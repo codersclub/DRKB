@@ -1,0 +1,25 @@
+    <div class="text">
+
+      <div class="divline"></div>
+
+      <div class="divtab">
+  	<span class="divind">Реклама на сайте</span>
+      </div>
+
+      <div class="clear"></div>
+
+<br>
+<br>
+
+      <p>
+      Если вы хотите разместить вашу рекламу на страницах сайта,
+      сообщите об этом по емэйл votrobot@ya.ru.
+      </p>
+
+      <p>
+        Предварительная информация о размещении рекламы
+        приведена на странице: <a href="https://forum.sources.ru/advert/" target="_blank">forum.sources.ru/advert/</a>
+      </p>
+      
+
+    </div><!-- .text -->
