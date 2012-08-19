@@ -1,13 +1,4 @@
-    <div class="text">
-
-
-      <div class="container">
-        <div class="divline"></div>
-        <div class="divtab">
-          <span id="divind">Загрузка последних версий</span>
-        </div>
-      </div>
-
+<h1>Загрузка последних версий</h1>
 
 	<p><strong>DRKB 3.0</strong> (standalone, кроссплатформенная версия) доступна в&nbsp;следующих вариантах:</p>
 	<ul>
@@ -17,13 +8,7 @@
 		<li><a href="drkb3_algorithms.zip">DRKB Algorithms</a> — Около 3.5 МБ, формат — CHM, содержит статьи по реализации алгоритмов и рассчитана главным образом на студентов, которых не столько интересует програмирование, сколько реализация алгоритмов (полная версия эти статьи тоже содержит).</li>
 	</ul>
 
-
-      <div class="container">
-        <div class="divline"></div>
-        <div class="divtab">
-          <span id="divind">Предыдущие версии</span>
-        </div>
-      </div>
+<h2>Предыдущие версии</h2>
 
 	<ul>
 		<li><a href="drkb23.zip">Версия 2.3</a>&nbsp;— хоть и более ранняя, но довольно полная версия базы: компромисс между размером файла и объемом информации (<strong>10</strong> МБ).<p></p>
@@ -31,6 +16,3 @@
 		<li><a href="drkb20.zip">Delphist's FAQ 2.0</a>&nbsp;— раньше DRKB выходила под этим названием (<strong>4.3</strong> МБ).</li>
 		<li><a href="drkb10.zip">Delphist's FAQ 1.0</a>&nbsp;— самая первая версия DRKB (<strong>2.7</strong> МБ).</li>
 	</ul>
-
-
-  </div><!-- .text -->

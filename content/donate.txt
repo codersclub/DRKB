@@ -1,27 +1,62 @@
-    <div class="text">
+<h1>Пожертвования</h1>
 
-      <div class="divline"></div>
+<p>
+  <strong>DRKB</strong> распространяется совершенно <strong>бесплатно</strong>.
+  Это означает, что вы совершено свободно можете качать базу знаний
+  и использовать код и статьи DRKB в любых целях,
+  в том числе и в коммерческих приложениях.
+</p>
 
-      <div class="divtab">
-  	<span class="divind">Пожертвования</span>
-      </div>
+<p>Мы будем вам премного благодарны, если вы сделаете посильное пожертвование на развитие проекта.</p>
+<p>Сумма пожертвования не регламентирована. Сколько хотите/можете, столько и пожертвуйте...</p>
+<p>Пожертвования принимаются через платежные системы <b>«PayPal»</b> и <b>«Яндекс.Деньги»</b>.</p>
 
-      <div class="clear"></div>
+<p>Все полученные средства направляются на продление доменного имени, оплату хостинга и дальнейшее развитие базы знаний и сайта.</p>
 
+
+<table cellspacing="8" width="100%">
+
+<tr style="text-align:center; vertical-align:top;">
+
+<td>
+<b>PayPal:</b>
 <br>
+<div class="donate">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="vot@sources.ru">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="DRKB.ru">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+<input type="submit" class="button" value="Поддержать" title="Перейти на сайт платёжной системы">
+
+</form>
+
+</div>
+</td>
+
+
+
+<td>
+<b>Yandex.Money:</b>
 <br>
+<div class="donate">
+<a target="_blank" href="https://money.yandex.ru/to/41001151000887" title="Перейти на сайт платёжной системы">
+  <img src="/img/YandexMoneyLogo200.png" style="height:47px;">
+</a>
 
-      <p><strong>DRKB</strong> распространяется совершенно <strong>бесплатно</strong>.
-        Это означает, что вы совершено свободно можете качать базу знаний
-        и использовать код и статьи DRKB в любых целях,
-        в том числе и в коммерческих приложениях.</p>
+<a class="button" target="_blank" href="https://money.yandex.ru/to/41001151000887" title="Перейти на сайт платёжной системы">
+  Поддержать
+</a>
+</div>
 
-      <p>Мы будем вам премного благодарны, если вы сделаете посильное пожертвование на развитие проекта.</p>
-      <p>Сумма пожертвования не регламентирована. Сколько хотите/можете, столько и пожертвуйте...</p>
-      <p>Пожертвования принимаются через платежные системы <b>«Вебмани»</b>, <b>«PayPal»</b> и&nbsp;<b>«Яндекс.Деньги»</b>.</p>
-      <p>Номера кошельков <strong>«Вебмани»</strong>: Z000000000000 — в долларах, E000000000000 — в евро, R000000000000 — в рублях.</p>
-      <p>Кошелек <strong>«Яндекс.Денег»</strong>: 00000000000000 (только рубли).</p>
-      <p>Все полученные средства направляются на продление доменного имени, оплату хостинга и дальнейшее развитие базы знаний и сайта.</p>
+</td>
 
-
-    </div><!-- .text -->
+</tr>
+</table>
