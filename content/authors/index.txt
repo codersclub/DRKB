@@ -8,13 +8,13 @@
           Виталий Невзоров
           <br>
           <a href="https://forum.sources.ru/index.php?showuser=4453" title="Виталий Невзоров @ sources.ru" target="_blank"><img src="img/Vit_src.jpg" alt="Виталий Невзоров" style="border: 1px solid rgb(221, 221, 221);"></a>
-          <a style="float:right;" href="https://forum.vingrad.ru/users/Vit" title="Виталий Невзоров @ vingrad.ru" target="_blank"><img src="img/vit.jpg" alt="Виталий Невзоров" style="border: 1px solid rgb(221, 221, 221);"></a>
+          <a style="float:right;" href="https://forum.vingrad.ru/index.php?showuser=10" title="Виталий Невзоров @ vingrad.ru" target="_blank"><img src="img/vit.jpg" alt="Виталий Невзоров" style="border: 1px solid rgb(221, 221, 221);"></a>
 	</div>
       </div>
 
 
 
-<p>Создатель <strong>DRKB</strong> и&nbsp;долгое время единственный ее разработчик: <strong>Виталий Невзоров</strong> (<strong><a href="https://forum.vingrad.ru/users/Vit" title="Vit@vingrad" target="_blank">Vit</a></strong>, <strong><a href="https://forum.sources.ru/index.php?showuser=4453" title="Vit@sources" target="_blank">Vit</a></strong>).</p>
+<p>Создатель <strong>DRKB</strong> и&nbsp;долгое время единственный ее разработчик: <strong>Виталий Невзоров</strong> (<strong><a href="https://forum.vingrad.ru/index.php?showuser=10" title="Vit@vingrad" target="_blank">Vit</a></strong>, <strong><a href="https://forum.sources.ru/index.php?showuser=4453" title="Vit@sources" target="_blank">Vit</a></strong>).</p>
 <p>Виталий является автором всех версий вплоть до&nbsp;<b>3.0</b> включительно. (Это последняя версия, выпущенная за его авторством.)</p>
 
 <p>К несчастью, Виталий Невзоров погиб в автокатастрофе 07 июля 2009г...</p>
