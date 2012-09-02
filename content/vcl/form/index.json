@@ -1,0 +1,10 @@
+[
+    {"name":"Общие вопросы", "page":"common"},
+    {"name":"Создание, закрытие и вызов форм", "page":"manipulation"},
+    {"name":"Прозрачность формы", "page":"transparent"},
+    {"name":"Прячем форму", "page":"hidden"},
+    {"name":"Формы нестандартного вида", "page":"nonstandard"},
+    {"name":"Манипуляции с заголовком формы", "page":"header"},
+    {"name":"MDI приложения", "page":"mdi"},
+    {"name":"Перемещение формы", "page":"move"}
+]

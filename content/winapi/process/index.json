@@ -1,0 +1,11 @@
+[
+    {"name":"AWE", "page":"awe"},
+    {"name":"Взаимодействие с Win16 кодом", "page":"win16"},
+    {"name":"Консольные приложения и приложения DOS", "page":"console"},
+    {"name":"Запуск и завершение приложений", "page":"starapplication"},
+    {"name":"Запуск и завершение процессов", "page":"startprocess"},
+    {"name":"Список задач, процессы и приорететы", "page":"tasklist"},
+    {"name":"Работа с памятью", "page":"ram"},
+    {"name":"Работа с чужими процессами", "page":"external_process"},
+    {"name":"Разные вопросы", "page":"misc"}
+]

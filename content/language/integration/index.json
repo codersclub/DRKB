@@ -1,0 +1,11 @@
+[
+    {"name":"Аналог функции С memcmp", "page":"8a2792fea05b4e82"},
+    {"name":"Вызов сишной функции с переменным числом параметров", "page":"eb54e25aa3404d87"},
+    {"name":"Вызов Delphi DLL из MS Visual C++", "page":"00bd830a96484e01"},
+    {"name":"Соответствие типов С++ и Delphi", "page":"dcef515640a145d8"},
+    {"name":"Does Delphi have an equivalent for the Visual Basic SendKeys function?", "page":"8c62b63b43424ab0"},
+    {"name":"Does Delphi have an equivalent for the VB function DoEvents?", "page":"f918673e2e934322"},
+    {"name":"Using Visual Basic arrays in Delphi", "page":"ded098a824a74243"},
+    {"name":"Основное отличие exe-файлов созданных Delphi и Visual Basic", "page":"74957f6654bf498b"},
+    {"name":"Beep для Delphi, который работает как в Turbo Pascal", "page":"b8b22bd418af4136"}
+]

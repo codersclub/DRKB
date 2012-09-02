@@ -1,0 +1,10 @@
+[
+    {"name":"Delphi и Windows API (Статья)", "page":"998d0658650043d9"},
+    {"name":"Программирование на основе Win32 API в Delphi (статья)", "page":"win32_api"},
+    {"name":"Программирование без VCL", "page":"novcl"},
+    {"name":"Для чего нужен WinAPI", "page":"00203757ab48456d"},
+    {"name":"Как использовать WinAPI?", "page":"fde9353f295b4e1b"},
+    {"name":"Как писать Win32 API приложения на Delphi?", "page":"67cdb34e756448c6"},
+    {"name":"Написание программ на чистом WinAPI", "page":"635eb42433e34967"},
+    {"name":"Пример приложений на чистом API", "page":"9cd961322c3b41d8"}
+]

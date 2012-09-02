@@ -1,0 +1,8 @@
+[
+      {"name":"Автозаполнение формы для нового письма", "page":"c0b2eb2cae6d4182"},
+      {"name":"Использование COM-объекта Outlook", "page":"6ccfd1f0f7c14ed1"},
+      {"name":"Использование SMTP Relay Server", "page":"248a6244e013454d"},
+      {"name":"Пример работы с SMTP", "page":"b5ec082759bb45ec"},
+      {"name":"Работа через MAPI", "page":"3710bd4fabe1498c"},
+      {"name":"Send e-mails via WinSock API?", "page":"f5c693614e524f0f"}
+]

@@ -1,0 +1,8 @@
+[
+  {"name":"Среда Delphi", "page":"environment"},
+  {"name":"Компилятор Delphi", "page":"compiler"},
+  {"name":"Особенности отдельных версий Delphi", "page":"version"},
+  {"name":"Ошибки, связанные с работой среды", "page":"error"},
+  {"name":"Проблемы с компонентами и палитрой компонентов", "page":"problem"},
+  {"name":"Работа с ToolsAPI (эксперты и редакторы свойств)", "page":"toolsapi"}
+]

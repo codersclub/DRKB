@@ -1,0 +1,9 @@
+<h1>Пример, показывающий принцип работы с Memory Mapped Files</h1>
+<div class="date">01.01.2007</div>
+
+
+<p>Пример, показывающий принцип работы с Memory Mapped Files.</p>
+<p><a href="/zip/mmf.zip">Скачать демонстрационный пример</a>
+</p>
+<p>Александр (Rouse_) Багель</p>
+<p><a href="https://rouse.drkb.ru" target="_blank">https://rouse.drkb.ru</a></p>

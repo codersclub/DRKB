@@ -1,0 +1,14 @@
+[
+    {"name":"TObject", "page":"973fb36a34bc4bd6"},
+    {"name":"TList", "page":"99ee2f5b6e514e7a"},
+    {"name":"TStrings и TStringList", "page":"tstrings"},
+    {"name":"TStream", "page":"tstream"},
+    {"name":"TPersistent", "page":"4bfd856e0a4342fb"},
+    {"name":"TComponent", "page":"fdd800f4dbbf4b61"},
+    {"name":"TControl", "page":"0e14fe64ec5e4bd5"},
+    {"name":"TCustomControl", "page":"d428e0e2aac940cd"},
+    {"name":"TGraphicControl", "page":"7ee5af9b1e144093"},
+    {"name":"TWinControl", "page":"6c467c7448ea452a"},
+    {"name":"Глобальный объект Screen", "page":"8f850937ff4b424f"},
+    {"name":"Глобальный объект Clipboard", "page":"97fbdd6f507648bd"}
+]

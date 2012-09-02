@@ -1,0 +1,15 @@
+[
+    {"name":"DirectX (Игровой SDK)", "page":"game_sdk"},
+    {"name":"DirectX и Delphi", "page":"delphi"},
+    {"name":"DirectX для начинающих", "page":"dummy"},
+    {"name":"DelphiX", "page":"delphix"},
+    {"name":"Что такое DirectShow?", "page":"fab7fee75daf4af3"},
+    {"name":"DXInput", "page":"11f62e3246294ecf"},
+    {"name":"DXPlay", "page":"927c1a23ed3a4ed3"},
+    {"name":"Пример использования DirectInput для опроса клавиатуры", "page":"ebad4f5ed39e4225"},
+    {"name":"Пример опроса мыши методами DirectInput", "page":"321bb438363a4979"},
+    {"name":"Текст с эффектами", "page":"34bd247293454775"},
+    {"name":"Blitting, спрайты и анимация", "page":"f7ec10b9eb924050"},
+    {"name":"Динамическая загрузка спрайтов", "page":"225744cfb2884bb8"},
+    {"name":"Advanced Draw", "page":"fe94d0558a0a4420"}
+]

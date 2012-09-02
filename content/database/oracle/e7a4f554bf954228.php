@@ -1,0 +1,35 @@
+<h1>Как заставить ORACLE анализировать все таблицы?</h1>
+<div class="date">01.01.2007</div>
+
+
+<p>Конечно, можно использовать dbms_sql, dbms_job... <br>
+&nbsp;<br>
+А можно и так: <br>
+<p>&nbsp;</p>
+<pre>#!/bin/sh
+#
+# analyze all tables
+#
+&nbsp;
+sqlfile=/tmp/analyze.sql
+logfile=/tmp/analyze.log
+&nbsp;
+echo @connect dbo/passwd@ &gt; $sqlfile
+&nbsp;
+$oracle_home/bin/svrmgrl &lt;&gt; $sqlfile
+connect dbo/passwd
+select 'table', table_name from all_tables where owner = 'dbo';
+eof
+&nbsp;
+echo exit &gt;&gt; $sqlfile
+cat $sqlfile &gt; $logfile
+&nbsp;
+cat $sqlfile | $oracle_home/bin/svrmgrl &gt;&gt; $logfile
+&nbsp;
+cat $logfile | /usr/bin/mailx -s 'analyze tables' tlk@nbd.kis.ru
+&nbsp;
+rm $sqlfile
+rm $logfile
+</pre>
+&nbsp;<br>
+<p>Источник: <a href="https://www.codenet.ru" target="_blank">https://www.codenet.ru</a></p>

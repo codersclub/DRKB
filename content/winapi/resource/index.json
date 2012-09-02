@@ -1,0 +1,19 @@
+[
+    {"name":"Иконки", "page":"icon"},
+    {"name":"Курсоры", "page":"cursor"},
+    {"name":"Каретка", "page":"caret"},
+    {"name":"256-цветное изображение из RES-файла", "page":"2dde9f3764774e6c"},
+    {"name":"Как извлечь иконку из EXE или DLL?", "page":"5fceff77e4974a62"},
+    {"name":"Как загрузить BMP файл из DLL?", "page":"3c70dacb150a4f17"},
+    {"name":"Как поместить JPEG-картинку в exe-файл и потом загрузить её?", "page":"b7798a63a7d04a6d"},
+    {"name":"Компиляция ресурсов", "page":"fef90c4e62e64e91"},
+    {"name":"Работа с ресурсами", "page":"da124b6c93e04a40"},
+    {"name":"Работа с ресурсами без TResourceSteram", "page":"06d95497fb074e45"},
+    {"name":"Создание RES-файла с помощью BRCC.EXE", "page":"ef1f947d5049420a"},
+    {"name":"Сохранение и выдергивание ресурсов в DLL или EXE?", "page":"dd37dc8c43754f0d"},
+    {"name":"Таблицы строк", "page":"b0a27612c3284c63"},
+    {"name":"Хранение данных в EXE-файле", "page":"ddc8c487319b4601"},
+    {"name":"Converting 16bit resource to 32bit", "page":"05eae5616a9a4203"},
+    {"name":"Creating resource files", "page":"bf6a680719f7438b"},
+    {"name":"How to get all the resource names that are loaded in a given application?", "page":"d7a162e1bf7d4d53"}
+]

@@ -1,0 +1,6 @@
+[
+    {"name":"Блокировка", "page":"lock"},
+    {"name":"Завершение работы", "page":"shutdown"},
+    {"name":"Режим энергосбережения", "page":"powersave"},
+    {"name":"Спящий режим", "page":"sleep"}
+]

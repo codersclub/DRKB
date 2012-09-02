@@ -1,0 +1,136 @@
+<h1>Delphi и Flash</h1>
+<div class="date">01.01.2007</div>
+
+
+<p>Delphi и Flash. Совмещение несовместимого!</p>
+<p>Разве возможно совместить Флэш-ролики и Дельфи-приложения. Раньше я думал что НЕТ. Но теперь я знаю не только, что это возможно, но и знаю как это делается!!! И сейчас я вам расскажу об этом. Во-первых хочется отметить преимущества использования флэш-роликов в ваших программах. Если вы сумеете гармонично вписать небольшой флэш-ролик в вашу программу, то несомненно внешний вид программы будет намного привлекательнее (главное не переборщить, увлекаясь дизайном, не надо забывать о том что программа должна быть удобна и проста в использовании! ).</p>
+
+<p>Итак, как же совместить Флэш и Дельфи? (Надеюсь, что у вас Флэш установлен:)) </p>
+
+<p>Запустите Дельфи и выберите пункт меню Component-&gt;Import ActiveX Control... Перед вами откроется диалоговое окно с заголовком Import ActiveX Control. В разделе Registered Controls выберите Shockwave Flash. В разделе Pallete Page... Выберите страницу в палитре компонентов, на которой будет располагаться установленный компонент (по умолчанию это ActiveX). В разделе Unit Dir Name... путь к папке куда будет установлен компонент.</p>
+
+<p>Нажмите на кнопку Install. Перед вами появится окно, в котором вам нужно будет выбрать в какой пакет будет установлен компонент (вы можете установить как в уже существующий, так и в новый пакет). Затем перед вами появится окно редактирования выбранного пакета и Дельфи вас спросит: "...Package will be rebuilt. Continue?". Ответьте Yes. Все готово теперь можно использовать флэш в ваших приложениях!!!</p>
+
+<p>Теперь, чтобы показать вам как пользоваться этим компонентом, попробуем вместе сделать программу для просмотра *.SWF файлов. Для этого нам понадобятся следующие компоненты: TShockwaveFlash (для удобства назовите его просто Flash1), TTrackBar, TTimer, TOpendialog и три кнопки TButton ("открыть", "старт" и "стоп").</p>
+
+<p>Для начала установим необходимые свойства OpenDialog'a</p>
+
+<p>Свойство Filter может быть таким: Флэш-ролики|*.swf </p>
+
+<p>Свойство DefaultExt должно быть: *.swf </p>
+
+<p>Для Timer'a нужно установить свойство Interval равным 1.</p>
+
+<p>Для TShockwaveFlash:</p>
+
+<p>Name сделайте равным Flash1 </p>
+
+<p>Свойство Playing установите в false </p>
+
+<p>Свойство BGColor, установите как вам хочется (цвет фона) </p>
+
+<p>Теперь напишем обработчик события OnClick для кнопки, которая вызывать OpenDialog:</p>
+
+<p>if open1.Execute then begin</p>
+<p>flash1.Movie:=open1.FileName;</p>
+<p>trackbar1.Max:=flash1.TotalFrames; {это делается для того, чтобы потом можно было перемещаю ползунок посмотреть каждый кадр ролика}</p>
+
+<p>В обработчик события OnClick для второй кнопки ("Старт") напишем:</p>
+
+<p>flash1.Play;</p>
+
+<p>Ну тут вообще все просто! Почти таким же образом это будет выглядеть для третьей кнопки ("Стоп"):</p>
+
+<p>flash1.Stop;</p>
+
+<p>Теперь сделаем, чтобы при перемещении ползунка Trackbar'a мы могли посмотреть каждый кадр (событие OnChange):</p>
+
+<p>if Flash1.IsPlaying=true then Flash1.Stop; {если ролик проигрывается, то надо его остановить}</p>
+<p>flash1.GotoFrame(trackbar1.position); {открываем кадр номер которого соответствует позиции ползунка} </p>
+
+<p>Ну и наконец осталось сделать чтобы при проигрывании ролика ползунок перемещался, указывая сколько осталось и сколько прошло. Для этого то мы и используем Timer. В обработчик события OnTimer,напишем:</p>
+
+<p>trackbar1.Position:=flash1.CurrentFrame; </p>
+
+<p>Приведу полный код приложения:</p>
+
+<pre>
+unit flash;
+ 
+interface
+ 
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  ComCtrls, StdCtrls, OleCtrls, ShockwaveFlashObjects_TLB, ExtCtrls;
+ 
+type
+  TForm1 = class(TForm)
+    Flash1: TShockwaveFlash;
+    Button1: TButton;
+    TrackBar1: TTrackBar;
+    Open1: TOpenDialog;
+    Button2: TButton;
+    Button3: TButton;
+    Timer1: TTimer;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure TrackBar1Change(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+  private
+{ Private declarations }
+  public
+{ Public declarations }
+  end;
+ 
+var
+  Form1: TForm1;
+ 
+implementation
+ 
+{$R *.DFM}
+ 
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  if open1.Execute then
+    begin
+      flash1.Movie := open1.FileName;
+      trackbar1.Max := flash1.TotalFrames;
+    end;
+end;
+ 
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  flash1.Play;
+end;
+ 
+procedure TForm1.TrackBar1Change(Sender: TObject);
+begin
+  if Flash1.IsPlaying = true then Flash1.Stop;
+  flash1.GotoFrame(trackbar1.position);
+end;
+ 
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  flash1.Stop;
+end;
+ 
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+  trackbar1.Position := flash1.CurrentFrame;
+end;
+ 
+end.
+</pre>
+
+<p>Ну вот и все. Как оказалось ничего сложного.</p>
+
+<p>Дополнительная информация</p>
+<p class="author">Автор: Михаил Христосенко.</p>
+
+<p>Если у вас возникнут какие-нибудь вопросы, предложения и пожелания, а также ваши отзывы шлите по почте: kikoz@kemtel.ru </p>
+
+<p>Заходите на мой сайт http://MihanDelphi.narod.ru там вы найдете множество программ (моих и не только), компонентов, статей и еще множество полезностей для Дельфера. </p>
+
+
+<p>Взято с сайта <a href="https://www.emanual.ru" target="_blank">www.emanual.ru</a></p>

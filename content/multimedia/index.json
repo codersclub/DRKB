@@ -1,0 +1,18 @@
+[
+  {"name":"Bitmap", "page":"bitmap"},
+  {"name":"Metafile", "page":"metafile"},
+  {"name":"JPEG", "page":"jpeg"},
+  {"name":"GIF", "page":"gif"},
+  {"name":"Canvas", "page":"canvas"},
+  {"name":"GDI и GDI+", "page":"gdi"},
+  {"name":"DirectX и DelphiX", "page":"directx"},
+  {"name":"OpenGL", "page":"opengl"},
+  {"name":"Вывод текста", "page":"text"},
+  {"name":"Цвета и палитра", "page":"color"},
+  {"name":"Графические фильтры и эффекты", "page":"filter"},
+  {"name":"Рисование в разных местах и захват изображения", "page":"paint"},
+  {"name":"Черчение", "page":"draw"},
+  {"name":"Видео и анимация", "page":"animation"},
+  {"name":"Работа со звуком", "page":"audio"},
+  {"name":"Разные вопросы", "page":"misc"}
+]

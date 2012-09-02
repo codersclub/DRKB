@@ -1,0 +1,10 @@
+[
+    {"name":"Технология dbExpress (статья)", "page":"dbe_technology"},
+    {"name":"Развертывание приложения, использующего dbExpress", "page":"c910bbd9271641f1"},
+    {"name":"Создание DBExpress-Connection в runtime", "page":"4b7c1af9ecc84fca"},
+    {"name":"Перенос приложений с BDE на dbExpress (статья)", "page":"8ebdee3246cb4bf5"},
+    {"name":"Создание DBExpress соединения в runtime", "page":"693d67a33b024ca9"},
+    {"name":"Особенности использования BLOB-полей в dbExpress на примере MySQL", "page":"aeab541d024f4446"},
+    {"name":"База данных без BDE", "page":"f733cbffc96c4c42"},
+    {"name":"Пример приложения, демонстрирующего возможности технологии dbExpress", "page":"4145c123f3e7405f"}
+]

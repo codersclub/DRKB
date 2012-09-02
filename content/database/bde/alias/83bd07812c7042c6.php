@@ -1,0 +1,156 @@
+<h1>Задание псевдонима программным путем</h1>
+<div class="date">01.01.2007</div>
+
+
+<p>Эта информация поможет вам разобраться в вопросе создания и использования ПСЕВДОНИМОВ баз данных в ваших приложениях. </p>
+
+<p>Вне Delphi создание и конфигурирование псевдонимов осуществляется утилитой BDECFG.EXE. Тем не менее, применяя компонент TDatabase, вы можете в вашем приложении создать и использовать псевдоним, не определенный в IDAPI.CFG. </p>
+
+<p>Важно понять, что создав псевдоним, использовать его можно только в текущем сеансе вашего приложения. Псевдонимы определяеют расположение таблиц базы данных и параметры связи с сервером баз данных. В конце концов, вы получаете преимущества использования псевдонимов в пределах вашего приложения без необходимости беспокоиться о наличии их в конфигурационном файле IDAPI.CFG в момент инициализации приложения. </p>
+
+<p>Некоторые варианты решения задачи: </p>
+
+<p>Пример #1: </p>
+
+<p>Пример #1 создает и конфигурирует псевдоним для базы данных STANDARD (.DB, .DBF). Псевдоним затем используется компонентом TTable. </p>
+
+<p>Пример #2: </p>
+
+<p>Пример #2 создает и конфигурирует псевдоним для базы данных INTERBASE (.gdb). Псевдоним затем используется компонентом TQuery для подключения к двум таблицам базы данных. </p>
+
+<p>Пример #3: </p>
+
+<p>Пример #3 создает и конфигурирует псевдоним для базы данных STANDARD (.DB, .DBF). Демонстрация ввода псевдонима пользователем и его конфигурация во время выполнения программы. </p>
+
+<p>Пример #1: Используем базу данных .DB или .DBF (STANDARD) </p>
+
+<p>Создаем новый проект. </p>
+<p>Располагаем на форме следующие компоненты: - TDatabase, TTable, TDataSource, TDBGrid, and TButton. </p>
+<p>Дважды щелкаем на компоненте TDatabase или через контекстное меню (правая кнопка мыши) вызываем редактор базы данных. </p>
+<p>Присваиваем базе данных имя 'MyNewAlias'. Это имя будет выполнять роль псевдонима в свойстве DatabaseName для компонентов типа TTable, TQuery, TStoredProc. </p>
+<p>Выбираем в поле Driver Name (имя драйвера) пункт STANDARD. </p>
+<p>Щелкаем на кнопке Defaults. Это автоматически добавляет путь (PATH=) в секцию перекрытых параметров (окно Parameter Overrides). </p>
+<p>Устанавливаем PATH= to C:\DELPHI\DEMOS\DATA (PATH=C:\DELPHI\DEMOS\DATA). </p>
+<p>Нажимаем кнопку OK и закрываем окно редактора. </p>
+<p>В компоненте TTable свойству DatabaseName присваиваем 'MyNewAlias'. </p>
+<p>В компоненте TDataSource свойству DataSet присваиваем 'Table1'. </p>
+<p>В компоненте DBGrid свойству DataSource присваиваем 'DataSource1'. </p>
+<p>Создаем в компоненте TButton обработчик события OnClick. </p>
+<pre>
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Table1.Tablename:= 'CUSTOMER';
+  Table1.Active:= True;
+end;
+</pre>
+
+
+<p>Запускаем приложение. </p>
+<p>*** В качестве альтернативы шагам 3 - 11, вы можете включить все эти действия в сам обработчик: </p>
+
+<pre>
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Database1.DatabaseName:= 'MyNewAlias';
+  Database1.DriverName:= 'STANDARD';
+  Database1.Params.Clear;
+  Database1.Params.Add('PATH=C:\DELPHI\DEMOS\DATA');
+  Table1.DatabaseName:= 'MyNewAlias';
+  Table1.TableName:= 'CUSTOMER';
+  Table1.Active:= True;
+  DataSource1.DataSet:= Table1;
+  DBGrid1.DataSource:= DataSource1;
+end;
+</pre>
+
+
+
+
+<p>Пример #2: Используем базу данных INTERBASE </p>
+
+<p>Создаем новый проект. </p>
+<p>Располагаем на форме следующие компоненты: - TDatabase, TQuery, TDataSource, TDBGrid, and TButton. </p>
+<p>Дважды щелкаем на компоненте TDatabase или через контекстное меню (правая кнопка мыши) вызываем редактор базы данных. </p>
+<p>Присваиваем базе данных имя 'MyNewAlias'. Это имя будет выполнять роль псевдонима в свойстве DatabaseName для компонентов типа TTable, TQuery, TStoredProc. </p>
+<p>Выбираем в поле Driver Name (имя драйвера) пункт INTRBASE. </p>
+<p>Щелкаем на кнопке Defaults. Это автоматически добавляет путь (PATH=) в секцию перекрытых параметров (окно Parameter Overrides). </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SERVER NAME=IB_SERVEER:/PATH/DATABASE.GDB</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;USER NAME=MYNAME</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;OPEN MODE=READ/WRITE</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SCHEMA CACHE SIZE=8</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;LANGDRIVER=</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SQLQRYMODE=</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SQLPASSTHRU MODE=NOT SHARED</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SCHEMA CACHE TIME=-1</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;PASSWORD=</p>
+
+<p>Устанавливаем следующие параметры </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SERVER NAME=C:\IBLOCAL\EXAMPLES\EMPLOYEE.GDB</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;USER NAME=SYSDBA</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;OPEN MODE=READ/WRITE</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SCHEMA CACHE SIZE=8</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;LANGDRIVER=</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SQLQRYMODE=</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SQLPASSTHRU MODE=NOT SHARED</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;SCHEMA CACHE TIME=-1</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;PASSWORD=masterkey</p>
+
+<p>В компоненте TDatabase свойство LoginPrompt устанавливаем в 'False'. Если в секции перекрытых параметров (Parameter Overrides) задан пароль (ключ PASSWORD) и свойство LoginPrompt установлено в 'False', при соединении с базой данный пароль запрашиваться не будет. Предупреждение: при неправильно указанном пароле в секции Parameter Overrides и неактивном свойстве LoginPrompt вы не сможете получить доступ к базе данных, поскольку нет возможности ввести правильный пароль - диалоговое окно "Ввод пароля" отключено свойством LoginPrompt. </p>
+<p>Нажимаем кнопку OK и закрываем окно редактора. </p>
+<p>В компоненте TQuery свойству DatabaseName присваиваем 'MyNewAlias'. </p>
+<p>В компоненте TDataSource свойству DataSet присваиваем 'Query1'. </p>
+<p>В компоненте DBGrid свойству DataSource присваиваем 'DataSource1'. </p>
+<p>Создаем в компоненте TButton обработчик события OnClick. </p>
+<pre>
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Query1.SQL.Clear;
+  Query1.SQL.ADD(
+  'SELECT DISTINCT * FROM CUSTOMER C, SALES S
+    WHERE (S.CUST_NO = C.CUST_NO)
+    ORDER BY C.CUST_NO, C.CUSTOMER');
+  Query1.Active:= True;
+end;
+</pre>
+
+
+
+
+<p>Запускаем приложение. </p>
+<p>Пример #3: Ввод псевдонима пользователем </p>
+
+<p>Этот пример выводит диалоговое окно и создает псевдоним на основе информации, введенной пользователем. </p>
+
+<p>Директория, имя сервера, путь, имя базы данных и другая необходимая информация для получения псевдонима может быть получена приложением из диалогово окна или конфигурационного .INI файла. </p>
+
+<p>Выполняем шаги 1-11 из примера #1. </p>
+<p>Пишем следующий обработчик события OnClick компонента TButton: </p>
+
+<pre>
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  NewString: string;
+  ClickedOK: Boolean;
+begin
+  NewString := 'C:\';
+  ClickedOK := InputQuery('Database Path',
+    'Path: --&gt; C:\DELPHI\DEMOS\DATA', NewString);
+  if ClickedOK then
+  begin
+    Database1.DatabaseName := 'MyNewAlias';
+    Database1.DriverName := 'STANDARD';
+    Database1.Params.Clear;
+    Database1.Params.Add('Path=' + NewString);
+    Table1.DatabaseName := 'MyNewAlias';
+    Table1.TableName := 'CUSTOMER';
+    Table1.Active := True;
+    DataSource1.DataSet := Table1;
+    DBGrid1.DataSource := DataSource1;
+  end;
+end;
+</pre>
+
+
+<p>Запускаем приложение. </p>
+<p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+

@@ -1,0 +1,27 @@
+<h1>TList</h1>
+<div class="date">01.01.2007</div>
+
+
+<p>Класс TList</p>
+<p>Класс TList &#8212; универсальный список. Он представляет собой массив нетипированных указателей и поэтому годится для хранения набора любых, в том числе разнотипных, данных и объектов. При добавлении/удалении в список данные не создаются и не уничтожаются &#8212; эта обязанность лежит на программисте. </p>
+<p>Приведем доступные ему методы и свойства класса:</p>
+<p>property Items[Index: Integer]: Pointer; &mdash; Возвращает указатель на содержимое элемента списка с индексом Index. Это свойство является векторным свойством, принимаемым по умолчанию, и его имя можно при записи опускать. &mdash; </p>
+<p>property Count: Integer; &mdash; Определяет число элементов в списке. &mdash; </p>
+<p>property Capacity: Integer; &mdash; Определяет максимальное число элементов в списке. Оно может изменяться как явно &#8212; пользователем, так и при добавлении элементов в список, в том случае, когда Count&gt;=Capacity. Максимальная емкость списка &#8212; 16380 элементов. &mdash; </p>
+<p>Управляют списком следующие методы:</p>
+<p>function Add(Item: Pointer): Integer; &mdash; Добавляет в конец списка элемент, который будет равен Item (т. е. указывать на те же данные). &mdash; </p>
+<p>function Remove(Item: Pointer): Integer; &mdash; Удаляет из списка элемент, который равен Item. &mdash; </p>
+<p>procedure Insert(Index: Integer; Item: Pointer) ; &mdash; Вставляет элемент, равный Item, перед элементом с индексом Index. &mdash; </p>
+<p>procedure Delete(Index: Integer); &mdash; Удаляет из списка элемент с индексом Index. &mdash; </p>
+<p>procedure Clear; &mdash; Очищает список, устанавливая величины Count и Capacity в 0. &mdash; </p>
+<p>procedure Exchange(Indexl, Index2: Integer); &mdash; Меняет местами элементы списка с индексами Indexl и Index2. &mdash; </p>
+<p>function Expand: TList; &mdash; При соблюдении равенства Count=Capacity расширяет список. При емкости списка менее пяти элементов, он по умолчанию расширяется на четыре элемента, при пяти-восьми &#8212; на восемь, более восьми &#8212; на шестнадцать. &mdash; </p>
+<p>function First: Pointer; function Last: Pointer; &mdash; Возвращают значения первого п последнего (с индексом Count-1) элементов списка соответственно. &mdash; </p>
+<p>function IndexOf(Item: Pointer): Integer; &mdash; Возвращает индекс элемента, равного Item. &mdash; </p>
+<p>procedure Move(CurIndex, Newlndex: Integer) ; &mdash; Перемещает элемент списка с положения Curlndex в положение Newlndex. &mdash; </p>
+<p>procedure Pack; &mdash; Упаковывает список, сдвигая элементы к началу на пустующие места. &mdash; </p>
+<p>Наконец, если приведенных методов почему-либо недостаточно, то свойство</p>
+<p>property List: pPointerList;</p>
+<p>pPointerList = ^TPointerList;</p>
+<p>TPointerList = array[0..65520 div SizeOf(Pointer)] of Pointer;</p>
+<p>возвращает указатель непосредственно на список указателен ((ко) означает, что свойство доступно только для чтения).</p>
