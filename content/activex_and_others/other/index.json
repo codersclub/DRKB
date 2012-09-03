@@ -1,14 +1,14 @@
 [
-    {"name":"1C", "page":"1c"},
-    {"name":"Adobe Flash", "page":"flash"},
-    {"name":"Adobe Photoshop", "page":"photoshop"},
-    {"name":"Adobe PageMaker", "page":"pagemaker"},
-    {"name":"AutoCAD", "page":"autocad"},
-    {"name":"Corel Draw", "page":"coreldraw"},
-    {"name":"Lotus Notes", "page":"lotusnotes"},
-    {"name":"MapInfo", "page":"mapinfo"},
-    {"name":"Microsoft Exchange", "page":"msexchange"},
-    {"name":"Microsoft Script Control", "page":"msscript"},
-    {"name":"Outlook Express", "page":"outlookexpress"},
-    {"name":"WinAMP", "page":"winamp"}
+    {"name":"1C", "page":"1c/"},
+    {"name":"Adobe Flash", "page":"flash/"},
+    {"name":"Adobe Photoshop", "page":"photoshop/"},
+    {"name":"Adobe PageMaker", "page":"pagemaker/"},
+    {"name":"AutoCAD", "page":"autocad/"},
+    {"name":"Corel Draw", "page":"coreldraw/"},
+    {"name":"Lotus Notes", "page":"lotusnotes/"},
+    {"name":"MapInfo", "page":"mapinfo/"},
+    {"name":"Microsoft Exchange", "page":"msexchange/"},
+    {"name":"Microsoft Script Control", "page":"msscript/"},
+    {"name":"Outlook Express", "page":"outlookexpress/"},
+    {"name":"WinAMP", "page":"winamp/"}
 ]

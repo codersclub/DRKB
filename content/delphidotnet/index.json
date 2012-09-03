@@ -1,5 +1,5 @@
 [
-  {"name":"Платформа .NET", "page":"dotnet"},
-  {"name":"Работа с .NET Framework", "page":"dotnetframework"},
-  {"name":"Разные вопросы", "page":"misc"}
+  {"name":"Платформа .NET", "page":"dotnet/"},
+  {"name":"Работа с .NET Framework", "page":"dotnetframework/"},
+  {"name":"Разные вопросы", "page":"misc/"}
 ]

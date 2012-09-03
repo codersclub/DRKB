@@ -1,11 +1,11 @@
 [
-  {"name":"Вопросы защиты и взлома программ", "page":"hack_protect"},
-  {"name":"Вопросы оптимизации и отладки програм", "page":"debug"},
-  {"name":"Вопросы инсталяции програм", "page":"install"},
-  {"name":"Вопросы локализации програм", "page":"localize"},
-  {"name":"Вопросы запуска программ", "page":"run"},
-  {"name":"Работа со справочной системой", "page":"help"},
-  {"name":"Разработка плагинов", "page":"plugin"},
-  {"name":"Extreme Programming (XP)", "page":"extreme"},
-  {"name":"Разные вопросы", "page":"misc"}
+  {"name":"Вопросы защиты и взлома программ", "page":"hack_protect/"},
+  {"name":"Вопросы оптимизации и отладки програм", "page":"debug/"},
+  {"name":"Вопросы инсталяции програм", "page":"install/"},
+  {"name":"Вопросы локализации програм", "page":"localize/"},
+  {"name":"Вопросы запуска программ", "page":"run/"},
+  {"name":"Работа со справочной системой", "page":"help/"},
+  {"name":"Разработка плагинов", "page":"plugin/"},
+  {"name":"Extreme Programming (XP)", "page":"extreme/"},
+  {"name":"Разные вопросы", "page":"misc/"}
 ]

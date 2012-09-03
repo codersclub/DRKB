@@ -1,10 +1,10 @@
 [
-    {"name":"SQL-запросы в Delphi", "page":"8e255898ed2e43c8"},
-    {"name":"Генератор SQL-запросов Insert / Update", "page":"c1c4896ba06f4234"},
-    {"name":"Интерактивные SQL-запросы", "page":"1cb1c4f287ed4aa5"},
-    {"name":"Как получить результирующим полем разницу между хранимой датой и текущей датой?", "page":"e512e712321740e7"},
-    {"name":"Как создать таблицу через SQL?", "page":"db7b4ba38f2f4a52"},
-    {"name":"Локальные операторы языка SQL (BDE)", "page":"2237a1cae6894e85"},
-    {"name":"Основы языка SQL (статья)", "page":"d68be6a35fad40ee"},
-    {"name":"Синтаксис SQL-функции Substring", "page":"c2a13062c54f435f"}
+    {"name":"SQL-запросы в Delphi", "page":"8e255898ed2e43c8.html"},
+    {"name":"Генератор SQL-запросов Insert / Update", "page":"c1c4896ba06f4234.html"},
+    {"name":"Интерактивные SQL-запросы", "page":"1cb1c4f287ed4aa5.html"},
+    {"name":"Как получить результирующим полем разницу между хранимой датой и текущей датой?", "page":"e512e712321740e7.html"},
+    {"name":"Как создать таблицу через SQL?", "page":"db7b4ba38f2f4a52.html"},
+    {"name":"Локальные операторы языка SQL (BDE)", "page":"2237a1cae6894e85.html"},
+    {"name":"Основы языка SQL (статья)", "page":"d68be6a35fad40ee.html"},
+    {"name":"Синтаксис SQL-функции Substring", "page":"c2a13062c54f435f.html"}
 ]

@@ -1,6 +1,6 @@
 [
-    {"name":"SyBase Transact-SQL", "page":"tsql"},
-    {"name":"Delphi и SyBase (официальное руководство)", "page":"886fdb75208e4fff"},
-    {"name":"Архитектура SyBase System", "page":"f98e08c4a86e4e5e"},
-    {"name":"32-битное соединение с сервером SyBase", "page":"60ff23a31df14cbb"}
+    {"name":"SyBase Transact-SQL", "page":"tsql/"},
+    {"name":"Delphi и SyBase (официальное руководство)", "page":"886fdb75208e4fff.html"},
+    {"name":"Архитектура SyBase System", "page":"f98e08c4a86e4e5e.html"},
+    {"name":"32-битное соединение с сервером SyBase", "page":"60ff23a31df14cbb.html"}
 ]

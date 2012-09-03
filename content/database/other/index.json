@@ -1,10 +1,10 @@
 [
-    {"name":"Возможности PostgreSQL", "page":"19645d66c1c143ee"},
-    {"name":"Обучающее руководство по PostgreSQL", "page":"70139ae2a35c4be2"},
-    {"name":"Использованию в Delphi прямых обращений к ядру Btrieve", "page":"5de9d58d241d4b0d"},
-    {"name":"Руководство по Btrieve", "page":"bad2a04899ec40d0"},
-    {"name":"Прямой доступ к базе данных 1С", "page":"9d5f52695a764d31"},
-    {"name":"Advantage Database Server", "page":"6797529d4a134dca"},
-    {"name":"Berkeley DB", "page":"75f9c3b0eccd4274"},
-    {"name":"ObjectHaven", "page":"13e7f5aab90a4825"}
+    {"name":"Возможности PostgreSQL", "page":"19645d66c1c143ee.html"},
+    {"name":"Обучающее руководство по PostgreSQL", "page":"70139ae2a35c4be2.html"},
+    {"name":"Использованию в Delphi прямых обращений к ядру Btrieve", "page":"5de9d58d241d4b0d.html"},
+    {"name":"Руководство по Btrieve", "page":"bad2a04899ec40d0.html"},
+    {"name":"Прямой доступ к базе данных 1С", "page":"9d5f52695a764d31.html"},
+    {"name":"Advantage Database Server", "page":"6797529d4a134dca.html"},
+    {"name":"Berkeley DB", "page":"75f9c3b0eccd4274.html"},
+    {"name":"ObjectHaven", "page":"13e7f5aab90a4825.html"}
 ]

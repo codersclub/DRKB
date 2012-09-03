@@ -1,9 +1,9 @@
 [
-      {"name":"XLS > TStringGrid", "page":"01d128caeb5145cd"},
-      {"name":"TStringGrid и файловый поток", "page":"adcbae503e0e43b8"},
-      {"name":"TStringGrid > HTML", "page":"60270b1c616c4032"},
-      {"name":"Получить содержимое TStringGrid или TDrawGrid в виде строки", "page":"c2256832472d4264"},
-      {"name":"Сохранение и чтение TStringGrid", "page":"9d159104953f466a"},
-      {"name":"Экспорт TStringGrid в Excel", "page":"0eba5aefd1d94782"},
-      {"name":"Экспорт TStringGrid в исполняемый файл *.exe", "page":"018f32820bf742ad"}
+      {"name":"XLS > TStringGrid", "page":"01d128caeb5145cd.html"},
+      {"name":"TStringGrid и файловый поток", "page":"adcbae503e0e43b8.html"},
+      {"name":"TStringGrid > HTML", "page":"60270b1c616c4032.html"},
+      {"name":"Получить содержимое TStringGrid или TDrawGrid в виде строки", "page":"c2256832472d4264.html"},
+      {"name":"Сохранение и чтение TStringGrid", "page":"9d159104953f466a.html"},
+      {"name":"Экспорт TStringGrid в Excel", "page":"0eba5aefd1d94782.html"},
+      {"name":"Экспорт TStringGrid в исполняемый файл *.exe", "page":"018f32820bf742ad.html"}
 ]

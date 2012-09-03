@@ -1,12 +1,12 @@
 [
-    {"name":"ASCII драйвер для CSV-файлов", "page":"350fe77b98024177"},
-    {"name":"ASCII-файл с использованием полей", "page":"e86c8795bc554459"},
-    {"name":"RecCount в таблицах ASCII", "page":"c923fe51ef7c49ac"},
-    {"name":"Быстрая обработка CSV файла", "page":"68157eaf72924e78"},
-    {"name":"Импорт CSV ASCII", "page":"eb4c151527fc4544"},
-    {"name":"Импорт большого CSV файла", "page":"a788862719a14e36"},
-    {"name":"Как определить, имеет ли файл ASCII-формат", "page":"8382e742ff3f4513"},
-    {"name":"Как экспортировать таблицу базы данных в ASCII-файл?", "page":"1203759bb2b74233"},
-    {"name":"Формат файла ASCII-схемы", "page":"33eb832713e142a5"},
-    {"name":"Читаем CSV текстовый файл в StringGrid", "page":"e30556985f324cb1"}
+    {"name":"ASCII драйвер для CSV-файлов", "page":"350fe77b98024177.html"},
+    {"name":"ASCII-файл с использованием полей", "page":"e86c8795bc554459.html"},
+    {"name":"RecCount в таблицах ASCII", "page":"c923fe51ef7c49ac.html"},
+    {"name":"Быстрая обработка CSV файла", "page":"68157eaf72924e78.html"},
+    {"name":"Импорт CSV ASCII", "page":"eb4c151527fc4544.html"},
+    {"name":"Импорт большого CSV файла", "page":"a788862719a14e36.html"},
+    {"name":"Как определить, имеет ли файл ASCII-формат", "page":"8382e742ff3f4513.html"},
+    {"name":"Как экспортировать таблицу базы данных в ASCII-файл?", "page":"1203759bb2b74233.html"},
+    {"name":"Формат файла ASCII-схемы", "page":"33eb832713e142a5.html"},
+    {"name":"Читаем CSV текстовый файл в StringGrid", "page":"e30556985f324cb1.html"}
 ]

@@ -1,7 +1,7 @@
 [
-    {"name":"TDBGrid", "page":"tdbgrid"},
-    {"name":"TDBNavigator", "page":"tdbnavigator"},
-    {"name":"Древовидные структуры", "page":"tree"},
-    {"name":"ActiveControl имеет DataSet", "page":"68210775dc38464f"},
-    {"name":"Использование DB Controls без базы данных", "page":"f39b47d29c8345e8"}
+    {"name":"TDBGrid", "page":"tdbgrid/"},
+    {"name":"TDBNavigator", "page":"tdbnavigator/"},
+    {"name":"Древовидные структуры", "page":"tree/"},
+    {"name":"ActiveControl имеет DataSet", "page":"68210775dc38464f.html"},
+    {"name":"Использование DB Controls без базы данных", "page":"f39b47d29c8345e8.html"}
 ]

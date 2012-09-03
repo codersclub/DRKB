@@ -1,11 +1,11 @@
 [
-    {"name":"В строке состояния TStatusBar выводится только 127 символов", "page":"67d71bb743b14548"},
-    {"name":"Изменить шрифт TStatusBar", "page":"288d0f99852d421a"},
-    {"name":"Как вывести цветной текст в TStatusBar?", "page":"f2d09acf03a64096"},
-    {"name":"Показ всплывающих подсказок в строке состояния", "page":"e2a79305ba7e4de7"},
-    {"name":"Показ даты, времени и состояния клавиш в строке состояния", "page":"e66ee69951c14428"},
-    {"name":"TStatusBar с другими контролами", "page":"1b4138ee7ee3437f"},
-    {"name":"TStatusBar + TProgressBar", "page":"1b45ffffd5c048b8"},
-    {"name":"OwnerDraw в компоненте TStatusBar", "page":"61360690dc3f4315"},
-    {"name":"Установить размер шрифта для панели TStatusBar", "page":"332d1c3e170747ea"}
+    {"name":"В строке состояния TStatusBar выводится только 127 символов", "page":"67d71bb743b14548.html"},
+    {"name":"Изменить шрифт TStatusBar", "page":"288d0f99852d421a.html"},
+    {"name":"Как вывести цветной текст в TStatusBar?", "page":"f2d09acf03a64096.html"},
+    {"name":"Показ всплывающих подсказок в строке состояния", "page":"e2a79305ba7e4de7.html"},
+    {"name":"Показ даты, времени и состояния клавиш в строке состояния", "page":"e66ee69951c14428.html"},
+    {"name":"TStatusBar с другими контролами", "page":"1b4138ee7ee3437f.html"},
+    {"name":"TStatusBar + TProgressBar", "page":"1b45ffffd5c048b8.html"},
+    {"name":"OwnerDraw в компоненте TStatusBar", "page":"61360690dc3f4315.html"},
+    {"name":"Установить размер шрифта для панели TStatusBar", "page":"332d1c3e170747ea.html"}
 ]

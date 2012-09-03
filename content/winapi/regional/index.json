@@ -1,5 +1,5 @@
 [
-    {"name":"Локализация и перекодировка", "page":"localization"},
-    {"name":"Работа с TFont и API-функциями холста", "page":"vertical_text"},
-    {"name":"Шрифты и файлы шрифтов", "page":"font"}
+    {"name":"Локализация и перекодировка", "page":"localization/"},
+    {"name":"Работа с TFont и API-функциями холста", "page":"vertical_text/"},
+    {"name":"Шрифты и файлы шрифтов", "page":"font/"}
 ]

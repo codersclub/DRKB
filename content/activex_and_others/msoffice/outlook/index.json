@@ -1,14 +1,14 @@
 [
-      {"name":"Как написать Outlook AddIn?", "page":"f0443ccc3ef34deb"},
-      {"name":"Как получить список папок Outlook?", "page":"3779ee5d6665494f"},
-      {"name":"Как прочитать адресную книгу Outlook (MSOffice) из Delphi и занести данные в таблицу *.db?", "page":"f8c56d1a98d8460a"},
-      {"name":"Как прочитать адрес отправителя?", "page":"e4552e96fd334d86"},
-      {"name":"Создать новый Outlook Contact?", "page":"ca9b4a40a59e45c4"},
-      {"name":"Как сохранить Outlook календарь как website?", "page":"8d24dcd649094b94"},
-      {"name":"Чтение email адресов из Outlook .dbx файлов", "page":"8d2f16c12ac54dba"},
-      {"name":"How to start Outlook", "page":"4738bacc40ba41b3"},
-      {"name":"How to send and receive email", "page":"d381cc7d1f6a44b9"},
-      {"name":"How to check for unread email", "page":"351102248bf54bd0"},
-      {"name":"How to check for unsent email", "page":"16e8429f78614efb"},
-      {"name":"Сохранить вложения OutLook", "page":"3c3ba319e528441b"}
+      {"name":"Как написать Outlook AddIn?", "page":"f0443ccc3ef34deb.html"},
+      {"name":"Как получить список папок Outlook?", "page":"3779ee5d6665494f.html"},
+      {"name":"Как прочитать адресную книгу Outlook (MSOffice) из Delphi и занести данные в таблицу *.db?", "page":"f8c56d1a98d8460a.html"},
+      {"name":"Как прочитать адрес отправителя?", "page":"e4552e96fd334d86.html"},
+      {"name":"Создать новый Outlook Contact?", "page":"ca9b4a40a59e45c4.html"},
+      {"name":"Как сохранить Outlook календарь как website?", "page":"8d24dcd649094b94.html"},
+      {"name":"Чтение email адресов из Outlook .dbx файлов", "page":"8d2f16c12ac54dba.html"},
+      {"name":"How to start Outlook", "page":"4738bacc40ba41b3.html"},
+      {"name":"How to send and receive email", "page":"d381cc7d1f6a44b9.html"},
+      {"name":"How to check for unread email", "page":"351102248bf54bd0.html"},
+      {"name":"How to check for unsent email", "page":"16e8429f78614efb.html"},
+      {"name":"Сохранить вложения OutLook", "page":"3c3ba319e528441b.html"}
 ]

@@ -1,6 +1,6 @@
 [
-      {"name":"Автоматический logon к локальной InterBase", "page":"36aabae28d9f45fc"},
-      {"name":"Как предотвратить появление login dialog?", "page":"4f70c39a53ed4a28"},
-      {"name":"Можно ли создать пользователя БД при помощи SQL-команды?", "page":"cdd72834fde3474d"},
-      {"name":"Установка InterBase и добавление пользователя", "page":"c6b1391d80f849f7"}
+      {"name":"Автоматический logon к локальной InterBase", "page":"36aabae28d9f45fc.html"},
+      {"name":"Как предотвратить появление login dialog?", "page":"4f70c39a53ed4a28.html"},
+      {"name":"Можно ли создать пользователя БД при помощи SQL-команды?", "page":"cdd72834fde3474d.html"},
+      {"name":"Установка InterBase и добавление пользователя", "page":"c6b1391d80f849f7.html"}
 ]

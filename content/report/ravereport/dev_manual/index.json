@@ -1,12 +1,12 @@
 [
-      {"name":"От переводчика", "page":"c4faf542e95746fc"},
-      {"name":"Начало работы − техническая информация", "page":"32c872b414d6485c"},
-      {"name":"Введение в Rave", "page":"42c268a3a5f54872"},
-      {"name":"Начало работы с Rave", "page":"f585953d63624c3c"},
-      {"name":"Компонент TRvSystem", "page":"c21ca3010c4b4d93"},
-      {"name":"Rave подключения данных", "page":"149361b461cd4cb7"},
-      {"name":"Настройка подключений данных", "page":"0c76d89e3d3e4b8e"},
-      {"name":"Компонент TRvNDRWriter", "page":"85a4f853a3294cf7"},
-      {"name":"Компоненты вывода", "page":"e6f78f17b3944c13"},
-      {"name":"Компонент TRvProject", "page":"995774547b0549e6"}
+      {"name":"От переводчика", "page":"c4faf542e95746fc.html"},
+      {"name":"Начало работы − техническая информация", "page":"32c872b414d6485c.html"},
+      {"name":"Введение в Rave", "page":"42c268a3a5f54872.html"},
+      {"name":"Начало работы с Rave", "page":"f585953d63624c3c.html"},
+      {"name":"Компонент TRvSystem", "page":"c21ca3010c4b4d93.html"},
+      {"name":"Rave подключения данных", "page":"149361b461cd4cb7.html"},
+      {"name":"Настройка подключений данных", "page":"0c76d89e3d3e4b8e.html"},
+      {"name":"Компонент TRvNDRWriter", "page":"85a4f853a3294cf7.html"},
+      {"name":"Компоненты вывода", "page":"e6f78f17b3944c13.html"},
+      {"name":"Компонент TRvProject", "page":"995774547b0549e6.html"}
 ]

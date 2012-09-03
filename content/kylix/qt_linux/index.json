@@ -1,11 +1,11 @@
 [
-    {"name":"Взаимодействие с системой: Linux API и Qt library", "page":"704a4601d2d741bb"},
-    {"name":"Перехватчики событий, сигналы и слоты", "page":"3f60bb60a7234d84"},
-    {"name":"Как перехватывать kernel-signals?", "page":"8dceb2aa4faf47f5"},
-    {"name":"Как получить имя текущего пользователя?", "page":"71a6126878784e29"},
-    {"name":"Обработка событий Qt в Kylix-приложении", "page":"e059989532324c91"},
-    {"name":"Libqt для Kylix с поддержкой сглаживания", "page":"1ef7d44d7d184e94"},
-    {"name":"Как использовать Tray под Linux", "page":"48a9db4c4a774ab1"},
-    {"name":"Qt: интерфейс, и не только", "page":"2f54942afb884625"},
-    {"name":"Межплатформенный Drag & Drop", "page":"222a9058cde4467e"}
+    {"name":"Взаимодействие с системой: Linux API и Qt library", "page":"704a4601d2d741bb.html"},
+    {"name":"Перехватчики событий, сигналы и слоты", "page":"3f60bb60a7234d84.html"},
+    {"name":"Как перехватывать kernel-signals?", "page":"8dceb2aa4faf47f5.html"},
+    {"name":"Как получить имя текущего пользователя?", "page":"71a6126878784e29.html"},
+    {"name":"Обработка событий Qt в Kylix-приложении", "page":"e059989532324c91.html"},
+    {"name":"Libqt для Kylix с поддержкой сглаживания", "page":"1ef7d44d7d184e94.html"},
+    {"name":"Как использовать Tray под Linux", "page":"48a9db4c4a774ab1.html"},
+    {"name":"Qt: интерфейс, и не только", "page":"2f54942afb884625.html"},
+    {"name":"Межплатформенный Drag & Drop", "page":"222a9058cde4467e.html"}
 ]

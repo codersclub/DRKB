@@ -1,7 +1,7 @@
 [
-      {"name":"Описание работы с AWE", "page":"ccc5d7bb83d34f60"},
-      {"name":"MapUserPhysicalPages", "page":"385a1ee9a5924a37"},
-      {"name":"AllocateUserPhysicalPages", "page":"3fc61999a9f147e3"},
-      {"name":"MapUserPhysicalPagesScatter", "page":"5cbf43339add4389"},
-      {"name":"FreeUserPhysicalPages", "page":"65a7128f894e41ba"}
+      {"name":"Описание работы с AWE", "page":"ccc5d7bb83d34f60.html"},
+      {"name":"MapUserPhysicalPages", "page":"385a1ee9a5924a37.html"},
+      {"name":"AllocateUserPhysicalPages", "page":"3fc61999a9f147e3.html"},
+      {"name":"MapUserPhysicalPagesScatter", "page":"5cbf43339add4389.html"},
+      {"name":"FreeUserPhysicalPages", "page":"65a7128f894e41ba.html"}
 ]
