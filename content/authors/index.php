@@ -7,8 +7,8 @@
 	<div class="columntext">
           Виталий Невзоров
           <br>
-          <a href="https://forum.sources.ru/index.php?showuser=4453" title="Виталий Невзоров @ sources.ru" target="_blank"><img src="img/Vit_src.jpg" alt="Виталий Невзоров" style="border: 1px solid rgb(221, 221, 221);"></a>
-          <a style="float:right;" href="https://forum.vingrad.ru/index.php?showuser=10" title="Виталий Невзоров @ vingrad.ru" target="_blank"><img src="img/vit.jpg" alt="Виталий Невзоров" style="border: 1px solid rgb(221, 221, 221);"></a>
+          <a href="https://forum.sources.ru/index.php?showuser=4453" title="Виталий Невзоров @ sources.ru" target="_blank"><img src="/img/Vit_src.jpg" alt="Виталий Невзоров" style="border: 1px solid rgb(221, 221, 221);"></a>
+          <a style="float:right;" href="https://forum.vingrad.ru/index.php?showuser=10" title="Виталий Невзоров @ vingrad.ru" target="_blank"><img src="/img/vit.jpg" alt="Виталий Невзоров" style="border: 1px solid rgb(221, 221, 221);"></a>
 	</div>
       </div>
 
