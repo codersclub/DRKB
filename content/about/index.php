@@ -22,7 +22,6 @@
   	<p>Прошу высказывать свои замечания, предложения, дополнения, исправления и&nbsp;пожелания на&nbsp;форумах <a href="https://forum.vingrad.ru/" title="Перейти на форумы Vingrad" target="_blank">Vingrad</a> и <a href="https://forum.sources.ru/" title="Перейти на форумы Исходников" target="_blank">Sources.ru</a> — это наиболее удобный способ связи для&nbsp;получения ответов на&nbsp;все Ваши вопросы. Вы можете задавать вопросы по&nbsp;содержимому <strong>DRKB</strong>, и наверняка найдутся профессионалы, которые смогут Вам квалифицированно помочь.</p>
   	<p>Приглашаю также посетить и&nbsp;другие мои сайты:</p>
   	<ul>
-  	<li><a href="https://www.delphist.com/" target="_blank">Delphist</a> — мой официальный англоязычный сайт. (Домашняя страница <b>Golden Pen</b> и&nbsp;старой версии <b>SynUniHighlighter</b>.)</li>
   	<li><a href="https://www.nevzorov.org/" target="_blank">Nevzorov</a> — моя домашняя страничка.</li>
   	<li><a href="https://wallpapers.nevzorov.org/" target="_blank">Nevzorov Wallpapers</a> — огромная коллекция обоев в&nbsp;высоком разрешении.</li>
   	<li><a href="https://verticalwallpapers.nevzorov.org/" target="_blank">Nevzorov VerticalWallpapers</a> — огромная коллекция обоев для&nbsp;вертикально ориентированных экранов.</li>
