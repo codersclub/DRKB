@@ -1,7 +1,7 @@
 <?php
 //	header('Content-type: text/html; charset=UTF-8');
 
-	include_once (_D_."/ninja.php");
+	include_once (_D_."/lib/ninja.php");
 
 	echo js_insert_ninja();
 	echo css_insert_ninja("224px");
