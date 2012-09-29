@@ -1,7 +1,7 @@
 [
   {"name":"Арифметика и алгебра", "page":"arithmetic/"},
   {"name":"Алгоритмы работы с текстом", "page":"text/"},
-  {"name":"Алгоритмы работы с графикой", "page":"graph/"},
+  {"name":"Алгоритмы работы с графикой", "page":"graphic/"},
   {"name":"Высшая математика", "page":"higher_math/"},
   {"name":"Деревья", "page":"tree/"},
   {"name":"Комбинаторика", "page":"Combinatorics/"},
