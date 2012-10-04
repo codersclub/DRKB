@@ -1491,5 +1491,3 @@ end;
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 <h1>ICQ2000 − сделай сам (статья)</h1>
 
-<?php
-article_list();

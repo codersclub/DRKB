@@ -77,5 +77,3 @@ ECHO ^&lt;/BODY^&gt;^&lt;/HTML^&gt;</p>
 
 <h1>Программирование CGI в Delphi и Kylix (статья)</h1>
 
-<?php
-article_list();

@@ -18,5 +18,3 @@ pf32bit </p>
 
 <h1>Bitmap.PixelFormat − подробности</h1>
 
-<?php
-article_list();

@@ -6,5 +6,3 @@
 
 <h1>Элементы управления Windows XP</h1>
 
-<?php
-article_list();

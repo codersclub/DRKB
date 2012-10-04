@@ -255,5 +255,3 @@ function GetWindowText; external user32 name 'GetWindowTextA';
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <h1>Основы работы с WinAPI</h1>
 
-<?php
-article_list();

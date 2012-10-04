@@ -12,5 +12,3 @@
 
 <h1>Особенности работы с БД на MS SQL Server 2000 из Delphi 5 (статья)</h1>
 
-<?php
-article_list();

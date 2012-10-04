@@ -19,5 +19,3 @@
 
 <h1>Rave Report −  руководство разработчика</h1>
 
-<?php
-article_list();

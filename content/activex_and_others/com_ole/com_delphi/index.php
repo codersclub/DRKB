@@ -17,5 +17,3 @@
 <a href="mailto:tolik@katren.nsk.ru">tolik@katren.nsk.ru</a></p>
 <h1>Delphi и COM (статья)</h1>
 
-<?php
-article_list();

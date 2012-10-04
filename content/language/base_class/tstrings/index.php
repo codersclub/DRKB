@@ -50,5 +50,3 @@
 <p>property OnChange: TNotifyEvent; property OnChanging: TNotifyEvent; &nbsp; &nbsp; &nbsp; &nbsp;Два свойства, предусмотренные для определения пользователем своей реакции на изменение данных. Событие OnChanging вызывается во многих рассмотренных выше методах до внесения первого изменения, OnChange &#8212; после последнего. &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <h1>TStrings и TStringList</h1>
 
-<?php
-article_list();

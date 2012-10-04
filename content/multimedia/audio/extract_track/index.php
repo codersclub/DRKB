@@ -127,5 +127,3 @@ end;
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
 <h1>Как экстрагировать аудиодорожку из AVI файла?</h1>
 
-<?php
-article_list();

@@ -8,5 +8,3 @@
 
 <h1>Диаграммы Excel</h1>
 
-<?php
-article_list();

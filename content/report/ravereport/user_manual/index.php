@@ -22,5 +22,3 @@
 
 <h1>Rave Report − руководство пользователя</h1>
 
-<?php
-article_list();

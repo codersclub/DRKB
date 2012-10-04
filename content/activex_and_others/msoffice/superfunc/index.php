@@ -11,5 +11,3 @@ www.kornjakov.ru,<br>
 
 <h1>Суперфункции Microsoft Word и Microsoft Excel (статья)</h1>
 
-<?php
-article_list();

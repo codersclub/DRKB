@@ -12,5 +12,3 @@
 <p>© <a href="mailto:mystic2000@newmail.ru" target="_blank">Mystic</a>, 2002</p>
 <h1>AWE</h1>
 
-<?php
-article_list();

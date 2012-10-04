@@ -64,5 +64,3 @@ Function recv(socket:integer;
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 <h1>CrtSock - модуль для работы с сокетами в Delphi32</h1>
 
-<?php
-article_list();

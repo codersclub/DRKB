@@ -16,5 +16,3 @@
 </p>
 <h1>Язык программирования Delphi</h1>
 
-<?php
-article_list();

@@ -6,5 +6,3 @@
 
 <h1>Интерфейсы dbExpress</h1>
 
-<?php
-article_list();

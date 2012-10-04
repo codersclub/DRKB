@@ -30,5 +30,3 @@ End;
 &nbsp;</p>
 <h1>Доступ к ячейкам Excel</h1>
 
-<?php
-article_list();

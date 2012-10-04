@@ -13,5 +13,3 @@
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <h1>Как отправить Email?</h1>
 
-<?php
-article_list();

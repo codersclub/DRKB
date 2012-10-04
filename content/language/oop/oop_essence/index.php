@@ -116,5 +116,3 @@ MyPersonFile := TPersonFile.Create('c:\person.dat');
 
 <h1>Сущность ООП</h1>
 
-<?php
-article_list();

@@ -32,5 +32,3 @@
 
 <h1>TStream</h1>
 
-<?php
-article_list();

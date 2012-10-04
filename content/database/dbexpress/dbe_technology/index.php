@@ -41,5 +41,3 @@
 
 <h1>Технология dbExpress (статья)</h1>
 
-<?php
-article_list();
