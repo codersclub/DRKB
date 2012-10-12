@@ -28,7 +28,7 @@ if (GetCursorInfo(CI)) and (CI.flags=CURSOR_SHOWING) then
 end;
 </pre>
 
-<p class="author">Автор P.O.D  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="author">Автор: P.O.D  &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr />
 <pre>

@@ -3,7 +3,7 @@
 
 
 <p>GetSystemMetrics</p>
-<p class="author">Автор AntonSaburov</p>
+<p class="author">Автор: AntonSaburov</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <p>TScreen.WIdth/Height </p>
 <p class="author">Автор: Song</p>

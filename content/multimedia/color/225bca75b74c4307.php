@@ -7,7 +7,7 @@
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>IntToHex(Color); </p>
-<p class="author">Автор ответа: neutrino</p>
+<p class="author">Автор: neutrino</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>В модуле graphics имеются две недокументированные функции:</p>

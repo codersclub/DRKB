@@ -15,10 +15,12 @@ begin
   Form1.Height := r.Bottom - r.Top;
 end;
 </pre>
-<p class="author">Автор советов: Даниил Карапетян</p>
-<p>e-mail: delphi4all@narod.ru</p>
-<p class="author">Автор справки: Алексей Денисов</p>
-<p>e-mail: aleksey@sch103.krasnoyarsk.su</p>
+
+
+<p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
+<p>Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+
+
 <hr />
 <p>Воспользуйтесь функцией SystemParametersInfo(), переслав ей в качестве параметров - SPI_GETWORKAREA и адрес структуры типа TRect, куда будут передан полученный результат: </p>
 <pre>

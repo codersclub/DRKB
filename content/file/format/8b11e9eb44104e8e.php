@@ -59,10 +59,15 @@ end;
 </pre>
 <p>из файловов GIF (анимированных) вытаскивает каждую картинку в отдельности, или записывает в отдельный BMP по очереди</p>
 <p>Для этих программок нужен всеми любимый RX Lib !!!</p>
-<p class="author">Автор ответа: МММ </p>
+
+<p class="author">Автор: МММ </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a> </p>
+
+<hr>
+
 <p>Как поставить (анимационный) GIF на форму?</p>
 <p>Использовать компонент rxGIFAnimator из библиотеки RxLib. </p>
+
 <p class="author">Автор: Vit</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

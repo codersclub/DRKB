@@ -30,5 +30,5 @@ str-&gt;SaveToFile("M:\\MyFile.jpg");
 </pre>
 
 <p>Ну и ессно, как говорит Bigbrother, сделал дело - вызови деструктор! То есть почистить за собой надо, не знаю как в Паскале, но в сях мне надо удалить str и buf.</p>
-<p class="author">Автор ответа: TwoK </p>
+<p class="author">Автор: TwoK </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

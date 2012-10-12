@@ -98,6 +98,6 @@ end;
 </pre>
 
 
-<p class="author">Автор 3d[Power]</p>
+<p class="author">Автор: 3d[Power]</p>
 <p><a href="https://www.mirgames.ru" target="_blank">https://www.mirgames.ru</a></p>
 

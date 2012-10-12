@@ -70,5 +70,5 @@ EXECUTE @OLEResult = sp_OADestroy @FileID
 EXECUTE @OLEResult = sp_OADestr 
 </pre>
 
-<p class="author">Автор AQL</p>
+<p class="author">Автор: AQL</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

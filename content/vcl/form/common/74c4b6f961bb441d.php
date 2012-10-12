@@ -293,7 +293,7 @@ end;
  
 end.
 </pre>
-<p class="author">Автор Mischka </p>
+<p class="author">Автор: Mischka </p>
 <hr /><p>Еще, как вариант, воспользоваться стандартной функцией GradientFill:</p>
 <pre>
 uses ..., Math;

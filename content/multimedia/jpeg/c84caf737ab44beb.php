@@ -290,6 +290,6 @@ end;
 
 <p>Не забудь USES Jpeg;</p>
 
-<p class="author">Автор RoboSol </p>
+<p class="author">Автор: RoboSol </p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

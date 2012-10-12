@@ -45,6 +45,6 @@
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Почти все о железе можно прочитать из регистра по HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Class\ </p>
-<p class="author">Автор ответа: Diamond cat</p>
+<p class="author">Автор: Diamond cat</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

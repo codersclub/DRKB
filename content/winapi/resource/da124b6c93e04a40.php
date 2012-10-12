@@ -22,7 +22,7 @@ end;
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <p>А вот целый проект, сделанный LENIN INC показывающий различные приёмы работы с ресурсами: </p>
 <p><a href="https://vingrad.ru/download/delphi/reswork.zip" target="_blank">reswork.zip</a></p>
-<p class="author">Автор ответа: LENIN INC</p>
+<p class="author">Автор: LENIN INC</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <p>Исходники программы для чтения и изменения ресурсов готовой программы</p>
 <p>Большое спасибо Song нашедшему эту программу <a href="https://forum.vingrad.ru/index.php?s=2e1a44e8fd0d842dc2781c6bd964f18a&act=Attach&type=post&id=21633" target="_blank">ResEdit.zip</a> </p>

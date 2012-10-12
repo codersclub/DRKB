@@ -12,7 +12,7 @@ if ((Word(GetKeyState(VK_RSHIFT)) and $8000) &lt;&gt; 0) then
   end;
 </pre>
 <p>работает под Win NT/2000, но не работает под Win95.</p>
-<p class="author">Автор ответа: CHERRY</p>
+<p class="author">Автор: CHERRY</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>В 95 катит следующее:</p>
@@ -29,7 +29,7 @@ asm
 end;
 if tt = 1 then ShowMessage ('Right Shift'); 
 </pre>
-<p class="author">Автор ответа: Baa</p>
+<p class="author">Автор: Baa</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -67,6 +67,6 @@ ELSE
 END;
 End;
 </pre>
-<p class="author">Автор ответа: CHERRY</p>
+<p class="author">Автор: CHERRY</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

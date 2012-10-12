@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Arx&nbsp; ( http://arxoft.tora.ru )</p>
+<p class="author">Автор: Arx ( http://arxoft.tora.ru )</p>
 
 <p>Проверяйте значение переменной key на равенство VK_RIGHT, VK_LEFT, VK_F1 и т.д. на событии KeyDown формы</p>
 <pre>

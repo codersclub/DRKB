@@ -150,5 +150,6 @@ begin
 end;
 </pre>
 <p>&nbsp;<br>
-Автор ответа - Scorpy <br>
+
+<p class="author">Автор: Scorpy</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

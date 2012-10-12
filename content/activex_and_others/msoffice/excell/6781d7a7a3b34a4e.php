@@ -18,5 +18,5 @@ begin
   end;
 </pre>
 
-<p class="author">Автор Кулюкин Олег</p>
+<p class="author">Автор: Кулюкин Олег</p>
 <p>Взято с сайта <a href="https://www.delphikingdom.ru/" target="_blank">https://www.delphikingdom.ru/</a></p>

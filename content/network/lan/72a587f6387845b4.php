@@ -175,6 +175,6 @@ end; {function}
 end.
 </pre>
 
-<p class="author">Автор Alex</p>
+<p class="author">Автор: Alex</p>
 
 <p>Взято с сайта <a href="https://www.delphikingdom.ru/" target="_blank">https://www.delphikingdom.ru/</a></p>

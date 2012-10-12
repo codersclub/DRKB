@@ -21,7 +21,7 @@ begin
 end;
 </pre>
 <p>Данный способ никогда не открывает файл, а заместо этого создаёт копию его в памяти. Конечно Вы можете и записать в поток (Stream) в Памяти(Memory), но изменения не будут записаны на диск до тех пор, пока Вы не запишете их в файл (командой SaveToFile).</p>
-<p class="author">Автор ответа: neutrino</p>
+<p class="author">Автор: neutrino</p>
 <p>Комментарий от Vit</p>
 <p>Решение хорошее, но накладно если файл большой... </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
@@ -40,7 +40,9 @@ end;
 
 <p class="author">Автор: Vit</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
+
 <hr />
+
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 type
@@ -62,5 +64,5 @@ end;
 end;
 </pre>
 
-<p class="author">Автор ответа: PILOTIK</p>
+<p class="author">Автор: PILOTIK</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

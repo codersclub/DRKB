@@ -681,5 +681,5 @@ IRangeSrc.Copy(IRangeDst);
 <p>Метод Copy интерфейса Range принимает в качестве параметра любой другой Range, совпадение размеров источника и получателя необязательно. </p>
 <p>При копировании области убедитесь, что не редактируете ячейку, иначе возникнет исключение "Call was rejected by callee".</p>
 <p>Использование метода Copy без указания параметра destination скопирует ячейки в буфер обмена. </p>
-<p class="author">Автор Akella</p>
+<p class="author">Автор: Akella</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -13,7 +13,7 @@ end;
 if IsBitSet(43691,1) then //установлен (равен 1)
 </pre>
 
-<p class="author">Автор ответа: Krid</p>
+<p class="author">Автор: Krid</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr />
 <pre>

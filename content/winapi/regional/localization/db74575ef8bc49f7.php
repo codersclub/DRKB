@@ -78,5 +78,5 @@ end;
 end.
  
 </pre>
-<p class="author">Автор NiJazz</p>
+<p class="author">Автор: NiJazz</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

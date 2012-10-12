@@ -124,5 +124,5 @@ end.
 
 
 <p>Взято с Исходников.Ru</p>
-<p class="author">Автор pve </p>
+<p class="author">Автор: pve </p>
 

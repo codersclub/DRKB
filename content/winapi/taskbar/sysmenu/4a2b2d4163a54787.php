@@ -7,7 +7,7 @@
 AppendMenu(GetSystemMenu(Self.Handle,FALSE),MF_ENABLED,1001,'&amp;Help'); 
 </pre>
 
-<p class="author">Автор ответа: Sheff</p>
+<p class="author">Автор: Sheff</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Отловить клик по меню можно следующим образом:</p>

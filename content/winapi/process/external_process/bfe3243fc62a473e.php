@@ -92,5 +92,5 @@ begin
 end;
 </pre>
 
-<p class="author">Автор ответа: Mikel</p>
+<p class="author">Автор: Mikel</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

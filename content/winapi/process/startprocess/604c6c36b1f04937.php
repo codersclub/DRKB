@@ -32,7 +32,7 @@ CloseHandle(pi.hThread);
 end;
 </pre>
 
-<p class="author">Автор ответа: TAPAKAH</p>
+<p class="author">Автор: TAPAKAH</p>
 <p class="note">Примечание Vit:</p>
 <p>Если заменить</p>
 <p>WaitForSingleObject(pi.hProcess,INFINITE);</p>

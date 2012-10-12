@@ -322,5 +322,5 @@ WebRequestHandler.AddWebModuleFactory(TWebPageModuleFactory.Create(TPageProducer
 </td>
 </tr>
 </table>
-<p class="author">Автор статьи: Mike Goblin </p>
+<p class="author">Автор: Mike Goblin </p>
 <p><a href="https://www.delphimaster.ru" target="_blank">https://www.delphimaster.ru</a></p>

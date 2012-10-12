@@ -40,6 +40,7 @@ end;
 for i:=1 to 500 do begin
   paintbox1.Canvas.Pixels [round(sin(i*5)*10+50),round(sin(i*10)*10+50)] := RGB(0,0,0);
 </pre>
-<p class="author">Автор ответа: Baa</p>
+
+<p class="author">Автор: Baa</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

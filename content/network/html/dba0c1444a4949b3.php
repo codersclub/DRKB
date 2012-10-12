@@ -44,6 +44,6 @@ begin
  
 end;
 </pre>
-<p class="author">Автор RAdmin</p>
+<p class="author">Автор: RAdmin</p>
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

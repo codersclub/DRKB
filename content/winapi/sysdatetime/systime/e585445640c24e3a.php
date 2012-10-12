@@ -4,7 +4,7 @@
 
 <p>Функция SetSystemTime. </p>
 <p>Обрати внимание на привилегии. </p>
-<p class="author">Автор ответа: podval</p>
+<p class="author">Автор: podval</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

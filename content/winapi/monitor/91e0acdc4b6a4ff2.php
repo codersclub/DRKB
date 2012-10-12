@@ -3,7 +3,7 @@
 
 
 <p>ChangeDisplaySettings</p>
-<p class="author">Автор cpu </p>
+<p class="author">Автор: cpu </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

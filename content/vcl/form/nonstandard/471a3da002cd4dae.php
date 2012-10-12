@@ -17,7 +17,7 @@ width:=width+1;
 width:=width-1;
 </pre>
 
-<p class="author">Автор ответа: rhf </p>
+<p class="author">Автор: rhf </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

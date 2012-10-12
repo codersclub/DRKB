@@ -15,5 +15,5 @@ var
   name_frame := 'mainFrame';
   oRange1 := Window.frames.item(name_frame).document.body.createTextRange;
 </pre>
-<p class="author">Автор ответа: Good Man</p>
+<p class="author">Автор: Good Man</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

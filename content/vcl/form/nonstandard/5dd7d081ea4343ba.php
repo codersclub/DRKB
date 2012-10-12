@@ -5,6 +5,6 @@
 <pre>
 PostMessage(Application.Handle, WM_SYSCOMMAND, SC_MAXIMIZE, 1); 
 </pre>
-<p class="author">Автор ответа: Baa</p>
+<p class="author">Автор: Baa</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

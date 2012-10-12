@@ -13,9 +13,11 @@ begin
 end;
 </pre>
 
-<p class="author">Автор ответа: Mazenrat</p>
+<p class="author">Автор: Mazenrat</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
+
 <hr />
+
 <p>Пример отслеживания завершения приложения написанного на чистом API:</p>
 <pre>
 program kvd;

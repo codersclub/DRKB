@@ -24,5 +24,5 @@ begin
  RxTrayIcon1.Hide;
 end;
 </pre>
-<p class="author">Авторы ответа: Song, Den</p>
+<p class="author">Автор: Song, Den</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

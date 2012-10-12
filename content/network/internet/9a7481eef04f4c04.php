@@ -23,7 +23,7 @@
 <p>параметр Flag игнорируется, соответственно используем ноль. </p>
 <p>Эта DLL обычно проинсталлирована на большинстве компьютеров. Она также существует в Win98 либо поставляется с Internet Explorer 4 или выше, Office 97 и т.д.. </p>
 <p>Более подробно можно прочитать в MSDN. Оригинал: http://msdn.microsoft.com/library/psdk/shellcc/shell/Functions/InetIsOffline.htm</p>
-<p class="author">Автор ответа: Vitaly Zayko</p>
+<p class="author">Автор: Vitaly Zayko</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>
 </p>

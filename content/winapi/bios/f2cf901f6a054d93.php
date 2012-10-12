@@ -81,7 +81,7 @@ end;
 </pre>
 <p>нашел на <a href="https://www.sources.ru/delphi/system/get_bios_information_w9x.shtml" target="_blank">https://www.sources.ru/delphi/system/get_bios_information_w9x.shtml</a></p>
 <p>и <a href="https://www.sources.ru/delphi/system/get_bios_information_nt_2000_xp.shtml" target="_blank">https://www.sources.ru/delphi/system/get_bios_information_nt_2000_xp.shtml</a></p>
-<p class="author">Автор ответа: МММ </p>
+<p class="author">Автор: МММ </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

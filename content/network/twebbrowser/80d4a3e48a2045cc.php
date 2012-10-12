@@ -105,6 +105,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор Alex</p>
+<p class="author">Автор: Alex</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

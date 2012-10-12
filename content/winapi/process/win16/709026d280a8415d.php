@@ -49,13 +49,15 @@ const
  end;
 </pre>
 
-<p class="author">Автор - Quality freeware from Sight&amp;Sound, Slovenia : http://www.sight-sound.si</p>
+<p>Автор: Quality freeware from Sight&amp;Sound, Slovenia, http://www.sight-sound.si</p>
 
-<p>Андрей Гусев (Andrey Gusev)</p>
+<p class="author">Автор: Андрей Гусев (Andrey Gusev)</p>
 
 <p>Взято из Akzhan's Delphi-related VCL&amp;WinAPI Tips'n'Tricks</p>
 
-<hr />Посылаю код для определения системных ресурсов (как в "Индикаторе ресурсов"). Использовалась статья "Calling 16-bit code from 32-bit in Windows 95".</p>
+<hr />
+
+Посылаю код для определения системных ресурсов (как в "Индикаторе ресурсов"). Использовалась статья "Calling 16-bit code from 32-bit in Windows 95".</p>
 
 <pre>
 { GetFeeSystemResources routine for 32-bit Delphi.

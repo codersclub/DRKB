@@ -91,5 +91,5 @@ end;
 </pre>
 
 
-<p class="author">Автор Евгений Старостин</p>
+<p class="author">Автор: Евгений Старостин</p>
 <p>Взято с сайта <a href="https://www.delphikingdom.ru/" target="_blank">https://www.delphikingdom.ru/</a></p>

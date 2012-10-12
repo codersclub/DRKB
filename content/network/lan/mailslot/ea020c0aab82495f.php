@@ -19,7 +19,7 @@ begin
  //то память чистится т.е. все, что мы туда поназаписали удаляется
 end;
 </pre>
-<p class="author">Автор ответа: Baa </p>
+<p class="author">Автор: Baa </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <p>WinAPI-&gt;Windows-&gt;Процессы...-&gt;Пример работы с MailSlot</p>
 <p>Тут Baa немного ошибся. Он написал открытие мэйлслота в C++ стиле:</p>

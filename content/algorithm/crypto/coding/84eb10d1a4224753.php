@@ -176,7 +176,7 @@ a:=Decode( b );
 showmessage( a ); 
  
 </pre>
-<p class="author">Автор P.O.D.</p>
+<p class="author">Автор: P.O.D.</p>
 <hr />
 <pre>
 const

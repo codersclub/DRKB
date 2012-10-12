@@ -99,5 +99,5 @@ end;
 </pre>
 <p>&nbsp;<br>
 &nbsp;<br>
-<p class="author">Авторы: Rouse_, Krid </p>
+<p class="author">Автор: Rouse_, Krid </p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

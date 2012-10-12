@@ -118,7 +118,7 @@ Adapter.adapt.adapter_address[5] );
 }
 </pre>
 
-<p class="author">Автор ответа: Garik</p>
+<p class="author">Автор: Garik</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p class="author">Автор: Daniel Wischnewski</p>

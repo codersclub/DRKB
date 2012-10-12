@@ -9,5 +9,5 @@
 <p>Internet Explorer</p>
 <p>MenuExt</p>
 <p>два параметра, посмотришь на другие-поймешь что они означают. </p>
-<p class="author">Автор ответа: Mikel </p>
+<p class="author">Автор: Mikel </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

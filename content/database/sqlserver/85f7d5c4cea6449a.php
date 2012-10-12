@@ -7,7 +7,7 @@ use master
 exec xp_cmdshell "DTSRun /S servername /U username /P password /N packagename"
 </pre>
 
-<p class="author">Автор Akim </p>
+<p class="author">Автор: Akim </p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <p>1.</p>
 <pre>

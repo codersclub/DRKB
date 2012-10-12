@@ -1,8 +1,8 @@
 <h1>Основы Extreme Programming: документация</h1>
-<div class="date">01.01.2007</div>
+<div class="date">21.11.2001</div>
 
-<p class="author">Рон Джеффриз</p>
-<p>11/21/2001</p>
+<p class="author">Автор: Рон Джеффриз</p>
+
 <p>Original text at www.xprogramming.com </p>
 <p>"Outside of a dog, a book is man's best friend. Inside of a dog, it's too dark to read." --Groucho Marx <br>
 ("Вычтем собаку, и лучшим другом человека окажется книга. Впрочем, в собаке много не вычитаешь - слишком темно". Гручо Маркс) <br>

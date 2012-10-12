@@ -53,7 +53,7 @@ begin
 end; 
 </pre>
 
-<p class="author">Автор ответа: neutrino </p>
+<p class="author">Автор: neutrino </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>А вот какой способ предложен для нахождения собственного IP рассылкой мастеров дельфи <a href="https://Subscribe.Ru/catalog/comp.soft.prog.mdelphi" target="_blank">https://Subscribe.Ru/catalog/comp.soft.prog.mdelphi</a>():</p>

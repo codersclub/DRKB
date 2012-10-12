@@ -5,7 +5,7 @@
 <p>Посмотри функцию DeviceIoControl - может там что получиться. Я ее мало использовал, но что-то там было.</p>
 <p>Там есть ссылка на CreateFile - эта функция под NT может действительно вернуть хэндл на физический диск.</p>
 <p>You can use the CreateFile function to open a disk drive or a partition on a disk drive. The function returns a handle to the disk device; that handle can be used with the DeviceIOControl function.</p>
-<p class="author">Автор AntonSaburov </p>
+<p class="author">Автор: AntonSaburov </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>{ **** UBPFD *********** by delphibase.endimus.com ****</p>

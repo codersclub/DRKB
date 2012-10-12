@@ -54,9 +54,11 @@ Pop ESI
 end;
 </pre>
 
-<p class="author">Автор ответа:Vit</p>
+<p class="author">Автор:Vit</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
+
 <hr />
+
 <p>Комментарий от Chingachguk'a:</p>
 <p>Мне кажется, у этого алгоритма есть два недостатка:</p>
 <p>1) Код, сильно зависимый от компилятора. Далеко не всегда</p>

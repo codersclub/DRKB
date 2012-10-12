@@ -4,7 +4,7 @@
 
 <p>Идентификатор интерфейса тип IDispatch, используемый для связи с объектом. Для создания объектов COM, не использующих интерфейс IDispatch, надо использовать функцию CreateComObject.</p>
 <p>Руксскими словами: varDispatch &nbsp; &nbsp; &nbsp; &nbsp;$0009 &nbsp; &nbsp; &nbsp; &nbsp;ссылка на автоматический объект (указатель на интерфейс IDispatch)</p>
-<p class="author">Автор ответа: Snick_Y2K&nbsp; </p>
+<p class="author">Автор: Snick_Y2K&nbsp; </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>"Тип IDispatch" - не звучит. Ты бы сказал, в каком контексте.</p>

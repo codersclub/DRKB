@@ -11,7 +11,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор ответа: s-mike </p>
+<p class="author">Автор: s-mike </p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr />
 <pre>

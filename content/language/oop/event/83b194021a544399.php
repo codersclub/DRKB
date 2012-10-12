@@ -57,7 +57,7 @@ var
  
   Button1.OnClick := TDummy.Click;
 </pre>
-<p class="author">Автор ответа: Le Taon</p>
+<p class="author">Автор: Le Taon</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>По идее, при вызове OnClick первым параметром будет запихнут указатель на экземпляр того класса который в этом OnClick хранится . Я в низкоуровневой реализации не силен, но кажись, так как параметры в процедурах в Delphi передаются через регистры, то ничего страшного не произойдет. </p>
