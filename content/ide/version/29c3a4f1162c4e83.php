@@ -18,7 +18,7 @@
 <hr />
 
 <p>См. также другие статьи:</p>
-<p><a href="86925aa159254abc.html">Delphi 7 and FastNet Components</a></p>
-<p><a href="c9ab58cb9a4546be.html">Проблема использования компонентов в D6/7 от предыдущих версий</a></p>
-<p><a href="8553002314724f8d.html">Прозрачность в Delphi 6</a></p>
-<p><a href="47eb683352974a75.html">Где TServerSocket и TClientSocket в Delphi 7? </a></p>
+<p><a href="/vcl/common/86925aa159254abc">Delphi 7 and FastNet Components</a></p>
+<p><a href="/ide/problem/c9ab58cb9a4546be">Проблема использования компонентов в D6/7 от предыдущих версий</a></p>
+<p><a href="/vcl/form/transparent">Прозрачность в Delphi 6</a></p>
+<p><a href="/network/socket/47eb683352974a75">Где TServerSocket и TClientSocket в Delphi 7? </a></p>
