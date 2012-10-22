@@ -16,14 +16,15 @@ end;
 
 
 <p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p>Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
 
 
 <hr>
 
-<p class="p_Heading1">&nbsp;</p>
-<p class="p_Heading1">Как корректно перехватить сигнал выгрузки операционной системы, если в моей программе нет окна </p>
-<p> Автор: Nomadic&nbsp; </p>
+<p class="author">Автор: Nomadic</p>
+
+<b>Как корректно перехватить сигнал выгрузки операционной системы, если в моей программе нет окна </b>
+
 <p>Используй GetMessage(), в качестве HWND окна пиши NULL (на Паскале - 0). Если в очереди сообщений следующее - WM_QUIT, то эта функция фозвращает FALSE. Если ты пишешь программу для Win32, то запихни это в отдельный поток, организующий выход из программы. </p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

@@ -1,6 +1,7 @@
 <h1>Основы работы с WinAPI</h1>
 <div class="date">01.01.2007</div>
 
+<p class="author">Григорьев Антон</p>
 
 <p>Основы работы с Windows API. </p>
 <p>Введение.</p>
@@ -254,4 +255,3 @@ function GetWindowText; external user32 name 'GetWindowTextA';
 <p>© Григорьев Антон , 1999 Специально для Королевства Delphi</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <h1>Основы работы с WinAPI</h1>
-

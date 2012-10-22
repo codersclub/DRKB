@@ -89,7 +89,9 @@ end;
 
 <p class="author">Автор: Song</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
+
 <hr />
+
 <pre>
 function MyExitWindows(RebootParam: Longword): Boolean; 
 var 

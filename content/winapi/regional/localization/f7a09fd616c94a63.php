@@ -155,13 +155,15 @@ end;
 
 
 <p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p>Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
 
 
 <hr />
 
-<p class="author">Автор: Stas Malinovski&nbsp; </p>
+<p class="author">Автор: Stas Malinovski</p>
+
 <p>Методом таблицы модельных распределений: </p>
+
 <pre>
 type
   TCodePage = (cpWin1251, cp866, cpKOI8R);
@@ -740,11 +742,12 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
+
 <p>Определение кодовой страницы </p>
 
+<p class="author">Автор: Alexander Trunov</p>
 <p>&nbsp;<br>
 <p>&nbsp;</p>
-Автор: Alexander Trunov</p>
 <pre>
 {
   Work with codepages
@@ -990,5 +993,6 @@ end;
  
 end.
 </pre>
+
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

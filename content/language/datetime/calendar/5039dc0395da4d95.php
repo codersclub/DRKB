@@ -3,6 +3,7 @@
 
 
 <p class="author">Автор: Mark Lussier&nbsp; </p>
+
 <pre>
 function TtheCalendar.CalcEaster: string;
 var

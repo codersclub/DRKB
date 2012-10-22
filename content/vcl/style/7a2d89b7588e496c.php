@@ -56,7 +56,8 @@ Delphi.Diagnostinc.Ru </p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fmt := fmt or LVCFMT_IMAGE or LVCFMT_COL_HAS_IMAGES </p>
 <p> &nbsp;&nbsp;&nbsp; else </p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mask := mask and not (LVCF_IMAGE);</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">4.</td><td>Сохраняем Comctrls.pas. Теперь TListView не вызывает ошибку в режиме vsReport под Windows XP. </td></tr></table></div>Автор поправки Matteo Riso. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">4.</td><td>Сохраняем Comctrls.pas. Теперь TListView не вызывает ошибку в режиме vsReport под Windows XP. </td></tr></table>
+</div>Автор поправки Matteo Riso. </p>
 
 <p>Исправление проблемы с TPageControl</p>
 <p>Решение проблемы с установкой цвета фона clBtnFace для TTabSheet.<br>

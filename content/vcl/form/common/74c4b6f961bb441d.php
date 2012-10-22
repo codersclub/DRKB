@@ -164,6 +164,7 @@ end.
 <p class="author">Автор: Kostas</p>
 
 <hr />
+
 <pre>
 unit Graph32;
 
@@ -294,7 +295,10 @@ end;
 end.
 </pre>
 <p class="author">Автор: Mischka </p>
-<hr /><p>Еще, как вариант, воспользоваться стандартной функцией GradientFill:</p>
+
+<hr />
+
+<p>Еще, как вариант, воспользоваться стандартной функцией GradientFill:</p>
 <pre>
 uses ..., Math;
 
@@ -358,6 +362,6 @@ begin
 end;
 </pre>
 
-<p> Автор Rouse_</p>
+<p class="author">Автор: Rouse_</p>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

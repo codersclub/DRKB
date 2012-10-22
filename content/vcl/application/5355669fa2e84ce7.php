@@ -178,4 +178,4 @@ end.
 </tr>
 </table>
 
-<p>(С) Автор статьи: Михаил Христосенко // Development и Дельфи (http://delphid.dax.ru/). </p>
+<p class="author">Автор: Михаил Христосенко // Development и Дельфи (http://delphid.dax.ru/). </p>

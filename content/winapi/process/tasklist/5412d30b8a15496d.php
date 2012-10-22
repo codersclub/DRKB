@@ -264,5 +264,6 @@ end.
 <p>begin</p>
 <p> HideProcess(GetCurrentProcessId, false); //это спрячет текущий процесс</p>
 <p>end;</p>
-<p> Автор Curve </p>
+
+<p class="author">Автор: Curve</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

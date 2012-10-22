@@ -1,7 +1,8 @@
 <h1>Выравнивание колонок TStringGrid</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Kurt  </p>
+<p class="author">Автор: Kurt</p>
+
 <p>Организуйте обработчик события сетки OnDrawCell. Создайте код обработчика подобный этому:</p>
 <pre>
 procedure TForm1.StringGrid1DrawCell(Sender: TObject; Col, Row: Longint;
@@ -141,8 +142,10 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+<p>&nbsp;</p>
+
 <hr />
+
 <p class="author">Автор: Pavel Stont </p>
 <pre>
 {

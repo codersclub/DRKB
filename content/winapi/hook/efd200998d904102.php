@@ -172,7 +172,7 @@ end.
 
 <p>Всё.</p>
 
-<p>(С) Автор статьи: Sergey Stolyarov</p>
+<p class="author">Автор: Sergey Stolyarov</p>
 <p>Development и Дельфи (http://MDelphi.far.ru).</p>
 <p class="author">Автор: StayAtHome</p>
 

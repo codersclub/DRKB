@@ -1,6 +1,7 @@
 <h1>Смешивание цветов рисунка с другим цветом</h1>
-<div class="date">01.01.2007</div>
+<div class="date">05.06.2002</div>
 
+<p class="author">Автор: Федоровских Николай</p>
 
 <pre>
  **** UBPFD *********** by delphibase.endimus.com ****

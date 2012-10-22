@@ -1,6 +1,7 @@
 <h1>Программирование Sound Blaster</h1>
-<div class="date">01.01.2007</div>
+<div class="date">01.08.1995</div>
 
+<p class="author">Анисимов С.Ю.</p>
 
 <p>Статья взята с " target=_blankhttp://www.programmist.info[/i]</p>
 <p>Программирование Sound Blaster</p>
@@ -676,4 +677,5 @@
 <p>использовании этого документа.</p>
 <p>С наилучшими пожеланиями, для всех любителей программировать Sound Blaster !</p>
 <p>Vale ! </p>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

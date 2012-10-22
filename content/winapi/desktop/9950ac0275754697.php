@@ -18,10 +18,11 @@ end;
 
 
 <p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p>Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
 
 
 <hr />
+
 <p>Воспользуйтесь функцией SystemParametersInfo(), переслав ей в качестве параметров - SPI_GETWORKAREA и адрес структуры типа TRect, куда будут передан полученный результат: </p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
@@ -37,8 +38,11 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+<p>&nbsp;</p>
+
 <hr />
+<p class="author">Автор: Dimka Maslov</p>
+
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Получение координат области Рабочего стола, не скрытой Панелью задач

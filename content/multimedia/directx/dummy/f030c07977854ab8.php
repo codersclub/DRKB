@@ -285,4 +285,5 @@ begin
 
 <p>Напоследок хочу выразить особую благодарность Антону Ржешевскому за его дельные советы в освоении DirectX и не только. </p>
 
-<p class="author">Автор: Виктор Кода</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<p class="author">Автор: Виктор Кода</p>
+<p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

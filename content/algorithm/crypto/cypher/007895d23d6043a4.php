@@ -89,5 +89,5 @@ until i&lt;Lenght(Source);
 <p>И это - фатальный недостаток.</p>
 <hr /><p>Информацию по шифрованию можно найти на </p>
 <p><a href="https://www.cryptography.ru/" target="_blank">https://www.cryptography.ru/</a></p>
-Автор ответа: Shaman</p>
+<p class="author">Автор: Shaman</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

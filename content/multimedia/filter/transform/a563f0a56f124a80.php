@@ -1,6 +1,7 @@
 <h1>Наклон изображения</h1>
-<div class="date">01.01.2007</div>
+<div class="date">02.06.2002</div>
 
+<p class="author">Автор: Федоровских Николай</p>
 
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

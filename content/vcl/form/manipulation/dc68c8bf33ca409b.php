@@ -28,5 +28,5 @@ begin
 end;
 </pre>
 
-<p> Автор feriman</p>
+<p class="author">Автор: feriman</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

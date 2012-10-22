@@ -14,7 +14,7 @@ end;
 
 
 <p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p>Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
 
 
 <hr />
@@ -111,5 +111,6 @@ end;
  
 end.
 </pre>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

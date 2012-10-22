@@ -1,8 +1,9 @@
 <h1>Програмная эмуляция нажатия клавиш</h1>
 <div class="date">01.01.2007</div>
+<p class="author">Автор: Robert Wittig</p>
 
-Использование клавиш для управления компонентами </p>
- Автор: Robert Wittig  </p>
+<p>Использование клавиш для управления компонентами </p>
+
 <p>Так, если у меня есть своего рода кнопка (check, radio, speed и т.п.), то почему я не могу с помощью клавиш курсора управлять ею? </p>
 <p>После некоторых экспериметов я создал метод, который привожу ниже, способный перехватывать в форме все нажатые клавиши позиционирования и управлять ими выбранным в настоящий момент элементом управления. Имейте в виду, что элементы управления (кроме компонентов Label) должны иметь возможность "выбираться". Для возможности выбрать GroupBox или другой компонент, удедитесь, что их свойство TabStop установлено в True. Вы можете переместить управление на GroupBox, но, так как он не выделяется целиком, узнать, что он действительно имеет управление, достаточно непросто. Если вам не нужно передавать управление в контейнерные элементы (нижеследующий код исходит из этого предположения), то вы можете управлять элементами, просто перемещая управление в сам GroupBox. </p>
 <p>В нижеследующем коде FormActivate является обработчиком события формы OnActivate, тогда как ProcessFormMessages никакого отношения к событиям формы не имеет. Не забудьте поместить объявление процедуры ProcessFormMessages в секцию 'Private' класса вашей формы. </p>
@@ -145,8 +146,11 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
+
 <p class="author">Автор: Den is Com&nbsp; </p>
+
 <p>К сожалению работает хорошо, только когда фокус у вызывающего окна, в противном случае может глючить</p>
 <pre>
 procedure TForm1.SetKey(Key:Integer);
@@ -164,9 +168,11 @@ SetKey(VK_CAPITAL);
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
+
 <p>Послать нажатие клавиш </p>
-Автор: Xavier Pacheco </p>
+<p class="author">Автор: Xavier Pacheco </p>
 <pre>
 unit Main;
  
@@ -635,7 +641,9 @@ end.
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
+
 <p>Почти полный аналог метода SendKeys из VB </p>
 <p class="author">Автор: Ken Henderson </p>
 <pre>
@@ -1430,7 +1438,11 @@ SendMessage(Memo1.Handle, WM_CHAR, Ord('A'), 0);
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
+
+<p class="author">Dimka Maslov</p>
+
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Эмуляция нажатия клавиши в активном окне
@@ -1451,6 +1463,9 @@ end;
 </pre>
 
 <hr />
+
+<p class="author">Dimka Maslov</p>
+
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Эмуляция нажатия клавиши в любом окне, в т.ч. неактивном
@@ -1484,6 +1499,7 @@ EmulateKey(Edit1.Handle, VK_RETURN);
 </pre>
 
 <hr />
+
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Эмуляция нажатия клавиши
@@ -1944,8 +1960,12 @@ end.
  
 SendKeys('A', False); 
 </pre>
-&nbsp;</p>
-<hr /><p>Как отправить нажатие клавиши с кодом 255 в элемент управления Windows </p>
+<p>&nbsp;</p>
+
+<hr />
+
+<p>Как отправить нажатие клавиши с кодом 255 в элемент управления Windows </p>
+
 <p>Функция keybd_event() принимает значения до 244 - как мне отправить нажатие клавиши с кодом #255 в элемент управления Windows? Это может понадобится для иностранных языков или для специальных символов. (например, в русских шрифтах символ с кодом #255 - я прописное). Приведенный в примере метод, не стоит использовать в случае если символ может быть передан обычным способом (функцией keybd_event()). </p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
@@ -1978,6 +1998,7 @@ begin
         Application.ProcessMessages;
 end;
 </pre>
+
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 
