@@ -14,7 +14,7 @@ end;
 </pre>
 
 
-<p class="author">Автор: Per Larsen </p>
+<div class="author">Автор: Per Larsen </div>
 
 <p class="note">Примечание от Vit</p>
 
@@ -32,5 +32,5 @@ end;
 </pre>
 
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

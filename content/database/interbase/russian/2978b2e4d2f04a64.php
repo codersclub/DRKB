@@ -13,5 +13,5 @@
 <p>Запустите RegEdit. В Registry реально к IB имеют отношение две строки: автоматический запуск Local IB и путь к файлу лицензии IB. </p>
 <p>Найдите эти две строки и измените путь в этих строках на новый. </p>
 
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>
 

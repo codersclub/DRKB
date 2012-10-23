@@ -98,7 +98,7 @@ begin
   result := round(num * 100 + 0.5) / 100;
 end;
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <hr />
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
@@ -199,7 +199,7 @@ end;
 </pre>
 <hr />
 <p>Округление дробного числа до N знаков после запятой </p>
-<p class="author">Автор: Perceptron </p>
+<div class="author">Автор: Perceptron </div>
 <pre>
 function RoundEx(chislo: double; Precision: Integer): string;
 var

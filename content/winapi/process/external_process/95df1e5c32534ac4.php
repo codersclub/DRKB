@@ -7,8 +7,8 @@ PostThreadMessage(AnotherProg_MainThreadID,WM_CLOSE,0,0);
 PostMessage(AnotherProg_MainWindow,WM_CLOSE,0,0);
 </pre>
 
-<p class="author">Автор: Fantasist</p>
+<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p><a href="https://delphi.mastak.ru/download/255.zip " target="_blank">https://delphi.mastak.ru/download/255.zip </a></p>
-<p class="author">Автор: LENIN INC</p>
+<div class="author">Автор: LENIN INC</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -7,6 +7,6 @@ SetWindowText(FindWindow(nil,'Текущий заголовок'), 'Желаем
 </pre>
 
 
-<p class="author">Автор: trainer</p>
+<div class="author">Автор: trainer</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

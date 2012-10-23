@@ -4,7 +4,7 @@
 
 <p>В принципе, все настройки на фоновый рисунок хранятся в реестре. Поэтому надо сначала скопировать картинку в какое-нибудь место (лучше в каталог Виндов) на случай удаления или переноса исходного файла. Информация по обоям хранится в разделе HKEY_CURRENT_USER\Control Panel\Desktop в параметрах TileWallpaper (если 1 - рисунок размножен, 0 - в центре), Wallpaper - путь к файлу обоев (gif, bmp, jpg), WallpaperStyle - если 2, то обои будут растянуты (отсутствует в 95 винде).</p>
 <p>ПОсле установки всех занчений обновляешь рабочий стои и наслаждаешься эффектом. </p>
-<p class="author">Автор: Garik </p>
+<div class="author">Автор: Garik </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Смена обоев только на время текущего сеанса, после перезагрузки обои восстановятся:</p>
 <pre>
@@ -17,7 +17,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: p0s0l</p>
+<div class="author">Автор: p0s0l</div>
 <hr />
 <pre>
 program wallpapr;
@@ -72,7 +72,7 @@ end
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 <hr />
-<p class="author">Автор: Владимир Рыбант </p>
+<div class="author">Автор: Владимир Рыбант </div>
 <p>Другие подобные советы не изменяют обои, если в Windows работает режим Active Desktop </p>
 <p>Нужно использовать следующее:</p>
 <pre>

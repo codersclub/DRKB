@@ -6,5 +6,5 @@
 Exec master..xp_cmdshell 'dir'
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

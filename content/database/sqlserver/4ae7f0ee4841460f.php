@@ -5,4 +5,4 @@
 <pre>
 Select Cast((@dividend-(@dividend % @divisor))/@divisor as bigint)
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

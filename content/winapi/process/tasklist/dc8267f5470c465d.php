@@ -72,5 +72,5 @@ end;
  
 end.
 </pre>
-<p class="author">Автор: Admin</p>
+<div class="author">Автор: Admin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -35,4 +35,4 @@ DROP GROUP группа[, группа, …]
 
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: BAS</p>
+<div class="author">Автор: BAS</div>

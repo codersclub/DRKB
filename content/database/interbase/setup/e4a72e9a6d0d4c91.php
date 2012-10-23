@@ -3,4 +3,4 @@
 
 
 <p>Файл WAL должен быть расположен на другом винчестере чем основная БД. (это-же относится и к теневой БД). В этом случае ухудшения производительности не будет. Кроме этого вы должны учитывать, что запись в WAL происходит синхронно с БД, поэтому сравнивать "производительность" WAL с асинхронными изменениями в БД некорректно. </p>
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>

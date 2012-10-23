@@ -33,4 +33,4 @@
 <p>Memo1.Text:=Clipboard.AsText; </p>
 <p>Для работы с буфером обмена существует ряд методов. Для очистки буфера используется метод Clear, для того, чтобы поместить в буфер изображение (*.BMP или *.WMF) нужно воспользоваться методом Assign (Source: TPersistent). </p>
 
-<p class="author">Автор: Михаил Христосенко // Development и Дельфи (http://delphid.dax.ru/). </p>
+<div class="author">Автор: Михаил Христосенко // Development и Дельфи (http://delphid.dax.ru/). </div>

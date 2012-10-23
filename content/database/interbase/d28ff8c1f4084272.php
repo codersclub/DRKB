@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Nomadic&nbsp; </p>
+<div class="author">Автор: Nomadic</div>
 
 <p>Располагайте DLL в каталоге Interbase/Bin, или в одном из каталогов, в которых ОС обязательно будет произведен поиск этой библиотеки (для Windows это %SystemRoot% и %Path%); </p>
 

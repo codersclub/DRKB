@@ -315,4 +315,4 @@ end;
  
 end.
 </pre>
-<p class="author">Автор: MBo</p>
+<div class="author">Автор: MBo</div>

@@ -307,7 +307,7 @@ end
 end 
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>В следующем примере E-mail отправляется автоматически сразу после нажатия кнопки.</p>

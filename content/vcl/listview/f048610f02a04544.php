@@ -24,7 +24,7 @@ else
   LV1.CustomSort(@CustomDateSortProc, 0)
 end; 
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Сортировка по первой колонке</p>
 <p>Сортировка по первой колонке TListView делается так:</p>

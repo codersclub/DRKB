@@ -1,7 +1,7 @@
 <h1>Основы работы с WinAPI</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Григорьев Антон</p>
+<div class="author">Григорьев Антон</div>
 
 <p>Основы работы с Windows API. </p>
 <p>Введение.</p>

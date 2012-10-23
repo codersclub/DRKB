@@ -319,7 +319,7 @@ if scd_emp.ChangeCount &gt; 0 then
 <p>Достоинства вышеописанного метода в том, что вся база будет храниться в одном xml файле, недостаток же - нельзя разорвать связь главный-подчиненный и как следствие одновременно просмотреть все записи о заказах вне зависимости от выбранного клиента. </p>
 
 
-<p class="author">Автор: Mike Goblin </p>
+<div class="author">Автор: Mike Goblin </div>
 <p>Взято с сайта <a href="https://www.delphimaster.ru/" target="_blank">https://www.delphimaster.ru/</a></p>
 
 <p> с разрешения автора.</p>

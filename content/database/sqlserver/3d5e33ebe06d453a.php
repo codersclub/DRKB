@@ -6,5 +6,5 @@
 Select COL_LENGTH(@TableName,@FieldName)
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

@@ -22,7 +22,7 @@ end;
 </pre>
 
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />Нет такого понятия "свернуть в трей". Есть возможность только добавлять, удалять и менять значок в области трея. Сама же программа просто прячется.</p>
@@ -105,7 +105,7 @@ protected
 <p>Для выполнения пунктов всплывающего меню, пишите стандартные обработчики onClick() для его пунктов.</p>
 
 <p>Данный опус писался только в форме, в IDE не тестировался . Всё работает конечно, но не обессудьте, если будут ошибочки мелкие. </p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

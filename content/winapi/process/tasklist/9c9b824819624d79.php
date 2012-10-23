@@ -23,7 +23,7 @@ end;
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 <hr />
-<p class="author">Автор: Gestap</p>
+<div class="author">Автор: Gestap</div>
 
 <pre>
 library Hide;

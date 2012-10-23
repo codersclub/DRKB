@@ -25,6 +25,6 @@ end;
 &nbsp;<br>
 
 <p>&nbsp;<br>
-<p class="author">Автор: Rouse_ </p>
+<div class="author">Автор: Rouse_ </div>
 
 

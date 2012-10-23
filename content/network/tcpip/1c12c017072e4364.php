@@ -169,6 +169,6 @@ TCP Port 51515 - MOM-Clear Microsoft Operations Manager 2000<br>
 &nbsp;<br>
 &nbsp;<br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>
 &nbsp;<br>
 

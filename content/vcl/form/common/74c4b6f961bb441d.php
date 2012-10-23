@@ -161,7 +161,7 @@ end;
  
 end.
 </pre>
-<p class="author">Автор: Kostas</p>
+<div class="author">Автор: Kostas</div>
 
 <hr />
 
@@ -294,7 +294,7 @@ end;
  
 end.
 </pre>
-<p class="author">Автор: Mischka </p>
+<div class="author">Автор: Mischka </div>
 
 <hr />
 
@@ -362,6 +362,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

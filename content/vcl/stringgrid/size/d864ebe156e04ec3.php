@@ -1,7 +1,8 @@
 <h1>Увеличение ячейки TStringGrid при увеличении числа строк</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Пётр Соболь </p>
+<div class="author">Автор: Пётр Соболь</div>
+
 <pre>procedure TForm1.StringGrid1DrawCell(Sender: TObject; ACol, ARow:
   Integer; Rect: TRect; State: TGridDrawState);
 var

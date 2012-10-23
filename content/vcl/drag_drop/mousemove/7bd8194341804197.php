@@ -1,7 +1,8 @@
 <h1>Как перемещать компонент во время работы программы?</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Олег Кулабухов  </p>
+<div class="author">Автор: Олег Кулабухов</div>
+
 <p>Нижеприведенный пример показывает как перемещать компонент при перетаскивании его нажатой левой кнопкой мыши при нажатом Ctrl.</p>
 <pre>
 procedure TForm1.Button1MouseDown(Sender: TObject; Button:
@@ -370,7 +371,7 @@ FOR N := 0 TO ComponentCount-1 DO
         Accept := False;
 </pre>
 <p>В этом случае курсор будет изменяться на перечеркнутый кружок при пересечении перетаскиваемым элементом границы интересующей вас кнопки. Вы должны сделать аналогичную логику или в обработчике EndDrag или OnDragDrop компонента PainBox. </p>
-<p class="author">Автор: NEil </p>
+<div class="author">Автор: NEil </div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 &nbsp;</p>

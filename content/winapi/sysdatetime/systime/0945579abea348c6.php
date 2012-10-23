@@ -11,5 +11,5 @@
 
 <p>Итак 12 PM - это полдень, а 12 AM - это полночь</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

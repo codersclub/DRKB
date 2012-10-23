@@ -35,7 +35,7 @@ begin
  
 writeln(EBSstr,ECXstr,EDXstr); 
 </pre>
-<p class="author">Автор: Chingachguk</p>
+<div class="author">Автор: Chingachguk</div>
 <hr />
 <pre>
 unit CpuId; 

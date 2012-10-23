@@ -17,8 +17,8 @@ end;
 </pre>
 
 
-<p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<div class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</div>
+<div class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</div>
 
 
 <hr />
@@ -41,7 +41,7 @@ end;
 <p>&nbsp;</p>
 
 <hr />
-<p class="author">Автор: Dimka Maslov</p>
+<div class="author">Автор: Dimka Maslov</div>
 
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

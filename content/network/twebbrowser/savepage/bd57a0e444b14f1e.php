@@ -44,4 +44,4 @@ end;
 </pre>
 
 
-<p class="author">Автор: Donall Burns</p>
+<div class="author">Автор: Donall Burns</div>

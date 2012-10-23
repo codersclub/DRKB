@@ -426,7 +426,7 @@ public
 </pre>
 
 
-<p class="author">Автор: Neil Rubenkind </p>
+<div class="author">Автор: Neil Rubenkind </div>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <hr />В разделе Заполнение изображением MDI-формы повторяющимся изображением. Я нашел (Copyright не мой а из книжки) более простой способ.</p>
@@ -480,7 +480,7 @@ end;
 </pre>
 
 
-<p class="author">Автор: <a href="mailto:van@ttk.jar.ru">Alexander N.Voronin</a></p>
+<div class="author">Автор: <a href="mailto:van@ttk.jar.ru">Alexander N.Voronin</a></div>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <hr />
@@ -572,5 +572,5 @@ end;
 </pre>
 
 
-<p class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></p>
+<div class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></div>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

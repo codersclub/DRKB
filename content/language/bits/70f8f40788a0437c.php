@@ -87,6 +87,6 @@ end;
 <p>Источник: Книга В. Озерова "Delphi. Советы программистов"</p>
 
 
-<p class="author">Автор: StayAtHome</p>
+<div class="author">Автор: StayAtHome</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

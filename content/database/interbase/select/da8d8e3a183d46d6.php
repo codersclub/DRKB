@@ -12,4 +12,4 @@
 
 <p class="note">Примечание</p>
 <p>Бывают ситуации, когда оптимизатор "настаивает" на использовании всех индексов по определенному столбцу, даже если создан специальный композитный индекс по всем полям where. В этом случае необходимо принудительно заставить оптимизатор IB использовать нужный запрос, причем скорость отработки такого запроса может ускориться на порядок. </p>
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>

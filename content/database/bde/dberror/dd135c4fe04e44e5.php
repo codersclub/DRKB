@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Eryk </p>
+<div class="author">Автор: Eryk </div>
 
 <p>Ошибки общего характера, типа Key Violation или конфликты блокировки лучше всего обрабатывать в обработчике события Application.OnException ...например:</p>
 

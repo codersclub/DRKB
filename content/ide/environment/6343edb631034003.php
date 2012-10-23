@@ -597,7 +597,7 @@
 </tr>
 </table>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />
@@ -651,7 +651,7 @@
 <p>Shift+Up Arrow Move up one pane.</p>
 <p>Shift+Down Arrow Move down one pane. </p>
 
-<p class="author">Автор: Admin</p>
+<div class="author">Автор: Admin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 

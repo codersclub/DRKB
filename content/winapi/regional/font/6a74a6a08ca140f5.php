@@ -3,7 +3,7 @@
 
 
 <p>GetTextMetrics() </p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Как определить, какой шрифт установлен в системе, большой или маленький</p>

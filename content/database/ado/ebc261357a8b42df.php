@@ -328,4 +328,4 @@ end;
 <p>Ресурсы:</p>
 <p>https://www.borland.com/delphi/</p>
 <p>https://www.microsoft.com/ado/</p>
-<p class="author">Автор: Дмитрий Ю. Сидоров.</p>
+<div class="author">Автор: Дмитрий Ю. Сидоров.</div>

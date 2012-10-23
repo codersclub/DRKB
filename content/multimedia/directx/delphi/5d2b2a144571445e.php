@@ -76,5 +76,5 @@
 
 <p>Пишите: aziz@telebot.net, error@softhome.net </p>
 
-<p class="author">Автор: Азиз (JINX)</p>
+<div class="author">Автор: Азиз (JINX)</div>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

@@ -3,7 +3,7 @@
 
 
 <p>Используй GetKeyboardLayoutName</p>
-<p class="author">Автор: Mikel</p>
+<div class="author">Автор: Mikel</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -30,7 +30,7 @@ else
     showmessage(' X 3 ' ) ;
 end; 
 </pre>
-<p class="author">Автор: Radmin</p>
+<div class="author">Автор: Radmin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

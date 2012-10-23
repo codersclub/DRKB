@@ -17,7 +17,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<p class="author">Автор: Profit Manson </p>
+<div class="author">Автор: Profit Manson </div>
 <pre>
 function ReverseString(s: string): string;
 var

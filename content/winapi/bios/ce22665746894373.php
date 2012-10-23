@@ -202,7 +202,7 @@ end.
 <p>PS Возможно, эти процедуры не всегда дату возвращают но то что практически всегда для разных материнских/видео плат возвращаются разные значения - проверено, что мне собственно и требовалось.</p>
 <p>Andrey Sorokin from sunny <img src="/pic/embim1701.png" width="288" height="96" vspace="1" hspace="1" border="0" alt="">Saint-Petersburg anso@mail.ru</p>
 <p>Russian Technology http://attend.to/rt anso@rt.spb.ru </p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

@@ -27,7 +27,7 @@ end;
 
 <p>Тем более это работает в rxRichEdit. </p>
 
-<p class="author">Автор: Seti</p>
+<div class="author">Автор: Seti</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />

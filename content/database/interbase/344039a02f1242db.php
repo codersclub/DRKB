@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Rob Minte </p>
+<div class="author">Автор: Rob Minte </div>
 
 <pre>
 procedure TForm1.ReadOLE;

@@ -54,5 +54,5 @@ end;
 </pre>
 <p class="note">Примечание</p>
 <p>Константа "UniqueSignature" должна быть достаточно длинной, чтобы однозначно идентифицировать атом, в тоже время длина хранимой строки вместе с UniqueSignature не должна превышать 255 символов. Данная конструкция может хранить только 1 значение. Для хранения нескольких значений надо назначить несколько разных UniqueSignature и использовать сходные процедуры.</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -7,6 +7,6 @@
 <p>Проблема в том, что вы передаете со стороны Delphi Variant, но на стороне C++ "ожидают" IUnknown. Измените прототип функции Delphi следующим образом:</p>
 <p>function SmtOleLink(OleCallBack: IUnknown; ...) ...;</p>
 <p>Для получения доступа к типу IUnknown необходимо добавить "Ole2" к списку используемых модулей. Теперь измените вызов со стороны Delphi:</p>
-<p class="author">Автор: Anders Hejlsberg&nbsp; </p>
+<div class="author">Автор: Anders Hejlsberg</div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

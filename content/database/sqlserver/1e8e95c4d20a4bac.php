@@ -3,5 +3,5 @@
 
 
 <p>Надо воспользоваться утилитой scptxfr.exe</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

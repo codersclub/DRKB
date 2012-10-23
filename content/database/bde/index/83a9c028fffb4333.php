@@ -5,6 +5,6 @@
 <p>Ошибка в VCL.</p>
 <p>А помогает добавление fUpdated:=false; в теле процедуры TIndexDefs.Update.</p>
 <p>Или убиением владельца через Free, и пересозданием.</p>
-<p class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></p>
+<div class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

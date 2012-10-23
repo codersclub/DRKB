@@ -55,3 +55,4 @@
 &nbsp;</p>
 <p>Интернет решения от доктора Боба (http://www.drbob42.com)</p>
 <p>(c) 2000, Анатолий Подгорецкий, перевод на русский язык (<a href="https://nps.vnet.ee/ftp" target="_blank">https://nps.vnet.ee/ftp</a>)</p>
+<div class="author">Автор: Анатолий Подгорецкий</div>

@@ -29,7 +29,7 @@ end;
 </pre>
 
 <p>Кусочек кода, который должен распознавать какая версия DAO установлена на компьютере мной не мог быть оттестирован, так как только одна работающая версия DAO может быть установлена на компьютере. У меня установлен Office XP (DAO36) и на нем все работает нормально. Интересно было бы узнать работает ли логика для Office 2000 (DAO35) и Office 97 (DAO30)</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Here is an OP function that will do it for you:</p>
@@ -96,6 +96,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Петрович</p>
+<div class="author">Автор: Петрович</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

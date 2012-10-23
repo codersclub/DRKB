@@ -45,4 +45,4 @@ begin
 end;
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Kostas</p>
+<div class="author">Автор: Kostas</div>

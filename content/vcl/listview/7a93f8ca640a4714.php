@@ -591,5 +591,5 @@ end;
  
 end.
 </pre>
-<p class="author">Автор: Мыш</p>
+<div class="author">Автор: Мыш</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -54,7 +54,7 @@ Pop ESI
 end;
 </pre>
 
-<p class="author">Автор:Vit</p>
+<div class="author">Автор:Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />
@@ -89,5 +89,5 @@ until i&lt;Lenght(Source);
 <p>И это - фатальный недостаток.</p>
 <hr /><p>Информацию по шифрованию можно найти на </p>
 <p><a href="https://www.cryptography.ru/" target="_blank">https://www.cryptography.ru/</a></p>
-<p class="author">Автор: Shaman</p>
+<div class="author">Автор: Shaman</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -5,5 +5,5 @@
 <pre>
 Select * From tempdb.information_schema.columns
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

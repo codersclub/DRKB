@@ -218,10 +218,11 @@ NEWS_MSG = $800<br>
 ATTACHMENTS = $4000<br>
 REPLY =$80000<br>
 INSPECT_CONVERSATION = $400000<br>
-<p>IGNORE_CONVERSATION =$800000</p>
+IGNORE_CONVERSATION =$800000</p>
+
 <p>Модули к статье можно взять здесь</p>
 <p>Все дополнения, модификации, предложения, благодарности и т.п. просьба присылать на Samum2000@mail15.com (особенно к русскому переводу) или на walther_e@yahoo.com (на английском языке, касательно оригинала). <br>
 <p>Walther Estergaard Walther_e@yahoo.com </p>
-<p>Перевод:<br>
-<p>Боднар Денис aka Samum, Samum2000@mail15.com, ICQ: 278395965. </p>
+
+<div class="author">Перевод: Боднар Денис aka Samum, Samum2000@mail15.com, ICQ: 278395965.</div>
 <p><a href="https://www.samum2000.narod.ru/articles/oedb.html" target="_blank">https://www.samum2000.narod.ru/articles/oedb.html</a></p>

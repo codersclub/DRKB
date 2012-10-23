@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Ruslan Abu Zant</p>
+<div class="author">Автор: Ruslan Abu Zant</div>
 <p>Компилятор: Delphi 4.x (или выше)</p>
 <p>Впринципе эти команды можно запускать в меню "Выполнить..." (Run), кнопки Пуск. Ну а в Delphi они запускаются путём всем извесной команды winexec(Pchar('ABCD'),sw_Show);</p>
 <p>где 'ABCD' - одна из следующих команд ... </p>

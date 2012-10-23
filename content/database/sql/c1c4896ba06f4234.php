@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Mike Heydon</p>
+<div class="author">Автор: Mike Heydon</div>
 
 <p>Вам ещё не надоело динамически генерировать SQL запросы insert и update ? Давайте посмотрим, как можно раз и навсегда упростить этот процесс.</p>
 

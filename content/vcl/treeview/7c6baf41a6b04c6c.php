@@ -1,7 +1,8 @@
 <h1>Как реализовать Drag &amp; Drop в TTreeView?</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Васильев Василий </p>
+<div class="author">Автор: Васильев Василий</div>
+
 <pre>
 unit Unit1;
  

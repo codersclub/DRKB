@@ -11,5 +11,5 @@ if @@error &lt;&gt; 0
   Print 'Record was not inserted' 
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

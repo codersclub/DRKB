@@ -44,7 +44,7 @@ end.
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<p class="author">Автор: Igor N. Semenushkin </p>
+<div class="author">Автор: Igor N. Semenushkin </div>
 <p>Вот ужасно простой пример XOR шифрования - работает без глюков.</p>
 <pre>
 var

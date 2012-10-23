@@ -71,7 +71,7 @@ EXECUTE XMLParam @S
 <p>ICQ UIN 15925834</p>
 <p>tolik@katren.nsk.ru</p>
 <hr />
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 
 <pre>
 Select * From MyTable For XML  AUTO, ELEMENTS

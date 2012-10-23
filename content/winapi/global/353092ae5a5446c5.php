@@ -5,6 +5,6 @@
 <pre>
 ExpandEnvironmentStrings( LPCTSTR lpSrc, LPTSTR lpDst, DWORD nSize ); 
 </pre>
-<p class="author">Автор: Nomadic </p>
+<div class="author">Автор: Nomadic </div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

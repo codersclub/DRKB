@@ -72,6 +72,6 @@ InternetAutoDial (INTERNET_AUTODIAL_FORCE_ONLINE, Handle);
 
 <p>Handle - окно, из которого вызывается функция.</p>
 
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

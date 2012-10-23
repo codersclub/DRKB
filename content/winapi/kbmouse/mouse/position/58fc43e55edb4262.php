@@ -3,7 +3,7 @@
 
 
 <p>GetCursorPos() </p>
-<p class="author">Автор: Spawn</p>
+<div class="author">Автор: Spawn</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Обрабатывай событие OnMouseMove. Координаты курсора можно получить следующим путем:</p>
@@ -16,7 +16,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Pegas</p>
+<div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -25,7 +25,7 @@ end;
   mouse.CursorPos.y
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Для этого можно воспользоваться API функцией GetCursorPos. Передав в эту функцию TPoint, мы получим текущие координаты курсора. Следующий код показывает, как получить значения координат курсора по нажатию кнопки.</p>

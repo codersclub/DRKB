@@ -1,7 +1,7 @@
 <h1>Шифрование текстовых полей таблицы InterBase</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Автор: Vemer</p>
+<div class="author">Автор: Vemer</div>
 <p>WEB-сайт: http://delphibase.endimus.com </p>
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

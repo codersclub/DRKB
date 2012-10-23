@@ -8,5 +8,5 @@ Exec master.dbo.xp_sendmail
   @Subject='MS SQL Test',
   @message='This is email body!'
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

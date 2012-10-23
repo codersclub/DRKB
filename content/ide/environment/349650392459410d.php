@@ -17,5 +17,5 @@
 <p>2. Размещаем нашу темплейт-прогу в каталоге "C:\Program Files\Lang\Delphi7\ObjRepos\MyApp\" и называем её "MyApp.dpr".</p>
 <p>3. Жмём "File/New/Application" (т.к. у нас DefaultProject=1), либо заходим во вкладку "Projects", а затем кликаем два раза по "My Application".</p>
 <p>4. Радуемся!&nbsp; </p>
-<p class="author">Автор: Jin X</p>
+<div class="author">Автор: Jin X</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

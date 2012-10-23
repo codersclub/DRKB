@@ -1,6 +1,6 @@
 <h1>Програмная эмуляция нажатия клавиш</h1>
 <div class="date">01.01.2007</div>
-<p class="author">Автор: Robert Wittig</p>
+<div class="author">Автор: Robert Wittig</div>
 
 <p>Использование клавиш для управления компонентами </p>
 
@@ -149,7 +149,7 @@ end;
 
 <hr />
 
-<p class="author">Автор: Den is Com&nbsp; </p>
+<div class="author">Автор: Den is Com</div>
 
 <p>К сожалению работает хорошо, только когда фокус у вызывающего окна, в противном случае может глючить</p>
 <pre>
@@ -172,7 +172,7 @@ SetKey(VK_CAPITAL);
 <hr />
 
 <p>Послать нажатие клавиш </p>
-<p class="author">Автор: Xavier Pacheco </p>
+<div class="author">Автор: Xavier Pacheco </div>
 <pre>
 unit Main;
  
@@ -645,7 +645,7 @@ end.
 <hr />
 
 <p>Почти полный аналог метода SendKeys из VB </p>
-<p class="author">Автор: Ken Henderson </p>
+<div class="author">Автор: Ken Henderson </div>
 <pre>
 {
 SendKeys routine for 32-bit Delphi.
@@ -1441,7 +1441,7 @@ SendMessage(Memo1.Handle, WM_CHAR, Ord('A'), 0);
 
 <hr />
 
-<p class="author">Dimka Maslov</p>
+<div class="author">Dimka Maslov</div>
 
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
@@ -1464,7 +1464,7 @@ end;
 
 <hr />
 
-<p class="author">Dimka Maslov</p>
+<div class="author">Dimka Maslov</div>
 
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

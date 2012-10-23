@@ -9,5 +9,5 @@ Set @sql='Select * From MyTable'
 Exec (@sql)
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

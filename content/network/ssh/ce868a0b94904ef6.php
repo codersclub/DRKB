@@ -1,7 +1,7 @@
 <h1>Описание протокола SSH (Secure Shell)</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">delphiworld.narod.ru</p>
+<div class="author">delphiworld.narod.ru</div>
 
 <p>В настоящей статье рассматривается ssh (secure shell), одно из самых распространенных программных средств повышения компьютерной безопасности при работе Unix-систем в Internet. </p>
 

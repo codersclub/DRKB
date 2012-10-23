@@ -24,4 +24,4 @@ end;
 <p>вновь и вновь, до тех пор пока приложение "бездельничает" и </p>
 <p>переменной Done не присвоенно значение True. </p>
 <p>Источник: http://www.vlata.com/delphi/</p>
-<p class="author">Автор: p0s0l</p>
+<div class="author">Автор: p0s0l</div>

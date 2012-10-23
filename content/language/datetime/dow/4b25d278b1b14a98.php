@@ -17,6 +17,6 @@ end;
 &nbsp;</p>
 <hr /><p>&nbsp;
 <p>Функции DayOfTheWeek и DayOfWeek (см. справку по Дельфи)</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>&nbsp;
 <p>&nbsp;</p>

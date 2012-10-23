@@ -6,6 +6,6 @@
 <pre>
 GroupBox1.Font.color:=clInactiveCaption;
 </pre>
-<p class="author">Автор: Гавриш Дмитрий </p>
+<div class="author">Автор: Гавриш Дмитрий </div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

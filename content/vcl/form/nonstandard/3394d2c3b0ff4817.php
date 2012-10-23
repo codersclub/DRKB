@@ -51,5 +51,5 @@
    SetWindowRgn(Form1.Handle, CreatePolygonRgn(Points, 8, WINDING), True);
  end;
 </pre>
-<p class="author">Автор: winsoft</p>
+<div class="author">Автор: winsoft</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

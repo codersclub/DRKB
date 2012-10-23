@@ -13,6 +13,6 @@
 <p>;EXP=c:\windows\system\netlib32.dll</p>
 <p>обратите внимание на ";" в начале строки - проверьте какие из перечисленных там файлов действительно существуют по соответствующему адресу и УБЕРИТЕ ";" перед теми строками. </p>
 <p>4. Теперь, после перезагрузки компьютера, отладчик готов к работе - можно переходить к урокам крэкерства.</p>
-<p class="author">Автор: <a href="https://cracklab.narod.ru" target="_blank">Bad_guy</a></p>
+<div class="author">Автор: <a href="https://cracklab.narod.ru" target="_blank">Bad_guy</a></div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

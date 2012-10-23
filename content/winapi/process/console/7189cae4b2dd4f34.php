@@ -256,7 +256,7 @@ begin
   RunDosInMemo('ping -t 192.168.28.200', Memo1);
 end;
 </pre>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
@@ -509,6 +509,6 @@ end;
 </pre>
 
 
-<p class="author">Автор: Алексей Бойко</p>
+<div class="author">Автор: Алексей Бойко</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

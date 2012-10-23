@@ -121,7 +121,7 @@ begin
 end;
 </pre>
 <hr />
-<p class="author">Автор: Nomadic&nbsp; </p>
+<div class="author">Автор: Nomadic</div>
 
 <pre>
 const

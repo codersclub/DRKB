@@ -33,6 +33,6 @@ begin
     CopyDataToClipboard(CF_LOCALE, Chr(Lo(Locale))+Chr(Hi(Locale)));
 end;
 </pre>
+<div class="author">Автор: Mechanic</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Mechanic</p>
 

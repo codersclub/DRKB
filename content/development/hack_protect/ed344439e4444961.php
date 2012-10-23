@@ -54,5 +54,7 @@
 <p>В данной работе рассмотрены различные схемы хранения информации о правах доступа. Для конкретной системы нужно строить свою схему исходя из требований по быстродействию и уровню ограничения доступа.<br>
 &nbsp;<br>
 &nbsp;<br>
-<p>Сергей Радкевич (mailto:level3@mail.ru, ICQ:15320127)</p>
+
+<div class="author">Автор: Сергей Радкевич (mailto:level3@mail.ru, ICQ:15320127)</div>
+
 <p>Взято из<a href="https://delphi.chertenok.ru" target="_blank"> http://delphi.chertenok.ru</a></p>

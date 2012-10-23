@@ -32,8 +32,8 @@ end;
 </pre>
 
 
-<p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<div class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</div>
+<div class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</div>
 
 
 <hr />
@@ -118,6 +118,6 @@ end;
 dbeArcSended.Text := IncludeTrailingPathDelimiter(Selectdir(ParamStr(0)));
 </pre>
 
-<p class="author">Автор: Akella </p>
+<div class="author">Автор: Akella </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

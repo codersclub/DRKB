@@ -68,7 +68,7 @@ begin
 </pre>
 <p>и так далее. </p>
 <p>Опыт 2 </p>
-<p class="author">Автор: Jean Yves </p>
+<div class="author">Автор: Jean Yves </div>
 <p>Вот еще очень простой пример DDE-связи с WinWord 6. Это работает. </p>
 <p>В Word вы должны иметь заранее созданный файл (в нашем примере DDETEST.DOC) и закладку с именем "Bm1".</p>
 <pre>

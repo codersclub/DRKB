@@ -172,9 +172,9 @@ end.
 
 <p>Всё.</p>
 
-<p class="author">Автор: Sergey Stolyarov</p>
+<div class="author">Автор: Sergey Stolyarov</div>
 <p>Development и Дельфи (http://MDelphi.far.ru).</p>
-<p class="author">Автор: StayAtHome</p>
+<div class="author">Автор: StayAtHome</div>
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

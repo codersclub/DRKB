@@ -144,7 +144,7 @@ end;
 FillNetLevel(nil,ListView1.Items);
 </pre>
  &nbsp; &nbsp; &nbsp; &nbsp;&copy;Drkb::03287</p>
-<p class="author">Автор: Pegas</p>
+<div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

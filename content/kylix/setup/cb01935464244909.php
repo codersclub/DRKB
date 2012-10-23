@@ -8,6 +8,6 @@
 
 <a href="https://forum.sources.ru/index.php?act=Attach&type=post&id=262358" target="_blank">https://forum.sources.ru/index.php?act=Attach&amp;type=post&amp;id=262358</a></p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

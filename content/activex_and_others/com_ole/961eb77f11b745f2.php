@@ -342,11 +342,11 @@ end;
 </td>
 <td ><p>При установленном флаге STGM_TRANSACTED вместо внешнего буфера используется незадействованное пространство в самом файле. Более эффективное использование ресурсов компьютера</p>
 </td>
-<td ><p>&nbsp;</p>
+<td >
+<p>&nbsp;</p>
 </td>
 </tr>
 </table>
-<p>&nbsp;<br>
-Михаил Продан <br>
-&nbsp;<br>
-<a href="https://tdelphi.spb.ru" target="_blank">https://tdelphi.spb.ru</a></p>
+<p>&nbsp;</p>
+<div class="author">Автор: Михаил Продан</div>
+<p><a href="https://tdelphi.spb.ru" target="_blank">https://tdelphi.spb.ru</a></p>

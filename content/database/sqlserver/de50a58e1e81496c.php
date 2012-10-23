@@ -34,5 +34,5 @@ for
 Select MyField From MyTable Where MyField2=1
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

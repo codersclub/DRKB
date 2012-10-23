@@ -19,5 +19,5 @@ Exec master..xp_cmdshell @sql
 <p class="note">Примечание</p>
 <p>Путь локален для серверного компьютера, не для клиента!</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

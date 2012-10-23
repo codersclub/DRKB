@@ -201,7 +201,7 @@ end.
 
 <p>Дальше</p>
 
-<p class="author">Автор: Неизвестен URL: www.delphi.agava.ru </p>
+<div class="author">Автор: Неизвестен URL: www.delphi.agava.ru </div>
 
 <p>Взято с сайта <a href="https://blackman.wp-club.net/" target="_blank">https://blackman.wp-club.net/</a></p>
 

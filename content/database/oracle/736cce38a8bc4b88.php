@@ -9,6 +9,6 @@
 <p>Persist Security Info=False</p>
 <p>2) способ если использовать "Oracle Provaider for Ole DB" - это провайдер от Oracle</p>
 <p>Provider=OraOLEDB.Oracle.1;Persist Security Info=False;User ID=USER;Data Source=MyDataSourse </p>
-<p class="author">Автор: Pegas</p>
+<div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

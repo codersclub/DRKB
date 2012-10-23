@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Gert v.d. Venis</p>
+<div class="author">Автор: Gert v.d. Venis</div>
 
 <p>Компонент Sendkeys: </p>
 

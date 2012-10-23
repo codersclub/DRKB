@@ -3,7 +3,7 @@
 
 
 <p>Введение в Indy</p>
-<p class="author">Автор: Chad Z. Hower</p>
+<div class="author">Автор: Chad Z. Hower</div>
 <p>Домашняя страница: http://www.atozedsoftware.com</p>
 <p>Перевод: Анатолий Подгорецкий</p>
 <p>Вступительное слово</p>

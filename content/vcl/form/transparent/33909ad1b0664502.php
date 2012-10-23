@@ -2,7 +2,7 @@
 <div class="date">04.12.2006.</div>
 
 
-<p class="author">Автор: Нуржанов Аскар. (NikNet/Arazel)</p>
+<div class="author">Автор: Нуржанов Аскар. (NikNet/Arazel)</div>
 <p>Сайт кому интересно : NikNet.narod.ru</p>
 <p></p>
 <p>Данный пример показывает, как сделать форму невидимой, а компоненты (image) видимые&#8230; </p>

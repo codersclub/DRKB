@@ -55,5 +55,5 @@ begin
  X2 := X1 xor X2; // X2 = X1 
  X1 := X1 xor X2; // X1 = X2 
 </pre>
-<p class="author">Автор: ___ALex___ </p>
+<div class="author">Автор: ___ALex___ </div>
 <p><a href="https://forum.pascal.dax.ru" target="_blank">https://forum.pascal.dax.ru</a></p>

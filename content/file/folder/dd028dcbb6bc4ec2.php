@@ -21,7 +21,7 @@ begin
 ScanDir('c:');
 end;
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Ненамного сложнее, но возможностей поболе будет.</p>
 <pre>
 procedure ScanDir (Path:string;SearchMask:TStrings;ScanSub:boolean);
@@ -57,5 +57,5 @@ end;{for}
  
 end; {ScanDir}
 </pre>
-<p class="author">Автор: December</p>
+<div class="author">Автор: December</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -7,7 +7,7 @@
 <p>или </p>
 <p><a href="https://www.torry.net " target="_blank">https://www.torry.net </a></p>
 <p>Модуль Parsing.pas вполне может работать отдельно и без установки пакета компонент (но в таком случае вам прийдется взять еще несколько inc файлов помимо него).</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />
@@ -394,13 +394,13 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<div class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</div>
+<div class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</div>
 
 <hr />
 
 <p>Отличная реализация есть в бесплатной библиотеке для дельфи JVCL. Помимо стандартных требований которые решены во всех приведенных примерах, там ещё есть интерфейс для простого подключения любых своих функций, например буквально парой строчек можно подключить распознавание и вычисление гиперболических функций из модуля Math. Настоятельно рекомендую этот пакет всем кто работает на Дельфи - там есть почти всё что требуется для комфортной работы</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 
 <hr />
 

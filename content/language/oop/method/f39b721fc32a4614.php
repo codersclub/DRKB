@@ -17,7 +17,7 @@ class1(a).mtd;
 end;
 </pre>
 
-<p class="author">Автор: Fantasist</p>
+<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Способ со статическим приведением годится только для</p>
@@ -44,6 +44,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Le Taon</p>
+<div class="author">Автор: Le Taon</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

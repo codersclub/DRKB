@@ -70,6 +70,6 @@ begin
 end;
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: Dynamic </p>
+<div class="author">Автор: Dynamic </div>
 &nbsp;<br>
 

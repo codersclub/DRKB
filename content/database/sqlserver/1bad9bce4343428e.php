@@ -11,5 +11,5 @@ Select * From MyTable Where (MyBitField1 | MyBitField2 | MyBitField3)=1
 Select * From MyTable Where (MyBitField1 &amp; MyBitField2 &amp; MyBitField3)=1
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

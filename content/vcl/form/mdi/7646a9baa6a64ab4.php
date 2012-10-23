@@ -45,5 +45,5 @@ begin
  vv.Show;
 end;
 </pre>
-<p class="author">Автор: Girder</p>
+<div class="author">Автор: Girder</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

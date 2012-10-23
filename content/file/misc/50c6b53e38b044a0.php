@@ -191,6 +191,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Mikel</p>
+<div class="author">Автор: Mikel</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

@@ -4,8 +4,12 @@
 
 <p>На рабочий стол можно вывести строку используя</p>
 <p>TextOut(GetWindowDC(GetDesktopWindow),100,100,'Thom',4);&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p class="author">Автор: Fantasist</p>
+
+<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
+
+<hr />
+
 <p>Поверх всех окон можно нарисовать надпись использую следующую процедуру:</p>
 <pre>
 procedure WriteDC(s: string);
@@ -21,6 +25,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

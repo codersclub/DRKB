@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Denis Alexandrovich Ivanov&nbsp; </p>
+<div class="author">Автор: Denis Alexandrovich Ivanov</div>
 
 <p>Как сделать инсталятор, который прописывал бы пользователя в Interbase? BDE при этом не нужна совсем. </p>
 

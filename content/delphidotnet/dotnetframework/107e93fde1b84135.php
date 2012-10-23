@@ -216,9 +216,9 @@ http://quadr0.pochta.ru/delphinet2/delphinet2.zip<br>
 Статья в формате Adobe PDF со всеми исходными кодами:<br>
 http://quadr0.pochta.ru/delphinet2/delphinet2_pdf.zip<br>
 <p>&nbsp;</p>
-С уважением, Титов Сергей (Quadr0).<br>
-<p>&nbsp;</p>
-vingrad.ru<br>
+
+<div class="author">Автор: Титов Сергей (Quadr0)</div>
+<p>vingrad.ru</p>
 &nbsp;<br>
 <p>&nbsp;</p>
 &nbsp;</p>

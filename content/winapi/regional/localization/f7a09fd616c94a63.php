@@ -154,13 +154,13 @@ end;
 </pre>
 
 
-<p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<div class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</div>
+<div class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</div>
 
 
 <hr />
 
-<p class="author">Автор: Stas Malinovski</p>
+<div class="author">Автор: Stas Malinovski</div>
 
 <p>Методом таблицы модельных распределений: </p>
 
@@ -745,7 +745,7 @@ end;
 
 <p>Определение кодовой страницы </p>
 
-<p class="author">Автор: Alexander Trunov</p>
+<div class="author">Автор: Alexander Trunov</div>
 <p>&nbsp;<br>
 <p>&nbsp;</p>
 <pre>

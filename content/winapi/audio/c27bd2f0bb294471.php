@@ -75,5 +75,5 @@ Caption := IntToStr(GetWaveVolume);
 end;
 </pre>
 
-<p class="author">Автор: MMM</p>
+<div class="author">Автор: MMM</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

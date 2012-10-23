@@ -14,7 +14,7 @@
 <p>Для того, чтобы не повторять этот вызов (EM_LIMITTEXT), можно воспользоваться сообщением EM_EXLIMITTEXT.</p>
 
 <p>Stas Mehanoshin</p>
-<p class="author">Автор: StayAtHome</p>
+<div class="author">Автор: StayAtHome</div>
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

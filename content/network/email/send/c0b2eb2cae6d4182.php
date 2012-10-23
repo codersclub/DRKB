@@ -21,6 +21,6 @@ end;
 <p>1) Пробелы в тексте желательно заполнять сочетанием %20</p>
 <p>2) Конец строки обозначать как %0D%0A</p>
 <p>3) Поля отделять друг от друга символом &amp;</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

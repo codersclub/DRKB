@@ -14,14 +14,14 @@ PostMessage(c1,WM_KEYDOWN,VK_F5,0);
 PostMessage(c1,WM_KEYUP,VK_F5,1 shl 31);
 end;
 </pre>
-<p class="author">Автор: neutrino </p>
+<div class="author">Автор: neutrino </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
 winexec(Pchar( 'rundll32 user,repaintscreen' ),sw_Show);
 </pre>
 
-<p class="author">Автор: Radmin</p>
+<div class="author">Автор: Radmin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -145,4 +145,3 @@ uses
 }
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-<p class="p_Heading1">&nbsp;</p>

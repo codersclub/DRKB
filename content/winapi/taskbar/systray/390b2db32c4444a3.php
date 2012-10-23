@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Ruslan Abu Zant</p>
+<div class="author">Автор: Ruslan Abu Zant</div>
 <p>Данный код сперва конвертирует Ваш текст в DIB, а затем DIB в иконку и далее в ресурс. После этого изображение иконки отображается в System Tray. </p>
 <p>Вызов просходит следующим образом.... </p>
 <p>StringToIcon('This Is Made By Ruslan K. Abu Zant'); </p>

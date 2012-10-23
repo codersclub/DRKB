@@ -9,7 +9,7 @@
 <p>или </p>
 <p>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\CodePage]</p>
 <p>"1252"="c_1251.nls"</p>
-<p class="author">Автор: Pegas</p>
+<div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Подскажите пожалуйста, у меня вот какая проблема: </p>

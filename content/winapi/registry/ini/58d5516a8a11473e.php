@@ -75,7 +75,7 @@ initialization
  
 end.
 </pre>
-<p class="author">Автор: Guedda</p>
+<div class="author">Автор: Guedda</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -174,5 +174,5 @@ End;
  
 End.
 </pre>
-<p class="author">Автор: Rrader</p>
+<div class="author">Автор: Rrader</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

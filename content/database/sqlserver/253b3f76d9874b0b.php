@@ -69,5 +69,5 @@ Group by Case When MyField=0 Then 'False' else 'True' End
 Order By Case When MyField=0 Then 'False' else 'True' End 
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

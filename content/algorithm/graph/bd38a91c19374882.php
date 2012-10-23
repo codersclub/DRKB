@@ -58,5 +58,5 @@
 <p>4. Якщо множини I' і J' непорожні і на кроці 3 удалося збільшити ланцюг, то&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; перейти до 3</p>
 <p>5. Видати рішення</p>
 <p>Тут I' і J' - множини ненасичених вершин із двох часток графа. "Збільшити ланцюг" - говорячи простою мовою - означає розгорнути ребра графа.</p>
-<p class="author">Автор: Fedor</p>
+<div class="author">Автор: Fedor</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

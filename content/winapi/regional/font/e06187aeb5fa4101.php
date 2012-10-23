@@ -185,4 +185,4 @@ Button2.Caption:=Edit3.Text;
 <p>Из за того что фичь есть но юзать его простым смертным не дано.... <br>
 <p>С ГЛУБОКИМ УВАЖЕНИЕМ ASTER_X </p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: ASTER_X</p>
+<div class="author">Автор: ASTER_X</div>

@@ -1,7 +1,7 @@
 <h1>}{0TT@БЬIЧ</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Автор: Александр </p>
+<div class="author">Автор: Александр </div>
 <pre>
 unit Stilizator;
  

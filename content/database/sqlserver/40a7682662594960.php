@@ -6,5 +6,5 @@
 EXEC sp_dropserver @LinkedServerName, 'droplogins'
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

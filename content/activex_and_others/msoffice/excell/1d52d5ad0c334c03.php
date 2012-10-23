@@ -15,5 +15,5 @@ ISheet := IWorkbook.Worksheets.Item['Лист1'] as Excel8TLB._Worksheet;
 
 <p>Главную же мысль свою повторю еще раз. Всегда и везде рекомендую работать с ячейками и областями в контексте их листа, получив предварительно интерфейс на этот лист вышеописанным способом. От использования свойств ActiveSheet и ActiveWorkbook можно совсем отказаться, разве что за исключением каких-то особых случаев. </p>
 
-<p class="author">Автор: Евгений Старостин</p>
+<div class="author">Автор: Евгений Старостин</div>
 <p>Взято с сайта <a href="https://www.delphikingdom.ru/" target="_blank">https://www.delphikingdom.ru/</a></p>

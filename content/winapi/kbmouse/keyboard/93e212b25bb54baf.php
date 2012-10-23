@@ -10,7 +10,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 <hr />
@@ -24,6 +24,6 @@ SetWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) or WS_EX_T
 </pre>
 
 
-<p class="author">Автор: Stavros </p>
+<div class="author">Автор: Stavros </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

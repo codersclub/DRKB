@@ -149,5 +149,8 @@ end;
 Исходник клиента - так же можно найти в аттаче!<br>
 Всё. Теперь вы знаете, как передовать кучу переменных своим программам из других!<br>
 &nbsp;<br>
-Автор: Стас Пономарёв. Хочу поблагодарить www.sources.ru www.delphimasters.ru а также Alex-Eraser <br>
+Хочу поблагодарить www.sources.ru, www.delphimasters.ru а также Alex-Eraser <br>
+
+<div class="author">Автор: Стас Пономарёв</div>
+
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 Drag and Drop для TListBox на примере двойного списка </p>
-<p class="author">Автор: Александр Малыгин</p>
+<div class="author">Автор: Александр Малыгин</div>
 <p>Специально для Королевства Delphi </p>
 <p>Типичная задача перетаскивания мышью объектов из одного контрола в другой просто решается обработкой событий OnDragOver и OnDragDrop, при установленных свойствах DragMode := dmAutomatic и DragKind := dkDrag у всех участвующих компонентов. </p>
 <p>Первый обработчик предназначен для принятия решения - допускается ли сбросить объект в контрол, над которым находится мышь (параметр Sender), и выставить соответствующий курсор. Для этого передается параметр Source:TObject, представляющий собой тот компонент, с которого начали перетаскивание (источник), координаты курсора X,Y:integer, состояние процесса перетаскивания State:TDragState, и результат, который надо вернуть var Accept:boolean. </p>
@@ -70,7 +70,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr /><p>Изменение позиций элементов ListBox с помощью Drag and Drop </p>
-<p class="author">Автор: Nick Hodges (Monterey, CA) </p>
+<div class="author">Автор: Nick Hodges (Monterey, CA) </div>
 <p>Я хотел бы изменить порядок следования элементов в неотсортированном списке ListBox методом drag&amp;drop, т.е. просто перетаскивая их мышью на нужное место. Будет еще лучше, если при удержании кнопки мыши перетаскиваемый элемент визуально перемещал бы вверх или вниз сам список (для определения своего нового месторасположения) до тех пор, пока клавиша мыши не будет отпущена (как я понял, автоматическое скроллирование - В.О.). </p>
 <p>Попробуйте для начала это: </p>
 <pre>
@@ -219,7 +219,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <p>Изменение позиций элементов ListBox с помощью Drag and Drop </p>
-<p class="author">Автор: Peter Donnelly </p>
+<div class="author">Автор: Peter Donnelly </div>
 <p>Вот еще одна вариация сабжа.</p>
 <pre>
 procedure TPickParty.PickListBMouseDown(Sender: TObject;

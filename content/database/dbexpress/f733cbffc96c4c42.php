@@ -1,5 +1,5 @@
 <h1>База данных без BDE</h1>
-<div class="date">01.01.2007</div>
+<div class="date">2004.05.13</div>
 
 
 <p>Что есть жизнь Delphi-разработчика без Borland Database Engine aka BDE?</p>
@@ -390,7 +390,9 @@ end;
 </td>
 </tr>
 </table>
-<p>&nbsp;<br>
-2004.05.13 Автор: Сергей Кривошеев <br>
+
+<p>&nbsp;</p>
+<div class="author">Автор: Сергей Кривошеев</div>
+<br>
 &nbsp;<br>
 <a href="https://www.cpp.com.ua" target="_blank">https://www.cpp.com.ua</a></p>

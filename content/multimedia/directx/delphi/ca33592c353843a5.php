@@ -253,4 +253,4 @@ end;
 <p>На этом пока все. Если Вы заинтересовались &#8211; скачайте демо-программку и поэкспериментируйте. </p>
 <p>Пишите мне &#8211; aziz@telebot.com или error@softhome.net &#8211; с удовольствием приму Ваши пожелания и предложения (особенно если предложите какую-нибудь работу) :-). </p>
 
-<p class="author">Автор: Азиз (JINX)</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Азиз (JINX)</div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

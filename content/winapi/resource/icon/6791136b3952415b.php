@@ -39,6 +39,6 @@
   SendMessage(Handle, WM_SETICON, 1, LoadIcon(HInstance, MAKEINTRESOURCE(100)));
 </pre>
 <p>&nbsp;<br>
+<div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
 

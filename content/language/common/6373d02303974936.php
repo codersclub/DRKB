@@ -28,5 +28,5 @@ procedure Proc(const a:Ta);
 procedure Proc(out a:Ta);
 </pre>
 <p>при входе в процедуру массив рассматривается как пустой, но после выполнения процедуры можно получить значения</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

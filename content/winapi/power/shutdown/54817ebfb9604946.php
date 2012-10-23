@@ -197,7 +197,7 @@ out  64h,al
 </pre>
 <p>только под XP все это работает плохо. Надо думать...</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>&nbsp;
 <p>&nbsp;</p>

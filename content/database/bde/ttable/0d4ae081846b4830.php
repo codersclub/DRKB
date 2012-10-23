@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Valler&nbsp; ( http://www.valler.narod.ru )</p>
+<div class="author">Автор: Valler&nbsp; ( http://www.valler.narod.ru )</div>
 
 <pre>
 var NeedNumber: Integer;

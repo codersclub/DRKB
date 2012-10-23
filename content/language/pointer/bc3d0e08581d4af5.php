@@ -1,5 +1,5 @@
 <h1>Увеличение значения указателя</h1>
-<div class="date">01.01.2007</div>
+<div class="date">08.06.2003</div>
 
 
 <pre>
@@ -43,3 +43,4 @@ end.
 </pre>
 
 &nbsp;</p>
+<div class="author">Автор: Григорий Ситнин, gregor@gregor.ru, Москва</div>

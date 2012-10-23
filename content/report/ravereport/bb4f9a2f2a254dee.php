@@ -4,6 +4,6 @@
 
 <p>Пример использования настраиваемого соединения TRvCustomConnection</p>
 <p><a href="/zip/26_1.zip">Пример использования настраиваемого соединения на основе компонента TRvCustomConnection</a></p>
-<p class="author">Автор: Akella </p>
+<div class="author">Автор: Akella </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

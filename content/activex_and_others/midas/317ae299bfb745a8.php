@@ -665,7 +665,7 @@ MIDAS Deployment License</p>
 <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>If the data packet providers and consumers stay on the same machine, then you DO NOT have to pay license fees. </td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">2.</td><td>As soon as you deliver the data packet from the provider on one machine to the client dataset on the other machine you MUST pay a license fee. The transport you have used doesn&#8217;t play any role. You can send the data packet by e-mail. You can save it on diskette from a computer in San Diego, drive to Los Angeles and load the data packet in a client dataset on the other computer. You can transfer the data packet calling a method of a COM or CORBA object, or something similar.&nbsp; All described situations require a MIDAS license.</td></tr></table>
 <p>There are two types of MIDAS license:</p>
 <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Unlimited. You pay $5,000 per machine for each CPU.&nbsp; You may run as many MIDAS servers on this machine as you want. The number of clients is unlimited. If you are using VisiBroker for your MIDAS servers and clients, you do not need to buy a separate VisiBroker license, as MIDAS license covers it.</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">2.</td><td>Per seat. You pay $250 per application server machine for each CPU. That includes one client seat. Seats from 2 through 25 are $125 each. Seats starting from 26 will coast you $80 each. This type of license does not cover VisiBroker.</td></tr></table>
-Serge Bodrov, Senior Analyst</p>
-Jessie Potts, Senior Analyst</p>
-Marotz, Inc.</p>
-*** Promise PM, deliver AM ***</p>
+
+<div class="author">Автор: Serge Bodrov, Senior Analyst; Jessie Potts, Senior Analyst, Marotz, Inc.</div>
+
+<p>*** Promise PM, deliver AM ***</p>

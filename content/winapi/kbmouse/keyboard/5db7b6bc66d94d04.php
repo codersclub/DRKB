@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Full ( http://full.hotmail.ru/ )</p>
+<div class="author">Автор: Full ( http://full.hotmail.ru/ )</div>
 <p>Для этого можно воспользоваться функцией GetHeapStatus:</p>
 <pre>
 procedure TForm1.WMKeyDown(var Message: TWMKeyDown);

@@ -454,6 +454,6 @@ end;
 </pre>
 <p>&nbsp;<br>
 <p>&nbsp;</p>
-<p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <p class="author">Автор: Smike and Jack128<br>
+<p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <p>&nbsp;</p>

@@ -681,5 +681,5 @@ begin
 end.
 </pre>
 <p>Это было базовое знакомство с сабклассингом и суперклассингом. Надеюсь, материал данной статьи поможет Вам при программировании!</p>
-<p class="author">Автор:Rrader</p>
+<div class="author">Автор:Rrader</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

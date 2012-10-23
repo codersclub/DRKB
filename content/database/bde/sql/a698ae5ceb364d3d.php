@@ -4,6 +4,6 @@
 
 <p>BDE такую возможность не поддерживает, но есть компонент в библиотеке RxLib - TSQLScript (соответственно и в JVCL - TJvSQLScript), поставляются они в исходниках, и переделать их на любой другой доступ проще-простого. Компонет делает парсинг SQL и выполняет несколько SQL запросов.</p>
 
-<p class="author">Автор: Петрович</p>
+<div class="author">Автор: Петрович</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

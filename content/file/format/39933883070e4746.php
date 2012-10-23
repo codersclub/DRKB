@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Morten Ravn-Jonsen</p>
+<div class="author">Автор: Morten Ravn-Jonsen</div>
 
 <p>Совместимость: Delphi 5.x (или выше)</p>
 

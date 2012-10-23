@@ -53,7 +53,7 @@ osXP: Showmessage('XP');
 end;
 end;
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -67,7 +67,7 @@ end;
 
 <p>Функция выдает следующее - 4.10</p>
 <p>Как можно таким же простым способом получить полную версию - 4.10.222</p>
-<p class="author">Автор: inko </p>
+<div class="author">Автор: inko </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Вот еще один пример. Мне он нравиться больше всего. Я его обычно использую в своих программах. Он гибкий и предоставляет максимум информации.</p>
 <pre>
@@ -202,7 +202,7 @@ end;
 Label1.Caption := WhatWindowsIsInstalled+' (Build '+GetWindowsVersion1+')';        
 </pre>
 
-<p class="author">Автор: Pegas</p>
+<div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Этот пример должен работать на всех версиях Windows </p>
 <pre>

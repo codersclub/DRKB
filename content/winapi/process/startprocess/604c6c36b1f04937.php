@@ -32,7 +32,7 @@ CloseHandle(pi.hThread);
 end;
 </pre>
 
-<p class="author">Автор: TAPAKAH</p>
+<div class="author">Автор: TAPAKAH</div>
 <p class="note">Примечание Vit:</p>
 <p>Если заменить</p>
 <p>WaitForSingleObject(pi.hProcess,INFINITE);</p>
@@ -68,7 +68,7 @@ end;
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 <hr />
-<p class="author">Автор: Fabrнcio Fadel Kammer</p>
+<div class="author">Автор: Fabrнcio Fadel Kammer</div>
 <p>Пример показывает как из Вашей программы запустить внешнее приложение и подождать его завершения.</p>
 <pre>
 function ExecAndWait(const FileName, Params: ShortString; const WinState: Word): boolean; export; 

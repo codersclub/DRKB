@@ -98,7 +98,7 @@ end;
 <pre>ToHtml(StringGrid1, 'C:\123.html');
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: Kostas</p>
+<div class="author">Автор: Kostas</div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <p>&nbsp;<br>

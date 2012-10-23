@@ -74,7 +74,7 @@ end;
 end.
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>
 
 <hr /><pre>unit wfsU;
 &nbsp;
@@ -319,6 +319,6 @@ end.
 <p>PS: только для NT/2000/XP/2003 </p>
 <p>&nbsp;
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Krid</p>
+<div class="author">Автор: Krid</div>
 &nbsp;<br>
 

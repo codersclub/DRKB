@@ -18,5 +18,5 @@ begin
 end;
  
 </pre>
-<p class="author">Автор: Yanis</p>
+<div class="author">Автор: Yanis</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

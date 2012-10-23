@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Nomadic&nbsp; </p>
+<div class="author">Автор: Nomadic</div>
 
 <p>Все процессы получают сигналы CTRL_CLOSE_EVENT, CTRL_LOGOFF_EVENT и CTRL_SHUTDOWN_EVENT. А делается это (грубо говоря :) так:</p>
 <pre>

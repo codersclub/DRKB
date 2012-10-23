@@ -3,5 +3,5 @@
 
 
 <p>Со стороны сервера - невозможно, только клиентом (ADO/MDAC имеют метод NextRecordset)</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

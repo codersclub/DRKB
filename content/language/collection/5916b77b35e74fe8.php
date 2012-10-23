@@ -5,5 +5,5 @@
 <p>Пример использования в приложении списка объектов на основе класса TList</p>
 <p><a href="/zip/07_1.zip">Пример использования в приложении списка объектов на основе класса TList</a>
 </p>
-<p class="author">Автор: Akella </p>
+<div class="author">Автор: Akella </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

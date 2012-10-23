@@ -51,7 +51,7 @@ const
 
 <p>Автор: Quality freeware from Sight&amp;Sound, Slovenia, http://www.sight-sound.si</p>
 
-<p class="author">Автор: Андрей Гусев (Andrey Gusev)</p>
+<div class="author">Автор: Андрей Гусев (Andrey Gusev)</div>
 
 <p>Взято из Akzhan's Delphi-related VCL&amp;WinAPI Tips'n'Tricks</p>
 

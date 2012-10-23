@@ -71,5 +71,5 @@ begin
 end;
  
 </pre>
-<p class="author">Автор: Alex&amp;Co </p>
+<div class="author">Автор: Alex&amp;Co </div>
 <p>Сайт: <a href="https://alex-co.com.ru " target="_blank">https://alex-co.com.ru </a></p>

@@ -54,5 +54,5 @@ SHFileOperation (sh);
 <p>Надо путь писать : c:\\test\dfg</p>
 <p>Чтобы вначале "\\" было...иначе не будет удалять диры из корня </p>
 
-<p class="author">Автор: Baa </p>
+<div class="author">Автор: Baa </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Xavier Pacheco</p>
+<div class="author">Автор: Xavier Pacheco</div>
 <pre>
 unit Main;
  

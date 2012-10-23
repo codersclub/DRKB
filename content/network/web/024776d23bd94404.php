@@ -1,5 +1,5 @@
 <h1>Delphi ActiveForms и Web Modules (Intranet)</h1>
-<div class="date">01.01.2007</div>
+<div class="date">01.01.2000</div>
 
 <p>Delphi ActiveForms (intranet) </p>
 С помощью JBuilder возможно разрабатывать 100% pure Java апплеты, приложения., но мы не должны забывать и о том, что с помощью Дельфи так же можно создавать интересные Интранет решения используя такие вещи как ActiveForms и Web Modules... </p>
@@ -33,3 +33,4 @@ Bug Report: TWinCGI OutputFile</p>
 <p>Интернет решения от доктора Боба (http://www.drbob42.com)</p>
 <p>(c) 2000, Анатолий Подгорецкий, перевод на русский язык (http://nps.vnet.ee/ftp)</p>
 &nbsp;</p>
+<div class="author">Автор: Анатолий Подгорецкий</div>

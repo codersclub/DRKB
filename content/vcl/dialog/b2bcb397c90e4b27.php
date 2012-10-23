@@ -56,7 +56,7 @@ end;
 end.
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: Александр (Rouse_) Багель</p>
+<div class="author">Автор: Александр (Rouse_) Багель</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr />
 <pre>
@@ -112,5 +112,5 @@ end;
 end.
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: Krid </p>
+<div class="author">Автор: Krid </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

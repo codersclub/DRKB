@@ -41,7 +41,7 @@ begin
 end; 
 </pre>
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
-<hr /><p class="author">Автор: Дедок Василий </p>
+<hr /><div class="author">Автор: Дедок Василий </div>
 <pre>
  
 type
@@ -66,7 +66,7 @@ begin
     end;
 end;
 </pre>
-<hr /><p class="author">Автор: Иваненко Фёдор Григорьевич </p>
+<hr /><div class="author">Автор: Иваненко Фёдор Григорьевич </div>
 <pre>
 procedure FillArray(var A: array of Integer);
 var

@@ -36,7 +36,7 @@ wbWebBrowser.Navigate2(vWebAddr, vFlags, vFrame, vPostData, vHeaders);
 end; {End of Navigate procedure.}
 </pre>
 
-<p class="author">Автор: Craig Foley Ответ: А это другой способ: </p>
+<div class="author">Автор: Craig Foley Ответ: А это другой способ: </div>
 <pre>
 procedure TForm1.SubmitPostForm;
 var
@@ -70,7 +70,7 @@ WebBrowser1.Navigate2(URL, Flags, TargetFrameName, PostData, Headers);
 end;
 </pre>
 
-<p class="author">Автор: Hans Gulo. </p>
+<div class="author">Автор: Hans Gulo. </div>
 
 <hr />в BeforeNavigate2, если посмотреть на PostData, увидем строку типа "????????", а как нормальную получить ?</p>
 <pre>
@@ -105,6 +105,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Alex</p>
+<div class="author">Автор: Alex</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

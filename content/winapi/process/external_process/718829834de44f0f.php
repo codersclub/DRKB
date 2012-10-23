@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Dale Berry</p>
+<div class="author">Автор: Dale Berry</div>
 
 <p>Данная функция позволяет завершить выполнение любой активной программы по её classname или заголовку окна.</p>
 <pre>

@@ -225,5 +225,5 @@ end;
 </pre>
 <p>Осталось запустить проект на выполнение и убедиться в его работоспособности. В данной статье мы рассмотрели лишь самый простой пример. Надеюсь, она станет для Вас хорошим стартом в освоении новых Web технологий. </p>
 
-<p class="author">Автор: Mike Goblin </p>
+<div class="author">Автор: Mike Goblin </div>
 <p><a href="https://www.delphimaster.ru" target="_blank">https://www.delphimaster.ru</a></p>

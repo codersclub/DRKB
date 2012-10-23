@@ -75,5 +75,5 @@ cs.Socket.SendText('PRIVMSG #' + Info.sChan + ' :' + Edit4.Text + #13#10);
 После этого текст из Edit4 должен попасть на канал sChan, за отсылку сообщений ответственна команда &#171;PRIVMSG&#187;.<br>
 &nbsp;<br>
 &nbsp;<br>
+<div class="author">Автор: x2er0</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: x2er0</p>

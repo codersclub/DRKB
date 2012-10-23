@@ -19,4 +19,4 @@ SELECT * FROM TABLE ORDER BY INDEXFIELD DESC
 
 <p>Более подробно на эту тему см. документ http://www.ibase.ru/devinfo/bde.htm </p>
 
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>

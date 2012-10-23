@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Philip A. Milovanov&nbsp;&nbsp; ( http://korys.chat.ru )</p>
+<div class="author">Автор: Philip A. Milovanov&nbsp;&nbsp; ( http://korys.chat.ru )</div>
 
 <p>Ниже приведен пример, как это сделать при помощи Direct Oracle Access, надеюсь этот кусок кода несложно запустить в отдельном процессе, а в другом можно запустить перемесчатель прогресс бара. Есть готовая компонента, могу поделиться.</p>
 

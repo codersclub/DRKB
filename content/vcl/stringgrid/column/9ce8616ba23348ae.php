@@ -2,10 +2,13 @@
 <div class="date">01.01.2007</div>
 
 
+<div class="author">Автор: Song</div>
 <p>Можно сделать наследника от TCustomGrid. А у последнего есть метод - DeleteRow.</p>
-<p class="author">Автор: Song</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
-<hr /><p>Например удаление текущей строки:</p>
+
+<hr />
+
+<p>Например удаление текущей строки:</p>
 <pre>
 Type TFakeGrid=class(TCustomGrid);
 
@@ -16,7 +19,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <p class="note">Примечание от bur80 (Sources.ru):</p>
 <p>Предлагаю в разделе VCL -&gt; StringGrid внести корректировочку в статью "Как удалить строку в StringGrid в run-time", что данный метод(!) будет работать только в случае если форма создаётся вот так:</p>
@@ -39,6 +42,7 @@ fr1.Show;
 &nbsp;<br>
 
 <hr />
+
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Удаление строки из StringGrid
@@ -92,4 +96,6 @@ procedure GridDeleteRow(RowNumber: Integer; Grid: TstringGrid);
    GridDeleteRow(3, stringGrid1);
  end;
 </pre>
+
+<div class="author">Автор: Борис Новгородов (MBo), mbo@mail.ru</div>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>

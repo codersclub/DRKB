@@ -36,10 +36,10 @@ begin
 end;
 </pre>
 <p>PS. Ecли вы собираетесь работать с этим DSN через BDE, то надо закрыть и открыть Session, иначе он не будет доступен.</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p class="author">Автор: Olivio Moura</p>
+<div class="author">Автор: Olivio Moura</div>
 <p>Этот пример показывает один из способов создания ODBC драйвера для доступа к файлу Access MDB. Подобная операция применима к большинству файлов баз данных. Естевственно, Вам потребуется MDB файл, для того, чтобы связать его с DSN.</p>
 <pre>
 const 

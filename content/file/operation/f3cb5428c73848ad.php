@@ -4,11 +4,11 @@
 
 <p>Я использую функцию, которая заносит в ключ реестра RunOnce командную строку:</p>
 <p>command.com /c del C:\Путь\Имя_файла</p>
-<p class="author">Автор: inko </p>
+<div class="author">Автор: inko </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <p>В wininit добавляешь строку NUL={ПУТЬ УДАЛЯЕМОГО ФАЙЛА}</p>
-<p class="author">Автор: VoL</p>
+<div class="author">Автор: VoL</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />
@@ -35,5 +35,5 @@ end;
 <p>Тут две команды добавляются, т.к. на XP с command.com не рабоает...</p>
 <p>Одна из них сработает, а другая пройдет в холостую...</p>
 
-<p class="author">Автор: p0s0l</p>
+<div class="author">Автор: p0s0l</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

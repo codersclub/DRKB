@@ -23,5 +23,5 @@ Select * From @MyMemoryTable
 Select * into @MyTempTable From MyTable
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

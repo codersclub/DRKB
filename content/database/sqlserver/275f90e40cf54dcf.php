@@ -15,4 +15,4 @@ Begin Tran
  
 If @ErrorCode &lt;&gt; 0 Rollback Else Commit
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

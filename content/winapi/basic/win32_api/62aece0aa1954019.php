@@ -4,13 +4,15 @@
 
 <p>Автору известны две объектно-ориентированные библиотеки, которые можно рассматривать как альтернативу библиотеке VCL при написании компактных программ. Это библиотеки классов XCL и ACL. Обе библиотеки бесплатны и поставляются в исходных кодах. </p>
 <p>Библиотека ACL &nbsp; &nbsp; &nbsp; &nbsp;(API control library) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p class="author">Автор: &nbsp; &nbsp; &nbsp; &nbsp;Александр Боковиков, Екатеринбург, Россия &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div class="author">Автор: Александр Боковиков, Екатеринбург, Россия</div>
 <p>Страничка: &nbsp; &nbsp; &nbsp; &nbsp;http://a-press.parad.ru/pc/bokovikov/delphi/acl/acl.zip &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>E-Mail: &nbsp; &nbsp; &nbsp; &nbsp;abb@adx.ru &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>Классы: &nbsp; &nbsp; &nbsp; &nbsp;TFont, TFonts, TControl, TWinControl, TStdControl, TLabel, TEdit, TListBox, TButton, TCheckBox, TComboBox, TGroupBox, TProgressBar, TKeyboard &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
 <hr />
+
 <p>Библиотека XCL &nbsp; &nbsp; &nbsp; &nbsp;(Extreme class library) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p class="author">Автор: &nbsp; &nbsp; &nbsp; &nbsp;Vladimir Kladov (Mr.Bonanzas) &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div class="author">Автор: Vladimir Kladov (Mr.Bonanzas)</div>
 <p>Страничка: &nbsp; &nbsp; &nbsp; &nbsp;http://xcl.cjb.net &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>E-Mail: &nbsp; &nbsp; &nbsp; &nbsp;bonanzas@xcl.cjb.net &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>Классы: &nbsp; &nbsp; &nbsp; &nbsp;XForm, XApplet, XCanvas, XPen, XBrush, XFont, ZDDB, ZHiBmp, ZDIBitmap, ZBitmap, ZIcon, ZGifDecoder, ZGif, ZJpeg, XLabel, XButton, XBevel, XPanel, XSplitPanel, XStatus, XGrep, XGroup, XCheckBox, XRadioBox, XPaint, XScroller, XScrollBox, XScrollBoxEx, XEdit, XNumEdit, XCombo, XGrid, XListView, XMultiList, XNotebook, XTabs, XTabbedNotebook, XCalendar, XGauge, XGaugePercents, XHysto, XHystoEx, XImageList, XImgButton, XTooltip, XCustomForm, XDsgnForm, XDsgnNonvisual, CLabel, CPaint, CButton, CEdit, CMemo, CCheckBox, CRadioBox, CListBox, CComboBox, ZList, ZMenu, ZPopup, ZMainMenu, ZPopupMenu, ZTimer, ZStrings, ZStringList, ZIniFile, ZThread, ZQueue, ZFileChange, ZDirChange, ZOpenSaveDialog, ZOpenDirDialog, ZTree, ZDirList, ZDirListEx, ZRegistry, ZStream, ZFileStream, ZMemoryStream, XStrUtils.pas, XDateUtils.pas, XFileUtils.pas, XWindowUtils, XPrintUtils, XShellLinks.pas, XJustOne.pas, XJustOneNotify.pas, XPascalUnit.pas, XSysIcons.pas, XCanvasObjectsManager, XRotateFonts, XFocusPainter, XFormsStdMouseEvents, XFormsStdKeyEvents, XFormAutoSizer, XAligner, XControlAutoPlacer, XMfcAntiFlicker, XSplitSizer, XResizeAntiFlicker, XCaretShower, XEditMouseSelect, XEditClipboard, XEditUndo, XListMouseSel, XListKeySel, XListEdit, ZNamedTags, XBtnRepeats, XBufLabels, XBackgrounds, XWndDynHandlers &nbsp; &nbsp; &nbsp; &nbsp;</p>

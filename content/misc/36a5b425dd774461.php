@@ -30,7 +30,7 @@ begin
   CloseHandle(FSnapshotHandle);
 end;
 </pre>
-<p class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></p>
+<div class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 <hr />

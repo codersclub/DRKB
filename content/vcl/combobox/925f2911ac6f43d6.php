@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Allan Carlton</p>
+<div class="author">Автор: Allan Carlton</div>
 
 <p>Делается это при помощи стиля ownerdraw, который присутствует в TComboBox. Нас интересуют два свойства этого стиля:</p>
 

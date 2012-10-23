@@ -5,5 +5,5 @@
 <pre>
 cast(cast(@Date as float)-floor(cast(@Date as float)) as datetime)
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

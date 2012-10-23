@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Ruslan Abu Zant</p>
+<div class="author">Автор: Ruslan Abu Zant</div>
 <p>Приводимая здесь функция показывает, как Ваше приложение может извлечь из браузера (IE или Netscape) URL , как, например, это делает аська.</p>
 <p>Совместимость: Delphi 4.x (или выше)</p>
 <p>Не забудьте добавить DDEMan в Ваш проект!</p>

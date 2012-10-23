@@ -30,6 +30,6 @@ end;
 </pre>
 
 <p>Не забудьте перед запуском поставить нужное значение TabWidth.</p>
-<p class="author">Автор: <a href="mailto:virty1k@mail.ru">Virtualik</a></p>
+<div class="author">Автор: <a href="mailto:virty1k@mail.ru">Virtualik</a></div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

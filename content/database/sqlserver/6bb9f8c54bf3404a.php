@@ -17,4 +17,4 @@ Select @result
 
 <p class="note">Примечание</p>
 <p>Заменить nvarchar на varchar нельзя!</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

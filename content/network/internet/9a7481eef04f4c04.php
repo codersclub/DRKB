@@ -3,11 +3,11 @@
 
 
 <p>За это отвечает ф-ии InternetGetConnectedState() из wininet.dll или InetIsOffLine() из url.dll </p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Единственный 100% достоверный способ узнать находится ли комп в интернете это скачать что-то со стабильного внешнего сервера - такого как Microsoft, Yahoo, AT&amp;T... По другому ни одна функция локального компьютера не сможет отличить нахождение компьютера в интранете и в интернете... Я в своей программе для определения коннекта с интернетом пингую наш собственный DNS сервер, который стоит за Firewall и естественно пинговка идет через провайдера интернет. (В некоторых Firewall может быть запрещен Ping - тогда надо именно попытаться скачать что-нибудь)</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Часто приложению, которое работает в интернете, требуется знать, подключён пользователь к интернету или нет. Предлагаю Вам довольно гибкое решение этого вопроса.</p>
 <p>Совместимость: Delphi 3.x (или выше)</p>
@@ -23,7 +23,7 @@
 <p>параметр Flag игнорируется, соответственно используем ноль. </p>
 <p>Эта DLL обычно проинсталлирована на большинстве компьютеров. Она также существует в Win98 либо поставляется с Internet Explorer 4 или выше, Office 97 и т.д.. </p>
 <p>Более подробно можно прочитать в MSDN. Оригинал: http://msdn.microsoft.com/library/psdk/shellcc/shell/Functions/InetIsOffline.htm</p>
-<p class="author">Автор: Vitaly Zayko</p>
+<div class="author">Автор: Vitaly Zayko</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>
 </p>

@@ -264,7 +264,7 @@ end;
 &nbsp;<br>
 &nbsp;
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Krid</p>
+<div class="author">Автор: Krid</div>
 &nbsp;</p>
 <hr />
 <pre>

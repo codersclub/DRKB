@@ -6,5 +6,5 @@
 BACKUP LOG MyDatabaseName WITH NO_LOG
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

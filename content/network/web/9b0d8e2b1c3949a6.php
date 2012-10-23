@@ -452,5 +452,5 @@ Connected - true<br>
 <img src="/pic/clip0089.gif" width="800" height="303" border="0" alt="clip0089"></p>
 &nbsp;</p>
 
-<p class="author">Автор: Mike Goblin </p>
+<div class="author">Автор: Mike Goblin </div>
 <p><a href="https://www.delphimaster.ru" target="_blank">https://www.delphimaster.ru</a></p>

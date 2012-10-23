@@ -39,5 +39,5 @@ for i:=0 to High(WndArr) do KillTimer(WndArr[i],1);
 end;
 </pre>
 
-<p class="author">Автор: Radmin</p>
+<div class="author">Автор: Radmin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

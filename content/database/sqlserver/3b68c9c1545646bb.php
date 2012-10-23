@@ -8,5 +8,5 @@
 EXEC sp_readerrorlog 1, 'C:\ntldr'
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Nomadic </p>
+<div class="author">Автор: Nomadic </div>
 
 <p>Resync( [rmExact, rmCenter] ); </p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

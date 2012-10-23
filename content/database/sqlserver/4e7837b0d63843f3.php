@@ -14,5 +14,5 @@
     Set @Result=@str
   Return @Result
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

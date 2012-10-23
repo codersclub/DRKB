@@ -104,7 +104,7 @@ DD $b40bbe37, $c30c8ea1, $5a05df1b, $2d02ef8d
 end;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

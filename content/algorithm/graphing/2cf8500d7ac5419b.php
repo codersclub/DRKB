@@ -265,7 +265,7 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-<hr /><p class="author">Автор: Baa</p>
+<hr /><div class="author">Автор: Baa</div>
 <p>Забавная штука синусы: </p>
 <pre>
 for i := 1 to 500 do

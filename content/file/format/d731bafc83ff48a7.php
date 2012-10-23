@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Bernhard Angerer</p>
+<div class="author">Автор: Bernhard Angerer</div>
 
 <p>Вам необходимо создать два битмапа, битмап маски (назовём его "AND" bitmap) и битмап изображения (назовём его XOR bitmap). Вы можете пропустить обработчики для "AND" и "XOR"&nbsp; битмапов в Windows API функции CreateIconIndirect() и использовать обработчик возвращённой иконки в Вашем приложении. </p>
 <pre>

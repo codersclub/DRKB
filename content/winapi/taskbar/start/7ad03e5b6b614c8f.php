@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Misha Moellner</p>
+<div class="author">Автор: Misha Moellner</div>
 <p>Пример из серии "Что можно сделать с рабочим столом". В общем, это обычный трюк с кнопкой "Пуск" (Start).</p>
 <pre>
 { объявляем глобальные переменные } 

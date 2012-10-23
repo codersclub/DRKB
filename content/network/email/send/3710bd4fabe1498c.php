@@ -85,7 +85,7 @@ end.
 </pre>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p class="author">Автор: Sven Lohmann</p>
+<div class="author">Автор: Sven Lohmann</div>
 <p>Обычно в программах используется два способа отправки email. Первый - это "ShellExecute", а второй - через OLE server, как в Delphi 5. Однако, предлагаю посмотреть, как эта задача решается посредствам MAPI.</p>
 <p>Совместимость: Delphi 4.x (или выше)</p>
 <pre>
@@ -563,4 +563,4 @@ end;
 </pre>
 <p>&nbsp;<br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>

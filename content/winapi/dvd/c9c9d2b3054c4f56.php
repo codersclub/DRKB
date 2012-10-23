@@ -7,6 +7,6 @@ GetLogicalDrives()
 GetDriveType() 
 </pre>
 
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

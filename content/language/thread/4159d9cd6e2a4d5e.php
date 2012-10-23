@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Charles Calvert </p>
+<div class="author">Автор: Charles Calvert </div>
 
 <p>Потоки и DLL-ки </p>
 

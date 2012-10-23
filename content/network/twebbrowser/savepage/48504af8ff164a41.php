@@ -24,5 +24,5 @@ end;
 </pre>
 
 
-<p class="author">Автор: Ron Loewy Обратите внимание: Вам понадобится импортировать библиотеку</p>
+<div class="author">Автор: Ron Loewy Обратите внимание: Вам понадобится импортировать библиотеку</div>
 <p>MSHTML и добавить MSHTML_TLB как ActiveX, в секцию Uses. </p>

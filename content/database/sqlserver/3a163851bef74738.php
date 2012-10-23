@@ -33,5 +33,5 @@ dbcc showcontig(MyTable) with all_indexes, fast
 </p>
 <p>Чем выше плотность, чем она ближе к 100% тем быстрее будет работать индекс при поиске. Если плотность маленькая возможно следует переиндексировать таблицу или пересоздать индекс.(ВИСС IndexDefrag, DBCC ReIndex)</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

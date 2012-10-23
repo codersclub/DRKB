@@ -72,7 +72,7 @@ Width, ClientY + Top + Height);
 end;
 end.
 </pre>
-<p class="author">Автор: Krid </p>
+<div class="author">Автор: Krid </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr />
 <pre>
@@ -104,7 +104,7 @@ begin
     WS_EX_TRANSPARENT;
 end;
 </pre>
-<p class="author">Автор:&nbsp; Smike</p>
+<div class="author">Автор:&nbsp; Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Вместо перекрытия CreateParams():<br>
 <p>Сделать "прозрачным" для мышки: </p>
@@ -116,7 +116,7 @@ setWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) or WS_EX_T
 setWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) and not WS_EX_TRANSPARENT);
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор:&nbsp; Vitalik</p>
+<div class="author">Автор:&nbsp; Vitalik</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Еще одно хорошее решение. Его преимущество в том, что работать оно будет на всех системах, включая Win9x.<br>
 <p>&nbsp;</p>
@@ -151,5 +151,5 @@ end;
 </pre>
 <p>&nbsp;<br>
 
-<p class="author">Автор: Scorpy</p>
+<div class="author">Автор: Scorpy</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

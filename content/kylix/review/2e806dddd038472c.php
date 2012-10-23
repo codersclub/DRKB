@@ -4,7 +4,7 @@
 
 <p>Первые впечатления</p>
 
-<p class="author">Автор: Андрей Боровский (<a href="https://www.myhomepage.com/index.html" target="_blank">www.kylixportal.chat.ru</a>)</p>
+<div class="author">Автор: Андрей Боровский (<a href="https://www.myhomepage.com/index.html" target="_blank">www.kylixportal.chat.ru</a>)</div>
 
 <p>Наверное каждый программист, хотя бы время от времени работающий с Delphi, слышал о том, что Kylix &#8211; это Delphi для Linux. Более строго, Kylix &#8211; это средство разработки на основе ObjectPascal и VCL для платформы Linux/QT. Данная серия статей предназначена прежде всего для программистов, ранее писавших на Delphi, и желающих теперь освоить программирование для Linux. Я сам пишу программы как на Delphi под Windows, так и на QT под Linux. Надеюсь, мои впечатления и наблюдения покажутся Вам полезными.</p>
 

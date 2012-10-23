@@ -7,7 +7,7 @@
 TForm.Style:=bsNone 
 </pre>
 
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>MDIChild форма:</p>
@@ -17,7 +17,7 @@ width:=width+1;
 width:=width-1;
 </pre>
 
-<p class="author">Автор: rhf </p>
+<div class="author">Автор: rhf </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

@@ -132,4 +132,4 @@ end;
 
 
 <p><a href="https://www.mirgames.ru" target="_blank">https://www.mirgames.ru</a></p>
-<p class="author">Автор: Spose</p>
+<div class="author">Автор: Spose</div>

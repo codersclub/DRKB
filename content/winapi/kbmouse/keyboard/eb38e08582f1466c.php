@@ -15,7 +15,7 @@ Msg.Result := 0
 end;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>На уровне формы клавиша tab обычно обрабатывается Windows. В примере создается обработчик события CM_Dialog для перехвата Dialog keys </p>
@@ -51,7 +51,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<p class="author">Автор: Ralph Friedman </p>
+<div class="author">Автор: Ralph Friedman </div>
 <p>Единственное место в программе, где можно перехватить нажатие клавиши tab - в обработчике Application.OnMessages. Пример ниже:</p>
 
 <pre>

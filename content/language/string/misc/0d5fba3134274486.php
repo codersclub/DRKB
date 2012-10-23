@@ -5,11 +5,11 @@
 <p>Как в Run-time сгененрировать строку типа </p>
 '{821AB2C7-559D-48E0-A3EE-6DD50E83234C}'</p>
 <p>Типа как в среде при нажатии Ctrl-Shift-G. Функция CoCreateGuid выводит значение типа TGUID, я нигде не нашёл функции конвертации TGUID -&gt; String. Может кто знает такую функцию? </p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Есть такая функция. Как ни странно называется она GUIDToString, и живет в SysUtils. </p>
-<p class="author">Автор: Fantasist</p>
+<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Можно GUIDToString написать и вручную, будет выглядеть примерно так:</p>
 <pre>
@@ -31,4 +31,4 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Jin X</p>
+<div class="author">Автор: Jin X</div>

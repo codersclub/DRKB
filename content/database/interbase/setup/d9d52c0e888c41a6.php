@@ -3,4 +3,4 @@
 
 
 <p>БД ISC4.GDB используется IB для хранения информации о пользователях (имена, пароли и т.п.). Удалять этот файл нельзя. Вы можете создать alias на эту БД и посмотреть ее содержимое, и даже программно добавлять пользователей или изменять их пароли, воспользовавшись соответствующими UDF в разделе www.ibase.ru/d_udf.htm. </p>
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>

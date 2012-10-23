@@ -33,4 +33,4 @@ begin
 end;
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>

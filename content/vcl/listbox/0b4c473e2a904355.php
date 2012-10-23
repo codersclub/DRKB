@@ -74,7 +74,7 @@ end;
 end.
 </pre>
 
-<p class="author">Автор: Ralph Friedman </p>
+<div class="author">Автор: Ralph Friedman </div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 <hr /><p>Предположим, что ListBox сортируется, это не трудно. Вы должны разместить компонент Edit выше ListBox и создать следующий обработчик его случая OnChange:</p>

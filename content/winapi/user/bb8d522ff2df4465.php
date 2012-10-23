@@ -95,7 +95,7 @@ end;
 end.
 </pre>
 
-<p class="author">Автор: <a href="mailto:vit@mo.msk.ru" target="_blank">Кондратюк Виталий</a></p>
+<div class="author">Автор: <a href="mailto:vit@mo.msk.ru" target="_blank">Кондратюк Виталий</a></div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 <hr />

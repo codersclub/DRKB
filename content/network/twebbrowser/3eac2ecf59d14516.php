@@ -36,7 +36,7 @@ begin
   end;
 end;
 </pre>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 &nbsp;<br>
 
@@ -64,7 +64,7 @@ begin
   NavigateTo := True;
 end;
 </pre>
-<p class="author">Автор: s-mike</p>
+<div class="author">Автор: s-mike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 &nbsp;<br>
 
@@ -84,6 +84,6 @@ begin
 end;
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: -TOXA- </p>
+<div class="author">Автор: -TOXA- </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
 <p>&nbsp;</p>

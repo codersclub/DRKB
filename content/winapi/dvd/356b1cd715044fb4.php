@@ -40,7 +40,7 @@ CloseHandle (hDevice);
  
 }
 </pre>
-<p class="author">Автор: Baa </p>
+<div class="author">Автор: Baa </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a> </p>
 <hr />
 <pre>
@@ -97,6 +97,6 @@ begin
    MessageBox(Handle,'CD is unlocked','Info',MB_ICONINFORMATION)
 end;
 </pre>
-<p class="author">Автор: Krid</p>
+<div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

@@ -255,7 +255,7 @@ End;
 
 <p> SetPrivilege('SeShutdownPrivilege',True);</p>
 <p> ExitWindowsEx(EWX_SHUTDOWN,0);</p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

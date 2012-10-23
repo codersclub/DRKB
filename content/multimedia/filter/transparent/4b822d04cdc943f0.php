@@ -59,7 +59,7 @@ Canvas.CopyRect(TitleRect, BTitle.Canvas, TitleRect);
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-<hr /><p class="author">Автор: Павел </p>
+<hr /><div class="author">Автор: Павел </div>
 <p>Пожалуй, это самый простой способ создания прозрачного изображения. Суть его в том, что маска создается автоматически во время выполнения программы, используя значение прозрачного цвета. </p>
 <pre>
 MaskBitmap := TBitmap.Create;

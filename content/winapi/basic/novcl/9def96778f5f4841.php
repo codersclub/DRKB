@@ -22,5 +22,5 @@ end;
 </pre>
 <p>&nbsp;<br>
 &nbsp;<br>
-<p class="author">Автор: jack128 </p>
+<div class="author">Автор: jack128 </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

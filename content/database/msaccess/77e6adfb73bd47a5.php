@@ -5,5 +5,5 @@
 <p>Говорит мол невозможно открыть файл. И на самом деле еще виден файл блокировки Access. Как закрыть базу так чтоб этот файл исчез и я мог сохранить. </p>
 <p>Ответ: </p>
 <p>session.close</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

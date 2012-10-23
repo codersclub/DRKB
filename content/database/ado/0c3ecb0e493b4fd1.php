@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Дмитрий Померанцев </p>
+<div class="author">Автор: Дмитрий Померанцев </div>
 
 <p>Проблема обнаружена под операционной системой Windows 2000 SP3, в среде Delphi6, Delphi7 (скорее всего не зависит от версии Delphi) с использованием Microsoft Jet DB Engine версия 4, SP3. </p>
 

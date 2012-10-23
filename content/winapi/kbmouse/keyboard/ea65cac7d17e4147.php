@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Arx ( http://arxoft.tora.ru )</p>
+<div class="author">Автор: Arx ( http://arxoft.tora.ru )</div>
 
 <p>Проверяйте значение переменной key на равенство VK_RIGHT, VK_LEFT, VK_F1 и т.д. на событии KeyDown формы</p>
 <pre>
@@ -105,7 +105,7 @@ end;
 <p>DelphiWorld 6.0</p>
 
 <hr />
-<p class="author">Автор: Robert Wittig </p>
+<div class="author">Автор: Robert Wittig </div>
 
 <p>Вы можете перехватывать нажатие курсорных клавиш на уровне приложения: </p>
 

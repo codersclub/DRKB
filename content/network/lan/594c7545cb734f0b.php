@@ -655,4 +655,4 @@ end.
 <p>&nbsp;<br>
 Проект также доступен по адресу: http://rouse.front.ru/infofromip.zip <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>

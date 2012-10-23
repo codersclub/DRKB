@@ -13,7 +13,7 @@ end;
 </pre>
 
 <p>&nbsp;</p>
-<p class="author">Автор: Smike</p>
+<div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 &nbsp;</p>
 <hr />
@@ -77,5 +77,5 @@ end.
 </pre>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Krid</p>
+<div class="author">Автор: Krid</div>
 

@@ -65,7 +65,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr />
 <pre>keybd_event(VK_SNAPSHOT,1,KEYEVENTF_KEYUP,0);
@@ -80,7 +80,7 @@ finally
 end;
 </pre>
 &nbsp;</p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Еще один способ получения скриншота окна, на чистом WinApi:</p>
 <pre>
@@ -108,7 +108,7 @@ begin
   Result := bm;
 end;
 </pre>
-<p class="author">Автор: Krid </p>
+<div class="author">Автор: Krid </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Универсальный способ - скриншот с прозрачностью:</p>
 <pre>

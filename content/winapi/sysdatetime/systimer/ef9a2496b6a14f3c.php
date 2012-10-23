@@ -68,7 +68,7 @@ function UpTime: string;
 
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
 <hr />
-<p class="author">Автор: Павел </p>
+<div class="author">Автор: Павел </div>
 <p>Чтобы определить сколько времени прошло с момента последней перезагрузки системы необходимо воспользоваться функцией GetCurrentTime: LongInt; </p>
 <p>Возвращаемое значение: время в миллисекундах. </p>
 <p>Пример использования: </p>

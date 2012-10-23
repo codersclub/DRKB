@@ -3,5 +3,5 @@
 
 Хранится в глобальных переменных now, date, time</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

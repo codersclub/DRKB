@@ -1,7 +1,7 @@
 <h1>Установка уровня прозрачности изображения</h1>
 <div class="date">03.09.2002</div>
 
-<p class="author">Автор: Федоровских Николай</p>
+<div class="author">Автор: Федоровских Николай</div>
 
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

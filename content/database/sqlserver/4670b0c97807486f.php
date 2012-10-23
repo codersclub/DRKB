@@ -7,4 +7,4 @@ Select * From MyTable
 Order by NewID()
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

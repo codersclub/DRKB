@@ -21,6 +21,6 @@ end;
 </pre>
 
 
-<p class="author">Автор: Vasya2000</p>
+<div class="author">Автор: Vasya2000</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

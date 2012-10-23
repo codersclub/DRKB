@@ -1,7 +1,8 @@
 <h1>Вставка и удаление строк в TStringGrid</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Dennis Passmore </p>
+<div class="author">Автор: Dennis Passmore</div>
+
 <p>Поскольку свойство Cols[x] компонента TStringGrid реально является компонентом TStrings, все методы TStrings применимы также и к Cols[x]. </p>
 <p>Недавно в интернете я нашел реализацию расширенных функций TStringGrid: </p>
 <pre>

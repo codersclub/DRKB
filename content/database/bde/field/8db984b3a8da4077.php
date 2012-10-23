@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Reinhard Kalinke </p>
+<div class="author">Автор: Reinhard Kalinke </div>
 
 <p>Единственный способ изменить размер поля или его тип - использовать DBIDoRestructure. Вот простой пример, который может вам помочь в этом:</p>
 

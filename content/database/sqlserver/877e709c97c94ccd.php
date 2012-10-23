@@ -19,5 +19,5 @@ return stuff(@s,len(@s)-2,1,',')
 END
 </pre>
 
-<p class="author">Автор: Sh@dow </p>
+<div class="author">Автор: Sh@dow </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

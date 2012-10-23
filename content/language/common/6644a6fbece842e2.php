@@ -12,5 +12,5 @@ begin
   k := ifthen({If}i &lt; j, {Then}i, {Else}k);
 End;
 </pre>
-<p class="author">Автор: feriman</p>
+<div class="author">Автор: feriman</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

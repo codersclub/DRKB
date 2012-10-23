@@ -68,10 +68,10 @@ Begin
 End;
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 &nbsp;</p>
 <hr />
-<p class="author">Автор: Peter Kane </p>
+<div class="author">Автор: Peter Kane </div>
 <p>Небольшие хитрости для работы с узлами TreeView: </p>
 <p>Если вы хотите производить поиск по дереву, может быть для того, чтобы найти узел, соответствующий определенному критерию, то НЕ ДЕЛАЙТЕ ЭТО ТАКИМ ОБРАЗОМ:</p>
 <pre>

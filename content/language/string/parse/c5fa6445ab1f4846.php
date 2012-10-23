@@ -106,7 +106,7 @@ end; //cnsSmartPos
 
 <p>function PosEx(const SubStr, S: string; Offset: Cardinal = 1): Integer;</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 
 
 

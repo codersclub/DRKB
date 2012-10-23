@@ -7,6 +7,6 @@
 
 <p>C:\Program Files\Common Files\Microsoft Shared\Office10\1033\JETSQL40.CHM</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

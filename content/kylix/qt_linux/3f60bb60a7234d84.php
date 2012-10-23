@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Андрей Боровский (<a href="https://www.myhomepage.com/index.html" target="_blank">www.kylixportal.chat.ru</a>)</p>
+<div class="author">Автор: Андрей Боровский (<a href="https://www.myhomepage.com/index.html" target="_blank">www.kylixportal.chat.ru</a>)</div>
 
 <p>Перехватчики событий</p>
 

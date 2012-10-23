@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Max Rezanov</p>
+<div class="author">Автор: Max Rezanov</div>
 
 <pre>
 var

@@ -121,7 +121,7 @@ Disks.Caption:=SOut; {Выводим в компонент TLabel получен
 end;
 </pre>
 
-<p class="author">Автор: Pegas</p>
+<div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Присутствует неточность в топике "Как получить инфу о жестком диске?". Неточность заключается в том, что функция "GetVolumeInformation" выдает совершенно разный номер диска под системами 9х и NT. Я долго бился над этой проблемой т. к. в своей программе привязываются к номеру в своей программе для определения какой диск вставил пользователь. Пару раз задавал этот вопрос в форумах, но ответа так и не получил. Но недавно я нашел решение этой проблемы. Вот код моей функции для корректного определения серийного номера диска под любой ОС:</p>
 <pre>
@@ -164,6 +164,6 @@ begin
   Label1.Caption:= SirealNumberDisk('f:\');
 end; 
 </pre>
-<p class="author">Автор: Alex&amp;Co&nbsp;  </p>
-<p>Сайт: <a href="https://alex-co.com.ru" target="_blank">https://alex-co.com.ru</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<div class="author">Автор: Alex&amp;Co</div>
+<p>Сайт: <a href="https://alex-co.com.ru" target="_blank">https://alex-co.com.ru</a></p>
 

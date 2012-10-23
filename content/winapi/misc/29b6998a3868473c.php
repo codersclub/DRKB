@@ -490,6 +490,6 @@ end;
 end.
 </pre>
 
-<p class="author">Автор: <a href="mailto:maniac_n@hotmail.com" target="_blank">maniac_n@hotmail.com</a></p>
+<div class="author">Автор: <a href="mailto:maniac_n@hotmail.com" target="_blank">maniac_n@hotmail.com</a></div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

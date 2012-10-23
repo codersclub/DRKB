@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Chris Cummings (http://wibblovia.topcities.com)</p>
+<div class="author">Автор: Chris Cummings (http://wibblovia.topcities.com)</div>
 
 <p>Рано или поздно каждый программист сталкивается с таким понятим как ловушки. Чтобы приступить к ипользованию ловушек необходимо обзавестись windows SDK, который можно так же скачать с сайта Microsoft. В прилагаемом к статье архиве содержатся два проекта: hooks.dpr - это пример приложения работающего с ловушками, а hookdll.dpr - собственно сама DLL. </p>
 <p>Что такое ловушки (Hooks)?</p>

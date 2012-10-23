@@ -1,7 +1,7 @@
 <h1>Рисование звезд и многоугольников</h1>
 <div class="date">03.06.2002</div>
 
-<p class="author">Автор: Федоровских Николай</p>
+<div class="author">Автор: Федоровских Николай</div>
 
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

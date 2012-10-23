@@ -8,4 +8,4 @@
 Select [group] From [Моя Таблица]
 Where [моё поле с таким вот длинным названием и пробелами] like '%какая-то строка%'
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

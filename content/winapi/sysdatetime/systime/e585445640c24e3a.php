@@ -4,7 +4,7 @@
 
 <p>Функция SetSystemTime. </p>
 <p>Обрати внимание на привилегии. </p>
-<p class="author">Автор: podval</p>
+<div class="author">Автор: podval</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -68,7 +68,7 @@ int $21
 end; 
 </pre>
 
-<p class="author">Автор: Pegas</p>
+<div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Следующие несколько строк кода позволяют установить системную дату и время без использования панели управления. Дата и время устанавливаются двумя раздельными компонентами TDateTimePicker. Дата и время декодируются и передаются в API функцию.</p>

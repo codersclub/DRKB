@@ -1,5 +1,5 @@
 <h1>Rave Report &ndash; руководство пользователя</h1>
-<div class="date">01.01.2007</div>
+<div class="date">01.01.2003</div>
 
 
 <p>Rave Reports</p>
@@ -15,10 +15,9 @@
 <p>This manual and all material accompanying it is</p>
 <p>Copyright (C) 1995-2002, Nevrona Designs, All Rights Reserved (rev BE50a)</p>
 <p>&nbsp;</p>
-<p>© Анатолий Подгорецкий, 2003, перевод на русский язык</p>
+<div class="author">Перевод на русский язык: Анатолий Подгорецкий</div>
 <p>https://podgoretsky.com/</p>
 <p>anatoly@podgoretsky.com</p>
-<p class="note">Примечание от Vit: Часть иллюстративного материала статьи и приложения&nbsp; были исключены с целью экономии места в DRKB - за полной версией обращайтесь к Анатолию Подгорецкому. </p>
 
-<h1>Rave Report − руководство пользователя</h1>
+<p class="note">Примечание от Vit: Часть иллюстративного материала статьи и приложения&nbsp; были исключены с целью экономии места в DRKB - за полной версией обращайтесь к Анатолию Подгорецкому. </p>
 

@@ -865,4 +865,4 @@ unit UUReg;
 &nbsp;</p>
 <p>Интернет решения от доктора Боба (http://www.drbob42.com)</p>
 <p>(c) 2000, Анатолий Подгорецкий, перевод на русский язык (http://nps.vnet.ee/ftp)</p>
-&nbsp;</p>
+<div class="author">Автор: Анатолий Подгорецкий</div>

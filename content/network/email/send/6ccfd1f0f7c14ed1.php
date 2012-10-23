@@ -29,10 +29,10 @@ begin
     end;
 end;
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p class="author">Автор: Eddie Shipman</p>
+<div class="author">Автор: Eddie Shipman</div>
 <p>Пример использует VB Script для Outlook, который позволяет произвести такую операцию. Создаётся OLE-объект - 'Outlook.Application' и в него передаётся скрипт.</p>
 <p>Совместимость: все версии Delphi</p>
 <p>Измените recipientaddress@recipienthost.com на Ваш собственный e-mail </p>

@@ -4,13 +4,13 @@
 
 <p>Application.ExeName </p>
 
-<p class="author">Автор: Baa</p>
+<div class="author">Автор: Baa</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />
 
 <p>Или еще лучше Paramstr(0) - лучше потому что работает и без объекта Application и в DLL </p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

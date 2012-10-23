@@ -240,4 +240,4 @@ if (FAILED(pSurface.Lock(nil, ddsd2, DDLOCK_WAIT, 0))) then
 
 <p>И последнее. Данная функция работает не совсем корректно - если открыть созданный файл в графическом редакторе, то под большим увеличением можно заметить ма-аленький цветовой артефакт - один стобик пикселей имеет не тот цвет. Решение этой проблемы я так и не смог найти. </p>
 
-<p class="author">Автор: Виктор Кода</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Виктор Кода</div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

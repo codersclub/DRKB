@@ -17,7 +17,7 @@ begin
 end; 
 </pre>
 
-<p class="author">Автор: МММ</p>
+<div class="author">Автор: МММ</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -64,7 +64,7 @@ With TMySuperEdit.Create(Self) Do Parent:=Self;
 end;
 </pre>
 
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <p>Идея заключается в том, как сделать правое выравнивание текста в TEdit, не прибегая к написанию нового компонента.</p>
 <p>Для этого можно воспользоваться канвасом. Так как TEdit не имеет канваса, то сперва мы создадим TControlCanvas а затем, прикрепим TEdit к этому канвасу.</p>

@@ -5,4 +5,4 @@
 <pre>
 select * from [123.123.123.123].MyExternalDatabase.dbo.MyTable
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

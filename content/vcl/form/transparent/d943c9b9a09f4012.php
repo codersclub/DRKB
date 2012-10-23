@@ -7,5 +7,5 @@ Form1.AlphaBlendValue := 200 {Уровень прозрачности};
 Form1.AlphaBlend := True;
 </pre>
 <p>Delphi 6+</p>
-<p class="author">Автор: Radmin</p>
+<div class="author">Автор: Radmin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

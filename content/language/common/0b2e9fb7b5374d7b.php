@@ -10,6 +10,6 @@ end;
 
 <p>Переменная Step и есть нужный шаг</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

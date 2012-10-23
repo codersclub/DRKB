@@ -15,6 +15,6 @@ BDS (../Help/Thirdparty) для каждого ini файла в поставк�
 &nbsp;<br>
 <p>по материалам sql.ru</p>
 
-<p class="author">Автор: phanatos</p>
+<div class="author">Автор: phanatos</div>
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

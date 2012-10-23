@@ -4,7 +4,7 @@
 
 <p>WM_LBUTTONDOWN</p>
 <p>WM_RBUTTONDOWN </p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Я решил проверить точку нажатия мышки таким вот образом:</p>
@@ -14,12 +14,12 @@
 <p>...</p>
 <p>и получилось, что мышка перемещалась не в те координаты(относительно разрешения монитора (800 на 600)) которые я задумал(в не зависимости от местоположения мышки она перемещалась строго по одному направлению на одинаковое расстояние), причем я сделал еще один вариант - dx=100, dy=100, но тогда перемещение мышки произошло в другую сторону(в сторону x=0 y=0 монитора)!</p>
 <p>Подскажите плз в чем дело? </p>
-<p class="author">Автор: Spawn </p>
+<div class="author">Автор: Spawn </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Mouse_event программирует не абсолюьные, а относительные координаты.</p>
 <p>Чтобы не думалось, просто сначала установите курсор в нужную позицию - SetCursorPos(), а потом делайте клик - Mouse_event() </p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>На форму вынесите компонент TTimer и опишите его единственное событие следующим образом: </p>

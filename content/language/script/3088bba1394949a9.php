@@ -3,4 +3,4 @@
 
 
 <p>Да. В JVCL есть компонент Interpreter который позволяет выполнять скрипты написанные на Дельфи.</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

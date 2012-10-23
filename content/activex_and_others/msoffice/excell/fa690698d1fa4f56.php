@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Fernando Silva</p>
+<div class="author">Автор: Fernando Silva</div>
 
 <p>В Delphi 5, для обмена данными между Вашим приложением и Excel можно использовать компонент TExcelApplication, доступный на Servers Page в Component Palette. </p>
 

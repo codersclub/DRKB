@@ -194,5 +194,5 @@ end;
 <p>ShellExecute(Application.Handle,'open','C:\Windows\Rundll32.exe',</p>
 <p>'команда','C:\Windows',SW_HIDE);</p>
 
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Simon Carter</p>
+<div class="author">Автор: Simon Carter</div>
 <p>Совместимость: Delphi 3.x (или выше)</p>
 <p>Приведённая здесь функция делает копию изображения экрана и сохраняет её в буфере обмена (Clipboard). Так же необходимо включить в Ваш проект файл ClipBrd.pas. </p>
 <pre>

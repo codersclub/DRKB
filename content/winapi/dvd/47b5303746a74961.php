@@ -166,5 +166,5 @@ begin
   Application.Run;
 end.
 </pre>
-<p class="author">Автор: Blabsadm</p>
+<div class="author">Автор: Blabsadm</div>
 <p>Компилятор: Delphi 5</p>

@@ -12,5 +12,5 @@ Exec MyStroredProcedure
   @StroredProcedureVariable2=@MyVariable2
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

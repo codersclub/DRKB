@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Kecvin S. Gallagher</p>
+<div class="author">Автор: Kecvin S. Gallagher</div>
 <p>Если монитор поддерживает режим Stand by, то его можно программно перевести в этот режим. Данная возможность доступна на Windows95 и выше.</p>
 <p>Чтобы перевести монитор в режим Stand by:</p>
 <pre>

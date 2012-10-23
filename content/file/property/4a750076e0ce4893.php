@@ -55,5 +55,5 @@ end;
 
 <p>В качестве параметра задать имя программы, если своей программы:</p>
 <p>FileVersion(Paramstr(0));</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

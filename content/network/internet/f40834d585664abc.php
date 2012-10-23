@@ -4,6 +4,8 @@
 <p>Пример получения информации с WhoIs сервера. <br>
 <a href="/zip/whois.zip">Скачать демонстрационный пример</a>
 </p>
-<p>Александр (Rouse_) Багель</p>
+
+<div class="author">Автор: Александр (Rouse_) Багель</div>
+
 <p><a href="https://rouse.drkb.ru" target="_blank">https://rouse.drkb.ru</a><br>
 <p>&nbsp;</p>

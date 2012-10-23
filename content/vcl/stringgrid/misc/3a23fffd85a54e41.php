@@ -214,5 +214,5 @@ begin
 PrintGrid(StringGrid1,20,20, 'Таблица1: "Название"');
 end;
 </pre>
-<p class="author">Автор: pankerstein </p>
+<div class="author">Автор: pankerstein </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

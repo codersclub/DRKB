@@ -4,11 +4,10 @@
 
 <pre>
 var
-
- 
   hTrayClock  : HWND;
   DC:HDC;
   r:TRect;
+
 begin
   hTrayClock := FindWindowEx(FindWindowEx(FindWindow('Shell_TrayWnd',nil),0,'TrayNotifyWnd',nil),0,'TrayClockWClass',nil);
   GetWindowRect(hTrayClock,r);
@@ -22,5 +21,5 @@ end.
 </pre>
 <p>При следующем обновлении часов надпись исчезнет. Так что можно делать это по таймеру.<br>
 <p>&nbsp;</p>
+<div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Krid</p>

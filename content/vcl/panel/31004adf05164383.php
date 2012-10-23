@@ -3,5 +3,5 @@
 
 
 <p>Смотри пример $Delphi\Demos\Docking\</p>
-<p class="author">Автор: SmaLL </p>
+<div class="author">Автор: SmaLL </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

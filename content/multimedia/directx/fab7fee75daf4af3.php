@@ -200,7 +200,7 @@ hr:=Sample.Update(0 , 0, nil, 0);
 
 <p>Пока все о DirectDraw - надеюсь эта информация послужит для Вас отправной точкой в написании чего-то потрясающего! :-)</p>
 
-<p class="author">Автор: JINX (Elchin Aziz Ali OglI)</p>
+<div class="author">Автор: JINX (Elchin Aziz Ali OglI)</div>
 <p>EMail: aziz@telebot.com, error@softhome.net</p>
 <p>CopyLeft 2000.</p>
 

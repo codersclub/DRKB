@@ -49,6 +49,6 @@ begin
     end;
 end;
 </pre>
-<p class="author">Автор: dron-s </p>
+<div class="author">Автор: dron-s </div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

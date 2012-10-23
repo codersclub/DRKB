@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Zarko Gajic</p>
+<div class="author">Автор: Zarko Gajic</div>
 <pre>
 // переменные
 var Srect,Drect,PosForme:TRect;

@@ -34,7 +34,7 @@ begin
 end; 
 </pre>
 
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Пример показывает, как найти окно Internet Explorer, и захватить из него текущий URL, находящийся в поле адреса IE. В Исходнике используются простые функции win32 api на delphi.</p>
 <pre>

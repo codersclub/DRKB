@@ -15,7 +15,7 @@ begin
   FreeMem(p);
 end;
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <hr />
 <pre>
 public

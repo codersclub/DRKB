@@ -166,7 +166,7 @@ end;
 end.
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Misc&#1106;ka</p>
+<div class="author">Автор: Misc&#1106;ka</div>
 <hr /><p>Еще, как вариант, воспользоваться стандартной функцией GradientFill:</p>
 <pre>
 uses ..., Math;
@@ -231,5 +231,5 @@ end;
 </pre>
 <p>&nbsp;<br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>
 

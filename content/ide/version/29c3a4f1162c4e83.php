@@ -8,11 +8,11 @@
 <p>3) Очень много добавилось для поддержки Web/Internet/Soap/XML и т.п. если используются новые интернет технологии то быстрый переход на Дельфи 7 может быть весьма оправдан.</p>
 <p>4) Если используется Дельфи для построения стандартных виндовых приложений то отличий можно сказать что почти нет, переход либо можно не делать, либо сделать - так как он будет очень простой.</p>
 <p>5) Если Вы разрабатываете компоненты, то естественно нужна поддержка и этой версии</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>и кстати ещё исчезли компоненты TclienSocket и TServerSocket </p>
-<p class="author">Автор: Radmin</p>
+<div class="author">Автор: Radmin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />

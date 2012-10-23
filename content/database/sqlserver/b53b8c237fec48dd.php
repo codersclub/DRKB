@@ -12,5 +12,5 @@ WHERE o.xtype = 'U' AND i.indid &gt; 0 AND
 ORDER BY i.indid
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

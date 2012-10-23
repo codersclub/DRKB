@@ -91,4 +91,4 @@ TypInfo.GetPropInfo (My_Component.ClassInfo, 'Hint') &lt;&gt; nil
 
 <p>Модифицировать кучу объектов можно организовав цикл перебора оных с получением в цикле PropertyInfo объекта и записи в объект на основе PropInfo.</p>
 
-<p class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

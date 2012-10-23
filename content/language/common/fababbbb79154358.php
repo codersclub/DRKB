@@ -25,7 +25,7 @@ if paramstr(1) = '/f' then
   caption := 'Parameter "/f" was found';
 </pre>
 <p>Поставь этот код на событие формы onActivate, откомпиллируй и попробуй запустить программу с одним из 3х указанных параметров и ты увидишь что произойдет. </p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Функция </p>

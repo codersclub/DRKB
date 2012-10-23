@@ -5,4 +5,4 @@
 <p>У меня возникают проблемы с открытием базы данных. USERNAME и PASSWORD вроде-бы правильные. </p>
 
 <p>Может быть, что в момент ввода пароля клавиатура переключена в режим Caps Lock - а пароль является регистрочувствительным. После установки действуют имя пользователя SYSDBA и пароль masterkey. Они предназначены для работы Администратора БД. Из соображений security вы должны изменить пароль masterkey, чтобы никто кроме вас не смог подсоединиться к IB. Также, ни в коем случае нельзя удалять пользователя SYSDBA, иначе вы потеряете доступ к системным таблицам. </p>
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>

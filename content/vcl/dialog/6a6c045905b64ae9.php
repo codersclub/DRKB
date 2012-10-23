@@ -57,7 +57,7 @@ end;
 end.
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: Krid </p>
+<div class="author">Автор: Krid </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 &nbsp;<br>
 

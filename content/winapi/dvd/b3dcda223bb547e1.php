@@ -63,5 +63,5 @@ begin
 end;
 end.
 </pre>
-<p class="author">Автор: eralex</p>
+<div class="author">Автор: eralex</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

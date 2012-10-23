@@ -15,5 +15,5 @@ a:IHTMLTxtRange;
 a:=IHTMLDocument2(webbrowser1.Document).selection.createRange as IHTMLTxtRange;
 </pre>
 
-<p class="author">Автор: Good Man</p>
+<div class="author">Автор: Good Man</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

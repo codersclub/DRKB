@@ -45,7 +45,7 @@ begin
     Result := False
 end;
 </pre>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 <pre>
@@ -147,5 +147,5 @@ initialization
  
 end.
 </pre>
-<p class="author">Автор: Arazel</p>
+<div class="author">Автор: Arazel</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

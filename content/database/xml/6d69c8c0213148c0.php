@@ -1170,6 +1170,6 @@ end.
 //inc(tickCounter, GetTickCount() - tickCount); 
 </pre>
 
-Андрей Чудин, ЦПР ТД Библио-Глобус. </p>
+<div class="author">Автор: Андрей Чудин, ЦПР ТД Библио-Глобус.</div>
 
 <p>Взято из<a href="https://delphi.chertenok.ru" target="_blank"> http://delphi.chertenok.ru</a></p>

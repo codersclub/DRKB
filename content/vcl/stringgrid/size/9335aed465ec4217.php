@@ -1,7 +1,7 @@
 <h1>Выравнивание колонок TStringGrid</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Автор: Kurt</p>
+<div class="author">Автор: Kurt</div>
 
 <p>Организуйте обработчик события сетки OnDrawCell. Создайте код обработчика подобный этому:</p>
 <pre>
@@ -146,7 +146,7 @@ end;
 
 <hr />
 
-<p class="author">Автор: Pavel Stont </p>
+<div class="author">Автор: Pavel Stont </div>
 <pre>
 {
 Код компонента для Delphi на основе стандартного TStringGrid.

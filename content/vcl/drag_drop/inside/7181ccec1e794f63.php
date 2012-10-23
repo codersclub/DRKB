@@ -106,7 +106,7 @@ end;
 procedure TForm1.StringGrid1DragDrop(Sender, Source: TObject; X,
   Y: Integer);
 begin
-  //В данном случае помещаем е? на грид
+  //В данном случае помещаем её на грид
   StartDrag := True;
 end;
 </pre>

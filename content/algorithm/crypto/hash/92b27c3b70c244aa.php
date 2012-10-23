@@ -176,7 +176,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
@@ -617,7 +617,7 @@ end.
 </pre>
 
 <hr />
-<p class="author">Автор: Nikonov A.A. </p>
+<div class="author">Автор: Nikonov A.A. </div>
 
 <pre>
 unit psnMD5;

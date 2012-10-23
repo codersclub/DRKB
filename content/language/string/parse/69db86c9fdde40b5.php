@@ -1,7 +1,7 @@
 <h1>Замена подстрок</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Автор: Сергей Шамайтис </p>
+<div class="author">Автор: Сергей Шамайтис </div>
 <pre>
 function ReplaceSub(str, sub1, sub2: string): string;
 var
@@ -82,4 +82,4 @@ end;
 </pre>
 &nbsp;</p>
 <hr /><p>А стандартная функция StringReplace  чем не устраивает?</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

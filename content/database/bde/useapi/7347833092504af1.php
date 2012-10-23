@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Mark Erbaugh </p>
+<div class="author">Автор: Mark Erbaugh </div>
 <pre>
 type
   TmyFilter = record

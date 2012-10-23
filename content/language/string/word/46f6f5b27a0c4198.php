@@ -1,7 +1,7 @@
 <h1>Определить корень слова (для поиска похожих слов)</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Автор: ___Nikolay</p>
+<div class="author">Автор: ___Nikolay</div>
 <pre>
 // Поиск по корню слова
 function RootOfWord(s: string): string;

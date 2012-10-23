@@ -57,5 +57,5 @@
 
 <p>(с) Vit (Сссылка на оригинал статьи при перепечатке: http://forum.vingrad.ru/index.php?showtopic=37936 обязательна, это единственное ограничение при перепечатке статьи) </p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

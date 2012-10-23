@@ -6,5 +6,5 @@
 EXEC sp_addextendedproperty 'PropertyName', 'PropertyValue', 'user', dbo, 'table', MyTable, 'column', MyField
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>&nbsp;</p>

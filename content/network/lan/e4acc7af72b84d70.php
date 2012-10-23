@@ -70,6 +70,7 @@ end;
 </pre>
 <p>&nbsp;<br>
 &nbsp;<br>
+<div class="author">Автор: Александр (Rouse_) Багель</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
+
 

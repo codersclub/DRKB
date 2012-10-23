@@ -57,7 +57,7 @@ begin
   Until Result=s; //повторяем до тех пор пока есть двойные пробелы 
 end;
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 
 
 

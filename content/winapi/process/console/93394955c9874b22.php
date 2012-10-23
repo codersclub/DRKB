@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Олег Кулабухов&nbsp; </p>
+<div class="author">Автор: Олег Кулабухов</div>
 
 <p>Нужно просто использовать GetConsoleScreenBufferInfo() для ввода нескольких пустых строк.</p>
 
@@ -53,4 +53,4 @@ begin
 end;
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Krid</p>
+<div class="author">Автор: Krid</div>

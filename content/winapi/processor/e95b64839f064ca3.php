@@ -313,7 +313,7 @@ begin
   end;
 end;
 </pre>
-<p class="author">Автор: Shady </p>
+<div class="author">Автор: Shady </div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 

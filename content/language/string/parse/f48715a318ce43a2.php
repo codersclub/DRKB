@@ -21,7 +21,7 @@ begin
   t.free;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Вариант 2. Используем стандартные массивы:</p>
 <pre>
@@ -48,7 +48,7 @@ begin
   showmessage(a[2]);
 </pre>
 <p>После использования массива не забудте освободить память a:=nil или setlength(a,0)</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
@@ -80,6 +80,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Fantasist</p>
+<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>См. также <a href="22008.htm">Парсинг строк</a></p>

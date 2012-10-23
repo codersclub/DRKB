@@ -1,8 +1,7 @@
 <h1>Работа с Bluetooth в Delphi</h1>
-<div class="date">01.01.2007</div>
+<div class="date">01.01.2006</div>
 
 
-<p>Работа с Bluetooth в Delphi</p>
 <p>Часть 1</p>
 <p>&#169; 2006 Петриченко Михаил,</p>
 <p>Soft Service Company</p>
@@ -2662,3 +2661,4 @@ AClientSocket = accept(ASocket, nil, nil);
 <p>Всегда буду рад ответить на ваши вопросы: mike@btframework.com</p>
 <p>Copyright&#169; 2006 Петриченко Михаил, Soft Service Company<br>
 <p>Специально для Delphi Plus</p>
+<div class="author">Автор: Петриченко Михаил</div>

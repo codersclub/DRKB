@@ -72,5 +72,5 @@ end;
  
 end.
 </pre>
-<p class="author">Автор: Smike</p>
+<div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

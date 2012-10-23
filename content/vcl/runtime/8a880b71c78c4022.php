@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: RoboSol.</p>
+<div class="author">Автор: RoboSol.</div>
 <p>часто возникают вопросы о работе с массивом компонентов. вот пример того как вывести список имен всех компонентов в приложении.</p>
 <pre>
 procedure TForm1.Button1Click(Sender : TObject);

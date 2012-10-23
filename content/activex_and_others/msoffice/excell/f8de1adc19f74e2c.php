@@ -14,7 +14,7 @@ Sheet.Cells[2,2]:=230;
 </pre>
 
 <p>Все объекты и методы Офиса можно посмотреть в help'е Офиса.</p>
-<p class="author">Автор: Fantasist</p>
+<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Ниже представлен пример создания новой таблице в Excel 2000:</p>

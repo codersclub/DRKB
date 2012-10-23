@@ -7,7 +7,7 @@
 <p>Переустановка не помогла. Подскажите, как решить проблему.</p>
 
 <p>1. С файлом чистки реестра соседствует программа регистрации D7Reg.exe. Она и позволяет ввести ключ заново.</p>
-<p class="author">Автор: Domino</p>
+<div class="author">Автор: Domino</div>
 <p>2. Вообще можно просто один раз сохранить файлы из c:\Documents and Settings\username\.borland\ и жить спокойно <br>
-<p class="author">Автор: andrey_pst</p>
+<div class="author">Автор: andrey_pst</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -585,5 +585,5 @@ closesocket(sock);
 end;
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: TauxCanolf</p>
+<div class="author">Автор: TauxCanolf</div>
 

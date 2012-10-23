@@ -366,5 +366,5 @@
 <p>Advantage CA-Visual Objects RDDs </p>
 <p>Набор компонентов Advantage TDataSet Descendant for Delphi/Kylix/C++Builder </p>
 <p>- языки программирования - Clipper, Delphi/C++Builder/Kylix, Microsoft Visual Basic, Microsoft Visual C/C++, Java, Perl , Php, CA-Visual Objects </p>
-<p class="author">Автор: Vyacheslav </p>
+<div class="author">Автор: Vyacheslav </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

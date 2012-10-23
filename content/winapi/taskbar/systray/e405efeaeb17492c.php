@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Ruslan Abu Zant</p>
+<div class="author">Автор: Ruslan Abu Zant</div>
 <p>Вы, наверное, видели множество примеров, которые показывают как скрывать панель задач или кнопку Пуск. Но вот как скрыть только System Tray ?</p>
 <pre>procedure hideStartbutton(visi: boolean);
 var

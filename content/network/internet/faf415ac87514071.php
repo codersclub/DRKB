@@ -72,5 +72,5 @@ begin
 
 <p>&nbsp;<br>
 <p>&nbsp;</p>
+<div class="author">Автор: Демо</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Демо</p>

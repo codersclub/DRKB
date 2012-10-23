@@ -1,7 +1,7 @@
 <h1>Определение восхода и захода солнца и луны</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Автор: Александр Ермолаев </p>
+<div class="author">Автор: Александр Ермолаев </div>
 <pre>
 program sunproject;
  

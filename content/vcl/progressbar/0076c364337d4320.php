@@ -24,5 +24,5 @@
 <p>Цитата (MSDN) </p>
 <p>Use this message when you do not know the amount of progress toward completion but wish to indicate that progress is being made.&nbsp; </p>
 <p>PS: чтобы это работало, нужно включить в прогу XP-манифест </p>
-<p class="author">Автор: p0s0l</p>
+<div class="author">Автор: p0s0l</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

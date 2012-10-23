@@ -71,4 +71,4 @@ end;
 </pre>
 
 
-<p class="author">Автор: Xavier Pacheco </p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Xavier Pacheco </div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

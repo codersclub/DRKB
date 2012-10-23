@@ -387,5 +387,5 @@ end;
 <p>&nbsp;<br>
 &nbsp;<br>
 <p>Проверьте - работает. </p>
-<p class="author">Автор: Максим Кузьминский</p>
+<div class="author">Автор: Максим Кузьминский</div>
 <p>Источник: <a href="https://delphikingdom.ru" target="_blank">https://delphikingdom.ru</a></p>

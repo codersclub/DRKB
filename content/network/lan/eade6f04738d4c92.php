@@ -240,5 +240,5 @@ end.
 </pre>
 
 <p>Оригинал доступен по следующему адресу: <a href="https://rouse.front.ru/netscan.zip" target="_blank">https://rouse.front.ru/netscan.zip</a> </p>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

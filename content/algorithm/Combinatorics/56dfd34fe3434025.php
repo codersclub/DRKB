@@ -57,4 +57,4 @@ begin
 end.
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: --= Eagle =-- </p>
+<div class="author">Автор: --= Eagle =-- </div>

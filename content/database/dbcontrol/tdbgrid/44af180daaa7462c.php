@@ -55,9 +55,9 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Ramil Galiev</p>
+<div class="author">Автор: Ramil Galiev</div>
 <p>(2:5085/33.11)</p>
 
-<p class="author">Автор: StayAtHome</p>
+<div class="author">Автор: StayAtHome</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

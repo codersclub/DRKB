@@ -18,4 +18,4 @@ end;
 </pre>
 
 
-<p class="author">Автор: Peter Friese</p>
+<div class="author">Автор: Peter Friese</div>

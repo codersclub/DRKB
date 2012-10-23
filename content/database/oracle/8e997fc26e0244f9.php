@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Nomadic </p>
+<div class="author">Автор: Nomadic </div>
 
 <p>Перевод документации: </p>
 

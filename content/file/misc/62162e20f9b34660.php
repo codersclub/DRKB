@@ -41,6 +41,6 @@ begin
 End;
 </pre>
 
-<p class="author">Автор: RoboSol</p>
+<div class="author">Автор: RoboSol</div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

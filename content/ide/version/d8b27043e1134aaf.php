@@ -554,5 +554,5 @@ Date.Year := 1993;
 Label8.Caption := Date.Text;
 end;
 </pre>
-<p class="author">Автор: CatATonik </p>
+<div class="author">Автор: CatATonik </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

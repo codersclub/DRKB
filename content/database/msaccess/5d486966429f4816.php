@@ -8,5 +8,5 @@ t:Tstringlist;
 ADOConnection.GetTableNames(t, false)
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

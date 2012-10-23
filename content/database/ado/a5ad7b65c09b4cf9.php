@@ -4,5 +4,5 @@
 
 <p>Пример приложения, демонстрирующее возможности технологии ADO</p>
 <p><a href="/zip/19_1.zip">Приложение баз данных, демонстрирующее возможности технологии ADO</a></p>
-<p class="author">Автор: Akella</p>
+<div class="author">Автор: Akella</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

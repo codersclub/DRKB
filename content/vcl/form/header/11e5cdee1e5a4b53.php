@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Christian Cristofori</p>
+<div class="author">Автор: Christian Cristofori</div>
 
 <p>В примере показывается, как изменять заголовок окна (видимый в списке задач при переключении между приложениями) при минимизации окна в иконку.</p>
 

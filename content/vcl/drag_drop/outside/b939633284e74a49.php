@@ -1,6 +1,7 @@
 <h1>Переслать данные в другую программу методом Drag &amp; Drop</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Hagen Reddmann</div>
 
 <pre>
 // Autor: Hagen Reddmann

@@ -149,6 +149,6 @@ end;
 CompactDatabase_JRO('C:\MyDataBase\base.mdb','','123');
 </pre>
 
-<p class="author">Автор: ZEE</p>
+<div class="author">Автор: ZEE</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

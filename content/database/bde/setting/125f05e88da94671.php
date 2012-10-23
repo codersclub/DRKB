@@ -6,5 +6,5 @@
 <p>Решение:</p>
 <p>Control Panel-&gt;BDE Administrator-&gt;закладка Configuration-&gt;Drivers-&gt;Native-&gt;Paradox</p>
 <p>Сделайте где нибудь в сетке каталог доступный со всех компьютеров, Опция Net Dir должна указывать на всех компьютерах должна указывать на этот каталог - в нём будут хранится файлы которые обеспечивают раздельный доступ.</p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

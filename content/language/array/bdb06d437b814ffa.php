@@ -428,14 +428,14 @@ end;
 </pre>
 
 
-<p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<div class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</div>
+<div class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</div>
 
 
 
 <hr />
 
-<p class="author">Автор: Виталий </p>
+<div class="author">Автор: Виталий </div>
 
 <p>Я хочу написать об использовании динамических массивов. Для того чтобы с ними работать можно использовать два вида объявлния в типах</p>
 

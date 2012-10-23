@@ -15,7 +15,7 @@
 <p>Авторы данной технологии Ralph Friedman (CompuServe 100064,3102), Bob Swart и Chris Frizelle.</p>
 <p>Взято из Советов по Delphi, Сборник Kuliba</p>
 
-<p class="author">Автор: Валентин Озеров, mailto:webmaster@webinspector.com</p>
+<div class="author">Автор: Валентин Озеров, mailto:webmaster@webinspector.com</div>
 
 <hr />
 

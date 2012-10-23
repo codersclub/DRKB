@@ -9,4 +9,4 @@
 <p>Если версии IB и платформы на обоих серверах совпадают, то ISC4.GDB можно просто скопировать. Разумеется, при отсутствии подсоединений. (еще лучше вообще выключить сервер БД на время копирования isc4.gdb). </p>
 
 <p>Перенести isc4.gdb между платформами можно следующим способом: сделать backup isc4.gdb, восстановить на нужном сервере эту БД в другое имя (например isc4_new.gdb), остановить сервер IB, удалить старую isc4.gdb и переименовать isc4_new.gdb. </p>
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>

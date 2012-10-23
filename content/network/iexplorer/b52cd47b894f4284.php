@@ -19,5 +19,5 @@ var
       end;
 end;
 </pre>
-<p class="author">Автор: bizar  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div class="author">Автор: bizar</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

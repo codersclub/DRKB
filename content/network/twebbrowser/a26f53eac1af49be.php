@@ -25,5 +25,5 @@ Result:= '';
 end;
 </pre>
 
-<p class="author">Автор: P.O.D.</p>
+<div class="author">Автор: P.O.D.</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

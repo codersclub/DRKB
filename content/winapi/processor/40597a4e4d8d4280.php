@@ -525,4 +525,5 @@
 &nbsp;</p>
 &nbsp;<br>
 &nbsp;<br>
-<p>Станислав Гарматюк (nawhi@ixbt.com)</p>
+
+<div class="author">Автор: Станислав Гарматюк (nawhi@ixbt.com)</div>

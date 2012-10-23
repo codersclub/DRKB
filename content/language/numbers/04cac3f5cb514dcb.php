@@ -11,6 +11,6 @@ type
   end;
 </pre>
 
-<p class="author">Автор: Steve Schafer</p>
+<div class="author">Автор: Steve Schafer</div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

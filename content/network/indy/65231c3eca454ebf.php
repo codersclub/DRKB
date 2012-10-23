@@ -7,6 +7,6 @@
 <a href="https://www.indyproject.org/ " target="_blank">https://www.indyproject.org/ </a></p>
 <a href="https://www.nevrona.com/indy " target="_blank">https://www.nevrona.com/indy </a> &nbsp; &nbsp; &nbsp; 
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

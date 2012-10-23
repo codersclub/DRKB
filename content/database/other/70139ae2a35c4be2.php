@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Команда разработчиков PostgreSQL</p>
+<div class="author">Автор: Команда разработчиков PostgreSQL</div>
 <p>Под редакцией: Thomas Lockhart</p>
 
 <p><b>Авторские права и торговые марки</b></p>

@@ -15,13 +15,13 @@ end;
 </pre>
 
 
-<p class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</p>
-<p class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</p>
+<div class="author">Автор: Даниил Карапетян (delphi4all@narod.ru)</div>
+<div class="author">Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)</div>
 
 
 <hr>
 
-<p class="author">Автор: Nomadic</p>
+<div class="author">Автор: Nomadic</div>
 
 <b>Как корректно перехватить сигнал выгрузки операционной системы, если в моей программе нет окна </b>
 

@@ -147,7 +147,7 @@ end;
 
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
 <hr /><p>Читать из реестра HKEY_DYN_DATA\PerfStats\StatData соответствующий ключ Kernel \CPUUsage</p>
-<p class="author">Автор: Nomadic </p>
+<div class="author">Автор: Nomadic </div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 <hr />
@@ -229,5 +229,5 @@ begin
       end;
 end;
 </pre>
-<p class="author">Автор: Александр (Rouse_) Багель</p>
+<div class="author">Автор: Александр (Rouse_) Багель</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

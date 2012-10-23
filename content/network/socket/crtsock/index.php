@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Paul Toth</p>
+<div class="author">Автор: Paul Toth</div>
 <p>WEB-сайт: www.multimania.com/tothpaul</p>
 <p>CrtSock. Модуль для работы с сокетами. </p>
 <p>Совместимость: Delphi 2+ </p>

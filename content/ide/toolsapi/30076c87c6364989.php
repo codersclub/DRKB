@@ -427,6 +427,6 @@ IOTAWizard = interface(IOTANotifier)
 <p>Именем ключа может быть произвольная строка.</p>
 <p>Эксперт будет запущен только при перезапуске среды, если она выполнялась. Вуаля! </p>
 
-<p class="author">Автор: Раструсный Владислав Юрьевич</p>
+<div class="author">Автор: Раструсный Владислав Юрьевич</div>
 <p>Взято с сайта <a href="https://www.delphimaster.ru/" target="_blank">https://www.delphimaster.ru/</a></p>
 

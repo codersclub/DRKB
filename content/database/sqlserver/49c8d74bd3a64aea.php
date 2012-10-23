@@ -10,4 +10,4 @@ Inner join MyTable c2 on c1.Sys_id &gt;= c2.sys_id
 group by c1.sys_id
 order by id
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

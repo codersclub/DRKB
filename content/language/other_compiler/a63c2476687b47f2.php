@@ -261,5 +261,6 @@ end.
 - http://midletpascal.com<br>
 <p>- <a href="https://www.j2meforums.com/yabbse/index.php?board=4" target="_blank">https://www.j2meforums.com/yabbse/index.php?board=4</a></p>
 
+<div class="author">Автор: XProger</div>
 <p><a href="https://www.mirgames.ru" target="_blank">https://www.mirgames.ru</a></p>
-<p>XProger</p>
+

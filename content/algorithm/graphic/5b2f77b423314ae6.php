@@ -46,5 +46,5 @@ end;
 
 <p>Можно также скрывать невидимые линии - когда q находится в определенном интервале. Также можно поизвращаться: повернуть куб в другой плоскости - поворот осей(для тех, кто знает формулу). </p>
 
-<p class="author">Автор: Айткулов Павел</p>
+<div class="author">Автор: Айткулов Павел</div>
 <p>WEB-сайт: http://rax.ru/click?apg67108864.narod.ru/ </p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

@@ -10,5 +10,6 @@
 <p>&nbsp;</p>
 <p><a href="/zip/sniffer.zip">Скачать демонстрационный пример</a>
 </p>
-<p>Александр (Rouse_) Багель</p>
+<div class="author">Автор: Александр (Rouse_) Багель</div>
+
 <p><a href="https://rouse.drkb.ru" target="_blank">https://rouse.drkb.ru</a></p>

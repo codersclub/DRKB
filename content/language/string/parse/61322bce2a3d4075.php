@@ -77,7 +77,7 @@ end;
 
 
 <hr />
-<p class="author">Автор: ___Nikolay</p>
+<div class="author">Автор: ___Nikolay</div>
 
 <pre>
 // Кол-во вхождений символа в строку

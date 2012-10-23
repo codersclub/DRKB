@@ -38,6 +38,6 @@ X := Gauss(0, 1);
 <p>В стандартном модуле &nbsp;Math есть функция </p>
 function RandG(Mean, StdDev: Extended): Extended;</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>&nbsp;
 <p>&nbsp;</p>

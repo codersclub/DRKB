@@ -6,5 +6,5 @@
 Raiserror('This is error!', 18, 1)
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

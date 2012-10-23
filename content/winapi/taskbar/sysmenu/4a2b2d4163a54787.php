@@ -7,7 +7,7 @@
 AppendMenu(GetSystemMenu(Self.Handle,FALSE),MF_ENABLED,1001,'&amp;Help'); 
 </pre>
 
-<p class="author">Автор: Sheff</p>
+<div class="author">Автор: Sheff</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Отловить клик по меню можно следующим образом:</p>
@@ -27,6 +27,6 @@ procedure WhetherUserPressesHelp(var Msg: TMessage); message WM_SYSCOMMAND;
   end;
 </pre>
 
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

@@ -2,7 +2,6 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Установка бита в единицу</p>
 <pre>
 function BitOn(const val: longint; const TheBit: byte): LongInt;
 
@@ -11,7 +10,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: s-mike </p>
+<div class="author">Автор: s-mike </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <pre>
 procedure SetBit(SetWord, BitNum: Word);

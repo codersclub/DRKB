@@ -68,4 +68,4 @@ end.
 Тож самое и на клавиатуру, код хука - Цифра 13 Соответственно принимай уже мессаги от клавиатуры...<br>
 <p>Только начиная с Win 2000 </p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: Rouse_</p>
+<div class="author">Автор: Rouse_</div>

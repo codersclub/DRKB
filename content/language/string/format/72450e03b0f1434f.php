@@ -34,7 +34,7 @@ begin
   Result := StringReplace(S, #10#13, '',[rfReplaceAll]);
 end;
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 &nbsp;</p>
 &nbsp;
 <p>&nbsp;</p>

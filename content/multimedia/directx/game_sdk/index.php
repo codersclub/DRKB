@@ -3,6 +3,6 @@
 
 
 
-<p class="author">Автор: Стас Бакулин </p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Стас Бакулин </div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 <h1>DirectX (Игровой SDK)</h1>
 

@@ -51,4 +51,4 @@ Select * From
 Where dbName=Db_Name() and ObjId is not NULL
 Order By ObjId, LockMode
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

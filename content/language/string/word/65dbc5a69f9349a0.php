@@ -41,6 +41,6 @@ StrArr:TArrayOfString
 StrArr:=fcToParts('строка1-строка2@строка3',['-','@']):
  
 </pre>
-<p class="author">Автор: ДЫМ</p>
+<div class="author">Автор: ДЫМ</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

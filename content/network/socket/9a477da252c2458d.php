@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: M K</p>
+<div class="author">Автор: M K</div>
 <p>На вопрос "Как я могу отправлять файлы через TClientSocket &amp; TServerSocket?" даём наш ответ :) </p>
 <pre>
 unit Unit1; 

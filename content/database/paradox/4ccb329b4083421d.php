@@ -44,4 +44,4 @@ end;
 </pre>
 
 
-<p class="author">Автор: Pavel Kulchenko </p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Pavel Kulchenko </div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

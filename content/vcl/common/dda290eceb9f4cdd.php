@@ -13,6 +13,6 @@
 <p>e-pager: 7329451@pager.mirabilis.com</p>
 <p>(2:5013/11.3)</p>
 
-<p class="author">Автор: StayAtHome</p>
+<div class="author">Автор: StayAtHome</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

@@ -101,6 +101,6 @@ begin
   Result := true;
 end;
 </pre>
-<p class="author">Автор: MakedoneZ</p>
+<div class="author">Автор: MakedoneZ</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
 <p>&nbsp;</p>

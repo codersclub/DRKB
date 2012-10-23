@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Vimil Saju </p>
+<div class="author">Автор: Vimil Saju </div>
 
 <p>Чтобы добавить дополнительную кнопку, нам прийдётся создать обработчики для следующих событий: </p>
 <p>WM_NCPAINT;//вызывается, когда перерисовывается не клиентская область формы </p>
@@ -175,7 +175,7 @@ end;
 <p>  Комментарии специалистов: </p>
 
 <p>Дата: 25 Августа 2000г.</p>
-<p class="author">Автор: NeNashev nashev@mail.ru</p>
+<div class="author">Автор: NeNashev nashev@mail.ru</div>
 
 <p>InvalidateRect на событие Resize ничего не даёт. Но даже без него</p>
 <p>кнопка всё равно моргает при Resize формы... Надо ещё где-то убрать</p>

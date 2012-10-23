@@ -6,5 +6,5 @@
 <p>1. Пишеш обычный VCL-компонент и добавляеш его в палитру компонентов.</p>
 <p>2. File-&gt;New-&gt;Other-&gt;ActiveX-&gt;ActiveX Control</p>
 <p>3. VCL Class Name = твой VCL-компонент</p>
-<p class="author">Автор: Cully</p>
+<div class="author">Автор: Cully</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

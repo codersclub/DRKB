@@ -9,4 +9,4 @@ FROM Teachers
 INNER JOIN Students ON Students.TeacherID=Teachers.ID 
 WHERE Students.BirthDate BETWEEN #09/02/87# AND #01/01/00#
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

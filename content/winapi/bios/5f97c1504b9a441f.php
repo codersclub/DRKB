@@ -187,4 +187,4 @@
 <p> &nbsp;&nbsp; zeosx</p>
 <p>[C] Faraon</p>
 <p>Источник: <a href="https://wasm.ru" target="_blank">https://wasm.ru</a></p>
-<p class="author">Автор: p0s0l</p>
+<div class="author">Автор: p0s0l</div>

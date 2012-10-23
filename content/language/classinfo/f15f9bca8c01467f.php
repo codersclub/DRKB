@@ -575,7 +575,8 @@ TGsvObjectInspectorEnumPropertiesEvent = procedure(Sender: TObject;
 Россия, Томск.<br>
 http://gurin.tomsknet.ru<br>
 <p>Специально для Королевства Delphi</p>
-&nbsp;<br>
+
+<div class="author">Автор: Сергей Гурин</div>
 &nbsp;<br>
 
 <p><a href="https://www.delphikingdom.com" target="_blank">https://www.delphikingdom.com</a><br>

@@ -1,7 +1,8 @@
 <h1>Пример TDrawGrid.DrawCell</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Neil </p>
+<div class="author">Автор: Neil</div>
+
 <pre>
 procedure TForm1.DrawGrid1DrawCell(Sender: TObject; Col, Row: Longint;
   Rect: TRect; State: TGridDrawState);
@@ -25,7 +26,9 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 &nbsp;</p>
+
 <hr />
+
 <p>Это код, который я использую для печати TMemoField в TDBGrid. Перекрываем (override) метод DrawCell:</p>
 <pre>
 Canvas.FillRect(ARect);

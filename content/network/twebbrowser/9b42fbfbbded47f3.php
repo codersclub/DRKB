@@ -25,4 +25,4 @@ end;
 </pre>
 
 
-<p class="author">Автор: Donovan J. Edye </p>
+<div class="author">Автор: Donovan J. Edye </div>

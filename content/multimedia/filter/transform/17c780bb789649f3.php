@@ -160,5 +160,7 @@ SetStretchBltMode(Canvas.Handle, HALFTONE);
 </pre>
 <p>&nbsp;<br>
 &nbsp;<br>
-Автор: s-mike <br>
+
+<div class="author">Автор: s-mike</div>
+
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

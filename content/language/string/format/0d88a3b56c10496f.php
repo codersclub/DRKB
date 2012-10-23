@@ -1,7 +1,7 @@
 <h1>Обрезание строки по длине</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Автор: ___Nikolay</p>
+<div class="author">Автор: ___Nikolay</div>
 <pre>
 // Обрезание строки по длине
 function TfmDW6Main.BeautyStr(s: string; iLength: integer): string;

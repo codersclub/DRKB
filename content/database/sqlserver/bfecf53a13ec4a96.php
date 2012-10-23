@@ -6,4 +6,4 @@
 Select top 10 * From MyTable
 Order by NewID()
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Terrance Hui</p>
+<div class="author">Автор: Terrance Hui</div>
 
 <p>Пример показывает стандартное диалоговое окно, которое обычно используется для подтверждения дальнейших действий в любой программе с галочкой "Don't show this message again." </p>
 

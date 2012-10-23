@@ -30,5 +30,5 @@ end;
 
 <p>Если нужна более подробная информация об объекте, можно почитать хелп по функции API CLSIDFromProgID. </p>
 
-<p class="author">Автор: Кулюкин Олег</p>
+<div class="author">Автор: Кулюкин Олег</div>
 <p>Взято с сайта <a href="https://www.delphikingdom.ru/" target="_blank">https://www.delphikingdom.ru/</a></p>

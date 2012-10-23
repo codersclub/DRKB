@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Bjarne Winkler </p>
+<div class="author">Автор: Bjarne Winkler </div>
 
 <p>Пример показывает как можно сохранять в файл содержимое TCheckListBox и соответственно восстанавливать из файла ранее сохранённые состояния Чекбоксов.</p>
 

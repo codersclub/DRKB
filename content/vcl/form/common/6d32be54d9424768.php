@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Lutfi Baran</p>
+<div class="author">Автор: Lutfi Baran</div>
 
 <p>Пример демонстрирует вывод теста случайным образом на форме под определённым углом. Добавляем в форму компонент TButton и в событие OnClick следующий код:</p>
 <pre>

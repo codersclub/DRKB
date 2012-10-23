@@ -30,5 +30,5 @@ end;
 <p>case KindOfImage(MemoryStream.Memory) of</p>
 <p>...</p>
 
-<p class="author">Автор: s-mike</p>
+<div class="author">Автор: s-mike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

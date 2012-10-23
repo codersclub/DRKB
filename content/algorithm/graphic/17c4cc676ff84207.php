@@ -25,5 +25,5 @@ if abs(dx)&lt;r4 then begin if dy&gt;0 then a:=r2 else a:=-r2;end else a:=arctan
 if isZero(Result,r4) then Result:=0;
 end;
 </pre>
-<p class="author">Автор: Digar </p>
+<div class="author">Автор: Digar </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -4,5 +4,5 @@
 
 <p>Хранится в переменной @@servername</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

@@ -25,6 +25,6 @@ end;
 </pre>
 
 <p>Тепеpь property 'Hint' в Object Inspector не видно. Рад, если чем-то помог. Если будут глюки, умоляю сообщить. Такой подход у меня сплошь и pядом.</p>
-<p class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></p>
+<div class="author">Автор: <a href="mailto:Nomadic@newmail.ru" target="_blank">Nomadic</a></div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

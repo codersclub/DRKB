@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Alex Schlecht</p>
+<div class="author">Автор: Alex Schlecht</div>
 
 <p>StringGrids / DBGrids с цветными ячейками смотрятся очень красиво, и Вы можете информировать пользователя о важных данных внутри Grid.</p>
 

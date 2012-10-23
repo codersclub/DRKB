@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Sergei Dubarev </p>
+<div class="author">Автор: Sergei Dubarev </div>
 
 <p>Для того, чтобы ОНО заработало, необходимо создать проект в составе: </p>
 

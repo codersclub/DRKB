@@ -49,5 +49,5 @@ end;
 <p>PS: Всё бы хорошо, но эта функция хоть и есть в Win9x, только её там вызывать нельзя - пишет "This function is only valid in Windows NT mode."...</p>
 <p>FontView в Win9x использует EnumFontFamiliesEx (видимо по предложенному Vit'ом и x77 способу)...</p>
 <p>FontView в WinNT использует GetFontResourceInfo (в импорте вообще нет EnumFontFamiliesEx или других Enum*)...</p>
-<p class="author">Автор: p0s0l</p>
+<div class="author">Автор: p0s0l</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Simon Carter</p>
+<div class="author">Автор: Simon Carter</div>
 
 <p>Иногда бывает полезно знать какими DLL-ками пользуется Ваше приложение. Давайте посмотрим как это можно сделать в Win NT/2000.</p>
 

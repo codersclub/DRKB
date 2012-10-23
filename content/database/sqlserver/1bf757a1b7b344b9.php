@@ -6,4 +6,4 @@
 SELECT * FROM ::FN_LISTEXTENDEDPROPERTY(NULL, 'user','dbo','table', 'MyTable', 'column', 'MyIndex')
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

@@ -3,7 +3,7 @@
 
 
 
-<p class="author">Автор: Tom Stickle </p>
+<div class="author">Автор: Tom Stickle </div>
 <pre>
 var
   pszAliasName: PChar;  { Имя псевдонима }

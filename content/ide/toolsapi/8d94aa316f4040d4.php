@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Dr. Bob </p>
+<div class="author">Автор: Dr. Bob </div>
 
 <p>Компонент во время проектирования может знать имена текущих модулей и имя проекта. Все это можно получить с помощью ToolServices (см. файл TOOLINTF.PAS) </p>
 

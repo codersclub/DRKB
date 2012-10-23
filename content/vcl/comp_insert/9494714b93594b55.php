@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Joel E. Cant.</p>
+<div class="author">Автор: Joel E. Cant.</div>
 
 <p>Пример демонстрирует добавление любого количества чекбоксов в StringGrid. В этом примере необходимо добавить TPanel, а в саму панель включить TstringGrid. Так же необходимо добавить невидимый TcheckBox на форму. Затем добавьте5 колонок и 4 строки в объект StringGrid.</p>
 

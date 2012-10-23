@@ -31,7 +31,7 @@ end;
 end.
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>А как сделать чтобы "procedure Click" была не методом класса, а отдельно стоящей функцией?</p>
@@ -57,7 +57,7 @@ var
  
   Button1.OnClick := TDummy.Click;
 </pre>
-<p class="author">Автор: Le Taon</p>
+<div class="author">Автор: Le Taon</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>По идее, при вызове OnClick первым параметром будет запихнут указатель на экземпляр того класса который в этом OnClick хранится . Я в низкоуровневой реализации не силен, но кажись, так как параметры в процедурах в Delphi передаются через регистры, то ничего страшного не произойдет. </p>
@@ -74,6 +74,6 @@ begin
 end;
 </pre>
 <p>Self тут у нас будет равен nil, а Sender как раз и получается Sender'ом. </p>
-<p class="author">Автор: Fantasist</p>
+<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

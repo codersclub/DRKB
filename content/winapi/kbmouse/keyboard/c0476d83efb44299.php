@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: InSAn</p>
+<div class="author">Автор: InSAn</div>
 
 <p>Нужно ловить сообщение WM_INPUTLANGCHANGEREQUEST</p>
 

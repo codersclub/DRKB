@@ -1,6 +1,5 @@
 <h1>Модуль для работы с дисковыми драйверами (на уровне FAT)</h1>
-<div class="date">01.01.2007</div>
-
+<div class="date">01.01.2006</div>
 
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FAT/FAT16/FAT32</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Модуль для работы с дисковыми драйверами</p>
@@ -891,20 +890,7 @@ end;
  
  
 end.
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
 </pre>
 
+<div class="author">Автор: NikNet, NikNet@Yandex.ru</div>

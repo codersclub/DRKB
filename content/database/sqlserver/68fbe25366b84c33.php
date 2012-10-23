@@ -4,5 +4,5 @@
 
 <p>Хранится в переменной @@rowcount</p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

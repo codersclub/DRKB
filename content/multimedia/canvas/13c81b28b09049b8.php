@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Mike Scott </p>
+<div class="author">Автор: Mike Scott </div>
 
 <p>...вот я и удивляюсь - почему я получаю мерцание, если я вызываю Repaint или Refresh, а не метод OnPaint напрямую? Или это просто "вариация на тему"? </p>
 

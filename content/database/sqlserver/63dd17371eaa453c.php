@@ -10,5 +10,5 @@ Set @sql2='Where MyField=''Something'''
 Exec (@sql1+@sql2)
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

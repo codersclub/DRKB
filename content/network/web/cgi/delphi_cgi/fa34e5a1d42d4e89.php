@@ -2,8 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Передача параметров</p>
-Методы GET и POST</p>
+<p>Методы GET и POST</p>
 Существует по крайней мере два метода передачи параметров CGI-программе. </p>
  &lt;form method=GET action="program.exe"&gt;</p>
  &lt;form method=POST action="program.exe"&gt;</p>

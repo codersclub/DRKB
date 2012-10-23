@@ -121,7 +121,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <hr /><p>Функция StrToDate преобразует только числа, поэтому, если у Вас месяцы в виде имён, то прийдётся использовать VarToDateTime.</p>
 <pre>
 var

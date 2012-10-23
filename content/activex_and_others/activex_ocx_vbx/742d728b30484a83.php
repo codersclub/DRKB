@@ -3,7 +3,7 @@
 
 
 <p>запустить "Regsvr32.exe имя_файла" из каталога c:\windows\system(32) </p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>1. Регистрация ActiveX:</p>
@@ -48,5 +48,5 @@ Buffer, SizeOf(Buffer)));
 end;
 </pre>
 
-<p class="author">Автор: Fantasist</p>
+<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

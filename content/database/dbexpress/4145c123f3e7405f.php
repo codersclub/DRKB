@@ -4,5 +4,5 @@
 
 <p>Пример приложения, демонстрирующее возможности технологии dbExpress</p>
 <p><a href="/zip/17_1.zip">Приложение баз данных, демонстрирующее возможности технологии dbExpress</a></p>
-<p class="author">Автор: Akella </p>
+<div class="author">Автор: Akella </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

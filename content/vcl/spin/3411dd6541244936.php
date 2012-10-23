@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="p_Heading1">Блокировка вставки нецифровых данных через буфер обмена</p>
+<b>Блокировка вставки нецифровых данных через буфер обмена</b>
 <pre>
 uses Clipbrd;
  
@@ -26,9 +26,11 @@ begin
 end;
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: Krid </p>
+<div class="author">Автор: Krid </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
+
 <hr />
+
 <p>Следующий код создаёт TEdit который блокирует ввод любых нецифровых данных при вводе любым способом.</p>
 <pre>
 unit Unit1;
@@ -84,12 +86,12 @@ With TMySuperEdit.Create(Self) Do
 end;
 End.
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 &nbsp;</p>
 <hr />
 <p class="p_Heading1">Как сделать, чтобы TEdit воспринимал одни цифры и DecimalSeparator?</p>
 <p class="p_Heading1">&nbsp;</p>
-<p class="author">Автор: Full&nbsp; ( http://full.hotmail.ru/ )</p>
+<div class="author">Автор: Full&nbsp; ( http://full.hotmail.ru/ )</div>
 <pre>
 type
   TNumEdit = class(TEdit)
@@ -235,5 +237,5 @@ end.
 <p>на </p>
 <p>strtoint(Edit1.Text);</p>
 <p>для того чтобы ограничить возможность ввода только целыми числами. </p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

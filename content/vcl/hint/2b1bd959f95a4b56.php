@@ -166,6 +166,6 @@ begin
   Application.Run;
 end.
 </pre>
-<p class="author">Автор: Сергей Королев</p>
+<div class="author">Автор: Сергей Королев</div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

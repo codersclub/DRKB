@@ -15,5 +15,5 @@
 <p>Professional: <a href="ftp://ftpc.borland.com/pub/delphi/devsupport/updates/delphi5/D5ProUpdate.exe" target="_blank">ftp://ftpc.borland.com/pub/delphi/devsupport/updates/delphi5/D5ProUpdate.exe</a></p>
 <p>Standard: <a href="ftp://ftpc.borland.com/pub/delphi/devsupport/updates/delphi5/D5StdUpdate.exe" target="_blank">ftp://ftpc.borland.com/pub/delphi/devsupport/updates/delphi5/D5StdUpdate.exe</a></p>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

@@ -12,5 +12,5 @@
   Order by o.name
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

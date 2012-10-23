@@ -10,5 +10,5 @@ Exec sp_Who
 Exec sp_Who2
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

@@ -25,4 +25,4 @@
   EXEC @HR = sp_OAMethod @Stream, 'Close'
   EXEC @HR = sp_OADestroy @Stream
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>

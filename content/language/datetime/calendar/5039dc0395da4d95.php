@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Mark Lussier&nbsp; </p>
+<div class="author">Автор: Mark Lussier</div>
 
 <pre>
 function TtheCalendar.CalcEaster: string;

@@ -3,4 +3,4 @@
 
 
 <p>Минимально при запуске - от 1.2 до 3 Мб, далее память распределяется динамически в зависимости от запросов, выполняемых клиентами (от 40 до 400К на клиента). Кроме этого, объем используемой памяти сильно зависит от архитектуры сервера (Classic или SuperServer), операционной системы, размера кэша страниц БД и других настроек. Подробнее по настройкам см. PERFORM.HLP в каталоге INTRBASE\BIN </p>
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>

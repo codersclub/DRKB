@@ -162,5 +162,5 @@ end      _ExitProc;
 end.
  
 </pre>
-<p class="author">Автор: NikNet_ </p>
+<div class="author">Автор: NikNet_ </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

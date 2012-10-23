@@ -121,6 +121,6 @@ end;
 <p>MakeSound(1,1);</p>
 <p>MakeSound(32,10); </p>
 <p>Эти две строчки заставят динамик вашего PC зазвучать сначала в низком диапазоне (продолжительностью в секунду или две), и затем немного дольше в более высоком диапазоне.</p>
-<p class="author">Автор: Steve Keyser </p>
+<div class="author">Автор: Steve Keyser </div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

@@ -7,5 +7,5 @@ Exec sp_addlinkedserver @LinkedServerName, 'Jet 4.0', 'Microsoft.Jet.OLEDB.4.0',
 Exec sp_addlinkedsrvlogin @LinkedServerName, 'false'
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

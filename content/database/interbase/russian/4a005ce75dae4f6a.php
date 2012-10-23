@@ -29,4 +29,4 @@ end
 
 <p>После восстановления из архива, запускаю еще раз.</p>
 
-<p class="author">Автор: Nomadic</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Nomadic</div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

@@ -51,4 +51,4 @@ with ListView.Items.Add do begin
 end;
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="author">Автор: alexanderm</p>
+<div class="author">Автор: alexanderm</div>

@@ -5,5 +5,5 @@
 <pre>
 Select Replace('Какая-то строка','Строка которую заменить','Строка на которую заменить')
 </pre>
-<p class="author">Автор: Vit</p> 
+<div class="author">Автор: Vit</div> 
 

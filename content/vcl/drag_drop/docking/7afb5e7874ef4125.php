@@ -4,5 +4,5 @@
 
 <p>Пример реализации Drag-and-Dock</p>
 <p><a href="/zip/27_2.zip">Пример реализации Drag-and-Dock</a></p>
-<p class="author">Автор: Akella</p>
+<div class="author">Автор: Akella</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

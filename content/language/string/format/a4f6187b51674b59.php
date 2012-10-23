@@ -75,5 +75,5 @@ S:=StringReplace(ИсходнаяСтрока, ЧтоЗаменять, НаЧт�
 S:=StringReplace(ИсходнаяСтрока, ЧтоЗаменять, НаЧтоЗаменять, [rfReplaceAll, rfIgnoreCase]) 
  
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 &nbsp;</p>

@@ -24,6 +24,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Neil </p>
+<div class="author">Автор: Neil </div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

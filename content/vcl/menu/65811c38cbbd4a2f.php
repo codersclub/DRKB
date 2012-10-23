@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Ido Kanner</p>
+<div class="author">Автор: Ido Kanner</div>
 
 <p>Когда играешь во встроенную&nbsp; в Windows игру freecell, то справа в меню постоянно пишется сколько осталось карт. Давайте посмотрим, как это делается.</p>
 

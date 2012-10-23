@@ -52,6 +52,6 @@ end; {TGenericNetTask.GetPeerOrigin}
 <p>mailto:alexk@msmt.spb.su"</p>
 <p>(2:5030/217)</p>
 
-<p class="author">Автор: StayAtHome</p>
+<div class="author">Автор: StayAtHome</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

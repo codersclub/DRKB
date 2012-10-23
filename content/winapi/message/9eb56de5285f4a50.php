@@ -27,9 +27,9 @@ SendMessage(HWND_BROADCAST,FM_FINDPHOTO,0,0);
 
 <p>Кстати, для посылки сообщения дочерним контролам некоего контрола можно использовать метод Broadcast.</p>
 
-<p class="author">Автор: Andrey Burov</p>
+<div class="author">Автор: Andrey Burov</div>
 <p>(2:463/238.19) </p>
 
-<p class="author">Автор: StayAtHome</p>
+<div class="author">Автор: StayAtHome</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

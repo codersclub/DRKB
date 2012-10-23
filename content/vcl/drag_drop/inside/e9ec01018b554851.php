@@ -43,7 +43,7 @@ end;
 &nbsp;</p>
 <hr />
 <p class="p_Heading1">Drag and Drop для двух компонентов TOutline </p>
-<p class="author">Автор: Lloyd Linklater (Sysop) (Delphi Technical Support) </p>
+<div class="author">Автор: Lloyd Linklater (Sysop) (Delphi Technical Support) </div>
 <pre>
 unit Unit1;
  

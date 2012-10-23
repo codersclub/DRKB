@@ -19,7 +19,7 @@ begin
  //то память чистится т.е. все, что мы туда поназаписали удаляется
 end;
 </pre>
-<p class="author">Автор: Baa </p>
+<div class="author">Автор: Baa </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <p>WinAPI-&gt;Windows-&gt;Процессы...-&gt;Пример работы с MailSlot</p>
 <p>Тут Baa немного ошибся. Он написал открытие мэйлслота в C++ стиле:</p>
@@ -27,6 +27,6 @@ end;
 <p>а надо так:</p>
 <p> lpszSlotName := '\\.\mailslot\sample_mailslot'; </p>
 <p>т.е. вместо \\ надо просто \</p>
-<p class="author">Автор: p0s0l</p>
+<div class="author">Автор: p0s0l</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

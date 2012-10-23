@@ -14,6 +14,6 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: TAPAKAH</p>
+<div class="author">Автор: TAPAKAH</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

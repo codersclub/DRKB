@@ -23,5 +23,6 @@ end;
 </pre>
 
 Вот в принципе и все. Если ты используешь Edit, то вместо labelX.caption пиши EditX.text , где х-номер компонента. И последнее, чтобы pogressBar выглядела лучше, измени свойство Smooth равным True. Если у тебя возникнут какие-либо вопросы, предложения, пожелания, прошу отправлять их мне по адресу: crazy_script@mail.ru </p>
-Источник: http://delphi.dax.ru </p>
+<div class="author">Автор: crazy_script@mail.ru</div>
+<p>Источник: http://delphi.dax.ru </p>
 &nbsp;</p>

@@ -21,7 +21,7 @@ begin
 end;
 </pre>
 <p>Данный способ никогда не открывает файл, а заместо этого создаёт копию его в памяти. Конечно Вы можете и записать в поток (Stream) в Памяти(Memory), но изменения не будут записаны на диск до тех пор, пока Вы не запишете их в файл (командой SaveToFile).</p>
-<p class="author">Автор: neutrino</p>
+<div class="author">Автор: neutrino</div>
 <p>Комментарий от Vit</p>
 <p>Решение хорошее, но накладно если файл большой... </p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
@@ -38,7 +38,7 @@ Free;
 end;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr />
@@ -64,5 +64,5 @@ end;
 end;
 </pre>
 
-<p class="author">Автор: PILOTIK</p>
+<div class="author">Автор: PILOTIK</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

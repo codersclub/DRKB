@@ -396,11 +396,10 @@ end;
 end.
 </pre>
 <p>&nbsp;<br>
-<p class="author">Автор: Александр (Rouse_) Багель</p>
-<p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
-<p>&nbsp;</p>
 <p>Демонстрационный пример перехвата вызовов API функций, посредством изменения таблицы импорта. </p>
 <p><a href="/zip/iatchange.zip">Скачать демонстрационный пример</a>
 </p>
-<p>Александр (Rouse_) Багель</p>
+<div class="author">Автор: Александр (Rouse_) Багель</div>
 <p><a href="https://rouse.drkb.ru" target="_blank">https://rouse.drkb.ru</a></p>
+<p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
+<p>&nbsp;</p>

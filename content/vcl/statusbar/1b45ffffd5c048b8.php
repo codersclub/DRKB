@@ -22,7 +22,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <hr />
 <pre>
 var pb: TProgressBar;
@@ -105,4 +105,4 @@ end;
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>With TProgressBar.Create(StatusBar1) Do Parent:=StatusBar1; </p>
-<p class="author">Автор: Song</p>
+<div class="author">Автор: Song</div>

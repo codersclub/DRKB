@@ -199,5 +199,5 @@ end;
 end.
 </pre>
 
-<p class="author">Автор: ___ALex___ Форум: <a href="https://forum.pascal.dax.ru/" target="_blank">https://forum.pascal.dax.ru/</a></p>
+<div class="author">Автор: ___ALex___ Форум: <a href="https://forum.pascal.dax.ru/" target="_blank">https://forum.pascal.dax.ru/</a></div>
 

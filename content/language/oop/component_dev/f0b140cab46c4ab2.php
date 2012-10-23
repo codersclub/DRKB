@@ -158,6 +158,6 @@ stored Fuct;
 </pre>
 
 <p>Дата: 12.02.2004<br>
-<p class="author">Автор: Александр Василевский</p>
+<div class="author">Автор: Александр Василевский</div>
 <p>Источник: <a href="https://alvas.hypermart.net/" target="_blank">https://alvas.hypermart.net/</a></p>
 

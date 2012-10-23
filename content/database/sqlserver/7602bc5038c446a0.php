@@ -10,5 +10,5 @@ Set @MyVariable='dir'
 Exec master..xp_cmdshell @MyVariable
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

@@ -15,7 +15,7 @@ begin
 end;
 </pre>
 
-<p class="author">Автор: Олег Кулабухов</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Олег Кулабухов</div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <hr />
 <pre>

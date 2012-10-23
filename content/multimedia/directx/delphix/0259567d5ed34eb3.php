@@ -1,9 +1,6 @@
 <h1>Изучаем DelphiX (Часть 1)</h1>
 <div class="date">01.01.2007</div>
 
-<p>Изучаем DelphiX&nbsp; </p>
-<p>Взято с: <a href="https://www.gamedev.ru/" target="_blank">https://www.gamedev.ru/</a> </p>
-<p class="author">Автор: hex</p>
 <p class="p_Heading1">Часть 0: &#171;Теория&#187;. </p>
 <p class="p_Heading1" style="text-align: right;">&#171;Теория, теория ну а практика, <br>
 а практика потом&#187; &#8212; <br>
@@ -279,3 +276,8 @@ end;
 <p>Вот вам Д/З для улучшения знаний: <br>
 1. Сделайте так, чтобы при уходе патрона из зоны видимости он уничтожался <br>
 <p>2. Сделайте, чтобы патроны стреляли очередями, а не кучами как у меня </p>
+
+<div class="author">Автор: hex</div>
+
+<p>Взято с: <a href="https://www.gamedev.ru/" target="_blank">https://www.gamedev.ru/</a> </p>
+

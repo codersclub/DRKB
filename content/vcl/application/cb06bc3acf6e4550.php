@@ -24,5 +24,5 @@ begin
  RxTrayIcon1.Hide;
 end;
 </pre>
-<p class="author">Автор: Song, Den</p>
+<div class="author">Автор: Song, Den</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

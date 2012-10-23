@@ -6,5 +6,5 @@
 SetForegroundWindow(FindWindow(Nil,Pchar('Название Окна')));
 </pre>
 
-<p class="author">Автор: Radmin</p>
+<div class="author">Автор: Radmin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

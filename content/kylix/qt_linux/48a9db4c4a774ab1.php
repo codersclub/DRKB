@@ -4,5 +4,5 @@
 
 <p>Есть прекрасный компонент для этого:</p>
 <p><a href="https://www.sudemon.xaker.ru/" target="_blank">https://www.sudemon.xaker.ru/</a></p>
-<p class="author">Автор: sudemon</p>
+<div class="author">Автор: sudemon</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

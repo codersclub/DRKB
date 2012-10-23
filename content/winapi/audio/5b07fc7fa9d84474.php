@@ -1,7 +1,7 @@
 <h1>Программирование Sound Blaster</h1>
 <div class="date">01.08.1995</div>
 
-<p class="author">Анисимов С.Ю.</p>
+<div class="author">Анисимов С.Ю.</div>
 
 <p>Статья взята с " target=_blankhttp://www.programmist.info[/i]</p>
 <p>Программирование Sound Blaster</p>

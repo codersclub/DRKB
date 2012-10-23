@@ -83,4 +83,4 @@ end;
 </pre>
 
 
-<p class="author">Автор: p0s0l</p>
+<div class="author">Автор: p0s0l</div>

@@ -3,7 +3,7 @@
 
 
 <p>Генераторы и их использование </p>
-<p class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</p>
+<div class="author">Автор: <a href="mailto:delphi@demo.ru" target="_blank">Дмитрий Кузьменко</a> (<a href="https://www.ibase.ru" target="_blank">https://www.ibase.ru</a>)</div>
 <p>&nbsp;</p>
 <p>Источники: печатная документация и справочная информация по Borland InterBase, переписка листсервера esunix1. </p>
 <p>последние изменения: 2 июля 1999. </p>

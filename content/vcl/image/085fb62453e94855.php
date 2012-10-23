@@ -3,6 +3,6 @@
 
 
 <p>По умолчанию цвет нижнего левого пикселя считается прозрачным, только та программа/контрол/компонент который отражает эту иконку должна поддерживать прозрачность... </p>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

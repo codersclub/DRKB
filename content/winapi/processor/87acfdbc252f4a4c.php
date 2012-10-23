@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p class="author">Автор: Pavlo Zolotarenki&nbsp; </p>
+<div class="author">Автор: Pavlo Zolotarenki</div>
 
 <p>Модуль для работы с портами микропроцессора с сохранением синтаксиса.</p>
 <p>Работает под Win9x.</p>

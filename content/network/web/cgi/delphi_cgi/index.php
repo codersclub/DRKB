@@ -1,8 +1,8 @@
 <h1>Программирование CGI в Delphi и Kylix (статья)</h1>
 <div class="date">01.01.2007</div>
 
-<p class="author">Автор: Paul TOTH </p>
-<p class="author">Перевод с французского: Valery Votintsev </p>
+<div class="author">Автор: Paul TOTH </div>
+<div class="author">Перевод с французского: Valery Votintsev </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 <p>Содержание:</p>

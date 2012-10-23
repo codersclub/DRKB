@@ -21,6 +21,6 @@ end;
 <p>Этот способ удобно применять когда нужно выполнить только текстовое преобразование для отображения значения поля.</p>
 
 
-<p class="author">Автор: Петрович</p>
+<div class="author">Автор: Петрович</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

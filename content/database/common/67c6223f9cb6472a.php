@@ -71,7 +71,7 @@ ADOQuery1.Parameters.ParamByName('pic').LoadFromFile('c:\mypic.bmp', ftGraphic);
 ADOQuery1.ExecSQL;
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 <hr /><p class="note">Примечание от Anatoly Podgoretsky </p>
 <p>Для ран тайм можно указать про добавление параметров, определение их типов, поскольку у людей часто возникают проблемы с типами параметров, с присвоением значений через AsФункции и через Value.</p>
 <pre>

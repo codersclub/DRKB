@@ -17,4 +17,4 @@ uDISK &#8211; ф-ций для работы с дисковыми драйвер
 модуля нечего!!!<br>
 Ваша безопасность в ваших руках! <br>
 <p>&nbsp;</p>
-<p class="author">Автор: NikNet (NikNet@Yandex.ru)</p>
+<div class="author">Автор: NikNet (NikNet@Yandex.ru)</div>

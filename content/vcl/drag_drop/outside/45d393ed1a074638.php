@@ -68,7 +68,7 @@ end.
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-<hr /><p class="author">Автор: Aleksey </p>
+<hr /><div class="author">Автор: Aleksey </div>
 <pre>
 {Так можно заставить окно принимать файлы, перетаскиваемые из проводника}
 {ОБЯЗАТЕЛЬНО ПОМЕСТИТЕ В СЕКЦИЮ PRIVATE СТРОКИ

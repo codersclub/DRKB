@@ -11,5 +11,5 @@ Select Value4, Value5, Value6
 ...
 </pre>
 
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
 

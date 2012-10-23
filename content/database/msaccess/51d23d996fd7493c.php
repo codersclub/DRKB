@@ -100,7 +100,7 @@ end;
  
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p class="p_Heading1">Автор:dron-s</p>
+<div class="author">Автор: dron-s</div>
 &nbsp;<br>
 
 <p>&nbsp;<br>

@@ -12,4 +12,4 @@ GROUP BY
     YEAR([MyDateFiled]),
     MONTH([MyDateFiled])
 </pre>
-<p class="author">Автор: Vit</p>
+<div class="author">Автор: Vit</div>
