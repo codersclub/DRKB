@@ -3,7 +3,7 @@
 
 
 
-<p>This is the VCL for Spell Checking and Synonyms using MS Word COM interface. It can correct and replace words in a Text String,TMemo or TRichEdit using a built in replacement editor, or can be controlled by user dialog. I see there are other callable functions in the interface, which I have not implemented. Anyone see a use for any of them ?. </p>
+<p>This is the VCL for Spell Checking and Synonyms using MS Word COM interface. It can correct and replace words in a Text String,TMemo or TRichEdit using a built in replacement editor, or can be controlled by user dialog. I see there are other callable functions in the interface, which I have not implemented. Anyone see a use for any of them ?.</p>
 
 <p>They are ...</p>
 <pre>
@@ -14,72 +14,72 @@
 </pre>
 
 
-<p>Example of checking and changing a Memo text ... </p>
+<p>Example of checking and changing a Memo text ...</p>
 
-<p> &nbsp;  SpellCheck.CheckMemoTextSpelling(Memo1); </p>
+<p> &nbsp;  SpellCheck.CheckMemoTextSpelling(Memo1);</p>
 
-<p>Properties </p>
-<p>---------------- </p>
-<p>LetterChars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  - Characters considered to be letters. default is&nbsp;&nbsp; </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ['A'..'Z','a'..'z'] (English) but could be changed to </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ['A'..'Z','a'..'z','б','й','н','у','ъ'] (Spanish) </p>
+<p>Properties</p>
+<p>----------------</p>
+<p>LetterChars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  - Characters considered to be letters. default is&nbsp;&nbsp;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ['A'..'Z','a'..'z'] (English) but could be changed to</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ['A'..'Z','a'..'z','б','й','н','у','ъ'] (Spanish)</p>
 
-<p>Color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Backgound color of Default dialog Editbox and Listbox </p>
+<p>Color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Backgound color of Default dialog Editbox and Listbox</p>
 
-<p>CompletedMessage - Enable/Disable display of completed and count message dialog </p>
+<p>CompletedMessage - Enable/Disable display of completed and count message dialog</p>
 
-<p>Font &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Font of Default dialog Editbox and Listbox </p>
+<p>Font &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Font of Default dialog Editbox and Listbox</p>
 
-<p>Language &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Language used by GetSynonyms() method </p>
+<p>Language &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Language used by GetSynonyms() method</p>
 
-<p>ReplaceDialog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Use Default replace dialog or User defined&nbsp; (see events) </p>
+<p>ReplaceDialog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Use Default replace dialog or User defined&nbsp; (see events)</p>
 
-<p>Active &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Readonly, set at create time. Indicates if MS Word is&nbsp; available </p>
+<p>Active &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Readonly, set at create time. Indicates if MS Word is&nbsp; available</p>
 
-<p>Methods </p>
-<p>---------------- </p>
-<p>function GetSynonyms(StrWord : string; Synonyms : TStrings) : boolean; </p>
+<p>Methods</p>
+<p>----------------</p>
+<p>function GetSynonyms(StrWord : string; Synonyms : TStrings) : boolean;</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; True if synonyms found for StrWord. Synonyms List is&nbsp;&nbsp; </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returned in TStrings (Synonyms). </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; True if synonyms found for StrWord. Synonyms List is&nbsp;&nbsp;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returned in TStrings (Synonyms).</p>
 
-<p>function CheckWordSpelling(StrWord : string; Suggestions : TStrings) : boolean; </p>
+<p>function CheckWordSpelling(StrWord : string; Suggestions : TStrings) : boolean;</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; True if StrWord is spelt correctly. Suggested corrections </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returned in TStrings (Suggestions) </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; True if StrWord is spelt correctly. Suggested corrections</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returned in TStrings (Suggestions)</p>
 
-<p>procedure CheckTextSpelling(var StrText : string); </p>
+<p>procedure CheckTextSpelling(var StrText : string);</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proccesses string StrText and allows users to change&nbsp;&nbsp; </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mispelt&nbsp; words via a Default replacement dialog or User&nbsp;&nbsp; </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defined calls. Words are changed and returned in StrText. </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Words in the text are changed automatically by the Default </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; editor. Use the&nbsp; events if you want to control the dialog </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yourself. ie. Get the mispelt word, give a choice of </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sugesstions (BeforeCorrection), Change the word to </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; corrected&nbsp; (OnCorrection) and possibly display "Was/Now" </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (AfterCorrection) </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proccesses string StrText and allows users to change&nbsp;&nbsp;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mispelt&nbsp; words via a Default replacement dialog or User&nbsp;&nbsp;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defined calls. Words are changed and returned in StrText.</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Words in the text are changed automatically by the Default</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; editor. Use the&nbsp; events if you want to control the dialog</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yourself. ie. Get the mispelt word, give a choice of</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sugesstions (BeforeCorrection), Change the word to</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; corrected&nbsp; (OnCorrection) and possibly display "Was/Now"</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (AfterCorrection)</p>
 
-<p>procedure CheckRichTextSpelling(RichEdit : TRichEdit); </p>
+<p>procedure CheckRichTextSpelling(RichEdit : TRichEdit);</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrects misspelt words directly in TRichEdit.Text. </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rich Format is maintained. </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrects misspelt words directly in TRichEdit.Text.</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rich Format is maintained.</p>
 
-<p>procedure CheckMemoTextSpelling(Memo : TMemo); </p>
+<p>procedure CheckMemoTextSpelling(Memo : TMemo);</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrects misspelt words directly into a TMemo.Text. </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrects misspelt words directly into a TMemo.Text.</p>
 
-<p>Events (Mainly used when ReplaceDialog = repUser) </p>
-<p>-------------------------------------------------------------------------------- </p>
-<p>BeforeCorrection - Supplies the mispelt word along with a TStrings </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var containing suggested corrections. </p>
+<p>Events (Mainly used when ReplaceDialog = repUser)</p>
+<p>--------------------------------------------------------------------------------</p>
+<p>BeforeCorrection - Supplies the mispelt word along with a TStrings</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var containing suggested corrections.</p>
 
-<p>OnCorrection &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Supplies the mispelt word as a VAR type allowing </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; user to change it to desired word. The word will be </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replaced by this variable in the passed StrText. </p>
+<p>OnCorrection &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Supplies the mispelt word as a VAR type allowing</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; user to change it to desired word. The word will be</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replaced by this variable in the passed StrText.</p>
 
-<p>AfterCorrection  - Supplies the mispelt word and what it has been </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; changed to. </p>
+<p>AfterCorrection  - Supplies the mispelt word and what it has been</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; changed to.</p>
 
 <pre>
 unit SpellChk;

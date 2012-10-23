@@ -2,14 +2,14 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Для вывода информации мы будет использовать компонент TStringGrid с закладки Additional. </p>
-<p>Сначала вам нужно будет после </p>
+<p>Для вывода информации мы будет использовать компонент TStringGrid с закладки Additional.</p>
+<p>Сначала вам нужно будет после</p>
 <pre>
 var
   Form1: TForm1;
 </pre>
 
-<p>добавить следующий код: </p>
+<p>добавить следующий код:</p>
 <pre>
 AppBarData : TAppBarData;
 bAlwaysOnTop, bAutoHide : boolean;
@@ -17,7 +17,7 @@ Clrect,rect : TRect;
 Edge: UInt;
 </pre>
 
-<p>затем после слова Implementation пишем </p>
+<p>затем после слова Implementation пишем</p>
 <pre>
 procedure DetectTaskBar;
 begin
@@ -41,7 +41,7 @@ begin
     Edge:=ABE_RIGHT;
 end;
 </pre>
-<p>и осталось описать самое главное - обработчик нажатия кнопки: </p>
+<p>и осталось описать самое главное - обработчик нажатия кнопки:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 begin

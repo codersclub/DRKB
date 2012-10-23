@@ -2,16 +2,16 @@
 <div class="date">01.01.2007</div>
 
 
-<p>CreateMappedBitmap() :-) </p>
+<p>CreateMappedBitmap() :-)</p>
 
-<p>Один из паpаметpов yказатель на COLORMAP, в нем для 16 основных цветов делаешь </p>
-<p>пеpекодиpовкy, цвета подбеpешь сам из пpинципа: </p>
-<p> &nbsp; все самые яpкие -&gt; в GetSysColor( COLOR_3DLIGHT ); </p>
-<p> &nbsp; самые&nbsp; темные -&gt; GetSysColor( COLOR_3DSHADOW ); </p>
-<p> &nbsp; нейтpальные, котpые бyдyт пpозpачные -&gt; GetSysColor( COLOR_3DFACE ); </p>
+<p>Один из паpаметpов yказатель на COLORMAP, в нем для 16 основных цветов делаешь</p>
+<p>пеpекодиpовкy, цвета подбеpешь сам из пpинципа:</p>
+<p> &nbsp; все самые яpкие -&gt; в GetSysColor( COLOR_3DLIGHT );</p>
+<p> &nbsp; самые&nbsp; темные -&gt; GetSysColor( COLOR_3DSHADOW );</p>
+<p> &nbsp; нейтpальные, котpые бyдyт пpозpачные -&gt; GetSysColor( COLOR_3DFACE );</p>
 
-<p>Serge Zakharchuk </p>
-<p>(2:5060/32) </p>
+<p>Serge Zakharchuk</p>
+<p>(2:5060/32)</p>
 
 <hr />
 <pre>
@@ -71,21 +71,21 @@ begin
 end; 
 </pre>
 
-<p>Писал это не я. Это написал сам Борланд (некузявно было бы взглянуть на класс TButtonGlyph.&nbsp; Как раз из него я это и выдернул). </p>
+<p>Писал это не я. Это написал сам Борланд (некузявно было бы взглянуть на класс TButtonGlyph.&nbsp; Как раз из него я это и выдернул).</p>
 
-<p>Hу а если уже совсем хорошо разобраться, то можно заметить&nbsp; функцию </p>
-<p>ImageList_DrawEx, в которой можно на 25 и 50 процентов уменьшить яркость </p>
-<p>(но визуально это очень плохо воспринимается). Соответственно </p>
-<p>параметры ILD_BLEND25, ILD_BLEND50, ILD_BLEND-A-MED. Естественно, что </p>
-<p>последний абзац работает только с тройкой. </p>
+<p>Hу а если уже совсем хорошо разобраться, то можно заметить&nbsp; функцию</p>
+<p>ImageList_DrawEx, в которой можно на 25 и 50 процентов уменьшить яркость</p>
+<p>(но визуально это очень плохо воспринимается). Соответственно</p>
+<p>параметры ILD_BLEND25, ILD_BLEND50, ILD_BLEND-A-MED. Естественно, что</p>
+<p>последний абзац работает только с тройкой.</p>
 
-<p>Denis Tanayeff </p>
+<p>Denis Tanayeff</p>
 <a href="mailto:denis@demo.ru ">denis@demo.ru </a></p>
 
 
 <hr />
 
-<p>Это кусочек из рабочей проги на Си, Вроде все лишнее я убрал. </p>
+<p>Это кусочек из рабочей проги на Си, Вроде все лишнее я убрал.</p>
 
 <pre>
 #define CO_GRAY         0x00C0C0C0L 
@@ -120,9 +120,9 @@ MAKEINTRESOURCE(BT_DISABLEBITS));
 } 
 </pre>
 
-<p>Andy Nikishin </p>
-<p>https://www.gs.ru/~links/andy.shtml </p>
-<p>(2:5031/16.2) </p>
+<p>Andy Nikishin</p>
+<p>https://www.gs.ru/~links/andy.shtml</p>
+<p>(2:5031/16.2)</p>
 <hr />
 <pre>
 procedure Emboss(ABitmap : TBitmap; AMount : Integer);

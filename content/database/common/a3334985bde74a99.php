@@ -16,16 +16,16 @@
 </pre>
 
 <p> &nbsp; &nbsp; &nbsp; &nbsp;Personnel:</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;boss &nbsp; &nbsp; &nbsp; &nbsp;salary&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;==========================&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;1000.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Bert' &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Donna' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 800.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Eddie' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 700.00&nbsp; </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;boss &nbsp; &nbsp; &nbsp; &nbsp;salary&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;==========================&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;1000.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Bert' &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Donna' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 800.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Eddie' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 700.00&nbsp;</p>
 <p> &nbsp; &nbsp; &nbsp; &nbsp;'Fred' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 600.00</p>
 
-<p>Эта модель имеет преимущества и недостатки. ПЕРВИЧНЫЙ КЛЮЧ - emp, но столбец boss - функционально зависит от него, следовательно мы имеем проблемы с нормализацией. REFERENCES не даст вам возможность указать начальником, того кто не является сотрудником. Однако, что произойдет, когда 'Jerry' изменяет имя на 'Geraldo', чтобы получить телевизионное ток-шоу? Вы также должны сделать каскадные изменения в строках 'Bert' и 'Chuck'. </p>
+<p>Эта модель имеет преимущества и недостатки. ПЕРВИЧНЫЙ КЛЮЧ - emp, но столбец boss - функционально зависит от него, следовательно мы имеем проблемы с нормализацией. REFERENCES не даст вам возможность указать начальником, того кто не является сотрудником. Однако, что произойдет, когда 'Jerry' изменяет имя на 'Geraldo', чтобы получить телевизионное ток-шоу? Вы также должны сделать каскадные изменения в строках 'Bert' и 'Chuck'.</p>
 <p>Другой недостаток этой модели - то трудно вывести путь. Чтобы найти имя босса для каждого служащего, используется самообъединяющийся запрос, типа:</p>
 <pre>
         SELECT B1.emp, 'bosses', E1.emp 
@@ -50,7 +50,7 @@
                 AND E2.emp = E3.boss;
 </pre>
 
-<p>К сожалению, Вы понятия не имеете насколько глубоко дерево, так что Вы должны продолжать расширять этот запрос, пока Вы не получите в результате пустое множество. </p>
+<p>К сожалению, Вы понятия не имеете насколько глубоко дерево, так что Вы должны продолжать расширять этот запрос, пока Вы не получите в результате пустое множество.</p>
 <p>Листья не имеют потомков. В этой модели, их довольно просто найти: Это сотрудники, не являющиеся боссом кому либо еще в компании:</p>
 <pre>
         SELECT *
@@ -70,14 +70,14 @@
 
 <p>Реальные проблемы возникают при попытке вычислить значения вверх и вниз по дереву. Как упражнение, напишите запрос, суммирующий жалованье каждого служащего и его/ее подчиненных; результат:</p>
 <p> &nbsp; &nbsp; &nbsp; &nbsp;Total Salaries</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;boss &nbsp; &nbsp; &nbsp; &nbsp;salary&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;==========================&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;4900.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Bert' &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp;3000.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Donna' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 800.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Eddie' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 700.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Fred' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 600.00&nbsp; </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;boss &nbsp; &nbsp; &nbsp; &nbsp;salary&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;==========================&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;4900.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Bert' &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp;3000.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Donna' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 800.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Eddie' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 700.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Fred' &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 600.00&nbsp;</p>
 <p>Множественная модель деревьев.</p>
 <p>Другой путь представления деревьев состоит в том, чтобы показать их как вложенные множества. Это более подходящая модель, т.к. SQL - язык, ориентированный на множества. Корень дерева - множество, содержащее все другие множества, и отношения предок-потомок описываются принадлежностью множества потомков множеству предка.</p>
 <p>Имеются несколько способов преобразования организационной диаграммы во вложенные наборы. Один путь состоит в том, чтобы вообразить, что Вы перемещаете подчиненные "овалы" внутри их родителей, использующих линии края как веревки. Корень - самый большой овал и содержит все другие узлы. Листья - самые внутренние овалы, ничего внутри не содержащие, и вложение соответствует иерархическим отношениям. Это - естественное представление модели "перечень материалов", потому что заключительный блок сделан физически из вложенных составляющих, и разбирается на отдельные части.</p>
@@ -92,15 +92,15 @@
                 right        INTEGER                NOT NULL);
 </pre>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Personnel </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;salary &nbsp; &nbsp; &nbsp; &nbsp;left &nbsp; &nbsp; &nbsp; &nbsp;right&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;==============================&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp;1000.00&nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp;12&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Bert' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; 3&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp;11&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Donna' &nbsp; &nbsp; &nbsp; &nbsp; 800.00&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; 6&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Eddie' &nbsp; &nbsp; &nbsp; &nbsp; 700.00&nbsp; 7 &nbsp; &nbsp; &nbsp; &nbsp; 8&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;'Fred' &nbsp; &nbsp; &nbsp; &nbsp; 600.00&nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp;10&nbsp; </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Personnel</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;salary &nbsp; &nbsp; &nbsp; &nbsp;left &nbsp; &nbsp; &nbsp; &nbsp;right&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;==============================&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Jerry' &nbsp; &nbsp; &nbsp; &nbsp;1000.00&nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp;12&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Bert' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; 3&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Chuck' &nbsp; &nbsp; &nbsp; &nbsp; 900.00&nbsp; 4 &nbsp; &nbsp; &nbsp; &nbsp;11&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Donna' &nbsp; &nbsp; &nbsp; &nbsp; 800.00&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; 6&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Eddie' &nbsp; &nbsp; &nbsp; &nbsp; 700.00&nbsp; 7 &nbsp; &nbsp; &nbsp; &nbsp; 8&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;'Fred' &nbsp; &nbsp; &nbsp; &nbsp; 600.00&nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp;10&nbsp;</p>
 <p>Корень всегда имеет 1 в левом столбце и удвоенное число узлов (2*n) в правом столбце. Это просто понять: червь должен посетить каждый узел дважды, один раз с левой стороны и один раз с правой стороны, так что заключительный количество должено быть удвоенное число узлов во всем дереве.</p>
 <p>В модели вложенных множеств, разность между левыми и правыми значениями листьев - всегда 1. Представте червя, поворачивающегся вокруг листа, пока он ползет по дереву. Поэтому, Вы можете найти все листья следующим простым запросом:</p>
 <pre>
@@ -126,7 +126,7 @@
         AND E1.emp = :myworker;
 </pre>
 <p>Чем больше height, тем дальше по иерархии босс от служащего. Модель вложенных множеств использует факт, что каждое содержащее другие множество является большим в размере (где размер = (right - left)) чем множества, в нем содержащиеся. Очевидно, корень будет всегда иметь самый большой размер.</p>
-<p>Уровень, число дуг между двумя данными узлами, довольно просто вычислить. Например, чтобы найти уровни между заданным рабочим и менеджером, Вы могли бы использовть: </p>
+<p>Уровень, число дуг между двумя данными узлами, довольно просто вычислить. Например, чтобы найти уровни между заданным рабочим и менеджером, Вы могли бы использовть:</p>
 <pre>
         SELECT E1.emp, B1.emp, COUNT(*) - 1 AS levels 
         FROM Personnel AS B1, Personnel AS E1 
@@ -135,27 +135,27 @@
         AND E1.node = :myworker 
         AND B1.node = :mymanager; 
 </pre>
-<p>(COUNT(*) - 1) используется для того, чтобы удалить двойной индекс узла непосредственно как нахождение на другом уровне, потому что узел - нулевые уровни, удаленные из себя. </p>
+<p>(COUNT(*) - 1) используется для того, чтобы удалить двойной индекс узла непосредственно как нахождение на другом уровне, потому что узел - нулевые уровни, удаленные из себя.</p>
 <p>Вы можете построить другие запросы из этого шаблона. Например, чтобы найти общих боссов двух служащих, объединяют пути и находят узлы который имеют (COUNT(*) &gt; 1). Чтобы найти самых близких общих предков двух узлов, объединяют пути, находят узлы, которые имеют (COUNT(*) &gt; 1), и выбирают с наименьшей глубиной.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
+<tr>
 <td colspan="2" ><p>Рисунок 1.</p>
 </td>
 </tr>
-<tr >
-<td >
+<tr>
+<td>
 </td>
-<td ><p>Вершина дерева называется корнем. Узлы дерева, которые не имеют поддеревьев, называются листьями. Потомки родительского узла - узлы в поддервья, имеющие корнем родительский узел.</p>
+<td><p>Вершина дерева называется корнем. Узлы дерева, которые не имеют поддеревьев, называются листьями. Потомки родительского узла - узлы в поддервья, имеющие корнем родительский узел.</p>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>Рисунок 2.</p>
 </td>
 </tr>
-<tr >
-<td >
+<tr>
+<td>
 </td>
-<td ><p>Другой путь представления деревьев состоит в том, чтобы показать их как вложенные множества. Это более подходящая модель, т.к. SQL - язык, ориентированный на множества. Корень дерева - множество, содержащее все другие множества, и отношения предок-потомок описываются принадлежностью множества потомков множеству предка.
+<td><p>Другой путь представления деревьев состоит в том, чтобы показать их как вложенные множества. Это более подходящая модель, т.к. SQL - язык, ориентированный на множества. Корень дерева - множество, содержащее все другие множества, и отношения предок-потомок описываются принадлежностью множества потомков множеству предка.
 </td>
 </tr>
 </table>
@@ -175,15 +175,15 @@ DBMS Online - March 1996<br>
         AND P2.lft BETWEEN P1.lft AND P1.rgt;
 </pre>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;size&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; &nbsp; &nbsp; &nbsp;=== &nbsp; &nbsp; &nbsp; &nbsp;====&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Albert &nbsp; &nbsp; &nbsp; &nbsp;  27&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Charles &nbsp; &nbsp; &nbsp; &nbsp;  13&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Fred &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Jim &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1&nbsp; </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;size&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;==== &nbsp; &nbsp; &nbsp; &nbsp;=== &nbsp; &nbsp; &nbsp; &nbsp;====&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Albert &nbsp; &nbsp; &nbsp; &nbsp;  27&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Charles &nbsp; &nbsp; &nbsp; &nbsp;  13&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Fred &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Jim &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1&nbsp;</p>
 
-<p>Заметьте, что, когда size = 1, Вы имеете дело С Мэри как с ее собственным боссом. Вы можете исключить этот случай. </p>
+<p>Заметьте, что, когда size = 1, Вы имеете дело С Мэри как с ее собственным боссом. Вы можете исключить этот случай.</p>
 <p>Модель вложенная множеств использует факт, что каждый вешний набор имеет больший size (size = right - left) чем множества, которые оно содержит. Очевидно, корень будет всегда иметь самый большой size. JOIN и ORDER BY не нужны в модели вложенных множеств, как модели графа смежности. Плюс, результаты не зависят от порядка, в котором отображаются строки.</p>
 <p>Уровень узла - число дуг между узлом и корнем. Вы можете вычислять уровень узла следующим запросом:</p>
 <pre>
@@ -193,24 +193,24 @@ DBMS Online - March 1996<br>
         GROUP BY P2.emp;
 </pre>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Этот запрос находит уровни среди менеджеров, следующим образом: </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Этот запрос находит уровни среди менеджеров, следующим образом:</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;level&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;=== &nbsp; &nbsp; &nbsp; &nbsp;=====&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Albert &nbsp; &nbsp; &nbsp; &nbsp;1&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Bert &nbsp; &nbsp; &nbsp; &nbsp;2&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Charles &nbsp; &nbsp; &nbsp; &nbsp;2&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Diane &nbsp; &nbsp; &nbsp; &nbsp;2&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Edward &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Fred &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;George &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Heidi &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Igor &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Jim &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Kathy &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Larry &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;5&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Ned &nbsp; &nbsp; &nbsp; &nbsp;5&nbsp; </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;level&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;=== &nbsp; &nbsp; &nbsp; &nbsp;=====&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Albert &nbsp; &nbsp; &nbsp; &nbsp;1&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Bert &nbsp; &nbsp; &nbsp; &nbsp;2&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Charles &nbsp; &nbsp; &nbsp; &nbsp;2&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Diane &nbsp; &nbsp; &nbsp; &nbsp;2&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Edward &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Fred &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;George &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Heidi &nbsp; &nbsp; &nbsp; &nbsp;3&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Igor &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Jim &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Kathy &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Larry &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp;5&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Ned &nbsp; &nbsp; &nbsp; &nbsp;5&nbsp;</p>
 <p>В некоторых книгах по теории графов, корень имеет нулевой уровнь вместо первого. Если Вам нравится это соглашение, используйте выражение "(COUNT(*)-1)".</p>
 <p>Самообъединения в комбинации с предикатом BETWEEN- основной шаблон для других запросов.</p>
 <p>Агрегатные функции в деревьях.</p>
@@ -222,24 +222,24 @@ DBMS Online - March 1996<br>
         WHERE P2.lft BETWEEN P1.lft AND P1.rgt
         GROUP BY P1.emp;
 </pre>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;payroll&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;=== &nbsp; &nbsp; &nbsp; &nbsp;=======&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Albert &nbsp; &nbsp; &nbsp; &nbsp;7800.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Bert &nbsp; &nbsp; &nbsp; &nbsp;1650.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Charles &nbsp; &nbsp; &nbsp; &nbsp;3250.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Diane &nbsp; &nbsp; &nbsp; &nbsp;1900.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Edward &nbsp; &nbsp; &nbsp; &nbsp; 750.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Fred &nbsp; &nbsp; &nbsp; &nbsp;1600.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;George &nbsp; &nbsp; &nbsp; &nbsp; 750.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Heidi &nbsp; &nbsp; &nbsp; &nbsp;1000.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Igor &nbsp; &nbsp; &nbsp; &nbsp; 500.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Jim &nbsp; &nbsp; &nbsp; &nbsp; 300.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Kathy &nbsp; &nbsp; &nbsp; &nbsp; 100.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Larry &nbsp; &nbsp; &nbsp; &nbsp; 100.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp; 100.00&nbsp; </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Ned &nbsp; &nbsp; &nbsp; &nbsp; 100.00&nbsp; </p>
-<p>поддеревьев </p>
-<p>Следующий запрос будет брать уволенного служащего как параметр и удалять поддерево, расположенное под ним/ней. Уловка в этом запросе - то, что Вы используете ключ, но Вы должны заставить работать левые и правые значения. Ответ - набор скалярных подзапросов: </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;emp &nbsp; &nbsp; &nbsp; &nbsp;payroll&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;=== &nbsp; &nbsp; &nbsp; &nbsp;=======&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Albert &nbsp; &nbsp; &nbsp; &nbsp;7800.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Bert &nbsp; &nbsp; &nbsp; &nbsp;1650.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Charles &nbsp; &nbsp; &nbsp; &nbsp;3250.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Diane &nbsp; &nbsp; &nbsp; &nbsp;1900.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Edward &nbsp; &nbsp; &nbsp; &nbsp; 750.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Fred &nbsp; &nbsp; &nbsp; &nbsp;1600.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;George &nbsp; &nbsp; &nbsp; &nbsp; 750.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Heidi &nbsp; &nbsp; &nbsp; &nbsp;1000.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Igor &nbsp; &nbsp; &nbsp; &nbsp; 500.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Jim &nbsp; &nbsp; &nbsp; &nbsp; 300.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Kathy &nbsp; &nbsp; &nbsp; &nbsp; 100.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Larry &nbsp; &nbsp; &nbsp; &nbsp; 100.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Mary &nbsp; &nbsp; &nbsp; &nbsp; 100.00&nbsp;</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Ned &nbsp; &nbsp; &nbsp; &nbsp; 100.00&nbsp;</p>
+<p>поддеревьев</p>
+<p>Следующий запрос будет брать уволенного служащего как параметр и удалять поддерево, расположенное под ним/ней. Уловка в этом запросе - то, что Вы используете ключ, но Вы должны заставить работать левые и правые значения. Ответ - набор скалярных подзапросов:</p>
 <pre>
  
         DELETE FROM Personnel
@@ -283,7 +283,7 @@ DBMS Online - March 1996<br>
 </pre>
 
 <p>Реальная процедура должна иметь обработку ошибок, но я оставляю это как упражнение для читателя.</p>
-<p>Удалениеузла </p>
+<p>Удалениеузла</p>
 <p>Удаление одиночного узла в середине дерева тяжелее чем удаление полных поддеревьев. Когда Вы удаляете узел в середине дерева, Вы должны решить, как заполнить отверстие. Имеются два пути. Первый метод к повышает одного из детей к позиции первоначального узла (предположим, что отец умирает, и самый старший сын занимает бизнес, как показано на рисунке 2). Самый старший потомок всегда показывается как крайний левый дочерний узел под родителем. Однако с этой этой операцией имеется проблема. Если старший ребенок имеет собственнх детей, Вы должны решить, как обработать их, и так далее вниз по дереву, пока Вы не добираетесь к листу.</p>
 <p>Второй метод для удаления одиночного узла в середине дерева состоит в том, чтобы подключить потомков к предку первоначального узла (можно сказать, что мамочка умирает, и дети приняты бабушкой), как показано на рисунке 3. Это получается автоматически во модели вложенных множеств, Вы просто удаляете узел, и его дети уже содержатся в узлах его предка. Однако, Вы должны быть осторожны, при закрытии промежутка, оставленного стиранием. Имеется различие в изменении нумерации потомков удаленного узла и изменения нумерации узлов справа. Ниже - процедура выполняющая это:</p>
 <pre>
@@ -355,7 +355,7 @@ DBMS Online - March 1996<br>
 DBMS Online - April 1996<br>
 <p>Translated by SDM</p>
 <p>Деревья в SQL. Часть 3.</p>
-<p>Давайте продолжим наше обсуждение модели вложенных множеств для деревьев в SQL. Я не собираюсь рассматривать любую из моих предидущих статей и буду предполагать, что Вы все еще имеете копию таблицы Personnel, которую я использовал для примеров (DBMS, март 1996, страница 24). Если Вы не имеете прошлых выпусков, Вы можете осчастливить моего издателя, приобретя их. </p>
+<p>Давайте продолжим наше обсуждение модели вложенных множеств для деревьев в SQL. Я не собираюсь рассматривать любую из моих предидущих статей и буду предполагать, что Вы все еще имеете копию таблицы Personnel, которую я использовал для примеров (DBMS, март 1996, страница 24). Если Вы не имеете прошлых выпусков, Вы можете осчастливить моего издателя, приобретя их.</p>
 <p>Меня спрашивают, почему я не показываю больше процедурного кода в примерах. Прямо сейчас, ANSI и ISO пробуют договориться о стандартном процедурном языке для триггеров и хранимых процедур называемом SQL/PSM. Однако, этот стандарт еще не утвержден, что означает, что я должен использовать или свой собственный псевдо-код или выбирать одного производителя. Я решил использовать пока Английские комментарии, но я буду начинать использовать SQL/PSM, когда он будет завершен.</p>
 <p>Наиболее хитрая часть обработки деревьев в SQL это нахождение способа конвертировать модель матрицы смежности в модель вложенных множеств в пределах структуры чистого SQL. Было бы довольно просто загрузить таблицу матрицы смежности в программу, и затем использовать рекурсивную программу преобразование дерева из учебника колледжа, чтобы построить модель вложенных множеств.</p>
 <p>Честно говоря, такое преобразованиме дерева могло бы быть быстрее чем то, что я собираюсь показать Вам. Но я хочу сделать это в чистом SQL, чтобы доказать следующее: Вы можете делать на декларативном языке то же, что Вы можете делать на процедурном языке. Поскольку это обучающее упражнение, я буду объяснять с болезненной детальностью.</p>
@@ -393,7 +393,7 @@ DBMS Online - April 1996<br>
                 WHERE P0.boss = P1.boss)
                 FROM Personnel AS P0; 
 </pre>
-<p>Теперь, Вы должны добавить потомков в таблицу вложенных множеств. Первоначальный босс останется тот же самый. Порядок потомков - естественный порядок ключа; в данном случае emp char(10): </p>
+<p>Теперь, Вы должны добавить потомков в таблицу вложенных множеств. Первоначальный босс останется тот же самый. Порядок потомков - естественный порядок ключа; в данном случае emp char(10):</p>
 <pre>
         INSERT INTO WorkingTree
         --convert the children
@@ -410,13 +410,13 @@ DBMS Online - April 1996<br>
 </pre>
 
 <p>Фактически, Вы можете использовать эту процедуру, чтобы конвертировать модель матрицы смежности в лес деревьев, каждое из которых - модель вложенных множеств, идентифицированная ее корневым значением. Таким образом, генеалогическое дерево Альберта - набор строк, которые имеют Альберта как предка, генеалогическое дерево Берта - набор строк, которые имеют Берта как предка, и так далее. (Эта концепция иллюстрирована в рисунках 1 и 2.</p>
-<p>Поскольку первоначальная таблица матрицы смежности повторяет нелистовые узлы, некорневые узлы, в столбцах emp и boss, таблица WorkingTree дублирует узлы как корень в одном дереве и как потомок в другом. Запрос также будет странно себя вести со значением NULL в столбце boss первоначальной таблицы матрицы смежности, так что Вы будете должны очистить таблицу WorkingTree следующим запросом: </p>
+<p>Поскольку первоначальная таблица матрицы смежности повторяет нелистовые узлы, некорневые узлы, в столбцах emp и boss, таблица WorkingTree дублирует узлы как корень в одном дереве и как потомок в другом. Запрос также будет странно себя вести со значением NULL в столбце boss первоначальной таблицы матрицы смежности, так что Вы будете должны очистить таблицу WorkingTree следующим запросом:</p>
 <pre>
         DELETE FROM WorkingTree
         WHERE boss IS NULL OR emp IS NULL; 
 </pre>
-<p>Чтобы заставить эти деревья сливаться в одно заключительное дерево, Вы нуждаетесь в способе прикрепить подчиненное дерево к его предку. На процедурном языке, Вы могли выполнить это программой, которая будет делать следующие шаги: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Найти размер подчиненного дерева. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Найти место, куда подчиненное дерево вставляется в дерево-предок. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Раздвинуть дерево-предок в точке вставки. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Вставить подчиненное дерево в точку вставки. </td></tr></table></div><p>На непроцедурном языке, Вы исполнили бы эти шаги вместе, используя логику всех перечисленных пунктов. Вы начинаете этот процесс, задавая вопросы и отмечая факты:<br>
+<p>Чтобы заставить эти деревья сливаться в одно заключительное дерево, Вы нуждаетесь в способе прикрепить подчиненное дерево к его предку. На процедурном языке, Вы могли выполнить это программой, которая будет делать следующие шаги:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Найти размер подчиненного дерева.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Найти место, куда подчиненное дерево вставляется в дерево-предок.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Раздвинуть дерево-предок в точке вставки.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Вставить подчиненное дерево в точку вставки.</td></tr></table></div><p>На непроцедурном языке, Вы исполнили бы эти шаги вместе, используя логику всех перечисленных пунктов. Вы начинаете этот процесс, задавая вопросы и отмечая факты:<br>
 &nbsp;<br>
 Q)Как выбирать дерево-предок и его подчиненное дерево в лесу?<br>
 A)Ищем одиночное ключевое значение, которое является потомком в дерево-предке и корнем подчиненного дерева;<br>
@@ -495,230 +495,230 @@ Q)Как определить точку вставки?<br>
 
 <p>Теперь все, что Вам осталось сделать - поместить этот запрос в ранее разработанную процедуру - и у вас будет процедура, которая сольет вместе лес деревьев слева направо. Используя цикл WHILE, контролируюший наличие значений в LeftmostPairs делайте вызовы процедуры. Это единственная процедуральная структура во всей хранимой процедуре.</p>
 
-<p>Таблица 1 </p>
+<p>Таблица 1</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>C1</p>
+<tr>
+<td><p>C1</p>
 </td>
-<td ><p>row in superior</p>
+<td><p>row in superior</p>
 </td>
-<td ><p>y</p>
+<td><p>y</p>
 </td>
-<td ><p>y</p>
+<td><p>y</p>
 </td>
-<td ><p>y</p>
+<td><p>y</p>
 </td>
-<td ><p>y</p>
+<td><p>y</p>
 </td>
-<td ><p>n</p>
+<td><p>n</p>
 </td>
-<td ><p>y</p>
+<td><p>y</p>
 </td>
-<td ><p>n</p>
-</td>
-</tr>
-<tr >
-<td ><p>C2</p>
-</td>
-<td ><p>row in subord</p>
-</td>
-<td ><p>n</p>
-</td>
-<td ><p>n</p>
-</td>
-<td ><p>n</p>
-</td>
-<td ><p>n</p>
-</td>
-<td ><p>y</p>
-</td>
-<td ><p>y</p>
-</td>
-<td ><p>n</p>
+<td><p>n</p>
 </td>
 </tr>
-<tr >
-<td ><p>C3</p>
+<tr>
+<td><p>C2</p>
 </td>
-<td ><p>lft &gt; cut</p>
+<td><p>row in subord</p>
 </td>
-<td ><p>n</p>
+<td><p>n</p>
 </td>
-<td ><p>n</p>
+<td><p>n</p>
 </td>
-<td ><p>y</p>
+<td><p>n</p>
 </td>
-<td ><p>y</p>
+<td><p>n</p>
 </td>
-<td ><p>-</p>
+<td><p>y</p>
 </td>
-<td ><p>-</p>
+<td><p>y</p>
 </td>
-<td ><p>-</p>
+<td><p>n</p>
 </td>
 </tr>
-<tr >
-<td ><p>C4</p>
+<tr>
+<td><p>C3</p>
 </td>
-<td ><p>rgt &gt; cut</p>
+<td><p>lft &gt; cut</p>
 </td>
-<td ><p>n</p>
+<td><p>n</p>
 </td>
-<td ><p>y</p>
+<td><p>n</p>
 </td>
-<td ><p>n</p>
+<td><p>y</p>
 </td>
-<td ><p>y</p>
+<td><p>y</p>
 </td>
-<td ><p>-</p>
+<td><p>-</p>
 </td>
-<td ><p>-</p>
+<td><p>-</p>
 </td>
-<td ><p>-</p>
+<td><p>-</p>
+</td>
+</tr>
+<tr>
+<td><p>C4</p>
+</td>
+<td><p>rgt &gt; cut</p>
+</td>
+<td><p>n</p>
+</td>
+<td><p>y</p>
+</td>
+<td><p>n</p>
+</td>
+<td><p>y</p>
+</td>
+<td><p>-</p>
+</td>
+<td><p>-</p>
+</td>
+<td><p>-</p>
 </td>
 </tr>
 </table>
 <p>&nbsp;<br>
 <p>&nbsp;</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>A1</p>
+<tr>
+<td><p>A1</p>
 </td>
-<td ><p>Ошибка</p>
+<td><p>Ошибка</p>
 </td>
-<td >
+<td>
 </td>
-<td >
+<td>
 </td>
-<td ><p>1</p>
+<td><p>1</p>
 </td>
-<td >
+<td>
 </td>
-<td >
+<td>
 </td>
-<td ><p>1</p>
+<td><p>1</p>
 </td>
-<td >
-</td>
-</tr>
-<tr >
-<td ><p>A2</p>
-</td>
-<td ><p>lft := lft + size</p>
-</td>
-<td >
-</td>
-<td >
-</td>
-<td >
-</td>
-<td ><p>1</p>
-</td>
-<td >
-</td>
-<td >
-</td>
-<td >
+<td>
 </td>
 </tr>
-<tr >
-<td ><p>A3</p>
+<tr>
+<td><p>A2</p>
 </td>
-<td ><p>rgt := rgt + size</p>
+<td><p>lft := lft + size</p>
 </td>
-<td >
+<td>
 </td>
-<td ><p>1</p>
+<td>
 </td>
-<td >
+<td>
 </td>
-<td ><p>2</p>
+<td><p>1</p>
 </td>
-<td >
+<td>
 </td>
-<td >
+<td>
 </td>
-<td >
-</td>
-</tr>
-<tr >
-<td ><p>A4</p>
-</td>
-<td ><p>lft := lft</p>
-</td>
-<td ><p>1</p>
-</td>
-<td ><p>2</p>
-</td>
-<td >
-</td>
-<td >
-</td>
-<td >
-</td>
-<td >
-</td>
-<td ><p>1</p>
+<td>
 </td>
 </tr>
-<tr >
-<td ><p>A5</p>
+<tr>
+<td><p>A3</p>
 </td>
-<td ><p>rgt := rgt</p>
+<td><p>rgt := rgt + size</p>
 </td>
-<td ><p>2</p>
+<td>
 </td>
-<td >
+<td><p>1</p>
 </td>
-<td >
+<td>
 </td>
-<td >
+<td><p>2</p>
 </td>
-<td >
+<td>
 </td>
-<td >
+<td>
 </td>
-<td ><p>2</p>
-</td>
-</tr>
-<tr >
-<td ><p>A6</p>
-</td>
-<td ><p>lft := lft + cut</p>
-</td>
-<td >
-</td>
-<td >
-</td>
-<td >
-</td>
-<td >
-</td>
-<td ><p>1</p>
-</td>
-<td >
-</td>
-<td >
+<td>
 </td>
 </tr>
-<tr >
-<td ><p>A7</p>
+<tr>
+<td><p>A4</p>
 </td>
-<td ><p>rgt := rgt + cut</p>
+<td><p>lft := lft</p>
 </td>
-<td >
+<td><p>1</p>
 </td>
-<td >
+<td><p>2</p>
 </td>
-<td >
+<td>
 </td>
-<td >
+<td>
 </td>
-<td ><p>2</p>
+<td>
 </td>
-<td >
+<td>
 </td>
-<td ><p>&nbsp;</p>
+<td><p>1</p>
+</td>
+</tr>
+<tr>
+<td><p>A5</p>
+</td>
+<td><p>rgt := rgt</p>
+</td>
+<td><p>2</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><p>2</p>
+</td>
+</tr>
+<tr>
+<td><p>A6</p>
+</td>
+<td><p>lft := lft + cut</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><p>1</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p>A7</p>
+</td>
+<td><p>rgt := rgt + cut</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><p>2</p>
+</td>
+<td>
+</td>
+<td><p>&nbsp;</p>
 </td>
 </tr>
 </table>

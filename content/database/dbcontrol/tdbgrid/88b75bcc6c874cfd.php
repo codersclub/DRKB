@@ -10,7 +10,7 @@ else
   DBGrid1.Options := DBGrid1.Options - goRowSelect;
 </pre>
 
-<p>Дело в том, что если у Grid'а стоит опция goRowSelect, то из Grid'а невозможно добавить запись. Ну а когда програмно вызываешь редактирование или вставку, то курсор принимает обычный вид и все Ok. </p>
+<p>Дело в том, что если у Grid'а стоит опция goRowSelect, то из Grid'а невозможно добавить запись. Ну а когда програмно вызываешь редактирование или вставку, то курсор принимает обычный вид и все Ok.</p>
 
-<p>Лучше использовать конструкцию "State in dsEditModes" </p>
+<p>Лучше использовать конструкцию "State in dsEditModes"</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

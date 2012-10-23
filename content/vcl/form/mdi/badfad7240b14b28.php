@@ -20,5 +20,5 @@ begin
 end;
 </pre>
 
-<p>Используйте LockWindowUpdate перед созданием окна и после того, как создание будет завершено. </p>
+<p>Используйте LockWindowUpdate перед созданием окна и после того, как создание будет завершено.</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

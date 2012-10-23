@@ -32,7 +32,7 @@ end;
 
 <p>Destination.SetFieldDefs(Source.FieldDefs);</p>
 
-<p>(за исключением того, что вы не можете использовать эту строку, поскольку SetFieldDefs определен в секции Private.) </p>
+<p>(за исключением того, что вы не можете использовать эту строку, поскольку SetFieldDefs определен в секции Private.)</p>
 
 <p>Вот определение свойства IndexDefs объекта TTable в файле DBTABLES.PAS file:</p>
 
@@ -41,15 +41,15 @@ end;
 <p>В этом случае метод write отсутствует, поэтому свойство имеет атрибут только для чтения. Тем не менее, для самого объекта TIndexDefs существует метод Assign. Следовательно, следующий код должен работать:</p>
 
 <p>Source.IndexDefs.Update;</p>
-<p>Destination.IndexDefs.Assign(Source.IndexDefs); </p>
+<p>Destination.IndexDefs.Assign(Source.IndexDefs);</p>
 
-<p>Перед вызовом Assign для Source.IndexDefs вызывайте метод Update, чтобы быть уверенным в том, что вы получите то, что хотите. </p>
+<p>Перед вызовом Assign для Source.IndexDefs вызывайте метод Update, чтобы быть уверенным в том, что вы получите то, что хотите.</p>
 
-<p>Метод SetFieldDefs является процедурой с одной строкой кода, в которой вызывается метод FieldDefs Assign. </p>
+<p>Метод SetFieldDefs является процедурой с одной строкой кода, в которой вызывается метод FieldDefs Assign.</p>
 
 <p>Также можно проверить, определен ли реально индекс, и, если нет, то при вызове IndexDefs.Assign вы можете получить исключение типа "List Index Out Of Bounds" (или что-то типа этого). Например, так:</p>
 
-<p>if Source.IndexDefs.Count &gt; 0 then... </p>
+<p>if Source.IndexDefs.Count &gt; 0 then...</p>
 
-<p>Вам нужно будет это сделать, поскольку метод TIndexDefs.Assign не проверяет это перед копированием индекс-информации. Также вам нет необходимости вызывать Clear до работы с IndexDefs, поскольку метод Assign сделает это и без вашего участия. </p>
+<p>Вам нужно будет это сделать, поскольку метод TIndexDefs.Assign не проверяет это перед копированием индекс-информации. Также вам нет необходимости вызывать Clear до работы с IndexDefs, поскольку метод Assign сделает это и без вашего участия.</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

@@ -1,9 +1,9 @@
 <h1>How to save a presentation</h1>
 <div class="date">01.01.2007</div>
 
-<p>PowerPoint.Save; </p>
+<p>PowerPoint.Save;</p>
 <p>Or for SaveAs:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 24px 0px 24px;"><pre>var
+<pre>var
   EmbedFonts: OleVariant;
 begin
   EmbedFonts := False;

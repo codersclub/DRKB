@@ -5,7 +5,7 @@
 <div class="author">Автор: Lutfi Baran</div>
 <p>Описывается функция, которая показывает, как вычислить IP адрес компьютера в интернете по его доменному имени.</p>
 <p>Совместимость: Delphi 3.x (или выше)</p>
-<p>Объявляем Winsock, для использования в функции </p>
+<p>Объявляем Winsock, для использования в функции</p>
 <pre>
 function HostToIP(Name: string; var Ip: string): Boolean; 
 var 
@@ -40,7 +40,7 @@ begin
   end 
 end; 
 </pre>
-<p>Вы можете разметстить на форме EditBox, Кнопку и Label и добавить к кнопке следующий обработчик события OnClick: </p>
+<p>Вы можете разметстить на форме EditBox, Кнопку и Label и добавить к кнопке следующий обработчик события OnClick:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject); 
 var 

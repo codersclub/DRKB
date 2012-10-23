@@ -2,22 +2,22 @@
 <div class="date">01.01.2007</div>
 
 
-Delphi и COM</p>
+<h2>Delphi и COM</h2>
 
-Введение</p>
+<p>Введение</p>
 <p>COM (Component Object Model) или модель объектных компонентов &#8211; одна из основных технологий, на который основывается Windows. Более&nbsp; того, все новые технологии в Windows (Shell, Scripting, поддержка HTML и т.п.) реализуют свои API именно в виде COM интерфейсов. Таким образом, в настоящее время профессиональное программирование требует понимания модели COM и умения с ней работать. В этой главе мы рассмотрим основные понятия COM и особенности их поддержки в Delphi.</p>
 
 Базовые понятия</p>
 <p>Основным понятием, на котором основана модель COM, является понятие интерфейса. Не имея четкого понимания о том, что такое интерфейс невозможно успешное программирование COM-объектов. Главными понятиями являются интерфейс и реализация интерфейса.</p>
 
-Интерфейс </p>
+Интерфейс</p>
 <p>Интерфейс является контрактом, между программистом и компилятором.</p>
 <p>Программист &#8211; обязуется реализовать все методы, описанные в интерфейсе и следовать требованиям на реализацию некоторых их них.</p>
-<p>Компилятор &#8211; обязуется создать в программе внутренние структуры, позволяющие обращаться к методам этого интерфейса из любого поддерживающего те же соглашения средства программирования. Таким образом, COM является языково-независимой технологией и может использоваться в качестве «клея», соединяющего программы, написанные на разных языках. </p>
+<p>Компилятор &#8211; обязуется создать в программе внутренние структуры, позволяющие обращаться к методам этого интерфейса из любого поддерживающего те же соглашения средства программирования. Таким образом, COM является языково-независимой технологией и может использоваться в качестве «клея», соединяющего программы, написанные на разных языках.</p>
 <p>Объявление интерфейса включает в себя описание методов и их параметров, но не включает их реализации. Кроме этого, в объявлении может указываться идентификатор интерфейса &#8211; уникальное 16-байтовое число, сгенерированное по специальным правилам, гарантирующим его статистическую уникальность (GUID &#8211; global unique identifier).</p>
 <p>Интерфейсы могут наследоваться. Наследование интерфейсов &#8211; это декларация, указывающая, что унаследованный интерфейс должен включать в себя все методы предка.</p>
 <p>Таким образом, необходимо понимать, что:</p>
-<p>Интерфейс &#8211; это не класс. </p>
+<p>Интерфейс &#8211; это не класс.</p>
 <p>Класс может выступать реализацией интерфейса, но класс содержит код методов на конкретном языке программирования, а интерфейс &#8211; нет.</p>
 <p>Интерфейс строго типизирован.</p>
 <p>Как клиент, так и реализация интерфейса должны использовать точно те же методы и параметры, как указано в описании интерфейса.</p>
@@ -74,12 +74,12 @@ type
 <p>function QueryInterface(const IID: TGUID; out Obj): HResult; stdcall;</p>
 
 <p>Эта функция получает в качестве входного параметра идентификатор интерфейса. Если объект реализует запрошенный интерфейс, то функция:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>возвращает ссылку на него в параметрt Obj</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>вызывает метод _AddRef полученного интерфейса</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>возвращает 0</td></tr></table></div>В противном случае, функция возвращает код ошибки E_NOINTERFACE.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>возвращает ссылку на него в параметрt Obj</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>вызывает метод _AddRef полученного интерфейса</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>возвращает 0</td></tr></table></div>В противном случае, функция возвращает код ошибки E_NOINTERFACE.</p>
 <p>В принципе, конкретная реализация может наполнить эти методы какой-либо другой, отличающейся от стандартной функциональностью, однако в этом случае интерфейс будет несовместим с моделью COM, поэтому делать этого не рекомендуется.</p>
 <p>В модуле System.pas объявлен класс TInterfacedObject, реализующий IUnknown и его методы. Рекомендуется использовать этот класс для создания реализаций своих интерфейсов.</p>
 <p>Кроме этого, поддержка интерфейсов реализована в базовом классе TObject. Он имеет метод</p>
 
 <p>function TObject.GetInterface(const IID: TGUID; out Obj): Boolean;</p>
 <p>Если класс реализует запрошенный интерфейс, то функция:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>возвращает ссылку на него в параметрt Obj</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>вызывает метод _AddRef полученного интерфейса</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>возвращает TRUE</td></tr></table></div>В противном случае, функция возвращает FALSE.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>возвращает ссылку на него в параметрt Obj</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>вызывает метод _AddRef полученного интерфейса</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>возвращает TRUE</td></tr></table></div>В противном случае, функция возвращает FALSE.</p>
 <p>Таким образом, имеется возможность запросить у любого класса Delphi реализуемый им интерфейс Подробнее использование этой функции будет рассмотрено ниже.</p>

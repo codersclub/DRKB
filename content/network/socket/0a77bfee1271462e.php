@@ -51,7 +51,7 @@ end;
 
 <div class="author">Автор: Alex Konshin</div>
 <p>alexk@msmt.spb.su</p>
-<p>(2:5030/217) </p>
+<p>(2:5030/217)</p>
 
 <div class="author">Автор: StayAtHome</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

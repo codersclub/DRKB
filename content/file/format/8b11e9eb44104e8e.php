@@ -61,12 +61,12 @@ end;
 <p>Для этих программок нужен всеми любимый RX Lib !!!</p>
 
 <div class="author">Автор: МММ </div>
-<p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a> </p>
+<p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr>
 
 <p>Как поставить (анимационный) GIF на форму?</p>
-<p>Использовать компонент rxGIFAnimator из библиотеки RxLib. </p>
+<p>Использовать компонент rxGIFAnimator из библиотеки RxLib.</p>
 
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

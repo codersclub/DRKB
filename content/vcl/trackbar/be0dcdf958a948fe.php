@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>В примере создается компонент, унаследованный от TTrackbar который переопределяет метод CreateParams и убират флаг TBS_ENABLESELRANGE из Style. Константа TBS_ENABLESELRANGE обьявленна в модуле CommCtrl. </p>
+<p>В примере создается компонент, унаследованный от TTrackbar который переопределяет метод CreateParams и убират флаг TBS_ENABLESELRANGE из Style. Константа TBS_ENABLESELRANGE обьявленна в модуле CommCtrl.</p>
 <pre>
 uses CommCtrl, ComCtrls;
  

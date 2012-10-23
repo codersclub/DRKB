@@ -1,7 +1,7 @@
 <h1>Обнаружение прокрутки TMemo</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Xavier Pacheco </p>
+Автор: Xavier Pacheco</p>
 <p>Создайте потомок TMemo, перехватывающий сообщения WM_HSCROLL и WM_VSCROLL:</p>
 <pre>
 TSMemo = class(TMemo)

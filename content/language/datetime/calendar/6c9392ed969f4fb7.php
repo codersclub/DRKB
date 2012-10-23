@@ -17,7 +17,7 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-<hr /><p>Получить число дней в месяце </p>
+<hr /><p>Получить число дней в месяце</p>
 
 <pre>
 function DaysOfMonth(mm, yy: Integer): Integer; 

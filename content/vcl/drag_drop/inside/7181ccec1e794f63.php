@@ -1,8 +1,8 @@
 <h1>Как перетащить целую колонку из StringGrid в ListBox?</h1>
 <div class="date">01.01.2007</div>
 
-В Object Inspector установите свойство dragmode у StringGrid в dmAutomatic. </p>
-<p>Ниже приведён полный код: </p>
+В Object Inspector установите свойство dragmode у StringGrid в dmAutomatic.</p>
+<p>Ниже приведён полный код:</p>
 <pre>
 type
   TForm1 = class(TForm)

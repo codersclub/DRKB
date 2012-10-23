@@ -3,8 +3,8 @@
 
 <div class="author">Автор: Dennis Passmore</div>
 
-<p>Поскольку свойство Cols[x] компонента TStringGrid реально является компонентом TStrings, все методы TStrings применимы также и к Cols[x]. </p>
-<p>Недавно в интернете я нашел реализацию расширенных функций TStringGrid: </p>
+<p>Поскольку свойство Cols[x] компонента TStringGrid реально является компонентом TStrings, все методы TStrings применимы также и к Cols[x].</p>
+<p>Недавно в интернете я нашел реализацию расширенных функций TStringGrid:</p>
 <pre>
 {
 Создано:               Dennis Passmore

@@ -19,8 +19,8 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-<p>pgProgress положить на форму как Visible := false; </p>
-<p>StatusPanel надо OwnerDraw сделать и pефpешить, если Position меняется. </p>
+<p>pgProgress положить на форму как Visible := false;</p>
+<p>StatusPanel надо OwnerDraw сделать и pефpешить, если Position меняется.</p>
 <pre>
 procedure TMainForm.stStatusBarDrawPanel(StatusBar: TStatusBar;
 Panel: TStatusPanel; const Rect: TRect);

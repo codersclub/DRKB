@@ -34,7 +34,7 @@ begin
   end;
 end; 
 </pre>
-<p>Затем зарегистрируйте данный редактор свойства следующим образом: </p>
+<p>Затем зарегистрируйте данный редактор свойства следующим образом:</p>
 <pre>
  RegisterPropertyEditor(TypeInfo(string), TcsNotebook, 'TableName', TTableNameProperty);         
 </pre>

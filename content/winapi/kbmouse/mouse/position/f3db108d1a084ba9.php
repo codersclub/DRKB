@@ -4,7 +4,7 @@
 
 <p>Для этого можно воспользоваться API функцией GetCapture().</p>
 
-<p>Пример: </p>
+<p>Пример:</p>
 <pre>
 procedure TForm1.FormDeactivate(Sender: TObject);
 begin

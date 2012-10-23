@@ -90,7 +90,7 @@
 <p>{****************************************************************}</p>
 
 <p>06)</p>
-<p>Deactivating the Debug Information </p>
+<p>Deactivating the Debug Information</p>
 
 <p>Exclude any debug information for the final build</p>
 <p>(project-Options Compiler - Debugging and project-Options</p>

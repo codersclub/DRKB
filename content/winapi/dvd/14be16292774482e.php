@@ -3,7 +3,7 @@
 
 
 
-<p>Можно использовать функцию Windows API GetDriveType() чтобы определить является ли дисковод CD-ROM'мом. И функцию API GetVolumeInformation() чтобы проверить VolumeName на равенство 'Audio CD'. </p>
+<p>Можно использовать функцию Windows API GetDriveType() чтобы определить является ли дисковод CD-ROM'мом. И функцию API GetVolumeInformation() чтобы проверить VolumeName на равенство 'Audio CD'.</p>
 <p>Пример:</p>
 <pre>
 function IsAudioCD(Drive : char) : bool;
@@ -56,7 +56,7 @@ begin
 end;
 </pre>
 
-<p>Взято из </p>
+<p>Взято из</p>
 DELPHI VCL FAQ Перевод с английского &nbsp; &nbsp; &nbsp; 
 <p>Подборку, перевод и адаптацию материала подготовил Aziz(JINX)</p>
 <p>специально для <a href="https://delphi.vitpc.com/" target="_blank">Королевства Дельфи</a></p>

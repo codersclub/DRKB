@@ -316,7 +316,7 @@ end;
 end.
 </pre>
 <p>&nbsp;<br>
-<p>PS: только для NT/2000/XP/2003 </p>
+<p>PS: только для NT/2000/XP/2003</p>
 <p>&nbsp;
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Krid</div>

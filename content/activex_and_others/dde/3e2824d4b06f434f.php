@@ -1,7 +1,7 @@
 <h1>Управление Program Manager в Win95 с помощью DDE</h1>
 <div class="date">01.01.2007</div>
 
-Для управления программными группами в Program Manager с помощью DDE мною был использован следующий модуль. За основу был взят код Steve Texeira (sp) из руководства Dephi Developers Guide. </p>
+Для управления программными группами в Program Manager с помощью DDE мною был использован следующий модуль. За основу был взят код Steve Texeira (sp) из руководства Dephi Developers Guide.</p>
 <p>Работает под Win 3.1 и '95.</p>
 <pre>
 unit Pm;

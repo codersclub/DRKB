@@ -3,8 +3,8 @@
 
 
 <p>Ниже приведён код обработчика события OnClick для Button1. Он показывает диалоговое окошко с текстом в следующем формате</p>
-<p>Windows started on Thursday, February 10, 2000 at 11:42:46 AM </p>
-<p>Its been up for 0 days, 3 hours, 22 minutes, 54 seconds </p>
+<p>Windows started on Thursday, February 10, 2000 at 11:42:46 AM</p>
+<p>Its been up for 0 days, 3 hours, 22 minutes, 54 seconds</p>
 <pre>procedure TForm1.Button1Click(Sender: TObject); 
 var 
   ndays: double; 
@@ -69,9 +69,9 @@ function UpTime: string;
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
 <hr />
 <div class="author">Автор: Павел </div>
-<p>Чтобы определить сколько времени прошло с момента последней перезагрузки системы необходимо воспользоваться функцией GetCurrentTime: LongInt; </p>
-<p>Возвращаемое значение: время в миллисекундах. </p>
-<p>Пример использования: </p>
+<p>Чтобы определить сколько времени прошло с момента последней перезагрузки системы необходимо воспользоваться функцией GetCurrentTime: LongInt;</p>
+<p>Возвращаемое значение: время в миллисекундах.</p>
+<p>Пример использования:</p>
 <pre>
 Edit1.Text := FloatToStr(GetCurrentTime / 1000) + ' секунд с момента перезагрузки';
 </pre>

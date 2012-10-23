@@ -1,7 +1,7 @@
 <h1>Вывод строковой информации</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Xavier Pacheco </p>
+Автор: Xavier Pacheco</p>
 <pre>
 {
 Copyright © 1999 by Delphi 5 Developer's Guide - Xavier Pacheco and Steve Teixeira

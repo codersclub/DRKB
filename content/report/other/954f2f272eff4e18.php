@@ -13,25 +13,25 @@
 <p>Увидев в одном из зарубежных форумов результаты сравнения скорости работы двух генераторов отчетов, включаемых в поставку Borland Delphi: QuickReport и Rave Reports, меня посетила одна мысль: "Какие результаты покажут другие популярные у программистов генераторы отчетов?".</p>
 <p>Когда мне в руки попали исходники вышеописанного теста, я решил расширить этот тест, не только за счет новых участников тестирования, но и за счет расширения диапазона тестирования (т.е. добавив новые тесты).</p>
 <p>Осмотр трассы и участников</p>
-<p>В качестве "участников забега" были выбраны 6 популярных генераторов отчетов: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>QuickReport Pro 4.06 фирмы QBS Software Ltd </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Rave Reports 7.0 фирмы Nevrona Designs </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>FastReport 3.23 фирмы Fast Reports Inc </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>FastReport 2.56 VCL фирмы Fast Reports Inc </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>ReportBuilder 10.02 фирмы Digital Metaphors Corporation </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Crystal Reports 11.0 фирмы Business Objects SA </td></tr></table></div><p>Все участники опытные, хорошо известны Delphi-разработчикам, обычно, именно между ними и стоит выбор. Надо сказать, что, если визуально различий между ними не так уж и много (к примеру, вы без проблем перейдёте от дизайнера отчётов Crystal Reports к ReportBuilder, как, впрочем, и почти к любому из участников) архитектурно же они различаются очень сильно. </p>
+<p>В качестве "участников забега" были выбраны 6 популярных генераторов отчетов:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>QuickReport Pro 4.06 фирмы QBS Software Ltd</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Rave Reports 7.0 фирмы Nevrona Designs</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FastReport 3.23 фирмы Fast Reports Inc</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FastReport 2.56 VCL фирмы Fast Reports Inc</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ReportBuilder 10.02 фирмы Digital Metaphors Corporation</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Crystal Reports 11.0 фирмы Business Objects SA</td></tr></table></div><p>Все участники опытные, хорошо известны Delphi-разработчикам, обычно, именно между ними и стоит выбор. Надо сказать, что, если визуально различий между ними не так уж и много (к примеру, вы без проблем перейдёте от дизайнера отчётов Crystal Reports к ReportBuilder, как, впрочем, и почти к любому из участников) архитектурно же они различаются очень сильно.</p>
 <p>QuickReport<br>
 <p>Известен тем, что с давних пор поставляется в составе Delphi. Точнее &#8211; поставлялся. Начиная с Delphi 7, это почётное место занял Rave Reports. Один из старейших продуктов. По идее, должен быть наиболее стабилен.</p>
 <p>Rave Reports<br>
 <p>Раньше назывался Report Printer.Своё новое название приобрёл вместе с визуальным дизайнером отчётов (ранее сам дизайнер отчётов назывался Rave). Изначально был именно генератором отчётов, создаваемых из кода, не ориентированным на бэнды. И, надо сказать, это заметно. Среди участников визуальная часть у него наиболее непроработана.</p>
 <p>FastReport<br>
 <p>Изучив внимательно FastReport 2 и FastReport 3, могу смело заявить: две версии одного продукта идеологически отличаются между собой практически как два разных продукта! Похоже, ребята из FastReports очень серьезно подошли к вопросу &#8211;заявления о "переработанной и улучшенной архитектуре в тройке" весьма скромны.</p>
-<p>Несмотря на то, что общего между ними достаточно: все объекты являются внутренними объектами генератора отчётов (тут FastReport ближе, пожалуй, к CrystalReports), различий тоже предостаточно &#8211; единый внутренний скрипт у третьей версии и отдельные свои скрипты для каждого объекта во второй, куда большие возможности у третьей версии, поддержка четырёх различных скриптовых языков, поддержка матричных принтеров (из сравниваемых участников такие широкие возможности есть только у FastReport) и т.п. Есть даже конвертор из второй версии в третью (обратите внимание &#8211; другие участники не идут на столь радикальное изменение форматов! В этом есть и минусы &#8211; переход с версии на версию не всегда прост, лучше сразу выбирать третью версию, так и плюсы &#8211; по формату это самый новый генератор, не тянущий за собой пережитки и артефакты &#8211; отчёты хранятся в XML, что может служить гарантией теперь уже стабильности формата и его удобочитаемости), Судя по динамике развития, на сегодня это самый динамично растущий продукт. </p>
+<p>Несмотря на то, что общего между ними достаточно: все объекты являются внутренними объектами генератора отчётов (тут FastReport ближе, пожалуй, к CrystalReports), различий тоже предостаточно &#8211; единый внутренний скрипт у третьей версии и отдельные свои скрипты для каждого объекта во второй, куда большие возможности у третьей версии, поддержка четырёх различных скриптовых языков, поддержка матричных принтеров (из сравниваемых участников такие широкие возможности есть только у FastReport) и т.п. Есть даже конвертор из второй версии в третью (обратите внимание &#8211; другие участники не идут на столь радикальное изменение форматов! В этом есть и минусы &#8211; переход с версии на версию не всегда прост, лучше сразу выбирать третью версию, так и плюсы &#8211; по формату это самый новый генератор, не тянущий за собой пережитки и артефакты &#8211; отчёты хранятся в XML, что может служить гарантией теперь уже стабильности формата и его удобочитаемости), Судя по динамике развития, на сегодня это самый динамично растущий продукт.</p>
 <p>ReportBuilder<br>
 <p>Ранее этот проект назывался PiParty. Достаточно долго он был безоговорочным лидером среди генераторов отчётов для Delphi. Надо сказать, что этот продукт выпускает новую версию сразу же после выпуска новой версии Delphi (потому и номер версии совпадает). Однако, хотелось бы более реальных изменений и улучшений от версии к версии, а не просто "поддержки следующей версии Delphi", особенно ярко это видно на фоне того же FastReport (но это уже моё личное мнение!)</p>
 <p>Crystal Reports<br>
 <p>Самый опытный участник забега. Некоторые знают его под именем ReportSmith (кузнец отчётов) по Delphi 1. В силу возраста он достаточно велик в размерах и тяжёл в интеграции. Скидки на возраст не делаем &#8211; потому выстраиваем всех в один ряд. Borland опять включила его в состав своего продукта, на этот раз Delphi 2005. С Delphi 2006 на момент написания статьи ситуация не ясна...</p>
-<p>Количество тестов я решил ограничить 4 этапами: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Создание и сохранение в файл простого отчета из 2-х страниц с использованием 6-ти полей БД. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Создание и сохранение в файл сложного отчета из 14-ти страниц с использованием всех полей БД. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Экспорт в формат Acrobat PDF сложного отчета из 14-ти страниц с использованием всех полей БД. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Экспорт в формат HTML сложного отчета из 14-ти страниц с использованием всех полей БД. </td></tr></table></div><p>На старт!</p>
-<p>Для получения более точных результатов тестирования, на каждом этапе каждый из генераторов отчетов выполняет задание этапа по 100 раз. Время выполнения одного отчета не вычисляется по причине отсутствия необходимости в этом, так как расстановка мест от деления на 100 не поменяется. </p>
+<p>Количество тестов я решил ограничить 4 этапами:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Создание и сохранение в файл простого отчета из 2-х страниц с использованием 6-ти полей БД.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Создание и сохранение в файл сложного отчета из 14-ти страниц с использованием всех полей БД.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Экспорт в формат Acrobat PDF сложного отчета из 14-ти страниц с использованием всех полей БД.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Экспорт в формат HTML сложного отчета из 14-ти страниц с использованием всех полей БД.</td></tr></table></div><p>На старт!</p>
+<p>Для получения более точных результатов тестирования, на каждом этапе каждый из генераторов отчетов выполняет задание этапа по 100 раз. Время выполнения одного отчета не вычисляется по причине отсутствия необходимости в этом, так как расстановка мест от деления на 100 не поменяется.</p>
 <p>Для получения средних результатов тестирования и исключить влияние архитектуры процессоров, тестирование было проведено на двух компьютерах следующей конфигурации:<br>
 1. AMD Athlon XP 3200+ , 1024 МБ RAM;<br>
-<p>2. Intel Mobility Pentium M 1.7 ГГц, 512 МБ RAM. </p>
+<p>2. Intel Mobility Pentium M 1.7 ГГц, 512 МБ RAM.</p>
 <p>Исходные тексты программы доступны в форматах zip (1.09M) и rar (468K).</p>
 <p>Начали!</p>
 <p>Пробки на дорогах?</p>
@@ -49,370 +49,370 @@
 <p>Перейдем, собственно, к самому тестированию.</p>
 <p>I &#8211; й этап. В этом тесте, все участники выполняют следующее задание: создание и сохранение в файл простого отчета, состоящего из 2-х страниц. Для заполнения используются 6 полей из БД, входящей в поставку любой версии среды программирования от фирмы Borland - customer.db.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
+<tr>
 <td rowspan="2" ><p>Участник</p>
 </td>
 <td colspan="3" ><p>Время выполнения</p>
 </td>
-<td rowspan="2" ><p>Размер получаемого файла </p>
+<td rowspan="2" ><p>Размер получаемого файла</p>
 </td>
 </tr>
-<tr >
-<td ><p>ПК &#8470;1 </p>
+<tr>
+<td><p>ПК &#8470;1</p>
 </td>
-<td ><p>ПК &#8470;2 </p>
+<td><p>ПК &#8470;2</p>
 </td>
-<td ><p>Среднее </p>
-</td>
-</tr>
-<tr >
-<td ><p>QuickReport</p>
-</td>
-<td ><p>2.969</p>
-</td>
-<td ><p>2.523</p>
-</td>
-<td ><p>2.746</p>
-</td>
-<td ><p>106 кб</p>
+<td><p>Среднее</p>
 </td>
 </tr>
-<tr >
-<td ><p>Rave Reports</p>
+<tr>
+<td><p>QuickReport</p>
 </td>
-<td ><p>2.140</p>
+<td><p>2.969</p>
 </td>
-<td ><p>2.364</p>
+<td><p>2.523</p>
 </td>
-<td ><p>2.252</p>
+<td><p>2.746</p>
 </td>
-<td ><p>3.77 кб + 14.4 кб</p>
-</td>
-</tr>
-<tr >
-<td ><p>FastReport 3</p>
-</td>
-<td ><p>0.734</p>
-</td>
-<td ><p>1.051</p>
-</td>
-<td ><p>0.893</p>
-</td>
-<td ><p>0.251 кб</p>
+<td><p>106 кб</p>
 </td>
 </tr>
-<tr >
-<td ><p>FastReport 2</p>
+<tr>
+<td><p>Rave Reports</p>
 </td>
-<td ><p>1.109</p>
+<td><p>2.140</p>
 </td>
-<td ><p>1.032</p>
+<td><p>2.364</p>
 </td>
-<td ><p>1.070</p>
+<td><p>2.252</p>
 </td>
-<td ><p>34.3 кб</p>
-</td>
-</tr>
-<tr >
-<td ><p>ReportBuilder</p>
-</td>
-<td ><p>4.234</p>
-</td>
-<td ><p>4.236</p>
-</td>
-<td ><p>4.235</p>
-</td>
-<td ><p>72.3 кб</p>
+<td><p>3.77 кб + 14.4 кб</p>
 </td>
 </tr>
-<tr >
-<td ><p>Crystal Reports </p>
+<tr>
+<td><p>FastReport 3</p>
 </td>
-<td ><p>12.281</p>
+<td><p>0.734</p>
 </td>
-<td ><p>20.834</p>
+<td><p>1.051</p>
 </td>
-<td ><p>20.783</p>
+<td><p>0.893</p>
 </td>
-<td ><p>15 кб
+<td><p>0.251 кб</p>
+</td>
+</tr>
+<tr>
+<td><p>FastReport 2</p>
+</td>
+<td><p>1.109</p>
+</td>
+<td><p>1.032</p>
+</td>
+<td><p>1.070</p>
+</td>
+<td><p>34.3 кб</p>
+</td>
+</tr>
+<tr>
+<td><p>ReportBuilder</p>
+</td>
+<td><p>4.234</p>
+</td>
+<td><p>4.236</p>
+</td>
+<td><p>4.235</p>
+</td>
+<td><p>72.3 кб</p>
+</td>
+</tr>
+<tr>
+<td><p>Crystal Reports</p>
+</td>
+<td><p>12.281</p>
+</td>
+<td><p>20.834</p>
+</td>
+<td><p>20.783</p>
+</td>
+<td><p>15 кб
 </td>
 </tr>
 </table>
-<p>II &#8211; й этап. В этом тесте, все участники выполняют следующее задание: создание и сохранение в файл сложного отчета, состоящего из 14-х страниц. Для заполнения используются все поля, в том числе и графические, из БД, входящей в поставку любой версии среды программирования от фирмы Borland - biolife.db. </p>
+<p>II &#8211; й этап. В этом тесте, все участники выполняют следующее задание: создание и сохранение в файл сложного отчета, состоящего из 14-х страниц. Для заполнения используются все поля, в том числе и графические, из БД, входящей в поставку любой версии среды программирования от фирмы Borland - biolife.db.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
+<tr>
 <td rowspan="2" ><p>Участник</p>
 </td>
 <td colspan="3" ><p>Время выполнения</p>
 </td>
-<td rowspan="2" ><p>Размер получаемого файла </p>
+<td rowspan="2" ><p>Размер получаемого файла</p>
 </td>
 </tr>
-<tr >
-<td ><p>ПК &#8470;1 </p>
+<tr>
+<td><p>ПК &#8470;1</p>
 </td>
-<td ><p>ПК &#8470;2 </p>
+<td><p>ПК &#8470;2</p>
 </td>
-<td ><p>Среднее </p>
-</td>
-</tr>
-<tr >
-<td ><p>QuickReport</p>
-</td>
-<td ><p>10.875</p>
-</td>
-<td ><p>10.345</p>
-</td>
-<td ><p>10.610</p>
-</td>
-<td ><p>1.32 Мб</p>
+<td><p>Среднее</p>
 </td>
 </tr>
-<tr >
-<td ><p>Rave Reports</p>
+<tr>
+<td><p>QuickReport</p>
 </td>
-<td ><p>13.124</p>
+<td><p>10.875</p>
 </td>
-<td ><p>20.519</p>
+<td><p>10.345</p>
 </td>
-<td ><p>16.820</p>
+<td><p>10.610</p>
 </td>
-<td ><p>4.62 кб + 1.08 МБ</p>
-</td>
-</tr>
-<tr >
-<td ><p>FastReport 3</p>
-</td>
-<td ><p>9.703</p>
-</td>
-<td ><p>11.307</p>
-</td>
-<td ><p>10.505</p>
-</td>
-<td ><p>2.10 МБ</p>
+<td><p>1.32 Мб</p>
 </td>
 </tr>
-<tr >
-<td ><p>FastReport 2</p>
+<tr>
+<td><p>Rave Reports</p>
 </td>
-<td ><p>4.422</p>
+<td><p>13.124</p>
 </td>
-<td ><p>3.004</p>
+<td><p>20.519</p>
 </td>
-<td ><p>3.713</p>
+<td><p>16.820</p>
 </td>
-<td ><p>519 кб</p>
-</td>
-</tr>
-<tr >
-<td ><p>ReportBuilder</p>
-</td>
-<td ><p>13.969</p>
-</td>
-<td ><p>11.677</p>
-</td>
-<td ><p>12.823</p>
-</td>
-<td ><p>1.15 МБ</p>
+<td><p>4.62 кб + 1.08 МБ</p>
 </td>
 </tr>
-<tr >
-<td ><p>Crystal Reports </p>
+<tr>
+<td><p>FastReport 3</p>
 </td>
-<td ><p>24.141</p>
+<td><p>9.703</p>
 </td>
-<td ><p>25.085</p>
+<td><p>11.307</p>
 </td>
-<td ><p>24.613</p>
+<td><p>10.505</p>
 </td>
-<td ><p>156 кб
+<td><p>2.10 МБ</p>
+</td>
+</tr>
+<tr>
+<td><p>FastReport 2</p>
+</td>
+<td><p>4.422</p>
+</td>
+<td><p>3.004</p>
+</td>
+<td><p>3.713</p>
+</td>
+<td><p>519 кб</p>
+</td>
+</tr>
+<tr>
+<td><p>ReportBuilder</p>
+</td>
+<td><p>13.969</p>
+</td>
+<td><p>11.677</p>
+</td>
+<td><p>12.823</p>
+</td>
+<td><p>1.15 МБ</p>
+</td>
+</tr>
+<tr>
+<td><p>Crystal Reports</p>
+</td>
+<td><p>24.141</p>
+</td>
+<td><p>25.085</p>
+</td>
+<td><p>24.613</p>
+</td>
+<td><p>156 кб
 </td>
 </tr>
 </table>
-<p>III &#8211; й этап. В этом тесте, все участники выполняют следующее задание: экспорт в формат PDF сложного отчета, состоящего из 14-х страниц. Для заполнения используются все поля, в том числе и графические, из БД, входящей в поставку любой версии среды программирования от фирмы Borland - biolife.db. </p>
+<p>III &#8211; й этап. В этом тесте, все участники выполняют следующее задание: экспорт в формат PDF сложного отчета, состоящего из 14-х страниц. Для заполнения используются все поля, в том числе и графические, из БД, входящей в поставку любой версии среды программирования от фирмы Borland - biolife.db.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
+<tr>
 <td rowspan="2" ><p>Участник</p>
 </td>
 <td colspan="3" ><p>Время выполнения</p>
 </td>
-<td rowspan="2" ><p>Размер получаемого файла </p>
+<td rowspan="2" ><p>Размер получаемого файла</p>
 </td>
 </tr>
-<tr >
-<td ><p>ПК &#8470;1 </p>
+<tr>
+<td><p>ПК &#8470;1</p>
 </td>
-<td ><p>ПК &#8470;2 </p>
+<td><p>ПК &#8470;2</p>
 </td>
-<td ><p>Среднее </p>
-</td>
-</tr>
-<tr >
-<td ><p>QuickReport</p>
-</td>
-<td ><p>1072.796</p>
-</td>
-<td ><p>654.411</p>
-</td>
-<td ><p>863.604</p>
-</td>
-<td ><p>248 кб</p>
+<td><p>Среднее</p>
 </td>
 </tr>
-<tr >
-<td ><p>Rave Reports</p>
+<tr>
+<td><p>QuickReport</p>
 </td>
-<td ><p>60.954</p>
+<td><p>1072.796</p>
 </td>
-<td ><p>48.980</p>
+<td><p>654.411</p>
 </td>
-<td ><p>54.967</p>
+<td><p>863.604</p>
 </td>
-<td ><p>515 кб</p>
-</td>
-</tr>
-<tr >
-<td ><p>FastReport 3</p>
-</td>
-<td ><p>98.577</p>
-</td>
-<td ><p>92.193</p>
-</td>
-<td ><p>95.385</p>
-</td>
-<td ><p>434 кб</p>
+<td><p>248 кб</p>
 </td>
 </tr>
-<tr >
-<td ><p>FastReport 2</p>
+<tr>
+<td><p>Rave Reports</p>
 </td>
-<td >
+<td><p>60.954</p>
 </td>
-<td >
+<td><p>48.980</p>
 </td>
-<td >
+<td><p>54.967</p>
 </td>
-<td >
-</td>
-</tr>
-<tr >
-<td ><p>ReportBuilder</p>
-</td>
-<td ><p>121.781</p>
-</td>
-<td ><p>40.919</p>
-</td>
-<td ><p>81.350</p>
-</td>
-<td ><p>3.11 МБ</p>
+<td><p>515 кб</p>
 </td>
 </tr>
-<tr >
-<td ><p>Crystal Reports </p>
+<tr>
+<td><p>FastReport 3</p>
 </td>
-<td ><p>250.750</p>
+<td><p>98.577</p>
 </td>
-<td ><p>251.260</p>
+<td><p>92.193</p>
 </td>
-<td ><p>251.009</p>
+<td><p>95.385</p>
 </td>
-<td ><p>156 кб
+<td><p>434 кб</p>
+</td>
+</tr>
+<tr>
+<td><p>FastReport 2</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p>ReportBuilder</p>
+</td>
+<td><p>121.781</p>
+</td>
+<td><p>40.919</p>
+</td>
+<td><p>81.350</p>
+</td>
+<td><p>3.11 МБ</p>
+</td>
+</tr>
+<tr>
+<td><p>Crystal Reports</p>
+</td>
+<td><p>250.750</p>
+</td>
+<td><p>251.260</p>
+</td>
+<td><p>251.009</p>
+</td>
+<td><p>156 кб
 </td>
 </tr>
 </table>
-<p>IV &#8211; й этап. В этом тесте, все участники выполняют следующее задание: экспорт в формат HTML сложного отчета, состоящего из 14-х страниц. Для заполнения используются все поля, в том числе и графические, из БД, входящей в поставку любой версии среды программирования от фирмы Borland - biolife.db. </p>
+<p>IV &#8211; й этап. В этом тесте, все участники выполняют следующее задание: экспорт в формат HTML сложного отчета, состоящего из 14-х страниц. Для заполнения используются все поля, в том числе и графические, из БД, входящей в поставку любой версии среды программирования от фирмы Borland - biolife.db.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
+<tr>
 <td rowspan="2" ><p>Участник</p>
 </td>
 <td colspan="3" ><p>Время выполнения</p>
 </td>
-<td rowspan="2" ><p>Размер получаемого файла </p>
+<td rowspan="2" ><p>Размер получаемого файла</p>
 </td>
 </tr>
-<tr >
-<td ><p>ПК &#8470;1 </p>
+<tr>
+<td><p>ПК &#8470;1</p>
 </td>
-<td ><p>ПК &#8470;2 </p>
+<td><p>ПК &#8470;2</p>
 </td>
-<td ><p>Среднее </p>
-</td>
-</tr>
-<tr >
-<td ><p>QuickReport</p>
-</td>
-<td ><p>68.845</p>
-</td>
-<td ><p>50.302</p>
-</td>
-<td ><p>59.569</p>
-</td>
-<td ><p>128 кб + 360 кб(карт.)</p>
+<td><p>Среднее</p>
 </td>
 </tr>
-<tr >
-<td ><p>Rave Reports</p>
+<tr>
+<td><p>QuickReport</p>
 </td>
-<td ><p>354.062</p>
+<td><p>68.845</p>
 </td>
-<td ><p>517.104</p>
+<td><p>50.302</p>
 </td>
-<td ><p>435.583</p>
+<td><p>59.569</p>
 </td>
-<td ><p>340 кб + 35.2 МБ (карт.)</p>
-</td>
-</tr>
-<tr >
-<td ><p>FastReport 3</p>
-</td>
-<td ><p>26.656</p>
-</td>
-<td ><p>25.797</p>
-</td>
-<td ><p>26.227</p>
-</td>
-<td ><p>76.6 кб + 7.21 МБ (карт.)</p>
+<td><p>128 кб + 360 кб(карт.)</p>
 </td>
 </tr>
-<tr >
-<td ><p>FastReport 2</p>
+<tr>
+<td><p>Rave Reports</p>
 </td>
-<td ><p>25.453</p>
+<td><p>354.062</p>
 </td>
-<td ><p>74.698</p>
+<td><p>517.104</p>
 </td>
-<td ><p>50.076</p>
+<td><p>435.583</p>
 </td>
-<td ><p>47.8 кб + 11.2 МБ (карт.)</p>
-</td>
-</tr>
-<tr >
-<td ><p>ReportBuilder</p>
-</td>
-<td >
-</td>
-<td >
-</td>
-<td >
-</td>
-<td ><p>340 кб + 35.2 МБ (карт.)</p>
+<td><p>340 кб + 35.2 МБ (карт.)</p>
 </td>
 </tr>
-<tr >
-<td ><p>Crystal Reports </p>
+<tr>
+<td><p>FastReport 3</p>
 </td>
-<td ><p>225.031</p>
+<td><p>26.656</p>
 </td>
-<td ><p>226.102</p>
+<td><p>25.797</p>
 </td>
-<td ><p>225.567</p>
+<td><p>26.227</p>
 </td>
-<td ><p>197 кб + 20.2 МБ (карт.)
+<td><p>76.6 кб + 7.21 МБ (карт.)</p>
+</td>
+</tr>
+<tr>
+<td><p>FastReport 2</p>
+</td>
+<td><p>25.453</p>
+</td>
+<td><p>74.698</p>
+</td>
+<td><p>50.076</p>
+</td>
+<td><p>47.8 кб + 11.2 МБ (карт.)</p>
+</td>
+</tr>
+<tr>
+<td><p>ReportBuilder</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><p>340 кб + 35.2 МБ (карт.)</p>
+</td>
+</tr>
+<tr>
+<td><p>Crystal Reports</p>
+</td>
+<td><p>225.031</p>
+</td>
+<td><p>226.102</p>
+</td>
+<td><p>225.567</p>
+</td>
+<td><p>197 кб + 20.2 МБ (карт.)
 </td>
 </tr>
 </table>
-<p>В результате проведения этого теста было замечено следующее: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>При экспорте в HTML для QuickReport изображения выходят за границу блока и размеры изображения в экспорте не соответствуют размерам в исходном отчете. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>При экспорте в HTML для Rave Reports для каждой страницы отчета создается своя HTML-страница, и происходит создание для каждого отчета новых файлов изображений (28 изображений х 100 повторов = 2800 файлов изображений), что приводит к дополнительному расходу и дискового места и времени на экспорт. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>При экспорте в HTML для Crystal Reports происходит создание для каждого отчета новых файлов изображений (28 изображений х 100 повторов = 2800 файлов изображений), что приводит к дополнительному расходу и дискового места и времени на экспорт. </td></tr></table></div><p>Финиш!</p>
+<p>В результате проведения этого теста было замечено следующее:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>При экспорте в HTML для QuickReport изображения выходят за границу блока и размеры изображения в экспорте не соответствуют размерам в исходном отчете.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>При экспорте в HTML для Rave Reports для каждой страницы отчета создается своя HTML-страница, и происходит создание для каждого отчета новых файлов изображений (28 изображений х 100 повторов = 2800 файлов изображений), что приводит к дополнительному расходу и дискового места и времени на экспорт.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>При экспорте в HTML для Crystal Reports происходит создание для каждого отчета новых файлов изображений (28 изображений х 100 повторов = 2800 файлов изображений), что приводит к дополнительному расходу и дискового места и времени на экспорт.</td></tr></table></div><p>Финиш!</p>
 <p>Итоги тестирования:</p>
 <p>В первом тесте первое и второе места с большим отрывом занимают продукты от фирмы Fast Reports Inc. Третье занимает Rave Reports с отставанием от второго места на 110.5 %.</p>
 <p>Во втором тесте первое и второе места отрывом занимают продукты от фирмы Fast Reports Inc. Третье занимает QuickReport с отставанием от второго места на 1 %.</p>
@@ -421,7 +421,7 @@
 <p>Кто победил?</p>
 <p>По итогам всех четырех тестов первое и второе места заняли продукты от фирмы Fast Reports Inc: FastReport 3 и FastReport 2. Третье место занял Rave Reports от фирмы Nevrona Designs. Четвертое место с очень малым отставанием от третьего занял QuickReport Pro от фирмы QBS Software Ltd. Следом за ним идет ReportBuilder от фирмы DIGITAL METAPHORS CORPORATION. На последнем месте оказался Crystal Reports от фирмы Business Objects SA.</p>
 <p>А в это время за кулисами...</p>
-<p>Как показали результаты тестов и личные впечатления при создании программы практически все генераторы отчетов имеют свои "узкие места". </p>
+<p>Как показали результаты тестов и личные впечатления при создании программы практически все генераторы отчетов имеют свои "узкие места".</p>
 <p>Работа по созданию отчетов в Crystal Reports выявила, что из среды программирования нельзя вызвать дизайнер ни для создания нового отчета, ни для внесения исправлений в уже готовом. К тому же формирование отчета, похоже происходит на этапе его построения в дизайнере, на этот вывод наводит тот факт, что при открытии отчетов разной степени сложности время открытия практически одинаково. И программно внести изменения в открываемый отчет очень сложно, вернее практически нереально. Таким образом, ветеран рынка генераторов отчетов мало того, что требует наличия своих библиотек, велик размерами и не поворотлив. К тому же, практически отсутствует какая-либо документация по работе с отчетом в коде программы. Везде как правило, существуют описания, и то не полные, и для определенных версий Crystal Reports, как создавать отчет в дизайнере и больше ничего.</p>
 <p>QuickReport, в отличие от других, требует создания отдельной формы, содержащей его отчет, что неудобно для пользователя. К тому же при дублирование Бэндов, например есть необходимость сделать вывод отчета, содержащего два экземпляра бланка, выводится только один и в область просмотра и при экспорте.</p>
 <p>ReportBuilder для подключения к БД, помимо ppDBPipeline, требует наличие компонента DataSource (из палитры Data Access), что , по-меньшей мере не удобно для конечного пользователя. К тому же, сам компонент не поддерживает экспорт в формат HTML, для осуществления этой функции разработчики рекомендуют использовать сторонние компоненты, такие как: TExtraDevices by James Waler и TcdHTML Device by Cyberdyme Data Systems, которые также являются платными. Такое отношение к пользователям RB, мягко сказать удивляет, купив сам продукт, цена которого находится примерно на одном уровне с другими генераторами отчетов, приходится для осуществления возможности экспорта в HTML, приобретать еще и отдельные компоненты. Другие продукты имеют собственные методы экспорта.</p>

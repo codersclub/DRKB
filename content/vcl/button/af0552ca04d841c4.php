@@ -8,24 +8,24 @@
 
 <p>Также можно создать до 4-х изображений для индикации состояния кнопки</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--------- Ширина ---------&gt; </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--------- Ширина ---------&gt;</p>
 
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +------+------+-----+------+&nbsp;&nbsp;&nbsp; ^</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |Курсор|Курсор|нажа-|недос-|&nbsp;&nbsp;&nbsp; | </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |на кно|за пре| та&nbsp; |тупна |&nbsp; Высота </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | пке&nbsp; |делами|&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; | </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |Курсор|Курсор|нажа-|недос-|&nbsp;&nbsp;&nbsp; |</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |на кно|за пре| та&nbsp; |тупна |&nbsp; Высота</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | пке&nbsp; |делами|&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +------+------+-----+------+&nbsp;&nbsp;&nbsp; v</p>
 
 <p>Вы так же можете присвоить кнопке текстовый заголовок. Можно расположить текст и изображение в любом месте кнопки. Для этого в пример добавлены четыре свойства:</p>
 
-<p>TextTop и TextLeft, Для расположения текста заголовка на кнопке, </p>
-<p>и: </p>
-<p>GlyphTop и GlyphLeft, Для расположения Glyph на кнопке. </p>
+<p>TextTop и TextLeft, Для расположения текста заголовка на кнопке,</p>
+<p>и:</p>
+<p>GlyphTop и GlyphLeft, Для расположения Glyph на кнопке.</p>
 
-<p>Текст заголовка прорисовывается после изображения, потому что они используют одно пространство кнопки, и соответственно заголовок прорисуется поверх изображения. Бэкграунд текста сделан прозрачным. Соответственно мы увидим только текстовые символы поверх изображения. </p>
+<p>Текст заголовка прорисовывается после изображения, потому что они используют одно пространство кнопки, и соответственно заголовок прорисуется поверх изображения. Бэкграунд текста сделан прозрачным. Соответственно мы увидим только текстовые символы поверх изображения.</p>
 
-<p>Найденные баги </p>
-<p>---------- </p>
+<p>Найденные баги</p>
+<p>----------</p>
 <p>1) Если двигать мышку очень быстро, то кнопка может не вернуться в исходное состояние</p>
 <p>2) Если кнопка находится в запрещённом состоянии, то при нажатии на неё, будет наблюдаться неприятное мерцание.</p>
 <pre>

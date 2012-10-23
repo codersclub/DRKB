@@ -1,7 +1,7 @@
 <h1>Над какой закладкой курсор в TTabControl</h1>
 <div class="date">01.01.2007</div>
 
-Автор: YoungHacker </p>
+Автор: YoungHacker</p>
 <p>Получение позиции мышиного курсора для TabControl над какой закладкой находится курсор.</p>
 <pre>
 function Form1.ItemAtPos(TabControlHandle : HWND; X, Y : Integer) : Integer;

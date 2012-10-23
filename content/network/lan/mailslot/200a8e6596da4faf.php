@@ -6,10 +6,10 @@
 <p>Как реализовать обмен информацией между Вашими приложениями в сети? ОС Windows предлагает несколько технологий. Эта статья опишет один очень простой и надежный способ для Win9x/NT - MailSlots. <br>
 The CreateMailslot function creates a mailslot with the specified name and returns a handle that a mailslot server can use to perform operations on the mailslot. The mailslot is local to the computer that creates it. An error occurs if a mailslot with the specified name already exists. <br>
 &nbsp;<br>
-<p>Обмен текстовыми данными в локальной сети очень прост. Для этого необходимы три функции: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>CreateMailslot - создание почтового канала; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>GetMailslotInfo - определение наличия сообщения в канале; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>ReadFile - чтение сообщения из канала, как из файла; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>WriteFile - запись сообщения в канал, как в файл; </td></tr></table></div><p>Функции работы с почтовыми каналами присутствуют как в Windows 9x, так и в Windows NT.<br>
+<p>Обмен текстовыми данными в локальной сети очень прост. Для этого необходимы три функции:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>CreateMailslot - создание почтового канала;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>GetMailslotInfo - определение наличия сообщения в канале;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ReadFile - чтение сообщения из канала, как из файла;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>WriteFile - запись сообщения в канал, как в файл;</td></tr></table></div><p>Функции работы с почтовыми каналами присутствуют как в Windows 9x, так и в Windows NT.<br>
 &nbsp;<br>
-<p>Рассмотрим создание почтового канала (сервер). </p>
+<p>Рассмотрим создание почтового канала (сервер).</p>
 <pre>
   //... создание канала с именем MailSlotName - по этому имени к нему
   //    будут обращаться клиенты
@@ -19,7 +19,7 @@ The CreateMailslot function creates a mailslot with the specified name and retur
     raise Exception.Create('MailSlotServer: Ошибка создания канала !');
 </pre>
 <p>&nbsp;<br>
-<p>Отправка сообщений по почтовомуо каналу (клиенты). </p>
+<p>Отправка сообщений по почтовомуо каналу (клиенты).</p>
 <pre>
   if not GetMailSlotInfo(h,nil,DWORD(MsgNext),@MsgNumber,nil) then 
   begin 
@@ -234,6 +234,6 @@ end.
 <p>&nbsp;<br>
 Компонент TglMailSlotServer создает почтовый канал с именем MailSlotName и принимает входящие ссобщения. Компонент TglMailSlotClient отправляет сообщения в канал с именем MailSlotName на машине ServerName. <br>
 &nbsp;<br>
-<p>Эти компонеты входят в состав библиотеки GlobusLib, распространяемой с исходными текстами. Вы можете скачать ее на тут. </p>
-составление статьи: Андрей Чудин, ЦПР ТД Библио-Глобус. </p>
+<p>Эти компонеты входят в состав библиотеки GlobusLib, распространяемой с исходными текстами. Вы можете скачать ее на тут.</p>
+составление статьи: Андрей Чудин, ЦПР ТД Библио-Глобус.</p>
 <p>Взято из<a href="https://delphi.chertenok.ru" target="_blank"> http://delphi.chertenok.ru</a></p>

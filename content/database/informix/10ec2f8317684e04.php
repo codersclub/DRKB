@@ -8,36 +8,36 @@
 Каждый модуль содержит описания переменных и несколько процедурных блоков function (подпрограммы) и report (блоки печати). В программе должен быть один блок main - главный блок, начинающийся с ключевого слова main. На него будет передаваться управление при старте программы. <br>
 Формат записи операторов 4GL свободный. Можно писать все подряд на одной строке, один оператор на нескольких строках, слова операторов можно разделять произвольным количеством пробелов и комментариев. Никакими значками (типа ;) операторы разделять не нужно. Окончание операторов определяется по контексту. <br>
 Весь набор ключевых слов языка зарезервирован, их нельзя занимать для других целей (на имена объектов и переменных 4GL). <br>
-<p>Компилятору языка безразлично, большими или маленькими буквами пишутся операторы. Он их не различает. </p>
+<p>Компилятору языка безразлично, большими или маленькими буквами пишутся операторы. Он их не различает.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td rowspan="3" ><p>Комментарии обозначаются знаками </p>
+<tr>
+<td rowspan="3" ><p>Комментарии обозначаются знаками</p>
 </td>
-<td ><p>{ комментарий },</p>
+<td><p>{ комментарий },</p>
 </td>
-<td ><p>или знаком # - до конца строки,</p>
+<td><p>или знаком # - до конца строки,</p>
 </td>
-<td ><p>или знаком -- (два знака минус) до конца строки.</p>
-</td>
-</tr>
-<tr >
-<td >
-</td>
-<td >
-</td>
-<td >
+<td><p>или знаком -- (два знака минус) до конца строки.</p>
 </td>
 </tr>
-<tr >
-<td >
+<tr>
+<td>
 </td>
-<td >
+<td>
 </td>
-<td ><p>&nbsp;
+<td>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td><p>&nbsp;
 </td>
 </tr>
 </table>
-<p>Объекты, Используемые в INFORMIX-4GL. </p>
+<p>Объекты, Используемые в INFORMIX-4GL.</p>
 <p>1. Объекты SQL&nbsp;&nbsp;&nbsp; 2. Переменные 4GL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. Программные</p>
 <p>Имя базы данных &nbsp; простая переменная &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; функция</p>
 <p>Имя таблицы &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; переменная типа "запись"&nbsp;&nbsp;&nbsp; отчет</p>
@@ -58,58 +58,58 @@
 <p>cursor-name&nbsp; - курсор &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; screen-field</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; screen-record</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; screen-array</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Идентификаторы INFORMIX. <br>
-<p>Каждый объект 4GL имеет имя (идентификатор) - это слово, состоящее из букв, цифр, и знаков подчеркивания (_), начинающееся с буквы или знака (_). В INFORMIX-4GL не различаются маленькие и большие буквы. Поэтому i_Un103Tt и I_UN103TT - одно и тоже имя. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Области Действия Имен Переменных: </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Локальная переменная - объявлена внутри блока function, main, report. Действует внутри блока, в котором объявлена. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Модульная переменная должна быть объявлена в самом начале модуля с исходным текстом вне любого блока report, function или main. Действует внутри всего модуля (за исключением блоков, в которых это имя переобъявлено и является для них локальным). </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Глобальные переменные - объявляются с помощью оператора GLOBALS в начале модулей. Действуют во всех модулях с исходным текстом, в которых есть соответствующее объявление этих переменных. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Область действия имен КУРСОРОВ и Изготовленных Операторов от точки их объявления (DECLARE, PREPARE) и до конца модуля. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Область действия имен Окон, Форм, Функций, Отчетов - во всей программе. </td></tr></table></div><p>В Языке 4GL Есть Такие Операторы:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Идентификаторы INFORMIX. <br>
+<p>Каждый объект 4GL имеет имя (идентификатор) - это слово, состоящее из букв, цифр, и знаков подчеркивания (_), начинающееся с буквы или знака (_). В INFORMIX-4GL не различаются маленькие и большие буквы. Поэтому i_Un103Tt и I_UN103TT - одно и тоже имя.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Области Действия Имен Переменных:</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Локальная переменная - объявлена внутри блока function, main, report. Действует внутри блока, в котором объявлена.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Модульная переменная должна быть объявлена в самом начале модуля с исходным текстом вне любого блока report, function или main. Действует внутри всего модуля (за исключением блоков, в которых это имя переобъявлено и является для них локальным).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 72px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Глобальные переменные - объявляются с помощью оператора GLOBALS в начале модулей. Действуют во всех модулях с исходным текстом, в которых есть соответствующее объявление этих переменных.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Область действия имен КУРСОРОВ и Изготовленных Операторов от точки их объявления (DECLARE, PREPARE) и до конца модуля.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Область действия имен Окон, Форм, Функций, Отчетов - во всей программе.</td></tr></table></div><p>В Языке 4GL Есть Такие Операторы:</p>
 <p>Операторы SQL</p>
-<p>Организация программы </p>
+<p>Организация программы</p>
 <p>MAIN</p>
 <p>FUNCTION</p>
 <p>REPORT</p>
-<p>Объявления переменных </p>
+<p>Объявления переменных</p>
 <p>DEFINE</p>
 <p>GLOBALS</p>
-<p>Присвоения </p>
+<p>Присвоения</p>
 <p>LET</p>
 <p>INITIALIZE</p>
-<p>Программные </p>
+<p>Программные</p>
 <p>CALL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GOTO</p>
 <p>RETURN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LABLE</p>
 <p>CASE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHILE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RUN</p>
 <p>IF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONTINUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SLEEP</p>
-<p>Перехват прерываний </p>
+<p>Перехват прерываний</p>
 <p>WHENEVER</p>
 <p>DEFER</p>
-<p>Динамическое создание операторов </p>
+<p>Динамическое создание операторов</p>
 <p>PREPARE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXECUTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FREE</p>
-<p>Манипуляция "курсором" </p>
+<p>Манипуляция "курсором"</p>
 <p>DECLARE</p>
 <p>OPEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOREACH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUT</p>
 <p>CLOSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FETCH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FLUSH</p>
-<p>Экранный обмен </p>
+<p>Экранный обмен</p>
 <p>MENU&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OPEN FORM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DISPLAY ARRAY</p>
 <p>OPTIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DISPLAY FORM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SCROLL</p>
 <p>OPEN WINDOW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CLOSE FORM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INPUT ARRAY</p>
 <p>CURRENT WINDOW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DISPLAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROMPT</p>
 <p>CLEAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INPUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ERROR</p>
 <p>CLOSE WINDOW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONSTRUCT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MESSAGE</p>
-<p>Генерация отчетов </p>
+<p>Генерация отчетов</p>
 <p>START&nbsp; REPORT</p>
 <p>OUTPUT TO&nbsp; REPORT</p>
 <p>FINISH REPORT</p>
 <p>Типы Переменных и Операторы Описания Переменных в 4GL.</p>
-<p>В языке 4GL имеются простые переменные, переменные типа запись и массивы. Простые переменные бывают следующих типов: </p>
+<p>В языке 4GL имеются простые переменные, переменные типа запись и массивы. Простые переменные бывают следующих типов:</p>
 <p> &nbsp;&nbsp; INTEGER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHAR(n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DATE</p>
 <p> &nbsp;&nbsp; SMALLINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DECIMAL(m,n)&nbsp;&nbsp; DATETIME ед_врем1 TO ед_врем2</p>
 <p> &nbsp;&nbsp; REAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MONEY(m,n)&nbsp;&nbsp;&nbsp;&nbsp; INTERVAL ед_врем1 TO ед_врем2</p>
 <p> &nbsp;&nbsp; FLOAT</p>
 <p>&nbsp;<br>
-<p>где ед_врем1, ед_врем2 - единицы измерения времени </p>
+<p>где ед_врем1, ед_врем2 - единицы измерения времени</p>
 <p>{YEAR,MONTH,DAY,HOUR,MINUTE,SECOND,FRACTION(n)}</p>
 <p>&nbsp;<br>
 где FLOAT = DOUBLE PRECISSION <br>
 Переменная типа запись описывается при помощи конструкции RECORD ... END RECORD или конструкции LIKE имя_таблицы.* <br>
 Переменная типа массив имеет описатель ARRAY [i,j,k] OF type, где type - тип простой переменной, конструкция RECORD, или конструкция ARRAY. <br>
-<p>Для описания переменных служит оператор DEFINE: </p>
+<p>Для описания переменных служит оператор DEFINE:</p>
 <p>DEFINE&nbsp; simw char (200), j,i,k INTEGER, ff FLOAT</p>
 <p># Здесь объявлены символьная переменная simw длиной 200 байт,</p>
 <p># целые i,j,k, и ff - восьмибайтовое с плавающей точкой</p>
@@ -130,7 +130,7 @@
 <p>#&nbsp; щие те  же  самые  названия и те же самые типы что и столбцы</p>
 <p>#&nbsp; таблицы kadry</p>
 <p>&nbsp;<br>
-<p>Элементами записи могут быть массивы. Можно обьявить массив элементов типа RECORD. </p>
+<p>Элементами записи могут быть массивы. Можно обьявить массив элементов типа RECORD.</p>
 <p>DEFINE zap RECORD</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a LIKE kadry.tabnom,</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b array[8] OF REAL</p>
@@ -142,15 +142,15 @@
 <p>#&nbsp;&nbsp;&nbsp; massiw&nbsp; объявлен как массив записей. Каждая запись состоит</p>
 <p>#&nbsp; из двух простых элементов - kolwo и tip</p>
 <p>&nbsp;<br>
-<p>Индексы массивов пишутся в квадратных скобках. На элементы записей можно ссылаться по его имени, если не допускается двусмысленности, иначе их необходимо уточнять именем записи, отделяя его точкой (.) от простого имени. </p>
+<p>Индексы массивов пишутся в квадратных скобках. На элементы записей можно ссылаться по его имени, если не допускается двусмысленности, иначе их необходимо уточнять именем записи, отделяя его точкой (.) от простого имени.</p>
 <p>#&nbsp; присвоить значение элементу массива можно так:</p>
 <p>LET&nbsp;&nbsp; massiw[1,i+2].kolwo = zap.a + LENGTH(massiw[1,i+2].tip)</p>
 <p>&nbsp;<br>
-<p>Для сокращения перечисления элементов в списках можно пользоваться нотацией (*). Например, strkt.* означает все элементы записи strkt. А так же нотацией THRU: (элементы записи от и до) </p>
+<p>Для сокращения перечисления элементов в списках можно пользоваться нотацией (*). Например, strkt.* означает все элементы записи strkt. А так же нотацией THRU: (элементы записи от и до)</p>
 <p>SELECT kadry.* INTO strkt.* FROM kadry WHERE kadry.tabnom=i+j</p>
 <p>SELECT * INTO strukt.b THRU strkt.e FROM kadry</p>
 <p>&nbsp;<br>
-<p>Глобальные переменные должны иметь одинаковые объявления GLOBALS во всех модулях программы (в которых используются). Проще всего это организуется так: заводится отдельный модуль, в котором ничего, кроме объявлений GLOBALS нет. А во всех остальных модулях программы ссылаются на этот файл. Ниже приводится пример объявления глобальных переменных в файле progrglob.4gl: </p>
+<p>Глобальные переменные должны иметь одинаковые объявления GLOBALS во всех модулях программы (в которых используются). Проще всего это организуется так: заводится отдельный модуль, в котором ничего, кроме объявлений GLOBALS нет. А во всех остальных модулях программы ссылаются на этот файл. Ниже приводится пример объявления глобальных переменных в файле progrglob.4gl:</p>
 <p>DATABASE zawod</p>
 <p> GLOBALS</p>
 <p>  DEFINE zap RECORD LIKE kadry.*</p>
@@ -158,11 +158,11 @@
 <p> &nbsp; . . .</p>
 <p> END GLOBALS</p>
 <p>&nbsp;<br>
-<p>Тогда в остальные модули программы, где используются эти глобальные переменные, надо включить строчку </p>
+<p>Тогда в остальные модули программы, где используются эти глобальные переменные, надо включить строчку</p>
 <p>GLOBALS "progrglob"</p>
 <p>  . . .</p>
 <p>Подпрограммные Блоки (Функции).</p>
-<p>В языке 4GL при программировании функций (подпрограмм) используются операторы function. Все аргументы функции должны быть объявлены. Аргументы передаются по значению. Если функция возвращает какие-либо значения, то при вызове ее нужно воспользоваться в операторе CALL предложением RETURNING с перечислением переменных, в которые возвращается значение. Ниже приводится соответствующий фрагмент программы. </p>
+<p>В языке 4GL при программировании функций (подпрограмм) используются операторы function. Все аргументы функции должны быть объявлены. Аргументы передаются по значению. Если функция возвращает какие-либо значения, то при вызове ее нужно воспользоваться в операторе CALL предложением RETURNING с перечислением переменных, в которые возвращается значение. Ниже приводится соответствующий фрагмент программы.</p>
 <p>FUNCTION stroka(rec)</p>
 <p>DEFINE rec RECORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i int, st char(256)&nbsp; END RECORD</p>
 <p>RETURN&nbsp; st clipped,"автопробега"</p>
@@ -179,7 +179,7 @@
 <p> . . .</p>
 <p>END MAIN</p>
 <p>&nbsp;<br>
-<p>На экране пользователь увидит: </p>
+<p>На экране пользователь увидит:</p>
 <p>&#1107;&#1027;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#8218;</p>
 <p>&#1107;&#1033; &nbsp; Привет участникам автопробега &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1033;</p>
 <p>&#1107;&#1033; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1033;</p>
@@ -187,12 +187,12 @@
 <p>&#1107;&#1033; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1033;</p>
 <p>&#1107;&#1107;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#8222;</p>
 <p>Примеры Использования Программных Операторов.</p>
-<p>Оператор безусловного перехода действует в пределах модуля. </p>
+<p>Оператор безусловного перехода действует в пределах модуля.</p>
 <p>GOTO metka</p>
 <p> . . .</p>
 <p>LABEL&nbsp; metka:&nbsp;&nbsp; . . .</p>
 <p>&nbsp;<br>
-<p>Оператор выбора. </p>
+<p>Оператор выбора.</p>
 <p>CASE</p>
 <p> &nbsp; WHEN iscreen=1</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; current window is w1</p>
@@ -209,9 +209,9 @@
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; message "b=",b</p>
 <p> END CASE</p>
 <p>&nbsp;<br>
-<p>Условный оператор. </p>
-<p>IF str = "завершить" OR y&lt;0 THEN exit program # Не забывайте в конце каждого условного # оператора ставить END IF. END IF </p>
-<p>Оператор цикла. </p>
+<p>Условный оператор.</p>
+<p>IF str = "завершить" OR y&lt;0 THEN exit program # Не забывайте в конце каждого условного # оператора ставить END IF. END IF</p>
+<p>Оператор цикла.</p>
 <p>  FOR&nbsp;&nbsp;&nbsp;&nbsp; I= i1 TO 23</p>
 <p>  let a[i]=0</p>
 <p> &nbsp;&nbsp;&nbsp; if b[i]=100 then</p>
@@ -228,7 +228,7 @@
 <p>  END WHILE</p>
 <p>Динамическое Изготовление Операторов SQL. Курсоры.</p>
 <p>Операторы PREPARE и EXECUTE предназначены для динамического (во время выполнения программы) изготовления и выполнения операторов языка SQL (не 4GL !!!). <br>
-<p>В приведенном ниже фрагменте в ответ на запрос пользователь сможет ввести с клавиатуры строку с оператором языка SQL (Пусть, например, он введет строку: DROP DATABASE buhgalteriq). Программа изготовит из этой строки настоящий оператор и выполнит его с помощью оператора EXECUTE. Если при выполнении зарегистрирована ошибка, о чем сообщит установленный в отрицательное значение код завершения status, пользователя снова попросят ввести оператор. </p>
+<p>В приведенном ниже фрагменте в ответ на запрос пользователь сможет ввести с клавиатуры строку с оператором языка SQL (Пусть, например, он введет строку: DROP DATABASE buhgalteriq). Программа изготовит из этой строки настоящий оператор и выполнит его с помощью оператора EXECUTE. Если при выполнении зарегистрирована ошибка, о чем сообщит установленный в отрицательное значение код завершения status, пользователя снова попросят ввести оператор.</p>
 <p>DEFINE stroka char(200)</p>
 <p>  MAIN</p>
 <p>  . . .</p>
@@ -239,11 +239,11 @@
 <p> &nbsp;&nbsp; PREPARE st1 FROM stroka&nbsp;&nbsp;&nbsp;&nbsp; # Изготовить оператор из</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # символьной строки</p>
 <p> &nbsp;&nbsp; EXECUTE st1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp;&nbsp; Выполнить изготовленный оператор</p>
-<p> &nbsp;&nbsp; IF status&lt;0 THEN ERROR "ошибка номер ", status, " в вашем операторе" GOTO metk2 END IF WHENEVER ERROR STOP # Восстановить режим # "В случае ошибки прервать # выполнение программы" . . . END MAIN </p>
-<p>В системную переменную status помещается код выполнения каждого оператора 4GL (status=0 если все нормально, status&lt;0 если произошла ошибка). Переменная status может проверяться после любого оператора программы и в зависимости от ее значения могут предприниматься какие-либо действия. </p>
-<p>Курсоры </p>
+<p> &nbsp;&nbsp; IF status&lt;0 THEN ERROR "ошибка номер ", status, " в вашем операторе" GOTO metk2 END IF WHENEVER ERROR STOP # Восстановить режим # "В случае ошибки прервать # выполнение программы" . . . END MAIN</p>
+<p>В системную переменную status помещается код выполнения каждого оператора 4GL (status=0 если все нормально, status&lt;0 если произошла ошибка). Переменная status может проверяться после любого оператора программы и в зависимости от ее значения могут предприниматься какие-либо действия.</p>
+<p>Курсоры</p>
 <p>Если запрос к таблице возвращает несколько (больше одной) строк, то для их обработки используется так называемый курсор - указатель во множестве строк, выбранных оператором SELECT. Оператором DECLARE объявляется курсор для запроса, оператором OPEN этот запрос фактически выполняется и выбранные строки выделяются. Курсор устанавливается на первую из выбранных строк. С помощью оператора FETCH вы можете брать очередную строку, на которую указывает курсор, и помещать ее в свои программные переменные. Курсор после этого смещается на следующую строку. <br>
-<p>С помощью конструкции циклической FOREACH имя_курсора ... END FOREACH можно перебрать все строки, выбранные оператором SELECT. Оператор OPEN в этом случае не нужен. </p>
+<p>С помощью конструкции циклической FOREACH имя_курсора ... END FOREACH можно перебрать все строки, выбранные оператором SELECT. Оператор OPEN в этом случае не нужен.</p>
 <p>  DATABASE zawod</p>
 <p>  DEFINE zap RECORD LIKE kadry.*</p>
 <p>  DECLARE curs1 CURSOR FOR</p>
@@ -260,8 +260,8 @@
 <p>  DATABASE zawod</p>
 <p>  DEFINE z1 ARRAY[100] OF RECORD LIKE kadry.*, counter int</p>
 <p>  DECLARE curs2 CURSOR FOR SELECT * FROM kadry</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHERE datarovd&lt;"9/26/1973" OPEN curs2 FOR counter="1" TO 100 FETCH curs2 INTO z1[counter].* # взять очередную строку и поместить ее в следующий элемент # массива z1 IF status="NOTFOUND" THEN # если выбранные сроки кончились, закончить цикл EXIT FOR END IF END FOR LET counter="counter-1" MESSAGE "В массив z1 прочитано ",counter, " записей" </p>
-<p>Этот пример демонстрирует еще одно использование переменной status. Если оператор FETCH пытается взять сроку из курсора когда тот уже пуст, то значение переменной status устанавливается равным символической константе NOTFOUND, имеющей значение 100. Поэтому можно проверять значение status после оператора FETCH и если оно равно 100, то прекратить чтение строк из опустевшего курсора. В данном примере пользователь сам должен ввести условия, по которым будут найдены строки в таблице ceh. Он, например, может ввести: "nomerceh&gt;15 and nomerceh&lt;23". Программа прицепит это условие к строке, в которой записан SELECT оператор, получит строчку "SELECT * FROM ceh WHERE nomerceh&gt;15 and nomerceh&lt;23", изготовит из нее оператор, и для этого изготовленного оператора SELECT объявит курсор. Дальше действия аналогичны предыдущему примеру. </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHERE datarovd&lt;"9/26/1973" OPEN curs2 FOR counter="1" TO 100 FETCH curs2 INTO z1[counter].* # взять очередную строку и поместить ее в следующий элемент # массива z1 IF status="NOTFOUND" THEN # если выбранные сроки кончились, закончить цикл EXIT FOR END IF END FOR LET counter="counter-1" MESSAGE "В массив z1 прочитано ",counter, " записей"</p>
+<p>Этот пример демонстрирует еще одно использование переменной status. Если оператор FETCH пытается взять сроку из курсора когда тот уже пуст, то значение переменной status устанавливается равным символической константе NOTFOUND, имеющей значение 100. Поэтому можно проверять значение status после оператора FETCH и если оно равно 100, то прекратить чтение строк из опустевшего курсора. В данном примере пользователь сам должен ввести условия, по которым будут найдены строки в таблице ceh. Он, например, может ввести: "nomerceh&gt;15 and nomerceh&lt;23". Программа прицепит это условие к строке, в которой записан SELECT оператор, получит строчку "SELECT * FROM ceh WHERE nomerceh&gt;15 and nomerceh&lt;23", изготовит из нее оператор, и для этого изготовленного оператора SELECT объявит курсор. Дальше действия аналогичны предыдущему примеру.</p>
 <p>DEFINE z2 ARRAY[100] OF RECORD LIKE ceh.*,</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; counter int, simw char(200)</p>
 <p>PROMPT "допишите оператор SELECT * FROM ceh WHERE " FOR simw</p>
@@ -284,7 +284,7 @@
 <p>В любой момент времени на экране терминала существует ТЕКУЩЕЕ окно, через которое и выполняется ввод/вывод вашей программы. С окном связаны используемые при вводе и выводе атрибуты (например, green, revers, underline и т.п.) и номера строк окна, используемых операторами MESSAGE, PROMPT и ERROR для вывода. <br>
 При открытии нового окна оно становится текущим и и весь ввод/вывод будет направляться уже в него. <br>
 В окно можно вывести экранную форму, которая, представляет собой набор экранных полей, имеющих имена, и в эти поля (из этих полей), обращаясь к ним по имени, можно выводить (вводить) данные с помощью оператора DISPLAY (INPUT). Экранные поля можно объединять в экранные записи. Описание экранных полей и самой формы располагается отдельно от программы в файле описания экранной формы. <br>
-<p>Ниже приведен пример программы, иллюстрирующий работу с окнами. </p>
+<p>Ниже приведен пример программы, иллюстрирующий работу с окнами.</p>
 <p>OPEN WINDOW wind1 AT 2,30 WITH 10 ROWS, 40 COLUMNS</p>
 <p> &nbsp;&nbsp;&nbsp; ATTRIBUTE(BORDER, REVERSE, MESSAGE LINE FIRST)</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # текущим окном является wind1</p>
@@ -306,7 +306,7 @@
 <p>&#1107;'&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;'</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;'&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;' окно &nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; значение  равно 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;  ...&#1107;wind1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
-<p>&#1107;&#1113; &nbsp;&nbsp; &#1107;'&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>&#1107;&#1113; &nbsp;&nbsp; &#1107;'&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp; цех &nbsp; [&nbsp; 2] [литейный &nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;&#1107;щ&#1107;&#8249;&#1107;&#8222; &nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp; &#1107;&#1113;  таб.номер [26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; окно &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp; &#1107;&#1113;  фамилия &nbsp; [Петров У.Е.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;  ...&#1107; wind2&nbsp; &#1107;&#1113;</p>
@@ -314,14 +314,14 @@
 <p>&#1107;&#1113; &nbsp;&nbsp; &#1107;&#1113;  зарплата  [$340&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;&#1107;щ&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8249;&#1107;&#8222;&#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp; &#1107;&#1113; дата рождения [31.12.1952]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
-<p>&#1107;&#1113; &nbsp;&nbsp; &#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;" </p>
+<p>&#1107;&#1113; &nbsp;&nbsp; &#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;"</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;  789 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
-<p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp; нет таких &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;"</p>
 <p>Операторы MENU. MESSAGE. PROMPT.</p>
-<p>В результате работы фрагмента программы </p>
+<p>В результате работы фрагмента программы</p>
 <p>let sta_return=podtwervdenie(" В самом деле решили закончить? ")</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</p>
 <p>function podtwervdenie(stroka)</p>
@@ -350,18 +350,18 @@
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | В самом деле решили закончить?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +---------------------------------------+</p>
 <p>Оператор OPTIONS</p>
-<p>Оператор OPTIONS может установить новые режимы для ввода вывода, если вас не устраивают заданные по умолчанию. </p>
+<p>Оператор OPTIONS может установить новые режимы для ввода вывода, если вас не устраивают заданные по умолчанию.</p>
 <p>OPTIONS&nbsp;&nbsp;&nbsp;&nbsp; MESSAGE LINE 23,</p>
 <p> &nbsp;&nbsp;&nbsp; HELP&nbsp;&nbsp;&nbsp; FILE "h4gl.txt",&nbsp;&nbsp; HELP&nbsp; KEY CONTROL-T,</p>
 <p> &nbsp;&nbsp;&nbsp; DISPLAY ATTRIBUTE(REVERSE, UNDERLINE)</p>
 <p>Операторы MESSAGE, ERROR</p>
-<p>Оператор MESSAGE выводит строку значений на экран на message line. Аргументами MESSAGE могут быть переменные и константы, но не выражения. </p>
+<p>Оператор MESSAGE выводит строку значений на экран на message line. Аргументами MESSAGE могут быть переменные и константы, но не выражения.</p>
 <p>let ttmm=CURRENT</p>
 <p>message "Московское время ", ttmm</p>
 <p>error "Данных больше нет, прочитанно ", n, " строк"</p>
 <p>Оператор ERROR делает тоже, что и MESSAGE, только со звонком  и с атрибутом REVERSE. Сообщение выводится на 24-ю строку экрана.</p>
 <p>Оператор PROMPT</p>
-<p>Оператор PROMPT выводит на экран display-list - список значений переменных и констант, и вводит после этого с клавиатуры значение в указанную вслед за ключевым словом FOR переменную. </p>
+<p>Оператор PROMPT выводит на экран display-list - список значений переменных и констант, и вводит после этого с клавиатуры значение в указанную вслед за ключевым словом FOR переменную.</p>
 <p>PROMPT "Да или нет ?" FOR answer</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ON KEY (CONTROL-U)</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LET&nbsp; answer=wozderv()</p>
@@ -370,8 +370,8 @@
 <p>Можно включить в PROMPT&nbsp; контрольные  блоки,&nbsp; выполняющиеся при нажатии заданных клавиш. Если в данном примере  во  время ввода пользователь нажмет клавишу CTRL-U то выполнятся  операторы  из ON&nbsp; KEY&nbsp; предложения:&nbsp; будет  вызвана функция wozderv() а затем</p>
 <p>прерван оператор PROMPT, не завершив ввода.</p>
 <p>Операторы обмена с экранной формой</p>
-<p>DISPLAY и INPUT </p>
-<p>Оператор DISPLAY выводит данные в поля экранной формы. </p>
+<p>DISPLAY и INPUT</p>
+<p>Оператор DISPLAY выводит данные в поля экранной формы.</p>
 <p>DISPLAY a,b,zap[i].nomerceh TO pole1,fscr.* ATTRIBUTE(BOLD)</p>
 <p>Если имена выводимых переменных совпадают  с  именами  экранных полей  в  текущей  экранной  форме, то можно применить ключевое слово BY NAME.</p>
 <p>DISPLAY BY NAME fio, dolvnostx</p>
@@ -388,7 +388,7 @@
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENF IF</p>
 <p>END INPUT</p>
 <p>Фрагмент, реализующий окошко подсказки.</p>
-<p>Ниже приведен пример программирования подсказки (в процессе интерактивного диалога) с использованием экранного массива. Таблица ceh содержит два столбца: номер цеха и его название. В приведенном фрагменте вызывается функция wyborceh, которая выводит содержимое таблицы ceh в экранный массив. Пользователь передвигает курсор на название нужного ему цеха и нажимает клавишу CR. Подпрограмма определяет номер цеха и возвращает его вызывающей программе. </p>
+<p>Ниже приведен пример программирования подсказки (в процессе интерактивного диалога) с использованием экранного массива. Таблица ceh содержит два столбца: номер цеха и его название. В приведенном фрагменте вызывается функция wyborceh, которая выводит содержимое таблицы ceh в экранный массив. Пользователь передвигает курсор на название нужного ему цеха и нажимает клавишу CR. Подпрограмма определяет номер цеха и возвращает его вызывающей программе.</p>
 <p>DATABASE zawod</p>
 <p> . . .</p>
 <p>let nc= wyborceh()</p>
@@ -441,7 +441,7 @@
 <p> &nbsp; &#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;"</p>
 <p>Описание и компиляция экранных форм</p>
 <p>В приведенном выше фрагменте использована экранная форма cehform.per. Ниже приведено ее описание. Это описание должно лежать в файле cehform.per и должно быть откомпилировано компилятором экранных форм INFORMIX'а form4gl. <br>
-<p>Описание экранной формы cehform.per </p>
+<p>Описание экранной формы cehform.per</p>
 <p>DATABASE zawod</p>
 <p>SCREEN</p>
 <p>{</p>
@@ -475,8 +475,8 @@
 <p> &nbsp; "select&nbsp; count(*),",wyravenie," from systables"</p>
 <p> &nbsp; whenever error continue</p>
 <p> &nbsp; prepare kalkulqtor_operator from stroka_kalkulatora</p>
-<p> &nbsp; if status&lt;0 then display beep to kalkulator display "Неправильное выражение" to kalkulator next field wyravenie end if declare kalkulator cursor for kalkulqtor_operator foreach kalkulator into kolichestwo, kalkulator if status&lt;0 then display beep to kalkulator display "Неправильное выражение" to kalkulator next field wyravenie end if end foreach whenever error stop display kalkulator to kalkulator next field wyravenie end input close window kalkulator return kalkulator end function </p>
-<p>Использованная в подпрограмме экранная форма должна быть описана в файле kalkulator.per и откомпилирована при помощи компилятора form4gl. </p>
+<p> &nbsp; if status&lt;0 then display beep to kalkulator display "Неправильное выражение" to kalkulator next field wyravenie end if declare kalkulator cursor for kalkulqtor_operator foreach kalkulator into kolichestwo, kalkulator if status&lt;0 then display beep to kalkulator display "Неправильное выражение" to kalkulator next field wyravenie end if end foreach whenever error stop display kalkulator to kalkulator next field wyravenie end input close window kalkulator return kalkulator end function</p>
+<p>Использованная в подпрограмме экранная форма должна быть описана в файле kalkulator.per и откомпилирована при помощи компилятора form4gl.</p>
 <p>DATABASE formonly</p>
 <p>SCREEN</p>
 <p>{</p>
@@ -488,7 +488,7 @@
 <p>wyravenie =formonly.wyravenie;</p>
 <p>kalkulator=formonly.kalkulator;</p>
 <p>END</p>
-<p>Пример программы, выдающей отчет </p>
+<p>Пример программы, выдающей отчет</p>
 <p>DATABASE zawod</p>
 <p>MAIN</p>
 <p>DEFINE zapisx record like kadry.*</p>
@@ -558,7 +558,7 @@
 <p> pause "нажмите ВВОД"</p>
 <p>END REPORT</p>
 
-<p>Вот что увидит на пользователь во время работы программы: </p>
+<p>Вот что увидит на пользователь во время работы программы:</p>
 <p>+-------------------------------------------------------------+</p>
 <p>|Укажите файл, куда выводить отчет, или CR, если на экран:&nbsp;&nbsp;&nbsp; |</p>
 <p>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Не забудьте нажать CONTROL-О|</p>
@@ -608,8 +608,8 @@
 <p> Средняя зарплата &nbsp; 1615 руб.00 коп</p>
 <p>заполнена страница номер &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</p>
 <p>нажмите ВВОД</p>
-<p>Описание экранной формы </p>
-<p>Описание состоит из 5 разделов: DATABASE, SCREEN, TABLES, ATTRIBUTES, INSTRUCTIONS </p>
+<p>Описание экранной формы</p>
+<p>Описание состоит из 5 разделов: DATABASE, SCREEN, TABLES, ATTRIBUTES, INSTRUCTIONS</p>
 <p>#&nbsp; база данных, с которой ведется работа</p>
 <p>DATABASE zawod</p>
 <p>#&nbsp; Картинка, которая выводится на экран.</p>
@@ -655,23 +655,23 @@
 <p> &nbsp;&nbsp; screen record&nbsp;&nbsp; scr[3] (ceh.nomerceh, nameceh)</p>
 <p>END</p>
 <p>&nbsp;<br>
-<p>а вот что увидит на экране пользователь, использующий эту форму: </p>
+<p>а вот что увидит на экране пользователь, использующий эту форму:</p>
 <p>&#1107;'&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;'</p>
 <p>&#1107;&#1113; &nbsp; номер цеха [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; зарплата &nbsp; [f002&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp; фамилия &nbsp;&nbsp; [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp; должность  [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Так в экранной форме рисуется рамка.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp; Значок  используется для входа и выхода в графический режим &nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
-<p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;'&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;'&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp; Экранный массив &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp; [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp; [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp; [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp; [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp; [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]&nbsp; [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113; &nbsp; номер цеха  название цеха &nbsp; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
-<p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; в графическом режиме символы р q b d - |&nbsp; заменяются &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; символами рисования рамки &nbsp;&nbsp; &#1107;' &#1107;' &#1107;" &#1107;" &#1107;&#8250; &#1107;&#1113; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#1107;&#1113;</p>
 <p>&#1107;"&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;&#8250;&#1107;</p>
 <p>&nbsp;<br>
 В этой экранной форме определены экранные поля: kadry.nomerceh, zarpllatа, fiо, dolvп, ceh.nomerceh, nameceh <br>
-<p>А так же экранные записи: kadrу (по умолчанию), ceh (по умолчанию), kad, scr[3] </p>
+<p>А так же экранные записи: kadrу (по умолчанию), ceh (по умолчанию), kad, scr[3]</p>

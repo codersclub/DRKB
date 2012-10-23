@@ -14,7 +14,7 @@ begin
 end;
 </pre>
 
-<p>Взято из </p>
+<p>Взято из</p>
 DELPHI VCL FAQ Перевод с английского &nbsp; &nbsp; &nbsp; 
 <p>Подборку, перевод и адаптацию материала подготовил Aziz(JINX)</p>
 <p>специально для <a href="https://delphi.vitpc.com/" target="_blank">Королевства Дельфи</a></p>

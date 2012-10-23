@@ -14,9 +14,9 @@
 
 <p>Extended Stored Procedures (called xp's afterwards) are part of Microsoft's Open Data Services (ODS) for SQL Server. With ODS you can do three things:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Making routines in a DLL available as stored procedures to any SQL Server user. </p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Write procedure server applications. They are similar to xp's, however they run as a separate network server application and could even be running on a different machine (3-tier). </p>
-3. &nbsp; &nbsp; &nbsp; &nbsp;Writing gateways to non-SQL Server based environments. </p>
+1. &nbsp; &nbsp; &nbsp; &nbsp;Making routines in a DLL available as stored procedures to any SQL Server user.</p>
+2. &nbsp; &nbsp; &nbsp; &nbsp;Write procedure server applications. They are similar to xp's, however they run as a separate network server application and could even be running on a different machine (3-tier).</p>
+3. &nbsp; &nbsp; &nbsp; &nbsp;Writing gateways to non-SQL Server based environments.</p>
 
 <p>In the following figure a graphical overview of the ODS architecture is given.</p>
 
@@ -25,8 +25,8 @@
 
 <p>Making parts of your application available on the server has some advantages, for example:</p>
 <p>
-1. &nbsp; &nbsp; &nbsp; &nbsp;Some things are easy to write in Delphi, but difficult or impossible using Transact SQL. For example you might use some routines written in a language you don't understand or don't have the source code for, so you can't translate it to Transact SQL (with the possibility of errors creeping in during this translation). </p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Delphi routines run much faster than Transact SQL. Take for example numerical calculations. </p>
+1. &nbsp; &nbsp; &nbsp; &nbsp;Some things are easy to write in Delphi, but difficult or impossible using Transact SQL. For example you might use some routines written in a language you don't understand or don't have the source code for, so you can't translate it to Transact SQL (with the possibility of errors creeping in during this translation).</p>
+2. &nbsp; &nbsp; &nbsp; &nbsp;Delphi routines run much faster than Transact SQL. Take for example numerical calculations.</p>
 3. &nbsp; &nbsp; &nbsp; &nbsp;You can interface with other programs, databases and such. For example you could write an xp that accepts the name of a paradox table and returns the contents of this table as a SQL Server result set.</p>
 
 <p>Xp's live in DLL's and can therefore be written in any language which can produce DLL's like Delphi can. Before going into detail about how to write xp's, first some examples from a user's point of view. Let's assume we have an xp called xp_incbyone1 which increments a given number by one. We can call xp_incbyone1 as followings:</p>
@@ -52,18 +52,18 @@
 
 <p>xp_incbyone2 will return a table of just one column and one row containing the value 1.</p>
 
-<p>Both xp_incbyone1 and xp_incbyone2 are described in detail in the next section where I present the framework. </p>
+<p>Both xp_incbyone1 and xp_incbyone2 are described in detail in the next section where I present the framework.</p>
 
 <p>As you see, for users extended stored procedures work exactly like stored procedures. Just like stored procedures, extended stored procedures can return parameters and/or result sets.</p>
 
 <p>Each implementation of an xp needs to do the same things:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Check that the caller of the procedure has provided all of the required parameters and that each parameter is of the appropriate data type. Return an appropriate message if not. </p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Define the columns for returning a result set. </p>
-3. &nbsp; &nbsp; &nbsp; &nbsp;Create each record for returning to the caller. </p>
-4. &nbsp; &nbsp; &nbsp; &nbsp;Set up any output parameters and return statuses used by the procedure. </p>
-5. &nbsp; &nbsp; &nbsp; &nbsp;When finished returning results, send the results completion message using srv_senddone with the SRV_DONE_MORE status flag. </p>
-6. &nbsp; &nbsp; &nbsp; &nbsp;Return from the procedure with the desired Transact-SQL return status. </p>
+1. &nbsp; &nbsp; &nbsp; &nbsp;Check that the caller of the procedure has provided all of the required parameters and that each parameter is of the appropriate data type. Return an appropriate message if not.</p>
+2. &nbsp; &nbsp; &nbsp; &nbsp;Define the columns for returning a result set.</p>
+3. &nbsp; &nbsp; &nbsp; &nbsp;Create each record for returning to the caller.</p>
+4. &nbsp; &nbsp; &nbsp; &nbsp;Set up any output parameters and return statuses used by the procedure.</p>
+5. &nbsp; &nbsp; &nbsp; &nbsp;When finished returning results, send the results completion message using srv_senddone with the SRV_DONE_MORE status flag.</p>
+6. &nbsp; &nbsp; &nbsp; &nbsp;Return from the procedure with the desired Transact-SQL return status.</p>
 
 <p>Step 1 is necessary because, unless normal stored procedures, it is up to the programmer to validate any user-specified parameters for xp's. Step 2 and 3 are optional, and are applicable only if you return a result set. Step 4 is also optional, and applies only if you return output parameters.</p>
 
@@ -75,8 +75,8 @@
 
 <p>You use this framework as follows:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Create an object of class TSQLXProc and implement its Execute method. </p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Write a procedure that allocates this object, calls it's Run method and frees the object. The name of this procedure should be equal to the name of your extended stored procedure. It's calling method should be stdcall. </p>
+1. &nbsp; &nbsp; &nbsp; &nbsp;Create an object of class TSQLXProc and implement its Execute method.</p>
+2. &nbsp; &nbsp; &nbsp; &nbsp;Write a procedure that allocates this object, calls it's Run method and frees the object. The name of this procedure should be equal to the name of your extended stored procedure. It's calling method should be stdcall.</p>
 
 <p>To make this more concrete, let's implement the xp_incbyone1 stored procedure. The 1st step is to create a new object based on TSQLXProc and implement its Execute method. It's header looks like this:</p>
 <pre>
@@ -112,7 +112,7 @@ end;
 
 <p>It's that easy!</p>
 
-<p>Let's look in more detail to the first step. The only thing you'll ever need to do is to implement the Execute method. This function returns True or False. If False is returned, an error is returned to the calling application or user. Exceptions are caught by the code that calls your Execute method and a similar error is returned to the calling application or user. </p>
+<p>Let's look in more detail to the first step. The only thing you'll ever need to do is to implement the Execute method. This function returns True or False. If False is returned, an error is returned to the calling application or user. Exceptions are caught by the code that calls your Execute method and a similar error is returned to the calling application or user.</p>
 
 <p>You have access to the parameters of a stored procedure by using the variant array Params. Parameters are numbered from one onwards. As noted earlier SQL Server does no type checking on xp parameters. The framework returns parameters as variants, so it's a bit more robust against different parameters, but variant conversion errors may occur if a parameter type mismatches. You might want to use the ODS API call srv_paramtype to explicitly retrieve and check parameter types, but so far I've not found a need this. Another solution for checking parameter types is to use the VarType function. See Table 1 for a list of Transact-SQL data types and corresponding Delphi data types.</p>
 
@@ -163,7 +163,7 @@ end;
 
 <p>The xp_incbyone2 procedure is still a simple call the object and exit. In the remaining examples I will omit this procedure.</p>
 
-<p>Table 1: supported types for use with DescribeColumn. </p>
+<p>Table 1: supported types for use with DescribeColumn.</p>
 
 ODS constant&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;TSQL data type(s) &nbsp; &nbsp; &nbsp; &nbsp;Delhi data type(s) &nbsp; &nbsp; &nbsp; 
 SRVVARCHAR  &nbsp; &nbsp; &nbsp; &nbsp;varchar &nbsp; &nbsp; &nbsp; &nbsp;string &nbsp; &nbsp; &nbsp; 
@@ -234,12 +234,12 @@ end;
 
 <p>The framework in more detail</p>
 
-<p>The framework itself is in the unit odsxp.pas. In the following figure you see how this framework fits within the ODS architecture.&nbsp; </p>
+<p>The framework itself is in the unit odsxp.pas. In the following figure you see how this framework fits within the ODS architecture.&nbsp;</p>
 
 
-<p>SQL Server loads and calls the DLL. You have written a simple method which creates an object of type TSQLXProc. You call its Run method. </p>
+<p>SQL Server loads and calls the DLL. You have written a simple method which creates an object of type TSQLXProc. You call its Run method.</p>
 
-<p>The Run method does some checks and calls you back on a method you have written, the Execute method. When you are finished, you return to Run, which in return sends the results back to SQL Server. </p>
+<p>The Run method does some checks and calls you back on a method you have written, the Execute method. When you are finished, you return to Run, which in return sends the results back to SQL Server.</p>
 <p>
 <p>Installing xp's on SQL Server</p>
 <p>
@@ -249,17 +249,17 @@ end;
 
 <p>Installing xp's on SQL Server 7</p>
 <p>
-<p>Installing an extended stored procedure on SQL Server 7 can be done using the SQL Enterprise manager: </p>
+<p>Installing an extended stored procedure on SQL Server 7 can be done using the SQL Enterprise manager:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Open a server. </p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Go to item `Databases'. </p>
-3. &nbsp; &nbsp; &nbsp; &nbsp;Select the master database. </p>
-4. &nbsp; &nbsp; &nbsp; &nbsp;Right click it and choose `New Extended Stored Procedure', see figure below </p>
-5. &nbsp; &nbsp; &nbsp; &nbsp;Give the name of a function in the DLL and the location and name of the DLL itself. </p>
+1. &nbsp; &nbsp; &nbsp; &nbsp;Open a server.</p>
+2. &nbsp; &nbsp; &nbsp; &nbsp;Go to item `Databases'.</p>
+3. &nbsp; &nbsp; &nbsp; &nbsp;Select the master database.</p>
+4. &nbsp; &nbsp; &nbsp; &nbsp;Right click it and choose `New Extended Stored Procedure', see figure below</p>
+5. &nbsp; &nbsp; &nbsp; &nbsp;Give the name of a function in the DLL and the location and name of the DLL itself.</p>
 
 <p>Installing xp's on SQL Server 6.5</p>
 
-<p>When you have compiled your DLL you have to install it in the appropriate directory. Copy the file to the same directory as the standard SQL Server DLL files. Usually this directory is something like c:\mssql\binn, note binn with two n's not the bin directory with a single n which also exists! As with other DLL's, once the extended stored procedure DLL is placed in the appropriate directory and the appropriate paths are set, you can make its functions available to users immediately. It is not necessary to restart the server. </p>
+<p>When you have compiled your DLL you have to install it in the appropriate directory. Copy the file to the same directory as the standard SQL Server DLL files. Usually this directory is something like c:\mssql\binn, note binn with two n's not the bin directory with a single n which also exists! As with other DLL's, once the extended stored procedure DLL is placed in the appropriate directory and the appropriate paths are set, you can make its functions available to users immediately. It is not necessary to restart the server.</p>
 
 <p>For each function provided in an extended stored procedure DLL, a SQL Server system administrator must run the sp_addextendedproc system procedure, specifying the name of the function and the name of the DLL in which that function resides. For example:</p>
 

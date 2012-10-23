@@ -23,11 +23,11 @@ end;
 
 <p>Замечание: Не забудьте каждый раз создавать hintWnd:</p>
 
-<p>  &nbsp;&nbsp; hintwnd:= THintWindow.create(self); </p>
+<p>  &nbsp;&nbsp; hintwnd:= THintWindow.create(self);</p>
 
 <p>а затем освобождать его</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp; hintwnd.releasehandle; </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; hintwnd.releasehandle;</p>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

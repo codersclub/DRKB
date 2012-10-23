@@ -1,7 +1,7 @@
 <h1>Выбор строки или колонки компонента TStringGrid</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Neil J. Rubenking </p>
+Автор: Neil J. Rubenking</p>
 <p>Вот функция, выбирающая при нажатии на кнопку первую строку сетки. Это работает независимо от размера сетки и количества фиксированных строк/колонок.</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);

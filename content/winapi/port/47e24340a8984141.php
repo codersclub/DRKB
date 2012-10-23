@@ -69,7 +69,7 @@ end;
 
 <p>Данный пример был взят мной из многочисленный FAQ посвященных в DELPHI в сети ФИДО</p>
 <p>Итак,для работы с портами COM и LPT нам понадобится знание функций Windows API. Вот подробное описание функций, которые нам нужны (в эквиваленте C) для работы с портами.</p>
-<p>(извините за возможный местами неточный перевод ,если что поправьте меня если что не так перевел) </p>
+<p>(извините за возможный местами неточный перевод ,если что поправьте меня если что не так перевел)</p>
 <pre>
 CreateFile HANDLE CreateFile( LPCTSTR lpFileName,// указатель на строку PCHAR с именем файла
 DWORD dwDesiredAccess,// режим доступа
@@ -171,7 +171,7 @@ OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,
 <p>Структура DCB Структура DCB определяет установку управления для последовательного порта ввода-вывода</p>
 <p>(нам она понадобится для разбора примера с программой управления весами ПетрВес) Примечание : В местах где нельзя дать точный перевод</p>
 <p>будет дано определение на английском из MSDK и приблизительный его перевод</p>
-<p>Описание в эквиваленте C typedef struct _DCB { // dcb </p>
+<p>Описание в эквиваленте C typedef struct _DCB { // dcb</p>
 <p>DWORD DCBlength; // Размер DCB</p>
 <p>DWORD BaudRate; // Скорость пересылки данных в бодах;</p>
 <p>// текущая скорость в бодах</p>
@@ -187,7 +187,7 @@ OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,
 <p>DWORD fDsrSensitivity:1; // DSR sensitivity (чувствительность)</p>
 <p>DWORD fTXContinueOnXoff:1; // XOFF continues Tx (стоп-сигнал</p>
 <p>// продалжает выполнение)</p>
-<p>DWORD fOutX: 1; // XON/XOFF out flow control (СТАРТ- </p>
+<p>DWORD fOutX: 1; // XON/XOFF out flow control (СТАРТ-</p>
 <p>// СИГНАЛ / СТОП-СИГНАЛ для управления</p>
 <p>// выходящим потоком (по умолчанию</p>
 <p>// значение = 1)</p>
@@ -200,7 +200,7 @@ OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,
 <p>DWORD fNull: 1; // enable null stripping (отвергать</p>
 <p>// пустой поток данных (по умолчанию=1))</p>
 <p>DWORD fRtsControl:2; // RTS управление потоком данных</p>
-<p>DWORD fAbortOnError:1; // abort reads/writes on error </p>
+<p>DWORD fAbortOnError:1; // abort reads/writes on error</p>
 <p>// (проверять операции чтения/записи</p>
 <p>// по умолчанию=1)</p>
 <p>DWORD fDummy2:17; // reserved ЗАРЕЗЕРВИРОВАНО</p>
@@ -218,14 +218,14 @@ OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,
 <p>// старт сигнал в потоке)</p>
 <p>char XoffChar; // Tx and Rx XOFF character (вид</p>
 <p>// стоп сигнал в потоке)</p>
-<p>char ErrorChar; // error replacement character (какой </p>
+<p>char ErrorChar; // error replacement character (какой</p>
 <p>// сигнал погрешности,его вид)</p>
 <p>char EofChar; // end of input character (сигнал</p>
 <p>// окончания потока)</p>
 <p>char EvtChar; // received event character РЕЗЕРВ</p>
 <p>WORD wReserved1; // reserved; do not use НЕ ДЛЯ</p>
 <p>// ИСПОЛЬЗОВАНИЯ</p>
-<p>} DCB; </p>
+<p>} DCB;</p>
 <pre>
 with Mode do
 Begin
@@ -384,7 +384,7 @@ End;
 <p>следующие ограничения используются для ByteSize и StopBits параметров :</p>
 <p>Число информационных разрядов должно быть от 5 до 8 битов.</p>
 <p>Использование 5 информационных разрядов с 2 стоповыми битами -</p>
-<p>недопустимая комбинация, как - 6, 7, или 8 информационных разрядов с 1.5 стоповыми битами. </p>
+<p>недопустимая комбинация, как - 6, 7, или 8 информационных разрядов с 1.5 стоповыми битами.</p>
 
 <div class="author">Автор: Дмитрий Кузан, kuzan@fsskomi.parma.ru</div>
 <p>Взято из FAQ:http://blackman.km.ru/myfaq/cont4.phtml</p>

@@ -43,7 +43,7 @@ begin
   RemoveFontResource(FontFileA);
 end;
 </pre>
-<p>Пример вызова: </p>
+<p>Пример вызова:</p>
 <p>&nbsp;
 <p>GetFontName('C:\MyFonts\FUTURA.TTF') - возвратит 'FuturaEugenia'.</p>
 <p>PS: Всё бы хорошо, но эта функция хоть и есть в Win9x, только её там вызывать нельзя - пишет "This function is only valid in Windows NT mode."...</p>

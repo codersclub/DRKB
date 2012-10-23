@@ -1,18 +1,18 @@
 <h1>Правильные диалоги от Борланда</h1>
 <div class="date">01.01.2007</div>
 
-Если покопаться в фирменных "Дельфовых" примерах, можно найти ГОРАЗДО более удачную конструкцию (которую, кстати, я уже давно использую). </p>
+Если покопаться в фирменных "Дельфовых" примерах, можно найти ГОРАЗДО более удачную конструкцию (которую, кстати, я уже давно использую).</p>
 <p>Еще раз подчеркну - это не моя придумка, а ребят из Борланда.</p>
-<p>Эта конструкция позволяет: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Возвращать ЛЮБЫЕ значения; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>ДИНАМИЧЕСКИ создавать форму; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Еще куча всяких "бонусов", просто лень описывать :-) </td></tr></table></div><p>Итак, смотрим исходники...<br>
+<p>Эта конструкция позволяет:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Возвращать ЛЮБЫЕ значения;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ДИНАМИЧЕСКИ создавать форму;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Еще куча всяких "бонусов", просто лень описывать :-)</td></tr></table></div><p>Итак, смотрим исходники...<br>
 &nbsp;<br>
 В этом примере я привел два наиболее типичных случая. 1-й - InputString - просто ввод, без анализа отмены, второй - MrInputString - с анализом отмены ввода (ModalResult). <br>
 &nbsp;<br>
 Оба случая используют начальные значения. Без них - Еще проще... <br>
 В принципе - ваша фантазия ничем не ограничивается. Я, например, храню последние вводившиеся значения в реестре и читаю их оттуда после создания формы. Удобно. <br>
 &nbsp;<br>
-<p>Пользователь не мается вводя по 10 раз одно и то же, а у меня не болит голова с инициализацией полей (есть специальный класс, который этим занимается, но это отдельная тема...) </p>
-<p>ИСХОДНИКИ: </p>
+<p>Пользователь не мается вводя по 10 раз одно и то же, а у меня не болит голова с инициализацией полей (есть специальный класс, который этим занимается, но это отдельная тема...)</p>
+<p>ИСХОДНИКИ:</p>
 <pre>
 //**************************************************************
 //Основной модуль Обратите Внимание!  "uses Dialog;"

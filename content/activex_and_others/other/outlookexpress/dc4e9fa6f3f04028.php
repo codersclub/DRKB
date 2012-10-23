@@ -1,8 +1,6 @@
-<h1>Как читать файлы Outlook Express</h1>
+<h1>Как читать файлы Outlook Express (*.dbx)</h1>
 <div class="date">01.01.2007</div>
 
-<p>КАК ЧИТАТЬ ФАЙЛЫ OUTLOOK EXPRESS (.DBX) <br>
-<p>(формат файла *.DBX) </p>
 <p>1)Структура файла.</p>
 <p>Сообщения хранятся в таблицах, расположенных друг за другом, по порядку. Каждая таблица состоит из двух частей - заголовка и _входа_. Смещение первой таблицы от начала файла располагается со смещением $30 от начала файла и представляет собой знаковое 32-х битное число (тип integer или longint). Общее же количество записей (т.е. этих самых таблиц) расположено со смещением $C4 от начала файла, и представляет собой число типа integer (longint).</p>
 <p>Заголовок таблицы содержит количество _входов_, собственное смещение, а так же смещения предыдущей и следующей таблиц (все смещения, разумеется, от начала файла). Для чтения заголовка таблицы я использую такую структуру:</p>
@@ -17,7 +15,7 @@ Unknown2: longint; { ??? }
 end; 
 </pre>
 
-<p>Чтобы получить реальное количество _входов_, значение поля count надо конвертировать . </p>
+<p>Чтобы получить реальное количество _входов_, значение поля count надо конвертировать .</p>
 <p>Каждый _вход_ содержит смещение (всегда от начала файла) заголовка письма (Message Header) и позицию другой индексной таблицы (эта таблица используется, чтобы обеспечить поддержку наследования (или связывания) сообщения, то есть любой заголовок сообщения, на который ссылается эта таблица - ребенок текущего сообщения). Вот структура входа:</p>
 <pre>Toe5_IndexItem =record
 HeaderPos: longint; {Смещение (от начала файла) заголовка письма}
@@ -27,19 +25,19 @@ end;
 </pre>
 
 
-<p>На мой взгляд, лучшим методом чтения таблиц является рекурсивная функция (см. пример). </p>
+<p>На мой взгляд, лучшим методом чтения таблиц является рекурсивная функция (см. пример).</p>
 <p>Заголовок сообщения содержит некоторую информацию, которую Outlook Express использует, чтобы избежать доступа к сообщению, пока в этом нет особой необходимости. Эта структура разделена на три части: заголовок структуры, таблицу параметров типа DWORD и блок данных.</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Заголовок структуры - это то, что вам необходимо прочитать в первую очередь, так как он определяет размер оставшихся двух частей. В её состав входят размер всей структуры (все 3 части), суммарный размер таблицы параметров, блока данных и количество параметров в таблице (я называю эти параметры флагами). </td></tr></table></div>THeaderData = record <br>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Заголовок структуры - это то, что вам необходимо прочитать в первую очередь, так как он определяет размер оставшихся двух частей. В её состав входят размер всей структуры (все 3 части), суммарный размер таблицы параметров, блока данных и количество параметров в таблице (я называю эти параметры флагами).</td></tr></table></div>THeaderData = record <br>
 position: longint; {смещение данной структуры от BOF, используется только для контроля}<br>
 DataLength: longint; {размер таблицы параметров и блока данных}<br>
 HeaderLength: WORD; {размер всех трех частей}<br>
 FlagCount: WORD; {количество элементов в таблице}<br>
-<p>end ; </p>
-Чтобы получить размер таблицы флагов, можно написать SizeOfTable:=FlagCount*SizeOf(DWord), a размер блока данных используйте DataLength-SizeOfTable. </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Каждый элемент таблицы параметров должен быть декодирован, для того, чтобы получить его идентификатор и значение: идентификатор находят как element and $FF, а значение флага - element shr 8. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Блок данных содержит такую информацию, как дата получения, отправки, тема, адресат, отправитель, аккаунт и т.д. Для её чтения используется таблица флагов (параметров). Вот пример таблицы параметров и соответствующего блока данных: </td></tr></table></div> &nbsp;&nbsp;&nbsp; Flags =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>end ;</p>
+Чтобы получить размер таблицы флагов, можно написать SizeOfTable:=FlagCount*SizeOf(DWord), a размер блока данных используйте DataLength-SizeOfTable.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Каждый элемент таблицы параметров должен быть декодирован, для того, чтобы получить его идентификатор и значение: идентификатор находят как element and $FF, а значение флага - element shr 8.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Блок данных содержит такую информацию, как дата получения, отправки, тема, адресат, отправитель, аккаунт и т.д. Для её чтения используется таблица флагов (параметров). Вот пример таблицы параметров и соответствующего блока данных:</td></tr></table></div> &nbsp;&nbsp;&nbsp; Flags =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 80: 00000074 </p>
+ &nbsp;&nbsp;&nbsp; 80: 00000074</p>
  &nbsp;&nbsp;&nbsp; 81: 00000081</p>
  &nbsp;&nbsp;&nbsp; 02: 00000000</p>
  &nbsp;&nbsp;&nbsp; 84: 0002ECA0</p>
@@ -58,88 +56,88 @@ FlagCount: WORD; {количество элементов в таблице}<br>
 &nbsp;</p>
  &nbsp;&nbsp;&nbsp; Data Block:</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 72 F3 E4 58 22 C0 01 41 63 74 69 76 65 57 65 </p>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r&nbsp; o&nbsp; a&nbsp; X&nbsp; "&nbsp; A&nbsp; _&nbsp; A&nbsp; c&nbsp; t&nbsp; i&nbsp; v&nbsp; e&nbsp; W&nbsp; e </p>
+ &nbsp;&nbsp;&nbsp; 00 72 F3 E4 58 22 C0 01 41 63 74 69 76 65 57 65</p>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r&nbsp; o&nbsp; a&nbsp; X&nbsp; "&nbsp; A&nbsp; _&nbsp; A&nbsp; c&nbsp; t&nbsp; i&nbsp; v&nbsp; e&nbsp; W&nbsp; e</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 62 20 44 65 76 65 6C 6F 70 65 72 20 65 58 54 52 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; X&nbsp; T&nbsp; R </p>
+ &nbsp;&nbsp;&nbsp; 62 20 44 65 76 65 6C 6F 70 65 72 20 65 58 54 52</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; X&nbsp; T&nbsp; R</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 41 20 23 38 00 60 E2 F2 9C 90 35 C0 01 3C 4F 46 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; `&nbsp; a&nbsp; o&nbsp; ?&nbsp; ?&nbsp; 5&nbsp; A&nbsp; _&nbsp; &lt;&nbsp; O&nbsp; F </p>
+ &nbsp;&nbsp;&nbsp; 41 20 23 38 00 60 E2 F2 9C 90 35 C0 01 3C 4F 46</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; `&nbsp; a&nbsp; o&nbsp; ?&nbsp; ?&nbsp; 5&nbsp; A&nbsp; _&nbsp; &lt;&nbsp; O&nbsp; F</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 45 31 44 36 35 46 38 37 2E 32 39 39 31 37 34 31 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; E&nbsp; 1&nbsp; D&nbsp; 6&nbsp; 5&nbsp; F&nbsp; 8&nbsp; 7&nbsp; .&nbsp; 2&nbsp; 9&nbsp; 9&nbsp; 1&nbsp; 7&nbsp; 4&nbsp; 1 </p>
+ &nbsp;&nbsp;&nbsp; 45 31 44 36 35 46 38 37 2E 32 39 39 31 37 34 31</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; E&nbsp; 1&nbsp; D&nbsp; 6&nbsp; 5&nbsp; F&nbsp; 8&nbsp; 7&nbsp; .&nbsp; 2&nbsp; 9&nbsp; 9&nbsp; 1&nbsp; 7&nbsp; 4&nbsp; 1</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 42 2D 4F 4E 38 35 32 35 36 39 35 46 2E 30 30 35 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; B&nbsp; -&nbsp; O&nbsp; N&nbsp; 8&nbsp; 5&nbsp; 2&nbsp; 5&nbsp; 6&nbsp; 9&nbsp; 5&nbsp; F&nbsp; .&nbsp; 0&nbsp; 0&nbsp; 5 </p>
+ &nbsp;&nbsp;&nbsp; 42 2D 4F 4E 38 35 32 35 36 39 35 46 2E 30 30 35</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; B&nbsp; -&nbsp; O&nbsp; N&nbsp; 8&nbsp; 5&nbsp; 2&nbsp; 5&nbsp; 6&nbsp; 9&nbsp; 5&nbsp; F&nbsp; .&nbsp; 0&nbsp; 0&nbsp; 5</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 43 33 46 41 36 40 70 69 6E 6E 61 63 6C 65 70 75 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; C&nbsp; 3&nbsp; F&nbsp; A&nbsp; 6&nbsp; @&nbsp; p&nbsp; i&nbsp; n&nbsp; n&nbsp; a&nbsp; c&nbsp; l&nbsp; e&nbsp; p&nbsp; u </p>
+ &nbsp;&nbsp;&nbsp; 43 33 46 41 36 40 70 69 6E 6E 61 63 6C 65 70 75</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; C&nbsp; 3&nbsp; F&nbsp; A&nbsp; 6&nbsp; @&nbsp; p&nbsp; i&nbsp; n&nbsp; n&nbsp; a&nbsp; c&nbsp; l&nbsp; e&nbsp; p&nbsp; u</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 62 6C 69 73 68 69 6E 67 2E 63 6F 6D 3E 00 41 63 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp; l&nbsp; i&nbsp; s&nbsp; h&nbsp; i&nbsp; n&nbsp; g&nbsp; .&nbsp; c&nbsp; o&nbsp; m&nbsp; &gt;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; c </p>
+ &nbsp;&nbsp;&nbsp; 62 6C 69 73 68 69 6E 67 2E 63 6F 6D 3E 00 41 63</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp; l&nbsp; i&nbsp; s&nbsp; h&nbsp; i&nbsp; n&nbsp; g&nbsp; .&nbsp; c&nbsp; o&nbsp; m&nbsp; &gt;&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; c</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 74 69 76 65 57 65 62 20 44 65 76 65 6C 6F 70 65 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; t&nbsp; i&nbsp; v&nbsp; e&nbsp; W&nbsp; e&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e </p>
+ &nbsp;&nbsp;&nbsp; 74 69 76 65 57 65 62 20 44 65 76 65 6C 6F 70 65</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; t&nbsp; i&nbsp; v&nbsp; e&nbsp; W&nbsp; e&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 72 20 65 58 54 52 41 20 23 38 00 41 63 74 69 76 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; X&nbsp; T&nbsp; R&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; c&nbsp; t&nbsp; i&nbsp; v </p>
+ &nbsp;&nbsp;&nbsp; 72 20 65 58 54 52 41 20 23 38 00 41 63 74 69 76</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; X&nbsp; T&nbsp; R&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp; c&nbsp; t&nbsp; i&nbsp; v</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 65 57 65 62 20 44 65 76 65 6C 6F 70 65 72 20 65 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; W&nbsp; e&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; e </p>
+ &nbsp;&nbsp;&nbsp; 65 57 65 62 20 44 65 76 65 6C 6F 70 65 72 20 65</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; W&nbsp; e&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; e</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 58 54 52 41 00 61 63 74 69 76 65 77 65 62 64 65 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; X&nbsp; T&nbsp; R&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; a&nbsp; c&nbsp; t&nbsp; i&nbsp; v&nbsp; e&nbsp; w&nbsp; e&nbsp; b&nbsp; d&nbsp; e </p>
+ &nbsp;&nbsp;&nbsp; 58 54 52 41 00 61 63 74 69 76 65 77 65 62 64 65</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; X&nbsp; T&nbsp; R&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; a&nbsp; c&nbsp; t&nbsp; i&nbsp; v&nbsp; e&nbsp; w&nbsp; e&nbsp; b&nbsp; d&nbsp; e</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 76 65 6C 6F 70 65 72 65 78 74 72 61 40 70 69 6E </p>
- &nbsp;&nbsp;&nbsp;&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp; e&nbsp; x&nbsp; t&nbsp; r&nbsp; a&nbsp; @&nbsp; p&nbsp; i&nbsp; n </p>
+ &nbsp;&nbsp;&nbsp; 76 65 6C 6F 70 65 72 65 78 74 72 61 40 70 69 6E</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp; e&nbsp; x&nbsp; t&nbsp; r&nbsp; a&nbsp; @&nbsp; p&nbsp; i&nbsp; n</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 6E 61 63 6C 65 70 75 62 6C 69 73 68 69 6E 67 2E </p>
- &nbsp;&nbsp;&nbsp;&nbsp; n&nbsp; a&nbsp; c&nbsp; l&nbsp; e&nbsp; p&nbsp; u&nbsp; b&nbsp; l&nbsp; i&nbsp; s&nbsp; h&nbsp; i&nbsp; n&nbsp; g&nbsp; . </p>
+ &nbsp;&nbsp;&nbsp; 6E 61 63 6C 65 70 75 62 6C 69 73 68 69 6E 67 2E</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; n&nbsp; a&nbsp; c&nbsp; l&nbsp; e&nbsp; p&nbsp; u&nbsp; b&nbsp; l&nbsp; i&nbsp; s&nbsp; h&nbsp; i&nbsp; n&nbsp; g&nbsp; .</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 63 6F 6D 00 00 23 5E 0F 8B 22 C0 01 41 63 74 69 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; c&nbsp; o&nbsp; m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; ^&nbsp; _&nbsp; &#8249;  "&nbsp; A&nbsp; _&nbsp; A&nbsp; c&nbsp; t&nbsp; i </p>
+ &nbsp;&nbsp;&nbsp; 63 6F 6D 00 00 23 5E 0F 8B 22 C0 01 41 63 74 69</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; c&nbsp; o&nbsp; m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; ^&nbsp; _&nbsp; &#8249;  "&nbsp; A&nbsp; _&nbsp; A&nbsp; c&nbsp; t&nbsp; i</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 76 65 57 65 62 20 44 65 76 65 6C 6F 70 65 72 20 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; v&nbsp; e&nbsp; W&nbsp; e&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp; </p>
+ &nbsp;&nbsp;&nbsp; 76 65 57 65 62 20 44 65 76 65 6C 6F 70 65 72 20</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; v&nbsp; e&nbsp; W&nbsp; e&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 65 58 54 52 41 20 53 75 62 73 63 72 69 62 65 72 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; X&nbsp; T&nbsp; R&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp; u&nbsp; b&nbsp; s&nbsp; c&nbsp; r&nbsp; i&nbsp; b&nbsp; e&nbsp; r </p>
+ &nbsp;&nbsp;&nbsp; 65 58 54 52 41 20 53 75 62 73 63 72 69 62 65 72</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; X&nbsp; T&nbsp; R&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp; u&nbsp; b&nbsp; s&nbsp; c&nbsp; r&nbsp; i&nbsp; b&nbsp; e&nbsp; r</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 20 00 3C 41 63 74 69 76 65 57 65 62 20 44 65 76 </p>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&nbsp; A&nbsp; c&nbsp; t&nbsp; i&nbsp; v&nbsp; e&nbsp; W&nbsp; e&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v </p>
+ &nbsp;&nbsp;&nbsp; 20 00 3C 41 63 74 69 76 65 57 65 62 20 44 65 76</p>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&nbsp; A&nbsp; c&nbsp; t&nbsp; i&nbsp; v&nbsp; e&nbsp; W&nbsp; e&nbsp; b&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; e&nbsp; v</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 65 6C 6F 70 65 72 20 65 58 54 52 41 20 53 75 62 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; X&nbsp; T&nbsp; R&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp; u&nbsp; b </p>
+ &nbsp;&nbsp;&nbsp; 65 6C 6F 70 65 72 20 65 58 54 52 41 20 53 75 62</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; l&nbsp; o&nbsp; p&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp; X&nbsp; T&nbsp; R&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp; u&nbsp; b</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 73 63 72 69 62 65 72 20 3E 00 88 00 00 00 01 00 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; s&nbsp; c&nbsp; r&nbsp; i&nbsp; b&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; &gt;&nbsp;&nbsp;&nbsp;&nbsp; ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _&nbsp;&nbsp;&nbsp; </p>
+ &nbsp;&nbsp;&nbsp; 73 63 72 69 62 65 72 20 3E 00 88 00 00 00 01 00</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; s&nbsp; c&nbsp; r&nbsp; i&nbsp; b&nbsp; e&nbsp; r&nbsp;&nbsp;&nbsp;&nbsp; &gt;&nbsp;&nbsp;&nbsp;&nbsp; ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _&nbsp;&nbsp;&nbsp;</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 02 4E 00 00 00 00 F9 37 00 00 02 4E 00 00 01 00 </p>
- &nbsp;&nbsp;&nbsp;&nbsp; _&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _&nbsp;&nbsp;&nbsp; </p>
+ &nbsp;&nbsp;&nbsp; 02 4E 00 00 00 00 F9 37 00 00 02 4E 00 00 01 00</p>
+ &nbsp;&nbsp;&nbsp;&nbsp; _&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _&nbsp;&nbsp;&nbsp;</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 </p>
-&nbsp;</p>
-&nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 </p>
+ &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</p>
 &nbsp;</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 </p>
+ &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</p>
 &nbsp;</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 40 05 00 00 F9 37 00 00 00 00 </p>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @&nbsp; _&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
-&nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 </p>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
-&nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 </p>
+ &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</p>
 &nbsp;</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 </p>
+ &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 40 05 00 00 F9 37 00 00 00 00</p>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @&nbsp; _&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; u&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+&nbsp;</p>
+ &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00</p>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+&nbsp;</p>
+ &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</p>
 &nbsp;</p>
 &nbsp;</p>
- &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 6D 70 </p>
+ &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</p>
+&nbsp;</p>
+&nbsp;</p>
+ &nbsp;&nbsp;&nbsp; 00 00 00 00 00 00 6D 70</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m&nbsp; p</p>
 &nbsp;</p>
 Теперь давайте разберёмся, что означает каждый флаг.</p>
@@ -169,17 +167,17 @@ $1B: Смещение от начала блока данных, по котор
 $80: Номер сообщения<br>
 $81: Используется для хранения статуса письма <br>
 $84: Смещение тела сообщения в файле<br>
-<p>$91: Размер сообщения. </p>
-Сообщения: Каждое письмо или сообщение групп новостей хранятся в блоках по 512 байт, у каждого блока есть заголовок. То есть каждое сообщение делится на части, и к каждой части добавляют заголовок (в котором содержится размер блока, размер занятой части блока, а так же положение следующего блока). Я использую такую структуру для чтения блоков (вместе с их заголовками): </p>
+<p>$91: Размер сообщения.</p>
+Сообщения: Каждое письмо или сообщение групп новостей хранятся в блоках по 512 байт, у каждого блока есть заголовок. То есть каждое сообщение делится на части, и к каждой части добавляют заголовок (в котором содержится размер блока, размер занятой части блока, а так же положение следующего блока). Я использую такую структуру для чтения блоков (вместе с их заголовками):</p>
 Toe5_MsgItem = record<br>
 FilePos: longint; {смещение структуры от BOF, используется для контроля верности операций}<br>
 Unknown: longint; {я думаю, это размер блока данных}<br>
 ItemSize: longint; {использованная часть блока}<br>
 NextItem: longint; {смещение следующего блока от BOF, и 0, если это последний блок}<br>
 MsgContent: array[0..511] of Char; {блок, содержащий непосредственно данные}<br>
-<p>end ; </p>
+<p>end ;</p>
 <p>2) Удаление сообщений.</p>
-<p>Когда какое либо сообщение удаляется, оно сначала помещается в папку "Удаленные", а физически - в соответствующий этой папке файл. Место же, которое занимало сообщение в прежнем файле, добавляется в список пустого пространства, и когда приходит новое сообщение, Outlook Express использует сначала это место. Смещение первого элемента в списке сободного места сохранено по смещению $48 от начала файла. Каждый элемент этого списка разделен на две части: заголовок и блок свободного пространства. Вот структура заголовка: </p>
+<p>Когда какое либо сообщение удаляется, оно сначала помещается в папку "Удаленные", а физически - в соответствующий этой папке файл. Место же, которое занимало сообщение в прежнем файле, добавляется в список пустого пространства, и когда приходит новое сообщение, Outlook Express использует сначала это место. Смещение первого элемента в списке сободного места сохранено по смещению $48 от начала файла. Каждый элемент этого списка разделен на две части: заголовок и блок свободного пространства. Вот структура заголовка:</p>
 <pre>Toe5_FreeSpace = record 
 FilePos: longint;{это смещение всей структуры от начала файла BOF, используется для контроля}
 ElementSize:longint; {размер структуры - заголовок и свободное место}
@@ -190,7 +188,7 @@ end ;
 </pre>
 
 <p>3) Даты.</p>
-<p>Все даты в заголовке сообщения сохранены в формате TFileTime, и основаном на UTC. Перед использованием это значение надо перевести в местное время. Вот небольшой пример того, как это можно сделать: </p>
+<p>Все даты в заголовке сообщения сохранены в формате TFileTime, и основаном на UTC. Перед использованием это значение надо перевести в местное время. Вот небольшой пример того, как это можно сделать:</p>
 <pre>function FiletimeToDatetime(const date: TFileTime): TDateTime;
 var
 st:TSystemTime;
@@ -203,11 +201,11 @@ end;
 </pre>
 
 <p>4)Статус сообщения.</p>
-<p>Для получения статуса сообщения можно использовать значение флага $81 следующим образом: </p>
-<p>&#8230;<br>
+<p>Для получения статуса сообщения можно использовать значение флага $81 следующим образом:</p>
+<p>...<br>
 x := &lt;значение флага $81&gt;<br>
 If (x AND constant) &lt;&gt;0 then<br>
-<p>&#8230; </p>
+<p>...</p>
 <p>И на последок, некоторые константы:<br>
 DOWNLOADED = $1<br>
 MARKED = $20<br>
@@ -220,9 +218,9 @@ REPLY =$80000<br>
 INSPECT_CONVERSATION = $400000<br>
 IGNORE_CONVERSATION =$800000</p>
 
-<p>Модули к статье можно взять здесь</p>
-<p>Все дополнения, модификации, предложения, благодарности и т.п. просьба присылать на Samum2000@mail15.com (особенно к русскому переводу) или на walther_e@yahoo.com (на английском языке, касательно оригинала). <br>
-<p>Walther Estergaard Walther_e@yahoo.com </p>
+<div class="author">Автор: Walther Estergaard, Walther_e@yahoo.com</div>
 
 <div class="author">Перевод: Боднар Денис aka Samum, Samum2000@mail15.com, ICQ: 278395965.</div>
+<p>Модули к статье можно взять здесь</p>
 <p><a href="https://www.samum2000.narod.ru/articles/oedb.html" target="_blank">https://www.samum2000.narod.ru/articles/oedb.html</a></p>
+<p>Все дополнения, модификации, предложения, благодарности и т.п. просьба присылать на Samum2000@mail15.com (особенно к русскому переводу) или на walther_e@yahoo.com (на английском языке, касательно оригинала).</p>

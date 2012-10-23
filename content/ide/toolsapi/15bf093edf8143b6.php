@@ -24,6 +24,6 @@
 <p>If you have enough RAM, Delphi is loaded and this instance will have your expert installed.</p>
 <p>Activate the expert, you'll have the possibility to use the comfort of the first instance's internal debugger.</p>
 
-<p>Close the right instance of Delphi - and you can modify/ recompile etc. your expert. </p>
+<p>Close the right instance of Delphi - and you can modify/ recompile etc. your expert.</p>
 
 <p>Взято с сайта <a href="https://www.delphifaq.com" target="_blank">https://www.delphifaq.com</a></p>

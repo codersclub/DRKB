@@ -5,13 +5,13 @@
 <p>Иногда на форуме проскакивает такой вопрос: "Как можно поглядеть экспортируемые ф-ии какой либо длл'ины?".</p>
 <p>Можно конечно же воспользоваться стандартными утилитами, но можно попробовать написать и что нить свое.</p>
 <p>Сейчас я попробую показать такой пример. Напишем пример, который делает именно это - вытаскивает экспорт модуля.</p>
-<p>Подробно расписывать тут ничего не буду, тут идет разбор элементов PE заголовка - нахождение таблицы экспорта, </p>
-<p>перечисление ф-ий. Недостаток этого примера в том, что он работает уже с подгруженными модулями, т.к. для нахождения </p>
-<p>базы используется GetModuleHandle(). </p>
+<p>Подробно расписывать тут ничего не буду, тут идет разбор элементов PE заголовка - нахождение таблицы экспорта,</p>
+<p>перечисление ф-ий. Недостаток этого примера в том, что он работает уже с подгруженными модулями, т.к. для нахождения</p>
+<p>базы используется GetModuleHandle().</p>
 <p>Вставка:</p>
-<p>The GetModuleHandle function returns a module handle for the specified module if the file has been mapped into the address </p>
-<p>space of the calling process. </p>
-<p>Для расширения возможностей - простмотра всех модулей, надо использовать </p>
+<p>The GetModuleHandle function returns a module handle for the specified module if the file has been mapped into the address</p>
+<p>space of the calling process.</p>
+<p>Для расширения возможностей - простмотра всех модулей, надо использовать</p>
 <p>что нить другое, например "мэпирование" (CreateFileMapping() итд). Ведь надо хоть что нить самому сделать....</p>
 <pre>
 program ExpDump;
@@ -120,7 +120,7 @@ end.
 <p>BeginPaint</p>
 <p>BlockInput</p>
 <p>...</p>
-<p>Для улучшения можно доделать так: </p>
+<p>Для улучшения можно доделать так:</p>
 <pre>
 ImageBase := GetModuleHandle(PChar(cmdline));
   if (ImageBase = 0) then begin
@@ -132,6 +132,6 @@ ImageBase := GetModuleHandle(PChar(cmdline));
   end;
 </pre>
 
-<p>И не забудте в конце FreeLibrary() </p>
+<p>И не забудте в конце FreeLibrary()</p>
 <div class="author">Автор: x2er0 </div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

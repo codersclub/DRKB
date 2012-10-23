@@ -33,7 +33,7 @@ begin
 end.
 </pre>
 
-<p>А это пишим в базе: </p>
+<p>А это пишим в базе:</p>
 <pre>
 DECLARE EXTERNAL FUNCTION MAXINT INTEGER, INTEGER
 RETURNS INTEGER BY VALUE

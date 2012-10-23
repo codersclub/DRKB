@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>GetTextMetrics() </p>
+<p>GetTextMetrics()</p>
 <div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />

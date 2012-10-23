@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>The current highest value is stored beginning at byte 73 decimal. </p>
+<p>The current highest value is stored beginning at byte 73 decimal.</p>
 <p>The next value is determined by adding 1 to it.</p>
 <p>Here is a simple Delphi function that returns the current</p>
 <p>autoincrement value.</p>

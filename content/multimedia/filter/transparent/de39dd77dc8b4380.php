@@ -68,7 +68,7 @@ begin
   end;
 end;
 </pre>
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>var
   Bmp: TBitmap;
 begin

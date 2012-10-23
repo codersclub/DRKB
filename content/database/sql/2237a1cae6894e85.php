@@ -237,7 +237,7 @@ and Exists(SELECT * FROM customer WHERE City='Largo')
 
 <p>Выводим заказы покупателей из города 'Largo' если вообще есть покупатели с этого города</p>
 
-<p>Использование параметров </p>
+<p>Использование параметров</p>
 
 <pre>SELECT * FROM clients</p>
 where Last_Name=:LastNameParam

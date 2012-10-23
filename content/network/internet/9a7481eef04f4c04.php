@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>За это отвечает ф-ии InternetGetConnectedState() из wininet.dll или InetIsOffLine() из url.dll </p>
+<p>За это отвечает ф-ии InternetGetConnectedState() из wininet.dll или InetIsOffLine() из url.dll</p>
 <div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
@@ -11,17 +11,17 @@
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Часто приложению, которое работает в интернете, требуется знать, подключён пользователь к интернету или нет. Предлагаю Вам довольно гибкое решение этого вопроса.</p>
 <p>Совместимость: Delphi 3.x (или выше)</p>
-<p>Для работы Вам необходимо импортировать функцию InetIsOffline из URL.DLL: </p>
-<p>function InetIsOffline(Flag: Integer): Boolean; stdcall; external 'URL.DLL'; </p>
-<p>а затем поместить в программу простой вызов функции для проверки статуса соединения: </p>
-<p>if InetIsOffline(0) then </p>
-<p> &nbsp; ShowMessage('This computer is not connected to Internet!') </p>
-<p>else </p>
-<p> &nbsp; ShowMessage(You are connected to Internet!'); </p>
-<p>Эта функция возвращает TRUE если соединение с интернетов отсутствует, или FALSE если соединение установлено. </p>
-<p>Замечание: </p>
-<p>параметр Flag игнорируется, соответственно используем ноль. </p>
-<p>Эта DLL обычно проинсталлирована на большинстве компьютеров. Она также существует в Win98 либо поставляется с Internet Explorer 4 или выше, Office 97 и т.д.. </p>
+<p>Для работы Вам необходимо импортировать функцию InetIsOffline из URL.DLL:</p>
+<p>function InetIsOffline(Flag: Integer): Boolean; stdcall; external 'URL.DLL';</p>
+<p>а затем поместить в программу простой вызов функции для проверки статуса соединения:</p>
+<p>if InetIsOffline(0) then</p>
+<p> &nbsp; ShowMessage('This computer is not connected to Internet!')</p>
+<p>else</p>
+<p> &nbsp; ShowMessage(You are connected to Internet!');</p>
+<p>Эта функция возвращает TRUE если соединение с интернетов отсутствует, или FALSE если соединение установлено.</p>
+<p>Замечание:</p>
+<p>параметр Flag игнорируется, соответственно используем ноль.</p>
+<p>Эта DLL обычно проинсталлирована на большинстве компьютеров. Она также существует в Win98 либо поставляется с Internet Explorer 4 или выше, Office 97 и т.д..</p>
 <p>Более подробно можно прочитать в MSDN. Оригинал: http://msdn.microsoft.com/library/psdk/shellcc/shell/Functions/InetIsOffline.htm</p>
 <div class="author">Автор: Vitaly Zayko</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

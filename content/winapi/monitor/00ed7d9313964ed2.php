@@ -29,7 +29,7 @@ end;
 </pre>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<hr /><p>Эта программа отслеживает изменение характеристик экрана. </p>
+<hr /><p>Эта программа отслеживает изменение характеристик экрана.</p>
 <pre>
 ...
 private

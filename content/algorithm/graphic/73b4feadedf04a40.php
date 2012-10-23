@@ -11,11 +11,11 @@ function angl(y,x:extended):extended;  assembler;
  end; 
 </pre>
 
-<p>вывод ответа: </p>
+<p>вывод ответа:</p>
 <pre>
 s:=angl(0,1)*180/pi; {Т.к возвращается угол в радианах} 
 writeln(s:0:0); 
 </pre>
 
-<div class="author">Автор: Bink (Новиков Виктор) </div>
+<div class="author">Автор: Bink (Новиков Виктор)</div>
 

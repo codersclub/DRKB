@@ -8,7 +8,7 @@
 <p>3) <a href="a69.htm">Использовать SMTP</a> - там все просто, однако посыка не напрямую, требуется наличие SMTP сервера, например сервера провайдера.</p>
 <p>4) <a href="a71.htm">Использовать COM интерфейс Outlook</a> - там тоже все просто, но нужно наличие установленного и полностью подключенного Outlook</p>
 <p>5) <a href="a72.htm">Писать свой SMTP Relay сервер</a> и отсылать email напрямую, минуя любые сервера. Для Дельфи6/Дельфи7/Kylix3 можно использовать компоненты Indy (входят в поставку Дельфи) - пример внизу, а так же можно использовать для любых версий Delphi/Kylix компоненты из пакета ICS - Internet component suite.</p>
-<p>Вот ещё вариант: <a href="sendemailsviawinsockapi.htm">Send e-mails via WinSock API?</a> </p>
+<p>Вот ещё вариант: <a href="sendemailsviawinsockapi.htm">Send e-mails via WinSock API?</a></p>
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <h1>Как отправить Email?</h1>

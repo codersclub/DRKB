@@ -6,27 +6,27 @@
 В этой главе описывается процесс создания баз данных и таблиц,</p>
 который назывется также процессом определения данных. Здесь рассматриваются следующие темы:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Общее описание баз данных и таблиц;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как создавать и использовать базы данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как создавать таблицы и выделять в них столбцы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как пользователь может определить свой тип данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как изменять уже сделанные таблицы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как получить информацию о базах данных и таблицах. </td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Общее описание баз данных и таблиц;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как создавать и использовать базы данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как создавать таблицы и выделять в них столбцы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как пользователь может определить свой тип данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как изменять уже сделанные таблицы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как получить информацию о базах данных и таблицах.</td></tr></table></div>&nbsp;</p>
 Если читатель не планирует создавать свои собственные базы данных и таблицы, то он может прочесть только основные понятия о базах данных и таблицах (описываемые в следующем разделе), а остальную часть этой главы пропустить.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td> Что такое базы данных и таблицы ?</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td> Что такое базы данных и таблицы ?</td></tr></table></div>&nbsp;</p>
 Информация (данные) хранятся в базе данных в виде набора объектов, таких как таблицы, которые могут быть связаны друг с другом. Таблица это набор строк, разбитых на столбцы, в каждом из которых хранятся однотипные данные. При создании базы данных или таблицы, необходимо указать как в ней будут организованы данные. Этот процесс называется определением данных.</p>
 Далее перечислены объекты, которые SQL Сервер рассматривает как объекты базы данных:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Таблицы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Правила;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Умолчания (Defaults);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Сохраненные процедуры;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Триггера;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Вьюверы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Ограничения ссылочной целостности данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Условные ограничения целостности (условия отбора данных).</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Таблицы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Правила;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Умолчания (Defaults);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Сохраненные процедуры;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Триггера;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Вьюверы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Ограничения ссылочной целостности данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Условные ограничения целостности (условия отбора данных).</td></tr></table></div>&nbsp;</p>
 В этой главе рассматриваются только вопросы создания, изменения, удаления баз данных и таблиц, включая рассмотрение ограничений целостности данных.</p>
 Правила и умолчания рассматриваются в главе 12; вьюверы обсуждаются в главе 9; сохраненные процедуры излагаются в главе 14; наконец, триггеры обсуждаются в главе 15 этой книги.</p>
 В столбцах задается тип данных, которые хранятся в таблице, в то время как индексы описывают способ организации этих данных в таблице. SQL Сервер не рассматривает индексы как объекты базы данных, поэтому их нет в списке sysobjects (системные объекты). Столбцы и типы данных также рассматриваются в этой главе, в то время как индексы обсуждаются в главе 11.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Сохранение целостности данных в базе</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Сохранение целостности данных в базе</td></tr></table></div>&nbsp;</p>
 Целостность данных в базе означает их корректность (непротиворечивость) и полноту. Для сохранения целостности пользователь может наложить ограничения на процессы вставки, удаления или обновления данных в базе. Например, для сохранения целостности данных в базе pubs2 требуется, чтобы книга, находящаяся в таблице titles, имела издателя, сведения о котором хранятся в таблице publishers. Пользователь не сможет записать книгу в таблицу titles с неправильным издателем, так как это нарушает целостность данных в базе pubs2.</p>
 Язык Transact-SQL предоставляет несколько механизмов для сохранения целостности данных в базе, таких как правила, умолчания, индексы и триггеры. Они позволяют сохранять следующие виды целостности данных:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Присутствие значения - Для сохранения этого вида целостности требуется, чтобы в указанном столбце всех строк таблицы присутствовали некоторые значения данных, т.е. в данном столбце запрещается использование неопределенного значения (null value). В операторе creat table (создание таблицы) можно ввести это ограничение для любого столбца таблицы.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Ограничение значения - Для сохранения этого вида целостности требуется, чтобы значения в указанном столбце таблицы попадали в заданный диапазон значений. Для выполнения этих ограничений можно использовать триггера или правила.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Уникальность значения - Для сохранения этого вида целостности требуется, чтобы значения данных в указанном столбце таблицы не повторялись. Для выполнения этого ограничения можно использовать индексы.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Ссылка на значение - Для сохранения этого вида целостности требуется, чтобы значение данных в указанном столбце таблицы совпадало с некоторым значением в другом столбце этой же или другой таблицы. Для выполнения этого ограничения можно использовать триггера.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Присутствие значения - Для сохранения этого вида целостности требуется, чтобы в указанном столбце всех строк таблицы присутствовали некоторые значения данных, т.е. в данном столбце запрещается использование неопределенного значения (null value). В операторе creat table (создание таблицы) можно ввести это ограничение для любого столбца таблицы.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Ограничение значения - Для сохранения этого вида целостности требуется, чтобы значения в указанном столбце таблицы попадали в заданный диапазон значений. Для выполнения этих ограничений можно использовать триггера или правила.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Уникальность значения - Для сохранения этого вида целостности требуется, чтобы значения данных в указанном столбце таблицы не повторялись. Для выполнения этого ограничения можно использовать индексы.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Ссылка на значение - Для сохранения этого вида целостности требуется, чтобы значение данных в указанном столбце таблицы совпадало с некоторым значением в другом столбце этой же или другой таблицы. Для выполнения этого ограничения можно использовать триггера.</td></tr></table></div>&nbsp;</p>
 Согласованность (consistensy) данных в базе является еще одним видом целостности, который обсуждается в главе 17.</p>
 Как альтернативу использованию правил, умолчаний, индексов и триггеров, Transact-SQL позволяет вводить серию ограничений целостности непосредственно в операторе создания таблицы, как этого требует стандарт языка SQL. Эти ограничения целостности рассматриваются далее в этой главе.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Права доступа в базах данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Права доступа в базах данных</td></tr></table></div>&nbsp;</p>
 От прав доступа или привилегий, данных пользователю, зависят его возможности по созданию или уничтожению баз данных и объектов внутри них. Обычно, права доступа конкретному пользователю устанавливаются системным администратором или владельцем базы данных, исходя из вида работы и функций, которые выполняет этот пользователь.</p>
 Пользователь может определить свои права доступа (статус) путем выполнения следующей команды:</p>
 &nbsp;</p>
@@ -37,15 +37,15 @@ sp_helprotect имя_пользователя</p>
 Механизм, связанный со словом “guest”, предоставляет права доступа к базе pubs2 любому пользователю, который вошел в систему, т.е. выполнил команду login и следовательно его имя было записано в список master..syslogin, и позволяет ему создавать и удалять такие объекты базы данных, как таблицы, индексы, правила, процедуры и т.д. Имя “guest” позволяет также использовать некоторые сохраненные процедуры, создавать свои типы данных, делать запросы к базе данных и изменять в ней данные.</p>
 Чтобы использовать базу данных pubs2, нужно выполнить команду use. После этого SQL Сервер проверит находится ли имя данного пользователя в списке пользователей этой базы (pubs2..sysuser). Если имени в этом списке нет, то сервер рассматривает этого пользователя как гостя Если имя находится в списке, то сервер просит подтвердить его и в этом случае права пользователя могут отличаться от прав, предоставленных “гостю”. При выполнении примеров из этой главы предполагается, что пользователь имеет права “гостя”.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание и использование баз данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание и использование баз данных</td></tr></table></div>&nbsp;</p>
 База данных это набор взаимосвязанных таблиц и других объектов, таких как вьюверы, индексы и т.д.</p>
 Когда инсталлируется (запускается) SQL Сервер, то он содержит только следующие системные базы данных:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Базу данных master, которая используется для управления базами данных пользователей и в целом поддерживает работу SQL Сервера;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Базу данных sybsystemprocs, которая содержит системные сохраненные процедуры;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Временную базу данных tempdb, которая используется для хранения временных объектов, включая временные таблицы, в названии которых имеется префикс “tempdb..”;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Базу данных model, которая используется SQL Сервером как шаблон для создания новых баз данных.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Базу данных master, которая используется для управления базами данных пользователей и в целом поддерживает работу SQL Сервера;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Базу данных sybsystemprocs, которая содержит системные сохраненные процедуры;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Временную базу данных tempdb, которая используется для хранения временных объектов, включая временные таблицы, в названии которых имеется префикс “tempdb..”;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Базу данных model, которая используется SQL Сервером как шаблон для создания новых баз данных.</td></tr></table></div>&nbsp;</p>
 Кроме того, системный администратор может проинсталлировать (загрузить) демонстрационную базу данных pubs2 и синтаксическую базу данных sybsyntax с помощью процедуры isql и сценариев (scripts) SQL, которые расположены в директории scripts. База данных pubs2 используется как основа для большинства примеров, приведенных в документации по SQL Серверу. База данных sybsyntax содержит всю синтаксическую информацию по командам и процедурам и может вызываться командой sp_syntax.</p>
 Базы данных pubs2 и sybsyntax являются пользовательскими. Все необходимые пользователям данные, из-за чего собственно и используются системы управления базами данных, хранятся также в пользовательских базах данных. SQL Сервер управляет каждой базой данных, основываясь на системных таблицах. Таблица data dictionary (словарь данных) в базе данных master, а также в других базах данных,&nbsp; рассматривается как системная.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Выбор базы данных: команда use</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Выбор базы данных: команда use</td></tr></table></div>&nbsp;</p>
 Большую часть времени пользователь работает с уже существующими базами данных. Команда доступа к уже сущестующей базе данных имеет следующий вид:</p>
 &nbsp;</p>
 use название_базы_данных</p>
@@ -59,7 +59,7 @@ use pubs2</p>
 Владелец базы данных “dbo” (DataBase Owner) может добавить пользователя “гостя” в любую пользовательскую базу данных с помощью системной процедуры sp_adduser. Системный администратор автоматически становится владельцем любой базы данных, которую он использует. Более подробная информация по этому поводу приведена в Руководстве системного администратора и Справочном руководстве по SQL Серверу.</p>
 Таким образом, пользователь автоматически подсоединяется к базе данных master, когда он входит в ситему, поэтому он может использовать команду use для доступа к другой базе данных. Сам пользователь или системный администратор путем вызова системной процедуры sp_modifylogin может изменить базу данных, к которой этот пользователь присоединяется вначале по умолчанию. Но только системный администратор может изменять базу данных, к которой по умолчанию присоединяется другой пользователь.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание базы данных: команда creat database</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание базы данных: команда creat database</td></tr></table></div>&nbsp;</p>
 Пользователь может создать свою базу данных, если системный администратор разрешил ему использовать команду creat database (создать базу данных). Необходимо использовать базу данных master, чтобы создать новую базу данных. Во многих организациях все базы данных создаются системным администратором. Создатель базы данных является ее собственником (владельцем). Если база данных создается некоторым пользователем, то он может передать права на владение этой базой другому пользователю с помощью системной процедуры sp_changedbowner.</p>
 Владелец базы данных несет ответственность за предоставление прав доступа к ней и лишения этих прав других пользователей. В некоторых организациях владелец базы также должен периодически архивировать ее и восстанавливать после системных ошибок. Владелец базы данных может всегда замещать любого другого пользователя этой базы путем временного присвоения его прав с помощью команды setuser.</p>
 Поскольку каждая база данных требует значительного места для хранения даже в том случае, если она содержит мало данных, то многие пользователи не имеют прав на использование команды creat database. Если читатель относится к этой категории, то он может пропустить этот раздел и перейти к разделу, в котором описывается процесс построения таблиц (“Создание таблиц”).</p>
@@ -73,13 +73,13 @@ creat database newpubs</p>
 &nbsp;</p>
 Название базы данных должно быть уникальным для SQL Сервера и оно должно удовлетворять соглашениям для идентификаторов, указанным в главе 1 этой книги. SQL Сервер может управлять 32767 базами данных. В каждый момент времени можно создать только одну базу данных. Любой базе данных может быть выделено до 32 сегментов.</p>
 SQL Сервер создает новую базу данных как копию модельной базы данных model, которая содержит системную таблицу, включаемую в каждую базу данных.</p>
-Создание новой базы данных регистрируется в таблицах sysdatabase и sysusages базы данных master. </p>
+Создание новой базы данных регистрируется в таблицах sysdatabase и sysusages базы данных master.</p>
 Полный синтаксис команды создания базы данных имеет следующий вид:</p>
 &nbsp;</p>
 create database название_базы_данных</p>
-[on {default | database_device} [= размер]&nbsp; </p>
- &nbsp;&nbsp; [, database_device [= размер]]...] </p>
-[log on database_device [= размер] </p>
+[on {default | database_device} [= размер]&nbsp;</p>
+ &nbsp;&nbsp; [, database_device [= размер]]...]</p>
+[log on database_device [= размер]</p>
  &nbsp;&nbsp; [, database_device [= размер]]...]</p>
 [with override]</p>
 [for load]</p>
@@ -88,19 +88,19 @@ create database название_базы_данных</p>
 &nbsp;</p>
 Замечание. В предыдущих примерах и в примерах из следующего раздела опция log on для простоты опускается. При создании производственных баз данных нужно обязательно ее указывать (см. следующий раздел).</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Предложение on</td></tr></table></div>Необязательное предложение on позволяет пользователю указать, где сохранить базу данных и память какого размера под нее выделить. Если здесь указывается слово default (по умолчанию), то база данных записывается на доступное устройство хранения (database device), которое выбирается из набора устройств, выделяемых по умолчанию и указанных в таблице sysdevices базы данных master. С помощью системной процедуры sp_helpdevice можно просмотреть список устройств, которые выделяются по умолчанию.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Предложение on</td></tr></table></div>Необязательное предложение on позволяет пользователю указать, где сохранить базу данных и память какого размера под нее выделить. Если здесь указывается слово default (по умолчанию), то база данных записывается на доступное устройство хранения (database device), которое выбирается из набора устройств, выделяемых по умолчанию и указанных в таблице sysdevices базы данных master. С помощью системной процедуры sp_helpdevice можно просмотреть список устройств, которые выделяются по умолчанию.</p>
 &nbsp;</p>
 Замечание. Системный администратор управляет распределением памяти, основываясь на статистике работы и других соображениях. Поэтому перед созданием базы данных необходимо сообщить об этом системному администратору.</p>
 &nbsp;</p>
 Для выделения, например, 5 мегабайт (Мб) для хранения базы данных используйте конструкцию on default = размер как в следующем примере:</p>
 &nbsp;</p>
-create database newpubs </p>
-on default = 5 </p>
+create database newpubs</p>
+on default = 5</p>
 &nbsp;</p>
 Если необходимо сохранить базу данных в определенном месте, то нужно указать логическое имя данного устройства хранения. База данных может храниться на нескольких устройствах с различными объемами выделенной памяти на каждом устройстве.</p>
 Например, с помощью следующего оператора создается база данных newpubs и для нее выделяется 3 Мб на устройстве pubsdata и 2 Мб на устройстве newdata:</p>
 &nbsp;</p>
-create database newpubs </p>
+create database newpubs</p>
 on pubsdata = 3, newdata = 2</p>
 &nbsp;</p>
 Если предложение on и спецификация размера опущены, то под базу данных по умолчанию выделяется 2 Мб на одном из устройств, указанных в таблице sysdevices.</p>
@@ -108,16 +108,16 @@ on pubsdata = 3, newdata = 2</p>
 &nbsp;</p>
 &nbsp;</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Предложение log on</td></tr></table></div>&nbsp;</p>
-За исключением случаев, когда создаются очень маленькие, некритические базы данных в операторе create database следует указывать расширение log on. В этом случае создается журнал транзакций (запросов на изменение) для этой базы данных на отдельном устройстве хранения данных. Для этого имеются следующие основания: </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Предложение log on</td></tr></table></div>&nbsp;</p>
+За исключением случаев, когда создаются очень маленькие, некритические базы данных в операторе create database следует указывать расширение log on. В этом случае создается журнал транзакций (запросов на изменение) для этой базы данных на отдельном устройстве хранения данных. Для этого имеются следующие основания:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Это позволяет воспользоваться командой dump transaction (трассировка транзакций) вместо команды dump database (трассировка базы данных), таким образом экономя время и память ;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Это позволяет выделить фиксированный размер памяти для журнала транзакций, тем самым предотвращая соревнование за память между активными процессами базы данных.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Это позволяет воспользоваться командой dump transaction (трассировка транзакций) вместо команды dump database (трассировка базы данных), таким образом экономя время и память ;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Это позволяет выделить фиксированный размер памяти для журнала транзакций, тем самым предотвращая соревнование за память между активными процессами базы данных.</td></tr></table></div>&nbsp;</p>
 Имеются также следующие дополнительные причины, по которым журнал&nbsp; транзакций лучше располагать отдельно от таблиц базы данных на другом физическом устройстве:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Это повышает производительность;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Это гарантирует полное восстановление в случае выхода из строя жесткого диска.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Это повышает производительность;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Это гарантирует полное восстановление в случае выхода из строя жесткого диска.</td></tr></table></div>&nbsp;</p>
 По следующей команде выделяется память под журнал транзакций для базы данных newpubs на логическом устройстве “pubslog” размером 1 Мб:</p>
 &nbsp;</p>
-create database newpubs </p>
+create database newpubs</p>
 on pubsdata = 3, newdata = 2</p>
 log on pushlog = 1</p>
 &nbsp;</p>
@@ -125,13 +125,13 @@ log on pushlog = 1</p>
 &nbsp;</p>
 Размер памяти, выделяемый для журнала транзакций, изменяется в зависимости от количества модификаций базы данных и частоты дампов (трассировок) журнала. Эмпирически установлено, что этот размер должен составлять примерно от 10 до 25 процентов объема памяти, выделенного на саму базу данных.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Опция for load</td></tr></table></div>Необязательное предложение for load (для загрузки) вызывает создание базы данных, которая может использоваться только для хранения дампов базы данных (database dump). Эта опция используется при восстановлении после ошибок или при переносе базы данных с одной машины на другую. См. Руководство системного администратора, в котором более подробно описывается эта опция.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Опция for load</td></tr></table></div>Необязательное предложение for load (для загрузки) вызывает создание базы данных, которая может использоваться только для хранения дампов базы данных (database dump). Эта опция используется при восстановлении после ошибок или при переносе базы данных с одной машины на другую. См. Руководство системного администратора, в котором более подробно описывается эта опция.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Удаление баз данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Удаление баз данных</td></tr></table></div>&nbsp;</p>
 Удаление базы данных выполняется командой drop database. Эта команда удаляет базу данных и все ее содержимое из системы, освобождает занимаемую ее память и удаляет все ссылки на нее из базы данных master.</p>
 Эта команда имеет следующий вид:</p>
 &nbsp;</p>
-drop database название_базы_данных [,название_базы_данных]... </p>
+drop database название_базы_данных [,название_базы_данных]...</p>
 &nbsp;</p>
 Нельзя удалить базу данных, которая находится в работе, т.е. которая открыта на чтение или запись некоторым пользователем.</p>
 Можно одной командой удалить несколько баз данных, как это было указано в общем виде этой команды, например:</p>
@@ -140,7 +140,7 @@ drop database newpubs, newdb</p>
 &nbsp;</p>
 Испорченную (damaged) базу данных нельзя удалить командой drop database. Для этого нужно использовать команду dbcc dbrepair.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Изменение размеров баз данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Изменение размеров баз данных</td></tr></table></div>&nbsp;</p>
 Если память, отведенная под базу данных, полностью заполнена данными, то в нее нельзя добавить новую информацию или обновить ее содержимое. Если произошло переполнение памяти, то владелец базы данных может увеличить ее размер с помощью команды alter database. По умолчанию права доступа на выполнение этой команды имеет только владелец базы данных и их нельзя передать другому лицу. Эта команда должна выполняться в базе данных master.</p>
 По умолчанию размер базы данных увеличивается на 2 Мб, причем память на это увеличение берется из стандартного пула устройств (default pool). Следующий оператор добавляет 2 Мб к памяти, выделенной для базы данных newpub:</p>
 &nbsp;</p>
@@ -149,9 +149,9 @@ alter database newpubs</p>
 В команде alter database можно указать точное количество мегабайтов (минимум 1 Мб), необходимых для расширения, и устройство, на котором должна быть выделена память. Полный синтаксис этой команды имеет следующий вид:</p>
 &nbsp;</p>
 alter database название_базы_данных</p>
-[on {default | database_device} [= размер]&nbsp; </p>
- &nbsp;&nbsp; [, database_device [= размер]]...] </p>
-[log on database_device [= размер] </p>
+[on {default | database_device} [= размер]&nbsp;</p>
+ &nbsp;&nbsp; [, database_device [= размер]]...]</p>
+[log on database_device [= размер]</p>
  &nbsp;&nbsp; [, database_device [= размер]]...]</p>
 [with override]</p>
 [for load]</p>
@@ -159,7 +159,7 @@ alter database название_базы_данных</p>
 Предложение on в этой команде такое же как и в команде создания базы данных creat database. Предложение for load&nbsp; здесь можно использовать только в том случае, если оно было указано при создании этой базы данных.</p>
 В следующем операторе на 2 Мб увеличивается память для базы данных newpubs на устройстве pubsdata и на 3 Мб на устройстве newdata:</p>
 &nbsp;</p>
-alter database newpubs </p>
+alter database newpubs</p>
 on pubsdata = 2, newdata = 3</p>
 &nbsp;</p>
 Когда используется команда alter database, чтобы добавить память на устройстве, которое уже используется для хранения этой базы данных, то все сегменты на этом устройстве могут использовать добавленный фрагмент. Таким образом, все объекты этой базы данных, расположенные на прежних сегментах, могут расти за счет добавленной памяти. Максимальное количество сегментов, которые могут выделяться одной базе данных, равно 32.</p>
@@ -169,20 +169,20 @@ on pubsdata = 2, newdata = 3</p>
 &nbsp;</p>
 Информация об опции with override дается в Руководстве системного администратора.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание таблиц</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание таблиц</td></tr></table></div>&nbsp;</p>
 Когда создается таблица, пользователь должен указать названия ее столбцов и тип данных, хранящихся в каждом столбце. Можно также дополнительно указать возможность появления неопределенного значения в отдельных столбцах и ограничения целостности, которым должны удовлетворять данные в таблице.</p>
 Число таблиц в базе данных может доходить до 2 миллиардов.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Пример создания таблицы</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Пример создания таблицы</td></tr></table></div>&nbsp;</p>
 Перед тем как выполнить следующие примеры пользователь должен обратиться к базе данных newpubs, процесс создания которой был описан в предыдущем разделе. В противном случае, могут произойти изменения в другой базе данных, например, в pubs2.</p>
 Для создания таблицы следует использовать команду creat table, которая в своей простейшей форме имеет следующий вид:</p>
 &nbsp;</p>
-create table название_таблицы </p>
+create table название_таблицы</p>
 (название_столбца тип_данных)</p>
 &nbsp;</p>
 Например, следующей командой создается таблица names с одним столбцом some_name, имеющем фиксированную длину в 11 байтов:</p>
 &nbsp;</p>
-create table names </p>
+create table names</p>
 (some_name char(11))</p>
 &nbsp;</p>
 Одна таблица может содержать до 250 столбцов. Если была выполнена команда set quoted_identifier on, то название таблицы и названия столбцов можно заключать в кавычки. В противном случае, нужно придерживаться правил написания идентификаторов, которые были изложены в первой главе “Введение”. Названия столбцов одной таблицы должны быть уникальными, но могут совпадать в различных таблицах одной базы данных.</p>
@@ -190,14 +190,14 @@ create table names </p>
 Число, расположенное в скобках после типа данных, указывает максимальное количество байтов, которые могут использоваться для хранения значений в этом столбце. Для некоторых типов данных пользователь должен указывать максимальное длину поля, а другие могут иметь длину установленную системой.</p>
 Не нужно забывать о скобках, в которые заключается список названий столбцов, и запятых, которые разделяют определения различных столбцов.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Выбор названий для столбцов</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Выбор названий для столбцов</td></tr></table></div>&nbsp;</p>
 Команда creat table создает новую таблицу в текущей открытой базе данных. Название таблицы должно быть уникальным для каждого пользователя.</p>
 Пользователь может создавать временные таблицы путем добавления знака фунта (#) или префикса “tempdb..” к названию таблицы в операторе creat table.</p>
 Временные таблицы, названиям которых предшествует знак фунта, доступны только в процессе текущего сеанса работы SQL Сервера и по окончанию сеанса уничтожаются. Первые 13 символов в названии временной таблицы, включая знак фунта, должны быть уникальными. SQL Сервер добавляет к названию таких таблиц 17-байтовый суффикс.</p>
 Временные таблицы с префиксом “tempdb..” хранятся в базе данных tempdb и могут использоваться на протяжении нескольких сеансов работы SQL Сервера. SQL Сервер не изменяет названий таких таблиц. Эти таблицы будут сохраняться либо до перезагрузки SQL Сервера, либо пока владелец такой таблицы не удалит ее с помощью команды drop table. Временные таблицы не восставливаются (после сбоя). Следующий оператор создает временную односеансовую таблицу:</p>
 &nbsp;</p>
-create table #authors </p>
-(au_id char (11)) </p>
+create table #authors</p>
+(au_id char (11))</p>
 &nbsp;</p>
 А оператор:</p>
 &nbsp;</p>
@@ -208,7 +208,7 @@ create table tempdb..authors</p>
 Пользователь может не указывать расширенных названий таблиц и других объектов, которые он создал. Можно также не указывать расширенные названия объектов, созданных другими пользователями, если на это получено их разрешение. Эти правила распространяются на всех пользователей, включая системного администратора и владельца базы данных.</p>
 Хотя названия таблиц должны быть уникальными у каждого пользователя, у различных пользователей они могут совпасть. Например, пользователь по имени “jonah” и пользователь по имени “sally” могут создать таблицу с названием info. Пользователи, которые получили разрешение на использование обеих таблиц, должны указывать их расширенные названия jonah.info и sally.info. Салли должна указывать расширенное название при обращении к таблице info другого пользователя, хотя к своей собственной таблице она может обращаться без расширения.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Синтаксис команды создания таблицы</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Синтаксис команды создания таблицы</td></tr></table></div>&nbsp;</p>
 Команда creat table имеет следующий вид:</p>
 &nbsp;</p>
 create table [база_данных.[владелец].]название_таблицы (название_столбца тип</p>
@@ -223,13 +223,13 @@ create table [база_данных.[владелец].]название_таб�
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [(столбец_ссылок)]</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | check (условие_отбора)}]}...</p>
 | [constraint название_ограничения]</p>
- &nbsp;&nbsp; {{unique | primary key} </p>
+ &nbsp;&nbsp; {{unique | primary key}</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [clustered | nonclustered]</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (название_столбца [{,название_столбца}...])</p>
         [with {fillfactor | max_rows_per_page} = x]</p>
         [on название_сегмента]</p>
  &nbsp;&nbsp; | foreign key (название_столбца [{,название_столбца}...])</p>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; references [[база_данных.]владелец.]таблица_ссылок </p>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; references [[база_данных.]владелец.]таблица_ссылок</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [(столбец_ссылок [{,столбец_ссылок}...])]</p>
  &nbsp;&nbsp; | check (условие_отбора)}</p>
 [{, {следующий_столбец | следующее_ограничение}}...])</p>
@@ -239,15 +239,15 @@ create table [база_данных.[владелец].]название_таб�
 В операторе creat table определяется каждый столбец таблицы. В нем должно быть приведено название столбца и его тип и указано на возможность появления в этом столбце неопределенных значений. В случае необходимости в нем указывается, какой столбец будет счетчиком (автоинкрементным). В этом операторе также должны быть определены ограничения целостности на уровне отдельных столбцов и ограничение целостности для всей таблицы. В таблице может быть несколько ограничений для отдельного столбца и для всей таблицы.</p>
 Например, чтобы создать таблицу titles в базе данных pubs2, нужно выполнить следующий оператор:</p>
 &nbsp;</p>
-create table titles </p>
-(title_id tid, </p>
- title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(80) not null, </p>
- type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(12), </p>
- pub_id&nbsp;&nbsp; char(4) null, </p>
- price&nbsp;&nbsp;&nbsp;&nbsp; money null, </p>
- advance money null, </p>
- royalty&nbsp;&nbsp; int null, </p>
- total_sales int null, </p>
+create table titles</p>
+(title_id tid,</p>
+ title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(80) not null,</p>
+ type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(12),</p>
+ pub_id&nbsp;&nbsp; char(4) null,</p>
+ price&nbsp;&nbsp;&nbsp;&nbsp; money null,</p>
+ advance money null,</p>
+ royalty&nbsp;&nbsp; int null,</p>
+ total_sales int null,</p>
  notes&nbsp;&nbsp;&nbsp;&nbsp; varchar(200) null,</p>
  pubdate&nbsp; datetime</p>
  contract bit not null)</p>
@@ -256,7 +256,7 @@ create table titles </p>
 &nbsp;</p>
  Замечание. Расширение on название_сегмента в операторе создания таблицы позволяет поместить таблицу на определенный сегмент памяти, название которого связано с конкретным устройством хранения или с набором таких устройств. Перед использованием этого расширения необходимо узнать у системного администратора или владельца базы данных список сегментов, которые можно использовать, поскольку некоторые сегменты могут быть зарезервированы для опеределенных таблиц или индексов, исходя из соображений производительности системы или из других соображений.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Возможность записи неопределенных значений</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Возможность записи неопределенных значений</td></tr></table></div>&nbsp;</p>
 Для каждого столбца таблицы можно определить возможно ли в нем указание неопределенного значения (null value). Заметим, что неопределенное значение отличается от числа “ноль” и от знака “пробел”. Значение NULL указывает, что в данное поле не было введено никаких данных, поэтому оно интерпретируется как “неопределенная” или “неизвестная” величина. Другими словами, оно означает, что&nbsp; по каким-то причинам пользователь не вводил данных в это поле. Например, неопределенное значение в столбце price (цена) таблицы titles отнюдь не свидетельствует о том, что данная книга распространяется свободно, а просто в данный момент нам эта цена еще неизвестна или издатель еще не установил ее.</p>
 Если пользователь не ввел никакого значения в поле столбца, для которого было указано ключевое слово null, то SQL Сервер автоматически запишет туда значение NULL. Пользователь может и непосредственно ввести это значение в столбец, для которого указано ключевое слово null, независимо от типа данных, расположенных в этом столбце. Однако, надо быть осторожным, когда неопределенное значение вводится в строковые (char) столбцы. Если слово “null” будет указано там в кавычках, то оно будет интерпретироваться SQL Сервером как строка символов, а не как значение NULL.</p>
 Если в операторе creat table для данного столбца не указаны ключевые слова null или not null, то SQL Сервер будет использовать для него текущий установленный режим неопределенности. По умолчанию вначале в системе устанавливается запрет на неявное появление неопределенных значений NOT NULL. Для совместимости со стандартом SQL, в котором разрешено по умолчанию дописывать неопределенные значения, следует обратиться к системной процедуре sp_dboption и поменять режим неопределенности, установив опцию allow nulls by default (разрешить неявную запись неопределенных значений) в состояние true (истина).</p>
@@ -266,17 +266,17 @@ create table titles </p>
 Однако, в столбцах title_id (идентификатор книги) и title (название книги) это запрещено, поскольку отсутствие данных в этих полях бессмысленно и чревато ошибками. Не может быть книги, имеющей цену, но не имеющей названия, в то время как вполне возможно появление книги, имеющей название, но еще не имеющей цены.</p>
 В операторе creat table следует указывать ключевые слова not null в тех столбцах, в которых будет храниться наиболее важная информация по отношению к другим столбцам.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Использование счетчиков</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Использование счетчиков</td></tr></table></div>&nbsp;</p>
 Каждая таблица может включать один столбец-счетчик. Столбец-счетчик (IDENTITY) содержит последовательные числа, которыми можно нумеровать заявки, работников, записи и т.д. SQL Сервер автоматически генерирует числа&nbsp; в этом столбце, которые однозначно определяют (идентифицируют) каждую строку в таблице. Счетчик определяется с помощью ключевого слова identity (идентификация), которое указывается вместо ключевых слов null или not null в операторе creat table. (По определению столбец-счетчик не может содержать неопределенных значений). Этот столбец должен иметь числовой тип данных numeric и нулевую шкалу.</p>
-Точность представления чисел в этом столбце определяет диапазон их изменения. Максимальное значение равно 10^(точность) - 1. В следующем примере создается таблица со счетчиком, который может расти до числа 10^5 - 1 = 9999: </p>
+Точность представления чисел в этом столбце определяет диапазон их изменения. Максимальное значение равно 10^(точность) - 1. В следующем примере создается таблица со счетчиком, который может расти до числа 10^5 - 1 = 9999:</p>
 &nbsp;</p>
 create table sales_daily</p>
- &nbsp;&nbsp; (row_id numeric(5,0) identity, </p>
+ &nbsp;&nbsp; (row_id numeric(5,0) identity,</p>
  &nbsp;&nbsp;&nbsp; stor_id char(4) not null)</p>
 &nbsp;</p>
 Пользователь может автоматически задавать столбец-счетчик с помощью опции auto_identity, тогда точность этого счетчика будет определяться конфигурационным параметром size of auto_identity. Для включения счетчика в неуникальный индекс, следует использовать опцию identity in nonique index.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание счетчиков с определяемыми типами данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание счетчиков с определяемыми типами данных</td></tr></table></div>&nbsp;</p>
 Пользователь может использовать счетчик со своим типом данных. В этом случае тип данных, определенный пользователем, должен базироваться на числовом типе numeric и на нулевой шкале.</p>
 Если тип данных, определенный пользователем, создавался со свойством IDENTITY, то можно не указывать ключевое слово identity при создании столбца. Далее приводится пример определения типа данных со свойством IDENTITY:</p>
 &nbsp;</p>
@@ -290,39 +290,39 @@ create table sales_monthly</p>
 Если тип данных определялся пользователем со свойством not null, то необходимо указывать ключевое слово identity в операторе создания таблицы. Нельзя создавать столбец-счетчик с типом данных, который допускает неопределенные значения.</p>
 &nbsp;</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Обращение к счетчику через syb_identity </td></tr></table></div>Если пользователь определил столбец-счетчик, то он может не запоминать точное название этого столбца. В этом случае можно использовать ключевое слово syb_identity, дополненное названием таблицы там где это необходимо, для обращения к этому столбцу в операторах выбора, обновления и удаления. Например, для выбора строки, в которой значение счетчика row_id равно 30, можно использовать следующий запрос: </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Обращение к счетчику через syb_identity</td></tr></table></div>Если пользователь определил столбец-счетчик, то он может не запоминать точное название этого столбца. В этом случае можно использовать ключевое слово syb_identity, дополненное названием таблицы там где это необходимо, для обращения к этому столбцу в операторах выбора, обновления и удаления. Например, для выбора строки, в которой значение счетчика row_id равно 30, можно использовать следующий запрос:</p>
 &nbsp;</p>
 select * from sales_daily</p>
  &nbsp;&nbsp; where syb_identity = 30</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Генерация значений счетчика</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Генерация значений счетчика</td></tr></table></div>&nbsp;</p>
 Вначале, когда в таблицу вводится первая строка, SQL Сервер записывает в столбце-счетчике значение 1 (единица). В каждую последующую строку в этом столбце записывается на единицу большее число, по сравнению с предыдущей строкой. Повторение транзакций, удаление строк и значение конфигурационного параметра identity grab size могут привести к образованию разрывов в цепочке значений этого столбца.</p>
 Ошибки сервера также могут привести к образованию разрывов в значениях счетчика. Величина этих разрывов, выраженная в процентах от максимального размера таблицы, будет зависеть от конфигурационного параметра identity burning set factor. Этот параметр устанавливается во время инсталляции и может изменяться системным администратором.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Использование временных таблиц</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Использование временных таблиц</td></tr></table></div>&nbsp;</p>
 Если перед названием таблицы в операторе creat table указывается знак фунта (#) или префикс “tempdb..”, то создается новая временная таблица.</p>
 Имеется два вида временных таблиц:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Таблицы, которые можно использовать на протяжении нескольких сеансов работы SQL Сервера.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Таблицы, которые можно использовать на протяжении нескольких сеансов работы SQL Сервера.</td></tr></table></div>&nbsp;</p>
 Эти временные таблицы определяются с помощью префикса tempdb, который должен быть частью названия таблицы в операторе creat table. Например:</p>
 &nbsp;</p>
-create table tempdb..my_temptb1 </p>
+create table tempdb..my_temptb1</p>
 &nbsp;</p>
 SQL Сервер не изменяет названий временных таблиц, созданных таким образом. Такая таблица будет храниться до очередной перезагрузки SQL Сервера, или пока она не будет удалена ее владельцем с помощью оператора drop table.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Таблицы, которые доступны только на протяжении текущего сеанса работы SQL Сервера.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Таблицы, которые доступны только на протяжении текущего сеанса работы SQL Сервера.</td></tr></table></div>&nbsp;</p>
 Название таких таблиц должно начинаться со знака фунта (#). В этом случае в операторе создания таблицы достаточно указать только ее название, например:</p>
 &nbsp;</p>
-create table #my_temptb1 </p>
+create table #my_temptb1</p>
 &nbsp;</p>
 SQL Сервер обеспечивает уникальность названий таких временных таблиц. Он укорачивает длинные названия таблиц до 13 символов (включая знак фунта) и удлиняет короткие названия до 13 символов путем добавления символов подчеркивания (_). Затем SQL Сервер добавляет к названию 17 разрядный числовой суффикс, который является уникальным для текущего сеанса работы. Такая таблица сохраняется до конца сеанса работы SQL Сервера или пока она не будет удалена ее владельцем с помощью оператора drop table.</p>
 Если перед названием таблицы нет знака фунта или префикса “tempdb..”  и пользователь не работает с временной базой данных tempdb, то будет создана постоянная таблица. Такая таблица будет оставаться в базе данных до тех пор, пока владелец не удалит ее явным образом.</p>
 Далее приведен пример создания односеансовой таблицы:</p>
 &nbsp;</p>
-create table #myjobs </p>
-(task&nbsp; char(30), </p>
- start&nbsp; datetime, </p>
- stop&nbsp; datetime, </p>
+create table #myjobs</p>
+(task&nbsp; char(30),</p>
+ start&nbsp; datetime,</p>
+ stop&nbsp; datetime,</p>
  notes varchar(200))</p>
 &nbsp;</p>
 Эта таблица может использоваться для хранения информации о запланированных на текущие сутки делах и поручениях, а также о времени начала и конца их выполнения вместе с любыми комментариями, которые могут добавляться по усмотрению пользователя. Эта таблица и содержащиеся в ней данные будут удалены по окончанию текущего сеанса работы.</p>
@@ -330,53 +330,53 @@ create table #myjobs </p>
 Пользователь может связать с временной таблицей правила, значения по умолчанию и индексы, но он не может создавать вьюверы на ее основе или связывать с ней триггеры. Во временной таблице можно использовать типы данных, определенные пользователем, только в том случае, если этот тип данных находится в таблице tempdb..systypes.</p>
 Имеется два способа добавления типа данных или любого другого объекта во временную базу данных tempdb. Чтобы добавить объект только на один сеанс, нужно вызвать процедуру sp_addtype, работая с базой данных tempdb. Для добавления постоянного объекта следует вызвать процедуру sp_addtype, находясь в базе данных model, и затем перезапустить SQL Сервер таким образом, чтобы база данных model перекопировалась в базу данных tempdb.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание таблиц в разных базах данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание таблиц в разных базах данных</td></tr></table></div>&nbsp;</p>
 Как видно из синтаксиса оператора создания таблицы, можно создать таблицу в базе данных, которая отличается от текущей, путем указания названия таблицы, расширенного названием другой базы данных. При этом предполагается, что создающий таблицу пользователь имеет доступ к этой базе данных и имеет право создавать там таблицы.</p>
-Например, непосредственно из базы pubs2 можно создать таблицу newtab в базе данных newpubs с помощью следующего оператора: </p>
+Например, непосредственно из базы pubs2 можно создать таблицу newtab в базе данных newpubs с помощью следующего оператора:</p>
 &nbsp;</p>
 creat table newpubs..newtab (cоl l int)</p>
 &nbsp;</p>
 Оператор создания таблицы заканчивается успешно, если сеансовая метка пользователя curread превосходит порог доступа (hurdle) к базе данных, в которой создается таблица.</p>
 Однако, нельзя создавать объекты, отличные от таблиц, такие, как вьюверы, правила, значения по умолчанию, сохраняемые процедуры или триггеры в базах данных, отличных от текущей открытой базы данных.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Определение ограничений целостности для таблиц</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Определение ограничений целостности для таблиц</td></tr></table></div>&nbsp;</p>
 Transact-SQL предоставляет два метода сохранения целостности данных в базе:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Путем определения правил, значений по умолчанию, индексов и триггеров;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Путем определения ограничений целостности в операторе создания таблицы.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Путем определения правил, значений по умолчанию, индексов и триггеров;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Путем определения ограничений целостности в операторе создания таблицы.</td></tr></table></div>&nbsp;</p>
 Выбор того или иного метода зависит от требований пользователя. Второй метод имеет то преимущество, что определение ограничений целостности происходит за один шаг в процессе создания таблицы (как того требует стандарт SQL) и это упрощает процесс проверки этих ограничений. Однако, получающиеся&nbsp; таким образом ограничения целостности имеют ограниченную применимость и уступают в общности правилам, умолчаниям, индексам и триггерам.</p>
 Например, триггера обеспечивают более глубокую проверку ссылочной целостности по сравнению с ограничениями, определенными в операторе создания таблицы. Кроме того, ограничения, определенные в операторе создания таблицы, действуют только для этой таблицы. В отличии от правил и умолчаний, их нельзя связать с другой таблицей, кроме того пользователь может удалить или изменить эти ограничения только оператором alter table. Ограничения не могут содержать подзапросов или агрегирующих функций даже для той таблицы, где они определены.</p>
 Два вышеприведенных метода не являются взаимоисключающими. Можно использовать ограничения целостности наряду с правилами, значениями по умолчанию, индексами и триггерами. Это позволяет гибко выбирать метод в зависимости от приложения. В этом разделе будет описан процесс определения ограничений целостности в операторе создания таблицы. Правила, умолчания, индексы и триггера будут описаны в последующих главах.</p>
 Пользователь может создавать следующие типы ограничений:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Уникальные (unique) и главные (primary) ключи обеспечивают уникальность (неповторяемость) значений в заданных столбцах таблицы. Кроме того, главный ключ запрещает появление неопределенного значения в любой строке заданного столбца;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Ограничения ссылочной целостности (references) означают, что любые значения, которые хранятся в заданных столбцах, должны также встречаться в указанных таблицах и столбцах;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Условные ограничения (check constraints) налагают условия на значения, которые можно записывать в заданные столбцы.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Уникальные (unique) и главные (primary) ключи обеспечивают уникальность (неповторяемость) значений в заданных столбцах таблицы. Кроме того, главный ключ запрещает появление неопределенного значения в любой строке заданного столбца;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Ограничения ссылочной целостности (references) означают, что любые значения, которые хранятся в заданных столбцах, должны также встречаться в указанных таблицах и столбцах;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Условные ограничения (check constraints) налагают условия на значения, которые можно записывать в заданные столбцы.</td></tr></table></div>&nbsp;</p>
 Можно также вносить ограничения на появление в столбце неопределенного значения (ключевые слова null или not null) и на значение, которое записывается по умолчанию (предложение default). В разделе “Возможность записи неопределенных значений” уже давалась информация о ключевых словах null и not null.</p>
 Пользователь может задать сообщение об ошибке и связать его с ограничениями. Сообщение создается системной процедурой sp_addmessage, а его связывание с ограничениями производится процедурой sp_bindmsg. Более подробную информацию об этих процедурах читатель найдет в Справочном руководстве SQL Сервера.</p>
 Справку по поводу любых ограничений, определяемых для таблицы, можно получить с помощью системной процедуры sp_helpconstraint. Эта процедура будет описана в конце данной главы.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Спецификация табличных и столбцовых ограничений</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Спецификация табличных и столбцовых ограничений</td></tr></table></div>&nbsp;</p>
 Ограничения целостности можно определять как на уровне всей таблицы, так и на уровне отдельных столбцов. Разница между ними чисто синтаксическая. Ограничения целостности для отдельного столбца нужно располагать после названия столбца и его типа данных, но перед разделяющей запятой. Ограничения целостности для всей таблицы определяются отдельными предложениями, разделяемыми запятыми. SQL Сервер отслеживает оба вида ограничений одинаково и с примерно одинаковыми затратами.</p>
 Однако, ограничения которые относятся к нескольким столбцам, нужно определять на уровне всей таблицы. Например, в следующем операторе создания таблицы условное ограничение относится к двум столбцам pub_id и pub_name:</p>
 &nbsp;</p>
 create table my_publishers</p>
 (pub_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(4),</p>
  pub_name&nbsp;&nbsp;&nbsp;&nbsp; varchar(40),</p>
-constraint my_chk_constraint </p>
+constraint my_chk_constraint</p>
  &nbsp;&nbsp; check(pub_id in ("1389", "0736", "0877") or pub_name not like "Bad News Books"))</p>
 &nbsp;</p>
 Ограничения, которые относится к одному столбцу, не обязательно выносить на уровень всей таблицы, поскольку их можно указать непосредственно в этом столбце. Например, если указанное выше ограничение относится только к столбцу pub_id, то можно поместить его в этот столбец:</p>
 &nbsp;</p>
 create table my_publishers</p>
-(pub_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(4) constraint my_chk_constraint </p>
+(pub_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(4) constraint my_chk_constraint</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; check(pub_id in ("1389", "0736", "0877")),</p>
  pub_name&nbsp;&nbsp; varchar(40))</p>
 &nbsp;</p>
 В любом из этих случаев ключевое слово constraint и название ограничения указывать не обязательно. Условные ограничения более подробно будут описаны в одном из следующих разделов.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Установка значений по умолчанию </td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Установка значений по умолчанию</td></tr></table></div>&nbsp;</p>
 Перед определением ограничений на уровне столбцов можно с помощью предложения default (умолчание) установить значение, которое по умолчанию будет записываться в этот столбец. В конструкции default значение по умолчанию устанавливается одним предложением, которое является частью оператора создания таблицы. Если пользователь не введет никакого значения в указанный столбец, то в него автоматически будет записано значение, которое установлено по умолчанию.</p>
 В качестве значений по умолчанию можно указать следующие величины:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>константное_выражение - задает выражение, имеющее постоянное значение, в качестве значения по умолчанию. Это выражение не должно содержать названий столбцов или названий других объектов базы данных, но оно может включать встроенные функции, которые не обращаются к объектам базы данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>user - задает имя пользователя в качестве значения по умолчанию. Тип данных столбца в этом случае должен быть либо char(30) либо varchar(30);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>null - задает неопределенное значение в качестве значения по умолчанию. Это значение нельзя устанавливать, если для данного столбца было указано ключевое слово not null.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>константное_выражение - задает выражение, имеющее постоянное значение, в качестве значения по умолчанию. Это выражение не должно содержать названий столбцов или названий других объектов базы данных, но оно может включать встроенные функции, которые не обращаются к объектам базы данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>user - задает имя пользователя в качестве значения по умолчанию. Тип данных столбца в этом случае должен быть либо char(30) либо varchar(30);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>null - задает неопределенное значение в качестве значения по умолчанию. Это значение нельзя устанавливать, если для данного столбца было указано ключевое слово not null.</td></tr></table></div>&nbsp;</p>
 Например, следующий оператор создает таблицу со значениями по умолчанию, заданными для двух столбцов:</p>
 &nbsp;</p>
 create table my_titles</p>
@@ -388,7 +388,7 @@ create table my_titles</p>
 Для каждого столбца таблицы можно указать только одно значение по умолчанию.</p>
 Устанавливать значения предложением default проще чем с помощью двухшагового метода, предусмотренного в языке Transact-SQL. В этом языке можно указать значение по умолчанию с помощью оператора creat default, а затем связать его со столбцом таблицы процедурой sp_bindefault.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Спецификация уникальных и главных ключей</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Спецификация уникальных и главных ключей</td></tr></table></div>&nbsp;</p>
 Пользователь может ввести ограничения целостности в виде уникальных (unique) или главных (primary) ключей, которые обеспечивают неповторяемость данных в различных строках данного столбца. Для обоих видов&nbsp; ограничений создается уникальный индекс, чтобы обеспечить целостность данных. Однако, главный ключ является более жестким ограничением чем уникальный, поскольку он запрещает использование неопределенных значений в этом столбце. Обычно главный ключ используется вместе с ограничениями ссылочной целостности, определенными в других таблицах.</p>
 Поле с уникальным ключом согласно стандарту SQL не может содержать неопределенных значений. По умолчанию SQL Сервер не допускает неопределенных значений в столбце (если не были произведены изменения процедурой sp_dboption), для которого не были указаны ключевые слова null или not null при его определении. В языке Transact-SQL, если пользователь определяет уникальный ключ, то тем самым в этом столбце допускается использование неопределенных значений, поскольку реализация уникальных индексов допускает их использование.</p>
 &nbsp;</p>
@@ -406,10 +406,10 @@ create table my_sales</p>
 У каждой таблицы может быть только один кластеризованный индекс, поэтому пользователь может определить только один уникальный кластеризованный ключ или главный ключ.</p>
 Пользователь может вводить ограничения по уникальному или главному ключу для формирования уникальных индексов (включая опции with fillfactor, with max_rows_per_page и on название_сегмента) для сохранения целостности данных. Однако индексы дают дополнительные возможности. Информация об индексах и связанных с ними опциях приводится в главе 11 “Создание индексов для таблиц”.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Спецификация ссылочных ограничений целостности</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Спецификация ссылочных ограничений целостности</td></tr></table></div>&nbsp;</p>
 Ограничения ссылочной целостности (referential integrity) определяются для того, чтобы значения, записываемые в создаваемую таблицу, совпадали со значениями, которые расположены в таблице, на которую направлена “ссылка”. Ограничения ссылочной целостности будут выполнены, если имеет место одно из двух условий:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Если во всех указанных столбцах таблицы, на которую направлена ссылка, содержатся неопределенные значения;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Если все значения в указанных столбцах “ссылающейся” таблицы, (т.е. таблицы, где вводятся ограничения) совпадают с некоторыми значениями соответствующих столбцов таблицы, на которую направлена ссылка.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Если во всех указанных столбцах таблицы, на которую направлена ссылка, содержатся неопределенные значения;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Если все значения в указанных столбцах “ссылающейся” таблицы, (т.е. таблицы, где вводятся ограничения) совпадают с некоторыми значениями соответствующих столбцов таблицы, на которую направлена ссылка.</td></tr></table></div>&nbsp;</p>
 Например, следующий оператор создает таблицу с двумя ограничениями ссылочной целостности:</p>
 &nbsp;</p>
 create table my_salesdetail</p>
@@ -427,17 +427,17 @@ constraint salesdet_constr</p>
 Со всеми сравниваемыми столбцами таблицы, на которую направлена ссылка, должны быть связаны уникальные индексы этой таблицы. Напомним, что пользователь может образовать уникальный индекс определением уникального или&nbsp; главного ключа, либо с помощью оператора creat index (создать индекс). Типы данных, расположенные в сравниваемых столбцах ссылающейся таблицы, должны в точности совпадать с типами данных соответствующих столбцов таблицы, на которую направлена ссылка. Например:</p>
 &nbsp;</p>
 create table test_type</p>
-(col1&nbsp; char(4) not null&nbsp; </p>
+(col1&nbsp; char(4) not null&nbsp;</p>
 references publishers(pub_id),</p>
  col2&nbsp; varchar(20) not null)</p>
 &nbsp;</p>
 Тип данных столбца col1 в ссылающейся таблице test_type должен совпадать с типом данных столбца pub_id.</p>
 Пользователь должен иметь право создавать ссылки на таблицу, которая указывается в определении ссылочной целостности. Информация по поводу этих прав дается в Руководстве пользователя по безопасности (Security Features User&#8217;s Guide).</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Спецификация условных ограничений</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Спецификация условных ограничений</td></tr></table></div>&nbsp;</p>
 Пользователь может определить условные (check) ограничения целостности, ограничивающие значения, которые можно хранить в указанном столбце таблицы. Эти ограничения определяются в условиях отбора (seach_condition), которые должна пройти любая величина перед записью в указанное поле таблицы. Эти условия могут иметь следующий вид:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Список константных выражений, которому предшествует ключевое слово in (в);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Диапазон значений, заданный константными выражениями и ключевым словом between (между);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Набор условий, которым предшествует ключевое слово like (как) и которые могут содержать символы замены.&nbsp;&nbsp; </td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Список константных выражений, которому предшествует ключевое слово in (в);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Диапазон значений, заданный константными выражениями и ключевым словом between (между);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Набор условий, которым предшествует ключевое слово like (как) и которые могут содержать символы замены.&nbsp;&nbsp;</td></tr></table></div>&nbsp;</p>
 Выражение может включать арифметические операции и встроенные в Transact-SQL функции. В условия отбора нельзя включать подзапросы, определения функций и спецификации целей (target specification).</p>
 Например, в следующем операторе создания таблицы требуется, чтобы только указанные значения могли храниться в столбце pub_id:</p>
 &nbsp;</p>
@@ -452,14 +452,14 @@ state&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(2))
 &nbsp;</p>
 Условные ограничения, определенные на уровне отдельных столбцов, действуют только для столбцов, в которых они определены, поэтому в них не должно быть ссылок на другие столбцы. Условные ограничения, определенные на уровне всей таблицы, могут ссылаться на любой столбец таблицы. В операторе создания таблицы допускается опеределение нескольких условных ограничений для одного столбца.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Как проектировать и создавать таблицы</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Как проектировать и создавать таблицы</td></tr></table></div>&nbsp;</p>
 В этом разделе приводится пример оператора creat table, который пользователь может использовать в практической работе по построению своих таблиц. Если у читателя нет прав на создание таблиц, то следует обратиться к системному администратору или к владельцу базы данных, в которой нужно создать таблицу, за предоставлением таких прав.</p>
 Создание таблицы обычно влечет за собой образование индексов, правил и умолчаний. Кроме того, обычно также формируются пользовательские типы данных, триггеры и вьюверы.</p>
 Конечно, можно создать таблицу, ввести в нее некоторые данные и работать с ней перед тем, как создавать индексы, значения по умолчанию, правила, триггеры и вьюверы. Это позволит понять какие транзакции появляются наиболее часто и какие данные чаще всего вводятся.</p>
 С другой стороны, обычно лучше всего сразу проектировать таблицу и все связанные с ней компоненты одновременно. Далее приводится последовательность шагов, которую при этом необходимо пройти. Можно сделать предварительный набросок проекта таблицы на бумаге, прежде чем переходить к реальному созданию&nbsp; таблицы и всех связанных с ней объектов.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">1.</td><td>Решите из каких столбцов будет состоять таблица и какой у них должен быть тип данных, длина, точность представления данных и шкала.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">2.</td><td>Сделайте все необходимые новые типы данных перед тем как создавать таблицу, в которой они будут использоваться.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">3.</td><td>Выделите столбец под счетчик, если это необходимо.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">4.</td><td>Решите какие столбцы могут содержать неопределенное значение.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">5.</td><td>Решите какие ограничения целостности и значения по умолчанию необходимо для данных в столбцах. Здесь также необходимо решить связывать ли&nbsp;&nbsp; ограничения целостности и значения по умолчанию с данными конкретного столбца или определить отдельно правила, умолчания, индексы или триггера для обеспечения целостности данных.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">6.</td><td>Решите нужны ли вам правила и значения по умолчанию и какой вид они должны иметь. Проверьте, нет ли противоречий между статусом неопределенного значения в столбце и значениями по умолчанию.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">7.</td><td>Выберите типы индексов, которые необходимы, и решите, где их использовать. Индексы будут обсуждаться в главе 11.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">8.</td><td>Создайте таблицу и индексы с помощью команд creat table и creat index соответственно.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">9.</td><td>Создайте новые значения по умолчанию и правила с помощью команд creat default и creat rule соответственно. Эти команды будут обсуждаться в главе 12.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">10.</td><td>Свяжите значения по умолчанию и правила с таблицей с помощью системных процедур sp_bindefault и sp_bindrule соответствено. Если при создании таблицы были определены некоторые значения по умолчанию и правила, то они будут автоматически учитываться сервером, поэтому в этом случае не нужно обращаться к соответствущим системным процедурам. Эти системные процедуры будут обсуждаться в главе 14.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">11.</td><td>Сделайте триггеры командой creat trigger. Триггеры будут обсуждаться в главе 15.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">12.</td><td>Создайте вьюверы командой creat view. Вьюверы будут обсуждаться в главе 9.</td></tr></table></div>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Подготовка наброска проекта</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">1.</td><td>Решите из каких столбцов будет состоять таблица и какой у них должен быть тип данных, длина, точность представления данных и шкала.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">2.</td><td>Сделайте все необходимые новые типы данных перед тем как создавать таблицу, в которой они будут использоваться.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">3.</td><td>Выделите столбец под счетчик, если это необходимо.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">4.</td><td>Решите какие столбцы могут содержать неопределенное значение.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">5.</td><td>Решите какие ограничения целостности и значения по умолчанию необходимо для данных в столбцах. Здесь также необходимо решить связывать ли&nbsp;&nbsp; ограничения целостности и значения по умолчанию с данными конкретного столбца или определить отдельно правила, умолчания, индексы или триггера для обеспечения целостности данных.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">6.</td><td>Решите нужны ли вам правила и значения по умолчанию и какой вид они должны иметь. Проверьте, нет ли противоречий между статусом неопределенного значения в столбце и значениями по умолчанию.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">7.</td><td>Выберите типы индексов, которые необходимы, и решите, где их использовать. Индексы будут обсуждаться в главе 11.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">8.</td><td>Создайте таблицу и индексы с помощью команд creat table и creat index соответственно.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">9.</td><td>Создайте новые значения по умолчанию и правила с помощью команд creat default и creat rule соответственно. Эти команды будут обсуждаться в главе 12.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">10.</td><td>Свяжите значения по умолчанию и правила с таблицей с помощью системных процедур sp_bindefault и sp_bindrule соответствено. Если при создании таблицы были определены некоторые значения по умолчанию и правила, то они будут автоматически учитываться сервером, поэтому в этом случае не нужно обращаться к соответствущим системным процедурам. Эти системные процедуры будут обсуждаться в главе 14.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">11.</td><td>Сделайте триггеры командой creat trigger. Триггеры будут обсуждаться в главе 15.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">12.</td><td>Создайте вьюверы командой creat view. Вьюверы будут обсуждаться в главе 9.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Подготовка наброска проекта</td></tr></table></div>&nbsp;</p>
 В последующих главах на примере таблицы, называемой friends_etc, показано как создавать индексы, правила, триггера и т.п. В нее можно будет записать имена, адреса, телефоны и личную информацию о своих друзьях. В ней не будет никаких значений по умолчанию и ограничений целостности для столбцов, чтобы не возникали ошибки в связи с этими объектами.</p>
 Если пользователь решил выполнить все упражнения по созданию таблицы friends_etc самостоятельно, то он должен предупредить об этом системного администратора, чтобы не возникло конфликта с объектами, которые были созданы другими пользователями.</p>
 Далее приводится структура создаваемой таблицы и для каждого столбца указываются индексы, значения по умолчанию и правила.</p>
@@ -467,236 +467,236 @@ state&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(2))
 Таблица 7-1: Пример проектирования таблицы</p>
 &nbsp;</p>
 <table>
-<tr >
-<td ><p>Столбец</p>
+<tr>
+<td><p>Столбец</p>
 </td>
-<td ><p>Тип данных </p>
+<td><p>Тип данных</p>
 </td>
-<td ><p>Неопред. ?</p>
+<td><p>Неопред. ?</p>
 </td>
-<td ><p>Индекс</p>
+<td><p>Индекс</p>
 </td>
-<td ><p>Умолчание</p>
+<td><p>Умолчание</p>
 </td>
-<td ><p>Правило</p>
-</td>
-</tr>
-<tr >
-<td ><p>pname</p>
-</td>
-<td ><p>nm</p>
-</td>
-<td ><p>Not null</p>
-</td>
-<td ><p>nmind(составной)</p>
-</td>
-<td >
-</td>
-<td >
+<td><p>Правило</p>
 </td>
 </tr>
-<tr >
-<td ><p>sname</p>
+<tr>
+<td><p>pname</p>
 </td>
-<td ><p>nm</p>
+<td><p>nm</p>
 </td>
-<td ><p>Not null</p>
+<td><p>Not null</p>
 </td>
-<td ><p>nmind(составной)</p>
+<td><p>nmind(составной)</p>
 </td>
-<td >
+<td>
 </td>
-<td >
-</td>
-</tr>
-<tr >
-<td ><p>address</p>
-</td>
-<td ><p>varchar(30)</p>
-</td>
-<td ><p>Null</p>
-</td>
-<td >
-</td>
-<td >
-</td>
-<td >
+<td>
 </td>
 </tr>
-<tr >
-<td ><p>city</p>
+<tr>
+<td><p>sname</p>
 </td>
-<td ><p>varchar(30)</p>
+<td><p>nm</p>
 </td>
-<td ><p>Not null</p>
+<td><p>Not null</p>
 </td>
-<td >
+<td><p>nmind(составной)</p>
 </td>
-<td ><p>citydflt</p>
+<td>
 </td>
-<td >
-</td>
-</tr>
-<tr >
-<td ><p>state</p>
-</td>
-<td ><p>char(2)</p>
-</td>
-<td ><p>Not null</p>
-</td>
-<td >
-</td>
-<td ><p>statedflt</p>
-</td>
-<td >
+<td>
 </td>
 </tr>
-<tr >
-<td ><p>zip</p>
+<tr>
+<td><p>address</p>
 </td>
-<td ><p>char(5)</p>
+<td><p>varchar(30)</p>
 </td>
-<td ><p>Null</p>
+<td><p>Null</p>
 </td>
-<td ><p>zipind</p>
+<td>
 </td>
-<td ><p>zipdflt</p>
+<td>
 </td>
-<td ><p>ziprule</p>
-</td>
-</tr>
-<tr >
-<td ><p>phone</p>
-</td>
-<td ><p>p#</p>
-</td>
-<td ><p>Null</p>
-</td>
-<td >
-</td>
-<td >
-</td>
-<td ><p>phonerule</p>
+<td>
 </td>
 </tr>
-<tr >
-<td ><p>age</p>
+<tr>
+<td><p>city</p>
 </td>
-<td ><p>tinyint</p>
+<td><p>varchar(30)</p>
 </td>
-<td ><p>Null</p>
+<td><p>Not null</p>
 </td>
-<td >
+<td>
 </td>
-<td >
+<td><p>citydflt</p>
 </td>
-<td ><p>agerule</p>
-</td>
-</tr>
-<tr >
-<td ><p>bday</p>
-</td>
-<td ><p>datetime</p>
-</td>
-<td ><p>Not null</p>
-</td>
-<td >
-</td>
-<td ><p>bdflt</p>
-</td>
-<td >
+<td>
 </td>
 </tr>
-<tr >
-<td ><p>sex</p>
+<tr>
+<td><p>state</p>
 </td>
-<td ><p>bit</p>
+<td><p>char(2)</p>
 </td>
-<td ><p>Not null</p>
+<td><p>Not null</p>
 </td>
-<td >
+<td>
 </td>
-<td ><p>sexdflt</p>
+<td><p>statedflt</p>
 </td>
-<td >
-</td>
-</tr>
-<tr >
-<td ><p>debt</p>
-</td>
-<td ><p>money</p>
-</td>
-<td ><p>Not null</p>
-</td>
-<td >
-</td>
-<td ><p>sexdflt</p>
-</td>
-<td >
+<td>
 </td>
 </tr>
-<tr >
-<td ><p>notes</p>
+<tr>
+<td><p>zip</p>
 </td>
-<td ><p>varchar(30)</p>
+<td><p>char(5)</p>
 </td>
-<td ><p>Null</p>
+<td><p>Null</p>
 </td>
-<td >
+<td><p>zipind</p>
 </td>
-<td >
+<td><p>zipdflt</p>
 </td>
-<td ><p>&nbsp;
+<td><p>ziprule</p>
+</td>
+</tr>
+<tr>
+<td><p>phone</p>
+</td>
+<td><p>p#</p>
+</td>
+<td><p>Null</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><p>phonerule</p>
+</td>
+</tr>
+<tr>
+<td><p>age</p>
+</td>
+<td><p>tinyint</p>
+</td>
+<td><p>Null</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><p>agerule</p>
+</td>
+</tr>
+<tr>
+<td><p>bday</p>
+</td>
+<td><p>datetime</p>
+</td>
+<td><p>Not null</p>
+</td>
+<td>
+</td>
+<td><p>bdflt</p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p>sex</p>
+</td>
+<td><p>bit</p>
+</td>
+<td><p>Not null</p>
+</td>
+<td>
+</td>
+<td><p>sexdflt</p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p>debt</p>
+</td>
+<td><p>money</p>
+</td>
+<td><p>Not null</p>
+</td>
+<td>
+</td>
+<td><p>sexdflt</p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p>notes</p>
+</td>
+<td><p>varchar(30)</p>
+</td>
+<td><p>Null</p>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><p>&nbsp;
 </td>
 </tr>
 </table>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание определенных пользователей типов данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание определенных пользователей типов данных</td></tr></table></div>&nbsp;</p>
 Первые два столбца нашей таблицы отводятся для имени и фамилии. Для них указан тип данных nm. Перед там как создавать таблицу необходимо определить новые (пользовательские) типы данных, к которым относится также тип данных p# из столбца phone.</p>
 Тип данных nm определим как строковый тип данных переменной длины, с максимальной длиной 30 байтов. Тип данных p# определим как строковый тип данных с фиксированной длиной 10 байтов.</p>
-Определение этих типов происходит следующим образом: </p>
+Определение этих типов происходит следующим образом:</p>
 &nbsp;</p>
-execute sp_addtype nm, "varchar(30)" </p>
+execute sp_addtype nm, "varchar(30)"</p>
 execute sp_addtype p#, "char(10)"</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Выбор столбцов, допускающих неопределенное значение</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Выбор столбцов, допускающих неопределенное значение</td></tr></table></div>&nbsp;</p>
 Напомним, что при определении таблицы можно не указывать ключевую фразу Not Null, поскольку она подразумевается по умолчанию. Тем не менее для ясности в определении таблицы, где это необходимо, явно указана эта фраза.</p>
 Фраза Not Null означает, что в данное поле обязательно нужно записать некоторое значение, например в первых двух столбцах необходимо указать имя и фамилию. Данные, отличные от имен, не имеют смысла в этих столбцах. Кроме того, в столбце sex (пол) также не допускается неопределенное значение, поскольку это значение запрещено использовать в столбцах с типом данных bit.</p>
 Если при определении столбца указано ключевое слово Null и по умолчанию установлено определенное значение (не Null), то это значение и будет записываться в таблицу (а не Null), когда пользователь не вводит никакого значения в это поле. Если при определении столбца указано ключевое слово Null и с этим столбцом связано правило, которое указывает на непустое (не Null) значение, то в этом случае определение имеет приоритет перед правилом, когда пользователь не вводит никакого значения в это поле. Со столбцами можно связывать и значения по умолчанию и правила. Взаимоотношения между ними обсуждаются в следующей главе.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Определение таблицы</td></tr></table></div>&nbsp;</p>
-Теперь уже можно написать оператор создания таблицы: </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Определение таблицы</td></tr></table></div>&nbsp;</p>
+Теперь уже можно написать оператор создания таблицы:</p>
 &nbsp;</p>
-create table friends_etc </p>
-(pname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null, </p>
- sname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null, </p>
- address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(30)&nbsp;&nbsp;&nbsp; null, </p>
- city&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(30)&nbsp;&nbsp;&nbsp; not null, </p>
- state&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null, </p>
- postalcode&nbsp; char(5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; null, </p>
- phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; null, </p>
- age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tinyint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; null, </p>
- bday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; datetime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null, </p>
- sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null, </p>
- debt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; money&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null, </p>
+create table friends_etc</p>
+(pname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null,</p>
+ sname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null,</p>
+ address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(30)&nbsp;&nbsp;&nbsp; null,</p>
+ city&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(30)&nbsp;&nbsp;&nbsp; not null,</p>
+ state&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null,</p>
+ postalcode&nbsp; char(5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; null,</p>
+ phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; null,</p>
+ age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tinyint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; null,</p>
+ bday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; datetime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null,</p>
+ sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null,</p>
+ debt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; money&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not null,</p>
  notes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(255)&nbsp;&nbsp; null</p>
 &nbsp;</p>
 Итак имеется таблица, в столбцах которой можно хранить имена, фамилии, адреса, почтовые индексы, телефоны, возраст, дни рождения, пол, долги и примечания. В следующих главах будет показано как создавать правила, умолчания, индексы, триггера и вьюверы для этой таблицы.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание таблиц из результатов запросов: select into</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание таблиц из результатов запросов: select into</td></tr></table></div>&nbsp;</p>
 Если установлена опция базы данных select into/bulkcopy, то для создания постоянной таблицы можно использовать оператор select into (выбрать в). Системный администратор может установить эту опцию с помощью системной процедуры sp_dboption. Чтобы определить состояние этой опции, нужно выполнить системную процедуру sp_helpdb.</p>
 Далее показан пример вызова этой процедуры и ее результат, когда установлена интересующая нас опция:</p>
 &nbsp;</p>
-sp_helpdb pubs2 </p>
+sp_helpdb pubs2</p>
 &nbsp;</p>
-name&nbsp;&nbsp;&nbsp; db_size&nbsp;&nbsp; owner&nbsp; dbid&nbsp;&nbsp;&nbsp; created&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; status&nbsp; </p>
+name&nbsp;&nbsp;&nbsp; db_size&nbsp;&nbsp; owner&nbsp; dbid&nbsp;&nbsp;&nbsp; created&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; status&nbsp;</p>
 ------&nbsp; -------&nbsp;&nbsp;&nbsp;&nbsp; ------&nbsp; -----&nbsp;&nbsp; -----------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ---------------------</p>
 pubs&nbsp;&nbsp;&nbsp;&nbsp; 2 MB&nbsp;&nbsp;&nbsp;&nbsp; sa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jun&nbsp; 3 1988&nbsp;&nbsp;&nbsp; select into/bulkcopy</p>
 &nbsp;</p>
 (Выбрана 1 строка)</p>
 &nbsp;</p>
-device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; usage </p>
-------------&nbsp;&nbsp; ---------&nbsp;&nbsp;&nbsp; -------------- </p>
+device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; usage</p>
+------------&nbsp;&nbsp; ---------&nbsp;&nbsp;&nbsp; --------------</p>
 master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 MB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data and log</p>
 &nbsp;</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Выбрана 1 строка)</p>
@@ -711,39 +711,39 @@ master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 MB&nb
 Оператор select, в котором имеется предложение into позволяет создавать таблицы и сразу помещать в них данные, основываясь на существующих опеределениях данных, без явного процесса их определения.</p>
 В следующем примере приводится оператор select into вместе с результирующей таблицей. Эта таблица, называемая newtable, состоит из двух столбцов, которые выбираются из четырехстолбцовой таблицы publishers. Поскольку в этом примере нет предложения where, то в результирующую таблицу включаются все строки исходной таблицы publishers (но только по двум столбцам).</p>
 &nbsp;</p>
-select pub_id, pub_name </p>
-into newtable </p>
-from publishers </p>
+select pub_id, pub_name</p>
+into newtable</p>
+from publishers</p>
 &nbsp;</p>
-(3 rows affected) </p>
+(3 rows affected)</p>
 &nbsp;</p>
-Сообщение SQL Сервера "3 rows affected" указывает на то, что в новую таблицу было включено три строки. Новая таблица выглядит следующим образом: </p>
+Сообщение SQL Сервера "3 rows affected" указывает на то, что в новую таблицу было включено три строки. Новая таблица выглядит следующим образом:</p>
 &nbsp;</p>
-select * </p>
-from newtable </p>
+select *</p>
+from newtable</p>
 &nbsp;</p>
-pub_id&nbsp; pub_name </p>
-------&nbsp; ----------------------- </p>
-0736&nbsp;&nbsp;&nbsp; New Age Books </p>
-0877&nbsp;&nbsp;&nbsp; Binnet &amp; Hardley </p>
+pub_id&nbsp; pub_name</p>
+------&nbsp; -----------------------</p>
+0736&nbsp;&nbsp;&nbsp; New Age Books</p>
+0877&nbsp;&nbsp;&nbsp; Binnet &amp; Hardley</p>
 1389&nbsp;&nbsp;&nbsp; Algodata Infosystems</p>
 &nbsp;</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Выбрано 3 строки)</p>
 &nbsp;</p>
-Таким образом, новая таблица содержит результаты оператора select. Она становится частью базы данных также как и породившая ее таблица. Предложение into особенно полезно для создания тестовых таблиц, копий существующих таблиц и создания маленьких таблиц из больших. Можно также использовать оператор select into для создания каркаса новой таблицы, не содержащей данных, путем указания тождественно ложного условия в предложении where. Например:   </p>
+Таким образом, новая таблица содержит результаты оператора select. Она становится частью базы данных также как и породившая ее таблица. Предложение into особенно полезно для создания тестовых таблиц, копий существующих таблиц и создания маленьких таблиц из больших. Можно также использовать оператор select into для создания каркаса новой таблицы, не содержащей данных, путем указания тождественно ложного условия в предложении where. Например:</p>
 &nbsp;</p>
-select * </p>
-into newtable2 </p>
-from publishers </p>
-where 1=2 </p>
+select *</p>
+into newtable2</p>
+from publishers</p>
+where 1=2</p>
 &nbsp;</p>
 (0 rows affected)</p>
 &nbsp;</p>
-select * </p>
-from newtable2 </p>
+select *</p>
+from newtable2</p>
 &nbsp;</p>
-pub_id&nbsp;&nbsp;&nbsp; pub_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; city&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; state </p>
-------&nbsp;&nbsp;&nbsp; --------------&nbsp;&nbsp;&nbsp; --------&nbsp; ----- </p>
+pub_id&nbsp;&nbsp;&nbsp; pub_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; city&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; state</p>
+------&nbsp;&nbsp;&nbsp; --------------&nbsp;&nbsp;&nbsp; --------&nbsp; -----</p>
 &nbsp;</p>
 (0 rows affected)</p>
 &nbsp;</p>
@@ -763,16 +763,16 @@ select * from #whatspent</p>
  ----------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----------------</p>
  UNDECIDED &nbsp; &nbsp; &nbsp; &nbsp;NULL</p>
  business &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;25,125.00</p>
- mod_cook &nbsp; &nbsp; &nbsp; &nbsp;15,000.00 </p>
- popular_comp &nbsp; &nbsp; &nbsp; &nbsp;15,000.00 </p>
- psychology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21,275.00 </p>
+ mod_cook &nbsp; &nbsp; &nbsp; &nbsp;15,000.00</p>
+ popular_comp &nbsp; &nbsp; &nbsp; &nbsp;15,000.00</p>
+ psychology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21,275.00</p>
  trad_cook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19,000.00</p>
 &nbsp;</p>
 (Выбрано 6 строк)</p>
 &nbsp;</p>
 Надо всегда давать названия столбцам в операторе select into для всех результатов вычислений агрегирующих функций или результатов вычисления любых других выражений, таких как арифметические выражения (amount*2), конкатенации строк (lname+fname) или выражения со встроенными функциями SQL Сервера (lower(lname)). Далее приводится пример, содержащий конкатенацию строк:</p>
 &nbsp;</p>
-select au_id, </p>
+select au_id,</p>
  &nbsp;&nbsp; "Full_Name" = au_fname + ' ' + au_lname</p>
 into #g_authortemp</p>
 from authors</p>
@@ -782,7 +782,7 @@ where au_lname like "G%"</p>
 &nbsp;</p>
 select * from #g_authortemp</p>
 &nbsp;</p>
- au_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Full_Name&nbsp;&nbsp; </p>
+ au_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Full_Name&nbsp;&nbsp;</p>
  --------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------------------------</p>
  213-46-8915 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Marjorie Green</p>
  472-27-2349 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Burt Gringlesby</p>
@@ -790,11 +790,11 @@ select * from #g_authortemp</p>
 &nbsp;</p>
 (Выбрано 3 строки)</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Выбор столбца для счетчика</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Выбор столбца для счетчика</td></tr></table></div>&nbsp;</p>
 Для копирования столбца-счетчика из старой таблицы в новую достаточно включить этот столбец в список выбора или указать ключевое слово syb_identity. Новый столбец будет наследовать свойства счетчика за исключением следующих случаев:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>В таблице указано более одного счетчика;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Столбец-счетчик задается как часть выражения;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>В операторе выбора имеется предложение group by, или агрегирующие функции, или операция объединения или операция соединения.</td></tr></table></div>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Добавление счетчика в операторе select into</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В таблице указано более одного счетчика;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Столбец-счетчик задается как часть выражения;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>В операторе выбора имеется предложение group by, или агрегирующие функции, или операция объединения или операция соединения.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Добавление счетчика в операторе select into</td></tr></table></div>&nbsp;</p>
 Чтобы создать новый столбец-счетчик, следует расположить определение этого столбца перед предложением into в операторе select into. Заметим, что в этом определении нужно указать точность счетчика, но не указывать его шкалу:</p>
 &nbsp;</p>
 select список_столбцов</p>
@@ -805,10 +805,10 @@ from название_таблицы</p>
 Нельзя использовать оператор select into для создания таблицы с несколькими счетчиками. Если в этом операторе указать столбец-счетчик из прежней таблицы и создать новый, то будет выдано сообщение об ошибке.</p>
 Дополнительная информация о счетчиках приводится в разделах “оператор выбора” и “столбцы-счетчики” в Справочном руководстве SQL Сервера.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Удаление таблиц</td></tr></table></div>&nbsp;</p>
-Таблицы удаляются из базы данных командой drop table. Эта команда имеет следующий общий вид: </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Удаление таблиц</td></tr></table></div>&nbsp;</p>
+Таблицы удаляются из базы данных командой drop table. Эта команда имеет следующий общий вид:</p>
 &nbsp;</p>
-drop table [база_данных.[владелец].] название_таблицы </p>
+drop table [база_данных.[владелец].] название_таблицы</p>
   [, [база_данных.[владелец].] название_таблицы] ...</p>
 &nbsp;</p>
 После появления этой команды SQL Сервер удаляет указанные таблицы из базы данных вместе с их содержимым и стирает все индексы и привилегии, с ними связанные. Правила и умолчания, присоединенные к удаленной таблице, освобождаются от связей с ней, но в других отношениях не изменяются.</p>
@@ -817,14 +817,14 @@ drop table [база_данных.[владелец].] название_табл
 Если в таблице были удалены все строки или была выполнена команда truncate table, то таблица тем не менее остается в базе данных до тех пор, пока не будет явно удалена пользователем.</p>
 Права на исполнение команд drop table и truncate table не могут передаваться другим лицам.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Модификация существующих таблиц</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Модификация существующих таблиц</td></tr></table></div>&nbsp;</p>
 Если возникла необходимость изменения структуры таблицы в процессе ее использования или необходимо модифицировать способ ее компоновки, то пользователь может воспользоваться следующими возможностями:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Можно добавить столбцы или ограничения целостности, удалить некоторые ограничения, изменить значения, подразумеваемые по умолчанию, с помощью команды alter table (изменить таблицу);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Можно изменить название таблицы или столбца, или любого другого объекта базы данных с помощью системной процедуры sp_rename.</td></tr></table></div>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Изменение структуры таблицы: команда alter table</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Можно добавить столбцы или ограничения целостности, удалить некоторые ограничения, изменить значения, подразумеваемые по умолчанию, с помощью команды alter table (изменить таблицу);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Можно изменить название таблицы или столбца, или любого другого объекта базы данных с помощью системной процедуры sp_rename.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Изменение структуры таблицы: команда alter table</td></tr></table></div>&nbsp;</p>
 Команда alter table позволяет произвести следующие изменения в существующей таблице:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Добавить столбцы (за исключением столбцов с типом данных bit);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Добавить ограничения целостности;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Удалить ограничения целостности;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Заменить значения по умолчанию, определенные для столбцов таблицы.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Добавить столбцы (за исключением столбцов с типом данных bit);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Добавить ограничения целостности;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Удалить ограничения целостности;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Заменить значения по умолчанию, определенные для столбцов таблицы.</td></tr></table></div>&nbsp;</p>
 Команда alter table имеет следующий общий вид:</p>
 &nbsp;</p>
 alter table [база_данных.[владелец].]название_таблицы</p>
@@ -834,7 +834,7 @@ alter table [база_данных.[владелец].]название_табл
  &nbsp;&nbsp; | [[constraint название_ограничения]</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{unique | primary key}</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [clustered | nonclustered]</p>
-        [with {fillfactor | max_rows_per_page} = x] </p>
+        [with {fillfactor | max_rows_per_page} = x]</p>
         [on название_сегмента]</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | references [[база_данных.]владелец.]таблица_ссылок</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [(столбец_ссылок)]</p>
@@ -844,7 +844,7 @@ alter table [база_данных.[владелец].]название_табл
  &nbsp;&nbsp; {unique | primary key}</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [clustered | nonclustered]</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (название_столбца [{, название_столбца}...])</p>
-        [with {fillfactor | max_rows_per_page} = x] </p>
+        [with {fillfactor | max_rows_per_page} = x]</p>
         [on название_сегмента]</p>
 | foreign key (название_столбца [{, название_столбца}...])</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; references [[база_данных.]владелец.]таблица_ссылок</p>
@@ -861,7 +861,7 @@ alter table [база_данных.[владелец].]название_табл
 &nbsp;</p>
 Например, можно добавить столбец к таблице friends_etc следующим образом:</p>
 &nbsp;</p>
-alter table friends_etc </p>
+alter table friends_etc</p>
  &nbsp;&nbsp; add country varchar(20) null</p>
 &nbsp;</p>
 Можно ввести также несколько ограничений целостности для нового столбца (или любого другого столбца) таблицы friends_etc:</p>
@@ -883,7 +883,7 @@ alter table friends_etc</p>
 &nbsp;</p>
 Информация о значениях по умолчанию и ограничениях целостности дается в разделе “Определение ограничений целостности для таблиц”.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Переименование таблиц и других объектов</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Переименование таблиц и других объектов</td></tr></table></div>&nbsp;</p>
 Для переименования таблиц и других объектов базы данных таких, как вьюверы, индексы, правила, значения по умолчанию, процедуры и триггеры, следует использовать системную процедуру sp_rename. Переименовать объект может только его владелец.</p>
 Для переименования базы данных следует использовать системную процедуру sp_renamedb. Информацию об этой процедуре можно найти в Справочном руководстве SQL Сервера.</p>
 Обращение к процедуре sp_rename имеет следующий вид:</p>
@@ -894,29 +894,29 @@ sp_rename название_объекта, новое_название</p>
 &nbsp;</p>
 sp_rename friends_etc,&nbsp; infotable</p>
 &nbsp;</p>
-Точно также процедуру sp_rename можно использовать для переименования таких объектов как: столбцы, значения по умолчанию, правила, процедуры, вьюверы, триггеры, условия отбора, ограничения ссылочной целостности и типы данных пользователя. Например, команда переименования столбца имеет следующий вид: </p>
+Точно также процедуру sp_rename можно использовать для переименования таких объектов как: столбцы, значения по умолчанию, правила, процедуры, вьюверы, триггеры, условия отбора, ограничения ссылочной целостности и типы данных пользователя. Например, команда переименования столбца имеет следующий вид:</p>
 &nbsp;</p>
-sp_rename "таблица.столбец", новое_название_столбца </p>
+sp_rename "таблица.столбец", новое_название_столбца</p>
 &nbsp;</p>
 Заметим, что в новом названии столбца не должна быть префикса с названием таблицы, в противном случае новое название не будет присвоено. Команда переименования индекса имеет следующий вид:</p>
 &nbsp;</p>
-sp_rename "таблица.индекс", новое_название_индекса </p>
+sp_rename "таблица.индекс", новое_название_индекса</p>
 &nbsp;</p>
 Здесь также не нужно указывать название таблицы с новым названием индекса.</p>
 Следующая команда показывает как переименовать тип данных пользователя tid на t_id:</p>
 &nbsp;</p>
 exec sp_rename tid, "t_id"</p>
 &nbsp;</p>
-Пользователь не может изменить названия системных объектов или системных типов данных. Переименовывать объекты можно только в текущей базе данных, и только владелец объекта имеет на это право. Однако владелец базы данных может переименовать в ней любой объект пользователя. Пользователь имеет право переименовывать только свои объекты. </p>
+Пользователь не может изменить названия системных объектов или системных типов данных. Переименовывать объекты можно только в текущей базе данных, и только владелец объекта имеет на это право. Однако владелец базы данных может переименовать в ней любой объект пользователя. Пользователь имеет право переименовывать только свои объекты.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Переименование зависимых объектов</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Переименование зависимых объектов</td></tr></table></div>&nbsp;</p>
 Процедуры, вьюверы и триггеры, связанные&nbsp; с объектом, название которого было изменено, будут работать правильно до тех пор, пока они не будут перекомпилированы. Однако, перекомпиляция может произойти по многим причинам причем без уведомления пользователя, например, при загрузке базы данных, или при удалении и последующем создании пользователем некоторой таблицы, или при удалении индекса.</p>
 После того как SQL Сервер перекомпилирует процедуру, вьювер или триггер, они становятся неработоспособны. Пользователь должен изменить текст описания связанного объекта, указав в нем новое название объекта, от которого он зависит. В то же время старое название объекта будет выдаваться в результатах запросов до тех пор, пока процедура, триггер или вьювер не будут перекомпилированы. Наиболее безопасный способ работы состоит в изменении описаний всех зависимых объектов после исполнения процедуры sp_rename. Список всех зависимых объектов можно получить с помощью системной процедуры sp_depends.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Предоставление прав пользователям</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Предоставление прав пользователям</td></tr></table></div>&nbsp;</p>
 Команды SQL Сервера grant (дать) и revoke (отменить) служат для управления правами доступа в системе. Можно предоставить различные права пользователям и группам пользователей с помощью команды grant или аннулировать их с помощью команды revoke. Эти команды могут использоваться для предоставления следующих прав:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Создание баз данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Создание объектов в базе данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Доступ к таблицам, вьюверам и столбцам;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Исполнение сохраненных процедур.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Создание баз данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Создание объектов в базе данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Доступ к таблицам, вьюверам и столбцам;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Исполнение сохраненных процедур.</td></tr></table></div>&nbsp;</p>
 Некоторые команды могут исполняться в любое время любым пользователем без необходимости предоставления каких-либо прав. Другие (привелегированные) команды могут исполняться только пользователями, имеющими определенные права (например, только системным администратором), и эти права не могут передаваться другим лицам.</p>
 Возможность предоставления прав на использование привелегированных команд зависит от статуса пользователя (такого как системный администратор, владелец базы данных или владелец объекта в базе данных), а также от прав, предоставленных данному пользователю, в том числе возможности передачи своих прав другим пользователям.</p>
 Владелец базы данных не получает автоматически права на использование объектов, принадлежащих другим пользователям. Однако владелец базы данных и системный администратор всегда могут приобрести любые права при условии идентификации владельца объекта с помощью команды setuser с последующим исполнением оператора grant или revoke.</p>
@@ -936,30 +936,30 @@ from mary</p>
 &nbsp;</p>
 Полная информация об использовании команд grant и revoke для предоставления прав доступа к объектам и на создание объектов дается в Руководстве пользователя по безопасности.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Получение информации о базах данных и таблицах</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Получение информации о базах данных и таблицах</td></tr></table></div>&nbsp;</p>
 SQL Сервер предоставляет несколько системных процедур для получения информации о базах данных, таблицах и других объектах базы данных. В этом разделе описываются четыре из них: sp_help, sp_helpdb, sp_helpconstraint, sp_spaceused.</p>
 Полная информация о системных процедурах дается в Справочном руководстве SQL Сервера.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Использование процедуры sp_help с объектами базы данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Использование процедуры sp_help с объектами базы данных</td></tr></table></div>&nbsp;</p>
 Системная процедура sp_help предоставляет информацию об указанном объекте базы данных (из списка sysobjects), об указанном типе данных (из списка systypes) или о всех объектах и типах данных из текущей базы данных.</p>
 Вызов этой процедуры имеет следующий вид:</p>
 &nbsp;</p>
-sp_help [название_объекта] </p>
+sp_help [название_объекта]</p>
 &nbsp;</p>
 Далее приводится результаты вызова этой процедуры с таблицей publishers в качестве аргумента:</p>
 &nbsp;</p>
-Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Owner&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type </p>
+Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Owner&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type</p>
 --------------------------&nbsp;&nbsp;&nbsp; -----------&nbsp;&nbsp; --------</p>
 publisher&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; user table</p>
-Data_located_on_segment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When_created </p>
+Data_located_on_segment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When_created</p>
 ------------------------------&nbsp;&nbsp;&nbsp;&nbsp; --------------------</p>
 default&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jan&nbsp; 1 1900 12:00AM</p>
 &nbsp;</p>
 Column_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Length&nbsp;&nbsp;&nbsp;&nbsp; Prec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scale</p>
 -----------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -----</p>
 pub_id &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;NULL</p>
-pub_name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;varchar &nbsp; &nbsp; &nbsp; &nbsp;40 &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
-city &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;varchar &nbsp; &nbsp; &nbsp; &nbsp;20 &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+pub_name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;varchar &nbsp; &nbsp; &nbsp; &nbsp;40 &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+city &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;varchar &nbsp; &nbsp; &nbsp; &nbsp;20 &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;NULL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 state &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp;NULL &nbsp; &nbsp; &nbsp; &nbsp;NULL</p>
 &nbsp;</p>
 Nulls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Default_name&nbsp;&nbsp; Rule_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Identity</p>
@@ -985,31 +985,31 @@ foreign&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; titles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Если процедура sp_help вызывается без аргумента, то выдается краткое описание каждого объекта из списка sysobjects с названием, владельцем и типом каждого объекта. Также выдается описание каждого пользовательского типа данных из списка systypes с названием, видом памяти, длиной, наличием неопределенного значения, названиями значений по умолчанию и правилами, связанными с каждым типом. В отчетах также сообщается, имеются ли в таблицах или вьюверах столбцы с ключами primary и foreign, установленных системными процедурами sp_ primarykey и sp_ foreignkey.</p>
 Процедура sp_help выдает также список всех табличных индексов, включая индексы, связанные с главными и уникальными ключами, определенные в операторах creat table или alter table. Однако эта процедура не сообщает об ограничениях целостности, определенных для таблиц. Информацию об ограничениях целостности можно получить с помощью системной процедуры sp_helpconstraint.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td> Использование процедуры sp_helpdb в базах данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td> Использование процедуры sp_helpdb в базах данных</td></tr></table></div>&nbsp;</p>
 Системная процедура sp_helpdb предоставляет информацию об указанной базе данных или о всех базах данных, с которыми работает SQL Сервер. Она сообщает название базы, ее размер и количество используемых фрагментов памяти, выделенных этой базе данных с помощью операторов creat database или alter database. Эта процедура вызывается следующим образом:</p>
 &nbsp;</p>
-sp_helpdb [название_базы_данных] </p>
+sp_helpdb [название_базы_данных]</p>
 &nbsp;</p>
 Далее приводится пример получения информации о базе данных pubs2 с помощью этой процедуры:</p>
 &nbsp;</p>
 sp_helpdb pubs2</p>
 &nbsp;</p>
-name&nbsp;&nbsp;&nbsp; db_size&nbsp;&nbsp; owner&nbsp; dbid&nbsp;&nbsp; created&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; status </p>
+name&nbsp;&nbsp;&nbsp; db_size&nbsp;&nbsp; owner&nbsp; dbid&nbsp;&nbsp; created&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; status</p>
 -----&nbsp;&nbsp; -------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ------&nbsp; ----&nbsp;&nbsp; --------------&nbsp;&nbsp;&nbsp; -------------</p>
 pubs2&nbsp;&nbsp; 2 MB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; Jan 10 1988&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; no options set</p>
 &nbsp;</p>
 (1 row affected)</p>
 &nbsp;</p>
 device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; usage</p>
-------------&nbsp; ----------&nbsp; -------------- </p>
+------------&nbsp; ----------&nbsp; --------------</p>
 &nbsp;</p>
 pubsdev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 MB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data + log</p>
 (1 row affected)</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Использование процедуры sp_helpconstraint</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Использование процедуры sp_helpconstraint</td></tr></table></div>&nbsp;</p>
 Системная процедура sp_helpconstraint предоставляет информацию об ограничениях целостности, связанных с указанной таблицей. Она сообщает о названиях ограничений,&nbsp; значениях, заданных по умолчанию, уникальных и главных ключах, ограничениях ссылочной целостности и условиях отбора. Эта процедура вызывается следующим образом:</p>
 &nbsp;</p>
-sp_helpconstraint&nbsp; название_объекта [, detail ] </p>
+sp_helpconstraint&nbsp; название_объекта [, detail ]</p>
 &nbsp;</p>
 По умолчанию процедура sp_helpconstraint выводит название и определение каждого ограничения целостности. Если указана опция detail (подробность) при вызове этой процедуры, то выводится также информация об ограничениях пользователя и сообщениях об ошибках.</p>
 В следующем примере предполагается, что таблица states создавалась следующим оператором:</p>
@@ -1033,7 +1033,7 @@ stateconstr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
 &nbsp;</p>
 (3 rows affected, return status = 0)</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Использование процедуры sp_spaceused</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Использование процедуры sp_spaceused</td></tr></table></div>&nbsp;</p>
 Пользователь может уточнить объем памяти, занимаемый таблицей, с помощью системной процедуры sp_spaceused. Синтаксис вызова этой процедуры имеет следующий вид:</p>
 &nbsp;</p>
 sp_spaceused [название_объекта]</p>
@@ -1042,7 +1042,7 @@ sp_spaceused [название_объекта]</p>
 &nbsp;</p>
 sp_spaceused titles</p>
 &nbsp;</p>
-name&nbsp;&nbsp;&nbsp; rows&nbsp;&nbsp; reserved&nbsp;&nbsp;&nbsp; data&nbsp;&nbsp; index_size&nbsp;&nbsp; unused&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+name&nbsp;&nbsp;&nbsp; rows&nbsp;&nbsp; reserved&nbsp;&nbsp;&nbsp; data&nbsp;&nbsp; index_size&nbsp;&nbsp; unused&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 -------&nbsp;&nbsp;&nbsp; -----&nbsp;&nbsp;&nbsp; ----------&nbsp;&nbsp;&nbsp; -----&nbsp;&nbsp;&nbsp; -----------&nbsp;&nbsp;&nbsp;&nbsp; ---------</p>
 titles&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48 KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 KB&nbsp;&nbsp; 4 KB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 38 KB</p>
 &nbsp;</p>

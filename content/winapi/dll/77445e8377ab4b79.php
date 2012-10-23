@@ -28,7 +28,7 @@ End.
 
 <p>Теперь достаточно достаточно объявить в приложении процедуру из DLL и скопировать саму DLL в директорию с приложением.</p>
 
-<p>Procedure TestDLL (TestStr : Sting); Stdcall; External 'Test.dll'; </p>
+<p>Procedure TestDLL (TestStr : Sting); Stdcall; External 'Test.dll';</p>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

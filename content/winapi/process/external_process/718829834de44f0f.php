@@ -22,29 +22,29 @@ end;
 </pre>
 
 
-<p>  Комментарии </p>
+<p>  Комментарии</p>
 
 <p>Xianguang Li (22 Октября 2000)</p>
 
-<p>В Delphi 5, при компиляции получается следующая ошибка : </p>
-<p>  Incompatible types: 'String' and 'PChar'. </p>
-<p>После изменения выражения </p>
-<p>  TheWindow := FindWindow(ClassName, WindowTitle) </p>
-<p>на </p>
-<p>  TheWindow := FindWindow(PChar(ClassName), PChar(WindowTitle)) , </p>
-<p>Нормально откомпилировалось. </p>
+<p>В Delphi 5, при компиляции получается следующая ошибка :</p>
+<p>  Incompatible types: 'String' and 'PChar'.</p>
+<p>После изменения выражения</p>
+<p>  TheWindow := FindWindow(ClassName, WindowTitle)</p>
+<p>на</p>
+<p>  TheWindow := FindWindow(PChar(ClassName), PChar(WindowTitle)) ,</p>
+<p>Нормально откомпилировалось.</p>
 <p>И ещё: если мы не знаем ClassName или WindowTitle программы, которую мы хотим убить,</p>
-<p>то мы не сможем её завершить. Причина в том, что нельзя вызвать функцию в виде: </p>
-<p>  KillProgram(nil, WindowTitle) </p>
-<p>  или </p>
-<p>  KillProgram(ClassName, nil). </p>
-<p>Компилятор не позволяет передать nil в переменную типа String. </p>
-<p>Итак, я изменил объявление </p>
-<p>  KillProgram(ClassName: string; WindowTitle: string) </p>
-<p>на </p>
-<p>  KillProgram(ClassName: PChar; WindowTitle: PChar), </p>
+<p>то мы не сможем её завершить. Причина в том, что нельзя вызвать функцию в виде:</p>
+<p>  KillProgram(nil, WindowTitle)</p>
+<p>  или</p>
+<p>  KillProgram(ClassName, nil).</p>
+<p>Компилятор не позволяет передать nil в переменную типа String.</p>
+<p>Итак, я изменил объявление</p>
+<p>  KillProgram(ClassName: string; WindowTitle: string)</p>
+<p>на</p>
+<p>  KillProgram(ClassName: PChar; WindowTitle: PChar),</p>
 <p>вот теперь функция действительно может завершить любое приложение, если вы не знаете</p>
-<p>ClassName или WindowTitle этого приложения. </p>
+<p>ClassName или WindowTitle этого приложения.</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 

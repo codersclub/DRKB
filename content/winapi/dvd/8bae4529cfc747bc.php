@@ -3,7 +3,7 @@
 
 
 
-<p>CD может иметь или не иметь серийный номер и/или универсальный код продукта (Universal Product Code). MCI-расширение Windows предоставляет эту информации с помощью комманды MCI_INFO_MEDIA_IDENTITY command. Эта команда возвращает уникальную ID-строку. </p>
+<p>CD может иметь или не иметь серийный номер и/или универсальный код продукта (Universal Product Code). MCI-расширение Windows предоставляет эту информации с помощью комманды MCI_INFO_MEDIA_IDENTITY command. Эта команда возвращает уникальную ID-строку.</p>
 <p>Пример:</p>
 <pre>
 uses MMSystem, MPlayer;
@@ -43,7 +43,7 @@ end;
 end.
 </pre>
 
-<p>Взято из </p>
+<p>Взято из</p>
 DELPHI VCL FAQ Перевод с английского &nbsp; &nbsp; &nbsp; 
 <p>Подборку, перевод и адаптацию материала подготовил Aziz(JINX)</p>
 <p>специально для <a href="https://delphi.vitpc.com/" target="_blank">Королевства Дельфи</a></p>

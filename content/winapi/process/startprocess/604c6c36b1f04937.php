@@ -36,10 +36,10 @@ end;
 <p class="note">Примечание Vit:</p>
 <p>Если заменить</p>
 <p>WaitForSingleObject(pi.hProcess,INFINITE);</p>
-<p>на </p>
+<p>на</p>
 <p>while WaitforSingleObject(PI.hProcess,200)=WAIT_TIMEOUT do &nbsp; application.ProcessMessages;</p>
 <p>то вызывающая программа не будет казаться завешанной и будет отвечать на сообщения</p>
-<p class="note">Примечание Mikel: В RxLib есть функция для этого: FileExecuteWait </p>
+<p class="note">Примечание Mikel: В RxLib есть функция для этого: FileExecuteWait</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Здесь представлена функция, которая вызывается таким же образом как и WinExec, однако она ждёт, пока запущенная задача завершится.</p>
@@ -103,10 +103,10 @@ end;
 <pre>
 ExecAndWait( 'C:\windows\calc.exe', '', SH_SHOWNORMAL);
 </pre>
-<p>Параметр FileName = Имя внешней программы. </p>
+<p>Параметр FileName = Имя внешней программы.</p>
 <p>Параметр Params = Параметры, необходимые для запуска внешней программы</p>
 <p>Параметр WinState = Указывает - как будет показано окно:</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для этого параметра мы можем так же использовать следующие константы: </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW_HIDE, SW_MAXIMIZE, SW_MINIMIZE, SW_SHOWNORMAL </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для этого параметра мы можем так же использовать следующие константы:</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW_HIDE, SW_MAXIMIZE, SW_MINIMIZE, SW_SHOWNORMAL</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

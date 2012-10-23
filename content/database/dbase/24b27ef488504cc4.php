@@ -182,7 +182,7 @@ with Table1 do
 
 <p>Добавление индекса к существующей таблицы осуществляется вызовом метода AddIndex компонента TTable. Кроме того, флажки индекса должны включать в себя значение TIndexOptions ixExpression.</p>
 
-<p> &nbsp;&nbsp; Table1.AddIndex('FullName', 'LastName + FirstName', [ixExpression]); </p>
+<p> &nbsp;&nbsp; Table1.AddIndex('FullName', 'LastName + FirstName', [ixExpression]);</p>
 
 <p>Изучение функций и синтаксиса dBASE</p>
 

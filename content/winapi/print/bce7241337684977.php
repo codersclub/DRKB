@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Используте функцию Windows API - GetStockObject() чтобы получить дескриптор (handle) шрифта по умолчанию устройства (DEVICE_DEFAULT_FONT) и передайте его Printer.Font.Handle. </p>
+<p>Используте функцию Windows API - GetStockObject() чтобы получить дескриптор (handle) шрифта по умолчанию устройства (DEVICE_DEFAULT_FONT) и передайте его Printer.Font.Handle.</p>
 <pre>
 uses Printers;
  

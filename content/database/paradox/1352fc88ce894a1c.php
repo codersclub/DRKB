@@ -7,7 +7,7 @@
 <p>Свойство компонента Table ACTIVE должно быть установлено в FALSE. (Если она активна прежде, чем вы ввели пароль, вы получите это окошко.) Затем поместите следующий код в обработчике события формы OnCreate:</p>
 
 <p>session.AddPassword('Мой секретный пароль');</p>
-<p>table1.active := true;&nbsp; </p>
+<p>table1.active := true;&nbsp;</p>
 <p>Взято из Советов по Delphi от <a href="mailto:mailto:webmaster@webinspector.com" target="_blank">Валентина Озерова</a></p>
 <p>Сборник Kuliba</p>
 

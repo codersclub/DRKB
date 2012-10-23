@@ -1,12 +1,11 @@
 <h1>Pipeline Components</h1>
 <div class="date">01.01.2007</div>
 
-
 <p>Эта область разработки возникла в моем текущем проекте. Pipeline components - это COM-объекты, которые выполняются в pipeline, который в свою очередь вызывается на выполнение обычно через ASP. Pipeline представляет собой цепочку pipeline component, выполняющихся последовательно один за одним. На вход pipeline передается объект IDictionary, который передается всем компонентам в цепочке. Результатом работы этих компонент может быть видоизмененный IDictionary, либо еще чего-нибудь.</p>
-<p>   Описание. </p>
-<p>Pipeline компоненты должны поддерживать интерфейс IPipelineComponent,&nbsp; а также несколько других. Обо всех будет рассказано поподробнее ниже. </p>
+<p>Описание.</p>
+<p>Pipeline компоненты должны поддерживать интерфейс IPipelineComponent,&nbsp; а также несколько других. Обо всех будет рассказано поподробнее ниже.</p>
 <p>Представим себе, что мы хотим создать компонент, который сбрасывает содержимое IDictionary в xml-файл на диск. Причем мы хотим иметь возможность задавать имя этого файла в Properties Page внутри Pipeline Editor. Для ознакомления с Pipeline Editor советую обратиться на сайт Microsoft.</p>
-<p>В первую очередь, для создания компонента в Delphi необходимо создать ActiveX Library. Для этого выполним команду File|New -&gt; Activex tabsheet -&gt; ActiveX Library. Затем там добавим Automation Object. Назовем объект DumpOrderToXml. Добавим методы SetXmlFilename и GetXmlFilename. Результатом должны быть следующие объявления: </p>
+<p>В первую очередь, для создания компонента в Delphi необходимо создать ActiveX Library. Для этого выполним команду File|New -&gt; Activex tabsheet -&gt; ActiveX Library. Затем там добавим Automation Object. Назовем объект DumpOrderToXml. Добавим методы SetXmlFilename и GetXmlFilename. Результатом должны быть следующие объявления:</p>
 <p>function SetXmlFilename(XmlFileName: WideString): HResult [dispid $00000001]; stdcall;</p>
 <p>function GetXmlFileName(retval XmlFileName: WideString): HResult [dispid $00000002]; stdcall;</p>
 <p>Для дальнейшей успешной работы Вы должны иметь на диске следующие файлы: COMMERCELib_TLB.pas, MSCSAspHelpLib_TLB.pas, MSCSCoreLib_TLB.pas, PIPELINELib_TLB.pas. Их можно сгенерировать с помощью tipe library editor, предоставляемого Delphi, либо скачать у меня. Также необходимо иметь на диске ComPUtil.pas и PipeConsts.pas файлы, которые есть у меня.</p>
@@ -118,7 +117,7 @@ begin
 end;
 </pre>
 
-<p>Как видим, метод довольно несложный - вся нагрузка ложится на метод ExportDictionaryToXml. Рассмотрим его поподробнее. Как известно, dictionary представляет собой список именованных вариантов. Вариант сам по себе может быть IDictionary, ISimpleList или другой интерфейс. Для перечисления своих элементов dictionary поддерживает интерфейс IEnumVARIANT. Соотвественно, наша задача - взять IEnumVARIANT, пробежаться по его элементам и сохранить их имена и значение в строке. </p>
+<p>Как видим, метод довольно несложный - вся нагрузка ложится на метод ExportDictionaryToXml. Рассмотрим его поподробнее. Как известно, dictionary представляет собой список именованных вариантов. Вариант сам по себе может быть IDictionary, ISimpleList или другой интерфейс. Для перечисления своих элементов dictionary поддерживает интерфейс IEnumVARIANT. Соотвественно, наша задача - взять IEnumVARIANT, пробежаться по его элементам и сохранить их имена и значение в строке.</p>
 <pre>
 Result := E_FAIL;
 hr := InitKeyEnumInDict(Dict, Enum);
@@ -207,7 +206,7 @@ XmlStr := Res;
 Result := S_OK;
 </pre>
 
-<p>Вот собственно и вся реализация метода Execute. Для полной красоты картины, нам необходимо научиться редактировать поле FXmlFilename в Pipeline редакторе. Для этого добавим в проект Property Page. На форму добавим из палитры Textbox, Label, Button и SaveDialog. </p>
+<p>Вот собственно и вся реализация метода Execute. Для полной красоты картины, нам необходимо научиться редактировать поле FXmlFilename в Pipeline редакторе. Для этого добавим в проект Property Page. На форму добавим из палитры Textbox, Label, Button и SaveDialog.</p>
 <p>В обработчик нажатия кнопки добавим код по вызову SaveDialog:</p>
 <pre>
  

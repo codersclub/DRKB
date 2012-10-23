@@ -40,7 +40,7 @@ begin
   RESULT := StrToTime(HS + ':' + MS + ':' + SS);
 end;
 </pre>
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <p>ShowMessage(TimeToStr(SecToTime(50)));</p>
 <p>//получаем сообщение:</p>
 <p>"00:00:50 "</p>

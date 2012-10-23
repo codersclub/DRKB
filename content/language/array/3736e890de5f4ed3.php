@@ -265,7 +265,7 @@ end; {==TDynaMatrix.SetElement==}
 end.
 </pre>
 
-<p>Тестовая программа для модуля DynArray </p>
+<p>Тестовая программа для модуля DynArray</p>
 
 <pre>
 uses DynArray, WinCRT;

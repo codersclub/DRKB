@@ -4,12 +4,12 @@
 
 <p>Связаться с Personal Oracle - мудреное дело, но оно оказывается очень простым, если знать как...</p>
 
-<p>Personal Oracle должен иметь имя сервера (servername) "2:" (два и точка с запятой) </p>
+<p>Personal Oracle должен иметь имя сервера (servername) "2:" (два и точка с запятой)</p>
 <p>Сетевой протокол (Net Protocol) ДОЛЖЕН БЫТЬ пустым (т.е. пустым - ничего не содержать)</p>
 <p>Если вы работаете с Personal Oracle версии 7.1, в файле конфигурации сервера должен быть определен ORA71WIN.DLL, в противном случае выберите ora7win.dll</p>
 <p>Oracle в сети.... Если вы можете соединиться через sql*dba или sql*plus, то настройки вашего Oracle, вероятно, правильные. Кроме того, поставщик в файле конфигурации должен указывать версию базы данных.</p>
 
-<p>The server name (имя сервера):&nbsp; SQL*Net V.1.x:&nbsp; Protocol (протокол) : Servername (имя сервера) : Database SID&nbsp;&nbsp; </p>
+<p>The server name (имя сервера):&nbsp; SQL*Net V.1.x:&nbsp; Protocol (протокол) : Servername (имя сервера) : Database SID&nbsp;&nbsp;</p>
 
 <p>---&gt; например:&nbsp; T:222.122.22.32:DEMO</p>
 

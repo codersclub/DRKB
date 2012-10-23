@@ -24,7 +24,7 @@ IsSQLBased }
 end;
 </pre>
 
-<p>OAmiry/Borland </p>
+<div class="author">Автор: OAmiry (Borland)</div>
 <p>Взято из Советов по Delphi от <a href="mailto:mailto:webmaster@webinspector.com" target="_blank">Валентина Озерова</a></p>
 <p>Сборник Kuliba</p>
 

@@ -1,8 +1,8 @@
 <h1>Синхронизация TTabSet c TListBox</h1>
 <div class="date">01.01.2007</div>
 
-Что-то аналогичное я делал раньше, тем не менее, вместо Listbox я использовал dbGrid со следующими опциями: </p>
-<p>[dgAlwaysShowEditor,dgTabs,dgRowSelect,dgAlwaysShowSelection,dgConfirmDelete, dgCancelOnExit] </p>
+Что-то аналогичное я делал раньше, тем не менее, вместо Listbox я использовал dbGrid со следующими опциями:</p>
+<p>[dgAlwaysShowEditor,dgTabs,dgRowSelect,dgAlwaysShowSelection,dgConfirmDelete, dgCancelOnExit]</p>
 <p>Кроме того, я привел код, который я использовал в ответ на щелчок на закладке, таким образом изменяя запись в dbgrid.</p>
 <pre>procedure TForm1.TabSet1Change(Sender: TObject; NewTab: Integer;
   var AllowChange: Boolean);

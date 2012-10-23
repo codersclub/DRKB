@@ -4,7 +4,7 @@
 
 <p>Вот на что наткнулся в одном из ФАКов:</p>
 <p>Вариант1:</p>
-<p>From : Sergey Gazimagomedov 2:453/11.13 </p>
+<p>From : Sergey Gazimagomedov 2:453/11.13</p>
 <p>Мне нужен был МАС адpес, так я его получал, пользуясь NetBIOS.</p>
 <p>Добавляешь имя NetBIOS и посылаешь на имя станции, нужной для опpеделения(можно</p>
 <p>и своей) датагpамный пакет с заполненным NCB.</p>
@@ -35,7 +35,7 @@ return(SNcb.ncb_cmd_cplt);
 <p>необходим.</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <p>Вариант2:</p>
-<p>From : Alexey Grachyov </p>
+<p>From : Alexey Grachyov</p>
 <pre>
 void main()
 {
@@ -124,7 +124,7 @@ Adapter.adapt.adapter_address[5] );
 <div class="author">Автор: Daniel Wischnewski</div>
 <p>Для того, чтобы этот код работал, необходимо включить в проект юнит NB30. Простой вызов функции GetMACAddress возвращает адрес первого установленного сетевого адаптера.</p>
 <p>Совместимость: Delphi 3.x (или выше)</p>
-<p>Данный пример был составлен на основе статьи на сайте&nbsp; Borland: </p>
+<p>Данный пример был составлен на основе статьи на сайте&nbsp; Borland:</p>
 <p><a href="https://community.borland.com/article/0,1410,26040,00.html " target="_blank">https://community.borland.com/article/0,1410,26040,00.html </a></p>
 <pre>
 uses 

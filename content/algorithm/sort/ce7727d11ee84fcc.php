@@ -16,24 +16,24 @@
 <p>Рассмотрим оценку количества операций подробнее.<br>
 <p>Всего выполняется n шагов, каждый из которых состоит в выборе наибольшего элемента из последовательности a[0]..a[i] и последующем обмене. Выбор происходит последовательным перебором элементов последовательности, поэтому необходимое на него время: O(n). Итак, n шагов по O(n) каждый - это O(n2).</p>
 <p>Произведем усовершенствование: построим структуру данных, позволяющую выбирать максимальный элемент последовательности не за O(n), а за O(logn) времени. Тогда общее быстродействие сортировки будет n*O(logn) = O(n log n).</p>
-<p>Эта структура также должна позволять быстро вставлять новые элементы (чтобы быстро ее построить из исходного массива) и удалять максимальный элемент (он будет помещаться в уже отсортированную часть массива - его правый конец). </p>
+<p>Эта структура также должна позволять быстро вставлять новые элементы (чтобы быстро ее построить из исходного массива) и удалять максимальный элемент (он будет помещаться в уже отсортированную часть массива - его правый конец).</p>
 <p>Итак, назовем пирамидой(Heap) бинарное дерево высоты k, в котором</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>все узлы имеют глубину k или k-1 - дерево сбалансированное. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>при этом уровень k-1 полностью заполнен, а уровень k заполнен слева направо, т.е форма пирамиды имеет приблизительно такой вид:<br>
-<img src="/pic/clip0147.gif" width="94" height="84" border="0" alt="clip0147"></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>выполняется "свойство пирамиды": каждый элемент меньше, либо равен родителю. </td></tr></table></div><p>Как хранить пирамиду? Наименее хлопотно - поместить ее в массив.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>все узлы имеют глубину k или k-1 - дерево сбалансированное.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при этом уровень k-1 полностью заполнен, а уровень k заполнен слева направо, т.е форма пирамиды имеет приблизительно такой вид:<br>
+<img src="/pic/clip0147.gif" width="94" height="84" border="0" alt="clip0147"></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>выполняется "свойство пирамиды": каждый элемент меньше, либо равен родителю.</td></tr></table></div><p>Как хранить пирамиду? Наименее хлопотно - поместить ее в массив.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p><img src="/pic/clip0148.gif" width="282" height="209" border="0" alt="clip0148"></p>
+<tr>
+<td><p><img src="/pic/clip0148.gif" width="282" height="209" border="0" alt="clip0148"></p>
 </td>
-<td ><p>Соответствие между геометрической структурой пирамиды как дерева и массивом устанавливается по следующей схеме:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>в a[0] хранится корень дерева </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>левый и правый сыновья элемента a[i] хранятся, соответственнно, в a[2i+1] и a[2i+2] </p>
+<td><p>Соответствие между геометрической структурой пирамиды как дерева и массивом устанавливается по следующей схеме:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>в a[0] хранится корень дерева</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>левый и правый сыновья элемента a[i] хранятся, соответственнно, в a[2i+1] и a[2i+2]</p>
 </td></tr></table></div></td>
 </tr>
 </table>
 
 <p>Таким образом, для массива, хранящего в себе пирамиду, выполняется следующее характеристическое свойство: a[i] &gt;= a[2i+1] и a[i] &gt;= a[2i+2].</p>
-<p>Плюсы такого хранения пирамиды очевидны: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>никаких дополнительных переменных, нужно лишь понимать схему. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>узлы хранятся от вершины и далее вниз, уровень за уровнем. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>узлы одного уровня хранятся в массиве слева направо. </td></tr></table></div><p>Запишем в виде массива пирамиду, изображенную выше.. Слева-направо, сверху-вниз: 94 67 18 44 55 12 06 42. На рисунке место элемента пирамиды в массиве обозначено цифрой справа-вверху от него.</p>
-<p>Восстановить пирамиду из массива как геометрический объект легко - достаточно вспомнить схему хранения и нарисовать, начиная от корня. </p>
+<p>Плюсы такого хранения пирамиды очевидны:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>никаких дополнительных переменных, нужно лишь понимать схему.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>узлы хранятся от вершины и далее вниз, уровень за уровнем.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>узлы одного уровня хранятся в массиве слева направо.</td></tr></table></div><p>Запишем в виде массива пирамиду, изображенную выше.. Слева-направо, сверху-вниз: 94 67 18 44 55 12 06 42. На рисунке место элемента пирамиды в массиве обозначено цифрой справа-вверху от него.</p>
+<p>Восстановить пирамиду из массива как геометрический объект легко - достаточно вспомнить схему хранения и нарисовать, начиная от корня.</p>
 <p>&nbsp;<br>
 Фаза 1 сортировки: построение пирамиды <img src="/pic/embim1833.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1834.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
@@ -43,7 +43,7 @@
 <p>Следует заметить, что неправильно говорить о том, что a[k]..a[n] является пирамидой как самостоятельный массив. Это, вообще говоря, не верно: его элементы могут быть любыми. Свойство пирамиды сохраняется лишь в рамках исходного, основного массива a[0]...a[n].</p>
 <p>Далее будем расширять часть массива, обладающую столь полезным свойством, добавляя по одному элементу за шаг. Следующий элемент на каждом шаге добавления - тот, который стоит перед уже готовой частью.</p>
 <p>Чтобы при добавлении элемента сохранялась пирамидальность, будем использовать следующую процедуру расширения пирамиды a[i+1]..a[n] на элемент a[i] влево:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Смотрим на сыновей слева и справа - в массиве это a[2i+1] и a[2i+2] и выбираем наибольшего из них. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Если этот элемент больше a[i] - меняем его с a[i] местами и идем к шагу 2, имея в виду новое положение a[i] в массиве. Иначе конец процедуры. </td></tr></table></div><p>Новый элемент "просеивается" сквозь пирамиду. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Смотрим на сыновей слева и справа - в массиве это a[2i+1] и a[2i+2] и выбираем наибольшего из них.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Если этот элемент больше a[i] - меняем его с a[i] местами и идем к шагу 2, имея в виду новое положение a[i] в массиве. Иначе конец процедуры.</td></tr></table></div><p>Новый элемент "просеивается" сквозь пирамиду.</p>
 <pre>
 template&lt;class T&gt;
 void downHeap(T a[], long k, long n) {
@@ -67,17 +67,17 @@ void downHeap(T a[], long k, long n) {
   a[k] = new_elem;
 }
 </pre>
-<p>Учитывая, что высота пирамиды h &lt;= log n, downheap требует O(log n) времени. Полный код процедуры построения пирамиды будет иметь вид: </p>
+<p>Учитывая, что высота пирамиды h &lt;= log n, downheap требует O(log n) времени. Полный код процедуры построения пирамиды будет иметь вид:</p>
 <p>// вызвать downheap O(n) раз для преобразования массива в пирамиду целиком</p>
 <p>for(i=size/2; i &gt;= 0; i--) downHeap(a, i, size-1);</p>
 <p>Ниже дана иллюстрация процесса для пирамиды из 8-и элементов:</p>
 <p> &nbsp; 44&nbsp; 55&nbsp; 12&nbsp; 42&nbsp; //&nbsp; 94&nbsp; 18&nbsp; 06&nbsp; 67&nbsp;&nbsp;&nbsp; Справа - часть массива, удовлетворяющая</p>
 <p> &nbsp; 44&nbsp; 55&nbsp; 12&nbsp; //&nbsp; 67&nbsp; 94&nbsp; 18&nbsp; 06&nbsp; 42&nbsp;&nbsp;&nbsp; свойству пирамиды,</p>
-<p> &nbsp; 44&nbsp; 55&nbsp; //&nbsp; 18&nbsp; 67&nbsp; 94&nbsp; 12&nbsp; 06&nbsp; 42&nbsp; </p>
+<p> &nbsp; 44&nbsp; 55&nbsp; //&nbsp; 18&nbsp; 67&nbsp; 94&nbsp; 12&nbsp; 06&nbsp; 42&nbsp;</p>
 <p> &nbsp; 44&nbsp; //&nbsp; 94&nbsp; 18&nbsp; 67&nbsp; 55&nbsp; 12&nbsp; 06&nbsp; 42&nbsp;&nbsp;&nbsp; остальные элементы добавляются</p>
-<p> &nbsp; //&nbsp; 94&nbsp; 67&nbsp; 18&nbsp; 44&nbsp; 55&nbsp; 12&nbsp; 06&nbsp; 42&nbsp;&nbsp;&nbsp; один за другим, справа налево.&nbsp;&nbsp;&nbsp; </p>
+<p> &nbsp; //&nbsp; 94&nbsp; 67&nbsp; 18&nbsp; 44&nbsp; 55&nbsp; 12&nbsp; 06&nbsp; 42&nbsp;&nbsp;&nbsp; один за другим, справа налево.&nbsp;&nbsp;&nbsp;</p>
 <p>В геометрической интерпретации ключи из начального отрезка a[size/2]...a[n] является листьями в бинарном дереве, как изображено ниже. Один за другим остальные элементы продвигаются на свои места, и так - пока не будет построена вся пирамида.</p>
-<p>На рисунках ниже изображен процесс построения. Неготовая часть пирамиды (начало массива) окрашена в белый цвет, удовлетворяющий свойству пирамиды конец массива - в темный. </p>
+<p>На рисунках ниже изображен процесс построения. Неготовая часть пирамиды (начало массива) окрашена в белый цвет, удовлетворяющий свойству пирамиды конец массива - в темный.</p>
 <img src="/pic/clip0149.gif" width="626" height="458" border="0" alt="clip0149"><br>
 <img src="/pic/clip0150.gif" width="339" height="216" border="0" alt="clip0150"></p>
 &nbsp;</p>
@@ -86,17 +86,17 @@ void downHeap(T a[], long k, long n) {
 <img src="/pic/embim1836.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 &nbsp;<br>
 <p>&nbsp;</p>
-<p>Итак, задача построения пирамиды из массива успешно решена. Как видно из свойств пирамиды, в корне всегда находится максимальный элемент. Отсюда вытекает алгоритм фазы 2: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Берем верхний элемент пирамиды a[0]...a[n] (первый в массиве) и меняем с последним местами. Теперь "забываем" об этом элементе и далее рассматриваем массив a[0]...a[n-1]. Для превращения его в пирамиду достаточно просеять лишь новый первый элемент. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>Повторяем шаг 1, пока обрабатываемая часть массива не уменьшится до одного элемента. </td></tr></table></div><img src="/pic/clip0151.gif" width="561" height="494" border="0" alt="clip0151"></p>
+<p>Итак, задача построения пирамиды из массива успешно решена. Как видно из свойств пирамиды, в корне всегда находится максимальный элемент. Отсюда вытекает алгоритм фазы 2:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Берем верхний элемент пирамиды a[0]...a[n] (первый в массиве) и меняем с последним местами. Теперь "забываем" об этом элементе и далее рассматриваем массив a[0]...a[n-1]. Для превращения его в пирамиду достаточно просеять лишь новый первый элемент.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Повторяем шаг 1, пока обрабатываемая часть массива не уменьшится до одного элемента.</td></tr></table></div><img src="/pic/clip0151.gif" width="561" height="494" border="0" alt="clip0151"></p>
 <p>Очевидно, в конец массива каждый раз попадает максимальный элемент из текущей пирамиды, поэтому в правой части постепенно возникает упорядоченная последовательность.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94&nbsp; 67&nbsp; 18&nbsp; 44&nbsp; 55&nbsp; 12&nbsp; 06&nbsp; 42&nbsp; //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; иллюстрация 2-й фазы сортировки </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 94&nbsp; 67&nbsp; 18&nbsp; 44&nbsp; 55&nbsp; 12&nbsp; 06&nbsp; 42&nbsp; //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; иллюстрация 2-й фазы сортировки</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 67&nbsp; 55&nbsp; 44&nbsp; 06&nbsp; 42&nbsp; 18&nbsp; 12&nbsp; //&nbsp; 94&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; во внутреннем представлении пирамиды</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 55&nbsp; 42&nbsp; 44&nbsp; 06&nbsp; 12&nbsp; 18&nbsp; //&nbsp; 67&nbsp; 94 </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 44&nbsp; 42&nbsp; 18&nbsp; 06&nbsp; 12&nbsp; //&nbsp; 55&nbsp; 67&nbsp; 94 </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 42&nbsp; 12&nbsp; 18&nbsp; 06&nbsp; //&nbsp; 44&nbsp; 55&nbsp; 67&nbsp; 94 </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp; 12&nbsp; 06&nbsp; //&nbsp; 42&nbsp; 44&nbsp; 55&nbsp; 67&nbsp; 94 </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp; 06&nbsp; //&nbsp; 18&nbsp; 42&nbsp; 44&nbsp; 55&nbsp; 67&nbsp; 94 </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 06&nbsp; //&nbsp; 12&nbsp; 18&nbsp; 42&nbsp; 44&nbsp; 55&nbsp; 67&nbsp; 94 </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 55&nbsp; 42&nbsp; 44&nbsp; 06&nbsp; 12&nbsp; 18&nbsp; //&nbsp; 67&nbsp; 94</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 44&nbsp; 42&nbsp; 18&nbsp; 06&nbsp; 12&nbsp; //&nbsp; 55&nbsp; 67&nbsp; 94</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 42&nbsp; 12&nbsp; 18&nbsp; 06&nbsp; //&nbsp; 44&nbsp; 55&nbsp; 67&nbsp; 94</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp; 12&nbsp; 06&nbsp; //&nbsp; 42&nbsp; 44&nbsp; 55&nbsp; 67&nbsp; 94</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp; 06&nbsp; //&nbsp; 18&nbsp; 42&nbsp; 44&nbsp; 55&nbsp; 67&nbsp; 94</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 06&nbsp; //&nbsp; 12&nbsp; 18&nbsp; 42&nbsp; 44&nbsp; 55&nbsp; 67&nbsp; 94</p>
 <p>Код внешней процедуры сортировки:</p>
 <pre>
 template&lt;class T&gt;
@@ -123,6 +123,6 @@ void heapSort(T a[], long size) {
 <p>Вторая фаза занимает O(n log n) времени: O(n) раз берется максимум и происходит просеивание бывшего последнего элемента. Плюсом является стабильность метода: среднее число пересылок (n log n)/2, и отклонения от этого значения сравнительно малы.</p>
 <p>Пирамидальная сортировка не использует дополнительной памяти.</p>
 <p>Метод не является устойчивым: по ходу работы массив так "перетряхивается", что исходный порядок элементов может измениться случайным образом.</p>
-<p>Поведение неестественно: частичная упорядоченность массива никак не учитывается. </p>
+<p>Поведение неестественно: частичная упорядоченность массива никак не учитывается.</p>
 
 <p><a href="https://algolist.manual.ru" target="_blank">https://algolist.manual.ru</a></p>

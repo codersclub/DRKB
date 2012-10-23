@@ -1,7 +1,7 @@
 <h1>Получить язык MS Word</h1>
 <div class="date">01.01.2007</div>
 
-How can I read the default language of installed MS Word application? </p>
+How can I read the default language of installed MS Word application?</p>
 <pre>
 // You may initialize Word.Application instance and read a CountryID: 
  

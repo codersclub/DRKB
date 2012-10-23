@@ -4,6 +4,6 @@
 
 <p>Командной строкой:</p>
 
-<p>Delphi32.EXE -ns </p>
+<p>Delphi32.EXE -ns</p>
 
 <p>Взято с сайта <a href="https://www.delphifaq.com" target="_blank">https://www.delphifaq.com</a></p>

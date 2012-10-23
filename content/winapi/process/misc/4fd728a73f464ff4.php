@@ -8,12 +8,12 @@
 Функции синхронизации</p>
 <p>Функции синхронизации делятся на две основные категории &#8211; это функции, ожидающие единственного объекта и функции, ожидающие одного из нескольких объектов</p>
 Функции, ожидающие единственного объекта</p>
-<p>Простейшей функцией ожидания является </p>
+<p>Простейшей функцией ожидания является</p>
 <p>function WaitForSingleObject(</p>
 <p>  hHandle: THandle;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // идентификатор объекта</p>
 <p>  dwMilliseconds: DWORD&nbsp;&nbsp; // период ожидания</p>
 <p>): DWORD; stdcall;</p>
-<p>Функция ожидает перехода объекта hHandle в сигнальное состояние в течении dwMilliseconds миллисекунд. Если в качестве параметра dwMilliseconds передать значение INFINITE, функция будет ждать в течение неограниченного времени. Если dwMilliseconds равен 0, то функция проверяет состояние объекта и немедленно возвращает управление. </p>
+<p>Функция ожидает перехода объекта hHandle в сигнальное состояние в течении dwMilliseconds миллисекунд. Если в качестве параметра dwMilliseconds передать значение INFINITE, функция будет ждать в течение неограниченного времени. Если dwMilliseconds равен 0, то функция проверяет состояние объекта и немедленно возвращает управление.</p>
 <p>Функция возвращает одно из следующих значений:</p>
 <p>WAIT_ABANDONED &nbsp; &nbsp; &nbsp; &nbsp;Поток, владевший объектом, завершился, не переведя объект в сигнальное состояние. &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>WAIT_OBJECT_0 &nbsp; &nbsp; &nbsp; &nbsp;Объект перешел в сигнальное состояние &nbsp; &nbsp; &nbsp; &nbsp;</p>
@@ -44,15 +44,15 @@ end;
 <p>В случае, когда требуется одновременно с ожиданием объекта, перевести в сигнальное состояние другой объект может использоваться функция:</p>
 <p>function SignalObjectAndWait(</p>
 <p>  hObjectToSignal: THandle;&nbsp; // объект, который будет переведен в</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // сигнальное состояние </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // сигнальное состояние</p>
 <p>  hObjectToWaitOn: THandle;&nbsp; // объект, которого ожидает функция</p>
 <p>  dwMilliseconds: DWORD;&nbsp;&nbsp;&nbsp;&nbsp; // период ожидания</p>
 <p>  bAlertable: BOOL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // задает, должна ли функция возвращать</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // завершение операции ввода-вывода</p>
 <p>): DWORD; stdcall;</p>
 <p>Возвращаемые значения аналогичны функции WaitForSingleObject.</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">!</td><td>В модуле Windows.pas эта функция ошибочно объявлена, как возвращающая значение BOOL. Если Вы намерены её использовать &#8211; объявите её корректно или используйте приведение типа возвращенного значения к DWORD</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">!</td><td>В модуле Windows.pas эта функция ошибочно объявлена, как возвращающая значение BOOL. Если Вы намерены её использовать &#8211; объявите её корректно или используйте приведение типа возвращенного значения к DWORD</td></tr></table>
 <p>Объект hObjectToSignal может быть семафором, событием (event), либо мутексом. Параметр bAlertable определяет, будет ли прерываться ожидание объекта, в случае, если операционная система запросит у потока окончание операции асинхронного ввода-вывода, либо асинхронный вызов процедуры. Более подробно это обсуждается ниже.</p>
 &nbsp;</p>
 Функции, ожидающие нескольких объектов</p>
@@ -72,7 +72,7 @@ end;
 <p>Число в диапазоне от WAIT_ABANDONED_0 до WAIT_ABANDONED_0 + nCount &#8211; 1 &nbsp; &nbsp; &nbsp; &nbsp;Если bWaitAll равно TRUE &#8211; это означает, что все перешли в сигнальное состояние, но хотя бы один из владевших ими потоков завершился, не сделав объект сигнальным. Если FALSE &#8211; то, вычтя из возвращенного значения WAIT_ABANDONED_0,&nbsp; мы получим индекс объекта в массиве lpHandles, поток, владевший которым, завершился, не сделав его сигнальным. &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>WAIT_TIMEOUT &nbsp; &nbsp; &nbsp; &nbsp;Истек период ожидания &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>WAIT_FAILED &nbsp; &nbsp; &nbsp; &nbsp;Произошла ошибка &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Например, в следующем фрагменте кода программа пытается модифицировать два различных ресурса, разделяемых между потоками. </p>
+<p>Например, в следующем фрагменте кода программа пытается модифицировать два различных ресурса, разделяемых между потоками.</p>
 <pre>
 var
   Handles: array[0..1] of THandle;
@@ -167,14 +167,14 @@ end;
 <p>function SleepEx(</p>
 <p>  dwMilliseconds: DWORD;&nbsp;&nbsp; // Период ожидания</p>
 <p>  bAlertable: BOOL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // задает, длжна ли функция возвращать</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // асинхронный вызов процедуры</p>
 <p>): DWORD; stdcall;</p>
 <p>function WaitForSingleObjectEx(</p>
 <p>  hHandle: THandle;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Идентификатор объекта</p>
 <p>  dwMilliseconds: DWORD; // Период ожидания</p>
 <p>  bAlertable: BOOL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // задает, длжна ли функция возвращать</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // асинхронный вызов процедуры</p>
 <p>): DWORD; stdcall;</p>
 <p>function WaitForMultipleObjectsEx(</p>
@@ -184,16 +184,16 @@ end;
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // объектов или любого</p>
 <p>  dwMilliseconds: DWORD;&nbsp;&nbsp;&nbsp; // Период ожидания</p>
 <p>  bAlertable: BOOL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // задает, должна ли функция возвращать</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // асинхронный вызов процедуры</p>
 <p>): DWORD; stdcall;</p>
 <p>function SignalObjectAndWait(</p>
 <p>  hObjectToSignal: THandle;&nbsp; // объект, который будет переведен в</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // сигнальное состояние </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // сигнальное состояние</p>
 <p>  hObjectToWaitOn: THandle;&nbsp; // объект, которого ожидает функция</p>
 <p>  dwMilliseconds: DWORD;&nbsp;&nbsp;&nbsp;&nbsp; // период ожидания</p>
 <p>  bAlertable: BOOL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // задает, должна ли функция возвращать</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // управление в случае запроса на</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // асинхронный вызов процедуры</p>
 <p>): DWORD; stdcall;</p>
 <p>function MsgWaitForMultipleObjectsEx(</p>
@@ -218,25 +218,25 @@ end;
 <p>function CreateEvent(</p>
 <p>  lpEventAttributes: PSecurityAttributes;&nbsp; // Адрес структуры</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // TSecurityAttributes</p>
-<p> &nbsp; bManualReset,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Задает, будет Event переключаемым </p>
+<p> &nbsp; bManualReset,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Задает, будет Event переключаемым</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // вручную (TRUE) или автоматически (FALSE)</p>
-<p> &nbsp; bInitialState: BOOL;&nbsp; // Задает начальное состояние. Если TRUE - </p>
+<p> &nbsp; bInitialState: BOOL;&nbsp; // Задает начальное состояние. Если TRUE -</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // объект в сигнальном состоянии</p>
 <p> &nbsp; lpName: PChar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Имя или NIL, если имя не требуется</p>
 <p>): THandle; stdcall;&nbsp;&nbsp;&nbsp;&nbsp; // Возвращает идентификатор созданного</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // объекта</p>
 <p>Структура TSecurityAttributes описана, как:</p>
 <p>TSecurityAttributes = record</p>
-<p>  nLength: DWORD;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Размер структуры, должен </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // инициализироваться как </p>
+<p>  nLength: DWORD;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Размер структуры, должен</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // инициализироваться как</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // SizeOf(TSecurityAttributes)</p>
-<p>  lpSecurityDescriptor: Pointer; // Адрес дескриптора защиты. В </p>
+<p>  lpSecurityDescriptor: Pointer; // Адрес дескриптора защиты. В</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Windows 95 и 98 игнорируется</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Обычно можно указывать NIL</p>
-<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Задает, могут ли дочерние </p>
+<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Задает, могут ли дочерние</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // процессы наследовать объект</p>
 <p>end;</p>
-<p>Если не требуется задание особых прав доступа под Windows NT или возможности наследования объекта дочерними процессами, в качестве параметра lpEventAttributes можно передавать NIL. В этом случае объект не может наследоваться дочерними процессами и ему задается дескриптор защиты «по умолчанию». </p>
+<p>Если не требуется задание особых прав доступа под Windows NT или возможности наследования объекта дочерними процессами, в качестве параметра lpEventAttributes можно передавать NIL. В этом случае объект не может наследоваться дочерними процессами и ему задается дескриптор защиты «по умолчанию».</p>
 <p>Параметр lpName позволяет разделять объекты между процессами. Если lpName совпадает с именем уже существующего объекта типа Event, созданного текущим или любым другим процессом, функция не создает нового объекта, а возвращает идентификатор уже существующего. При этом игнорируются параметры bManualReset, bInitialState и lpSecurityDescriptor. Проверить, был объект создан, или используется уже существующий можно следующим образом:</p>
 <p>hEvent := CreateEvent(NIL, TRUE, FALSE, 'EventName');</p>
 <p>if hEvent = 0 then</p>
@@ -249,7 +249,7 @@ end;
 <p>Если известно, что Event уже создан, для получения доступа к нему можно вместо CreateEvent воспользоваться функцией:</p>
 <p>function OpenEvent(</p>
 <p>  dwDesiredAccess: DWORD;&nbsp; // Задает права доступа к объекту</p>
-<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp; // Задает, может ли объект наследоваться </p>
+<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp; // Задает, может ли объект наследоваться</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // дочерними процессами</p>
 <p>  lpName: PChar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Имя объекта</p>
 <p>): THandle; stdcall;</p>
@@ -329,7 +329,7 @@ end;
 <p>Mutex (Mutually Exclusive)</p>
 <p>Мутекс &#8211; это объект синхронизации, который находится в сигнальном состоянии только тогда, когда он не принадлежит ни одному из процессов. Как только хотя бы один процесс запрашивает владение мутексом, он переходит в несигнальное состояние и остается в нем до тех пор, пока не будет освобожден владельцем. Такое поведение позволяет использовать мутексы для синхронизации совместного доступа нескольких процессов к разделяемому ресурсу. Для создания мутекса используется функция:</p>
 <p>function CreateMutex(</p>
-<p>  lpMutexAttributes: PSecurityAttributes;&nbsp; // Адрес структуры </p>
+<p>  lpMutexAttributes: PSecurityAttributes;&nbsp; // Адрес структуры</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // TSecurityAttributes</p>
 <p>  bInitialOwner: BOOL;&nbsp; // Задает, будет ли процесс владеть</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // мутексом сразу после создания</p>
@@ -340,7 +340,7 @@ end;
 <p>Если мутекс уже существует, приложение может получить его идентификатор функцией</p>
 <p>function OpenMutex(</p>
 <p>  dwDesiredAccess: DWORD;&nbsp; // Задает права доступа к объекту</p>
-<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp; // Задает, может ли объект наследоваться </p>
+<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp; // Задает, может ли объект наследоваться</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // дочерними процессами</p>
 <p>  lpName: PChar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Имя объекта</p>
 <p>): THandle; stdcall;</p>
@@ -384,18 +384,18 @@ CloseHandle(Mutex);
 <p>Семафор представляет собой счетчик, содержащий целое число в диапазоне от 0 до заданной при его создании максимальной величины. Счетчик уменьшается каждый раз, когда поток успешно завершает функцию ожидания, использующую семафор и увеличивается вызовом функции ReleaseSemaphore. При достижении семафором значения 0 он переходит в несигнальное состояние, при любых других значениях счетчика &#8211; его состояние сигнальное. Такое поведение позволяет использовать семафор в качестве ограничителя доступа к ресурсу, поддерживающему заранее заданное количество подключений.</p>
 <p>Для создания семафора служит функция:</p>
 <p>function CreateSemaphore(</p>
-<p>  lpSemaphoreAttributes: PSecurityAttributes; // Адрес структуры </p>
+<p>  lpSemaphoreAttributes: PSecurityAttributes; // Адрес структуры</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // TSecurityAttributes</p>
 <p>  lInitialCount,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Начальное значение счетчика</p>
 <p>  lMaximumCount: Longint;&nbsp; // Максимальное значение счетчика</p>
 <p>  lpName: PChar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Имя объекта</p>
 <p>): THandle; stdcall;</p>
-<p>Функция возвращает идентификатор созданного семафора, либо 0, если создать объект не удалось. </p>
+<p>Функция возвращает идентификатор созданного семафора, либо 0, если создать объект не удалось.</p>
 <p>Параметр lMaximumCount задает максимальное значение счетчика семафора, lInitialCount задает начальное значение счетчика и должен быть в диапазоне от 0 до lMaximumCount. lpName задает имя семафора. Если в системе уже есть семафор с таким именем, то новый не создается, а возвращается идентификатор существующего семафора. В случае если семафор используется внутри одного процесса, можно создать его без имени, передав в качестве lpName значение NIL. Имя семафора не должно совпадать с именем уже существующего объекта типов event, mutex, waitable timer, job, или file-mapping.</p>
 <p>Идентификатор ранее созданного семафора может быть, также, получен функцией:</p>
 <p>function OpenSemaphore(</p>
 <p>  dwDesiredAccess: DWORD;&nbsp; // Задает права доступа к объекту</p>
-<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp; // Задает, может ли объект наследоваться </p>
+<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp; // Задает, может ли объект наследоваться</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // дочерними процессами</p>
 <p>  lpName: PChar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Имя объекта</p>
 <p>): THandle; stdcall;</p>
@@ -407,7 +407,7 @@ CloseHandle(Mutex);
 <p>function ReleaseSemaphore(</p>
 <p>  hSemaphore: THandle;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Идентификатор семафора</p>
 <p>  lReleaseCount: Longint;&nbsp;&nbsp; // Счетчик будет увеличен на эту величину</p>
-<p>  lpPreviousCount: Pointer&nbsp; // Адрес 32-битной переменной, </p>
+<p>  lpPreviousCount: Pointer&nbsp; // Адрес 32-битной переменной,</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // принимающей предыдущее значение</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // счетчика</p>
 <p>): BOOL; stdcall;</p>
@@ -467,19 +467,19 @@ end;
 <p>Таймер ожидания отсутствует в Windows 95 и для его использования необходима Windows 98 или Windows NT 4.0 и выше.</p>
 <p>Таймер ожидания переходит в сигнальное состояние по завершении заданного интервала времени. Для его создания используется функция:</p>
 <p>function CreateWaitableTimer(</p>
-<p>  lpTimerAttributes: PSecurityAttributes;&nbsp;&nbsp;&nbsp;&nbsp; // Адрес структуры </p>
+<p>  lpTimerAttributes: PSecurityAttributes;&nbsp;&nbsp;&nbsp;&nbsp; // Адрес структуры</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // TSecurityAttributes</p>
-<p>  bManualReset: BOOL;&nbsp; // Задает, будет ли таймер переходить в </p>
+<p>  bManualReset: BOOL;&nbsp; // Задает, будет ли таймер переходить в</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // сигнальное состояние по завершении функции</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ожидания</p>
 <p>  lpTimerName: PChar&nbsp;&nbsp; // Имя объекта</p>
-<p>): THandle; stdcall; </p>
-<p>Если параметр bManualReset равен TRUE, то таймер после срабатывания функции ожидания остается в сигнальном состоянии до явного вызова SetWaitableTimer, если FALSE - таймер автоматически переходит в несигнальное состояние. </p>
+<p>): THandle; stdcall;</p>
+<p>Если параметр bManualReset равен TRUE, то таймер после срабатывания функции ожидания остается в сигнальном состоянии до явного вызова SetWaitableTimer, если FALSE - таймер автоматически переходит в несигнальное состояние.</p>
 <p>Если lpTimerName совпадает с именем уже существующего в системе таймера &#8211; функция возвращает его идентификатор, позволяя использовать объект для синхронизации между процессами. Имя таймера не должно совпадать с именем уже существующих объектов типов event, semaphore, mutex, job или file-mapping.</p>
 <p>Идентификатор уже существующего таймера можно получить функцией:</p>
 <p>function OpenWaitableTimer(</p>
 <p>  dwDesiredAccess: DWORD;&nbsp; // Задает права доступа к объекту</p>
-<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp; // Задает, может ли объект наследоваться </p>
+<p>  bInheritHandle: BOOL;&nbsp;&nbsp;&nbsp; // Задает, может ли объект наследоваться</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // дочерними процессами</p>
 <p>  lpTimerName: PChar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Имя объекта</p>
 <p>): THandle; stdcall;</p>
@@ -487,14 +487,14 @@ end;
 <p>TIMER_ALL_ACCESS &nbsp; &nbsp; &nbsp; &nbsp;Разрешает полный доступ к объекту &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>TIMER_MODIFY_STATE &nbsp; &nbsp; &nbsp; &nbsp;Разрешает изменять состояние таймера функциями SetWaitableTimer и CancelWaitableTimer &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>SYNCHRONIZE &nbsp; &nbsp; &nbsp; &nbsp;Только Windows NT &#8211; разрешает использовать таймер в функциях ожидания &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>После получения идентификатора таймера, поток может задать время его срабатывания функцией </p>
+<p>После получения идентификатора таймера, поток может задать время его срабатывания функцией</p>
 <p>function SetWaitableTimer(</p>
 <p>  hTimer: THandle;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Идентификатор таймера</p>
 <p>  const lpDueTime: TLargeInteger;&nbsp;&nbsp; // Время срабатывания</p>
 <p>  lPeriod: Longint;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Период повторения срабатывания</p>
 <p>  pfnCompletionRoutine: TFNTimerAPCRoutine;&nbsp; // Процедура-обработчик</p>
 <p>  lpArgToCompletionRoutine: Pointer;// Параметр процедуры-обработчика</p>
-<p>  fResume: BOOL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Задает, будет ли операционная </p>
+<p>  fResume: BOOL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Задает, будет ли операционная</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // система «пробуждаться»</p>
 <p>): BOOL; stdcall;</p>
 <p>Рассмотрим параметры подробнее.</p>
@@ -510,7 +510,7 @@ end;
 <p>  dwTimerHighValue: DWORD;&nbsp; // старшие 32 разряда значения таймера</p>
 <p>); stdcall;</p>
 <p>Эта функция вызывается, когда срабатывает таймер, если поток, ожидающий его срабатывания, использует функцию ожидания, поддерживающую асинхронный вызов процедур. В функцию передаются 3 параметра:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>lpArgToCompletionRoutine &#8211; значение, переданное в качестве одноименного параметра в функцию SetWaitableTimer. Приложение может использовать его для передачи в процедуру обработки адреса блока данных, необходимых для её работы</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>dwTimerLowValue и dwTimerHighValue &#8211; соответственно члены dwLowDateTime и dwHighDateTime структуры TFileTime. Они описывают время срабатывания таймера. Время задается в UTC формате (по Гринвичу).</td></tr></table></div><p>Если дополнительная функция обработки не нужна, в качестве этого параметра можно передать NIL.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>lpArgToCompletionRoutine &#8211; значение, переданное в качестве одноименного параметра в функцию SetWaitableTimer. Приложение может использовать его для передачи в процедуру обработки адреса блока данных, необходимых для её работы</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>dwTimerLowValue и dwTimerHighValue &#8211; соответственно члены dwLowDateTime и dwHighDateTime структуры TFileTime. Они описывают время срабатывания таймера. Время задается в UTC формате (по Гринвичу).</td></tr></table></div><p>Если дополнительная функция обработки не нужна, в качестве этого параметра можно передать NIL.</p>
 <p>lpArgToCompletionRoutine</p>
 <p>Это значение передается в функцию pfnCompletionRoutine при её вызове.</p>
 <p>fResume</p>
@@ -598,9 +598,9 @@ end;
 <p>Сообщение об изменении папки (change notification)</p>
 <p>Windows позволяет организовать слежение за изменениями объектов файловой системы. Для этого служит функция</p>
 <p>function FindFirstChangeNotification(</p>
-<p>  lpPathName: PChar;&nbsp;&nbsp;&nbsp;&nbsp; // Путь к папке, изменения в которой нас </p>
+<p>  lpPathName: PChar;&nbsp;&nbsp;&nbsp;&nbsp; // Путь к папке, изменения в которой нас</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // интересуют</p>
-<p>  bWatchSubtree: BOOL;&nbsp;&nbsp; // Задает необходимость слежения за </p>
+<p>  bWatchSubtree: BOOL;&nbsp;&nbsp; // Задает необходимость слежения за</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // изменениями во вложенных папках</p>
 <p>  dwNotifyFilter: DWORD&nbsp; // Фильтр событий</p>
 <p>): THandle; stdcall;</p>
@@ -762,7 +762,7 @@ end;
 <p>function TryEnterCriticalSection(</p>
 <p>  var lpCriticalSection: TRTLCriticalSection</p>
 <p>): BOOL; stdcall;</p>
-<p>Она проверяет, захвачена секция ли в момент её вызова. Если да &#8211; функция возвращает FALSE, в противном случае &#8211; захватывает секцию и возвращает TRUE. </p>
+<p>Она проверяет, захвачена секция ли в момент её вызова. Если да &#8211; функция возвращает FALSE, в противном случае &#8211; захватывает секцию и возвращает TRUE.</p>
 <p>По завершении работы с критической секцией, она должна быть уничтожена вызовом функции:</p>
 <p>procedure DeleteCriticalSection(</p>
 <p>  var lpCriticalSection: TRTLCriticalSection</p>
@@ -865,7 +865,7 @@ function InterlockedIncrement(
 <p>): Integer; stdcall;</p>
 <p>Функция уменьшает переменную Addend на 1. Возвращаемое значение аналогично функции InterlockedIncrement.</p>
 <p>function InterlockedExchange(</p>
-<p>  var Target: Integer; </p>
+<p>  var Target: Integer;</p>
 <p>  Value: Integer</p>
 <p>): Integer; stdcall;</p>
 <p>Функция записывает в переменную Target значение Value и возвращает предыдущее значение Target</p>
@@ -877,13 +877,13 @@ function InterlockedIncrement(
 <p>): Pointer; stdcall;</p>
 <p>Функция сравнивает значения Destination и Comperand. Если они совпадают, значение Exchange записывается в Destination. Функция возвращает начальное значение Destination.</p>
 <p>function InterlockedExchangeAdd(</p>
-<p>  Addend: PLongint; </p>
+<p>  Addend: PLongint;</p>
 <p>  Value: Longint</p>
 <p>): Longint; stdcall;</p>
 <p>Функция добавляет к переменной, на которую указывает Addend значение Value и возвращает начальное значение Addend.</p>
 Резюме</p>
 <p>Многозадачная и многопоточная среда Win32 предоставляет широкие возможности для написания высокоэффективных приложений. Однако, написание приложений, использующих многопоточность и взаимодействующих друг с другом, при неаккуратном программировании может привести к их неверной работе, неоправданной загрузке и даже блокировке всей системы. Во избежание этого следуйте нижеприведенным рекомендациям:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Если приложения или потоки одного процесса изменяют общий ресурс &#8211; защищайте доступ к нему при помощи критических секций или мутексов.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Если доступ осуществляется только на чтение &#8211; защищать ресурс не обязательно.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Критические секции более эффективны, но применимы только внутри одного процесса, мутексы могут использоваться для синхронизации между процессами.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Используйте семафоры для ограничения количества обращений к одному ресурсу.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Используйте события (event) для информирования потока о наступлении какого-либо события.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Если разделяемый ресурс &#8211; 32-битная переменная &#8211; для синхронизации доступа к нему можно использовать функции, обеспечивающие разделяемый доступ к переменным.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Многие объекты Win32 позволяют организовать эффективное слежение за своим состоянием при помощи функций ожидания. Это наиболее эффективный с точки зрения расхода системных ресурсов метод.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Если Ваш поток создает (даже неявно, при помощи CoInitialize или функций DDE) окна &#8211; он должен обрабатывать сообщения. Не используйте в таком потоке функций не позволяющих прервать ожидание по приходу сообщения с большим или неограниченным периодом ожидания. Используйте функции MsgWaitForXXX</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Если приложения или потоки одного процесса изменяют общий ресурс &#8211; защищайте доступ к нему при помощи критических секций или мутексов.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Если доступ осуществляется только на чтение &#8211; защищать ресурс не обязательно.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Критические секции более эффективны, но применимы только внутри одного процесса, мутексы могут использоваться для синхронизации между процессами.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Используйте семафоры для ограничения количества обращений к одному ресурсу.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Используйте события (event) для информирования потока о наступлении какого-либо события.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Если разделяемый ресурс &#8211; 32-битная переменная &#8211; для синхронизации доступа к нему можно использовать функции, обеспечивающие разделяемый доступ к переменным.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Многие объекты Win32 позволяют организовать эффективное слежение за своим состоянием при помощи функций ожидания. Это наиболее эффективный с точки зрения расхода системных ресурсов метод.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Если Ваш поток создает (даже неявно, при помощи CoInitialize или функций DDE) окна &#8211; он должен обрабатывать сообщения. Не используйте в таком потоке функций не позволяющих прервать ожидание по приходу сообщения с большим или неограниченным периодом ожидания. Используйте функции MsgWaitForXXX</td></tr></table></div>&nbsp;</p>
 <p>Тенцер А. Л.</p>
 <p>ICQ UIN 15925834</p>
 <p>tolik@katren.nsk.ru</p>

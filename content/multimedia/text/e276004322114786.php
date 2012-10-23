@@ -64,10 +64,10 @@ type
  
  
 </pre>
-<p>Полный текст модулей располагается по адресам: </p>
-<p>HtDraw: http://downloads.endimus.com/htdraw.zip </p>
-<p>Dim : http://downloads.endimus.com/dimpas.zip </p>
-<p>Пример использования: </p>
+<p>Полный текст модулей располагается по адресам:</p>
+<p>HtDraw: http://downloads.endimus.com/htdraw.zip</p>
+<p>Dim : http://downloads.endimus.com/dimpas.zip</p>
+<p>Пример использования:</p>
 <pre>var
   HtDraw: THtDraw;
 begin

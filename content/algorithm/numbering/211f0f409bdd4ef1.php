@@ -54,4 +54,4 @@ begin
 end;
 </pre>
 &copy;Drkb::04060<br>
-<div class="author">Автор: s-mike </div>
+<div class="author">Автор: s-mike</div>

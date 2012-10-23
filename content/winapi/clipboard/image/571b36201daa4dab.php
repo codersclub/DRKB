@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Некоторые функции для копирования и вставки Bitmap-объектов через буфер обмена. </p>
+<p>Некоторые функции для копирования и вставки Bitmap-объектов через буфер обмена.</p>
 <pre>
 function CopyClipToBuf(DC: HDC; Left, Top, Width, Height: Integer;  Rop: LongInt; var CopyDC: HDC; var CopyBitmap: HBitmap): Boolean;
 var

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Ваpиант 1. CoolBar. </p>
+<p>Ваpиант 1. CoolBar.</p>
 <pre>
 procedure TMainForm.SetBands(AControls: array of TWinControl;
 ABreaks: array of boolean);
@@ -32,7 +32,7 @@ begin
 end;
 </pre>
 
-<p>и </p>
+<p>и</p>
 <pre>
 procedure TMsgForm.FormActivate(Sender: TObject);
 begin

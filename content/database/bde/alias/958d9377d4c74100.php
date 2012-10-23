@@ -2,8 +2,8 @@
 <div class="date">01.01.2007</div>
 
 
+<div class="author">Автор: Tom Stickle</div>
 
-<div class="author">Автор: Tom Stickle </div>
 <pre>
 var
   pszAliasName: PChar;  { Имя псевдонима }

@@ -3,7 +3,7 @@
 
 
 <div class="author">Автор: M K</div>
-<p>На вопрос "Как я могу отправлять файлы через TClientSocket &amp; TServerSocket?" даём наш ответ :) </p>
+<p>На вопрос "Как я могу отправлять файлы через TClientSocket &amp; TServerSocket?" даём наш ответ :)</p>
 <pre>
 unit Unit1; 
  

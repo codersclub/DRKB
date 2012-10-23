@@ -5,9 +5,9 @@
 
 <p>First of all, get the SDK at http://developer.logitech.comhttp://developer.logitech.com</p>
 
-<p>After installation, open delphi and Import ActiveX Control VPortal2 from the list. Now, create a new form, and put a VideoPortal from the ActiveX panel and a button. In the uses, add VideoPortal </p>
+<p>After installation, open delphi and Import ActiveX Control VPortal2 from the list. Now, create a new form, and put a VideoPortal from the ActiveX panel and a button. In the uses, add VideoPortal</p>
 
-<p>On the OnShow add: </p>
+<p>On the OnShow add:</p>
 <pre>
 VideoPortal1.PrepareControl('QCSDK',
   'HKEY_LOCAL_MACHINE\Software\JCS Programmation\QCSDK', 0);
@@ -16,7 +16,7 @@ VideoPortal1.ConnectCamera2;
 VideoPortal1.EnablePreview := 1;
 </pre>
 
-<p>On the ButtonClick add: </p>
+<p>On the ButtonClick add:</p>
 
 <pre>
 var
@@ -43,9 +43,9 @@ begin
 end;
 </pre>
 
-<p>It's all, run the application, you will see the image from the camera, click on the button to get a picture. </p>
+<p>It's all, run the application, you will see the image from the camera, click on the button to get a picture.</p>
 
-<p>Here is a copy a VideoPortal.Pas (constants). </p>
+<p>Here is a copy a VideoPortal.Pas (constants).</p>
 <pre>
 unit VideoPortal;
  

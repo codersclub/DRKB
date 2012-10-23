@@ -5,19 +5,19 @@
 <img src="/pic/embim1818.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 &nbsp;<br>
 <p>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Алгоритм Евклида<br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Бинарный алгоритм Евклида<br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Алгоритм решения уравнения ax+by = 1</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Расширенный алгоритм Евклида:<br>
-Даны x, y. Находит a, b, v: ax+by = d, где d=НОД(x, y) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Нахождение обратного элемента по модулю<br>
-Обратный элемент для x из Zn - такой a из Zn, что ax = 1(mod n) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>НОК<br>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм Евклида<br>
+&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Бинарный алгоритм Евклида<br>
+&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм решения уравнения ax+by = 1</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Расширенный алгоритм Евклида:<br>
+Даны x, y. Находит a, b, v: ax+by = d, где d=НОД(x, y)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нахождение обратного элемента по модулю<br>
+Обратный элемент для x из Zn - такой a из Zn, что ax = 1(mod n)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>НОК<br>
 &nbsp;</td></tr></table></div><p>&nbsp;<br>
 Алгоритм Евклида. <img src="/pic/embim1819.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1820.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <p>&nbsp;</p>
-<p>1. Вычислим r - остаток от деления числа a на b, a = bq+r, 0 &lt;= r &lt; b. </p>
-<p>2. Если r = 0, то b есть искомое число. </p>
+<p>1. Вычислим r - остаток от деления числа a на b, a = bq+r, 0 &lt;= r &lt; b.</p>
+<p>2. Если r = 0, то b есть искомое число.</p>
 <p>3. Если r =/= 0, то заменим пару чисел (a,b) парой (b,r)<br>
-<p>и перейдем к шагу 1. </p>
+<p>и перейдем к шагу 1.</p>
 <pre>
 int NOD(int a,int b)
  {
@@ -30,7 +30,7 @@ int NOD(int a,int b)
  }
 </pre>
 
-<p>При вычислении наибольшего общего делителя (a,b) с помощью алгоритма Евклида будет выполнено не более 5p операций деления с остатком, где p есть количество цифр в десятичной записи меньшего из чисел a и b. </p>
+<p>При вычислении наибольшего общего делителя (a,b) с помощью алгоритма Евклида будет выполнено не более 5p операций деления с остатком, где p есть количество цифр в десятичной записи меньшего из чисел a и b.</p>
 <p>&nbsp;<br>
 Бинарный алгоритм Евклида. <img src="/pic/embim1821.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1822.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
@@ -67,27 +67,27 @@ int NOD(int a,int b)
 <p>&nbsp;</p>
 <p>1.Определим матрицу E:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>E = </p>
+<tr>
+<td><p>E =</p>
 </td>
-<td ><p>( 1 0 )<br>
+<td><p>( 1 0 )<br>
 ( 0 1 )
 </td>
 </tr>
 </table>
-<p>2. Вычислим r - остаток от деления числа a на b, a=bq+r, 0 &lt;= r &lt; b. </p>
-<p>3. Если r=0, то второй столбец матрицы E даёт вектор ( x, y ) решений уравнения. </p>
-<p>4. Если r =/= 0, то заменим матрицу E матрицей </p>
+<p>2. Вычислим r - остаток от деления числа a на b, a=bq+r, 0 &lt;= r &lt; b.</p>
+<p>3. Если r=0, то второй столбец матрицы E даёт вектор ( x, y ) решений уравнения.</p>
+<p>4. Если r =/= 0, то заменим матрицу E матрицей</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>E * </p>
+<tr>
+<td><p>E *</p>
 </td>
-<td ><p>( 0 1 )<br>
+<td><p>( 0 1 )<br>
 ( 1 -q ) 
 </td>
 </tr>
 </table>
-<p>5. Заменим пару чисел (a,b) на (b,r) и перейдем к шагу 2. </p>
+<p>5. Заменим пару чисел (a,b) на (b,r) и перейдем к шагу 2.</p>
 <p>&nbsp;<br>
 Расширенный алгоритм Евклида. <img src="/pic/embim1825.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1826.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>

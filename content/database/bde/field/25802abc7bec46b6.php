@@ -1,9 +1,10 @@
 <h1>Как создать вычисляемые поля во время исполнения программы</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Nomadic </p>
-<p>Смотрите книгу "Developing Custom Delphi Components" от Рэя Конопки. </p>
-<p>Здесь немного исправленный пример из этой книги -</p>
+<div class="author">Автор: Nomadic</div>
+
+<p>Смотрите книгу "Developing Custom Delphi Components" от Рэя Конопки.</p>
+<p>Здесь немного исправленный пример из этой книги:</p>
 <pre>
 function TMyClass.CreateCalcField(const AFieldName: string;
   AFieldClass: TFieldClass; ASize: Word): TField;

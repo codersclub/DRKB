@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>У компьютеров ATX есть функция Sleep. Эта программа заставляет компьютер "заснуть". </p>
+<p>У компьютеров ATX есть функция Sleep. Эта программа заставляет компьютер "заснуть".</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 begin

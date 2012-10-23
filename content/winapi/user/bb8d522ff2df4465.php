@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>GetLocalUserList - возвращает список пользователей (Windows NT, Windows 2000) </p>
+<p>GetLocalUserList - возвращает список пользователей (Windows NT, Windows 2000)</p>
 <pre>
 unit Func;
  

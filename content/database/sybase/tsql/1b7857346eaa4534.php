@@ -4,12 +4,12 @@
 
 <p>Определение правил и умолчаний для данных</p>
 &nbsp;</p>
-Значения по умолчанию определяются для столбцов таблицы или для определенных пользователем типов данных для того, чтобы это значение записывалось в таблицу автоматически в том случае, если явно не указано никакого&nbsp; другого значения. Пользователь может также присоединить правило к полю таблицы или к типу данных для того, чтобы ограничить данные, которые могут быть использованы в этом поле или типе. </p>
+Значения по умолчанию определяются для столбцов таблицы или для определенных пользователем типов данных для того, чтобы это значение записывалось в таблицу автоматически в том случае, если явно не указано никакого&nbsp; другого значения. Пользователь может также присоединить правило к полю таблицы или к типу данных для того, чтобы ограничить данные, которые могут быть использованы в этом поле или типе.</p>
 В этой главе рассматриваются следующие вопросы:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Общий обзор правил и умолчаний;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как создавать и удалять умолчания;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как использовать по умолчанию неопределенные значения; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как создавать и удалять правила;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Как получить информацию о правилах и умолчаниях.</td></tr></table></div>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Что такое правила и умолчания?</td></tr></table></div>&nbsp;</p>
-Значение по умолчанию - это значение, которое SQL Сервер вставляет в некоторое поле, если пользователь не указал явно никакого значения для этого поля. В системах управления базами данных правило указывает, какого вида данные допускаются для столбца таблицы или типа данных определенного пользователем. Правила и умолчания используются для достижения целостности данных в базе. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Общий обзор правил и умолчаний;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как создавать и удалять умолчания;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как использовать по умолчанию неопределенные значения;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как создавать и удалять правила;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Как получить информацию о правилах и умолчаниях.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Что такое правила и умолчания?</td></tr></table></div>&nbsp;</p>
+Значение по умолчанию - это значение, которое SQL Сервер вставляет в некоторое поле, если пользователь не указал явно никакого значения для этого поля. В системах управления базами данных правило указывает, какого вида данные допускаются для столбца таблицы или типа данных определенного пользователем. Правила и умолчания используются для достижения целостности данных в базе.</p>
 В системах управления реляционными базами данных каждый элемент базы, например, определенный столбец в определенной строке, должен иметь какое-либо значение, даже если это неопределенное значение NULL. Как уже говорилось в главе 7 “ Создание баз данных и таблиц”, в некоторые столбцы нельзя записывать неопределенное значение. В такие столбцы пользователь должен ввести определенное значение, либо по умолчанию это должен сделать&nbsp; SQL Сервер.</p>
 Значения по умолчанию, определенные пользователем, позволяют SQL Серверу автоматически записывать в поле некоторое значение, если для этого поля явно не было указано никакого значения, независимо от того допускает ли это поле неопределенные значения или нет. Например, можно определить по умолчанию значение “???” или значение “заполнить позже”.</p>
 Правила обеспечивают поддержку целостности данных в том отношении, в каком ее нельзя обеспечить простым разделением данных на типы. Правила могут быть связаны с определенным столбцом таблицы, или с группой столбцов, или с типом данных пользователя.</p>
@@ -17,21 +17,21 @@
 &nbsp;</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Замечание: Можно присоединить к столбцу данных числового типа правило для данных символьного типа, хотя это и не имеет смысла. Правила проверяются во время исполнения операторов insert и update, а не во время их создания.</p>
 &nbsp;</p>
-В данной главе объясняется, как создавать правила и умолчания с помощью команд create default (создать умолчание) и create rule (создать правило), а также как связывать правила и умолчания к столбцу или к типу данных пользователя с помощью системных процедур sp_bindefault (присоединить умолчание), sp_bindrule (присоединить правило), sp_unbindefault (отсоединить умолчание), sp_unbindrule (отсоединить правило). </p>
+В данной главе объясняется, как создавать правила и умолчания с помощью команд create default (создать умолчание) и create rule (создать правило), а также как связывать правила и умолчания к столбцу или к типу данных пользователя с помощью системных процедур sp_bindefault (присоединить умолчание), sp_bindrule (присоединить правило), sp_unbindefault (отсоединить умолчание), sp_unbindrule (отсоединить правило).</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td> Сравнение правил и умолчаний с условиями целостности</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td> Сравнение правил и умолчаний с условиями целостности</td></tr></table></div>&nbsp;</p>
 Вместо создания правил и умолчаний, можно&nbsp; сразу в операторе создания таблицы create table указать конструкцию default (умолчание) и опцию check (проверка), которые выполняют аналогичную роль. Однако, эти&nbsp; правила и умолчания будут действовать только для одной таблицы и не могут быть связаны со столбцами других таблиц или типами данных пользователя. Подробная информация об условиях сохранения целостности данных в отдельной таблице содержится в главе 7 “Создание баз данных и таблиц”.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание умолчаний</td></tr></table></div>&nbsp;</p>
-Умолчания могут создаваться и удаляться в любой момент, до или после введения данных в таблицу. Значения по умолчанию создаются командой create default (создать умолчание), а удаляются с командой drop default (удалить умолчание). </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание умолчаний</td></tr></table></div>&nbsp;</p>
+Умолчания могут создаваться и удаляться в любой момент, до или после введения данных в таблицу. Значения по умолчанию создаются командой create default (создать умолчание), а удаляются с командой drop default (удалить умолчание).</p>
 Умолчание может быть связано с определенным столбцом таблицы, с несколькими столбцами или со всеми столбцами таблиц базы данных, имеющими заданный пользователем тип данных. Для связывания умолчания со столбцом или типом данных используется системная процедура sp_bindefault (присоединить умолчание). Для отсоединения умолчания применяется процедура sp_unbindefault (отсоединить умолчание).</p>
 Ниже приведены некоторые условия, которые нужно проверить при создании и присоединении умолчаний:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Необходимо убедиться, что размер данных в столбце достаточен для значения, задаваемого по умолчанию. Например, в столбце типа char(2) не допускается хранение 17-байтовой строки “Nobody knows yet”;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Нужно внимательно относиться к определению значений по умолчанию, заданных для всего типа данных, и их переопределению для отдельных столбцов этого типа. Если вначале со столбцом связывается тип данных, определенный пользователем и имеющий свое значение по умолчанию, а затем для этого столбца указывается другое значение по умолчанию, то последнее значение заменит первое только в указанном столбце. Первое значение будет действовать по умолчанию во&nbsp; всех других столбцах, имеющих этот тип. Однако, если для столбца было определено другое значение, отличное от типового, то изменение типового значения уже не будет влиять на этот столбец. Этот вопрос будет более подробно обсуждаться в данной главе;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Следует избегать конфликтов между умолчаниями и правилами. Нужно убедиться, что значение по умолчанию соответствует правилу, в противном случае, умолчание будет исключаться;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Например, рассмотрим ситуацию, когда правилом в данном столбце допускаются числа от 1 до 100, а значение по умолчанию для этого столбца равно 0. В этом случае правило будет каждый раз отклонять значение, вводимое по умолчанию, и будет получено сообщение об ошибке, если&nbsp; столбец не допускает неопределенного значения NULL. Если столбец или умолчание допускают неопределенное значение, то будет вводиться значение “NULL”. Таким образом, либо правило, либо умолчание нужно изменить.</td></tr></table></div>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Синтаксис команды create default</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Необходимо убедиться, что размер данных в столбце достаточен для значения, задаваемого по умолчанию. Например, в столбце типа char(2) не допускается хранение 17-байтовой строки “Nobody knows yet”;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Нужно внимательно относиться к определению значений по умолчанию, заданных для всего типа данных, и их переопределению для отдельных столбцов этого типа. Если вначале со столбцом связывается тип данных, определенный пользователем и имеющий свое значение по умолчанию, а затем для этого столбца указывается другое значение по умолчанию, то последнее значение заменит первое только в указанном столбце. Первое значение будет действовать по умолчанию во&nbsp; всех других столбцах, имеющих этот тип. Однако, если для столбца было определено другое значение, отличное от типового, то изменение типового значения уже не будет влиять на этот столбец. Этот вопрос будет более подробно обсуждаться в данной главе;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Следует избегать конфликтов между умолчаниями и правилами. Нужно убедиться, что значение по умолчанию соответствует правилу, в противном случае, умолчание будет исключаться;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Например, рассмотрим ситуацию, когда правилом в данном столбце допускаются числа от 1 до 100, а значение по умолчанию для этого столбца равно 0. В этом случае правило будет каждый раз отклонять значение, вводимое по умолчанию, и будет получено сообщение об ошибке, если&nbsp; столбец не допускает неопределенного значения NULL. Если столбец или умолчание допускают неопределенное значение, то будет вводиться значение “NULL”. Таким образом, либо правило, либо умолчание нужно изменить.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Синтаксис команды create default</td></tr></table></div>&nbsp;</p>
 Синтаксис команды create default выглядит следующим образом:</p>
 &nbsp;</p>
-create default [имя_владельца.]название_умолчания </p>
+create default [имя_владельца.]название_умолчания</p>
  &nbsp; &nbsp; &nbsp; &nbsp;as константное_выражение</p>
 &nbsp;</p>
 Названия умолчаний должны соответствовать правилам, установленным для идентификаторов. Умолчания можно создавать только в текущей базе данных.</p>
@@ -41,11 +41,11 @@ create default [имя_владельца.]название_умолчания <
 create default citydflt</p>
 as “Oakland”</p>
 &nbsp;</p>
-После слова as можно задать любую константу. Символьные константы и даты должны быть заключены в кавычки; для денежных, целых и числовых констант с плавающей точкой кавычки не обязательны.&nbsp; Двоичным данным должен предшествовать символ 0х, а денежным данным - символ доллара ($). Значение по умолчанию должно соответствовать типу данных, установленному для столбца. Например, нельзя использовать в качестве значения по умолчанию строку “none” для столбца числового типа, а число 0 (ноль) можно.&nbsp;&nbsp; </p>
-Если при создании столбца было указано на недопустимость в нем неопределенных значений (NOT NULL) и с этим столбцом не было связано никаких значений по умолчанию, то SQL Сервер будет выдавать сообщение об ошибке каждый раз, когда в этом столбце будут отсутствовать данные. </p>
+После слова as можно задать любую константу. Символьные константы и даты должны быть заключены в кавычки; для денежных, целых и числовых констант с плавающей точкой кавычки не обязательны.&nbsp; Двоичным данным должен предшествовать символ 0х, а денежным данным - символ доллара ($). Значение по умолчанию должно соответствовать типу данных, установленному для столбца. Например, нельзя использовать в качестве значения по умолчанию строку “none” для столбца числового типа, а число 0 (ноль) можно.&nbsp;&nbsp;</p>
+Если при создании столбца было указано на недопустимость в нем неопределенных значений (NOT NULL) и с этим столбцом не было связано никаких значений по умолчанию, то SQL Сервер будет выдавать сообщение об ошибке каждый раз, когда в этом столбце будут отсутствовать данные.</p>
 Часто значения по умолчанию создаются при создании самой таблицы. Однако, если во время одного сеанса работы нужно ввести большое количество строк с одинаковыми значениями в одном или нескольких столбцах, то удобнее было бы создать умолчание, которое присоединяется на время одного сеанса работы.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Присоединение умолчаний</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Присоединение умолчаний</td></tr></table></div>&nbsp;</p>
 После того, как умолчание было создано, следует использовать системную процедуру sp_bindefault (присоединить умолчание) для присоединения этого умолчания к столбцу или типу данных, определенному пользователем.</p>
 &nbsp;</p>
 create default phonedflt as “UNKNOWN”</p>
@@ -63,15 +63,15 @@ sp_bindefault phonedflt, “authors.phone”</p>
 &nbsp;</p>
 sp_bindefault citydflt, “friends_etc.city”</p>
 &nbsp;</p>
-Заметим, что название таблицы и столбца заключаются в кавычки, поскольку они разделены знаком пунктуации, которым в данном случае является точка. </p>
+Заметим, что название таблицы и столбца заключаются в кавычки, поскольку они разделены знаком пунктуации, которым в данном случае является точка.</p>
 &nbsp;</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Замечание: Умолчания нельзя присоединить к системным типам данным, поскольку неясно какие значения потребуются различным пользователям. Также не допускается присоединение умолчаний к столбцам типа timestamp (моменты времени), поскольку SQL Сервер автоматически записывает значения в эти столбцы. Можно связывать умолчания со столбцами типа IDENTITY (счетчик) или с типами данных, определенными пользователем и имеющими свойство IDENTITY, но такие умолчания игнорируются. Каждый раз когда&nbsp; вводится новая строка без указания значения для счетчика, SQL Сервер записывает в этот столбец значение, которое на единицу больше предыдущего.</p>
 &nbsp;</p>
-Если создать специальный тип данных для всех столбцов city каждой таблицы базы данных, то можно присоединить умолчание citydflt &nbsp; к этому типу данных и быть уверенным в том, что значение по умолчанию “Oakland” будет заменять значения в тех столбцах, где это необходимо. Например, если пользовательский тип данных называется citytype, то присоединить к этому типу данных умолчание citydflt можно следующим образом: </p>
+Если создать специальный тип данных для всех столбцов city каждой таблицы базы данных, то можно присоединить умолчание citydflt &nbsp; к этому типу данных и быть уверенным в том, что значение по умолчанию “Oakland” будет заменять значения в тех столбцах, где это необходимо. Например, если пользовательский тип данных называется citytype, то присоединить к этому типу данных умолчание citydflt можно следующим образом:</p>
 &nbsp;</p>
 sp_bindefault citydflt, citytype</p>
 &nbsp;</p>
-Параметр futureonly (только в будущем) может быть использован при связывании умолчания с пользовательским типом данных. Этот параметр предотвращает изменение существующих значений в столбцах этого типа, записанных по умолчанию, на новое значение. Параметр futureonly никогда не используется при связывании умолчания со столбцом таблицы. В следующем примере показано, как создать и присоединить новое значение по умолчанию “Berkeley” к типу данных citytype таким образом, чтобы оно действовало только для вновь создаваемых столбцов. Предыдущее значение по умолчанию “Oakland” будет по-прежнему находиться в уже существующих столбцах типа citytype. </p>
+Параметр futureonly (только в будущем) может быть использован при связывании умолчания с пользовательским типом данных. Этот параметр предотвращает изменение существующих значений в столбцах этого типа, записанных по умолчанию, на новое значение. Параметр futureonly никогда не используется при связывании умолчания со столбцом таблицы. В следующем примере показано, как создать и присоединить новое значение по умолчанию “Berkeley” к типу данных citytype таким образом, чтобы оно действовало только для вновь создаваемых столбцов. Предыдущее значение по умолчанию “Oakland” будет по-прежнему находиться в уже существующих столбцах типа citytype.</p>
 &nbsp;</p>
 create default newcitydflt as “Berkeley”</p>
 sp_bindefault newcitydflt, citytype, futureonly</p>
@@ -88,51 +88,51 @@ sp_bindefault название_умолчания, название_объект
 Название_умолчания это название умолчания, указанное при его создании процедурой create default. Название_объекта  это название столбца таблицы или пользовательского типа данных, с которым связывается данное умолчание. Если это название не имеет вида таблица.столбец, то оно воспринимается как название типа данных.</p>
 Для всех столбцов, имеющих заданный пользовательский тип данных, будет действовать умолчание, связанное с этим типом, если не выполняется одно из следующих условий:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Используется третий необязательный&nbsp; параметр futureonly, который предотвращает изменение значений в уже существующих столбцах этого типа; или </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Изменено значение по умолчанию для конкретного столбца таблицы. В этом случае действует измененное умолчание.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Используется третий необязательный&nbsp; параметр futureonly, который предотвращает изменение значений в уже существующих столбцах этого типа; или</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Изменено значение по умолчанию для конкретного столбца таблицы. В этом случае действует измененное умолчание.</td></tr></table></div>&nbsp;</p>
 Умолчания, связанные со столбцами, всегда имеют преимущество перед умолчаниями, связанными с типами данных. Присоединение значения по умолчанию к столбцу заменяет действие значения по умолчанию, связанного с типом данных этого столбца, но присоединение умолчаний к типу данных не заменяет действие значения по умолчанию, связанного со столбцом, имеющим этот тип данных. В следующей таблице отражено относительное старшинство операций присоединения значений по умолчанию к табличным столбцам и типам данных пользователя:</p>
 &nbsp;</p>
 Таблица 12-1: Предшествование умолчаний</p>
 &nbsp;</p>
 <table cellspacing="0" cellpadding="4" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td >&nbsp;</p>
+<tr>
+<td>&nbsp;</p>
 </td>
 <td colspan="2" >Прежнее умолчание связано с:</p>
 </td>
 </tr>
-<tr >
-<td >Новое умолчание связано с:</p>
+<tr>
+<td>Новое умолчание связано с:</p>
 </td>
-<td >Пользовательским типом</p>
+<td>Пользовательским типом</p>
 </td>
-<td >Табличным столбцом</p>
-</td>
-</tr>
-<tr >
-<td >Пользовательским типом</p>
-</td>
-<td >Новое значение заменяет прежнее.</p>
-</td>
-<td >Нет изменений. Действует прежнее.</p>
+<td>Табличным столбцом</p>
 </td>
 </tr>
-<tr >
-<td >Табличным столбцом</p>
+<tr>
+<td>Пользовательским типом</p>
 </td>
-<td >Новое значение заменяет прежнее.</p>
+<td>Новое значение заменяет прежнее.</p>
 </td>
-<td >Новое значение заменяет прежнее.
+<td>Нет изменений. Действует прежнее.</p>
+</td>
+</tr>
+<tr>
+<td>Табличным столбцом</p>
+</td>
+<td>Новое значение заменяет прежнее.</p>
+</td>
+<td>Новое значение заменяет прежнее.
 </td>
 </tr>
 </table>
 &nbsp;</p>
-Существующие столбцы пользовательского типа наследуют новые умолчания для этого типа, если для них специально не было определено другого значения по умолчанию или не был указан третий параметр futureonly. Новые столбцы, имеющие этот тип данных, всегда наследуют значение по умолчанию для этого типа.&nbsp; </p>
+Существующие столбцы пользовательского типа наследуют новые умолчания для этого типа, если для них специально не было определено другого значения по умолчанию или не был указан третий параметр futureonly. Новые столбцы, имеющие этот тип данных, всегда наследуют значение по умолчанию для этого типа.&nbsp;</p>
 Например, предположим, что пользователь создал таблицу foes со столбцом city, который имеет пользовательский тип citytype. Сначала тип citytype не имел значений по умолчанию. После создания умолчания citydflt,&nbsp; оно автоматически связывается со столбцом foes.city. Затем пользователь связывает другое умолчание newcitydflt  с типом citytype. Хотя foes.city является столбцом типа citytype, новое умолчание не будет с ним связано, поскольку значение по умолчание для этого столбца было предварительно изменено.</p>
 &nbsp;</p>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Замечание: Значение по умолчанию нельзя связывать и использовать в одном и том же пакете. Процедура sp_bindefault не должна быть в том же пакете, где расположены операторы модификации данных, использующие по умолчанию это значение.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Отсоединение умолчаний</td></tr></table></div>&nbsp;</p>
-Отсоединение значения по умолчанию означает разрыв его связи с определенным столбцом или типом данных. Отсоединенное умолчание по-прежнему будет хранится в базе данных и может быть использовано в дальнейшем. Для удаления связи между умолчанием и столбцом или типом данных, используется системная процедура sp_unbindefault (отсоединить умолчание). </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Отсоединение умолчаний</td></tr></table></div>&nbsp;</p>
+Отсоединение значения по умолчанию означает разрыв его связи с определенным столбцом или типом данных. Отсоединенное умолчание по-прежнему будет хранится в базе данных и может быть использовано в дальнейшем. Для удаления связи между умолчанием и столбцом или типом данных, используется системная процедура sp_unbindefault (отсоединить умолчание).</p>
 В следующем примере показано, как отсоединить значение по умолчанию от столбца city таблицы friends_etc:</p>
 &nbsp;</p>
 execute sp_unbindefault “friends_etc.city”</p>
@@ -144,15 +144,15 @@ sp_unbindefault citytype</p>
 &nbsp;</p>
 Полный синтаксис вызова системной процедуры sp_unbindefault имееи следующий вид:</p>
 &nbsp;</p>
-sp_unbindefault название_объекта [, futureonly] </p>
+sp_unbindefault название_объекта [, futureonly]</p>
 &nbsp;</p>
 Если параметр название_объекта имеет вид отличный от таблица.столбец, то SQL Сервер интерпретирует его как название пользовательского типа данных. Если отсоединить умолчание от&nbsp; пользовательского типа данных, то оно будет действительно отсоединено от всех столбцов этого типа, за исключением следующих:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Указан второй параметр futureonly (только в будущем), который предотвращает отсоединение умолчания от уже существующих столбцов этого типа, или</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Было указано новое значение по умолчанию для данного столбца.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Указан второй параметр futureonly (только в будущем), который предотвращает отсоединение умолчания от уже существующих столбцов этого типа, или</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Было указано новое значение по умолчанию для данного столбца.</td></tr></table></div>&nbsp;</p>
 Ниже приведен пример, илюстрирующий описанные выше условия:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">1.</td><td>Создан пользовательский тип nm;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">2.</td><td>Тип nm указан в операторах создания таблиц friends_etc (друзья) и enemies (враги), при определении столбцов friends_etc.pname, friends_etc.sname,&nbsp; и enemies.nickname;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">3.</td><td>Создано умолчание nmdflt  и присоединено к типу nm;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">4.</td><td>Создано новое умолчание nastydflt и связано со столбцом enemies.nickname;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">5.</td><td>Если теперь отсоединить умолчание nmdflt  от пользовательского типа nm, то отсоединенными будут только столбцы friends.pname и friends.sname. Поскольку исходное умолчание для столбца enemies.nickname было изменено, то отсоединение на него не повлияет, несмотря на то, что этот столбец имеет тип nm.</td></tr></table></div>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Удаление умолчаний</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">1.</td><td>Создан пользовательский тип nm;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">2.</td><td>Тип nm указан в операторах создания таблиц friends_etc (друзья) и enemies (враги), при определении столбцов friends_etc.pname, friends_etc.sname,&nbsp; и enemies.nickname;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">3.</td><td>Создано умолчание nmdflt  и присоединено к типу nm;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">4.</td><td>Создано новое умолчание nastydflt и связано со столбцом enemies.nickname;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">5.</td><td>Если теперь отсоединить умолчание nmdflt  от пользовательского типа nm, то отсоединенными будут только столбцы friends.pname и friends.sname. Поскольку исходное умолчание для столбца enemies.nickname было изменено, то отсоединение на него не повлияет, несмотря на то, что этот столбец имеет тип nm.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Удаление умолчаний</td></tr></table></div>&nbsp;</p>
 Для удаления умолчаний из базы данных используется команда drop default (удалить умолчание). Перед удалением умолчание должно быть отсоединено от всех столбцов и пользовательских типов данных. Если попытаться удалить умолчание, которое не отсоединено, то SQL Сервер выдаст сообщение об ошибке и команда drop default не будет выполнена. Однако для того, чтобы присоединить новое умолчание, не обязательно удалять прежнее умолчание из базы. Достаточно просто присоединить новое умолчание на его место.</p>
 В следующем примере показано, как удалить умолчание citydflt из базы:</p>
 &nbsp;</p>
@@ -165,63 +165,63 @@ drop default [владелец.]название _умолчания</p>
 &nbsp;</p>
 Умолчание может быть удалено только его владельцем.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Воздействие умолчаний на значение NULL</td></tr></table></div>&nbsp;</p>
-Если при создании столбца была указана опция NOT NULL и с ним не было связано никаких значений по умолчанию, то при попытке оставить это поле пустым SQL Сервер выдаст сообщение об ошибке. </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Воздействие умолчаний на значение NULL</td></tr></table></div>&nbsp;</p>
+Если при создании столбца была указана опция NOT NULL и с ним не было связано никаких значений по умолчанию, то при попытке оставить это поле пустым SQL Сервер выдаст сообщение об ошибке.</p>
 Если удалено умолчание для столбца, в котором можно использовать значение NULL, то SQL Сервер вставляет в этот столбец неопределенное значение всякий раз, когда добавляется строка с неуказанным значением для этого поля. Если же умолчание удалено из столбца, в котором нельзя использовать значение NULL, то при добавлении новых строк, с явно неуказанным для этого поля значением, будет выдано сообщение об ошибке.</p>
 Следующая таблица показывает соотношение между существованием умолчания и определением столбца с опциями NULL или NOT NULL. Результаты указаны в таблице:</p>
 &nbsp;</p>
 Таблица 12-2: Умолчания и неопределенные значения</p>
 &nbsp;</p>
 <table cellspacing="0" cellpadding="4" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>Определение столбца</p>
+<tr>
+<td><p>Определение столбца</p>
 </td>
-<td ><p>Нет данных и умолчания</p>
+<td><p>Нет данных и умолчания</p>
 </td>
-<td ><p>Нет данных, но есть умолчание</p>
+<td><p>Нет данных, но есть умолчание</p>
 </td>
-<td ><p>Введено NULL и нет умолчания</p>
+<td><p>Введено NULL и нет умолчания</p>
 </td>
-<td ><p>Введено NULL и есть умолчание</p>
-</td>
-</tr>
-<tr >
-<td ><p>NULL</p>
-</td>
-<td ><p>Null</p>
-</td>
-<td ><p>Значение по умолчанию</p>
-</td>
-<td ><p>Null</p>
-</td>
-<td ><p>Null</p>
+<td><p>Введено NULL и есть умолчание</p>
 </td>
 </tr>
-<tr >
-<td ><p>NOT NULL</p>
+<tr>
+<td><p>NULL</p>
 </td>
-<td ><p>Ошибка</p>
+<td><p>Null</p>
 </td>
-<td ><p>Значение по умолчанию</p>
+<td><p>Значение по умолчанию</p>
 </td>
-<td ><p>Ошибка</p>
+<td><p>Null</p>
 </td>
-<td ><p>Ошибка
+<td><p>Null</p>
+</td>
+</tr>
+<tr>
+<td><p>NOT NULL</p>
+</td>
+<td><p>Ошибка</p>
+</td>
+<td><p>Значение по умолчанию</p>
+</td>
+<td><p>Ошибка</p>
+</td>
+<td><p>Ошибка
 </td>
 </tr>
 </table>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Создание правил</td></tr></table></div>&nbsp;</p>
-Правила создаются с помощью команды create rule (создать правило), а затем присоединяются к столбцу или пользовательскому типу данных с помощью системной процедуры sp_binderule (присоединить правило). Отсоединение правила от столбца или пользовательских типа данных проводится с помощью системной процедуры sp_unbindrule (отсоединить правило) или путем присоединения нового правила к столбцу или пользовательскому типу. </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Создание правил</td></tr></table></div>&nbsp;</p>
+Правила создаются с помощью команды create rule (создать правило), а затем присоединяются к столбцу или пользовательскому типу данных с помощью системной процедуры sp_binderule (присоединить правило). Отсоединение правила от столбца или пользовательских типа данных проводится с помощью системной процедуры sp_unbindrule (отсоединить правило) или путем присоединения нового правила к столбцу или пользовательскому типу.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Синтаксис команды create rule</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Синтаксис команды create rule</td></tr></table></div>&nbsp;</p>
 Синтаксис команды create rule имеет следующий вид:</p>
 &nbsp;</p>
 create rule [владелец. ]название_правила</p>
  &nbsp; &nbsp; &nbsp; &nbsp;as условное_выражение</p>
 &nbsp;</p>
 Названия правил должны соответствовать правилам, установленным для идентификаторов. Правила можно создавать только в текущей базе данных.</p>
-Названия правил должны быть уникальными для каждого пользователя внутри одной базы данных. Например, один пользователь не может создать два правила с названием socsecrule. Однако, два различных пользователя могут создать правила с названием socsecrule, поскольку имена пользователей позволяют их различить. </p>
+Названия правил должны быть уникальными для каждого пользователя внутри одной базы данных. Например, один пользователь не может создать два правила с названием socsecrule. Однако, два различных пользователя могут создать правила с названием socsecrule, поскольку имена пользователей позволяют их различить.</p>
 В следующем примере показано правило, которое допускает пять различных значений для столбца pub_id и любое четырехзначное число, начинающееся с двух девяток 99:</p>
 &nbsp;</p>
 create rule pub_idrule</p>
@@ -239,10 +239,10 @@ as @phone like &#8216;415_ _ _ _ _ _ _&#8217;</p>
 Следующее правило устанавливает, что возраст друзей пользователя может изменяться от 1 до 120, но не равен 17:</p>
 &nbsp;</p>
 create rule agerule</p>
-as @age between 1 and 120 and @age !=17&nbsp;&nbsp;    </p>
+as @age between 1 and 120 and @age !=17&nbsp;&nbsp;</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Присоединение правил</td></tr></table></div>&nbsp;</p>
-После создания правила его нужно присоединить к определенному столбцу или пользовательскому типу данных с помощью системной процедуры sp_bindrule (присоединить правило). </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Присоединение правил</td></tr></table></div>&nbsp;</p>
+После создания правила его нужно присоединить к определенному столбцу или пользовательскому типу данных с помощью системной процедуры sp_bindrule (присоединить правило).</p>
 Полный синтаксис процедуры sp_bindrule  выглядит так:</p>
 &nbsp;</p>
 sp_binderule название_правила, название_объекта [, futureonly]</p>
@@ -252,7 +252,7 @@ sp_binderule название_правила, название_объекта [,
 &nbsp;</p>
 Замечание: Не допускается присоединение правил к столбцам типа text, image, и timestamp.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Связывание правил с табличными столбцами</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Связывание правил с табличными столбцами</td></tr></table></div>&nbsp;</p>
 Правило присоединяется к столбцу с помощью процедуры sp_binderule, которой в качестве параметров передается название правила, а также&nbsp; название таблицы и столбца, заключенные в кавычки. Ниже показано, как присоединить правило pub_idrule к столбцу publishers pub_id:</p>
 &nbsp;</p>
 sp_binderule pub_idrule, “publishers.pub_id”</p>
@@ -266,57 +266,57 @@ as @postalcode like “946[0-9] [0-9]”</p>
 &nbsp;</p>
 sp_binderule postalcoderule946, “friends_etc.postalcode”</p>
 &nbsp;</p>
-Правило нельзя связывать и использовать в одном пакете. Процедура sp_binderule не должны быть в одном пакете вместе с операторами вставки, которые используют это правило. </p>
+Правило нельзя связывать и использовать в одном пакете. Процедура sp_binderule не должны быть в одном пакете вместе с операторами вставки, которые используют это правило.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Связывание правил с пользовательскими типами данных</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Связывание правил с пользовательскими типами данных</td></tr></table></div>&nbsp;</p>
 Правила нельзя связывать с системными типами данных, т.е. их можно присоединять только к пользовательским типам данных. Например, чтобы связать правило phonerule с пользовательским типу p#, омужно выполнить команду:</p>
 &nbsp;</p>
 sp_binderule, “p#”</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Старшинство правил</td></tr></table></div>&nbsp;</p>
-Правила, связанные со столбцами, всегда сильнее правил, связанных с типами данных. Присоединение правила к столбцу заменяет правило, которое связано с типом данных этого столбца, но присоединение правила к типу данных не заменяет правила, связанного со столбцом этого типа. </p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Старшинство правил</td></tr></table></div>&nbsp;</p>
+Правила, связанные со столбцами, всегда сильнее правил, связанных с типами данных. Присоединение правила к столбцу заменяет правило, которое связано с типом данных этого столбца, но присоединение правила к типу данных не заменяет правила, связанного со столбцом этого типа.</p>
 Правило, связанное с типом данных, начинает действовать только при попытке обновить или вставить значения в столбец данных этого типа. Поскольку правила не проверяют значения переменных, то пользователь должен стараться не присваивать переменной пользовательского типа значения, которое не допускается правилом для этого типа данных.</p>
-Следующая таблица иллюстрирует старшинство замещения правил при их связывании с табличными столбцами и типами данных, когда последние уже имеют связанные с ними правила. </p>
+Следующая таблица иллюстрирует старшинство замещения правил при их связывании с табличными столбцами и типами данных, когда последние уже имеют связанные с ними правила.</p>
 &nbsp;</p>
 Таблица 12-3: Старшинство правил</p>
 &nbsp;</p>
 <table cellspacing="0" cellpadding="4" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>Новое правило связывается с:</p>
+<tr>
+<td><p>Новое правило связывается с:</p>
 </td>
 <td colspan="2" ><p>Прежнее правило связано с:</p>
 </td>
 </tr>
-<tr >
-<td >
+<tr>
+<td>
 </td>
-<td ><p>Пользовательским типом</p>
+<td><p>Пользовательским типом</p>
 </td>
-<td ><p>Табличным столбцом</p>
-</td>
-</tr>
-<tr >
-<td ><p>Пользовательским типом</p>
-</td>
-<td ><p>Заменяет прежнее</p>
-<p>правило.</p>
-</td>
-<td ><p>Нет изменений. Действует прежнее.</p>
+<td><p>Табличным столбцом</p>
 </td>
 </tr>
-<tr >
-<td ><p>Табличным столбцом</p>
+<tr>
+<td><p>Пользовательским типом</p>
 </td>
-<td ><p>Заменяет прежнее</p>
+<td><p>Заменяет прежнее</p>
 <p>правило.</p>
 </td>
-<td ><p>Заменяет прежнее</p>
+<td><p>Нет изменений. Действует прежнее.</p>
+</td>
+</tr>
+<tr>
+<td><p>Табличным столбцом</p>
+</td>
+<td><p>Заменяет прежнее</p>
+<p>правило.</p>
+</td>
+<td><p>Заменяет прежнее</p>
 <p>правило.
 </td>
 </tr>
 </table>
 &nbsp;</p>
-При введении данных в табличные столбцы, которые требуют особых временных ограничений, можно сделать новое правило для проверки этих данных. Например, предположим, пользователю нужно добавить данные о величине долгов в столбец debt (долг) таблицы friends_etc. Ему известно, что все долги, которые нужно зафиксировать, находятся в пределах от $5 до $200. Чтобы избежать случайных ошибок и не допустить чисел, выходящих из этого диапазона, можно сделать следующее правило. (Это правило позволяет вводить нулевое значение $0.00, которая ранее было определено как значение по умолчанию для этого столбца.) </p>
+При введении данных в табличные столбцы, которые требуют особых временных ограничений, можно сделать новое правило для проверки этих данных. Например, предположим, пользователю нужно добавить данные о величине долгов в столбец debt (долг) таблицы friends_etc. Ему известно, что все долги, которые нужно зафиксировать, находятся в пределах от $5 до $200. Чтобы избежать случайных ошибок и не допустить чисел, выходящих из этого диапазона, можно сделать следующее правило. (Это правило позволяет вводить нулевое значение $0.00, которая ранее было определено как значение по умолчанию для этого столбца.)</p>
 &nbsp;</p>
 create rule debtrule</p>
 as @debt = $0.00 or @debt between $5.0 and $200.00</p>
@@ -325,14 +325,14 @@ as @debt = $0.00 or @debt between $5.0 and $200.00</p>
 &nbsp;</p>
 sp_bindrule debtrule, “friends_etc.debt”</p>
 &nbsp;</p>
-Замечание: После создания и присоединения правила нужно обязательно проверить его, записав в таблицу некоторые данные. Многие ошибки, связанные с созданием и присоединением правил, могут быть обнаружены только с помощью операторов insert и update. </p>
+Замечание: После создания и присоединения правила нужно обязательно проверить его, записав в таблицу некоторые данные. Многие ошибки, связанные с созданием и присоединением правил, могут быть обнаружены только с помощью операторов insert и update.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Отсоединение правил</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Отсоединение правил</td></tr></table></div>&nbsp;</p>
 Отсоединение правил означает разрыв их связи со столбцом или типом данных. Определение отсоединенного правила по-прежнему остается в базе данных и может быть использовано в дальнейшем.</p>
 Существуют два способа отсоединить правило:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>С помощью системной процедуры sp_unbinderule (отсоединить правило) удалить связь между правилом и столбцом или типом данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>С помощью системной процедуры sp_bindrule присоединить новое правило к столбцу или типу данных. Прежнее правило при этом автоматически отсоединяется.</td></tr></table></div>&nbsp;</p>
-Ниже показано, как отсоединить правило debtrule (или любое другое связанное правило) от столбца friends_etc.debt:&nbsp; </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>С помощью системной процедуры sp_unbinderule (отсоединить правило) удалить связь между правилом и столбцом или типом данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>С помощью системной процедуры sp_bindrule присоединить новое правило к столбцу или типу данных. Прежнее правило при этом автоматически отсоединяется.</td></tr></table></div>&nbsp;</p>
+Ниже показано, как отсоединить правило debtrule (или любое другое связанное правило) от столбца friends_etc.debt:&nbsp;</p>
 &nbsp;</p>
 sp_unbindrule “friends_etc.debt”</p>
 &nbsp;</p>
@@ -347,8 +347,8 @@ sp_unbindrule название_объекта [, futureonly]</p>
 &nbsp;</p>
 Если параметр название_объекта не имеет вида таблица.столбец, то он воспринимается как название пользовательского типа данных. Если правило отсоединяется от типа данных, то оно отсоединяется также от всех столбцов этого типа, если не выполняется одно из следующих условий:</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Указан второй необязательный параметр futureonly (только в будущем), который предотвращает отсоединение этого правила от существующих столбцов этого типа, или;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="28">&#183;</td><td>Было изменено правило для данного табличного столбца.</td></tr></table></div>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Удаление правил</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Указан второй необязательный параметр futureonly (только в будущем), который предотвращает отсоединение этого правила от существующих столбцов этого типа, или;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="28">&#183;</td><td>Было изменено правило для данного табличного столбца.</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Удаление правил</td></tr></table></div>&nbsp;</p>
 Для удаления правил из базы данных используется команда drop rule (удалить правило). Перед удалением правило должно быть отсоединено от всех столбцов и типов данных. Если попытаться удалить связанное правило, то SQL Cервер выдаст сообщение об ошибке и команда drop rule не будет выполняться. Однако для того, чтобы присоединить новое правило, не обязательно отсоединять и удалять прежнее правило. Достаточно просто присоединить новое правило на место прежнего.</p>
 Ниже показано, как удалить правило phonerule после его отсоединения:</p>
 &nbsp;</p>
@@ -362,7 +362,7 @@ drop rule [владелец.]название_правила</p>
 После удаления правила оно не будет оказывать воздействия на новые данные, которые вводятся в соответсвующий столбец таблицы. Уже существующие табличные данные никак не изменятся.</p>
 Правило может быть удалено только ее владельцем.</p>
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="21"></td><td>Получение информации о правилах и умолчаниях</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="21"></td><td>Получение информации о правилах и умолчаниях</td></tr></table></div>&nbsp;</p>
 Системная процедура sp_help, вызываемая вместе с названием таблицы, выдает список правил и умолчаний, связанных со столбцами этой таблицы. В следующем примере показано как получить информацию о таблице authors из базы данных pubs, включая сведения о правилах и умолчаниях:</p>
 &nbsp;</p>
 sp_help authors</p>

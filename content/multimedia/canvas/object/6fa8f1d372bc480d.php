@@ -132,7 +132,7 @@ begin
 end;
 </pre>
 
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>
 Hndl := Form1.Canvas.Handle;
 Display7Seg('ABCDE',100,20,8,Hndl); 

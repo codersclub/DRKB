@@ -2,10 +2,10 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Чтобы программно добавить принтер, необходимо воспользоваться API функцией AddPrinter, которая имеет три параметра: </p>
+<p>Чтобы программно добавить принтер, необходимо воспользоваться API функцией AddPrinter, которая имеет три параметра:</p>
 
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Имя принтера </td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Уровень печати </td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Описание принтера </td></tr></table>
-<p>Следующий пример является надстройкой для этой функции. Для этого необходимо знать Имя принтера, которое будет отображаться в Проводнике, имя порта, к которому подключён принтер (т.е. LPT1:), имя драйвера (прийдётся посмотреть вручную) и имя процессора печати (который обычно "winprint"). </p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Имя принтера</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Уровень печати</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Описание принтера</td></tr></table>
+<p>Следующий пример является надстройкой для этой функции. Для этого необходимо знать Имя принтера, которое будет отображаться в Проводнике, имя порта, к которому подключён принтер (т.е. LPT1:), имя драйвера (прийдётся посмотреть вручную) и имя процессора печати (который обычно "winprint").</p>
 
 <pre>
 unit unit_AddPrinter;

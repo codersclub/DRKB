@@ -65,7 +65,7 @@ end;
 </pre>
 
 <p>Теперь достаточно установить SortType в stBoth (вместо stText, который сортирует по первой колонке не используя метод OnCompare):</p>
-<p>ListView1.SortType := stBoth; </p>
+<p>ListView1.SortType := stBoth;</p>
 <p>Теперь, чтобы сделать временную сортировку, проделайте следующее:</p>
 <p>ListView1.SortType := stBoth;</p>
 <p>ListView1.SortType := stNone;</p>

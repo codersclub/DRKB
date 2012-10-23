@@ -65,4 +65,4 @@
 
 <p> &nbsp;&nbsp;&nbsp;&nbsp; Edited on 05/07/1999 23:52:26</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp; QWERTY.NANKO.RU</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;  </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;</p>

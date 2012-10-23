@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Если руками, то в BDE Administrator (BDE Configuration Utility). </p>
+<p>Если руками, то в BDE Administrator (BDE Configuration Utility).</p>
 
 <p>Если при инсталляции твоей программы, то -</p>
 <p>В пункте Make Registry Changes InstallShield'а создай ключ</p>

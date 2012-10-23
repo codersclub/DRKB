@@ -20,6 +20,6 @@ end;
 <p>Проверить тип контрола надо оператором is:</p>
 <p>if edit1 is TEdit then....</p>
 <p>Затем доступ ко всем свойствам путем приведения класса:</p>
-<p>(edit1 as TEdit).text:=''; </p>
+<p>(edit1 as TEdit).text:='';</p>
 <div class="author">Автор: Kiber_rat</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

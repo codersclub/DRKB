@@ -3,7 +3,7 @@
 
 
 <p>Начиная с виньХР появились в системе забавные ProgressBar'ы, которые не отображают реального "прогресса", а лишь отображают, что что-нибудь работает... такой же появляется при загрузки виндыХР (бегает пару чёрточек слева вправо, а потом обратно возвращаются в начало). Такой же прогресс отображается если в ХР выбрать изображение, в меню нажать на Print (Печать), и вэтом диалоге при выборе шаблона печати - тоже такого стиля есть прогресс. (надеюсь, что теперь ясно что я имел в виду&nbsp; )</p>
-<p>И сам вопрос: как такой сделать на делфи? </p>
+<p>И сам вопрос: как такой сделать на делфи?</p>
 <p>Судя по MSDN, надо</p>
 <pre>
 
@@ -21,8 +21,8 @@
 </pre>
 
 <p>(вместо 50 поставь время перемещения кубиков)</p>
-<p>Цитата (MSDN) </p>
-<p>Use this message when you do not know the amount of progress toward completion but wish to indicate that progress is being made.&nbsp; </p>
-<p>PS: чтобы это работало, нужно включить в прогу XP-манифест </p>
+<p>Цитата (MSDN)</p>
+<p>Use this message when you do not know the amount of progress toward completion but wish to indicate that progress is being made.&nbsp;</p>
+<p>PS: чтобы это работало, нужно включить в прогу XP-манифест</p>
 <div class="author">Автор: p0s0l</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

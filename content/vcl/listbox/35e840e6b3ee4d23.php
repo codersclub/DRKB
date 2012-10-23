@@ -19,7 +19,7 @@ end;
 </pre>
 
 
-<p>Hе забудьте установить свойство Style у своего ListBox в lbOwnerDrawFixed или в </p>
+<p>Hе забудьте установить свойство Style у своего ListBox в lbOwnerDrawFixed или в</p>
 <p>lbOwnerDrawVariable.</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

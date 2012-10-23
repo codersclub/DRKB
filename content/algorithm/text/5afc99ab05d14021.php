@@ -1,7 +1,8 @@
 <h1>Перевернуть строку</h1>
 <div class="date">01.01.2007</div>
 
-Автор: ___Nikolay</p>
+<div class="author">Автор: ___Nikolay</div>
+
 <pre>
 // Перевернуть строку
 function ReverseString(s: string): string;
@@ -16,8 +17,10 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
-<div class="author">Автор: Profit Manson </div>
+
+<div class="author">Автор: Profit Manson</div>
 <pre>
 function ReverseString(s: string): string;
 var
@@ -36,7 +39,9 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
+
 <pre>
 function ReverseString(const s: string): string;
  var
@@ -51,7 +56,9 @@ function ReverseString(const s: string): string;
  end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
+
 <hr />
+
 <pre>
  function ReverseString(const Str: string): string;
  // by Ido Kanner 
@@ -80,7 +87,9 @@ var
  end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
+
 <hr />
+
 <pre>
  function ReverseString(S: string): string;
  // by Rudy Velthuis 
@@ -103,7 +112,9 @@ var
  end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
+
 <hr />
+
 <pre>
  procedure ReverseString(var S: string);
  // by Rudy Velthuis 
@@ -124,6 +135,7 @@ var
    end;
  end;
 </pre>
+
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
 
 

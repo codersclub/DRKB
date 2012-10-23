@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Эта программа увеличивает громкость выбранного канала на 1000: </p>
+<p>Эта программа увеличивает громкость выбранного канала на 1000:</p>
 <pre>
 uses MMSystem;
  
@@ -303,7 +303,7 @@ TTrackBar);
 end.
 </pre>
 
-<hr />Выставь на форму 2 тракбара и двигай их. Если у тебя звучит музыка, ты должен услышать изменения громкости правого и левого каналов. </p>
+<hr />Выставь на форму 2 тракбара и двигай их. Если у тебя звучит музыка, ты должен услышать изменения громкости правого и левого каналов.</p>
 
 <pre>
 procedure TForm1.TrackBar1Change(Sender: TObject);
@@ -322,5 +322,5 @@ end;
 
 
 
-<p>свойство Max в каждом TrackBar'e должно равняться 65535 (то есть MaxWord) </p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<p>свойство Max в каждом TrackBar'e должно равняться 65535 (то есть MaxWord)</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 

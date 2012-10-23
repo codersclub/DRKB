@@ -206,7 +206,7 @@ begin
 end;
 </pre>
 
-<p>Код вроде бы из борландовского FAQ. На форуме приведен SmaLL </p>
+<p>Код вроде бы из борландовского FAQ. На форуме приведен SmaLL</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Вот решение приведенное на <a href="https://delphi.mastak.ru" target="_blank">https://delphi.mastak.ru</a> для нахождения всех компютеров:</p>

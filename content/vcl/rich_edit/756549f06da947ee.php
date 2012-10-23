@@ -23,9 +23,9 @@ end;
 <p>SCF_SELECTION применить к веделенному тексту</p>
 <p>SCF_WORD | SCF_SELECTION применить к выделенным словам</p>
 
-<p>Взято из MSDN. Проверено на Delphi7. Это работает. Попробый сделать сам, чтобы верхние/нижние индексы имели меньший размер. </p>
+<p>Взято из MSDN. Проверено на Delphi7. Это работает. Попробый сделать сам, чтобы верхние/нижние индексы имели меньший размер.</p>
 
-<p>Тем более это работает в rxRichEdit. </p>
+<p>Тем более это работает в rxRichEdit.</p>
 
 <div class="author">Автор: Seti</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

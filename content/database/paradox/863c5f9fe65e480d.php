@@ -11,5 +11,5 @@
 
 <p>for PARADOX 7.0 use this password: "jIGGAe" or "cupcdvum"</p>
 <p>for PARADOX 5.0 use this password: same thing</p>
-<p>for PARADOX 4.x (DOS) use this password: "nx66ppx" </p>
+<p>for PARADOX 4.x (DOS) use this password: "nx66ppx"</p>
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>

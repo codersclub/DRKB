@@ -1,7 +1,8 @@
 <h1>CRC-64</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Nikonov A.A. </p>
+<div class="author">Автор: Nikonov A.A.</div>
+
 <pre>
 unit psnCRC64;
 interface

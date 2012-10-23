@@ -16,7 +16,7 @@ begin
 end; 
 </pre>
 
-&copy;Drkb::01819 </p>
+&copy;Drkb::01819</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr />
 <pre>

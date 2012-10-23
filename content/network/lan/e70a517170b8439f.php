@@ -3,5 +3,5 @@
 
 
 
-<p>WinExec('net time \\nts2 /set /yes',SW_HIDE); </p>
+<p>WinExec('net time \\nts2 /set /yes',SW_HIDE);</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

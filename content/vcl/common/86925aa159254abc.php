@@ -3,5 +3,5 @@
 
 
 <p>Where are the FastNet Components in Delphi 7?</p>
-<p>The Fastnet components are no longer bundled with Delphi. It appears Netmasters does have a version compatible with Delphi 7 which can be purchased at: http://www.netmastersllc.com/ </p>
+<p>The Fastnet components are no longer bundled with Delphi. It appears Netmasters does have a version compatible with Delphi 7 which can be purchased at: http://www.netmastersllc.com/</p>
 

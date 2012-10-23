@@ -5,7 +5,7 @@
 
 <p>How i can create a form and this form stay in another icon in task bar ? (Looks like a new aplication).</p>
 
-<p>In private clause: </p>
+<p>In private clause:</p>
 <pre>
 type
   TForm1 = class(TForm)
@@ -13,7 +13,7 @@ type
     { Private declarations }
     procedure CreateParams(var Params: TCreateParams); override;
 </pre>
-<p>And, in the implementation: </p>
+<p>And, in the implementation:</p>
 <pre>
 procedure TForm1.CreateParams(var Params: TCreateParams);
 begin

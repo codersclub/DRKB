@@ -4,7 +4,7 @@
 
 <p>Обычно, это нужно для того, чтобы запихнуть в буфер обмена данные собственного формата. Сначала необходимо зарегистрировать этот формат при помощи функции RegisterClipboardFormat():</p>
 
-<p>CF_MYFORMAT := RegisterClipboardFormat('My Format Description'); </p>
+<p>CF_MYFORMAT := RegisterClipboardFormat('My Format Description');</p>
 
 <p>Затем необходимо проделать следующие шаги:</p>
 <p>1. Создать поток (stream) и записать в него данные.</p>

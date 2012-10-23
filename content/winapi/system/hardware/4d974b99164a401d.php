@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Есть 2 файла драйвера - Sys и Ini как установить драйвер? </p>
+<p>Есть 2 файла драйвера - Sys и Ini как установить драйвер?</p>
 <pre>
 
 function Install: Boolean;

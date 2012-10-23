@@ -11,7 +11,7 @@ OpenFileDialog1.execute
 <pre>
 if OpenFileDialog1.execute then 
 </pre>
-<p>если файл выбран то свойство FileName возвращает тебе строку - имя файла </p>
+<p>если файл выбран то свойство FileName возвращает тебе строку - имя файла</p>
 <pre>
 if OpenFileDialog1.execute then showmessage(OpenFileDialog1.FileName);
 </pre>

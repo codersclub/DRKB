@@ -2,18 +2,18 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Для того чтобы сделать это выполните следующие шаги: </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; Создайте новый проект. </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; Установите FormStyle формы в fsMDIForm </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; Разместите Image на форме и загрузите в него картинку. </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; Найдите { Private Declarations } в объявлении формы и добавьте следующие строки: </p>
+<p>Для того чтобы сделать это выполните следующие шаги:</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; Создайте новый проект.</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; Установите FormStyle формы в fsMDIForm</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; Разместите Image на форме и загрузите в него картинку.</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; Найдите { Private Declarations } в объявлении формы и добавьте следующие строки:</p>
 <pre>
                 FClientInstance : TFarProc; 
                  FPrevClientProc : TFarProc; 
                  procedure ClientWndProc(var Message: TMessage); 
 </pre>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp; Добавьте следующие строки в разделе implementation: </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; Добавьте следующие строки в разделе implementation:</p>
 <pre>
              procedure TMainForm.ClientWndProc(var Message: TMessage); 
              var 
@@ -49,7 +49,7 @@
              end; 
 </pre>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В методе формы OnCreate добавьте: </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В методе формы OnCreate добавьте:</p>
 <pre>
                 FClientInstance := MakeObjectInstance(ClientWndProc); 
                 FPrevClientProc := Pointer(GetWindowLong(ClientHandle, 
@@ -58,6 +58,6 @@
                               GWL_WNDPROC, LongInt(FClientInstance));  
 </pre>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Добавьте к проекту новую форму и установите ее свойство FormStyle в </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fsMDIChild. </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; У Вас получился  MDI-проект с "обоями" в клиентской области MDI формы. </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Добавьте к проекту новую форму и установите ее свойство FormStyle в</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fsMDIChild.</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; У Вас получился  MDI-проект с "обоями" в клиентской области MDI формы.</p>

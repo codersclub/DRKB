@@ -23,9 +23,9 @@ end;
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <p>WinAPI-&gt;Windows-&gt;Процессы...-&gt;Пример работы с MailSlot</p>
 <p>Тут Baa немного ошибся. Он написал открытие мэйлслота в C++ стиле:</p>
-<p> lpszSlotName := '\\\\.\\mailslot\\sample_mailslot'; </p>
+<p> lpszSlotName := '\\\\.\\mailslot\\sample_mailslot';</p>
 <p>а надо так:</p>
-<p> lpszSlotName := '\\.\mailslot\sample_mailslot'; </p>
+<p> lpszSlotName := '\\.\mailslot\sample_mailslot';</p>
 <p>т.е. вместо \\ надо просто \</p>
 <div class="author">Автор: p0s0l</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

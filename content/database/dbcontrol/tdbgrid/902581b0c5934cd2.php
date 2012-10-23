@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>TDBGrid имеет недокументированный в электронной справке метод DefaultDrawDataCell. </p>
+<p>TDBGrid имеет недокументированный в электронной справке метод DefaultDrawDataCell.</p>
 <p>Вот пример его использования:</p>
 <pre>
 procedure TForm1.DBGrid1DrawDataCell(Sender: TObject;

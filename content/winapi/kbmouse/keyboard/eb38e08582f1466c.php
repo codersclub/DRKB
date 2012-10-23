@@ -18,7 +18,7 @@ end;
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p>На уровне формы клавиша tab обычно обрабатывается Windows. В примере создается обработчик события CM_Dialog для перехвата Dialog keys </p>
+<p>На уровне формы клавиша tab обычно обрабатывается Windows. В примере создается обработчик события CM_Dialog для перехвата Dialog keys</p>
 <pre>
 type
   TForm1 = class(TForm)

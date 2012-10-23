@@ -5,9 +5,9 @@
 <p>Answer:</p>
 <p>To use an animated cursor you have several options: load it from a file (using LoadImage or LoadCursorFromFile), load it from a resource (using LoadCursor) or even creating the cursor at runtime (using CreateCursor).</p>
 <p>Note:</p>
-<p>You should implement custom cursors as resources. Rather than create the cursors at run time, use the LoadCursor, LoadCursorFromFile, or LoadImage function to avoid device dependence, to simplify localization, and to enable applications to share cursor designs. </p>
+<p>You should implement custom cursors as resources. Rather than create the cursors at run time, use the LoadCursor, LoadCursorFromFile, or LoadImage function to avoid device dependence, to simplify localization, and to enable applications to share cursor designs.</p>
 
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Loading a cursor from a file</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Loading a cursor from a file</td></tr></table>
 <p>The easiest way to load a cursor from a file is by using LoadCursorFromFile.</p>
 <p>This functions returns a handle to the loaded cursor that you should assign to your application Cursors array.</p>
 <pre>
@@ -29,12 +29,12 @@ end;
 </pre>
 
 
-<p>You can also use LoadImage instead of LoadCursorFromFile like this:&nbsp; </p>
+<p>You can also use LoadImage instead of LoadCursorFromFile like this:&nbsp;</p>
 
 <p>  hCur := LoadImage(0, PChar(PChar('path_to_my_cursor')), IMAGE_CURSOR, 0, 0,</p>
 <p>  LR_DEFAULTSIZE or LR_LOADFROMFILE);</p>
-    </p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Loading a cursor from a resource</td></tr></table>
+</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Loading a cursor from a resource</td></tr></table>
 <p>Before loading a cursor from a resource it's necessary to create the resource file with the cursor to be loaded.</p>
 
 <p>To do this create a file myResources.rc where you'll put the following</p>
@@ -51,7 +51,7 @@ end;
 
 <p>Remember that HInstance contains the instance handle of the application or library as provided by Windows. This variable it's very importante because it's the one used with many Windows API that work with current application resources.</p>
 
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Creating a cursor at runtime</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Creating a cursor at runtime</td></tr></table>
 <p>Another way to use a cursor it's creating one at runtime. Why would you do that?</p>
 <p>I don't know, it's your choice. I doubt you ever will create your cursors at runtime, anyway here it's way how to do it.</p>
 
@@ -104,7 +104,7 @@ const
 
 <p>hCur := CreateCursor(HInstance, 19, 2, 32, 32, @ANDmaskCursor, @XORmaskCursor);</p>
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>
-<hr />Во первых необходимо получит handle курсора, а затем определить его в массиве курсоров компонента TScreen. Индексы предопределенных курсоров системы отрицательны, пользователь может определить курсор, индекс которого положителен. </p>
+<hr />Во первых необходимо получит handle курсора, а затем определить его в массиве курсоров компонента TScreen. Индексы предопределенных курсоров системы отрицательны, пользователь может определить курсор, индекс которого положителен.</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var

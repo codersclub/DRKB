@@ -10,7 +10,7 @@ SelectNext(screen.ActiveControl, True, True);
 procedure SelectNext(CurControl: TWinControl;
 GoForward, CheckTabStop: Boolean);
 </pre>
-<p>Так как форма также является потомком TWinControl, то она имеет доступ к защищенным методам. </p>
+<p>Так как форма также является потомком TWinControl, то она имеет доступ к защищенным методам.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 

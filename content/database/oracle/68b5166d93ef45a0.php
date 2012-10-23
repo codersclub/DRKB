@@ -3,12 +3,12 @@
 
 
 
-<p>прописать в </p>
+<p>прописать в</p>
 
 <p>\HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE параметр:</p>
-<p>NLS_NUMERIC_CHARACTERS = '.,' </p>
+<p>NLS_NUMERIC_CHARACTERS = '.,'</p>
 
-<p>или </p>
+<p>или</p>
 
 <p>после соединения с ORACLE выполнить</p>
 <pre>ALTER SESSION SET NLS_NUMERIC_CHARACTERS = '.,' 

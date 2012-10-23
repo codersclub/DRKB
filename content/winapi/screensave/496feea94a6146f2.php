@@ -3,10 +3,10 @@
 
 
 
-<p>SendMessage(Application.Handle, WM_SYSCOMMAND, SC_SCREENSAVE, 0); </p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<p>SendMessage(Application.Handle, WM_SYSCOMMAND, SC_SCREENSAVE, 0);</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <hr />
-<p>Сначала мы проверяем, установлен ли Screen Saver, если нет - возвращаемся с отрицательным ответом, в противном случае - запускаем его и возвращаем true. </p>
+<p>Сначала мы проверяем, установлен ли Screen Saver, если нет - возвращаемся с отрицательным ответом, в противном случае - запускаем его и возвращаем true.</p>
 <pre>
 function RunScreenSaver: bool;
 var

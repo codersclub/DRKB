@@ -12,4 +12,5 @@ var
     if NewMail then
       ShowMessage(Format('Unread items in Inbox: %d', [Inbox.UnreadItemCount]));
 </pre>
-<p>The constant olFolderInbox is defined in Outlook_TLB as $00000006. </p>
+
+<p>The constant olFolderInbox is defined in Outlook_TLB as $00000006.</p>

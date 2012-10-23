@@ -152,7 +152,7 @@ library HookLib;
 </pre>
 
 <p> 2. Code from the calling Program</p>
-<p> {this program get's the Char from the DLL in 2 ways, </p>
+<p> {this program get's the Char from the DLL in 2 ways,</p>
 <p>  as a Char message to a Memo and as a DLLMessage WM_USER+1678}</p>
 <pre>
  unit Unit1;

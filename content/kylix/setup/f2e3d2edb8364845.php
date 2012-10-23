@@ -11,5 +11,5 @@
 <p>..</p>
 <p>source /usr/kylix/bin/kylixpath</p>
 <p>..</p>
-<p>------------------------------&nbsp;&nbsp; </p>
+<p>------------------------------&nbsp;&nbsp;</p>
 

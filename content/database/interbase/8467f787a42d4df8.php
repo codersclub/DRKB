@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 <div class="author">Автор: Vemer</div>
-<p>WEB-сайт: http://delphibase.endimus.com </p>
+<p>WEB-сайт: http://delphibase.endimus.com</p>
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Шифрование текстовых полей таблицы Interbase

@@ -94,7 +94,7 @@ begin
 end;
 </pre>
 
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>
 DrawStar(FBitmap.Canvas, Point(FBitmap.Width div 2, FBitmap.Height div 2),
   Point(FBitmap.Width div 2, 0), 20, 12, False); 

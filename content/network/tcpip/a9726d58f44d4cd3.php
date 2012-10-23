@@ -7,33 +7,33 @@
 <p>Часто возникает необходимость обмениваться данными между программами на разных компьютерах. Например, это необходимо в чатах, или в программах, которые должны реагировать одновременно на одно и то же событие.</p>
 <p>Обмен информации между компьютерами можно реализовать большим количеством способов. В данной статье я рассмотрю обмен данными по протоколу TCP/IP.</p>
 <p>Компоненты для обмена данными по TCP/IP</p>
-<p>Для обмена данными по протоколу TCP/IP будем использовать три Indy-компоненты: </p>
+<p>Для обмена данными по протоколу TCP/IP будем использовать три Indy-компоненты:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>TIdTCPServer</p>
+<tr>
+<td><p>TIdTCPServer</p>
 </td>
-<td ><p><img src="/pic/embim1778.png" width="33" height="44" vspace="1" hspace="1" border="0" alt=""></p>
-</td>
-</tr>
-<tr >
-<td ><p>TIdTCPClient</p>
-</td>
-<td ><p><img src="/pic/embim1779.png" width="29" height="41" vspace="1" hspace="1" border="0" alt=""></p>
+<td><p><img src="/pic/embim1778.png" width="33" height="44" vspace="1" hspace="1" border="0" alt=""></p>
 </td>
 </tr>
-<tr >
-<td ><p>TIdThreadMgrDefault</p>
+<tr>
+<td><p>TIdTCPClient</p>
 </td>
-<td ><p><img src="/pic/embim1780.png" width="100" height="51" vspace="1" hspace="1" border="0" alt="">
+<td><p><img src="/pic/embim1779.png" width="29" height="41" vspace="1" hspace="1" border="0" alt=""></p>
+</td>
+</tr>
+<tr>
+<td><p>TIdThreadMgrDefault</p>
+</td>
+<td><p><img src="/pic/embim1780.png" width="100" height="51" vspace="1" hspace="1" border="0" alt="">
 </td>
 </tr>
 </table>
-<p>Клиентская компонента предназначена для посылки и приёма сообщений, а серверная компонента - для приёма сообщения и рассылки клиентским компонентам. </p>
-<p>&lt;&gt; </p>
+<p>Клиентская компонента предназначена для посылки и приёма сообщений, а серверная компонента - для приёма сообщения и рассылки клиентским компонентам.</p>
+<p>&lt;&gt;</p>
 <p>Программа состоит из двех частей: серверная, на которой стоит серверная компонента, можно на неё ещё поставить и клиентскую компоненту - для тестирования клиентской части и возможности генерации сообщений с серверной программы. На клиентской части - стоит только клиентская компонента. Эта часть предназначена только для посылки и приёма сообщений.</p>
 <p>Серверная часть</p>
-<p>Установим на форму в программе серверной части компоненты TIdTCPServer <img src="/pic/embim1781.png" width="33" height="44" vspace="1" hspace="1" border="0" alt="">, TIdThreadMgrDefault <img src="/pic/embim1782.png" width="100" height="51" vspace="1" hspace="1" border="0" alt="">. </p>
-<p>Свяжите свойство ThreadMgr компоненты TIdTCPServer с компонентой TIdThreadMgrDefault. </p>
+<p>Установим на форму в программе серверной части компоненты TIdTCPServer <img src="/pic/embim1781.png" width="33" height="44" vspace="1" hspace="1" border="0" alt="">, TIdThreadMgrDefault <img src="/pic/embim1782.png" width="100" height="51" vspace="1" hspace="1" border="0" alt="">.</p>
+<p>Свяжите свойство ThreadMgr компоненты TIdTCPServer с компонентой TIdThreadMgrDefault.</p>
 <p>Для запуска сервера хватит установить свойство компоненты в True:</p>
 <pre>
 Server.Active := True;
@@ -80,7 +80,7 @@ FreeMem(ActClient);
 AThread.Data := nil;
 end;
 </pre>
-<p>Обработка команд (рассылка) на серверной части осуществляется с помощью события OnExecute. </p>
+<p>Обработка команд (рассылка) на серверной части осуществляется с помощью события OnExecute.</p>
 <pre>var
 ActClient, RecClient: PClient;
 CommBlock, NewCommBlock: TCommBlock;
@@ -184,7 +184,7 @@ end;
 end;
 </pre>
 <p>Здесь я реализовал дополнительную регистрацию компьютера с помощью команды cmRegisterComp='REGISTER', и дополнительно посылку сообщения, что компьютер отключился: cmUnRegisterComp='UNREGISTER'.</p>
-<p>При передаче сообщения передаётся сообщения типа TCommBlock. Это тип данных мы можем изменять по необходимости. В данном блоке я объявил переменную для идентификации ComputerName компьютера. </p>
+<p>При передаче сообщения передаётся сообщения типа TCommBlock. Это тип данных мы можем изменять по необходимости. В данном блоке я объявил переменную для идентификации ComputerName компьютера.</p>
 <pre>TCommBlock = record // the Communication Block used in both parts (Server+Client)
 Command,
 MyUserName, // the sender of the message
@@ -200,7 +200,7 @@ Msg - Текст сообщения.<br>
 <p>Клиентская часть</p>
 <p>Через клиентскую компоненту мы можем отправлять сообщения, а так же получать сообщения от других сообщений.</p>
 <p>Установим на форму клиентского приложения компоненту TIdTCPClient <img src="/pic/embim1783.png" width="29" height="41" vspace="1" hspace="1" border="0" alt="">.</p>
-<p>Установим на форму кнопки Подключиться и Отключиться. </p>
+<p>Установим на форму кнопки Подключиться и Отключиться.</p>
 <p>Обработчик кнопки Подключиться:</p>
 <pre>IncomingMessages.Lines.Add('===Подключение к серверу===');
 Client.Host:=DBInfo.IBaseServerName;
@@ -216,14 +216,14 @@ except
 on E: Exception do MessageDlg ('Ошибка подключения:'+#13+E.Message, mtError, [mbOk], 0);
 end; 
 </pre>
-<p>В кнопке Отключиться прописываем: </p>
+<p>В кнопке Отключиться прописываем:</p>
 <pre>if Client.Connected then
 begin
 ClientHandleThread.Terminate;
 Client.Disconnect;
 end;
 </pre>
-<p>Тип TClientHandleThread предназначен для обработки команд с клиентской стороны. </p>
+<p>Тип TClientHandleThread предназначен для обработки команд с клиентской стороны.</p>
 <pre>TEvent_Mesto = procedure(Sender: TObject) of object;
 .... 
 TClientHandleThread = class(TThread)
@@ -289,8 +289,8 @@ MessageDlg('Команда "'+CB.Command+'" содержит это сообще
 end;
 ... 
 </pre>
-<p>В процедуре HandleInput перхватываются сообщения. В событии EventMest мы можем определить процедуру, которая будет выполняться при получении сообщения. </p>
-<p>Помещаем на форму кнопку Послать, поле ввода Сообщение, и список Команда, где будут перечислены все доступные команды. </p>
+<p>В процедуре HandleInput перхватываются сообщения. В событии EventMest мы можем определить процедуру, которая будет выполняться при получении сообщения.</p>
+<p>Помещаем на форму кнопку Послать, поле ввода Сообщение, и список Команда, где будут перечислены все доступные команды.</p>
 <p>В обработчике щелчка кнопки опишем команду посылки сообщения:</p>
 <pre>var
 CommBlock : TCommBlock;

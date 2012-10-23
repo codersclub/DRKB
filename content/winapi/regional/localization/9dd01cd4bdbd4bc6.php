@@ -3,11 +3,11 @@
 
 
 
-<p>All Systems (Win 95+ and WinNT4+) with MS Internet Explorer 4 and newer have a library named mlang.dll in the Winnt\System32 directory. Usually you can tell Delphi to simply import these COM Libraries. This one however, Delphi did not. I started to convert the "most wanted" interface for myself. The results I present you here. </p>
+<p>All Systems (Win 95+ and WinNT4+) with MS Internet Explorer 4 and newer have a library named mlang.dll in the Winnt\System32 directory. Usually you can tell Delphi to simply import these COM Libraries. This one however, Delphi did not. I started to convert the "most wanted" interface for myself. The results I present you here.</p>
 
-<p>First I give you the code for the conversion unit, that allows you simply convert any text from code page interpretation into another one. Following I will shortly discuss the code and give you a sample of how to use it. </p>
+<p>First I give you the code for the conversion unit, that allows you simply convert any text from code page interpretation into another one. Following I will shortly discuss the code and give you a sample of how to use it.</p>
 
-<p>uCodePageConverter </p>
+<p>uCodePageConverter</p>
 <pre>
 {* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 *
@@ -110,13 +110,13 @@ end.
  
 </pre>
 
-<p>As you can see, I did translate only one of the many interfaces, however this one is the most efficient (according to Microsoft) and will do the job. Further I added some constants to simplify the task of finding the most important values. </p>
+<p>As you can see, I did translate only one of the many interfaces, however this one is the most efficient (according to Microsoft) and will do the job. Further I added some constants to simplify the task of finding the most important values.</p>
 
-<p>When using this unit to do any code page conersions you must not forget, that the both code pages (source and destination) must be installed and supported on the computer that does the translation. OIn the computer that is going to show the result only the destination code page must be installed and supported. </p>
+<p>When using this unit to do any code page conersions you must not forget, that the both code pages (source and destination) must be installed and supported on the computer that does the translation. OIn the computer that is going to show the result only the destination code page must be installed and supported.</p>
 
-<p>To test the unit simple create a form with a memo and a button. Add the following code to the buttons OnClick event. (Do not forget to add the conversion unit to the uses clause!) </p>
+<p>To test the unit simple create a form with a memo and a button. Add the following code to the buttons OnClick event. (Do not forget to add the conversion unit to the uses clause!)</p>
 
-<p>SAMPLE </p>
+<p>SAMPLE</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var

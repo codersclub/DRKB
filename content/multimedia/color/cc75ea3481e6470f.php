@@ -2,18 +2,18 @@
 <div class="date">01.01.2007</div>
 
 
-<p>The following functions RGBTOCMYK() and CMYKTORGB() </p>
-<p>demonstrate how to convert between RGB and CMYK color </p>
-<p>spaces. Note: There is a direct relationship between RGB </p>
-<p>colors and CMY colors. In a CMY color, black tones are </p>
-<p>achieved by printing equal amounts of Cyan, Magenta, and </p>
-<p>Yellow ink. The black component in a CMY color is achieved </p>
-<p>by reducing the CMY components by the minimum of (C, M, </p>
-<p>and Y) and substituting pure black in its place producing a </p>
-<p>sharper print and using less ink. Since it is possible for a user </p>
-<p>to boost the C,M and Y components where boosting the black </p>
-<p>component would have been preferable, a ColorCorrectCMYK() </p>
-<p>function is provided to achieve the same color by reducing the </p>
+<p>The following functions RGBTOCMYK() and CMYKTORGB()</p>
+<p>demonstrate how to convert between RGB and CMYK color</p>
+<p>spaces. Note: There is a direct relationship between RGB</p>
+<p>colors and CMY colors. In a CMY color, black tones are</p>
+<p>achieved by printing equal amounts of Cyan, Magenta, and</p>
+<p>Yellow ink. The black component in a CMY color is achieved</p>
+<p>by reducing the CMY components by the minimum of (C, M,</p>
+<p>and Y) and substituting pure black in its place producing a</p>
+<p>sharper print and using less ink. Since it is possible for a user</p>
+<p>to boost the C,M and Y components where boosting the black</p>
+<p>component would have been preferable, a ColorCorrectCMYK()</p>
+<p>function is provided to achieve the same color by reducing the</p>
 <p>C, M and Y components, and boosting the K component.</p>
 
 <p>Example:</p>

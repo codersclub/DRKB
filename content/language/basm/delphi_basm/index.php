@@ -2,8 +2,8 @@
 <div class="date">01.01.2007</div>
 
 
-<p>© Guido Gybels, January-February 2001, All rights reserved. </p>
-<p>© Anatoly Podgoretskys, 2002, Authorized Russian Translation. </p>
+<p>© Guido Gybels, January-February 2001, All rights reserved.</p>
+<p>© Anatoly Podgoretskys, 2002, Authorized Russian Translation.</p>
 <p><a href="77754.htm">Ввведение</a></p>
 <p><a href="77755.htm">Об основах ассемблерных процедур</a></p>
 <p><a href="77756.htm">Замечания о синтаксисе</a></p>

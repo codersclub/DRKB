@@ -22,7 +22,7 @@ AcceptableRelativeError then ...
 <p>&nbsp;<br>
 , где AcceptableRelativeError определяет величину относительной погрешности (ну, и конечно, TrueValue &lt;&gt; 0.0). <br>
 &nbsp;<br>
-<p>Математеческий модуль Delphi вычисляет относительную погрешность следующим образом (но оно не вынесено в секцию interface): </p>
+<p>Математеческий модуль Delphi вычисляет относительную погрешность следующим образом (но оно не вынесено в секцию interface):</p>
 <pre>
 FUNCTION RelSmall(X, Y: Extended): Boolean;
 { Возвращаем Истину, если разница между X и Y незначительна }
@@ -35,4 +35,4 @@ END;
 </pre>
 <p>&nbsp;<br>
 &nbsp;<br>
-<p>Источник: DelphiWorld </p>
+<p>Источник: DelphiWorld</p>

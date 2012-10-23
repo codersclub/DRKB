@@ -1,7 +1,7 @@
 <h1>Как отловить правый Enter (NumPad)</h1>
 <div class="date">01.01.2007</div>
 
-Для этого можно воспользоваться функцией GetHeapStatus: </p>
+Для этого можно воспользоваться функцией GetHeapStatus:</p>
 <pre>
 procedure TForm1.WMKeyDown(var message: TWMKeyDown);
 begin

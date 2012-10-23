@@ -2,59 +2,59 @@
 <div class="date">01.01.2007</div>
 
 
-<p>This is a simple class that plays a formatted musical string. It is reminiscent of the old GWBASIC days whereby one could play a string of notes via the PC speaker. I know that WAV and MIDI files are available in todays technology, but sometimes one does not need all that overhead. The class is useful for certain types of alarms (specially if the user has his sound card volume muted) or simple "Cell Phone" like jingles. The trick of the matter in Delphi is that the standard DELPHI implementation of BEEP takes no arguments and has only one sound. However the WIN API BEEP() takes two arguments. </p>
+<p>This is a simple class that plays a formatted musical string. It is reminiscent of the old GWBASIC days whereby one could play a string of notes via the PC speaker. I know that WAV and MIDI files are available in todays technology, but sometimes one does not need all that overhead. The class is useful for certain types of alarms (specially if the user has his sound card volume muted) or simple "Cell Phone" like jingles. The trick of the matter in Delphi is that the standard DELPHI implementation of BEEP takes no arguments and has only one sound. However the WIN API BEEP() takes two arguments.</p>
 
-<p>ie. </p>
+<p>ie.</p>
 
-<p>BOOL Beep( </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DWORD dwFreq,&nbsp;&nbsp;&nbsp;&nbsp; // sound frequency, in hertz </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DWORD dwDuration&nbsp; // sound duration, in milliseconds </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ); </p>
+<p>BOOL Beep(</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DWORD dwFreq,&nbsp;&nbsp;&nbsp;&nbsp; // sound frequency, in hertz</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DWORD dwDuration&nbsp; // sound duration, in milliseconds</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );</p>
 
-<p>Parameters </p>
+<p>Parameters</p>
 
-<p>dwFreq </p>
+<p>dwFreq</p>
 
-<p> &nbsp; Windows NT: </p>
-<p> &nbsp; Specifies the frequency, in hertz, of the sound. This parameter&nbsp;&nbsp; must be in the range 37 through 32,767 (0x25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; through 0x7FFF). </p>
+<p> &nbsp; Windows NT:</p>
+<p> &nbsp; Specifies the frequency, in hertz, of the sound. This parameter&nbsp;&nbsp; must be in the range 37 through 32,767 (0x25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; through 0x7FFF).</p>
 
-<p> &nbsp; Windows 95: </p>
-<p> &nbsp; The parameter is ignored. </p>
+<p> &nbsp; Windows 95:</p>
+<p> &nbsp; The parameter is ignored.</p>
 
-<p>dwDuration </p>
+<p>dwDuration</p>
 
-<p> &nbsp; Windows NT: </p>
-<p> &nbsp; Specifies the duration, in milliseconds, of the sound. </p>
+<p> &nbsp; Windows NT:</p>
+<p> &nbsp; Specifies the duration, in milliseconds, of the sound.</p>
 
-<p> &nbsp; Windows 95: </p>
-<p> &nbsp; The parameter is ignored. </p>
+<p> &nbsp; Windows 95:</p>
+<p> &nbsp; The parameter is ignored.</p>
 
-<p>As can be seen it appears that BEEP() is NOT supported on WIN95, but is OK from there upwards. (I have not tested it on WIN95, but assume you will just get a monotone ???? - anyone for comment) </p>
+<p>As can be seen it appears that BEEP() is NOT supported on WIN95, but is OK from there upwards. (I have not tested it on WIN95, but assume you will just get a monotone ???? - anyone for comment)</p>
 
-<p>It is easily called by prefixing the unit </p>
-<p>ie. Windows.Beep(Freq,Duration) </p>
+<p>It is easily called by prefixing the unit</p>
+<p>ie. Windows.Beep(Freq,Duration)</p>
 
-<p>The format of the "Music String" is a comma delimited (",&lt;" terminated) string in the following formats. (The string is CASE-INSENSITIVE and [] means optional with defaults). </p>
+<p>The format of the "Music String" is a comma delimited (",&lt;" terminated) string in the following formats. (The string is CASE-INSENSITIVE and [] means optional with defaults).</p>
 
-<p>A..G[+ or -][0..5][/BEATS] and </p>
+<p>A..G[+ or -][0..5][/BEATS] and</p>
 
-<p>@[/BEATS] </p>
+<p>@[/BEATS]</p>
 
-<p>Where A..G&nbsp;&nbsp; is the Note to be played. </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; + or - is optional Sharp or Flat designator respectively. (default is normal NULL) </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; 0..5&nbsp;&nbsp; is optional Octave range (default = 1) </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; /BEATS is number of 100ms to hold the note (default = 1) </p>
+<p>Where A..G&nbsp;&nbsp; is the Note to be played.</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; + or - is optional Sharp or Flat designator respectively. (default is normal NULL)</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; 0..5&nbsp;&nbsp; is optional Octave range (default = 1)</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; /BEATS is number of 100ms to hold the note (default = 1)</p>
 
-<p>where @&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is a musical pause </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; /BEATS is the number of beats to pause for (default = 1) </p>
+<p>where @&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is a musical pause</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp; /BEATS is the number of beats to pause for (default = 1)</p>
 
-<p>where ,&lt;&nbsp;&nbsp;&nbsp;&nbsp; is the END OF STRING terminator. </p>
+<p>where ,&lt;&nbsp;&nbsp;&nbsp;&nbsp; is the END OF STRING terminator.</p>
 
-<p>Properties: </p>
-<p>DefaultOctave  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Used if no 0..5 designator specified in format. (System Default = 1)&nbsp;&nbsp; </p>
-<p>BetweenNotesPause  &nbsp; &nbsp; &nbsp; &nbsp;: Use to set number MS gap between notes (faster or slower default = 100ms) </p>
+<p>Properties:</p>
+<p>DefaultOctave  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Used if no 0..5 designator specified in format. (System Default = 1)&nbsp;&nbsp;</p>
+<p>BetweenNotesPause  &nbsp; &nbsp; &nbsp; &nbsp;: Use to set number MS gap between notes (faster or slower default = 100ms)</p>
 
-<p>Simple Example: </p>
+<p>Simple Example:</p>
 <pre>
 procedure TForm1.Button3Click(Sender: TObject);
 var

@@ -16,7 +16,7 @@ begin
 end; 
 </pre>
 
-<p>На событие OnDrawColumnCell повесьте вызов процедуры DrawGridCheckBox(): </p>
+<p>На событие OnDrawColumnCell повесьте вызов процедуры DrawGridCheckBox():</p>
 <pre>
 procedure TForm1.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
   DataCol: Integer; Column: TColumn; State: TGridDrawState);
@@ -29,7 +29,7 @@ begin
 end;
 </pre>
 
-<p>Кроме этого, для скрытия текста в ячейках с CheckBox-ом от отображения значения при вводе с клавиатуры определите реакцию на событие OnColumnEnter: </p>
+<p>Кроме этого, для скрытия текста в ячейках с CheckBox-ом от отображения значения при вводе с клавиатуры определите реакцию на событие OnColumnEnter:</p>
 <pre>
 procedure TfrmMain.DBGrid1ColEnter(Sender: TObject);
 begin

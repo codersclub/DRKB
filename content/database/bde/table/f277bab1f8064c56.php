@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Эти небольшие функции анализирую таблицу и записывают её содержимое в TStringList. А затем просто сохраняют в файл. </p>
+<p>Эти небольшие функции анализирую таблицу и записывают её содержимое в TStringList. А затем просто сохраняют в файл.</p>
 <pre>
 procedure DatasetRecordToInfFile(aDataset: TDataSet; aStrList: TStrings);
 var

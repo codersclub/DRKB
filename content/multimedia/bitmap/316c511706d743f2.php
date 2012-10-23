@@ -58,7 +58,7 @@ begin
   end;
 end;
 </pre>
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>
 procedure TForm1.MMHowManyColorsClick(Sender: TObject);
 var

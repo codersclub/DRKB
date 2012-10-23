@@ -1,8 +1,7 @@
 <h1>Как можно определить доступные сервера приложений на этой машине через Registry</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Nomadic  </p>
-<p>Прочитайте ключ под HKEY_CLASSES_ROOT\CLSID\*, просматривая его насчёт ключей, которые имеют подключ "Borland DataBroker". Эти вхождения и являются серверами приложений. </p>
+<p>Прочитайте ключ под HKEY_CLASSES_ROOT\CLSID\*, просматривая его насчёт ключей, которые имеют подключ "Borland DataBroker". Эти вхождения и являются серверами приложений.</p>
 <p>Ниже пример, который загружает имена доступных серверов приложений в Listbox:</p>
 <pre>
 uses Registry;
@@ -38,6 +37,7 @@ begin
 end;
 </pre>
 
+<div class="author">Автор: Nomadic</div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 

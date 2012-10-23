@@ -26,7 +26,7 @@ end;
 
 
 <hr />
-<p class="p_Heading1">Автор: Steve Schafer </p>
+<p class="p_Heading1">Автор: Steve Schafer</p>
 
 <pre>
 type

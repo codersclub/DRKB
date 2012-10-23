@@ -3,10 +3,10 @@
 
 
 <p>Взято из FAQ:<a href="https://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml</a></p>
-<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm </p>
+<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm</p>
 
 <p>Есть два способа вывода на печать. Первый пример работает в IE 4.x и выше,</p>
-<p>в то время как второй пример расчитан на IE 3.x: </p>
+<p>в то время как второй пример расчитан на IE 3.x:</p>
 <pre>
 var
 vaIn, vaOut: OleVariant; 
@@ -37,4 +37,4 @@ end;
 
 <p>Обратите внимание: Если версия Delphi ниже чем 3.02, то необходимо заменить PGuid(nil)</p>
 <p>на PGuid(nil)^</p>
-<p>. А лучше всего проапгрейдить до 3.02 (если Вы пользуетесь версиями 3.0 или 3.01). </p>
+<p>. А лучше всего проапгрейдить до 3.02 (если Вы пользуетесь версиями 3.0 или 3.01).</p>

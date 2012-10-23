@@ -417,5 +417,5 @@ end
 </pre>
 
 
-<p>Взято с сайта Анатолия Подгорецкого&nbsp; <a href="https://podgoretsky.com" target="_blank">https://podgoretsky.com</a> </p>
-<p>по материалам fido7.ru.delphi.* </p>
+<p>Взято с сайта Анатолия Подгорецкого&nbsp; <a href="https://podgoretsky.com" target="_blank">https://podgoretsky.com</a></p>
+<p>по материалам fido7.ru.delphi.*</p>

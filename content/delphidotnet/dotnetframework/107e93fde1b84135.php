@@ -66,7 +66,7 @@ pause</p>
 dccil -CC -NSC:\WINDOWS\Microsoft.NET\Framework\v2.0.50727 --clrversion:v2.0.50727 --no-config -Q -M -y -Z -$D- Borland.Delphi.System.pas<br>
 pause
 
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Эта команда приведёт к компиляции Borland.Delphi.System.pas и получению так необходимого нам файла Borland.Delphi.System.dcuil.</td></tr></table></div><p>&nbsp;<br>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Эта команда приведёт к компиляции Borland.Delphi.System.pas и получению так необходимого нам файла Borland.Delphi.System.dcuil.</td></tr></table></div><p>&nbsp;<br>
 <p>Снова запускайте make.bat. В директории проекта появится скомпилированный файл ConsoleApp.exe, а также ещё несколько скомпилированных библиотек второго .NET. Запускайте приложение и вуаля! Мы видим, что приложение прекрасно работает, более того, видно, что текст в консоли имеет разные цвета. Это говорит о том, что классы второго фреймворка дают о себе знать и замечательно работают:</p>
 <p>Для ещё большей уверенности можете попробовать запустить это приложение на машине без установленного второго фреймворка.<br>
 Как видите, у нас получилось создать полноценное .NET 2.0 приложение. Вы можете пробовать экспериментировать с другими классами и новыми свойствами второго фреймворка и Я Вас уверяю, они будут работать.<br>

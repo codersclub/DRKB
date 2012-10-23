@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Функции GetTcpTable, GetUdpTable. </p>
+<p>Функции GetTcpTable, GetUdpTable.</p>
 <p>Импорт GetTcpTable:</p>
 <pre>
 unit TcpTable;

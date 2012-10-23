@@ -104,7 +104,7 @@ end.
 </pre>
 
 
-<p>- Nick Hodges </p>
+<p>- Nick Hodges</p>
 <p>Взято из Советов по Delphi от <a href="mailto:mailto:webmaster@webinspector.com" target="_blank">Валентина Озерова</a></p>
 <p>Сборник Kuliba</p>
 

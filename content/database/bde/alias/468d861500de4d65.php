@@ -51,7 +51,7 @@ end;
 <p>szDbType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : DBINAME;&nbsp;&nbsp;&nbsp; { Тип базы данных }</p>
 <p>end;</p>
 
-<p>Физическое имя/путь будет содержаться в поле szPhyName структуры DBDesc. </p>
+<p>Физическое имя/путь будет содержаться в поле szPhyName структуры DBDesc.</p>
 
 <p>Возможные значения, возвращаемые функцией DBIGetDatbaseDesc:</p>
 
@@ -71,4 +71,5 @@ end;
 </pre>
 
 
-<div class="author">Автор: Xavier Pacheco </div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Xavier Pacheco</div>
+<p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

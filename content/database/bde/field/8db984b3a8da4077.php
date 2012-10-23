@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Reinhard Kalinke </div>
+<div class="author">Автор: Reinhard Kalinke</div>
 
 <p>Единственный способ изменить размер поля или его тип - использовать DBIDoRestructure. Вот простой пример, который может вам помочь в этом:</p>
 
@@ -108,7 +108,7 @@ end;
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
-<p class="note">Примечание Vit</p><p>На счёт "Единственный способ"&nbsp; - этот товарищ несколько погорячился. Все базы данных поддерживают SQL запрос вида </p>
+<p class="note">Примечание Vit</p><p>На счёт "Единственный способ"&nbsp; - этот товарищ несколько погорячился. Все базы данных поддерживают SQL запрос вида</p>
 
 <p>ALTER TABLE...</p>
 

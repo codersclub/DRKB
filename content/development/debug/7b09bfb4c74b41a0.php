@@ -3,15 +3,15 @@
 
 
 
-<p>Class Methods aply to the class level, in other words you donґt need an instance to call the method </p>
+<p>Class Methods aply to the class level, in other words you donґt need an instance to call the method</p>
 
-<p>I wish we could define class objects as well, but they doesnґt exist in Object Pascal, so we will do a trick, we are going to define a variable in the implementation section of the unit, this variable will hold the number of instances the class will have in a moment in time. Object Oriented purist might claim about it, but it works, nobody is perfect (not even Delphi!). </p>
+<p>I wish we could define class objects as well, but they doesnґt exist in Object Pascal, so we will do a trick, we are going to define a variable in the implementation section of the unit, this variable will hold the number of instances the class will have in a moment in time. Object Oriented purist might claim about it, but it works, nobody is perfect (not even Delphi!).</p>
 
-<p>For example say you need to create instances of a class named TFoo, so you create the following Unit. </p>
+<p>For example say you need to create instances of a class named TFoo, so you create the following Unit.</p>
 
-<p>We will define two class procedures: AddInstance(to increse the counter of instances) and ReleaseInstance(to decrese the number of instances), these are called in the constructor and the destructor acordingly. Finally we define a class function NumOfInstances which returns the actual number of instances. </p>
+<p>We will define two class procedures: AddInstance(to increse the counter of instances) and ReleaseInstance(to decrese the number of instances), these are called in the constructor and the destructor acordingly. Finally we define a class function NumOfInstances which returns the actual number of instances.</p>
 
-<p>Add a Initilialization and a Finalization section to the Unit, in the Finalization section ask if the number of instances is &lt;&gt; 0, if this is the case you known that you didinґt destroy all the objects that you created. </p>
+<p>Add a Initilialization and a Finalization section to the Unit, in the Finalization section ask if the number of instances is &lt;&gt; 0, if this is the case you known that you didinґt destroy all the objects that you created.</p>
 
 <pre>
 unit U_Foo;

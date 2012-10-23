@@ -10,7 +10,7 @@
 <p>Функция находится в модуле ShellApi, так что не забудьте подключить его в uses. Если эта функция возвратит ноль, значит иконок в файле нет.</p>
 <p>Данная функция возвращает handle иконки, поэтому применять ее нужно так:</p>
 <p>Image1.Picture.Icon.Handle:=ExtractIcon(hInstance, pchar(paramstr(0)), 0);</p>
-<p>данное объявление нарисует в Image'e картинку вашего приложения. </p>
+<p>данное объявление нарисует в Image'e картинку вашего приложения.</p>
 
 <div class="author">Автор: Михаил Христосенко</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

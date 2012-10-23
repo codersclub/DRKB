@@ -49,17 +49,17 @@ end;
 
 <p>Как использовать:</p>
 
-<p> &nbsp;&nbsp; Function SetProcessPriority( Priority : Integer ) : Integer; </p>
+<p> &nbsp;&nbsp; Function SetProcessPriority( Priority : Integer ) : Integer;</p>
 
 <p>для установки приоритета Вашего приложения, либо:</p>
 
-<p> &nbsp;&nbsp; Function GetProcessPriority : Integer; </p>
+<p> &nbsp;&nbsp; Function GetProcessPriority : Integer;</p>
 
 <p>для получения приоритета.</p>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
-<hr />Следующий пример изменяет приоритет приложения. Изменение приоритета следует использовать с осторожностью - т.к. присвоение слишком высокого приоритета может привети к медленной работе остальных программ и системы в целом. См. Win32 help for SetThreadPriority() function. </p>
+<hr />Следующий пример изменяет приоритет приложения. Изменение приоритета следует использовать с осторожностью - т.к. присвоение слишком высокого приоритета может привети к медленной работе остальных программ и системы в целом. См. Win32 help for SetThreadPriority() function.</p>
 
 <pre>
   procedure TForm1.Button1Click(Sender: TObject);

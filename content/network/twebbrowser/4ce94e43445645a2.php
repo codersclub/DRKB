@@ -3,18 +3,18 @@
 
 
 <div class="author">Автор: Лозовюк Александр</div>
-<p>WEB-сайт: http://search3i.al.ru/ </p>
+<p>WEB-сайт: http://search3i.al.ru/</p>
 <p>Читая и перечитывая вопросы и ответы на Круглом столе сайта Королевство Дельфи я все время натыкался на вопросы о компоненте TWebBrowser. Сначала я думал, что все просто, но когда самому понадобилось написать приложение с использованием TwebBrowser… оказалось, что не все так просто!</p>
 <p>Эта статья не претендует на исчерпывающие руководство по написанию браузера в Delphi 5 - скорее всего она будет со временем дополняться и исправляться. Я постарался обобщить в одном работающем примере решения большинства вопросов, заданных на этом сайте (признаюсь, там были и мои). Также выражаю большую признательность Елене Филлиповой за исчерпывающие ответы на некоторые из них, и всему Королевству за столь хороший и полезный сайт.</p>
 <p>Компонент TWebBrowser в Delphi 4 нужно было специально инсталлировать как Active X компонент. В 5-й версии нам пошли навстречу, и он сразу есть на вкладке Internet. Не буду останавливаться на особенностях интерфейса программы - он очень прост (надеюсь, не очень) и не вызовет трудностей.</p>
 <p>Рассмотрим некоторые свойства и функции TwebBrowser.</p>
-<p>procedure GoBack; </p>
-<p>procedure GoForward; </p>
-<p>procedure GoHome; </p>
-<p>procedure GoSearch; </p>
-<p>procedure Refresh; </p>
-<p>procedure Stop; </p>
-<p>procedure Quit; </p>
+<p>procedure GoBack;</p>
+<p>procedure GoForward;</p>
+<p>procedure GoHome;</p>
+<p>procedure GoSearch;</p>
+<p>procedure Refresh;</p>
+<p>procedure Stop;</p>
+<p>procedure Quit;</p>
 <p>Названия этих процедур говорят сами за себя, а позволяют они осуществить управление просмотром - перейти по истории просмотра вперед, назад, перейти на страницу, установленную как домашняя, открыть страницу поиска, обновить текущую страницу, остановить загрузку страницы, выйти.</p>
 <p>Последняя команда самая интересная - в Help написано, что использовать ее не надо. Она завершает работу IE и очищает окно. Но я проверял - вроде вреда от ее использования не наблюдалось.</p>
 <p>Далее идет целая группа процедур:</p>
@@ -46,45 +46,45 @@
 <p>procedure ExecWB(cmdID: OLECMDID; cmdexecopt: OLECMDEXECOPT); overload;</p>
 <p>Позволяет осуществить управление браузером и вызывать различные дополнительные функции - печать, сохранение и др. Использует IoleCommandTarget интерфейс для управления браузером.</p>
 <p>CmdID - задает команду, которую нужно выполнить. Может принимать следующие значения:</p>
-<p>OLECMDID_OPEN, </p>
-<p>OLECMDID_NEW, </p>
-<p>OLECMDID_SAVE, </p>
-<p>OLECMDID_SAVEAS, </p>
-<p>OLECMDID_SAVECOPYAS, </p>
-<p>OLECMDID_PRINT, </p>
-<p>OLECMDID_PRINTPREVIEW, </p>
-<p>OLECMDID_PAGESETUP, </p>
-<p>OLECMDID_SPELL, </p>
-<p>OLECMDID_PROPERTIES, </p>
-<p>OLECMDID_CUT, </p>
-<p>OLECMDID_COPY, </p>
-<p>OLECMDID_PASTE, </p>
-<p>OLECMDID_PASTESPECIAL, </p>
-<p>OLECMDID_UNDO, </p>
-<p>OLECMDID_REDO, </p>
-<p>OLECMDID_SELECTALL, </p>
-<p>OLECMDID_CLEARSELECTION, </p>
-<p>OLECMDID_ZOOM, </p>
-<p>OLECMDID_GETZOOMRANGE, </p>
-<p>OLECMDID_UPDATECOMMANDS, </p>
-<p>OLECMDID_REFRESH, </p>
-<p>OLECMDID_STOP, </p>
-<p>OLECMDID_HIDETOOLBARS, </p>
-<p>OLECMDID_SETPROGRESSMAX , </p>
-<p>OLECMDID_SETPROGRESSPOS, </p>
-<p>OLECMDID_SETPROGRESSTEXT, </p>
-<p>OLECMDID_SETTITLE, </p>
-<p>OLECMDID_SETDOWNLOADSTATE, </p>
-<p>OLECMDID_STOPDOWNLOAD, </p>
-<p>OLECMDID_FIND, </p>
-<p>OLECMDID_ONTOOLBARACTIVATED, </p>
-<p>OLECMDID_DELETE, </p>
-<p>OLECMDID_HTTPEQUIV, </p>
-<p>OLECMDID_ENABLE_INTERACTION, </p>
-<p>OLECMDID_HTTPEQUIV_DONE, </p>
-<p>OLECMDID_ONUNLOAD, </p>
-<p>OLECMDID_PROPERTYBAG2, </p>
-<p>OLECMDID_PREREFRESH </p>
+<p>OLECMDID_OPEN,</p>
+<p>OLECMDID_NEW,</p>
+<p>OLECMDID_SAVE,</p>
+<p>OLECMDID_SAVEAS,</p>
+<p>OLECMDID_SAVECOPYAS,</p>
+<p>OLECMDID_PRINT,</p>
+<p>OLECMDID_PRINTPREVIEW,</p>
+<p>OLECMDID_PAGESETUP,</p>
+<p>OLECMDID_SPELL,</p>
+<p>OLECMDID_PROPERTIES,</p>
+<p>OLECMDID_CUT,</p>
+<p>OLECMDID_COPY,</p>
+<p>OLECMDID_PASTE,</p>
+<p>OLECMDID_PASTESPECIAL,</p>
+<p>OLECMDID_UNDO,</p>
+<p>OLECMDID_REDO,</p>
+<p>OLECMDID_SELECTALL,</p>
+<p>OLECMDID_CLEARSELECTION,</p>
+<p>OLECMDID_ZOOM,</p>
+<p>OLECMDID_GETZOOMRANGE,</p>
+<p>OLECMDID_UPDATECOMMANDS,</p>
+<p>OLECMDID_REFRESH,</p>
+<p>OLECMDID_STOP,</p>
+<p>OLECMDID_HIDETOOLBARS,</p>
+<p>OLECMDID_SETPROGRESSMAX ,</p>
+<p>OLECMDID_SETPROGRESSPOS,</p>
+<p>OLECMDID_SETPROGRESSTEXT,</p>
+<p>OLECMDID_SETTITLE,</p>
+<p>OLECMDID_SETDOWNLOADSTATE,</p>
+<p>OLECMDID_STOPDOWNLOAD,</p>
+<p>OLECMDID_FIND,</p>
+<p>OLECMDID_ONTOOLBARACTIVATED,</p>
+<p>OLECMDID_DELETE,</p>
+<p>OLECMDID_HTTPEQUIV,</p>
+<p>OLECMDID_ENABLE_INTERACTION,</p>
+<p>OLECMDID_HTTPEQUIV_DONE,</p>
+<p>OLECMDID_ONUNLOAD,</p>
+<p>OLECMDID_PROPERTYBAG2,</p>
+<p>OLECMDID_PREREFRESH</p>
 <p>Если присмотреться, то можно увидеть, что некоторые из них дублируються процедурами Stop, Refresh и др. Но большенство очень даже нужные.</p>
 <p>Cmdexecopt - указывает дополнительно, как команда должна исполняться. Может принимать значения:</p>
 <p>OLECMDEXECOPT_DODEFAULT 0 Команда исполняеться так, как принято по умолчанию.</p>
@@ -127,12 +127,12 @@ end;
 <p>property LocationURL: WideString; Позначено как "только для чтения" и содержит URL ресурса, загруженого в браузер.</p>
 <p>Теперь события.</p>
 <p>Среди самых важных/нужных есть:</p>
-<p>OnDownloadBegin </p>
-<p>OnDownloadComplete </p>
-<p>OnBeforeNavigate2 </p>
-<p>OnNewWindow2 </p>
-<p>OnNavigateComplete2 </p>
-<p>OnDocumentComplete </p>
+<p>OnDownloadBegin</p>
+<p>OnDownloadComplete</p>
+<p>OnBeforeNavigate2</p>
+<p>OnNewWindow2</p>
+<p>OnNavigateComplete2</p>
+<p>OnDocumentComplete</p>
 <p>OnDownloadBegin - происходит, когда вы, наберя URL, хотите перейти по нему. Тут можно задать например анимацию или ProgressBar для индикации процесса загрузки страницы ( совмесно с OnProgressChange).</p>
 <p>OnDownloadComplete, OnDownloadComplete, OnNavigateComplete2 - происходит, когда страница закончила грузиться.</p>
 <p>Правда, здесь есть много нюансов при загрузке страниц с графикой и фреймами - для каждого загружаемого элемента будут генерироваться новые события начала/окончания загрузки, а кроме того, если отключить загрузку рисунков/анимации/видео, так вообще некоторые из них не будут происходить! Так что пользоваться ими нужно осторожно.</p>

@@ -56,7 +56,7 @@ begin
   end;
 end;
 </pre>
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>
 Threshold(FBitmap, 127, clWhite, clBlack); 
 </pre>

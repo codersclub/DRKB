@@ -4,82 +4,82 @@
 
 <p>Предлагаю вам ознакомиться с приведенной таблицей событий этого объекта:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>События </p>
+<tr>
+<td><p>События</p>
 </td>
-<td ><p>Возникает </p>
-</td>
-</tr>
-<tr >
-<td ><p>OnActionExecute: TActionEvent </p>
-</td>
-<td ><p>Происходит при вызове метода Execute перед обработкой списка событий. </p>
+<td><p>Возникает</p>
 </td>
 </tr>
-<tr >
-<td ><p>OnActionUpdate: TNotifyEvent </p>
+<tr>
+<td><p>OnActionExecute: TActionEvent</p>
 </td>
-<td ><p>Происходит при вызове метода Update; </p>
-</td>
-</tr>
-<tr >
-<td ><p>OnActivate: TNotifyEvent </p>
-</td>
-<td ><p>При переходе приложения в активное состояние. </p>
+<td><p>Происходит при вызове метода Execute перед обработкой списка событий.</p>
 </td>
 </tr>
-<tr >
-<td ><p>OnDeactivate:TNotifyEvent </p>
+<tr>
+<td><p>OnActionUpdate: TNotifyEvent</p>
 </td>
-<td ><p>При переключении на другое приложение Windows </p>
-</td>
-</tr>
-<tr >
-<td ><p>OnException: TExceptionEvent </p>
-</td>
-<td ><p>При возникновении исключительной ситуации </p>
+<td><p>Происходит при вызове метода Update;</p>
 </td>
 </tr>
-<tr >
-<td ><p>OnHelp: THelpEvent </p>
+<tr>
+<td><p>OnActivate: TNotifyEvent</p>
 </td>
-<td ><p>При запросе приложением справочной системы. </p>
-</td>
-</tr>
-<tr >
-<td ><p>OnHint: TNotifyEvent </p>
-</td>
-<td ><p>При перемещении мыши над компонентом, у которого есть строка подсказки (Hint) </p>
+<td><p>При переходе приложения в активное состояние.</p>
 </td>
 </tr>
-<tr >
-<td ><p>OnIdle: TNotifyEvent </p>
+<tr>
+<td><p>OnDeactivate:TNotifyEvent</p>
 </td>
-<td ><p>При отсутствии работы у приложения </p>
-</td>
-</tr>
-<tr >
-<td ><p>OnMessage: TMessageEvent </p>
-</td>
-<td ><p>При получении сообщения Windows </p>
+<td><p>При переключении на другое приложение Windows</p>
 </td>
 </tr>
-<tr >
-<td ><p>OnMinimize: TNotifyEvent </p>
+<tr>
+<td><p>OnException: TExceptionEvent</p>
 </td>
-<td ><p>При минимизации приложения </p>
-</td>
-</tr>
-<tr >
-<td ><p>OnRestore: TNotifyEvent </p>
-</td>
-<td ><p>При восстановлении приложения в нормальный размер </p>
+<td><p>При возникновении исключительной ситуации</p>
 </td>
 </tr>
-<tr >
-<td ><p>OnShowHint: TShowHintEvent </p>
+<tr>
+<td><p>OnHelp: THelpEvent</p>
 </td>
-<td ><p>При выводе строки подсказки (Hint) </p>
+<td><p>При запросе приложением справочной системы.</p>
+</td>
+</tr>
+<tr>
+<td><p>OnHint: TNotifyEvent</p>
+</td>
+<td><p>При перемещении мыши над компонентом, у которого есть строка подсказки (Hint)</p>
+</td>
+</tr>
+<tr>
+<td><p>OnIdle: TNotifyEvent</p>
+</td>
+<td><p>При отсутствии работы у приложения</p>
+</td>
+</tr>
+<tr>
+<td><p>OnMessage: TMessageEvent</p>
+</td>
+<td><p>При получении сообщения Windows</p>
+</td>
+</tr>
+<tr>
+<td><p>OnMinimize: TNotifyEvent</p>
+</td>
+<td><p>При минимизации приложения</p>
+</td>
+</tr>
+<tr>
+<td><p>OnRestore: TNotifyEvent</p>
+</td>
+<td><p>При восстановлении приложения в нормальный размер</p>
+</td>
+</tr>
+<tr>
+<td><p>OnShowHint: TShowHintEvent</p>
+</td>
+<td><p>При выводе строки подсказки (Hint)</p>
 </td>
 </tr>
 </table>
@@ -137,43 +137,43 @@ end.
 </pre>
 
 <p>Еще у объекта TApplication есть ряд полезных свойств. Их названия и смысл приведены в таблице.</p>
-<table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: colla: 7px 0px 7px 0px;">Свойств: 7px 0px 7px 0px;">Описание </p>
+<table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: colla: 7px 0px 7px 0px;">Свойств: 7px 0px 7px 0px;">Описание</p>
 </td>
 </tr>
-<tr >
-<td ><p>HelpFile: String </p>
+<tr>
+<td><p>HelpFile: String</p>
 </td>
-<td ><p>Имя файла контекстной помощи, которое используется приложением </p>
-</td>
-</tr>
-<tr >
-<td ><p>Hint: String </p>
-</td>
-<td ><p>Строка подсказки </p>
+<td><p>Имя файла контекстной помощи, которое используется приложением</p>
 </td>
 </tr>
-<tr >
-<td ><p>HintHidePause: Integer </p>
+<tr>
+<td><p>Hint: String</p>
 </td>
-<td ><p>Время, в течении которого подсказка будет отображаться. По умолчанию 2500 мсек. </p>
-</td>
-</tr>
-<tr >
-<td ><p>HintPause: Integer </p>
-</td>
-<td ><p>Время, через которое подсказка появится при перемещении курсора над объектом. По умолчанию 500 мсек. </p>
+<td><p>Строка подсказки</p>
 </td>
 </tr>
-<tr >
-<td ><p>HintShortPause: Integer </p>
+<tr>
+<td><p>HintHidePause: Integer</p>
 </td>
-<td ><p>Используется для уменьшения мерцания курсора при перемещении мыши над объектом. По умолчанию 50 мсек. </p>
+<td><p>Время, в течении которого подсказка будет отображаться. По умолчанию 2500 мсек.</p>
 </td>
 </tr>
-<tr >
-<td ><p>ShowHint: Boolean </p>
+<tr>
+<td><p>HintPause: Integer</p>
 </td>
-<td ><p>Разрешает выводить подсказку для всего приложения (по умолчанию). Установив в False, вы запретите вывод подсказок для всего приложения </p>
+<td><p>Время, через которое подсказка появится при перемещении курсора над объектом. По умолчанию 500 мсек.</p>
+</td>
+</tr>
+<tr>
+<td><p>HintShortPause: Integer</p>
+</td>
+<td><p>Используется для уменьшения мерцания курсора при перемещении мыши над объектом. По умолчанию 50 мсек.</p>
+</td>
+</tr>
+<tr>
+<td><p>ShowHint: Boolean</p>
+</td>
+<td><p>Разрешает выводить подсказку для всего приложения (по умолчанию). Установив в False, вы запретите вывод подсказок для всего приложения</p>
 </td>
 </tr>
 </table>

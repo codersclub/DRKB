@@ -41,7 +41,10 @@ begin
 end; 
 </pre>
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
-<hr /><div class="author">Автор: Дедок Василий </div>
+
+<hr />
+
+<div class="author">Автор: Дедок Василий</div>
 <pre>
  
 type
@@ -66,7 +69,7 @@ begin
     end;
 end;
 </pre>
-<hr /><div class="author">Автор: Иваненко Фёдор Григорьевич </div>
+<hr /><div class="author">Автор: Иваненко Фёдор Григорьевич</div>
 <pre>
 procedure FillArray(var A: array of Integer);
 var
@@ -143,8 +146,10 @@ begin
   end;
 end;
 </pre>
+
 <hr />
-<p>Предлагаю Вам интересное решение заполнения массива случаными неповторяющимися значениями. Думаю этот алгоритм небесполезен. </p>
+
+<p>Предлагаю Вам интересное решение заполнения массива случаными неповторяющимися значениями. Думаю этот алгоритм небесполезен.</p>
 <pre>
 type
   arr = array[1..255] of integer;

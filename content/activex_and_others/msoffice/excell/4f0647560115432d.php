@@ -8,7 +8,7 @@ Create Table MyTable1 (
 Field1 varchar(20),
 Field2 varchar(10) )
 </pre>
-<p>Снова переходим в дизайн - ставим на форму ADOTable, указываем как Connection наш компонент с ADOConnection, теперь если кликнуть на свойстве TableName - вы сможете увидеть в списке сделанную нами таблицу "MyTable1". Соедините таблицу с DBGrid - убедитесь что работа с таблицей в Excel мало отличается от работы с другими базами данных. </p>
+<p>Снова переходим в дизайн - ставим на форму ADOTable, указываем как Connection наш компонент с ADOConnection, теперь если кликнуть на свойстве TableName - вы сможете увидеть в списке сделанную нами таблицу "MyTable1". Соедините таблицу с DBGrid - убедитесь что работа с таблицей в Excel мало отличается от работы с другими базами данных.</p>
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

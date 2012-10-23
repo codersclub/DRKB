@@ -3,30 +3,30 @@
 
 
 
-<p>TAnimate is a rather nice component. However if you don't want to use the built in AVI files and want to create your own AVI files from BMP files, then you may have a problem as there is no tool in Delphi to do this. </p>
+<p>TAnimate is a rather nice component. However if you don't want to use the built in AVI files and want to create your own AVI files from BMP files, then you may have a problem as there is no tool in Delphi to do this.</p>
 
-<p>While browsing the web for information on AVI file formats I came upon a site www.shrinkwrapvb.com/avihelp/avihelp.htm that is maintained by Ray Mercer. In this tutorial he explains how to manipulate,read and write AVI files. I was particularly interested in "Step 5" in which he shows a utility that takes a list of BMP files that creates an AVI file which can be used by the TAnimate component. The only problem was that the examples are in Visual Basic, thus a conversion to Delphi was required. </p>
+<p>While browsing the web for information on AVI file formats I came upon a site www.shrinkwrapvb.com/avihelp/avihelp.htm that is maintained by Ray Mercer. In this tutorial he explains how to manipulate,read and write AVI files. I was particularly interested in "Step 5" in which he shows a utility that takes a list of BMP files that creates an AVI file which can be used by the TAnimate component. The only problem was that the examples are in Visual Basic, thus a conversion to Delphi was required.</p>
 
-<p>I have posted this procedure </p>
-<p>CreateAVI(const FileName : string; BMPFileList : TStrings; FramesPerSec : integer = 10); </p>
+<p>I have posted this procedure</p>
+<p>CreateAVI(const FileName : string; BMPFileList : TStrings; FramesPerSec : integer = 10);</p>
 
-<p>To keep the text of the example simple and readable I have left out most to the error checking (try except etc.). You can also play with the AVISaveOptions dialog box, but I can only seem to get it to work with "Full Frames Uncompressed" with BMP files. Can anyone shed some light on this ? </p>
+<p>To keep the text of the example simple and readable I have left out most to the error checking (try except etc.). You can also play with the AVISaveOptions dialog box, but I can only seem to get it to work with "Full Frames Uncompressed" with BMP files. Can anyone shed some light on this ?</p>
 
-<p>Errors you should check for are .. </p>
-<p>All files are valid BMP files and are of the same size. </p>
-<p>All Blockreads are valid with no read errors. </p>
+<p>Errors you should check for are ..</p>
+<p>All files are valid BMP files and are of the same size.</p>
+<p>All Blockreads are valid with no read errors.</p>
 
-<p>Ray has a downloadable EXE that works quite nicely, however I am about to write my own utility that incorporates the following ... </p>
+<p>Ray has a downloadable EXE that works quite nicely, however I am about to write my own utility that incorporates the following ...</p>
 
-<p>Multiline file selection. </p>
-<p>Listbox line reordering (drag/drop). </p>
-<p>Sort File list </p>
-<p>Layout Save and Load . </p>
-<p>AVI Preview. </p>
+<p>Multiline file selection.</p>
+<p>Listbox line reordering (drag/drop).</p>
+<p>Sort File list</p>
+<p>Layout Save and Load .</p>
+<p>AVI Preview.</p>
 
-<p>(I have beta version 1.0.0.0 ready, if anyone wants a copy of exe or source code, drop me a mail at mheydon@pgbison.co.za) </p>
+<p>(I have beta version 1.0.0.0 ready, if anyone wants a copy of exe or source code, drop me a mail at mheydon@pgbison.co.za)</p>
 
-<p>For further info on AVI files I recommend you vist Ray's site at http://www.shrinkwrapvb.com/avihelp/avihelp.htm it really is a well written tutorial (even if it is in Visual Basic) </p>
+<p>For further info on AVI files I recommend you vist Ray's site at http://www.shrinkwrapvb.com/avihelp/avihelp.htm it really is a well written tutorial (even if it is in Visual Basic)</p>
 <pre>
 const
   // AVISaveOptions Dialog box flags

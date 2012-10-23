@@ -3,10 +3,10 @@
 
 <p>В ходе создания программного обеспечения возникает желание дополнить возможности создаваемого приложения голосовым интерфейсом.</p>
 <p>Если возможности распознания голоса ещё далеки от совершенства и простому программисту не по силам, то заставить ваше приложение весьма сносно заговорить может любой программист.</p>
-<p>Об этом позаботились специалисты Microsoft выпустив на рынок бесплатный ActiveX компонент TextToSpeech входящий в стандартную комплектацию WinMe и Win 2x. </p>
+<p>Об этом позаботились специалисты Microsoft выпустив на рынок бесплатный ActiveX компонент TextToSpeech входящий в стандартную комплектацию WinMe и Win 2x.</p>
 <p>Если у Вас этого компонента нет Вам необходимо скачать и установить Microsoft Speech API 4.0 825 Кб и Lernout &amp;Hauspie Text-To-Speech 2.9 Мб (русский мужской и женский голос.)</p>
 <p>Применение этого компонента позволяет значительно расширить функциональные возможности интерфейса создаваемой программы. Приятно когда программа говорит &#171;человеческим голосом&#187;. Как пример моя программа общения по сети. Исходный текст прилагаю..</p>
-<p>Рассмотрим пример применения Microsoft Speech API. </p>
+<p>Рассмотрим пример применения Microsoft Speech API.</p>
 <p>Используем позднее связывание освобождающее программиста от написания лишнего кода и облегчающего в дальнейшем модификацию приложения.</p>
 <p>Для размещения ActiveX компонентов будем использовать универсальный класс-контейнер TAxControl, подробно описанный в книге &#171;Delphi для профессионалов&#187; авторы Александровский А.Д., Шубин В.В.</p>
 <pre>unit axControl;
@@ -76,7 +76,7 @@ compon.OleObject.Speak(timetostr(time));
 end; 
 </pre>
 &nbsp;</p>
-Рассмотрим более подробно наиболее общие свойства и методы TextToSpeech: </p>
+Рассмотрим более подробно наиболее общие свойства и методы TextToSpeech:</p>
 <pre>
 var Text:string;
 ...
@@ -97,8 +97,8 @@ compon.OleObject.Select(X);//персоанаж X=1(Светлана) X=2(Бор
 compon.OleObject.LipTension:=X;//визуальное положение губ X:= 0..255; 
 </pre>
 В большинстве программ хватает этих свойств и методов. Но SpeechToText некоторые слова произносит некорректно.</p>
-Для решения этой проблемы существует несколько путей: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>- Подключение пользовательских словарей; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>- Создание своих обработчиков; </td></tr></table></div>Подключение словарей через вызов LexiconDlg, вручную, неудобно &#8211; библиотеку типов этого модуля, лично я, не нашел.</p>
+Для решения этой проблемы существует несколько путей:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>- Подключение пользовательских словарей;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>- Создание своих обработчиков;</td></tr></table></div>Подключение словарей через вызов LexiconDlg, вручную, неудобно &#8211; библиотеку типов этого модуля, лично я, не нашел.</p>
 Остаётся создание своего обработчика с вызовом методов:</p>
 <pre>procedure TForm1.Button5Click(Sender: TObject); 
 begin 

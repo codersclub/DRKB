@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Может кто объяснит подробнее особенности применения директив вызовов процедур: register, pascal, cdecl, stdcall, safecall. В чём отличия, когда и какие надо применять, какие преимущества и недостатки? </p>
+<p>Может кто объяснит подробнее особенности применения директив вызовов процедур: register, pascal, cdecl, stdcall, safecall. В чём отличия, когда и какие надо применять, какие преимущества и недостатки?</p>
 <p>Разница в способе передачи параметров в функцию и возврата параметров из функции.</p>
 <p>stdcall - юзается (вроде) а винапях. Передача аргументов справа налево. Стек очищает вызываемая процедура. Возвращает разультат в EAX (помойму)</p>
 <p>pascal - юзалось в вин16апи. Передача в аргументов слева направо. Стек очищает вызываемая. В паскале результат возвращался в al, ax или в dx:ax. Как в Дельфи - не помню, вероятно а EAX.</p>
@@ -11,7 +11,7 @@
 <div class="author">Автор: FdX</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p>sdecl - вызовы в стиле С (для обращения к DLL использующим соглашения о вызовах в стиле С). Параметры в сет с права на лево. Очистка - вызывающей процедурой. Обеспечивают обслуживание переменного числа параметров. </p>
+<p>sdecl - вызовы в стиле С (для обращения к DLL использующим соглашения о вызовах в стиле С). Параметры в сет с права на лево. Очистка - вызывающей процедурой. Обеспечивают обслуживание переменного числа параметров.</p>
 <div class="author">Автор: Dapo</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
@@ -19,12 +19,12 @@
 <p>Так, например в DOS СИ использовали свои виды реализаций(обычно называемые C-call), а Паскаль - свой. В win32 также различаются реализации для этих языков, но постепенно происходит заимствование фрагментов реализаций друг у друга и их симбиозы (stdcall).</p>
 <p>Если ты пишешь только на одном языке и не подключаешь внешних библиотек, созданных другим компилятором (в другом формате), то тебе, в принципе, все равно, какая реализация используется - компилятор сам примет верное решение и согласует вызовы подпрограмм в своем стиле. Исключение, пожалуй, составляет лишь опция "registers" - по смыслу это означает приоритетное использование регистров процессора для передачи(получения) данных процедуре. Как правило, это ускоряет вызов процедуры и возврат из нее: может быть использования для повышения быстродействия. Однако это обычно делают установкой глобального флага проекта в момент создания Файнал Релиз, применяя это сразу ко всем подпрограммам.</p>
 <p>Однако если тебе необходимо подключить внешнюю библиотеку (например, написанный на СИ dll, вызывающий в свою очередь апи sql-сервера), то будет необходимо учесть способ передачи параметров именно этой библиотеке.</p>
-<p>Или при явном вызове win api из кода также нужно учесть способ их вызова (stdcall)... </p>
+<p>Или при явном вызове win api из кода также нужно учесть способ их вызова (stdcall)...</p>
 <div class="author">Автор: Chingachguk</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Calling conventions influence two things:</p>
-<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>how parameters are passed to a function/procedure (=routines)</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="13">&#183;</td><td>how the call stack is cleaned up when the call returns</td></tr></table></div><p>Delphi routines can use the calling conventions pascal (the Delphi 1 default), register (the default for Delphi 2-5), cdecl (the default used by C/C++ compilers), stdcall (the default used by the Windows API). There is a fifth one: safecall, which is only used in the context of interface methods. A good explanation for what it entails can be found in issue 51 (Nov. 99) of The Delphi Magazine, i will not go into it further here. Lets go through the first four in detail, using a couple of test functions with the same parameter list but different calling conventions. For clearity we compile with stack frames on, so each routine will start with the prologue push ebp mov ebp, esp. The stack layouts given below are for the mov line. Each test function is called with the same parameter values so one can</p>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>how parameters are passed to a function/procedure (=routines)</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>how the call stack is cleaned up when the call returns</td></tr></table></div><p>Delphi routines can use the calling conventions pascal (the Delphi 1 default), register (the default for Delphi 2-5), cdecl (the default used by C/C++ compilers), stdcall (the default used by the Windows API). There is a fifth one: safecall, which is only used in the context of interface methods. A good explanation for what it entails can be found in issue 51 (Nov. 99) of The Delphi Magazine, i will not go into it further here. Lets go through the first four in detail, using a couple of test functions with the same parameter list but different calling conventions. For clearity we compile with stack frames on, so each routine will start with the prologue push ebp mov ebp, esp. The stack layouts given below are for the mov line. Each test function is called with the same parameter values so one can</p>
 <p>use the CPU windows stack pane to study the resulting stack layout.</p>
 <p>1. Pascal calling convention</p>
 <pre>
@@ -130,5 +130,5 @@ begin
   i := Test4(16, True, 1.0);
 end;
 </pre>
-<p>Set breakpoints on the lines and step into the routines with the CPU window open to see the stack layout. </p>
+<p>Set breakpoints on the lines and step into the routines with the CPU window open to see the stack layout.</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

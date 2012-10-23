@@ -3,7 +3,7 @@
 
 
 <p>WM_LBUTTONDOWN</p>
-<p>WM_RBUTTONDOWN </p>
+<p>WM_RBUTTONDOWN</p>
 <div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
@@ -13,16 +13,16 @@
 <p>mouse_event(MOUSEEVENTF_MOVE,400,400,0,0);</p>
 <p>...</p>
 <p>и получилось, что мышка перемещалась не в те координаты(относительно разрешения монитора (800 на 600)) которые я задумал(в не зависимости от местоположения мышки она перемещалась строго по одному направлению на одинаковое расстояние), причем я сделал еще один вариант - dx=100, dy=100, но тогда перемещение мышки произошло в другую сторону(в сторону x=0 y=0 монитора)!</p>
-<p>Подскажите плз в чем дело? </p>
+<p>Подскажите плз в чем дело?</p>
 <div class="author">Автор: Spawn </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>Mouse_event программирует не абсолюьные, а относительные координаты.</p>
-<p>Чтобы не думалось, просто сначала установите курсор в нужную позицию - SetCursorPos(), а потом делайте клик - Mouse_event() </p>
+<p>Чтобы не думалось, просто сначала установите курсор в нужную позицию - SetCursorPos(), а потом делайте клик - Mouse_event()</p>
 <div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p>На форму вынесите компонент TTimer и опишите его единственное событие следующим образом: </p>
+<p>На форму вынесите компонент TTimer и опишите его единственное событие следующим образом:</p>
 <pre>
 procedure TForm1.Timer1Timer(Sender: TObject);
 var
@@ -34,7 +34,7 @@ begin
   sendmessage(Handle, WM_LBUTTONUP, MK_LBUTTON, x + y shl 16);
 end;
 </pre>
-<p>Для того, чтобы убедиться, что сообщения на самом деле посылаются, давайте обработаем событие OnMouseDown для формы. Мы попытаем обозначать те места, где якобы была нажата кнопка мыши. </p>
+<p>Для того, чтобы убедиться, что сообщения на самом деле посылаются, давайте обработаем событие OnMouseDown для формы. Мы попытаем обозначать те места, где якобы была нажата кнопка мыши.</p>
 <pre>
 procedure TForm1.FormMouseDown(Sender: TObject; Button: TMouseButton;
 Shift: TShiftState; X, Y: Integer);

@@ -1,7 +1,7 @@
 <h1>Перехват (Hook) клавиатуры (программа Sendkeys)</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Bogachev  </p>
+Автор: Bogachev</p>
 <pre>
 program Project1;
  

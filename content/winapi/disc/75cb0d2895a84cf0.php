@@ -51,8 +51,8 @@
 <p>Примеры значений поля SystemIndicator:</p>
 <p>  01 - FAT12</p>
 <p>  04 - FAT16</p>
-<p>  05 - EXTENDED&nbsp;&nbsp;&nbsp; </p>
-<p>  06 - FAT16&nbsp;&nbsp;&nbsp; </p>
+<p>  05 - EXTENDED&nbsp;&nbsp;&nbsp;</p>
+<p>  06 - FAT16&nbsp;&nbsp;&nbsp;</p>
 <p>  07 - NTFS</p>
 <p>  0B - FAT32</p>
 <p>  0F - EXTENDED</p>

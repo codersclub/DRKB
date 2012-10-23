@@ -37,5 +37,5 @@ end;
 </pre>
 
 
-<p>Для получения информации об определенном поле вы должны использовать FieldDef. </p>
+<p>Для получения информации об определенном поле вы должны использовать FieldDef.</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

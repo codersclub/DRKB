@@ -14,15 +14,15 @@
 <p>- эксклюзивный доступ одного пользователя: MS Excel, XML, CSV, Парадокс, Dbase, Foxpro/VFP, MS Access, MySQL, PostgreSQL</p>
 <p>- до десятка пользователей: Парадокс, Dbase, Foxpro/VFP, MS Access, MySQL, PostgreSQL</p>
 <p>- несколько десятков пользователей: MySQL, PostgreSQL, Interbase, Informix</p>
-<p>- сотни пользователей: PostgreSQL, Interbase, MS SQL Server, Oracle, SyBase, DB/2 </p>
-<p>- тысячи пользователей: MS SQL Server, Oracle, SyBase, DB/2 </p>
+<p>- сотни пользователей: PostgreSQL, Interbase, MS SQL Server, Oracle, SyBase, DB/2</p>
+<p>- тысячи пользователей: MS SQL Server, Oracle, SyBase, DB/2</p>
 
 <p>3) Цена базы данных - параметер весьма критичен!</p>
 <p>- полностью бесплатно: XML, CSV, MySQL, PostgreSQL, Interbase (некоторые клоны)</p>
 <p>- формат бесплатен, для разработки желательно купить дешёвую всего одну систему:MS Excel, Парадокс, Dbase, Foxpro/VFP, MS Access</p>
 <p>- дешёвые сервера: Interbase (некоторые клоны), Informix, старые версии SyBase</p>
 <p>- дорогие сервера: MS SQL Server, Oracle, SyBase</p>
-<p>- сверхдорогие сервера: DB/2 </p>
+<p>- сверхдорогие сервера: DB/2</p>
 
 <p>4) Платформа - параметер весьма критичен!</p>
 <p>- любая: XML, CSV</p>
@@ -30,7 +30,7 @@
 <p>- Unix/Linux only:PostgreSQL</p>
 <p>- Windows+Linux:Oracle, DB/2, Interbase, MySQL</p>
 <p>- Мейнфреймы: DB/2</p>
-<p>- Кластеры:MS SQL Server, Oracle, SyBase, DB/2 </p>
+<p>- Кластеры:MS SQL Server, Oracle, SyBase, DB/2</p>
 
 <p>5) язык программирования - рекомендательный параметер:</p>
 <p>- Языки от Microsoft: MS SQL Server, SyBase, Foxpro/VFP, MS Access, MS Excel</p>
@@ -52,10 +52,10 @@
 <p>- очень слабые: MS Excel, XML, CSV</p>
 <p>- слабые: Парадокс, Dbase, Foxpro/VFP, MS Access, MySQL</p>
 <p>- развитые:Interbase, Informix, PostgreSQL</p>
-<p>- мощные:MS SQL Server, Oracle, SyBase, DB/2 </p>
+<p>- мощные:MS SQL Server, Oracle, SyBase, DB/2</p>
 
 <p>9) Требования к железу - параметер весьма критичен!:</p>
-<p>- неприхотливые:MySQL, PostgreSQL, Парадокс, Dbase, Foxpro/VFP, MS Access,MS Excel, XML, CSV </p>
+<p>- неприхотливые:MySQL, PostgreSQL, Парадокс, Dbase, Foxpro/VFP, MS Access,MS Excel, XML, CSV</p>
 <p>- чуствительные: Interbase, Informix, SyBase</p>
 <p>- требуют отдельных мощных серверов с большой RAM, желательно на нескольких процессорах: MS SQL Server, Oracle, DB/2</p>
 
@@ -68,7 +68,7 @@
 <p>- Собственные:XML,MySQL,Interbase, Informix, PostgreSQL, Oracle, SyBase, DB/2</p>
 
 <p>11) Сложность настройки, установки, администрирования, желательность специально обученного персонала для администрирования - параметер весьма критичен!:</p>
-<p>- никаких сложностей, администрирование не требуется: MS Excel, XML, CSV </p>
+<p>- никаких сложностей, администрирование не требуется: MS Excel, XML, CSV</p>
 <p>- минимальные либо небольшие сложности: Парадокс, Dbase, Foxpro/VFP, MS Access</p>
 <p>- первоначальная настройка плюс минимальная поддержка: PostgreSQL, MySQL</p>
 <p>- требуются специальные знания в достаточно большом объёме: Interbase, Informix</p>

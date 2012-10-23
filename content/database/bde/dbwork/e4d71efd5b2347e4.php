@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>По Table(Query).Database: </p>
+<p>По Table(Query).Database:</p>
 <pre>
 uses
   DbiProcs;
@@ -21,7 +21,7 @@ begin
 end;
 </pre>
 
-<p>По алиасу: </p>
+<p>По алиасу:</p>
 <pre>
 function GetPhNameByAlias(sAlias: string): string;
 var

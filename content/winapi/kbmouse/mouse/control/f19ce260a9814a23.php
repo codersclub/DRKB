@@ -26,6 +26,6 @@ begin
   Refresh;
 end;
 </pre>
-<p>...затем читать параметр FMouseInPos при прорисовке области компонента или использовать иное решение. </p>
+<p>...затем читать параметр FMouseInPos при прорисовке области компонента или использовать иное решение.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

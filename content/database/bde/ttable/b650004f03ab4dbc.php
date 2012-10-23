@@ -4,5 +4,5 @@
 
 <div class="author">Автор: Nomadic </div>
 
-<p>Resync( [rmExact, rmCenter] ); </p>
+<p>Resync( [rmExact, rmCenter] );</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

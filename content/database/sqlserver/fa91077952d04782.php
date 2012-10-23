@@ -78,7 +78,7 @@ end;
 
 Ses &nbsp; &nbsp; &nbsp; &nbsp;var TSession &nbsp; &nbsp; &nbsp; &nbsp;This is a session instance variable that you pass by reference into the procedure. Note: It MUST be instantiated prior to use. The procedure does not create an instance. It assumes it already exists. This is especially necessary when using this procedure within a thread. But if you're not creating a multi- threaded application, then you can use the default Session variable. &nbsp; &nbsp; &nbsp; 
 DBName &nbsp; &nbsp; &nbsp; &nbsp;String &nbsp; &nbsp; &nbsp; &nbsp;Name of the MS SQL Server client database &nbsp; &nbsp; &nbsp; 
-<p>ArTables &nbsp; &nbsp; &nbsp; &nbsp;Array of String &nbsp; &nbsp; &nbsp; &nbsp;This is an open array of string that you can pass into the procedure. This means that you can pass any size array and the procedure will handle it. For instance, in the Primary table maker program, I define an array as follows:&nbsp; </p>
+<p>ArTables &nbsp; &nbsp; &nbsp; &nbsp;Array of String &nbsp; &nbsp; &nbsp; &nbsp;This is an open array of string that you can pass into the procedure. This means that you can pass any size array and the procedure will handle it. For instance, in the Primary table maker program, I define an array as follows:&nbsp;</p>
 <pre>
 arPat[0] := 'dbo.Temp0';
 arPat[1] := 'dbo.Temp1';
@@ -94,7 +94,7 @@ arPat[10] := 'dbo.' + FDisease + 'Primary_' + FQtrYr;
 </pre>
 
  and pass it into the procedure. &nbsp; &nbsp; &nbsp; 
-<p>StatMsg &nbsp; &nbsp; &nbsp; &nbsp;TStatusMsg &nbsp; &nbsp; &nbsp; &nbsp;This is a procedural type of : procedure(Msg : String). You can't use a class method for this procedure; instead, you declare a regular procedure that references a regular procedure. For example, I declare an interface-level procedure called StatMsg that references a thread instance variable and a method as follows:&nbsp; </p>
+<p>StatMsg &nbsp; &nbsp; &nbsp; &nbsp;TStatusMsg &nbsp; &nbsp; &nbsp; &nbsp;This is a procedural type of : procedure(Msg : String). You can't use a class method for this procedure; instead, you declare a regular procedure that references a regular procedure. For example, I declare an interface-level procedure called StatMsg that references a thread instance variable and a method as follows:&nbsp;</p>
 <pre>
 procedure StatMsg(Msg: string); 
 begin   

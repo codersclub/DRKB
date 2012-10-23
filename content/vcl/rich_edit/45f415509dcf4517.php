@@ -1,7 +1,7 @@
 <h1>Загрузка нескольких RTF-файлов в TRichEdit</h1>
 <div class="date">01.01.2007</div>
 
-Автор: McAndrews </p>
+Автор: McAndrews</p>
 <pre>
  
 //Кидаем на форму RichEdit1, Button1, OpenDialog1

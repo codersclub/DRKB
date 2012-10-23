@@ -9,7 +9,7 @@ if IndexName = Fieldname then
 if IndexName <> Fieldname then
   ixCaseInsensitive is reqd
 </pre>
-<p>Таким образом, вам нужно: </p>
+<p>Таким образом, вам нужно:</p>
 <pre>
 InvTbl.AddIndex('cusname', 'name', [ixCaseInsensitive]);
 </pre>

@@ -16,5 +16,5 @@ end;
 <p>После получения вышеуказанным кодом строки s проверяется условие и,</p>
 <p>if Length(s) &gt; maxlengthoffield then exit;</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
-<p>DelphiWorld 6.0 </p>
+<p>DelphiWorld 6.0</p>
 

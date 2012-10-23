@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Как гарантированно сделать backup/restore БД InterBase с опцией 'Replace existing database' и записями протоколов в файлы с гарантированным отстрелом пользователей? </p>
+<p>Как гарантированно сделать backup/restore БД InterBase с опцией 'Replace existing database' и записями протоколов в файлы с гарантированным отстрелом пользователей?</p>
 
 <p>Att.bat:</p>
 <p>at 01:00 /INTERACTIVE "e:\IB_DATA\BR.BAT"</p>

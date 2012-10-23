@@ -2,9 +2,9 @@
 <div class="date">01.01.2007</div>
 
 
-<p>В Удаленный Модуль Данных бросьте компонент TDatabase, затем добавьте процедуру автоматизации (пункт главного меню Edit | Add To Interface) для Login. </p>
+<p>В Удаленный Модуль Данных бросьте компонент TDatabase, затем добавьте процедуру автоматизации (пункт главного меню Edit | Add To Interface) для Login.</p>
 
-<p>Убедитесь, что свойство HandleShared компонента TDatabase установлено в True. </p>
+<p>Убедитесь, что свойство HandleShared компонента TDatabase установлено в True.</p>
 <pre>
 procedure Login(UserName, Password: WideString);
 begin
@@ -18,7 +18,7 @@ end;
 </pre>
 
 
-<p>После того, как Вы создали этот метод автоматизации, Вы можете вызывать его с помощью: </p>
+<p>После того, как Вы создали этот метод автоматизации, Вы можете вызывать его с помощью:</p>
 
-<p>RemoteServer1.AppServer.Login('USERNAME','PASSWORD'); </p>
+<p>RemoteServer1.AppServer.Login('USERNAME','PASSWORD');</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

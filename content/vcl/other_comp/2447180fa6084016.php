@@ -9,7 +9,7 @@
 http://delphi-gems.com/VirtualTreeview/<br>
 &nbsp;<br>
 Существует хорошее расширение компонента для работы отображения файлов, аналогично Windows Explorer:<br>
-<p>https://www.mustangpeak.net/ </p>
+<p>https://www.mustangpeak.net/</p>
 
 <p>Основы работы с компонентом<br>
 Рассмотрим пример простейшего приложения с использованием этого компонента, где он будет использоваться только для отображения данных. Думаю, он будет полезен тем, кто начинает работу с этим компонентом.<br>
@@ -107,7 +107,7 @@ end;
 </pre>
 
 <p>&nbsp;<br>
-<p>Освобождение элементов особенно актуально, если в дереве будут динамически создаваться и удаляться элементы. </p>
+<p>Освобождение элементов особенно актуально, если в дереве будут динамически создаваться и удаляться элементы.</p>
 
 <p>Создание многострочного дерева<br>
 <p>Одним из преимуществ компонента является возможность создавать деревья с многострочными элементами. Теперь рассмотрим, как можно создать такое дерево. За основу возьмем пример из поста #2. Но для того чтобы получить многострочные названия элементов немного подправим процедуру занесения данных в дерево:</p>
@@ -162,11 +162,11 @@ end;
 </pre>
 
 <p>&nbsp;<br>
-<p>Что приведет к отображению дерева с многострочными элементами. </p>
+<p>Что приведет к отображению дерева с многострочными элементами.</p>
 
 <p>Многострочные деревья в Win9x<br>
 <p>В AdvancedDemo компонента на странице демонстрации многострочных элементов встречаем следующую огорчающую надпись:</p>
-<p>Цитата </p>
+<p>Цитата</p>
 <p>Since Virtual Treeview uses Unicode for text display it is not easy to provide multiline support on Windows 9x/Me systems. Under Windows NT (4.0, 2000, XP) there is support by the operation system and so full word breaking is possible there. Otherwise you have to insert line breaks manually to have multiline captions. Of course there is no difference in handling between multiline and single line nodes (except for the vertical alignment of the latter).<br>
 <p>Но не все так страшно, если не рассчитывать на отображение юникода, а только, скажем, английского или русского текста. Для этого достаточно только поменять в файле VirtualTrees.pas текст процедуры DrawTextW на:</p>
 <pre>
@@ -180,7 +180,7 @@ end;
 </pre>
 
 <p>&nbsp;<br>
-<p>После этого VirtualTreeView будет нормально переносить текст под Win9x, а не только под 2000/XP. </p>
+<p>После этого VirtualTreeView будет нормально переносить текст под Win9x, а не только под 2000/XP.</p>
 
 <p>Сортировка VirtualStringTree<br>
 <p>Нужно написать обработчики событий OnCompareNodes и OnHeaderClick:</p>
@@ -230,7 +230,7 @@ end;
 </pre>
 
 <p>&nbsp;<br>
-<p>Перемещение узлов в VirtualTree с помощью Drag&amp;Drop </p>
+<p>Перемещение узлов в VirtualTree с помощью Drag&amp;Drop</p>
 <pre>
 
  

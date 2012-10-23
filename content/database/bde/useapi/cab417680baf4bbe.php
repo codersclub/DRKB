@@ -12,5 +12,5 @@ begin
 </pre>
 
 
-<p>Для получения дополнительной информации обратитесь к описанию свойства pDatabase.szDbType. </p>
+<p>Для получения дополнительной информации обратитесь к описанию свойства pDatabase.szDbType.</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

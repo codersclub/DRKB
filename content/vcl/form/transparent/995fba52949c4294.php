@@ -107,11 +107,11 @@ end;
 <div class="author">Автор:&nbsp; Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Вместо перекрытия CreateParams():<br>
-<p>Сделать "прозрачным" для мышки: </p>
+<p>Сделать "прозрачным" для мышки:</p>
 <pre>
 setWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) or WS_EX_TRANSPARENT);
 </pre>
-<p>Сделать обратно нормальным: </p>
+<p>Сделать обратно нормальным:</p>
 <pre>
 setWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) and not WS_EX_TRANSPARENT);
 </pre>

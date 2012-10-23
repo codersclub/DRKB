@@ -11,8 +11,8 @@ begin
 end; 
 </pre>
 <p>этот код так же можно использовать для:</p>
-<p>GetCurrentDirectory </p>
-<p>GetSystemDirectory </p>
-<p>GetWindowsDirectory </p>
+<p>GetCurrentDirectory</p>
+<p>GetSystemDirectory</p>
+<p>GetWindowsDirectory</p>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -14,5 +14,5 @@
   AccessReport1.ConnectTo(AccessApplication1.Reports['Sales by Year']);
   AccessReport1.Caption := 'Annual sales - from bad to worse';
 </pre>
-<p>Note that a workbook or worksheet must be open before you can connect to it. </p>
+<p>Note that a workbook or worksheet must be open before you can connect to it.</p>
 <p>If you haven't got the patch for D5, starting Access is a bit different, because there is no TAccessApplication component. (This is because Microsoft declared the Application object as hidden in the type library.) However you can create an Application object in the same way as it was done in D4 (see below), and then connect the Access components to it. See Access- common problems for an example.</p>

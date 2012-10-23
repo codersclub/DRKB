@@ -28,7 +28,7 @@ end;
 </pre>
 
 
-<p>Замечание: Вышеприведённый код использует таблицу "CUSTOMER.DB", TDBGrid, TDataSource </p>
+<p>Замечание: Вышеприведённый код использует таблицу "CUSTOMER.DB", TDBGrid, TDataSource</p>
 <p>и TTable</p>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

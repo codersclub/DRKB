@@ -1,14 +1,14 @@
 <h1>Как прочитать русский текст MS DOS?</h1>
 <div class="date">01.01.2007</div>
 
-Для перекодировки из Win(1251) кодовой страницы в Dos(866) кодовую страницу и обратно используются функции: </p>
-<p>CharToOEM </p>
-<p>OEMToChar </p>
-<p>CharToOEMBuff </p>
-<p>OEMToCharBuff </p>
-<p>OemToAnsi </p>
-<p>AnsiToOem: </p>
-<p>Пример чтения текста dos из файла в memo </p>
+Для перекодировки из Win(1251) кодовой страницы в Dos(866) кодовую страницу и обратно используются функции:</p>
+<p>CharToOEM</p>
+<p>OEMToChar</p>
+<p>CharToOEMBuff</p>
+<p>OEMToCharBuff</p>
+<p>OemToAnsi</p>
+<p>AnsiToOem:</p>
+<p>Пример чтения текста dos из файла в memo</p>
 <pre>
 procedure TForm1.FormCreate(Sender: TObject);
 var
@@ -47,7 +47,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<p>Один из вариантов кодировщика слегка громоздкий, но работает быстро, изменяя таблицу можно отключить пропуск непечатаемых символов </p>
+<p>Один из вариантов кодировщика слегка громоздкий, но работает быстро, изменяя таблицу можно отключить пропуск непечатаемых символов</p>
 <pre>
 const
   ConvertSet: array[0..255] of byte =

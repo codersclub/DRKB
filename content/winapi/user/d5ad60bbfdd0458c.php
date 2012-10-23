@@ -22,6 +22,6 @@ end;
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr>
-<p>Здесь проблема: если страница памяти защищена, то её нельзя прочитать таким способом, но можно заменить PasswordChar(пример: поле ввода пароля в удаленном соединении) </p>
+<p>Здесь проблема: если страница памяти защищена, то её нельзя прочитать таким способом, но можно заменить PasswordChar(пример: поле ввода пароля в удаленном соединении)</p>
 <div class="author">Автор: Mikel</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

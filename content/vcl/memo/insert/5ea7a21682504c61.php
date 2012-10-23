@@ -43,7 +43,7 @@ end;
 </pre>
 
 
-<p>Использовать </p>
+<p>Использовать</p>
 
 <p>LoadUnicodeFile(filename, memo1.lines);</p>
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>

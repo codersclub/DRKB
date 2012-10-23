@@ -3,11 +3,11 @@
 
 
 <p>В примере описывается как программно в Internet Explorer нажать кнопку "Clear cache".</p>
-<p>Вам нужно будет использовать WinINet в Вашей TfrmMain: </p>
+<p>Вам нужно будет использовать WinINet в Вашей TfrmMain:</p>
 <pre>
 Uses WinINet; 
 </pre>
-<p>и добавить к TButton следующий обработчик btnEmptyCache: </p>
+<p>и добавить к TButton следующий обработчик btnEmptyCache:</p>
 
 <pre>
 Procedure TfrmMain.btnEmptyCacheClick( Sender : TObject ); 

@@ -47,4 +47,4 @@ function isAscii(NomeFile: string): Boolean;
        ShowMessage('ASCII File');
  end;
 </pre>
-Автор: http://www.swissdelphicenter.ch </p>
+Автор: http://www.swissdelphicenter.ch</p>

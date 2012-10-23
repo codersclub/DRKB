@@ -52,7 +52,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<p>Функция, которая устанавливает дату одного файла, равную дате другого файла </p>
+<p>Функция, которая устанавливает дату одного файла, равную дате другого файла</p>
 <pre>
 procedure CopyFileDate(const Source, Dest: String);
 var

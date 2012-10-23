@@ -34,6 +34,6 @@ end;
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
-<p>Исправлено Stolzen </p>
+<p>Исправлено Stolzen</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

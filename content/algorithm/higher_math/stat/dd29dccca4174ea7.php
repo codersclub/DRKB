@@ -35,8 +35,10 @@ X := Gauss(0, 1);
 </pre>
 
 <hr />
-<p>В стандартном модуле &nbsp;Math есть функция </p>
-function RandG(Mean, StdDev: Extended): Extended;</p>
+
+<p>В стандартном модуле &nbsp;Math есть функция</p>
+
+<p>function RandG(Mean, StdDev: Extended): Extended;</p>
 
 <div class="author">Автор: Vit</div>
 <p>&nbsp;

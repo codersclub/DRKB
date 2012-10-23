@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Сделайте родительским окном рабочий стол. </p>
+<p>Сделайте родительским окном рабочий стол.</p>
 <pre>
 procedure TForm2.CreateParams(VAR Params: TCreateParams); 
 begin 

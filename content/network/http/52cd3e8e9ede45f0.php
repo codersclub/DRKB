@@ -9,152 +9,152 @@
 1.1.1. UUEncode и UUDecode</p>
 Необходимость кодирование файлов при передаче является то, что ф файле могут находиться любые двоичные данные, для это файл преобразовывается в "читаемую" или "печатаемую" форму в набор из 64 символов: [`!"#$%&amp;'()*+,-./0123456789:;&lt;=?@ABC...XYZ[\]^_], что бы кодированный фал прошел через различные сети и почтовые шлюзы. Эти 64 печатных символа представлены в следующей таблице.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td colspan="8" ><p>Набор символов UUEncode </p>
+<tr>
+<td colspan="8" ><p>Набор символов UUEncode</p>
 </td>
 </tr>
-<tr >
-<td ><p>0 `</p>
+<tr>
+<td><p>0 `</p>
 </td>
-<td ><p>8 (</p>
+<td><p>8 (</p>
 </td>
-<td ><p>16 0</p>
+<td><p>16 0</p>
 </td>
-<td ><p>24 8</p>
+<td><p>24 8</p>
 </td>
-<td ><p>32 @</p>
+<td><p>32 @</p>
 </td>
-<td ><p>40 H</p>
+<td><p>40 H</p>
 </td>
-<td ><p>48 P</p>
+<td><p>48 P</p>
 </td>
-<td ><p>56 X</p>
-</td>
-</tr>
-<tr >
-<td ><p>1 !</p>
-</td>
-<td ><p>9 )</p>
-</td>
-<td ><p>17 1</p>
-</td>
-<td ><p>25 9</p>
-</td>
-<td ><p>33 A</p>
-</td>
-<td ><p>41 I</p>
-</td>
-<td ><p>49 Q</p>
-</td>
-<td ><p>57 Y</p>
+<td><p>56 X</p>
 </td>
 </tr>
-<tr >
-<td ><p>2 "</p>
+<tr>
+<td><p>1 !</p>
 </td>
-<td ><p>10 *</p>
+<td><p>9 )</p>
 </td>
-<td ><p>18 2</p>
+<td><p>17 1</p>
 </td>
-<td ><p>26 :</p>
+<td><p>25 9</p>
 </td>
-<td ><p>34 B</p>
+<td><p>33 A</p>
 </td>
-<td ><p>42 J</p>
+<td><p>41 I</p>
 </td>
-<td ><p>50 R</p>
+<td><p>49 Q</p>
 </td>
-<td ><p>58 Z</p>
-</td>
-</tr>
-<tr >
-<td ><p>3 #</p>
-</td>
-<td ><p>11 +</p>
-</td>
-<td ><p>19 3</p>
-</td>
-<td ><p>27 ;</p>
-</td>
-<td ><p>35 C</p>
-</td>
-<td ><p>43 K</p>
-</td>
-<td ><p>51 S</p>
-</td>
-<td ><p>59 [</p>
+<td><p>57 Y</p>
 </td>
 </tr>
-<tr >
-<td ><p>4 $</p>
+<tr>
+<td><p>2 "</p>
 </td>
-<td ><p>12 ,</p>
+<td><p>10 *</p>
 </td>
-<td ><p>20 4</p>
+<td><p>18 2</p>
 </td>
-<td ><p>28 &lt;</p>
+<td><p>26 :</p>
 </td>
-<td ><p>36 D</p>
+<td><p>34 B</p>
 </td>
-<td ><p>44 L</p>
+<td><p>42 J</p>
 </td>
-<td ><p>52 T</p>
+<td><p>50 R</p>
 </td>
-<td ><p>60 \</p>
-</td>
-</tr>
-<tr >
-<td ><p>5 %</p>
-</td>
-<td ><p>13 -</p>
-</td>
-<td ><p>21 5</p>
-</td>
-<td ><p>29 =</p>
-</td>
-<td ><p>37 E</p>
-</td>
-<td ><p>45 M</p>
-</td>
-<td ><p>53 U</p>
-</td>
-<td ><p>61 ]</p>
+<td><p>58 Z</p>
 </td>
 </tr>
-<tr >
-<td ><p>6 &amp;</p>
+<tr>
+<td><p>3 #</p>
 </td>
-<td ><p>14 .</p>
+<td><p>11 +</p>
 </td>
-<td ><p>22 6</p>
+<td><p>19 3</p>
 </td>
-<td ><p>30 &gt;</p>
+<td><p>27 ;</p>
 </td>
-<td ><p>38 F</p>
+<td><p>35 C</p>
 </td>
-<td ><p>46 N</p>
+<td><p>43 K</p>
 </td>
-<td ><p>54 V</p>
+<td><p>51 S</p>
 </td>
-<td ><p>62 ^</p>
+<td><p>59 [</p>
 </td>
 </tr>
-<tr >
-<td ><p>7 '</p>
+<tr>
+<td><p>4 $</p>
 </td>
-<td ><p>15 /</p>
+<td><p>12 ,</p>
 </td>
-<td ><p>23 7</p>
+<td><p>20 4</p>
 </td>
-<td ><p>31 ?</p>
+<td><p>28 &lt;</p>
 </td>
-<td ><p>39 G</p>
+<td><p>36 D</p>
 </td>
-<td ><p>47 O</p>
+<td><p>44 L</p>
 </td>
-<td ><p>55 W</p>
+<td><p>52 T</p>
 </td>
-<td ><p>63 _
+<td><p>60 \</p>
+</td>
+</tr>
+<tr>
+<td><p>5 %</p>
+</td>
+<td><p>13 -</p>
+</td>
+<td><p>21 5</p>
+</td>
+<td><p>29 =</p>
+</td>
+<td><p>37 E</p>
+</td>
+<td><p>45 M</p>
+</td>
+<td><p>53 U</p>
+</td>
+<td><p>61 ]</p>
+</td>
+</tr>
+<tr>
+<td><p>6 &amp;</p>
+</td>
+<td><p>14 .</p>
+</td>
+<td><p>22 6</p>
+</td>
+<td><p>30 &gt;</p>
+</td>
+<td><p>38 F</p>
+</td>
+<td><p>46 N</p>
+</td>
+<td><p>54 V</p>
+</td>
+<td><p>62 ^</p>
+</td>
+</tr>
+<tr>
+<td><p>7 '</p>
+</td>
+<td><p>15 /</p>
+</td>
+<td><p>23 7</p>
+</td>
+<td><p>31 ?</p>
+</td>
+<td><p>39 G</p>
+</td>
+<td><p>47 O</p>
+</td>
+<td><p>55 W</p>
+</td>
+<td><p>63 _
 </td>
 </tr>
 </table>
@@ -188,7 +188,7 @@ procedure Triplet2Kwartet(const Triplet: TTriplet;
      else Inc(Kwartet[i], Ord(SP))
  end {Triplet2Kwartet};
 </pre>
-Данная процедура состоит из двух частей: в первой части 24 бита (3 * 8) из триплета преобразовываются в 24 бита (4 * 6) квартета. Во второй части алгоритма, мы добавляем ASCII код символа пробела к каждому квартету. ASCII код символа пробела закодирован как Ord(SP), где SP определен как символ пробела или #32. Заметим, что для случая когда квартет равен 0, то мы не добавляем значение&nbsp; #32, поскольку многие почтовые программы имеют проблемы с этим символом, просто в этом случае добавляем код со значением 64 ($40)., в результате получаем вместо пробела код обратного апострофа, который нейтрален к алгоритму декодирования, одинаково работающий как для пробела так и для апострофа. </p>
+Данная процедура состоит из двух частей: в первой части 24 бита (3 * 8) из триплета преобразовываются в 24 бита (4 * 6) квартета. Во второй части алгоритма, мы добавляем ASCII код символа пробела к каждому квартету. ASCII код символа пробела закодирован как Ord(SP), где SP определен как символ пробела или #32. Заметим, что для случая когда квартет равен 0, то мы не добавляем значение&nbsp; #32, поскольку многие почтовые программы имеют проблемы с этим символом, просто в этом случае добавляем код со значением 64 ($40)., в результате получаем вместо пробела код обратного апострофа, который нейтрален к алгоритму декодирования, одинаково работающий как для пробела так и для апострофа.</p>
 Говоря о декодировании, реализация его в Паскале преобразования квартетов обратно в триплеты следующая:</p>
 <pre>
 procedure Kwartet2Triplet(const Kwartet: TKwartet;
@@ -208,168 +208,168 @@ procedure Kwartet2Triplet(const Kwartet: TKwartet;
 1.1.2. XXEncode и XXDecode</p>
 UUкодирование было наиболее популярным форматом 64 битного кодирования. Ограничение состояло в том, что набор символов не мог транслироваться между наборами ASCII и EBCDIC (IBM мейнфреймы). XXencode очень похож на UUEncode, просто используется другой набор символов, что более удобно между различными типами систем, например как указано выше между EBCDIC и ASCII.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
+<tr>
 <td style="border: solid 1px #000000;"><br>
 </td>
 <td colspan="9" ><p>Набор символов XXEncode</p>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>0 +</p>
 </td>
-<td ><p>8 6</p>
+<td><p>8 6</p>
 </td>
-<td ><p>16 E</p>
+<td><p>16 E</p>
 </td>
-<td ><p>24 M</p>
+<td><p>24 M</p>
 </td>
-<td ><p>32 U</p>
+<td><p>32 U</p>
 </td>
-<td ><p>40 c</p>
+<td><p>40 c</p>
 </td>
-<td ><p>48 k</p>
+<td><p>48 k</p>
 </td>
-<td ><p>56 s</p>
+<td><p>56 s</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>1 -</p>
 </td>
-<td ><p>9 7</p>
+<td><p>9 7</p>
 </td>
-<td ><p>17 F</p>
+<td><p>17 F</p>
 </td>
-<td ><p>25 N</p>
+<td><p>25 N</p>
 </td>
-<td ><p>33 V</p>
+<td><p>33 V</p>
 </td>
-<td ><p>41 d</p>
+<td><p>41 d</p>
 </td>
-<td ><p>49 l</p>
+<td><p>49 l</p>
 </td>
-<td ><p>57 t</p>
+<td><p>57 t</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>2 0</p>
 </td>
-<td ><p>10 8</p>
+<td><p>10 8</p>
 </td>
-<td ><p>18 G</p>
+<td><p>18 G</p>
 </td>
-<td ><p>26 O</p>
+<td><p>26 O</p>
 </td>
-<td ><p>34 W</p>
+<td><p>34 W</p>
 </td>
-<td ><p>42 e</p>
+<td><p>42 e</p>
 </td>
-<td ><p>50 m</p>
+<td><p>50 m</p>
 </td>
-<td ><p>58 u</p>
+<td><p>58 u</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>3 1</p>
 </td>
-<td ><p>11 9</p>
+<td><p>11 9</p>
 </td>
-<td ><p>19 H</p>
+<td><p>19 H</p>
 </td>
-<td ><p>27 P</p>
+<td><p>27 P</p>
 </td>
-<td ><p>35 X</p>
+<td><p>35 X</p>
 </td>
-<td ><p>43 f</p>
+<td><p>43 f</p>
 </td>
-<td ><p>51 n</p>
+<td><p>51 n</p>
 </td>
-<td ><p>59 v</p>
+<td><p>59 v</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>4 2</p>
 </td>
-<td ><p>12 A</p>
+<td><p>12 A</p>
 </td>
-<td ><p>20 I</p>
+<td><p>20 I</p>
 </td>
-<td ><p>28 Q</p>
+<td><p>28 Q</p>
 </td>
-<td ><p>36 Y</p>
+<td><p>36 Y</p>
 </td>
-<td ><p>44 g</p>
+<td><p>44 g</p>
 </td>
-<td ><p>52 o</p>
+<td><p>52 o</p>
 </td>
-<td ><p>60 w</p>
+<td><p>60 w</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>5 3</p>
 </td>
-<td ><p>13 B</p>
+<td><p>13 B</p>
 </td>
-<td ><p>21 J</p>
+<td><p>21 J</p>
 </td>
-<td ><p>29 R</p>
+<td><p>29 R</p>
 </td>
-<td ><p>37 Z</p>
+<td><p>37 Z</p>
 </td>
-<td ><p>45 h</p>
+<td><p>45 h</p>
 </td>
-<td ><p>53 p</p>
+<td><p>53 p</p>
 </td>
-<td ><p>61 x</p>
+<td><p>61 x</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>6 4</p>
 </td>
-<td ><p>14 C</p>
+<td><p>14 C</p>
 </td>
-<td ><p>22 K</p>
+<td><p>22 K</p>
 </td>
-<td ><p>30 S</p>
+<td><p>30 S</p>
 </td>
-<td ><p>38 a</p>
+<td><p>38 a</p>
 </td>
-<td ><p>46 i</p>
+<td><p>46 i</p>
 </td>
-<td ><p>54 q</p>
+<td><p>54 q</p>
 </td>
-<td ><p>62 y</p>
+<td><p>62 y</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>7 5</p>
 </td>
-<td ><p>15 D</p>
+<td><p>15 D</p>
 </td>
-<td ><p>23 L</p>
+<td><p>23 L</p>
 </td>
-<td ><p>31 T</p>
+<td><p>31 T</p>
 </td>
-<td ><p>39 b</p>
+<td><p>39 b</p>
 </td>
-<td ><p>47 j</p>
+<td><p>47 j</p>
 </td>
-<td ><p>55 r</p>
+<td><p>55 r</p>
 </td>
-<td ><p>63 z</p>
+<td><p>63 z</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
@@ -435,172 +435,172 @@ const
  end {Kwartet2Triplet};
 </pre>
 &nbsp;</p>
-Заметим, что в новой версии этих процедур используется глобальная переменная XXCode логического типа для определения типа кодирования. </p>
+Заметим, что в новой версии этих процедур используется глобальная переменная XXCode логического типа для определения типа кодирования.</p>
 1.1.3. Base64</p>
 Алгоритм кодирования Base64 отличается от алгоритмов UUencode и XXencode тем, что в нем не используется первый символ как индикатор длины. Общее то что используется алгоритм преобразования триплетов в квартеты с помощью 64 байтной таблицы преобразования.</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
+<tr>
 <td style="border: solid 1px #000000;"><br>
 </td>
 <td colspan="9" ><p>Набор символов Base64</p>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>0 A</p>
 </td>
-<td ><p>8 I</p>
+<td><p>8 I</p>
 </td>
-<td ><p>16 Q</p>
+<td><p>16 Q</p>
 </td>
-<td ><p>24 Y</p>
+<td><p>24 Y</p>
 </td>
-<td ><p>32 g</p>
+<td><p>32 g</p>
 </td>
-<td ><p>40 o</p>
+<td><p>40 o</p>
 </td>
-<td ><p>48 w</p>
+<td><p>48 w</p>
 </td>
-<td ><p>56 4</p>
+<td><p>56 4</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>1 B</p>
 </td>
-<td ><p>9 J</p>
+<td><p>9 J</p>
 </td>
-<td ><p>17 R</p>
+<td><p>17 R</p>
 </td>
-<td ><p>25 Z</p>
+<td><p>25 Z</p>
 </td>
-<td ><p>33 h</p>
+<td><p>33 h</p>
 </td>
-<td ><p>41 p</p>
+<td><p>41 p</p>
 </td>
-<td ><p>49 x</p>
+<td><p>49 x</p>
 </td>
-<td ><p>57 5</p>
+<td><p>57 5</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>2 C</p>
 </td>
-<td ><p>10 K</p>
+<td><p>10 K</p>
 </td>
-<td ><p>18 S</p>
+<td><p>18 S</p>
 </td>
-<td ><p>26 a</p>
+<td><p>26 a</p>
 </td>
-<td ><p>34 I</p>
+<td><p>34 I</p>
 </td>
-<td ><p>42 q</p>
+<td><p>42 q</p>
 </td>
-<td ><p>50 y</p>
+<td><p>50 y</p>
 </td>
-<td ><p>58 6</p>
+<td><p>58 6</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>3 D</p>
 </td>
-<td ><p>11 L</p>
+<td><p>11 L</p>
 </td>
-<td ><p>19 T</p>
+<td><p>19 T</p>
 </td>
-<td ><p>27 b</p>
+<td><p>27 b</p>
 </td>
-<td ><p>35 j</p>
+<td><p>35 j</p>
 </td>
-<td ><p>43 r</p>
+<td><p>43 r</p>
 </td>
-<td ><p>51 z</p>
+<td><p>51 z</p>
 </td>
-<td ><p>59 7</p>
+<td><p>59 7</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>4 E</p>
 </td>
-<td ><p>12 M</p>
+<td><p>12 M</p>
 </td>
-<td ><p>20 U</p>
+<td><p>20 U</p>
 </td>
-<td ><p>28 c</p>
+<td><p>28 c</p>
 </td>
-<td ><p>36 k</p>
+<td><p>36 k</p>
 </td>
-<td ><p>44 s</p>
+<td><p>44 s</p>
 </td>
-<td ><p>52 0</p>
+<td><p>52 0</p>
 </td>
-<td ><p>60 8</p>
+<td><p>60 8</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>5 F</p>
 </td>
-<td ><p>13 N</p>
+<td><p>13 N</p>
 </td>
-<td ><p>21 V</p>
+<td><p>21 V</p>
 </td>
-<td ><p>29 d</p>
+<td><p>29 d</p>
 </td>
-<td ><p>37 l</p>
+<td><p>37 l</p>
 </td>
-<td ><p>45 t</p>
+<td><p>45 t</p>
 </td>
-<td ><p>53 1</p>
+<td><p>53 1</p>
 </td>
-<td ><p>61 9</p>
+<td><p>61 9</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>6 G</p>
 </td>
-<td ><p>14 O</p>
+<td><p>14 O</p>
 </td>
-<td ><p>22 W</p>
+<td><p>22 W</p>
 </td>
-<td ><p>30 e</p>
+<td><p>30 e</p>
 </td>
-<td ><p>38 m</p>
+<td><p>38 m</p>
 </td>
-<td ><p>46 u</p>
+<td><p>46 u</p>
 </td>
-<td ><p>54 2</p>
+<td><p>54 2</p>
 </td>
-<td ><p>62 +</p>
+<td><p>62 +</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
 </tr>
-<tr >
+<tr>
 <td colspan="2" ><p>7 H</p>
 </td>
-<td ><p>15 P</p>
+<td><p>15 P</p>
 </td>
-<td ><p>23 X</p>
+<td><p>23 X</p>
 </td>
-<td ><p>31 f</p>
+<td><p>31 f</p>
 </td>
-<td ><p>39 n</p>
+<td><p>39 n</p>
 </td>
-<td ><p>47 v</p>
+<td><p>47 v</p>
 </td>
-<td ><p>55 3</p>
+<td><p>55 3</p>
 </td>
-<td ><p>63 /</p>
+<td><p>63 /</p>
 </td>
 <td style="border: solid 1px #000000;"><br>
 </td>
@@ -765,39 +765,39 @@ unit UUCode;
    end {TUUCode};
 </pre>
 1.1.6. Свойства</p>
-TUUCode компонент имеет восемь опубликованных свойств (мы здесь опустим описание обработчиков событий): </p>
+TUUCode компонент имеет восемь опубликованных свойств (мы здесь опустим описание обработчиков событий):</p>
 Свойство About содержит информацию о правах и версии.</p>
 Свойство Active может использоваться для вызова преобразования UUCode во время разработки (design time), подобно свойству Active у TTables и Tquery компонент.</p>
 Свойство Algorithm содержит информацию об алгоритме кодирования для метода UUCode. Реализованы следующие алгоритмы:</p>
-<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>filecopy - простое копирование файла InputFile в файл OutputFile </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>uuencode - копирование файла с помощью алгоритма uuencode из файла InputFile и генерация файла OutputFile </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>uudecode - копирование файла с помощью алгоритма uudecode из файла InputFile (и генерация файла OutputFile, если не используется Headers) </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>xxencode - копирование файла с помощью алгоритма xxencode из файла InputFile и генерация файла OutputFile </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>xxdecode - копирование файла с помощью алгоритма xxdecode из файла InputFile (и генерация файла OutputFile, если не используется Headers)</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Base64encode - копирование файла с помощью алгоритма Base64 encode InputFile и генерация файла OutputFile </td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>Base64decode - копирование файла с помощью алгоритма Base64 decode InputFile (и генерация файла OutputFile, если не используется Headers) </td></tr></table></div>Свойство FileMode содержит шестнадцатеричное значение режима файла (обычно 0644 или&nbsp; 0755). Заметим, что режим задается с помощью десятичных цифр.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>filecopy - простое копирование файла InputFile в файл OutputFile</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>uuencode - копирование файла с помощью алгоритма uuencode из файла InputFile и генерация файла OutputFile</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>uudecode - копирование файла с помощью алгоритма uudecode из файла InputFile (и генерация файла OutputFile, если не используется Headers)</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>xxencode - копирование файла с помощью алгоритма xxencode из файла InputFile и генерация файла OutputFile</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>xxdecode - копирование файла с помощью алгоритма xxdecode из файла InputFile (и генерация файла OutputFile, если не используется Headers)</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Base64encode - копирование файла с помощью алгоритма Base64 encode InputFile и генерация файла OutputFile</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 4px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Base64decode - копирование файла с помощью алгоритма Base64 decode InputFile (и генерация файла OutputFile, если не используется Headers)</td></tr></table></div>Свойство FileMode содержит шестнадцатеричное значение режима файла (обычно 0644 или&nbsp; 0755). Заметим, что режим задается с помощью десятичных цифр.</p>
 Свойство Headers может быть использовано для указания должны или нет использоваться заголовки begin-end в алгоритме кодирования или ожидаются в алгоритме декодирования. Значение по умолчанию True.</p>
-Свойство InputFile содержит имя входного файла для кодирования/декодирования. </p>
+Свойство InputFile содержит имя входного файла для кодирования/декодирования.</p>
 Свойство OutputFile содержит имя выходного файла, в который будет записан результат кодирования. Заметим, что свойство OutputFile игнорируется при декодировании, если входной файл имеет заголовки, которые определяют имя файла для декодирования.</p>
 Свойство UnixCRLF используется для указания разделителей строк специфичных для Unix систем, только Line Feed (перевод строки) или DOS/Windows, где используется пара Carriage Return/Line Feed (возврат каретки/ перевод строки). По умолчанию CRLF, но как минимум вы имеете возможность кодировать и декодировать файлы для Unix систем.</p>
 1.1.7. Методы</p>
 Компонент TUUCode имеет три метода; один public конструктор, один protected метод и один public метод:</p>
 Конструктор Create используется для создания компонента и инициализации свойств ао умолчанию (default) для Active, FileMode, Headers и About.</p>
 Метод Activate используется для вызова метода UUCode во время разработки, когда вы изменяете состояние свойства в True. При необходимости вы можете вызвать этот метод напрямую, так как это проще вызова метода UUCode.</p>
-Метод UUCode это метод, в котором в действительности производится кодирование/декодирование входного файла (InputFile), базируясь на состоянии других свойств компонента TUUCode. </p>
+Метод UUCode это метод, в котором в действительности производится кодирование/декодирование входного файла (InputFile), базируясь на состоянии других свойств компонента TUUCode.</p>
 1.1.8. События</p>
 Компонент TUUCode имеет только одно такое свойство:</p>
-Событие OnProgress может использоваться как callback функция, позволяющая компоненту TUUCode выдавать текущий процент обработки входного файла. Использовать эту информацию вы можете с компонентами 16-битным TGauge или 32-битным TprogressBar, для примера показывая прогресс выполнения кодирования/декодирования от 0 до 100%. </p>
-Кодирование/декодирование больших документов может занимать значительное время даже при использовании быстрой машины и быстрых дисков. Поэтому приятно иметь такую возможность показывать процесс выполнения. Для реализации вам нужно создать обработчик события. </p>
+Событие OnProgress может использоваться как callback функция, позволяющая компоненту TUUCode выдавать текущий процент обработки входного файла. Использовать эту информацию вы можете с компонентами 16-битным TGauge или 32-битным TprogressBar, для примера показывая прогресс выполнения кодирования/декодирования от 0 до 100%.</p>
+Кодирование/декодирование больших документов может занимать значительное время даже при использовании быстрой машины и быстрых дисков. Поэтому приятно иметь такую возможность показывать процесс выполнения. Для реализации вам нужно создать обработчик события.</p>
 Обработчик состоит из двух частей, сигнализатора и обработчика события. Сигнализатор должен быть уверен, что компонент в состоянии&nbsp; принять сообщение определенного типа и сгенерировать событие. Обработчик события с другой стороны начинает работать только при поступлении события.</p>
-Сигнализатор типично виртуальный или динамический метод самого класса (подобно методу Click) или сообщению Windows, такому как оповещение (notification) или callback сообщения. Обработчик события типично присваивается свойству, такому как OnClick, OnChange или&nbsp; OnProgress. Если обработчик события опубликован, то конечный пользователь компонента может написать любой код для обработки события. </p>
+Сигнализатор типично виртуальный или динамический метод самого класса (подобно методу Click) или сообщению Windows, такому как оповещение (notification) или callback сообщения. Обработчик события типично присваивается свойству, такому как OnClick, OnChange или&nbsp; OnProgress. Если обработчик события опубликован, то конечный пользователь компонента может написать любой код для обработки события.</p>
 1.1.9. Обработчики событий</p>
-Обработчики события методы объекта. Это означает, что они должны быть методами класса, а не обычной процедурой или функцией (первый параметр должен быть Self). Для наиболее употребимых обработчиков предназначен следующий тип: </p>
+Обработчики события методы объекта. Это означает, что они должны быть методами класса, а не обычной процедурой или функцией (первый параметр должен быть Self). Для наиболее употребимых обработчиков предназначен следующий тип:</p>
 TNotifyEvent = procedure(Sender: TObject) of object;</p>
 Тип TNotifyEvent для обработчиков, в которые передается только один параметр sender. Эти события просто оповещают компонент о возникновении специфического события у объекта sender. Например, OnClick, типа TNotifyEvent, указывает органу, что произошло событие click у конкретного органа. Если бы параметр Sender отсутствовал, то мы бы знали только, то, что произошло определенное событие, но не знали бы у какого органа. Обычно нам требуется знать, у какого конкретно органа произошло данное событие, что бы мы могли работать с этим органом или его данными..</p>
 Как было указано ранее, Обработчики событий присваиваются свойствам типа событие (event), и они появляются как отдельная закладка в инспекторе объектов (Object Inspector), для различения их от обычных свойств. Основой для помещения этого свойства на закладку события является то, что они должны быть типа "procedure/function of Object". Фраза "of Object" обязательна, иначе мы получим сообщение об ошибке "cannot publish property".</p>
-Компоненту TUUCode требуется событие типа TProgressEvent. Данному событию реально не требуется параметр sender (это всегда можно добавить позже), но ему необходим процент выполнения операции, для цели опишем следующий прототип: </p>
+Компоненту TUUCode требуется событие типа TProgressEvent. Данному событию реально не требуется параметр sender (это всегда можно добавить позже), но ему необходим процент выполнения операции, для цели опишем следующий прототип:</p>
 TProgressEvent = procedure(Percent: Word) of object;</p>
 1.1.10. Сигнализаторы событий</p>
 Сигнализаторы событий требуются для указания обработчику события, что возникло указанное событие, что бы обработчик события смог бы выполнить свои действия. Сигнализаторы обычно виртуальные или динамические методы класса (подобно методу Click) или сообщения Windows, такие как callback ил notification сообщения. <br>
-<p>В случае с компонентом TUUCode, сигнализатор интегрирован непосредственно в метод UUCode. После кодирования каждой строки, вызывается обработчик события назначенный OnProgress, реализация этого следующая: </p>
+<p>В случае с компонентом TUUCode, сигнализатор интегрирован непосредственно в метод UUCode. После кодирования каждой строки, вызывается обработчик события назначенный OnProgress, реализация этого следующая:</p>
 if Assigned(FOnProgress) then</p>
   FOnProgress(trunc((100.0 * Size) / OutputBufSize))</p>
-Где Size это текущий размер или позиция в выходном буфере, и OutputBufSize это размер выходного файла. Size увеличивается от нуля до OutputBufSize, что означает, что обработчик события FOnProgress вызывается с аргументом от 0 до 100. </p>
+Где Size это текущий размер или позиция в выходном буфере, и OutputBufSize это размер выходного файла. Size увеличивается от нуля до OutputBufSize, что означает, что обработчик события FOnProgress вызывается с аргументом от 0 до 100.</p>
 1.1.11. Регистрация компонента</p>
 При регистрации компонента TUUCode, полезно добавить редактор свойства FileName (InputFile), что обеспечит дополнительный комфорт для конечного пользователя. Редактор этого свойства реализован в модуле UUReg, который регистрирует компонент TUUCode в палитре компонентов Дельфи.</p>
 <pre>
@@ -855,13 +855,13 @@ unit UUReg;
  end.
 </pre>
 &nbsp;</p>
-Если вы желаете использовать компонент TUUCode&nbsp; в составе, какого либо пакета, то вы должны поместить компонент UUCode в пакет времени выполнения (runtime package), и модуль UUReg в пакет разработки (design-time), который требует пакет времени выполнения. В действительности, для использования пакетов вы можете использовать UUCode Wizard из следующей главы в пакет времени разработки и сделать его доступным в IDE Delphi для всех пользователей! </p>
+Если вы желаете использовать компонент TUUCode&nbsp; в составе, какого либо пакета, то вы должны поместить компонент UUCode в пакет времени выполнения (runtime package), и модуль UUReg в пакет разработки (design-time), который требует пакет времени выполнения. В действительности, для использования пакетов вы можете использовать UUCode Wizard из следующей главы в пакет времени разработки и сделать его доступным в IDE Delphi для всех пользователей!</p>
 1.1.12. UUCode Example Wizard</p>
-Для показа прогресса 16-битный пример использует TGauge компонент, в то же время 32-битная версия использует Windows 95 Progress Control. </p>
+Для показа прогресса 16-битный пример использует TGauge компонент, в то же время 32-битная версия использует Windows 95 Progress Control.</p>
 Во время исполнения программы могут возникнуть два исключения. Если входной файл пуст и во время кодирования, если выходной файл пуст. Для 16 битной версии может возникнуть третье исключение, если входной или выходной файл больше 65000 байт (16-битная версия данного компонента может обрабатывать входные и выходные файлы до 64 килобайт). На практике это означает, не может быть более 48 килобайт. 32-битная версия не имеет такого ограничения).</p>
 1.1.13. Заключение</p>
 В этой главе мы рассмотрели uuencode/uudecode, xxencode/xxdecode, и Base64 алгоритмы кодирования/декодирования. Мы также разработали простой VCL компонент, который поддерживает эти алгоритмы в дополнение к простому копированию. Свойства, методы и события делают данный компонент пригодным для построения Интернет приложений нуждающихся в подобном преобразовании.</p>
-Компонент TBUUCode сейчас часть пакета "DrBob42 component package for Delphi and C++Builder". </p>
+Компонент TBUUCode сейчас часть пакета "DrBob42 component package for Delphi and C++Builder".</p>
 &nbsp;</p>
 <p>Интернет решения от доктора Боба (http://www.drbob42.com)</p>
 <p>(c) 2000, Анатолий Подгорецкий, перевод на русский язык (http://nps.vnet.ee/ftp)</p>

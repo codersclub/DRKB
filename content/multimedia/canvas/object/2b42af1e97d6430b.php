@@ -3,7 +3,7 @@
 
 
 <p>Function PaintDesktop(HDC) : boolean;</p>
-<p>Например: PaintDesktop(form1.Canvas.Handle); </p>
+<p>Например: PaintDesktop(form1.Canvas.Handle);</p>
 
 <p>Зайцев О.В.</p>
 <p>Владимиров А.М.</p>

@@ -21,5 +21,5 @@
 <p>(GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) *</p>
 <p>GetDeviceCaps(Form1.Canvas.Handle, PLANES));</p>
 
-<p>для подсчета общего количества используемых цветов. </p>
+<p>для подсчета общего количества используемых цветов.</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

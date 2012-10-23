@@ -2,9 +2,9 @@
 <div class="date">01.01.2007</div>
 
 <div class="author">Автор: Даниил Карапетян</div>
-<p>WEB сайт: http://program.dax.ru  </p>
+<p>WEB сайт: http://program.dax.ru</p>
 
-<p>При нажатии на Button1 используется свойство Pixels, а при нажатии на Button2 - ScanLine. В заголовок окна выводится время в миллисекундах, за которое было создано изображение. </p>
+<p>При нажатии на Button1 используется свойство Pixels, а при нажатии на Button2 - ScanLine. В заголовок окна выводится время в миллисекундах, за которое было создано изображение.</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var

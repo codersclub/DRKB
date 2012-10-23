@@ -10,6 +10,6 @@
 
 <p>(where MyRes.Res is the name of the resource file).</p>
 
-<p>To add the resource to Borland's C++ Builder, add the resource </p>
+<p>To add the resource to Borland's C++ Builder, add the resource</p>
 <p>from the project manager.</p>
 

@@ -1,7 +1,7 @@
 <h1>Как создать собственное Hint-окно</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Олег Кулабухов </p>
+Автор: Олег Кулабухов</p>
 <pre>
 procedure TForm1.FormCreate(Sender: TObject);
 begin

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Access.DoCmd.OpenReport('Titles by Author', acViewPreview, EmptyParam, EmptyParam); </p>
+<p>Access.DoCmd.OpenReport('Titles by Author', acViewPreview, EmptyParam, EmptyParam);</p>
 <p>{</p>
 <p>const</p>
 <p> &nbsp;&nbsp; acViewNormal = $00000000;</p>

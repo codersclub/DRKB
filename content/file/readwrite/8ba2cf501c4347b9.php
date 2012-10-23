@@ -3,7 +3,7 @@
 
 
 
-<p>{1.} </p>
+<p>{1.}</p>
 <pre>function Are2FilesEqual(const File1, File2: TFileName): Boolean; 
 var 
   ms1, ms2: TMemoryStream; 
@@ -36,7 +36,7 @@ end;
 </pre>
 
 
-<p>{2.} </p>
+<p>{2.}</p>
 <pre>
 function FilesAreEqual(const File1, File2: TFileName): Boolean; 
 const   

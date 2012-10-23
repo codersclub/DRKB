@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>В следующем примере приведены две функции: GetGridColumnByName() и GetGridRowByName(), которые возвращают колонку или строку, имеющую заданный заголовок (caption). </p>
+<p>В следующем примере приведены две функции: GetGridColumnByName() и GetGridRowByName(), которые возвращают колонку или строку, имеющую заданный заголовок (caption).</p>
 <pre>
 procedure TForm1.FormCreate(Sender: TObject);
 begin

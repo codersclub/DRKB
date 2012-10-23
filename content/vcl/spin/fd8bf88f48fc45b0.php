@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>В форму добавляются TEditBox и TLabel, при этом TLabel постоянно показывает позицию курсора в элементе редактирования. </p>
+<p>В форму добавляются TEditBox и TLabel, при этом TLabel постоянно показывает позицию курсора в элементе редактирования.</p>
 <pre>
 procedure TForm1.Edit1Change(Sender: TObject); 
 begin 

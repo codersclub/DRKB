@@ -2,9 +2,9 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Делается это при помощи dbiGetDatabaseDesc: </p>
+<p>Делается это при помощи dbiGetDatabaseDesc:</p>
+
 <pre>
- 
 uses BDE;
 .....
  

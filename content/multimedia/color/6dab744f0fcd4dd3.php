@@ -21,7 +21,7 @@ end;
 
 <p>GetRValue(color:tcolor)</p>
 <p>GetGValue(color:tcolor)</p>
-<p>GetBValue(color:tcolor) </p>
+<p>GetBValue(color:tcolor)</p>
 
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

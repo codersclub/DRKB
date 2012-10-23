@@ -29,7 +29,7 @@ Table1.UpdateCursorPos;
 Check(DbiUndeleteRecord(Table1.Handle));
 </pre>
 
-<p>Метод UpdateCursorPos устанавливает основной курсор BDE на позицию курсора текущей записи, который существуют только для того, чтобы все работало правильно. Вам нужно только вызвать этот метод прямым вызовом одной из BDE API функций (такой как, например, DbiUndeleteRecord). </p>
+<p>Метод UpdateCursorPos устанавливает основной курсор BDE на позицию курсора текущей записи, который существуют только для того, чтобы все работало правильно. Вам нужно только вызвать этот метод прямым вызовом одной из BDE API функций (такой как, например, DbiUndeleteRecord).</p>
 
-<p>Ну и, наконец, чтобы все работало, поместите модули DBIPROCS и DBITYPES с список USES. </p>
+<p>Ну и, наконец, чтобы все работало, поместите модули DBIPROCS и DBITYPES с список USES.</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

@@ -41,7 +41,9 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
+
 <pre>
 function RoundEx(X: Double; Precision: Integer ): Double;
 {
@@ -66,8 +68,10 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
-<p>Округление дробных чисел с точностью i - количество знаков после запятой, S - дробное число в строковом виде. </p>
+
+<p>Округление дробных чисел с точностью i - количество знаков после запятой, S - дробное число в строковом виде.</p>
 <pre>
 function FormatData(s: String; i: Integer): String;
 begin
@@ -76,13 +80,12 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
-<p>Как округлять до сотых в большую сторону </p>
+
+<p>Как округлять до сотых в большую сторону</p>
 <pre>
 uses Math;
- 
-
- 
  
 // Прибавляешь 0.5 затем округляешь:
  
@@ -99,7 +102,9 @@ begin
 end;
 </pre>
 <div class="author">Автор: Vit</div>
+
 <hr />
+
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; «Округление» в большую сторону
@@ -127,7 +132,9 @@ end;
 RoundNext(10, 3) // = 12
 RoundNext(9, 3) // = 12
 </pre>
+
 <hr />
+
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; «Округление» в меньшую сторону
@@ -155,7 +162,9 @@ end;
 RoundPrev(10, 3) // = 9
 RoundPrev(9, 3) // = 9
 </pre>
+
 <hr />
+
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; «Округление» до ближайшего кратного
@@ -198,8 +207,8 @@ end;
  
 </pre>
 <hr />
-<p>Округление дробного числа до N знаков после запятой </p>
-<div class="author">Автор: Perceptron </div>
+<p>Округление дробного числа до N знаков после запятой</p>
+<div class="author">Автор: Perceptron</div>
 <pre>
 function RoundEx(chislo: double; Precision: Integer): string;
 var

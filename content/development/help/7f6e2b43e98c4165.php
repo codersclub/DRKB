@@ -13,6 +13,6 @@ begin
 end; 
 </pre>
 
-<p>Konstantin Kipa </p>
-<p>2:5061/19.17 </p>
-<p>kotya@extranet.ru </p>
+<p>Konstantin Kipa</p>
+<p>2:5061/19.17</p>
+<p>kotya@extranet.ru</p>

@@ -6,22 +6,22 @@
 
 <p>Совместимость: Delphi 5.x (или выше)</p>
 
-<p>Как-то раз получился TIF файл на несколько страниц и возникла необходимость конвертации его в PDF формат. Для использования такой возможности необходимо иметь полную версию Adobe Acrobat. Функция тестировалась на Adobe Acrobat 4.0. </p>
+<p>Как-то раз получился TIF файл на несколько страниц и возникла необходимость конвертации его в PDF формат. Для использования такой возможности необходимо иметь полную версию Adobe Acrobat. Функция тестировалась на Adobe Acrobat 4.0.</p>
 
-<p>Сперва Вам необходимо импортировать элементы управления Acrobat AxtiveX. </p>
+<p>Сперва Вам необходимо импортировать элементы управления Acrobat AxtiveX.</p>
 
-<p>1) Выберите Component -&gt; Import ActiveX Control </p>
-<p>2) Выберите Acrobat Control for ActiveX и нажмите install </p>
+<p>1) Выберите Component -&gt; Import ActiveX Control</p>
+<p>2) Выберите Acrobat Control for ActiveX и нажмите install</p>
 <p>3) Выберите пакет ActiveX control для инсталяции</p>
-<p>4) Добавьте PDFlib_tlb в Ваш проект. Этот файл находится в директории Borland\Delphi5\Imports. </p>
+<p>4) Добавьте PDFlib_tlb в Ваш проект. Этот файл находится в директории Borland\Delphi5\Imports.</p>
 
-<p>Как использовать функцию </p>
+<p>Как использовать функцию</p>
 
-<p>Вот пример её вызова: </p>
+<p>Вот пример её вызова:</p>
 
-<p>if not TifToPDF('c:\test.tif', 'c:\test.pdf') then Showmessage('Could not convert'); </p>
+<p>if not TifToPDF('c:\test.tif', 'c:\test.pdf') then Showmessage('Could not convert');</p>
 
-<p>Функция TifToPdf </p>
+<p>Функция TifToPdf</p>
 <pre>
 function TifToPDF(TIFFilename, PDFFilename: string): boolean; 
 var 

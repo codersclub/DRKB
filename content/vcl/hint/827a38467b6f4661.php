@@ -1,7 +1,7 @@
 <h1>Как показать подсказки Hints для элементов меню</h1>
 <div class="date">01.01.2007</div>
 
-В примере создается обработчик события Application.Hint - подсказки меню изображаются на status Panel: </p>
+В примере создается обработчик события Application.Hint - подсказки меню изображаются на status Panel:</p>
 <pre>
 type
   TForm1 = class(TForm)

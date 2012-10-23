@@ -3,11 +3,11 @@
 
 
 <p>Взято из FAQ:<a href="https://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml</a></p>
-<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm </p>
+<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm</p>
 
 <p>В IE5, можно получить исходник используя свойство outerHTML тэгов</p>
 <p>HTML. В IE4 или IE3, Вам понадобится записать документ в файл, а затем</p>
-<p>загрузить файл в TMemo, TStrings, и т.д. </p>
+<p>загрузить файл в TMemo, TStrings, и т.д.</p>
 <pre>
 var
   HTMLDocument: IHTMLDocument2;
@@ -25,4 +25,4 @@ end;
 
 
 <div class="author">Автор: Ron Loewy Обратите внимание: Вам понадобится импортировать библиотеку</div>
-<p>MSHTML и добавить MSHTML_TLB как ActiveX, в секцию Uses. </p>
+<p>MSHTML и добавить MSHTML_TLB как ActiveX, в секцию Uses.</p>

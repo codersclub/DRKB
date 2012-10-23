@@ -27,7 +27,7 @@ End;
 <div class="author">Автор: Radmin</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p>BlockInput(), живёт в user32.dll </p>
+<p>BlockInput(), живёт в user32.dll</p>
 <div class="author">Автор: Song</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />

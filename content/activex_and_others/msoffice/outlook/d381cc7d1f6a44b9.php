@@ -15,4 +15,4 @@ begin
   AllAccs.Execute;
 </pre>
 &nbsp;</p>
-<p>If you're using Outlook 2000, you'll have to change 'Send and Receive', perhaps to 'Send/Receive'. (I've had one report that this works, one that it doesn't - perhaps there are spaces around the '/'? Any clarification of this would be very welcome! Pointless menu changes don't make automation any easier...) </p>
+<p>If you're using Outlook 2000, you'll have to change 'Send and Receive', perhaps to 'Send/Receive'. (I've had one report that this works, one that it doesn't - perhaps there are spaces around the '/'? Any clarification of this would be very welcome! Pointless menu changes don't make automation any easier...)</p>

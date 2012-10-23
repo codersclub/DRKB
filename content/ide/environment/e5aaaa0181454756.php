@@ -4,7 +4,7 @@
 
 
 <p>Some undocumented registry settings of Delphi 5 (which -slightly adapted- might also work with Delphi 4 and below) modify the behavior of the Delphi component palette in a manner you may like!</p>
-<p>Most values are stored as strings, and boolean values are represented as "1" for true and "0" for false. All values are stored in </p>
+<p>Most values are stored as strings, and boolean values are represented as "1" for true and "0" for false. All values are stored in</p>
 
 <p>HKEY_CURRENT_USER</p>
 
@@ -85,7 +85,7 @@
 <p>Software\Borland\Delphi\5.0\CallStackWindow\Dockable</p>
 <p>Software\Borland\Delphi\5.0\ModuleWindow\Dockable</p>
 
-<p>Read but unused settings. Used values come from DSK files. </p>
+<p>Read but unused settings. Used values come from DSK files.</p>
 
 <p>There are lots of other interesting registry keys that aren't modifiable in the IDE, but they all have values written by default, so you can find and play with them much easier.</p>
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>

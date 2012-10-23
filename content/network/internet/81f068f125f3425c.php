@@ -364,6 +364,6 @@ end.
 </pre>
 <p>&nbsp;<br>
 &nbsp;<br>
-<p>Проект также доступен по адресу: http://rouse.front.ru/tracert.zip </p>
+<p>Проект также доступен по адресу: http://rouse.front.ru/tracert.zip</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Rouse_</div>

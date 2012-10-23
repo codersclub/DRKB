@@ -132,14 +132,14 @@ end;
 
 <p>Она возвращает одну из следующих констант:</p>
 
-<p>SERVICE_STOPPED </p>
-<p>SERVICE_RUNNING </p>
-<p>SERVICE_PAUSED </p>
-<p>SERVICE_START_PENDING </p>
-<p>SERVICE_STOP_PENDING </p>
-<p>SERVICE_CONTINUE_PENDING </p>
+<p>SERVICE_STOPPED</p>
+<p>SERVICE_RUNNING</p>
+<p>SERVICE_PAUSED</p>
+<p>SERVICE_START_PENDING</p>
+<p>SERVICE_STOP_PENDING</p>
+<p>SERVICE_CONTINUE_PENDING</p>
 <p>или</p>
-<p>SERVICE_PAUSE_PENDING </p>
+<p>SERVICE_PAUSE_PENDING</p>
 
 <p>Всё что, что Вам нужно, это unit WinSvc !</p>
 

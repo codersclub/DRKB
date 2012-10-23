@@ -6,7 +6,7 @@
 <p>  SendMessage(Handle_, WM_KEYDOWN, VK_MENU,0);</p>
 <p>  SendMessage(Handle_, WM_KEYDOWN, VK_F1,0);</p>
 <p>  SendMessage(Handle_, WM_KEYUP, VK_F1,0);</p>
-<p>но у меня не получается, что не так? </p>
+<p>но у меня не получается, что не так?</p>
 <p>Попробуй так</p>
 <pre>
 SendMessage(Handle,WM_KEYDOWN,Byte(C),$20000001);

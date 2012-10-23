@@ -3,8 +3,8 @@
 
 
 <p>Примеры</p>
-<p>В данной главе, мы приведем несколько примеров на basm. Это только первая часть моих статей по Дельфи и встроенному ассемблеру, которая опубликована на данном сайте. Расположено это на странице featured articles, и называется Considerations for writing and using Intel assembly code in Delphi projects (Последнее изменение 1 сентября 2001). Мы будем признательны за замечания или советы по этим страницам. </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Прямой доступ к портам в Windows 95 и 98</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Подсчет количества установленных бит в integer</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Проверка установки отдельного бита (0-31)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Установка отдельного бита (0-31) в единицу</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Сброс отдельного бита</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#8226;</td><td>Извлечение битовой маски их integer</td></tr></table></div><p>Есть замечания насчет этих примеров? Пожалуйста, посылайте их по адресу в главе Как связаться с Гуйдо Гайбелсом! </p>
+<p>В данной главе, мы приведем несколько примеров на basm. Это только первая часть моих статей по Дельфи и встроенному ассемблеру, которая опубликована на данном сайте. Расположено это на странице featured articles, и называется Considerations for writing and using Intel assembly code in Delphi projects (Последнее изменение 1 сентября 2001). Мы будем признательны за замечания или советы по этим страницам.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Прямой доступ к портам в Windows 95 и 98</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Подсчет количества установленных бит в integer</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Проверка установки отдельного бита (0-31)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Установка отдельного бита (0-31) в единицу</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Сброс отдельного бита</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Извлечение битовой маски их integer</td></tr></table></div><p>Есть замечания насчет этих примеров? Пожалуйста, посылайте их по адресу в главе Как связаться с Гуйдо Гайбелсом!</p>
 <p>Прямой доступ к портам в Windows 95 и 98</p>
 <pre>
 function PortInByte(PortAddress: Word): Byte;
@@ -92,7 +92,7 @@ asm
  @@ending:
 end;
 </pre>
-<p>Модуль CpuInfo </p>
+<p>Модуль CpuInfo</p>
 <p>Здесь приведена часть проекта, модуль CpuInfo. Полностью проект находится на сайте Гуйдо Гайбелса http://www.optimalcode.com/Guido/cpuinfo.html и в виде архива cpuinfo.zip вместе с этой книгой.</p>
 <pre>
 unit cpuinfo;
@@ -576,8 +576,8 @@ end.
 <p>fs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Резервировано для Windows  &nbsp; &nbsp; &nbsp; &nbsp;Резервировано для Windows &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>gs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Резервировано &nbsp; &nbsp; &nbsp; &nbsp;Резервировано &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>ss &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Сегмент стека (5) &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>(1) Для метода, когда используется соглашение Register </p>
-<p>(2) Для автономных функций и процедур, когда используется соглашение Register </p>
+<p>(1) Для метода, когда используется соглашение Register</p>
+<p>(2) Для автономных функций и процедур, когда используется соглашение Register</p>
 <p>(3) Для всех других случаев при всех соглашенияч о вызове</p>
 <p>(4) Только для результата, который полностью помещается в регистр. См. таблицу для полного обзора как результаты возвращаются из функции.</p>
 <p>(5) В плоской 32-битной модели памяти все сегментные регистры нормально указывают на один и тот же сегмент памяти. Тем не менее, при анализе поведения Дельфи, оказывается, что регистр cs имеет различное значение.</p>
@@ -628,7 +628,7 @@ end.
 <p>(8) Используется только младшие 6 байт.</p>
 <p>&nbsp;</p>
 <p>Таблица 3: Результаты возврата функций</p>
-<p>В следующей таблице приведен обзор того, как результаты возвращаются из функции в программу. Для более подробной информации насчет каждого типа, читайте соответствующий раздел. </p>
+<p>В следующей таблице приведен обзор того, как результаты возвращаются из функции в программу. Для более подробной информации насчет каждого типа, читайте соответствующий раздел.</p>
 <p>Тип Дельфи &nbsp; &nbsp; &nbsp; &nbsp;Результат &nbsp; &nbsp; &nbsp; &nbsp;Размер &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>ShortInt  &nbsp; &nbsp; &nbsp; &nbsp;al &nbsp; &nbsp; &nbsp; &nbsp;8-битное значение &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>SmallInt &nbsp; &nbsp; &nbsp; &nbsp;ax &nbsp; &nbsp; &nbsp; &nbsp;16-битное значение  &nbsp; &nbsp; &nbsp; &nbsp;</p>
@@ -664,6 +664,6 @@ end.
 <p>Currency &nbsp; &nbsp; &nbsp; &nbsp;ST(0) (4) &nbsp; &nbsp; &nbsp; &nbsp;n/a &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <p>(1) Переменная Result в действительности передается в функцию, как дополнительный var параметр. Эта переменная Result содержит 32-битный указатель на область результата в памяти. Подлинное местонахождение зависит от типа использованного соглашения о вызове: Для соглашения register это может быть EAX, EDX или ECX, в зависимости от количества переданных параметров. В других случаях Result это 32-битный указатель на стеке.</p>
 <p>(2) Переменная Result указывает на адрес памяти где расположены два 32-битных указателя. Этот указатель передается так, как если бы он был действительно объявлен, и его точное местонахождение зависит от типа используемого соглашения о вызове.</p>
-<p>(3) Если подлинный тип помещается в 32 бита, то он возвращается напрямую через регистр al/ax/EAX. Иначе, Result содержит 32-битный указатель на переменную памяти, и он передается в функцию, как если бы он был объявлен как дополнительный 32-битный var параметр. Этот параметр (точное местонахождение зависит от типа использованного соглашения о вызове) должен содержать указатель на действительные данные в памяти </p>
-<p>(4) Значение в ST(0) является маштабированным значением (x10000). Для примера, значение 5,8745 возвращается как 58745. </p>
+<p>(3) Если подлинный тип помещается в 32 бита, то он возвращается напрямую через регистр al/ax/EAX. Иначе, Result содержит 32-битный указатель на переменную памяти, и он передается в функцию, как если бы он был объявлен как дополнительный 32-битный var параметр. Этот параметр (точное местонахождение зависит от типа использованного соглашения о вызове) должен содержать указатель на действительные данные в памяти</p>
+<p>(4) Значение в ST(0) является маштабированным значением (x10000). Для примера, значение 5,8745 возвращается как 58745.</p>
 

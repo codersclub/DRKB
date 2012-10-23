@@ -4,17 +4,17 @@
 
 <div class="author">Автор: Fernando Silva</div>
 
-<p>В Delphi 5, для обмена данными между Вашим приложением и Excel можно использовать компонент TExcelApplication, доступный на Servers Page в Component Palette. </p>
+<p>В Delphi 5, для обмена данными между Вашим приложением и Excel можно использовать компонент TExcelApplication, доступный на Servers Page в Component Palette.</p>
 
-<p>На форме находится TStringGrid, заполненный некоторыми данными и две кнопки, с названиями To Excel и From Excel. Так же на форме находится компонент TExcelApplication со свойством Name, содержащим XLApp и свойством ConnectKind, содержащим ckNewInstance. </p>
+<p>На форме находится TStringGrid, заполненный некоторыми данными и две кнопки, с названиями To Excel и From Excel. Так же на форме находится компонент TExcelApplication со свойством Name, содержащим XLApp и свойством ConnectKind, содержащим ckNewInstance.</p>
 
-<p>Когда нам необходимо работать с Excel, то обычно мы открываем ExcelApplication, затем открываем WorkBook и в конце используем WorkSheet. </p>
+<p>Когда нам необходимо работать с Excel, то обычно мы открываем ExcelApplication, затем открываем WorkBook и в конце используем WorkSheet.</p>
 
-<p>Итак, несомненный интерес представляет для нас листы (WorkSheets) в книге (WorkBook). Давайте посмотрим как всё это работает. </p>
+<p>Итак, несомненный интерес представляет для нас листы (WorkSheets) в книге (WorkBook). Давайте посмотрим как всё это работает.</p>
 
 <p>Посылка данных в Excel</p>
 
-<p>Это можно сделать с помощью следующей процедуры : </p>
+<p>Это можно сделать с помощью следующей процедуры :</p>
 <pre>
 procedure TForm1.BitBtnToExcelOnClick(Sender: TObject);
 var
@@ -72,7 +72,7 @@ end;
 
 <p>Получение данных из Excel</p>
 
-<p>Это можно сделать с помощью следующей процедуры : </p>
+<p>Это можно сделать с помощью следующей процедуры :</p>
 
 <pre>
 procedure TForm1.BitBtnFromExcelOnClick(Sender: TObject);

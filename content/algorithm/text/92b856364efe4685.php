@@ -226,13 +226,14 @@ end.
 </pre>
 
 
-<p>Alex Gorbunov</p>
+<p></p>
+<div class="author">Автор: Alex Gorbunov</div>
 <p>acdc@media-press.donetsk.ua</p>
 <p>www.media-press.donetsk.ua</p>
 <p>(2:465/85.4)</p>
-<p>.</p>
+<p></p>
 <p>Взято из FAQ:</p>
-<p>Delphi and Windows API Tips'n'Tricks </p>
+<p>Delphi and Windows API Tips'n'Tricks</p>
 <p>olmal@mail.ru</p>
 <a href="https://www.chat.ru/~olmal" target="_blank">https://www.chat.ru/~olmal</a></p>
 

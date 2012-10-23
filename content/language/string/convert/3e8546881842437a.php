@@ -1,7 +1,7 @@
 <h1>Как преобразовать значение любого типа в строку?</h1>
 <div class="date">01.01.2007</div>
 
-<p>Более подробно ищите в хелпе Delphi по словам "Variant" и "TVarData"... </p>
+<p>Более подробно ищите в хелпе Delphi по словам "Variant" и "TVarData"...</p>
 <pre>
  
 function ToString(Value: Variant): String;
@@ -19,12 +19,12 @@ begin
   end;
 end;
 </pre>
-<p>Использование: </p>
+<p>Использование:</p>
 <pre>
 ShowMessage(ToString(10.87));
 ShowMessage(ToString(10));
 </pre>
-<p>или </p>
+<p>или</p>
 <pre>
 var
   V1 : Double;
@@ -42,9 +42,9 @@ begin
 end;
  
 </pre>
-<p>Так же можно пользоваться другими вариантами, например: </p>
+<p>Так же можно пользоваться другими вариантами, например:</p>
 <p>varCurrency &nbsp;: Result := CurrToStrF(Value ,ffFixed,CurrencyDecimals);</p>
-<p>и </p>
+<p>и</p>
 <p>varDate: Result := DateToStr(Value);</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
-<p>DelphiWorld 6.0 </p>
+<p>DelphiWorld 6.0</p>

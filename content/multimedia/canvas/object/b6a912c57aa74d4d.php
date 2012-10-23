@@ -2,8 +2,8 @@
 <div class="date">01.01.2007</div>
 
 
-<p>У всех компонентов, порожденных от TCustomControl, имеется свойство Canvas типа TCanvas. </p>
-<p>Если свойство Canvas недоступно, Вы можете достучаться до него созданием потомка и переносом этого свойства в раздел Public. </p>
+<p>У всех компонентов, порожденных от TCustomControl, имеется свойство Canvas типа TCanvas.</p>
+<p>Если свойство Canvas недоступно, Вы можете достучаться до него созданием потомка и переносом этого свойства в раздел Public.</p>
 <pre>
 { Example. We recommend You to create this component through Component Wizard.
 In Delphi 1 it can be found as 'File|New Component...', and can be found
@@ -16,10 +16,10 @@ type
 </pre>
 
 
-<p>Akzhan Abdulin </p>
-<p>(2:5040/55) </p>
+<p>Akzhan Abdulin</p>
+<p>(2:5040/55)</p>
 
-<p>Если у объекта нет свойства Canvas (у TDBEdit, вpоде-бы нет), по кpайней меpе в D3 можно использовать класс TControlCanvas. Пpимеpное использование: </p>
+<p>Если у объекта нет свойства Canvas (у TDBEdit, вpоде-бы нет), по кpайней меpе в D3 можно использовать класс TControlCanvas. Пpимеpное использование:</p>
 <pre>
 var cc: TControlCanvas; 
 ... 
@@ -28,7 +28,7 @@ cc.Control := youControl;
 ... 
 </pre>
 
-<p>и далее как обычно можно использовать методы Canvas. </p>
+<p>и далее как обычно можно использовать методы Canvas.</p>
 
-<p>Andrew Velikoredchanin </p>
-<p>(2:5026/29.3) </p>
+<p>Andrew Velikoredchanin</p>
+<p>(2:5026/29.3)</p>

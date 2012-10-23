@@ -38,6 +38,6 @@ end;
 <pre>
 SetForegroundWindow(FindWindow(PChar(WindowClassName), PChar(WindowCaption)));
 </pre>
-<p>PS. не забудьте поставить задержки типа Sleep(100) после активизации окна и между посылаемыми клавишами, не то окно может не успевать реагировать на клавиши... </p>
+<p>PS. не забудьте поставить задержки типа Sleep(100) после активизации окна и между посылаемыми клавишами, не то окно может не успевать реагировать на клавиши...</p>
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

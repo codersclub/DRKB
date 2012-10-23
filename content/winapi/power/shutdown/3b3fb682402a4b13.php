@@ -10,7 +10,7 @@ begin
   PowerControl1.Execute; 
 end; 
 </pre>
-<p>Component Code: </p>
+<p>Component Code:</p>
 <pre>
 unit PowerControl; 
  

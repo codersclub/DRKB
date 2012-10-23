@@ -10,5 +10,5 @@
 
 <p>MyField.DefaultExpression := '''MyValue''';</p>
 
-<p>В Инспекторе Объектов вам нужно просто поместить значение 'MyValue' (используя одинарные кавычки). </p>
+<p>В Инспекторе Объектов вам нужно просто поместить значение 'MyValue' (используя одинарные кавычки).</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

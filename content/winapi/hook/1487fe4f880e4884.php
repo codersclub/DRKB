@@ -362,7 +362,7 @@ begin
  
  end.
 </pre>
-<p>Код прислал NoName </p>
+<p>Код прислал NoName</p>
 <hr />
 <pre>
 library keyboardhook;

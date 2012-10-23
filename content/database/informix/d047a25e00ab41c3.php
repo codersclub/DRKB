@@ -14,7 +14,7 @@
 Все аргументы, в том числе CHAR, преобразуются к типу DECIMAL <br>
 Внимание: -7 mod 3 = -1 <br>
 Внимание: mod и ** нельзя использовать в операторе SELECT <br>
-<p>Можно пользоваться встроенными функциями 4GL (см. "Функции 4GL") и функциями на языке Си. </p>
+<p>Можно пользоваться встроенными функциями 4GL (см. "Функции 4GL") и функциями на языке Си.</p>
 <p>Операции над строками:</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string1,string2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; сцепить</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string&nbsp;&nbsp; [m,n]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; подстрока</p>
@@ -36,8 +36,8 @@
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; означают "много", "один", "любой из", "ни один из"</p>
 <p>Системные переменные:</p>
 <p>&nbsp;<br>
-<p>Устанавливаются после любого оператора 4GL </p>
-<p>status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { 0 | NOTFOUND | &lt;0 } код завершения оператора quit_flag ( не 0 если было нажато QUIT ) int_flag ( не 0 если было нажато ^C ) define SQLCA record # системная запись с кодами завершения SQLCODE integer,="status" SQLERRM char(71), &#173;- SQLERRP char(8), &#173;- SQLERRD array[8] of int,...&#8222;см. SQLAWARN char(8) warning или пробел end record SQLERRD[1] зарезервирован SQLERRD[2] serial значение или ISAM error cod SQLERRD[3] число обработанных строк SQLERRD[4] CPU cost запроса SQLERRD[5] offset of error into SQL-st SQLERRD[6] ROWID of last row SQLERRD[7] зарезервирован SQLERRD[8] зарезервирован </p>
+<p>Устанавливаются после любого оператора 4GL</p>
+<p>status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { 0 | NOTFOUND | &lt;0 } код завершения оператора quit_flag ( не 0 если было нажато QUIT ) int_flag ( не 0 если было нажато ^C ) define SQLCA record # системная запись с кодами завершения SQLCODE integer,="status" SQLERRM char(71), &#173;- SQLERRP char(8), &#173;- SQLERRD array[8] of int,...&#8222;см. SQLAWARN char(8) warning или пробел end record SQLERRD[1] зарезервирован SQLERRD[2] serial значение или ISAM error cod SQLERRD[3] число обработанных строк SQLERRD[4] CPU cost запроса SQLERRD[5] offset of error into SQL-st SQLERRD[6] ROWID of last row SQLERRD[7] зарезервирован SQLERRD[8] зарезервирован</p>
 
 <p>Операторы организации программы.</p>
 <pre>MAIN            Главный блок (должен быть ровно один)
@@ -64,7 +64,7 @@ REPORT  report-name(variable-list)
 END REPORT
 </pre>
 
-<p>Генерация отчетов. </p>
+<p>Генерация отчетов.</p>
 <p>START&nbsp; REPORT report-name</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp; [TO {file-name | PRINTER | PIPE program}]</p>
 <p>OUTPUT TO&nbsp; REPORT&nbsp; report-name (выражение, выражение [, ...])</p>
@@ -161,8 +161,8 @@ END REPORT
 <p> &nbsp;&nbsp;&nbsp; INPUT { WRAP | NO WRAP } |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NO WRAP</p>
 <p> &nbsp;&nbsp;&nbsp; INSERT&nbsp;&nbsp;&nbsp; KEY&nbsp;&nbsp; key-name | Вставить  F1&nbsp;&nbsp; !! Не применять:</p>
 <p> &nbsp;&nbsp;&nbsp; DELETE&nbsp;&nbsp;&nbsp; KEY&nbsp;&nbsp; key-name | Удал. стр F2&nbsp;&nbsp; CONTROL-A,D,H,L,</p>
-<p> &nbsp;&nbsp;&nbsp; NEXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KEY&nbsp;&nbsp; key-name | Страница  F3&nbsp;&nbsp; CONTROL-Q,R,X,&nbsp; </p>
-<p> &nbsp;&nbsp;&nbsp; PREVIOUS&nbsp; KEY&nbsp;&nbsp; key-name | Страница  F4&nbsp;&nbsp; CONTROL-C,S,Q,Z </p>
+<p> &nbsp;&nbsp;&nbsp; NEXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KEY&nbsp;&nbsp; key-name | Страница  F3&nbsp;&nbsp; CONTROL-Q,R,X,&nbsp;</p>
+<p> &nbsp;&nbsp;&nbsp; PREVIOUS&nbsp; KEY&nbsp;&nbsp; key-name | Страница  F4&nbsp;&nbsp; CONTROL-C,S,Q,Z</p>
 <p> &nbsp;&nbsp;&nbsp; ACCEPT&nbsp;&nbsp;&nbsp; KEY&nbsp;&nbsp; key-name |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ESC</p>
 <p> &nbsp;&nbsp;&nbsp; HELP&nbsp;&nbsp;&nbsp; FILE "help-file" | Предварительно откомпилированный</p>
 <p> &nbsp;&nbsp;&nbsp; HELP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KEY&nbsp;&nbsp; key-name |&nbsp;&nbsp; CONTROL-W&nbsp;&nbsp; утилитой mkmessage</p>
@@ -191,7 +191,7 @@ END REPORT
 <p>Простые операторы вывода на экран.</p>
 <p>MESSAGE список переменных, констант [ATTRIBUTE(список атрибутов)]</p>
 <p>ERROR список переменных, констант [ATTRIBUTE(список атрибутов)]</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; по умолчанию REVERSE </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; по умолчанию REVERSE</p>
 <p>PROMPT список переменных и констатнт</p>
 <p> [ATTRIBUTE(аттрибуты вывода)] FOR [CHAR] variable</p>
 <p> [HELP help-number]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Ввести значение в variable</p>
@@ -204,7 +204,7 @@ END REPORT
 <p>в  ON&nbsp; KEY&nbsp; пункте  нельзя  напрямую  пользоваться  операторами</p>
 <p>PROMPT, INPUT.Для их вызова применяйте функции.</p>
 <p>Ввод/вывод через экранные формы.</p>
-<p>Вывести в форму </p>
+<p>Вывести в форму</p>
 <p>DISPLAY { BY NAME список переменных |</p>
 <p> список переменных TO {список полей|screen-record[[n]].*}[,..] |</p>
 <p> список переменных AT row, column }</p>
@@ -231,60 +231,60 @@ END REPORT
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ATTRIBUTE(список атрибутов)]</p>
 <p>В полях могут использоваться служебные символы:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>символ: </p>
+<tr>
+<td><p>символ:</p>
 </td>
-<td ><p>пример: </p>
+<td><p>пример:</p>
 </td>
-<td ><p>назначение: </p>
-</td>
-</tr>
-<tr >
-<td ><p>* </p>
-</td>
-<td ><p>*X </p>
-</td>
-<td ><p>произвольная строка</p>
+<td><p>назначение:</p>
 </td>
 </tr>
-<tr >
-<td ><p>? </p>
+<tr>
+<td><p>*</p>
 </td>
-<td ><p>X? </p>
+<td><p>*X</p>
 </td>
-<td ><p>произвольный символ</p>
-</td>
-</tr>
-<tr >
-<td ><p>| </p>
-</td>
-<td ><p>abc|cdef </p>
-</td>
-<td ><p>или</p>
+<td><p>произвольная строка</p>
 </td>
 </tr>
-<tr >
-<td ><p>&gt;,&lt;,&gt;=,&lt;=,&lt;&gt; </p>
+<tr>
+<td><p>?</p>
 </td>
-<td ><p>&gt;X </p>
+<td><p>X?</p>
 </td>
-<td >
-</td>
-</tr>
-<tr >
-<td ><p>: </p>
-</td>
-<td ><p>X:YW </p>
-</td>
-<td ><p>промежуток</p>
+<td><p>произвольный символ</p>
 </td>
 </tr>
-<tr >
-<td ><p>.. </p>
+<tr>
+<td><p>|</p>
 </td>
-<td ><p>Date..Date </p>
+<td><p>abc|cdef</p>
 </td>
-<td ><p>промежуток между датами
+<td><p>или</p>
+</td>
+</tr>
+<tr>
+<td><p>&gt;,&lt;,&gt;=,&lt;=,&lt;&gt;</p>
+</td>
+<td><p>&gt;X</p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p>:</p>
+</td>
+<td><p>X:YW</p>
+</td>
+<td><p>промежуток</p>
+</td>
+</tr>
+<tr>
+<td><p>..</p>
+</td>
+<td><p>Date..Date</p>
+</td>
+<td><p>промежуток между датами
 </td>
 </tr>
 </table>
@@ -320,7 +320,7 @@ END REPORT
 <p>PREPARE statement-id FROM {char-variable | "SQL-оператор [ы] "}</p>
 <p>  Изготовить SQL - statement из символьной строки</p>
 <p>  Нельзя включать имена переменных, нужно заменять их на знак ?</p>
-<p>Нельзя готовить операторы: </p>
+<p>Нельзя готовить операторы:</p>
 <p>DECLARE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PREPARE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LOAD</p>
 <p>OPEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXECUTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UNLOAD</p>
 <p>CLOSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FETCH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SELECT INTO variables</p>
@@ -356,13 +356,13 @@ END REPORT
 <p>[заменив знаки ? для DECLAREd INSERT-st на список переменных]</p>
 <p>FLUSH cursor-name&nbsp;&nbsp; вытолкнуть буфер</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^^&nbsp; SQL операторы  ^^</p>
-<p>Описания CREATE, DROP, DATABASE, ALTER, RENAME </p>
-<p>Манипуляция данными DELETE, INSERT, UPDATE, LOAD, UNLOAD </p>
-<p>Оператор SELECT </p>
-<p>Права доступа GRANT/REVOKE, LOCK/UNLOCK TABLE, SET LOCK MODE </p>
-<p>Операторы транзакции и восстановления BEGIN WORK, COMMIT WORK, ROLLBACK WORK, START DATABASE, ... </p>
+<p>Описания CREATE, DROP, DATABASE, ALTER, RENAME</p>
+<p>Манипуляция данными DELETE, INSERT, UPDATE, LOAD, UNLOAD</p>
+<p>Оператор SELECT</p>
+<p>Права доступа GRANT/REVOKE, LOCK/UNLOCK TABLE, SET LOCK MODE</p>
+<p>Операторы транзакции и восстановления BEGIN WORK, COMMIT WORK, ROLLBACK WORK, START DATABASE, ...</p>
 <p>Операторы описания данных.</p>
-<p>Операторы описания данных не откатываются ! </p>
+<p>Операторы описания данных не откатываются !</p>
 <p>CREATE DATABASE db-name [WITH LOG IN "pathname" [MODE ANSI]]</p>
 <p>Стандарт ansi требует имя владельца, транзакция по умолчанию</p>
 <p>DROP DATABASE { database-name | char-variable }</p>
@@ -466,7 +466,7 @@ END REPORT
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONNECT&nbsp;&nbsp; работать &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SELECT[(cols)]</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RESOURCE&nbsp; создавать объекты &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UPDATE [(cols)]</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; все &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ALL [PRIVILEGES]</p>
-<p>SET LOCK MODE TO [NOT] WAIT&nbsp;&nbsp;&nbsp;&nbsp; ждать [не ждать] освобождения </p>
+<p>SET LOCK MODE TO [NOT] WAIT&nbsp;&nbsp;&nbsp;&nbsp; ждать [не ждать] освобождения</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; блокир. строк</p>
 <p>LOCK TABLE&nbsp;&nbsp; table-name&nbsp;&nbsp; IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {SHARE | EXCLUSIVE} MODE</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {Можно смотреть | Ничего нельзя}</p>
@@ -487,7 +487,7 @@ END REPORT
 <p>RECOVER TABLE table-name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Восстановить таблицу</p>
 <p>DROP AUDIT FOR table-name</p>
 <p>VALIDATE список переменных LIKE column-list&nbsp;&nbsp; удовлетворяют ли</p>
-<p> переменные допустимым значениям для этих столбцов (syscolval)?, если нет то status&lt;0 </p>
+<p> переменные допустимым значениям для этих столбцов (syscolval)?, если нет то status&lt;0</p>
  &nbsp; Примечание: подчеркнутые операторы  нельзя  использовать в 4GL, а можно только в INFORMIX-SQL</p>
 <p>INFO&nbsp; { TABLES | { COLUMNS | INDEXES | ACCES | PRIVILEGES |</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FOR table-name }</p>

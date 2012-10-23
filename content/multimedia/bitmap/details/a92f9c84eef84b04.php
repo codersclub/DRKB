@@ -12,7 +12,7 @@ pRGBArray = ^TRGBArray;
 TRGBArray = ARRAY[0..PixelCountMax-1] OF TRGBTriple;
 </pre>
 
-<p class="note">Примечание: TRGBTriple определен в модуле Windows.PAS. </p>
+<p class="note">Примечание: TRGBTriple определен в модуле Windows.PAS.</p>
 
 <p>Для того, чтобы к существующему 24-битному изображению иметь доступ как к изображению, созданному с разрешением 3 байта на пиксел, сделайте следующее:</p>
 

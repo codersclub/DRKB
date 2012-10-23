@@ -1,7 +1,7 @@
 <h1>Как использовать CreateWindow(Ex)?</h1>
 <div class="date">01.01.2007</div>
 
-Автор: lel  </p>
+Автор: lel</p>
 <pre>
 program winmin;
  

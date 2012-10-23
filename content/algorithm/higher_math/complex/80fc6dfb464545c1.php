@@ -3,11 +3,12 @@
 
 
 <p>Взято из <a href="https://www.ibrtses.com/delphi/complexrec.html" target="_blank">https://www.ibrtses.com/delphi/complexrec.html</a></p>
+
 <p>Complex numbers</p>
-<p>Complex numbers have two representations : </p>
-<p>rectanglar : Z = a + i * b, a being the real part, and b being the imaginary part </p>
-<p>polar : Z = r * exp(i * phi), r being the absolute value, and phi being the argument(angle) </p>
-<p>a reason to demotivate compiler writers to have it as native type. </p>
+<p>Complex numbers have two representations :</p>
+<p>rectanglar : Z = a + i * b, a being the real part, and b being the imaginary part</p>
+<p>polar : Z = r * exp(i * phi), r being the absolute value, and phi being the argument(angle)</p>
+<p>a reason to demotivate compiler writers to have it as native type.</p>
 <p>Here is a unit that approaches the complex as record.</p>
 <p>the used record is of dual use, either rectangular or polar,</p>
 <p>one just has to keep in mind what in is at the moment.</p>
@@ -411,5 +412,5 @@ end;
 end.
 </pre>
 
-<p>Copyright (99,2000) Ing.BЁ№ro R.Tschaggelar </p>
+<p>Copyright (99,2000) Ing.BЁ№ro R.Tschaggelar</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

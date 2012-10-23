@@ -1,7 +1,7 @@
 <h1>Имитация ввода с клавиатуры для консоли</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Nomadic  </p>
+Автор: Nomadic</p>
 <pre>
 const
  

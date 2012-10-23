@@ -24,10 +24,10 @@ begin
   result := int(hhdd) + (frac(hhdd) * 0.6);
 end;
 </pre>
-<p>Использование: </p>
-<p>// sumtime(1.20,1.50) =&gt; 3.10 </p>
-<p>// sumtime(1.20,- 0.50) =&gt; 0.30 </p>
-<p>// hhmm2hhdd(1.30) =&gt; 1.5 (1h.30m = 1.5h) </p>
-<p>// hhdd2hhmm(1.50) =&gt; 1.30 (1.5h = 1h30m) </p>
+<p>Использование:</p>
+<p>// sumtime(1.20,1.50) =&gt; 3.10</p>
+<p>// sumtime(1.20,- 0.50) =&gt; 0.30</p>
+<p>// hhmm2hhdd(1.30) =&gt; 1.5 (1h.30m = 1.5h)</p>
+<p>// hhdd2hhmm(1.50) =&gt; 1.30 (1.5h = 1h30m)</p>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

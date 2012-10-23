@@ -38,5 +38,5 @@
 <p>ошибке вызовите функцию GetLastError. Комментарии Функции CreateIconFromResourceEx, CreateIconFromResource, CreateIconIndirect,</p>
 <p>GetIconInfo и LookupIconIdFromDirectoryEx позволяют приложениям оболочки и браузерам</p>
 <p>иконок проверять и использовать ресурсы См. также BITMAPINFOHEADER, CreateIconFromResource, CreateIconIndirect, GetIconInfo, LoadResource,</p>
-<p>LookupIconIdFromDirectoryEx . хелп по WinAPI: <a href="https://www.winnt.rsm.org.ru/winapi/win32api.exe" target="_blank">https://www.winnt.rsm.org.ru/winapi/win32api.exe</a> </p>
+<p>LookupIconIdFromDirectoryEx . хелп по WinAPI: <a href="https://www.winnt.rsm.org.ru/winapi/win32api.exe" target="_blank">https://www.winnt.rsm.org.ru/winapi/win32api.exe</a></p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

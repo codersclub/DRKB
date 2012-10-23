@@ -3,10 +3,10 @@
 
 
 <p>Сперва необходимо узнать, константы, которые соответствуют определённым иконкам. Все они определены в API unit (windows.pas) в Delphi:</p>
-<p>IDI_HAND </p>
-<p>IDI_EXCLAMATION </p>
-<p>or </p>
-<p>IDI_QUESTION </p>
+<p>IDI_HAND</p>
+<p>IDI_EXCLAMATION</p>
+<p>or</p>
+<p>IDI_QUESTION</p>
 <p>Следующий пример рисует иконку вопроса на панели:</p>
 <pre>var
   DC: HDC;

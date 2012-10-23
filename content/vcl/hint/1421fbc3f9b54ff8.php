@@ -44,7 +44,7 @@ end;
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
 
 <hr />
-<p>В примере перехватывается событие Application.OnShowHint и изменяется шрифт Hint'а. </p>
+<p>В примере перехватывается событие Application.OnShowHint и изменяется шрифт Hint'а.</p>
 
 <pre>
  

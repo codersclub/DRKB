@@ -1,7 +1,7 @@
 <h1>Цвет неактивной ячейки TStringGrid</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Neil J. Rubenking </p>
+Автор: Neil J. Rubenking</p>
 <p>...если я щелкаю на любой ячейке StringGrid2, последняя выбранная ячейка в StringGrid1 становится синей...</p>
 <p>Создайте обработчик (если он отсутствует) события сетки OnDrawCell и включите в него следующий код:</p>
 <pre>procedure TForm1.StringGrid3DrawCell(Sender: TObject; vCol,

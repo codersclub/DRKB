@@ -3,9 +3,9 @@
 
 
 
-<p>Функция возвращает True если найден OLE-объект</p>
+<p>Функция IsOLEObjectInstalled возвращает True если найден OLE-объект</p>
 
-<p>Пример использования </p>
+<p>Пример использования</p>
 <pre>
   if not IsOLEObjectInstalled('Excel.Application') then
     ShowMessage('Класс не зарегистрирован')
@@ -28,7 +28,7 @@ begin
 end;
 </pre>
 
-<p>Если нужна более подробная информация об объекте, можно почитать хелп по функции API CLSIDFromProgID. </p>
+<p>Если нужна более подробная информация об объекте, можно почитать хелп по функции API CLSIDFromProgID.</p>
 
 <div class="author">Автор: Кулюкин Олег</div>
 <p>Взято с сайта <a href="https://www.delphikingdom.ru/" target="_blank">https://www.delphikingdom.ru/</a></p>

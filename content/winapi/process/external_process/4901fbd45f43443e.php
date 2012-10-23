@@ -1,7 +1,7 @@
 <h1>Как передать строку другому приложению?</h1>
 <div class="date">01.01.2007</div>
 
-получатель: </p>
+получатель:</p>
 <pre>
 procedure ReceiveMessage (var Msg: TMessage);
 message WM_COPYDATA;
@@ -14,7 +14,7 @@ begin
   Caption := PChar(pcd.lpData);
 end;
 </pre>
-<p>отправитель: </p>
+<p>отправитель:</p>
 <pre>
 procedure TFormXXX.Button1Click(Sender: TObject);
 var

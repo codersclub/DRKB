@@ -1,7 +1,7 @@
 <h1>Как сделать прозрачным фон текста?</h1>
 <div class="date">01.01.2007</div>
 
-Используйте функцию SetBkMode(): </p>
+Используйте функцию SetBkMode():</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var

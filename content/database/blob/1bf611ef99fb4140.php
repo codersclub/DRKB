@@ -25,7 +25,7 @@
 
 <p>Загрузка данных через параметры:</p>
 
-<p>Запрос </p>
+<p>Запрос</p>
 <pre>Insert into MyTable (MyBlobField)
 Values (:Something) 
 </pre>

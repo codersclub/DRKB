@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Информация здесь: </p>
+<p>Информация здесь:</p>
 <p><a href="https://crosskylix.untergrund.net/" target="_blank">https://crosskylix.untergrund.net/</a></p>
 <p>Скачать можно здесь:</p>
 <p><a href="https://crosskylix.untergrund.net/crosskylix-100.zip" target="_blank">https://crosskylix.untergrund.net/crosskylix-100.zip</a></p>

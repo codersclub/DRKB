@@ -1,7 +1,7 @@
 <h1>TPaintBox в буфер обмена</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Xavier Pacheco </p>
+Автор: Xavier Pacheco</p>
 <pre>
 var
   pbRect: TRect;

@@ -3,7 +3,7 @@
 
 
 <p>Вы уж простите, что на сях... сподручней было :\</p>
-<p>Исходный код&nbsp; </p>
+<p>Исходный код&nbsp;</p>
 <pre>
 // ©Drkb v.3(2007): www.drkb.ru
  
@@ -41,7 +41,7 @@ CloseHandle (hDevice);
 }
 </pre>
 <div class="author">Автор: Baa </div>
-<p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a> </p>
+<p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>
  

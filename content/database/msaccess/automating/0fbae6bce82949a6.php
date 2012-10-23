@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Before you can use this method, you must have imported the type library (MSAcc8.olb for Access 97). </p>
+<p>Before you can use this method, you must have imported the type library (MSAcc8.olb for Access 97).</p>
 <p>One way of starting Access is Excelto try the GetActiveObject call, to get a running instance of Access, but put a call to CoApplication.Create in an except clause. But except clauses are slow, and can cause problems within the IDE for people who like Break On Exceptions set to True. The following code removes the need for a try...except clause, by avoiding using OleCheck on GetActiveObject in the case when Access is not running.</p>
 <pre>
   uses Windows, ComObj, ActiveX, Access_TLB;

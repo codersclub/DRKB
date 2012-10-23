@@ -101,10 +101,10 @@ end;
 
 <p>Возможные результаты (отображаемые в memo-поле):</p>
 
-<p>ENGINE VERSION=500 </p>
-<p>INTERFACE LEVEL=500 </p>
-<p>VERSION DATE=09.06.98 </p>
-<p>VERSION TIME=17:06:13 </p>
+<p>ENGINE VERSION=500</p>
+<p>INTERFACE LEVEL=500</p>
+<p>VERSION DATE=09.06.98</p>
+<p>VERSION TIME=17:06:13</p>
 
 <p>Способ 2:</p>
 
@@ -124,7 +124,7 @@ end;
 
 <p>Способ 3:</p>
 
-<p>Можно попробовать установить BDE </p>
+<p>Можно попробовать установить BDE</p>
 <pre>
  
   IsBDEExist := (dbiInit(nil) = 0) 

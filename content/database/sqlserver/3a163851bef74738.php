@@ -27,7 +27,7 @@ TABLE level scan performed.
 dbcc showcontig(MyTable) with all_indexes, fast
 </pre>
 
-<p>Один из самых информативных показателей здесь: </p>
+<p>Один из самых информативных показателей здесь:</p>
 <p>
 - Scan Density [Best Count:Actual Count].......: 98.59% [2791:2831]
 </p>

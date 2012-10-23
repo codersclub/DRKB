@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Данная функция определяет присутствие нужной функции в библиотеке (dll) и, в случае нахождения искомой функции возвращает True, иначе False. </p>
+<p>Данная функция определяет присутствие нужной функции в библиотеке (dll) и, в случае нахождения искомой функции возвращает True, иначе False.</p>
 <pre>
 function FuncAvail (VLibraryname, VFunctionname: string; var VPointer: pointer): 
 boolean; 

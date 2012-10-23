@@ -46,7 +46,7 @@ begin
   end;
 end;
 </pre>
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>
 FillTree(TreeView1, ADOQuery1, 'idDoc', 'idParentDoc', 'cDocument');
 </pre>

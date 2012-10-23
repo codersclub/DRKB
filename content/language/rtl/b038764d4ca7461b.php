@@ -9,16 +9,16 @@
 <p>function ArcTan2(Y, X: Extended): Extended; Арктангенс X/Y возвращает угол в квадранте</p>
 <p>procedure SinCos(Theta: Extended; var Sin, Cos: Extended) register; возвращает сразу и синус и косинус, вычисления в 2 раза быстрее чем Sin, Cos по отдельности</p>
 <p>function Tan(X: Extended): Extended;</p>
-<p>function Cotan(X: Extended): Extended;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>function Cotan(X: Extended): Extended;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>function Hypot(X, Y: Extended): Extended;&nbsp; Возвращает значение гипотенузы по катетам</p>
 
 <p>Конвертация углов</p>
 
-<p>function DegToRad(Degrees: Extended): Extended; </p>
-<p>function RadToDeg(Radians: Extended): Extended;&nbsp; </p>
-<p>function GradToRad(Grads: Extended): Extended;&nbsp; </p>
-<p>function RadToGrad(Radians: Extended): Extended; </p>
-<p>function CycleToRad(Cycles: Extended): Extended; </p>
+<p>function DegToRad(Degrees: Extended): Extended;</p>
+<p>function RadToDeg(Radians: Extended): Extended;&nbsp;</p>
+<p>function GradToRad(Grads: Extended): Extended;&nbsp;</p>
+<p>function RadToGrad(Radians: Extended): Extended;</p>
+<p>function CycleToRad(Cycles: Extended): Extended;</p>
 <p>function RadToCycle(Radians: Extended): Extended;</p>
 
 <p>Гиперболические функции</p>
@@ -26,14 +26,14 @@
 <p>function Cosh(X: Extended): Extended;</p>
 <p>function Sinh(X: Extended): Extended;</p>
 <p>function Tanh(X: Extended): Extended;</p>
-<p>function ArcCosh(X: Extended): Extended; </p>
+<p>function ArcCosh(X: Extended): Extended;</p>
 <p>function ArcSinh(X: Extended): Extended;</p>
-<p>function ArcTanh(X: Extended): Extended;&nbsp;&nbsp; </p>
+<p>function ArcTanh(X: Extended): Extended;&nbsp;&nbsp;</p>
 
 <p>Логарифмы, экспоненты и возведение в степень</p>
 
 <p>function LnXP1(X: Extended): Extended;&nbsp; - натуральный логариф x+1 (для более высокой точности при x близких к нулю)</p>
-<p>function Log10(X: Extended): Extended; - десятичный логарифм&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>function Log10(X: Extended): Extended; - десятичный логарифм&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>function Log2(X: Extended): Extended;&nbsp; - логарифм по основанию 2</p>
 <p>function LogN(Base, X: Extended): Extended; - логарифм по произвольному основанию</p>
 <p>function IntPower(Base: Extended; Exponent: Integer): Extended register;</p>

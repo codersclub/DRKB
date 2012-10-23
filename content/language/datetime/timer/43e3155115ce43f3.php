@@ -24,7 +24,7 @@ timeKillEvent(uTimerID);
 <p>И все. Точность этого способа до 1 мсек. минимальный интервал времени можно задавать 1 мсек.</p>
 
 <div class="author">Автор: Leonid Tserling</div>
-<p>tlv@f3334.dd.vaz.tlt.ru </p>
+<p>tlv@f3334.dd.vaz.tlt.ru</p>
 <div class="author">Автор: StayAtHome</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

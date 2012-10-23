@@ -2,18 +2,18 @@
 <div class="date">01.01.2007</div>
 
 
-<p>How do I paint the color spectrum of a rainbow, and if the </p>
-<p>spectrum is clicked on, how do I calculate what color was </p>
+<p>How do I paint the color spectrum of a rainbow, and if the</p>
+<p>spectrum is clicked on, how do I calculate what color was</p>
 <p>clicked on?</p>
-<p>The following example demonstrates painting a color spectrum, </p>
-<p>and calculating the color of a given point on the spectrum. </p>
-<p>Two procedures are presented: PaintRainbow() and </p>
-<p>ColorAtRainbowPoint(). The PaintRainbow() procedure paints a </p>
-<p>spectrum from red to magenta if the WrapToRed parameter is </p>
-<p>false, or paint red to red if the WrapToRed parameter is true. </p>
+<p>The following example demonstrates painting a color spectrum,</p>
+<p>and calculating the color of a given point on the spectrum.</p>
+<p>Two procedures are presented: PaintRainbow() and</p>
+<p>ColorAtRainbowPoint(). The PaintRainbow() procedure paints a</p>
+<p>spectrum from red to magenta if the WrapToRed parameter is</p>
+<p>false, or paint red to red if the WrapToRed parameter is true.</p>
 <p>The rainbow can progress either in a horizontal or</p>
-<p>vertical progression. The ColorAtRainbowPoint() function </p>
-<p>returns a TColorRef containing the color at a given point in </p>
+<p>vertical progression. The ColorAtRainbowPoint() function</p>
+<p>returns a TColorRef containing the color at a given point in</p>
 <p>the rainbow.</p>
 <pre>
 procedure PaintRainbow(Dc : hDc; {Canvas to paint to}

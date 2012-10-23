@@ -4,7 +4,7 @@
 
 
 <p>Have you ever tried to create a stored procedure on an SQL Server?</p>
-<p>What if the functionality you wish to incorporate is not inside the SQL but in your Delphi project? Microsoft provides ODS (Open Data Services)&nbsp; which is an API to help you create such&nbsp; functionality by adding DLL's to your SQL Server that contain Extended Stored Procedures. </p>
+<p>What if the functionality you wish to incorporate is not inside the SQL but in your Delphi project? Microsoft provides ODS (Open Data Services)&nbsp; which is an API to help you create such&nbsp; functionality by adding DLL's to your SQL Server that contain Extended Stored Procedures.</p>
 <p>This is how you do it....</p>
 
 <p>Answer:</p>
@@ -13,13 +13,13 @@
 
 <p>What do we need?</p>
 
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>1. &nbsp; &nbsp; &nbsp; &nbsp;opends60.dll (from a full installation with developer tools of MSSQL or MSDE)</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">2.</td><td>2. &nbsp; &nbsp; &nbsp; &nbsp;MsOdsApi.pas (Header file to use opends60.dll) (included at the end of the article)</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">3.</td><td>3. &nbsp; &nbsp; &nbsp; &nbsp;A Local SQL Server for testing (MSDE will do fine).</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>1. &nbsp; &nbsp; &nbsp; &nbsp;opends60.dll (from a full installation with developer tools of MSSQL or MSDE)</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">2.</td><td>2. &nbsp; &nbsp; &nbsp; &nbsp;MsOdsApi.pas (Header file to use opends60.dll) (included at the end of the article)</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">3.</td><td>3. &nbsp; &nbsp; &nbsp; &nbsp;A Local SQL Server for testing (MSDE will do fine).</td></tr></table>
 <p>NOTE: For cryptography I used the components found under MIT license here:</p>
 <p>https://www.cityinthesky.co.uk/cryptography.html</p>
 
 <p>Steps:</p>
 
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">1.</td><td>1. &nbsp; &nbsp; &nbsp; &nbsp;Create a new DLL.</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">2.</td><td>2. &nbsp; &nbsp; &nbsp; &nbsp;Create a unit and in the uses clause add the MsOdsApi unit.</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">3.</td><td>3. &nbsp; &nbsp; &nbsp; &nbsp;In the Library file just under ther Uses clause add Exports and the names of the functions to export:</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>1. &nbsp; &nbsp; &nbsp; &nbsp;Create a new DLL.</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">2.</td><td>2. &nbsp; &nbsp; &nbsp; &nbsp;Create a unit and in the uses clause add the MsOdsApi unit.</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">3.</td><td>3. &nbsp; &nbsp; &nbsp; &nbsp;In the Library file just under ther Uses clause add Exports and the names of the functions to export:</td></tr></table>
 <pre>
 library MyEncryptDll;
  
@@ -119,7 +119,7 @@ end;
 
 <p>A) Install SQL 7.0/2000 on your workstation (or install Delphi on workstation where SQL Server is installed).</p>
 
-<p>B) Register your Xp on SQL Server. </p>
+<p>B) Register your Xp on SQL Server.</p>
 <p> &nbsp; NOTES:</p>
 <p> &nbsp; Register Xp like this:</p>
 <p> &nbsp;&nbsp;&nbsp; use master</p>
@@ -140,15 +140,15 @@ end;
 <p> &nbsp;&nbsp;&nbsp; go</p>
 <p> &nbsp;&nbsp;&nbsp; DBCC MyEncryptDll(FREE)</p>
 <p> &nbsp;&nbsp;&nbsp; go</p>
-<p>C) In Delphi, select from main menu Run -&gt; Run Parameters. </p>
-<p>In the Host Application field, specify a pathname to your SQL Server executable (sqlservr.exe). For SQL 7.0, this is enough. For SQL 2000, in the Parameters field specify a command line parameter "-sYOUR_SQL_NAME", where YOUR_SQL_NAME is the name assigned to your SQL Server during the installation. </p>
-<p>Set breakpoints in your Delphi code and run project. SQL Server will start as a console application. </p>
-<p>D) You can execute your Xp from Query Analyzer and trace code in Delphi. </p>
+<p>C) In Delphi, select from main menu Run -&gt; Run Parameters.</p>
+<p>In the Host Application field, specify a pathname to your SQL Server executable (sqlservr.exe). For SQL 7.0, this is enough. For SQL 2000, in the Parameters field specify a command line parameter "-sYOUR_SQL_NAME", where YOUR_SQL_NAME is the name assigned to your SQL Server during the installation.</p>
+<p>Set breakpoints in your Delphi code and run project. SQL Server will start as a console application.</p>
+<p>D) You can execute your Xp from Query Analyzer and trace code in Delphi.</p>
 <p> &nbsp; NOTE:</p>
 <p> &nbsp; Executing an extended stored procedure is done like this:</p>
 <p> &nbsp; exec master..xp_DoEncrypt 'ValueToEncrypt','KeyValue'</p>
 <p> &nbsp; go</p>
-<p>E) To exit application, press Ctrl+Pause in the SQL Server console window. </p>
+<p>E) To exit application, press Ctrl+Pause in the SQL Server console window.</p>
 
 <p>-------------------------------------------------------</p>
 <p>End of article. Bellow follows a unit required for ODS.</p>

@@ -1,7 +1,7 @@
 <h1>Как получить информацию о загрузке процессора?</h1>
 <div class="date">01.01.2007</div>
 
-Читать из реестра HKEY_DYN_DATA\PerfStats\StatData соответствующий ключ Kernel \CPUUsage. </p>
+Читать из реестра HKEY_DYN_DATA\PerfStats\StatData соответствующий ключ Kernel \CPUUsage.</p>
 <div class="author">Автор: Nomadic </div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

@@ -38,7 +38,7 @@ listbox1.Sorted:=true;
 end;
 </pre>
 
-<p>2) </p>
+<p>2)</p>
 <pre>{uses ShellAPI}
 type PListBox=^TListBox;
 Procedure FillList(List:PListBox;pathh,mask:string;attr:Cardinal);

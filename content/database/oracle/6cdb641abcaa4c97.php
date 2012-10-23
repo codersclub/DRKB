@@ -25,11 +25,11 @@ while (Terminated = false) do
 
 
 <p>Ну и соответсвенно перед выполнением всего этого дела необходимо выставить максимальное число (100%) :</p>
-<p>PROCEDURE SETMaxValue(nVal IN NUMBER); </p>
+<p>PROCEDURE SETMaxValue(nVal IN NUMBER);</p>
 <p>Минимальное:</p>
-<p>PROCEDURE SETMinValue(nVal IN NUMBER); </p>
+<p>PROCEDURE SETMinValue(nVal IN NUMBER);</p>
 <p>Значение шага:</p>
-<p>PROCEDURE SetStepValue(nValue IN NUMBER); </p>
+<p>PROCEDURE SetStepValue(nValue IN NUMBER);</p>
 
 <p>Вышеприведенный кусок кода - клиентская часть, но есть и "подводный камень" - серверная часть... Данный метотод подкодит только для функций, процедур и пактеов, в которых вы можете написать вставить следущую строчку:</p>
 <p>PROGRESS_BAR.STEPIT;</p>

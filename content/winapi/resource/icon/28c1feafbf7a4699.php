@@ -14,7 +14,7 @@ Application.Icon.Handle := LoadIcon(hInstance, 'ICONNAME');
 <pre>
 InvalidateRect(Application.Handle, NIL, True);
 </pre>
-<p>.. и новая иконка предстанет свету. </p>
-<p>Иконка, расположенная в .RES-файле, должна быть видима в .EXE-файле, к примеру, при просмотре файла посредством Program Manager. Иконка, расположенная в компоненте Image, в этом случае не видна. </p>
+<p>.. и новая иконка предстанет свету.</p>
+<p>Иконка, расположенная в .RES-файле, должна быть видима в .EXE-файле, к примеру, при просмотре файла посредством Program Manager. Иконка, расположенная в компоненте Image, в этом случае не видна.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

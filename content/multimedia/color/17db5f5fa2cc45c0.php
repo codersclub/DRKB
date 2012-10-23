@@ -4,7 +4,7 @@
 
 <p>Как работать с палитрой в Delphi? На форме установлен TImage и видна картинка (*.BMP файл), как изменить у него палитру цветов ?</p>
 
-<p>Палитра в TBitmap и TMetaFile доступна через property Palette. Если палитра имеется (что совсем необязательно), то Palette&lt;&gt;0: </p>
+<p>Палитра в TBitmap и TMetaFile доступна через property Palette. Если палитра имеется (что совсем необязательно), то Palette&lt;&gt;0:</p>
 <pre>
 procedure TMain.BitBtnClick(Sender: TObject);
 var

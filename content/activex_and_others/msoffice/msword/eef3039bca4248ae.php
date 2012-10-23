@@ -3,17 +3,17 @@
 
 
 
-<p>Open a new Application and place: </p>
+<p>Open a new Application and place:</p>
 
-<p>  a button named Button3, </p>
-<p>  a RitchText object named WordEditor </p>
-<p>  and an OpenDialog component. </p>
+<p>  a button named Button3,</p>
+<p>  a RitchText object named WordEditor</p>
+<p>  and an OpenDialog component.</p>
 
-<p>From now on, you can browse for any *.doc file and load it into the RitchText object. </p>
+<p>From now on, you can browse for any *.doc file and load it into the RitchText object.</p>
 
-<p>NOTE: Format:=6 instructs Word to save the file as RTF. Extension is not enough. </p>
+<p>NOTE: Format:=6 instructs Word to save the file as RTF. Extension is not enough.</p>
 
-<p>Other File Formats: </p>
+<p>Other File Formats:</p>
 
 Argument Format&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;File Format  &nbsp; &nbsp; &nbsp; 
 0 &nbsp; &nbsp; &nbsp; &nbsp;Normal (Word format)  &nbsp; &nbsp; &nbsp; 
@@ -56,7 +56,7 @@ end;
 <p>if WordApp.ActiveDocument.HasPassword = True then</p>
 <p>  MsgBox("Password Protected");</p>
 
-<p>You can even preset the password propery as: </p>
+<p>You can even preset the password propery as:</p>
 
 <p>WordApp.Password := 'mypassword";</p>
 
@@ -64,8 +64,9 @@ end;
 
 <p>CreateOleObject('Word.Basic');</p>
 
-<p>with </p>
+<p>with</p>
 
 <p>CreateOleObject('Word.Application');</p>
+
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>
 

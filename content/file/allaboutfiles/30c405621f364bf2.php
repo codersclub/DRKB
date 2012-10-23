@@ -3,7 +3,7 @@
 
 
 <p>Раздел написан Podval (примеры к сожалению на С++)</p>
-<p>Любителям WinAPI посвящается... </p>
+<p>Любителям WinAPI посвящается...</p>
 <p>Функции FileOpen, FileSeek, FileRead.</p>
 <p>Возьмем форму, положим на нее кнопку, грид и Опен диалог бокс.</p>
 <p>Это для Билдера, но какая нам в данном случае разница?</p>
@@ -40,7 +40,7 @@ Application-&gt;MessageBox("Can't perform one of the following file operations: 
 }
  
 </pre>
-<p>Потренируемся еще. </p>
+<p>Потренируемся еще.</p>
 <p>Функции FileExists, RenameFile, FileCreate, FileWrite, FileClose.</p>
 <p>Бросим на форму Save dialog box.</p>
 <pre>
@@ -82,14 +82,14 @@ FileClose(iFileHandle);
 }
  
 </pre>
-<p>(с) Оба примера взяты из хелпа по Borland C++ Builder 5. </p>
+<p>(с) Оба примера взяты из хелпа по Borland C++ Builder 5.</p>
 <p>Дата/время файла</p>
 <p>extern PACKAGE int fastcall FileGetDate(int Handle);</p>
 <p>extern PACKAGE int fastcall FileSetDate(int Handle, int Age);</p>
 <p>Первоисточник тот же.</p>
 <p>Атрибуты файла.</p>
 <p>extern PACKAGE int __fastcall FileGetAttr(const AnsiString FileName);</p>
-<p>И </p>
+<p>И</p>
 <p>extern PACKAGE int fastcall FileSetAttr(const AnsiString FileName, int Attr);</p>
 <p>Может быть, такая функция полезна будет, хотя о программном поиске файлов и так много наговорено. Но на всякий случай, как говорится.</p>
 <p>В этом примере идет поиск в текущем каталоге и каталоге Windows</p>

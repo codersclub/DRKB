@@ -13,7 +13,7 @@ exports
 end.
 </pre>
 
-<p>Это его Unit1: </p>
+<p>Это его Unit1:</p>
 
 <pre>
 unit Unit1;
@@ -43,7 +43,7 @@ end;
 end.
 </pre>
 
-<p>Это UnitCall вызывающего EXE-шника: </p>
+<p>Это UnitCall вызывающего EXE-шника:</p>
 
 <pre>
 unit

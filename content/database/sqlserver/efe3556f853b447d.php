@@ -272,7 +272,7 @@ BEGIN
  
 </pre>
 <p>Поддерживает любые маски стандартных форматов, писал по спецификации:</p>
-<p>Цитата </p>
+<p>Цитата</p>
 <p>d Displays the day as a number without a leading zero (1-31).</p>
 <p>dd Displays the day as a number with a leading zero (01-31).</p>
 <p>ddd Displays the day as an abbreviation (Sun-Sat)</p>

@@ -2,12 +2,12 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>function MousePresent : Boolean; </p>
-<p>begin </p>
-if GetSystemMetrics(SM_MOUSEPRESENT) &lt;&gt; 0 then </p>
-  Result := true </p>
-else </p>
-  Result := false; </p>
+<pre>function MousePresent : Boolean;</p>
+<p>begin</p>
+if GetSystemMetrics(SM_MOUSEPRESENT) &lt;&gt; 0 then</p>
+  Result := true</p>
+else</p>
+  Result := false;</p>
 end; 
 </pre>
 

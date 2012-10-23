@@ -18,11 +18,11 @@
 <p> &nbsp; BCD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17</p>
 <p> &nbsp; Currency (Денежный)&nbsp;&nbsp; 8</p>
 <p> &nbsp; Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</p>
-<p> &nbsp; Formatted Memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе </p>
+<p> &nbsp; Formatted Memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0 - 240)</p>
-<p> &nbsp; Graphic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе </p>
+<p> &nbsp; Graphic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0 - 240)</p>
-<p> &nbsp; Memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе </p>
+<p> &nbsp; Memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе</p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1 - 240) [2]</p>
 <p> &nbsp; Logical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</p>
 <p> &nbsp; LongInt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</p>
@@ -41,13 +41,13 @@
 <p> &nbsp; (максимальное количество</p>
 <p> &nbsp;&nbsp; блоков в таблице)</p>
 <p> &nbsp; Maximum Block Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp; 32К символов</p>
-<p> &nbsp; (максимальный размер </p>
+<p> &nbsp; (максимальный размер</p>
 <p> &nbsp;&nbsp; блока)</p>
 <p> &nbsp; Max Record Size, unkeyed :&nbsp; Текущий размер блока - 6 байта [3]</p>
-<p> &nbsp; (максимальный размер </p>
+<p> &nbsp; (максимальный размер</p>
 <p> &nbsp;&nbsp; записи, неключевой)</p>
-<p> &nbsp; Max Record Size, keyed&nbsp;&nbsp; :&nbsp; (BlockSize - 6) / 3, округляется в меньшую сторону </p>
-<p> &nbsp; (максимальный размер&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; до ближайшего размера блока. [4]&nbsp;&nbsp;&nbsp; </p>
+<p> &nbsp; Max Record Size, keyed&nbsp;&nbsp; :&nbsp; (BlockSize - 6) / 3, округляется в меньшую сторону</p>
+<p> &nbsp; (максимальный размер&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; до ближайшего размера блока. [4]&nbsp;&nbsp;&nbsp;</p>
 <p> &nbsp;&nbsp; записи, ключевой)</p>
 <p>Сноски:</p>
 <p>[1] Все blob-поля содержат 10-байтовые указатели на .MB-файл, которые указывают где могут быть найдены "остальные" значения поля.</p>
@@ -58,7 +58,7 @@
 
 <p>[4] Это следствие наличия значений ключа записей Paradox, которые передаются в .PX файл, очень похожий на табличный файл. Размер ключа не может превышать 1/3 размера блока таблицы; в противном случае Paradox будет пытаться увеличить размер блока. При выполнении вычислений не забывайте брать в расчет 6-байтные указатели.</p>
 
-<p>- John B Moore </p>
+<p>- John B Moore</p>
 <p>Взято из Советов по Delphi от <a href="mailto:mailto:webmaster@webinspector.com" target="_blank">Валентина Озерова</a></p>
 <p>Сборник Kuliba</p>
 

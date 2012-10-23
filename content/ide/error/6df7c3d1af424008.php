@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Delphi's online help documentation seems to miss the run-time error codes. I usually looked them up in my old Borland Pascal for Windows help file - now they are here for fast access: </p>
+<p>Delphi's online help documentation seems to miss the run-time error codes. I usually looked them up in my old Borland Pascal for Windows help file - now they are here for fast access:</p>
 
 1 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Invalid function number &nbsp; &nbsp; &nbsp; <br />
 2 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;File not found &nbsp; &nbsp; &nbsp; <br />

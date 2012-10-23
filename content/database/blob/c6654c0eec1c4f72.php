@@ -2,14 +2,13 @@
 <div class="date">01.01.2007</div>
 
 
-<p>How can I store an AVI file in a database and then play AVI </p>
-<p>files?</p>
-<p>AVI files can be stored in BLOB (binary large object) fields. </p>
-<p>The easiest way to play an AVI file stored in a BLOB is to write</p>
-<p>the BLOB data to a temporary file, then let the mulimedia player</p>
-<p>play the file. The following example demonstrates how to store </p>
-<p>an AVI file to a BLOB field, and also play the AVI file from the</p>
-<p>BLOB field.</p>
+<p>How can I store an AVI file in a database and then play AVI files?</p>
+<p>AVI files can be stored in BLOB (binary large object) fields.</p>
+<p>The easiest way to play an AVI file stored in a BLOB is to write
+the BLOB data to a temporary file, then let the mulimedia player
+play the file. The following example demonstrates how to store
+an AVI file to a BLOB field, and also play the AVI file from the
+BLOB field.</p>
 <pre>
 var
   FileName : string;

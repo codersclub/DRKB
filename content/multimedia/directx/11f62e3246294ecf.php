@@ -2,18 +2,18 @@
 <div class="date">01.01.2007</div>
 
 Автор: Daddy<br>
-<p>WEB-сайт: http://daddy.mirgames.ru </p>
+<p>WEB-сайт: http://daddy.mirgames.ru</p>
 <p>В этой статье мы рассмотрим методы управления объектами в играх с помощью клавиатуры, мыши и джойстика..<br>
 1. Клавиатура.<br>
-<p>Опрос нажатия клавиши ведется через DXInput.States: </p>
+<p>Опрос нажатия клавиши ведется через DXInput.States:</p>
 <pre>
 if &lt;тикер&gt; in DXInput.States then
 begin
    //действие
 end
 </pre>
-<p>,где </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>&lt;тикер&gt; есть зарезервированное слово: </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>isUp - по умолчанию "стрелка вверх" </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>isDown - по умолчанию "стрелка вниз" </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>isRight - по умолчанию "стрелка вправо" </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>isLeft - по умолчанию "стрелка влево" </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>IsButton1 - по умолчанию "Space" </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>IsButton2 - по умолчанию "Enter" </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>IsButton3-IsButton32 - по умолчанию не определены </td></tr></table></div><p>Для сравнения два равноценных условия:</p>
+<p>,где</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>&lt;тикер&gt; есть зарезервированное слово:</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isUp - по умолчанию "стрелка вверх"</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isDown - по умолчанию "стрелка вниз"</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isRight - по умолчанию "стрелка вправо"</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isLeft - по умолчанию "стрелка влево"</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton1 - по умолчанию "Space"</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton2 - по умолчанию "Enter"</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton3-IsButton32 - по умолчанию не определены</td></tr></table></div><p>Для сравнения два равноценных условия:</p>
 <pre>
 //c использования DXInput
 if isUp in DXInput.States then
@@ -26,8 +26,8 @@ begin
 end
 </pre>
 
-<p>Чтобы определить "тикер": DXInput.Keyboard.KeyAssigns[&lt;тикер&gt;,X]:= &lt;кнопка&gt; ,где: </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>X - значение от 0 до 2 (то есть на каждый "тикер" можно присвоить до трех &lt;кнопок&gt;) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>&lt;кнопка&gt; - код кнопки (например ord('Q')).</td></tr></table></div><p class="note">Примечание: буквенные клавиши указываются в верхнем регистре, т.е. </p>
+<p>Чтобы определить "тикер": DXInput.Keyboard.KeyAssigns[&lt;тикер&gt;,X]:= &lt;кнопка&gt; ,где:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>X - значение от 0 до 2 (то есть на каждый "тикер" можно присвоить до трех &lt;кнопок&gt;)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>&lt;кнопка&gt; - код кнопки (например ord('Q')).</td></tr></table></div><p class="note">Примечание: буквенные клавиши указываются в верхнем регистре, т.е.</p>
 <p>DXInput.Keyboard.KeyAssigns[isButton10,X]:=ord('q')</p>
 <p>не будет реагировать на нажатие клавиши 'q' .<br>
 <p>Кнопки Ctrl, Alt, Shift можно опросить обычным способом:</p>
@@ -149,7 +149,7 @@ begin
 end;
 </pre>
 
-<p class="note">Примечание: Руль можно считать частным случаем джойстика. При этом штурвал - горизонтальная ось (X), педаль газа и педаль тормоза - вертикальная ось (Y). </p>
+<p class="note">Примечание: Руль можно считать частным случаем джойстика. При этом штурвал - горизонтальная ось (X), педаль газа и педаль тормоза - вертикальная ось (Y).</p>
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

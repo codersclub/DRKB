@@ -3,7 +3,7 @@
 
 
 
-<p>In the next small example I'll demonstrate how you can call the report in MS Access: </p>
+<p>In the next small example I'll demonstrate how you can call the report in MS Access:</p>
 
 <pre>
 var

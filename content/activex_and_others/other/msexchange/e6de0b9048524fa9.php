@@ -6,11 +6,11 @@
 <p>MS Exchange API via CDO (Collaboration Data Objects)</p>
 
 <p>CDO (Collaboration Data Objects) Base Library.</p>
-<p>( Talking to MS-Exchange server.)</p>
+<p>(Talking to MS-Exchange server.)</p>
 
 <p>This is a vast subject that is beyond the scope of this article to detail all here. This library provides the basic building blocks for someone who wants to develop using CDO. There are many references on the Net, but your best source is the CDO.HLP file that ships on the Exchange CD or site http://www.cdolive.com/start.htmhttp://www.cdolive.com/start.htm. The cdolive.com site is an excellent reference site which discusses all aspects including installation, versions and also downloads. (CDO.HLP is downloadable from here)</p>
 
-<p>My basic class provides the following functionality .. </p>
+<p>My basic class provides the following functionality...</p>
 
 <p>Utility functions and methods</p>
 

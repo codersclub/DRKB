@@ -1,8 +1,8 @@
 <h1>Как перетаскивать выделенный текст между компонентами TMemo?</h1>
 <div class="date">01.01.2007</div>
 
-Данный способ позволяет не погружаясь глубоко в создание компонент осуществить операцию "drag and drop" выделенного текста. </p>
-<p>Создайте новый компонент (TMyMemo), наследовав его от TMemo. И объявите его следующим образом: </p>
+Данный способ позволяет не погружаясь глубоко в создание компонент осуществить операцию "drag and drop" выделенного текста.</p>
+<p>Создайте новый компонент (TMyMemo), наследовав его от TMemo. И объявите его следующим образом:</p>
 <pre>
 type
   TMyMemo = class(TMemo)
@@ -15,7 +15,7 @@ type
     property LastSelLength : Integer read FLastSelLength write FLastSelLength;
 end;
 </pre>
-<p>Добавьте обработчик WMLButtonDown: </p>
+<p>Добавьте обработчик WMLButtonDown:</p>
 <pre>
 procedure TMyMemo.WMLButtonDown(var message: TWMLButtonDown);
 var
@@ -36,7 +36,7 @@ begin
     inherited;
 end;
 </pre>
-<p>Теперь установите этот компонент в package, создайте новый проект в Delphi и поместите на форму два TMyMemo. Для обоих компонент необходимо создать обработчики событий OnDragOver, которые должны выглядеть следующим образом: </p>
+<p>Теперь установите этот компонент в package, создайте новый проект в Delphi и поместите на форму два TMyMemo. Для обоих компонент необходимо создать обработчики событий OnDragOver, которые должны выглядеть следующим образом:</p>
 <pre>
 procedure TForm1.MyMemo1DragOver(Sender, Source: TObject; X, Y: Integer;
 State: TDragState; var Accept: Boolean);
@@ -44,7 +44,7 @@ begin
   Accept := Source is TMyMemo;
 end;
 </pre>
-<p>Так же для них необходимо сделать обработчики событий OnDragDrop: </p>
+<p>Так же для них необходимо сделать обработчики событий OnDragDrop:</p>
 <pre>
 procedure TForm1.MyMemo1DragDrop(Sender, Source: TObject;
 X, Y: Integer);
@@ -68,7 +68,7 @@ begin
   Src.Text := Temp;
 end;
 </pre>
-<p>Запустите приложение, поместите в поля memo какой-нибудь текст, и посмотрите что произойдёт, если перетащить текст между полями. </p>
+<p>Запустите приложение, поместите в поля memo какой-нибудь текст, и посмотрите что произойдёт, если перетащить текст между полями.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 &nbsp;</p>

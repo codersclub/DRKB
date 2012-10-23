@@ -11,6 +11,6 @@
 <p>THOUSANDSEPARATOR будет ","</p>
 <p>Для России</p>
 <p>DECIMALSEPARATOR будет ","</p>
-<p>THOUSANDSEPARATOR будет "." или " " (не помню уже) </p>
+<p>THOUSANDSEPARATOR будет "." или " " (не помню уже)</p>
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

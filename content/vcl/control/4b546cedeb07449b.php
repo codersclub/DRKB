@@ -1,7 +1,7 @@
 <h1>Добавление и удаление страниц TNotebook</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Mark Johnson </p>
+Автор: Mark Johnson</p>
 <p>Как во время выполнения программы динамически добавлять и удалять страницы динамически созданного NoteBook?</p>
 <pre>
 procedure AddPage(nbk: TNotebook; tabset: TTabSet; const pagename: string);

@@ -3,9 +3,9 @@
 
 
 <p>Взято из FAQ:<a href="https://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml</a></p>
-<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm </p>
+<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm</p>
 
-<p>Следующий пример устанавливает borderStyle: </p>
+<p>Следующий пример устанавливает borderStyle:</p>
 <pre>
 procedure TForm1.WBDocumentComplete(Sender: TObject;
   const pDisp: IDispatch; var URL: OleVariant);

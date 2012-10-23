@@ -1,7 +1,7 @@
 <h1>Как записать содержимое окна OpenGL в bmp файл?</h1>
 <div class="date">01.01.2007</div>
 
-gr - объект, в канве которого я рисую с помощью OpenGL </p>
+gr - объект, в канве которого я рисую с помощью OpenGL</p>
 <pre>
 bt := TBitmap.Create;
 with bt do

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>В приведенном примере FileListBox приводится к типу TDirectoryListBox - таким образом можно добавиь дополнительные колонки. </p>
+<p>В приведенном примере FileListBox приводится к типу TDirectoryListBox - таким образом можно добавиь дополнительные колонки.</p>
 <pre>
 with TDirectoryListBox(FileListBox1) do 
 begin

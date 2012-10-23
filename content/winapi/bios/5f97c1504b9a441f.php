@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>AWARD BIOS v2.50 </p>
+<p>AWARD BIOS v2.50</p>
 <p> &nbsp;&nbsp; AWARD_SW</p>
 <p> &nbsp;&nbsp; j262</p>
 <p> &nbsp;&nbsp; TTPTHA</p>
@@ -16,7 +16,7 @@
 <p> &nbsp;&nbsp; h6BB</p>
 <p> &nbsp;&nbsp; j09F</p>
 <p> &nbsp;&nbsp; TzqF</p>
-<p>AWARD BIOS v2.51 </p>
+<p>AWARD BIOS v2.51</p>
 <p> &nbsp;&nbsp; AWARD_WG</p>
 <p> &nbsp;&nbsp; j256</p>
 <p> &nbsp;&nbsp; BIOSTAR</p>
@@ -30,7 +30,7 @@
 <p> &nbsp;&nbsp; Sxyz</p>
 <p> &nbsp;&nbsp; SZYX</p>
 <p> &nbsp;&nbsp; t0ch20x</p>
-<p>AWARD BIOS v2.51G </p>
+<p>AWARD BIOS v2.51G</p>
 <p> &nbsp;&nbsp; g6PJ</p>
 <p> &nbsp;&nbsp; j322</p>
 <p> &nbsp;&nbsp; ZJAAADC</p>
@@ -44,7 +44,7 @@
 <p> &nbsp;&nbsp; HLT</p>
 <p> &nbsp;&nbsp; t0ch88</p>
 <p> &nbsp;&nbsp; zjaaadc</p>
-<p>AWARD BIOS v2.51U </p>
+<p>AWARD BIOS v2.51U</p>
 <p> &nbsp;&nbsp; 1EAAh</p>
 <p> &nbsp;&nbsp; condo</p>
 <p> &nbsp;&nbsp; biostar</p>
@@ -56,7 +56,7 @@
 <p> &nbsp;&nbsp; j09F</p>
 <p> &nbsp;&nbsp; j64</p>
 <p> &nbsp;&nbsp; zbaaaca</p>
-<p>AWARD BIOS v4.5x </p>
+<p>AWARD BIOS v4.5x</p>
 <p> &nbsp;&nbsp; AWARD_SW</p>
 <p> &nbsp;&nbsp; AWARD_PW</p>
 <p> &nbsp;&nbsp; 589589</p>
@@ -69,121 +69,121 @@
 <p> &nbsp;&nbsp; award_ps</p>
 <p> &nbsp;&nbsp; ZAAADA</p>
 <p>AMI BIOS</p>
-<p> &nbsp;&nbsp; AMI </p>
-<p> &nbsp;&nbsp; AMI_SW (не унивеpсальный но устанавливается пpи сбpосе CMOS/SETUP'a) </p>
-<p> &nbsp;&nbsp; SER </p>
-<p> &nbsp;&nbsp; Ctrl+Alt+Del+Ins (держать при загрузке, иногда просто INS) ;) </p>
-<p> &nbsp;&nbsp; A.M.I. </p>
-<p> &nbsp;&nbsp; aammii </p>
-<p> &nbsp;&nbsp; ami.kez </p>
-<p> &nbsp;&nbsp; ami° </p>
-<p> &nbsp;&nbsp; amiami </p>
-<p> &nbsp;&nbsp; AMI!SW </p>
-<p> &nbsp;&nbsp; AMI.KEY </p>
-<p> &nbsp;&nbsp; AMI?SW </p>
-<p> &nbsp;&nbsp; AMISETUP </p>
-<p> &nbsp;&nbsp; AMI~ </p>
-<p> &nbsp;&nbsp; AMIPSWD </p>
-<p> &nbsp;&nbsp; amipswd </p>
-<p> &nbsp;&nbsp; helgaЯs </p>
-<p> &nbsp;&nbsp; bios310 </p>
-<p> &nbsp;&nbsp; amidecod </p>
-<p> &nbsp;&nbsp; BIOSPASS </p>
-<p> &nbsp;&nbsp; CMOSPWD </p>
-<p> &nbsp;&nbsp; HEWITT RAND </p>
-<p> &nbsp;&nbsp; KILLCMOS </p>
-<p>AMPTON BIOS </p>
+<p> &nbsp;&nbsp; AMI</p>
+<p> &nbsp;&nbsp; AMI_SW (не унивеpсальный но устанавливается пpи сбpосе CMOS/SETUP'a)</p>
+<p> &nbsp;&nbsp; SER</p>
+<p> &nbsp;&nbsp; Ctrl+Alt+Del+Ins (держать при загрузке, иногда просто INS) ;)</p>
+<p> &nbsp;&nbsp; A.M.I.</p>
+<p> &nbsp;&nbsp; aammii</p>
+<p> &nbsp;&nbsp; ami.kez</p>
+<p> &nbsp;&nbsp; ami°</p>
+<p> &nbsp;&nbsp; amiami</p>
+<p> &nbsp;&nbsp; AMI!SW</p>
+<p> &nbsp;&nbsp; AMI.KEY</p>
+<p> &nbsp;&nbsp; AMI?SW</p>
+<p> &nbsp;&nbsp; AMISETUP</p>
+<p> &nbsp;&nbsp; AMI~</p>
+<p> &nbsp;&nbsp; AMIPSWD</p>
+<p> &nbsp;&nbsp; amipswd</p>
+<p> &nbsp;&nbsp; helgaЯs</p>
+<p> &nbsp;&nbsp; bios310</p>
+<p> &nbsp;&nbsp; amidecod</p>
+<p> &nbsp;&nbsp; BIOSPASS</p>
+<p> &nbsp;&nbsp; CMOSPWD</p>
+<p> &nbsp;&nbsp; HEWITT RAND</p>
+<p> &nbsp;&nbsp; KILLCMOS</p>
+<p>AMPTON BIOS</p>
 <p> &nbsp;&nbsp; Polrty</p>
-<p>AST BIOS </p>
+<p>AST BIOS</p>
 <p> &nbsp;&nbsp; SnuFG5</p>
-<p>BIOSTAR BIOS </p>
-<p> &nbsp;&nbsp; Biostar </p>
-<p> &nbsp;&nbsp; Q54arwms </p>
-<p>COMPAQ BIOS </p>
+<p>BIOSTAR BIOS</p>
+<p> &nbsp;&nbsp; Biostar</p>
+<p> &nbsp;&nbsp; Q54arwms</p>
+<p>COMPAQ BIOS</p>
 <p> &nbsp;&nbsp; Compaq</p>
-<p>CONCORD BIOS </p>
+<p>CONCORD BIOS</p>
 <p> &nbsp;&nbsp; last</p>
-<p>CTX International BIOS </p>
+<p>CTX International BIOS</p>
 <p> &nbsp;&nbsp; CTX_123</p>
-<p>CyberMax BIOS </p>
+<p>CyberMax BIOS</p>
 <p> &nbsp;&nbsp; Congress</p>
-<p>Daewoo BIOS </p>
+<p>Daewoo BIOS</p>
 <p> &nbsp;&nbsp; Daewuu</p>
-<p>Daytek BIOS </p>
+<p>Daytek BIOS</p>
 <p> &nbsp;&nbsp; Daytec</p>
-<p>DELL BIOS </p>
+<p>DELL BIOS</p>
 <p> &nbsp;&nbsp; Dell</p>
-<p>Digital Equipment BIOS </p>
+<p>Digital Equipment BIOS</p>
 <p> &nbsp;&nbsp; komprie</p>
-<p>Enox BIOS </p>
+<p>Enox BIOS</p>
 <p> &nbsp;&nbsp; xo11nE</p>
-<p>Epox BIOS </p>
+<p>Epox BIOS</p>
 <p> &nbsp;&nbsp; central</p>
-<p>Freetech BIOS </p>
+<p>Freetech BIOS</p>
 <p> &nbsp;&nbsp; Posterie</p>
-<p>HP Vectra BIOS </p>
+<p>HP Vectra BIOS</p>
 <p> &nbsp;&nbsp; hewlpack</p>
-<p>IBM BIOS </p>
-<p> &nbsp;&nbsp; IBM </p>
-<p> &nbsp;&nbsp; MBIUO </p>
-<p> &nbsp;&nbsp; sertafu </p>
-<p>Iwill BIOS </p>
+<p>IBM BIOS</p>
+<p> &nbsp;&nbsp; IBM</p>
+<p> &nbsp;&nbsp; MBIUO</p>
+<p> &nbsp;&nbsp; sertafu</p>
+<p>Iwill BIOS</p>
 <p> &nbsp;&nbsp; iwill</p>
-<p>JetWay BIOS </p>
+<p>JetWay BIOS</p>
 <p> &nbsp;&nbsp; spoom1</p>
-<p>Joss Technology BIOS </p>
-<p> &nbsp;&nbsp; 57gbz6 </p>
+<p>Joss Technology BIOS</p>
+<p> &nbsp;&nbsp; 57gbz6</p>
 <p> &nbsp;&nbsp; technolgi</p>
-<p>M Technology BIOS </p>
+<p>M Technology BIOS</p>
 <p> &nbsp;&nbsp; mMmM</p>
-<p>MachSpeed BIOS </p>
+<p>MachSpeed BIOS</p>
 <p> &nbsp;&nbsp; sp99dd</p>
-<p>Magic-Pro BIOS </p>
+<p>Magic-Pro BIOS</p>
 <p> &nbsp;&nbsp; prost</p>
-<p>Megastar BIOS </p>
+<p>Megastar BIOS</p>
 <p> &nbsp;&nbsp; star</p>
-<p>Megastar BIOS </p>
-<p> &nbsp;&nbsp; sldkj754 </p>
-<p> &nbsp;&nbsp; xyzall </p>
-<p>Micronics BIOS </p>
+<p>Megastar BIOS</p>
+<p> &nbsp;&nbsp; sldkj754</p>
+<p> &nbsp;&nbsp; xyzall</p>
+<p>Micronics BIOS</p>
 <p> &nbsp;&nbsp; dn_04rjc</p>
-<p>Nimble BIOS </p>
+<p>Nimble BIOS</p>
 <p> &nbsp;&nbsp; xdfk9874t3</p>
-<p>Packard Bell BIOS </p>
+<p>Packard Bell BIOS</p>
 <p> &nbsp;&nbsp; bell9</p>
-<p>QDI BIOS </p>
+<p>QDI BIOS</p>
 <p> &nbsp;&nbsp; QDI</p>
-<p>Quantex BIOS </p>
-<p> &nbsp;&nbsp; teX1 </p>
+<p>Quantex BIOS</p>
+<p> &nbsp;&nbsp; teX1</p>
 <p> &nbsp;&nbsp; xljlbj</p>
-<p>Research BIOS </p>
+<p>Research BIOS</p>
 <p> &nbsp;&nbsp; Col2ogro2</p>
-<p>Shuttle BIOS </p>
+<p>Shuttle BIOS</p>
 <p> &nbsp;&nbsp; Col2ogro2</p>
-<p>Siemens Nixdorf BIOS </p>
+<p>Siemens Nixdorf BIOS</p>
 <p> &nbsp;&nbsp; SKY_FOX</p>
-<p>SpeedEasy BIOS </p>
+<p>SpeedEasy BIOS</p>
 <p> &nbsp;&nbsp; lesarot1</p>
-<p>SuperMicro BIOS </p>
+<p>SuperMicro BIOS</p>
 <p> &nbsp;&nbsp; ksdjfg934t</p>
-<p>Tinys BIOS </p>
+<p>Tinys BIOS</p>
 <p> &nbsp;&nbsp; tiny</p>
-<p>TMC BIOS </p>
+<p>TMC BIOS</p>
 <p> &nbsp;&nbsp; BIGO</p>
-<p>Toshiba BIOS </p>
-<p> &nbsp;&nbsp; Toshiba </p>
-<p> &nbsp;&nbsp; 24Banc81 </p>
+<p>Toshiba BIOS</p>
+<p> &nbsp;&nbsp; Toshiba</p>
+<p> &nbsp;&nbsp; 24Banc81</p>
 <p> &nbsp;&nbsp; toshy99</p>
-<p>Vextrec Technology BIOS </p>
+<p>Vextrec Technology BIOS</p>
 <p> &nbsp;&nbsp; Vextrex</p>
-<p>Vobis BIOS </p>
+<p>Vobis BIOS</p>
 <p> &nbsp;&nbsp; merlin</p>
-<p>WIMBIOSnbsp v2.10 BIOS </p>
+<p>WIMBIOSnbsp v2.10 BIOS</p>
 <p> &nbsp;&nbsp; Compleri</p>
-<p>Zenith BIOS </p>
-<p> &nbsp;&nbsp; 3098z </p>
+<p>Zenith BIOS</p>
+<p> &nbsp;&nbsp; 3098z</p>
 <p> &nbsp;&nbsp; Zenith</p>
-<p>ZEOS BIOS </p>
+<p>ZEOS BIOS</p>
 <p> &nbsp;&nbsp; zeosx</p>
 <p>[C] Faraon</p>
 <p>Источник: <a href="https://wasm.ru" target="_blank">https://wasm.ru</a></p>

@@ -5,8 +5,6 @@
 <pre>
 Function md5(s:string):string; 
  
-
- 
  var a:array[0..15] of byte; 
      i:integer; 
  
@@ -617,7 +615,7 @@ end.
 </pre>
 
 <hr />
-<div class="author">Автор: Nikonov A.A. </div>
+<div class="author">Автор: Nikonov A.A.</div>
 
 <pre>
 unit psnMD5;

@@ -3,8 +3,6 @@
 
 
 <pre>
-
- 
 function CRC32(const IniCRC:Integer;Source:AnsiString):Integer;
 asm
 Push EBX
@@ -222,8 +220,10 @@ begin
 end;
  
 </pre>
+
 <hr />
-<p>Приведен модуль для Delphi 1.0 (для Delphi 2.0 должны быть сделаны небольшие изменения): </p>
+
+<p>Приведен модуль для Delphi 1.0 (для Delphi 2.0 должны быть сделаны небольшие изменения):</p>
 <pre>
 unit CRC32;
  

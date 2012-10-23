@@ -2,25 +2,25 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Sending a bitmap based on the screen to the printer is an </p>
-<p>invalid operation that will usually fail, unless the print </p>
-<p>driver has been designed to detect this error condition and </p>
-<p>compensate for the error. This means you should use the VCL </p>
-<p>canvas methods Draw, StretchDraw,CopyRect, BrushCopy, and </p>
-<p>the like to transfer a bitmap to the printer, since the </p>
+<p>Sending a bitmap based on the screen to the printer is an</p>
+<p>invalid operation that will usually fail, unless the print</p>
+<p>driver has been designed to detect this error condition and</p>
+<p>compensate for the error. This means you should use the VCL</p>
+<p>canvas methods Draw, StretchDraw,CopyRect, BrushCopy, and</p>
+<p>the like to transfer a bitmap to the printer, since the</p>
 <p>underlying bitmap is based on the screen, and is device</p>
-<p>dependent. The only way to reliably print an image is to </p>
-<p>use DIBs (Device Independent Bitmaps). Getting a valid DIB can </p>
-<p>be difficult, as there are many Windows API functions that must </p>
-<p>be used correctly. Further, many video drivers incorrectly fill </p>
+<p>dependent. The only way to reliably print an image is to</p>
+<p>use DIBs (Device Independent Bitmaps). Getting a valid DIB can</p>
+<p>be difficult, as there are many Windows API functions that must</p>
+<p>be used correctly. Further, many video drivers incorrectly fill</p>
 <p>in the DIB structure in regards to the color table in the DIB.</p>
-<p>The following example demonstrates an attempt to overcome </p>
-<p>some of these problems and limitations. The example should </p>
+<p>The following example demonstrates an attempt to overcome</p>
+<p>some of these problems and limitations. The example should</p>
 <p>compile successfully under all versions of Delphi/C++ Builder.</p>
-<p>The core function in the example, BltTBitmapAsDib(), accepts </p>
-<p>a handle to a device to image to, the x and y coordinates you </p>
-<p>wish the bitmap to be imaged at, the width and height you wish </p>
-<p>the image to be (stretching and shrinking is acceptable), and </p>
+<p>The core function in the example, BltTBitmapAsDib(), accepts</p>
+<p>a handle to a device to image to, the x and y coordinates you</p>
+<p>wish the bitmap to be imaged at, the width and height you wish</p>
+<p>the image to be (stretching and shrinking is acceptable), and</p>
 <p>the TBitmap you wish to image.</p>
 <pre>
 uses Printers;

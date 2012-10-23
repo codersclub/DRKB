@@ -10,14 +10,14 @@
 <p>Date: 05.08.2003</p>
 <p>Translation: Kerk &lt;kerk_p@yahoo.com&gt;</p>
 
-<p>Вступление </p>
+<p>Вступление</p>
 
 <p>Эта статья описывает техники скрытия объектов, файлов, сервисов,</p>
 <p>процессов и т.д. в ОС Windows NT. Эти методы основаны на перехвате функций</p>
 <p>Windows API, что описано в моей статье "Hooking Windows API".</p>
 <p>Данная информация была получена мною в процессе написания rootkit'а,</p>
 <p>поэтому есть вероятность, что это может быть реализовано более эффективно или</p>
-<p>намного более просто. </p>
+<p>намного более просто.</p>
 <p>Под скрытием объектов в этой статье подразумевается замена некоторых</p>
 <p>системных функций, которые работают с этим объектом таким образом, чтобы они</p>
 <p>его пропускали. В случае, если объект - всего лишь возвращаемое значение</p>
@@ -30,14 +30,14 @@
 <p>хэндлов.</p>
 
 
-<p>Файлы </p>
+<p>Файлы</p>
 
 <p>Существует несколько способов скрытия файлов, чтобы ОС не могла их</p>
 <p>видеть. Мы сконцентрируемся на изменении API и отбросим такие техники, как</p>
 <p>использование возможностей файловой системы. К тому же это намного проще, т.к.</p>
 <p>в этом случае нам не нужно знать как работает конкретная файловая система.</p>
 
-<p>NtQueryDirectoryFile </p>
+<p>NtQueryDirectoryFile</p>
 
 <p>Поиск файла в wNT в какой-либо директории заключается в просмотре всех</p>
 <p>файлов этой директории и файлов всех ее поддиректорий. Для перечисления файлов</p>
@@ -72,7 +72,7 @@
 
 <p>структура записи в FileInformation для FileDirectoryInformation:</p>
 
-<p>typedef struct _FILE_DIRECTORY_INFORMATION { </p>
+<p>typedef struct _FILE_DIRECTORY_INFORMATION {</p>
 <p>ULONG NextEntryOffset;</p>
 <p>ULONG Unknown;</p>
 <p>LARGE_INTEGER CreationTime;</p>
@@ -80,7 +80,7 @@
 <p>LARGE_INTEGER LastWriteTime;</p>
 <p>LARGE_INTEGER ChangeTime;</p>
 <p>LARGE_INTEGER EndOfFile;</p>
-<p>LARGE_INTEGER AllocationSize; </p>
+<p>LARGE_INTEGER AllocationSize;</p>
 <p>ULONG FileAttributes;</p>
 <p>ULONG FileNameLength;</p>
 <p>WCHAR FileName[1];</p>
@@ -105,7 +105,7 @@
 
 <p>для FileBothDirectoryInformation:</p>
 
-<p>typedef struct _FILE_BOTH_DIRECTORY_INFORMATION { </p>
+<p>typedef struct _FILE_BOTH_DIRECTORY_INFORMATION {</p>
 <p>ULONG NextEntryOffset;</p>
 <p>ULONG Unknown;</p>
 <p>LARGE_INTEGER CreationTime;</p>
@@ -120,7 +120,7 @@
 <p>UCHAR AlternateNameLength;</p>
 <p>WCHAR AlternateName[12];</p>
 <p>WCHAR FileName[1];</p>
-<p>} FILE_BOTH_DIRECTORY_INFORMATION, *PFILE_BOTH_DIRECTORY_INFORMATION; </p>
+<p>} FILE_BOTH_DIRECTORY_INFORMATION, *PFILE_BOTH_DIRECTORY_INFORMATION;</p>
 
 <p>и для FileNamesInformation:</p>
 
@@ -156,12 +156,12 @@
 
 <p>#define STATUS_NO_SUCH_FILE 0xC000000F</p>
 
-<p>NtVdmControl </p>
+<p>NtVdmControl</p>
 
 <p>По неизвестной причине эмуляция DOS - NTVDM может получить список</p>
 <p>файлов еще и с помощью функции NtVdmControl.</p>
 
-<p>NTSTATUS NtVdmControl( </p>
+<p>NTSTATUS NtVdmControl(</p>
 <p>IN ULONG ControlCode,</p>
 <p>IN PVOID ControlData</p>
 <p>);</p>
@@ -180,7 +180,7 @@
 <p>Методы скрытия такие же как и в случае с NtQueryDirectoryFile.</p>
 
 
-<p>Процессы </p>
+<p>Процессы</p>
 
 <p>Различная системная информация доступна через NtQuerySystemInformation.</p>
 
@@ -202,14 +202,14 @@
 
 <p>Возвращаемая структура в буфере SystemInformation:</p>
 
-<p>typedef struct _SYSTEM_PROCESSES { </p>
+<p>typedef struct _SYSTEM_PROCESSES {</p>
 <p>ULONG NextEntryDelta;</p>
 <p>ULONG ThreadCount;</p>
 <p>ULONG Reserved1[6];</p>
 <p>LARGE_INTEGER CreateTime;</p>
 <p>LARGE_INTEGER UserTime;</p>
 <p>LARGE_INTEGER KernelTime;</p>
-<p>UNICODE_STRING ProcessName; </p>
+<p>UNICODE_STRING ProcessName;</p>
 <p>KPRIORITY BasePriority;</p>
 <p>ULONG ProcessId;</p>
 <p>ULONG InheritedFromProcessId;</p>
@@ -224,14 +224,14 @@
 <p>NextEntryDelta записи предшествующей записи скрываемого процесса. Обычно</p>
 <p>не требуется скрывать первую запись, т.к. это процесс Idle.</p>
 
-<p>Реестр </p>
+<p>Реестр</p>
 
 <p>Реестр Windows - это достаточно большая древовидная структура,</p>
 <p>содержащая два важных типа записей, которые мы можем захотеть скрыть. Первый</p>
 <p>тип - ключи реестра, второй - значения реестра. Благодаря структуре реестра</p>
 <p>скрытие его ключей не так тривиально, как скрытие файлов или процессов.</p>
 
-<p>NtEnumerateKey </p>
+<p>NtEnumerateKey</p>
 
 <p>Благодаря структуре реестра, мы не можем запросить список всех ключей</p>
 <p>в какой-либо его части. Мы можем получить информацию только об одном ключе,</p>
@@ -240,7 +240,7 @@
 <p>NTSTATUS NtEnumerateKey(</p>
 <p>IN HANDLE KeyHandle,</p>
 <p>IN ULONG Index,</p>
-<p>IN KEY_INFORMATION_CLASS KeyInformationClass, </p>
+<p>IN KEY_INFORMATION_CLASS KeyInformationClass,</p>
 <p>OUT PVOID KeyInformation,</p>
 <p>IN ULONG KeyInformationLength,</p>
 <p>OUT PULONG ResultLength</p>
@@ -275,10 +275,10 @@
 <p>вызывает NtEnumerateKey, мы не будем перевызывать ее с неизмененными</p>
 <p>аргументами, а определим имя записи указанной параметром Index.</p>
 
-<p>NTSTATUS RtlCompareUnicodeString( </p>
-<p>IN PUNICODE_STRING String1, </p>
-<p>IN PUNICODE_STRING String2, </p>
-<p>IN BOOLEAN CaseInSensitive </p>
+<p>NTSTATUS RtlCompareUnicodeString(</p>
+<p>IN PUNICODE_STRING String1,</p>
+<p>IN PUNICODE_STRING String2,</p>
+<p>IN BOOLEAN CaseInSensitive</p>
 <p>);</p>
 
 <p>String1 и String2 - строки, которые необходимо сравнить,</p>
@@ -332,7 +332,7 @@
 <p>LARGE_INTEGER LastWriteTime;</p>
 <p>ULONG TitleIndex;</p>
 <p>ULONG NameLength;</p>
-<p>WCHAR Name[1]; </p>
+<p>WCHAR Name[1];</p>
 <p>} KEY_BASIC_INFORMATION, *PKEY_BASIC_INFORMATION;</p>
 
 <p>Единственное что нам нужно - это Name, и его длина - NameLength.</p>
@@ -341,7 +341,7 @@
 
 <p>#define STATUS_EA_LIST_INCONSISTENT 0x80000014</p>
 
-<p>NtEnumerateValueKey </p>
+<p>NtEnumerateValueKey</p>
 
 <p>Значения реестра не отсортированы. К счастью, их количество в одном</p>
 <p>ключе достаточно мало, поэтому мы можем перевызывать функцию, чтобы получить</p>
@@ -385,7 +385,7 @@
 <p>#define STATUS_NO_MORE_ENTRIES 0x8000001A</p>
 
 
-<p>Сервисы и драйверы </p>
+<p>Сервисы и драйверы</p>
 
 <p>Системные сервисы и драйверы обрабатываются четырьмя независимыми</p>
 <p>API-функциями. Их связи различны в каждой версии Windows. Поэтому мы вынуждены</p>
@@ -462,7 +462,7 @@
 <p>DWORD dwWaitHint;</p>
 <p>} SERVICE_STATUS, *LPSERVICE_STATUS;</p>
 
-<p>а для EnumServicesStatusExA и EnumServicesStatusExW: </p>
+<p>а для EnumServicesStatusExA и EnumServicesStatusExW:</p>
 
 <p>typedef struct _ENUM_SERVICE_STATUS_PROCESS {</p>
 <p>LPTSTR lpServiceName;</p>
@@ -488,14 +488,14 @@
 <p>помнить о различии размеров SERVICE_STATUS и SERVICE_STATUS_PROCESS.</p>
 
 
-<p>Перехват и распространение </p>
+<p>Перехват и распространение</p>
 
 <p>Чтобы получить желаемый эффект, мы должны заразить все запущенные</p>
 <p>процессы, а также процессы, которые будут запущены позже. Новые процессы должны</p>
 <p>быть заражены до выполнения первой инструкции их кода, иначе они смогут увидеть</p>
 <p>наши скрытые объекты до того, как функции будут перехвачены.</p>
 
-<p>Привелегии </p>
+<p>Привелегии</p>
 
 <p>Нам нужны как минимум администраторские права, чтобы получить доступ ко</p>
 <p>всем запущенным процессам. Лучшая возможность - это запуск нашего процесса как</p>
@@ -547,7 +547,7 @@
 <p>NULL,&amp;dwRet);</p>
 <p>CloseHandle(hToken);</p>
 
-<p>Перехват </p>
+<p>Перехват</p>
 
 <p>Перечисление процессов производится уже упомянутой API-функцией</p>
 <p>NtQuerySystemInformation. Для перехвата функций используется метод перезаписи</p>
@@ -598,7 +598,7 @@
 <p>в этом случае память будет выделена как можно выше рядом с DLL.</p>
 
 <p>#define MEM_COMMIT 0x00001000</p>
-<p>#define MEM_TOP_DOWN 0x00100000 </p>
+<p>#define MEM_TOP_DOWN 0x00100000</p>
 
 <p>Теперь мы можем записать наш код, используя NtWriteVirtualMemory.</p>
 
@@ -700,7 +700,7 @@
 <p>ULONG ContextSwitchCount;</p>
 <p>THREAD_STATE State;</p>
 <p>KWAIT_REASON WaitReason;</p>
-<p>} SYSTEM_THREADS, *PSYSTEM_THREADS; </p>
+<p>} SYSTEM_THREADS, *PSYSTEM_THREADS;</p>
 
 <p>Для каждого потока мы должны получить его хэндл, используя</p>
 <p>NtOpenThread. Мы используем для этого ClientId.</p>
@@ -736,7 +736,7 @@
 <p>OUT PULONG PreviousSuspendCount OPTIONAL</p>
 <p>);</p>
 
-<p>Новые процессы </p>
+<p>Новые процессы</p>
 
 <p>Заражение всех запущенных процессов не затронет процессы, которые будут</p>
 <p>запущены позже. Мы должны получить список процессов, через некоторое время</p>
@@ -759,7 +759,7 @@
 <p>IN HANDLE ThreadHandle,</p>
 <p>IN THREADINFOCLASS ThreadInformationClass,</p>
 <p>OUT PVOID ThreadInformation,</p>
-<p>IN ULONG ThreadInformationLength, </p>
+<p>IN ULONG ThreadInformationLength,</p>
 <p>OUT PULONG ReturnLength OPTIONAL</p>
 <p>);</p>
 
@@ -803,7 +803,7 @@
 <p>Перехват функций в своем процессе такой же как и перехват в запущенном</p>
 <p>процессе, но нам не нужно беспокоиться о потоках.</p>
 
-<p>DLL </p>
+<p>DLL</p>
 
 <p>В каждом процессе в системе есть копия ntdll.dll. Это значит, что мы</p>
 <p>можем перехватить любую функцию этого модуля при инициализации процесса.</p>
@@ -813,9 +813,9 @@
 <p>перехвата процесса. Вот почему мы должны перехватить LdrLoadDll, которая</p>
 <p>загружает новые модули.</p>
 
-<p>NTSTATUS LdrLoadDll( </p>
+<p>NTSTATUS LdrLoadDll(</p>
 <p>PWSTR szcwPath,</p>
-<p>PDWORD pdwLdrErr, </p>
+<p>PDWORD pdwLdrErr,</p>
 <p>PUNICODE_STRING pUniModuleName,</p>
 <p>PHINSTANCE pResultInstance</p>
 <p>);</p>
@@ -826,7 +826,7 @@
 <p>загруженном модуле.</p>
 
 
-<p>Память </p>
+<p>Память</p>
 
 <p>Когда мы перехватываем функцию, мы изменяем ее первые байты. Вызвав</p>
 <p>NtReadVirtualMemory, кто угодно сможет определить, что функция перехвачена.</p>
@@ -904,7 +904,7 @@
 
 <p>Для MemoryWorkingSetList возвращается структура:</p>
 
-<p>typedef struct _MEMORY_WORKING_SET_LIST { </p>
+<p>typedef struct _MEMORY_WORKING_SET_LIST {</p>
 <p>ULONG NumberOfPages;</p>
 <p>ULONG WorkingSetList[1];</p>
 <p>} MEMORY_WORKING_SET_LIST, *PMEMORY_WORKING_SET_LIST;</p>
@@ -915,7 +915,7 @@
 <p>это старшие 20 бит адреса секции, а младшие 12 бит содержат флаги.</p>
 
 
-<p>Хэндлы </p>
+<p>Хэндлы</p>
 
 <p>Вызов NtQuerySystemInformation с классом SystemHandleInformation дает</p>
 <p>нам массив всех открытых хэндлов в структуре _SYSTEM_HANDLE_INFORMATION_EX.</p>
@@ -1052,7 +1052,7 @@
 <p>проекте OpHandle на моем сайте http://rootkit.host.sk.</p>
 
 
-<p>Порты </p>
+<p>Порты</p>
 
 <p>Самый простой путь для перечисления открытых портов - это использование</p>
 <p>функций AllocateAndGetTcpTableFromStack и AllocateAndGetUdpTableFromStack,</p>
@@ -1169,7 +1169,7 @@
 <p>IN ULONG InputBufferLength,</p>
 <p>OUT PVOID OutputBuffer OPTIONAL,</p>
 <p>IN ULONG OutputBufferLength</p>
-<p>); </p>
+<p>);</p>
 
 <p>Интересующие нас параметры - это FileHandle (определяет хэндл</p>
 <p>устройства), IoStatusBlock (указывает на переменную, которая получает</p>
@@ -1189,50 +1189,50 @@
 <p>1) Для получения массива из MIB_TCPROW InputBuffer должен быть таким:</p>
 
 <p>первый вызов:</p>
-<p>0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00 </p>
-<p>0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 </p>
-<p>0x00 0x00 0x00 0x00 </p>
+<p>0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00</p>
+<p>0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00</p>
+<p>0x00 0x00 0x00 0x00</p>
 
 <p>второй вызов:</p>
-<p>0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00 </p>
-<p>0x01 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 </p>
-<p>0x00 0x00 0x00 0x00 </p>
+<p>0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00</p>
+<p>0x01 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00</p>
+<p>0x00 0x00 0x00 0x00</p>
 
 <p>2) Чтобы получить массив из MIB_UDPROW:</p>
 
 <p>первый вызов:</p>
-<p>0x01 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00 </p>
-<p>0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 </p>
-<p>0x00 0x00 0x00 0x00 </p>
+<p>0x01 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00</p>
+<p>0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00</p>
+<p>0x00 0x00 0x00 0x00</p>
 
 <p>второй вызов:</p>
-<p>0x01 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00 </p>
-<p>0x01 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 </p>
-<p>0x00 0x00 0x00 0x00 </p>
+<p>0x01 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00</p>
+<p>0x01 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00</p>
+<p>0x00 0x00 0x00 0x00</p>
 
 <p>3) Чтобы получить массив из MIB_TCPROW_EX:</p>
 
 <p>первый вызов:</p>
-<p>0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00 </p>
-<p>0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 </p>
-<p>0x00 0x00 0x00 0x00 </p>
+<p>0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00</p>
+<p>0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00</p>
+<p>0x00 0x00 0x00 0x00</p>
 
 <p>второй вызов:</p>
-<p>0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00 </p>
-<p>0x02 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 </p>
-<p>0x00 0x00 0x00 0x00 </p>
+<p>0x00 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00</p>
+<p>0x02 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00</p>
+<p>0x00 0x00 0x00 0x00</p>
 
 <p>4) Чтобы получить массив из MIB_UDPROW_EX:</p>
 
 <p>Первый вызов:</p>
-<p>0x01 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00 </p>
-<p>0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 </p>
-<p>0x00 0x00 0x00 0x00 </p>
+<p>0x01 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00</p>
+<p>0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00</p>
+<p>0x00 0x00 0x00 0x00</p>
 
 <p>Второй вызов:</p>
-<p>0x01 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00 </p>
-<p>0x02 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 </p>
-<p>0x00 0x00 0x00 0x00 </p>
+<p>0x01 0x04 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x02 0x00 0x00 0x00 0x01 0x00 0x00</p>
+<p>0x02 0x01 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00</p>
+<p>0x00 0x00 0x00 0x00</p>
 
 <p>Вы можете заметить, что буферы различаются только в нескольких байтах.</p>
 <p>Мы можем объяснить это.</p>
@@ -1299,7 +1299,7 @@
 <p>IoStatusBlock и вернув значение STATUS_INVALID_ADDRESS, мы скроем порт.</p>
 
 
-<p>Окончание </p>
+<p>Окончание</p>
 
 <p>Конкретная реализация описанных техник доступна в исходном коде</p>
 <p>Hacker Defender Rootkit версии 1.0.0 на сайте http://rootkit.host.sk и на</p>

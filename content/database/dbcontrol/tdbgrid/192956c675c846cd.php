@@ -42,7 +42,7 @@ end;
 
 <hr />В обработчик события GetText TMemoField поместите следующую строку:</p>
 
-<p>Text := GrabMemoAsString(TMemoField(Sender)); </p>
+<p>Text := GrabMemoAsString(TMemoField(Sender));</p>
 
 <p>и поместите следующую функцию так, чтобы к ней можно было свободно обратиться:</p>
 <pre>function GrabMemoAsString(TheField: TMemoField): string;

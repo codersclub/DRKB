@@ -153,16 +153,16 @@ end;
 // from http://www.swissdelphicenter.ch
 </pre>
 <hr />
-<p>Используйте стандартный Windows API: </p>
+<p>Используйте стандартный Windows API:</p>
 <p>используйте hWnd := GetDesktopWindow для получения дескриптора 'рабочего стола';</p>
 <p>используйте hDC := GetDC (hWnd) для получения HDC (дескриптора контекста экрана) ;</p>
-<p>и не забывайте освобождать (уничтожать дескриптор) hDC после выполнения задачи. </p>
-<p>Используя TCanvas.Handle в качестве HDC, можно при помощи WinAPI реализовать функции рисования, или, если это возможно, можно присвоить HDC свойству Handle непосредственно при создании TCanvas. </p>
+<p>и не забывайте освобождать (уничтожать дескриптор) hDC после выполнения задачи.</p>
+<p>Используя TCanvas.Handle в качестве HDC, можно при помощи WinAPI реализовать функции рисования, или, если это возможно, можно присвоить HDC свойству Handle непосредственно при создании TCanvas.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<p>В D1 (по идее должно работать и в D2) попробуйте это: </p>
-<p>Разместите на форме TPaintBox и TButton. </p>
+<p>В D1 (по идее должно работать и в D2) попробуйте это:</p>
+<p>Разместите на форме TPaintBox и TButton.</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var
@@ -181,7 +181,7 @@ begin
   end
 end;
 </pre>
-<p>Это скопирует верхнюю левую область рабочего стола в верхнюю левую область вашего TPaintBox. </p>
+<p>Это скопирует верхнюю левую область рабочего стола в верхнюю левую область вашего TPaintBox.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
@@ -201,7 +201,7 @@ begin
   ReleaseDC(0, DC);
 end;
 </pre>
-<p>Или с помощью обертки TCanvas - </p>
+<p>Или с помощью обертки TCanvas -</p>
 <p>Объект Screen[.width,height] - размеры</p>
 <pre>
 Var

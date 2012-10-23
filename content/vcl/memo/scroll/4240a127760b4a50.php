@@ -10,17 +10,17 @@ memo1.Perform(WM_VScroll, SB_LINEDOWN,0);
 <p>Возможны так же следующие опции:</p>
 <p>SB_BOTTOM</p>
 <p>SB_ENDSCROLL</p>
-<p>SB_LINEDOWN </p>
-<p>SB_LINEUP </p>
+<p>SB_LINEDOWN</p>
+<p>SB_LINEUP</p>
 <p>SB_PAGEDOWN</p>
-<p>SB_PAGEUP </p>
+<p>SB_PAGEUP</p>
 <p>SB_THUMBPOSITION</p>
-<p>SB_THUMBTRACK </p>
+<p>SB_THUMBTRACK</p>
 <p>SB_TOP</p>
-<p>TComboBox, TListBox, TRichEdit и т.п можно прокрутить подобным образом </p>
+<p>TComboBox, TListBox, TRichEdit и т.п можно прокрутить подобным образом</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p>В поле ввода вводите на какую строку нужно сойти, и по нажатию на кнопку эта строка будет попадать о зону видимости: </p>
+<p>В поле ввода вводите на какую строку нужно сойти, и по нажатию на кнопку эта строка будет попадать о зону видимости:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var

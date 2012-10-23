@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Используйте HELP_FINDER, если "текущая закладка" не является закладкой 'Index' или 'Find'. HELP_FINDER открывает окно Help Topics, но не меняет закладку с оглавлением (Contents), если текущая закладка - 'Index' или 'Find'. </p>
+<p>Используйте HELP_FINDER, если "текущая закладка" не является закладкой 'Index' или 'Find'. HELP_FINDER открывает окно Help Topics, но не меняет закладку с оглавлением (Contents), если текущая закладка - 'Index' или 'Find'.</p>
 <p>Попробуйте следующий код:</p>
 <pre>
 Function L1InvokeHelpMacro(const i_strMacro: String; const i_bForceFile:

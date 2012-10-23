@@ -3,17 +3,17 @@
 
 
 
-<p>This function gets the connected Oracle version. It returns the version info in 3 OUT parameters. </p>
+<p>This function gets the connected Oracle version. It returns the version info in 3 OUT parameters.</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;VerNum &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: double  &nbsp; &nbsp; &nbsp; &nbsp;eg. 7.23 </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;VerStrShort  &nbsp; &nbsp; &nbsp; &nbsp;: string  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;eg. '7.2.3.0.0' </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;VerStrLong  &nbsp; &nbsp; &nbsp; &nbsp;: string  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;eg. 'Oracle7 Server Release 7.2.3.0.0 - Production Release' </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;VerNum &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: double  &nbsp; &nbsp; &nbsp; &nbsp;eg. 7.23</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;VerStrShort  &nbsp; &nbsp; &nbsp; &nbsp;: string  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;eg. '7.2.3.0.0'</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;VerStrLong  &nbsp; &nbsp; &nbsp; &nbsp;: string  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;eg. 'Oracle7 Server Release 7.2.3.0.0 - Production Release'</p>
 
-<p>I have tested it with Oracle 7.2 and 8.17. I assume it should work for the others (not too sure about Oracle 9 though). Any feedback and fixes for different versions would be appreciated. </p>
+<p>I have tested it with Oracle 7.2 and 8.17. I assume it should work for the others (not too sure about Oracle 9 though). Any feedback and fixes for different versions would be appreciated.</p>
 
-<p>The TQuery parameter that it recieves is a TQuery component that is connected to an open database connection. </p>
+<p>The TQuery parameter that it recieves is a TQuery component that is connected to an open database connection.</p>
 
-<p>Example : </p>
+<p>Example :</p>
 
 <pre>
 var

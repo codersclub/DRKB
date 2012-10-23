@@ -73,7 +73,7 @@ begin
 end;
 </pre>
 
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>
 AddNoise(FBitmap, 65, False); 
 </pre>

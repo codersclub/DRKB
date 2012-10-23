@@ -7,7 +7,7 @@
 <p>Download or copy the file kylix3_open.tar.gz into the "temp" directory you just created.</p>
 <p>Check that all necessary programs are installed on your system:</p>
 <p>Open kmenu/configuration/packaging/Remove Software or kpackage</p>
-<p>Check for installation of the following: </p>
+<p>Check for installation of the following:</p>
 <p>kernel =&gt; 2.2 (mdk9.0 uses 2.4)</p>
 <p>libgtk =&gt; 1.2 (mdk 9.0 uses 1.2-1.2.10-29)</p>
 <p>libjpeg =&gt; 6.2 (mdk 9.0 uses 6.-66-25)</p>
@@ -15,7 +15,7 @@
 <p>XFree86-dev (mdk9.0 uses 4.2.1-3)</p>
 <p>glibc-dev (mdk9.0 uses 2.2.5-16)</p>
 <p>Once you have verified that you have all of the necessary programs do the following:</p>
-<p>In a Super User Terminal do: </p>
+<p>In a Super User Terminal do:</p>
 <p>cd /temp</p>
 <p>tar zxf kylix3_open.tar.gz</p>
 <p>In user terminal (NOT as root):</p>
@@ -28,5 +28,5 @@
 <p>In the Gui select "next"</p>
 <p>In the Gui select 'Finish"</p>
 <p>The Gui disappears and the registration process has completed.</p>
-<p>The Kylix Delphi and Kylix C++ IDE's can now be run. </p>
+<p>The Kylix Delphi and Kylix C++ IDE's can now be run.</p>
 

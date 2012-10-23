@@ -44,7 +44,7 @@
 <p>+ Component showing CPU usage</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p>Почти все о железе можно прочитать из регистра по HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Class\ </p>
+<p>Почти все о железе можно прочитать из регистра по HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Class\</p>
 <div class="author">Автор: Diamond cat</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

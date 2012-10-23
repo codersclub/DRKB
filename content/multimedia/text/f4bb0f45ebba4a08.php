@@ -175,9 +175,9 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<p>Выводим цветной текст на форме под любым углом </p>
+<p>Выводим цветной текст на форме под любым углом</p>
 
-<p>Пример демонстрирует вывод теста случайным образом на форме под определённым углом. Добавляем в форму компонент TButton и в событие OnClick следующий код: </p>
+<p>Пример демонстрирует вывод теста случайным образом на форме под определённым углом. Добавляем в форму компонент TButton и в событие OnClick следующий код:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var
@@ -256,7 +256,7 @@ if FontAngle &lt;&gt; 0 then
  
  
 </pre>
-<p>Вращаются только векторные шрифты. </p>
+<p>Вращаются только векторные шрифты.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 

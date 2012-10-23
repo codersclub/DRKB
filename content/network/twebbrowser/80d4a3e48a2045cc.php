@@ -3,10 +3,10 @@
 
 
 <p>Взято из FAQ:<a href="https://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml</a></p>
-<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm </p>
+<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm</p>
 
 <p>Если данные передаются в формате 'animal=cat&amp; color=brown' и т.д.,</p>
-<p>то попробуйте использовать следующий код: </p>
+<p>то попробуйте использовать следующий код:</p>
 <pre>
 procedure TDBModule.Navigate(stURL, stPostData: String; var wbWebBrowser: TWebBrowser);
 var

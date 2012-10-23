@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>В стандартном RichEdit нельзя, для RichEdit с картинками используйте RichEdit из RxLib или JVCL. </p>
+<p>В стандартном RichEdit нельзя, для RichEdit с картинками используйте RichEdit из RxLib или JVCL.</p>
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr /><p>Ниже представлен пример, который можно применить к RxRichEdit, RichEditEx, RichEdit98, и Microsoft RichTextBox (поставляемый с VB5+) не прибегая к использованию буфера обмена или OLE:</p>

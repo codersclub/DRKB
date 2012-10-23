@@ -5,41 +5,41 @@
 
 <p>Problem/Question/Abstract:</p>
 
-<p>How do I make delphi functions available to Excel users? </p>
+<p>How do I make delphi functions available to Excel users?</p>
 
 <p>I have seen many articles telling how to control Excel from within Delphi. However, it is also appealing to give Excel users (which tend to be far less programming oriented guys) the power of tools built with Dephi, its flexibility and velocity.</p>
 
 <p>Answer:</p>
 
-<p>The idea is very simple and is based upon the variable types that are common to Excel's VBA and to Delphi. Those include 32 bit integer, double precision floating point and, mainly, Excel ranges. </p>
+<p>The idea is very simple and is based upon the variable types that are common to Excel's VBA and to Delphi. Those include 32 bit integer, double precision floating point and, mainly, Excel ranges.</p>
 
-<p>I found that Excel sometimes interprets incorrectly simple types when passed by reference and thus I limmited their usage to value parameters. </p>
-<p>On the other hand, ranges can only be passed by reference and can be read from but not written to. This means that, within Delphi, you must use the reserved word CONST instead of VAR. </p>
+<p>I found that Excel sometimes interprets incorrectly simple types when passed by reference and thus I limmited their usage to value parameters.</p>
+<p>On the other hand, ranges can only be passed by reference and can be read from but not written to. This means that, within Delphi, you must use the reserved word CONST instead of VAR.</p>
 
-<p>First, I defined within a simple unit a set of functions that convert simple Variant types to simple types and viceversa. Those are IntToVar,Double and VarTodouble (the real unit also includes a StrToVar function but not a VarToStr since this one is already included in the System unit), and are used within the procedures that do the real work (RangeToMatrix, RangeToVector,VectorToMatrix and VectortoRange). </p>
-<p>All these functions (along with some others that you might find useful) are put together in a unit called "_Variants" whose source code is copied here (with some slight modifications). </p>
+<p>First, I defined within a simple unit a set of functions that convert simple Variant types to simple types and viceversa. Those are IntToVar,Double and VarTodouble (the real unit also includes a StrToVar function but not a VarToStr since this one is already included in the System unit), and are used within the procedures that do the real work (RangeToMatrix, RangeToVector,VectorToMatrix and VectortoRange).</p>
+<p>All these functions (along with some others that you might find useful) are put together in a unit called "_Variants" whose source code is copied here (with some slight modifications).</p>
 
-<p>In the real unit you will find that there fucntions that provide conversion between Excel ranges and SDL delphi component suite which I have found to be quite useful (refer to www.lohninger.com). </p>
+<p>In the real unit you will find that there fucntions that provide conversion between Excel ranges and SDL delphi component suite which I have found to be quite useful (refer to www.lohninger.com).</p>
 
-<p>I shall restrict the examples, however to standard types. </p>
+<p>I shall restrict the examples, however to standard types.</p>
 
-<p>Lets take first a simple function: </p>
-<p>This function, called gamma_alfa, takes as input the mean and the variance of a population and returns the alfa parameter of a gamma distribution. </p>
+<p>Lets take first a simple function:</p>
+<p>This function, called gamma_alfa, takes as input the mean and the variance of a population and returns the alfa parameter of a gamma distribution.</p>
 
-<p>In Excel's VBA it is declared as </p>
-<p>Declare Function gamma_alfa Lib "c:\archivos\del_files\f_auxiliares_delphi" Alias "gamma_alfa_XL" (ByVal media As Double, ByVal varianza As Double) As Double </p>
+<p>In Excel's VBA it is declared as</p>
+<p>Declare Function gamma_alfa Lib "c:\archivos\del_files\f_auxiliares_delphi" Alias "gamma_alfa_XL" (ByVal media As Double, ByVal varianza As Double) As Double</p>
 
-<p>note the lib statement that refers to name that the DLL actually has. </p>
-<p>note also the ByVal modifiers used for declaring the variables as well as the "as double" statements. </p>
-<p>These mean that both the input and the output will be simple types of type double. </p>
+<p>note the lib statement that refers to name that the DLL actually has.</p>
+<p>note also the ByVal modifiers used for declaring the variables as well as the "as double" statements.</p>
+<p>These mean that both the input and the output will be simple types of type double.</p>
 
-<p>In Delphi, the function is declared as </p>
-<p>function gamma_alfa(media, varianza : double) : Double;stdcall; </p>
+<p>In Delphi, the function is declared as</p>
+<p>function gamma_alfa(media, varianza : double) : Double;stdcall;</p>
 
-<p>Note the stdcall at the end of the declaration. This is to ensure that Delphi will use the Microsoft calling convention </p>
+<p>Note the stdcall at the end of the declaration. This is to ensure that Delphi will use the Microsoft calling convention</p>
 
-<p>Also note the inconsistency between the delphi function's name and the "alias" statement in VBA. </p>
-<p>This is set in the export clause of the DLL: </p>
+<p>Also note the inconsistency between the delphi function's name and the "alias" statement in VBA.</p>
+<p>This is set in the export clause of the DLL:</p>
 <pre>
 exports ..., 
         gamma_alfa     name 'gamma_alfa_XL', 
@@ -47,7 +47,7 @@ exports ...,
 </pre>
 
 
-<p>Although irrelevant, the implementation of the function follows: </p>
+<p>Although irrelevant, the implementation of the function follows:</p>
 <pre>
 implementation
  
@@ -58,20 +58,20 @@ end;
 </pre>
 
 
-<p>Now, let's go to the tough stuff: sending Excel ranges as parameters. </p>
-<p>Now, I will make use of a function that gets and returns excel ranges as parameters: </p>
-<p>This function is called gamma_parametros and takes as input an histogram (with frequencies and class markers) and returns the alfa and beta parameters for a gamma. Here is its VBA declaration: </p>
+<p>Now, let's go to the tough stuff: sending Excel ranges as parameters.</p>
+<p>Now, I will make use of a function that gets and returns excel ranges as parameters:</p>
+<p>This function is called gamma_parametros and takes as input an histogram (with frequencies and class markers) and returns the alfa and beta parameters for a gamma. Here is its VBA declaration:</p>
 
-<p>Declare Function gamma_parametros Lib "c:\archivos\del_files\f_auxiliares_delphi" Alias "gamma_parametros_XL" (ByRef marcas_de_clase As Variant, ByRef frecuencias As Variant) As Variant </p>
+<p>Declare Function gamma_parametros Lib "c:\archivos\del_files\f_auxiliares_delphi" Alias "gamma_parametros_XL" (ByRef marcas_de_clase As Variant, ByRef frecuencias As Variant) As Variant</p>
 
-<p>Now note hte "Byref" and the as "Variant" types. </p>
+<p>Now note hte "Byref" and the as "Variant" types.</p>
 
-<p>In Delphi, the function is declared as follows: </p>
+<p>In Delphi, the function is declared as follows:</p>
 
 <p>function gamma_parametros_XL(const _marcas_de_clase, _frecuencias: Variant): Variant;</p>
 <p>  stdcall;</p>
 
-<p>and is implemented as: </p>
+<p>and is implemented as:</p>
 <pre>
 function gamma_parametros_XL(const _marcas_de_clase, _frecuencias: Variant): Variant;
   stdcall;
@@ -88,11 +88,11 @@ end;
 </pre>
 
 
-<p>Note that the functions that does the real work is not gamma_parametros_XL but gamma_parametros. The former only does the job of converting Excel ranges to TVector_ and viceversa. </p>
+<p>Note that the functions that does the real work is not gamma_parametros_XL but gamma_parametros. The former only does the job of converting Excel ranges to TVector_ and viceversa.</p>
 
-<p>the exports clause exports gamma_parametros_XL, since it's the one that is replicated in the VBA definition, and thus it does not need a 'name' clause. </p>
+<p>the exports clause exports gamma_parametros_XL, since it's the one that is replicated in the VBA definition, and thus it does not need a 'name' clause.</p>
 
-<p>Here is the implementation of the gamma_parametros function: </p>
+<p>Here is the implementation of the gamma_parametros function:</p>
 <pre>
 function gamma_parametros(const marcas_de_clase, frecuencias: TVector_): TVector_;
 var
@@ -109,7 +109,7 @@ end;
 </pre>
 
 
-<p>Here is the listing of the _Variants unit: </p>
+<p>Here is the listing of the _Variants unit:</p>
 <pre>
 interface
 uses SysUtils,
@@ -310,11 +310,12 @@ end;
 end.
 </pre>
 
-<p>One final warning note: </p>
+<p>One final warning note:</p>
 
-<p>Notice that the types' names in VBA are NOT the same as in Delphi. </p>
-<p>The two must obvious are BOOLEAN (which in VBA is a 2 byte type whereas in Delphi is a one byte type). Thus you MUST use WORDBOOL in Delphi. </p>
-<p>The other obvious type is INTEGER (in DElphi is a 4-byte type and in VBA a 2-byte type). To avoid confussion use LONGINT in Delphi and LONG in VBA </p>
+<p>Notice that the types' names in VBA are NOT the same as in Delphi.</p>
+<p>The two must obvious are BOOLEAN (which in VBA is a 2 byte type whereas in Delphi is a one byte type). Thus you MUST use WORDBOOL in Delphi.</p>
+<p>The other obvious type is INTEGER (in DElphi is a 4-byte type and in VBA a 2-byte type). To avoid confussion use LONGINT in Delphi and LONG in VBA</p>
 
 <p>I will be more than glad to send you the full source code of the _Variant unit</p>
+
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>

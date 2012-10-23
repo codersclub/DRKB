@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Решить задачу помогут обработчики событий OnScroll (в данном примере два компонента ScrollBox (ScrollBar1 и ScrollBar2) расположены на форме TMainForm): </p>
+<p>Решить задачу помогут обработчики событий OnScroll (в данном примере два компонента ScrollBox (ScrollBar1 и ScrollBar2) расположены на форме TMainForm):</p>
 
 <pre>
 procedure TMainForm.ScrollBar1Scroll(Sender: TObject;

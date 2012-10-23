@@ -44,7 +44,7 @@
 504 Gateway Timeout <br>
 505 HTTP Version Not Supported <br>
 &nbsp;<br>
-<p>Дополнительная информация здесь: Hypertext Transfer Protocol -- HTTP/1.0 </p>
+<p>Дополнительная информация здесь: Hypertext Transfer Protocol -- HTTP/1.0</p>
 <p>&nbsp;<br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Rouse_</div>

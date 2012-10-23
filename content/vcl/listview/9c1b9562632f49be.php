@@ -39,5 +39,5 @@ Today I want to describe how you may exchange some items in standard TListView.<
 </pre>
 <p>So structure is a same as in our sample for Integer. All what we added are</p>
 <p>BeginUpdate and EndUpdate (just allow to reduce a flickering)</p>
-<p>So if you want to exchange items in any ListView, just call this procedure... </p>
+<p>So if you want to exchange items in any ListView, just call this procedure...</p>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>

@@ -72,7 +72,7 @@ ADOQuery1.ExecSQL;
 </pre>
 
 <div class="author">Автор: Vit</div>
-<hr /><p class="note">Примечание от Anatoly Podgoretsky </p>
+<hr /><p class="note">Примечание от Anatoly Podgoretsky</p>
 <p>Для ран тайм можно указать про добавление параметров, определение их типов, поскольку у людей часто возникают проблемы с типами параметров, с присвоением значений через AsФункции и через Value.</p>
 <pre>
 with ADOQuery1.Parameters.AddParameter do begin
@@ -95,7 +95,7 @@ end;
 <p>что это дает:</p>
 <p>Это снимает все разночтения, которые могут возникнуть при автоматическом разборе выражения с типом и присвоением ему значения.</p>
 <hr /><p class="note">Примечание от Петровича</p>
-<p>Внесу и свою лепту </p>
+<p>Внесу и свою лепту</p>
 <p>К параметрам запроса можно обращаться и по индексу. Например так:</p>
 <pre>
 with  ADOQuery1  do begin
@@ -106,7 +106,7 @@ with  ADOQuery1  do begin
 end;
 </pre>
 
-<p>Это полностью эквивалентно: </p>
+<p>Это полностью эквивалентно:</p>
 <pre>
 with  ADOQuery1  do begin
   SQL.text:='UPDATE Customers SET Addr1=:p WHERE CustNo=:c';
@@ -126,7 +126,7 @@ with  ADOQuery1  do begin
 end;
 </pre>
 
-<p>Но, вернусь к обращению по индексу. </p>
+<p>Но, вернусь к обращению по индексу.</p>
 <p>Так вот, по индексу, к Parameters лучше никогда не обращаться. Или, делать это с особой осторожностью.</p>
 <p>Например, если усложнить предыдущий запрос:</p>
 <pre>
@@ -290,7 +290,7 @@ end;
 <p>Тут правда я использую некоторые функции из моей библиотеки. Нужный модуль ( awString.pas ) я уже выкладывал то-ли здесь, то-ли на Vingrade. Ну а кому лень искать, все нужные функции я добавлю в конец поста.</p>
 <p>Теперь, как енто пользовать.</p>
 <p>Например, кладем на форму (я обычно делаю жто в Data-модуле) ADOConnection1: TADOConnection.</p>
-<p>Описываем соединение с поставляемой Borland демо-базой данных: </p>
+<p>Описываем соединение с поставляемой Borland демо-базой данных:</p>
 <p>ADOConnection1.ConnectionString := 'FILE NAME=C:\Program Files\Common Files\System\OLE DB\Data Links\DBDEMOS.udl'</p>
 <p>Затем, в OnCreate формы пишем:</p>
 <p>  ADOConnection1.Open;</p>
@@ -340,7 +340,7 @@ begin
   end;
 end;
 </pre>
-<p>Вот и все. </p>
+<p>Вот и все.</p>
 <p>Ах, да. Как обещал, необходимые функции:</p>
 <pre>
 var GetLocationInfoStrFunc :function (Addr :Pointer) :String =Nil;

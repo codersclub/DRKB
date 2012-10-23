@@ -11,6 +11,6 @@
 
 <p>При&nbsp; этом,&nbsp; информация&nbsp; о&nbsp; клавишах&nbsp; смены регистра, так же как и&nbsp;&nbsp;&nbsp;&nbsp; местоположения&nbsp; события, передаваемые при стандартных " настоящих"&nbsp;&nbsp;&nbsp;&nbsp; сообщениях мыши, теряются.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hо&nbsp; положение&nbsp; курсора&nbsp; можно узнать функцией GetCursorPos(), а состояние&nbsp;&nbsp; клавиш&nbsp;&nbsp; смены&nbsp; регистра&nbsp; -&nbsp; функцией&nbsp; GetKeyState(),&nbsp; описанных в winuser.h.</p>
 
-<p>Взято из FAQ: </p>
+<p>Взято из FAQ:</p>
 <a href="https://blackman.km.ru/myfaq/cont4.phtml]http://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml]http://blackman.km.ru/myfaq/cont4.phtml</a></p>
 

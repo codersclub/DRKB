@@ -42,7 +42,7 @@ begin
   DeleteDC(DC);
 end;
 </pre>
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>MessageDlg(GetOGLExtensions,mtInformation,[mbOK],0); 
 </pre>
 

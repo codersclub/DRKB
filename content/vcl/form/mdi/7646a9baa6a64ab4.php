@@ -3,9 +3,9 @@
 
 
 <p>Как выполнить код после создания MDIChild-формы но до появления ее на экране?<br>
-<p>Как отобразить MDIChild-форму модально? </p>
+<p>Как отобразить MDIChild-форму модально?</p>
 <p>1.Убераешь свою MDIChild форму из автосоздания: (MainMenu) Project-&gt;Options-&gt;Forms. Там её перебрасываешь в: Available forms</p>
-<p>2. Переключаешься на свою MDIChild форму и дописываеш в описание класса(пусть например твой класс формы для MDIChild называется TForm2): </p>
+<p>2. Переключаешься на свою MDIChild форму и дописываеш в описание класса(пусть например твой класс формы для MDIChild называется TForm2):</p>
 <pre>
  TForm2 = class(TForm)
     ...
@@ -15,7 +15,7 @@
   public
  
 </pre>
-<p>3. Реализуешь эту процедуру: </p>
+<p>3. Реализуешь эту процедуру:</p>
 <pre>
 procedure TForm2.CreateWindowHandle(const Params: TCreateParams);
 var Comp:TForm2;

@@ -1,7 +1,8 @@
 <h1>ActiveControl имеет DataSet</h1>
 <div class="date">01.01.2007</div>
 
-Автор: OAmiry (Borland) </p>
+<div class="author">Автор: OAmiry (Borland)</div>
+
 <p>Для успешного кодирования необходимо включить typinfo в список используемых модулей. Код данного примера инвертирует логическое свойство Active набора данных, связанного с активным элементом управления при каждом нажатии пользователем клавиши ESC.</p>
 <pre>
 procedure TForm1.FormKeyUp(Sender: TObject; var Key: Word;

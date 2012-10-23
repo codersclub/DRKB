@@ -22,7 +22,7 @@ Canvas.FillRect(Canvas.ClipRect);
 InValidateRect(Canvas.handle,NIL,True);
 </pre>
 
-<p>(или взамен передать дескриптор компонента) </p>
+<p>(или взамен передать дескриптор компонента)</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <hr />Есть два хороших способа очистить Canvas. Их скорости очень близки. В первом способе используются возможности Delphi, во втором &#8211; WinAPI. Первый способ удобнее тем, что позволяет закрашивать Canvas любым цветом.</p>
@@ -47,15 +47,15 @@ end;
 InValidateRect(Canvas.handle,NIL,True);
 </pre>
 
-<p>Если вы используете холст формы, то попробуйте следующее: </p>
+<p>Если вы используете холст формы, то попробуйте следующее:</p>
 <pre>
  
 InValidateRect(form1.handle,NIL,True); 
 </pre>
 
-<p>(или взамен передать дескриптор компонента) </p>
+<p>(или взамен передать дескриптор компонента)</p>
 
-<p>Это очистит хост: </p>
+<p>Это очистит хост:</p>
 
 <pre>
 canvas.fillrect(canvas.cliprect);

@@ -11,12 +11,12 @@ SELECT * FROM MyTable WHERE MyField = NULL
 
 
 <p>Вернет все строки, в которых MyField установлено в NULL. Если ANSI_NULLS = OFF, то, в соответствии со стандартом ANSI SQL92 сравнение с NULL возвращает UNKNOWN. Другие установки, на которые следует обратить внимание:</p>
-<p>SET CURSOR_CLOSE_ON_COMMIT &mdash; Устанавливает режим закрытия курсоров по завершению транзакции &nbsp; &nbsp; &nbsp; </p>
-<p>SET ANSI_NULL_DFLT_ON и&nbsp; SET ANSI_NULL_DFLT_OFF &mdash; Устанавливают nullability полей по умолчанию при создании таблицы &nbsp; &nbsp; &nbsp; </p>
-<p>SET IMPLICIT_TRANSACTIONS &mdash; Устанавливает режим Autocommit &nbsp; &nbsp; &nbsp; </p>
-<p>SET ANSI_PADDING &mdash; Устанавливает режим «отсечения» концевых пробелов для вновь создаваемых полей &nbsp; &nbsp; &nbsp; </p>
-<p>SET QUOTED_IDENTIFIER &mdash; Разрешает выделение идентификаторов двойными кавычками &nbsp; &nbsp; &nbsp; </p>
-<p>SET ANSI_WARNINGS &mdash; Устанавливает реакцию на математические ошибки &nbsp; &nbsp; &nbsp; </p>
+<p>SET CURSOR_CLOSE_ON_COMMIT &mdash; Устанавливает режим закрытия курсоров по завершению транзакции &nbsp; &nbsp; &nbsp;</p>
+<p>SET ANSI_NULL_DFLT_ON и&nbsp; SET ANSI_NULL_DFLT_OFF &mdash; Устанавливают nullability полей по умолчанию при создании таблицы &nbsp; &nbsp; &nbsp;</p>
+<p>SET IMPLICIT_TRANSACTIONS &mdash; Устанавливает режим Autocommit &nbsp; &nbsp; &nbsp;</p>
+<p>SET ANSI_PADDING &mdash; Устанавливает режим «отсечения» концевых пробелов для вновь создаваемых полей &nbsp; &nbsp; &nbsp;</p>
+<p>SET QUOTED_IDENTIFIER &mdash; Разрешает выделение идентификаторов двойными кавычками &nbsp; &nbsp; &nbsp;</p>
+<p>SET ANSI_WARNINGS &mdash; Устанавливает реакцию на математические ошибки &nbsp; &nbsp; &nbsp;</p>
 <p>Рассмотрение этих параметров выходит за рамки книги, однако необходимо обратить на них внимание при чтении документации.</p>
 <p>Установка SET ANSI_DEFAULTS устанавливает режим максимальной совместимости с ANSI SQL92. При установке SET ANSI_DEFAULTS ON устанавливаются в ON следующие параметры:</p>
 <p>SET ANSI_NULLS, SET CURSOR_CLOSE_ON_COMMIT, SET ANSI_NULL_DFLT_ON, SET IMPLICIT_TRANSACTIONS, SET ANSI_PADDING, SET QUOTED_IDENTIFIER и SET ANSI_WARNINGS</p>

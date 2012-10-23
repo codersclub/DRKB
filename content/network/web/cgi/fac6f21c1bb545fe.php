@@ -16,7 +16,7 @@ end.
 </pre>
 <p>Всё что этот код делает это выводит в поток вывода 'Hello World!'. Открываем новый проэкт. Удаляем все из DPR файла, заполняем приведенным кодом. Компиллируем. Полученный файл helloworld.cgi ставим в папку cgi-bin IIS сервера, убеждаемся что в настройках сервера разрешено исполнение серверных скриптов и сам сервер включен, далее открываем браузер и вводим адрес, у меня это:</p>
 <p>httр://vitaly/cgi-bin/helloworld.cgi</p>
-<p>любуемся надписью "Hello World!" в браузере. </p>
+<p>любуемся надписью "Hello World!" в браузере.</p>
 <p>А вот чуть более сложный пример - вывод потока (в данном случае если поток содержит картинку) в браузер:</p>
 <pre>
 procedure OutputStream(m: TStream);
@@ -37,7 +37,7 @@ begin
 end;
 </pre>
 
-<p>Теперь сделанный cgi можно использовать в качестве картинки. </p>
+<p>Теперь сделанный cgi можно использовать в качестве картинки.</p>
 <p>Естественно, что работать такой CGI ,будет только в среде Windows (для работы под Linux надо подумать над компилляцией в среде Kilix)</p>
 <p>Ещё типы контента:</p>
 <p>text/html</p>
@@ -46,7 +46,7 @@ end;
 <p>image/gif</p>
 <p>image/jpeg</p>
 <p>image/x-MS-bmp</p>
-<p>image/x-xpixmap </p>
+<p>image/x-xpixmap</p>
 <p>video/mpeg</p>
 <p>video/quicktime</p>
 <p>audio/x-wav</p>
@@ -62,7 +62,7 @@ end;
 <p>application/octet-stream (для exe)</p>
 <p>application/x-zip</p>
 <p>application/mac-binhex40 (hqx)</p>
-<p>application/pdf </p>
+<p>application/pdf</p>
 <p>application/rtf</p>
 <p>application/x-latex</p>
 <p>application/zip</p>

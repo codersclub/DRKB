@@ -102,7 +102,7 @@ end; //cnsSmartPos
 </pre>
 
 <hr />
-<p>Круто конечно, но есть стандартная функция: </p>
+<p>Круто конечно, но есть стандартная функция:</p>
 
 <p>function PosEx(const SubStr, S: string; Offset: Cardinal = 1): Integer;</p>
 

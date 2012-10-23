@@ -13,6 +13,6 @@
 <p>(2:5020/898.15)</p>
 
 <p>Взято из FAQ:</p>
-<p>Delphi and Windows API Tips'n'Tricks </p>
+<p>Delphi and Windows API Tips'n'Tricks</p>
 <p>olmal@mail.ru</p>
 <p>https://www.chat.ru/~olmal</p>

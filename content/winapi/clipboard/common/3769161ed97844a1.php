@@ -116,6 +116,6 @@ end.
 
 <p>Alexey Mahotkin alexm@hsys.msk.ru (2:5020/433)</p>
 <p>Взято из FAQ:</p>
-<p>Delphi and Windows API Tips'n'Tricks </p>
+<p>Delphi and Windows API Tips'n'Tricks</p>
 <p>olmal@mail.ru</p>
 <p>https://www.chat.ru/~olmal</p>

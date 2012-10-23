@@ -3,7 +3,7 @@
 
 
 <p>Взято из FAQ:<a href="https://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml</a></p>
-<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm </p>
+<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm</p>
 <pre>
 procedure generateJPEGfromBrowser(browser: iWebBrowser2; jpegFQFilename: String;
 srcHeight: Integer; srcWidth: Integer; tarHeight: Integer; tarWidth: Integer);

@@ -239,7 +239,7 @@ end.
 </pre>
 <p>&nbsp;<br>
 &nbsp;<br>
-<p>Пример использования: </p>
+<p>Пример использования:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var

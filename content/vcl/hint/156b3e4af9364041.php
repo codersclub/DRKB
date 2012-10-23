@@ -1,7 +1,7 @@
 <h1>Длинные подсказки на StatusBar'e</h1>
 <div class="date">01.01.2007</div>
 
-Этот пример показывает, как сделать, чтобы на StatusBar выводилась длинная подсказка при поднесении мыши к объекту. </p>
+Этот пример показывает, как сделать, чтобы на StatusBar выводилась длинная подсказка при поднесении мыши к объекту.</p>
 <pre>
 public
   procedure DoShowHint(Sender: TObject);
@@ -22,7 +22,7 @@ begin
 end;
  
 </pre>
-<p>Символ "|" позволяет разделять две подсказки: та, что появляется на желтом фоне, и та, что лежит в Application.Hint. Для работы с частями подсказки существуют функции GetShortHint, GetLongHint. </p>
+<p>Символ "|" позволяет разделять две подсказки: та, что появляется на желтом фоне, и та, что лежит в Application.Hint. Для работы с частями подсказки существуют функции GetShortHint, GetLongHint.</p>
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

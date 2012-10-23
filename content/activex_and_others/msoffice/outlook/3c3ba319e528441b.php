@@ -1,8 +1,8 @@
 <h1>Сохранить вложения OutLook</h1>
 <div class="date">01.01.2007</div>
 
-<p>autor: patrick cleys <br>
-<p>homepage: http://www.dcmedical.org </p>
+<div class="author">Автор: Patrick Cleys, http://www.dcmedical.org</div>
+
 <pre>{ 
 won’t some backups of your outlook attachments are filtered 
 some incoming log files? here's the function. 

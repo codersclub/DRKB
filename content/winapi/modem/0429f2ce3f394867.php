@@ -53,9 +53,9 @@ Mode.Flags:=EV_RXCHAR +   EV_EVENT2;  { $1001 }
 end; 
 </pre>
 
-<p>Переменная "com" типа dword. </p>
+<p>Переменная "com" типа dword.</p>
 
-<p>Вы так же можете очистить буфер COM порта PurgeComm(Com,PURGE_RXCLEAR or PURGE_TXCLEAR); И прочитать из него </p>
+<p>Вы так же можете очистить буфер COM порта PurgeComm(Com,PURGE_RXCLEAR or PURGE_TXCLEAR); И прочитать из него</p>
 
 <pre>
 Function ReadCh(Var Ch:Byte):dword; 

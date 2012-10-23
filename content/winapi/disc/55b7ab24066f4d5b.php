@@ -122,9 +122,9 @@ end.
 </pre>
 
 
-<p>For more information about SCSI commands: </p>
+<p>For more information about SCSI commands:</p>
 
-<p>ftp://ftp.t10.org/t10/drafts/scsi-1/ </p>
-<p>ftp://ftp.t10.org/t10/drafts/spc/ </p>
-<p>ftp://ftp.t10.org/t10/drafts/spc2/ </p>
+<p>ftp://ftp.t10.org/t10/drafts/scsi-1/</p>
+<p>ftp://ftp.t10.org/t10/drafts/spc/</p>
+<p>ftp://ftp.t10.org/t10/drafts/spc2/</p>
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>

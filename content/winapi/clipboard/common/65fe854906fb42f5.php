@@ -137,6 +137,6 @@ begin
   ChangeClipboardChain(Handle, PrevHwnd);
 end;
 </pre>
-<p>Обращаю ваше внимание на то, что у меня не было никакой конкретной идеи прежде, чем я это сделал; я просто внимательно прочел файлы помощи по SetClipboardViewer и во всех связанных темах. </p>
+<p>Обращаю ваше внимание на то, что у меня не было никакой конкретной идеи прежде, чем я это сделал; я просто внимательно прочел файлы помощи по SetClipboardViewer и во всех связанных темах.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

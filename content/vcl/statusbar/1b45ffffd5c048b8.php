@@ -87,7 +87,7 @@ end;
 end. 
 </pre>
 
-<p>Это позволит вам разместить элемент управления в панели. Но этот способ не поддерживает использование вложенных панелей. Вероятно, вам также понадобиться выровнять элемент управления по правому краю. Не так это все сложно... </p>
+<p>Это позволит вам разместить элемент управления в панели. Но этот способ не поддерживает использование вложенных панелей. Вероятно, вам также понадобиться выровнять элемент управления по правому краю. Не так это все сложно...</p>
 <p>Взято из Советов по Delphi от <a href="mailto:mailto:webmaster@webinspector.com" target="_blank">Валентина Озерова</a></p>
 <p>Сборник Kuliba</p>
 <hr /><p>pgProgress положить на форму как Visible := false; StatusPanel надо OwnerDraw сделать и pефpешить, если Position меняется.</p>
@@ -104,5 +104,5 @@ end;
 </pre>
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
-<hr /><p>With TProgressBar.Create(StatusBar1) Do Parent:=StatusBar1; </p>
+<hr /><p>With TProgressBar.Create(StatusBar1) Do Parent:=StatusBar1;</p>
 <div class="author">Автор: Song</div>

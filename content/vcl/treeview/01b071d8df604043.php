@@ -21,7 +21,7 @@
 
 <hr />
 <div class="author">Автор: Eugene Mayevski </div>
-<p>TCustomTreeView.WMNotify. О том, что такое тип notify'а TTM_NEEDTEXT пpочтешь в хелпе. Убpать хинты можно, пеpекpыв обpаботчик для этого уведомительного сообщения. </p>
+<p>TCustomTreeView.WMNotify. О том, что такое тип notify'а TTM_NEEDTEXT пpочтешь в хелпе. Убpать хинты можно, пеpекpыв обpаботчик для этого уведомительного сообщения.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 &nbsp;</p>

@@ -31,9 +31,9 @@ begin
 end;
 </pre>
 
-<p>для того, чтобы обатно её показать, используйте </p>
-<p>hideStartbutton(true); </p>
-<p>или hideStartbutton(false); </p>
-<p>чтобы скрыть !! </p>
+<p>для того, чтобы обатно её показать, используйте</p>
+<p>hideStartbutton(true);</p>
+<p>или hideStartbutton(false);</p>
+<p>чтобы скрыть !!</p>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

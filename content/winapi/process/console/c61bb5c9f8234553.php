@@ -39,9 +39,9 @@ end;
 
 <p>А где-то в программе:</p>
 
-<p>SetConsoleCtrlHandler( Ctrl_Handler, TRUE ); </p>
+<p>SetConsoleCtrlHandler( Ctrl_Handler, TRUE );</p>
 
-<p>Таких обработчиков можно навесить кучу. Если при обработке какого-то из сообщений обработчик возвращает FALSE, то вызывается следующий обработчик. Можно настроить таких этажерок, что ого-го :-))) </p>
+<p>Таких обработчиков можно навесить кучу. Если при обработке какого-то из сообщений обработчик возвращает FALSE, то вызывается следующий обработчик. Можно настроить таких этажерок, что ого-го :-)))</p>
 
-<p>Короче, смотри описание SetConsoleCtrlHandler -- там всё есть. </p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<p>Короче, смотри описание SetConsoleCtrlHandler -- там всё есть.</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 

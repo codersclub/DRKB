@@ -2,12 +2,12 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Протокол Ping предназначен для тестирования компьютерных соединений в Интернете путём посылки через протокол Internet Protocol (IP) по обределённому адресу сообщения и ожидания от него ответа. </p>
-<p>ICMP - Internet Control Message Protocol. ICMP служит для передачи сообщений об ошибках а так же управляющих сообщений . ICMP-тест может показать насколько быстро проходит информация между двумя узлами в Интернете. </p>
-<p>1. Запускаем Delphi; </p>
-<p>2. В Новом проекте добавляем в форму Tbutton, Tedit и Tmemo; </p>
-<p>3. Вставляем "winsock"; </p>
-<p>4. объявляем структурку для IP-заголовка: </p>
+<p>Протокол Ping предназначен для тестирования компьютерных соединений в Интернете путём посылки через протокол Internet Protocol (IP) по обределённому адресу сообщения и ожидания от него ответа.</p>
+<p>ICMP - Internet Control Message Protocol. ICMP служит для передачи сообщений об ошибках а так же управляющих сообщений . ICMP-тест может показать насколько быстро проходит информация между двумя узлами в Интернете.</p>
+<p>1. Запускаем Delphi;</p>
+<p>2. В Новом проекте добавляем в форму Tbutton, Tedit и Tmemo;</p>
+<p>3. Вставляем "winsock";</p>
+<p>4. объявляем структурку для IP-заголовка:</p>
 <pre>
 type
   IPINFO = record
@@ -19,7 +19,7 @@ type
   end;
 </pre>
 
-<p>5. объявляем структурку для хранения ICMP пакета: </p>
+<p>5. объявляем структурку для хранения ICMP пакета:</p>
 <pre>
 type
   ICMPECHO = record
@@ -33,14 +33,14 @@ type
   end;
 </pre>
 
-<p>6. Объявляем функции и процедуры, которые мы будем вызывать из ICMP.DLL </p>
+<p>6. Объявляем функции и процедуры, которые мы будем вызывать из ICMP.DLL</p>
 <pre>
 TIcmpCreateFile = function():integer; {$IFDEF WIN32} stdcall; {$ENDIF} 
 TIcmpCloseHandle = procedure(var handle:integer);{$IFDEF WIN32} stdcall; {$ENDIF} 
 TIcmpSendEcho = function(var handle:integer; endereco:DWORD; buffer:variant; tam:WORD; IP:IPINFO; ICMP:ICMPECHO; tamicmp:DWORD; tempo:DWORD):DWORD;{$IFDEF WIN32} stdcall; {$ENDIF} 
 </pre>
 
-<p>7. В Tbutton в событие Onclick вставляем следующий код: </p>
+<p>7. В Tbutton в событие Onclick вставляем следующий код:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var
@@ -138,8 +138,8 @@ end;
 </pre>
 
 <p>У данного примера есть один недостаток - программа не воспримет доменное имя, только IP-адресс. Для пользователей NT не используйте функцию IcmpCloseHandle.</p>
-<p>Это всё….. </p>
-<p>Ну и в конце полный исходный код примера: </p>
+<p>Это всё…..</p>
+<p>Ну и в конце полный исходный код примера:</p>
 <pre>
 unit Unit1;
  

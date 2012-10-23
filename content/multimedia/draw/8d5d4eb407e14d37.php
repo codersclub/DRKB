@@ -3,7 +3,7 @@
 
 
 
-<p>Polygon - метод компонента TCanvas получает в качестве параметра динамический массив точек. Функция PolyPolygon() из Windows GDI получает указатель на массив точек. </p>
+<p>Polygon - метод компонента TCanvas получает в качестве параметра динамический массив точек. Функция PolyPolygon() из Windows GDI получает указатель на массив точек.</p>
 
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);

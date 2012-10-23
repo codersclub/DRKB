@@ -58,7 +58,7 @@ end;
 </pre>
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>
 <hr />
-<p>It's very simple to create a empty Access-Database (*.mdb File) using OLE. It's not necessary to have MS-Access installed on your computer. If an exception occures the error message will returned. After creating the DB you can create Tables with simple SQL-Statements. </p>
+<p>It's very simple to create a empty Access-Database (*.mdb File) using OLE. It's not necessary to have MS-Access installed on your computer. If an exception occures the error message will returned. After creating the DB you can create Tables with simple SQL-Statements.</p>
 <pre>
 uses comobj, sysutils;
  

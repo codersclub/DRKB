@@ -7,7 +7,7 @@
 
 <p>Recently I got unique key violations during insert attempts on a piece of code that used to work (what can go bad, will go bad). I found that the offending field - was actually created by a generator. For some reason the generator returned values that where already in the database.</p>
 
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>how can I display the current value of the generator?</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>how can I adjust the value of the generator?</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>how can I display the current value of the generator?</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>how can I adjust the value of the generator?</td></tr></table>
 <p>Answer:</p>
 
 <p>See the example (table name is SD_LOAD, generator name is GEN_SD_LOAD).</p>

@@ -4,7 +4,7 @@
 
 <p>Ниже приведён unit, который позволяет убить задачу в Windows NT.</p>
 
-<p>Entry : </p>
+<p>Entry :</p>
 <pre>
  
 function Kill_By_Pid(pid : longint) : integer; 

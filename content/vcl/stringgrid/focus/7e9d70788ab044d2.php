@@ -1,7 +1,7 @@
 <h1>Фокус ячейки TStringGrid</h1>
 <div class="date">01.01.2007</div>
 
-Автор: Simon </p>
+Автор: Simon</p>
 <pre>
 procedure SetGridFocus(SGrid: TStringGrid; r, c: integer);
 var
@@ -27,6 +27,6 @@ end;
  
 SetGridFocus(StringGrid1, 10, 2);
 </pre>
-<p>Это всегда срабатывает в случае, если никакая ячейка не выбрана или фокус имеет другой элемент управления. </p>
+<p>Это всегда срабатывает в случае, если никакая ячейка не выбрана или фокус имеет другой элемент управления.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

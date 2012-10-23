@@ -5,7 +5,7 @@
 <p>Взято из FAQ:<a href="https://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml</a></p>
 Перевод материала с сайта members.home.com/hfournier/webbrowser.htm</p>
 
-<p>Пример показывает как добавить содержимое каждой ячейки в TMemo: </p>
+<p>Пример показывает как добавить содержимое каждой ячейки в TMemo:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var

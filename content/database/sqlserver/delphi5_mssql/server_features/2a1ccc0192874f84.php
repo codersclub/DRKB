@@ -2,13 +2,13 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Триггеры в MS SQL Server срабатывают после обновления и один раз на оператор (а не на каждую обновленную запись). Количество триггеров на таблицу неограниченно. В триггере доступна обновленная таблица и две виртуальных таблицы Inserted и Deleted. </p>
+<p>Триггеры в MS SQL Server срабатывают после обновления и один раз на оператор (а не на каждую обновленную запись). Количество триггеров на таблицу неограниченно. В триггере доступна обновленная таблица и две виртуальных таблицы Inserted и Deleted.</p>
 <p>В них находятся:</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Inserted &nbsp; &nbsp; &nbsp; &nbsp;Deleted &nbsp; &nbsp; &nbsp; </p>
-<p><b>INSERT</b> &nbsp; &nbsp; &nbsp; &nbsp;Вставленные записи &nbsp; &nbsp; &nbsp; &nbsp;Нет записей &nbsp; &nbsp; &nbsp; </p>
-<p><b>UPDATE</b> &nbsp; &nbsp; &nbsp; &nbsp;Новые версии записей &nbsp; &nbsp; &nbsp; &nbsp;Старые версии записей &nbsp; &nbsp; &nbsp; </p>
-<p><b>DELETE</b> &nbsp; &nbsp; &nbsp; &nbsp;Нет записей &nbsp; &nbsp; &nbsp; &nbsp;Удаленные записи &nbsp; &nbsp; &nbsp; </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;Inserted &nbsp; &nbsp; &nbsp; &nbsp;Deleted &nbsp; &nbsp; &nbsp;</p>
+<p><b>INSERT</b> &nbsp; &nbsp; &nbsp; &nbsp;Вставленные записи &nbsp; &nbsp; &nbsp; &nbsp;Нет записей &nbsp; &nbsp; &nbsp;</p>
+<p><b>UPDATE</b> &nbsp; &nbsp; &nbsp; &nbsp;Новые версии записей &nbsp; &nbsp; &nbsp; &nbsp;Старые версии записей &nbsp; &nbsp; &nbsp;</p>
+<p><b>DELETE</b> &nbsp; &nbsp; &nbsp; &nbsp;Нет записей &nbsp; &nbsp; &nbsp; &nbsp;Удаленные записи &nbsp; &nbsp; &nbsp;</p>
 <p>Триггер может, основываясь на содержании этих таблиц осуществить дополнительную модификацию данных, либо отменить транзакцию, вызвавшую этот оператор. Например:</p>
 
 <pre>

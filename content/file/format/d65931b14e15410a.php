@@ -55,7 +55,7 @@ end;
 </pre>
 
 <hr />
-<p>Чтобы преобразовать Icon в Bitmap используйте TImageList. для обратного преобразования замените метод AddIcon на Add, и метод GetBitmap на GetIcon. </p>
+<p>Чтобы преобразовать Icon в Bitmap используйте TImageList. для обратного преобразования замените метод AddIcon на Add, и метод GetBitmap на GetIcon.</p>
 
 <pre>
 function Icon2Bitmap(Icon: TIcon): TBitmap;
@@ -71,7 +71,7 @@ end;
 </pre>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
-<p>Способ преобразования изображения размером 32x32 в иконку. </p>
+<p>Способ преобразования изображения размером 32x32 в иконку.</p>
 
 <pre>
 unit main;

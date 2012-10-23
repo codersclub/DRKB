@@ -14,4 +14,4 @@ begin with MediaPlayer1 do
 end;
 </pre>
 
-<p>Взято с сайта <a href="https://blackman.wp-club.net/myfaq/default.php" target="_blank">https://blackman.wp-club.net/myfaq/default.php</a> </p>
+<p>Взято с сайта <a href="https://blackman.wp-club.net/myfaq/default.php" target="_blank">https://blackman.wp-club.net/myfaq/default.php</a></p>

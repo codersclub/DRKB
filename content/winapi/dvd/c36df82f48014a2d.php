@@ -48,6 +48,6 @@ begin
   end;
 end;
 </pre>
-<p>Какие параметры передавать - написано в том же ASPI.pas </p>
+<p>Какие параметры передавать - написано в том же ASPI.pas</p>
 <div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

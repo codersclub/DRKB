@@ -204,7 +204,7 @@ Label1.Caption := WhatWindowsIsInstalled+' (Build '+GetWindowsVersion1+')';
 
 <div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
-<hr /><p>Этот пример должен работать на всех версиях Windows </p>
+<hr /><p>Этот пример должен работать на всех версиях Windows</p>
 <pre>
 {$IFDEF WIN32}
  

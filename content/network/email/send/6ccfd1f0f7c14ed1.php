@@ -35,9 +35,9 @@ end;
 <div class="author">Автор: Eddie Shipman</div>
 <p>Пример использует VB Script для Outlook, который позволяет произвести такую операцию. Создаётся OLE-объект - 'Outlook.Application' и в него передаётся скрипт.</p>
 <p>Совместимость: все версии Delphi</p>
-<p>Измените recipientaddress@recipienthost.com на Ваш собственный e-mail </p>
-<p>адресс. У Вас должен быть проинсталирован Outlook, </p>
-<p>{Я не уверен, что это будет работать в Outlook Express.} </p>
+<p>Измените recipientaddress@recipienthost.com на Ваш собственный e-mail</p>
+<p>адресс. У Вас должен быть проинсталирован Outlook,</p>
+<p>{Я не уверен, что это будет работать в Outlook Express.}</p>
 <p class="note">Примечание Vit: Это точно не будет работать в&nbsp; Outlook Express</p>
 <pre>
 uses ComObj; {Delphi 5} 

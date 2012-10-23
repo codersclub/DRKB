@@ -2,13 +2,13 @@
 <div class="date">01.01.2007</div>
 
 Автор: Daddy<br>
-<p>WEB-сайт: http://daddy.mirgames.ru </p>
-<p>Кручу-верчу, обмануть хочу, или как использовать продвинутые методы вывода спрайтов. В классе TSprite есть три метода: DoDraw, DoCollision и DoMove Чтобы заставить спрайт созданный таким образом: </p>
+<p>WEB-сайт: http://daddy.mirgames.ru</p>
+<p>Кручу-верчу, обмануть хочу, или как использовать продвинутые методы вывода спрайтов. В классе TSprite есть три метода: DoDraw, DoCollision и DoMove Чтобы заставить спрайт созданный таким образом:</p>
 <pre>
 TPlayer = class(TImageSprite)
 end;
 </pre>
-<p>выводится через продвинутые методы (DrawRotate, DrawAplha, DrawSub, DrawWave, StretchDraw), нужно "заглушить" стандартный вывод при создании объекта. Вот так: </p>
+<p>выводится через продвинутые методы (DrawRotate, DrawAplha, DrawSub, DrawWave, StretchDraw), нужно "заглушить" стандартный вывод при создании объекта. Вот так:</p>
 <pre>
 type
    THero = class(TImageSprite)
@@ -19,7 +19,7 @@ type
       procedure DoDraw; override; // вот здесь
    end;
 </pre>
-<p>Теперь в процедуре DoDraw выводим спрайт нужным нам способом. Вот так: </p>
+<p>Теперь в процедуре DoDraw выводим спрайт нужным нам способом. Вот так:</p>
 <pre>
  
 procedure THero.DoDraw;
@@ -32,14 +32,14 @@ begin
                     round(animpos),0.5,0.5,Angle);
 end;
 </pre>
-<p>Посмотрите этот dodraw.zip примерчик, для более ясного понимания. А теперь недокументированная фишка! Забываем то, что написано выше и читаем дальше. Cоздадим спрайт таким образом: </p>
+<p>Посмотрите этот dodraw.zip примерчик, для более ясного понимания. А теперь недокументированная фишка! Забываем то, что написано выше и читаем дальше. Cоздадим спрайт таким образом:</p>
 <pre>
 TPlayer = class(TImageSpriteEx)
 protected
    procedure DoMove(MoveCount: Integer); override;
 end;
 </pre>
-<p>И теперь в процедуре DoMove можно задать Angle (угол поворота спрайта) и Alpha (прозрачность спрайта). Примерно так: </p>
+<p>И теперь в процедуре DoMove можно задать Angle (угол поворота спрайта) и Alpha (прозрачность спрайта). Примерно так:</p>
 <pre>
 type
    THero = class(TImageSpriteEx)

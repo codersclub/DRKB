@@ -81,5 +81,5 @@ The following links set and get a cookie onto your browser&lt;P&gt;
 &lt;/HTML&gt;
 </pre>
 <p>&nbsp;<br>
-<p>&#169; Delphi 4 Developer's Guide </p>
+<p>&#169; Delphi 4 Developer's Guide</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

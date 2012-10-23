@@ -34,8 +34,8 @@ type
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
 <hr />
-<p>У многооконного приложения, как Delphi, обычно только одна кнопка на TaskBar. Если же вам понадобилось, чтобы у каждого окна была своя кнопка, воспользуйтесь функцией SetWindowLong, добавив флаг WS_EX_APPWINDOW. </p>
-<p>В модуле первого окна: </p>
+<p>У многооконного приложения, как Delphi, обычно только одна кнопка на TaskBar. Если же вам понадобилось, чтобы у каждого окна была своя кнопка, воспользуйтесь функцией SetWindowLong, добавив флаг WS_EX_APPWINDOW.</p>
+<p>В модуле первого окна:</p>
 <pre>
 uses Unit2, Unit3;
  
@@ -49,7 +49,7 @@ begin
   Form3.Show;
 end;
 </pre>
-<p>В модуле второго окна: </p>
+<p>В модуле второго окна:</p>
 <pre>
 uses Unit3;
  
@@ -67,7 +67,7 @@ begin
     Application.Terminate;
 end;
 </pre>
-<p>В модуле третьего окна: </p>
+<p>В модуле третьего окна:</p>
 <pre>
 uses Unit2;
  

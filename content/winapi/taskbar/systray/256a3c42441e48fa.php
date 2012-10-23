@@ -3,7 +3,7 @@
 
 
 
-<p>Проще всего использовать RxTrayIcon компонент из библиотеки RxLib </p>
+<p>Проще всего использовать RxTrayIcon компонент из библиотеки RxLib</p>
 <pre>
 procedure TForm1.ApplicationMinimize(Sender : TObject);
 
@@ -104,7 +104,7 @@ protected
 
 <p>Для выполнения пунктов всплывающего меню, пишите стандартные обработчики onClick() для его пунктов.</p>
 
-<p>Данный опус писался только в форме, в IDE не тестировался . Всё работает конечно, но не обессудьте, если будут ошибочки мелкие. </p>
+<p>Данный опус писался только в форме, в IDE не тестировался . Всё работает конечно, но не обессудьте, если будут ошибочки мелкие.</p>
 <div class="author">Автор: Song</div>
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
@@ -163,6 +163,6 @@ protected
 <p> &nbsp;&nbsp;&nbsp; пустым,&nbsp; если&nbsp; вам не нужен ToolTip. Поле uFlags должно содержать</p>
 <p> &nbsp;&nbsp;&nbsp; как минимум NIF_MESSAGE | NIF_ICON.</p>
 
-<p>Взято из FAQ: </p>
+<p>Взято из FAQ:</p>
 <a href="https://blackman.km.ru/myfaq/cont4.phtml]http://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml]http://blackman.km.ru/myfaq/cont4.phtml</a></p>
 

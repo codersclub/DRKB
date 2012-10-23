@@ -7,5 +7,5 @@ SELECT CAST((поле_с_датой -"NOW") AS INTEGER) FROM MyBase
 </pre>
 
 
-<p>Получишь результат в днях. </p>
+<p>Получишь результат в днях.</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

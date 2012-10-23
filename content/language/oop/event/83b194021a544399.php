@@ -60,7 +60,7 @@ var
 <div class="author">Автор: Le Taon</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<p>По идее, при вызове OnClick первым параметром будет запихнут указатель на экземпляр того класса который в этом OnClick хранится . Я в низкоуровневой реализации не силен, но кажись, так как параметры в процедурах в Delphi передаются через регистры, то ничего страшного не произойдет. </p>
+<p>По идее, при вызове OnClick первым параметром будет запихнут указатель на экземпляр того класса который в этом OnClick хранится . Я в низкоуровневой реализации не силен, но кажись, так как параметры в процедурах в Delphi передаются через регистры, то ничего страшного не произойдет.</p>
 <pre>
 
 procedure C(Self:pointer;Sender:TObject);
@@ -73,7 +73,7 @@ begin
   @Button1.OnClick:=@c;
 end;
 </pre>
-<p>Self тут у нас будет равен nil, а Sender как раз и получается Sender'ом. </p>
+<p>Self тут у нас будет равен nil, а Sender как раз и получается Sender'ом.</p>
 <div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

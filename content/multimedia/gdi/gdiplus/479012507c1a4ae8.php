@@ -3,11 +3,11 @@
 
 Доброе время суток, уважаемые коллеги. В данной статье мы разберем вывод графических примитивов и вывод изображений. GDI+ предоставляет программисту огромный выбор методов для вывода графики, в данной статье мы рассмотрим вывод примитивов с заливкой и без, вывод примитивов с своим стилем линии, использование групп (путей) для группировки примитивов и вывода их на экран, также мы рассмотрим операции по загрузке и выводу изображений, создание на основе изображения - мини-просмотра (Thumbnail), вывода изображения в область (растягивание), вывод изображения в параллелограмм. В данной статье я не буду специально рассматривать трансформацию изображений и примитивов, а так же заливку примитивов различными градиентами и изображениями, так как в первой части данного цикла статей я дал простые примеры по данным вопросам, а применить их к изображению иль к примитивам не составляет особого труда.<br>
 &nbsp;<br>
-<p>Итак, что в данной части мы получим - </p>
+<p>Итак, что в данной части мы получим -</p>
 <img src="/pic/clip0270.png" width="473" height="372" border="0" alt="clip0270">вот такой пример. <br>
 &nbsp;<br>
-<p>Итак, сверху - вниз : </p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>1. Вывод примитивов без заливки (для этого в GDI+ предусмотрены функции начинающиеся с Draw&#8230;) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>2. Вывод примитивов с заливкой (для этого в GDI+ предусмотрены функции начинающиеся с Fill&#8230;) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>3. Создание мини-просмотра </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>4.Вывод оригинального изображения, вывод растянутого и вывод изображения в параллелограмм. </td></tr></table></div><p>Рассмотрим это в коде : </p>
+<p>Итак, сверху - вниз :</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>1. Вывод примитивов без заливки (для этого в GDI+ предусмотрены функции начинающиеся с Draw...)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>2. Вывод примитивов с заливкой (для этого в GDI+ предусмотрены функции начинающиеся с Fill...)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>3. Создание мини-просмотра</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>4.Вывод оригинального изображения, вывод растянутого и вывод изображения в параллелограмм.</td></tr></table></div><p>Рассмотрим это в коде :</p>
 <pre>
 procedure TForm1.PaintBox1Paint(Sender: TObject);
 Const
@@ -116,9 +116,9 @@ begin
   graphicsGDIPlus.Free;
 end;
 </pre>
-<p>Вот в принципе и все, еще раз повторюсь, ничего сложного в GDI+ нет, а огромное количество примеров по использованию от http://www.progdigy.com дадут вам совершенно новый механизм по выводу графики в Delphi. </p>
-<p>Данной статьей я хотел показать основы работы, привлечь внимание начинающих программистов к данной библиотеке </p>
-С уважением к коллегам, Дмитрий Кузан. </p>
+<p>Вот в принципе и все, еще раз повторюсь, ничего сложного в GDI+ нет, а огромное количество примеров по использованию от http://www.progdigy.com дадут вам совершенно новый механизм по выводу графики в Delphi.</p>
+<p>Данной статьей я хотел показать основы работы, привлечь внимание начинающих программистов к данной библиотеке</p>
+С уважением к коллегам, Дмитрий Кузан.</p>
 
 <div class="author">Автор: Дмитрий Кузан</div>
 

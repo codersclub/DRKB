@@ -86,7 +86,7 @@ end;
 &nbsp;<br>
 Чудо третье (One more low integer miracle).<br>
 &nbsp;<br>
-<p>Новая кнопка на форме будет реагировать на нажатие следующим образом: </p>
+<p>Новая кнопка на форме будет реагировать на нажатие следующим образом:</p>
 <pre>
 procedure TfrmAllMiracles.btnLowIntMrclClick( Sender: TObject);
 var
@@ -171,7 +171,7 @@ end;
 Такое "Чудо" я видел несколько раз и в разных проявлениях. Сколько раз бы вы не нажимали на кнопку btnIsMrcl, вы каждый раз будете видеть сообщение 'Not a Control', а конструктор TControl так никогда и не будет вызван.<br>
 &nbsp;<br>
 Вот, что говорит Help:<br>
-&#8230;The expression object is class returns True if object is an instance of the class denoted by class or one of its descendants, and False otherwise. (If object is nil, the result is False.)<br>
+...The expression object is class returns True if object is an instance of the class denoted by class or one of its descendants, and False otherwise. (If object is nil, the result is False.)<br>
 &nbsp;<br>
 Дело в том, что оператор is использует ссылку на класс обьекта, а не то, как описана переменная, которая по сути - простой указатель. Так что TControl не всегда TControl.<br>
 &nbsp;<br>
@@ -201,7 +201,7 @@ IsControlLib;
 &nbsp;<br>
 Как вы видите эта библиотека экспортирует только одну очень простую функцию, которая возвращает знечение True в том случае, если ее единственный параметр происходит от TControl и False - в остальных случаях.<br>
 &nbsp;<br>
-<p>В модуль формы нашего основного проекта добавим следующее определение: </p>
+<p>В модуль формы нашего основного проекта добавим следующее определение:</p>
 <pre>
 unit AllMir;
  
@@ -295,7 +295,7 @@ end;
 &nbsp;<br>
 Не кажется ли вам это удивительным - variant можно складывать с чем угодно. Например, integer плюс variant - будет variant, а variant можно опять складывать с чем угодно...<br>
 &nbsp;<br>
-<p>Новая кнопка на форме будет выполнять следующие действия: </p>
+<p>Новая кнопка на форме будет выполнять следующие действия:</p>
 <pre>
 procedure TfrmAllMiracles.btnVarTrickClick(Sender: TObject);
 var
@@ -333,7 +333,7 @@ ShowMessage(sl.text);
 end;
 </pre>
 <p>&nbsp;<br>
-<p>И кнопка на форме: </p>
+<p>И кнопка на форме:</p>
 <pre>
 procedure TfrmAllMiracles.btnWithSelfTrickClick(Sender: TObject);
 var
@@ -386,6 +386,6 @@ end;
 </pre>
 <p>&nbsp;<br>
 &nbsp;<br>
-<p>Проверьте - работает. </p>
+<p>Проверьте - работает.</p>
 <div class="author">Автор: Максим Кузьминский</div>
 <p>Источник: <a href="https://delphikingdom.ru" target="_blank">https://delphikingdom.ru</a></p>

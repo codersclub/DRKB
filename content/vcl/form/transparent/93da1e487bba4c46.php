@@ -59,13 +59,13 @@ end.
 
 <hr />SetWindowTransp(hndl: THandle; Perc: byte);</p>
 
-<p>hndl </p>
-Hanle окна, которое надо сделать полупрозрачным. </p>
-<p>Perc </p>
+<p>hndl</p>
+Hanle окна, которое надо сделать полупрозрачным.</p>
+<p>Perc</p>
 Число от 1 до 100, указывающее уровень прозрачности.</p><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <hr />Есть более продвинутые возможности (например, альфа-канал в битмапе)</p>
-<p>https://msdn.microsoft.com/isapi/msdnlib.idc?theURL=/library/techart/layerwin.htm </p>
+<p>https://msdn.microsoft.com/isapi/msdnlib.idc?theURL=/library/techart/layerwin.htm</p>
 <pre>
 unit TransparentWnd;
  

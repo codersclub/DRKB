@@ -16,7 +16,7 @@
 uses OpenGL;
 </pre>
 <p>Если вы используете Delphi, то всё необходимое для работы с OpenGL находится в модуле OpenGL.dcu. А если вы используете С++Builder, то подключать придётся несколько файлов:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>gl.h и glu.h содержат прототипы основных функций OpenGL определённых в opengl32.dll и glu32.dll. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>glaux.h содержит вспомогательные (auxiliary) функции (glaux.dll). В этой статье я не буду использовать glaux.h, т.к. его функции не доступны в Delphi, да и не люблю я эту библиотеку. Кроме того основные задачи glaux (как, в прочем, и аналогичной, но более качественной, библиотеки GLUT) &#8211; это создание окон, таймеров, обработка клавиатуры и мыши, всё это есть в ИСР (Интегральная Среда Разработки) Delphi или С++Builder. </td></tr></table></div><p>После подключения заголовочных файлов нужно установить формат пикселей. Я для этой цели использую следующую функцию:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>gl.h и glu.h содержат прототипы основных функций OpenGL определённых в opengl32.dll и glu32.dll.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>glaux.h содержит вспомогательные (auxiliary) функции (glaux.dll). В этой статье я не буду использовать glaux.h, т.к. его функции не доступны в Delphi, да и не люблю я эту библиотеку. Кроме того основные задачи glaux (как, в прочем, и аналогичной, но более качественной, библиотеки GLUT) &#8211; это создание окон, таймеров, обработка клавиатуры и мыши, всё это есть в ИСР (Интегральная Среда Разработки) Delphi или С++Builder.</td></tr></table></div><p>После подключения заголовочных файлов нужно установить формат пикселей. Я для этой цели использую следующую функцию:</p>
 <pre>
       function bSetupPixelFormat(DC:HDC):boolean;
       var
@@ -163,7 +163,7 @@ uses OpenGL;
 <p>glColor устанавливает цвет фигуры. Существует следующий синтаксис как для glColor, так и для других функций OpenGL:</p>
 <p>gl&lt;name&gt;[n][type]</p>
 <p>Поясняю, каждая функция OpenGL начинается с префикса &#171;gl&#187;. Далее следует название функции. После названия &#8211; количество параметров (если функция определена для разного кол-ва параметров). И, наконец, переменными какого типа являются параметры:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>b &#8211; GLbyte байт </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>s &#8211; GLshort короткое целое </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>i &#8211; GLint целое </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>f &#8211; GLfloat дробное </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>d &#8211; GLdouble дробное с двойной точностью </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>ub &#8211; GLubyte беззнаковый байт </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>us &#8211; GLushort беззнаковое короткое целое </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>ui &#8211; GLuint беззнаковое целое </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr ><td width="24">&#183;</td><td>v &#8211; вектор &#8211; массив из n элементов указанного типа </td></tr></table></div><p>Итак, glColor3f означает, что цвет задаётся тремя компонентами типа GLfloat.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>b &#8211; GLbyte байт</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>s &#8211; GLshort короткое целое</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>i &#8211; GLint целое</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>f &#8211; GLfloat дробное</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>d &#8211; GLdouble дробное с двойной точностью</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ub &#8211; GLubyte беззнаковый байт</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>us &#8211; GLushort беззнаковое короткое целое</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ui &#8211; GLuint беззнаковое целое</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>v &#8211; вектор &#8211; массив из n элементов указанного типа</td></tr></table></div><p>Итак, glColor3f означает, что цвет задаётся тремя компонентами типа GLfloat.</p>
 <p>Для рисования сферы мы используем механизм из glu32.dll. Создаём объект типа GLUquadricObj и инициализируем его функцией gluNewQuadric. Далее устанавливаем стиль фигуры функцией gluQuadricDrawStyle (quadObj, GLU_FILL). Стиль может быть GLU_FILL, GLU_LINE или GLU_POINT. Что каждый из них значит, проверьте сами.</p>
 <p>gluSphere &#8211; делает из quadObj сферу. Три последних параметра &#8211; это радиус и количество разбиений поперёк и вдоль оси Z соответственно. Я взял маленькое число разбиений, чтобы было видно, что сфера крутится.</p>
 <p>И не забудем освободить память, занимаемую под quadObj - gluDeleteQuadric(quadObj).</p>
@@ -174,16 +174,16 @@ uses OpenGL;
 <p>Системы координат</p>
 <p>Рассматривая какой-либо трёхмерный объект, мы всегда определяем его положение и размеры относительно некоторой привычной, и удобной в настоящий момент системы координат, связанной с реальным миром. Такая исходная система координат в компьютерной графике является правосторонней и называется мировой системой координат. Для того, чтобы можно было изобразить объект на экране, его необходимо предварительно перевести (или преобразовать) в другую систему координат, которая связана с точкой наблюдения и носит название видовой системы координат. Эта система координат является левосторонней. И, наконец, любое трёхмерное изображение мы всегда рисуем на двумерном экране, который имеет свою экранную систему координат. (Этот абзац я списал у Ю.Тихомирова).</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td >Правосторонняя система координат (мировая)</p>
+<tr>
+<td>Правосторонняя система координат (мировая)</p>
 </td>
-<td >Левосторонняя система координат (видовая)</p>
+<td>Левосторонняя система координат (видовая)</p>
 </td>
 </tr>
-<tr >
-<td ><img src="/pic/clip0015.png" width="234" height="187" border="0" alt="clip0015"></p>
+<tr>
+<td><img src="/pic/clip0015.png" width="234" height="187" border="0" alt="clip0015"></p>
 </td>
-<td ><img src="/pic/clip0016.png" width="204" height="186" border="0" alt="clip0016">
+<td><img src="/pic/clip0016.png" width="204" height="186" border="0" alt="clip0016">
 </td>
 </tr>
 </table>
@@ -219,64 +219,64 @@ procedure glEnd;
 </pre>
 <p>Параметр mode показывает, какие примитивы будут рисоваться. Доступны следующие значения:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
-<tr >
-<td ><p>GL_POINTS</p>
+<tr>
+<td><p>GL_POINTS</p>
 </td>
-<td ><p>Каждая вершина &#8211; отдельная точка</p>
-</td>
-</tr>
-<tr >
-<td ><p>GL_LINES</p>
-</td>
-<td ><p>Каждая пара вершин &#8211; отдельная линия. Если число вершин нечётно, то последняя игнорируется</p>
+<td><p>Каждая вершина &#8211; отдельная точка</p>
 </td>
 </tr>
-<tr >
-<td ><p>GL_LINE_STRIP</p>
+<tr>
+<td><p>GL_LINES</p>
 </td>
-<td ><p>Последовательность связанных отрезков. Первые две вершины &#8211; первый отрезок. Третья вершина определяет второй отрезок с началом в конце первого и концом в этой вершине и т.д</p>
-</td>
-</tr>
-<tr >
-<td ><p>GL_LINE_LOOP</p>
-</td>
-<td ><p>Аналогичен GL_LINE_STRIP, только последняя вершина соединяется отрезком с первой.</p>
+<td><p>Каждая пара вершин &#8211; отдельная линия. Если число вершин нечётно, то последняя игнорируется</p>
 </td>
 </tr>
-<tr >
-<td ><p>GL_TRIANGLES</p>
+<tr>
+<td><p>GL_LINE_STRIP</p>
 </td>
-<td ><p>Каждая тройка вершин &#8211; отдельный треугольник</p>
-</td>
-</tr>
-<tr >
-<td ><p>GL_TRIANGLE_STRIP</p>
-</td>
-<td ><p>Группа связанных треугольников. Первые три вершины &#8211; первый треугольник. Вторая, третья и четвёртая вершины - второй треугольник и т.д.</p>
+<td><p>Последовательность связанных отрезков. Первые две вершины &#8211; первый отрезок. Третья вершина определяет второй отрезок с началом в конце первого и концом в этой вершине и т.д</p>
 </td>
 </tr>
-<tr >
-<td ><p>GL_TRIANGLE_FAN</p>
+<tr>
+<td><p>GL_LINE_LOOP</p>
 </td>
-<td ><p>Также группа связанных треугольников. Первые три вершины &#8211; первый треугольник. Первая, вторая и четвёртая вершины - второй треугольник и т.д.</p>
-</td>
-</tr>
-<tr >
-<td ><p>GL_QUADS</p>
-</td>
-<td ><p>Каждые четыре вершины &#8211; отдельный четырёхугольник.</p>
+<td><p>Аналогичен GL_LINE_STRIP, только последняя вершина соединяется отрезком с первой.</p>
 </td>
 </tr>
-<tr >
-<td ><p>GL_QUAD_STRIP</p>
+<tr>
+<td><p>GL_TRIANGLES</p>
 </td>
-<td ><p>Группа связанных четырёхугольников. Первые четыре вершины &#8211; первый четырёхугольник. Третья, четвёртая, пятая и шестая вершины &#8211; второй четырёхугольник и т.д.</p>
+<td><p>Каждая тройка вершин &#8211; отдельный треугольник</p>
 </td>
 </tr>
-<tr >
-<td ><p>GL_POLYGON</p>
+<tr>
+<td><p>GL_TRIANGLE_STRIP</p>
 </td>
-<td ><p>Рисует отдельный выпуклый многоугольник (один).</p>
+<td><p>Группа связанных треугольников. Первые три вершины &#8211; первый треугольник. Вторая, третья и четвёртая вершины - второй треугольник и т.д.</p>
+</td>
+</tr>
+<tr>
+<td><p>GL_TRIANGLE_FAN</p>
+</td>
+<td><p>Также группа связанных треугольников. Первые три вершины &#8211; первый треугольник. Первая, вторая и четвёртая вершины - второй треугольник и т.д.</p>
+</td>
+</tr>
+<tr>
+<td><p>GL_QUADS</p>
+</td>
+<td><p>Каждые четыре вершины &#8211; отдельный четырёхугольник.</p>
+</td>
+</tr>
+<tr>
+<td><p>GL_QUAD_STRIP</p>
+</td>
+<td><p>Группа связанных четырёхугольников. Первые четыре вершины &#8211; первый четырёхугольник. Третья, четвёртая, пятая и шестая вершины &#8211; второй четырёхугольник и т.д.</p>
+</td>
+</tr>
+<tr>
+<td><p>GL_POLYGON</p>
+</td>
+<td><p>Рисует отдельный выпуклый многоугольник (один).</p>
 </td>
 </tr>
 </table>

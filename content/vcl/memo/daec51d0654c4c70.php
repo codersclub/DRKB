@@ -44,7 +44,7 @@ end;
 &nbsp;</p>
 &nbsp;</p>
 <hr />
-<p class="p_Heading1">Поиск и замена текста в TMemo </p>
+<p class="p_Heading1">Поиск и замена текста в TMemo</p>
 <pre>
 procedure TForm1.FindDialog1Find(Sender: TObject);
 var

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Код распознаёт и русский и английский языки. Кстати вполне корректно обрабатывает и падежи типа: </p>
+<p>Код распознаёт и русский и английский языки. Кстати вполне корректно обрабатывает и падежи типа:</p>
 <p>2 мая 2002</p>
 <p>май месяц 1999 года, 3е число</p>
 <p>3е мая 1999 года</p>
@@ -11,7 +11,7 @@
 <p>July 3, 99</p>
 <p>но естественно не способен распознать</p>
 <p>01-jan-03</p>
-<p>т.е. год если двузначный, то должен быть больше 31. Иначе необоходим дополнительный параметер, указывающий годом считать первую или вторую найденную цифру в строке </p>
+<p>т.е. год если двузначный, то должен быть больше 31. Иначе необоходим дополнительный параметер, указывающий годом считать первую или вторую найденную цифру в строке</p>
 <pre>
  
 Function StringToDate(Temp:String):TDateTime;
@@ -136,35 +136,35 @@ end;
 </pre>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<hr /><p>When extracting data from text or other operating systems the format of date strings can vary dramatically. Borland function StrToDateTime() converts a string to a TDateTime value, but it is limited to the fact that the string parameter must be in the format of the current locale's date/time format. eg. "MM/DD/YY HH:MM:SS" </p>
+<hr /><p>When extracting data from text or other operating systems the format of date strings can vary dramatically. Borland function StrToDateTime() converts a string to a TDateTime value, but it is limited to the fact that the string parameter must be in the format of the current locale's date/time format. eg. "MM/DD/YY HH:MM:SS"</p>
 <p>Answer:</p>
-<p>This is of little use when extracting dates such as .. </p>
+<p>This is of little use when extracting dates such as ..</p>
 <p> &nbsp; &nbsp; &nbsp; &nbsp;1) "Friday 18 October 2002 08:34am (45 secs)"&nbsp; or "Wednesday 15 May 2002 06:12 (22 secs)"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;2) "20020431" </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;3) "12.Nov.03" </p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;4) "14 Hour 31 Minute 25 Second 321 MSecs" </p>
-<p>This function will evaluate a DateTime string in accordance to the DateTime specifier format string supplied. The following specifiers are supported ... </p>
-<p>  dd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as a number with a leading zero or space (01-31).&nbsp;&nbsp; </p>
-<p>  ddd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as an abbreviation (Sun-Sat) </p>
-<p>  dddd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as a full name (Sunday-Saturday) </p>
-<p>  mm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as a number with a leading zero or space (01-12). </p>
-<p>  mmm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as an abbreviation (Jan-Dec) </p>
-<p>  mmmm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as a full name (January-December) </p>
-<p>  yy  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the year as a two-digit number (00-99). </p>
-<p>  yyyy &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the year as a four-digit number (0000-9999). </p>
-<p>  hh  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the hour with a leading zero or space (00-23) </p>
-<p>  nn  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the minute with a leading zero or space (00-59). </p>
-<p>  ss  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the second with a leading zero or space (00-59). </p>
-<p>  zzz  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the millisecond with a leading zero (000-999). </p>
-<p>  ampm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Specifies am or pm flag hours (0..12) </p>
-<p>  ap  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Specifies a or p flag hours (0..12) </p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;2) "20020431"</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;3) "12.Nov.03"</p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;4) "14 Hour 31 Minute 25 Second 321 MSecs"</p>
+<p>This function will evaluate a DateTime string in accordance to the DateTime specifier format string supplied. The following specifiers are supported ...</p>
+<p>  dd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as a number with a leading zero or space (01-31).&nbsp;&nbsp;</p>
+<p>  ddd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as an abbreviation (Sun-Sat)</p>
+<p>  dddd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as a full name (Sunday-Saturday)</p>
+<p>  mm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as a number with a leading zero or space (01-12).</p>
+<p>  mmm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as an abbreviation (Jan-Dec)</p>
+<p>  mmmm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as a full name (January-December)</p>
+<p>  yy  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the year as a two-digit number (00-99).</p>
+<p>  yyyy &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the year as a four-digit number (0000-9999).</p>
+<p>  hh  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the hour with a leading zero or space (00-23)</p>
+<p>  nn  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the minute with a leading zero or space (00-59).</p>
+<p>  ss  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the second with a leading zero or space (00-59).</p>
+<p>  zzz  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the millisecond with a leading zero (000-999).</p>
+<p>  ampm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Specifies am or pm flag hours (0..12)</p>
+<p>  ap  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Specifies a or p flag hours (0..12)</p>
 <p>  (Any other character corresponds to a literal or delimiter.)</p>
-<p>NOTE : One assumption I have to make is that DAYS, MONTHS, HOURS and MINUTES have a leading&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZERO or SPACE (ie. are 2 chars long) and MILLISECONDS are 3 chars long (ZERO or SPACE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padded) </p>
-<p>Using function </p>
+<p>NOTE : One assumption I have to make is that DAYS, MONTHS, HOURS and MINUTES have a leading&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZERO or SPACE (ie. are 2 chars long) and MILLISECONDS are 3 chars long (ZERO or SPACE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padded)</p>
+<p>Using function</p>
 <pre>
 DateTimeStrEval(const DateTimeFormat : string; const DateTimeStr : string) : TDateTime; 
 </pre>
-<p>The above Examples (1..4) can be evaluated as ... (Assume DT1 to DT4 equals example strings 1..4) </p>
+<p>The above Examples (1..4) can be evaluated as ... (Assume DT1 to DT4 equals example strings 1..4)</p>
 <pre>
         MyDate := DateTimeStrEval('dddd dd mmmm yyyy hh:nnampm (ss xxxx)', DT1);
         MyDate := DateTimeStrEval('yyyymmdd', DT2);

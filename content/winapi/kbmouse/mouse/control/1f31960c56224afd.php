@@ -73,7 +73,7 @@
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
 <hr />
-<p>Получить активный элемент управления под курсором мышки </p>
+<p>Получить активный элемент управления под курсором мышки</p>
 <pre>
  { You may call this function in a global event procedure, 
   linking as many components events to it as you need. }

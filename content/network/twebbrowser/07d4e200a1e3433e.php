@@ -3,7 +3,7 @@
 
 
 <p>Взято из FAQ:<a href="https://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml</a></p>
-<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm </p>
+<p>Перевод материала с сайта members.home.com/hfournier/webbrowser.htm</p>
 
 <p>Протокол " res:" позволяет просмотреть HTML файл, сохранённый как ресурс.</p>
 <p>Более подробная информация доступна на Microsoft site:</p>
@@ -20,4 +20,4 @@ end;
 
 <p>Создайте файл ресурса (*.rc) со следующими строками и откомпилируйте</p>
 <p>его при помощи brcc32.exe: MYHTML 23 " .\html\myhtml.htm" MOREHTML 23 " .\html\morehtml.htm" Отредактируйте файл проекта, чтобы он выглядел примерно так: {$R *.RES}</p>
-<p>{$R HTML.RES} //где html.rc будет скомпилирован в html.res </p>
+<p>{$R HTML.RES} //где html.rc будет скомпилирован в html.res</p>
