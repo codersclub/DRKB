@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Peter Below </div>
+<div class="author">Автор: Peter Below</div>
 <pre>
 procedure TForm1.BtnShowFormatsClick(Sender: TObject);
 var

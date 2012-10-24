@@ -1,6 +1,7 @@
 <h1>Сформировать штрихкод</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Sh@dow</div>
 
 <pre>
  /*возвращает строку для формирования штрихкода со стартовыми, 
@@ -54,6 +55,5 @@ return (@stringnew)
 END 
 </pre>
 
-<div class="author">Автор: Sh@dow </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

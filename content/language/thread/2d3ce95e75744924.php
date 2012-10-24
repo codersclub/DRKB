@@ -13,5 +13,5 @@ function ReadComponentResFile(const FileName: string;
  Instance: TComponent): TComponent;
 </pre>
 
-<div class="author">Автор: Slawanix </div>
+<div class="author">Автор: Slawanix</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

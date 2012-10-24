@@ -7,5 +7,5 @@
 Пример использования в приложении списка строк на основе класса TStringList
 </a>
 </p>
-<div class="author">Автор: Akella </div>
+<div class="author">Автор: Akella</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

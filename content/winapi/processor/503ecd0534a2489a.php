@@ -147,7 +147,7 @@ end;
 
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
 <hr /><p>Читать из реестра HKEY_DYN_DATA\PerfStats\StatData соответствующий ключ Kernel \CPUUsage</p>
-<div class="author">Автор: Nomadic </div>
+<div class="author">Автор: Nomadic</div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 <hr />

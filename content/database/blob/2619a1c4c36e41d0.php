@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Eryk </div>
+<div class="author">Автор: Eryk</div>
 
 <p>...после моих дискуссий с людьми из службы технической поддержки Borland вывод один -- это невозможно!</p>
 

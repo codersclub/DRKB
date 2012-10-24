@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Vimil Saju </div>
+<div class="author">Автор: Vimil Saju</div>
 
 <p>В реестре есть раздел HKEY_DYN_DATA. Основная информация о системе хранится в ключе PerfStats.</p>
 

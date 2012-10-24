@@ -35,7 +35,7 @@ function BluetoothFindFirstRadio(
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае успешного выполнения функция вернет корректный описатель в phRadio и корректный описатель в качестве результата</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки будет возвращен 0. Для получения кода ошибки используйте функцию GetLastError</td></tr></table></div><p>BluetoothFindNextRadio - находит следующий установленный радиомодуль Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае успешного выполнения функция вернет корректный описатель в phRadio и корректный описатель в качестве результата</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки будет возвращен 0. Для получения кода ошибки используйте функцию GetLastError</td></tr></table></div><p>BluetoothFindNextRadio - находит следующий установленный радиомодуль Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothFindNextRadio(
@@ -59,7 +59,7 @@ function BluetoothFindNextRadio(
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если устройство найдено. В phRadio корректный описатель на найденный радиомодуль.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае отсутствия устройства. phRadio содержит некорректный описатель. Используйте GetLastError для получения кода ошибки.</td></tr></table></div><p>BluetoothFindRadioClose - закрывает описатель перечисления радиомодулей Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если устройство найдено. В phRadio корректный описатель на найденный радиомодуль.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае отсутствия устройства. phRadio содержит некорректный описатель. Используйте GetLastError для получения кода ошибки.</td></tr></table></div><p>BluetoothFindRadioClose - закрывает описатель перечисления радиомодулей Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothFindRadioClose(hFind : HBLUETOOTH_RADIO_FIND): BOOL; stdcall; 
@@ -75,7 +75,7 @@ function BluetoothFindRadioClose(hFind : HBLUETOOTH_RADIO_FIND): BOOL; stdcall;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE если описатель успешно закрыт.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае ошибки. Для получения кода ошибки используйте GetLastError.</td></tr></table></div><p>Теперь у нас достаточно знаний, чтобы получить список установленных радиомодулей Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE если описатель успешно закрыт.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае ошибки. Для получения кода ошибки используйте GetLastError.</td></tr></table></div><p>Теперь у нас достаточно знаний, чтобы получить список установленных радиомодулей Bluetooth.</p>
 <p>Напишем вот такую процедуру:</p>
 <pre>
 procedure EnumRadio;
@@ -130,7 +130,7 @@ function BluetoothGetRadioInfo(hRadio : THandle;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS если информация получена, в противном случае код ошибки.</td></tr></table></div><p>Структура BLUETOOTH_RADIO_INFO выгляди вот так:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS если информация получена, в противном случае код ошибки.</td></tr></table></div><p>Структура BLUETOOTH_RADIO_INFO выгляди вот так:</p>
 <pre>
 _BLUETOOTH_RADIO_INFO = record
 dwSize : dword;
@@ -232,7 +232,7 @@ function BluetoothFindFirstDevice(
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае успешного выполнения функция вернет корректный описатель в качестве результата.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки будет возвращен 0. Для получения кода ошибки используйте функцию GetLastError</td></tr></table></div><p>BluetoothFindNextDevice - находит следующее устройство Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае успешного выполнения функция вернет корректный описатель в качестве результата.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки будет возвращен 0. Для получения кода ошибки используйте функцию GetLastError</td></tr></table></div><p>BluetoothFindNextDevice - находит следующее устройство Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothFindNextDevice(hFind : HBLUETOOTH_DEVICE_FIND;
@@ -255,7 +255,7 @@ function BluetoothFindNextDevice(hFind : HBLUETOOTH_DEVICE_FIND;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если устройство найдено.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае отсутствия устройства. Используйте GetLastError для получения кода ошибки.</td></tr></table></div><p>BluetoothFindDeviceClose - закрывает описатель перечисления устройств Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если устройство найдено.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае отсутствия устройства. Используйте GetLastError для получения кода ошибки.</td></tr></table></div><p>BluetoothFindDeviceClose - закрывает описатель перечисления устройств Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothFindDeviceClose(hFind : HBLUETOOTH_DEVICE_FIND): BOOL; stdcall;
@@ -271,7 +271,7 @@ function BluetoothFindDeviceClose(hFind : HBLUETOOTH_DEVICE_FIND): BOOL; stdcall
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE если описатель успешно закрыт.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае ошибки. Для получения кода ошибки используйте GetLastError.</td></tr></table></div><p>BluetoothGetDeviceInfo - возвращает информацию об указанном устройстве Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE если описатель успешно закрыт.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае ошибки. Для получения кода ошибки используйте GetLastError.</td></tr></table></div><p>BluetoothGetDeviceInfo - возвращает информацию об указанном устройстве Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothGetDeviceInfo(hRadio : THandle;
@@ -294,7 +294,7 @@ function BluetoothGetDeviceInfo(hRadio : THandle;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS если выполнено успешно и информация занесена в структуру pbtdi. Остальные значения &#8211; код ошибки.</td></tr></table></div><p>Обладая этими знаниями, можно написать процедуру получения информации об устройствах Bluetooth:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS если выполнено успешно и информация занесена в структуру pbtdi. Остальные значения &#8211; код ошибки.</td></tr></table></div><p>Обладая этими знаниями, можно написать процедуру получения информации об устройствах Bluetooth:</p>
 <pre>
 procedure GetDevices(_hRadio: THandle);
 var
@@ -1140,7 +1140,7 @@ function BluetoothIsConnectable(const hRadio : THandle): BOOL; stdcall;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если указанный радиомодуль разрешает входящие подключения. Если hRadio=0, то вернет TRUE, если хотя бы один радиомодуль разрешает входящие подключения.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Если входящие подключения запрещены, то вернет FALSE.</td></tr></table></div><p>BluetoothIsDiscoverable - определяет, будет ли виден указанный радиомодуль другим при поиске. Если просматриваются все радиомодули, то вернет TRUE если хотя бы один разрешает обнаружение.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если указанный радиомодуль разрешает входящие подключения. Если hRadio=0, то вернет TRUE, если хотя бы один радиомодуль разрешает входящие подключения.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Если входящие подключения запрещены, то вернет FALSE.</td></tr></table></div><p>BluetoothIsDiscoverable - определяет, будет ли виден указанный радиомодуль другим при поиске. Если просматриваются все радиомодули, то вернет TRUE если хотя бы один разрешает обнаружение.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothIsDiscoverable(const hRadio : THandle): BOOL; stdcall; 
@@ -1156,7 +1156,7 @@ function BluetoothIsDiscoverable(const hRadio : THandle): BOOL; stdcall;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если указанный радиомодуль разрешает обнаружение. Если hRadio=0, то вернет TRUE, если хотя бы один радиомодуль разрешает обнаружение.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Если обнаружение запрещено, то вернет FALSE.</td></tr></table></div><p>BluetoothEnumerateInstalledServices - получает список GUID сервисов, предоставляемых устройством. Если параметр hRadio=0, то просматривает все радиомодули.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если указанный радиомодуль разрешает обнаружение. Если hRadio=0, то вернет TRUE, если хотя бы один радиомодуль разрешает обнаружение.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Если обнаружение запрещено, то вернет FALSE.</td></tr></table></div><p>BluetoothEnumerateInstalledServices - получает список GUID сервисов, предоставляемых устройством. Если параметр hRadio=0, то просматривает все радиомодули.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothEnumerateInstalledServices(
@@ -1194,7 +1194,7 @@ function BluetoothEnumerateInstalledServices(
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS, если вызов успешен и количество сервисов в pcServices соответствует реальности.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_MORE_DATA, если вызов успешен, но выделенное количество памяти (pcServices при вызове) меньше, чем количество предоставляемых сервисов.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки &#8211; другие коды ошибок Win32.</td></tr></table></div><p>Примечания:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS, если вызов успешен и количество сервисов в pcServices соответствует реальности.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_MORE_DATA, если вызов успешен, но выделенное количество памяти (pcServices при вызове) меньше, чем количество предоставляемых сервисов.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки &#8211; другие коды ошибок Win32.</td></tr></table></div><p>Примечания:</p>
 <p>Посмотрите на код получения списка сервисов:</p>
 <pre>
 // Получаем размер массива сервисов
@@ -1422,7 +1422,7 @@ fEnabled : BOOL): BOOL; stdcall;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен и статус изменен,</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае.</td></tr></table></div><p>BluetoothEnableDiscovery - функция разрешает/запрещает обнаружение локального радиомодуля Bluetooth</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен и статус изменен,</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае.</td></tr></table></div><p>BluetoothEnableDiscovery - функция разрешает/запрещает обнаружение локального радиомодуля Bluetooth</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothEnableDiscovery(hRadio : THandle; fEnabled : BOOL): BOOL; stdcall; 
@@ -1444,7 +1444,7 @@ function BluetoothEnableDiscovery(hRadio : THandle; fEnabled : BOOL): BOOL; stdc
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен и статус изменен,</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае.</td></tr></table></div><p>Теперь давайте научимся выводить системное окно свойств устройства Bluetooth. Для этого добавим к ActionList еще один TAction вот с такими свойствами:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен и статус изменен,</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае.</td></tr></table></div><p>Теперь давайте научимся выводить системное окно свойств устройства Bluetooth. Для этого добавим к ActionList еще один TAction вот с такими свойствами:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>Свойство</p>
@@ -1542,7 +1542,7 @@ hwndParent : HWND;<br>
 </table>
 <p>&nbsp;<br>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае (код ошибки можно узнать вызовом функции GetLastError).</td></tr></table></div><p>Выбор устройства</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае (код ошибки можно узнать вызовом функции GetLastError).</td></tr></table></div><p>Выбор устройства</p>
 <p>Рассмотрим, как вызвать окно диалога выбора устройства.</p>
 <p>Добавим в наш проект на Panel еще одну кнопку TButton и установите ее свойства как в таблице:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
@@ -1760,7 +1760,7 @@ function BluetoothSelectDevices(<br>
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен,</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - нечего освобождать.</td></tr></table></div><p>Управление сервисами</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен,</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - нечего освобождать.</td></tr></table></div><p>Управление сервисами</p>
 <p>Для управления сервисами Microsoft Bluetooth API предоставляет функцию:</p>
 <p>BluetoothSetServiceState - включает или выключает указанный сервис для устройства Bluetooth. Система проецирует сервис Bluetooth на соответствующий драйвер. При отключении сервиса &#8211; драйвер удаляется. При его включении &#8211; драйвер устанавливается. Если выполняется включение не поддерживаемого сервиса, то драйвер не будет установлен.</p>
 <p>Объявление функции:</p>

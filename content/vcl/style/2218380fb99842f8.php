@@ -52,6 +52,6 @@ Themes;
 if ThemeServices.ThemesEnabled then // Тема использется
 </pre>
 <p>&nbsp;<br>
-<div class="author">Автор: Alex </div>
+<div class="author">Автор: Alex</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

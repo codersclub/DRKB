@@ -1,6 +1,7 @@
 <h1>Как упаковать таблицу?</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Pavel Kulchenko</div>
 
 <pre>
 uses BDE; // for D3, для D2 не помню (что-то типа DbiProcs и еще что-то)
@@ -43,5 +44,4 @@ begin
 end;
 </pre>
 
-
-<div class="author">Автор: Pavel Kulchenko </div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

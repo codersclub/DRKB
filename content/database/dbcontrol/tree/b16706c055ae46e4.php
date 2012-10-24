@@ -1,6 +1,7 @@
 <h1>Построение древа TTreeView из базы данных</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: dron-s</div>
 
 <pre>
 procedure TOrgColumn.LoadTreeView;
@@ -49,6 +50,5 @@ begin
     end;
 end;
 </pre>
-<div class="author">Автор: dron-s </div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Shawn Wu </div>
+<div class="author">Автор: Shawn Wu</div>
 
 <p>Я пытаюсь преобразовать мою базу данных на Oracle в базу данных local Interbase server. Все таблицы Oracle ссылаются на имя схемы. Interbase поддерживает такого типа имена схем?</p>
 

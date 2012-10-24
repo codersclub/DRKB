@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Владимир Переплетчик </div>
+<div class="author">Автор: Владимир Переплетчик</div>
 
 <p>Комментарий к статье по поводу wsprintf</p>
 

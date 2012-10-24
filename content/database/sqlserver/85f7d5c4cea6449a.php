@@ -2,21 +2,25 @@
 <div class="date">01.01.2007</div>
 
 
+<div class="author">Автор: Akim</div>
+
 <pre>
 use master
 exec xp_cmdshell "DTSRun /S servername /U username /P password /N packagename"
 </pre>
 
-<div class="author">Автор: Akim </div>
-<p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p>1.</p>
 <pre>
 --©Drkb v.3(2007): www.drkb.ru
 
 Exec master..xp_cmdshell '"C:\Program Files\Microsoft SQL Server\80\Tools\Binn\dtsrun.exe" /S'+@ServerName+' /U'+@SQLUserName+' /P'+@SQLPassword+' /N'+@DTSPackageName
 </pre>
 
-<p>2.</p>
+<p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
+
+<hr />
+
+<div class="author">Автор: Vit</div>
+
 <pre>
 --©Drkb v.3(2007): www.drkb.ru
  
@@ -33,6 +37,3 @@ Exec master..xp_cmdshell '"C:\Program Files\Microsoft SQL Server\80\Tools\Binn\d
   EXEC @retval = sp_OAMethod @package,@LoadString,NULL
   EXEC @retval = sp_OAMethod @package, 'Execute'
 </pre>
-
-<div class="author">Автор: Vit</div>
-

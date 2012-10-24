@@ -1,6 +1,7 @@
 <h1>Использование SQLMonitor (DBExpress)</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Mike Goblin</div>
 
 <p>Следи за собой - будь осторожен или использование SQLMonitor.</p>
 <p>Итак, остался всего один компонент на закладке dbExpress, не обследованный нами - это SQLMonitor. Как вы уже догадались - его задача - это протоколирование событий, происходящих в программе при обращении к базе данных. Протокол может выводиться как в StringList, так и файл.</p>
@@ -34,7 +35,6 @@
 
 <p>Ну вот и все. Ваши замечания и предложения я рад буду увидеть в почтовом ящике mgoblin@mail.ru</p>
 
-<div class="author">Автор: Mike Goblin </div>
 <p>Взято с сайта <a href="https://www.delphimaster.ru/" target="_blank">https://www.delphimaster.ru/</a></p>
 
 <p>с разрешения автора.</p>

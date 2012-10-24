@@ -1,7 +1,7 @@
 <h1>Универсальная функция возврата значения элемента даты</h1>
 <div class="date">01.01.2007</div>
 
-<div class="author">Автор: Галимарзанов Фанис </div>
+<div class="author">Автор: Галимарзанов Фанис</div>
 <p>Универсальная функция возврата значения элемента даты (год, месяц, день, квартал):</p>
 <pre>
 function RetDate(inDate: TDateTime; inTip: integer): integer;

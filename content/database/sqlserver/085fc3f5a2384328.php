@@ -1,6 +1,7 @@
 <h1>Строка в WIN-кодировке</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Sh@dow</div>
 
 <pre>
  -- Возвращает строку в WIN кодировке, на базе WIN_DOS_String()
@@ -37,5 +38,5 @@ BEGIN
     RETURN @ws
 END 
 </pre>
-<div class="author">Автор: Sh@dow </div>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

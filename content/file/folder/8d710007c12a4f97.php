@@ -1,6 +1,7 @@
 <h1>Удаление каталога с подкаталогами</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Baa</div>
 
 <p>Способ 1: проход по дереву каталогов (Функция для удаления каталогов, взята из рассылки "Мастера DELPHI. Новости мира компонент, FAQ, статьи..." - собственно код аналогичен написанному мной коду по рекурсивному проходу каталогов <a href="b81.htm">здесь</a>)</p>
 <pre>
@@ -9,7 +10,8 @@ var
 iIndex : Integer;
 SearchRec : TSearchRec; 
 sFileName : String; 
-<p>begin 
+
+begin 
 Result := False; 
 sDir := sDir + '\*.*'; 
 iIndex := FindFirst(sDir, faAnyFile, SearchRec); 
@@ -51,8 +53,9 @@ SHFileOperation (sh);
 ... 
  
 </pre>
+
 <p>Надо путь писать : c:\\test\dfg</p>
 <p>Чтобы вначале "\\" было...иначе не будет удалять диры из корня</p>
 
-<div class="author">Автор: Baa </div>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

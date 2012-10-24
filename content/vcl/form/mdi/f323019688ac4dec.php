@@ -426,7 +426,7 @@ public
 </pre>
 
 
-<div class="author">Автор: Neil Rubenkind </div>
+<div class="author">Автор: Neil Rubenkind</div>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <hr />В разделе Заполнение изображением MDI-формы повторяющимся изображением. Я нашел (Copyright не мой а из книжки) более простой способ.</p>

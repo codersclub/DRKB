@@ -86,4 +86,4 @@ end.
 
 <p>Теперь вы можете ссылаться на элементы массива с помощью синтаксиса pData^[i,j].</p>
 
-<div class="author">Автор: Peter Below </div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Peter Below</div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

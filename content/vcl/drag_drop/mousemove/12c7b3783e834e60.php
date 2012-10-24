@@ -142,7 +142,7 @@ end;
 &nbsp;</p>
 <hr /><p class="p_Heading1">Перетаскивание картинки мышью</p>
 <p class="p_Heading1">&nbsp;</p>
-<div class="author">Автор: Пётр Соболь </div>
+<div class="author">Автор: Пётр Соболь</div>
 <pre>
 type
   TMouseState = (msNormal, msDragging);

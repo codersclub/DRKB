@@ -10,7 +10,7 @@ begin
 end;
 </pre>
 
-<div class="author">Автор: s-mike </div>
+<div class="author">Автор: s-mike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <pre>
 procedure SetBit(SetWord, BitNum: Word);

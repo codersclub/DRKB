@@ -28,4 +28,4 @@ end;
 
 
 
-<div class="author">Автор: John </div>
+<div class="author">Автор: John</div>

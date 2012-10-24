@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Rem </div>
+<div class="author">Автор: Rem</div>
 <pre>
 function BinStrToByte(a_sBinStr: string): byte;
 var

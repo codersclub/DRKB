@@ -24,7 +24,7 @@ end.
  
  
 </pre>
-<div class="author">Автор: http://sunsb.dax.ru </div>
+<div class="author">Автор: http://sunsb.dax.ru</div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 

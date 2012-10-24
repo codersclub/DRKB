@@ -40,7 +40,7 @@ CloseHandle (hDevice);
  
 }
 </pre>
-<div class="author">Автор: Baa </div>
+<div class="author">Автор: Baa</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

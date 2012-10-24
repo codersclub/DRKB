@@ -294,7 +294,7 @@ end;
  
 end.
 </pre>
-<div class="author">Автор: Mischka </div>
+<div class="author">Автор: Mischka</div>
 
 <hr />
 

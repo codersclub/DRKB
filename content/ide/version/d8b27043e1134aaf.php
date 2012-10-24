@@ -2,6 +2,8 @@
 <div class="date">01.01.2007</div>
 
 
+<div class="author">Автор: CatATonik</div>
+
 <p>В Delphi 2006 появилось много расширений языка, в том числе перегрузка операторов, "Class-like" записи. Что позволяет создавать собственные типы данных (не классы, а именно типы значения)! Для демонстрации этих возможностей я написал тип TDate для работы с датами. <br>
 
 <pre>
@@ -532,6 +534,7 @@ end;
  
 end.
 </pre>
+
 <p>А вот пример его использования:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
@@ -554,5 +557,5 @@ Date.Year := 1993;
 Label8.Caption := Date.Text;
 end;
 </pre>
-<div class="author">Автор: CatATonik </div>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

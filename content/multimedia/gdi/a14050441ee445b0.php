@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Alistair Keys </div>
+<div class="author">Автор: Alistair Keys</div>
 
 <p>Жаргон GDI.</p>
 

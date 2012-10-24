@@ -52,5 +52,5 @@ end.
     end;
 {$R+}
 </pre>
-<div class="author">Автор: Spawn </div>
+<div class="author">Автор: Spawn</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

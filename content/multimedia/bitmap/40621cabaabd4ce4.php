@@ -67,5 +67,5 @@ begin
  
 end;
 </pre>
-<div class="author">Автор: Аэтерос </div>
+<div class="author">Автор: Аэтерос</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -1,6 +1,7 @@
 <h1>Installer</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Неизвестен URL: www.delphi.agava.ru</div>
 
 <p>Этапы инсталляции</p>
 
@@ -200,8 +201,6 @@ end.
 <p> нам при написании универсальной процедуры копирования файлов.</p>
 
 <p>Дальше</p>
-
-<div class="author">Автор: Неизвестен URL: www.delphi.agava.ru </div>
 
 <p>Взято с сайта <a href="https://blackman.wp-club.net/" target="_blank">https://blackman.wp-club.net/</a></p>
 

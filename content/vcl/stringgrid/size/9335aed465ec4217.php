@@ -146,7 +146,7 @@ end;
 
 <hr />
 
-<div class="author">Автор: Pavel Stont </div>
+<div class="author">Автор: Pavel Stont</div>
 <pre>
 {
 Код компонента для Delphi на основе стандартного TStringGrid.

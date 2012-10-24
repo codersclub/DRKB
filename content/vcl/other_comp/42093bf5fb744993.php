@@ -149,6 +149,6 @@ end;
  
 end.
 </pre>
-<div class="author">Автор: Robert Wittig </div>
+<div class="author">Автор: Robert Wittig</div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

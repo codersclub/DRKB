@@ -70,7 +70,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr /><p>Изменение позиций элементов ListBox с помощью Drag and Drop</p>
-<div class="author">Автор: Nick Hodges (Monterey, CA) </div>
+<div class="author">Автор: Nick Hodges (Monterey, CA)</div>
 <p>Я хотел бы изменить порядок следования элементов в неотсортированном списке ListBox методом drag&amp;drop, т.е. просто перетаскивая их мышью на нужное место. Будет еще лучше, если при удержании кнопки мыши перетаскиваемый элемент визуально перемещал бы вверх или вниз сам список (для определения своего нового месторасположения) до тех пор, пока клавиша мыши не будет отпущена (как я понял, автоматическое скроллирование - В.О.).</p>
 <p>Попробуйте для начала это:</p>
 <pre>
@@ -219,7 +219,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <p>Изменение позиций элементов ListBox с помощью Drag and Drop</p>
-<div class="author">Автор: Peter Donnelly </div>
+<div class="author">Автор: Peter Donnelly</div>
 <p>Вот еще одна вариация сабжа.</p>
 <pre>
 procedure TPickParty.PickListBMouseDown(Sender: TObject;

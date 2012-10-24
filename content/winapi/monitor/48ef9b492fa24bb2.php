@@ -108,7 +108,7 @@ begin
   Result := bm;
 end;
 </pre>
-<div class="author">Автор: Krid </div>
+<div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Универсальный способ - скриншот с прозрачностью:</p>
 <pre>

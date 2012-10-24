@@ -80,7 +80,7 @@ end;
 <p>последний абзац работает только с тройкой.</p>
 
 <p>Denis Tanayeff</p>
-<a href="mailto:denis@demo.ru ">denis@demo.ru </a></p>
+<a href="mailto:denis@demo.ru ">denis@demo.ru</a></p>
 
 
 <hr />

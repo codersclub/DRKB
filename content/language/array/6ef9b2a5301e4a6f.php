@@ -1,6 +1,7 @@
 <h1>TMemoryStream &gt; Array of Byte</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Rouse_</div>
 
 <p>Для преобразования TMemoryStream в array of Byte можно использовать следующий код:<br>
 <p>&nbsp;</p>
@@ -22,9 +23,7 @@ begin
   end;
 end;
 </pre>
-&nbsp;<br>
 
-<p>&nbsp;<br>
-<div class="author">Автор: Rouse_ </div>
+<p>&nbsp;</p>
 
 

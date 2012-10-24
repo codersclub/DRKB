@@ -30,5 +30,5 @@ end;
 </pre>
 
 <p>Теперь при сворачивании формы сворачиваеться все приложение.</p>
-<div class="author">Автор: Alex </div>
+<div class="author">Автор: Alex</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

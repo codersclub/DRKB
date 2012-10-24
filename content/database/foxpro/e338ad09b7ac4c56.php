@@ -1,6 +1,7 @@
 <h1>Краткое описание Foxpro</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Cashey</div>
 
 <p>Visual FoxPro последняя версия 8.0.</p>
 <p>Производитель: Microsoft.</p>
@@ -139,5 +140,5 @@
 <p>System Data Format (SDF)</p>
 <p>и некоторые другие, мало кому известные.</p>
 <p>Наличие утилит для автоматизации операций для работы в командной строке, наличие собственных утилит для отладки запросов (выполнение SQL, построение плана выполнения кверей, профайлер и т.п.), утилиты для слежения за производительностью сервера. - Сам FoxPro</p>
-<div class="author">Автор: Cashey </div>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

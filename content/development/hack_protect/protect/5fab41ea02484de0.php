@@ -1,6 +1,8 @@
 <h1>Пример программы на Delphi, которая морфирует во время работы свой код</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: NikNet_</div>
+
 <p>Пример программы на DELPHI которая морфирует во время работы свой код и при этом не имеет секции импорта<br>
 <p>пример также показывает, как сделать программу очень маленькой хоть не на максимум, но предельно! После компиляций EXE весит 800 байт.</p>
 <pre>
@@ -121,11 +123,9 @@ Procedure EntryCode;
         pop     dword ptr fs:[0]
         add     esp,4
  end
+
 //****************************************************************
- 
- 
- 
- 
+
  begin
    _GetKernelBase;
    _CalcHashFunction;
@@ -162,5 +162,5 @@ end      _ExitProc;
 end.
  
 </pre>
-<div class="author">Автор: NikNet_ </div>
+
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

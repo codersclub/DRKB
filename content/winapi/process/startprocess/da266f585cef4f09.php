@@ -56,5 +56,5 @@ end.
 &nbsp;<br>
 
 <p>&nbsp;<br>
-<div class="author">Автор: win_nt </div>
+<div class="author">Автор: win_nt</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

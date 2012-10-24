@@ -1,6 +1,7 @@
 <h1>Как получить короткий путь файла, если есть длинный, и на оборот?</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Alex&amp;Co</div>
 
 <pre>
 // Короткий
@@ -13,8 +14,6 @@ GetFullPathName(ShortPath)
 <hr />
 <pre>
 function sfn(const LongName: String): String;
- 
-
  
 // Возвращает LongFileName преобразованное в соответствующее короткое имя
 var i :Integer;
@@ -71,5 +70,5 @@ begin
 end;
  
 </pre>
-<div class="author">Автор: Alex&amp;Co </div>
-<p>Сайт: <a href="https://alex-co.com.ru " target="_blank">https://alex-co.com.ru </a></p>
+
+<p>Сайт: <a href="https://alex-co.com.ru " target="_blank">https://alex-co.com.ru</a></p>

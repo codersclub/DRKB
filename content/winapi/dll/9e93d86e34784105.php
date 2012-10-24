@@ -133,5 +133,5 @@ ImageBase := GetModuleHandle(PChar(cmdline));
 </pre>
 
 <p>И не забудте в конце FreeLibrary()</p>
-<div class="author">Автор: x2er0 </div>
+<div class="author">Автор: x2er0</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

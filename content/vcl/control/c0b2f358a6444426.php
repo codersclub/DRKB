@@ -42,7 +42,7 @@ end;
 
 <hr />
 
-<div class="author">Автор: Ralph Friedman </div>
+<div class="author">Автор: Ralph Friedman</div>
 <p>Кто-нибудь может мне помочь в вопросе размещения подклассов форм на страницах компонента TTabbedNotebook?</p>
 <p>Я пробовал следующий код и он отлично работает с компонентами, являющимися частью формы, содержащей TTabbedNotebook; тем не менее он не работает с дочерними формами:</p>
 <pre>ChildForml[i].Parent := TWinControl(BrowseTabNotebook.Pages.Objects[i]);

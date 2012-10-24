@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: OAmiry (Borland) </div>
+<div class="author">Автор: OAmiry (Borland)</div>
 
 <p>Ниже приведен код обработчика кнопки OnClick, с помощью которого строится индекс:</p>
 

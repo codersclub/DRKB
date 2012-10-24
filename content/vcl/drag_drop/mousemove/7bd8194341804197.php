@@ -371,7 +371,7 @@ FOR N := 0 TO ComponentCount-1 DO
         Accept := False;
 </pre>
 <p>В этом случае курсор будет изменяться на перечеркнутый кружок при пересечении перетаскиваемым элементом границы интересующей вас кнопки. Вы должны сделать аналогичную логику или в обработчике EndDrag или OnDragDrop компонента PainBox.</p>
-<div class="author">Автор: NEil </div>
+<div class="author">Автор: NEil</div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 &nbsp;</p>

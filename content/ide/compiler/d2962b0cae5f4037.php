@@ -127,5 +127,5 @@
 
 <p>11)</p>
 <a href="https://www.virustrading.com/positron/delphi/tstrlist.rar" target="_blank">TStringList replacement by ~LOM~</a></p>
-<a href="https://www.virustrading.com/positron/delphi/minireg.zip" target="_blank">Minireg - TRegistry replacement </a></p>
+<a href="https://www.virustrading.com/positron/delphi/minireg.zip" target="_blank">Minireg - TRegistry replacement</a></p>
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>

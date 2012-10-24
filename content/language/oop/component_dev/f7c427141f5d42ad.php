@@ -4,6 +4,6 @@
 
 <p><a href="05_2.zip">Простой пример разработки собственного компонента</a>
 </p>
-<div class="author">Автор: Akella </div>
+<div class="author">Автор: Akella</div>
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

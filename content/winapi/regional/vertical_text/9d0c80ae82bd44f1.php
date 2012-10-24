@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Dennis Passmore </div>
+<div class="author">Автор: Dennis Passmore</div>
 
 <p>Как мне получить значение Font.Style и Font.Color в виде строки, я хотел бы присвоить его заголовку компонента Label, но style и color не являются строковыми величинами.</p>
 

@@ -51,7 +51,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<div class="author">Автор: Ralph Friedman </div>
+<div class="author">Автор: Ralph Friedman</div>
 <p>Единственное место в программе, где можно перехватить нажатие клавиши tab - в обработчике Application.OnMessages. Пример ниже:</p>
 
 <pre>

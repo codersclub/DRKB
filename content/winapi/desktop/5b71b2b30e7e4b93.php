@@ -14,7 +14,7 @@ PostMessage(c1,WM_KEYDOWN,VK_F5,0);
 PostMessage(c1,WM_KEYUP,VK_F5,1 shl 31);
 end;
 </pre>
-<div class="author">Автор: neutrino </div>
+<div class="author">Автор: neutrino</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <pre>

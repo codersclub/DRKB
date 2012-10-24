@@ -1,6 +1,7 @@
 <h1>Kylix Tutorial. Часть 3. Работа с базами данных через dbExpress. Коннект &ndash; есть коннект</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Mike Goblin</div>
 
 <p>Как говорилось раньше, SQLConnection предназначен для</p>
 <p>  1. Подключения к базе данных с заданными параметрами</p>
@@ -178,7 +179,6 @@ IConnectionAdmin = interface
 <p>Получение списка индексов</p>
 <p>  GetIndexNames</p>
 
-<div class="author">Автор: Mike Goblin </div>
 <p>Взято с сайта <a href="https://www.delphimaster.ru/" target="_blank">https://www.delphimaster.ru/</a></p>
 
 <p>с разрешения автора.</p>

@@ -7,5 +7,5 @@
 <p>Объект.Font.Name:="Algerian";</p>
 <p>Удалить -</p>
 <p>RemoveFontResource('путь к фонту\\Algerian.ttf');</p>
-<div class="author">Автор: Alex101 </div>
+<div class="author">Автор: Alex101</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

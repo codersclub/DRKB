@@ -5,11 +5,11 @@
 <img src="/pic/embim1818.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 &nbsp;<br>
 <p>&nbsp;</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм Евклида<br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Бинарный алгоритм Евклида<br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм решения уравнения ax+by = 1</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Расширенный алгоритм Евклида:<br>
-Даны x, y. Находит a, b, v: ax+by = d, где d=НОД(x, y)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нахождение обратного элемента по модулю<br>
-Обратный элемент для x из Zn - такой a из Zn, что ax = 1(mod n)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>НОК<br>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм Евклида<br>
+&nbsp;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Бинарный алгоритм Евклида<br>
+&nbsp;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм решения уравнения ax+by = 1</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Расширенный алгоритм Евклида:<br>
+Даны x, y. Находит a, b, v: ax+by = d, где d=НОД(x, y)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нахождение обратного элемента по модулю<br>
+Обратный элемент для x из Zn - такой a из Zn, что ax = 1(mod n)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>НОК<br>
 &nbsp;</td></tr></table></div><p>&nbsp;<br>
 Алгоритм Евклида. <img src="/pic/embim1819.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1820.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>

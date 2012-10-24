@@ -24,6 +24,6 @@ SetWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) or WS_EX_T
 </pre>
 
 
-<div class="author">Автор: Stavros </div>
+<div class="author">Автор: Stavros</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

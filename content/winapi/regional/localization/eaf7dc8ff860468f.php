@@ -118,7 +118,7 @@ end; // ver 1.0, (C)Vrublevsky Evgeny Gennadyevich (BELARUS/SLUTSK), 31.10.2003
 end.
 </pre>
 
-<div class="author">Автор: RoboSol </div>
+<div class="author">Автор: RoboSol</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 

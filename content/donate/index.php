@@ -47,7 +47,7 @@
 <div class="button">
   <a target="_blank" href="https://money.yandex.ru/to/41001151000887" title="Перейти на сайт платёжной системы">
     Поддержать
-  </a>
+</a>
 </div>
 
 <a target="_blank" href="https://money.yandex.ru/to/41001151000887" title="Перейти на сайт платёжной системы">
@@ -67,7 +67,7 @@
 <div class="button">
   <a target="_blank" href="https://www.webmoney.ru/" title="Перейти на сайт платёжной системы">
     Поддержать
-  </a>
+</a>
 </div>
 
 <a target="_blank" href="https://www.webmoney.ru/" title="Перейти на сайт платёжной системы">

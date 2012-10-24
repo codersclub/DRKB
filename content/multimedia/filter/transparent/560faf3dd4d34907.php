@@ -13,6 +13,6 @@ begin
   SetBkMode(Image1.Picture.Bitmap.Canvas.Handle, OldBkMode);
 end;
 </pre>
-<div class="author">Автор: Олег Кулабухов </div>
+<div class="author">Автор: Олег Кулабухов</div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

@@ -28,4 +28,4 @@ begin
   ShowMessage(IntToStr(Func(10.63)));
 end;
 </pre>
-<div class="author">Автор: jack128 </div>
+<div class="author">Автор: jack128</div>

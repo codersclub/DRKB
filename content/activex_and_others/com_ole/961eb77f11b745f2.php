@@ -10,10 +10,10 @@
 <p>Создание структурированных хранилищ осуществляется с использованием функции StgCreateDocFile, из модуля ActiveX.pas. Синтаксис этой функции выгладит таким образом:<br>
 <p>function StgCreateDocfile(pwcsName: POleStr; grfMode: Longint; reserved: Longint; out stgOpen: IStorage): HResult; stdcall;</p>
 где</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName</td></tr></table></div>название хранилища(т.е. название файла).</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode</td></tr></table></div>флаги доступа(комбинация значений STGM_*).</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved</td></tr></table></div>он и в Африке RESERVED.</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StgOpen</td></tr></table></div>ссылка на интерфейс IStorage нашего главного хранилища. Результат функции как всегда транслируем в исключения Delphi посредством OleCheck.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName</td></tr></table></div>название хранилища(т.е. название файла).</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode</td></tr></table></div>флаги доступа(комбинация значений STGM_*).</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved</td></tr></table></div>он и в Африке RESERVED.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StgOpen</td></tr></table></div>ссылка на интерфейс IStorage нашего главного хранилища. Результат функции как всегда транслируем в исключения Delphi посредством OleCheck.</p>
 <p>Для открытия хранилища используется функция StgOpenStorage:<br>
 function StgOpenStorage(pwcsName: POleStr; stgPriority: IStorage; grfMode: Longint; snbExclude: TSNB; reserved: Longint; out stgOpen: IStorage): HResult; stdcall;<br>
 <p>неизвестный параметр - stgPriority указывает на ранее открытый экземпляр главного хранилища (почти всегда nil).</p>
@@ -22,17 +22,17 @@ function StgOpenStorage(pwcsName: POleStr; stgPriority: IStorage; grfMode: Longi
 Создание потока - IStorage.CreateStream.<br>
 <p>function CreateStream(pwcsName: POleStr; grfMode: Longint; reserved1: Longint;reserved2: Longint; out stm: IStream): HResult; stdcall;</p>
 параметры:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName</td></tr></table></div>название потока.</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode</td></tr></table></div>Флаги доступа</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved1, reserved2</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>соответственно.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>stm</td></tr></table></div>указатель на созданный поток.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName</td></tr></table></div>название потока.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode</td></tr></table></div>Флаги доступа</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved1, reserved2</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>соответственно.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>stm</td></tr></table></div>указатель на созданный поток.</p>
 <p>Открытие потока - IStorage.OpenStream.<br>
 <p>function OpenStream(pwcsName: POleStr; reserved1: Pointer; grfMode: Longint;reserved2: Longint; out stm: IStream): HResult; stdcall;</p>
 параметры:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName</td></tr></table></div>название потока.</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved1</td></tr></table></div>nil</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode</td></tr></table></div>флаги доступа</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved2</td></tr></table></div>0</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>stm</td></tr></table></div>указатель на открытый поток.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName</td></tr></table></div>название потока.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved1</td></tr></table></div>nil</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode</td></tr></table></div>флаги доступа</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved2</td></tr></table></div>0</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>stm</td></tr></table></div>указатель на открытый поток.</p>
 <p>Создание подхранилища - IStorage.CreateStorage.<br>
 function CreateStorage(pwcsName: POleStr; grfMode: Longint; dwStgFmt: Longint; reserved2: Longint; out stg: IStorage): HResult;stdcall;<br>
 Открытие подхранилища - IStorage.OpenStorage.<br>
@@ -110,9 +110,9 @@ Skip(celt:longint):HResult;stdcall; - пропуск количества еле
 <p>На данный момент для нас самым важным из этих методов есть метод Next:<br>
 <p>Next(celt:Longint; out elt; pceltFetched: PLongint): HResult; stdcall;</p>
 Который принимает следующие параметры:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Celt</td></tr></table></div>количество елементов структуры, которое будет извлечено при его вызове.</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Elt</td></tr></table></div>Масив приемник елементов типа TStatStg.</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>PceltFetched</td></tr></table></div>указатель на переменную куда будет записано действительное количество извлеченных елементов.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Celt</td></tr></table></div>количество елементов структуры, которое будет извлечено при его вызове.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Elt</td></tr></table></div>Масив приемник елементов типа TStatStg.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>PceltFetched</td></tr></table></div>указатель на переменную куда будет записано действительное количество извлеченных елементов.</p>
 <p>Для примера воспользуемся любым doc файлом и перечислим его потоки(и подхранилища если они есть):</p>
 <pre>
 procedure TForm1.Button2Click(Sender: TObject);
@@ -133,22 +133,22 @@ end;
 </pre>
 &nbsp;</p>
 <p>кроме cbSize структура TStatStg содержит такие поля:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName: POleStr;</td></tr></table></div>Название потока или хранилища</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>dwType: Longint;</td></tr></table></div>Тип елемента (флаги типа STGTY_*)</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>cbSize: Largeint;</td></tr></table></div>Размер конкретного елемента</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>mtime: TFileTime;</td></tr></table></div>Дата последней модификации</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ctime: TFileTime;</td></tr></table></div>Дата создания</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>atime: TFileTime;</td></tr></table></div>Дата последнего обращения</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode: Longint;</td></tr></table></div>Флаг доступа</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfLocksSupported: Longint;</td></tr></table></div>Не используется в хранилищах</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>clsid: TCLSID;</td></tr></table></div>Идентификатор класса хранилища</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfStateBits: Longint;</td></tr></table></div>Статусные биты</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved: Longint;</td></tr></table></div>Зарезервирован</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName: POleStr;</td></tr></table></div>Название потока или хранилища</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>dwType: Longint;</td></tr></table></div>Тип елемента (флаги типа STGTY_*)</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>cbSize: Largeint;</td></tr></table></div>Размер конкретного елемента</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>mtime: TFileTime;</td></tr></table></div>Дата последней модификации</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ctime: TFileTime;</td></tr></table></div>Дата создания</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>atime: TFileTime;</td></tr></table></div>Дата последнего обращения</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode: Longint;</td></tr></table></div>Флаг доступа</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfLocksSupported: Longint;</td></tr></table></div>Не используется в хранилищах</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>clsid: TCLSID;</td></tr></table></div>Идентификатор класса хранилища</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfStateBits: Longint;</td></tr></table></div>Статусные биты</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>reserved: Longint;</td></tr></table></div>Зарезервирован</p>
 <p>Созданий дополнительных хранилищ</p>
 <p>Для создания дополнительных хранилищ главного хранилища используется метод интерфейса IStorage под названием CreateStorage:<br>
 <p>function CreateStorage(pwcsName: POleStr; grfMode: Longint; dwStgFmt: Longint; reserved2: Longint; out stg: IStorage): HResult;stdcall;</p>
 параметры:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName - название подхранилища.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode - флаги доступа</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>dwStgFmt,reserved2 - зарезервированы (принимают значение 0).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>stg - указатель на интерфейс содержащий ссылку на подхранилище.</td></tr></table></div><p>После вызова этого метода посредством переменной stg вам стают доступны методы по использованию подхранилища:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>pwcsName - название подхранилища.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>grfMode - флаги доступа</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>dwStgFmt,reserved2 - зарезервированы (принимают значение 0).</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>stg - указатель на интерфейс содержащий ссылку на подхранилище.</td></tr></table></div><p>После вызова этого метода посредством переменной stg вам стают доступны методы по использованию подхранилища:</p>
 <pre>
 procedure TForm1.Button2Click(Sender: TObject);
 var Stg,Temp:IStorage;
@@ -255,7 +255,7 @@ end;
 <td><p>STGM_SIMPLE</p>
 </td>
 <td><p>Упрощенный вариант хранения данных:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нет поддержки подхранилищ</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нельзя повторно открыть поток для записи</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Все потоки имеют длину не меньше 4096</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Поддерживается ограниченное количество методов интерфейсов IStorage и IStream.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нет поддержки подхранилищ</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нельзя повторно открыть поток для записи</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Все потоки имеют длину не меньше 4096</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Поддерживается ограниченное количество методов интерфейсов IStorage и IStream.</p>
 </td></tr></table></div></td>
 </tr>
 <tr>

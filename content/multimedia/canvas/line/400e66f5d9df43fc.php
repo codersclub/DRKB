@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Dmitry Streblechenko </div>
+<div class="author">Автор: Dmitry Streblechenko</div>
 
 <p>У кого-нибудь есть исходный код или какая-либо информация для рисования кривых Безье? Я должен использовать их в своем компоненте.</p>
 

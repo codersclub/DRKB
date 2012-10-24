@@ -172,7 +172,7 @@ SetKey(VK_CAPITAL);
 <hr />
 
 <p>Послать нажатие клавиш</p>
-<div class="author">Автор: Xavier Pacheco </div>
+<div class="author">Автор: Xavier Pacheco</div>
 <pre>
 unit Main;
  
@@ -645,7 +645,7 @@ end.
 <hr />
 
 <p>Почти полный аналог метода SendKeys из VB</p>
-<div class="author">Автор: Ken Henderson </div>
+<div class="author">Автор: Ken Henderson</div>
 <pre>
 {
 SendKeys routine for 32-bit Delphi.

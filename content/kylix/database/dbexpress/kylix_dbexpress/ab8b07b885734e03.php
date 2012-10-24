@@ -2,6 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
+<div class="author">Автор: Mike Goblin</div>
 
 <p>Фирма Borland в Kylix и Delphi 6 реализовала новый движок для работы с базой данных dbExpress. Данный движок предназначен для работы с серверными БД. На сегодняшний день поддерживаются MySQL, Oracle, Interbase, DB2. К сожалению, на момент выпуска Kylix он работал не со всеми версиями MySQL. В частности, он не заработал с MySQL 3.23.22-beta. За неимением Oracle и DB2 я пользовался Interbase 6, находившемся на втором диске дистрибутива.</p>
 
@@ -166,7 +167,6 @@ quit;
 
 <p>Теперь можно запустить приложение на выполнение (F9 однака).</p>
 
-<div class="author">Автор: Mike Goblin </div>
 <p>Взято с сайта <a href="https://www.delphimaster.ru/" target="_blank">https://www.delphimaster.ru/</a></p>
 
 <p> с разрешения автора.</p>

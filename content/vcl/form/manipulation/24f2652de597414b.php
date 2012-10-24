@@ -27,5 +27,5 @@ begin
    inherited;
 end;
 </pre>
-<div class="author">Автор: antonn </div>
+<div class="author">Автор: antonn</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

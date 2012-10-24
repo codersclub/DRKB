@@ -7,5 +7,5 @@ Application.ExeName
 ParamStr(0)
 GetModuleFileName()
 </pre>
-<div class="author">Автор: rhf </div>
+<div class="author">Автор: rhf</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

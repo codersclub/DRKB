@@ -1,6 +1,7 @@
 <h1>Информация о сетевых интерфейсах</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: pve</div>
 
 <pre>
 unit netinfo;
@@ -124,5 +125,4 @@ end.
 
 
 <p>Взято с Исходников.Ru</p>
-<div class="author">Автор: pve </div>
 

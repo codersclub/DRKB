@@ -1,6 +1,7 @@
 <h1>Как поймать свой RAISEERROR в Delphi</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Nomadic</div>
 
 <pre>
 procedure TFDMUtils.GeneralError(DataSet: TDataSet; E: EDatabaseError; var
@@ -48,6 +49,5 @@ begin
 end;
 </pre>
 
-
-<div class="author">Автор: Nomadic </div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 

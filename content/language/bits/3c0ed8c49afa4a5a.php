@@ -19,5 +19,5 @@ begin
 end;
 </pre>
 
-<div class="author">Автор: Rouse_ </div>
+<div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

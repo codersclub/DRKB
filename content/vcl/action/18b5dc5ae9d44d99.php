@@ -11,5 +11,5 @@ begin
   NewAction.ActionList := ActionList1;
 end; 
 </pre>
-<div class="author">Автор: Dayana </div>
+<div class="author">Автор: Dayana</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

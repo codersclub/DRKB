@@ -105,7 +105,7 @@ end;
 <p>DelphiWorld 6.0</p>
 
 <hr />
-<div class="author">Автор: Robert Wittig </div>
+<div class="author">Автор: Robert Wittig</div>
 
 <p>Вы можете перехватывать нажатие курсорных клавиш на уровне приложения:</p>
 

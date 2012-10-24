@@ -1,6 +1,7 @@
 <h1>Конвертирование числа в строку, которую понимает Excel</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Sh@dow</div>
 
 <pre>
  /* Функция переводит число в строковое выражение числа с запятой, которое понимает Ёксель
@@ -19,5 +20,4 @@ return stuff(@s,len(@s)-2,1,',')
 END
 </pre>
 
-<div class="author">Автор: Sh@dow </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

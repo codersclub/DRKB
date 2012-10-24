@@ -64,7 +64,7 @@ procedure TForm1.Button2Click(Sender: TObject);
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
 <hr />
 <p class="p_Heading1">Как скопировать выбранные в DBGrid записи в клипборд</p>
-<div class="author">Автор: Тенцер А.Л. </div>
+<div class="author">Автор: Тенцер А.Л.</div>
 <pre>
 const
  FIELD_DELIMITER = #9;

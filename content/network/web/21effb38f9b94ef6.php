@@ -27,4 +27,4 @@
 <p>9. Нажмите на меню File | Save All, выберите имена main.pas и helloisapi.dpr для файлов проекта и сохраните их на диск.</p>
 <p>10. Нажмите на меню Project | Build helloisapi. Будет скомпилирован файл helloisapi.dll.</p>
 <p>11. Поместите полученный файл в каталог для ISAPI DLL вашего веб сервера. Для IIS 4.0 это каталог /cgi-bin/. Проверьте установлено ли право execute на этот каталог в веб сервере и установите доступ на чтение и запуск для соответствующих пользователей в NTFS.</p>
-<p>12.Запустите на выполнение ваше приложение, набрав в браузере полный URL. Например, если ваш сервер имеет URL http://localhost, вы положили DLL в каталог /cgi-bin/, то полный URL будет <a href="https://localhost/cgi-bin/helloisapi.dll. " target="_blank">https://localhost/cgi-bin/helloisapi.dll. </a></p>
+<p>12.Запустите на выполнение ваше приложение, набрав в браузере полный URL. Например, если ваш сервер имеет URL http://localhost, вы положили DLL в каталог /cgi-bin/, то полный URL будет <a href="https://localhost/cgi-bin/helloisapi.dll. " target="_blank">https://localhost/cgi-bin/helloisapi.dll.</a></p>

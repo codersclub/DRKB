@@ -37,5 +37,5 @@ end;
 end.
 </pre>
 
-<div class="author">Автор: man2002ua </div>
+<div class="author">Автор: man2002ua</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

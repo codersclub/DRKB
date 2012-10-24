@@ -270,6 +270,6 @@ end;
 end.
 </pre>
 <div class="author">Автор: Вадим Исаенко</div>
-<p>WEB-сайт: <a href="https://v-isa.narod.ru " target="_blank">https://v-isa.narod.ru </a></p>
+<p>WEB-сайт: <a href="https://v-isa.narod.ru " target="_blank">https://v-isa.narod.ru</a></p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

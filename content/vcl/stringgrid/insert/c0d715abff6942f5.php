@@ -73,7 +73,7 @@ end.
 <p>DelphiWorld 6.0</p>
 <hr />
 
-<div class="author">Автор: Joel E. Cant </div>
+<div class="author">Автор: Joel E. Cant</div>
 <p>Пример демонстрирует добавление любого количества чекбоксов в StringGrid. В этом примере необходимо добавить TPanel, а в саму панель включить TstringGrid. Так же необходимо добавить невидимый TcheckBox на форму. Затем добавьте 5 колонок и 4 строки в объект StringGrid.</p>
 <pre>
 procedure TForm1.CheckBox1Click(Sender: TObject);

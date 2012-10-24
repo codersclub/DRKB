@@ -301,4 +301,4 @@ end;
 <img src="/pic/clip0111.png" width="175" height="112" border="0" alt="clip0111"></p>
 <p>Нравиться? Здесь можно скачать исподники всей этой части. <br>
 <p>part2.rar(77,5 kB)</p>
-<div class="author">Автор: Влад Энгельгардт </div>
+<div class="author">Автор: Влад Энгельгардт</div>

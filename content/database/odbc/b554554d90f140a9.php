@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Mark Nelson (Delphi Tech Support) </div>
+<div class="author">Автор: Mark Nelson (Delphi Tech Support)</div>
 
 <p>Представляю вашему вниманию инструкцию по конфигурированию ODBC и источника данных.</p>
 

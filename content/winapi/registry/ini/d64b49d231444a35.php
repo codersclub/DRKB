@@ -21,7 +21,7 @@ RenameFile('c:\test.ini', 'c:\test1.ini');
 <p>Я решил эту проблему добавлением следующей строки перед IniFile.Free:</p>
 <p>WritePrivateProfileString(nil, nil, nil, PChar(IniFileName));</p>
 <p>Для получения дополнительной информации обратитесь к электронной справке к разделу 'WritePrivateProfileString'</p>
-<div class="author">Автор: Tony Chang </div>
+<div class="author">Автор: Tony Chang</div>
 &nbsp;</p>
 <hr /><p>Как указать системе на необходимость сбросить буфер INI-файла на диск</p>
 <pre>

@@ -62,7 +62,7 @@ end;
  
 end.
 </pre>
-<div class="author">Автор: Smike </div>
+<div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Можно отключать стили XP и для отдельных контролов (темы должны быть включены и манифест лежать на форме):<br>
 <p>&nbsp;</p>
@@ -117,5 +117,5 @@ end;
  
 end.
 </pre>
-<div class="author">Автор: Krid </div>
+<div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

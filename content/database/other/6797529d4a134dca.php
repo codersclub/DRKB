@@ -1,6 +1,7 @@
 <h1>Advantage Database Server</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Vyacheslav</div>
 
 <p>1) Краткое описание - Advantage Database Server(ADS) - разработка фирмы Extended System, Inc (http://www.AdvantageDatabase.com). Развивается с начала 90-x годов. Первоначально была известен как Advantage X-Base Server и предназначался для работы в клиент-серверном режиме с таблицами формата dbf(Clipper, Foxpro) и базировался до 4 версии только на Novell платформе. К отличительной особенностью является использование ISAМ(indexed sequentil access method) - индексный последовательный метод доступа. С версии 5.0 появилась версия для NT и добавлен собственный форма таблиц, а с версии 5.5 поддерживается SQL. В настоящее время выпущена версия с номером 7.0</p>
 <p>2) возможности -</p>
@@ -366,5 +367,5 @@
 <p>Advantage CA-Visual Objects RDDs</p>
 <p>Набор компонентов Advantage TDataSet Descendant for Delphi/Kylix/C++Builder</p>
 <p>- языки программирования - Clipper, Delphi/C++Builder/Kylix, Microsoft Visual Basic, Microsoft Visual C/C++, Java, Perl , Php, CA-Visual Objects</p>
-<div class="author">Автор: Vyacheslav </div>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

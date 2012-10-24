@@ -35,7 +35,11 @@ end;
 </pre>
 
 <p>Этот код, делает следующее, загружаем в листбох список Gif файлов, затем это все дело обьединяетсяв один BMP файл,картинка к картинке, кто знает DirectX поймет для чего это надо (спрайты);</p>
+
 <hr />
+
+<div class="author">Автор: МММ</div>
+
 <pre>
 procedure TForm1.Button4Click(Sender: TObject);
 var
@@ -57,17 +61,18 @@ begin
   bm.free;
 end;
 </pre>
+
 <p>из файловов GIF (анимированных) вытаскивает каждую картинку в отдельности, или записывает в отдельный BMP по очереди</p>
 <p>Для этих программок нужен всеми любимый RX Lib !!!</p>
 
-<div class="author">Автор: МММ </div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
 <hr>
 
+<div class="author">Автор: Vit</div>
+
 <p>Как поставить (анимационный) GIF на форму?</p>
 <p>Использовать компонент rxGIFAnimator из библиотеки RxLib.</p>
 
-<div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

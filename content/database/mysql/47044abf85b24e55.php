@@ -1,6 +1,7 @@
 <h1>Подключение через TMySQLClient &amp; TMySQLResult</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Mal Hack</div>
 
 <p>Решение нашел...</p>
 <p>1. Без использования dbExpress, а с использованием специальных классов TMySQLClien &amp; TMySQLResult.</p>
@@ -92,5 +93,5 @@ begin
 end;
 </pre>
 
-<div class="author">Автор: Mal Hack </div>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

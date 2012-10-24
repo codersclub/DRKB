@@ -55,7 +55,7 @@ end; {RemoveHint}
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-<div class="author">Автор: Nomadic </div>
+<div class="author">Автор: Nomadic</div>
 <pre>
 {Появление}
 IF h&lt;&gt;nil H.ReleaseHandle; {если чей-то хинт yже был, то его погасить}

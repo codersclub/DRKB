@@ -26,5 +26,5 @@ label1.canvas,rect(0,0,label1.width,label1.height));
 end;
 </pre>
 
-<div class="author">Автор: Mikel </div>
+<div class="author">Автор: Mikel</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

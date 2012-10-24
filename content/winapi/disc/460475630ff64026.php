@@ -65,5 +65,5 @@ end; // case
 end
 </pre>
 <p>;</p>
-<div class="author">Автор: Serious </div>
+<div class="author">Автор: Serious</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

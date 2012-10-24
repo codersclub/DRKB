@@ -32,7 +32,7 @@ begin
  GetWord:=buf;
 end;
 </pre>
-<div class="author">Автор: TP@MB@Y </div>
+<div class="author">Автор: TP@MB@Y</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 &nbsp;</p>
 <hr />

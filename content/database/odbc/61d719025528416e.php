@@ -1,9 +1,7 @@
 <h1>Установка ODBC</h1>
 <div class="date">01.01.2007</div>
 
-
-
-<div class="author">Автор: Johannes M. Becher (CODATA GmbH Krefeld, Germany) </div>
+<div class="author">Автор: Johannes M. Becher (CODATA GmbH Krefeld, Germany)</div>
 
 <p>...если вам нужно знать, что творится за сценой, нужно просто взглянуть на эти два файла, оба человеко-читаемых, оба расположенных в вашей директории Windows.</p>
 

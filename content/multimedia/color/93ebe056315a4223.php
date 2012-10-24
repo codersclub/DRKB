@@ -93,5 +93,5 @@ end;
 ModColors(BitMap, RGB(150,150,150));
 </pre>
 
-<div class="author">Автор: Rouse_ </div>
+<div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

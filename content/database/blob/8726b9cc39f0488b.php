@@ -1,6 +1,7 @@
 <h1>Извлечение текста из TMemoField</h1>
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Steve Schafer</div>
 
 <pre>
 var
@@ -20,6 +21,5 @@ begin
   FreeMem(P, Size + 1);
 end;
 </pre>
-<div class="author">Автор: Steve Schafer </div>
 
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

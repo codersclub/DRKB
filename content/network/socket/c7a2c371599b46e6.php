@@ -19,7 +19,7 @@ begin
 end;
 </pre>
 &nbsp;</p>
-<div class="author">Автор: jack128 </div>
+<div class="author">Автор: jack128</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 <hr /><p>&nbsp;<br>
@@ -69,5 +69,5 @@ end;
 11003 Невосстанавливаемая ошибка при разрешении имени в адрес. <br>
 <p>11004 С запрошенным именем компьютера не связано никакой правильной информации об адресе, хотя само имя присутствует в соответствующих базах данных имён.</p>
 <p>&nbsp;<br>
-<div class="author">Автор: Misc&#1106;ka </div>
+<div class="author">Автор: Misc&#1106;ka</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

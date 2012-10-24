@@ -1,7 +1,7 @@
 <h1>Замена подстрок</h1>
 <div class="date">01.01.2007</div>
 
-<div class="author">Автор: Сергей Шамайтис </div>
+<div class="author">Автор: Сергей Шамайтис</div>
 <pre>
 function ReplaceSub(str, sub1, sub2: string): string;
 var

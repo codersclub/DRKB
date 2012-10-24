@@ -120,6 +120,6 @@ end;
 &nbsp;<br>
 &nbsp;<br>
 Ну вот вроде бы как и все. Мы добрались до завершения статьи. Если что непонятно, необходимо пояснение или пример пишите. Отвечу всем.<br>
-<div class="author">Автор: Релорт Relort@yandex.ru Февраль 2003. </div>
+<div class="author">Автор: Релорт Relort@yandex.ru Февраль 2003.</div>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
