@@ -25,7 +25,7 @@ begin
  SetWindowLong(Edit1.Handle,GWL_USERDATA,SetWindowLong(Edit1.Handle, GWL_WNDPROC, LPARAM(@NewEditProc)))
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
@@ -87,11 +87,11 @@ end;
 End.
 </pre>
 <div class="author">Автор: Vit</div>
-&nbsp;</p>
+</p>
 <hr />
 <p class="p_Heading1">Как сделать, чтобы TEdit воспринимал одни цифры и DecimalSeparator?</p>
-<p class="p_Heading1">&nbsp;</p>
-<div class="author">Автор: Full&nbsp; ( http://full.hotmail.ru/ )</div>
+<p class="p_Heading1"></p>
+<div class="author">Автор: Full  ( http://full.hotmail.ru/ )</div>
 <pre>
 type
   TNumEdit = class(TEdit)
@@ -169,7 +169,7 @@ begin
   end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <p>Все приведенные выше примеры грешат несколькими проблемами: одни из них не учитывают ВСЕ способы которыми может вводится информация в TEdit - одни не учитывают clipboard, другие ввод из кода программы, и наконец все они не учитывают, что число может иметь например такую запись "2E4" или даже "2E-4".</p>
 <p>Попытка разрешить ситуацию привела к следующему простому коду:</p>

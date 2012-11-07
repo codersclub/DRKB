@@ -57,7 +57,7 @@ reply body rbody;
 };
 </pre>
 
-&nbsp;
+ 
 <p>где xid - идентификатор текущей транзакции, call_body - пакет запроса, reply_body - пакет ответа. Структура запроса выглядит примерно так:</p>
 <pre>
 struct call body { 

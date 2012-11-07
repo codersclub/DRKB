@@ -3,7 +3,7 @@
 
 <div class="author">Автор: Константин, konrads@mail.ru</div>
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Работа с EXCEL
  

@@ -28,16 +28,16 @@
 <p>Также вам необходимы следующие файлы ODBC:</p>
 
 <p> Минимум:</p>
-<p>  ODBC.DLL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 03.10.1994, Версия 2.00.1510</p>
-<p>  ODBCINST.DLL&nbsp;&nbsp; 03.10.1994, Версия 2.00.1510</p>
-<p>  ODBCINST.HLP&nbsp;&nbsp; 11.08.1993</p>
-<p>  ODBCADM.EXE&nbsp;&nbsp;&nbsp; 11.08.1993, Версия 1.02.3129</p>
+<p>  ODBC.DLL       03.10.1994, Версия 2.00.1510</p>
+<p>  ODBCINST.DLL   03.10.1994, Версия 2.00.1510</p>
+<p>  ODBCINST.HLP   11.08.1993</p>
+<p>  ODBCADM.EXE    11.08.1993, Версия 1.02.3129</p>
 
 <p> Рекомендуется:</p>
-<p>  ODBC.DLL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.07.1994, Версия 2.10.2401</p>
-<p>  ODBCINST.DLL&nbsp;&nbsp; 12.07.1994, Версия 2.10.2401</p>
-<p>  ODBCINST.HLP&nbsp;&nbsp; 12.07.1994</p>
-<p>  ODBCADM.EXE&nbsp;&nbsp;&nbsp; 12.07.1994, Версия 2.10.2309</p>
+<p>  ODBC.DLL       12.07.1994, Версия 2.10.2401</p>
+<p>  ODBCINST.DLL   12.07.1994, Версия 2.10.2401</p>
+<p>  ODBCINST.HLP   12.07.1994</p>
+<p>  ODBCADM.EXE    12.07.1994, Версия 2.10.2309</p>
 
 <p>Нижеследующие шаги приведут вас к искомой цели:</p>
 

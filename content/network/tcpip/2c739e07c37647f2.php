@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Некоторые старые internet протоколы ( такие как FTP ) посылают IP адреса и номера портов в шестизначном формате XXX.XXX.XXX.XXX.XX.XXX&nbsp; Следующий код позволяет преобразовать такой адрес к нормальному четырёхзначному IP адресу.</p>
+<p>Некоторые старые internet протоколы ( такие как FTP ) посылают IP адреса и номера портов в шестизначном формате XXX.XXX.XXX.XXX.XX.XXX  Следующий код позволяет преобразовать такой адрес к нормальному четырёхзначному IP адресу.</p>
 <pre>
 procedure LongIPToShort(aLongIPAddress: string; out ShortIPAddress: string; out PortNumber: Integer);
 var I, DotPos, tempPort: Integer;

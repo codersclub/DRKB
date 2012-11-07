@@ -27,8 +27,8 @@ GlobalFreePtr(lpItemID);
 end;
 end;
 </pre>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <p>Источник: Дельфи. Вокруг да около.</p>
 <hr />
 <p>Вариант от Анатолия (SAVwa@eleks.lviv.ua)</p>

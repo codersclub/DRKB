@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { ... }
 aDoc := WordApp.Documents.Add(EmptyParam, EmptyParam);
 aDoc.Sections.Item(1).Headers.Item(wdHeaderFooterPrimary).Range.Text :=

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 function IsDCOMEnabled: Boolean;
 var
   Ts: string;
@@ -18,8 +18,10 @@ end;
 </pre>
 
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>
+
 <hr />
-<pre>
+
+<pre class="delphi">
 function IsDCOMInstalled: Boolean;
 var
   OLE32: HModule;

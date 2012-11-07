@@ -40,20 +40,20 @@ procedure TAxControl. InitControlData;
 begin
 ControlData := @CControlData; // Указываете адрес, где находится информация об ActiveX.
 end;
-&nbsp;
+ 
 //////////////////////////////////////////////////////////////////////////////////////
 end.
 </pre>
-&nbsp;</p>
+</p>
 Размещаем TextToSpeech на Delphi компонент Panel и устанавливаем стандартные свойства.</p>
 В случае отсутствия данного компонента на Вашем компьютере, обрабатываем исключение связыванием с компонентом WebBrowser и запускаем скачивание данного компонента с http://activex.microsoft.com/activex/controls/sapi/spchapi.exe.</p>
 Если же на вашем компьютере уже установлены компоненты, произойдёт инициализация TextToSpeech, который озвучит текущее время.</p>
 <pre>var compon:TAxControl;
-&nbsp;
+ 
  procedure TForm1.FormCreate(Sender: TObject); 
-&nbsp;
+ 
 begin 
-&nbsp;
+ 
 try compon:=TAxControl.Create(self,stringtoguid('{EEE78591-FE22-11D0-8BEF-0060081841DE}')); 
 compon.Parent:=panel1; 
 compon.Visible:=true;
@@ -63,19 +63,19 @@ compon.Width:=100;
 compon.Height:=100; 
 compon.OleObject.Speak(timetostr(time));
  except form1.Caption:='установка SpeechAPI';
- &nbsp; messagebox(form1.Handle,'установи Speech API','ошибка',0);
- &nbsp; panel1.Width:=300; 
- &nbsp; panel1.Height:=250; 
+   messagebox(form1.Handle,'установи Speech API','ошибка',0);
+   panel1.Width:=300; 
+   panel1.Height:=250; 
 // компонент WebBrowser
- &nbsp; compon:=TAxControl.Create(self,stringtoguid('{8856F961-340A-11D0-A96B-00C04FD705A2}'));
- &nbsp; compon.Parent:=panel1; 
- &nbsp; compon.Visible:=true; 
- &nbsp; compon.Top:=20;
- &nbsp; compon.Left:=0; compon.OleObject.Navigate2('http://activex.microsoft.com/activex/controls/sapi/spchapi.exe.',0,0,00); 
+   compon:=TAxControl.Create(self,stringtoguid('{8856F961-340A-11D0-A96B-00C04FD705A2}'));
+   compon.Parent:=panel1; 
+   compon.Visible:=true; 
+   compon.Top:=20;
+   compon.Left:=0; compon.OleObject.Navigate2('http://activex.microsoft.com/activex/controls/sapi/spchapi.exe.',0,0,00); 
  end; 
 end; 
 </pre>
-&nbsp;</p>
+</p>
 Рассмотрим более подробно наиболее общие свойства и методы TextToSpeech:</p>
 <pre>
 var Text:string;
@@ -98,19 +98,20 @@ compon.OleObject.LipTension:=X;//визуальное положение губ 
 </pre>
 В большинстве программ хватает этих свойств и методов. Но SpeechToText некоторые слова произносит некорректно.</p>
 Для решения этой проблемы существует несколько путей:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>- Подключение пользовательских словарей;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>- Создание своих обработчиков;</td></tr></table></div>Подключение словарей через вызов LexiconDlg, вручную, неудобно &#8211; библиотеку типов этого модуля, лично я, не нашел.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>- Подключение пользовательских словарей;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>- Создание своих обработчиков;</td></tr></table></div>Подключение словарей через вызов LexiconDlg, вручную, неудобно - библиотеку типов этого модуля, лично я, не нашел.</p>
 Остаётся создание своего обработчика с вызовом методов:</p>
 <pre>procedure TForm1.Button5Click(Sender: TObject); 
 begin 
  compon.OleObject.TextData(2,0,edit2.Text);//произнести фонемный код 
 end; 
-&nbsp;
+ 
 procedure TForm1.Button6Click(Sender: TObject);
  begin 
  edit2.Text:=compon.OleObject.Phonemes(2,10,edit1.Text);//преобразовать в фонемный код 
 end;
 </pre>
-<p>&nbsp;</p>
+<p></p>
 <p>Используя фонетический алфавит Вы можете в широких пределах изменять произношение. SpeechAPI компонент удобен для любителей Web-программирования, так как поддерживает интерфейс IObjectSefety и соответственно безопасен для использования в сценариях JavaScript и VbScript. Пример использования в Web на сайте magdelphi.boom.ru</p>
 
 <div class="author">Автор: Альберт Мамедов</div>

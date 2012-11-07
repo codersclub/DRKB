@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 try
   Ex1.Workbooks.Close(LOCALE_USER_DEFAULT);
   Ex1.Disconnect;

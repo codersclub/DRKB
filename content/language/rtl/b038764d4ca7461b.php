@@ -9,14 +9,14 @@
 <p>function ArcTan2(Y, X: Extended): Extended; Арктангенс X/Y возвращает угол в квадранте</p>
 <p>procedure SinCos(Theta: Extended; var Sin, Cos: Extended) register; возвращает сразу и синус и косинус, вычисления в 2 раза быстрее чем Sin, Cos по отдельности</p>
 <p>function Tan(X: Extended): Extended;</p>
-<p>function Cotan(X: Extended): Extended;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p>function Hypot(X, Y: Extended): Extended;&nbsp; Возвращает значение гипотенузы по катетам</p>
+<p>function Cotan(X: Extended): Extended;</p>
+<p>function Hypot(X, Y: Extended): Extended;  Возвращает значение гипотенузы по катетам</p>
 
 <p>Конвертация углов</p>
 
 <p>function DegToRad(Degrees: Extended): Extended;</p>
-<p>function RadToDeg(Radians: Extended): Extended;&nbsp;</p>
-<p>function GradToRad(Grads: Extended): Extended;&nbsp;</p>
+<p>function RadToDeg(Radians: Extended): Extended;</p>
+<p>function GradToRad(Grads: Extended): Extended;</p>
 <p>function RadToGrad(Radians: Extended): Extended;</p>
 <p>function CycleToRad(Cycles: Extended): Extended;</p>
 <p>function RadToCycle(Radians: Extended): Extended;</p>
@@ -28,13 +28,13 @@
 <p>function Tanh(X: Extended): Extended;</p>
 <p>function ArcCosh(X: Extended): Extended;</p>
 <p>function ArcSinh(X: Extended): Extended;</p>
-<p>function ArcTanh(X: Extended): Extended;&nbsp;&nbsp;</p>
+<p>function ArcTanh(X: Extended): Extended;</p>
 
 <p>Логарифмы, экспоненты и возведение в степень</p>
 
-<p>function LnXP1(X: Extended): Extended;&nbsp; - натуральный логариф x+1 (для более высокой точности при x близких к нулю)</p>
-<p>function Log10(X: Extended): Extended; - десятичный логарифм&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p>function Log2(X: Extended): Extended;&nbsp; - логарифм по основанию 2</p>
+<p>function LnXP1(X: Extended): Extended;  - натуральный логариф x+1 (для более высокой точности при x близких к нулю)</p>
+<p>function Log10(X: Extended): Extended; - десятичный логарифм</p>
+<p>function Log2(X: Extended): Extended;  - логарифм по основанию 2</p>
 <p>function LogN(Base, X: Extended): Extended; - логарифм по произвольному основанию</p>
 <p>function IntPower(Base: Extended; Exponent: Integer): Extended register;</p>
 <p>function Power(Base, Exponent: Extended): Extended;</p>
@@ -53,7 +53,7 @@
 <p>function Sum(const Data: array of Double): Extended register; сумма ряда</p>
 <p>function SumInt(const Data: array of Integer): Integer register; сумма ряда целых чисел</p>
 <p>function SumOfSquares(const Data: array of Double): Extended; сумма квадратов</p>
-<p>procedure SumsAndSquares(const Data: array of Double;&nbsp; var Sum, SumOfSquares: Extended) register; сумма и сумма квадратов одной функцией</p>
+<p>procedure SumsAndSquares(const Data: array of Double;  var Sum, SumOfSquares: Extended) register; сумма и сумма квадратов одной функцией</p>
 <p>function MinValue(const Data: array of Double): Double; минимальное значение в ряду</p>
 <p>function MinIntValue(const Data: array of Integer): Integer; минимальное значение в ряду целых</p>
 <p>function Min(A,B) минимальное значение из 2х чисел (overload функции для Integer, Int64, Single, Double, Extended)</p>
@@ -73,8 +73,8 @@
 
 <p>Финансовые функции</p>
 
-<p>function DoubleDecliningBalance(Cost, Salvage: Extended;&nbsp; Life, Period: Integer): Extended;</p>
-<p>function FutureValue(Rate: Extended; NPeriods: Integer; Payment, PresentValue:&nbsp; Extended; PaymentTime: TPaymentTime): Extended;</p>
+<p>function DoubleDecliningBalance(Cost, Salvage: Extended;  Life, Period: Integer): Extended;</p>
+<p>function FutureValue(Rate: Extended; NPeriods: Integer; Payment, PresentValue:  Extended; PaymentTime: TPaymentTime): Extended;</p>
 <p>function InterestPayment(Rate: Extended; Period, NPeriods: Integer; PresentValue,</p>
 <p>  FutureValue: Extended; PaymentTime: TPaymentTime): Extended;</p>
 <p>function InterestRate(NPeriods: Integer;</p>

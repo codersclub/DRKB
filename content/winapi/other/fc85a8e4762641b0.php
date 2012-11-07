@@ -6,7 +6,7 @@
 При открытии сидирома срабатывает DBT_DEVICEREMOVECOMPLETE, при закрытии DBT_DEVICEARRIVAL<br>
 При подключении сетевого диска также приходит DBT_DEVICEARRIVAL а при отключении DBT_DEVICEREMOVECOMPLETE<br>
 При подключении или отключении флэшки срабатывает DBT_DEVNODES_CHANGED...<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 unit Unit1;
 

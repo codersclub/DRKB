@@ -2,18 +2,18 @@
 <div class="date">01.01.2007</div>
 
 Автор: Влад Шубников<br>
-<p>&nbsp;</p>
+<p></p>
 <p>В основе иерархии классов, обеспечивающих функционирование наборов данных в приложениях баз данных Delphi, лежит класс TDataSet. Хотя он почти не содержит методов, реально обеспечивающих работоспособность основных механизмов набора данных, тем не менее его значение трудно переоценить.</p>
 <p>Этот класс задает структурную основу функционирования набора данных. Другими словами, это скелет набора данных, к методам которого необходимо лишь добавить требуемые вызовы соответствующих функций реальных технологий.</p>
 <p>При решении наиболее распространенных задач программирования в процессе создания приложений баз данных класс TDataSet не нужен. Тем не менее знание основных принципов работы набора данных всегда полезно. Кроме этого, класс TDataSet может использоваться разработчиками в качестве основы для создания собственных компонентов. Поэтому рассмотрим основные механизмы, реализованные в наборе данных.</p>
 <p>Набор данных открывается и закрывается свойством</p>
 <p>property Active: Boolean;</p>
 <p>которому соответственно необходимо присвоить значение True или False. Аналогичные действия выполняют методы</p>
-<p>procedure Open;&nbsp;</p>
+<p>procedure Open;</p>
 <p>procedure Close;</p>
 <p>После открытия набора данных можно перемещаться по его записям.</p>
 <p>На одну запись вперед и назад перемещают курсор соответственно методы</p>
-<p>procedure Next;&nbsp;</p>
+<p>procedure Next;</p>
 <p>procedure Prior;</p>
 <p>На первую и последнюю запись можно попасть, используя соответственно методы</p>
 <p>procedure First;</p>
@@ -120,7 +120,13 @@ type TDataSetState = (dslnactive, dsBrowse, dsEdit, dslnsert,
 <p>Методы-обработчики класса TDataSet предоставляют разработчику широчайшие возможности по отслеживанию событий, происходящих с набором данных.</p>
 <p>По паре методов-обработчиков (до и после события) предусмотрено для следующих событий в наборе данных:</p>
 <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>открытие и закрытие набора данных;</td></tr></table></div>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>переход в режим редактирования;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>переход в режим вставки новой записи;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>сохранение сделанных изменений;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>отмена сделанных изменений;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>перемещение по записям набора данных;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>обновление набора данных.</td></tr></table></div><p>Обратите внимание, что помимо методов-обработчиков режима вставки существует дополнительный метод</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>переход в режим редактирования;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>переход в режим вставки новой записи;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>сохранение сделанных изменений;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>отмена сделанных изменений;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>перемещение по записям набора данных;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>обновление набора данных.</td></tr></table></div>
+<p>Обратите внимание, что помимо методов-обработчиков режима вставки существует дополнительный метод</p>
 <p>property OnNewRecord: TDataSetNotifyEvent;</p>
 <p>который вызывается непосредственно при вставке или добавлении записи. Дополнительно к этому могут использоваться методы-обработчики возникающих ошибок. Они предусмотрены для ошибок удаления, редактирования и сохранения изменений.</p>
 <p>Метод-обработчик</p>

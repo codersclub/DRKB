@@ -5,7 +5,7 @@
 <p>Так как общим предком компонентов dbExpress объявлен класс TDataSet, то задачей класса TCustomSQLDataSet является не столько внесение новой</p>
 <p>функциональности, сколько корректное ограничение возможностей, заложенных в TDataSet. Непосредственно в приложениях этот класс не используется, но информация о нем полезна для понимания других компонентов dbExpress и для создания собственных компонентов на его основе.</p>
 <p>Класс TCustomSQLDataSet является общим предком для компонентов, инкапсулирующих запросы, таблицы и хранимые процедуры. Для их поддержки используются свойства:</p>
-<p>TSQLCommandType = (ctQuery, ctTable, ctStoredProc);&nbsp;&nbsp; property CommandType: TSQLCommandType;</p>
+<p>TSQLCommandType = (ctQuery, ctTable, ctStoredProc);   property CommandType: TSQLCommandType;</p>
 <p>определяющее тип команды, направляемой серверу;</p>
 <p> property CoramandText: string;</p>
 <p>содержащее текст команды.</p>

@@ -3,7 +3,8 @@
 
 
 <p>По Table(Query).Database:</p>
-<pre>
+
+<pre class="delphi">
 uses
   DbiProcs;
  
@@ -22,7 +23,8 @@ end;
 </pre>
 
 <p>По алиасу:</p>
-<pre>
+
+<pre class="delphi">
 function GetPhNameByAlias(sAlias: string): string;
 var
   Database: TDatabase;

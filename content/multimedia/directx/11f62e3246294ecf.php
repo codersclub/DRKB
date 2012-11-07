@@ -13,7 +13,15 @@ begin
 end
 </pre>
 <p>,где</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>&lt;тикер&gt; есть зарезервированное слово:</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isUp - по умолчанию "стрелка вверх"</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isDown - по умолчанию "стрелка вниз"</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isRight - по умолчанию "стрелка вправо"</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isLeft - по умолчанию "стрелка влево"</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton1 - по умолчанию "Space"</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton2 - по умолчанию "Enter"</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton3-IsButton32 - по умолчанию не определены</td></tr></table></div><p>Для сравнения два равноценных условия:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>&lt;тикер&gt; есть зарезервированное слово:</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isUp - по умолчанию "стрелка вверх"</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isDown - по умолчанию "стрелка вниз"</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isRight - по умолчанию "стрелка вправо"</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>isLeft - по умолчанию "стрелка влево"</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton1 - по умолчанию "Space"</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton2 - по умолчанию "Enter"</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IsButton3-IsButton32 - по умолчанию не определены</td></tr></table></div>
+<p>Для сравнения два равноценных условия:</p>
 <pre>
 //c использования DXInput
 if isUp in DXInput.States then
@@ -27,7 +35,9 @@ end
 </pre>
 
 <p>Чтобы определить "тикер": DXInput.Keyboard.KeyAssigns[&lt;тикер&gt;,X]:= &lt;кнопка&gt; ,где:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>X - значение от 0 до 2 (то есть на каждый "тикер" можно присвоить до трех &lt;кнопок&gt;)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>&lt;кнопка&gt; - код кнопки (например ord('Q')).</td></tr></table></div><p class="note">Примечание: буквенные клавиши указываются в верхнем регистре, т.е.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>X - значение от 0 до 2 (то есть на каждый "тикер" можно присвоить до трех &lt;кнопок&gt;)</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>&lt;кнопка&gt; - код кнопки (например ord('Q')).</td></tr></table></div>
+<p class="note">Примечание: буквенные клавиши указываются в верхнем регистре, т.е.</p>
 <p>DXInput.Keyboard.KeyAssigns[isButton10,X]:=ord('q')</p>
 <p>не будет реагировать на нажатие клавиши 'q' .<br>
 <p>Кнопки Ctrl, Alt, Shift можно опросить обычным способом:</p>
@@ -66,11 +76,11 @@ begin
 end;
 </pre>
 <p>2. Мышь<br>
-&nbsp;<br>
+ <br>
 DXinput.Mouse.X - положение курсора по горизонтали<br>
 DXinput.Mouse.Y - положение курсора по вертикали<br>
 DXinput.Mouse.Z - положение курсора по третьей оси<br>
-&nbsp;<br>
+ <br>
 <p>Небольшой примерчик:</p>
 <pre>
 var
@@ -122,22 +132,22 @@ end;
 </pre>
 
 <p>3. Джойстик<br>
-&nbsp;<br>
+ <br>
 Настроим джойстик:<br>
 DXinput.Joystick.RangeX = 0 - 1000, устанавливает диапазон изменения значений по горизонтальной оси от X до -X<br>
 DXinput.Joystick.RangeY = 0 - 1000, устанавливает диапазон изменения значений по вертикальной оси от Y до -Y<br>
 DXinput.Joystick.RangeZ = 0 - 1000, устанавливает диапазон изменения значений по третьей оси от Z до -Z<br>
-&nbsp;<br>
+ <br>
 DXinput.Joystick.DeadzoneX = 0 - 100, устанавливает чувствительность по горизонтальной оси<br>
 DXinput.Joystick.DeadzoneY = 0 - 100, устанавливает чувствительность по вертикальной оси<br>
 DXinput.Joystick.DeadzoneZ = 0 - 100, устанавливает чувствительность по третьей оси<br>
 0 - самое чувствительное значение.<br>
-&nbsp;<br>
+ <br>
 Читаем положение рукоятки:<br>
 DXinput.Joystick.X - по горизонтальной оси<br>
 DXinput.Joystick.Y - по вертикальной оси<br>
 DXinput.Joystick.Z - по третьей оси<br>
-&nbsp;<br>
+ <br>
 <p>Z - используется в случае наличия на джойстике соответствующей ручки. Этот кусок кода сканирует кнопки на джойстике:</p>
 <pre>
 for i := 0 to DXInput1.Joystick.ButtonCount do

@@ -5,9 +5,9 @@
 
 <p>This function gets the connected MS SQL Server version. It returns the version info in 3 OUT parameters.</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;VerNum &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: double  &nbsp; &nbsp; &nbsp; &nbsp;eg. 7.00623</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;VerStrShort  &nbsp; &nbsp; &nbsp; &nbsp;: string  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;eg. '7.00.623'</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;VerStrLong  &nbsp; &nbsp; &nbsp; &nbsp;: string  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;eg. 'Microsoft SQL Server&nbsp; 7.00 - 7.00.623 (Intel X86)  &nbsp; &nbsp; &nbsp; &nbsp;Nov 27 1998 22:20:07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copyright (c) 1988-1998 Microsoft Corporation &nbsp; &nbsp; &nbsp; &nbsp;Enterprise Edition on&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Windows NT 5.0 (Build 2195: Service Pack 1)'</p>
+<p>        VerNum                        : double         eg. 7.00623</p>
+<p>        VerStrShort         : string                 eg. '7.00.623'</p>
+<p>        VerStrLong         : string                 eg. 'Microsoft SQL Server  7.00 - 7.00.623 (Intel X86)         Nov 27 1998 22:20:07                                                             Copyright (c) 1988-1998 Microsoft Corporation        Enterprise Edition on                                                                   Windows NT 5.0 (Build 2195: Service Pack 1)'</p>
 
 <p>I have tested it with MSSQL 7 and MSSQL 2000. I assume it should work for the others. Any feedback and fixes for different versions would be appreciated.</p>
 

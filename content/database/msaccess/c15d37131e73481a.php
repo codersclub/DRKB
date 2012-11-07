@@ -5,10 +5,10 @@
 
 <p>f I am not wrong you have an Access db with multiple tables and you want to copy one of these tables into another Access db. For this case i would do the next:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Create database TrasportDB.mdb - use ADOX.</p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Copy table from source table into TransportDB.mdb with Select * Into [TransportTable] in "FullPath\TransportDB.mdb" From SourceTable.</p>
-3. &nbsp; &nbsp; &nbsp; &nbsp;Deliver TransportDB.mdb on destination computer.</p>
-4. &nbsp; &nbsp; &nbsp; &nbsp;Copy table from TransportTable into DestTable with Select * Into [DestTable] From [TransportTable] in "FullPath\TransportDB.mdb".</p>
+1.        Create database TrasportDB.mdb - use ADOX.</p>
+2.        Copy table from source table into TransportDB.mdb with Select * Into [TransportTable] in "FullPath\TransportDB.mdb" From SourceTable.</p>
+3.        Deliver TransportDB.mdb on destination computer.</p>
+4.        Copy table from TransportTable into DestTable with Select * Into [DestTable] From [TransportTable] in "FullPath\TransportDB.mdb".</p>
 
 <p>FullPath is the path to TransportDB.mdb and is different on source and dest computers.</p>
 

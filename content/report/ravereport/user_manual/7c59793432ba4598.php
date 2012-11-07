@@ -15,6 +15,6 @@
 <p>5. U.S. Government Restricted Rights - This Software and documentation are provided with restrictive rights. Use, duplication or disclosure by the Government is subject to restrictions set forth in Section c(1)(ii) of the Rights and Technical Data in Computer Software clause at 52.227-7013.</p>
 <p>Техническая поддержка</p>
 <p>Техническая поддержка, обновления и другая информация, относящаяся к Rave Reports, может быть получена на сайте Nevrona Designs. Для получения более подробной информации посетите один из слежующих сайтов:</p>
-Техническая поддержка &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- http:/www.nevrona.com/support</p>
-Добавления, советы и другая информация &nbsp; &nbsp; &nbsp; &nbsp;- http:/www.nevrona.com/rave</p>
-Обновления &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- http:/www.nevrona.com/rave/download.html</p>
+Техническая поддержка                        - http:/www.nevrona.com/support</p>
+Добавления, советы и другая информация        - http:/www.nevrona.com/rave</p>
+Обновления                                        - http:/www.nevrona.com/rave/download.html</p>

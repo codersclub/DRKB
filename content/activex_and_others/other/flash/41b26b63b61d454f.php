@@ -52,7 +52,7 @@
 
 <p>Приведу полный код приложения:</p>
 
-<pre>
+<pre class="delphi">
 unit flash;
  
 interface

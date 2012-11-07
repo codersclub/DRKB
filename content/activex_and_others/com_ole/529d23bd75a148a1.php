@@ -1,9 +1,11 @@
 <h1>Создание COM-объектов средствами Delphi?</h1>
+
 <div class="date">01.01.2007</div>
 
+<div class="author">Автор: Нил Дж. Рубенкинг</div>
 
+<h2>Часть 1</h2>
 
-<p>Часть 1</p>
 <p>Как преодолеть отсутствие множественного наследования в Delphi.</p>
 
 <p>Все сообщество программистов разделяется по приверженности к той или иной платформе и языку программирования. Один предпочитает Delphi для Windows, другому нравится ассемблер для DOS, третий программирует на Си++ для OS/2. Навыки работы для одной платформы совсем не обязательно станут полезными при переходе на другую, а знание отдельного языка программирования может даже затруднить изучение другого. Все эти преграды можно было бы преодолеть, используя межпроцессное взаимодействие между программами, однако здесь возникает новая трудность - разные формы внутреннего представления данных в этих программах.</p>
@@ -15,6 +17,7 @@
 <p>В этой и следующей за ней статьях мы рассмотрим процесс формирования COM-объектов в среде разработки Borland Delphi. В первой части мы коснемся проблем организации COM-объектов в Delphi и покажем несколько вариантов их решения. Во второй части будут приведены примеры пяти типовых объектов для стандартных надстроек оболочки Windows 95. В отдельных случаях COM-объекты целесообразно хранить как EXE-файлы. Однако в этой статье с целью простоты изложения материала будут рассматриваться лишь COM-объекты, записанные в наиболее часто используемой для них форме DLL-модулей.</p>
 
 <p>Основные понятия о COM-объектах</p>
+
 <p>Что же кроется внутри COM-объекта? Нам совершенно не нужно вникать в это! Весь обмен информацией между COM-объектом и внешним миром осуществляется через конкретные интерфейсы. Каждый из них реализует доступ к одной или нескольким функциям, обратиться к которым может любой объект или программа. Все COM-объекты должны иметь интерфейс IUnknown с тремя его функциями - AddRef, Release и QueryInterface. Функции AddRef и Release отвечают за обычную задачу сопровождения жизненного цикла объекта. При каждом обращении к Addref содержимое счетчика ссылок данного объекта увеличивается на единицу, а при каждом обращении к Release - уменьшается. Когда значение счетчика достигает нуля, объект уничтожается. Практический интерес представляет третья функция интерфейса IUnknown - QueryInterface. Получив доступ к обязательно присутствующему интерфейсу IUnknown, программа или любой другой объект сразу может обратиться к функции QueryInterface и узнать обо всех остальных имеющихся у этого объекта интерфейсах. IUnknown находится на вершине иерархического дерева всех COM-интерфейсов. Любой другой интерфейс фактически наследуется от IUnknown и поэтому также должен обеспечивать доступ ко всем трем IUnknown-функциям.</p>
 
 <p>Понятие объекта как в терминологии COM-модели, так и в Delphi или Си++ имеет практически одинаковый смысл. А вот COM-интерфейс больше напоминает Delphi- или Си++-объект, у которого отсутствуют public-переменные и имеются лишь виртуальные методы. Список функций интерфейса соответствует виртуальной таблице методов Object Pascal или объекта Си++. Создать COM-интерфейс можно средствами практически любого языка: достаточно лишь объявить объект с требуемым списком виртуальных методов. Само собой разумеется, что задаваемые определения методов должны в точности соответствовать определениям функций в самих интерфейсах. Однако, кроме того, необходимо соблюдать правильный порядок их размещения в виртуальной таблице. Сказанное означает, что эти определения следуют в заданном порядке, а перед ними нет никаких других виртуальных методов.</p>
@@ -27,7 +30,7 @@
 <p>Ключевой фактор создания в Delphi COM-объекта с несколькими интерфейсами состоит в том, что объект рассматривается как передающий контейнер этих интерфейсов. Совсем не обязательно иметь их внутри данного COM-объекта. Необходимо лишь при запросе, когда вызывается метод QueryInterface его интерфейса IUnknown предоставлять доступ к нужному интерфейсу. Такой COM-объект, созданный в Delphi, может лишь непосредственно обслуживать три свои функции IUnknown, а при запросе через QueryInterface интерфейса IUnknown, передавать указатель на самого себя. Он действует как передаточный механизм и распорядитель других объектов, имеющих свои интерфейсы. Такие интерфейсные объекты-сателлиты отображают свои три IUnknown-метода на общий объект-контейнер. Если приходит запрос на один из сателлитных интерфейсов (как правило, через метод QueryInterface), контейнер передает указатель на соответствующий объект-сателлит. На листинге показан пример, как средствами Delphi можно создать такие интерфейсные объекты с типами сателлит и контейнер, а также как подготовить соответствующий интерфейс IClassFactory.</p>
 
 <p>Листинг. С помощью этих обобщенных объектов с описанием интерфейсов можно создавать в среде Delphi COM-объекты с несколькими интерфейсами.</p>
-<pre>
+<pre class="delphi">
 unit DelphCom;
 // "Обобщенные" объекты. Предназначены для создания COM-объектов
 // в Delphi. ISatelliteUnknown - интерфейсный объект, который
@@ -263,39 +266,42 @@ end.
 
 <p>Рис. 1. Иерархия объектов - расширений оболочки Windows</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--------- IUnknown -----------&gt;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp; IContainerUnknown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISatelliteUnknown</p>
-<p> &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp; |-&gt; IPFContainer&nbsp; -----------&gt; IMyPersistFile&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp; |&nbsp;&nbsp; IPersistFile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IPersistFile&nbsp;&nbsp; &lt;---|</p>
-<p> &nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --------&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp; |&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; -&gt;IDSExtraction -------&gt; IMyExtraction&nbsp; &lt;---|</p>
-<p> &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IPersistFile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IExtractIcon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IExtractIcon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp; --&gt;ISEIContainer -----------&gt; IMyShellExtInit&lt;---|</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IShellExtInit&nbsp;&nbsp;&nbsp;&nbsp; -------&gt; IShellExtInit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-&gt; IDSContextMenu ----||&gt; IMyContextMenu &lt;---|</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; IShellExtInit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp; IContextMenu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; IContextMenu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------- |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; ------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-&gt; IDSDragDrop -|-------&gt; IMyDragDrop&nbsp;&nbsp;&nbsp; &lt;---|</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; IShellExtInit|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IContextMenu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; IContextMenu |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-&gt; IDSPropSheet --------&gt; IMyPropSheet&nbsp;&nbsp; &lt;---|</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IShellExtInit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IShellPropSheetExt</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IShellPropSheetExt</p>
+<pre>
+           &lt;--------- IUnknown -----------&gt;
+          |           --------             |
+          |                                |
+   IContainerUnknown                  ISatelliteUnknown
+   |                                                 |
+   |-&gt; IPFContainer  -----------&gt; IMyPersistFile     |
+   |   IPersistFile               IPersistFile   &lt;---|
+   |    |               --------&gt;                    |
+   |    |              |                             |
+   |     -&gt;IDSExtraction -------&gt; IMyExtraction  &lt;---|
+   |       IPersistFile           IExtractIcon       |
+   |       IExtractIcon                              |
+   |                                                 |
+   |                                                 |
+    --&gt;ISEIContainer -----------&gt; IMyShellExtInit&lt;---|
+       IShellExtInit     -------&gt; IShellExtInit      |
+       |                |      -&gt;                    |
+       |                |     ||                     |
+       |-&gt; IDSContextMenu ----||&gt; IMyContextMenu &lt;---|
+       |   IShellExtInit      ||  IContextMenu       |
+       |   IContextMenu       ||                     |
+       |              -------- |                     |
+       |             |   ------                      |
+       |-&gt; IDSDragDrop -|-------&gt; IMyDragDrop    &lt;---|
+       |   IShellExtInit|         IContextMenu       |
+       |   IContextMenu |                            |
+       |                |                            |
+       |-&gt; IDSPropSheet --------&gt; IMyPropSheet   &lt;---|
+           IShellExtInit          IShellPropSheetExt
+           IShellPropSheetExt
+</pre>
 
 <p>Лист. 1. Два объекта-сателлита реализуют вспомогательные интерфейсы, необходимые для работы таких расширений оболочки Windows 95, как обработчики контекстного меню, списка параметров, для механизма drag-and-drop и пиктограмм.</p>
-<pre>
+
+<pre class="delphi">
  type
    IMyShellExtInit = class(ISatelliteUnknown)
    public
@@ -320,7 +326,7 @@ end.
  
    ISEIContainer = class(IContainerUnknown)
    protected
-//Интерфейс объекта-сателлита
+     //Интерфейс объекта-сателлита
      FShellExtInit : IMyShellExtInit; 
    public
      FNumFiles         : Integer;
@@ -334,7 +340,7 @@ end.
  
    IPFContainer = class(IContainerUnknown)
    protected
-//Интерфейс объекта-сателлита
+     //Интерфейс объекта-сателлита
      FPersistFile : IMyPersistFile; 
    public
      FPFFileName : String;
@@ -344,7 +350,6 @@ end.
        var ReturnedObject): HResult; override;
    end;
 </pre>
-
 
 <p>Обработчик контекстного меню</p>
 <p>Щелчок правой клавишей мыши на каком-то файле, в среде Windows 95 Explorer приводит к тому, что система предпринимает попытку выяснить, задан ли для такого типа файлов обработчик контекстного меню. Если таковой имеется, система создает экземпляр COM-объекта - обработчика контекстного меню и передает список выделенных файлов функции Initialize интерфейса IShellExtInit этого объекта. Затем обращается к методу QueryContextMenu интерфейса IContextMenu. В работе этой функции используются стандартные функции Windows API; например, для вставки дополнительных элементов меню или разделителей вызывается функция InsertMenu, которая передает в качестве return-значения число добавленных элементов, не считая разделителей. Если же пользователь выбрал один из этих внесенных элементов меню, то происходит вызов функции InvokeCommand интерфейса IContextMenu. Чтобы предоставить комментарий к данному элементу меню в строке состояний программы Explorer, вызывается функция GetCommandString.</p>
@@ -398,7 +403,9 @@ end.
 
 <p>При подготовке сообщений о состоянии очень кстати придется функция NameOfIID, предусмотренная в модуле DllDebug. Согласно документации, она передает идентификаторы интерфейсов IIDs, реализуемых расширениями оболочки. Однако к ним можно добавить любые значения системных IID, необходимых для вашего проекта. Например, в тело метода QueryInterface можно было бы вставить следующую строку:</p>
 
-<p> &nbsp; Loggit(Format('QueryInterface: %s requested', [NameOfIID(WantIID)]));</p>
+<pre class="delphi">
+   Loggit(Format('QueryInterface: %s requested', [NameOfIID(WantIID)]));
+</pre>
 
 <p>Организовать передачу сообщения WM_LOGGIT - это еще полдела. Нужна программа, которая будет принимать и регистрировать сообщения о производимых операциях. Утилита Logger, предлагаемая службой PC Magazine Online, - один из возможных вариантов решения этой задачи.</p>
 

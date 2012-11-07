@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { ... }
 Excel.ActiveWindow.View := xlPageBreakPreview;
 WS.HPageBreaks.Add(WS.Cells.Item[78, 1]);

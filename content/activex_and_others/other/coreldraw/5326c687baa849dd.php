@@ -11,7 +11,7 @@
 
 <p>Ну что, начнем?</p>
 
-<pre>
+<pre class="delphi">
 var
    CorelDraw: Variant;
    …
@@ -29,7 +29,7 @@ CorelDraw := Unassigned;
 </pre>
 
 <p>Формат функций доступным английским языком описан в draw_scr.hlp. Ну а дальше, чего душа (или начальство :) ) желает:</p>
-<pre>
+<pre class="delphi">
 CorelDraw.SetPageOrientation(0);
 CorelDraw.SetPageSize(PageW, PageH);
 CorelDraw.NewLayer('NewLayer1');
@@ -45,8 +45,8 @@ CorelDraw.CreateRectangle(CalcY(Y1)), CalcX(X1), CalcY(Y2), CalcX(X2), CalcX(Rad
 <p>Ноль координат находится в середине листа бумаги (оригинально, правда?)</p>
 <p>Положительная ось Y направлено вверх, а X - в право.</p>
 <p>Координаты - целые числа в микронах. Для удобства я писал функцию:</p>
-<pre>
- 
+
+<pre class="delphi">
 function CalcX(x_mm:double):longint;
 begin
  result := Round(x_mm*10000);
@@ -58,7 +58,7 @@ end;
 <p>Принцип прорисовки таков: создается объект, а затем ему присваиваются различные свойства, такие как цвет, тип заливки, толщина линий и пр. По умолчанию эти значения через автоматизацию выставить нельзя - не поддерживается.</p>
 <p>Выше упомянутое наглядно видно на прорисовке текста:</p>
 
-<pre>
+<pre class="delphi">
 CorelDraw.CreateArtisticText( Text, CalcX(X), CalcY(Y)); 
    // создаем текст. X,Y - левый нижний
    // как видите, нет параметров шрифта, размера и пр. 
@@ -78,16 +78,16 @@ CorelDraw.StoreColor(2, C,M,Y,K, 0,0,0,0); // создание цвета
 CorelDraw.ApplyUniformFillColor; // применяем цвет к объекту
 </pre>
 
-<p>Тоже самое относится к трансформации объектов &#8211; сперва создаете, а затем изменяете как хотите.</p>
+<p>Тоже самое относится к трансформации объектов - сперва создаете, а затем изменяете как хотите.</p>
 <p>Работают функции для получения информации.</p>
-<pre>
+<pre class="delphi">
 CorelDraw.GetSize(XSize, YSize); // получили размеры объекта
 CorelDraw.MoveObject(0, -YSize); // сдвинули его вниз на свой размер
 </pre>
 
 
 <p>Можно "проверить" все существующие объекты. За круглым столом спрашивали, как это делается, а делается это так:</p>
-<pre>
+<pre class="delphi">
 var ObjID, FirstObjID:longint;
 begin
  CorelDraw.SelectAllObjects;

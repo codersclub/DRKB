@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 const 
   CXlsBof: array[0..5] of Word = ($809, 8, 00, $10, 0, 0); 
   CXlsEof: array[0..1] of Word = ($0A, 00); 

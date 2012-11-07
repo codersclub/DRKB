@@ -11,7 +11,7 @@
 <p>ADODataSet,CommandType = cmdText;</p>
 <p>ADODataSet. CommandText := Memol.Lines.Text;</p>
 <p>И запрос SQL готов к выполнению.</p>
-<p> Примечание&nbsp;</p>
+<p> Примечание</p>
 <p>Для запросов SQL можно применять только язык Data Manipulation Language (использовать только SELECT).</p>
 <p>Соединение с базой данных задается свойством Connectionstring или Connection (см. выше).</p>
 <p>Набор данных открывается и закрывается свойством Active или методами Open и Close.</p>

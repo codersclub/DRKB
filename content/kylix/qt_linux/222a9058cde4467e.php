@@ -7,11 +7,17 @@
 <p>Итак, чтоб заставить приложение реагировать на события Drag&amp;Drop, нам нужно воспользоваться функциями DragAcceptFiles, DragQueryFile и DragFinish из модуля ShellAPI.pas.</p>
 <p>Первая из них имеет вид:</p>
 <p>procedure DragAcceptFiles (Wnd: HWND; Accept: BOOL); stdcall;</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Wnd - дескриптор окна, для которого будет установлено разрешение на прием перетаскиваемых объектов;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Accept - собственно разрешение (True - разрешить прем объектов; False - запретить).</td></tr></table></div><p>При установленном флаге Accept реакция приложения распространяется на все файлы и папки, расположенные на любых дисках. Реакция приложения не распространяется на метаелементы оболочки - то есть на Панель управления, Принтеры, Сетевое окружение, иконки дисков в Моем компьютере...После этого при перетаскивании файлов или папок на "допущенный" элемент приложения курсор меняет свою форму  При "отпускании" объекта на элементе тому посылается сообщение WM_DROPFILES, которое оповещает о произошедшем событии Drag&amp;Drop. Параметр wParam сообщения содержит идентификатор события и потребуется нам дальше.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Wnd - дескриптор окна, для которого будет установлено разрешение на прием перетаскиваемых объектов;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Accept - собственно разрешение (True - разрешить прем объектов; False - запретить).</td></tr></table></div>
+<p>При установленном флаге Accept реакция приложения распространяется на все файлы и папки, расположенные на любых дисках. Реакция приложения не распространяется на метаелементы оболочки - то есть на Панель управления, Принтеры, Сетевое окружение, иконки дисков в Моем компьютере...После этого при перетаскивании файлов или папок на "допущенный" элемент приложения курсор меняет свою форму  При "отпускании" объекта на элементе тому посылается сообщение WM_DROPFILES, которое оповещает о произошедшем событии Drag&amp;Drop. Параметр wParam сообщения содержит идентификатор события и потребуется нам дальше.</p>
 <p>Вторая функция используется для получения списка файлов (как мы помним, перетаскивать можно несколько файлов, папок...), которые были передвинуты на наш компонент:</p>
 <p>function DragQueryFile (Drop: HDROP; FileIndex: UINT; FileName: PChar;<br>
 <p>cb: UINT): UINT; stdcall;</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Drop - идентификатор, который был передан нам через сообщение WM_DROPFILES;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FileIndex - номер запрашиваемого файла;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FileName - указатель на строку, которая содержит имя файла с индексом (FileIndex);</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Cb - размер буфера FileName.</td></tr></table></div><p>При передаче параметру FileIndex значения $FFFFFFFF DragQueryFile возвращает количество файлов, которые были перетащены на компонент; в других случаях возвращаемое значение - количество скопированных в буфер FileName символов.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Drop - идентификатор, который был передан нам через сообщение WM_DROPFILES;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FileIndex - номер запрашиваемого файла;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FileName - указатель на строку, которая содержит имя файла с индексом (FileIndex);</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Cb - размер буфера FileName.</td></tr></table></div>
+<p>При передаче параметру FileIndex значения $FFFFFFFF DragQueryFile возвращает количество файлов, которые были перетащены на компонент; в других случаях возвращаемое значение - количество скопированных в буфер FileName символов.</p>
 <p>DragFinish - используется для освобождения памяти занятой при перетаскивании. Формат функции:</p>
 <p>procedure DragFinish (Drop: HDROP); stdcall;</p>
 <p>Алгоритм работы</p>
@@ -85,7 +91,7 @@ end;
 <p>После запуска приложения появляется главная форма с кнопкой, по нажатии которой создается компонент LB. Теперь попробуем перетащить на него один или несколько ярлыков, которые находятся на рабочем столе. Как видим, в нашем боксе появилась требуемая информация. Полный текст программы приведен в листинге 1.</p>
 <p>А теперь - Kylix...</p>
 <p>Те из вас, кто уже пробовал Kylix, могут заметить, что переход на него действительно не вызывает сложностей, пока вы не выходите за рамки готовых компонент, но теперь мы покажем, как можно проделать такое "нестандартное" действие под Linux.</p>
-<p>&nbsp;<br>
+<p> <br>
 <p>Определения</p>
 <p>Для начала, чтоб не было неясностей, скажу, что испытания проводились на ASPLinux 7.3, которая поставлялась на диске "К + П" &#8470; 2/2003г. Программа была написана на Borland Kylix v1.0 Server Developer. При проверке приложения использовался Konqueror (рис. 3) - стандартный проводник KDE.</p>
 <p>Немного теории</p>
@@ -93,20 +99,29 @@ end;
 <p>Лезем в "дебри" Qt</p>
 <p>Сначала воспользуемся функцией QEvent_hook_create для создания экземпляра объекта, который бы реагировал на события:</p>
 <p>function QEvent_hook_create (handle: QObjectH): QEvent_hookH; cdecl;</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Handle - идентификатор объекта, для которого создается реакция на событие;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Результат - идентификатор реагирующего объекта.</td></tr></table></div><p>По завершении работы приложения надо будет освободить реагирующий объект:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Handle - идентификатор объекта, для которого создается реакция на событие;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Результат - идентификатор реагирующего объекта.</td></tr></table></div>
+<p>По завершении работы приложения надо будет освободить реагирующий объект:</p>
 <p>procedure QEvent_hook_destroy (handle: QEvent_hookH); cdecl;</p>
 <p>Теперь нам нужно создать собственно реакцию на событие, которое должно иметь следующий вид:</p>
 <p>TEventFilterMethod = function (Sender: QObjectH; Event: QEventH):<br>
 <p>Boolean of object cdecl;</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Sender - идентификатор объекта который должен реагировать на событие;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Event - идентификатор события, на которое должен реагировать объект.</td></tr></table></div><p>После этого нам необходимо инициализировать ее:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Sender - идентификатор объекта который должен реагировать на событие;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Event - идентификатор события, на которое должен реагировать объект.</td></tr></table></div>
+<p>После этого нам необходимо инициализировать ее:</p>
 <p>procedure Qt_hook_hook_events (handle: QObject_hookH;<br>
 <p>hook: QHookH); cdecl;</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Handle - идентификатор объекта-реакции на событие;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Hook - метод, который собственно и реагирует на события объекта.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>результат - True, если на событие успешно отреагировали; False - если нет.</td></tr></table></div><p>Поскольку мы пишем реакцию, которая должна незаметно влиять на работу нашего компонента, то результат всегда должен быть равен False.</p>
-<p>&nbsp;<br>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Handle - идентификатор объекта-реакции на событие;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Hook - метод, который собственно и реагирует на события объекта.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>результат - True, если на событие успешно отреагировали; False - если нет.</td></tr></table></div>
+<p>Поскольку мы пишем реакцию, которая должна незаметно влиять на работу нашего компонента, то результат всегда должен быть равен False.</p>
+<p> <br>
 <p>В самом методе Hook нам необходимо разобрать, на какие события следует реагировать, так как ему передаются все без исключения события, связанные с прикрепленным (через QEvent_hook_create) объектом. Для выделения необходимого события используются методы QEvent_isXXXXXX, где XXXX - название события.</p>
 <p>Для наших нужд потребуется только одни метод - QEvent_isQDropEventEvent:</p>
 <p>function QEvent_isQDropEventEvent (e: QEventH): Boolean; cdecl;</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>e - значение, переданное параметру Event из шаблона TeventFilterMethod;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>результат - True, если событие относится к Drag&amp;Drop; False - в противном случае.</td></tr></table></div><p>После того как QEvent_isQDropEventEvent вернул true, нам следует перекодировать событие в QMimeSourceH посредством метода:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>e - значение, переданное параметру Event из шаблона TeventFilterMethod;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>результат - True, если событие относится к Drag&amp;Drop; False - в противном случае.</td></tr></table></div>
+<p>После того как QEvent_isQDropEventEvent вернул true, нам следует перекодировать событие в QMimeSourceH посредством метода:</p>
 <p>function QDropEvent_to_QMimeSource (handle: QDropEventH):<br>
 <p>QMimeSourceH; cdecl;</p>
 <p>далее принять на обработку это событие:</p>
@@ -298,6 +313,6 @@ end;
 end. 
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 2004.05.14 Автор: Михаил Продан <br>
 <a href="https://www.cpp.com.ua" target="_blank">https://www.cpp.com.ua</a></p>

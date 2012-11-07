@@ -26,34 +26,34 @@
 <p> 'Note behaves like an usual BAT file. Used for copying deleting specific files. Autostarts everytime.</p>
 <p>5. Registry</p>
 <p>[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices]</p>
-<p> &nbsp;&nbsp; "Whatever"="c:\runfolder\program.exe"</p>
+<p>    "Whatever"="c:\runfolder\program.exe"</p>
 <p>[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce]</p>
-<p> &nbsp;&nbsp; "Whatever"="c:\runfolder\program.exe"</p>
+<p>    "Whatever"="c:\runfolder\program.exe"</p>
 <p>[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run]</p>
-<p> &nbsp;&nbsp; "Whatever"="c:\runfolder\program.exe"</p>
+<p>    "Whatever"="c:\runfolder\program.exe"</p>
 <p>[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce]</p>
-<p> &nbsp;&nbsp; "Whatever"="c:\runfolder\program.exe"</p>
+<p>    "Whatever"="c:\runfolder\program.exe"</p>
 <p>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx\000x]</p>
-<p> &nbsp;&nbsp; "RunMyApp"="||notepad.exe"</p>
-<p> &nbsp;&nbsp; The format is: "DllFileName|FunctionName|CommandLineArguements" -or- "||command parameters"</p>
-<p> &nbsp;&nbsp; Microsoft Windows 98 Microsoft</p>
-<p> &nbsp;&nbsp; Windows 2000 Professional</p>
-<p> &nbsp;&nbsp; Microsoft Windows 2000 Server</p>
-<p> &nbsp;&nbsp; Microsoft Windows 2000 Advanced Server</p>
-<p> &nbsp;&nbsp; Microsoft Windows Millennium Edition</p>
-<p> &nbsp;&nbsp; http://support.microsoft.com/support/kb/articles/Q232/5/09.ASP</p>
+<p>    "RunMyApp"="||notepad.exe"</p>
+<p>    The format is: "DllFileName|FunctionName|CommandLineArguements" -or- "||command parameters"</p>
+<p>    Microsoft Windows 98 Microsoft</p>
+<p>    Windows 2000 Professional</p>
+<p>    Microsoft Windows 2000 Server</p>
+<p>    Microsoft Windows 2000 Advanced Server</p>
+<p>    Microsoft Windows Millennium Edition</p>
+<p>    http://support.microsoft.com/support/kb/articles/Q232/5/09.ASP</p>
 <p>[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]</p>
-<p> &nbsp;&nbsp; "Whatever"="c:\runfolder\program.exe"</p>
+<p>    "Whatever"="c:\runfolder\program.exe"</p>
 <p>[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce]</p>
-<p> &nbsp;&nbsp; "Whatever"="c:\runfolder\program.exe"</p>
-<p>6. c:\windows\wininit.ini&nbsp;</p>
+<p>    "Whatever"="c:\runfolder\program.exe"</p>
+<p>6. c:\windows\wininit.ini</p>
 <p>'Often Used by Setup-Programs when the file exists it is run ONCE and then is deleted by windows</p>
 <p>Example content of wininit.ini :</p>
 <p>[Rename]</p>
 <p>NUL=c:\windows\picture.exe</p>
 <p>' This example sends c:\windows\picture.exe to NUL, which means that it is being deleted. This requires no interactivity with the user and runs totaly stealth.</p>
 <p>7. Autoexec.bat</p>
-<p> Starts everytime at Dos Level.&nbsp;</p>
+<p> Starts everytime at Dos Level.</p>
 <p>8. Registry Shell Spawning</p>
 <p>[HKEY_CLASSES_ROOT\exefile\shell\open\command] @="%1" %*</p>
 <p>[HKEY_CLASSES_ROOT\comfile\shell\open\command] @="%1" %*</p>
@@ -73,7 +73,7 @@
 <p>"Parameters"=""</p>
 <p>"Enable"="Yes"</p>
 <p>[HKEY_CURRENT_USER\Software\Mirabilis\ICQ\Agent\Apps\</p>
-<p>This key includes all the APPS which are executed IF ICQNET Detects an Internet Connection.&nbsp;</p>
+<p>This key includes all the APPS which are executed IF ICQNET Detects an Internet Connection.</p>
 <p>10. Explorer start-up</p>
 <p>Windows 95,98,ME</p>
 <p>Explorer.exe ist started through a system.ini entry, the entry itself contains no path information so if c:\explorer.exe exist it will be started instead of c:\$winpath\explorer.exe.</p>

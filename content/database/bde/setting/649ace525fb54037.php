@@ -8,7 +8,8 @@
 <p>Answer:</p>
 
 <p>Here is a unit that is supposed to allow changing the config file:</p>
-<pre>
+
+<pre class="delphi">
 unit CFGTOOL;
  
 interface
@@ -275,14 +276,17 @@ end;
 end.
 </pre>
 
-<hr />Problem/Question/Abstract:</p>
+<hr />
+
+<p>Question:</p>
 
 <p>How can my program access the idapi.cfg file and probably change its INIT (Local Share etc.) section?</p>
 
 <p>Answer:</p>
 
 <p>For 32bit only. You can of course use the registry to determine the default CFG File instead of passing it as a parameter here:</p>
-<pre>
+
+<pre class="delphi">
 procedure ModifyCFG(const ACFGFile, AValue, AEntry, ACFGPath: string; SaveAsWin31:
   bool);
 var
@@ -352,4 +356,5 @@ end;
 
 
 <p>ACFGPath would be '\SYSTEM\INIT\', AEntry would be 'LOCAL SHARE' und AValue would be 'TRUE' or 'FALSE'.</p>
+
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>

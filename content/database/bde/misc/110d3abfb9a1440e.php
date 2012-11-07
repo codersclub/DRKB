@@ -6,7 +6,7 @@
 
 <p>Попытаюсь изложить все попроще... Скажем, у меня есть индекс Field1; Field2; Field3, затем;</p>
 
-<pre>
+<pre class="delphi">
 SetRangeStart;
 Table1Field1.Value := x1;
 Table1Field2.Value := y1;
@@ -27,4 +27,5 @@ ApplyRange;
 <p>если x1 = x2 и никаких других критериев не определено, тогда y1 и y2 должны быть соответственно min/max значениями y</p>
 <p>если x1 = x2 и y1 = y2 и никаких других критериев не определено, тогда z1 и z2 должны быть соответственно min/max значениями z</p>
 <p>Я не знаю, поняли вы это или нет, но надеюсь это поможет...</p>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

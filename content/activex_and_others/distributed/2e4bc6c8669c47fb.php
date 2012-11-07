@@ -6,7 +6,25 @@
 
 <p>Клиенты многозвенных приложений обеспечивают выполнение следующих функций:</p>
 
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> соединение с сервером приложений, прием и передача данных;&nbsp;</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> отображение средствами пользовательского интерфейса;&nbsp;</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> простейшие операции редактирования;&nbsp;</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> сохранение локальных копий данных.</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr>
+<td width="13">&#183;</td>
+<td> соединение с сервером приложений, прием и передача данных;</td>
+</tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr>
+<td width="13">&#183;</td>
+<td> отображение средствами пользовательского интерфейса;</td>
+</tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr>
+<td width="13">&#183;</td><td> простейшие операции редактирования;</td></tr></table>
+
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> сохранение локальных копий данных.</td></tr></table>
+
 <p>При разработке клиентских частей многозвенных приложений в Delphi используются компоненты DataSnap, а также компонент TClientoataSet, роль которого трудно переоценить.</p>
 
 <p>Помимо новых компонентов в процессе разработки применяются стандартные компоненты отображения данных</p>
@@ -28,7 +46,7 @@
 
 <p>Кэширование и редактирование данных в клиентском приложении обеспечивает специализированный компонент TclientDataSet, отдаленным предком которого является класс TDataSet. Помимо унаследованных от предков методов, класс TclientDataSet инкапсулирует ряд дополнительных функций, облегчающих управление данными.</p>
 
-<p class="note">Примечание&nbsp;</p>
+<p class="note">Примечание</p>
 
 <p>Подобно обычному приложению БД, в "тонком" клиенте для размещения невизуальных компонентов доступа к данным необходимо использовать модули данных.</p>
 
@@ -40,8 +58,8 @@
 
 <p>В Палитре компонентов Delphi представлено несколько компонентов, инкапсулирующих клиентский набор данных. В то же время при разработке настоящих удаленных клиентских приложений применяется компонент TClientDataSet. Внесем ясность в этот вопрос. Итак, помимо компонента TClientDataSet, расположенного на странице Data Access, существуют еще два компонента:</p>
 
-<p> TSimpleDataSet &#8212; разработан для технологии доступа к данным dbExpress и, по существу, является единственным полноценным средством для работы с набором данных в рамках этой технологии;</p>
-<p> TiBdientDataSet &#8212; используется в технологии доступа к данным сервера InterBase &#8212; InterBase Express.</p>
+<p>- TSimpleDataSet &#8212; разработан для технологии доступа к данным dbExpress и, по существу, является единственным полноценным средством для работы с набором данных в рамках этой технологии;</p>
+<p>- TiBdientDataSet &#8212; используется в технологии доступа к данным сервера InterBase &#8212; InterBase Express.</p>
 <p>Все перечисленные компоненты произошли от общего предка &#8212; класса TCustomClientoataSet. Они обеспечивают локальное кэширование данных и взаимодействие с серверным набором данных при посредстве интерфейса IProviderSupport.</p>
 
 <p>Основное различие между компонентом TClientDataSet и другими клиентскими компонентами заключается в том, что первый предназначен для использования с внешним компонентом-провайдером данных. А значит, он может взаимодействовать с удаленным провайдером данных.</p>
@@ -60,11 +78,11 @@
 
 <p>Компонент TclientDataSet используется в клиентской части многозвенного распределенного приложения. Он инкапсулирует набор данных, переданный при помощи компонента-провайдера из удаленного набора данных. Компонент обеспечивает выполнение следующих основных функций:</p>
 
-<p> получение данных от удаленного сервера и передача ему сделанных изменений с использованием удаленного компонента-провайдера;</p>
-<p> представление набора данных при помощи локального буфера и поддержка основных операций, унаследованных от класса TDataSet;</p>
-<p> объединение записей набора данных при помощи агрегатных функций для получения суммарных данных;</p>
-<p> локальное сохранение набора данных в файле и последующее восстановление набора данных из файла;</p>
-<p> представление набора данных в формате XML.</p>
+<p>- получение данных от удаленного сервера и передача ему сделанных изменений с использованием удаленного компонента-провайдера;</p>
+<p>- представление набора данных при помощи локального буфера и поддержка основных операций, унаследованных от класса TDataSet;</p>
+<p>- объединение записей набора данных при помощи агрегатных функций для получения суммарных данных;</p>
+<p>- локальное сохранение набора данных в файле и последующее восстановление набора данных из файла;</p>
+<p>- представление набора данных в формате XML.</p>
 
 <p>Предком компонента TclientDataSet является класс TDataSet, поэтому TclientDataSet обладает таким же набором функций, что и обычный компонент, инкапсулирующий набор данных. Основное же отличие заключается в том, источник данных для него доступен только через удаленный компонент-провайдер. Это означает, что сохранение изменений и обновление набора данных осуществляется локально, без обращения к источнику данных.</p>
 
@@ -124,10 +142,12 @@
 
 <p>Например, это можно сделать следующим образом:</p>
 
-<p>procedure TDataModulel.ClientDataSetAfterScroll(DataSet: TDataSet);</p>
-<p>begin</p>
-<p>  if ClientDataSet.EOF then ClientDataSet.GetNextPacket;</p>
-<p>end;</p>
+<pre class="delphi">
+procedure TDataModulel.ClientDataSetAfterScroll(DataSet: TDataSet);
+begin
+  if ClientDataSet.EOF then ClientDataSet.GetNextPacket;
+end;
+</pre>
 
 <p>Свойство</p>
 
@@ -137,10 +157,12 @@
 
 <p>До и после получения очередного пакета соответственно выполняются обработчики событий:</p>
 
-<p>type</p>
-<p>  TRemoteEvent = procedure(Sender: TObject; var OwnerData: OleVariant) of object;</p>
-<p>  property BeforeGetRecords: TRemoteEvent;&nbsp;</p>
-<p>  property AfterGetRecords: TRemoteEvent;</p>
+<pre class="delphi">
+type
+  TRemoteEvent = procedure(Sender: TObject; var OwnerData: OleVariant) of object;
+  property BeforeGetRecords: TRemoteEvent;
+  property AfterGetRecords: TRemoteEvent;
+</pre>
 
 <p>Содержимое очередного пакета представлено свойством</p>
 
@@ -148,11 +170,13 @@
 
 <p>Данные в нем хранятся в транспортном формате, готовые для пересылки. Причем его можно использовать не только для чтения, но и для записи, формируя пакет данных для отправки провайдеру:</p>
 
-<p>var OwnerData: OleVariant;</p>
-<p> &nbsp;&nbsp; MaxErrors, ErrorCount: Integer;</p>
-<p> &nbsp;&nbsp; MaxErrors := 0;</p>
+<pre class="delphi">
+var OwnerData: OleVariant;
+    MaxErrors, ErrorCount: Integer;
+    MaxErrors := 0;
 
-<p>ResultDataSet.Data := SourceDataSet.AppServer.AS_ApplyUpdates('',&nbsp;&nbsp;&nbsp; SourceDataSet.Delta, MaxErrors, ErrorCount, OwnerData);</p>
+ResultDataSet.Data := SourceDataSet.AppServer.AS_ApplyUpdates('', SourceDataSet.Delta, MaxErrors, ErrorCount, OwnerData);
+</pre>
 
 <p>Метод AS_AppiyUpdates передает данные, содержащиеся в буфере Delta, провайдеру на сервер и возвращает записи, сохранить которые не удалось.</p>
 
@@ -168,7 +192,7 @@
 
 <p>Для передачи изменений на сервер используется метод</p>
 
-<p>function ApplyUpdates(MaxErrors: Integer); Integer; virtual;</p>
+<pre class="delphi">function ApplyUpdates(MaxErrors: Integer); Integer; virtual;</pre>
 
 <p>где параметр MaxErrors задает число ошибок, которые игнорируются при сохранении данных на сервере. Если параметр равен &#8212;1, сохранение на сервере прерывается при первой же ошибке. Метод возвращает число сохраненных записей.</p>
 
@@ -178,10 +202,12 @@
 
 <p>AfterPost:</p>
 
-<p>procedure TForml.ClientDataSetAfterPost(DataSet: TDataSet);&nbsp;</p>
-<p>begin</p>
-<p>  ClientDataSet.ApplyUpdates(-1);&nbsp;</p>
-<p>end;</p>
+<pre class="delphi">
+procedure TForml.ClientDataSetAfterPost(DataSet: TDataSet);
+begin
+  ClientDataSet.ApplyUpdates(-1);
+end;
+</pre>
 
 <p>Свойство только для чтения</p>
 
@@ -278,7 +304,7 @@
 
 <p>Перед и после получения параметров от провайдера, клиентский набор данных вызывает методы-обработчики событий:</p>
 
-<p>property BeforeGetParams: TRemoteEvent;&nbsp;</p>
+<p>property BeforeGetParams: TRemoteEvent;</p>
 <p>property AfterGetParams: TRemoteEvent;</p>
 
 <p>Использование индексов</p>
@@ -289,8 +315,8 @@
 
 <p>Для создания локального индекса используется метод</p>
 
-<p>procedure Addlndex(const Name, Fields: string;&nbsp; Options: TIndexOptions;</p>
-<p>const DescFields: string = '';&nbsp;</p>
+<p>procedure Addlndex(const Name, Fields: string;  Options: TIndexOptions;</p>
+<p>const DescFields: string = '';</p>
 <p>const CaselnsFields: string = '';</p>
 <p>const GroupingLevel: Integer = 0);</p>
 
@@ -301,7 +327,7 @@
 <p>TIndexOptions = set of TIndexOption;</p>
 
 <p>ixPrimary &#8212; первичный индекс;</p>
-<p>ixUnique &#8212; значения индекса уникальны;&nbsp;</p>
+<p>ixUnique &#8212; значения индекса уникальны;</p>
 <p>ixDescending &#8212; индекс сортирует записи в обратном порядке;</p>
 <p>ixCaselnsensitive &#8212; индекс сортирует записи без учета регистра символов;</p>
 <p>ixExpression &#8212; в индексе используется выражение (для индексов dBASE);</p>
@@ -331,7 +357,7 @@
 
 <p>property IndexFieldCount: Integer;</p>
 
-<p> свойство</p>
+<p>свойство</p>
 
 <p>property IndexFields: [Index: Integer]: TField;</p>
 
@@ -396,12 +422,14 @@
 
 <p>После загрузки набор данных полностью готов к работе:</p>
 
-<p>if LoadFileDialog.Execute then</p>
-<p>  begin</p>
-<p> &nbsp;&nbsp; ClientDataSet.LoadFromFile(LoadFileDialog.FileName);</p>
-<p> &nbsp;&nbsp; ClientDataSet.Open;&nbsp;</p>
-<p>  end;</p>
-<p>
+<pre class="delphi">
+if LoadFileDialog.Execute then
+  begin
+    ClientDataSet.LoadFromFile(LoadFileDialog.FileName);
+    ClientDataSet.Open;
+  end;
+</pre>
+
 <p>Работа с данными типа BLOB</p>
 
 <p>Если набор данных сервера содержит большие поля (например, изображения), передача данных по медленному каналу займет очень много времени,</p>
@@ -429,7 +457,7 @@
 <p>которое возвращает данные, содержащиеся в буфере Data (см. выше) в бинарном виде, в формате XML.</p>
 
 <p>Например, клиентский набор данных можно сохранить в файле формата XML:</p>
-<pre>
+<pre class="delphi">
 if SaveDialog.Execute then 
   with TFileStream.Create(SaveDialog.FileName, fmCreate) do  
     try 
@@ -453,11 +481,11 @@ if SaveDialog.Execute then
 <p>SUM &#8212; вычисляет сумму.</p>
 <p>Для их применения в компоненте TClientDataSet предусмотрены:</p>
 
-<p> индексированный список объектов, инкапсулирующих агрегатные выражения &#8212; агрегаты;</p>
-<p> агрегатные поля, обеспечивающие получение новых значений подобно вычисляемым полям, но с группированием записей на основе использования агрегатных функций.</p>
-<p>
-<p>Объекты-агрегаты</p>
+<p>- индексированный список объектов, инкапсулирующих агрегатные выражения &#8212; агрегаты;</p>
+<p>- агрегатные поля, обеспечивающие получение новых значений подобно вычисляемым полям, но с группированием записей на основе использования агрегатных функций.</p>
 
+
+<p>Объекты-агрегаты</p>
 
 <p>Для вычисления агрегатных выражений для всех записей набора данных используются объекты класса TAggregate. Индексированный список этих объектов содержится в свойстве</p>
 
@@ -501,7 +529,7 @@ if SaveDialog.Execute then
 
 <p>Например, после сохранения изменений в наборе данных можно визуализировать новое значение агрегата:</p>
 
-<p>SomeLabel.Caption := ClientDataSet.Aggregates[0].AggregateName;&nbsp;</p>
+<p>SomeLabel.Caption := ClientDataSet.Aggregates[0].AggregateName;</p>
 <p>SomeEdit.Text := ClientDataSet.Aggregates[0].Value;</p>
 
 <p>Для проверки активности агрегата, помимо проверки значения свойства Active, можно также использовать свойство</p>
@@ -514,9 +542,9 @@ if SaveDialog.Execute then
 
 <p>property Visible: Boolean;</p>
 
-<p>Для того чтобы снизить вычислительную нагрузку на набор данных, можно отключить все агрегаты одновременно. Для этого свойству&nbsp;</p>
+<p>Для того чтобы снизить вычислительную нагрузку на набор данных, можно отключить все агрегаты одновременно. Для этого свойству</p>
 
-<p>property AggregatesActive: Boolean;&nbsp;</p>
+<p>property AggregatesActive: Boolean;</p>
 
 <p>необходимо присвоить значение False.</p>
 
@@ -628,26 +656,28 @@ if SaveDialog.Execute then
 
 <p>В первом случае разработчик может применить стандартные способы. Это использование блоков try..except или методов обработчиков, унаследованных от класса TDataSet:</p>
 
-<p> property OnDeleteError: TDataSetErrorEvent; &#8212; вызывается при ошибках удаления записей;</p>
-<p> property OnEditError: TDataSetErrorEvent; &#8212; вызывается при ошибках редактирования записей;</p>
-<p> property OnPostError: TDataSetErrorEvent; &#8212; вызывается при ошибках локального сохранения записей.</p>
-<p> Все они используют процедурный тип</p>
+<p>- property OnDeleteError: TDataSetErrorEvent; &#8212; вызывается при ошибках удаления записей;</p>
+<p>- property OnEditError: TDataSetErrorEvent; &#8212; вызывается при ошибках редактирования записей;</p>
+<p>- property OnPostError: TDataSetErrorEvent; &#8212; вызывается при ошибках локального сохранения записей.</p>
+<p>Все они используют процедурный тип</p>
 
-<p>type</p>
-<p>  TDataSetErrorEvent = procedure(DataSet: TDataSet;&nbsp; E: EDatabaseError; var Action: TDataAction) of object;</p>
+<pre class="delphi">
+type
+  TDataSetErrorEvent = procedure(DataSet: TDataSet;  E: EDatabaseError; var Action: TDataAction) of object;
+</pre>
 
 <p>Здесь, помимо параметров DataSet и Е, определяющих соответственно набор данных и тип ошибки, параметром Action можно задать вариант реакции на ошибку:</p>
 
 <p>type TDataAction = (daFail, daAbort, daRetry);</p>
 
-<p>daFail &#8212; прервать операцию и показать сообщение об ошибке;&nbsp;</p>
+<p>daFail &#8212; прервать операцию и показать сообщение об ошибке;</p>
 
 <p>daAbort &#8212; прервать операцию без сообщения об ошибке;</p>
 
 <p>daRetry &#8212; повторить операцию</p>
 
 <p>Например, при возникновении ошибки редактирования набора данных код обработчика может выглядеть следующим образом:</p>
-<pre>
+<pre class="delphi">
 procedure TForml.ClientDataSetEditError(DataSet: TDataSet; E: EDatabaseError; var Action: TDataAction); 
 begin 
   if Not (DataSet.State in [dsEdit, dslnsert]) then 
@@ -665,7 +695,7 @@ end;
 <p>Итак, с локальными ошибками все обстоит достаточно просто. А как клиентский набор данных "узнает" об ошибке на удаленном сервере? Очевидно, при помощи своего компонента-провайдера. Действительно, компонент TDataSetProvider не только возвращает клиенту несохраненные изменения в пакете Delta (см. выше), но и обеспечивает генерацию события, реакцией на которое является метод-обработчик</p>
 
 <p>type</p>
-<p>TReconcileErrorEvent = procedure(DataSet: TCustomClientDataSet; E:EReconcileError; UpdateKind: TUpdateKind; var Action: TReconcileAction) of object;&nbsp;</p>
+<p>TReconcileErrorEvent = procedure(DataSet: TCustomClientDataSet; E:EReconcileError; UpdateKind: TUpdateKind; var Action: TReconcileAction) of object;</p>
 
 <p>property OnReconcileError: TReconcileErrorEvent;</p>
 
@@ -677,7 +707,7 @@ end;
 
 <p>ukModify &#8212; изменение данных;</p>
 
-<p>uklnsert &#8212; добавление записей;&nbsp;</p>
+<p>uklnsert &#8212; добавление записей;</p>
 
 <p>ukDelete &#8212; удаление записей.</p>
 
@@ -713,11 +743,16 @@ end;
 
 <p>В параметры этой функции подставляются параметры метода-обработчика OnReconciieError, а возвращает данная функция действие, выбранное пользователем в диалоге (см. рис. 22.4). Таким образом, ее использование очень просто:</p>
 
-<p>procedure TForml.ClientDataSetReconcileError(DataSet: TCustomClientDataSet;</p>
-<p>E: EReconcileError; UpdateKind: TUpdateKind; var Action: TReconcileAction);&nbsp;</p>
-<p>begin</p>
-<p>  Action := HandleReconcileError(DataSet, UpdateKind, E) ;</p>
-<p>end;</p>
+<pre class="delphi">
+procedure TForml.ClientDataSetReconcileError(
+  DataSet: TCustomClientDataSet;
+  E: EReconcileError;
+  UpdateKind: TUpdateKind;
+  var Action: TReconcileAction);
+begin
+  Action := HandleReconcileError(DataSet, UpdateKind, E);
+end;
+</pre>
 
 
 

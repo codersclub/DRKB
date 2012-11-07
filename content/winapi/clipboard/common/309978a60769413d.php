@@ -4,7 +4,7 @@
 Автор: Vladimir Timonin</p>
 <p>Мне нужно использовать clipboard для сохранения данных в собственном формате и я хочу для этого написать набор процедур ввода/вывода с использованием потоков (streams). Возможно ли создать объект TMemoryStream, эаполнить его и поместить в Clipboard?</p>
 <p>Hе только возможно, именно так поступают функции Clipboard.GetComponent и Clipboard.SetComponent. Сначала вы должны зарегистрировать свой собственный формат данных для Clipboard с помощью функции RegisterClipboardFormat:</p>
-<p>  &nbsp; &nbsp;CF_MYFORMAT := RegisterClipboardFormat('My Format Description');</p>
+<p>     CF_MYFORMAT := RegisterClipboardFormat('My Format Description');</p>
 <p>Далее вы должны выполнить шаги:</p>
 <p>1. Создать поток (memory stream) и записать туда данные.</p>
 <p>2. Создать глобальный буфер в памяти и скопировать поток туда.</p>

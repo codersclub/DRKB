@@ -32,23 +32,23 @@ http://www.delphikingdom.com</p>
 <p>a call to the InternetOpen function.</p>
 <p>Syntax</p>
 <p>typedef struct {</p>
-<p> &nbsp;&nbsp; DWORD dwAccessType;</p>
-<p> &nbsp;&nbsp; LPCTSTR lpszProxy;</p>
-<p> &nbsp;&nbsp; LPCTSTR lpszProxyBypass;</p>
+<p>    DWORD dwAccessType;</p>
+<p>    LPCTSTR lpszProxy;</p>
+<p>    LPCTSTR lpszProxyBypass;</p>
 <p>} INTERNET_PROXY_INFO, * LPINTERNET_PROXY_INFO;</p>
 <p>Members</p>
 <p>dwAccessType</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Unsigned long integer value that contains the access type.</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;This can be one of the following values:</p>
+<p>        Unsigned long integer value that contains the access type.</p>
+<p>        This can be one of the following values:</p>
 <p>INTERNET_OPEN_TYPE_DIRECT</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Internet accessed through a direct connection.</p>
+<p>        Internet accessed through a direct connection.</p>
 <p>INTERNET_OPEN_TYPE_PRECONFIG</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Applies only when setting proxy information.</p>
+<p>        Applies only when setting proxy information.</p>
 <p>INTERNET_OPEN_TYPE_PROXY</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Internet accessed using a proxy.</p>
+<p>        Internet accessed using a proxy.</p>
 <p>lpszProxy</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Address of a string value that contains the proxy server list.</p>
+<p>        Address of a string value that contains the proxy server list.</p>
 <p>lpszProxyBypass</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Address of a string value that contains the proxy bypass list.</p>
-<p>&nbsp;<br>
+<p>        Address of a string value that contains the proxy bypass list.</p>
+<p> <br>
 

@@ -89,7 +89,7 @@ end;
 end;
 </pre>
 <p>Ещё вариант: для каждого элемента header'а установить флаг HDF_OWNERDRAW и в оконной процедуре ListView обрабатывать WM_DRAWITEM, где так же назначать цвета для элементов заголовка ListView. <br>
-<p>&nbsp;</p>
-<p>&nbsp;<br>
+<p></p>
+<p> <br>
 <div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

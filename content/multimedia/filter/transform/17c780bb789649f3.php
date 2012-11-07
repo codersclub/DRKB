@@ -152,14 +152,14 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 Можно еще через StretchBlt, только перед ним надо задать<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 SetStretchBltMode(Canvas.Handle, HALFTONE);
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 
 <div class="author">Автор: s-mike</div>
 

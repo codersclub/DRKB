@@ -2,9 +2,9 @@
 <div class="date">01.01.2007</div>
 
 
-<p>Loading millions of records into a stringlist can be very slow }</p>
+<pre class="delphi">
+{ Loading millions of records into a stringlist can be very slow }
 
-<pre>
 procedure TForm1.SlowLoadingIntoStringList(StringList: TStringList);
 begin
   StringList.Clear;
@@ -48,7 +48,7 @@ end;
   Here it is the SQL code: }
 </pre>
 
-<pre>
+<pre class="sql">
 Create Table CacheTable
 (Data Text NULL)
 GO
@@ -58,43 +58,40 @@ Create
 procedure PopulateCacheTable as
   begin
   set NOCOUNT on
-  DECLARE @ptrval binary(16), @Value varchar(600) -
-  - a good Value for the expected maximum Length
-  - - You must set 'select into/bulkcopy' option to True in order to run this sp
+  DECLARE @ptrval binary(16), @Value varchar(600) -- a good Value for the expected maximum Length
+  -- You must set 'select into/bulkcopy' option to True in order to run this sp
   DECLARE @dbname nvarchar(128)
   set @dbname = db_name()
 EXEC sp_dboption @dbname, 'select into/bulkcopy', 'true'
-- - Declare a cursor
+-- Declare a cursor
 DECLARE scr CURSOR for
-SELECT  OriginalData + char(13) + char(10) - - each line in a TStringList is
+SELECT  OriginalData + char(13) + char(10) -- each line in a TStringList is
 separated by a #13#10
 FROM    SourceTable
-- - The CacheTable Table must have only one record
+-- The CacheTable Table must have only one record
 if EXISTS (SELECT * FROM CacheTable)
 Update CacheTable set Data = ''
 else
 Insert CacheTable VALUES('')
-- - Get a Pointer to the field we want to Update
+-- Get a Pointer to the field we want to Update
 SELECT @ptrval = TEXTPTR(Data) FROM CacheTable
 
 Open scr
 FETCH Next FROM scr INTO @Value
 while @ @FETCH_STATUS = 0
-begin - - This UPDATETEXT appends each Value to the 
-end 
-of the blob field
+begin -- This UPDATETEXT appends each Value to the end of the blob field
 UPDATETEXT CacheTable.Data @ptrval NULL 0 @Value
 FETCH Next FROM scr INTO @Value
 end
 Close scr
 DEALLOCATE scr
-- - Reset this option to False
+-- Reset this option to False
 EXEC sp_dboption @dbname, 'select into/bulkcopy', 'false'
 end
 GO
- 
+
+{ You may need to increase the BLOB SIZE parameter if you use BDE }
 </pre>
 
 
-<p>{ You may need to increase the BLOB SIZE parameter if you use BDE }</p>
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>

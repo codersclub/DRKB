@@ -19,15 +19,15 @@
 
 <pre>
 declare
-@sColumnName&nbsp;&nbsp; varchar(30),
-@sQuery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(200),
-@sTempQuery&nbsp;&nbsp;&nbsp; varchar(200),
-@sTabname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varchar(30),
-@nSearchParam&nbsp; int
+@sColumnName   varchar(30),
+@sQuery        varchar(200),
+@sTempQuery    varchar(200),
+@sTabname      varchar(30),
+@nSearchParam  int
 
 ----установим рабочие переменные:
-SELECT @sTabname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 'relTable' &nbsp;&nbsp;&nbsp; ----имя таблицы, из которой будем производить выборку
-SELECT @nSearchParam&nbsp; = 9348 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----искомое значение, в данном случае - неккий id.
+SELECT @sTabname      = 'relTable'     ----имя таблицы, из которой будем производить выборку
+SELECT @nSearchParam  = 9348           ----искомое значение, в данном случае - неккий id.
 
 
 ----все имена колонок нашей БД хранятся в таблице syscolumns, все объекты: в таблице sysobjects
@@ -43,33 +43,33 @@ SELECT c.name INTO #cname
   AND o.name = @sTabname
 
 ---Примечание:
----c.xtype = 56 &nbsp;&nbsp; - означает, что нас интересуют только поля таблиц
----c.type&nbsp; = 38 &nbsp;&nbsp; - означает, что нас интересуют числовые поля
+---c.xtype = 56    - означает, что нас интересуют только поля таблиц
+---c.type  = 38    - означает, что нас интересуют числовые поля
 
-SELECT @sColumnName = '' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --начальная инициализация - на всякий пожарный
+SELECT @sColumnName = ''          --начальная инициализация - на всякий пожарный
 
-WHILE 1 = 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+WHILE 1 = 1                  
 BEGIN
-  SET rowcount 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --данные из таблицы будем выбирать по одной строке
-  SELECT @sColumnName = name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --получили имя 
- &nbsp;&nbsp; FROM  #cname&nbsp; 
- &nbsp;&nbsp; WHERE name &gt; @sName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --следующей колонки
- &nbsp;&nbsp; ORDER BY  name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --обязательно отсортировать по полю, которое выбираем!
+  SET rowcount 1                  --данные из таблицы будем выбирать по одной строке
+  SELECT @sColumnName = name      --получили имя 
+    FROM  #cname  
+    WHERE name &gt; @sName           --следующей колонки
+    ORDER BY  name                --обязательно отсортировать по полю, которое выбираем!
 
 
-  IF @@rowcount = 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --если дошли до конца временно таблицы
+  IF @@rowcount = 0               --если дошли до конца временно таблицы
   BEGIN
- &nbsp;&nbsp; SET rowcount 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
- &nbsp;&nbsp; BREAK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --завершим цикл
+    SET rowcount 0          
+    BREAK                         --завершим цикл
   END
 
-  SET rowcount 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  SET rowcount 0            
 
 
   --используем динамическое создание SQL запроса
-  SELECT @sTempQuery = ' WHERE ' + @sColumnName + '= ' + Str(@nSearchParam)&nbsp;&nbsp;&nbsp; 
+  SELECT @sTempQuery = ' WHERE ' + @sColumnName + '= ' + Str(@nSearchParam)    
   SELECT @sQuery = 'IF EXIST (SELECT 1 FROM ' + @sTabname + @sTempQuery + ') BEGIN ' +
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' SELECT ' + @sColumnName + ',* FROM ' + @sTabname + @sTempQuery + ' END' &nbsp;&nbsp;&nbsp; 
+                   ' SELECT ' + @sColumnName + ',* FROM ' + @sTabname + @sTempQuery + ' END'     
 
   --исполним его
   EXEC (@sQuery)
@@ -77,7 +77,7 @@ BEGIN
   --такие сложности с EXIST нам нужны для того, что бы QueryAnalyzer не мучал нас выводом пустых 
   --результатов запроса
 END
-DROP TABLE #cname&nbsp;&nbsp;&nbsp; ---уничтожим временную таблицу
+DROP TABLE #cname    ---уничтожим временную таблицу
 </pre>
 
 

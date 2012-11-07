@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 CONECT_STR = 'Provider=Microsoft.Jet.OLEDB.4.0;Password=" " ;User ID=Admin;' + {Data Source=D:\ExBd\ТЕРМО\Bd0.mdb;}
 'Data Source=%s; Mode=Read|Write|Share Deny None;Extended Properties=" " ;' +
 'Locale Identifier=1049;Persist Security Info=True;Jet OLEDB:System database=" " ;' +
@@ -30,11 +30,14 @@ begin
   end;
 end;
 </pre>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <p class="note">Примечание Vit</p>
+
 <p>Я привёл этот код так как он был на сайте и его правильность целиком на совести автора. Однако приведенный код полон неточностей и могут быть проблемы при его выполнении. Давайте разберём что здесь не так и как сделать его работающим:</p>
-<pre>
+
+<pre class="delphi">
 function TdmR3.GetCountForPeriod(LastDate: TDateTime; IsPlan: boolean): Integer;
 var qu: TADOQuery;
   S: string;

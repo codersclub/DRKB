@@ -4,7 +4,7 @@
 
 <p>Пример получения информации о процессах на основе</p>
 <p>NtQuerySystemInformation.</p>
-<p>&nbsp;<br>
+<p> <br>
 <a href="/zip/taskmon.zip">Скачать демонстрационный пример</a>
 </p>
 <p>Александр (Rouse_) Багель</p>

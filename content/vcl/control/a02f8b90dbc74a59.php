@@ -88,7 +88,7 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Использование:</p>
 <pre>
 procedure TForm1.GSPageControl1Changing(Sender: TObject;
@@ -97,7 +97,7 @@ begin
  AllowChange:=GSPageControl1.Pages[GSPageControl1.NewPageIndex].Enabled
 end;
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <div class="author">Автор: Rouse_, Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

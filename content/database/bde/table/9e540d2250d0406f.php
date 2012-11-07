@@ -10,26 +10,26 @@
 
 <p>Оригинальные данные примера:</p>
 
-<p>  Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Product&nbsp;&nbsp;&nbsp; Month&nbsp;&nbsp; Sales</p>
-<p> &nbsp;&nbsp; #1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100</p>
-<p> &nbsp;&nbsp; #2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 68</p>
-<p> &nbsp;&nbsp; #1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150</p>
-<p> &nbsp;&nbsp; #1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Books&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75</p>
-<p> &nbsp;&nbsp; ...</p>
+<p>  Store         Product    Month   Sales</p>
+<p>    #1            Toys       1      100</p>
+<p>    #2            Toys       1       68</p>
+<p>    #1            Toys       2      150</p>
+<p>    #1            Books      1       75</p>
+<p>    ...</p>
 <p>Желаемый отчет должен выглядеть похожим на этот:</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp; Product&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; January&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; February&nbsp;&nbsp;&nbsp; March&nbsp; .....</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 168&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Books&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .....</p>
+<p>      Product         January      February    March  .....</p>
+<p>       Toys             168          150</p>
+<p>       Books             75         .....</p>
 
 <p>Установите pivot-таблицу с именем tblPivot и 12 строками:</p>
 
-<p> &nbsp; pvtMonth&nbsp;&nbsp; pvtJan&nbsp; pvtFeb&nbsp;&nbsp; pvtMar&nbsp; pvtApr&nbsp;&nbsp; ....</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ....</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</p>
-<p> &nbsp;&nbsp;&nbsp; .....</p>
+<p>   pvtMonth   pvtJan  pvtFeb   pvtMar  pvtApr   ....</p>
+<p>       1        1       0        0       0      ....</p>
+<p>       2        0       1        0       0</p>
+<p>       3        0       0        1       0</p>
+<p>       4        0       0        0       1</p>
+<p>     .....</p>
 <p>Теперь запрос, выполненный в виде:</p>
 <pre>  select Product, January=sum(Sales*pvtJan), 
                            February=sum(Sales*pvtFeb),

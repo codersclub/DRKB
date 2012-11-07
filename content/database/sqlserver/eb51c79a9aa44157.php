@@ -11,4 +11,4 @@
 
 
 <div class="author">Автор: Vit</div>
-<p>&nbsp;</p>
+<p></p>

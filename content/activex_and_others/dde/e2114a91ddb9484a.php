@@ -2,7 +2,8 @@
 <div class="date">01.01.2007</div>
 
 Вот код для создания файла группы и добавления в группу файла-элемента. Чтобы использовать эту процедуру, определите DDE clientconv App как ProgMan.</p>
-<pre>
+
+<pre class="delphi">
 procedure TMainForm.CreateWinGroup(Sender: TObject);
 var
   Name: string;

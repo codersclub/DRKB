@@ -2,15 +2,18 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 Session.AddAlias(AliasName, AliasDriver, Params);
 Session.SaveConfigFile;
 </pre>
 
 <div class="author">Автор: Vit</div>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
+
 <hr />
-<pre>
+
+<pre class="delphi">
 uses
   DBIProcs, DBITypes;
  
@@ -26,6 +29,7 @@ begin
   DBIExit;
 end;
 </pre>
+
 <pre>
 { Sample call to create an alias called WORK_DATA that }
 { points to the C:\WORK\DATA directory and uses the    }

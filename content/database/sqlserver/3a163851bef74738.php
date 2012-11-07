@@ -21,7 +21,7 @@ TABLE level scan performed.
 - Extent Scan Fragmentation ...................: 83.45%
 - Avg. Bytes Free per Page.....................: 575.1
 - Avg. Page Density (full).....................: 92.90%
-&nbsp;</p>
+</p>
 <p>Запрос на больших таблицах может выполняться изрядное время так как заставляет сканировать все листья дерева. Можно его ускорить, разрешив собрать неполную информацию:</p>
 <pre>
 dbcc showcontig(MyTable) with all_indexes, fast

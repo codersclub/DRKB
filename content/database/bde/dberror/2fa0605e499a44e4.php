@@ -5,7 +5,7 @@
 <p>Объяснение от Борланд:</p>
 <p>Index out Date ($2F02) is an error that occurs while using Paradox tables when the data in a table and a corresponding index is not consistent. In most cases (see below for the one exception), short of malicious behavior such as renaming an index, adding some data to the table, then renaming the index back, there is no programmatic way to cause this error to occur. There is no way to determine which index is out of date. All indexes must be recreated.</p>
 <p>Blob has been modified ($3302) is an error that occurs when the Blob portion of the record contained in the .DB file has become inconsistent with the Blob portion in the .MB file. This could occur when the write to the .DB file was successful but the .MB file did not get updated, or visa-versa.</p>
-<p>There are a few mechanisms to fix a table where these errors have occurred.&nbsp;</p>
+<p>There are a few mechanisms to fix a table where these errors have occurred.</p>
 <p>  1. First try re-starting the application. It is possible that the BDE has become unstable and is reporting incorrect errors. Also try opening the table with a different application.</p>
 <p>  2. Use Paradox 7 or 8 to run the Table Repair utility. Please see original documentation for more information.</p>
 <p>  3. Run TUtility and rebuild the table. TUtility is an unsupported utility available for download from the Borland web site in the {Utilities, programs and updates section}.</p>
@@ -32,13 +32,13 @@
 <p>  8. The one programmatic way you can make this error occur is if you attempt to post a duplicate value to a unique, non-primary index at the same time you attempt to open the same table. This problem only occurs if local share is set to False and only occurs on local drives.</p>
 <p>Unverified solutions</p>
 <p>  1. Windows 95 Only: Bring up the network properties screen on all Workstations and enter the netBEUI properties screen. On the advanced tab, make sure that "Set this protocol to be the default protocol" is checked.</p>
-<p>  2. Windows 95 Only: If the previous suggestion did not work, try removing the following protocols in order. Remove one at a time and then re-test your problem:&nbsp;</p>
-<p> &nbsp;&nbsp; 1. NETBIOS support for IPX/SPX-compatible Protocol</p>
-<p> &nbsp;&nbsp; 2. TCP/IP</p>
-<p> &nbsp;&nbsp; 3. IPX/SPX-compatible Protocol&nbsp; If the problem disappears, attempt to add back in all protocols except for the last one that was taken out. Again, make sure netBEUI's default protocol check box is checked.</p>
+<p>  2. Windows 95 Only: If the previous suggestion did not work, try removing the following protocols in order. Remove one at a time and then re-test your problem:</p>
+<p>    1. NETBIOS support for IPX/SPX-compatible Protocol</p>
+<p>    2. TCP/IP</p>
+<p>    3. IPX/SPX-compatible Protocol  If the problem disappears, attempt to add back in all protocols except for the last one that was taken out. Again, make sure netBEUI's default protocol check box is checked.</p>
 <p>  3. Windows NT Only used as a Workstation: On the Network Bindings page of the Network Properties, set the NetBEUI Protocol to be at the top of all services. The TCP/IP stack is known for having a lot of overhead that might cause timing problems. Since NT will send requests back in the same protocol as it is sent, changing the bindings on a NT machine used as a server will have no effect.</p>
 <p>Other resources</p>
-<p>  1. {The Delphi Magazine} has a number of interesting articles on this subject as well. See { www.itecuk.com/Delmag/Paradox.htm} for details.&nbsp;</p>
+<p>  1. {The Delphi Magazine} has a number of interesting articles on this subject as well. See { www.itecuk.com/Delmag/Paradox.htm} for details.</p>
 <hr /><p class="note">Примечание от Vit:</p>
 <p>Обычно такие ошибки возникают из-за проблем с кэшированием измений в базе данных, особенно при использовании BLOB/Memo полей и особенно при многопользовательском доступе. В простейшем случае снизить частоту возникновения этой ошибки на несколько порядков помогает вызов метода FlushBuffers после каждого изменения таблицы:</p>
 <p>Table1.post;</p>

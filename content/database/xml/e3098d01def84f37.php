@@ -11,16 +11,16 @@
 Во-первых, стилевые таблицы XSL позволяют определять оформление элемента в зависимости от его месторасположения внутри документа, т.е. к двум элементам с одинаковым названием могут применяться различные правила форматирования. <br>
 Во-вторых, языком, лежащем в основе XSL, является XML, а это означает, что XSL более гибок, универсален и у разработчиков появляется возможность использования средства для контроля за корректностью составления таких стилевых списков(используя DTD или схемы данных) <br>
 В-третьих, таблицы XSL не являются каскадными, подобно CSS, т.к. чрезвычайно сложно обеспечить "каскадируемость" стилевых описаний, или, другими словами, возможность объединения отдельных элементов форматирования путем вложенных описаний стиля, в ситуации, когда структура выходного документа заранее неизвестна и он создается в процессе самого разбора. Однако в XSL существует возможность задавать правила для стилей, при помощи которых можно изменять свойства стилевого оформления, что позволяет использовать довольно сложные приемы форматирования <br>
-<p>&nbsp;</p>
+<p></p>
 В настоящий момент язык XSL находится на стадии разработки в W3C[3] и в будущем, видимо, станет частью стандарта XML. Это означает, что использование этого механизма является наиболее перспективным способом оформления XML- документов. В текущем рабочем варианте W3C, XSL рассматривается не только как язык разметки, определяющий стилевые таблицы - в него заложены средства, необходимые для выполнения действий по фильтрации информации, выводимой в окно клиента, поиска элементов, сложного поиска, основанного на зависимостях между элементами и т.д. На сегодняшний день единственным броузером, поддерживающим некоторые из этих возможностей, является бэта-версия Internet Explorer 5.0, однако в самом ближайшем будущем, безусловно, XSL будет использоваться также широко, как сегодня стандартные тэги HTML</p>
 В этом разделе мы рассмотрим упрощенную объектную модель XSL- документа, используемую в текущей версии XSL-конвертора Microsoft msxsl, и поэтому информацию, изложенную далее, нельзя считать описанием стандарта языка.</p>
 Все примеры, приводимые далее, могут быть проверены при помощи XSL- конвертора, свободно доступного на странице Mcrosoft [ www.microsoft.com/xml/xsl/ ]</p>
 <p>С чего начать<br>
-<p>&nbsp;</p>
+<p></p>
 Принцип обработки XML- документов стилевыми таблицами заключается в следующем: при разборе XSL-документа программа-анализатор обрабатывает инструкции этого языка и каждому элементу, найденному в XML- дереве ставит в соответствие набор тэгов, определяющих форматирование этого элемента. Другими словами, мы задаем шаблон форматирования для XML- элементов, причем сам этот шаблон может иметь структуру соответствующего фрагмента XML-документа. Инструкции XSL определяют точное месторасположение элемента XML в дереве, поэтому существует возможность применять различные стили оформления к одинаковым элементам, в зависимости от контекста их использования.</p>
 В общем случае, XSL позволяет автору задавать параметры отображения элемента XML, используя любые языки, предназначенные для форматирования - HTML, RTF и т.д. В этом разделе мы будем использовать в качестве такого языка HTML, т.к. документы, созданные при помощи этого языка разметки могут просматриваться любой подходящей программой просмотра Web-страниц</p>
 <p>Структура XSL- таблиц<br>
-<p>&nbsp;</p>
+<p></p>
 Рассмотрим основные структурные элементы XSL, используемые, в частности, в конверторе msxsl, для создания оформления XML-документов.</p>
 <p>Правила XSL</p>
 XSL- документ представляет собой совокупность правил построения, каждое из которых выделено в отдельный блок, ограниченный тэгами &lt;rule&gt; и &lt;/rule&gt;;. Правила определяют шаблоны, по которым каждому элементу XML ставится в соответствие последовательность HTML- тэгов, т.е. внутри них содержатся инструкции, определяющие элементы XML- документа и тэги форматирования, применяемые к ним.</p>
@@ -85,58 +85,58 @@ XML-документ:</p>
 <pre>
 &lt;xsl&gt;
   &lt;rule&gt;
- &nbsp;&nbsp; &lt;root/&gt;
- &nbsp;&nbsp; &lt;HTML&gt;
- &nbsp;&nbsp; &lt;BODY bgcolor="white"&gt;
- &nbsp;&nbsp; &lt;center&gt;&lt;hr width="80%"/&gt;&lt;b&gt;Library&lt;/b&gt;
+    &lt;root/&gt;
+    &lt;HTML&gt;
+    &lt;BODY bgcolor="white"&gt;
+    &lt;center&gt;&lt;hr width="80%"/&gt;&lt;b&gt;Library&lt;/b&gt;
  &lt;hr width="80%"/&gt;&lt;br/&gt;
- &nbsp;&nbsp; &lt;table width="80%" border="2"&gt;
- &nbsp;&nbsp; &lt;children/&gt;
- &nbsp;&nbsp; &lt;/table&gt;&lt;/center&gt;
- &nbsp;&nbsp; &lt;/BODY&gt;
- &nbsp;&nbsp; &lt;/HTML&gt;
+    &lt;table width="80%" border="2"&gt;
+    &lt;children/&gt;
+    &lt;/table&gt;&lt;/center&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
   &lt;/rule&gt;
- &nbsp;&nbsp; &lt;rule&gt;
+    &lt;rule&gt;
   &lt;element type="book"&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="author"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/element&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td align="center"&gt;
- &nbsp;&nbsp;&nbsp; &lt;p color="red" font-size="14"&gt; &lt;b&gt;
+     &lt;target-element type="author"/&gt;
+             &lt;/element&gt;
+            &lt;td align="center"&gt;
+     &lt;p color="red" font-size="14"&gt; &lt;b&gt;
 &lt;children/&gt;
 &lt;/b&gt;&lt;/p&gt;&lt;/td&gt;
- &nbsp;&nbsp; &lt;/rule&gt;
- &nbsp;&nbsp; &lt;rule&gt;
+    &lt;/rule&gt;
+    &lt;rule&gt;
   &lt;element type="article"&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="author"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/element&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td align="center"&gt;
- &nbsp;&nbsp;&nbsp; &lt;p color="red" font-size="14"
+     &lt;target-element type="author"/&gt;
+         &lt;/element&gt;
+            &lt;td align="center"&gt;
+     &lt;p color="red" font-size="14"
  font-style="italic"&gt;&lt;children/&gt;&lt;/p&gt;&lt;/td&gt;
- &nbsp;&nbsp; &lt;/rule&gt;
- &nbsp;&nbsp; &lt;rule&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="book"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;children/&gt;&lt;/tr&gt;
- &nbsp;&nbsp; &lt;/rule&gt;
- &nbsp;&nbsp; &lt;rule&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="article"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;children/&gt;&lt;/tr&gt;
- &nbsp;&nbsp; &lt;/rule&gt;
- &nbsp;&nbsp; &lt;rule&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td align="center"&gt;&lt;p&gt;&lt;children/&gt;&lt;/p&gt;&lt;/td&gt;
- &nbsp;&nbsp; &lt;/rule&gt;
- &nbsp;&nbsp; &lt;rule&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="books"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td colspan="3" bgcolor="silver"
- &nbsp;&nbsp; &gt;Books&lt;/td&gt;&lt;/tr&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;children/&gt;
- &nbsp;&nbsp; &lt;/rule&gt;
- &nbsp;&nbsp; &lt;rule&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="articles"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td colspan="3" bgcolor="silver"
- &nbsp;&nbsp; &gt;Articles&lt;/td&gt;&lt;/tr&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;children/&gt;
- &nbsp;&nbsp; &lt;/rule&gt;
+    &lt;/rule&gt;
+    &lt;rule&gt;
+     &lt;target-element type="book"/&gt;
+            &lt;tr&gt;&lt;children/&gt;&lt;/tr&gt;
+    &lt;/rule&gt;
+    &lt;rule&gt;
+     &lt;target-element type="article"/&gt;
+            &lt;tr&gt;&lt;children/&gt;&lt;/tr&gt;
+    &lt;/rule&gt;
+    &lt;rule&gt;
+     &lt;target-element/&gt;
+            &lt;td align="center"&gt;&lt;p&gt;&lt;children/&gt;&lt;/p&gt;&lt;/td&gt;
+    &lt;/rule&gt;
+    &lt;rule&gt;
+     &lt;target-element type="books"/&gt;
+            &lt;tr&gt;&lt;td colspan="3" bgcolor="silver"
+    &gt;Books&lt;/td&gt;&lt;/tr&gt;
+            &lt;children/&gt;
+    &lt;/rule&gt;
+    &lt;rule&gt;
+     &lt;target-element type="articles"/&gt;
+            &lt;tr&gt;&lt;td colspan="3" bgcolor="silver"
+    &gt;Articles&lt;/td&gt;&lt;/tr&gt;
+            &lt;children/&gt;
+    &lt;/rule&gt;
 &lt;/xsl&gt;
 </pre>
 <p>Корневое правило<br>
@@ -163,8 +163,8 @@ vlink="darckblue"&gt;
 &lt;xsl&gt;
 &lt;rule&gt;
 &lt;element type="journal"&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="title"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/element&gt;
+     &lt;target-element type="title"/&gt;
+          &lt;/element&gt;
 &lt;center&gt;
 &lt;hr width=80%&gt;
 &lt;children/&gt;
@@ -173,8 +173,8 @@ vlink="darckblue"&gt;
 &lt;/rule&gt;
 &lt;rule&gt;
 &lt;element type="article"&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="title"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/element&gt;
+     &lt;target-element type="title"/&gt;
+          &lt;/element&gt;
 &lt;td align="center"&gt;&lt;p color="blue" font-size="14"
  font-style="italic"&gt;&lt;children/&gt;
 &lt;/td&gt;
@@ -188,8 +188,8 @@ vlink="darckblue"&gt;
 <pre>
 &lt;rule&gt;
 &lt;element type="journal"&gt;
- &nbsp;&nbsp;&nbsp; &lt;target-element type="title"/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/element&gt;
+     &lt;target-element type="title"/&gt;
+          &lt;/element&gt;
 &lt;center&gt;
 &lt;hr width=80%&gt;
 &lt;children/&gt;
@@ -205,7 +205,15 @@ vlink="darckblue"&gt;
 </pre>
 , то при использовании этой стилевой таблицы в случае, когда элемент &lt;title&gt; является потомком &lt;journal&gt;, к нему будет применено первое правило. Для любых же других элементов будет действовать правило без тэга &lt;element&gt;</p>
 В общем случае приоритет правил определяется следующим образом (в порядке убывания приоритета):</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила, помеченные специальным тэгом &lt;importance&gt;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила с наибольшим значением атрибута id, если он определен</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила с наибольшим значением атрибута class, если он определен</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила, имеющие наибольшую вложенность, определяемую тэгом &lt;element&gt;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила, использующие атрибут type совместно с &lt;target-element&gt;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила, в которых отсутствует атрибут type в &lt;target-element&gt; или &lt;element&gt;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила с более высоким приоритетом, задаваемым атрибутом priority тэга &lt;rule&gt;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила с наибольшим значением квалификаторов &lt;only&gt;, &lt;position&gt;, &lt;attribute&gt;</td></tr></table></div><p>Использование атрибутов элементов<br>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила, помеченные специальным тэгом &lt;importance&gt;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила с наибольшим значением атрибута id, если он определен</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила с наибольшим значением атрибута class, если он определен</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила, имеющие наибольшую вложенность, определяемую тэгом &lt;element&gt;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила, использующие атрибут type совместно с &lt;target-element&gt;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила, в которых отсутствует атрибут type в &lt;target-element&gt; или &lt;element&gt;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила с более высоким приоритетом, задаваемым атрибутом priority тэга &lt;rule&gt;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>правила с наибольшим значением квалификаторов &lt;only&gt;, &lt;position&gt;, &lt;attribute&gt;</td></tr></table></div>
+<p>Использование атрибутов элементов<br>
 <p>Применительно к &lt;target-element&gt; и &lt;element&gt; в правилах также могут использоваться специальные элементы &lt;attribute&gt;;, при помощи которых можно уточнять характеристики обрабатываемых элементов, задавая различные инструкции форматирования для одинаковых элементов с различными атрибутами. Указываемые в &lt;attribute&gt; параметры name и value определяют атрибут XML, который должен иметь текущий обрабатываемый элемент. Например, в следующем фрагменте все элементы с атрибутом free_lance ="true" будут выделены в выходном HTML- документе серым цветом</p>
 <pre>
 &lt;rule&gt;
@@ -232,7 +240,7 @@ vlink="darckblue"&gt;
 Элемент &lt;select-elements&gt; сам по себе не определяет шаблон форматирования, он лишь управляет работой анализатора, обозначая, подобно &lt;children/&gt;, "нижележащие" элементы. В приведенном примере элемент &lt;author&gt; должен быть расположен внутри элемента &lt;staff&gt;</p>
 Для того, чтобы в шаблоне выделить не только собственные дочерние элементы, но и дочерние элементы потомков, т.е. использовать несколько уровней вложенности, необходимо задать параметр from = "descendants". Если параметр имеет значение "children", что указывает на то, что выбор должен производится из списка собственных дочерних элементов, то атрибут from может опускаться, т.к. "children" является значением по умолчанию.</p>
 <p>Правила стилей<br>
-<p>&nbsp;</p>
+<p></p>
 В отличие от CSS, в XSL невозможно использование каскадных стилевых определений(т.е. нельзя использовать несколько правил для определения стиля одного того же элемента), т.к. такие ограничения вводит рекурсивный алгоритм работы программы - анализатора. Однако использование правил определения стиля(Style Rules) элемента позволяет каким-то образом скомпенсировать этот недостаток.</p>
 Для определения правила стилевого оформления необходимо воспользоваться элементом &lt;style-rule&gt;;, который используется точно также, как и &lt;rule&gt;, но инструкции, содержащиеся в нем, никак не влияют на структуру выходного документа. Поэтому все команды внутри этого правила должны описываться в рамках элемента &lt;apply&gt;. Вот как будет выглядеть, например, определение стиля для элемента &lt;flower&gt;rose&lt;/flower&gt;;:</p>
 <pre>
@@ -284,11 +292,11 @@ issue {
 &lt;/rule&gt;
 </pre>
 <p>Сценарии<br>
-<p>&nbsp;</p>
+<p></p>
 Сценарии могут использоваться в документах XSL точно также, как и в HTML. Кроме того, сценарии, содержащиеся внутри XSL-документа и запускаемые броузером в процессе обработки документа могут динамически создавать HTML-документы, извлекая необходимую для этого информацию непосредственно из элементов XSL-документа.</p>
 Для написания сценариев XSL использует специальный скриптовый язык - ECMAScript. Однако в msxsl для этих целей можно применять Microsoft JavaScript,- язык, который объединил в себе некоторые элементы стандартного JavaScript и ECMAScript.</p>
 <p>Вычисление выражений<br>
-<p>&nbsp;</p>
+<p></p>
 Наиболее простым примером использования сценариев в XSL -документе является вычисление значений параметров описываемых элементов. Для этого надо просто поставить знак равенства в качестве первого символа параметра, что заставит XSL-процессор вычислить значение выражения(синтаксис этого выражения должен отвечать требованиям JavaScript). Например, после разбора этого правила:</p>
 <pre>
 &lt;rule&gt;
@@ -327,8 +335,8 @@ Bugs report&lt;/article&gt;
 &gt;Bugs report&lt;/a&gt;
 </pre>
 <p>Выполнение инструкций<br>
-<p>&nbsp;</p>
-Другим способом помещения в выходной HTML- документ информации, являющейся результатом выполнения каких-либо операций JavaScript &#8211; сценариев является использовнаие инструкции &lt;eval&gt;;:</p>
+<p></p>
+Другим способом помещения в выходной HTML- документ информации, являющейся результатом выполнения каких-либо операций JavaScript - сценариев является использовнаие инструкции &lt;eval&gt;;:</p>
 <pre>
 &lt;rule&gt;
 &lt;element type="articles"&gt;
@@ -341,7 +349,7 @@ Bugs report&lt;/article&gt;
 </pre>
 Метод childNumber в данном случае возвращает текущий номер дочернего элемента.</p>
 <p>Определение функций и глобальных переменных<br>
-<p>&nbsp;</p>
+<p></p>
 Аналогично тэгу &lt;SCRIPT&gt; в HTML, элемент &lt;define-script&gt; содержит функции и определения глобальных переменных. Обычно в XSL-документе определяется один элемент &lt;define-script&gt;, расположенный в самом начале.</p>
 <pre>
 &lt;xsl&gt;
@@ -380,41 +388,41 @@ rose
 <pre>
 &lt;xsl&gt;
   &lt;rule&gt;
- &nbsp;&nbsp; &lt;root/&gt;
- &nbsp;&nbsp; &lt;HTML&gt;
- &nbsp;&nbsp;&nbsp;&nbsp; &lt;HEAD&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SCRIPT LANGUAGE="JSCRIPT"&gt;&lt;![CDATA[
+    &lt;root/&gt;
+    &lt;HTML&gt;
+      &lt;HEAD&gt;
+        &lt;SCRIPT LANGUAGE="JSCRIPT"&gt;&lt;![CDATA[
 var ie4=((navigator.appName=="Microsoft Internet
-Explorer")&amp;&amp;(parseInt(navigator.appVersion)&nbsp; &gt;= 4 ));
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function msover(){
+Explorer")&amp;&amp;(parseInt(navigator.appVersion)  &gt;= 4 ));
+       function msover(){
 if (ie4){
- &nbsp;&nbsp; event.srcElement.style.color="red";
- &nbsp;&nbsp; event.srcElement.style.cursor = "hand";
- &nbsp; }
+    event.srcElement.style.color="red";
+    event.srcElement.style.cursor = "hand";
+   }
 }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function msout(){
+       function msout(){
  if (ie4){
- &nbsp;&nbsp; event.srcElement.style.color="black";
- &nbsp;&nbsp; event.srcElement.style.cursor = "auto";
- &nbsp; }
-}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]]&gt;&lt;/SCRIPT&gt;
- &nbsp;&nbsp;&nbsp;&nbsp; &lt;/HEAD&gt;
- &nbsp;&nbsp;&nbsp;&nbsp; &lt;BODY&gt;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;children/&gt;
- &nbsp;&nbsp;&nbsp;&nbsp; &lt;/BODY&gt;
- &nbsp;&nbsp; &lt;/HTML&gt;
+    event.srcElement.style.color="black";
+    event.srcElement.style.cursor = "auto";
+   }
+}        ]]&gt;&lt;/SCRIPT&gt;
+      &lt;/HEAD&gt;
+      &lt;BODY&gt;
+        &lt;children/&gt;
+      &lt;/BODY&gt;
+    &lt;/HTML&gt;
   &lt;/rule&gt;
   &lt;rule&gt;
- &nbsp;&nbsp; &lt;target-element type="chapter"/&gt;
- &nbsp;&nbsp; &lt;DIV id='=tagName + formatNumber
+    &lt;target-element type="chapter"/&gt;
+    &lt;DIV id='=tagName + formatNumber
  (childNumber(this),"1")'
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-color="marron"
- &nbsp;&nbsp; onmouseover='="msover("+ tagName +
+         background-color="marron"
+    onmouseover='="msover("+ tagName +
   formatNumber(childNumber(this),"1")+")"'
- &nbsp;&nbsp; onmouseout='="msout("+ tagName +
+    onmouseout='="msout("+ tagName +
   formatNumber(childNumber(this),"1")+")"'
- &nbsp;&nbsp;&nbsp;&nbsp; &lt;children/&gt;
- &nbsp;&nbsp; &lt;/DIV&gt;
+      &lt;children/&gt;
+    &lt;/DIV&gt;
   &lt;/rule&gt;
 &lt;/xsl&gt;
 </pre>
@@ -432,39 +440,39 @@ if (ie4){
 &lt;HEAD&gt;
 &lt;SCRIPT LANGUAGE="JSCRIPT"&gt;
 var ie4=((navigator.appName=="Microsoft Internet
-Explorer")&amp;&amp;(parseInt(navigator.appVersion)&nbsp; &gt;= 4 ));
+Explorer")&amp;&amp;(parseInt(navigator.appVersion)  &gt;= 4 ));
 function msover(){
 if (ie4){
- &nbsp;&nbsp; event.srcElement.style.color="red";
- &nbsp;&nbsp; event.srcElement.style.cursor = "hand";
+    event.srcElement.style.color="red";
+    event.srcElement.style.cursor = "hand";
   }
 }
 function msout(){
  if (ie4){
- &nbsp;&nbsp; event.srcElement.style.color="black";
- &nbsp;&nbsp; event.srcElement.style.cursor = "auto";
- &nbsp; }
+    event.srcElement.style.color="black";
+    event.srcElement.style.cursor = "auto";
+   }
   }
 &lt;/SCRIPT&gt;
 &lt;/HEAD&gt;
 &lt;BODY&gt;
 &lt;DIV id=''chapter1" onmouseover="msover("chapter1")"'
- &nbsp;&nbsp;&nbsp; onmouseout="msout("chapter1")"'
- &nbsp;&nbsp;&nbsp;&nbsp; Part 1
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DIV&gt;
+     onmouseout="msout("chapter1")"'
+      Part 1
+       &lt;/DIV&gt;
 &lt;DIV id=''chapter2" onmouseover="msover("chapter2")"'
- &nbsp;&nbsp;&nbsp; onmouseout="msout("chapter2")"'
- &nbsp;&nbsp;&nbsp;&nbsp; Part 2
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DIV&gt;
+     onmouseout="msout("chapter2")"'
+      Part 2
+       &lt;/DIV&gt;
 &lt;DIV id=''chapter3" onmouseover="msover("chapter3")"'
- &nbsp;&nbsp;&nbsp; onmouseout="msout("chapter3")"'
- &nbsp;&nbsp;&nbsp;&nbsp; Part 3
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DIV&gt;
+     onmouseout="msout("chapter3")"'
+      Part 3
+       &lt;/DIV&gt;
 &lt;/BODY&gt;
 &lt;/HTML&gt;
 </pre>
 <p>Встроенные функции XSL</p>
-В завершении приведем список внутренних функций, которые можно использовать в JavaScript &#8211;сценариях, предназначенных для анализатора msxsl:</p>
+В завершении приведем список внутренних функций, которые можно использовать в JavaScript -сценариях, предназначенных для анализатора msxsl:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>Ancestor(elementType, elem)</p>

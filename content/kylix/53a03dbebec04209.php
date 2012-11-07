@@ -17,9 +17,9 @@
 <p>LC_COLLATE=ru_RU.KOI8-R</p>
 <p>LC_MONETARY=ru_RU.KOI8-R</p>
 <p>LC_MESSAGES=ru_RU.KOI8-R</p>
-<p>LC_ALL=ru_RU.KOI8-R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>LC_ALL=ru_RU.KOI8-R</p>
 <p>SYSFONT=UniCyr_8x16</p>
-<p>SYSFONTACM=koi8-r&nbsp;&nbsp;</p>
+<p>SYSFONTACM=koi8-r</p>
 
 <p>Если какие-то из этих строк уже есть в файле, то нужно отредактировать существующие.</p>
 

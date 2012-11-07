@@ -7,27 +7,27 @@
 <p>ie.</p>
 
 <p>BOOL Beep(</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DWORD dwFreq,&nbsp;&nbsp;&nbsp;&nbsp; // sound frequency, in hertz</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DWORD dwDuration&nbsp; // sound duration, in milliseconds</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );</p>
+<p>          DWORD dwFreq,     // sound frequency, in hertz</p>
+<p>          DWORD dwDuration  // sound duration, in milliseconds</p>
+<p>         );</p>
 
 <p>Parameters</p>
 
 <p>dwFreq</p>
 
-<p> &nbsp; Windows NT:</p>
-<p> &nbsp; Specifies the frequency, in hertz, of the sound. This parameter&nbsp;&nbsp; must be in the range 37 through 32,767 (0x25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; through 0x7FFF).</p>
+<p>   Windows NT:</p>
+<p>   Specifies the frequency, in hertz, of the sound. This parameter   must be in the range 37 through 32,767 (0x25        through 0x7FFF).</p>
 
-<p> &nbsp; Windows 95:</p>
-<p> &nbsp; The parameter is ignored.</p>
+<p>   Windows 95:</p>
+<p>   The parameter is ignored.</p>
 
 <p>dwDuration</p>
 
-<p> &nbsp; Windows NT:</p>
-<p> &nbsp; Specifies the duration, in milliseconds, of the sound.</p>
+<p>   Windows NT:</p>
+<p>   Specifies the duration, in milliseconds, of the sound.</p>
 
-<p> &nbsp; Windows 95:</p>
-<p> &nbsp; The parameter is ignored.</p>
+<p>   Windows 95:</p>
+<p>   The parameter is ignored.</p>
 
 <p>As can be seen it appears that BEEP() is NOT supported on WIN95, but is OK from there upwards. (I have not tested it on WIN95, but assume you will just get a monotone ???? - anyone for comment)</p>
 
@@ -40,19 +40,19 @@
 
 <p>@[/BEATS]</p>
 
-<p>Where A..G&nbsp;&nbsp; is the Note to be played.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; + or - is optional Sharp or Flat designator respectively. (default is normal NULL)</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; 0..5&nbsp;&nbsp; is optional Octave range (default = 1)</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; /BEATS is number of 100ms to hold the note (default = 1)</p>
+<p>Where A..G   is the Note to be played.</p>
+<p>      + or - is optional Sharp or Flat designator respectively. (default is normal NULL)</p>
+<p>      0..5   is optional Octave range (default = 1)</p>
+<p>      /BEATS is number of 100ms to hold the note (default = 1)</p>
 
-<p>where @&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is a musical pause</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; /BEATS is the number of beats to pause for (default = 1)</p>
+<p>where @      is a musical pause</p>
+<p>      /BEATS is the number of beats to pause for (default = 1)</p>
 
-<p>where ,&lt;&nbsp;&nbsp;&nbsp;&nbsp; is the END OF STRING terminator.</p>
+<p>where ,&lt;     is the END OF STRING terminator.</p>
 
 <p>Properties:</p>
-<p>DefaultOctave  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Used if no 0..5 designator specified in format. (System Default = 1)&nbsp;&nbsp;</p>
-<p>BetweenNotesPause  &nbsp; &nbsp; &nbsp; &nbsp;: Use to set number MS gap between notes (faster or slower default = 100ms)</p>
+<p>DefaultOctave                         : Used if no 0..5 designator specified in format. (System Default = 1)</p>
+<p>BetweenNotesPause         : Use to set number MS gap between notes (faster or slower default = 100ms)</p>
 
 <p>Simple Example:</p>
 <pre>

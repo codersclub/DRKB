@@ -37,5 +37,5 @@ begin
   Result := RS;
 end;
 </pre>
-&nbsp;</p>
+</p>
 

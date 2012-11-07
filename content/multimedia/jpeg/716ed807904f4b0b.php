@@ -28,14 +28,14 @@ begin
   Image1.Canvas.Draw(0, 0, MyJpeg);
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 Для JPEG, загнанного в ресурсы таким образом:<br>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
 <pre>
 MYJPEG RCDATA "Test.jpg" 
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

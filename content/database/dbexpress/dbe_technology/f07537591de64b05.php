@@ -10,11 +10,11 @@
 
 <p>позволяет выбрать из выпадающего списка конкретное настроенное соединение. По умолчанию разработчику доступно по одному настроенному соединению для каждого сервера БД. После выбора соединения автоматически устанавливаются значения свойств:</p>
 
-<p>property DriverName: string; определяет используемый драйвер;&nbsp;</p>
+<p>property DriverName: string; определяет используемый драйвер;</p>
 
 <p>property LibraryName: string; задает динамическую библиотеку драйвера dbExpress;</p>
 
-<p>property VendorLib: string; определяет динамическую библиотеку клиентского ПО сервера&nbsp;</p>
+<p>property VendorLib: string; определяет динамическую библиотеку клиентского ПО сервера</p>
 
 <p>property Params: TStrings; список этого свойства содержит настройки для выбранного соединения.</p>
 
@@ -78,7 +78,7 @@
 <p>Multiple Transaction Поддержка управлением несколькими транзакциями в одной сессии</p>
 <p>Oracle Translsolation Уровень изоляции транзакций</p>
 <p>OS Autenification  Использование учетной записи текущего пользователя операционной системы (домена или Active Directory) при доступе к ресурсам сервера</p>
-<p>Trim Char Определяет, нужно ли удалять из строковых значений полей пробелы, дополняющие значение до полной&nbsp; строки, заданной размером поля данных</p>
+<p>Trim Char Определяет, нужно ли удалять из строковых значений полей пробелы, дополняющие значение до полной  строки, заданной размером поля данных</p>
 
 <p>После выыбора настроенного соединения или выбора типа сервера и настройки параметров соединения компонент TSQLConnection готов к работе.</p>
 
@@ -96,9 +96,9 @@
 
 <p>При открытии и закрытии соединения разработчик может использовать обработчики событий</p>
 
-<p>property BeforeConnect: TNotifyEvent;&nbsp;</p>
+<p>property BeforeConnect: TNotifyEvent;</p>
 <p>property AfterConnect: TNotifyEvent;</p>
-<p>property BeforeDisconnect: TNotifyEvent;&nbsp;</p>
+<p>property BeforeDisconnect: TNotifyEvent;</p>
 <p>property AfterDisconnect: TNotifyEvent;</p>
 
 <p>Например, на стороне клиента можно организовать проверку пользователя приложения:</p>
@@ -107,10 +107,10 @@
 procedure TForml.MyConnectionBeforeConnect(Sender: TObject); 
 begin 
   if MyConnection.Params.Values['User_Name']) &lt;&gt; DefaultUser then 
- &nbsp;&nbsp; begin 
- &nbsp;&nbsp;&nbsp;&nbsp; MessageDlg('Wrong user name', mtError, [mbOK], 0); 
- &nbsp;&nbsp;&nbsp;&nbsp; Abort;&nbsp; 
- &nbsp;&nbsp; end;&nbsp; 
+    begin 
+      MessageDlg('Wrong user name', mtError, [mbOK], 0); 
+      Abort;  
+    end;  
 end; 
 </pre>
 
@@ -140,13 +140,13 @@ end;
 procedure TForml.StartBtnClickfSender: TObject); 
 begin 
   if MyConnection.Params.Values['DriverName'] = " then 
- &nbsp;&nbsp; MyConnection.LoadParamsFromlniFile('c:\Temp\dbxalarmconnections.ini'); 
+    MyConnection.LoadParamsFromlniFile('c:\Temp\dbxalarmconnections.ini'); 
   if MyConnection.ParamsLoaded then 
- &nbsp;&nbsp; try 
- &nbsp;&nbsp;&nbsp;&nbsp; MyConnection.Open; 
- &nbsp;&nbsp; except 
- &nbsp;&nbsp;&nbsp;&nbsp; MessageDlgt'Database connection error', mtError, [mbOK], 0); 
- &nbsp;&nbsp; end;&nbsp; 
+    try 
+      MyConnection.Open; 
+    except 
+      MessageDlgt'Database connection error', mtError, [mbOK], 0); 
+    end;  
 end; 
 </pre>
 

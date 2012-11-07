@@ -41,4 +41,4 @@ var
 <p>IndexFromDataTag должен искать передаваемый тэг поля в массиве DataTags. Определите все поля в TDataRec как Array [1..someUpperBound] of Char.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

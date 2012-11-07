@@ -4,7 +4,13 @@
 
 <p>Примеры</p>
 <p>В данной главе, мы приведем несколько примеров на basm. Это только первая часть моих статей по Дельфи и встроенному ассемблеру, которая опубликована на данном сайте. Расположено это на странице featured articles, и называется Considerations for writing and using Intel assembly code in Delphi projects (Последнее изменение 1 сентября 2001). Мы будем признательны за замечания или советы по этим страницам.</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Прямой доступ к портам в Windows 95 и 98</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Подсчет количества установленных бит в integer</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Проверка установки отдельного бита (0-31)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Установка отдельного бита (0-31) в единицу</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Сброс отдельного бита</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Извлечение битовой маски их integer</td></tr></table></div><p>Есть замечания насчет этих примеров? Пожалуйста, посылайте их по адресу в главе Как связаться с Гуйдо Гайбелсом!</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Прямой доступ к портам в Windows 95 и 98</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Подсчет количества установленных бит в integer</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Проверка установки отдельного бита (0-31)</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Установка отдельного бита (0-31) в единицу</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Сброс отдельного бита</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#8226;</td><td>Извлечение битовой маски их integer</td></tr></table></div>
+<p>Есть замечания насчет этих примеров? Пожалуйста, посылайте их по адресу в главе Как связаться с Гуйдо Гайбелсом!</p>
 <p>Прямой доступ к портам в Windows 95 и 98</p>
 <pre>
 function PortInByte(PortAddress: Word): Byte;
@@ -19,7 +25,7 @@ asm
   out dx,al
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Подсчет количества установленных бит в integer</p>
 <pre>
 function CountBits(const Value: Integer): Integer;
@@ -36,7 +42,7 @@ asm
  @@ending:
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Проверка установки отдельного бита (0-31)</p>
 <pre>
 function IsBit(Value, Pos: Integer): Boolean;
@@ -48,7 +54,7 @@ asm
   adc EAX,0
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Установка отдельного бита (0-31) в единицу</p>
 <pre>
 function SetBit(const Value, Pos: Integer): Integer;
@@ -57,7 +63,7 @@ asm
   bts        EAX,EDX
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Сброс отдельного бита</p>
 <pre>
 function ClearBit(const Value, Pos: Integer): Integer;
@@ -66,7 +72,7 @@ asm
   btr        EAX,EDX
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Извлечение битовой маски из integer</p>
 <pre>
 function ExtractBits(const Value, Start, Count: Integer): Integer;
@@ -557,67 +563,67 @@ finalization
 CPUID.Free;
 end.
 </pre>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <p>Таблица 1: Использование регистров процессора</p>
 <p>В данной таблице приведены сведения по использованию регистров процессора в 32-битных приложениях Дельфи. В первой колонке - список регистров. Во второй колонке - что содержится в регистре в секции входа в процедуру, а в третьей - что при выходе. В четвертой колонке - возможность использования регистра в коде и в последней колонке - необходимость сохранения регистра (сохранять при входе и восстанавливать при выходе).</p>
-<p>Регистр &nbsp; &nbsp; &nbsp; &nbsp;Код входа &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Код выхода &nbsp; &nbsp; &nbsp; &nbsp;Можно ли использовать? &nbsp; &nbsp; &nbsp; &nbsp;Нужно ли сохранять &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>EAX &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Self (1),  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Первый параметр (2) или не определен (3) &nbsp; &nbsp; &nbsp; &nbsp;Результат функции (4) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>EBX &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Неизвестно &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ECX &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Второй параметр (1), третий параметр (2) или не определен (3) &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>EDX &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Первый параметр (1), второй параметр (2) или не определен (3) &nbsp; &nbsp; &nbsp; &nbsp;Для Int64 старшее двойное слово результата, или не используется &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ESI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Не определен &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>EDI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Не определен &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>EBP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Указатель фрейма стека &nbsp; &nbsp; &nbsp; &nbsp;Указатель фрейма стека &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ESP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Указатель стека &nbsp; &nbsp; &nbsp; &nbsp;Указатель стека &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;n/a &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>cs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Кодовый сегмент (5) &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ds &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Сегмент модели памяти (5) &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>es &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Сегмент модели памяти (5) &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>fs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Резервировано для Windows  &nbsp; &nbsp; &nbsp; &nbsp;Резервировано для Windows &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>gs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Резервировано &nbsp; &nbsp; &nbsp; &nbsp;Резервировано &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ss &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Сегмент стека (5) &nbsp; &nbsp; &nbsp; &nbsp;Не используется &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Регистр        Код входа                Код выхода        Можно ли использовать?        Нужно ли сохранять</p>
+<p>EAX                Self (1),                 Первый параметр (2) или не определен (3)        Результат функции (4)        Да        Нет</p>
+<p>EBX                Неизвестно                Не используется        Да        Да</p>
+<p>ECX                Второй параметр (1), третий параметр (2) или не определен (3)        Не используется        Да        Нет</p>
+<p>EDX                Первый параметр (1), второй параметр (2) или не определен (3)        Для Int64 старшее двойное слово результата, или не используется        Да        Нет</p>
+<p>ESI                Не определен        Не используется        Да        Да</p>
+<p>EDI                Не определен        Не используется        Да        Да</p>
+<p>EBP                Указатель фрейма стека        Указатель фрейма стека        Да        Да</p>
+<p>ESP                Указатель стека        Указатель стека        Да        n/a</p>
+<p>cs                Кодовый сегмент (5)        Не используется        Нет        Да</p>
+<p>ds                Сегмент модели памяти (5)        Не используется        Нет        Да</p>
+<p>es                Сегмент модели памяти (5)        Не используется        Нет        Да</p>
+<p>fs                Резервировано для Windows         Резервировано для Windows        Нет        Да</p>
+<p>gs                Резервировано        Резервировано        Нет        Да</p>
+<p>ss                Сегмент стека (5)        Не используется        Нет        Да</p>
 <p>(1) Для метода, когда используется соглашение Register</p>
 <p>(2) Для автономных функций и процедур, когда используется соглашение Register</p>
 <p>(3) Для всех других случаев при всех соглашенияч о вызове</p>
 <p>(4) Только для результата, который полностью помещается в регистр. См. таблицу для полного обзора как результаты возвращаются из функции.</p>
 <p>(5) В плоской 32-битной модели памяти все сегментные регистры нормально указывают на один и тот же сегмент памяти. Тем не менее, при анализе поведения Дельфи, оказывается, что регистр cs имеет различное значение.</p>
-<p>&nbsp;</p>
+<p></p>
 <p>Таблица 2: Передача параметров в функции и процедуры</p>
 <p>В следующей таблице приведены сведения о передаче параметров по значению (включая, директиву const) в процедуры и функции Дельфи. При передаче по ссылке (директива var), все параметры передаются как 32-битные указатели.</p>
-<p>Тип &nbsp; &nbsp; &nbsp; &nbsp;Размер &nbsp; &nbsp; &nbsp; &nbsp;Регистр (1) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ShortInt &nbsp; &nbsp; &nbsp; &nbsp;1 байт (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>SmallInt &nbsp; &nbsp; &nbsp; &nbsp;1 слово (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>LongInt &nbsp; &nbsp; &nbsp; &nbsp;1 двойное слово &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Byte &nbsp; &nbsp; &nbsp; &nbsp;1 байт (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Word &nbsp; &nbsp; &nbsp; &nbsp;1 слово (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Dword &nbsp; &nbsp; &nbsp; &nbsp;1 двойное слово &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Int64 &nbsp; &nbsp; &nbsp; &nbsp;8 байт &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Boolean &nbsp; &nbsp; &nbsp; &nbsp;1 байт (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ByteBool &nbsp; &nbsp; &nbsp; &nbsp;1 байт (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>WordBool &nbsp; &nbsp; &nbsp; &nbsp;1 слово (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>LongBool &nbsp; &nbsp; &nbsp; &nbsp;1 двойное слово &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Char &nbsp; &nbsp; &nbsp; &nbsp;1 байт (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>AnsiChar &nbsp; &nbsp; &nbsp; &nbsp;1 байт (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>WideChar &nbsp; &nbsp; &nbsp; &nbsp;1 слово (2) &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ShortString &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>AnsiString &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>WideString &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Variant &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Pointers &nbsp; &nbsp; &nbsp; &nbsp;1 двойное слово &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Objects &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Class and Class reference &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Procedure pointer &nbsp; &nbsp; &nbsp; &nbsp;1 двойное слово &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Method pointers &nbsp; &nbsp; &nbsp; &nbsp;Два 32-битных указателя (3) &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Sets &nbsp; &nbsp; &nbsp; &nbsp;Значение типа байт/слово/двойное слово или 32-битный указатель (4) &nbsp; &nbsp; &nbsp; &nbsp;Да (4) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Records &nbsp; &nbsp; &nbsp; &nbsp;Значение типа байт/слово/двойное слово или 32-битный указатель (4) (5) &nbsp; &nbsp; &nbsp; &nbsp;Да (4) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Static Arrays &nbsp; &nbsp; &nbsp; &nbsp;Значение типа байт/слово/двойное слово или 32-битный указатель (4) &nbsp; &nbsp; &nbsp; &nbsp;Да (4) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Dynamic arrays &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;Да &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Open array &nbsp; &nbsp; &nbsp; &nbsp;Два 32-битных значения (6) &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Single &nbsp; &nbsp; &nbsp; &nbsp;4 байта &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Double &nbsp; &nbsp; &nbsp; &nbsp;8 байт &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Extended &nbsp; &nbsp; &nbsp; &nbsp;12 байт (7) &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Real48 &nbsp; &nbsp; &nbsp; &nbsp;8 байт (8) &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Currency &nbsp; &nbsp; &nbsp; &nbsp;8 байт &nbsp; &nbsp; &nbsp; &nbsp;Нет &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Тип        Размер        Регистр (1)</p>
+<p>ShortInt        1 байт (2)        Да</p>
+<p>SmallInt        1 слово (2)        Да</p>
+<p>LongInt        1 двойное слово        Да</p>
+<p>Byte        1 байт (2)        Да</p>
+<p>Word        1 слово (2)        Да</p>
+<p>Dword        1 двойное слово        Да</p>
+<p>Int64        8 байт        Нет</p>
+<p>Boolean        1 байт (2)        Да</p>
+<p>ByteBool        1 байт (2)        Да</p>
+<p>WordBool        1 слово (2)        Да</p>
+<p>LongBool        1 двойное слово        Да</p>
+<p>Char        1 байт (2)        Да</p>
+<p>AnsiChar        1 байт (2)        Да</p>
+<p>WideChar        1 слово (2)        Да</p>
+<p>ShortString        32-битный указатель        Да</p>
+<p>AnsiString        32-битный указатель        Да</p>
+<p>WideString        32-битный указатель        Да</p>
+<p>Variant        32-битный указатель        Да</p>
+<p>Pointers        1 двойное слово        Да</p>
+<p>Objects        32-битный указатель        Да</p>
+<p>Class and Class reference        32-битный указатель        Да</p>
+<p>Procedure pointer        1 двойное слово        Да</p>
+<p>Method pointers        Два 32-битных указателя (3)        Нет</p>
+<p>Sets        Значение типа байт/слово/двойное слово или 32-битный указатель (4)        Да (4)</p>
+<p>Records        Значение типа байт/слово/двойное слово или 32-битный указатель (4) (5)        Да (4)</p>
+<p>Static Arrays        Значение типа байт/слово/двойное слово или 32-битный указатель (4)        Да (4)</p>
+<p>Dynamic arrays        32-битный указатель        Да</p>
+<p>Open array        Два 32-битных значения (6)        Нет</p>
+<p>Single        4 байта        Нет</p>
+<p>Double        8 байт        Нет</p>
+<p>Extended        12 байт (7)        Нет</p>
+<p>Real48        8 байт (8)        Нет</p>
+<p>Currency        8 байт        Нет</p>
 <p>(1) Если указано, то тип передается через регистр. Типы, которые не указаны, всегда передаются через стек.</p>
 <p>(2) Когда эти типы занимают менее 32 бит, тогда при передаче на стек они всегда занимают 32 бита, и значение находится в младшей части, содержимое оставшей части неопределено.</p>
 <p>3) Указатели на метод передаются через стек, как два 32-битных указателя, указатель на экземпляр помещается перед указателем на метод, так что позже это становится младшим адресом.</p>
@@ -626,42 +632,42 @@ end.
 <p>(6) Первое значение это 32-битный указатель на массив, а второе значение содержит количество элементов в массиве.</p>
 <p>(7) Используются только младшие 10 байт.</p>
 <p>(8) Используется только младшие 6 байт.</p>
-<p>&nbsp;</p>
+<p></p>
 <p>Таблица 3: Результаты возврата функций</p>
 <p>В следующей таблице приведен обзор того, как результаты возвращаются из функции в программу. Для более подробной информации насчет каждого типа, читайте соответствующий раздел.</p>
-<p>Тип Дельфи &nbsp; &nbsp; &nbsp; &nbsp;Результат &nbsp; &nbsp; &nbsp; &nbsp;Размер &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ShortInt  &nbsp; &nbsp; &nbsp; &nbsp;al &nbsp; &nbsp; &nbsp; &nbsp;8-битное значение &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>SmallInt &nbsp; &nbsp; &nbsp; &nbsp;ax &nbsp; &nbsp; &nbsp; &nbsp;16-битное значение  &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>LongInt &nbsp; &nbsp; &nbsp; &nbsp;EAX &nbsp; &nbsp; &nbsp; &nbsp;32-битное значение &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Byte &nbsp; &nbsp; &nbsp; &nbsp;al &nbsp; &nbsp; &nbsp; &nbsp;Значение типа байт &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Word &nbsp; &nbsp; &nbsp; &nbsp;ax &nbsp; &nbsp; &nbsp; &nbsp;Значение типа слово &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Dword &nbsp; &nbsp; &nbsp; &nbsp;EAX &nbsp; &nbsp; &nbsp; &nbsp;Значение типа двойное слово &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Int64 &nbsp; &nbsp; &nbsp; &nbsp;EDX:EAX &nbsp; &nbsp; &nbsp; &nbsp;64-битное значение &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Boolean &nbsp; &nbsp; &nbsp; &nbsp;al &nbsp; &nbsp; &nbsp; &nbsp;Значение типа байт &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ByteBool &nbsp; &nbsp; &nbsp; &nbsp;al &nbsp; &nbsp; &nbsp; &nbsp;Значение типа байт &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>WordBool &nbsp; &nbsp; &nbsp; &nbsp;ax &nbsp; &nbsp; &nbsp; &nbsp;Значение типа слово &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>LongBool &nbsp; &nbsp; &nbsp; &nbsp;EAX &nbsp; &nbsp; &nbsp; &nbsp;Значение типа двойное слово &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Char &nbsp; &nbsp; &nbsp; &nbsp;al &nbsp; &nbsp; &nbsp; &nbsp;Значение типа байт &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>AnsiChar &nbsp; &nbsp; &nbsp; &nbsp;al &nbsp; &nbsp; &nbsp; &nbsp;Значение типа байт &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>WideChar &nbsp; &nbsp; &nbsp; &nbsp;ax &nbsp; &nbsp; &nbsp; &nbsp;Значение типа слово &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>ShortString &nbsp; &nbsp; &nbsp; &nbsp;Указатель в&nbsp; Result (1) &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>AnsiString &nbsp; &nbsp; &nbsp; &nbsp;Указатель в&nbsp; Result (1) &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>WideString &nbsp; &nbsp; &nbsp; &nbsp;Указатель в&nbsp; Result (1) &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Variant &nbsp; &nbsp; &nbsp; &nbsp;Указатель в&nbsp; Result (1) &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Pointers &nbsp; &nbsp; &nbsp; &nbsp;EAX &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Objects &nbsp; &nbsp; &nbsp; &nbsp;EAX &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Class and Class reference &nbsp; &nbsp; &nbsp; &nbsp;EAX &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Procedure pointer &nbsp; &nbsp; &nbsp; &nbsp;EAX &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Method pointers &nbsp; &nbsp; &nbsp; &nbsp;Указатель в&nbsp; Result (2) &nbsp; &nbsp; &nbsp; &nbsp;2 x 32-битных указателя &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Sets &nbsp; &nbsp; &nbsp; &nbsp;EAX или Result (3) &nbsp; &nbsp; &nbsp; &nbsp;Непосредственно или как 32-битный указатель (3) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Records &nbsp; &nbsp; &nbsp; &nbsp;EAX или Result (3) &nbsp; &nbsp; &nbsp; &nbsp;Непосредственно или как 32-битный указатель (3) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Static Arrays &nbsp; &nbsp; &nbsp; &nbsp;EAX или Result (3) &nbsp; &nbsp; &nbsp; &nbsp;Непосредственно или как 32-битный указатель (3) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Dynamic arrays &nbsp; &nbsp; &nbsp; &nbsp;Указатель в&nbsp; Result (1) &nbsp; &nbsp; &nbsp; &nbsp;32-битный указатель &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Single &nbsp; &nbsp; &nbsp; &nbsp;ST(0) &nbsp; &nbsp; &nbsp; &nbsp;n/a &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Double &nbsp; &nbsp; &nbsp; &nbsp;ST(0) &nbsp; &nbsp; &nbsp; &nbsp;n/a &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Extended &nbsp; &nbsp; &nbsp; &nbsp;ST(0) &nbsp; &nbsp; &nbsp; &nbsp;n/a &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Real48 &nbsp; &nbsp; &nbsp; &nbsp;ST(0) &nbsp; &nbsp; &nbsp; &nbsp;n/a &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Currency &nbsp; &nbsp; &nbsp; &nbsp;ST(0) (4) &nbsp; &nbsp; &nbsp; &nbsp;n/a &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Тип Дельфи        Результат        Размер</p>
+<p>ShortInt         al        8-битное значение</p>
+<p>SmallInt        ax        16-битное значение</p>
+<p>LongInt        EAX        32-битное значение</p>
+<p>Byte        al        Значение типа байт</p>
+<p>Word        ax        Значение типа слово</p>
+<p>Dword        EAX        Значение типа двойное слово</p>
+<p>Int64        EDX:EAX        64-битное значение</p>
+<p>Boolean        al        Значение типа байт</p>
+<p>ByteBool        al        Значение типа байт</p>
+<p>WordBool        ax        Значение типа слово</p>
+<p>LongBool        EAX        Значение типа двойное слово</p>
+<p>Char        al        Значение типа байт</p>
+<p>AnsiChar        al        Значение типа байт</p>
+<p>WideChar        ax        Значение типа слово</p>
+<p>ShortString        Указатель в  Result (1)        32-битный указатель</p>
+<p>AnsiString        Указатель в  Result (1)        32-битный указатель</p>
+<p>WideString        Указатель в  Result (1)        32-битный указатель</p>
+<p>Variant        Указатель в  Result (1)        32-битный указатель</p>
+<p>Pointers        EAX        32-битный указатель</p>
+<p>Objects        EAX        32-битный указатель</p>
+<p>Class and Class reference        EAX        32-битный указатель</p>
+<p>Procedure pointer        EAX        32-битный указатель</p>
+<p>Method pointers        Указатель в  Result (2)        2 x 32-битных указателя</p>
+<p>Sets        EAX или Result (3)        Непосредственно или как 32-битный указатель (3)</p>
+<p>Records        EAX или Result (3)        Непосредственно или как 32-битный указатель (3)</p>
+<p>Static Arrays        EAX или Result (3)        Непосредственно или как 32-битный указатель (3)</p>
+<p>Dynamic arrays        Указатель в  Result (1)        32-битный указатель</p>
+<p>Single        ST(0)        n/a</p>
+<p>Double        ST(0)        n/a</p>
+<p>Extended        ST(0)        n/a</p>
+<p>Real48        ST(0)        n/a</p>
+<p>Currency        ST(0) (4)        n/a</p>
 <p>(1) Переменная Result в действительности передается в функцию, как дополнительный var параметр. Эта переменная Result содержит 32-битный указатель на область результата в памяти. Подлинное местонахождение зависит от типа использованного соглашения о вызове: Для соглашения register это может быть EAX, EDX или ECX, в зависимости от количества переданных параметров. В других случаях Result это 32-битный указатель на стеке.</p>
 <p>(2) Переменная Result указывает на адрес памяти где расположены два 32-битных указателя. Этот указатель передается так, как если бы он был действительно объявлен, и его точное местонахождение зависит от типа используемого соглашения о вызове.</p>
 <p>(3) Если подлинный тип помещается в 32 бита, то он возвращается напрямую через регистр al/ax/EAX. Иначе, Result содержит 32-битный указатель на переменную памяти, и он передается в функцию, как если бы он был объявлен как дополнительный 32-битный var параметр. Этот параметр (точное местонахождение зависит от типа использованного соглашения о вызове) должен содержать указатель на действительные данные в памяти</p>

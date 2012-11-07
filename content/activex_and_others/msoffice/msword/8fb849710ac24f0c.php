@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 uses
   ..., Registry;
  
@@ -22,7 +22,8 @@ end;
 </pre>
 
 <hr />
-<pre>
+
+<pre class="delphi">
 function MSWordIsInstalled: Boolean;
 begin
   Result := AppIsInstalled('Word.Application');
@@ -38,11 +39,13 @@ end;
 
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>
 
-<hr />Как определить установлен ли на компьютере Word, запустить его и загрузить в него текст из программы?</p>
+<hr />
+
+Как определить установлен ли на компьютере Word, запустить его и загрузить в него текст из программы?</p>
 
 <p>Пример:</p>
 
-<pre>
+<pre class="delphi">
 var
  MsWord: Variant;
 ...

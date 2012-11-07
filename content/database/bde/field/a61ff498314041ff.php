@@ -8,7 +8,7 @@
 
 <p>Например, следующий код изменяет каждый размер поля TField.Size так, чтобы соответствовать фактическому размеру поля открываемого набора данных:</p>
 
-<pre>
+<pre class="delphi">
 procedure SetupFieldsAndOpenDataset(DataSet: TDataSet);
 var
   FieldNum, DefNum: Integer;
@@ -34,4 +34,5 @@ begin
   end;
 end;
 </pre>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

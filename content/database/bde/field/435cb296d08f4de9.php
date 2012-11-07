@@ -47,11 +47,15 @@
 
 <p>Поскольку автоинкрементальные поля Paradox имеют аттрибут только для чтения, они обычно не предназначены для обновления и вставки новых записей. Следовательно, свойство Required для field-компонентов, базирующихся на автоинкрементальных полях, должны всегда быть установлены в False. Это может быть выполнено из Delphi с помощью Fields Editor определением field-компонентов в режиме разработки) двойной щелчок на компоненте TQuery или TTable), или во время работы программы с помощью следующего кода:</p>
 
-<p>Table1.Fields[0].Required := False;</p>
+<pre class="delphi">
+Table1.Fields[0].Required := False;
+</pre>
 
 <p>или</p>
 
-<p>Table1.FieldByName('Fieldname').Required := False;</p>
+<pre class="delphi">
+Table1.FieldByName('Fieldname').Required := False;
+</pre>
 
 <p>Таблицы Informix</p>
 
@@ -84,7 +88,7 @@
 
 <p>Наконец, если условие 1, приведенное выше, невозможно, но возможно наступление событий 2a, 2b или 2c, то необходимо создать обработчик события AfterPost компонента TTable как показано ниже:</p>
 
-<pre>
+<pre class="delphi">
 procedure TForm1.Table1AfterPost(DataSet: TDataset);
 begin
   Table1.Refresh;

@@ -5,22 +5,22 @@
 <p>Триггеры в MS SQL Server срабатывают после обновления и один раз на оператор (а не на каждую обновленную запись). Количество триггеров на таблицу неограниченно. В триггере доступна обновленная таблица и две виртуальных таблицы Inserted и Deleted.</p>
 <p>В них находятся:</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Inserted &nbsp; &nbsp; &nbsp; &nbsp;Deleted &nbsp; &nbsp; &nbsp;</p>
-<p><b>INSERT</b> &nbsp; &nbsp; &nbsp; &nbsp;Вставленные записи &nbsp; &nbsp; &nbsp; &nbsp;Нет записей &nbsp; &nbsp; &nbsp;</p>
-<p><b>UPDATE</b> &nbsp; &nbsp; &nbsp; &nbsp;Новые версии записей &nbsp; &nbsp; &nbsp; &nbsp;Старые версии записей &nbsp; &nbsp; &nbsp;</p>
-<p><b>DELETE</b> &nbsp; &nbsp; &nbsp; &nbsp;Нет записей &nbsp; &nbsp; &nbsp; &nbsp;Удаленные записи &nbsp; &nbsp; &nbsp;</p>
+<p>        Inserted        Deleted</p>
+<p><b>INSERT</b>        Вставленные записи        Нет записей</p>
+<p><b>UPDATE</b>        Новые версии записей        Старые версии записей</p>
+<p><b>DELETE</b>        Нет записей        Удаленные записи</p>
 <p>Триггер может, основываясь на содержании этих таблиц осуществить дополнительную модификацию данных, либо отменить транзакцию, вызвавшую этот оператор. Например:</p>
 
 <pre>
 CREATE TRIGGER T1 ON MyTable FOR INSERT, UPDATE 
 AS BEGIN
   -- Заносим в поля:
-  --&nbsp;&nbsp; LastUserName &#8211; имя пользователя, последним обновившего запись
-  --&nbsp;&nbsp; LastDateTime &#8211; дату и время последнего обновления
+  --   LastUserName - имя пользователя, последним обновившего запись
+  --   LastDateTime - дату и время последнего обновления
   UPDATE MyTable
- &nbsp;&nbsp; SET LastUserName = SUSER_NAME(),
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LastDateTime = GETDATE()
- &nbsp;&nbsp; FROM Inserted I INNER JOIN MyTable T ON I.Id = T.Id
+    SET LastUserName = SUSER_NAME(),
+        LastDateTime = GETDATE()
+    FROM Inserted I INNER JOIN MyTable T ON I.Id = T.Id
 END
 
 CREATE TRIGGER T2 ON MyTable FOR DELETE
@@ -28,9 +28,9 @@ AS BEGIN
   -- Этот триггер откатывает и снимает всю транзакцию
   -- вызвавшую ошибку
   IF EXISTS (SELECT * FROM Deleted 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHERE Position = 'Boss') BEGIN
- &nbsp;&nbsp; RAISERROR('Нельзя удалять начальника', 16, 1)
- &nbsp;&nbsp; ROLLBACK
+              WHERE Position = 'Boss') BEGIN
+    RAISERROR('Нельзя удалять начальника', 16, 1)
+    ROLLBACK
   END
 END
 
@@ -39,11 +39,11 @@ AS BEGIN
   -- А этот просто не дает удалить запись
   -- позволяя продолжить транзакцию
   IF EXISTS (SELECT * FROM Deleted 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHERE Position = 'Programmer') BEGIN
- &nbsp;&nbsp; INSERT INTO MyTable 
- &nbsp;&nbsp;&nbsp;&nbsp; SELECT * FROM Deleted 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHERE Position = 'Programmer'
- &nbsp;&nbsp; RAISERROR('Программиста удалить тоже не получится', 16, 1)
+              WHERE Position = 'Programmer') BEGIN
+    INSERT INTO MyTable 
+      SELECT * FROM Deleted 
+       WHERE Position = 'Programmer'
+    RAISERROR('Программиста удалить тоже не получится', 16, 1)
   END
 END
 </pre>

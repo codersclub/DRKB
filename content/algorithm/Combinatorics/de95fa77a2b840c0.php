@@ -5,7 +5,7 @@
 <p>Всего таких последовательностей будет M^N (докажите!). Чтобы понять. как должна действовать процедура Next, начнем с примеров. Пусть N=4,M=3. Тогда:</p>
 Next(1,1,1,1) -&gt; (1,1,1,2) Next(1,1,1,3) -&gt; (1,1,2,1) Next(3,1,3,3) -&gt; (3,2,1,1)</p>
 <p>Теперь можно написать общую процедуру Next:</p>
-<pre>
+<pre class="delphi">
          procedure Next;
            begin
              {найти i: X[i]&lt;M,X[i+1]=M,...,X[N]=M};
@@ -14,7 +14,7 @@ Next(1,1,1,1) -&gt; (1,1,1,2) Next(1,1,1,3) -&gt; (1,1,2,1) Next(3,1,3,3) -&gt; 
            end;
 </pre>
 <p>Если такого i найти не удается, то следующей последовательности нет - мы добрались до последней (M,M,...,M). Заметим также, что если бы членами последовательности были числа не от 1 до M, а от 0 до M-1, то переход к следующей означал бы прибавление 1 в M-ичной системе счисления. Полная программа на Паскале выглядит так:</p>
-<pre>
+<pre class="delphi">
     program Sequences;
       type Sequence=array [byte] of byte;
       var M,N,i:byte;
@@ -38,13 +38,13 @@ Next(1,1,1,1) -&gt; (1,1,1,2) Next(1,1,1,3) -&gt; (1,1,2,1) Next(3,1,3,3) -&gt; 
       until not Yes
     end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 Решение через рекурисю. <img src="/pic/embim1845.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1846.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-<p>&nbsp;</p>
+<p></p>
 <p>Опишем рекурсивную процедуру Generate(k), предъявляющую все последовательности длины N из чисел 1,...,M, у которых фиксировано начало X[1],X[2],...,X[k]. Понятно, что при k=N мы имеем тривиальное решение: есть только одна такая последовательность - это она сама.<br>
 <p>При k&lt;N будем сводить задачу к k+1:</p>
-<pre>
+<pre class="delphi">
           procedure Generate(k:byte);
             var i,j:byte;
           begin
@@ -55,17 +55,20 @@ Next(1,1,1,1) -&gt; (1,1,1,2) Next(1,1,1,3) -&gt; (1,1,2,1) Next(3,1,3,3) -&gt; 
                 begin X[k+1]:=j; Generate(k+1) end
           end;
 </pre>
+
 <p>Основная программа теперь выглядит очень просто:</p>
-<pre>
-        program SequencesRecursion;
-          type Sequence=array [byte] of byte;
-          var M,N:byte;
-              X:Sequence;
-          procedure Generate(k:byte);
-               ............
-        begin
-          write('M,N=');readln(M,N);
-          Generate(0)        
+
+<pre class="delphi">
+program SequencesRecursion;
+  type Sequence=array [byte] of byte;
+  var M,N:byte;
+      X:Sequence;
+  procedure Generate(k:byte);
+       ............
+begin
+  write('M,N=');readln(M,N);
+  Generate(0)        
 end.
 </pre>
+
 <p><a href="https://algolist.manual.ru" target="_blank">https://algolist.manual.ru</a></p>

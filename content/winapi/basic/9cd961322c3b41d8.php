@@ -383,13 +383,13 @@ end.
 <p>Построение формы на чистом API</p>
 <pre>
 program PlainAPI;
-&nbsp;
+ 
 uses
   Windows,
   Messages;
-&nbsp;
+ 
 {$R *.res}
-&nbsp;
+ 
 function PlainWinProc (hWnd: THandle; nMsg: UINT;
   wParam, lParam: Cardinal): Cardinal; export; stdcall;
 var
@@ -398,22 +398,22 @@ var
 begin
   Result := 0;
   case nMsg of
- &nbsp;&nbsp; wm_lButtonDown:
- &nbsp;&nbsp;&nbsp;&nbsp; MessageBox (hWnd, 'Mouse Clicked',
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Plain API', MB_OK);
- &nbsp;&nbsp; wm_Paint:
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; hdc := BeginPaint (hWnd, ps);
- &nbsp;&nbsp;&nbsp;&nbsp; Ellipse (hdc, 100, 100, 300, 300);
- &nbsp;&nbsp;&nbsp;&nbsp; EndPaint (hWnd, ps);
- &nbsp;&nbsp; end;
- &nbsp;&nbsp; wm_Destroy:
- &nbsp;&nbsp;&nbsp;&nbsp; PostQuitMessage (0);
- &nbsp;&nbsp; else
- &nbsp;&nbsp;&nbsp;&nbsp; Result := DefWindowProc (hWnd, nMsg, wParam, lParam);
+    wm_lButtonDown:
+      MessageBox (hWnd, 'Mouse Clicked',
+        'Plain API', MB_OK);
+    wm_Paint:
+    begin
+      hdc := BeginPaint (hWnd, ps);
+      Ellipse (hdc, 100, 100, 300, 300);
+      EndPaint (hWnd, ps);
+    end;
+    wm_Destroy:
+      PostQuitMessage (0);
+    else
+      Result := DefWindowProc (hWnd, nMsg, wParam, lParam);
   end;
 end;
-&nbsp;
+ 
 procedure WinMain;
 var
   hWnd: THandle;
@@ -429,44 +429,44 @@ begin
   WndClassEx.cbClsExtra := 0;
   WndClassEx.cbWndExtra := 0;
   WndClassEx.hIcon := LoadIcon (hInstance,
- &nbsp;&nbsp; MakeIntResource ('MAINICON'));
-  WndClassEx.hIconSm&nbsp; := LoadIcon (hInstance,
- &nbsp;&nbsp; MakeIntResource ('MAINICON'));
+    MakeIntResource ('MAINICON'));
+  WndClassEx.hIconSm  := LoadIcon (hInstance,
+    MakeIntResource ('MAINICON'));
   WndClassEx.hCursor := LoadCursor (0, idc_Arrow);;
   WndClassEx.hbrBackground := GetStockObject (white_Brush);
   WndClassEx.lpszMenuName := nil;
   // register the class
   if RegisterClassEx (WndClassEx) = 0 then
- &nbsp;&nbsp; MessageBox (0, 'Invalid class registration',
- &nbsp;&nbsp;&nbsp;&nbsp; 'Plain API', MB_OK)
+    MessageBox (0, 'Invalid class registration',
+      'Plain API', MB_OK)
   else
   begin
- &nbsp;&nbsp; hWnd := CreateWindowEx (
- &nbsp;&nbsp;&nbsp;&nbsp; ws_Ex_OverlappedWindow, // extended styles
- &nbsp;&nbsp;&nbsp;&nbsp; WndClassEx.lpszClassName, // class name
- &nbsp;&nbsp;&nbsp;&nbsp; 'Plain API Demo', // title
- &nbsp;&nbsp;&nbsp;&nbsp; ws_OverlappedWindow, // styles
- &nbsp;&nbsp;&nbsp;&nbsp; cw_UseDefault, 0, // position
- &nbsp;&nbsp;&nbsp;&nbsp; cw_UseDefault, 0, // size
- &nbsp;&nbsp;&nbsp;&nbsp; 0, // parent window
- &nbsp;&nbsp;&nbsp;&nbsp; 0, // menu
- &nbsp;&nbsp;&nbsp;&nbsp; HInstance, // instance handle
- &nbsp;&nbsp;&nbsp;&nbsp; nil); // initial parameters
- &nbsp;&nbsp; if hWnd = 0 then
- &nbsp;&nbsp;&nbsp;&nbsp; MessageBox (0, 'Window not created',
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Plain API', MB_OK)
- &nbsp;&nbsp; else
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; ShowWindow (hWnd, sw_ShowNormal);
- &nbsp;&nbsp;&nbsp;&nbsp; while GetMessage (Msg, 0, 0, 0) do
- &nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TranslateMessage (Msg);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DispatchMessage (Msg);
- &nbsp;&nbsp;&nbsp;&nbsp; end;
- &nbsp;&nbsp; end;
+    hWnd := CreateWindowEx (
+      ws_Ex_OverlappedWindow, // extended styles
+      WndClassEx.lpszClassName, // class name
+      'Plain API Demo', // title
+      ws_OverlappedWindow, // styles
+      cw_UseDefault, 0, // position
+      cw_UseDefault, 0, // size
+      0, // parent window
+      0, // menu
+      HInstance, // instance handle
+      nil); // initial parameters
+    if hWnd = 0 then
+      MessageBox (0, 'Window not created',
+        'Plain API', MB_OK)
+    else
+    begin
+      ShowWindow (hWnd, sw_ShowNormal);
+      while GetMessage (Msg, 0, 0, 0) do
+      begin
+        TranslateMessage (Msg);
+        DispatchMessage (Msg);
+      end;
+    end;
   end;
 end;
-&nbsp;
+ 
 begin
   WinMain;
 end. 
@@ -557,14 +557,14 @@ var
 <p>Создание формы и кнопки на чистом API</p>
 <pre>
 program Plain2;
-&nbsp;
+ 
 uses
   Windows,
   Messages;
-&nbsp;
+ 
 const
   id_Button = 100;
-&nbsp;
+ 
 function PlainWinProc (hWnd: THandle; nMsg: UINT;
   wParam, lParam: Cardinal): Cardinal; export; stdcall;
 var
@@ -572,46 +572,46 @@ var
 begin
   Result := 0;
   case nMsg of
- &nbsp;&nbsp; wm_Create:
- &nbsp;&nbsp;&nbsp;&nbsp; // create button
- &nbsp;&nbsp;&nbsp;&nbsp; CreateWindowEx (0, // extended styles
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'BUTTON', // predefined class
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '&amp;Click here', // caption
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ws_Child or ws_Visible or ws_Border
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or bs_PushButton, // styles
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, 0, // position: see wm_Size
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 200, 80, // size
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hwnd, // parent
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id_Button, // identifier (not a menu handle)
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hInstance, // application id
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nil); // init info pointer
- &nbsp;&nbsp; wm_Size:
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; // get the size of the client window
- &nbsp;&nbsp;&nbsp;&nbsp; GetClientRect (hWnd, Rect);
- &nbsp;&nbsp;&nbsp;&nbsp; // move the button window
- &nbsp;&nbsp;&nbsp;&nbsp; SetWindowPos (
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GetDlgItem (hWnd, id_Button), // button handle
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, // zOrder
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rect.Right div 2 - 100,
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rect.Bottom div 2 - 40,
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, 0, // new size
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; swp_NoZOrder or swp_NoSize);
- &nbsp;&nbsp; end;
- &nbsp;&nbsp; wm_Command:
- &nbsp;&nbsp;&nbsp;&nbsp; // if it comes from the button
- &nbsp;&nbsp;&nbsp;&nbsp; if LoWord (wParam) = id_Button then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // if it is a click
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if HiWord (wParam) = bn_Clicked then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBox (hWnd, 'Button Clicked',
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Plain API 2', MB_OK);
- &nbsp;&nbsp; wm_Destroy:
- &nbsp;&nbsp;&nbsp;&nbsp; PostQuitMessage (0);
- &nbsp;&nbsp; else
- &nbsp;&nbsp;&nbsp;&nbsp; Result := DefWindowProc (hWnd, nMsg, wParam, lParam);
+    wm_Create:
+      // create button
+      CreateWindowEx (0, // extended styles
+        'BUTTON', // predefined class
+        '&amp;Click here', // caption
+        ws_Child or ws_Visible or ws_Border
+          or bs_PushButton, // styles
+        0, 0, // position: see wm_Size
+        200, 80, // size
+        hwnd, // parent
+        id_Button, // identifier (not a menu handle)
+        hInstance, // application id
+        nil); // init info pointer
+    wm_Size:
+    begin
+      // get the size of the client window
+      GetClientRect (hWnd, Rect);
+      // move the button window
+      SetWindowPos (
+        GetDlgItem (hWnd, id_Button), // button handle
+        0, // zOrder
+        Rect.Right div 2 - 100,
+        Rect.Bottom div 2 - 40,
+        0, 0, // new size
+        swp_NoZOrder or swp_NoSize);
+    end;
+    wm_Command:
+      // if it comes from the button
+      if LoWord (wParam) = id_Button then
+        // if it is a click
+        if HiWord (wParam) = bn_Clicked then
+          MessageBox (hWnd, 'Button Clicked',
+            'Plain API 2', MB_OK);
+    wm_Destroy:
+      PostQuitMessage (0);
+    else
+      Result := DefWindowProc (hWnd, nMsg, wParam, lParam);
   end;
 end;
-&nbsp;
+ 
 procedure WinMain;
 var
   hWnd: THandle;
@@ -627,48 +627,48 @@ begin
   WndClassEx.cbClsExtra := 0;
   WndClassEx.cbWndExtra := 0;
   WndClassEx.hIcon := LoadIcon (hInstance,
- &nbsp;&nbsp; MakeIntResource ('MAINICON'));
-  WndClassEx.hIconSm&nbsp; := LoadIcon (hInstance,
- &nbsp;&nbsp; MakeIntResource ('MAINICON'));
+    MakeIntResource ('MAINICON'));
+  WndClassEx.hIconSm  := LoadIcon (hInstance,
+    MakeIntResource ('MAINICON'));
   WndClassEx.hCursor := LoadCursor (0, idc_Arrow);;
   WndClassEx.hbrBackground := GetStockObject (white_Brush);
   WndClassEx.lpszMenuName := nil;
   // register the class
   if RegisterClassEx (WndClassEx) = 0 then
- &nbsp;&nbsp; MessageBox (0, 'Invalid class registration',
- &nbsp;&nbsp;&nbsp;&nbsp; 'Plain API', MB_OK)
+    MessageBox (0, 'Invalid class registration',
+      'Plain API', MB_OK)
   else
   begin
- &nbsp;&nbsp; hWnd := CreateWindowEx (
- &nbsp;&nbsp;&nbsp;&nbsp; ws_Ex_OverlappedWindow, // extended styles
- &nbsp;&nbsp;&nbsp;&nbsp; WndClassEx.lpszClassName, // class name
- &nbsp;&nbsp;&nbsp;&nbsp; 'Plain API Demo', // title
- &nbsp;&nbsp;&nbsp;&nbsp; ws_OverlappedWindow, // styles
- &nbsp;&nbsp;&nbsp;&nbsp; cw_UseDefault, 0, // position
- &nbsp;&nbsp;&nbsp;&nbsp; cw_UseDefault, 0, // size
- &nbsp;&nbsp;&nbsp;&nbsp; 0, // parent window
- &nbsp;&nbsp;&nbsp;&nbsp; 0, // menu
- &nbsp;&nbsp;&nbsp;&nbsp; HInstance, // instance handle
- &nbsp;&nbsp;&nbsp;&nbsp; nil); // initial parameters
- &nbsp;&nbsp; if hWnd = 0 then
- &nbsp;&nbsp;&nbsp;&nbsp; MessageBox (0, 'Window not created',
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Plain API', MB_OK)
- &nbsp;&nbsp; else
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; ShowWindow (hWnd, sw_ShowNormal);
- &nbsp;&nbsp;&nbsp;&nbsp; while GetMessage (Msg, 0, 0, 0) do
- &nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TranslateMessage (Msg);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DispatchMessage (Msg);
- &nbsp;&nbsp;&nbsp;&nbsp; end;
- &nbsp;&nbsp; end;
+    hWnd := CreateWindowEx (
+      ws_Ex_OverlappedWindow, // extended styles
+      WndClassEx.lpszClassName, // class name
+      'Plain API Demo', // title
+      ws_OverlappedWindow, // styles
+      cw_UseDefault, 0, // position
+      cw_UseDefault, 0, // size
+      0, // parent window
+      0, // menu
+      HInstance, // instance handle
+      nil); // initial parameters
+    if hWnd = 0 then
+      MessageBox (0, 'Window not created',
+        'Plain API', MB_OK)
+    else
+    begin
+      ShowWindow (hWnd, sw_ShowNormal);
+      while GetMessage (Msg, 0, 0, 0) do
+      begin
+        TranslateMessage (Msg);
+        DispatchMessage (Msg);
+      end;
+    end;
   end;
 end;
-&nbsp;
+ 
 begin
   WinMain;
 end.
-&nbsp;
+ 
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

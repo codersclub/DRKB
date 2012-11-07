@@ -69,7 +69,7 @@ procedure TForm1.Button1Click(Sender: TObject);
  
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 { Without OLE }
@@ -125,7 +125,7 @@ procedure TForm1.Button2Click(Sender: TObject);
  end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 { Code by Reinhard Schatzl }

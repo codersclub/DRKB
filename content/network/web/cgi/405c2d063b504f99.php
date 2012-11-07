@@ -29,109 +29,109 @@
    writeln('&lt;/HTML')
  end.
 </pre>
-&nbsp;</p>
+</p>
 Если вы откомпилируете данную программу в Дельфи 2 или 3 и затем запустите ее из web браузера подключенного к web серверу, где оно записано в исполнимом виде в исполняемом каталоге таком как cgi-bin, то вы увидите текст "Hello, world!" на странице.</p>
 1.3.5. CGI ввод</p>
-Теперь, мы знаем как создавать CGI приложение, которое может генерировать динамическую HTML страницу (или в действительности почти статическую). Но как&nbsp; насчет ввода? Здесь более чем одно действие: мы должны проверять переменную DOS 'CONTENT LENGTH' что бы знать как много символов мы можем прочитать со стандартного ввода (если мы попытаемся читать больше чем есть, то мы повиснем навсегда). Конечно, это широко известный факт. Я написал компонент TBDosEnvironment чтобы вы могли иметь доступ до переменных среды DOS:</p>
+Теперь, мы знаем как создавать CGI приложение, которое может генерировать динамическую HTML страницу (или в действительности почти статическую). Но как  насчет ввода? Здесь более чем одно действие: мы должны проверять переменную DOS 'CONTENT LENGTH' что бы знать как много символов мы можем прочитать со стандартного ввода (если мы попытаемся читать больше чем есть, то мы повиснем навсегда). Конечно, это широко известный факт. Я написал компонент TBDosEnvironment чтобы вы могли иметь доступ до переменных среды DOS:</p>
 <pre> unit DrBobDOS;
  interface
  uses
- &nbsp; SysUtils, WinTypes, WinProcs, Classes;
-&nbsp;
+   SysUtils, WinTypes, WinProcs, Classes;
+ 
  type
- &nbsp; TBDosEnvironment = class(TComponent)
- &nbsp; public
- &nbsp; { Public class declarations (override) }
- &nbsp;&nbsp;&nbsp; constructor Create(AOwner: TComponent); override;
- &nbsp;&nbsp;&nbsp; destructor Destroy; override;
-&nbsp;
- &nbsp; private
- &nbsp; { Private field declarations }
- &nbsp;&nbsp;&nbsp; FDosEnvList: TStringList;
- &nbsp;&nbsp;&nbsp; procedure DoNothing(const Value: TStringList);
-&nbsp;
- &nbsp; protected
- &nbsp; { Protected method declarations }
- &nbsp;&nbsp;&nbsp; Dummy: Word;
- &nbsp;&nbsp;&nbsp; function GetDosEnvCount: Word;
-&nbsp;
- &nbsp; public
- &nbsp; { Public interface declarations }
- &nbsp;&nbsp;&nbsp; function GetDosEnvStr(const Name: String): String;
- &nbsp;&nbsp;&nbsp; { This function is a modified version of the GetEnvVar function that appears in the WinDos unit that comes with Delphi. This function's interface uses Pascal strings instead of null-terminated strings.
- &nbsp;&nbsp;&nbsp; }
-&nbsp;
- &nbsp; published
- &nbsp; { Published design declarations }
- &nbsp;&nbsp;&nbsp; property DosEnvCount: Word read GetDosEnvCount write Dummy;
- &nbsp;&nbsp;&nbsp; property DosEnvList: TStringList read FDosEnvList write DoNothing;
- &nbsp; end;
-&nbsp;
+   TBDosEnvironment = class(TComponent)
+   public
+   { Public class declarations (override) }
+     constructor Create(AOwner: TComponent); override;
+     destructor Destroy; override;
+ 
+   private
+   { Private field declarations }
+     FDosEnvList: TStringList;
+     procedure DoNothing(const Value: TStringList);
+ 
+   protected
+   { Protected method declarations }
+     Dummy: Word;
+     function GetDosEnvCount: Word;
+ 
+   public
+   { Public interface declarations }
+     function GetDosEnvStr(const Name: String): String;
+     { This function is a modified version of the GetEnvVar function that appears in the WinDos unit that comes with Delphi. This function's interface uses Pascal strings instead of null-terminated strings.
+     }
+ 
+   published
+   { Published design declarations }
+     property DosEnvCount: Word read GetDosEnvCount write Dummy;
+     property DosEnvList: TStringList read FDosEnvList write DoNothing;
+   end;
+ 
  implementation
-&nbsp;
- &nbsp; constructor TBDosEnvironment.Create(AOwner: TComponent);
- &nbsp; var
- &nbsp;&nbsp;&nbsp; P: PChar;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; inherited Create(AOwner);
- &nbsp;&nbsp;&nbsp; FDosEnvList := TStringList.Create;
- &nbsp; {$IFDEF WIN32}
- &nbsp;&nbsp;&nbsp; P := GetEnvironmentStrings;
- &nbsp; {$ELSE}
- &nbsp;&nbsp;&nbsp; P := GetDosEnvironment;
- &nbsp; {$ENDIF}
- &nbsp;&nbsp;&nbsp; while P^ &lt;&gt; #0 do
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDosEnvList.Add(StrPas(P));
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inc(P, StrLen(P)+1) { Fast Jump to Next Var }
- &nbsp;&nbsp;&nbsp; end;
- &nbsp; end {Create};
-&nbsp;
- &nbsp; destructor TBDosEnvironment.Destroy;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; FDosEnvList.Free;
- &nbsp;&nbsp;&nbsp; FDosEnvList := nil;
- &nbsp;&nbsp;&nbsp; inherited Destroy
- &nbsp; end {Destroy};
-&nbsp;
- &nbsp; procedure TBDosEnvironment.DoNothing(const Value: StringList);
- &nbsp; begin
- &nbsp; end {DoNothing};
-&nbsp;
- &nbsp; function TBDosEnvironment.GetDosEnvCount: Word;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; if Assigned(FDosEnvList) then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result := FDosEnvList.Count
- &nbsp;&nbsp;&nbsp; else
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result := 0;
- &nbsp; end {GetDosEnvCount};
-&nbsp;
- &nbsp; function TBDosEnvironment.GetDosEnvStr(const Name: String): String;
- &nbsp; var
- &nbsp;&nbsp;&nbsp; i: Integer;
- &nbsp;&nbsp;&nbsp; Tmp: String;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; i := 0;
- &nbsp;&nbsp;&nbsp; Result := '';
- &nbsp;&nbsp;&nbsp; if Assigned(FDosEnvList) then while i &lt; FDosEnvList.Count do
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tmp := FDosEnvList[i];
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inc(i);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if Pos(Name,Tmp) = 1 then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete(Tmp,1,Length(Name));
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if Tmp[1] = '=' then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete(Tmp,1,1);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result := Tmp;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i := FDosEnvList.Count { end while-loop }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp; end
- &nbsp; end {GetDosEnvStr};
+ 
+   constructor TBDosEnvironment.Create(AOwner: TComponent);
+   var
+     P: PChar;
+   begin
+     inherited Create(AOwner);
+     FDosEnvList := TStringList.Create;
+   {$IFDEF WIN32}
+     P := GetEnvironmentStrings;
+   {$ELSE}
+     P := GetDosEnvironment;
+   {$ENDIF}
+     while P^ &lt;&gt; #0 do
+     begin
+       FDosEnvList.Add(StrPas(P));
+       Inc(P, StrLen(P)+1) { Fast Jump to Next Var }
+     end;
+   end {Create};
+ 
+   destructor TBDosEnvironment.Destroy;
+   begin
+     FDosEnvList.Free;
+     FDosEnvList := nil;
+     inherited Destroy
+   end {Destroy};
+ 
+   procedure TBDosEnvironment.DoNothing(const Value: StringList);
+   begin
+   end {DoNothing};
+ 
+   function TBDosEnvironment.GetDosEnvCount: Word;
+   begin
+     if Assigned(FDosEnvList) then
+       Result := FDosEnvList.Count
+     else
+       Result := 0;
+   end {GetDosEnvCount};
+ 
+   function TBDosEnvironment.GetDosEnvStr(const Name: String): String;
+   var
+     i: Integer;
+     Tmp: String;
+   begin
+     i := 0;
+     Result := '';
+     if Assigned(FDosEnvList) then while i &lt; FDosEnvList.Count do
+     begin
+       Tmp := FDosEnvList[i];
+       Inc(i);
+       if Pos(Name,Tmp) = 1 then
+       begin
+         Delete(Tmp,1,Length(Name));
+         if Tmp[1] = '=' then
+         begin
+           Delete(Tmp,1,1);
+           Result := Tmp;
+           i := FDosEnvList.Count { end while-loop }
+         end
+       end
+     end
+   end {GetDosEnvStr};
  end.
 </pre>
-&nbsp;</p>
+</p>
 Здесь список переменных среды (предоставленный Deepak Shenoy), которые доступны для CGI программ. Даже ISAPI программы могут использовать эти переменные:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -255,7 +255,7 @@ QUERY_STRING - если используется GET</p>
 CONTENT_LENGTH - если мы используем POST, то мы должны прочитать "CONTENT_LENGTH" символов со стандартного ввода (которые оканчиваются "Query", подобно QUERY_STRING при использовании метода GET).</p>
 Во всех случаях стандартное CGI приложение должно писать свой вывод на стандартный выход, если мы используем консольное приложение.</p>
 Теперь с помощью компонента TBDosEnvironment мы создадим приложение, которое примет все три переменных среды, описанных выше и получит необходимые данные. После этого мы напишем код генерирующий вывод.</p>
-Правда просто? Для другого очень маленького&nbsp; (39 Кб) стандартного CGI приложения, проверьте Search Engine на моем web сайте. Краткий исходный код будет опубликован в одной из статей в The Delphi Magazine, но я могу сказать, что базовый протокол CGI связи не более сложный, чем представленный здесь.</p>
+Правда просто? Для другого очень маленького  (39 Кб) стандартного CGI приложения, проверьте Search Engine на моем web сайте. Краткий исходный код будет опубликован в одной из статей в The Delphi Magazine, но я могу сказать, что базовый протокол CGI связи не более сложный, чем представленный здесь.</p>
 1.3.6. Input Queries</p>
 Сейчас мы попробуем прочитать запрос в стандартном CGI приложении с помощью 32-битной версии Дельфи (Delphi 2.x или 3.x).</p>
 Обычно это двух ступенчатый процесс. Первый шаг создание HTML и специальный CGI Form-тегов, второй шаг получение данных внутри CGI приложения на сервере.</p>
@@ -266,9 +266,9 @@ HTML CGI форма определяется с помощью тегов &lt;FO
 Данная HTML CGI форма посылает свои данные методом POST на мой web сервер, и выполняет программу debug.exe (из каталога cgi-bin). В данный момент мы пока не знакомы с концепцией различий между методами POST и GET (Я всегда использую метод POST). Мы заметим, что здесь пока нет ничего что бы посылать на сервер методом POST, это позже. Мы должны указать поля ввода внутри CGI формы. Для этого мы поместим некоторое количество наиболее стандартных Windows органов управления, все они предопределены, подобно editbox, memo, listbox, drop-down combobox, radiobuttons, checkboxes и конечно клавиши "action" (reset или submit).</p>
  Простой editbox это поля ввода типа "text", которое обязано иметь имя и необязательно размер и ширину в пикселях, и может иметь значение:</p>
 &lt;INPUT TYPE=text NAME=login SIZE=8</p>
-&nbsp;</p>
+</p>
 Результатом этой фразы будет нарисован editbox в котором можно ввести до восьми символов, и которое будет послано нашему CGI приложению как "login=xxxxxxxx", где xxxxxxxx данные веденные на форме в окошке подобному этому</p>
-&nbsp;</p>
+</p>
 Стандартное CGI приложение обязано проверить переменную среды REQUEST-METHOD для определения метода передачи данных. В случае POST, мы должны проверить CONTENT-LENGTH для определения количества символов, которые необходимо прочесть со стандартного ввода. Стандартный ввод содержит данные (такие как "login-xxxxxxxx") для нашего CGI приложения.</p>
 Вместо написания сложного стартового кода для каждого CGI приложения, я написал модуль DrBobCGI для выполнения всех необходимых стартовых процедур и извлечения входных данных и доступных затем через вызов единственной функции, называемой "Value". Так для выше приведенного примера мы можем вызвать "Value('login')" для получения строки 'xxxxxxxx'.</p>
 <pre>
@@ -367,7 +367,7 @@ unit DrBobCGI;
    Data := ''
  end.
 </pre>
-&nbsp;</p>
+</p>
 Я написал кучу CGI приложений за последний год и все они используют модуль DrBobCGIю Теперь реальное пример: стандартное CGI приложение - гостевая книга (guestbook), в которой запрашивается ваше имя и небольшой комментарий, написанное с помощью всего нескольких строк на Дельфи.</p>
 Вначале CGI форма:</p>
 &lt;HTML&gt;</p>
@@ -383,39 +383,39 @@ unit DrBobCGI;
   &lt;/BODY&gt;</p>
   &lt;/HTML&gt;</p>
 Теперь консольное приложение:</p>
-&nbsp;</p>
+</p>
 <pre>program CGI;
  {$I-}
  {$APPTYPE CONSOLE}
  uses
- &nbsp; DrBobCGI;
+   DrBobCGI;
  var
- &nbsp; guest: Text;
- &nbsp; Str: String;
+   guest: Text;
+   Str: String;
  begin
- &nbsp; Assign(guest,'book.htm'); // assuming that's the guestbook
- &nbsp; Append(guest);
- &nbsp; if IOResult &lt;&gt; 0 then // open new guestbook
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; Rewrite(guest);
- &nbsp;&nbsp;&nbsp; writeln(guest,'&lt;HTML&gt;');
- &nbsp;&nbsp;&nbsp; writeln(guest,'&lt;BODY&gt;')
- &nbsp; end;
- &nbsp; writeln(guest,'Date: ',DateTimeToStr(Now),'&lt;BR&gt;');
- &nbsp; writeln(guest,'Name: ',Value('name'),'&lt;BR&gt;');
- &nbsp; writeln(guest,'Comments: ',Value('comments'),'&lt;HR&gt;');
- &nbsp; reset(guest);
- &nbsp; while not eof(guest) do // now output guestbook itself
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; readln(guest,Str);
- &nbsp;&nbsp;&nbsp; writeln(Str)
- &nbsp; end;
- &nbsp; close(guest);
- &nbsp; writeln('&lt;/BODY&gt;');
- &nbsp; writeln('&lt;/HTML&gt;')
+   Assign(guest,'book.htm'); // assuming that's the guestbook
+   Append(guest);
+   if IOResult &lt;&gt; 0 then // open new guestbook
+   begin
+     Rewrite(guest);
+     writeln(guest,'&lt;HTML&gt;');
+     writeln(guest,'&lt;BODY&gt;')
+   end;
+   writeln(guest,'Date: ',DateTimeToStr(Now),'&lt;BR&gt;');
+   writeln(guest,'Name: ',Value('name'),'&lt;BR&gt;');
+   writeln(guest,'Comments: ',Value('comments'),'&lt;HR&gt;');
+   reset(guest);
+   while not eof(guest) do // now output guestbook itself
+   begin
+     readln(guest,Str);
+     writeln(Str)
+   end;
+   close(guest);
+   writeln('&lt;/BODY&gt;');
+   writeln('&lt;/HTML&gt;')
  end.
 </pre>
-&nbsp;</p>
+</p>
 Вопрос:</p>
 У меня на форме две "submit" клавиши, одна на переход на предыдущую страницу, другая переход на следующую страницу. Как определить какая из них была нажата, чтобы я мог выполнить соответствующее действие.</p>
 Доктор Боб отвечает:</p>
@@ -429,7 +429,7 @@ To Delete information, press the DELETE button&lt;BR&gt;</p>
 &lt;HR&gt;</p>
 &lt;input type=text name=name&gt;</p>
 &lt;P&gt;</p>
-&lt;input type=reset&nbsp; value="RESET"&gt;</p>
+&lt;input type=reset  value="RESET"&gt;</p>
 &lt;input type=submit name=action value="SAVE"&gt;</p>
 &lt;input type=submit name=action value="DELETE"&gt;</p>
 &lt;/FORM&gt;</p>
@@ -449,40 +449,40 @@ HTML страница может содержать только простой 
 const</p>
   MaxField = 255;</p>
   sf_UnKnown = 0;</p>
-  sf_String&nbsp; = 1;</p>
-  sf_Memo&nbsp;&nbsp;&nbsp; = 2;</p>
-&nbsp;</p>
+  sf_String  = 1;</p>
+  sf_Memo    = 2;</p>
+</p>
 var</p>
   FieldTypes: Array[0..Pred(MaxField)] of Byte; { default unknowns }</p>
 Мы должны просмотреть структуру таблицы для получения информации об типах полей:</p>
-&nbsp;</p>
+</p>
 <pre>
 with TTable.Create(nil) do
  try
- &nbsp; DatabaseName := ADatabase;
- &nbsp; TableName := ATable;
- &nbsp; Active := True;
- &nbsp; keys := -1; { no key in table }
- &nbsp; for i:=0 to Pred(FieldDefs.Count) do
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; if Fields[i].IsIndexField then keys := i;
- &nbsp;&nbsp;&nbsp; FieldTypes[i] := sf_String; { default }
- &nbsp;&nbsp;&nbsp; if (FieldDefs[i].FieldClass = TMemoField) then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FieldTypes[i] := sf_Memo
- &nbsp;&nbsp;&nbsp; else
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (FieldDefs[i].FieldClass = TGraphicField) or
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (FieldDefs[i].FieldClass = TBlobField) or
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (FieldDefs[i].FieldClass = TBytesField) or
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (FieldDefs[i].FieldClass = TVarBytesField) then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FieldTypes[i] := sf_UnKnown { ignore }
- &nbsp; end
+   DatabaseName := ADatabase;
+   TableName := ATable;
+   Active := True;
+   keys := -1; { no key in table }
+   for i:=0 to Pred(FieldDefs.Count) do
+   begin
+     if Fields[i].IsIndexField then keys := i;
+     FieldTypes[i] := sf_String; { default }
+     if (FieldDefs[i].FieldClass = TMemoField) then
+       FieldTypes[i] := sf_Memo
+     else
+       if (FieldDefs[i].FieldClass = TGraphicField) or
+          (FieldDefs[i].FieldClass = TBlobField) or
+          (FieldDefs[i].FieldClass = TBytesField) or
+          (FieldDefs[i].FieldClass = TVarBytesField) then
+         FieldTypes[i] := sf_UnKnown { ignore }
+   end
  finally
- &nbsp; Free
+   Free
  end;
 </pre>
-&nbsp;</p>
+</p>
 2.1.4. Записи</p>
-После анализа полей таблицы, мы можем пройтись по всей таблице и получить значения полей. Для каждой записи в таблице мы сгенерируем HTML-страницу. Мы можем использовать имена полей как заголовки, используя тег &lt;H2&gt; для ключевых&nbsp; полей и тег &lt;H3&gt;&nbsp; для не ключевых полей. Код просматривает всю таблицу т преобразовывает поля в текст и выводит их в HTML-файл:</p>
+После анализа полей таблицы, мы можем пройтись по всей таблице и получить значения полей. Для каждой записи в таблице мы сгенерируем HTML-страницу. Мы можем использовать имена полей как заголовки, используя тег &lt;H2&gt; для ключевых  полей и тег &lt;H3&gt;  для не ключевых полей. Код просматривает всю таблицу т преобразовывает поля в текст и выводит их в HTML-файл:</p>
 <pre>while not Eof do
 begin
   Inc(RecNr);
@@ -497,84 +497,84 @@ begin
   writeln(f,'&lt;BODY&gt;');
   { print fields }
   for i:=0 to Pred(FieldCount) do 
- &nbsp;&nbsp; if FieldTypes[i] &gt; sf_UnKnown then
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; if (keys &gt;= i) then writeln(f,'&lt;H2&gt;')
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else writeln(f,'&lt;H3&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp; writeln(f,FieldDefs[i].Name,':');
- &nbsp;&nbsp;&nbsp;&nbsp; if (keys &gt;= i) then writeln(f,'&lt;/B&gt;&lt;BR&gt;') { &lt;/H2&gt; }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else writeln(f,'&lt;/B&gt;&lt;BR&gt;'); { &lt;/H3&gt; }
- &nbsp;&nbsp;&nbsp;&nbsp; if FieldTypes[i] = sf_Memo then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeMemo(f,Fields[i])
- &nbsp;&nbsp;&nbsp;&nbsp; else writeln(f,Fields[i].AsString);
- &nbsp;&nbsp;&nbsp;&nbsp; if (keys = i) then writeln(f,'&lt;HR&gt;');
- &nbsp;&nbsp; end;
- &nbsp;&nbsp; writeln(f,'&lt;/BODY&gt;');
- &nbsp;&nbsp; writeln(f,'&lt;/HTML&gt;');
- &nbsp;&nbsp; System.Close(f);
- &nbsp;&nbsp; Next
+    if FieldTypes[i] &gt; sf_UnKnown then
+    begin
+      if (keys &gt;= i) then writeln(f,'&lt;H2&gt;')
+                     else writeln(f,'&lt;H3&gt;');
+      writeln(f,FieldDefs[i].Name,':');
+      if (keys &gt;= i) then writeln(f,'&lt;/B&gt;&lt;BR&gt;') { &lt;/H2&gt; }
+                     else writeln(f,'&lt;/B&gt;&lt;BR&gt;'); { &lt;/H3&gt; }
+      if FieldTypes[i] = sf_Memo then
+        writeMemo(f,Fields[i])
+      else writeln(f,Fields[i].AsString);
+      if (keys = i) then writeln(f,'&lt;HR&gt;');
+    end;
+    writeln(f,'&lt;/BODY&gt;');
+    writeln(f,'&lt;/HTML&gt;');
+    System.Close(f);
+    Next
   end;
 </pre>
-&nbsp;</p>
+</p>
 Заметим, что я использую здесь одно недокументированное свойство HTML: для окончания заголовка вы можете написать &lt;/B&gt;, но вы должны использовать &lt;BR&gt; для разрыва строки. Таким образом, вы можете иметь заголовки, и текст, начинающийся правее и ниже заголовка. Пожалуйста, учтите, что это недокументированное свойство и вы должны заменить его раз комментировав &lt;/H2&gt; и &lt;/H3&gt; если вы не желаете жить на угле &lt;юмор&gt;. Следующий листинг показывает как получить информацию из мемо поля базы данных и поместить его в текстовый файл. И наконец после этого мы отформатируем немного, помня что HTML игнорирует множественные переводы строки и пробелы.</p>
-&nbsp;</p>
+</p>
 <pre>procedure WriteStream(var f: Text; var Stream: TMemoryStream);
  const
- &nbsp; LF = #10;
- &nbsp; BufSize = 8192; { bigger memos are chopped off!! }
+   LF = #10;
+   BufSize = 8192; { bigger memos are chopped off!! }
  var
- &nbsp; Buffer: Array[0..Pred(BufSize)] of Char;
- &nbsp; i: Integer;
+   Buffer: Array[0..Pred(BufSize)] of Char;
+   i: Integer;
  begin
- &nbsp; Stream.Seek(0,0);
- &nbsp; if Stream.Size &gt; 0 then
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; Stream.Read(Buffer,Stream.Size);
- &nbsp;&nbsp;&nbsp; for i:=0 to Pred(Pred(Stream.Size)) do
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { empty line converted to &lt;P&gt; break }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (Buffer[i] = LF) and (Buffer[i+1] = LF) then writeln(f,'&lt;P&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { strip multiple spaces (are ignored anyway) }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not ((Buffer[i] = ' ') and (Buffer[i+1] = ' ')) then write(f,Buffer[i]);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { start new sentence on a new line (but only in HTML doc itself }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (Buffer[i] = '.') and (Buffer[i+1] = ' ') then writeln(f)
- &nbsp;&nbsp;&nbsp; end;
- &nbsp;&nbsp;&nbsp; writeln(f,Buffer[Pred(Stream.Size)])
- &nbsp; end
- &nbsp; else writeln(f,' ') { empty memo }
+   Stream.Seek(0,0);
+   if Stream.Size &gt; 0 then
+   begin
+     Stream.Read(Buffer,Stream.Size);
+     for i:=0 to Pred(Pred(Stream.Size)) do
+     begin
+       { empty line converted to &lt;P&gt; break }
+       if (Buffer[i] = LF) and (Buffer[i+1] = LF) then writeln(f,'&lt;P&gt;');
+       { strip multiple spaces (are ignored anyway) }
+       if not ((Buffer[i] = ' ') and (Buffer[i+1] = ' ')) then write(f,Buffer[i]);
+       { start new sentence on a new line (but only in HTML doc itself }
+       if (Buffer[i] = '.') and (Buffer[i+1] = ' ') then writeln(f)
+     end;
+     writeln(f,Buffer[Pred(Stream.Size)])
+   end
+   else writeln(f,' ') { empty memo }
  end {WriteStream};
-&nbsp;
+ 
  procedure WriteMemo(var f: Text; Field: TField);
  var Stream: TMemoryStream;
  begin
- &nbsp; Stream := TMemoryStream.Create;
+   Stream := TMemoryStream.Create;
   (Field AS TMemoField).SaveToStream(Stream);
- &nbsp; WriteStream(f,Stream);
- &nbsp; Stream.Free
+   WriteStream(f,Stream);
+   Stream.Free
  end {WriteMemo};
 </pre>
-&nbsp;</p>
+</p>
 2.1.5. Страницы</p>
 Теперь у нас есть метод преобразования записей в HTML страницы, нам также нужен путь уникальной идентификации каждой записи. Допустим, что база данных не не содержит более 100,000 записей (Если таблица содержит свыше 100,000 записей, то конвертирование их в HTML страницы наверно не очень хорошая идея), Я думаю что подойдет схема где каждая запись помещается в файл с именем "pag#####.htm", где ##### номер записи в базе данных. Для уменьшения конфликта имен, каждая таблица должна размещаться в своем собственном каталоге (например, BIOLIFE.HTM каталог для BIOLIFE.DB таблиц, так что мы будем иметь BIOLIFE.HTM/PAG00001.HTM для первой записи из BIOLIFE.DB таблицы).</p>
-&nbsp;</p>
+</p>
 <pre>const
- &nbsp; FirstPage = 'pag00001.htm';
- &nbsp; LastPage: TPageName = 'pag%.5d.htm'; { format }
-&nbsp;
- &nbsp; function PageNr(Nr: Word): TPageName;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; Result := Format('pag%.5d.htm',[Nr])
- &nbsp; end {PageNr};
+   FirstPage = 'pag00001.htm';
+   LastPage: TPageName = 'pag%.5d.htm'; { format }
+ 
+   function PageNr(Nr: Word): TPageName;
+   begin
+     Result := Format('pag%.5d.htm',[Nr])
+   end {PageNr};
 </pre>
 Кроме первой страницы PAG00001.HTM, нам также необходимо знать имя последней страницы, и функцию, которая нам даст номер текущей страницы для номера записи.</p>
 2.1.6. HTML "Живые" клавиши</p>
 Неплохо также иметь путь для навигации по записям таблицы, для этого я использую IMAGE MAP, встроенный в HTML-страницу и работающий даже если браузер загружает локальный файл. HTML-синтаксис для отображения картинки следующий:</p>
-&lt;IMG SRC="image.gif"&gt;  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+&lt;IMG SRC="image.gif"&gt;</p>
 где image.gif это файл типа .GIF или .JPEG. Мы можем вставить опцию USEMAP в тег, для указания имени карты образа, например:</p>
 &lt;IMG SRC="image.gif" USEMAP="#map"&gt;</p>
 Внутри страницы мы можем ссылаться на "#map", а в действительности на картинку. Image map ничего более чем список координат и ссылок. Переход на ссылку произойдет, мы щелкнем мышкой в указанных координатах. HTML-синтаксис карты образа, the image map выглядит как навигационная панель размером 25x125 пикселей:</p>
 &lt;MAP NAME="map"&gt;</p>
-&lt;AREA SHAPE="rect" COORDS="51,0,75,25"&nbsp; HREF="next"&gt;</p>
+&lt;AREA SHAPE="rect" COORDS="51,0,75,25"  HREF="next"&gt;</p>
 &lt;AREA SHAPE="rect" COORDS="76,0,100,25" HREF="last"&gt;</p>
 &lt;AREA SHAPE="rect" COORDS="101,0,125,25"HREF="this"&gt;</p>
 &lt;/MAP&gt;</p>
@@ -624,19 +624,19 @@ begin
   end;
   writeln(f,'&lt;/MAP&gt;');
 </pre>
-&nbsp;</p>
+</p>
 Все три образа панели навигации хранятся в общем каталоге "../images" и дают мне шанс конвертировать множество таблиц в одно и тоже время для всех точек только с помощью этих трех образов. В действительности, в нашей локальной интрасети мы имеем порядка 23 таблиц преобразованных в 200 HTML страниц, и все они используют эти самые три образа.</p>
 2.1.7. Первый результат</p>
 После конвертирования базы BIOLIFE.DB, которая содержит много текстовых данных в мемо поле и одно поле, которое мы игнорируем (image field), мы получили следующий результат (обратите внимание на заголовок, который показывает запись 1 из 28):</p>
-<p>&nbsp;</p>
+<p></p>
 2.1.8. Расширенный HTML</p>
 Конечно, не всегда таблица содержит только текстовые поля. Иногда данные из таблице удобнее представлять в виде таблицы (grid или таблице подобной структуре). Для этого я должен ввести вас в расширенные HTML свойства: фреймы и таблицы.</p>
 2.1.8.1. Фреймы</p>
 Фреймы это в действительности расширение HTML+, которое не поддерживается некоторыми web браузерами. Фреймы это свойство разделения вашей web страницы на две или более страниц. Основное свойство фреймом то, что каждый фрейм может иметь свое собственное имя и может переходить в другое местонахождение. Так, вы можете иметь индекс или таблицу оглавления с левой стороны, и например действительное содержимое с правой стороны. Для таблицы со многими записями вы можете иметь список ключей слева (главный индекс) и одну индивидуальную запись справа. Ключевое значение слева конечно ссылка на актуальную страницу с данными в правом фрейме. Как только мы щелкнем по ссылке в главном индексе (левый фрейм) в правом фрейме появятся данные относящиеся к этому ключу. Дополнительно к двум фреймам мы должны иметь главную специальную страницу, в которой определяем количество и относительные позиции (и размер) этих фреймов. Я использую для левого фрейма имя "Menu" и размер 32% от текущей ширины экрана, для правого фрейма имя "Main" и остаток ширины экрана. В HTML коде это выглядит следующим образом:</p>
 &lt;HTML&gt;</p>
 &lt;FRAMESET COLS="32%,*"&gt;</p>
-  &lt;FRAME&nbsp; SRC="pag00000.htm" NAME="Menu"&gt;</p>
-  &lt;FRAME&nbsp; SRC="pag00001.htm" NAME="Main"&gt;</p>
+  &lt;FRAME  SRC="pag00000.htm" NAME="Menu"&gt;</p>
+  &lt;FRAME  SRC="pag00001.htm" NAME="Main"&gt;</p>
 &lt;/FRAMESET&gt;</p>
 &lt;/HTML&gt;</p>
 Конечно, вы можете иметь более значимые имена для фреймов (например имена таблиц), но Я оставлю это на совесть читателя.</p>
@@ -655,22 +655,22 @@ begin
   writeln(f,'&lt;TR&gt;');
   write(f,'&lt;TD&gt;&lt;B&gt;',FieldDefs[i].Name,'&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;');
   if FieldTypes[i] = sf_Memo then
- &nbsp;&nbsp; writeMemo(f,Fields[i])
+    writeMemo(f,Fields[i])
   else writeln(f,Fields[i].AsString);
   writeln(f,'&lt;/TD&gt;&lt;/TR&gt;');
   if (keys &gt;= i) then
- &nbsp;&nbsp; writeln(g,'&lt;TD&gt;',Fields[i].AsString,'&lt;/TD&gt;')
+    writeln(g,'&lt;TD&gt;',Fields[i].AsString,'&lt;/TD&gt;')
 end;
 if (keys &gt;= 0) then writeln(g,'&lt;/TR&gt;');
 writeln(f,'&lt;/TABLE&gt;');
 </pre>
-&nbsp;</p>
+</p>
 2.1.9. Последний вариант конвертора</p>
 Имея объединенные фреймы и таблицы ы нашем конверторе, мы можем переходить от простой BIOLIFE.DB таблицы к более реалистичной таблицы продуктов, например PARTS.DB. Данная таблица имеет больше цифровых и меньше "memo" (или тестовых) данных, и поэтому выглядит лучше когда данные отображаются в табличном виде с простыми заголовками.</p>
-<p>&nbsp;</p>
+<p></p>
 "Живые" HTML кнопки работают также как и ранее, и мы можем выбирать любую запись из фрейма с индексом. Заметим, что содержимое правого фрейма также содержит текущую позицию (и общее количество записей) в таблице, так как это тоже генерируется на лету.</p>
 В данный момент мы уже имеем два пути для преобразования таблицы в HTML страницу, или с помощью простого текстового конвертора или с помощью более сложного конвертора фрейм /таблица, Я написал маленькую программу, которая использует оба метода. Это простое консольное приложение, которое нуждается только в имени таблицы как аргумент командной строки (таблица должна находиться в текущем каталоге). По умолчанию используется нормальный метод преобразования, тем не менее, если ввести более одного параметра, то будет использоваться метод преобразования во фреймы с таблицами (сам дополнительный параметр игнорируется).</p>
-&nbsp;</p>
+</p>
 <pre>program BDE2HTML;
  {$IFDEF WIN32}
  {$APPTYPE CONSOLE}
@@ -678,19 +678,19 @@ writeln(f,'&lt;/TABLE&gt;');
  {$ELSE}
  uses WinCrt,
  {$ENDIF}
- &nbsp;&nbsp;&nbsp;&nbsp; Convert, HTables;
+      Convert, HTables;
  begin
- &nbsp; case ParamCount of
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0: writeln('Usage: BDE2HTML tablename');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1: Convert.DatabaseHTML('',ParamStr(1));
- &nbsp;&nbsp;&nbsp; else HTables.DatabaseHTML('',ParamStr(1))
- &nbsp; end
+   case ParamCount of
+       0: writeln('Usage: BDE2HTML tablename');
+       1: Convert.DatabaseHTML('',ParamStr(1));
+     else HTables.DatabaseHTML('',ParamStr(1))
+   end
  end.
 </pre>
-&nbsp;</p>
+</p>
 2.1.10. Линейка прогресса</p>
 Конвертирование маленьких таблиц в небольшое количество страниц не занимает много времени, не более нескольких секунд. Но конвертирование больших таблиц в сотни или тысячи страниц может занять несколько минут. По этой причине я сделал небольшой прогресс индикатор к конвертору. Простая форма с компонентом TGauge. Мы устанавливаем MinValue и Value в 0, а MaxValue в количество записей в таблице, и после генерации страницы мы увеличиваем значение Value на единицу. Небольшие часики в левом верхнем углу показываю количество пройденного времени:</p>
-<p>&nbsp;</p>
+<p></p>
 2.1.11. Производительность</p>
 Единственная разница между реальным приложением обработки баз данных (например с использованием BDE) и браузером базы данных это производительность. Наше "приложение" не нуждается ни в каких других приложениях, кроме стандартного браузера. Посылка данных по сети и взаимодействие эмулируется с помощью щелчков по картинке-навигатору и перехода по гипер-ссылке. Ни BDE или ISAPI/NSAPI программы не могут выполнять подобную архитектуру. Конечно, мы имеем только статические страницы, поэтому здесь нет возможности делать динамические запросы или преобразование базы данных. Поэтому нам нет нужды разрабатывать другие вещи, как CGI скрипты. Но наши сгенерированные страницы могут "имитировать" Парадокс базу, даже не Unix Web сервере! И особенно для баз, в которых изменения очень редки, например раз в неделю, это превосходная схема быстрой и простой организации web сайта.</p>
 2.1.12. Заключение</p>
@@ -709,11 +709,11 @@ writeln(f,'&lt;/TABLE&gt;');
 &lt;P&gt;</p>
 &lt;LI&gt;Level:</p>
 &lt;BR&gt;&lt;SELECT NAME="Level"&gt;</p>
- &nbsp;&nbsp; &lt;OPTION VALUE=""&gt; don't care</p>
- &nbsp;&nbsp; &lt;OPTION VALUE="1"&gt; Beginning</p>
- &nbsp;&nbsp; &lt;OPTION VALUE="2"&gt; Intermediate</p>
- &nbsp;&nbsp; &lt;OPTION VALUE="3"&gt; Advanced</p>
- &nbsp;&nbsp; &lt;/SELECT&gt;</p>
+    &lt;OPTION VALUE=""&gt; don't care</p>
+    &lt;OPTION VALUE="1"&gt; Beginning</p>
+    &lt;OPTION VALUE="2"&gt; Intermediate</p>
+    &lt;OPTION VALUE="3"&gt; Advanced</p>
+    &lt;/SELECT&gt;</p>
 &lt;P&gt;</p>
 &lt;/UL&gt;</p>
 &lt;HR&gt;</p>
@@ -723,171 +723,171 @@ writeln(f,'&lt;/TABLE&gt;');
 &lt;/FORM&gt;</p>
 Данный код показывает на форме два типа органов управления: три радио кнопки (выбор между "Delphi 1.0x or 2.0x", "Delphi 1.0x only" и "Delphi 2.0x only"), и combobox с четырьмя значениями ("don't care", "Beginning", "Intermediate" и "Advanced"). Так же имеется две обычные кнопки, одна типа "RESET", для сброса введенной информации и одна типа "SUBMIT", для отправки введенной информации. Для выполнения запроса из Web браузера на Web сервер необходимо нажать кнопку типа SUBMIT (в нашем случае кнопку с текстом "Get Results"). Но как сервер узнает, какое CGI приложение запускать для обработки запроса? Для этого мы должны обратить внимание на параметр ACTION в теге FORM (первая строка кода). Параметр ACTION указывает точное местонахождение CGI приложения, в нашем случае это http://www.drbob42.com/cgi-bin/delbooks.exe (но ребята не пытайтесь запускать это у себя дома, так как это ссылка внутри моей Интрасети, а не Интернета).</p>
 В действительности "официальная" DELBOOKS.HTM содержит гораздо больше органов управления. Она также доступна на http://members.aol.com/drbobnl/delbooks.htm.</p>
-&nbsp;</p>
+</p>
 Нажатие на клавишу "Get Result" посылает информацию на Web сервер, котрый запускает delbooks.exe приложение с информацией введенной на форме. В нашем случае это может быть DELPHI="2", LEVEL="3", TITLE="", AUTHOR="Bob_Swart", PUBLISHER="" и ISBN="" (символ подчеркивания здесь означает пробел). Delphi 2 CGI приложение delbooks.exe обрабатывает полученную информацию, выполняет запрос и генерирует динамическую HTML страницу, которую отправляет на стандартный вывод. Web затем отправляет ее клиенту в его Webбраузеру который отображает ее на экране.</p>
 2.2.3. Переменные среды</p>
 Стандартное CGI приложение должно анализировать переменные среды для определения метода передачи и размера посылаемой информации через стандартный ввод. Для получения списка переменных среды я всегда использую простой компонент, который я написал очень давно и компилирую его с помощью директив условной компиляции, как в Дельфи 1, так и в Дельфи 2.</p>
-&nbsp;</p>
+</p>
 <pre>unit TBDosEnv;
  interface
  uses
- &nbsp; SysUtils, WinTypes, WinProcs, Classes;
-&nbsp;
+   SysUtils, WinTypes, WinProcs, Classes;
+ 
  type
- &nbsp; TBDosEnvironment = class(TComponent)
- &nbsp; public
- &nbsp; { Public class declarations (override) }
- &nbsp;&nbsp;&nbsp; constructor Create(AOwner: TComponent); override;
- &nbsp;&nbsp;&nbsp; destructor Destroy; override;
-&nbsp;
- &nbsp; private
- &nbsp; { Private field declarations }
- &nbsp;&nbsp;&nbsp; FDosEnvList: TStringList;
-&nbsp;
- &nbsp; protected
- &nbsp; { Protected method declarations }
- &nbsp;&nbsp;&nbsp; function GetDosEnvCount: Word;
-&nbsp;
- &nbsp; public
- &nbsp; { Public interface declarations }
- &nbsp;&nbsp;&nbsp; function GetDosEnvStr(Const Name: String): String;
- &nbsp;&nbsp;&nbsp; { This function is a modified version of the GetEnvVar function that
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; appears in the WinDos unit that comes with Delphi. This function's
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; interface uses Pascal strings instead of null-terminated strings.
- &nbsp;&nbsp;&nbsp; }
- &nbsp;&nbsp;&nbsp; property DosEnvCount: Word read GetDosEnvCount;
- &nbsp;&nbsp;&nbsp; property DosEnvList: TStringList read FDosEnvList;
- &nbsp; end;
-&nbsp;
+   TBDosEnvironment = class(TComponent)
+   public
+   { Public class declarations (override) }
+     constructor Create(AOwner: TComponent); override;
+     destructor Destroy; override;
+ 
+   private
+   { Private field declarations }
+     FDosEnvList: TStringList;
+ 
+   protected
+   { Protected method declarations }
+     function GetDosEnvCount: Word;
+ 
+   public
+   { Public interface declarations }
+     function GetDosEnvStr(Const Name: String): String;
+     { This function is a modified version of the GetEnvVar function that
+       appears in the WinDos unit that comes with Delphi. This function's
+       interface uses Pascal strings instead of null-terminated strings.
+     }
+     property DosEnvCount: Word read GetDosEnvCount;
+     property DosEnvList: TStringList read FDosEnvList;
+   end;
+ 
  implementation
-&nbsp;
- &nbsp; constructor TBDosEnvironment.Create(AOwner: TComponent);
- &nbsp; var P: PChar;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i: Integer;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; inherited Create(AOwner);
- &nbsp;&nbsp;&nbsp; FDosEnvList := TStringList.Create;
- &nbsp;&nbsp;&nbsp; {$IFDEF WIN32}
- &nbsp;&nbsp;&nbsp; P := GetEnvironmentStrings;
- &nbsp;&nbsp;&nbsp; {$ELSE}
- &nbsp;&nbsp;&nbsp; P := GetDosEnvironment; { Win API }
- &nbsp;&nbsp;&nbsp; {$ENDIF}
- &nbsp;&nbsp;&nbsp; i := 0;
- &nbsp;&nbsp;&nbsp; while P^ &lt;&gt; #0 do
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inc(i);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDosEnvList.Add(StrPas(P));
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inc(P, StrLen(P)+1) { Fast Jump to Next Var }
- &nbsp;&nbsp;&nbsp; end;
- &nbsp; end {Create};
-&nbsp;
- &nbsp; destructor TBDosEnvironment.Destroy;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; FDosEnvList.Free;
- &nbsp;&nbsp;&nbsp; FDosEnvList := nil;
- &nbsp;&nbsp;&nbsp; inherited Destroy
- &nbsp; end {Destroy};
-&nbsp;
- &nbsp; function TBDosEnvironment.GetDosEnvCount: Word;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; Result := 0;
- &nbsp;&nbsp;&nbsp; if Assigned(FDosEnvList) then Result := FDosEnvList.Count
- &nbsp; end {GetDosEnvCount};
-&nbsp;
- &nbsp; function TBDosEnvironment.GetDosEnvStr(Const Name: String): String;
- &nbsp; var i: Integer;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tmp: String;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; i := 0;
- &nbsp;&nbsp;&nbsp; Result := '';
- &nbsp;&nbsp;&nbsp; if Assigned(FDosEnvList) then while i &lt;FDosEnvList.Count &gt;do
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tmp := FDosEnvList[i];
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inc(i);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if Pos(Name,Tmp) = 1 then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete(Tmp,1,Length(Name));
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if Tmp[1] = '=' then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete(Tmp,1,1);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result := Tmp;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i := FDosEnvList.Count { end while-loop }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp; end
- &nbsp; end {GetDosEnvStr};
+ 
+   constructor TBDosEnvironment.Create(AOwner: TComponent);
+   var P: PChar;
+       i: Integer;
+   begin
+     inherited Create(AOwner);
+     FDosEnvList := TStringList.Create;
+     {$IFDEF WIN32}
+     P := GetEnvironmentStrings;
+     {$ELSE}
+     P := GetDosEnvironment; { Win API }
+     {$ENDIF}
+     i := 0;
+     while P^ &lt;&gt; #0 do
+     begin
+       Inc(i);
+       FDosEnvList.Add(StrPas(P));
+       Inc(P, StrLen(P)+1) { Fast Jump to Next Var }
+     end;
+   end {Create};
+ 
+   destructor TBDosEnvironment.Destroy;
+   begin
+     FDosEnvList.Free;
+     FDosEnvList := nil;
+     inherited Destroy
+   end {Destroy};
+ 
+   function TBDosEnvironment.GetDosEnvCount: Word;
+   begin
+     Result := 0;
+     if Assigned(FDosEnvList) then Result := FDosEnvList.Count
+   end {GetDosEnvCount};
+ 
+   function TBDosEnvironment.GetDosEnvStr(Const Name: String): String;
+   var i: Integer;
+       Tmp: String;
+   begin
+     i := 0;
+     Result := '';
+     if Assigned(FDosEnvList) then while i &lt;FDosEnvList.Count &gt;do
+     begin
+       Tmp := FDosEnvList[i];
+       Inc(i);
+       if Pos(Name,Tmp) = 1 then
+       begin
+         Delete(Tmp,1,Length(Name));
+         if Tmp[1] = '=' then
+         begin
+           Delete(Tmp,1,1);
+           Result := Tmp;
+           i := FDosEnvList.Count { end while-loop }
+         end
+       end
+     end
+   end {GetDosEnvStr};
  end.
 </pre>
-&nbsp;</p>
+</p>
 Данный компонент получает список переменных среды во время своего создания. Свойство DosEnvCount и DosEnvList является свойством только для чтения и поэтому лучше его создавать его в на ходу, а не бросать на форму, так как берется только 'свежий' список переменных среды, а не загружается из .DFM файла).</p>
 2.2.4. Анализ</p>
 Среди переменных среды есть переменная с именем REQUEST_METHOD. Она должна иметь значение POST для нашего примера (Я не люблю другие методы). Затем мы должны найти размер информации, которая передана нам. Для этого мы должны получить переменную CONTENT_LENGTH. Сама информация поступает к нам через стандартный ввод (без маркера конца файла, поэтому наша задача не пытаться читать больше, чем нам передано). Данные поступающие через стандартный ввод имеют следующую форму FIELD=VALUE и разделяется с помощью символа '&amp;'. Например: AUTHOR="Bob_Swart"&amp;. Поскольку мы имеем весь входной поток, как одну длинную строку, то мы можем быстро найти параметр AUTHOR с помощью следующей функции:</p>
-&nbsp;</p>
+</p>
 <pre>var
- &nbsp; Data: String;
-&nbsp;
- &nbsp; function Value(Const Field: ShortString): ShortString;
- &nbsp; var i: Integer;
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; Result := '';
- &nbsp;&nbsp;&nbsp; i := Pos(Field+'=',Data);
- &nbsp;&nbsp;&nbsp; if i = 0 then
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inc(i,Length(Field)+1);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while Data[i] &lt;&gt; '&amp;' do
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result := Result + Data[i];
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inc(i)
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp; end
- &nbsp; end {Value};
+   Data: String;
+ 
+   function Value(Const Field: ShortString): ShortString;
+   var i: Integer;
+   begin
+     Result := '';
+     i := Pos(Field+'=',Data);
+     if i = 0 then
+     begin
+       Inc(i,Length(Field)+1);
+       while Data[i] &lt;&gt; '&amp;' do
+       begin
+         Result := Result + Data[i];
+         Inc(i)
+       end
+     end
+   end {Value};
 </pre>
-&nbsp;</p>
+</p>
 Следующий шаблон кода показывает как динамически создать переменную TBDosEnvironment, прочитать информацию со стандартного ввода и получить строку готовую для анализа переменных формы.</p>
-&nbsp;</p>
+</p>
 <pre>{$APPTYPE CONSOLE}
  var
- &nbsp; Data: String;
- &nbsp; ContentLength,i,j: Integer;
-&nbsp;
+   Data: String;
+   ContentLength,i,j: Integer;
+ 
  begin
- &nbsp; writeln('HTTP/1.0 200 OK');
- &nbsp; writeln('SERVER: Dr.Bob''s Intranet WebServer 1.0');
- &nbsp; writeln('CONTENT-TYPE: TEXT/HTML');
- &nbsp; writeln;
- &nbsp; writeln('&lt;HTML&gt;');
- &nbsp; writeln('&lt;BODY&gt;');
- &nbsp; writeln('&lt;I&gt;Generated by Dr.Bobs CGI-Expert on &lt;/I&gt;',DateTimeToStr(Now));
-&nbsp;
- &nbsp; with TBDosEnvironment.Create(nil) do
- &nbsp; begin
- &nbsp;&nbsp;&nbsp; for i := 0 to Pred(DosEnvCount) do
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if Pos('REQUEST_METHOD',DosEnvList[i])&nbsp; 0 then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data := DosEnvList[i];
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete(Data,1,Pos('=',Data))
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp; end;
-&nbsp;
- &nbsp;&nbsp;&nbsp; if Data = 'POST' then
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ContentLength := StrToInt(GetDosEnvStr('CONTENT_LENGTH'));
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetLength(Data,ContentLength+1);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; j := 0;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to ContentLength do
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Inc(j);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; read(Data[j]);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data[j+1] := '&amp;';
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { now call Value or ValueAsInteger to obtain individual values }
- &nbsp;&nbsp;&nbsp; end;
+   writeln('HTTP/1.0 200 OK');
+   writeln('SERVER: Dr.Bob''s Intranet WebServer 1.0');
+   writeln('CONTENT-TYPE: TEXT/HTML');
+   writeln;
+   writeln('&lt;HTML&gt;');
+   writeln('&lt;BODY&gt;');
+   writeln('&lt;I&gt;Generated by Dr.Bobs CGI-Expert on &lt;/I&gt;',DateTimeToStr(Now));
+ 
+   with TBDosEnvironment.Create(nil) do
+   begin
+     for i := 0 to Pred(DosEnvCount) do
+     begin
+       if Pos('REQUEST_METHOD',DosEnvList[i])  0 then
+       begin
+         Data := DosEnvList[i];
+         Delete(Data,1,Pos('=',Data))
+       end
+     end;
+ 
+     if Data = 'POST' then
+     begin
+       ContentLength := StrToInt(GetDosEnvStr('CONTENT_LENGTH'));
+       SetLength(Data,ContentLength+1);
+       j := 0;
+       for i:=1 to ContentLength do
+       begin
+         Inc(j);
+         read(Data[j]);
+       end;
+       Data[j+1] := '&amp;';
+       { now call Value or ValueAsInteger to obtain individual values }
+     end;
 </pre>
-&nbsp;</p>
+</p>
 Заметим, что первые три "writeln" строки, посылаемые на стандартный вывод, необходимы для браузера, что бы сообщить ему, что содержимое страницы имеет тип TEXT/HTML.</p>
 2.2.5. Базы данных</p>
-При написании CGI приложений, вам необходим, какой то путь для доступа к данным базы. Одним из простых решений будет использование BDE и помещение ваших данных в таблицы Парадокса или dBASE. Если по какой либо причине BDE не инсталлировано на вашем NT Web сервере (может быть ваш дружественный Internet Provider не предоставляет вам BDE), вы можете использовать технику старых дней, используйте вместо базы данных файл записей.. Все что вам нужно, определить тип TRecord&nbsp; и написать программу, которая конвертирует вашу базу данных в file of TRecord.</p>
+При написании CGI приложений, вам необходим, какой то путь для доступа к данным базы. Одним из простых решений будет использование BDE и помещение ваших данных в таблицы Парадокса или dBASE. Если по какой либо причине BDE не инсталлировано на вашем NT Web сервере (может быть ваш дружественный Internet Provider не предоставляет вам BDE), вы можете использовать технику старых дней, используйте вместо базы данных файл записей.. Все что вам нужно, определить тип TRecord  и написать программу, которая конвертирует вашу базу данных в file of TRecord.</p>
 2.2.6. Преобразование</p>
 Если вы посмотрите на список полей Парадокса, то вам не составит труда понять, что не все поля можно просто конвертировать в текстовый формат, например типа Memo обычно не помещаются в короткие строки (Short String). А как начет Blob? Для данного типа полей я составил небольшую таблицу конвертирования.</p>
 <table cellspacing="0" cellpadding="5" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
@@ -925,104 +925,104 @@ writeln(f,'&lt;/TABLE&gt;');
 Использую данную таблицу не трудно небольшую программу, которая берет на вход таблицу и создает программу определения записи на Паскале.</p>
 <pre>{$APPTYPE CONSOLE}
  uses DB, DBTables;
-&nbsp;
+ 
  var i: Integer;
  begin
- &nbsp; if ParamCount = 1 then with TTable.Create(nil) do
- &nbsp; try
- &nbsp;&nbsp;&nbsp; TableName := ParamStr(1);
- &nbsp;&nbsp;&nbsp; Active := True;
- &nbsp;&nbsp;&nbsp; writeln('Type');
- &nbsp;&nbsp;&nbsp; writeln('&nbsp; TRecord = record');
- &nbsp;&nbsp;&nbsp; for i:=0 to Pred(FieldDefs.Count) do
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (FieldDefs[i].FieldClass = TStringField) then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln(' ':4,FieldDefs[i].Name,': String[',FieldDefs[i].Size,'];')
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (FieldDefs[i].FieldClass = TIntegerField) or
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (FieldDefs[i].FieldClass = TWordField) or
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (FieldDefs[i].FieldClass = TSmallintField) then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln(' ':4,FieldDefs[i].Name,': Integer;')
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (FieldDefs[i].FieldClass = TCurrencyField) then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln(' ':4,FieldDefs[i].Name,': Double;')
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('{ ':6,FieldDefs[i].Name,' }')
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp; end
- &nbsp; finally
- &nbsp;&nbsp;&nbsp; writeln('&nbsp; end;');
- &nbsp;&nbsp;&nbsp; Free
- &nbsp; end
- &nbsp; else
- &nbsp;&nbsp;&nbsp; writeln('Usage: record tablename')
+   if ParamCount = 1 then with TTable.Create(nil) do
+   try
+     TableName := ParamStr(1);
+     Active := True;
+     writeln('Type');
+     writeln('  TRecord = record');
+     for i:=0 to Pred(FieldDefs.Count) do
+     begin
+       if (FieldDefs[i].FieldClass = TStringField) then
+         writeln(' ':4,FieldDefs[i].Name,': String[',FieldDefs[i].Size,'];')
+       else
+       begin
+         if (FieldDefs[i].FieldClass = TIntegerField) or
+            (FieldDefs[i].FieldClass = TWordField) or
+            (FieldDefs[i].FieldClass = TSmallintField) then
+           writeln(' ':4,FieldDefs[i].Name,': Integer;')
+         else
+           if (FieldDefs[i].FieldClass = TCurrencyField) then
+             writeln(' ':4,FieldDefs[i].Name,': Double;')
+           else
+             writeln('{ ':6,FieldDefs[i].Name,' }')
+       end
+     end
+   finally
+     writeln('  end;');
+     Free
+   end
+   else
+     writeln('Usage: record tablename')
  end.
 </pre>
-&nbsp;</p>
+</p>
 Конечно, таблица трансляции и программа определения записи должны быть расширены, что включить и другие типы полей Парадокса, но для примера и этого достаточно.</p>
 2.2.7. Записи</p>
 После осознания, что мы можем писать на Delphi 2 CGI приложения без использования BDE, мы решили сгенерировать тип записи для нашей таблицы delbooks.db и конвертировать ее записи в файл записей. Использую программ RECORD.EXE из предыдущей главы мы получили следующее определение записи.</p>
 <pre>Type
- &nbsp; TRecord = record
- &nbsp;&nbsp;&nbsp; ISBN: String[16];
- &nbsp;&nbsp;&nbsp; Title: String[64];
- &nbsp;&nbsp;&nbsp; Author: String[64];
- &nbsp;&nbsp;&nbsp; Publisher: String[32];
- &nbsp;&nbsp;&nbsp; Price: Double;
- &nbsp;&nbsp;&nbsp; Code: String[7];
- &nbsp;&nbsp;&nbsp; { Comments }
- &nbsp;&nbsp;&nbsp; Level: Integer;
- &nbsp;&nbsp;&nbsp; TechnicalContentsQuality: Integer;
- &nbsp;&nbsp;&nbsp; QualityOfWriting: Integer;
- &nbsp;&nbsp;&nbsp; ValueForMoney: Integer;
- &nbsp;&nbsp;&nbsp; OverallAssessment: Integer;
- &nbsp;&nbsp;&nbsp; { Cover }
- &nbsp; end;
+   TRecord = record
+     ISBN: String[16];
+     Title: String[64];
+     Author: String[64];
+     Publisher: String[32];
+     Price: Double;
+     Code: String[7];
+     { Comments }
+     Level: Integer;
+     TechnicalContentsQuality: Integer;
+     QualityOfWriting: Integer;
+     ValueForMoney: Integer;
+     OverallAssessment: Integer;
+     { Cover }
+   end;
 </pre>
-&nbsp;</p>
+</p>
 Теперь нам осталось написать сам конвертор, который в цикле просматривает записи таблицы, помещает их в запись и записывает в файл.</p>
 <pre>{$APPTYPE CONSOLE}
  uses DB, DBTables, SysUtils;
-&nbsp;
+ 
  var i: Integer;
- &nbsp;&nbsp;&nbsp; Rec: TRecord;
- &nbsp;&nbsp;&nbsp; F: File of TRecord;
+     Rec: TRecord;
+     F: File of TRecord;
  begin
- &nbsp; if ParamCount = 1 then with TTable.Create(nil) do
- &nbsp; try
- &nbsp;&nbsp;&nbsp; System.Assign(f,ChangeFileExt(ParamStr(1),'.REC'));
- &nbsp;&nbsp;&nbsp; Rewrite(f);
- &nbsp;&nbsp;&nbsp; TableName := ParamStr(1);
- &nbsp;&nbsp;&nbsp; Active := True;
- &nbsp;&nbsp;&nbsp; First;
- &nbsp;&nbsp;&nbsp; while not Eof do with Rec do
- &nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISBN := FieldByName('ISBN').AsString;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Title := FieldByName('Title').AsString;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author := FieldByName('Author').AsString;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publisher := FieldByName('Publisher').AsString;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price := FieldByName('Price').AsFloat;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Code := FieldByName('Code').AsString;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Level := FieldByName('Level').AsInteger;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TechnicalContentsQuality :=
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FieldByName('TechnicalContentsQuality').AsInteger;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QualityOfWriting := FieldByName('QualityOfWriting').AsInteger;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ValueForMoney := FieldByName('ValueForMoney').AsInteger;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OverallAssessment := FieldByName('OverallAssessment').AsInteger;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; write(f,Rec);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next
- &nbsp;&nbsp;&nbsp; end
- &nbsp; finally
- &nbsp;&nbsp;&nbsp; System.Close(f);
- &nbsp;&nbsp;&nbsp; Free
- &nbsp; end
- &nbsp; else
- &nbsp;&nbsp;&nbsp; writeln('Usage: convert tablename')
+   if ParamCount = 1 then with TTable.Create(nil) do
+   try
+     System.Assign(f,ChangeFileExt(ParamStr(1),'.REC'));
+     Rewrite(f);
+     TableName := ParamStr(1);
+     Active := True;
+     First;
+     while not Eof do with Rec do
+     begin
+       ISBN := FieldByName('ISBN').AsString;
+       Title := FieldByName('Title').AsString;
+       Author := FieldByName('Author').AsString;
+       Publisher := FieldByName('Publisher').AsString;
+       Price := FieldByName('Price').AsFloat;
+       Code := FieldByName('Code').AsString;
+       Level := FieldByName('Level').AsInteger;
+       TechnicalContentsQuality :=
+          FieldByName('TechnicalContentsQuality').AsInteger;
+       QualityOfWriting := FieldByName('QualityOfWriting').AsInteger;
+       ValueForMoney := FieldByName('ValueForMoney').AsInteger;
+       OverallAssessment := FieldByName('OverallAssessment').AsInteger;
+       write(f,Rec);
+       Next
+     end
+   finally
+     System.Close(f);
+     Free
+   end
+   else
+     writeln('Usage: convert tablename')
  end.
 </pre>
-&nbsp;</p>
-Данная программа может использоваться для полного преобразования таблицы delbooks.db в файл delbooks.rec с типом записи TRecord. Delphi 2 CGI приложение может просто открыть этот файл и читать любую запись без использования BDE. Конечно, преобразование записей не просто сделать, но для этого мы имеем всегда оригинальную базу и можем запускать&nbsp; периодически программу преобразования. Так как я добавляю всего несколько записей примерно раз в два месяца, то меня это не очень волнует.</p>
+</p>
+Данная программа может использоваться для полного преобразования таблицы delbooks.db в файл delbooks.rec с типом записи TRecord. Delphi 2 CGI приложение может просто открыть этот файл и читать любую запись без использования BDE. Конечно, преобразование записей не просто сделать, но для этого мы имеем всегда оригинальную базу и можем запускать  периодически программу преобразования. Так как я добавляю всего несколько записей примерно раз в два месяца, то меня это не очень волнует.</p>
 2.2.8. Производительность</p>
 Единственное различие между обычным CGI приложением, которое использует BDE для получения данных и нашим приложением без использования BDE это производительность. Кроме того, наше CGI всего лишь 70 KB, оно не нуждается в загрузке BDE, так что время загрузки еще меньше (в результате еще более высокая производительность). В действительности реальные CGI приложения, использующие BDE, часто используют ISAPI (Information Server API) или NSAPI (Netscape Server API) расширения для сохранения CGI приложения "все-время-в-полете (in the air)".</p>
 Еще больше можно повысить производительность, если вместо файла записей использовать массив записей с предварительно инициализированными значениями! Вместо создания файла с записями, Я генерирую Паскаль код для этой цели. Таким образом, я могу генерировать исходный Паскаль код сразу с нужной информацией. Не нужды в файле записей. И сразу после компиляции я имею одиночное приложение на Дельфи 2, размером всего 77824 байта, которое содержит информацию об 44 книгах внутри самого себя.</p>
@@ -1035,14 +1035,14 @@ begin
   writeln('Author: ',DataRec.Author,'&lt;BR&gt;');
 {$ENDIF}
   for i:=1 to Books16 do
- &nbsp;&nbsp; if Pos(DataRec.Author,Book16[i].Author) &lt;&gt; 0 then
- &nbsp;&nbsp;&nbsp;&nbsp; Inc(Result16[i]);
+    if Pos(DataRec.Author,Book16[i].Author) &lt;&gt; 0 then
+      Inc(Result16[i]);
   for i:=1 to Books32 do
- &nbsp;&nbsp; if Pos(DataRec.Author,Book32[i].Author) &lt;&gt; 0 then
+    if Pos(DataRec.Author,Book32[i].Author) &lt;&gt; 0 then
 Inc(Result32[i])
 end;
 </pre>
-&nbsp;</p>
+</p>
 Заметим, что конструкция {$IFDEF DEBUG} может быть использована для вывода значения входного поля в стандартный вывод, так что мы можем использовать наше CGI приложение для отладки формы. Отладка вашего CGI приложения может оказать трудной задачей, поскольку вам нужен Web сервер и браузер для этого...</p>
 2.2.10. Результаты запроса</p>
 Теперь посмотрим на последнюю часть CGI приложения: часть, в которой генерируется HTML код. Здесь я использую другое свойство расширенного HTML, именованные таблицы, что бы вывод выглядел красивее. Для каждой записи, у которой счетчик более единицы, я выводу счетчик, название, автора, издательство, ISBN, уровень, техническое содержание, качество книги, стоимость и общее значение. Я также включаю ссылку из названия на другое место, где находится более подробное описание. С помощью этого великолепного свойства динамических HTML страниц: вы даже можете включать ссылки на статические страницы, так как результат запроса, часто стартовая точка для прыжка в другое место!</p>
@@ -1063,54 +1063,54 @@ writeln('&lt;TH&gt;Val&lt;/TH&gt;');
 writeln('&lt;TH&gt;&lt;B&gt;Tot&lt;/B&gt;&lt;/TH&gt;');
 writeln('&lt;/TR&gt;');
 </pre>
-&nbsp;</p>
+</p>
 После того как заголовок написан, самое время выводить сами записи. Я не хочу сортировать их по рейтингу от 5 до 1, так что я просто иду по списку книг и печатаю каждую со своим рейтингом. Этот путь, потому что я знаю, что книги уже отсортированы по рейтингу в основной базе delbooks.db (которая отсортирована по уровню и рейтингу). Обычно книги в верху списка уже лучший ответ на заданный вопрос.</p>
-&nbsp;</p>
+</p>
 <pre>if DataRec.Delphi2 then
   begin
- &nbsp;&nbsp; for Hits := 5 downto 1 do
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to Books32 do if Result32[i] = Hits then
- &nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TR&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Roman[Hits],'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;&lt;A HREF="',root32,Book32[i].HREF,'"&gt;',Book32[i].Title,'&lt;/A&gt;&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book32[i].Author,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book32[i].Publisher,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book32[i].ISBN,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Level[Book32[i].Level],'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book32[i].TechnicalContentsQuality,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book32[i].QualityOfWriting,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book32[i].ValueForMoney,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;&lt;B&gt;',Book32[i].OverallAssessment,'&lt;/B&gt;&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;/TR&gt;')
- &nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp; end;
- &nbsp;&nbsp; if DataRec.Delphi1 then writeln('&lt;TR&gt;&lt;/TR&gt;')
+    for Hits := 5 downto 1 do
+    begin
+      for i:=1 to Books32 do if Result32[i] = Hits then
+      begin
+        writeln('&lt;TR&gt;');
+        writeln('&lt;TD&gt;',Roman[Hits],'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;&lt;A HREF="',root32,Book32[i].HREF,'"&gt;',Book32[i].Title,'&lt;/A&gt;&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book32[i].Author,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book32[i].Publisher,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book32[i].ISBN,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Level[Book32[i].Level],'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book32[i].TechnicalContentsQuality,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book32[i].QualityOfWriting,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book32[i].ValueForMoney,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;&lt;B&gt;',Book32[i].OverallAssessment,'&lt;/B&gt;&lt;/TD&gt;');
+        writeln('&lt;/TR&gt;')
+      end
+    end;
+    if DataRec.Delphi1 then writeln('&lt;TR&gt;&lt;/TR&gt;')
   end;
-&nbsp;
+ 
   if DataRec.Delphi1 then
   begin
- &nbsp;&nbsp; for Hits := 5 downto 1 do
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; for i:=1 to Books16 do if Result16[i] = Hits then
- &nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TR&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Roman[Hits],'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;&lt;A HREF="',root16,Book16[i].HREF,'"&gt;',Book16[i].Title,'&lt;/A&gt;&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book16[i].Author,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book16[i].Publisher,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book16[i].ISBN,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Level[Book16[i].Level],'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book16[i].TechnicalContentsQuality,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book16[i].QualityOfWriting,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;',Book16[i].ValueForMoney,'&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;TD&gt;&lt;B&gt;',Book16[i].OverallAssessment,'&lt;/B&gt;&lt;/TD&gt;');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln('&lt;/TR&gt;')
- &nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp; end
+    for Hits := 5 downto 1 do
+    begin
+      for i:=1 to Books16 do if Result16[i] = Hits then
+      begin
+        writeln('&lt;TR&gt;');
+        writeln('&lt;TD&gt;',Roman[Hits],'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;&lt;A HREF="',root16,Book16[i].HREF,'"&gt;',Book16[i].Title,'&lt;/A&gt;&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book16[i].Author,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book16[i].Publisher,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book16[i].ISBN,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Level[Book16[i].Level],'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book16[i].TechnicalContentsQuality,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book16[i].QualityOfWriting,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;',Book16[i].ValueForMoney,'&lt;/TD&gt;');
+        writeln('&lt;TD&gt;&lt;B&gt;',Book16[i].OverallAssessment,'&lt;/B&gt;&lt;/TD&gt;');
+        writeln('&lt;/TR&gt;')
+      end
+    end
   end;
-&nbsp;
+ 
   writeln('&lt;/TABLE&gt;');
   writeln('&lt;HR&gt;');
   writeln('&lt;A HREF="http://www.drbob42.com"&gt;Dr.Bobs Delphi Clinic&lt;/A&gt;');
@@ -1120,13 +1120,13 @@ writeln('&lt;/TR&gt;');
   Free
 end
 </pre>
-&nbsp;</p>
+</p>
 2.2.11. Отладка CGI</p>
 Страницу HTML с результатом, сгенерированную по запросу мы модем увидеть выполнив CGI приложение. Для этого требуется (персональный) Web сервер. По этому я написал небольшую программу отладки, используя Delphi 2.01 и NetManage HTML control:</p>
-<p>&nbsp;</p>
+<p></p>
 2.2.12. Заключение</p>
 Я надеюсь, что я показал, как мы можем писать интерактивные Интернет (Интранет) CGI приложения с помощью Delphi 2 используя CGI, WinCGI и Delphi 3 ISAPI/NSAPI Web Modules. Лично я планирую делать многое с помощью Дельфи для Интернет и Интранет.</p>
-&nbsp;</p>
+</p>
 <p>Интернет решения от доктора Боба (http://www.drbob42.com)</p>
 <p>(c) 2000, Анатолий Подгорецкий, перевод на русский язык (<a href="https://nps.vnet.ee/ftp" target="_blank">https://nps.vnet.ee/ftp</a>)</p>
 <div class="author">Автор: Анатолий Подгорецкий</div>

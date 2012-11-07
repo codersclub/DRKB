@@ -5,13 +5,13 @@
 <pre>
 unit Unit1;
 
-&nbsp;
+ 
 interface
-&nbsp;
+ 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls;
-&nbsp;
+ 
 type
   TForm1 = class(TForm)
     Memo1: TMemo;

@@ -11,7 +11,7 @@
 <p>Параметры соединения управляются методами</p>
 <p>function SetOption(eConnectOption: TSQLConnectionOption; lvalue: Longlnt): SQLResult; stdcall;</p>
 <p>function GetOption(eDOption: TSQLConnectionOption; PropValue: Pointer; MaxLength: Smalllnt; out Length: Smalllnt): SQLResult; stdcall;</p>
-<p>Для обработки запроса, проходящего через соединение, создается интерфейс ISQLCommand&nbsp;</p>
+<p>Для обработки запроса, проходящего через соединение, создается интерфейс ISQLCommand</p>
 <p>function getSQLCommand(out pComm: ISQLCommand): SQLResult; stdcall;</p>
 <p>Обработка транзакций осуществляется тремя методами:</p>
 <p>function beginTransaction(TranID: LongWord): SQLResult; stdcall;</p>
@@ -24,23 +24,23 @@
 <pre>
 procedure CheckError(IConn: ISQLConnection);</p>
  var FStatus: SQLResult; 
- &nbsp;&nbsp;&nbsp; FSize:SmallInt; 
- &nbsp;&nbsp;&nbsp; FMessage: pChar; 
+     FSize:SmallInt; 
+     FMessage: pChar; 
 begin 
-  FStatus := IConn.getErrorMessageLen(FSize);&nbsp; 
+  FStatus := IConn.getErrorMessageLen(FSize);  
   if (FStatus = SQL_SUCCESS)and(FSize &gt; 0) then 
- &nbsp;&nbsp; begin 
- &nbsp;&nbsp;&nbsp;&nbsp; FMessage := AllocMem(FSize + I); 
- &nbsp;&nbsp;&nbsp;&nbsp; FStatus := IConn.getErrorMessage(FMessage); 
- &nbsp;&nbsp;&nbsp;&nbsp; if FStatus = SQL_SUCCESS then 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageDlg (FMessage, mtError, [rnbOK] , 0) 
- &nbsp;&nbsp;&nbsp;&nbsp; else 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageDlg('Checking error', mtWarning, [mbOK], 0) ; 
- &nbsp;&nbsp;&nbsp;&nbsp; if Assigned(FMessage) then FreeMem(FMessage); 
- &nbsp; end; 
+    begin 
+      FMessage := AllocMem(FSize + I); 
+      FStatus := IConn.getErrorMessage(FMessage); 
+      if FStatus = SQL_SUCCESS then 
+        MessageDlg (FMessage, mtError, [rnbOK] , 0) 
+      else 
+        MessageDlg('Checking error', mtWarning, [mbOK], 0) ; 
+      if Assigned(FMessage) then FreeMem(FMessage); 
+   end; 
 end; 
 </pre>
 <p>Доступ к интерфейсу isQLConnection можно получить через свойство</p>
-<p>property SQLConnection: ISQLConnection;&nbsp;</p>
+<p>property SQLConnection: ISQLConnection;</p>
 <p>компонента TSQLConnection.</p>
 

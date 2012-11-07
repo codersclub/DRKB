@@ -3,7 +3,7 @@
 
 
 <p>Как определяешь наличие новых файлов? По таймеру или через ReadDirectoryChangesW? Если по таймеру, то оставь его и попробуй вот такой код (тебя интересует флаг FILE_NOTIFY_CHANGE_CREATION):<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>unit Unit1;
  
 
@@ -77,98 +77,98 @@ end.
 <div class="author">Автор: Rouse_</div>
 
 <hr /><pre>unit wfsU;
-&nbsp;
+ 
 interface
-&nbsp;
+ 
 type
  // Структура с информацией об изменении в файловой системе (передается в callback процедуру)
-&nbsp;
+ 
   PInfoCallback = ^TInfoCallback;
   TInfoCallback = record
- &nbsp;&nbsp; FAction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Integer; // тип изменения (константы FILE_ACTION_XXX)
- &nbsp;&nbsp; FDrive&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : string;&nbsp; // диск, на котором было изменение
- &nbsp;&nbsp; FOldFileName : string;&nbsp; // имя файла до переименования
- &nbsp;&nbsp; FNewFileName : string;&nbsp; // имя файла после переименования
+    FAction      : Integer; // тип изменения (константы FILE_ACTION_XXX)
+    FDrive       : string;  // диск, на котором было изменение
+    FOldFileName : string;  // имя файла до переименования
+    FNewFileName : string;  // имя файла после переименования
   end;
-&nbsp;
+ 
   // callback процедура, вызываемая при изменении в файловой системе
   TWatchFileSystemCallback = procedure (pInfo: TInfoCallback);
-&nbsp;
+ 
 { Запуск мониторинга файловой системы
   Праметры:
-  pName&nbsp;&nbsp;&nbsp; - имя папки для мониторинга
-  pFilter&nbsp; - комбинация констант FILE_NOTIFY_XXX
+  pName    - имя папки для мониторинга
+  pFilter  - комбинация констант FILE_NOTIFY_XXX
   pSubTree - мониторить ли все подпапки заданной папки
   pInfoCallback - адрес callback процедуры, вызываемой при изменении в файловой системе}
 procedure StartWatch(pName: string; pFilter: cardinal; pSubTree: boolean; pInfoCallback: TWatchFileSystemCallback);
 // Остановка мониторинга
 procedure StopWatch;
-&nbsp;
+ 
 implementation
-&nbsp;
+ 
 uses
   Classes, Windows, SysUtils;
-&nbsp;
+ 
 const
-  FILE_LIST_DIRECTORY&nbsp;&nbsp; = $0001;
-&nbsp;
+  FILE_LIST_DIRECTORY   = $0001;
+ 
 type
   PFileNotifyInformation = ^TFileNotifyInformation;
   TFileNotifyInformation = record
- &nbsp;&nbsp; NextEntryOffset : DWORD;
- &nbsp;&nbsp; Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : DWORD;
- &nbsp;&nbsp; FileNameLength&nbsp; : DWORD;
- &nbsp;&nbsp; FileName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : array[0..0] of WideChar;
+    NextEntryOffset : DWORD;
+    Action          : DWORD;
+    FileNameLength  : DWORD;
+    FileName        : array[0..0] of WideChar;
   end;
-&nbsp;
+ 
   WFSError = class(Exception);
-&nbsp;
+ 
   TWFS = class(TThread)
   private
- &nbsp;&nbsp; FName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : string;
- &nbsp;&nbsp; FFilter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Cardinal;
- &nbsp;&nbsp; FSubTree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : boolean;
- &nbsp;&nbsp; FInfoCallback&nbsp;&nbsp; : TWatchFileSystemCallback;
- &nbsp;&nbsp; FWatchHandle&nbsp;&nbsp;&nbsp; : THandle;
- &nbsp;&nbsp; FWatchBuf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : array[0..4096] of Byte;
- &nbsp;&nbsp; FOverLapp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : TOverlapped;
- &nbsp;&nbsp; FPOverLapp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : POverlapped;
- &nbsp;&nbsp; FBytesWritte&nbsp;&nbsp;&nbsp; : DWORD;
- &nbsp;&nbsp; FCompletionPort : THandle;
- &nbsp;&nbsp; FNumBytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Cardinal;
- &nbsp;&nbsp; FOldFileName&nbsp;&nbsp;&nbsp; : string;
- &nbsp;&nbsp; function CreateDirHandle(aDir: string): THandle;
- &nbsp;&nbsp; procedure WatchEvent;
- &nbsp;&nbsp; procedure HandleEvent;
+    FName           : string;
+    FFilter         : Cardinal;
+    FSubTree        : boolean;
+    FInfoCallback   : TWatchFileSystemCallback;
+    FWatchHandle    : THandle;
+    FWatchBuf       : array[0..4096] of Byte;
+    FOverLapp       : TOverlapped;
+    FPOverLapp      : POverlapped;
+    FBytesWritte    : DWORD;
+    FCompletionPort : THandle;
+    FNumBytes       : Cardinal;
+    FOldFileName    : string;
+    function CreateDirHandle(aDir: string): THandle;
+    procedure WatchEvent;
+    procedure HandleEvent;
   protected
- &nbsp;&nbsp; procedure Execute; override;
+    procedure Execute; override;
   public
- &nbsp;&nbsp; constructor Create(pName: string; pFilter: cardinal; pSubTree: boolean; pInfoCallback: TWatchFileSystemCallback);
- &nbsp;&nbsp; destructor Destroy; override;
+    constructor Create(pName: string; pFilter: cardinal; pSubTree: boolean; pInfoCallback: TWatchFileSystemCallback);
+    destructor Destroy; override;
   end;
-&nbsp;
-&nbsp;
+ 
+ 
 var
   WFS : TWFS;
-&nbsp;
+ 
 procedure StartWatch(pName: string; pFilter: cardinal; pSubTree: boolean; pInfoCallback: TWatchFileSystemCallback);
 begin
  WFS:=TWFS.Create(pName, pFilter, pSubTree, pInfoCallback);
 end;
-&nbsp;
+ 
 procedure StopWatch;
 var
   Temp : TWFS;
 begin
   if Assigned(WFS) then
   begin
- &nbsp; PostQueuedCompletionStatus(WFS.FCompletionPort, 0, 0, nil);
- &nbsp; Temp := WFS;
- &nbsp; WFS:=nil;
- &nbsp; Temp.Terminate;
+   PostQueuedCompletionStatus(WFS.FCompletionPort, 0, 0, nil);
+   Temp := WFS;
+   WFS:=nil;
+   Temp.Terminate;
   end;
 end;
-&nbsp;
+ 
 constructor TWFS.Create(pName: string; pFilter: cardinal; pSubTree: boolean; pInfoCallback: TWatchFileSystemCallback);
 begin
   inherited Create(True);
@@ -183,7 +183,7 @@ begin
   FInfoCallback:=pInfoCallback;
   Resume
 end;
-&nbsp;
+ 
 destructor TWFS.Destroy;
 begin
   PostQueuedCompletionStatus(FCompletionPort, 0, 0, nil);
@@ -193,41 +193,41 @@ begin
   FCompletionPort:=0;
   inherited Destroy;
 end;
-&nbsp;
+ 
 function TWFS.CreateDirHandle(aDir: string): THandle;
 begin
 Result:=CreateFile(PChar(aDir), FILE_LIST_DIRECTORY, FILE_SHARE_READ+FILE_SHARE_DELETE+FILE_SHARE_WRITE,
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nil,OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS or FILE_FLAG_OVERLAPPED, 0);
+                   nil,OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS or FILE_FLAG_OVERLAPPED, 0);
 end;
-&nbsp;
+ 
 procedure TWFS.Execute;
 begin
   FWatchHandle:=CreateDirHandle(FName);
   WatchEvent;
 end;
-&nbsp;
+ 
 procedure TWFS.HandleEvent;
 var
   FileNotifyInfo : PFileNotifyInformation;
-  InfoCallback&nbsp;&nbsp; : TInfoCallback;
-  Offset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Longint;
+  InfoCallback   : TInfoCallback;
+  Offset         : Longint;
 begin
   Pointer(FileNotifyInfo) := @FWatchBuf[0];
   repeat
- &nbsp;&nbsp; Offset:=FileNotifyInfo^.NextEntryOffset;
- &nbsp;&nbsp; InfoCallback.FAction:=FileNotifyInfo^.Action;
- &nbsp;&nbsp; InfoCallback.FDrive:=FName;
- &nbsp;&nbsp; SetString(InfoCallback.FNewFileName,FileNotifyInfo^.FileName,FileNotifyInfo^.FileNameLength);
- &nbsp;&nbsp; InfoCallback.FNewFileName:=Trim(InfoCallback.FNewFileName);
- &nbsp;&nbsp; case FileNotifyInfo^.Action of
- &nbsp;&nbsp;&nbsp;&nbsp; FILE_ACTION_RENAMED_OLD_NAME: FOldFileName:=Trim(WideCharToString(@(FileNotifyInfo^.FileName[0])));
- &nbsp;&nbsp;&nbsp;&nbsp; FILE_ACTION_RENAMED_NEW_NAME: InfoCallback.FOldFileName:=FOldFileName;
- &nbsp;&nbsp; end;
- &nbsp;&nbsp; FInfoCallback(InfoCallback);
- &nbsp;&nbsp; PChar(FileNotifyInfo):=PChar(FileNotifyInfo)+Offset;
+    Offset:=FileNotifyInfo^.NextEntryOffset;
+    InfoCallback.FAction:=FileNotifyInfo^.Action;
+    InfoCallback.FDrive:=FName;
+    SetString(InfoCallback.FNewFileName,FileNotifyInfo^.FileName,FileNotifyInfo^.FileNameLength);
+    InfoCallback.FNewFileName:=Trim(InfoCallback.FNewFileName);
+    case FileNotifyInfo^.Action of
+      FILE_ACTION_RENAMED_OLD_NAME: FOldFileName:=Trim(WideCharToString(@(FileNotifyInfo^.FileName[0])));
+      FILE_ACTION_RENAMED_NEW_NAME: InfoCallback.FOldFileName:=FOldFileName;
+    end;
+    FInfoCallback(InfoCallback);
+    PChar(FileNotifyInfo):=PChar(FileNotifyInfo)+Offset;
   until (Offset=0) or Terminated;
 end;
-&nbsp;
+ 
 procedure TWFS.WatchEvent;
 var
  CompletionKey: Cardinal;
@@ -235,30 +235,30 @@ begin
   FCompletionPort:=CreateIoCompletionPort(FWatchHandle, 0, Longint(pointer(self)), 0);
   ZeroMemory(@FWatchBuf, SizeOf(FWatchBuf));
   if not ReadDirectoryChanges(FWatchHandle, @FWatchBuf, SizeOf(FWatchBuf), FSubTree,
- &nbsp;&nbsp; FFilter, @FBytesWritte,&nbsp; @FOverLapp, nil) then
+    FFilter, @FBytesWritte,  @FOverLapp, nil) then
   begin
- &nbsp;&nbsp; raise WFSError.Create(SysErrorMessage(GetLastError));
- &nbsp;&nbsp; Terminate;
+    raise WFSError.Create(SysErrorMessage(GetLastError));
+    Terminate;
   end else
   begin
- &nbsp;&nbsp; while not Terminated do
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; GetQueuedCompletionStatus(FCompletionPort, FNumBytes, CompletionKey, FPOverLapp, INFINITE);
- &nbsp;&nbsp;&nbsp;&nbsp; if CompletionKey&lt;&gt;0 then
- &nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Synchronize(HandleEvent);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZeroMemory(@FWatchBuf, SizeOf(FWatchBuf));
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FBytesWritte:=0;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReadDirectoryChanges(FWatchHandle, @FWatchBuf, SizeOf(FWatchBuf), FSubTree, FFilter,
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @FBytesWritte, @FOverLapp, nil);
- &nbsp;&nbsp;&nbsp;&nbsp; end else Terminate;
- &nbsp;&nbsp; end
+    while not Terminated do
+    begin
+      GetQueuedCompletionStatus(FCompletionPort, FNumBytes, CompletionKey, FPOverLapp, INFINITE);
+      if CompletionKey&lt;&gt;0 then
+      begin
+        Synchronize(HandleEvent);
+        ZeroMemory(@FWatchBuf, SizeOf(FWatchBuf));
+        FBytesWritte:=0;
+        ReadDirectoryChanges(FWatchHandle, @FWatchBuf, SizeOf(FWatchBuf), FSubTree, FFilter,
+                             @FBytesWritte, @FOverLapp, nil);
+      end else Terminate;
+    end
   end
 end;
-&nbsp;
+ 
 end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Пример использования:</p>
 <pre>unit Unit1;
  
@@ -315,10 +315,10 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>PS: только для NT/2000/XP/2003</p>
-<p>&nbsp;
+<p> 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Krid</div>
-&nbsp;<br>
+ <br>
 

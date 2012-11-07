@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 {  The greatest common factor, or GCF, is the greatest factor 
   that divides two numbers. 
 } 

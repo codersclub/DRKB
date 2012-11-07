@@ -3,33 +3,33 @@
 
 
 <p>Поддерживаемые типы данных</p>
-<p>PostgreSQL &nbsp; SQL92/SQL3 &nbsp; Комментарий</p>
-<p>bool &nbsp; boolean &nbsp; Логический (истина/ложь)</p>
-<p>box &nbsp; - &nbsp; Четырехугольник в плоскости (2D)</p>
-<p>char(n) &nbsp; character(n) &nbsp; Строка символов с фиксированной длиной</p>
-<p>cidr &nbsp; - &nbsp; IP адрес в формате IPv4</p>
-<p>circle &nbsp; - &nbsp; Круг в плосколсти (2D)</p>
-<p>date &nbsp; date &nbsp; Дата</p>
-<p>decimal &nbsp; decimal(p,s) &nbsp; Требует число с p&lt;=9, s=0</p>
-<p>float4 &nbsp; float(p), p&lt;7 &nbsp; Число с плафающей точкой с точностью p</p>
-<p>float8 &nbsp; float(p), 7&lt;=p&lt;16 &nbsp; Число с плафающей точкой с точностью p</p>
-<p>inet &nbsp; - &nbsp; IP адрес в формате IPv4</p>
-<p>int2 &nbsp; smallint &nbsp; двухбайтовое знаковое целое</p>
-<p>int4 &nbsp; int, integer &nbsp; четырехбайтовое знаковое целое</p>
-<p>int8 &nbsp; - &nbsp; восьмибайтовое знаковое целое</p>
-<p>interval &nbsp; interval &nbsp; временной промежуток</p>
-<p>line &nbsp; - &nbsp; линия в плоскости (2D)</p>
-<p>lseg &nbsp; - &nbsp; сегмент линии в плоскости (2D)</p>
-<p>money &nbsp; decimal(9,2) &nbsp; Деньги в стиле США (подходят и России)</p>
-<p>numeric &nbsp; numeric(p,s) &nbsp; Требует число с p&lt;=9, s=0</p>
-<p>path &nbsp; - &nbsp; Открытый и закрытый геометрический путь в плоскости (2D). Проще говоря ломаная или полигон</p>
-<p>point &nbsp; - &nbsp; Геометрическая точка в плоскости (2D)</p>
-<p>polygon &nbsp; - &nbsp; Закрытый геометрический путь в плоскости (2D). Проще говоря полигон</p>
-<p>serial &nbsp; - &nbsp; Уникальный идентификатор для перекрестной ссылки</p>
-<p>time &nbsp; time &nbsp; Время дня</p>
-<p>timetz &nbsp; time with time zone &nbsp; Время дня, включая временную зону</p>
-<p>timestamp &nbsp; timestamp &nbsp; Дата/время</p>
-<p>varchar(n) &nbsp; character varying(n) &nbsp; Строка с переменной длиной</p>
+<p>PostgreSQL   SQL92/SQL3   Комментарий</p>
+<p>bool   boolean   Логический (истина/ложь)</p>
+<p>box   -   Четырехугольник в плоскости (2D)</p>
+<p>char(n)   character(n)   Строка символов с фиксированной длиной</p>
+<p>cidr   -   IP адрес в формате IPv4</p>
+<p>circle   -   Круг в плосколсти (2D)</p>
+<p>date   date   Дата</p>
+<p>decimal   decimal(p,s)   Требует число с p&lt;=9, s=0</p>
+<p>float4   float(p), p&lt;7   Число с плафающей точкой с точностью p</p>
+<p>float8   float(p), 7&lt;=p&lt;16   Число с плафающей точкой с точностью p</p>
+<p>inet   -   IP адрес в формате IPv4</p>
+<p>int2   smallint   двухбайтовое знаковое целое</p>
+<p>int4   int, integer   четырехбайтовое знаковое целое</p>
+<p>int8   -   восьмибайтовое знаковое целое</p>
+<p>interval   interval   временной промежуток</p>
+<p>line   -   линия в плоскости (2D)</p>
+<p>lseg   -   сегмент линии в плоскости (2D)</p>
+<p>money   decimal(9,2)   Деньги в стиле США (подходят и России)</p>
+<p>numeric   numeric(p,s)   Требует число с p&lt;=9, s=0</p>
+<p>path   -   Открытый и закрытый геометрический путь в плоскости (2D). Проще говоря ломаная или полигон</p>
+<p>point   -   Геометрическая точка в плоскости (2D)</p>
+<p>polygon   -   Закрытый геометрический путь в плоскости (2D). Проще говоря полигон</p>
+<p>serial   -   Уникальный идентификатор для перекрестной ссылки</p>
+<p>time   time   Время дня</p>
+<p>timetz   time with time zone   Время дня, включая временную зону</p>
+<p>timestamp   timestamp   Дата/время</p>
+<p>varchar(n)   character varying(n)   Строка с переменной длиной</p>
 <p>Расширения языка SQL</p>
 <p>PostgreSQL имеет многочисленные расширения языка SQL 92. К ним относятся:</p>
 <p>  1. Хранимые процедуры</p>

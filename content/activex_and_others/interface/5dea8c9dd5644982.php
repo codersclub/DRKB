@@ -3,20 +3,20 @@
 
 
 <p>Идентификатор интерфейса тип IDispatch, используемый для связи с объектом. Для создания объектов COM, не использующих интерфейс IDispatch, надо использовать функцию CreateComObject.</p>
-<p>Руксскими словами: varDispatch &nbsp; &nbsp; &nbsp; &nbsp;$0009 &nbsp; &nbsp; &nbsp; &nbsp;ссылка на автоматический объект (указатель на интерфейс IDispatch)</p>
+<p>Руксскими словами: varDispatch        $0009        ссылка на автоматический объект (указатель на интерфейс IDispatch)</p>
 <div class="author">Автор: Snick_Y2K</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
 <p>"Тип IDispatch" - не звучит. Ты бы сказал, в каком контексте.</p>
 <p>Вообще, IDispatch - это интерфейс. Если ты заглянешь в System.pas, ты найдешь его делфийское описание:</p>
-<pre>
+<pre class="delphi">
  IDispatch=interface
   .....
  end;
 </pre>
 
 <p>Это интерфейс используется для обеспечения "позднего связывания" в COM, то есть вызовов методов(и использования property) когда на момент компиляции их имена не известны. Например:</p>
-<pre>
+<pre class="delphi">
 var
   v:variant;
 begin
@@ -26,7 +26,7 @@ end;
 </pre>
 
 <p>  Как тут вызывается метод Quit? Ведь компилятор совершенно ничего не знает об этом методе, ровно как и о том, что содержится в переменно v. На самом деле, одна эта строчка транслируется компилятором в набор примерно таких вызовов:</p>
-<pre>
+<pre class="delphi">
 var
   v:variant;
 begin
@@ -42,7 +42,7 @@ end;
 </pre>
 
 <p>Если использоват IDispatch вместо variant, то все это можно написать самому:</p>
-<pre>
+<pre class="delphi">
 var
   Disp:IDispatch;
   DispID:integer;

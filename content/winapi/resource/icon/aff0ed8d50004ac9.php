@@ -18,6 +18,6 @@ if iconindex &gt; 5 then
 iconindex := 0;
 ImageList1.GetIcon(iconindex, Application.Icon);
 </pre>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>
 <p>Посмотрите на иконку программы ACDSee, которая показана в левом верхнем углу. На ней изображён глаз. По-моему, было бы довольно эффектно, если бы время от времени он подмигивал пользователю!</p>

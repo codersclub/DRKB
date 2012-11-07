@@ -3,7 +3,7 @@
 
 <p>Прочитайте ключ под HKEY_CLASSES_ROOT\CLSID\*, просматривая его насчёт ключей, которые имеют подключ "Borland DataBroker". Эти вхождения и являются серверами приложений.</p>
 <p>Ниже пример, который загружает имена доступных серверов приложений в Listbox:</p>
-<pre>
+<pre class="delphi">
 uses Registry;
  
 procedure TForm1.FormCreate(Sender: TObject);

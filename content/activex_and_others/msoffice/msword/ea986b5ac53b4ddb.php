@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { ... }
 Doc := Word.ActiveDocument;
 for x := 1 to Doc.Hyperlinks.Count do

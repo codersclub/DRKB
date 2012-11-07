@@ -3,16 +3,16 @@
 
 <div class="author">Автор: Patrick Cleys, http://www.dcmedical.org</div>
 
-<pre>{ 
+<pre class="delphi">{ 
 won’t some backups of your outlook attachments are filtered 
 some incoming log files? here's the function. 
 } 
-&nbsp;
+ 
 uses 
 comobj; 
-&nbsp;
+ 
 {...} 
-&nbsp;
+ 
 function manageattachments(sendersname, attachmentpath: string; 
 maildelete: boolean): boolean; 
 var 
@@ -79,23 +79,23 @@ exit;
 end; 
 result := true; 
 end; 
-&nbsp;
-&nbsp;
+ 
+ 
 procedure tform1.button1click(sender: tobject); 
 begin 
 // manageattachments(email or name, backup directory, maildelete yes or no) 
 manageattachments('info@cleys.com', 'f:test', false); 
 end; 
-&nbsp;
-&nbsp;
+ 
+ 
 { 
 warning! 
 all your selected email will be deleted if maildelete = true 
-&nbsp;
+ 
 achtung! 
 alle e-mails werden geloscht, wenn maildelete = true ist. 
 }
 </pre>
-&nbsp;</p>
-&nbsp;<br>
+</p>
+ <br>
 <a href="https://www.swissdelphicenter.ch/" target="_blank">https://www.swissdelphicenter.ch/</a></p>

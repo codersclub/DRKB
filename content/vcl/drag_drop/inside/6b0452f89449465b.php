@@ -349,24 +349,24 @@ begin
 <p>Кроме того, в Memo2 можно переносить выбранную запись из DBGrid1, у которого установлено в Options dgRowSelect = True. В сетке отображается таблица из стандартной поставки Delphi DBDEMOS - Animals.dbf. Перетаскивание осуществляется аналогично StringGrid2, правой кнопкой мыши, только по событию OnMouseMove</p>
 
 <p>if ssRight in Shift then</p>
-<p> &nbsp;&nbsp; DBGrid1.BeginDrag(true);</p>
+<p>    DBGrid1.BeginDrag(true);</p>
 
 <p>Код в Memo2DragDrop, относящийся к переносу из DBGrid1:</p>
 
 <p>else</p>
-<p> &nbsp;&nbsp; with DBGrid1.DataSource.DataSet do</p>
-<p> &nbsp;&nbsp; begin</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; s := '';</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; for c := 0 to FieldCount - 1 do</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s := s + Fields[c].AsString + ' | ';</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; memo2.lines.add(s);</p>
-<p> &nbsp;&nbsp; end;</p>
+<p>    with DBGrid1.DataSource.DataSet do</p>
+<p>    begin</p>
+<p>      s := '';</p>
+<p>      for c := 0 to FieldCount - 1 do</p>
+<p>        s := s + Fields[c].AsString + ' | ';</p>
+<p>      memo2.lines.add(s);</p>
+<p>    end;</p>
 <p>// в случае dgRowSelect = False для переноса одного поля достаточно сделать</p>
 <p>// memo2.lines.add(DbGrid1.SelectedField.AsString);</p>
 
 <p>Drag из DBGrid1 принимается также на Panel3, условие приема очевидно, а OnDragDrop выглядит так:</p>
 
-<p>  Panel3.Height := 300;&nbsp; // раскрываем панель</p>
+<p>  Panel3.Height := 300;  // раскрываем панель</p>
 <p>  Image1.visible := True;</p>
 <p>  OleContainer1.Visible := false;</p>
 <p>  Image1.Picture.Assign(DBGrid1.DataSource.DataSet.FieldByName('BMP'));</p>
@@ -427,7 +427,7 @@ begin
 <p>  //если предполагается принимать группу файлов, то можно добавить:</p>
 <p>  //num:=DragQueryFile(h,Dword(-1),nil,0);</p>
 <p>  //for i:=0 to num-1 do begin</p>
-<p>  //&nbsp; DragQueryFile(h,i,pchr,maxlen);</p>
+<p>  //  DragQueryFile(h,i,pchr,maxlen);</p>
 <p>  //...обработка каждого</p>
 <p>  //end;</p>
 
@@ -435,24 +435,24 @@ begin
 <p>  fname := string(pchr);</p>
 <p>  if lowercase(extractfileext(fname)) = '.bmp' then</p>
 <p>  begin</p>
-<p> &nbsp;&nbsp; Image1.visible := True;</p>
-<p> &nbsp;&nbsp; OleContainer1.Visible := false;</p>
-<p> &nbsp;&nbsp; image1.Picture.LoadFromFile(fname);</p>
-<p> &nbsp;&nbsp; Panel3.Height := 300;</p>
+<p>    Image1.visible := True;</p>
+<p>    OleContainer1.Visible := false;</p>
+<p>    image1.Picture.LoadFromFile(fname);</p>
+<p>    Panel3.Height := 300;</p>
 <p>  end</p>
 <p>  else if lowercase(extractfileext(fname)) = '.doc' then</p>
 <p>  begin</p>
-<p> &nbsp;&nbsp; Image1.visible := False;</p>
-<p> &nbsp;&nbsp; OleContainer1.Visible := True;</p>
-<p> &nbsp;&nbsp; OleContainer1.CreateObjectFromFile(fname, false);</p>
-<p> &nbsp;&nbsp; Panel3.Height := 300;</p>
+<p>    Image1.visible := False;</p>
+<p>    OleContainer1.Visible := True;</p>
+<p>    OleContainer1.CreateObjectFromFile(fname, false);</p>
+<p>    Panel3.Height := 300;</p>
 <p>  end</p>
 <p>  else if lowercase(extractfileext(fname)) = '.htm' then</p>
-<p> &nbsp;&nbsp; ShellExecute(0, nil, pchr, nil, nil, 0)</p>
+<p>    ShellExecute(0, nil, pchr, nil, nil, 0)</p>
 <p>  else if lowercase(extractfileext(fname)) = '.txt' then</p>
-<p> &nbsp;&nbsp; Memo2.Lines.LoadFromFile(fname)</p>
+<p>    Memo2.Lines.LoadFromFile(fname)</p>
 <p>  else</p>
-<p> &nbsp;&nbsp; Memo2.Lines.Add(fname);</p>
+<p>    Memo2.Lines.Add(fname);</p>
 <p>  DragFinish(h);</p>
 <p>end;</p>
 

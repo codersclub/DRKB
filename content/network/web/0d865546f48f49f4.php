@@ -6,74 +6,74 @@
 <div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><pre>  {$APPTYPE CONSOLE}
   {$I-,H+}
   uses
- &nbsp;&nbsp; SysUtils;
+    SysUtils;
   var
- &nbsp;&nbsp; Path: String;
-&nbsp;
- &nbsp;&nbsp; procedure CheckHTML(const Path: String);
- &nbsp;&nbsp; var
- &nbsp;&nbsp;&nbsp;&nbsp; SRec: TSearchRec;
- &nbsp;&nbsp;&nbsp;&nbsp; Str: String;
- &nbsp;&nbsp;&nbsp;&nbsp; f: Text;
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; if FindFirst('*.htm', faArchive, SRec) = 0 then
- &nbsp;&nbsp;&nbsp;&nbsp; repeat
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assign(f,SRec.Name);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reset(f);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if IOResult = 0 then { no error }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while not eof(f) do
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; readln(f,Str);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (Pos('&lt;A HREF="',Str)&nbsp; 0) or
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Pos('FRAME SRC="',Str)&nbsp; 0) do
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if Pos('&lt;A HREF="',Str)&nbsp; 0 then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete(Str,1,Pos('HREF="',Str)+8-3)
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete(Str,1,Pos('FRAME SRC="',Str)+10);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (Pos('#',Str) &lt;&gt; 1) and
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Pos('http://',Str) &lt;&gt; 1) and
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Pos('mailto:',Str) &lt;&gt; 1) and
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Pos('news:',Str) &lt;&gt; 1) and
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Pos('ftp://',Str) &lt;&gt; 1) and
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Pos('.exe?',Str) = 0) then { skip external links &amp; exe }
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if Pos('file:///',Str) = 1 then Delete(Str,1,8);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (Pos('#',Str)&nbsp; 0) and
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Pos('#',Str) &lt; Pos('"',Str)) then Str[Pos('#',Str)] := '"';
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not FileExists(Copy(Str,1,Pos('"',Str)-1)) then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln(Path,'\',SRec.Name,': [',Copy(Str,1,Pos('"',Str)-1),']')
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Close(f);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if IOResult &lt;&gt; 0 then { skip }
- &nbsp;&nbsp;&nbsp;&nbsp; until FindNext(SRec) &lt;&gt; 0;
- &nbsp;&nbsp;&nbsp;&nbsp; FindClose(SRec);
- &nbsp;&nbsp;&nbsp;&nbsp; // check sub-directories recursively
- &nbsp;&nbsp;&nbsp;&nbsp; if FindFirst('*.*', faDirectory, SRec) = 0 then
- &nbsp;&nbsp;&nbsp;&nbsp; repeat
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ((SRec.Attr AND faDirectory) = faDirectory) and
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (SRec.Name[1] &lt;&gt; '.') then
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ChDir(SRec.Name);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CheckHTML(Path+'\'+SRec.Name);
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ChDir('..')
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
- &nbsp;&nbsp;&nbsp;&nbsp; until FindNext(SRec) &lt;&gt; 0;
- &nbsp;&nbsp;&nbsp;&nbsp; FindClose(SRec)
- &nbsp;&nbsp; end {CheckHTML};
-&nbsp;
+    Path: String;
+ 
+    procedure CheckHTML(const Path: String);
+    var
+      SRec: TSearchRec;
+      Str: String;
+      f: Text;
+    begin
+      if FindFirst('*.htm', faArchive, SRec) = 0 then
+      repeat
+        Assign(f,SRec.Name);
+        Reset(f);
+        if IOResult = 0 then { no error }
+        while not eof(f) do
+        begin
+          readln(f,Str);
+          while (Pos('&lt;A HREF="',Str)  0) or
+                (Pos('FRAME SRC="',Str)  0) do
+          begin
+            if Pos('&lt;A HREF="',Str)  0 then
+              Delete(Str,1,Pos('HREF="',Str)+8-3)
+            else
+              Delete(Str,1,Pos('FRAME SRC="',Str)+10);
+            if (Pos('#',Str) &lt;&gt; 1) and
+               (Pos('http://',Str) &lt;&gt; 1) and
+               (Pos('mailto:',Str) &lt;&gt; 1) and
+               (Pos('news:',Str) &lt;&gt; 1) and
+               (Pos('ftp://',Str) &lt;&gt; 1) and
+               (Pos('.exe?',Str) = 0) then { skip external links &amp; exe }
+            begin
+              if Pos('file:///',Str) = 1 then Delete(Str,1,8);
+              if (Pos('#',Str)  0) and
+                 (Pos('#',Str) &lt; Pos('"',Str)) then Str[Pos('#',Str)] := '"';
+              if not FileExists(Copy(Str,1,Pos('"',Str)-1)) then
+                writeln(Path,'\',SRec.Name,': [',Copy(Str,1,Pos('"',Str)-1),']')
+            end
+          end
+        end;
+        Close(f);
+        if IOResult &lt;&gt; 0 then { skip }
+      until FindNext(SRec) &lt;&gt; 0;
+      FindClose(SRec);
+      // check sub-directories recursively
+      if FindFirst('*.*', faDirectory, SRec) = 0 then
+      repeat
+        if ((SRec.Attr AND faDirectory) = faDirectory) and
+            (SRec.Name[1] &lt;&gt; '.') then
+        begin
+          ChDir(SRec.Name);
+          CheckHTML(Path+'\'+SRec.Name);
+          ChDir('..')
+        end
+      until FindNext(SRec) &lt;&gt; 0;
+      FindClose(SRec)
+    end {CheckHTML};
+ 
   begin
- &nbsp;&nbsp; writeln('HTMLinks 4.0 (c) 1997-2000 by Bob Swart (aka Dr.Bob - www.drbob42.com)');
- &nbsp;&nbsp; writeln;
- &nbsp;&nbsp; FileMode := $40;
- &nbsp;&nbsp; GetDir(0,Path);
- &nbsp;&nbsp; CheckHTML(Path)
+    writeln('HTMLinks 4.0 (c) 1997-2000 by Bob Swart (aka Dr.Bob - www.drbob42.com)');
+    writeln;
+    FileMode := $40;
+    GetDir(0,Path);
+    CheckHTML(Path)
   end.
 </pre>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <p>Интернет решения от доктора Боба (http://www.drbob42.com)</p>
 <p>(c) 2000, Анатолий Подгорецкий, перевод на русский язык (<a href="https://nps.vnet.ee/ftp" target="_blank">https://nps.vnet.ee/ftp</a>)</p>
 <div class="author">Автор: Анатолий Подгорецкий</div>

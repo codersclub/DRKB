@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 var Excel, WorkBook, Sheet: Variant;
 begin
 Excel := CreateOleObject('Excel.Application');
@@ -16,9 +16,11 @@ Sheet.Cells[2,2]:=230;
 <p>Все объекты и методы Офиса можно посмотреть в help'е Офиса.</p>
 <div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
+
 <hr />
+
 <p>Ниже представлен пример создания новой таблице в Excel 2000:</p>
-<pre>
+<pre class="delphi">
 uses
   ComObj, ActiveX;
  
@@ -65,7 +67,7 @@ end;
 </pre>
 
 <p>Далее представлен пример открытия и закрытия таблицы:</p>
-<pre>
+<pre class="delphi">
 uses
   ComObj, ActiveX;
  

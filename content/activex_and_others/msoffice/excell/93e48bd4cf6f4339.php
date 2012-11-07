@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 XL:=CreateOLEObject('Excel.Application');
     XL.Workbooks.Open('D:\Program Files\Borland\Delphi7\Projects\ppp\reports\Пенсионеры.xls');
     Sheet:=XL.Workbooks[1].workSheets[1];
@@ -28,8 +28,10 @@ XL:=CreateOLEObject('Excel.Application');
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <p class="p_Heading1">Автор: SeaGirl</p>
+
 <hr />
-<pre>
+
+<pre class="delphi">
           if open_excel then
             begin
               for i:=1 to ExcelApplication1.Worksheets.Count do
@@ -194,35 +196,39 @@ XL:=CreateOLEObject('Excel.Application');
 <p>Это такая сборная салянка из того, что я нашла в инете, вычитала из книг и узнала с помощью макросов excel. Но должна сказать - не все макросы работают при переводе их в Object Pascal</p>
 
 <p>не все макросы работают при переводе их в Object Pascal</p>
-<p>&nbsp;<br>
+<p> <br>
 <p>Например... ?</p>
 <p>Например:</p>
-<p>&nbsp;<br>
+<p> <br>
 Код макроса на VB<br>
 <p>Изменение высоты конкретной строки</p>
-<pre>
+
+<pre class="vb">
 Rows("4:4").RowHeight = 46.5
 </pre>
-<p>&nbsp;<br>
+<p>
+<br>
 <p>И так это выглядит на OP:</p>
-<pre>
+<pre class="delphi">
 ExcelWorksheet1.Range['A'+inttostr(ind_cell+1),emptyparam].Select;
 Range1:=ExcelRange( ExcelApplication1.Selection[0]);
 Range1.RowHeight:=60;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 И еще изменение Font колонтитулов<br>
 <p>На VB</p>
-<pre>
+<pre class="vb">
     With ActiveSheet.PageSetup
         .CenterHeader = "&amp;""Times New Roman,полужирный""&amp;16Колонтитул"
     End With
 </pre>
-<p>&nbsp;<br>
+<p>
+<br>
 А на OP так не получается, а как именно делать, я еще не додумалась<br>
-<p>&nbsp;</p>
+<p></p>
+
 <p>Попробуй так:</p>
-<pre>
+<pre class="delphi">
 XLApp.WorkBooks[1].WorkSheets[i].Rows[k].RowHeight := 25;
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

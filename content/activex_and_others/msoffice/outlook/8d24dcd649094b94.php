@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { In Outlook lasst sich ein Kalender als WebSeite speichern. Dazu benotig man
 den "Web Publishing Wizard" download im Microsoft Download Center. }
  

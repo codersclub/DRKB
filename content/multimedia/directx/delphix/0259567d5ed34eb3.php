@@ -6,7 +6,7 @@
 а практика потом&#187; &#8212; <br>
 Так подумал автор, начиная <br>
 <p>писать эту статью.</p>
-&nbsp;</p>
+</p>
 <p>Ну что же, приступим:</p>
 <p class="p_Heading1">1. Обзор DelphiX.</p>
 <p class="p_Heading1">DelphiX &#8212; это набор компонентов, способный облегчить использование DirectX в Delphi приложениях и использовать всю мощь DirectX.</p>
@@ -226,33 +226,33 @@ end;
 Procedure TPlayerSprite.DoMove(MoveCount: Integer);
 begin
   inherited DoMove(MoveCount);
- &nbsp;&nbsp; // при нажатии двигаем объект влево
- &nbsp;&nbsp; if isLeft in Form1.DXInput1.States then x:=x-5;
- &nbsp;&nbsp; // при нажатии двигаем объект вправо
- &nbsp;&nbsp; if isRight in Form1.DXInput1.States then x:=x+5;
- &nbsp;&nbsp; // при нажатие вверх создаётся наша пулька
- &nbsp;&nbsp; if isup in Form1.DXInput1.States then
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; with TPlayerFa.Create(Engine) do
- &nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PixelCheck := True;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Image := form1.dxImageList1.Items.Find('Pula');
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Чтобы пуля создавалась около нашего объекта
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X := Self.X+Self.Width&nbsp; -40;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Чтобы пуля создавалась около нашего объекта
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y := Self.Y+Self.Height -80;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Width := Image.Width;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Height := Image.Height;
- &nbsp;&nbsp;&nbsp;&nbsp; end;
- &nbsp;&nbsp; end;
- &nbsp;&nbsp; if  y &gt;= form1.DXDraw1.SurfaceHeight-image.Height then  //не пускаем
- &nbsp;&nbsp;&nbsp;&nbsp; y := form1.DXDraw1.SurfaceHeight-image.Height;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //объект
- &nbsp;&nbsp; if  x &gt;= form1.DXDraw1.SurfaceWidth -image.Width&nbsp; then  //за границы
- &nbsp;&nbsp;&nbsp;&nbsp; x := form1.DXDraw1.SurfaceWidth -image.Width;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //формы
- &nbsp;&nbsp; if  y &lt;= 0 then
- &nbsp;&nbsp;&nbsp;&nbsp; y := 1;
- &nbsp;&nbsp; if  x &lt;= 0 then
- &nbsp;&nbsp;&nbsp;&nbsp; x:=1;
+    // при нажатии двигаем объект влево
+    if isLeft in Form1.DXInput1.States then x:=x-5;
+    // при нажатии двигаем объект вправо
+    if isRight in Form1.DXInput1.States then x:=x+5;
+    // при нажатие вверх создаётся наша пулька
+    if isup in Form1.DXInput1.States then
+    begin
+      with TPlayerFa.Create(Engine) do
+      begin
+        PixelCheck := True;
+        Image := form1.dxImageList1.Items.Find('Pula');
+        //Чтобы пуля создавалась около нашего объекта
+        X := Self.X+Self.Width  -40;
+        //Чтобы пуля создавалась около нашего объекта
+        Y := Self.Y+Self.Height -80;
+        Width := Image.Width;
+        Height := Image.Height;
+      end;
+    end;
+    if  y &gt;= form1.DXDraw1.SurfaceHeight-image.Height then  //не пускаем
+      y := form1.DXDraw1.SurfaceHeight-image.Height;        //объект
+    if  x &gt;= form1.DXDraw1.SurfaceWidth -image.Width  then  //за границы
+      x := form1.DXDraw1.SurfaceWidth -image.Width;         //формы
+    if  y &lt;= 0 then
+      y := 1;
+    if  x &lt;= 0 then
+      x:=1;
 end;
 </pre>
 <p>И, наконец, последнее, это сама пуля и её процедуры:</p>

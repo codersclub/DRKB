@@ -8,10 +8,13 @@
 
 <p>Для ввода сведений о хранилище данных используется интерфейс iDBProperties. Для успешного подключения необходимо задать обязательные сведения. Вероятно, для любого хранилища данных будет актуальной информация об его имени, пользователе и пароле. Однако каждый тип хранилища имеет собственные уникальные настройки. Для получения списка всех обязательных параметров соединения с данным хранилищем можно воспользоваться методом</p>
 
-<p>function GetPropertylnfo(cPropertylDSets: UINT; rgPropertylDSets: PDBPropIDSetArray; var pcPropertylnfoSets: UINT; out prgPropertylnfoSets: PDBPropInfoSet; ppDescBuffer: PPOleStr): HResult; stdcall;</p>
+<pre class="delphi">
+function GetPropertylnfo(cPropertylDSets: UINT; rgPropertylDSets: PDBPropIDSetArray; var pcPropertylnfoSets: UINT; out prgPropertylnfoSets: PDBPropInfoSet; ppDescBuffer: PPOleStr): HResult; stdcall;
+</pre>
 
 <p>который возвращает заполненную структуру DBPROPINFO.</p>
-<pre>
+
+<pre class="delphi">
 PDBPropInfo = ^TDBPropInfo;
 
 DBPROPINFO = packed record
@@ -29,7 +32,9 @@ TDBPropInfo = DBPROPINFO;
 
 <p>Для инициализации соединения необходимо использовать метод</p>
 
-<p>function Initialize: HResult; stdcall;</p>
+<pre class="delphi">
+function Initialize: HResult; stdcall;
+</pre>
 
 <p>интерфейса iDBinitiaiize объекта-источника данных.</p>
 

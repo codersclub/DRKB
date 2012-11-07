@@ -27,7 +27,7 @@ TPlayerSprite = class(TImageSprite)
 </pre>
 
 Процедура DoMove класса PlayerSprite изменяется следующим образом: 
-<p>&nbsp;</p>
+<p></p>
 <pre>
 Procedure TPlayerSprite.DoMove(MoveCount: Integer);
 Begin

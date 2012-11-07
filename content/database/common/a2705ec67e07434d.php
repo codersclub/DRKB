@@ -6,7 +6,7 @@
 <p>problems when working with Microsoft SQL Server (DBLIB) and Sybase</p>
 <p>SQL Server (DBLIB)?</p>
 <p>The following suggestions may help you tune your application and</p>
-<p>server.&nbsp; The server side suggestions may not apply to all server</p>
+<p>server.  The server side suggestions may not apply to all server</p>
 <p>and database installations.</p>
 <p>From the client application you may want to take greater control</p>
 <p>over the size of results sets (this may mean using TQueries),</p>
@@ -56,8 +56,8 @@
 <p>Please also see:</p>
 <p>  MS SQl Server documentation (printed or Books Online)</p>
 <p>  If using TQueries:</p>
-<p> &nbsp;&nbsp; TABLOCKX</p>
-<p> &nbsp;&nbsp; UPDLOCK</p>
+<p>    TABLOCKX</p>
+<p>    UPDLOCK</p>
 <p>For more information on the options above:</p>
 <p>  Analyzing locks Topic</p>
 <p>  (also see Database Developer's Companion Errata)</p>

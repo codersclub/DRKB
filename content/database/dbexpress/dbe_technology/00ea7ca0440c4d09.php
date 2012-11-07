@@ -13,7 +13,7 @@
 <p>При этом у компонента отсутствует механизм создания удаленного доступа к данным, представленный у компонента TclientDataSet свойствами RemoteServer И ProviderName.</p>
 <p>После создания соединения с сервером БД можно определить тип используемой команды, подобно компоненту TSQLDataSet.</p>
 <p>Тип команды определяется свойством</p>
-<p>TSQLCommandType = (ctQuery, ctTable, ctStoredProc);&nbsp;</p>
+<p>TSQLCommandType = (ctQuery, ctTable, ctStoredProc);</p>
 <p>property CommandType: TSQLCommandType;</p>
 <p>А содержание команды задает свойство</p>
 <p>property CoinmandText: string;</p>

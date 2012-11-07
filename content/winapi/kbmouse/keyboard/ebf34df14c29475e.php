@@ -240,182 +240,182 @@ end;
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">HELP key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">30</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">0 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">31</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">1 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">32</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">2 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">33</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">3 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">34</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">4 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">35</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">5 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">36</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">6 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">37</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">7 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">38</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">8 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">39</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">9 key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">41</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">A key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">42</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">B key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">43</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">C key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">44</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">D key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">45</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">E key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">46</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">F key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">47</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">G key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">48</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">H key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">49</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">I key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">4A</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">J key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">4B</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">K key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">4C</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">L key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">4D</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">M key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">4E</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">N key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">4F</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">O key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">50</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">P key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">51</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">Q key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">52</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">R key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">53</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">S key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">54</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">T key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">55</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">U key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">56</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">V key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">57</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">W key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">58</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">X key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">59</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">Y key </font></td>
       </tr>
       <tr>
-        <td width="34%">&nbsp;</td>
+        <td width="34%"></td>
         <td width="23%"><font face="verdana, geneva, helvetica" size="1">5A</font></td>
         <td width="43%"><font face="verdana, geneva, helvetica" size="1">Z key </font></td>
       </tr>

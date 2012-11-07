@@ -6,7 +6,7 @@
 <p>Функция IsOLEObjectInstalled возвращает True если найден OLE-объект</p>
 
 <p>Пример использования</p>
-<pre>
+<pre class="delphi">
   if not IsOLEObjectInstalled('Excel.Application') then
     ShowMessage('Класс не зарегистрирован')
   else

@@ -18,5 +18,5 @@ if numentries &gt; 0 then result:=true
 else result:=false;
 end;
 </pre>
-&nbsp;<br>
+ <br>
 <p>Источник: vlata.com</p>

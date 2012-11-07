@@ -20,5 +20,5 @@ I just ran across this in some of my old code and thought I''d share it with you
  end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-&nbsp;</p>
+</p>
 

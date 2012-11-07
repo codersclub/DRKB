@@ -3,7 +3,7 @@
 
 
 <p>FindResource + LoadResource + LockResource</p>
-<p>&nbsp;<br>
+<p> <br>
 <p>Определяем размеры картинки хранящейся в ресурсах:</p>
 <pre>
 function PictureSize: TSize;
@@ -35,8 +35,8 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <p>Получаем список всех ресурсов</p>
 <pre>
 function GetResourceList: Boolean;
@@ -75,7 +75,7 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Извлекаем ресурс в файл</p>
 <pre>
 function ExtractResource: Boolean;
@@ -163,7 +163,7 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Отрисовываем картинку из ресурса на форме:</p>
 <pre>
 procedure ShowPicture;
@@ -248,6 +248,6 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Rouse_</div>

@@ -38,7 +38,7 @@ end;
 </pre>
 <div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-&nbsp;<br>
+ <br>
 
 <hr />
 <pre>
@@ -66,12 +66,12 @@ end;
 </pre>
 <div class="author">Автор: s-mike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-&nbsp;<br>
+ <br>
 
 <hr />
 <p>OnNewWindow2 <br>
 Возникает при попытке открыть документ в новом окне. Если Вы хотите, чтобы документ был открыт в Вашем экземпляре броузера, то Вам нужно создать свой экземпляр броузера и параметру ppDisp присвоить интерфейсную ссылку на этот экземпляр:<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 procedure TFormSimpleWB.WebBrowser1NewWindow2(Sender: TObject;
   var ppDisp: IDispatch; var Cancel: WordBool);
@@ -83,7 +83,7 @@ begin
   ppDisp := newForm.WebBrowser1.ControlInterface;
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: -TOXA-</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
-<p>&nbsp;</p>
+<p></p>

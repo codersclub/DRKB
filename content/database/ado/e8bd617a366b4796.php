@@ -12,7 +12,7 @@
 
 <p>Давайте взглянем на простейший пример выражения CREATE TABLE:</p>
 
-<pre>
+<pre class="sql">
 CREATE TABLE PhoneBook(
   Name TEXT(50)
   Tel TEXT(50)
@@ -25,7 +25,8 @@ CREATE TABLE PhoneBook(
 <p>TFieldDef.DataType</p>
 <p>Очевидно, что в Access тип данных, представленный строкой это TEXT. В Paradox это STRING. Чтобы передать таблицы Paradox в Access, нам необходимо знать какие типы данных присутствуют и, соответственно их имена. При работе в BDE с таблицами Paradox, TFieldDef.DataType определяет тип физического поля в (dataset) таблице. Поэтому для успешного перенесения данных из таблиц Paradox в Access Вам необходимо создать функцию, которая бы преобразовывала соотвествующие типы полей Paradox в типы Access.</p>
 <p>Давайте посмотрим на пример функции, которая проверяет тип поля (fd) и возвращает соответствующий тип Access, а заоодно и размер поля, который необходим для выражения CREATE TABLE DDL.</p>
-<pre>
+
+<pre class="delphi">
 function AccessType(fd:TFieldDef):string;
 begin
  case fd.DataType of
@@ -44,25 +45,34 @@ end;
 
 
 
-<p> &nbsp; ADOX</p>
+<p>ADOX</p>
 <p>ADOX - это расширения ADO для Data Definition Language а так же для модели защиты (ADOX). ADOX предоставляет разработчикам богатый набор инструментов для получения доступа к структуре, модели защиты, а так же процедурам, хранимым в базе данных.</p>
 
 <p>Для использования ADOX в Delphi, Вам необходимы установить библиотеку типа ADOX.</p>
-<p>1. Select Project | Import Type Library</p>
-<p>3. Выберите "Microsoft ADO Ext 2.x for DDL and Security (Version 2.x)"</p>
-<p>4. Измените "TTable" на "TADOXTable"</p>
-<p>5. Измените "TColumn" на "TADOXColumn"</p>
-<p>6 .Измените "TIndex" на "TADOXIndex"</p>
-<p>7. Нажмите кнопку Install (перекомпиляция пакетов (packages))</p>
-<p>8. Нажмите один раз OK и дважды Yes</p>
-<p>9. File | Close All | Yes</p>
+<p>
+1. Select Project | Import Type Library
+<br>
+3. Выберите "Microsoft ADO Ext 2.x for DDL and Security (Version 2.x)"
+<br>
+4. Измените "TTable" на "TADOXTable"
+<br>
+5. Измените "TColumn" на "TADOXColumn"
+<br>
+6 .Измените "TIndex" на "TADOXIndex"
+<br>
+7. Нажмите кнопку Install (перекомпиляция пакетов (packages))
+<br>
+8. Нажмите один раз OK и дважды Yes
+<br>
+9. File | Close All | Yes
+</p>
 
 <p>На вершине объектной модели ADOX находится объект Catalog. Он обеспечивает доступ к набору Таблиц (Tables), Видов (Views) и Процедур, который используется для работы со структурой базы данных, а так же к набору Пользователей (Users) и рупп (Groups), которые используются для авторизации доступа. Каждый объект Catalog связан только с одним подключением к источнику данных.</p>
 
 <p>Давайте оставим ADOX (пока) и перейдём к ADOExpress.</p>
 
-<p> &nbsp; TADOCommand</p>
-<p>В ADOExpress компонент TADOCommand - это VCL представление объекта ADO Command. Объект Command представляет команду (запрос или выражение), которая может быть обработана источником данных. Команды могут быть выполнены методом&nbsp; Execute, используемым в ADOCommand. TADOCommand чаще всего используется для исполнения команд языка определения данных (DDL) SQL. Свойство CommandText содержит в себе саму команду. Свойство CommandType используется для того, как интерпретировать свойство CommandText. Тип cmdText используется для указания инструкции DDL. Впринципе, использовать компонент ADOCommand для получения данных из таблицы, запросов или хранимых процедур не имеет смысла, но никто не запрещает Вам пользоваться данным компонентов и в таких целях.</p>
+<p>TADOCommand</p>
+<p>В ADOExpress компонент TADOCommand - это VCL представление объекта ADO Command. Объект Command представляет команду (запрос или выражение), которая может быть обработана источником данных. Команды могут быть выполнены методом  Execute, используемым в ADOCommand. TADOCommand чаще всего используется для исполнения команд языка определения данных (DDL) SQL. Свойство CommandText содержит в себе саму команду. Свойство CommandType используется для того, как интерпретировать свойство CommandText. Тип cmdText используется для указания инструкции DDL. Впринципе, использовать компонент ADOCommand для получения данных из таблицы, запросов или хранимых процедур не имеет смысла, но никто не запрещает Вам пользоваться данным компонентов и в таких целях.</p>
 
 <p>Итак, самое время приступить к реальному программированию...</p>
 
@@ -70,11 +80,13 @@ end;
 <p>Получение списка всех таблиц из BDE, использование TFieldDefs чтобы получить определения (имя, тип данных, размер, и т.д.) полей в таблице, создание инструкции CREATE TABLE и копирование данных из таблицы BDE/Paradox в таблицу ADO/Access.</p>
 
 <p>Давайте решим эту задачу по шагам:</p>
+
 <p>GUI</p>
 <p>Запускаем Delphi - получаем новый проект с пустой формой. Добавляем две кнопки, один ComboBox и один компонент Memo. Далее добавляем компоненты TTable, TADOTable, TADOConnection и TADOCommand. Чтобы установить следующие свойства, используем Object Inspector (оставьте все другие свойства как есть - например, Memo будет иметь имя по умолчанию: Memo1):</p>
 
 <p>Для получения списка таблиц, связанных с данной базо данных (DBDEMOS) мы воспользуемся следующим кодом (OnCreate для формы):</p>
-<pre>
+
+<pre class="delphi">
 procedure TForm1.FormCreate(Sender: TObject);
 begin
  Session.GetTableNames('DBDEMOS',
@@ -88,7 +100,8 @@ end;
 <p>В самом начале ComboBox содержит имена таблиц (Paradox) в базе данных DBDEMOS. В нижеприведённом коде мы выберем таблицу Country.</p>
 
 <p>Следующая наша задача - это создание инструкции CREATE TABLE DDL. Это делается в процедуре OnClick кнопки 'Construct Create command':</p>
-<pre>
+
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 //Кнопка 'Construct Create command'
 var i:integer;
@@ -117,7 +130,8 @@ end;
 <p>Вышеприведённый код просто анализирует определения полей для выбранной таблицы (cboBDETblNames) и генерирует строку, которая будет использоваться свойством CommandText компоненты TADOCommand.</p>
 
 <p>Например, когда Вы выбираете таблицу Country, то Memo будет заполнен следующей строкой:</p>
-<pre>
+
+<pre class="sql">
 CREATE TABLE country (
   Name TEXT(24),
   Capital TEXT(24),
@@ -129,7 +143,8 @@ CREATE TABLE country (
 
 
 <p>И в заключении, пример для кнопки 'Create Table and copy data' , которая удаляет таблицу (DROP..EXECUTE), создаёт таблицу (CREATE..EXECUTE), и затем копирует данные в новую таблицу (INSERT...POST). Так же присутствует некоторая обработка ошибок, но код будет выходить на ошибку, если, например, (новая) таблица ещё не существует (в случае удаления).</p>
-<pre>
+
+<pre class="delphi">
 procedure TForm1.Button2Click(Sender: TObject);
 //Кнопка 'Create Table and copy data'
 var i:integer;
@@ -174,5 +189,5 @@ end;
 
 <p>Однако некоторые вопросы остались без ответа, например: как добавлять индексы в таблицу (CREATE INDEX ON ...), или как создавать пустую базу данных Access.</p>
 
-<p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
+<p>Взято с <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

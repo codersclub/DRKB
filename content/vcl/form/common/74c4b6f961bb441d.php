@@ -25,13 +25,13 @@ begin
       end; 
 end.
 </pre>
-Mischka&nbsp;&nbsp; 
-Цитата&nbsp; 
+Mischka   
+Цитата  
 feriman, 13.09.04, 15:14
 Подкиньте примерчик градиентной заливки формы. 
-&nbsp;
+ 
 Вот посмотри:
-<p>&nbsp;</p>
+<p></p>
 <pre>
 unit Graph32;
 

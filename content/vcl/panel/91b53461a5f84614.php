@@ -65,7 +65,7 @@ end.
 <div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Можно отключать стили XP и для отдельных контролов (темы должны быть включены и манифест лежать на форме):<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 unit Unit1;
 

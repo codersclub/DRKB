@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Philip A. Milovanov&nbsp;&nbsp; ( http://korys.chat.ru )</div>
+<div class="author">Автор: Philip A. Milovanov   ( http://korys.chat.ru )</div>
 
 <p>Для этого можно воспользоваться компонентами от AllRoundAutomations Direct Oracle Access. Если кому надо могу поделиться. При помощи этих компонент можно не только производить простые запросы/вставки, но и выполнять DDL-скрипты, и иметь доступ к объектам Oracle 8, примет смотри ниже...</p>
 <pre>

@@ -3,7 +3,7 @@
 
 
 <p>На рабочий стол можно вывести строку используя</p>
-<p>TextOut(GetWindowDC(GetDesktopWindow),100,100,'Thom',4);&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>TextOut(GetWindowDC(GetDesktopWindow),100,100,'Thom',4);</p>
 
 <div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

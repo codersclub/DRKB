@@ -746,8 +746,8 @@ end;
 <p>Определение кодовой страницы</p>
 
 <div class="author">Автор: Alexander Trunov</div>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>
 <pre>
 {
   Work with codepages

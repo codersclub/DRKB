@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 {
   Lets say that we wish to create a fallawing number (Autoincrese) of an item,
   without using the AutoIncrese filed.

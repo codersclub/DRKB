@@ -56,7 +56,7 @@ end.
 </pre>
 <div class="author">Автор: Rrader</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 { 

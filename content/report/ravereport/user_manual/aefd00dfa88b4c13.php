@@ -30,12 +30,12 @@
 <p>Несмотря на то, что поля можно поместить в отчет с помощью соответствующих компонент из закладки Report, много проще работать напрямую с деревом проектов. При нажатой клавише CTRL, поля можно перетянуть напрямую из дерева проекта и бросить на форму дизайнера.</p>
 <p>После того как DirectDataView будет настроен с помощью Query Editor, никакие другие свойства не требуются для доступа к данным.</p>
 <p>Панель состояния</p>
-<p>&nbsp;</p>
+<p></p>
 <p>в самом низу окна RAVE расположена панель состояния. Панель состояния некоторую информацию о выбранном текущем элементе. Так что, смотрите иногда туда.</p>
 <p>Индикатор Data Connection предоставляет информацию о состоянии системы данных Rave, изменяя цвет светодиодного индикатора.</p>
-<p>Цвет  &nbsp; &nbsp; &nbsp; &nbsp;LED &nbsp; &nbsp; &nbsp; &nbsp;Состояние &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Серый &nbsp; &nbsp; &nbsp; &nbsp;<img src="/pic/embim1774.png" width="30" height="29" vspace="1" hspace="1" border="0" alt=""> &nbsp; &nbsp; &nbsp; &nbsp;Подключение не активно &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Желтый &nbsp; &nbsp; &nbsp; &nbsp;<img src="/pic/embim1775.png" width="29" height="26" vspace="1" hspace="1" border="0" alt=""> &nbsp; &nbsp; &nbsp; &nbsp;Подключение активно, но ожидает ответа &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Зеленый &nbsp; &nbsp; &nbsp; &nbsp;<img src="/pic/embim1776.png" width="29" height="26" vspace="1" hspace="1" border="0" alt=""> &nbsp; &nbsp; &nbsp; &nbsp;Подключение активно и занято &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Красный &nbsp; &nbsp; &nbsp; &nbsp;<img src="/pic/embim1777.png" width="30" height="29" vspace="1" hspace="1" border="0" alt=""> &nbsp; &nbsp; &nbsp; &nbsp;Подключение активно, но превышено время ожидания &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Цвет         LED        Состояние</p>
+<p>Серый        <img src="/pic/embim1774.png" width="30" height="29" vspace="1" hspace="1" border="0" alt="">        Подключение не активно</p>
+<p>Желтый        <img src="/pic/embim1775.png" width="29" height="26" vspace="1" hspace="1" border="0" alt="">        Подключение активно, но ожидает ответа</p>
+<p>Зеленый        <img src="/pic/embim1776.png" width="29" height="26" vspace="1" hspace="1" border="0" alt="">        Подключение активно и занято</p>
+<p>Красный        <img src="/pic/embim1777.png" width="30" height="29" vspace="1" hspace="1" border="0" alt="">        Подключение активно, но превышено время ожидания</p>
 <p>X и Y показывают координаты указателя мыши. Подвигайте мышь и посмотрите за показаниями. Когда графический примитив бросается на страницу, размер примитива появляется после создания и показывается как dX и dY позиции. "d" означает дельта.</p>

@@ -5,8 +5,8 @@
 <p>Access.DoCmd.OpenReport('Titles by Author', acViewPreview, EmptyParam, EmptyParam);</p>
 <p>{</p>
 <p>const</p>
-<p> &nbsp;&nbsp; acViewNormal = $00000000;</p>
-<p> &nbsp;&nbsp; acViewDesign = $00000001;</p>
-<p> &nbsp;&nbsp; acViewPreview = $00000002;</p>
+<p>    acViewNormal = $00000000;</p>
+<p>    acViewDesign = $00000001;</p>
+<p>    acViewPreview = $00000002;</p>
 <p>}</p>
 

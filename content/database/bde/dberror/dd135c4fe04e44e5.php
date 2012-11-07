@@ -5,7 +5,7 @@
 
 <p>Ошибки общего характера, типа Key Violation или конфликты блокировки лучше всего обрабатывать в обработчике события Application.OnException ...например:</p>
 
-<pre>
+<pre class="delphi">
 {Секция Interface}
 procedure HandleException(Sender: TObject; E: Exception);
 ...
@@ -41,4 +41,5 @@ end;
 </pre>
 
 <p>Для использования предопределенных констант ошибок ('DBIERR_etc.'), вам необходимо включить DBIERRS в список используемых модулей. Полный список кодов ошибок при работе с базами данных вы можете найти в файле DBIERRS.INT, расположенном в каталоге :\DELPHI\DOC.</p>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

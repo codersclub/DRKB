@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { 
   With different versions of MDAC available it is sometimes 
   useful to know that your application won't fail because a user 
@@ -38,8 +38,10 @@ end;
 </pre>
 
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
+
 <hr />
-<pre>
+
+<pre class="delphi">
 function TfrmMain.GetADOVersion: Double;
 var
   ADO: OLEVariant;

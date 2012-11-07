@@ -2,7 +2,8 @@
 <div class="date">01.01.2007</div>
 
 Вот я как работаю с Excel:</p>
-<pre>
+
+<pre class="delphi">
 type
   DDEClientConv1.SetLink('Excel', 'Sheet1');
 try

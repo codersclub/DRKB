@@ -33,7 +33,7 @@ begin
   Result := Str;
 end;
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

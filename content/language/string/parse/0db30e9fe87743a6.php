@@ -92,7 +92,7 @@ begin
   GetDirNames := Tokenize(FullPath, '\');
 end;
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 procedure Explode(var a: array of string; Border, S: string);
@@ -125,5 +125,5 @@ procedure TForm1.Button1Click(Sender: TObject);
  
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-&nbsp;</p>
+</p>
 <hr />

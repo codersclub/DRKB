@@ -37,7 +37,7 @@ end;
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
 <hr />
-&nbsp;</p>
+</p>
 <p>из файловов GIF (анимированных) вытаскивает каждую картинку в отдельности, или записывает в отдельный BMP по очереди Для этих программок нужен всеми любимый RX Lib !!!</p>
 <pre>
 procedure TForm1.Button4Click(Sender: TObject);

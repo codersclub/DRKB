@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<div class="author">Автор: Arx&nbsp; ( http://arxoft.tora.ru )</div>
+<div class="author">Автор: Arx  ( http://arxoft.tora.ru )</div>
 
 <p>Создайте обработчик сообщения WM_MENUCHAR.</p>
 <pre>

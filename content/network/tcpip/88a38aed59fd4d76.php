@@ -20,8 +20,8 @@ StrPCopy(hostName, Name);
 hostEnt := gethostbyname (hostName); 
 if Assigned (hostEnt) then 
   if Assigned (hostEnt^.h_addr_list) then 
- &nbsp;&nbsp; begin 
- &nbsp;&nbsp;&nbsp;&nbsp; addr := hostEnt^.h_addr_list^; 
+    begin 
+      addr := hostEnt^.h_addr_list^; 
 if Assigned (addr) then 
 begin 
 IP := Format ('%d.%d.%d.%d', [byte (addr [0]), 

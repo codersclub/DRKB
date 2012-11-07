@@ -5,11 +5,11 @@
 <p>В Windows нет разделения каналов записи по источникам.</p>
 
 <p>CD-ROM ----------|</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |--- Динамики</p>
-<p>Микрофон --------|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-- Windows --|--- Записывающие программы</p>
-<p>Линейный вход ---|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |--- Линейный выход</p>
+<p>                 |             |--- Динамики</p>
+<p>Микрофон --------|             |</p>
+<p>                 |-- Windows --|--- Записывающие программы</p>
+<p>Линейный вход ---|             |</p>
+<p>                 |             |--- Линейный выход</p>
 <p>MIDI ------------|</p>
 
 <p>Все поступающие в систему звуки смешиваются, и лишь после этого их получает программа.</p>

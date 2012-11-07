@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 uses
   Office97; {or Office2000, OfficeXP, Office_TLB}
  

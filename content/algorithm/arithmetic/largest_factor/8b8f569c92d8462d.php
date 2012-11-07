@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Вычисление наибольшего общего делителя двух целых неотрицательных чисел
  
@@ -41,7 +41,8 @@ end;
 </pre>
 
 <p> Пример использования:</p>
-<pre>
+
+<pre class="delphi">
 p := GCD(54, 36); {p := 18} 
 </pre>
 

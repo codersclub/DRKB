@@ -13,18 +13,18 @@
 <p>property Values[const Name: string]: string;</p>
 <p>При обращении к этому свойству для чтения ищется строка, содержащая подстроку (параметр) Name и символ '='. Если она найдена, возвращается то, что находится в этой строке после '='. Если нет, ValuesfName] равно пустой строке. При записи: если строка, содержащая параметр Name, найдена &#8212; ее значение после '=' заменяется новым значением, если нет &#8212; строка добавляется. Если существующему параметру присваивается пустая строка (Valu-es[Name] := ";), то он удаляется из набора строк.</p>
 <p>Методы класса</p>
-<p>procedure BeginUpdate; procedure EndUpdate; &nbsp; &nbsp; &nbsp; &nbsp;Пара процедур, которые устанавливают и сбрасывают флаг обновления набора. Между ними, для ускорения работы, нужно заключать все операции по копированию, удалению и т. д. большого количества элементов. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>procedure Clear; &nbsp; &nbsp; &nbsp; &nbsp;Осуществляет полную очистку набора. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>procedure Insert(Index: Integer; const S: string); &nbsp; &nbsp; &nbsp; &nbsp;Вставляет строку S под индексом Index. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>procedure Delete(Index: Integer); &nbsp; &nbsp; &nbsp; &nbsp;Удаляет строку с индексом Index. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>function IndexOf(const S: string): Integer; &nbsp; &nbsp; &nbsp; &nbsp;Возвращает индекс (номер в наборе) строки S. Если она не найдена, функция возвращает -1. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>function IndexOfObject(AObject: TObject): Integer; &nbsp; &nbsp; &nbsp; &nbsp;Возвращает индекс объекта в наборе. В случае неудачи возвращает -1. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>function Equals(Strings: TStrings): Boolean; &nbsp; &nbsp; &nbsp; &nbsp;Сравнивает строки вызвавшего его объекта со строками объекта Strings и возвращает True в случае равенства (сравниваются число строк и все строки попарно). &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>function Add(const S: string): Integer- &nbsp; &nbsp; &nbsp; &nbsp;Добавляет строку S в конец набора и в случае успеха возвращает присвоенный ей индекс (он должен быть равен значению Count до добавления строки). &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>function AddObject(const S: string; AObject: TObject): Integer; &nbsp; &nbsp; &nbsp; &nbsp;Добавляет строку в паре с объектом. Возвращает то же, что и метод Add. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>procedure Exchange(Indexl, Index2: Integer); &nbsp; &nbsp; &nbsp; &nbsp;Меняет местами пары строка+объект с индексами Indexl и Index2. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>procedure Move(Curlndex, Newlndex: Integer); &nbsp; &nbsp; &nbsp; &nbsp;Перемещает пару строка+объект с позиции Curlndex в позицию Newlndex. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>procedure InsertObject(Index: Integer; const S: string; AObject: TObject); &nbsp; &nbsp; &nbsp; &nbsp;Вставляет объект AObject и соответствующую ему строку S в набор под индексом Index. &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>procedure BeginUpdate; procedure EndUpdate;        Пара процедур, которые устанавливают и сбрасывают флаг обновления набора. Между ними, для ускорения работы, нужно заключать все операции по копированию, удалению и т. д. большого количества элементов.</p>
+<p>procedure Clear;        Осуществляет полную очистку набора.</p>
+<p>procedure Insert(Index: Integer; const S: string);        Вставляет строку S под индексом Index.</p>
+<p>procedure Delete(Index: Integer);        Удаляет строку с индексом Index.</p>
+<p>function IndexOf(const S: string): Integer;        Возвращает индекс (номер в наборе) строки S. Если она не найдена, функция возвращает -1.</p>
+<p>function IndexOfObject(AObject: TObject): Integer;        Возвращает индекс объекта в наборе. В случае неудачи возвращает -1.</p>
+<p>function Equals(Strings: TStrings): Boolean;        Сравнивает строки вызвавшего его объекта со строками объекта Strings и возвращает True в случае равенства (сравниваются число строк и все строки попарно).</p>
+<p>function Add(const S: string): Integer-        Добавляет строку S в конец набора и в случае успеха возвращает присвоенный ей индекс (он должен быть равен значению Count до добавления строки).</p>
+<p>function AddObject(const S: string; AObject: TObject): Integer;        Добавляет строку в паре с объектом. Возвращает то же, что и метод Add.</p>
+<p>procedure Exchange(Indexl, Index2: Integer);        Меняет местами пары строка+объект с индексами Indexl и Index2.</p>
+<p>procedure Move(Curlndex, Newlndex: Integer);        Перемещает пару строка+объект с позиции Curlndex в позицию Newlndex.</p>
+<p>procedure InsertObject(Index: Integer; const S: string; AObject: TObject);        Вставляет объект AObject и соответствующую ему строку S в набор под индексом Index.</p>
 <p>Шесть методов предназначены для экспорта/импорта наборов строк:</p>
 <p>а) в поток:</p>
 <p>procedure LoadFromStream(Stream: TStream);</p>
@@ -32,8 +32,8 @@
 <p>б) в файл (создавая поток и вызывая два предыдущих метода):</p>
 <p>procedure LoadFrornFile (const FileName: strings-procedure SaveToFile(const FileName: string);</p>
 <p>в) в данные в формате текстового редактора (подряд расположенные строки, оканчивающиеся парой символов CR/LF (16-ричные коды SOD/SOA)).</p>
-<p>procedure AddScrings(Strings: TStrings); &nbsp; &nbsp; &nbsp; &nbsp;Добавляет в конец набора другой набор Strings. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>procedure Assign(Source: TPersistent); &nbsp; &nbsp; &nbsp; &nbsp;Уничтожает прежнее содержимое набора и подставляет вместо него Source, если источник имеет тип TStrings. В противном случае возникает исключительная ситуация EConvertError. &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>procedure AddScrings(Strings: TStrings);        Добавляет в конец набора другой набор Strings.</p>
+<p>procedure Assign(Source: TPersistent);        Уничтожает прежнее содержимое набора и подставляет вместо него Source, если источник имеет тип TStrings. В противном случае возникает исключительная ситуация EConvertError.</p>
 <p>При этом метод</p>
 <p>function GetText: PChar;</p>
 <p>выгружает строки в единый массив, где они разделены парами символов CR/LF; в конце такого массива ставится нулевой байт. Размер массива не может превышать 65520 байт; поэтому строки выгружаются до тех пор, пока их суммарная длина не превосходит этого значения.</p>
@@ -43,8 +43,8 @@
 <p>Класс TStringlist</p>
 <p>Этот класс объединяет в себе свойства TStrings и TList простейшим способом &#8212; указатель на объект и соответствующая строка объединяются в запись, указатель на которую хранится в списке. В классе переопределены многие виртуальные методы TStrings: Add, Clear, Delete, Exchange, IndexOf, Insert; он является полностью функциональным и вы можете создавать экземпляры TStringList в своей программе для работы с наборами строк и объектов (помимо тех, которые уже есть в компонентах).</p>
 <p>Кроме унаследованных от TStrings, определены дополнительно полезные методы и свойства:</p>
-<p>function Find(const S: string; var Index: Integer): Boolean; &nbsp; &nbsp; &nbsp; &nbsp;Метод ищет в наборе строку S и в случае успеха возвращает результат True, а в параметре Index &#8212; ее индекс. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>property Sorted: Boolean; &nbsp; &nbsp; &nbsp; &nbsp;Свойство &#8212; признак отсортированности элементов (сортировка осуществляется через посимвольное сравнение строк). Установка Sort := True вызывает процедуру сортировки, которую можно вызвать и явно при помощи метода: &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>procedure Sort; &nbsp; &nbsp; &nbsp; &nbsp;Попытка добавить или вставить элемент в отсортированный список вызывает исключительную ситуацию EListError; в этом случае до выполнения действия свойству Sorted нужно присвоить значение False. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>property Duplicates: TDuplicates; TDuplicates = (duplgnore, dupAccept, dupError); &nbsp; &nbsp; &nbsp; &nbsp;Свойство определяет, что происходит при попытке добавить в список дубликат уже имеющейся строки: duplgnore &#8212; добавление игнорируется (отклоняется); dupError &#8212; добавление приводит к созданию исключительной ситуации EListError; dupAccept &#8212; одинаковые строки разрешены. В этом случае при поиске в неотсортированном списке не определено, которая из строк будет найдена первой. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>property OnChange: TNotifyEvent; property OnChanging: TNotifyEvent; &nbsp; &nbsp; &nbsp; &nbsp;Два свойства, предусмотренные для определения пользователем своей реакции на изменение данных. Событие OnChanging вызывается во многих рассмотренных выше методах до внесения первого изменения, OnChange &#8212; после последнего. &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>function Find(const S: string; var Index: Integer): Boolean;        Метод ищет в наборе строку S и в случае успеха возвращает результат True, а в параметре Index &#8212; ее индекс.</p>
+<p>property Sorted: Boolean;        Свойство &#8212; признак отсортированности элементов (сортировка осуществляется через посимвольное сравнение строк). Установка Sort := True вызывает процедуру сортировки, которую можно вызвать и явно при помощи метода:</p>
+<p>procedure Sort;        Попытка добавить или вставить элемент в отсортированный список вызывает исключительную ситуацию EListError; в этом случае до выполнения действия свойству Sorted нужно присвоить значение False.</p>
+<p>property Duplicates: TDuplicates; TDuplicates = (duplgnore, dupAccept, dupError);        Свойство определяет, что происходит при попытке добавить в список дубликат уже имеющейся строки: duplgnore &#8212; добавление игнорируется (отклоняется); dupError &#8212; добавление приводит к созданию исключительной ситуации EListError; dupAccept &#8212; одинаковые строки разрешены. В этом случае при поиске в неотсортированном списке не определено, которая из строк будет найдена первой.</p>
+<p>property OnChange: TNotifyEvent; property OnChanging: TNotifyEvent;        Два свойства, предусмотренные для определения пользователем своей реакции на изменение данных. Событие OnChanging вызывается во многих рассмотренных выше методах до внесения первого изменения, OnChange &#8212; после последнего.</p>

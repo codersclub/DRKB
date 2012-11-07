@@ -221,7 +221,7 @@ end.
 
 Ну вот и все, надеюсь эта статья оказалась Вам интересна!</p>
 Источник: <a href="https://delphid.dax.ru" target="_blank">https://delphid.dax.ru</a></p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 procedure TForm1.Button3Click(Sender: TObject);

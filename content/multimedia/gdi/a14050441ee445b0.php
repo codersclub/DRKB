@@ -166,13 +166,13 @@ end;
 
 <p>Ради интереса можно взглянуть на таблицу, в которой представлены примеры вызовов некоторых функций из VCL и их аналогов из Windows API.</p>
 
-<p>Canvas.TextOut(x,y,myString);  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TextOut(Canvas.Handle, x, y, PChar(myString), Length(String));</p>
+<p>Canvas.TextOut(x,y,myString);                 TextOut(Canvas.Handle, x, y, PChar(myString), Length(String));</p>
 
-<p>Canvas.FloodFill(X, Y, Color,fsBorder);  &nbsp; &nbsp; &nbsp; &nbsp;ExtFloodFill(Canvas.Handle, x, y, YourColour, FLOODFILLBORDER);</p>
+<p>Canvas.FloodFill(X, Y, Color,fsBorder);         ExtFloodFill(Canvas.Handle, x, y, YourColour, FLOODFILLBORDER);</p>
 
-<p>Canvas.LineTo(x,y);  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;LineTo(Canvas.Handle, x, y);</p>
+<p>Canvas.LineTo(x,y);                                 LineTo(Canvas.Handle, x, y);</p>
 
-<p>Canvas.MoveTo(x,y);  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MoveToEx(Canvas.Handle, x, y, nil);</p>
+<p>Canvas.MoveTo(x,y);                                 MoveToEx(Canvas.Handle, x, y, nil);</p>
 
 <p>Так же можно использовать разные дескрипторы, чтобы рисовать в разных местах. Например, можно использовать "SomeBmp.Canvas.Handle" для рисования на картинке (битмапе), либо "Form1.Canvas.Handle", чтобы рисовать на форме.</p>
 

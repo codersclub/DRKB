@@ -349,31 +349,31 @@ end.
 <p>. /etc/rc.d/init.d/functions</p>
 
 <p>case $1 in</p>
-<p> &nbsp;&nbsp; start)</p>
-<p> &nbsp;&nbsp; echo -n "Starting dhttpd"</p>
-<p> &nbsp;&nbsp; daemon dhttpd</p>
-<p> &nbsp;&nbsp; echo</p>
-<p> &nbsp;&nbsp; touch /var/lock/subsys/dhttpd</p>
-<p> &nbsp;&nbsp; ;;</p>
-<p> &nbsp;&nbsp; stop)</p>
-<p> &nbsp;&nbsp; echo -n "Shutting down dhttpd"</p>
-<p> &nbsp;&nbsp; killproc dhttpd&nbsp;</p>
-<p> &nbsp;&nbsp; echo</p>
-<p> &nbsp;&nbsp; rm -f /var/lock/subsys/dhttpd</p>
-<p> &nbsp;&nbsp; rm -f /var/run/dhttpd.pid</p>
-<p> &nbsp;&nbsp; ;;</p>
-<p> &nbsp;&nbsp; restart)</p>
-<p> &nbsp;&nbsp; $0 stop</p>
-<p> &nbsp;&nbsp; $0 start</p>
-<p> &nbsp;&nbsp; ;;</p>
-<p> &nbsp;&nbsp; reload)</p>
-<p> &nbsp;&nbsp; echo -n "Reloading dhttpd:"</p>
-<p> &nbsp;&nbsp; killproc dhttpd -HUP</p>
-<p> &nbsp;&nbsp; echo</p>
-<p> &nbsp;&nbsp; ;;</p>
-<p> &nbsp;&nbsp; *)</p>
-<p> &nbsp;&nbsp; echo "Usage: $(basename $0) start|stop|restart|reload"</p>
-<p> &nbsp;&nbsp; exit 1</p>
+<p>    start)</p>
+<p>    echo -n "Starting dhttpd"</p>
+<p>    daemon dhttpd</p>
+<p>    echo</p>
+<p>    touch /var/lock/subsys/dhttpd</p>
+<p>    ;;</p>
+<p>    stop)</p>
+<p>    echo -n "Shutting down dhttpd"</p>
+<p>    killproc dhttpd</p>
+<p>    echo</p>
+<p>    rm -f /var/lock/subsys/dhttpd</p>
+<p>    rm -f /var/run/dhttpd.pid</p>
+<p>    ;;</p>
+<p>    restart)</p>
+<p>    $0 stop</p>
+<p>    $0 start</p>
+<p>    ;;</p>
+<p>    reload)</p>
+<p>    echo -n "Reloading dhttpd:"</p>
+<p>    killproc dhttpd -HUP</p>
+<p>    echo</p>
+<p>    ;;</p>
+<p>    *)</p>
+<p>    echo "Usage: $(basename $0) start|stop|restart|reload"</p>
+<p>    exit 1</p>
 <p>esac</p>
 <p>exit 0</p>
 

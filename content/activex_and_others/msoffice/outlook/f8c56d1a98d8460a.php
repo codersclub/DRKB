@@ -5,7 +5,7 @@
 <p>Сперва сделай 'Import type Library' для Outlk80.olb, (расположен в \Program Files\Microsoft Office\Office).</p>
 <p>После того, как появится файл 'Outlook_TLB.pas', можно нацарапать следующее:</p>
 
-<pre>
+<pre class="delphi">
 uses ComObj, Outlook_TLB;procedure TForm1.Button1Click(Sender: TObject);var  MSOutlook,  MyNameSpace, 
  MyFolder,  MyItem: Variant;  s: string;  i: Integer;begin  try    MSOutlook := CreateOleObject('Outlook.Application');  
    MyNameSpace := MSOutlook.GetNameSpace('MAPI');    MyFolder := MyNamespace.GetDefaultFolder(olFolderContacts);  

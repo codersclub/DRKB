@@ -15,9 +15,9 @@
 <p>function InetIsOffline(Flag: Integer): Boolean; stdcall; external 'URL.DLL';</p>
 <p>а затем поместить в программу простой вызов функции для проверки статуса соединения:</p>
 <p>if InetIsOffline(0) then</p>
-<p> &nbsp; ShowMessage('This computer is not connected to Internet!')</p>
+<p>   ShowMessage('This computer is not connected to Internet!')</p>
 <p>else</p>
-<p> &nbsp; ShowMessage(You are connected to Internet!');</p>
+<p>   ShowMessage(You are connected to Internet!');</p>
 <p>Эта функция возвращает TRUE если соединение с интернетов отсутствует, или FALSE если соединение установлено.</p>
 <p>Замечание:</p>
 <p>параметр Flag игнорируется, соответственно используем ноль.</p>

@@ -57,10 +57,10 @@
 <p>TRIM(LastName) + FirstName</p>
 <p>Данное выражение не возратит значения "последовательной длины" для всех записей. Если поля LastName и FirstName содержали значения...</p>
 
-<p>  LastName&nbsp; FirstName</p>
-<p>  --------&nbsp; ---------</p>
-<p>  Smith&nbsp;&nbsp;&nbsp;&nbsp; Jonas</p>
-<p>  Wesson&nbsp;&nbsp;&nbsp; Nancy</p>
+<p>  LastName  FirstName</p>
+<p>  --------  ---------</p>
+<p>  Smith     Jonas</p>
+<p>  Wesson    Nancy</p>
 
 <p>...то результат использования индексного выражения может быть таким:</p>
 

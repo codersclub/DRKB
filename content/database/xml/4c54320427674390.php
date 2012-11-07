@@ -15,14 +15,14 @@
 
 <p>После ввода</p>
 
-<p>  1&nbsp;&nbsp;&nbsp; aaa</p>
-<p>  2&nbsp;&nbsp;&nbsp; bbb</p>
-<p>  3&nbsp;&nbsp;&nbsp; ccc</p>
-<p>  4&nbsp;&nbsp;&nbsp; ddd</p>
+<p>  1    aaa</p>
+<p>  2    bbb</p>
+<p>  3    ccc</p>
+<p>  4    ddd</p>
 
 <p>и сохранения текст XML имеет вид:</p>
 <pre>
-&lt;?xml version="1.0" standalone="yes"?&gt;&nbsp; &lt;DATAPACKET Version="2.0"&gt;
+&lt;?xml version="1.0" standalone="yes"?&gt;  &lt;DATAPACKET Version="2.0"&gt;
 &lt;METADATA&gt;&lt;FIELDS&gt;&lt;FIELD attrname="IntField" fieldtype="i4"/&gt;
 &lt;FIELD attrname="StrField" fieldtype="string" WIDTH="20"/&gt;&lt;/FIELDS&gt;
 &lt;PARAMS CHANGE_LOG="1 0 4 2 0 4 3 0 4 4 0 4"/&gt;&lt;/PARAMS&gt;&lt;/METADATA&gt;

@@ -5,23 +5,23 @@
 <div class="author">Автор: Wersion</div>
 <p>WEB сайт: http://expwinprg.cjb.net/</p>
 <p>Итак, как это было.</p>
-<p>Достались мне замечательные туторы Iczelion'а по ассемблеру на русском и английском языках. Перевод был сделан немного в стиле Promt'а: с падежами, окончаниями и т.д. всё в порядке, а до смысла докопаться трудно. Я решил всё переделать и представить в культурном виде &#8211; в 'Single Exe' как обещают создатели E-Book Html Compiler 2.12. &lt;-Закачал его с http://new-projects.com/booksoft/ (не ошибитесь версией) и запустил.</p>
+<p>Достались мне замечательные туторы Iczelion'а по ассемблеру на русском и английском языках. Перевод был сделан немного в стиле Promt'а: с падежами, окончаниями и т.д. всё в порядке, а до смысла докопаться трудно. Я решил всё переделать и представить в культурном виде - в 'Single Exe' как обещают создатели E-Book Html Compiler 2.12. &lt;-Закачал его с http://new-projects.com/booksoft/ (не ошибитесь версией) и запустил.</p>
 <p>Что мы видим:</p>
 <p>функциональные ограничения (Нет вкладки Security вообще)</p>
 <p>Nag в производимом файле</p>
 <p>Нехорошо. Начнём.</p>
 <p>Что нужно: Tools (много):</p>
-<p>ResHacker/Restorator/Exescope &#8211; обязательно</p>
-<p>Windows Commander 32 &#8211; обязательно</p>
-<p>UPX 1.07w &#8211; обязательно</p>
-<p>HIEW 6.11 &#8211; обязательно (Ну куда же нам без него!)</p>
-<p>Turbo Pascal for Windows 7.1 &#8211; Recommended</p>
-<p>Ida Pro &#8211; optional</p>
-<p>TRW 2000 &#8211; optional</p>
-<p>Any File Analyzer &#8211; optional</p>
+<p>ResHacker/Restorator/Exescope - обязательно</p>
+<p>Windows Commander 32 - обязательно</p>
+<p>UPX 1.07w - обязательно</p>
+<p>HIEW 6.11 - обязательно (Ну куда же нам без него!)</p>
+<p>Turbo Pascal for Windows 7.1 - Recommended</p>
+<p>Ida Pro - optional</p>
+<p>TRW 2000 - optional</p>
+<p>Any File Analyzer - optional</p>
 <p>Procdump32 - optional</p>
 <p>The Customiser - Recommended</p>
-<p>W32Dasm &#8211; optional</p>
+<p>W32Dasm - optional</p>
 <p>Brains: Среднее количество[x]</p>
 <p>Исследование</p>
 <p>Посмотрим Help. Есть, оказывается, 3 версии:</p>

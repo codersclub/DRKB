@@ -3,22 +3,28 @@
 
 <p>НОД, решение ax+by=1, нахождение обратного элемента по модулю <img src="/pic/embim1817.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1818.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
 <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм Евклида<br>
-&nbsp;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Бинарный алгоритм Евклида<br>
-&nbsp;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм решения уравнения ax+by = 1</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Расширенный алгоритм Евклида:<br>
-Даны x, y. Находит a, b, v: ax+by = d, где d=НОД(x, y)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нахождение обратного элемента по модулю<br>
-Обратный элемент для x из Zn - такой a из Zn, что ax = 1(mod n)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>НОК<br>
-&nbsp;</td></tr></table></div><p>&nbsp;<br>
+</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Бинарный алгоритм Евклида<br>
+</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Алгоритм решения уравнения ax+by = 1</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Расширенный алгоритм Евклида:<br>
+Даны x, y. Находит a, b, v: ax+by = d, где d=НОД(x, y)</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нахождение обратного элемента по модулю<br>
+Обратный элемент для x из Zn - такой a из Zn, что ax = 1(mod n)</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>НОК<br>
+</td></tr></table></div>
+<p> <br>
 Алгоритм Евклида. <img src="/pic/embim1819.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1820.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-<p>&nbsp;</p>
+<p></p>
 <p>1. Вычислим r - остаток от деления числа a на b, a = bq+r, 0 &lt;= r &lt; b.</p>
 <p>2. Если r = 0, то b есть искомое число.</p>
 <p>3. Если r =/= 0, то заменим пару чисел (a,b) парой (b,r)<br>
 <p>и перейдем к шагу 1.</p>
-<pre>
+<pre class="delphi">
 int NOD(int a,int b)
  {
     while(a!=0 &amp;&amp; b!=0)
@@ -31,18 +37,18 @@ int NOD(int a,int b)
 </pre>
 
 <p>При вычислении наибольшего общего делителя (a,b) с помощью алгоритма Евклида будет выполнено не более 5p операций деления с остатком, где p есть количество цифр в десятичной записи меньшего из чисел a и b.</p>
-<p>&nbsp;<br>
+<p> <br>
 Бинарный алгоритм Евклида. <img src="/pic/embim1821.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1822.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-<p>&nbsp;</p>
+<p></p>
 <p>Этот алгоритм использует соотношения для НОД:<br>
-&nbsp;<br>
+ <br>
 НОД(2*a, 2*b) = 2*НОД(a,b)<br>
 НОД(2*a, b) = НОД(a,b) при нечетном b,<br>
-&nbsp;<br>
+ <br>
 Он иллюстрируется следующей программой:<br>
-<p>&nbsp;</p>
-<pre>
+<p></p>
+<pre class="delphi">
   m:= a; n:=b; d:=1;
   {НОД(a,b) = d * НОД(m,n)}
   while not ((m=0) or (n=0)) do begin
@@ -61,10 +67,10 @@ int NOD(int a,int b)
   {m=0 =&gt; ответ=d*n; n=0 =&gt;  ответ=d*m}  
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 Алгоритм решения уравнения ax+by = 1. <img src="/pic/embim1823.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1824.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-<p>&nbsp;</p>
+<p></p>
 <p>1.Определим матрицу E:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -88,10 +94,10 @@ int NOD(int a,int b)
 </tr>
 </table>
 <p>5. Заменим пару чисел (a,b) на (b,r) и перейдем к шагу 2.</p>
-<p>&nbsp;<br>
+<p> <br>
 Расширенный алгоритм Евклида. <img src="/pic/embim1825.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1826.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-<p>&nbsp;</p>
+<p></p>
 <p>Алгоритм Евклида можно расширить так, что он не только даст НОД(a,b)=d, но и найдет целые числа x и y, такие что ax + by = d.</p>
 <p>Псевдокод.</p>
 <p>НА ВХОДЕ: два неотрицательных числа a и b: a&gt;=b</p>
@@ -99,12 +105,11 @@ int NOD(int a,int b)
 <p>1. Если b=0 положить d:=a, x:=1, y:=0 и возвратить (d,x,y)</p>
 <p>2. Положить x2:=1, x1:=0, y2:=0, y1:=1</p>
 <p>3. Пока b&gt;0</p>
-<p> &nbsp;&nbsp; 3.1 q:=[a/b], r:=a-qb, x:=x2-qx1, y:=y2-qy1</p>
-<p> &nbsp;&nbsp; 3.2 a:=b, b:=r, x2:=x1, x1:=x, y2:=y1, y1:=y</p>
+<p>    3.1 q:=[a/b], r:=a-qb, x:=x2-qx1, y:=y2-qy1</p>
+<p>    3.2 a:=b, b:=r, x2:=x1, x1:=x, y2:=y1, y1:=y</p>
 <p>4. Положить d:=a, x:=x2, y:=y2 и возвратить (d,x,y)</p>
 <p>Исходник на Си.</p>
-<p>/* Author:&nbsp; Pate Williams (c) 1997 */</p>
-<pre>
+<pre class="cpp">/* Author:  Pate Williams (c) 1997 */
 #include &lt;stdio.h&gt;
  
 #define DEBUG
@@ -181,21 +186,21 @@ int main(void)
 </pre>
 
 <p>Алгоритм работает за O(log2n) операций.</p>
-<p>&nbsp;<br>
+<p> <br>
 Нахождение обратного элемента по модулю <img src="/pic/embim1827.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1828.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-&nbsp;<br>
-<p>&nbsp;</p>
+<br>
+<p></p>
 <p>Для начала заметим, что элемент a кольца Zn обратим тогда и только тогда, когда НОД(a,n)=1. То есть ответ есть не всегда. Из определения обратного элемента прямо следует алгоритм.</p>
 <p>Псевдокод.</p>
 <p>НА ВХОДЕ: а из Zn.</p>
 <p>НА ВЫХОДЕ: обратный к а в кольце, если он существует.</p>
 <p>1. Использовать расширенный алгоритм Евклида для нахождения</p>
-<p> &nbsp; x и y, таких что ax + ny = d, где d=НОД(a,n).</p>
+<p>   x и y, таких что ax + ny = d, где d=НОД(a,n).</p>
 <p>2. Если d &gt; 1, то обратного элемента не существует.</p>
-<p> &nbsp;&nbsp; Иначе возвращаем x.</p>
+<p>    Иначе возвращаем x.</p>
 <p>Исходник на Си.</p>
-<pre>
+<pre class="cpp">
 /*  Author:  Pate Williams (c) 1997 */
  
  
@@ -268,10 +273,15 @@ int main(void)
   return 0;
 }
 </pre>
-<p>&nbsp;<br>
-НОК. <img src="/pic/embim1829.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-<img src="/pic/embim1830.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-<p>&nbsp;</p>
-<p>НОК( a , b) = a*b / НОД(a, b)<br>
-<p>&nbsp;</p>
+<p>
+<br>
+НОК. <img src="/pic/embim1829.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt="">
+<br>
+<img src="/pic/embim1830.png" width="160" height="1" vspace="1" hspace="1" border="0" alt="">
+<br>
+<p></p>
+<p>НОК( a , b) = a*b / НОД(a, b)
+<br>
+
+<p></p>
 <p><a href="https://algolist.manual.ru" target="_blank">https://algolist.manual.ru</a></p>

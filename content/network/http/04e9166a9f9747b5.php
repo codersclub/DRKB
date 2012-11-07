@@ -3,16 +3,19 @@
 
 
 <p>Введение</p>
-<p>&nbsp;</p>
+<p></p>
 <p>В связи с все большим вниманием, которое привлекает к себе Интернет, все больше людей становятся заинтересованы в сетевых технологиях. Данная статья посвящена программированию на Borland Delphi с использованием одного из самых популярных Интернет-протоколов - HTTP.</p>
 <p>А именно, здесь мы рассмотрим компонент TNMHTTP (NetMasters HTTP), который можно обнаружить на вкладке FastNet палитры компонентов Дельфи.</p>
 <p>Начнем с теории. Если Вы уже знаете, что такое HTTP и зачем он нужен, то пропустите следующий раздел.</p>
 <p>Зачем нужен HTTP</p>
-<p>&nbsp;</p>
+<p></p>
 <p>Итак, где же используется HTTP? Если Вы хотя бы чуть-чуть заглядывали на Интернет-странички и встречались с термином Web, то наверняка обратили внимание на то, что адреса страничек, как правило, начинаются с http://. Протокол HTTP (HyperText Transfer Protocol) позволяет принимать и посылать не только гипертекстовые документы (типа html), но и любые другие (тексты (txt), изображения (gif, jpg), и т.д.). Ниже приведены типовые задачи, для выполнения которых необходимо использовать HTTP:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Браузеры - программы, позволяющие просматривать Интернет-странички;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Скачивальщики - программы, позволяющие скачивать из Интернета странички, рисунки и другие документы;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Чаты - программы, позволяющие общаться по сети. Часто документы HTTP используются для хранения сообщений (как, например, в конференциях).</td></tr></table></div><p>- Это лишь список некоторых из стандартных направлений программирования с использованием HTTP. Вы можете применять этот протокол для любых своих целей. Например, автоматические системы обновления данных, посылка запросов в Интернетовские базы, и еще множество всяческих других возможностей!</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Браузеры - программы, позволяющие просматривать Интернет-странички;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Скачивальщики - программы, позволяющие скачивать из Интернета странички, рисунки и другие документы;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Чаты - программы, позволяющие общаться по сети. Часто документы HTTP используются для хранения сообщений (как, например, в конференциях).</td></tr></table></div>
+<p>- Это лишь список некоторых из стандартных направлений программирования с использованием HTTP. Вы можете применять этот протокол для любых своих целей. Например, автоматические системы обновления данных, посылка запросов в Интернетовские базы, и еще множество всяческих других возможностей!</p>
 <p>Краткое описание свойств, методов и событий</p>
-<p>&nbsp;</p>
+<p></p>
 <p>Ниже приведена таблица, содержащая наиболее краткое описание основных свойств, методов и событий компонента TNMHTTP:</p>
 <p>Свойства</p>
 <p>Body - строка, содержащая либо путь к файлу, в который будет записано тело http-документа (если св-во InputFileMode равно True), либо непосредственно само тело (если св-во InputFileMode равно False). Тип: string;</p>
@@ -54,10 +57,10 @@
 <p>OnPacketSent - возникает, когда значения свойств BytesSent и BytesTotal изменены, т.е. была отправлена новая порция данных на сервер;</p>
 <p>OnStatus - возникает, когда статус компонента был изменен (для обновления визуального оповещения пользователя);</p>
 <p>Практика и примеры</p>
-<p>&nbsp;</p>
+<p></p>
 <p>Ну а теперь приступим к самому главному методу изучения - на примерах. Сразу замечу, что все приведенные здесь примеры можно скачать в полностью сделанных исходниках, щелкнув здесь.</p>
 <p>И самый первый пример - программа, позволяющая определить, существует ли заданный URL:</p>
-<p>Пример 1. Проверка существования указанной URL &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Пример 1. Проверка существования указанной URL</p>
 <pre>
 {... Здесь идет заголовок файла и определение формы TForm1 и ее экземпляра Form1}
  
@@ -173,10 +176,15 @@ end;
 </pre>
 
 <p>Замечания по алгоритмам типовых задач</p>
-<p>&nbsp;</p>
+<p></p>
 <p>Если Вы собираетесь создать скачивалку сайтов, то Вам необходимо учитывать следующее (решить следующие проблемы):</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нужно скачивать не только саму страничку в формате HTML, но и все входящие в нее рисунки (gif, jpg, и т.д.);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>в некоторых случаях удобно скачивать не одну страничку, а несколько страниц, ссылки на которые находятся на первой из скачиваемых страничек. При этом нужно учитывать, что на страничке могут находиться и ссылки на другие сайты, поэтому необходимо анализировать скачиваемые ссылки (чтобы случайно не скачать весь Интернет). Для решения задачи со скачиванием нескольких страничек нужно использовать рекурсию;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>необходимо качественно информировать пользователя о ходе закачки. Т.е. показывать общее и скачанное количество информации;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>после скачивания нужно заменить Интернетовские ссылки на локальные, чтобы можно было просматривать странички в режиме offline.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td></td></tr></table></div><p>Эпилог</p>
-<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Нужно скачивать не только саму страничку в формате HTML, но и все входящие в нее рисунки (gif, jpg, и т.д.);</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>в некоторых случаях удобно скачивать не одну страничку, а несколько страниц, ссылки на которые находятся на первой из скачиваемых страничек. При этом нужно учитывать, что на страничке могут находиться и ссылки на другие сайты, поэтому необходимо анализировать скачиваемые ссылки (чтобы случайно не скачать весь Интернет). Для решения задачи со скачиванием нескольких страничек нужно использовать рекурсию;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>необходимо качественно информировать пользователя о ходе закачки. Т.е. показывать общее и скачанное количество информации;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>после скачивания нужно заменить Интернетовские ссылки на локальные, чтобы можно было просматривать странички в режиме offline.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td></td></tr></table></div>
+<p>Эпилог</p>
+<p></p>
 <p>В этой статье отображены основные приемы работы с компонентом TNMHTTP в Дельфи. Если у Вас есть вопросы - скидывайте их мне на E-mail: snick@mailru.com, а еще лучше - пишите в конференции этого сайта (Delphi. Общие вопросы), чтобы и другие пользователи смогли увидеть Ваш вопрос и попытаться на него ответить!</p>
 <p>Замечу, что TNMHTTP - не единственный компонент, релизующий доступ по протоколу HTTP. Есть и его аналоги с более расширенными возможностями, например, набор компонентов ICS (Internet Component Suite), в состав которого входит даже компонент FTPServer, позволяющий легко запрограммировать свой собственный сервер FTP для Windows. Этот набор можно скачать на сайте Delphi Super Page.</p>
 

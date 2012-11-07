@@ -40,7 +40,7 @@
 
 <p>Also note the inconsistency between the delphi function's name and the "alias" statement in VBA.</p>
 <p>This is set in the export clause of the DLL:</p>
-<pre>
+<pre class="delphi">
 exports ..., 
         gamma_alfa     name 'gamma_alfa_XL', 
         ...; 
@@ -48,7 +48,7 @@ exports ...,
 
 
 <p>Although irrelevant, the implementation of the function follows:</p>
-<pre>
+<pre class="delphi">
 implementation
  
 function gamma_alfa(media, varianza: double): Double; stdcall;
@@ -72,7 +72,7 @@ end;
 <p>  stdcall;</p>
 
 <p>and is implemented as:</p>
-<pre>
+<pre class="delphi">
 function gamma_parametros_XL(const _marcas_de_clase, _frecuencias: Variant): Variant;
   stdcall;
 var
@@ -93,7 +93,7 @@ end;
 <p>the exports clause exports gamma_parametros_XL, since it's the one that is replicated in the VBA definition, and thus it does not need a 'name' clause.</p>
 
 <p>Here is the implementation of the gamma_parametros function:</p>
-<pre>
+<pre class="delphi">
 function gamma_parametros(const marcas_de_clase, frecuencias: TVector_): TVector_;
 var
   pars: TVector_;
@@ -110,7 +110,8 @@ end;
 
 
 <p>Here is the listing of the _Variants unit:</p>
-<pre>
+
+<pre class="delphi">
 interface
 uses SysUtils,
   excel97,

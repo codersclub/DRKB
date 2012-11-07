@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 {Unit to export a dataset to XML} 
  
 unit DS2XML; 
@@ -171,15 +171,15 @@ end;
 end. 
 </pre>
 
-<pre>
+<pre class="delphi">
 //Beispiel, Example: 
- 
  
 uses DS2XML; 
  
 procedure TForm1.Button1Click(Sender: TObject); 
-  begin  DatasetToXML(Table1, 'test.xml'); 
-  end;
+begin
+  DatasetToXML(Table1, 'test.xml'); 
+end;
 </pre>
 
 

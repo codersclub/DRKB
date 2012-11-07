@@ -6,9 +6,9 @@
 <p>A) ODBCINST.INI - описание всех установленных драйверов ODBC</p>
 <p>Секция [ODBC Drivers] в каждой строчке описывает один драйвер. Здесь прописано формальное имя драйвера, использующегося позже для идентификации драйвера.</p>
 <p>Каждый драйвер, как вы увидите позже, имеет собственную секцию, к примеру, вот секция для Watcom :</p>
-<p> &nbsp;&nbsp; {1} [Watcom SQL 4.0]</p>
-<p> &nbsp;&nbsp; {2} Driver=D:\WIN31\SYSTEM\WOD40W.DLL</p>
-<p> &nbsp;&nbsp; {3} Setup=D:\WIN31\SYSTEM\WOD40W.DLL</p>
+<p>    {1} [Watcom SQL 4.0]</p>
+<p>    {2} Driver=D:\WIN31\SYSTEM\WOD40W.DLL</p>
+<p>    {3} Setup=D:\WIN31\SYSTEM\WOD40W.DLL</p>
 <p>Строка 1 содержит имя секции драйвера из [ODBC Drivers].<br>
 Строка 2 сообщает Windows о том, где следует искать DLL, содержащую методы, применяемые ODBC для доступа к базам данных Watcom.<br>
 <p>Строка 3 сообщает Windows о том, где следует искать DLL, содержащую методы, применяемые ODBC для административных целей.</p>
@@ -18,13 +18,13 @@
 {описание базы данных} = {описание драйвера из ODBCINST.INI}<br>
 <p>Данный файл сообщает ODBC, к каким базам данных вы хотите иметь доступ и какой драйвер для каждой конкретной базы данных для этого необходим.</p>
 <p>Каждая база данных, как вы увидите позже, имеет собственную секцию, к примеру, вот секция PB Demo:</p>
-<p> &nbsp;&nbsp; {1} [Powersoft Demo DB=Watcom SQL 4.0]</p>
-<p> &nbsp;&nbsp; {2} DatabaseFile=E:\PB4\EXAMPLES\PSDEMO.DB</p>
-<p> &nbsp;&nbsp; {3} DatabaseName=PSDEMODB</p>
-<p> &nbsp;&nbsp; {4} UID=dba</p>
-<p> &nbsp;&nbsp; {5} PWD=sql</p>
-<p> &nbsp;&nbsp; {6} Driver=D:\WIN31\SYSTEM\WOD40W.DLL</p>
-<p> &nbsp;&nbsp; {7} Start=D:\WSQL40\DBSTARTW -d -c512</p>
+<p>    {1} [Powersoft Demo DB=Watcom SQL 4.0]</p>
+<p>    {2} DatabaseFile=E:\PB4\EXAMPLES\PSDEMO.DB</p>
+<p>    {3} DatabaseName=PSDEMODB</p>
+<p>    {4} UID=dba</p>
+<p>    {5} PWD=sql</p>
+<p>    {6} Driver=D:\WIN31\SYSTEM\WOD40W.DLL</p>
+<p>    {7} Start=D:\WSQL40\DBSTARTW -d -c512</p>
 <p>Строка 1 содержит ссылку на секцию [ODBC Data Sources].<br>
 Строка 2 содержит физический путь к файлу базы данных.<br>
 Строка 3 - описание, только для вашего чтения.<br>

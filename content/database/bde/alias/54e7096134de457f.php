@@ -2,11 +2,11 @@
 <div class="date">01.01.2007</div>
 
 
-
 <p>There has been a number of occasions where I needed to create persistent BDE aliases. The point is that the DB API isn't very discussed and is unkown to most Delphi developers. Despite that fact, the Dbi calls are very powerful and useful functions.</p>
 
 <p>The function below, CreateAlias, encapsulates the DbiAddAlias call, with some error checking and BDE initialization and finalization procedures.</p>
-<pre>
+
+<pre class="delphi">
 uses Windows, SysUtils, DbiProcs, DbiErrs, DBTables;
  
 const
@@ -78,6 +78,8 @@ end; {CreateAlias}
 
 <p>Example of usage:</p>
 
-<p>CreateAlias('DBTEST', 'c:\progra~1\borland\delphi~1\projects\cd3\data', 'PARADOX',</p>
-<p>  true);</p>
+<pre class="delphi">
+CreateAlias('DBTEST', 'c:\progra~1\borland\delphi~1\projects\cd3\data', 'PARADOX', true);
+</pre>
+
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>

@@ -4,7 +4,7 @@
 
 <p>Делается это при помощи dbiGetDatabaseDesc:</p>
 
-<pre>
+<pre class="delphi">
 uses BDE;
 .....
  

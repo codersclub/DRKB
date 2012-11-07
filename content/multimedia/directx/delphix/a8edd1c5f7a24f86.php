@@ -39,9 +39,9 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;
+<p> 
 И перед implementation в Var добавляем: 
-<p>&nbsp;</p>
+<p></p>
 <pre>
 var
   Form1: TForm1;

@@ -4,5 +4,5 @@
 Не забывайте вызывать SysUtils.FindClose(SearchRec) после каждого вызова FindFirst, так как вызов FindFirst создаёт динамическую структуру SearchRec, которую после поиска надо освобождать.</p>
 
 <div class="author">Автор: Vit</div>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>

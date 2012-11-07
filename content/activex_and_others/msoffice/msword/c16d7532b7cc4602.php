@@ -2,7 +2,8 @@
 <div class="date">01.01.2007</div>
 
 How can I read the default language of installed MS Word application?</p>
-<pre>
+
+<pre class="delphi">
 // You may initialize Word.Application instance and read a CountryID: 
  
 var

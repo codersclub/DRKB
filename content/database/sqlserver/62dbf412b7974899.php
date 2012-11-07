@@ -14,9 +14,9 @@
 
 <p>Extended Stored Procedures (called xp's afterwards) are part of Microsoft's Open Data Services (ODS) for SQL Server. With ODS you can do three things:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Making routines in a DLL available as stored procedures to any SQL Server user.</p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Write procedure server applications. They are similar to xp's, however they run as a separate network server application and could even be running on a different machine (3-tier).</p>
-3. &nbsp; &nbsp; &nbsp; &nbsp;Writing gateways to non-SQL Server based environments.</p>
+1.        Making routines in a DLL available as stored procedures to any SQL Server user.</p>
+2.        Write procedure server applications. They are similar to xp's, however they run as a separate network server application and could even be running on a different machine (3-tier).</p>
+3.        Writing gateways to non-SQL Server based environments.</p>
 
 <p>In the following figure a graphical overview of the ODS architecture is given.</p>
 
@@ -25,9 +25,9 @@
 
 <p>Making parts of your application available on the server has some advantages, for example:</p>
 <p>
-1. &nbsp; &nbsp; &nbsp; &nbsp;Some things are easy to write in Delphi, but difficult or impossible using Transact SQL. For example you might use some routines written in a language you don't understand or don't have the source code for, so you can't translate it to Transact SQL (with the possibility of errors creeping in during this translation).</p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Delphi routines run much faster than Transact SQL. Take for example numerical calculations.</p>
-3. &nbsp; &nbsp; &nbsp; &nbsp;You can interface with other programs, databases and such. For example you could write an xp that accepts the name of a paradox table and returns the contents of this table as a SQL Server result set.</p>
+1.        Some things are easy to write in Delphi, but difficult or impossible using Transact SQL. For example you might use some routines written in a language you don't understand or don't have the source code for, so you can't translate it to Transact SQL (with the possibility of errors creeping in during this translation).</p>
+2.        Delphi routines run much faster than Transact SQL. Take for example numerical calculations.</p>
+3.        You can interface with other programs, databases and such. For example you could write an xp that accepts the name of a paradox table and returns the contents of this table as a SQL Server result set.</p>
 
 <p>Xp's live in DLL's and can therefore be written in any language which can produce DLL's like Delphi can. Before going into detail about how to write xp's, first some examples from a user's point of view. Let's assume we have an xp called xp_incbyone1 which increments a given number by one. We can call xp_incbyone1 as followings:</p>
 <pre>        declare
@@ -58,12 +58,12 @@
 
 <p>Each implementation of an xp needs to do the same things:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Check that the caller of the procedure has provided all of the required parameters and that each parameter is of the appropriate data type. Return an appropriate message if not.</p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Define the columns for returning a result set.</p>
-3. &nbsp; &nbsp; &nbsp; &nbsp;Create each record for returning to the caller.</p>
-4. &nbsp; &nbsp; &nbsp; &nbsp;Set up any output parameters and return statuses used by the procedure.</p>
-5. &nbsp; &nbsp; &nbsp; &nbsp;When finished returning results, send the results completion message using srv_senddone with the SRV_DONE_MORE status flag.</p>
-6. &nbsp; &nbsp; &nbsp; &nbsp;Return from the procedure with the desired Transact-SQL return status.</p>
+1.        Check that the caller of the procedure has provided all of the required parameters and that each parameter is of the appropriate data type. Return an appropriate message if not.</p>
+2.        Define the columns for returning a result set.</p>
+3.        Create each record for returning to the caller.</p>
+4.        Set up any output parameters and return statuses used by the procedure.</p>
+5.        When finished returning results, send the results completion message using srv_senddone with the SRV_DONE_MORE status flag.</p>
+6.        Return from the procedure with the desired Transact-SQL return status.</p>
 
 <p>Step 1 is necessary because, unless normal stored procedures, it is up to the programmer to validate any user-specified parameters for xp's. Step 2 and 3 are optional, and are applicable only if you return a result set. Step 4 is also optional, and applies only if you return output parameters.</p>
 
@@ -75,8 +75,8 @@
 
 <p>You use this framework as follows:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Create an object of class TSQLXProc and implement its Execute method.</p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Write a procedure that allocates this object, calls it's Run method and frees the object. The name of this procedure should be equal to the name of your extended stored procedure. It's calling method should be stdcall.</p>
+1.        Create an object of class TSQLXProc and implement its Execute method.</p>
+2.        Write a procedure that allocates this object, calls it's Run method and frees the object. The name of this procedure should be equal to the name of your extended stored procedure. It's calling method should be stdcall.</p>
 
 <p>To make this more concrete, let's implement the xp_incbyone1 stored procedure. The 1st step is to create a new object based on TSQLXProc and implement its Execute method. It's header looks like this:</p>
 <pre>
@@ -165,16 +165,16 @@ end;
 
 <p>Table 1: supported types for use with DescribeColumn.</p>
 
-ODS constant&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;TSQL data type(s) &nbsp; &nbsp; &nbsp; &nbsp;Delhi data type(s) &nbsp; &nbsp; &nbsp; 
-SRVVARCHAR  &nbsp; &nbsp; &nbsp; &nbsp;varchar &nbsp; &nbsp; &nbsp; &nbsp;string &nbsp; &nbsp; &nbsp; 
-SRVCHAR  &nbsp; &nbsp; &nbsp; &nbsp;char&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;string &nbsp; &nbsp; &nbsp; 
-SRVINTN &nbsp; &nbsp; &nbsp; &nbsp;tinyint, smallint, int  &nbsp; &nbsp; &nbsp; &nbsp;shortint,smallint,integer &nbsp; &nbsp; &nbsp; 
-SRVBIT&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;bit  &nbsp; &nbsp; &nbsp; &nbsp;Boolean &nbsp; &nbsp; &nbsp; 
-SRVDECIMAL &nbsp; &nbsp; &nbsp; &nbsp;numeric/decimal &nbsp; &nbsp; &nbsp; &nbsp;n/a (string) &nbsp; &nbsp; &nbsp; 
-SRVNUMERIC &nbsp; &nbsp; &nbsp; &nbsp;numeric/decimal &nbsp; &nbsp; &nbsp; &nbsp;n/a (string) &nbsp; &nbsp; &nbsp; 
-SRVFLTN &nbsp; &nbsp; &nbsp; &nbsp;real, float &nbsp; &nbsp; &nbsp; &nbsp;single, double &nbsp; &nbsp; &nbsp; 
-SRVMONEYN &nbsp; &nbsp; &nbsp; &nbsp;smallmoney, money &nbsp; &nbsp; &nbsp; &nbsp;n/a (integer, DBMONEY) &nbsp; &nbsp; &nbsp; 
-SRVDATETIMN &nbsp; &nbsp; &nbsp; &nbsp;smalldatetime, datetime &nbsp; &nbsp; &nbsp; &nbsp;TDateTime &nbsp; &nbsp; &nbsp; 
+ODS constant          TSQL data type(s)        Delhi data type(s)       
+SRVVARCHAR         varchar        string       
+SRVCHAR         char          string       
+SRVINTN        tinyint, smallint, int         shortint,smallint,integer       
+SRVBIT          bit         Boolean       
+SRVDECIMAL        numeric/decimal        n/a (string)       
+SRVNUMERIC        numeric/decimal        n/a (string)       
+SRVFLTN        real, float        single, double       
+SRVMONEYN        smallmoney, money        n/a (integer, DBMONEY)       
+SRVDATETIMN        smalldatetime, datetime        TDateTime       
 <p>I implemented two xp's from the sample xp's which Microsoft implemented in xp.c. The first one simply copies the contents of the first parameter to the second parameter. The second one returns the free space from every drive available on the SQL Server computer.</p>
 
 <p>To avoid name clashes I called the first xp xp_delphiecho instead of xp_echo. The second one is called xp_delphidisklist instead of xp_disklist. Especially xp_echo looks ways more elegant than the Microsoft's sample program. You really should have a look at xp.c!</p>
@@ -234,7 +234,7 @@ end;
 
 <p>The framework in more detail</p>
 
-<p>The framework itself is in the unit odsxp.pas. In the following figure you see how this framework fits within the ODS architecture.&nbsp;</p>
+<p>The framework itself is in the unit odsxp.pas. In the following figure you see how this framework fits within the ODS architecture.</p>
 
 
 <p>SQL Server loads and calls the DLL. You have written a simple method which creates an object of type TSQLXProc. You call its Run method.</p>
@@ -251,11 +251,11 @@ end;
 <p>
 <p>Installing an extended stored procedure on SQL Server 7 can be done using the SQL Enterprise manager:</p>
 
-1. &nbsp; &nbsp; &nbsp; &nbsp;Open a server.</p>
-2. &nbsp; &nbsp; &nbsp; &nbsp;Go to item `Databases'.</p>
-3. &nbsp; &nbsp; &nbsp; &nbsp;Select the master database.</p>
-4. &nbsp; &nbsp; &nbsp; &nbsp;Right click it and choose `New Extended Stored Procedure', see figure below</p>
-5. &nbsp; &nbsp; &nbsp; &nbsp;Give the name of a function in the DLL and the location and name of the DLL itself.</p>
+1.        Open a server.</p>
+2.        Go to item `Databases'.</p>
+3.        Select the master database.</p>
+4.        Right click it and choose `New Extended Stored Procedure', see figure below</p>
+5.        Give the name of a function in the DLL and the location and name of the DLL itself.</p>
 
 <p>Installing xp's on SQL Server 6.5</p>
 
@@ -273,13 +273,13 @@ end;
 
 <p>Extended Stored Procedures are subject to the same security mechanisms as regular stored procedure. For example to give every right on the xp_delphiecho xp, run the following command in the master database:</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;grant exec on xp_delphiecho to public</p>
+<p>        grant exec on xp_delphiecho to public</p>
 
 <p>Calling extended stored procedures</p>
 
 <p>Every user can now call xp_delphiecho from every database by prefixing xp_delphiecho with 'master..'. For example to call xp_delphiecho from the pubs database you say:</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;exec master..xp_delphiecho @paramin, @paramout output</p>
+<p>        exec master..xp_delphiecho @paramin, @paramout output</p>
 
 <p>Unloading extended stored procedures</p>
 

@@ -84,7 +84,7 @@ end;
  
 GetRegistryIconHandle('c:\winnt\win.ini');
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

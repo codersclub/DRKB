@@ -4,7 +4,7 @@
 <div class="author">Автор: Rouse_</div>
 
 <p>Для преобразования TMemoryStream в array of Byte можно использовать следующий код:<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 
@@ -24,6 +24,6 @@ begin
 end;
 </pre>
 
-<p>&nbsp;</p>
+<p></p>
 
 

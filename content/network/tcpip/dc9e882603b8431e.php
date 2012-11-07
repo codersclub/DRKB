@@ -3,8 +3,8 @@
 
 
 <p>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Class\NetTrans\ (для 98-винды)</p>
-<p> &nbsp; Ищем параметр IPAddress</p>
-<p> &nbsp; Программно можно определить следующим образом:</p>
+<p>   Ищем параметр IPAddress</p>
+<p>   Программно можно определить следующим образом:</p>
 
 <pre>
 var

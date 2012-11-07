@@ -41,7 +41,7 @@ property OnDragDrop: TDragDropEvent;
 <p>который вызывается при отпускании левой кнопки мыши на компоненте-приемнике. Доступ к источнику и приемнику обеспечивают параметры Source и Sender соответственно. Координаты мыши возвращают параметры X и Y.</p>
 <p>При завершении переноса элемент управления &#8212; источник &#8212; получает соответствующее сообщение, которое обрабатывается методом</p>
 <p>type TEndDragEvent = procedure(Sender, Target: TObject;</p>
-<p>  &nbsp; X, Y: Integer) of object;</p>
+<p>    X, Y: Integer) of object;</p>
 <p>property OnEndDrag: TEndDragEvent;</p>
 <p>Источник и приемник определяются параметрами Sender и Target соответственно. Координаты мыши определяются параметрами X и Y.</p>
 <p>Для программной остановки переноса можно использовать метод EndDrag источника (при обычном завершении операции пользователем он не используется):</p>
@@ -114,4 +114,4 @@ end.
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

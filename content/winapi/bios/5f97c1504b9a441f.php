@@ -3,188 +3,188 @@
 
 
 <p>AWARD BIOS v2.50</p>
-<p> &nbsp;&nbsp; AWARD_SW</p>
-<p> &nbsp;&nbsp; j262</p>
-<p> &nbsp;&nbsp; TTPTHA</p>
-<p> &nbsp;&nbsp; 01322222</p>
-<p> &nbsp;&nbsp; KDD</p>
-<p> &nbsp;&nbsp; ZBAAACA</p>
-<p> &nbsp;&nbsp; aPAf</p>
-<p> &nbsp;&nbsp; lkwpeter</p>
-<p> &nbsp;&nbsp; t0ch88</p>
-<p> &nbsp;&nbsp; t0ch20x</p>
-<p> &nbsp;&nbsp; h6BB</p>
-<p> &nbsp;&nbsp; j09F</p>
-<p> &nbsp;&nbsp; TzqF</p>
+<p>    AWARD_SW</p>
+<p>    j262</p>
+<p>    TTPTHA</p>
+<p>    01322222</p>
+<p>    KDD</p>
+<p>    ZBAAACA</p>
+<p>    aPAf</p>
+<p>    lkwpeter</p>
+<p>    t0ch88</p>
+<p>    t0ch20x</p>
+<p>    h6BB</p>
+<p>    j09F</p>
+<p>    TzqF</p>
 <p>AWARD BIOS v2.51</p>
-<p> &nbsp;&nbsp; AWARD_WG</p>
-<p> &nbsp;&nbsp; j256</p>
-<p> &nbsp;&nbsp; BIOSTAR</p>
-<p> &nbsp;&nbsp; HLT</p>
-<p> &nbsp;&nbsp; ZAAADA</p>
-<p> &nbsp;&nbsp; Syxz</p>
-<p> &nbsp;&nbsp; ?award</p>
-<p> &nbsp;&nbsp; 256256</p>
-<p> &nbsp;&nbsp; alfarome</p>
-<p> &nbsp;&nbsp; SWITCHES_SW</p>
-<p> &nbsp;&nbsp; Sxyz</p>
-<p> &nbsp;&nbsp; SZYX</p>
-<p> &nbsp;&nbsp; t0ch20x</p>
+<p>    AWARD_WG</p>
+<p>    j256</p>
+<p>    BIOSTAR</p>
+<p>    HLT</p>
+<p>    ZAAADA</p>
+<p>    Syxz</p>
+<p>    ?award</p>
+<p>    256256</p>
+<p>    alfarome</p>
+<p>    SWITCHES_SW</p>
+<p>    Sxyz</p>
+<p>    SZYX</p>
+<p>    t0ch20x</p>
 <p>AWARD BIOS v2.51G</p>
-<p> &nbsp;&nbsp; g6PJ</p>
-<p> &nbsp;&nbsp; j322</p>
-<p> &nbsp;&nbsp; ZJAAADC</p>
-<p> &nbsp;&nbsp; Wodj</p>
-<p> &nbsp;&nbsp; bios*</p>
-<p> &nbsp;&nbsp; biosstar</p>
-<p> &nbsp;&nbsp; h6BB</p>
-<p> &nbsp;&nbsp; HELGA-S</p>
-<p> &nbsp;&nbsp; HEWITT</p>
-<p> &nbsp;&nbsp; RAND</p>
-<p> &nbsp;&nbsp; HLT</p>
-<p> &nbsp;&nbsp; t0ch88</p>
-<p> &nbsp;&nbsp; zjaaadc</p>
+<p>    g6PJ</p>
+<p>    j322</p>
+<p>    ZJAAADC</p>
+<p>    Wodj</p>
+<p>    bios*</p>
+<p>    biosstar</p>
+<p>    h6BB</p>
+<p>    HELGA-S</p>
+<p>    HEWITT</p>
+<p>    RAND</p>
+<p>    HLT</p>
+<p>    t0ch88</p>
+<p>    zjaaadc</p>
 <p>AWARD BIOS v2.51U</p>
-<p> &nbsp;&nbsp; 1EAAh</p>
-<p> &nbsp;&nbsp; condo</p>
-<p> &nbsp;&nbsp; biostar</p>
-<p> &nbsp;&nbsp; CONDO</p>
-<p> &nbsp;&nbsp; CONCAT</p>
-<p> &nbsp;&nbsp; djonet</p>
-<p> &nbsp;&nbsp; efmukl</p>
-<p> &nbsp;&nbsp; g6PJ</p>
-<p> &nbsp;&nbsp; j09F</p>
-<p> &nbsp;&nbsp; j64</p>
-<p> &nbsp;&nbsp; zbaaaca</p>
+<p>    1EAAh</p>
+<p>    condo</p>
+<p>    biostar</p>
+<p>    CONDO</p>
+<p>    CONCAT</p>
+<p>    djonet</p>
+<p>    efmukl</p>
+<p>    g6PJ</p>
+<p>    j09F</p>
+<p>    j64</p>
+<p>    zbaaaca</p>
 <p>AWARD BIOS v4.5x</p>
-<p> &nbsp;&nbsp; AWARD_SW</p>
-<p> &nbsp;&nbsp; AWARD_PW</p>
-<p> &nbsp;&nbsp; 589589</p>
-<p> &nbsp;&nbsp; PASSWORD</p>
-<p> &nbsp;&nbsp; SKY_FOX</p>
-<p> &nbsp;&nbsp; AWARD SW</p>
-<p> &nbsp;&nbsp; award.sw</p>
-<p> &nbsp;&nbsp; AWARD?SW</p>
-<p> &nbsp;&nbsp; award_?</p>
-<p> &nbsp;&nbsp; award_ps</p>
-<p> &nbsp;&nbsp; ZAAADA</p>
+<p>    AWARD_SW</p>
+<p>    AWARD_PW</p>
+<p>    589589</p>
+<p>    PASSWORD</p>
+<p>    SKY_FOX</p>
+<p>    AWARD SW</p>
+<p>    award.sw</p>
+<p>    AWARD?SW</p>
+<p>    award_?</p>
+<p>    award_ps</p>
+<p>    ZAAADA</p>
 <p>AMI BIOS</p>
-<p> &nbsp;&nbsp; AMI</p>
-<p> &nbsp;&nbsp; AMI_SW (не унивеpсальный но устанавливается пpи сбpосе CMOS/SETUP'a)</p>
-<p> &nbsp;&nbsp; SER</p>
-<p> &nbsp;&nbsp; Ctrl+Alt+Del+Ins (держать при загрузке, иногда просто INS) ;)</p>
-<p> &nbsp;&nbsp; A.M.I.</p>
-<p> &nbsp;&nbsp; aammii</p>
-<p> &nbsp;&nbsp; ami.kez</p>
-<p> &nbsp;&nbsp; ami°</p>
-<p> &nbsp;&nbsp; amiami</p>
-<p> &nbsp;&nbsp; AMI!SW</p>
-<p> &nbsp;&nbsp; AMI.KEY</p>
-<p> &nbsp;&nbsp; AMI?SW</p>
-<p> &nbsp;&nbsp; AMISETUP</p>
-<p> &nbsp;&nbsp; AMI~</p>
-<p> &nbsp;&nbsp; AMIPSWD</p>
-<p> &nbsp;&nbsp; amipswd</p>
-<p> &nbsp;&nbsp; helgaЯs</p>
-<p> &nbsp;&nbsp; bios310</p>
-<p> &nbsp;&nbsp; amidecod</p>
-<p> &nbsp;&nbsp; BIOSPASS</p>
-<p> &nbsp;&nbsp; CMOSPWD</p>
-<p> &nbsp;&nbsp; HEWITT RAND</p>
-<p> &nbsp;&nbsp; KILLCMOS</p>
+<p>    AMI</p>
+<p>    AMI_SW (не унивеpсальный но устанавливается пpи сбpосе CMOS/SETUP'a)</p>
+<p>    SER</p>
+<p>    Ctrl+Alt+Del+Ins (держать при загрузке, иногда просто INS) ;)</p>
+<p>    A.M.I.</p>
+<p>    aammii</p>
+<p>    ami.kez</p>
+<p>    ami°</p>
+<p>    amiami</p>
+<p>    AMI!SW</p>
+<p>    AMI.KEY</p>
+<p>    AMI?SW</p>
+<p>    AMISETUP</p>
+<p>    AMI~</p>
+<p>    AMIPSWD</p>
+<p>    amipswd</p>
+<p>    helgaЯs</p>
+<p>    bios310</p>
+<p>    amidecod</p>
+<p>    BIOSPASS</p>
+<p>    CMOSPWD</p>
+<p>    HEWITT RAND</p>
+<p>    KILLCMOS</p>
 <p>AMPTON BIOS</p>
-<p> &nbsp;&nbsp; Polrty</p>
+<p>    Polrty</p>
 <p>AST BIOS</p>
-<p> &nbsp;&nbsp; SnuFG5</p>
+<p>    SnuFG5</p>
 <p>BIOSTAR BIOS</p>
-<p> &nbsp;&nbsp; Biostar</p>
-<p> &nbsp;&nbsp; Q54arwms</p>
+<p>    Biostar</p>
+<p>    Q54arwms</p>
 <p>COMPAQ BIOS</p>
-<p> &nbsp;&nbsp; Compaq</p>
+<p>    Compaq</p>
 <p>CONCORD BIOS</p>
-<p> &nbsp;&nbsp; last</p>
+<p>    last</p>
 <p>CTX International BIOS</p>
-<p> &nbsp;&nbsp; CTX_123</p>
+<p>    CTX_123</p>
 <p>CyberMax BIOS</p>
-<p> &nbsp;&nbsp; Congress</p>
+<p>    Congress</p>
 <p>Daewoo BIOS</p>
-<p> &nbsp;&nbsp; Daewuu</p>
+<p>    Daewuu</p>
 <p>Daytek BIOS</p>
-<p> &nbsp;&nbsp; Daytec</p>
+<p>    Daytec</p>
 <p>DELL BIOS</p>
-<p> &nbsp;&nbsp; Dell</p>
+<p>    Dell</p>
 <p>Digital Equipment BIOS</p>
-<p> &nbsp;&nbsp; komprie</p>
+<p>    komprie</p>
 <p>Enox BIOS</p>
-<p> &nbsp;&nbsp; xo11nE</p>
+<p>    xo11nE</p>
 <p>Epox BIOS</p>
-<p> &nbsp;&nbsp; central</p>
+<p>    central</p>
 <p>Freetech BIOS</p>
-<p> &nbsp;&nbsp; Posterie</p>
+<p>    Posterie</p>
 <p>HP Vectra BIOS</p>
-<p> &nbsp;&nbsp; hewlpack</p>
+<p>    hewlpack</p>
 <p>IBM BIOS</p>
-<p> &nbsp;&nbsp; IBM</p>
-<p> &nbsp;&nbsp; MBIUO</p>
-<p> &nbsp;&nbsp; sertafu</p>
+<p>    IBM</p>
+<p>    MBIUO</p>
+<p>    sertafu</p>
 <p>Iwill BIOS</p>
-<p> &nbsp;&nbsp; iwill</p>
+<p>    iwill</p>
 <p>JetWay BIOS</p>
-<p> &nbsp;&nbsp; spoom1</p>
+<p>    spoom1</p>
 <p>Joss Technology BIOS</p>
-<p> &nbsp;&nbsp; 57gbz6</p>
-<p> &nbsp;&nbsp; technolgi</p>
+<p>    57gbz6</p>
+<p>    technolgi</p>
 <p>M Technology BIOS</p>
-<p> &nbsp;&nbsp; mMmM</p>
+<p>    mMmM</p>
 <p>MachSpeed BIOS</p>
-<p> &nbsp;&nbsp; sp99dd</p>
+<p>    sp99dd</p>
 <p>Magic-Pro BIOS</p>
-<p> &nbsp;&nbsp; prost</p>
+<p>    prost</p>
 <p>Megastar BIOS</p>
-<p> &nbsp;&nbsp; star</p>
+<p>    star</p>
 <p>Megastar BIOS</p>
-<p> &nbsp;&nbsp; sldkj754</p>
-<p> &nbsp;&nbsp; xyzall</p>
+<p>    sldkj754</p>
+<p>    xyzall</p>
 <p>Micronics BIOS</p>
-<p> &nbsp;&nbsp; dn_04rjc</p>
+<p>    dn_04rjc</p>
 <p>Nimble BIOS</p>
-<p> &nbsp;&nbsp; xdfk9874t3</p>
+<p>    xdfk9874t3</p>
 <p>Packard Bell BIOS</p>
-<p> &nbsp;&nbsp; bell9</p>
+<p>    bell9</p>
 <p>QDI BIOS</p>
-<p> &nbsp;&nbsp; QDI</p>
+<p>    QDI</p>
 <p>Quantex BIOS</p>
-<p> &nbsp;&nbsp; teX1</p>
-<p> &nbsp;&nbsp; xljlbj</p>
+<p>    teX1</p>
+<p>    xljlbj</p>
 <p>Research BIOS</p>
-<p> &nbsp;&nbsp; Col2ogro2</p>
+<p>    Col2ogro2</p>
 <p>Shuttle BIOS</p>
-<p> &nbsp;&nbsp; Col2ogro2</p>
+<p>    Col2ogro2</p>
 <p>Siemens Nixdorf BIOS</p>
-<p> &nbsp;&nbsp; SKY_FOX</p>
+<p>    SKY_FOX</p>
 <p>SpeedEasy BIOS</p>
-<p> &nbsp;&nbsp; lesarot1</p>
+<p>    lesarot1</p>
 <p>SuperMicro BIOS</p>
-<p> &nbsp;&nbsp; ksdjfg934t</p>
+<p>    ksdjfg934t</p>
 <p>Tinys BIOS</p>
-<p> &nbsp;&nbsp; tiny</p>
+<p>    tiny</p>
 <p>TMC BIOS</p>
-<p> &nbsp;&nbsp; BIGO</p>
+<p>    BIGO</p>
 <p>Toshiba BIOS</p>
-<p> &nbsp;&nbsp; Toshiba</p>
-<p> &nbsp;&nbsp; 24Banc81</p>
-<p> &nbsp;&nbsp; toshy99</p>
+<p>    Toshiba</p>
+<p>    24Banc81</p>
+<p>    toshy99</p>
 <p>Vextrec Technology BIOS</p>
-<p> &nbsp;&nbsp; Vextrex</p>
+<p>    Vextrex</p>
 <p>Vobis BIOS</p>
-<p> &nbsp;&nbsp; merlin</p>
+<p>    merlin</p>
 <p>WIMBIOSnbsp v2.10 BIOS</p>
-<p> &nbsp;&nbsp; Compleri</p>
+<p>    Compleri</p>
 <p>Zenith BIOS</p>
-<p> &nbsp;&nbsp; 3098z</p>
-<p> &nbsp;&nbsp; Zenith</p>
+<p>    3098z</p>
+<p>    Zenith</p>
 <p>ZEOS BIOS</p>
-<p> &nbsp;&nbsp; zeosx</p>
+<p>    zeosx</p>
 <p>[C] Faraon</p>
 <p>Источник: <a href="https://wasm.ru" target="_blank">https://wasm.ru</a></p>
 <div class="author">Автор: p0s0l</div>

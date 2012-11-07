@@ -21,14 +21,14 @@
 <p>var NewParam: TParameter;</p>
 <p>NewParam := ADODataSet.Parameters.AddParameter;</p>
 <p>NewParam.Name := 'ParamTwo';</p>
-<p>NewParam.DataType := ftlnteger;&nbsp;</p>
+<p>NewParam.DataType := ftlnteger;</p>
 <p>NewParam.Direction := pdlnput;</p>
 <p>NewParam.Value := 0;</p>
-<p>Метод CreateParameter создает новый параметр и определяет его свойства:&nbsp;</p>
+<p>Метод CreateParameter создает новый параметр и определяет его свойства:</p>
 <p> Name &#8212; имя параметра;</p>
 <p> DataType &#8212; тип данных параметра, соответствующий типу поля таблицы БД (тип TFieldType);</p>
 <p> Direction &#8212; тип параметра, в дополнение к стандартным типам dUnknown, pdlnput, pdOutput, pdlnputOutput,тип TParameterDirection имеет дополнительный тип pdReturnValue, определяющий любое возвращаемое значение;</p>
-<p> size &#8212; максимальный размер значения параметра;&nbsp;</p>
+<p> size &#8212; максимальный размер значения параметра;</p>
 <p> value &#8212; значение параметра.</p>
 <p>При работе с параметрами полезно вызывать их, используя имена, а не абсолютные индексы в списке. Для этого можно использовать метод</p>
 <p>function ParamByName(const Value: WideString): TParameter;</p>
@@ -47,7 +47,7 @@
 <p>property Size: Integer;</p>
 <p>который может быть изменен для строкового или символьного типа данных и им подобных.</p>
 <p>Само значение параметра содержится в свойстве</p>
-<p>property Value: OleVariant;&nbsp;</p>
+<p>property Value: OleVariant;</p>
 <p>А свойство</p>
 <p>type</p>
 <p>TParameterAttribute = (paSigned, paNullable, paLong);</p>

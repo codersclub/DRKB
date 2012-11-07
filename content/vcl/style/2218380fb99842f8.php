@@ -43,7 +43,7 @@ end;
 </pre>
 
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 uses
@@ -51,7 +51,7 @@ Themes;
 ...
 if ThemeServices.ThemesEnabled then // Тема использется
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: Alex</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 

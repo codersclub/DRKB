@@ -28,7 +28,7 @@ end;
 
 <p>Для этого необходимо послать сообщение EM_LINEFROMCHAR.</p>
 
-<p>LineNumber :=&nbsp;&nbsp; Memo1.Perform(EM_LINEFROMCHAR, -1, 0);</p>
+<p>LineNumber :=   Memo1.Perform(EM_LINEFROMCHAR, -1, 0);</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 <hr />

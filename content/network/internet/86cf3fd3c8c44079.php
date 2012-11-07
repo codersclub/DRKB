@@ -69,7 +69,7 @@
 <p>The flesh of an old fish is just as tender to eat as that of the very young.</p>
 <p>&amp;#010;&amp;#010;Range is from the Indo-Pacific to East Africa.&amp;#010;"/&gt;</p>
 <p>&lt;/ROWDATA&gt;</p>
-<p>&lt;/DATAPACKET&gt;&nbsp;</p>
+<p>&lt;/DATAPACKET&gt;</p>
 
 <p>Структура пакета данных XML</p>
 
@@ -86,7 +86,7 @@
 <p>&lt;ROWDATA&gt;</p>
 <p>...</p>
 <p>&lt;/ROWDATA&gt;</p>
-<p>&lt;/DATAPACKET&gt;&nbsp;</p>
+<p>&lt;/DATAPACKET&gt;</p>
 
 <p>Структура разностного пакета данных XML</p>
 
@@ -113,7 +113,7 @@
 <p>&lt;SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="xmldb.js"&gt;&lt;/SCRIPT&gt;</p>
 <p>&lt;SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="xmldisp.js"&gt;&lt;/SCRIPT&gt;</p>
 <p>&lt;SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="xmlshow.js"&gt;&lt;/SCRIPT&gt;</p>
-<p>&lt;SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="xmlerrdisp.js"&gt;&lt;/SCRIPT&gt;&nbsp;</p>
+<p>&lt;SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript" SRC="xmlerrdisp.js"&gt;&lt;/SCRIPT&gt;</p>
 
 <p class="note">Примечание:</p>
 

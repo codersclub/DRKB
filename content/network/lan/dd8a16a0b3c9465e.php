@@ -91,7 +91,7 @@ finalization
 end.
 </pre>
 &copy;Drkb::03286
-<p>&nbsp;</p>
+<p></p>
 <hr />
 <pre>
 function TNetForm.FillNetLevel(xxx: PNetResource; List:TListItems): Word;
@@ -143,7 +143,7 @@ end;
 Пример вызова: 
 FillNetLevel(nil,ListView1.Items);
 </pre>
- &nbsp; &nbsp; &nbsp; &nbsp;&copy;Drkb::03287</p>
+        &copy;Drkb::03287</p>
 <div class="author">Автор: Pegas</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />

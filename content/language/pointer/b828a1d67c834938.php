@@ -167,8 +167,8 @@ end.
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 unit MemMan;
@@ -225,8 +225,8 @@ end.
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>unit SnapForm;
  
@@ -561,4 +561,4 @@ end.
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

@@ -14,7 +14,7 @@
 <p>Перед открытием соединения необходимо задать его параметры. Для этого предназначено свойство</p>
 <p>property ConnectionString: WideString;</p>
 <p>которое подробно рассматривалось в разд. "Компонент TADOConnection". Добавим лишь, что набор параметров изменяется в зависимости от типа провайдера и может настраиваться как вручную, так и при помощи специального редактора параметров соединения, который вызывается двойным щелчком на компоненте TADOConnection, перенесенным на форму, или щелчком на кнопке в поле редактирования свойства ConnectionString в Инспекторе объектов. Здесь можно настроить соединение через свойство ConnectionString (радиокнопка Use Connection String) или загрузить параметры соединения из файла с расширением udl (радиокнопка Use Data Link File).</p>
-<p>Файл UDL&nbsp; представляет собой обычный текстовый файл, в котором указывается название параметра и через знак равенства его значение. Параметры разделяются точкой с запятой.</p>
+<p>Файл UDL  представляет собой обычный текстовый файл, в котором указывается название параметра и через знак равенства его значение. Параметры разделяются точкой с запятой.</p>
 <p>[oledb]</p>
 <p>Everything after this line is an OLE DB initstring</p>
 <p>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Program Files\Common Files\Borland Shared\Data\DBDEMOS.mdb</p>
@@ -25,7 +25,7 @@
 <p>Второй этап определяет режим аутентификации пользователя. Это либо система безопасности Windows, либо собственная система аутентификации сервера. Здесь же надо определить имя и пароль пользователя.</p>
 <p>Третий этап предназначен для выбора базы данных сервера.</p>
 <p>По окончании настройки источника данных вы можете проверить соединение, нажав кнопку Test Connection.</p>
-<p>Страница Advanced&nbsp; задает дополнительные параметры соединения. В зависимости от типа хранилища данных некоторые элементы этой страницы могут быть недоступны.</p>
+<p>Страница Advanced  задает дополнительные параметры соединения. В зависимости от типа хранилища данных некоторые элементы этой страницы могут быть недоступны.</p>
 <p>Список Impersonation level определяет возможности клиентов при подключении в соответствии с полномочиями их ролей. В списке могут быть выбраны следующие значения:</p>
 <p> Anonymous &#8212; роль клиента недоступна серверу;</p>
 <p> Identify &#8212; роль клиента опознается сервером, но доступ к системным объектам заблокирован;</p>
@@ -33,8 +33,8 @@
 <p> Delegate &#8212; процесс сервера может быть представлен защищенным контекстом клиента, при этом сервер может осуществлять другие подключения.</p>
 <p>Список Protection level позволяет задать уровень защиты данных. В списке могут быть выбраны следующие значения:</p>
 <p> None &#8212; подтверждение не требуется;</p>
-<p> Connect &#8212; подтверждение необходимо только при подключении;&nbsp;</p>
-<p>  Call &#8212; подтверждение источника данных при каждом запросе;&nbsp;</p>
+<p> Connect &#8212; подтверждение необходимо только при подключении;</p>
+<p>  Call &#8212; подтверждение источника данных при каждом запросе;</p>
 <p> Pkt &#8212; подтверждение получения от клиента всех данных;</p>
 <p> Pkt Integrity &#8212; подтверждение получения от клиента всех данных с соблюдением целостности;</p>
 <p> Pkt Privacy &#8212; подтверждение получения от клиента всех данных с соблюдением целостности и защита шифрованием.</p>
@@ -60,11 +60,11 @@
 <p>Метод open является перегружаемым при необходимости использования удаленного или локального соединения. Для удаленного соединения применяется вариант с параметрами UserID и Password.</p>
 <p>До и после открытия и закрытия соединения разработчик может использовать соответствующие стандартные методы-обработчики событий:</p>
 <p>property BeforeConnect: TNotifyEvent;</p>
-<p>property BeforeDisconnect: TNotifyEvent;&nbsp;</p>
-<p>property AfterConnect: TNotifyEvent;&nbsp;</p>
+<p>property BeforeDisconnect: TNotifyEvent;</p>
+<p>property AfterConnect: TNotifyEvent;</p>
 <p>property AfterDisconnect: TNotifyEvent;</p>
 <p>Кроме этого, компонент TADOConnection имеет дополнительные методы-обработчики. После получения подтверждения от провайдера о том, что соединение будет открыто, перед его реальным открытием вызывается метод</p>
-<p>TWillConnectEvent = procedure(Connection: TADOConnection; var Connectionstring, UserlD, Password: WideString; var ConnectOptions: TConnectOption;&nbsp;</p>
+<p>TWillConnectEvent = procedure(Connection: TADOConnection; var Connectionstring, UserlD, Password: WideString; var ConnectOptions: TConnectOption;</p>
 <p>var EventStatus: TEventStatus) of object;</p>
 <p>property OnWillConnect: TWillConnectEvent;</p>
 <p>Параметр Connection содержит указатель на вызвавший обработчик компонент.</p>
@@ -84,15 +84,15 @@
 <p>procedure TForml.ADOConnectionWillConnect(Connection: TADOConnection;</p>
 <p> var ConnectionString, UserlD, Password: WideString;</p>
 <p> var ConnectOptions: TConnectOption;</p>
-<p> var Eventstatus: TEventStatus);&nbsp;</p>
+<p> var Eventstatus: TEventStatus);</p>
 <p>begin</p>
-<p>  if Eventstatus = esOK then ConnectOptions := coConnectunspecified;&nbsp;</p>
+<p>  if Eventstatus = esOK then ConnectOptions := coConnectunspecified;</p>
 <p>end;</p>
 <p>Кстати, параметр синхронности/асинхронности можно также задать при помощи свойства</p>
 <p>ConnectOptions property ConnectOptions: TConnectOption;</p>
 <p>После открытия соединения для выполнения собственного кода можно использовать метод-обработчик</p>
 <p>TConnectErrorEvent = procedure(Connection: TADOConnection; Error: Error;</p>
-<p> var Eventstatus: TEventStatus) of object;&nbsp;</p>
+<p> var Eventstatus: TEventStatus) of object;</p>
 <p>property OnConnectComplete: TConnectErrorEvent;</p>
 <p>Здесь, если в процессе открытия соединения возникла ошибка, параметр Eventstatus будет равен esErrorsOccured, а параметр Error содержит объект ошибки ADO.</p>
 <p>Теперь перейдем к вспомогательным свойствам и методам компонента TADOConnection, обеспечивающим соединение.</p>
@@ -138,8 +138,8 @@
 <p>Например:</p>
 <p>for i := 0 to ADOConnection.DataSetCount &#8212; 1 do</p>
 <p>  begin</p>
-<p> &nbsp;&nbsp; if ADOConnection.DataSets[i].Active = True then  &nbsp;&nbsp;&nbsp;&nbsp; ADOConnection.DataSets[i].Close;</p>
-<p> &nbsp;&nbsp; ADOConnection.DataSets[i].CursorLocation := clUseClient;</p>
+<p>    if ADOConnection.DataSets[i].Active = True then       ADOConnection.DataSets[i].Close;</p>
+<p>    ADOConnection.DataSets[i].CursorLocation := clUseClient;</p>
 <p>  end;</p>
 <p>Помимо наборов данных компонент TADOConnection обеспечивает выполнение команд ADO. Команду ADO инкапсулирует специальный компонент TADOCommand, который рассматривается ниже. Все команды ADO, работающие с хранилищем данных через это соединение, доступны для управления через индексированное свойство</p>
 <p>property Commands[Index: Integer]: TADOCommand</p>
@@ -147,17 +147,17 @@
 <p>Общее число доступных команд возвращается свойством</p>
 <p>property CommandCount: Integer</p>
 <p>Например, сразу после открытия соединения можно выполнить все связанные команды ADO, реализовав таким образом нечто вроде скрипта:</p>
-<p>procedure TForml.ADOConnectionConnectComplete(Connection: TADOConnection;&nbsp;</p>
-<p>  const Error: Error; var EventStatus: TEventStatus);&nbsp;</p>
+<p>procedure TForml.ADOConnectionConnectComplete(Connection: TADOConnection;</p>
+<p>  const Error: Error; var EventStatus: TEventStatus);</p>
 <p>var i, ErrorCnt: Integer;</p>
 <p>begin</p>
 <p>  if EventStatus = esOK then</p>
-<p> &nbsp;&nbsp; for i := 0 to ADOConnection.CommandCount &#8212; 1 do</p>
-<p> &nbsp;&nbsp;&nbsp;  try</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ADOConnection.Commands[i].CommandText &lt;&gt; then  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADOConnection.Commands[i].Execute;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; except</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on E: Exception do Inc(ErrorCnt);</p>
-<p> &nbsp;&nbsp;   end;&nbsp;</p>
+<p>    for i := 0 to ADOConnection.CommandCount &#8212; 1 do</p>
+<p>      try</p>
+<p>        if ADOConnection.Commands[i].CommandText &lt;&gt; then                             ADOConnection.Commands[i].Execute;</p>
+<p>      except</p>
+<p>        on E: Exception do Inc(ErrorCnt);</p>
+<p>      end;</p>
 <p>end;</p>
 <p>Однако компонент TADOConnection может выполнять команды ADO самостоятельно, без помощи других компонентов. Для этого используется перегружаемый метод</p>
 <p>function Execute(const CommandText: WideString; ExecuteOptions: TExecuteOptions = []): _RecordSet; overload;</p>
@@ -176,12 +176,12 @@
 <p>Если источник данных принял команду для выполнения и сообщил об этом соединению, вызывается метод-обработчик</p>
 <p>TWillExecuteEvent = procedure(Connection: TADOConnection;</p>
 <p>  var CommandText: WideString; var CursorType: TCursorType; var LockType:</p>
-<p>  TADOLockType; var ExecuteOptions: TExecuteOptions;&nbsp; var EventStatus:</p>
+<p>  TADOLockType; var ExecuteOptions: TExecuteOptions;  var EventStatus:</p>
 <p>  TEventStatus; const Command: _Command;</p>
 <p>  const Recordset: _Recordset) of object;</p>
 <p>property OnWillExecute: TWillExecuteEvent;</p>
 <p>После выполнения команды вызывается метод-обработчик</p>
-<p>TExecuteCompleteEvent = procedure(Connection: TADOConnection; RecordsAffected: Integer; const Error: Error; var EventStatus: TEventStatus;&nbsp;</p>
+<p>TExecuteCompleteEvent = procedure(Connection: TADOConnection; RecordsAffected: Integer; const Error: Error; var EventStatus: TEventStatus;</p>
 <p>const Command: _Command; const Recordset: _Recordset) of object;</p>
 <p>property OnExecuteComplete: TExecuteCompleteEvent;</p>
 <p>Объект ошибок ADO</p>
@@ -190,16 +190,16 @@
 <p>Транзакции</p>
 <p>Компонент TADOconnection позволяет выполнять транзакции. Методы</p>
 <p>function BeginTrans: Integer;</p>
-<p>procedure CommitTrans;&nbsp;</p>
+<p>procedure CommitTrans;</p>
 <p>procedure RollbackTrans;</p>
 <p>обеспечивают начало, фиксацию и откат транзакции соответственно. Методы-обработчики</p>
 <p>TBeginTransCompleteEvent = procedure(Connection: TADOConnection;</p>
-<p>TransactionLevel: Integer;&nbsp;</p>
+<p>TransactionLevel: Integer;</p>
 <p>const Error: Error; var EventStatus: TEventStatus) of object;</p>
 <p>property OnBeginTransComplete: TBeginTransCompleteEvent; TConnectErrorEvent = procedure(Connection: TADOConnection; Error: Error; var EventStatus: TEventStatus) of object;</p>
 <p>property OnCornmitTransComplete: TConnectErrorEvent;</p>
 <p>вызываются после начала и фиксации транзакции. Свойство</p>
-<p>type TIsolationLevel = (ilUnspecified, ilChaos, ilReadUncommitted, ilBrowse, ilCursorStability, ilReadCorranitted, ilRepeatableRead, ilSerializable, illsolated);&nbsp;</p>
+<p>type TIsolationLevel = (ilUnspecified, ilChaos, ilReadUncommitted, ilBrowse, ilCursorStability, ilReadCorranitted, ilRepeatableRead, ilSerializable, illsolated);</p>
 <p>property IsolationLevel: TIsolationLevel;</p>
 <p>позволяет задать уровень изоляции транзакции:</p>
 <p>IlUnspecifed &#8212; уровень изоляции не задается;</p>

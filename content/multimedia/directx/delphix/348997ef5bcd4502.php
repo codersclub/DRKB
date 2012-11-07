@@ -7,36 +7,36 @@
 1. <img src="/pic/clip0028.png" width="30" height="30" border="0" alt="clip0028">DXDraw</p>
 <p>Поверхность компоненты DXDRAW служит фундаментом для отображения графики.</p>
 1.1 Наиболее частая конфигурация</p>
-<p>Align...................allClient &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Align...................allClient</p>
 <p>AutoSize................True</p>
 <p>Display</p>
-<p> &nbsp; FixedBitCount........True</p>
-<p> &nbsp; Fixedratio...........True &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p> &nbsp; Fixedsize............False</p>
+<p>   FixedBitCount........True</p>
+<p>   Fixedratio...........True</p>
+<p>   Fixedsize............False</p>
 <p>Options</p>
-<p> &nbsp; DoFullScreen.........True</p>
-<p> &nbsp; doFlip...............True</p>
-<p> &nbsp; Rest.................False</p>
+<p>   DoFullScreen.........True</p>
+<p>   doFlip...............True</p>
+<p>   Rest.................False</p>
 <p>Если одновременно значения DoFullScreen и DoFlip сделать равными True, то кнопки управления окном не появятся (GDI=off). Если Вы хотите использовать кнопки, меню и т.д. можно сделать их в виде спрайтов. Если DoFlip=False, то включен оконный режим. Использование DoFullscreen и DoFlip делает игру очень быстрой по сравнению с игрой в оконном режиме.DXDrawSurface имеет тип TDirectDrawSurface. Эта поверхность также называется ' вторичной поверхностью ' или закадровой поверхностью, потому что она невидимая. Поверхность становится видимой после запроса метода DXDraw.Flip , в тот момент вторичная поверхность становится первичной. DXDraw.Primary - первичная (видимая) поверхность.</p>
 <img src="/pic/clip0029.png" width="241" height="199" border="0" alt="clip0029"></p>
 
 1.2 Режимы экрана</p>
 <p>Текущая конфигурация видеорежима Windows не влияет на игровую конфигурацию. Все настройки осуществляются через DXDraw. Форма, на которой размещается DXDraw , должна иметь тип TDXForm. <br>
-<p>&nbsp;</p>
+<p></p>
 1.2.1 Оконный режим</p>
-<p>&nbsp;<br>
+<p> <br>
 <p>Для включения/выключения оконного/полноэкранного режимов служит опция [doFullScreen], посмотрите:</p>
 <pre>procedure TForm1.WindowMode;
 begin
- &nbsp; DXDraw1.Finalize;
- &nbsp; RestoreWindow;
- &nbsp; DXDraw1.Options := DXDraw1.Options - [doFullScreen];
- &nbsp; DXDraw1.Display.Width := 640;
- &nbsp; DXDraw1.Display.Height := 480;
- &nbsp; DXDraw1.Display.BitCount := 8;
- &nbsp; DXDraw1.Initialize;
+   DXDraw1.Finalize;
+   RestoreWindow;
+   DXDraw1.Options := DXDraw1.Options - [doFullScreen];
+   DXDraw1.Display.Width := 640;
+   DXDraw1.Display.Height := 480;
+   DXDraw1.Display.BitCount := 8;
+   DXDraw1.Initialize;
 end;
-&nbsp;
+ 
 DXDraw.Align := alClient;
 Form.ClientWidth := … // Установка ширины Формы/DXDraw
 Form.ClientHeight := … // Установка высоты Формы
@@ -46,44 +46,44 @@ Form.ClientHeight := … // Установка высоты Формы
 
 <pre>procedure TForm1.FullScreenMode;
 begin
- &nbsp; DXDraw1.Finalize;
- &nbsp; StoreWindow;
- &nbsp; DXDraw1.Options := DXDraw1.Options + [doFullScreen];
- &nbsp; DXDraw1.Display.Width := 640;
- &nbsp; DXDraw1.Display.Height := 480;
- &nbsp; DXDraw1.Display.BitCount := 8;
- &nbsp; DXDraw1.Initialize;
+   DXDraw1.Finalize;
+   StoreWindow;
+   DXDraw1.Options := DXDraw1.Options + [doFullScreen];
+   DXDraw1.Display.Width := 640;
+   DXDraw1.Display.Height := 480;
+   DXDraw1.Display.BitCount := 8;
+   DXDraw1.Initialize;
 End;
 // Set mode in non-Windows GUI Disable windows-controls-&lt; purely graphics screen (very fast)
 DXDraw.Options := DXDraw.Options + [doFlip];
 // Enable Windows controls
 DXDraw.Options := DXDraw.Options - [doFlip];
-&nbsp;
+ 
 Screen.Cursor := CrNone; // Спрятать курсор
 Form1.BorderStyle := bsSingle; // Спрятать бордюр формы
 </pre>
 
 2. <img src="/pic/clip0030.png" width="28" height="28" border="0" alt="clip0030">DXImageList</p>
 <p>Компонента для загрузки графических файлов. <br>
-<p>&nbsp;</p>
+<p></p>
 2.1 Загрузка изображений во время выполнения</p>
 <p>Нижеприведенная процедура загружает растровое изображение в DXImageList (BMP, DIB и т.д.). Картинка становится элементом DXImageList.</p>
 <pre>procedure LoadImage (Filename, NameImage : String; PatWidth, PatHeight : Integer; Transp : Boolean; TranspColor : TColor);
 begin
- &nbsp; DXImageList.Items.Add;
- &nbsp; with DXImageList.Items[DXImageList.Items.Count-1] do
- &nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; Picture.LoadFromFile (FileName);
- &nbsp;&nbsp;&nbsp;&nbsp; Name := NameImage;
- &nbsp;&nbsp;&nbsp;&nbsp; PatternWidth := PatWidth;
- &nbsp;&nbsp;&nbsp;&nbsp; PatternHeight := PatHeight;
- &nbsp;&nbsp;&nbsp;&nbsp; SkipHeight := 0;
- &nbsp;&nbsp;&nbsp;&nbsp; SkipWidth := 0;
- &nbsp;&nbsp;&nbsp;&nbsp; SystemMemory := False;
- &nbsp;&nbsp;&nbsp;&nbsp; Transparent := Transp;
- &nbsp;&nbsp;&nbsp;&nbsp; TransparentColor := TranspColor;
- &nbsp;&nbsp;&nbsp;&nbsp; Restore;
- &nbsp; end;
+   DXImageList.Items.Add;
+   with DXImageList.Items[DXImageList.Items.Count-1] do
+   begin
+      Picture.LoadFromFile (FileName);
+      Name := NameImage;
+      PatternWidth := PatWidth;
+      PatternHeight := PatHeight;
+      SkipHeight := 0;
+      SkipWidth := 0;
+      SystemMemory := False;
+      Transparent := Transp;
+      TransparentColor := TranspColor;
+      Restore;
+   end;
 end;
 </pre>
 <p>С помощью этого метода можно запросто загрузить около 200 BMP или DIB картинок одновременно. Большее количество требует большего объема памяти.</p>
@@ -105,19 +105,19 @@ DXDraw1.ColorTable[i] := Pal;
 <p>Конечно можно сделать функцию для этой цели, подобную данной ниже:</p>
 <pre>function ComposeColor(Dest,Src:TRGBQuad;Percent:Integer):TRGBQuad;
 begin
- &nbsp; with Result do
- &nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; rgbRed :=Src.rgbRed+((Dest.rgbRed-Src.rgbRed)*Percent div256);
- &nbsp;&nbsp;&nbsp;&nbsp; rgbGreen :=Src.rgbGreen+((Dest.rgbGreen-Src.rgbGreen)*Percent div256);
- &nbsp;&nbsp;&nbsp;&nbsp; rgbBlue :=Src.rgbBlue+((Dest.rgbBlue-Src.rgbBlue)*Percent div256);
- &nbsp;&nbsp;&nbsp;&nbsp; rgbReserved :=0;
- &nbsp; end;
+   with Result do
+   begin
+      rgbRed :=Src.rgbRed+((Dest.rgbRed-Src.rgbRed)*Percent div256);
+      rgbGreen :=Src.rgbGreen+((Dest.rgbGreen-Src.rgbGreen)*Percent div256);
+      rgbBlue :=Src.rgbBlue+((Dest.rgbBlue-Src.rgbBlue)*Percent div256);
+      rgbReserved :=0;
+   end;
 end;
 </pre>
 <p>Ниже видно как заполнить палитру цветами:</p>
 <pre>Var Col : Integer;
 for i:=0 to 255 do
- &nbsp; DXDraw1.ColorTable[i] := ComposeColor (RGBQuad(GetRValue(Col), GetGValue(Col), GetBValue(Col) ), DXDraw1.DefColorTable[i], p);
+   DXDraw1.ColorTable[i] := ComposeColor (RGBQuad(GetRValue(Col), GetGValue(Col), GetBValue(Col) ), DXDraw1.DefColorTable[i], p);
 DXDraw1.UpdatePalette;
 </pre>
 <p>Анимация палитры (изменение цвета) используется для придания мерцания, вспышек (и прочих эфектов).</p>
@@ -129,10 +129,10 @@ DXDraw1.UpdatePalette;
 3. <img src="/pic/clip0045.png" width="24" height="26" border="0" alt="clip0045">DXSpriteEngine</p>
 <p>SpriteEngine компонента, контролирующая все спрайты SpriteEngine - не 'чистый' DelphiX компонент, потому он не представляет собой часть DirectX, как другие DelphiX компоненты. Многие игроделатели, использующие DelphiX, создают собственный Движок (например игра &#8216;Joffa&#8217;: www.joffa.com/). <br>
 Ниже - системы координат, с объяснением, как они связаны в SpriteEngine. <br>
-<p>&nbsp;</p>
+<p></p>
 3.1 Система координат</p>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>
 <img src="/pic/clip0046.png" width="622" height="428" border="0" alt="clip0046"></p>
 <pre>Sprite.WorldX = Sprite.X + Sprite.Engine.X (sprite.x. связан с SpriteEngine)
 Sprite.WorldY = Sprite.Y + Sprite.Engine.Y (sprite.y. связан с SpriteEngine)
@@ -161,23 +161,23 @@ DXSpriteEngine.Y := -Y + (DXSpriteEngine.Height div 2) - (Height div 2);
 
 <pre>TBackground = class (TBackgroundsprite)
 public
- &nbsp; procedure DoMove (MoveCount : Integer); override;
+   procedure DoMove (MoveCount : Integer); override;
 end;
-&nbsp;
+ 
 SBackground := TBackground.Create (DXSpriteEngine1.Engine);
 with SBackground do
 begin
- &nbsp; image := DXImageList1.Items.Find('image1');
- &nbsp; image.Transparent := false;
- &nbsp; SetMapSize(1,1);
- &nbsp; Z := -10;
- &nbsp; Tile := false;
+   image := DXImageList1.Items.Find('image1');
+   image.Transparent := false;
+   SetMapSize(1,1);
+   Z := -10;
+   Tile := false;
 end;
 var SBackground : TBackground;
 </pre>
 
 3.3.2 Движущийся фон</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p></p>
 <pre>
 TBackground = class (TBackgroundsprite)
 public
@@ -191,17 +191,17 @@ end;
 </pre>
 3.3.3 Тайловый фон (фон собран из тайлов)</p>
 <pre>Tile := True; { Фон полностью заполнен тайлами 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (При прокрутке, тайлы будут повторяться). 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Значение SetMapSize будет игнорироваться; 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; количество тайлов зависит от размера области 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; экрана (завершенный фон). SetmapSize должен быть вызван! 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; иначе работать не будет .. 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; попробуйте например: SetMapSize (1,1) }
-&nbsp;
+              (При прокрутке, тайлы будут повторяться). 
+              Значение SetMapSize будет игнорироваться; 
+              количество тайлов зависит от размера области 
+              экрана (завершенный фон). SetmapSize должен быть вызван! 
+              иначе работать не будет .. 
+              попробуйте например: SetMapSize (1,1) }
+ 
 Tile := False; { Количество тайлов по высоте и ширине is determined by 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘SetmapSize (w,h) SetMapsize (20, 10) &lt;-&gt; mapwidth :=20; mapheight :=10; } 
+              ‘SetmapSize (w,h) SetMapsize (20, 10) &lt;-&gt; mapwidth :=20; mapheight :=10; } 
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Если фоновая картинка не закрывает весь экран, она будет размножена. Каждый кусочек называется &#171;Тайл&#187;. В случае, если изображение должно представлять собой набор из Тайлов, параметры PatternWidth и PatternHeight должны быть меньшие чем область экрана. Эти значения не должны быть слишком большие (например 70x50). Если значение тайлов очень велико, то ничего видно не будет!</p>
 <img src="/pic/clip0047.png" width="64" height="66" border="0" alt="clip0047">тайл1 <img src="/pic/clip0048.png" width="67" height="67" border="0" alt="clip0048">тайл2</p>
 <img src="/pic/clip0049.png" width="200" height="150" border="0" alt="clip0049"><br>
@@ -231,18 +231,18 @@ Chips[j,i] := -1; // тайл [j,i] будет без картинки
 SBackground := TBackground.Create (DXSpriteEngine1.Engine);
 with SBackground do
 begin
- &nbsp; image := DXImageList1.Items.Find('backgr');
- &nbsp; image.Transparent := false;
- &nbsp; SetMapSize(5,5);
- &nbsp; Collisioned := True; //Не забудьте, иначе столкновения учитываться не будут!
- &nbsp; Z := -10;
- &nbsp; for i := 0 to MapHeight-1 do
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for j := 0 to MapWidth-1 do
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chips[j,i] := random(2); // Выбирается случайный Тайл
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CollisionMap [j,i] := false; // Все Collisions отключены
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;
- &nbsp; Tile := false;
+   image := DXImageList1.Items.Find('backgr');
+   image.Transparent := false;
+   SetMapSize(5,5);
+   Collisioned := True; //Не забудьте, иначе столкновения учитываться не будут!
+   Z := -10;
+   for i := 0 to MapHeight-1 do
+       for j := 0 to MapWidth-1 do
+       begin
+          Chips[j,i] := random(2); // Выбирается случайный Тайл
+          CollisionMap [j,i] := false; // Все Collisions отключены
+       end;
+   Tile := false;
 end;
 SBackground.CollisionMap [3,3] := true; // Тайл [3,3] "чувствует" столкновения
 </pre>
@@ -251,8 +251,8 @@ SBackground.CollisionMap [3,3] := true; // Тайл [3,3] "чувствует" �
 <p>Спрайт столкнулся с Тайлом фона Chip [3,3].</p>
 
 3.4 Изометрический тайловый движок</p>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>
 <img src="/pic/clip0051.png" width="181" height="123" border="0" alt="clip0051"><br>
 <p>NatureBackgroundSprite Z:=-10 (3 Тайла в рисунке)</p>
 <img src="/pic/clip0052.png" width="100" height="100" border="0" alt="clip0052"><br>
@@ -264,11 +264,11 @@ SBackground.CollisionMap [3,3] := true; // Тайл [3,3] "чувствует" �
 <img src="/pic/clip0054.png" width="187" height="78" border="0" alt="clip0054"></p>
 <img src="/pic/clip0055.png" width="471" height="216" border="0" alt="clip0055"></p>
 <p>FPS Количество кадров в секунду.</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>AnimPos &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  текущий кадр анимации</p>
-<p>AnimStart &nbsp; &nbsp; &nbsp; &nbsp;  стартовый кадр</p>
-<p>AnimCount &nbsp; &nbsp; &nbsp; &nbsp;  количество кадров анимации (берется из PatternCount)</p>
-<p>AnimLooped&nbsp; для повтора анимации (по кругу)</p>
+<p></p>
+<p>AnimPos                  текущий кадр анимации</p>
+<p>AnimStart          стартовый кадр</p>
+<p>AnimCount          количество кадров анимации (берется из PatternCount)</p>
+<p>AnimLooped  для повтора анимации (по кругу)</p>
 <p>AnimSpeed = (DXTimer.Interval / 1000) * FPS (напр.: Interval=1 и FPS=2 а 2/1000)</p>
 <p>Для анимации достаточно указать AnimStart. AnimPos автоматически изменяется во время анимации.</p>
 3.6 Столкновение спрайтов &amp; PixelCheck</p>
@@ -287,16 +287,16 @@ procedure TDummySprite.DoCollision (Sprite: TSprite; var Done: Boolean);<br>
 <p>Фактически, таймер управляет всей игрой; все действия игры происходят в одной большой петле. Тело этой петли может быть включено в 'OnTimer' событие Таймера. DXTimer опрашивается каждую миллисекунду. Хотя это не означает что каждую миллисекунду что-что случается. Определяется это в параметре 'Interval' - число миллисекунд между каждым действием. Предположим, что это значение - 100, тогда каждую 0.1 секунды событие 'OnTimer' будет выполнено (главная петля игры).</p>
 <pre>procedure TForm1.DXTimer1Timer(Sender: TObject; LagCount: Integer);
 begin
- &nbsp; if not DXDraw1.CanDraw then Exit;
- &nbsp; DXDraw1.Surface.Fill (0);
- &nbsp; DXSpriteEngine1.Move (1);
- &nbsp; DXSpriteEngine1.Draw;
- &nbsp; DXDraw1.Flip;
+   if not DXDraw1.CanDraw then Exit;
+   DXDraw1.Surface.Fill (0);
+   DXSpriteEngine1.Move (1);
+   DXSpriteEngine1.Draw;
+   DXDraw1.Flip;
 end;
 </pre>
 <p>Interval Время в миллисекундах между выполнением двух последовательных OnTimer событий.<br>
 Framerate (=FPS) Число OnTimer событий исполняющихся каждую секунду (частота). Interval = 1000 / FrameRate <br>
-<p>Внимание: Когда используется очень маленький интервал (меньше чем 10 миллисекунд.) отношение между Interval и FrameRate - не будет правильным, так как у компьютера есть максимальный FrameRate (например 82 FPS), тоже самое и с максимальным интервалом. Какой интервал может быть, полностью зависит от компьютера. Обычно, интервал между 0 и 1 выбирается так, чтобы получился максимальный FrameRate. FrameRate должен считываться непосредственно, потому что он не может быть рассчитан через Interval. Минимальный FrameRate для нормальной мультипликации - около 25, но чем больше, тем лучше. 60 - хороший FrameRate (DXTimer.Interval = 1000 / 60). Поскольку FrameRate &#8211; значение только для чтения, то интервал должен задаваться явно, чтобы приобрести некоторую частоту.</p>
+<p>Внимание: Когда используется очень маленький интервал (меньше чем 10 миллисекунд.) отношение между Interval и FrameRate - не будет правильным, так как у компьютера есть максимальный FrameRate (например 82 FPS), тоже самое и с максимальным интервалом. Какой интервал может быть, полностью зависит от компьютера. Обычно, интервал между 0 и 1 выбирается так, чтобы получился максимальный FrameRate. FrameRate должен считываться непосредственно, потому что он не может быть рассчитан через Interval. Минимальный FrameRate для нормальной мультипликации - около 25, но чем больше, тем лучше. 60 - хороший FrameRate (DXTimer.Interval = 1000 / 60). Поскольку FrameRate - значение только для чтения, то интервал должен задаваться явно, чтобы приобрести некоторую частоту.</p>
 <pre>DXTimer1.Interval := 1000 div 60; // 60 раз в секунду вызываем метод OnTimer
 LagCount is the (?). frequence +1 // частота = кол-во исполнений 'OnTimer'
 </pre>
@@ -417,5 +417,5 @@ end;
 <p>For making menu-items you can make a different picture (sprite) for each menu-item. To show if the menu-item is on or off, you&#8217;s just show a different picture (when you move your mouse over the Option).</p>
 <pre>procedure TForm1.DXDrawMouseMove(Sender: TObject; Shift: TShiftState; X,Y: Integer);
 </pre>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p></p>
 

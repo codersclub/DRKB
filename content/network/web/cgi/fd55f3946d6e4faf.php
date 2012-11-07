@@ -5,22 +5,22 @@
 
 <p>Если Вы программируете в Delphi и, хотели бы, чтобы Ваш любимый компилятор поучавствовал в создании Вашей веб-странички, то можно начать с маленькой, но довольно важной части веб-проекта - счётчика. Обычно, счётчик выглядит как кнопка на странице. В данном случае это JPEG картинка, генерируемая на лету.</p>
 <p>Те, кто желает сразу приступить к компиляции, могут скачать исходник и, в случае возникновения каких либо вопросов, вернуться к данной статье.</p>
-<p>&nbsp;</p>
+<p></p>
 <p>Вызывается счётчик тэгом IMG примерно так:</p>
 &lt;img src="http://ww5.borland.com/scripts/CounterCGI.exe?FileName=Article"&gt;</p>
 <p>CGI скрипт так же может получать определённый набор параметров:</p>
-<p> &nbsp;&nbsp;&nbsp; Txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.g. "You are visitor %d today, and %d ever."</p>
-<p> &nbsp;&nbsp;&nbsp; FontName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.g. "Courier"</p>
-<p> &nbsp;&nbsp;&nbsp; FontColor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.g. "clGreen"&nbsp; or "$404040"</p>
-<p> &nbsp;&nbsp;&nbsp; BackgroundColor&nbsp; e.g. "clYellow" or "$808080"</p>
+<p>     Txt              e.g. "You are visitor %d today, and %d ever."</p>
+<p>     FontName         e.g. "Courier"</p>
+<p>     FontColor        e.g. "clGreen"  or "$404040"</p>
+<p>     BackgroundColor  e.g. "clYellow" or "$808080"</p>
 <p>А вот так выглядит вызов скрипта с несколькими параметрами:</p>
 http://ww5.borland.com/scripts/CounterCGI.exe?FileName=Article&amp;BackgroundColor=$808080&amp;FontColor=$404040&amp;FontName=Courier</p>
 <p>Итак, давайте разбираться с кодом.</p>
 <p>Начать создавать новое CGI приложение следует с выбора File | New | Web Server Application | CGI stand-alone executable. После этого Вы получите чистый Web модуль. Добавьте новый TWebActionItem в подсвеченном свойстве действий (Actions) в TWebModule, нажав на Add Item. Затем двойным щелчком на событие OnAction создайте обработчик действия.</p>
 <p>Изображение JPEG, получается как снимок изображения с TPanel, с TMemo внитри него. Таким способом легче придать 3D вид счётчику. Для начала нам необходимо добавить следующую строку в раздел implementation:</p>
-<p> &nbsp;&nbsp;&nbsp; implementation</p>
-<p> &nbsp;&nbsp;&nbsp; uses</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExtCtrls, StdCtrls, Controls, Forms, Graphics, JPEG;</p>
+<p>     implementation</p>
+<p>     uses</p>
+<p>       ExtCtrls, StdCtrls, Controls, Forms, Graphics, JPEG;</p>
 <p>Теперь, мы определим некоторые основные процедуры, которые будут использоваться в коде. GetPaths будет обеспечивать нас двумя жизненно важными путями. Первый путь будет указывать где хранится сам скрипт по отношению к корневой директории web сервера (т.е. относительный путь). Скорее всего это будет "scripts" или "cgi-bin" в зависимости от того, куда Вы его положите. Второй - это локальный путь в Windows. Он может выглядеть как "C:\InetPub". Для нас важны оба пути, чтобы обеспечить переносимость CGI скрипта из директории в директорию и с одного сервера на другой.</p>
 <pre>     procedure GetPaths(Request: TWebRequest; var ScriptPath, LocalPath : String);
      var
@@ -50,8 +50,8 @@ http://ww5.borland.com/scripts/CounterCGI.exe?FileName=Article&amp;BackgroundCol
 </pre>
 
 <p>Вся суть CGI скрипта заключается в событие OnAction. Давайте рассмотрим его по шагам.</p>
-<p> &nbsp;&nbsp;&nbsp; procedure TWebModule1.WebModule1WebActionItem1Action(Sender: TObject;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Request: TWebRequest; Response: TWebResponse; var Handled: Boolean);</p>
+<p>     procedure TWebModule1.WebModule1WebActionItem1Action(Sender: TObject;</p>
+<p>       Request: TWebRequest; Response: TWebResponse; var Handled: Boolean);</p>
 <p>Сперва объявим некоторые локальные переменные.</p>
 <pre>     var
        ScriptPath,

@@ -48,7 +48,7 @@ type
 <p>Заходим в DXImageList и переименовываем спрайт Boss на Plu . <br>
 <p>А вот картинка:</p>
 <img src="/pic/clip0120.png" width="43" height="43" border="0" alt="clip0120"></p>
-<p>&nbsp;<br>
+<p> <br>
 <p>В Var перед implementation обозначаем два наших класса:</p>
 <pre>
 var
@@ -171,25 +171,25 @@ end;
   Data: Pointer; DataSize: Integer);
 begin
   if TDXActionMessage( Data^ ).actioncode AND DXKEY_LEFT = DXKEY_LEFT then
- &nbsp;&nbsp; plu.X:=plu.X -5; // получаем сообщение влево, двигаем удалённого
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //playerа в лево
+    plu.X:=plu.X -5; // получаем сообщение влево, двигаем удалённого
+                     //playerа в лево
   if TDXActionMessage( Data^ ).actioncode AND DXKEY_RIGHT = DXKEY_RIGHT then
- &nbsp;&nbsp; plu.X:=plu.X +5; // получаем сообщение вправо, двигаем удалённого
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //playerа в право
+    plu.X:=plu.X +5; // получаем сообщение вправо, двигаем удалённого
+                     //playerа в право
   if TDXActionMessage( Data^ ).actioncode AND DXKEY_SHOOT = DXKEY_SHOOT then
-  begin &nbsp;&nbsp; // получаем сообщение - удалённый игрок выстрелил,
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // создаём патрон на месте PLU
- &nbsp;&nbsp; with TPlayerFa.Create(dxspriteengine1.Engine) do
- &nbsp;&nbsp; begin
- &nbsp;&nbsp;&nbsp;&nbsp; PixelCheck := True;
- &nbsp;&nbsp;&nbsp;&nbsp; Image := form1.dxImageList1.Items.Find('Pula');
- &nbsp;&nbsp;&nbsp;&nbsp; X := plu.X+plu.Width-70;
- &nbsp;&nbsp;&nbsp;&nbsp; Y := plu.Y+plu.Height+10;
- &nbsp;&nbsp;&nbsp;&nbsp; Width := Image.Width;
- &nbsp;&nbsp;&nbsp;&nbsp; Height := Image.Height;
- &nbsp;&nbsp;&nbsp;&nbsp; stril:=4;
- &nbsp;&nbsp;&nbsp;&nbsp; Collision;
- &nbsp;&nbsp; end;
+  begin    // получаем сообщение - удалённый игрок выстрелил,
+          // создаём патрон на месте PLU
+    with TPlayerFa.Create(dxspriteengine1.Engine) do
+    begin
+      PixelCheck := True;
+      Image := form1.dxImageList1.Items.Find('Pula');
+      X := plu.X+plu.Width-70;
+      Y := plu.Y+plu.Height+10;
+      Width := Image.Width;
+      Height := Image.Height;
+      stril:=4;
+      Collision;
+    end;
   end;
 end;
 </pre>

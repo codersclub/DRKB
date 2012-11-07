@@ -5,7 +5,8 @@
 
 <p>Смотрите книгу "Developing Custom Delphi Components" от Рэя Конопки.</p>
 <p>Здесь немного исправленный пример из этой книги:</p>
-<pre>
+
+<pre class="delphi">
 function TMyClass.CreateCalcField(const AFieldName: string;
   AFieldClass: TFieldClass; ASize: Word): TField;
 begin
@@ -35,5 +36,6 @@ begin
   end;
 end;
 </pre>
-<p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
+
+<p>Взято с <a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>

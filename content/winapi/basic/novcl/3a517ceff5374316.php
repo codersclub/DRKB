@@ -4,15 +4,15 @@
 
 <p>Перехват нажатия на системные кнопки формы (закрытие , минимизация окна и т.д.)</p>
 
-<p> &nbsp; Сообщение WM_SYSCOMMAND приходит перед выполнением соответствующей команды,</p>
-<p> &nbsp;&nbsp; что дает возможность переопределить код.</p>
-<p> &nbsp; Описание :</p>
-<p> &nbsp; WM_SYSCOMMAND</p>
-<p> &nbsp; uCmdType = wParam;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // type of system command requested</p>
-<p> &nbsp; xPos = LOWORD(lParam);&nbsp;&nbsp;&nbsp; // horizontal postion, in screen coordinates</p>
-<p> &nbsp; yPos = HIWORD(lParam);&nbsp;&nbsp;&nbsp; // vertical postion, in screen coordinates</p>
+<p>   Сообщение WM_SYSCOMMAND приходит перед выполнением соответствующей команды,</p>
+<p>    что дает возможность переопределить код.</p>
+<p>   Описание :</p>
+<p>   WM_SYSCOMMAND</p>
+<p>   uCmdType = wParam;        // type of system command requested</p>
+<p>   xPos = LOWORD(lParam);    // horizontal postion, in screen coordinates</p>
+<p>   yPos = HIWORD(lParam);    // vertical postion, in screen coordinates</p>
 
-<p> &nbsp; Например, перехват события минимизации окна приложения:</p>
+<p>   Например, перехват события минимизации окна приложения:</p>
 <pre>
    Type TMain = class(TForm)
      ....

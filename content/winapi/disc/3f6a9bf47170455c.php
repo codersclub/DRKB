@@ -16,9 +16,9 @@
 <p>Если Вы хотите получить другие параметры диска/других дисков, то смотрите пример IdeInfo2 с моего сайта.</p>
 <p>На Windows 9x требует наличия драйвера smartvsd.vxd (должен быть в стандартной поставке), просто скопируйте его в \windows\system\iosubsys и перезагрузите компьютер.</p>
 <p>Зависимости: Windows, SysUtils</p>
-<div class="author">Автор:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alex Konshin, akonshin@earthlink.net, Boston, USA</div>
-<p>Copyright:&nbsp;&nbsp; http://home.earthlink.net/~akonshin/index.htm</p>
-<p>Дата:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30 декабря 2002 г.</p>
+<div class="author">Автор:       Alex Konshin, akonshin@earthlink.net, Boston, USA</div>
+<p>Copyright:   http://home.earthlink.net/~akonshin/index.htm</p>
+<p>Дата:        30 декабря 2002 г.</p>
 <pre>
  
 function GetIdeDiskSerialNumber : String;
@@ -213,5 +213,5 @@ begin
   else WriteLn('Disk serial number: ''', s,'''');
 end. 
 </pre>
-<div class="author">Автор:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alex Konshin, akonshin@earthlink.net, Boston, USA</div>
+<div class="author">Автор:       Alex Konshin, akonshin@earthlink.net, Boston, USA</div>
 

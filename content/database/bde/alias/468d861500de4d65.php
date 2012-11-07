@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 function GetAliasDir(alias: PChar): PChar;
 var
   s: TStringList;
@@ -40,26 +40,35 @@ end;
 </pre>
 
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>
-<hr />Если ссылка на таблицу получена через псевдоним, получить физический путь к ней не так просто. Для получения этого пути необходимо использовать функцию BDE DbiGetDatabaseDesc. Данной функции в качестве параметров передаются имя псевдонима и указатель на структуру DBDesc. Структура DBDesc будет заполнена информацией, относящейся к этому псевдониму. Определение структуры:</p>
 
+<hr />
 
-<p>pDBDesc = ^DBDesc;</p>
-<p>DBDesc = packed record &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { Описание данной базы данных }</p>
-<p>szName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : DBINAME;&nbsp;&nbsp;&nbsp; { Логическое имя (или псевдоним) }</p>
-<p>szText&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : DBINAME;&nbsp;&nbsp;&nbsp; { Описательный текст }</p>
-<p>szPhyName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : DBIPATH;&nbsp;&nbsp;&nbsp; { Физическое имя/путь }</p>
-<p>szDbType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : DBINAME;&nbsp;&nbsp;&nbsp; { Тип базы данных }</p>
-<p>end;</p>
+Если ссылка на таблицу получена через псевдоним, получить физический путь к ней не так просто.
+Для получения этого пути необходимо использовать функцию BDE DbiGetDatabaseDesc.
+Данной функции в качестве параметров передаются имя псевдонима и указатель на структуру DBDesc.
+Структура DBDesc будет заполнена информацией, относящейся к этому псевдониму.
+Определение структуры:</p>
+
+<pre class="delphi">
+pDBDesc = ^DBDesc;
+DBDesc = packed record        { Описание данной базы данных }
+  szName          : DBINAME;  { Логическое имя (или псевдоним) }
+  szText          : DBINAME;  { Описательный текст }
+  szPhyName       : DBIPATH;  { Физическое имя/путь }
+  szDbType        : DBINAME;  { Тип базы данных }
+end;
+</pre>
 
 <p>Физическое имя/путь будет содержаться в поле szPhyName структуры DBDesc.</p>
 
 <p>Возможные значения, возвращаемые функцией DBIGetDatbaseDesc:</p>
 
-<p>DBIERR_NONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Описание базы данных для pszName было успешно извлечено.</p>
-<p>DBIERR_OBJNOTFOUND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; База данных, указанная в pszName, не была обнаружена.</p>
+<p>DBIERR_NONE - Описание базы данных для pszName было успешно извлечено.</p>
+<p>DBIERR_OBJNOTFOUND - База данных, указанная в pszName, не была обнаружена.</p>
+
 <p>Приведенный ниже пример кода показывает как можно получить физический путь для компонента TTable, использующего псевдоним DBDemos:</p>
 
-<pre>
+<pre class="delphi">
 var
   vDBDesc: DBDesc;
   DirTable: String;
@@ -72,4 +81,5 @@ end;
 
 
 <div class="author">Автор: Xavier Pacheco</div>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

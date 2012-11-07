@@ -1,8 +1,9 @@
 <h1>Как узнать перечень таблиц базы и количество записей в них?</h1>
+
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 var
   SL: TStrings;
@@ -26,10 +27,12 @@ begin
   end;
 end;
 </pre>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
 <p>Комментарий Vit: открытие больших таблиц, особенно на удалённых серверах баз данных может быть исключительно длительным процессом. ADO оптимизированно для работы через запросы, поэтому количество записей можно значительно быстрее узнать составляя query и выполняя её:</p>
-<pre>
+
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 
 var

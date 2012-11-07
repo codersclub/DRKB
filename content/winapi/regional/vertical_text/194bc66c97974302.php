@@ -170,7 +170,7 @@ begin
 end;
 </pre>
 &copy;Drkb::01947
-<p>&nbsp;</p>
+<p></p>
 <hr />
 <pre>
 function FontToStr(font: TFont): string;

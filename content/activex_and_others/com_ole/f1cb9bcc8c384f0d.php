@@ -46,7 +46,7 @@
 
 <p>Итак, вот он:</p>
 
-<pre>
+<pre class="delphi">
 TAggregatedObject = class
 private
   FController: Pointer;
@@ -83,7 +83,7 @@ end;
 
 <p>Однако, вернёмся к нашим баранам. Просматривая, в некотором унынии, предков нашего обожаемого TAutoObject была обнаружена следующая забавная конструкция:</p>
 
-<pre>
+<pre class="delphi">
 TComObject = class(TObject, IUnknown, ISupportErrorInfo)
   ..
   protected

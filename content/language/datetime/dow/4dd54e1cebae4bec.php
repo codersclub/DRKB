@@ -58,7 +58,7 @@ end;
 </pre>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-&nbsp;</p>
+</p>
 <p>Получить номер недели по дате</p>
 <pre>
 var
@@ -108,5 +108,5 @@ var
  end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-&nbsp;</p>
+</p>
 

@@ -270,26 +270,26 @@ END START
 
 
 <p>Hex: Asm: Means</p>
-<p>75 &nbsp; &nbsp; &nbsp; &nbsp;or 0F85 jne jump if not equal</p>
-<p>74 &nbsp; &nbsp; &nbsp; &nbsp;or 0F84 je jump if equal</p>
-<p>EB &nbsp; &nbsp; &nbsp; &nbsp;jmp  &nbsp; &nbsp; &nbsp; &nbsp;jump directly to</p>
-<p>90  &nbsp; &nbsp; &nbsp; &nbsp;nop  &nbsp; &nbsp; &nbsp; &nbsp;no operation</p>
-<p>77  &nbsp; &nbsp; &nbsp; &nbsp;or 0F87 ja jump if above</p>
-<p>0F86  &nbsp; &nbsp; &nbsp; &nbsp;jna  &nbsp; &nbsp; &nbsp; &nbsp;jump if not above</p>
-<p>0F83  &nbsp; &nbsp; &nbsp; &nbsp;jae  &nbsp; &nbsp; &nbsp; &nbsp;jump if above or equal</p>
-<p>0F82  &nbsp; &nbsp; &nbsp; &nbsp;jnae  &nbsp; &nbsp; &nbsp; &nbsp;jump if not above or equal</p>
-<p>0F82  &nbsp; &nbsp; &nbsp; &nbsp;jb  &nbsp; &nbsp; &nbsp; &nbsp;jump if below</p>
-<p>0F83  &nbsp; &nbsp; &nbsp; &nbsp;jnb  &nbsp; &nbsp; &nbsp; &nbsp;jump if not below</p>
-<p>0F86  &nbsp; &nbsp; &nbsp; &nbsp;jbe  &nbsp; &nbsp; &nbsp; &nbsp;jump if below or equal</p>
-<p>0F87  &nbsp; &nbsp; &nbsp; &nbsp;jnbe  &nbsp; &nbsp; &nbsp; &nbsp;jump if not below or equal</p>
-<p>0F8F  &nbsp; &nbsp; &nbsp; &nbsp;jg  &nbsp; &nbsp; &nbsp; &nbsp;jump if greater</p>
-<p>0F8E  &nbsp; &nbsp; &nbsp; &nbsp;jng  &nbsp; &nbsp; &nbsp; &nbsp;jump if not greater</p>
-<p>0F8D  &nbsp; &nbsp; &nbsp; &nbsp;jge  &nbsp; &nbsp; &nbsp; &nbsp;jump if greater or equal</p>
-<p>0F8C  &nbsp; &nbsp; &nbsp; &nbsp;jnge  &nbsp; &nbsp; &nbsp; &nbsp;jump if not greater or equal</p>
-<p>0F8C  &nbsp; &nbsp; &nbsp; &nbsp;jl  &nbsp; &nbsp; &nbsp; &nbsp;jump if less</p>
-<p>0F8D  &nbsp; &nbsp; &nbsp; &nbsp;jnl  &nbsp; &nbsp; &nbsp; &nbsp;jump if not less</p>
-<p>0F8E  &nbsp; &nbsp; &nbsp; &nbsp;jle  &nbsp; &nbsp; &nbsp; &nbsp;jump if less or equal</p>
-<p>0F8F  &nbsp; &nbsp; &nbsp; &nbsp;jnle  &nbsp; &nbsp; &nbsp; &nbsp;jump if not less or equal</p>
+<p>75        or 0F85 jne jump if not equal</p>
+<p>74        or 0F84 je jump if equal</p>
+<p>EB        jmp         jump directly to</p>
+<p>90         nop         no operation</p>
+<p>77         or 0F87 ja jump if above</p>
+<p>0F86         jna         jump if not above</p>
+<p>0F83         jae         jump if above or equal</p>
+<p>0F82         jnae         jump if not above or equal</p>
+<p>0F82         jb         jump if below</p>
+<p>0F83         jnb         jump if not below</p>
+<p>0F86         jbe         jump if below or equal</p>
+<p>0F87         jnbe         jump if not below or equal</p>
+<p>0F8F         jg         jump if greater</p>
+<p>0F8E         jng         jump if not greater</p>
+<p>0F8D         jge         jump if greater or equal</p>
+<p>0F8C         jnge         jump if not greater or equal</p>
+<p>0F8C         jl         jump if less</p>
+<p>0F8D         jnl         jump if not less</p>
+<p>0F8E         jle         jump if less or equal</p>
+<p>0F8F         jnle         jump if not less or equal</p>
 
 
 <p>Ваши небольшие знания по Ассемберу, вам, естественно, помогут, и они вам потребуются для использования Soft-ICE. Кроме того, вы сможете кракать эти куски с помощью W32Dasm как маньяк :-) Вы не сможете дизассемблировать программы на Visual Basic, для него вам понадобятся специальные декомпилеры, но с помощью SoftIce'a поломать их можно и без декомпилятора.</p>

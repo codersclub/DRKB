@@ -3,7 +3,7 @@
 
 
 <p>При старте приложения попробуй вызвать вот такую процедуру:<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 procedure SetLangForParadoxAndDBase;
 var

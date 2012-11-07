@@ -14,8 +14,8 @@ begin
   p1^ := 'Test';
   Label1.Caption := s1
 </pre>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <div class="author">Автор: Baa</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
-&nbsp;</p>
+</p>

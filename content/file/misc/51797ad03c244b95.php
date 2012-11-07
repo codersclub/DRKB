@@ -8,7 +8,7 @@
 <p>Проще перетащить мышкой файл сразу в окно приложения.</p>
 <p>Рассмотрим пример перетаскивания Drag &amp; Drop в окно произвольного текстового файла,</p>
 <p>который сразу же открывается в компоненте Memo1. Для начала в разделе Uses необходимо подключить модуль ShellAPI. В private области окна нужно вставить следующую строку:</p>
-<p> procedure WMDropFiles(var Msg: TWMDropFiles); message WM_DROPFILES;//получение сообщений о переносе файла в окно приложения  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p> procedure WMDropFiles(var Msg: TWMDropFiles); message WM_DROPFILES;//получение сообщений о переносе файла в окно приложения</p>
 <p>Процедура обработки этого сообщения будет выглядеть следующим образом:</p>
 <pre>
 procedure TForm1.WMDropFiles(var Msg: TWMDropFiles);

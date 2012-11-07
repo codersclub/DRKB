@@ -52,7 +52,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>Теперь идём в FormCreate и удаляем там всё кроме</p>
 <pre>
 procedure TForm1.FormCreate(Sender: TObject);

@@ -23,8 +23,8 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 function WeekNum(const ADate: TDateTime): word;
@@ -40,8 +40,8 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 function WeekOfYear(Dat: TDateTime): Word;
@@ -63,5 +63,5 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>

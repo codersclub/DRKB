@@ -5,14 +5,14 @@
 
 <p>Go to the interbase/bin directory (Windows) or /usr/interbase (Unix) and locate the configuration file isc_config. By default your configuration file will look like this:</p>
 
-<p>#V4_LOCK_MEM_SIZE        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;98304</p>
-<p>#ANY_LOCK_MEM_SIZE       &nbsp; &nbsp; &nbsp; &nbsp;98304</p>
-<p>#V4_LOCK_SEM_COUNT       &nbsp; &nbsp; &nbsp; &nbsp;32</p>
-<p>#ANY_LOCK_SEM_COUNT   &nbsp; &nbsp; &nbsp; &nbsp;32</p>
-<p>#V4_LOCK_SIGNAL         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16</p>
-<p>#ANY_LOCK_SIGNAL         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16</p>
-<p>#V4_EVENT_MEM_SIZE   &nbsp; &nbsp; &nbsp; &nbsp;     &nbsp; &nbsp; &nbsp; &nbsp;32768</p>
-<p>#ANY_EVENT_MEM_SIZE      &nbsp; &nbsp; &nbsp; &nbsp;32768</p>
+<p>#V4_LOCK_MEM_SIZE                       98304</p>
+<p>#ANY_LOCK_MEM_SIZE              98304</p>
+<p>#V4_LOCK_SEM_COUNT              32</p>
+<p>#ANY_LOCK_SEM_COUNT          32</p>
+<p>#V4_LOCK_SIGNAL                        16</p>
+<p>#ANY_LOCK_SIGNAL                        16</p>
+<p>#V4_EVENT_MEM_SIZE                      32768</p>
+<p>#ANY_EVENT_MEM_SIZE             32768</p>
 
 <p>I increased the V4_LOCK_MEM_SIZE entry from 98304 to 198304 and things were fine then.</p>
 

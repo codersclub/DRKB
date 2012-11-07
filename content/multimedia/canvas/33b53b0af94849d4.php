@@ -25,7 +25,7 @@ InValidateRect(Canvas.handle,NIL,True);
 <p>(или взамен передать дескриптор компонента)</p>
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 
-<hr />Есть два хороших способа очистить Canvas. Их скорости очень близки. В первом способе используются возможности Delphi, во втором &#8211; WinAPI. Первый способ удобнее тем, что позволяет закрашивать Canvas любым цветом.</p>
+<hr />Есть два хороших способа очистить Canvas. Их скорости очень близки. В первом способе используются возможности Delphi, во втором - WinAPI. Первый способ удобнее тем, что позволяет закрашивать Canvas любым цветом.</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 begin

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { ... }
 var
   strOLE: string;
@@ -16,7 +16,8 @@ end;
 </pre>
 
 <hr />
-<pre>
+
+<pre class="delphi">
 { ... }
 const
   cKEY = '\SOFTWARE\Classes\CLSID\%s\InprocServer32'

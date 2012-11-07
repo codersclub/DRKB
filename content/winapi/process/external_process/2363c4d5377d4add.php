@@ -102,7 +102,7 @@ begin
   WriteLn('Failed to open process');
 end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>а вот программа, в которой ведем поиск для примера:</p>
 <pre>
 program someprog;
@@ -122,4 +122,4 @@ end.
 </pre>
 <div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p>&nbsp;</p>
+<p></p>

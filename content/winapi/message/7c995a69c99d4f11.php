@@ -2,23 +2,23 @@
 <div class="date">01.01.2007</div>
 
 
-<p>BM&nbsp; - ButtonMode</p>
-<p>BN&nbsp; - Button</p>
-<p>BS&nbsp; - ButtonStyle</p>
-<p>CB&nbsp; - ComboBox</p>
+<p>BM  - ButtonMode</p>
+<p>BN  - Button</p>
+<p>BS  - ButtonStyle</p>
+<p>CB  - ComboBox</p>
 <p>CBN - Combo Box Notifications</p>
 <p>CBS - ComboBoxStyle</p>
-<p>EM&nbsp; - EditMessage</p>
-<p>ES&nbsp; - EditStyle</p>
-<p>FM&nbsp; - FileManager</p>
-<p>LB&nbsp; - ListBox</p>
+<p>EM  - EditMessage</p>
+<p>ES  - EditStyle</p>
+<p>FM  - FileManager</p>
+<p>LB  - ListBox</p>
 <p>LBN - ListBox Notifications</p>
 <p>LBS - ListBoxStyle</p>
-<p>MB&nbsp; - MessageButton (Typen)</p>
-<p>PS&nbsp; - PenStyle</p>
-<p>SB&nbsp; - ScrollBar</p>
+<p>MB  - MessageButton (Typen)</p>
+<p>PS  - PenStyle</p>
+<p>SB  - ScrollBar</p>
 <p>SBS - ScrollBarStyle</p>
-<p>SM&nbsp; - SystemMetrics</p>
+<p>SM  - SystemMetrics</p>
 <p>SPI - SystemParametersInfo</p>
-<p>WM&nbsp; - WindowMessage</p>
-<p>WS&nbsp; - WindowStyle</p>
+<p>WM  - WindowMessage</p>
+<p>WS  - WindowStyle</p>

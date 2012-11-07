@@ -3,7 +3,7 @@
 
 <div class="author">Автор: Nikonov A.A.</div>
 
-<pre>
+<pre class="delphi">
 unit psnCRC64;
 interface
  

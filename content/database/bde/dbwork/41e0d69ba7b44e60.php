@@ -3,7 +3,8 @@
 
 
 <p>Следующая функция проверяет доступ к базе данных и выдает возможные причины, если доступ не удается осуществить. Функция возвращает значение True в случае успешной операции и False в противном случае.</p>
-<pre>
+
+<pre class="delphi">
 function TBDEDirect.CheckDatabase: Boolean;
 var DS: TDataSource;
 begin

@@ -15,6 +15,6 @@ begin
   PlaySound(nil, 0, 0);
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

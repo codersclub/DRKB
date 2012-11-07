@@ -2,8 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-
-<pre>
+<pre class="delphi">
 { 
 Exporting ADO tables into various formats 
  
@@ -12,11 +11,11 @@ supply exporting features to the ADOTable component. ADO supplies
 an extended SQL syntax that allows exporting of data into various  
 formats. I took into consideration the following formats: 
  
-1)Excel 
-2)Html 
-3)Paradox 
-4)Dbase 
-5)Text 
+1) Excel 
+2) Html 
+3) Paradox 
+4) Dbase 
+5) Text 
  
 You can see all supported output formats in the registry: 
 "HKEY_LOCAL_MACHINE\Software\Microsoft\Jet\4.0\ISAM formats" 

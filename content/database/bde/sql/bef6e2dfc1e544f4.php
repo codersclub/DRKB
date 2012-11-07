@@ -8,49 +8,51 @@
 
 <p>Приведенный ниже пример кода иллюстрирует описываемый процесс. Данный модуль демонстрирует форму, которая содержит по два экземпляра следующих компонентов: TSession, TDatabase, TQuery, TDataSource и TDBGrid. Данные компоненты имеют следующие значения свойств:</p>
 
-<p>  Session1</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Active &nbsp; &nbsp; &nbsp; &nbsp;True;</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SessionName &nbsp; &nbsp; &nbsp; &nbsp;"Ses1"</p>
+<pre>
+Session1
+      Active        True;
+      SessionName   "Ses1"
 
-<p>  DataBase1</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;AliasName &nbsp; &nbsp; &nbsp; &nbsp;"IBLOCAL"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DatabaseName &nbsp; &nbsp; &nbsp; &nbsp;"DB1"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SessionName &nbsp; &nbsp; &nbsp; &nbsp;"Ses1"</p>
+DataBase1
+      AliasName     "IBLOCAL"
+      DatabaseName  "DB1"
+      SessionName   "Ses1"
 
-<p>  Query1</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DataBaseName &nbsp; &nbsp; &nbsp; &nbsp;"DB1"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SessionName &nbsp; &nbsp; &nbsp; &nbsp;"Ses1"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SQL.Strings &nbsp; &nbsp; &nbsp; &nbsp;"Select * from employee"</p>
+Query1
+      DataBaseName  "DB1"
+      SessionName   "Ses1"
+      SQL.Strings   "Select * from employee"
 
-<p>  DataSource1</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DataSet &nbsp; &nbsp; &nbsp; &nbsp;""</p>
+DataSource1
+      DataSet       ""
 
-<p>  DBGrid1</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DataSource &nbsp; &nbsp; &nbsp; &nbsp;DataSource1</p>
+DBGrid1
+      DataSource    DataSource1
 
-<p>  Session2</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Active &nbsp; &nbsp; &nbsp; &nbsp;True;</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SessionName &nbsp; &nbsp; &nbsp; &nbsp;"Ses2"</p>
+Session2
+      Active        True;
+      SessionName   "Ses2"
 
-<p>  DataBase2</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;AliasName &nbsp; &nbsp; &nbsp; &nbsp;"IBLOCAL"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DatabaseName &nbsp; &nbsp; &nbsp; &nbsp;"DB2"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SessionName &nbsp; &nbsp; &nbsp; &nbsp;"Ses2"</p>
+DataBase2
+      AliasName     "IBLOCAL"
+      DatabaseName  "DB2"
+      SessionName   "Ses2"
 
-<p>  Query2</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DataBaseName &nbsp; &nbsp; &nbsp; &nbsp;"DB2"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SessionName &nbsp; &nbsp; &nbsp; &nbsp;"Ses2"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SQL.Strings &nbsp; &nbsp; &nbsp; &nbsp;"Select * from customer"</p>
+Query2
+      DataBaseName  "DB2"
+      SessionName   "Ses2"
+      SQL.Strings   "Select * from customer"
 
-<p>  DataSource2</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DataSet &nbsp; &nbsp; &nbsp; &nbsp;""</p>
+DataSource2
+      DataSet       ""
 
-<p>  DBGrid1</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DataSource &nbsp; &nbsp; &nbsp; &nbsp;DataSource2</p>
+DBGrid1
+      DataSource    DataSource2
+</pre>
 
 <p>Обратите внимание на то, что свойство DataSet обоих компонентов TDataSource первоначально никуда не ссылается. Оно устанавливается во время выполнения приложения, и это проиллюстрировано в коде.</p>
 
-<pre>
+<pre class="delphi">
 unit Unit1;
  
 interface
@@ -161,4 +163,5 @@ end.
 <p>Метод TForm1.GoBtn1Click является обработчиком события нажатия кнопки. Данный обработчик события дважды вызывает процедуру RunBackgroundQuery, это случается при каждой передаче новых параметров компонентам для работы с базой данных. RunBackgroundQuery создает отдельный экземпляр класса TQueryThread, передает различные компоненты для работы с базой данных в его конструктор, который, в свою очередь, назначает их закрытым полям TQueryThread.</p>
 
 <p>TQueryThread содержит две определенные пользователем процедуры: ConnectDataSource и ShowQryError. ConnectDataSource связывает FDataSource.DataSet с FQuery. Тем не менее, это делается в первичном потоке с помощью метода TThread.Synchronize. ShowQryError обрабатывает исключение в контексте первиного потока, также используя метод Synchronize. Конструктор Create и метод Execute снабжены подробными комментариями.</p>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

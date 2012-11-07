@@ -8,4 +8,4 @@
 <div class="author">Автор: Александр (Rouse_) Багель</div>
 
 <p><a href="https://rouse.drkb.ru" target="_blank">https://rouse.drkb.ru</a><br>
-<p>&nbsp;</p>
+<p></p>

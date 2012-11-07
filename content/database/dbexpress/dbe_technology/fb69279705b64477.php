@@ -36,7 +36,7 @@
 
 <p>Перед записью команды в список вызывается метод-обработчик</p>
 
-<p>TTraceEvent = procedure(Sender: TObject; CBInfo: pSQLTRACEDesc; var LogTrace: Boolean) of object;&nbsp;</p>
+<p>TTraceEvent = procedure(Sender: TObject; CBInfo: pSQLTRACEDesc; var LogTrace: Boolean) of object;</p>
 
 <p>property OnTrace: TTraceEvent;</p>
 
@@ -73,15 +73,15 @@
 
 <p>procedure TForml.MyConnectionBeforeConnect(Sender: TObject);</p>
 <p>begin</p>
-<p>  TraceList := TStringList.Create;&nbsp;</p>
+<p>  TraceList := TStringList.Create;</p>
 <p>end;</p>
 
 <p>procedure TForml.MyConnectionAfterDisconnect(Sender: TObject);</p>
 <p>begin</p>
 <p>  if Assigned(TraceList) then</p>
 <p>  begin</p>
-<p> &nbsp;&nbsp; TraceList.SaveToFile('с:\Temp\TraceInfo.txt');</p>
-<p> &nbsp;&nbsp; TraceList.Free;</p>
+<p>    TraceList.SaveToFile('с:\Temp\TraceInfo.txt');</p>
+<p>    TraceList.Free;</p>
 <p>  end;</p>
 <p>end;</p>
 
@@ -99,7 +99,7 @@
 
 <p>Таким образом, по мере прохождения команд информация о них будет накапливаться в списке. После закрытия соединения список сохраняется в текстовом файле.</p>
 
-<p class="note">Примечание&nbsp;</p>
+<p class="note">Примечание</p>
 
 <p>В своей работе компонент TSQLMonitor также использует вызовы метода SetTraceCallbackEvent. Поэтому одновременно применять компонент и собственные функции нельзя.</p>
 

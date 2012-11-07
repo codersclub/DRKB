@@ -7,7 +7,7 @@
  &lt;form method=GET action="program.exe"&gt;</p>
  &lt;form method=POST action="program.exe"&gt;</p>
 Чтобы определить, каким именно методом CGI-программе переданы параметры, достаточно в вашей программе проверить переменную среды REQUEST_METHOD.</p>
-&nbsp;</p>
+</p>
 Ниже привдена функция, с помощью которой можно получить значение переменной среды окружения:</p>
 <pre>function getvar(varname:string):string;
 {$IFDEF LINUX}
@@ -24,34 +24,35 @@
  end;
 {$ENDIF}
 </pre>
-&nbsp;</p>
+</p>
 Автор предпочитает работать не с массивами, а со строками, поэтому результат функции преобразовывается в строку...</p>
-&nbsp;</p>
+</p>
 Теперь посмотрим, как определить значение переменной среды под DOS в .BAT файле:</p>
-&nbsp;</p>
+</p>
 @ECHO OFF</p>
 ECHO content-type: text/html</p>
 ECHO.</p>
 ECHO ^&lt;HTML^&gt;^&lt;HEAD^&gt;^&lt;TITLE^&gt;^&lt;/TITLE^&gt;^&lt;/HEAD^&gt;^&lt;BODY^&gt;</p>
 ECHO REQUEST_METHOD=%REQUEST_METHOD%</p>
 ECHO ^&lt;/BODY^&gt;^&lt;/HTML^&gt;</p>
-&nbsp;</p>
+</p>
 Обратите внимание, что специальные символы, используемые в DOS (такие, как "&lt;", "&gt;", "&amp;",...), необходимо предварять знаком "^".</p>
-&nbsp;</p>
+</p>
 Таким образом, если мы обратимся к функции в виде GetVar('REQUEST_METHOD'), то получим в виде строки метод, которым были переданы параметры: 'GET' или 'POST'.</p>
-&nbsp;</p>
+</p>
 Согласно Спецификации CGI, параметры могут быть прочитаны:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Из переменной окружения QUERY_STRING для метода GET</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Из стандартного ввода (STDIN) с помощью процедуры ReadLn для метода POST</td></tr></table></div>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Из переменной окружения QUERY_STRING для метода GET</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Из стандартного ввода (STDIN) с помощью процедуры ReadLn для метода POST</td></tr></table></div></p>
 Метод POST используется в тех случаях, когда необходимо передать большое количество параметров или большой объем данных. При использовании же метода GET для хранения всех передаваемых параметров используется переменная среды окружения, а она, как вы понимаете, не резиновая, так что ее максимального размера в некоторых случаях может не хватить...</p>
-&nbsp;</p>
+</p>
 Метод GET и переменная QUERY_STRING</p>
 Переменная среды окружения QUERY_STRING содержит список имен и значений параметров, переданных из формы... Но сначала рассмотри код HTML:</p>
-&nbsp;</p>
+</p>
 &lt;form method="GET" action="program.exe"&gt;</p>
 &lt;input type=text name="toto" value="titi"&gt;</p>
 &lt;input type=submit value="GO"&gt;</p>
 &lt;/form&gt;</p>
-&nbsp;</p>
+</p>
 <p>Кликнув на "GO" (здесь кликать не надо, это просто пример!), вы запускаете на сервере программу "program.exe" передавая серверу запрос в виде:</p>
 <p>https://www.ваш_сервер/cgi-bin/program.exe?toto=titi</p>
 <p>Вы видите, что сразу за именем программы следует знак вопроса и передаваемый в программу параметр. В переменную QUERY_STRING как раз и будет помещено все, что находится после символа "?". Заметим, что точно так же можно задать параметры и в обычной ссылке:</p>

@@ -20,8 +20,8 @@ begin
   Result := Bmp;
 end;
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <p>ПРИМЕР ИСПОЛЬЗОВАНИЯ:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);

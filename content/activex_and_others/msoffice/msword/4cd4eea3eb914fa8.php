@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { 1. Change MS Word properties via OLE } 
  
 uses 
@@ -68,7 +68,7 @@ end;
 </pre>
 
 
-<pre>
+<pre class="delphi">
 { 
   2. Read MS Word properties via Structured Storage. 
   by Serhiy Perevoznyk 

@@ -4,7 +4,7 @@
 
 <p>в секции uses стоит так ExcelXP,{Excel2000, Excel97} крайней мере у меня, т.к. некоторые параметры при работе с разными версиями отличаются, например при открытии файла в версии XP больше параметров, чем в версии `97.</p>
 <p>На форме лежит компонента Ex1 типа TExcelApplication со страницы Servers, свойства AutoConnect и AutoQuit :=False, свойство ConnectKind:=ckRunningOrNew,</p>
-<pre>
+<pre class="delphi">
 uses ...
 ExcelXP, OleServer, ComObj, ...
  
@@ -435,7 +435,7 @@ begin
 end;
 </pre>
 
-<pre>
+<pre class="delphi">
 Function TfmImpExcel.Find(sText:String;Var iRow:Integer;Var sCol:String;WorkSheetF:_WorkSheet):Bool;
 Var
 UsedRange, Range: OLEVariant;
@@ -469,7 +469,7 @@ end;
 
 <p>Еще несколько примеров, используя Ole</p>
 <p>Excel:Variant - глобальная переменная</p>
-<pre>
+<pre class="delphi">
 ...
 begin
 //вначале проверяем, не открыт ли Excel  и закрываем
@@ -571,7 +571,7 @@ vRow - integer
 </pre>
 
 <p>удаляем лишние столбцы (по умолчанию со сдвигом влево)</p>
-<pre>
+<pre class="delphi">
 dbGridZay - DBGrid
    For iColCount:= dbGridZay.Columns.Count-1 downto 0 do begin
      if dbGridZay.Columns[iColCount].Visible=False then begin
@@ -654,7 +654,7 @@ Sheet.Range[...].Merge(Across)
 <p>и запустить эту процедуру</p>
 <p>OLEVariant(Excel).Run('MyModule1.MySub1');</p>
 <p>Различные способы обращения к ячейкам</p>
-<pre>
+<pre class="delphi">
 Var
 Value:Variant;
 ...
@@ -670,7 +670,7 @@ end;
 </pre>
 
 <p>Копирование данных в буфер обмена</p>
-<pre>
+<pre class="delphi">
 var 
 ISheetSrc, ISheetDst: Worksheet;//в разных версиях
 IRangeSrc, IRangeDst: Range; //могут объявляться по разному

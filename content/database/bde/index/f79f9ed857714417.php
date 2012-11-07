@@ -8,7 +8,7 @@
 
 <p>Эта проблема была в Delphi 3.0 только на TQuery, а в Delphi 3.01 появилась и в TTable. Лечится так (простой пример):</p>
 
-<pre>
+<pre class="delphi">
 procedure TMainForm.Edit1Change(Sender: TObject);
 begin
   if length(Edit1.Text) &gt; 0 then

@@ -8,73 +8,73 @@
 <p>Рассмотрим второй вариант использующий объект "проекция файла" (file-mapping object), представляющем собой блок памяти(раздел) доступный двум и более процессам для совместного использования.</p>
 <p>Совместное использование данных с помощью объекта "раздел" происходит следующим образом: Задав атрибуты с помощью функции</p>
 <pre>procedure InitializeObjectAttributes(InitializedAttributes : PNtObjectAttributes; 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pObjectName : PNtUnicodeString;
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const uAttributes : ULONG; 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const hRootDirectory : THandle; 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pSecurityDescriptor : PSECURITY_DESCRIPTOR);
+                                     pObjectName : PNtUnicodeString;
+                                     const uAttributes : ULONG; 
+                                     const hRootDirectory : THandle; 
+                                     pSecurityDescriptor : PSECURITY_DESCRIPTOR);
 begin
   with InitializedAttributes^ do
   begin
- &nbsp;&nbsp; Length := SizeOf(TNtObjectAttributes);
- &nbsp;&nbsp; ObjectName := pObjectName;
- &nbsp;&nbsp; Attributes := uAttributes;
- &nbsp;&nbsp; RootDirectory := hRootDirectory;
- &nbsp;&nbsp; SecurityDescriptor := pSecurityDescriptor;
- &nbsp;&nbsp; SecurityQualityOfService := nil;
+    Length := SizeOf(TNtObjectAttributes);
+    ObjectName := pObjectName;
+    Attributes := uAttributes;
+    RootDirectory := hRootDirectory;
+    SecurityDescriptor := pSecurityDescriptor;
+    SecurityQualityOfService := nil;
   end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>которая фактически заполняет структуру NtObjectAttributes</p>
 <p>Используем объект '\Device\PhysicalMemory' и преобразовав его в тип TNtUnicodeString;</p>
 RtlInitAnsiString(@AnsiPhysicalMemory, '\Device\PhysicalMemory');<br>
 RtlAnsiStringToUnicodeString(@UniPhysicalMemory, @AnsiPhysicalMemory, true);<br>
 <p>InitializeObjectAttributes(@NtObjectAttributes, @UniPhysicalMemory, OBJ_KERNEL_HANDLE, 0, nil);</p>
 <p>Получаем дескриптор секции вызывая функцию ядра<br>
-<p>&nbsp;</p>
+<p></p>
 NtOpenSection(SectionHandle, SECTION_MAP_READ, @NtObjectAttributes);</p>
 <p>Этим самым мы открываем объект '\Device\PhysicalMemory' для чтения отображенного участка физической памяти в процессе пользователя.</p>
 <p>Отображение осуществляем с помощью функции NtMapViewOfSection возвращающей указатель на участок памяти процесса пользователя в который осуществляется отображение. Более подробную информацию можно найти в MicrosoftDDK.</p>
 <p>Привожу несложный пример.</p>
 <pre>unit PhysMemWorks;
-&nbsp;
+ 
 interface
-&nbsp;
+ 
 uses windows;
-&nbsp;
+ 
 type
-&nbsp;
+ 
 NTSTATUS = LongInt; 
 PLARGE_INTEGER = ^LARGE_INTEGER; 
 TSectionInherit = (ViewNone,ViewShare,ViewUnmap); 
 SECTION_INHERIT = TSectionInherit;
-&nbsp;
+ 
 PHYSICAL_ADDRESS = record 
 LowPart : DWORD ; 
 HighPart : DWORD; 
 end;
-&nbsp;
-&nbsp;
+ 
+ 
 TNtAnsiString = packed record 
 Length : Word; 
 MaximumLength : Word; 
 Buffer : PChar; 
 end;
-&nbsp;
+ 
 PNtAnsiString = ^TNtAnsiString; 
 ANSI_STRING = TNtAnsiString;
-&nbsp;
-&nbsp;
+ 
+ 
 TNtUnicodeString = packed record 
 Length : Word; 
 MaximumLength : Word; 
 Buffer : PWideChar; 
 end;
-&nbsp;
+ 
 UNICODE_STRING = TNtUnicodeString; 
 PNtUnicodeString = ^TNtUnicodeString;
-&nbsp;
-&nbsp;
+ 
+ 
 TNtObjectAttributes = packed record 
 Length : ULONG; 
 RootDirectory : THandle; 
@@ -83,41 +83,41 @@ Attributes : ULONG;
 SecurityDescriptor : Pointer; 
 SecurityQualityOfService : Pointer; 
 end;
-&nbsp;
+ 
 OBJECT_ATTRIBUTES = TNtObjectAttributes; 
 PNtObjectAttributes = ^TNtObjectAttributes;
-&nbsp;
-&nbsp;
+ 
+ 
 function OpenPhysicalMemory:dword;
-&nbsp;
+ 
 function MapPhysicalMemory (hPhysMem:tHANDLE; pdwAddress:DWORD; pdwLength:DWORD; pdwBaseAddress:pDWORD):dword;
-&nbsp;
+ 
 ///////////
-&nbsp;
+ 
 const DLL = 'ntdll.dll';
-&nbsp;
+ 
 function RtlAnsiStringToUnicodeString( DestinationString : PNtUnicodeString; SourceString : PNtAnsiString; 
 AllocateDestinationString : Boolean ) : NTSTATUS; stdcall; external DLL name 'RtlAnsiStringToUnicodeString'; 
 procedure RtlInitAnsiString( DestinationString : PNtAnsiString; SourceString : PChar ); stdcall; external DLL name 'RtlInitAnsiString';
-&nbsp;
+ 
 function NtMapViewOfSection(SectionHandle : THandle;ProcessHandle : THandle; var BaseAddress : PDWORD; 
 ZeroBits : ULONG; CommitSize : ULONG; SectionOffset : PLARGE_INTEGER; ViewSize : DWORD; 
 InheritDisposition : SECTION_INHERIT; 
 AllocationType : ULONG; Protect : ULONG) : NTSTATUS; stdcall; external DLL name 'NtMapViewOfSection';
-&nbsp;
+ 
 function NtUnmapViewOfSection(const ProcessHandle : THandle; 
 const BaseAddress : Pointer) : NTSTATUS; stdcall; external DLL name 'NtUnmapViewOfSection'; 
 function NtOpenSection(out SectionHandle : THandle; const DesiredAccess : ACCESS_MASK; 
 ObjectAttributes : PNtObjectAttributes) : NTSTATUS; stdcall; external DLL name 'NtOpenSection';
-&nbsp;
+ 
 implementation
-&nbsp;
+ 
 const
 OBJ_KERNEL_HANDLE = $0000200;
-&nbsp;
+ 
 var 
 status: dword;
-&nbsp;
+ 
 procedure InitializeObjectAttributes(InitializedAttributes : PNtObjectAttributes; 
 pObjectName : PNtUnicodeString; const uAttributes : ULONG; const hRootDirectory : THandle; 
 pSecurityDescriptor : PSECURITY_DESCRIPTOR); 
@@ -132,15 +132,15 @@ SecurityDescriptor := pSecurityDescriptor;
 SecurityQualityOfService := nil; 
 end; 
 end;
-&nbsp;
-&nbsp;
+ 
+ 
 function OpenPhysicalMemory:dword; 
 var 
 hPhysMem:dword; 
 UniPhysicalMemory : TNtUnicodeString; 
 AnsiPhysicalMemory :TNtAnsiString ; 
 oa :TNtObjectAttributes;
-&nbsp;
+ 
 begin 
 RtlInitAnsiString(@AnsiPhysicalMemory, '\Device\PhysicalMemory'); 
 status:= RtlAnsiStringToUnicodeString(@UniPhysicalMemory, @AnsiPhysicalMemory, true); 
@@ -148,8 +148,8 @@ InitializeObjectAttributes(@oa, @UniPhysicalMemory, OBJ_KERNEL_HANDLE, 0, nil) ;
 status:= NtOpenSection(hPhysMem, SECTION_MAP_READ, @oa); 
 if status &lt;&gt; 0 then result:= 0 else result:= hPhysMem; 
 end;
-&nbsp;
-&nbsp;
+ 
+ 
 function MapPhysicalMemory (hPhysMem:tHANDLE; pdwAddress:DWORD; pdwLength:DWORD; pdwBaseAddress:pDWORD):dword; 
 var 
 SectionOffset: pLARGE_INTEGER; 
@@ -159,19 +159,19 @@ SectionOffset.LowPart:= pdwAddress;
 NtMapViewOfSection(hPhysMem, 0, pdwBaseAddress, 0, 0, nil,0, ViewNone, 0, PAGE_READONLY); 
 result:=1; 
 end;
-&nbsp;
-&nbsp;
+ 
+ 
 function UnmapPhysicalMemory (dwBaseAddress:DWORD):dword; 
 begin 
 NtUnmapViewOfSection(0, @dwBaseAddress); 
 result:=1; 
 end;
-&nbsp;
+ 
 end. 
 </pre>
-&nbsp;</p>
+</p>
 <p>Используя данный модуль получаем доступ к функциям ядра которые, в свою очередь, позволяют получить проекцию нужного участка памяти.</p>
-<p>На форме разместим компонент StringGrid &#8211; для представления информации в табличном виде, Button, Label и Edit и пишем такой код.</p>
+<p>На форме разместим компонент StringGrid - для представления информации в табличном виде, Button, Label и Edit и пишем такой код.</p>
 <pre>
 unit Read_Mem;
  
@@ -278,7 +278,7 @@ end;
 end;
 end.
 </pre>
-&nbsp;</p>
+</p>
 <p>Готово! У нас есть приложение позволяющее просматривать физическую память. Наберите, например, в поле адреса 000FFF00 , нажмие "Read" и в ячейках начиная с FFFF5 прочитайте дату прошивки BIOS Вашей материнской платы.</p>
 <p>Используя данные функции Вы легко получаете возможность просмотра всего объёма физической памяти, за исключением системных адресов операционной системы.</p>
 

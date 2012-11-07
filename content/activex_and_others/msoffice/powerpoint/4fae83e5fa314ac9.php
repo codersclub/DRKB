@@ -4,7 +4,7 @@
 <p>Opening PowerPoint (early binding)</p>
 <p>Before you can use this method, you must have imported the type library (MSPpt8.olb for PowerPoint 97).</p>
 <p>One way of starting PowerPoint is to try the GetActiveObject call, to get a running instance of PowerPoint, but put a call to CoApplication.Create in an except clause. But except clauses are slow, and can cause problems within the IDE for people who like Break On Exceptions set to True. The following code removes the need for a try...except clause, by avoiding using OleCheck on GetActiveObject in the case when PowerPoint is not running.</p>
-<pre>
+<pre class="delphi">
 uses Windows, ComObj, ActiveX, OfficePowerPoint_TLB;
  
 var 
@@ -26,11 +26,11 @@ begin
   PowerPoint.Visible := TOleEnum(msoTrue);
   ...
 </pre>
-&nbsp;</p>
+</p>
 
 <p>Without using the type library</p>
 <p>Automation is so much easier and faster using type libraries (early binding) that you should avoid managing without if at all possible. But if you really can't, here's how to get started:</p>
-<pre>
+<pre class="delphi">
 var 
   PowerPoint: Variant; 
 begin 

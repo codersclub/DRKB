@@ -12,10 +12,10 @@ begin
 end;
 </pre>
 
-<p>&nbsp;</p>
+<p></p>
 <div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 unit Unit1;

@@ -101,10 +101,10 @@ end;
 </pre>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: dron-s</div>
-&nbsp;<br>
+ <br>
 
-<p>&nbsp;<br>
-&nbsp;<br>
-&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+ <br>
+ <br>
+<p></p>
 

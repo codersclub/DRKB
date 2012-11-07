@@ -541,8 +541,8 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <p>пример вызова:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
@@ -561,6 +561,6 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Rouse_</div>

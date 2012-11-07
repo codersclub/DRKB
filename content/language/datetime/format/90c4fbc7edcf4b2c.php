@@ -50,7 +50,7 @@ begin
   DateEncode := (year * 10000) + (month * 100) + day;
 end;
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <p class="p_Heading1">Формат даты</p>
 <p>У меня есть неотложная задача: в настоящее время я разрабатываю проект, где я должен проверять достоверность введенных дат с применением маски __/__/____, например 12/12/1997.</p>
@@ -104,9 +104,9 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-<p class="p_Heading1">&nbsp;</p>
-<p class="p_Heading1">&nbsp;</p>
-<p class="p_Heading1">&nbsp;</p>
-<p class="p_Heading1">&nbsp;</p>
-<p class="p_Heading1">&nbsp;</p>
-<p class="p_Heading1">&nbsp;</p>
+<p class="p_Heading1"></p>
+<p class="p_Heading1"></p>
+<p class="p_Heading1"></p>
+<p class="p_Heading1"></p>
+<p class="p_Heading1"></p>
+<p class="p_Heading1"></p>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Базовые функции по работе с Автокадовскими скриптами, вывод основных примитивов.
  
@@ -600,7 +600,8 @@ end.
 </pre>
 
 <p> Пример использования:</p>
-<pre>
+
+<pre class="delphi">
 { Выводит в скрипт команды вставки из файлов символов скважин в локальных координатах
    Символы помещаются в слой "WELLS" }
 function TfrmWellPlace.PlotWellsSymbol : integer;

@@ -74,8 +74,8 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <p>В данном примере GetCurrentProcess можно заменить (если имеешь PID) на</p>
 <pre>
               hProcess := OpenProcess(PROCESS_QUERY_INFORMATION, True, PID);
@@ -86,6 +86,6 @@ end.
                 CloseHandle(hProcess);
               end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Rouse_</div>

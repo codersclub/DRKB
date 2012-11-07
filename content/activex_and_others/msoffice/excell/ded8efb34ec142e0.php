@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Работа с ячейкой листа Microsoft Excel
  

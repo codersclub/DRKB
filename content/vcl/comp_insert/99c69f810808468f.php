@@ -16,12 +16,12 @@
 <p>Теперь нужно поместить компонент TDBLookupCombo из палитры Data Controls на любое место формы - это не имеет никакого значения, т.к. он обычно будет невидим или будет нами имплантирован в табличную сетку. Установите свойства компонента LookuoCombo следующим образом:</p>
 
 
-<p>DataSource&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DataSource1</p>
-<p>DataField&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CustNo</p>
-<p>LookupSource&nbsp;&nbsp;&nbsp; DataSource2</p>
-<p>LookupField&nbsp;&nbsp;&nbsp;&nbsp; CustNo</p>
-<p>LookupDisplay&nbsp;&nbsp; CustNo&nbsp; {Вы можете изменить это на Company позже,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; но сейчас пусть это будет CustNo)</p>
+<p>DataSource      DataSource1</p>
+<p>DataField       CustNo</p>
+<p>LookupSource    DataSource2</p>
+<p>LookupField     CustNo</p>
+<p>LookupDisplay   CustNo  {Вы можете изменить это на Company позже,</p>
+<p>                         но сейчас пусть это будет CustNo)</p>
 
 
 <p>Пока мы только настроили компоненты. Теперь давайте создадим некоторый код.</p>

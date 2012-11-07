@@ -5,7 +5,7 @@
 <pre>
 type TOSVersion=(osUnknown, osUnknown9x, osUnknownNT, osWin95, osWin98, osWin98SE, osWinME, osWinNT, osWin2000, osXP);
 
-&nbsp;
+ 
 function GetOSVersion : TOSVersion;
 var osVerInfo : TOSVersionInfo;
 majorVer, minorVer : Integer;

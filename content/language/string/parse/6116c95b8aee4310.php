@@ -85,8 +85,8 @@ p := PosR2L('са', 'Мой сапог догнал самолёт.'); // p:=18;
  
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 // by Manuel Wiersch 
@@ -157,4 +157,4 @@ p := PosR2L('са', 'Мой сапог догнал самолёт.'); // p:=18;
 end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-&nbsp;</p>
+</p>

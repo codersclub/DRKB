@@ -676,24 +676,24 @@ end;
 <p>В описании это находится вот здесь:</p>
 <p>SNAC 15,02</p>
 <p> TLV(1)</p>
-<p> &nbsp; WORD&nbsp;&nbsp; (LE) bytes remaining, useless</p>
-<p> &nbsp; UIN&nbsp;&nbsp;&nbsp; my uin</p>
-<p> &nbsp; WORD&nbsp;&nbsp; type</p>
-<p> &nbsp; WORD&nbsp;&nbsp; cookie</p>
-<p> &nbsp; type = 3C00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ask for offlines messages</p>
-<p> &nbsp;&nbsp;&nbsp; nothing</p>
-<p> &nbsp; type = 3E00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ack to offline messages,</p>
-<p> &nbsp;&nbsp;&nbsp; nothing&nbsp;&nbsp; type=D007</p>
-<p> &nbsp;&nbsp;&nbsp; WORD&nbsp; subtype</p>
-<p> &nbsp;&nbsp;&nbsp; subtype=9808  xml-stype in an LNTS</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LNTS&nbsp; '' name of required data ''</p>
-<p> &nbsp;&nbsp;&nbsp; subtype=1F05 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // simple query info</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UIN&nbsp;&nbsp; user to request info&nbsp;&nbsp;&nbsp;&nbsp; subtype=B204&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // query info about user</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UIN&nbsp;&nbsp; user to request info&nbsp;&nbsp;&nbsp;&nbsp; subtype=D004&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // query my info</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UIN&nbsp;&nbsp; my uin</p>
-<p> &nbsp;&nbsp;&nbsp; ..............</p>
-<p> &nbsp;&nbsp;&nbsp; ..............</p>
-<p> &nbsp;&nbsp;&nbsp; ..............</p>
+<p>   WORD   (LE) bytes remaining, useless</p>
+<p>   UIN    my uin</p>
+<p>   WORD   type</p>
+<p>   WORD   cookie</p>
+<p>   type = 3C00       // ask for offlines messages</p>
+<p>     nothing</p>
+<p>   type = 3E00       // ack to offline messages,</p>
+<p>     nothing   type=D007</p>
+<p>     WORD  subtype</p>
+<p>     subtype=9808  xml-stype in an LNTS</p>
+<p>       LNTS  '' name of required data ''</p>
+<p>     subtype=1F05       // simple query info</p>
+<p>       UIN   user to request info     subtype=B204       // query info about user</p>
+<p>       UIN   user to request info     subtype=D004       // query my info</p>
+<p>       UIN   my uin</p>
+<p>     ..............</p>
+<p>     ..............</p>
+<p>     ..............</p>
 
 <p>В исходном коде это выглядит так:</p>
 <pre>
@@ -735,7 +735,7 @@ M(Memo,'&gt; Get offline messages');
 <p>Type 00 01</p>
 <p>Length 00 0A</p>
 <p>Value 08 00</p>
-<p>XX XX XX XX наш UIN&nbsp;</p>
+<p>XX XX XX XX наш UIN</p>
 <p>3C 00 запрос на оффлайновые сообщения</p>
 <p>02 00 cookie</p>
 <p>Передадим пакет и от сервера получим FLAP-пакет с таким дампом:</p>
@@ -766,24 +766,24 @@ M(Memo,'&gt; Get offline messages');
 <p>Type 00 01</p>
 <p>Length 00 3F</p>
 <p>Value 3D 00</p>
-<p>XX XX XX XX наш UIN&nbsp;</p>
+<p>XX XX XX XX наш UIN</p>
 <p>41 00 тип: оффлайновое сообщение</p>
-<p>02 00 cookie (как и в запросе)&nbsp;</p>
-<p>тело сообщения&nbsp;</p>
-<p>XX XX XX XX его UIN&nbsp;</p>
-<p>D2 07 год (2002)&nbsp;</p>
-<p>02 месяц (февраль)&nbsp;</p>
-<p>0C день (12)&nbsp;</p>
+<p>02 00 cookie (как и в запросе)</p>
+<p>тело сообщения</p>
+<p>XX XX XX XX его UIN</p>
+<p>D2 07 год (2002)</p>
+<p>02 месяц (февраль)</p>
+<p>0C день (12)</p>
 <p>10 час (16)</p>
-<p>12 минуты (18)&nbsp;</p>
+<p>12 минуты (18)</p>
 <p>01 под-тип сообщения</p>
-<p>(обычное)&nbsp;</p>
+<p>(обычное)</p>
 <p>00 флаги сообщения (?)</p>
 <p>25 00 длина сообщения (37)</p>
 <p>EF F0 E8 E2 E5 F2 0D 0A FD F2 EE 20 F2 E5 F1 F2 EE E2 EE E5 20 F1 EE EE E1 F9 E5 ED E8 E5 20 21 21 21 0D 0A 00 текст сообщения:</p>
 <p>"привет</p>
 <p>это тестовое сообщение !!!"</p>
-<p>00 00 присутствют, если сообщение единственное&nbsp;</p>
+<p>00 00 присутствют, если сообщение единственное</p>
 
 <p>В протокольных заметках я выделю ту часть описания SNAC(15,3), которая соответствует таблице:</p>
 <p>SNAC 15,03</p>
@@ -792,36 +792,36 @@ M(Memo,'&gt; Get offline messages');
 <p>  UIN my uin</p>
 <p>  WORD message-type</p>
 <p>  WORD cookie</p>
-<p> &nbsp;&nbsp; message-type = 4100 // offline message</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; UIN his uin</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; WORD year (LE)</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; BYTE month (1=jan)</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; BYTE day</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; BYTE hour (GMT time)</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; BYTE minutes</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; BYTE msg-subtype</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; BYTE msg-flags</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; LNTS msg</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; WORD 0000, present only in single messages</p>
-<p> &nbsp;&nbsp; message-type = 4200 // end of offline messages</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; BYTE unknown, usually 0</p>
-<p> &nbsp;&nbsp; message-type = D007</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; 2 BYTE unknown, usually 98 08</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; WORD length of the following NTS</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; NTS ""field-type""</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; field-type = DataFilesIP</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 BYTE unk, usually 2A 02 44 25 00 31</p>
-<p> &nbsp;&nbsp; message-type = DA07</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; 3 BYTE subtype</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; subtype=A4010A // wp-full-request result</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wp-result-info</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..............</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..............</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..............</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; subtype=B4000A // ack to remove user</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; empty</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; subtype=AA000A // ack to change password</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; empty</p>
+<p>    message-type = 4100 // offline message</p>
+<p>      UIN his uin</p>
+<p>      WORD year (LE)</p>
+<p>      BYTE month (1=jan)</p>
+<p>      BYTE day</p>
+<p>      BYTE hour (GMT time)</p>
+<p>      BYTE minutes</p>
+<p>      BYTE msg-subtype</p>
+<p>      BYTE msg-flags</p>
+<p>      LNTS msg</p>
+<p>      WORD 0000, present only in single messages</p>
+<p>    message-type = 4200 // end of offline messages</p>
+<p>      BYTE unknown, usually 0</p>
+<p>    message-type = D007</p>
+<p>      2 BYTE unknown, usually 98 08</p>
+<p>      WORD length of the following NTS</p>
+<p>      NTS ""field-type""</p>
+<p>      field-type = DataFilesIP</p>
+<p>        6 BYTE unk, usually 2A 02 44 25 00 31</p>
+<p>    message-type = DA07</p>
+<p>      3 BYTE subtype</p>
+<p>        subtype=A4010A // wp-full-request result</p>
+<p>          wp-result-info</p>
+<p>        ..............</p>
+<p>        ..............</p>
+<p>        ..............</p>
+<p>        subtype=B4000A // ack to remove user</p>
+<p>          empty</p>
+<p>        subtype=AA000A // ack to change password</p>
+<p>          empty</p>
 
 <p>И "нарешти" - код для приема SNAC(15,3). Множественные комментарии, кажется тут уже излишни.</p>
 <pre>
@@ -883,21 +883,21 @@ end;
 <p>Если UIN (для которого предназначено сообщение) находится в оффлайне - то ему шлется Simple Message. Advanced Message посылаются тем адресатам, (кажется ) если версия аськи у них не ниже ICQ2000. Из формата Advanced Message в уроке №2 используется лишь информация о Foreground Color и Background Color (это цвета раскраски текста). Использовал бы еще что-нибудь, так там больше ничего нет такого, что можно назвать advanced.</p>
 <p>При передаче, сообщения пакуются в SNAC(4,06).</p>
 <p>Начнем с более простого формата - Simple Message:</p>
-<p>FLAP&nbsp;</p>
+<p>FLAP</p>
 <p>Command Start 2A</p>
 <p>Channel ID 02</p>
 <p>Sequence Number 34 3B</p>
 <p>Data Field Length 00 3D</p>
-<p>SNAC (4, 06) - Send Message (Simple)&nbsp;</p>
-<p>Family ID 00 04&nbsp;</p>
-<p>SubType ID 00 06&nbsp;</p>
+<p>SNAC (4, 06) - Send Message (Simple)</p>
+<p>Family ID 00 04</p>
+<p>SubType ID 00 06</p>
 <p>Flags[0] 00</p>
 <p>Flags[1] 00</p>
 <p>Request ID 00 AD 00 06</p>
 <p>53 DE 53 75</p>
 <p> Cookie 1</p>
-<p>16 14 BB 50 Cookie 2&nbsp;</p>
-<p>00 01&nbsp; msg-format: Simple Message&nbsp;</p>
+<p>16 14 BB 50 Cookie 2</p>
+<p>00 01  msg-format: Simple Message</p>
 <p>09</p>
 <p> длина его UINа почти как</p>
 <p>PascalStr</p>
@@ -905,33 +905,33 @@ end;
 <p>37 37 37</p>
 <p>36 36 36 его UIN</p>
 <p>(например: '199777666')</p>
-<p>TLV (2) - сообщение здесь&nbsp;</p>
-<p>T ype 00 02&nbsp;</p>
-<p>L ength 00 17&nbsp;</p>
+<p>TLV (2) - сообщение здесь</p>
+<p>T ype 00 02</p>
+<p>L ength 00 17</p>
 <p>V alue 05 01 00 01 01 01 01 (unk) ???</p>
 <p>00 0E длина сообщения</p>
 <p>+ 4</p>
-<p>00 00 00 00 (unk) ???&nbsp;</p>
-<p>D1 EE EE E1 F9 E5 ED E8 E5 21&nbsp; 'Сообщение!'&nbsp;</p>
-<p>TLV (6) - пустой&nbsp;</p>
-<p>T ype 00 06&nbsp;</p>
+<p>00 00 00 00 (unk) ???</p>
+<p>D1 EE EE E1 F9 E5 ED E8 E5 21  'Сообщение!'</p>
+<p>TLV (6) - пустой</p>
+<p>T ype 00 06</p>
 <p>L ength 00 00</p>
 <p>Продолжим более сложным форматом - Advanced Message. А он действительно по-сложнее будет.</p>
-<p>FLAP&nbsp;</p>
+<p>FLAP</p>
 <p>Command Start 2A</p>
 <p>Channel ID 02</p>
 <p>Sequence Number 0C A3</p>
 <p>Data Field Length 00 99</p>
-<p>SNAC (4, 06) - Send Message (Advanced)&nbsp;</p>
-<p>Family ID 00 04&nbsp;</p>
-<p>SubType ID 00 06&nbsp;</p>
+<p>SNAC (4, 06) - Send Message (Advanced)</p>
+<p>Family ID 00 04</p>
+<p>SubType ID 00 06</p>
 <p>Flags[0] 00</p>
 <p>Flags[1] 00</p>
 <p>Request ID 00 C3 00 06</p>
 <p>1C D3 C4 B7</p>
 <p> Cookie 1</p>
-<p>23 4D 75 95 Cookie 2&nbsp;</p>
-<p>00 02&nbsp; msg-format: Advanced Message&nbsp;</p>
+<p>23 4D 75 95 Cookie 2</p>
+<p>00 02  msg-format: Advanced Message</p>
 <p>09</p>
 <p> длина его UINа почти как</p>
 <p>PascalStr</p>
@@ -939,9 +939,9 @@ end;
 <p>37 37 37</p>
 <p>36 36 36 его UIN</p>
 <p>(например: '199777666')</p>
-<p>TLV (5)&nbsp;</p>
-<p>T ype 00 05&nbsp;</p>
-<p>L ength 00 73&nbsp;</p>
+<p>TLV (5)</p>
+<p>T ype 00 05</p>
+<p>L ength 00 73</p>
 <p>V alue 00 00 00 00 - для посылки сообщения</p>
 <p>1C D3 C4 B7 Cookie 1</p>
 <p>23 4D 75 95 Cookie 1</p>
@@ -950,16 +950,16 @@ end;
 <p>82 22 44 45</p>
 <p>53 54 00 00 4 DWORD</p>
 <p>наши возможности ???</p>
-<p>(capability)&nbsp;</p>
-<p>TLV (A)&nbsp;</p>
-<p>T ype 00 0A&nbsp;</p>
+<p>(capability)</p>
+<p>TLV (A)</p>
+<p>T ype 00 0A</p>
 <p>L ength 00 02</p>
-<p>V alue 00 01&nbsp; 00 01 - для посылки сообщения</p>
-<p>TLV (F) - пустой (???)&nbsp;</p>
-<p>T ype 00 0F&nbsp;</p>
+<p>V alue 00 01  00 01 - для посылки сообщения</p>
+<p>TLV (F) - пустой (???)</p>
+<p>T ype 00 0F</p>
 <p>L ength 00 00</p>
-<p>TLV (2711) - сообщение здесь&nbsp;</p>
-<p>T ype 27 11&nbsp;</p>
+<p>TLV (2711) - сообщение здесь</p>
+<p>T ype 27 11</p>
 <p>L ength 00 4B</p>
 <p>V alue 1B 00 07 00 00</p>
 <p>00 00 00 00 00</p>
@@ -967,25 +967,25 @@ end;
 <p>00 00 00 00 00</p>
 <p>00 00 03 00 00</p>
 <p>00 26 байт (unk)</p>
-<p>00&nbsp;&nbsp;</p>
-<p>FF FF&nbsp;&nbsp;</p>
-<p>0E 00&nbsp;&nbsp;</p>
-<p>FF FF&nbsp;&nbsp;&nbsp;</p>
+<p>00</p>
+<p>FF FF</p>
+<p>0E 00</p>
+<p>FF FF</p>
 <p>00 00 00 00 00</p>
 <p>00 00 00 00 00</p>
 <p>00 00 12 байт (unk)</p>
-<p>01&nbsp; msg-subtype ( 01-обычное )&nbsp;</p>
-<p>00&nbsp;&nbsp;</p>
-<p>00 00&nbsp;&nbsp;</p>
-<p>01 00&nbsp;&nbsp;</p>
-<p>0E 00&nbsp; длина сообщения&nbsp; тело</p>
-<p>сообщения&nbsp;</p>
-<p>D1 EE EE E1 F9 E5 ED E8 E5 20 B9 32 2E (00)&nbsp; 'Сообщение №2.'&nbsp;</p>
-<p>80 00 80 00 foreground color&nbsp;</p>
-<p>FF FF 00 00 background color&nbsp;</p>
+<p>01  msg-subtype ( 01-обычное )</p>
+<p>00</p>
+<p>00 00</p>
+<p>01 00</p>
+<p>0E 00  длина сообщения  тело</p>
+<p>сообщения</p>
+<p>D1 EE EE E1 F9 E5 ED E8 E5 20 B9 32 2E (00)  'Сообщение №2.'</p>
+<p>80 00 80 00 foreground color</p>
+<p>FF FF 00 00 background color</p>
 
-<p>TLV (3) - пустой&nbsp;</p>
-<p>T ype 00 03&nbsp;</p>
+<p>TLV (3) - пустой</p>
+<p>T ype 00 03</p>
 <p>L ength 00 00 TLV(3) посылается, как запрос подтверждения</p>
 <p>Что касается кода, то мудровать с формированием TLV я не стал. Зато получилось дешево и сердито. Одним словом - это все работает.</p>
 <pre>
@@ -1378,19 +1378,19 @@ end;
 <p>SubType ID 00 02</p>
 <p>Flags[0] 00</p>
 <p>Flags[1] 00</p>
-<p>Request ID 00 XX 00 02 (по ним можно опознать ответ)&nbsp;</p>
+<p>Request ID 00 XX 00 02 (по ним можно опознать ответ)</p>
 <p>TLV (1)</p>
 <p>Type 00 01</p>
-<p>Length XX XX&nbsp;</p>
+<p>Length XX XX</p>
 <p>Value Length-2</p>
 <p> (и что оно тут делает ?)</p>
-<p>XX XX XX XX наш UIN&nbsp;</p>
+<p>XX XX XX XX наш UIN</p>
 <p>D0 07 тип запроса</p>
 <p>XX 00 cookie</p>
 <p>(по нему можно/нужно</p>
 <p>опознавать ответ)</p>
 <p>B2 04 подтип запроса</p>
-<p>(B204 - запрос инфо клиента)&nbsp;</p>
+<p>(B204 - запрос инфо клиента)</p>
 <p>Это переменная часть зпроса.</p>
 <p>Она определяется подтипом запроса.</p>
 <p>Например:</p>

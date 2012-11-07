@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 function IsPrime(N: Cardinal): Boolean; register; 
   // test if N is prime, do some small Strong Pseudo Prime test in certain bounds 
   // copyright (c) 2000 Hagen Reddmann, don't remove 

@@ -62,44 +62,44 @@ end;
 <hr /><pre>
 procedure ToHtml(SG: TStringGrid; S: string);
 Var i,j:integer;
- &nbsp;&nbsp; t:TStringList;
+    t:TStringList;
 begin
  try
   t:=TStringList.Create;
-  t.Add('&lt;table border="1" align="center" cellspacing="0" rules="all"&gt;');&nbsp; //начало таблицы
-&nbsp;
-  t.Add('&lt;tr&gt;');&nbsp; //начало заголовков
+  t.Add('&lt;table border="1" align="center" cellspacing="0" rules="all"&gt;');  //начало таблицы
+ 
+  t.Add('&lt;tr&gt;');  //начало заголовков
   For j:=0 To SG.ColCount-1 Do
- &nbsp; t.Add('&lt;th&gt;'+SG.Cells[j,0]+'&lt;/th&gt;');&nbsp; //заголовки
-  t.Add('&lt;/tr&gt;');&nbsp; //конец заголовков
-&nbsp;
+   t.Add('&lt;th&gt;'+SG.Cells[j,0]+'&lt;/th&gt;');  //заголовки
+  t.Add('&lt;/tr&gt;');  //конец заголовков
+ 
  {ProgressBar1.Max:=SG.RowCount}
-&nbsp;
+ 
   For i:=1 To SG.RowCount Do
- &nbsp; begin
- &nbsp;&nbsp; t.Add('&lt;tr&gt;'); //начало ячеек
- &nbsp;&nbsp; For j:=0 To SG.ColCount-1 Do
- &nbsp;&nbsp;&nbsp; t.Add('&lt;td&gt;'+SG.Cells[j,i]+'&lt;/td&gt;');&nbsp; //ячейки
- &nbsp;&nbsp; t.Add('&lt;/tr&gt;'); //конец ячеек
- &nbsp; {ProgressBar1.Position:=i}
- &nbsp; end;
-&nbsp;
- &nbsp; t.Add('&lt;/table&gt;');&nbsp; //конец таблицы
- &nbsp; t.SaveToFile(S); //сохраняем в файл
-&nbsp;
+   begin
+    t.Add('&lt;tr&gt;'); //начало ячеек
+    For j:=0 To SG.ColCount-1 Do
+     t.Add('&lt;td&gt;'+SG.Cells[j,i]+'&lt;/td&gt;');  //ячейки
+    t.Add('&lt;/tr&gt;'); //конец ячеек
+   {ProgressBar1.Position:=i}
+   end;
+ 
+   t.Add('&lt;/table&gt;');  //конец таблицы
+   t.SaveToFile(S); //сохраняем в файл
+ 
   {ProgressBar1.Position:=0}
  finally
   t.Free;
  end;
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Пример вызова:</p>
 <pre>ToHtml(StringGrid1, 'C:\123.html');
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: Kostas</div>
 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>

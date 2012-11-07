@@ -14,7 +14,7 @@
 
 <p>Utility functions and methods</p>
 
-<pre>
+<pre class="delphi">
     function CdoNothing(Obj : OleVariant) : boolean;
     function CdoDefaultProfile : string;
     function VarNothing : IDispatch;
@@ -26,7 +26,7 @@
 
 
 <p>Create constructors that allow Default profile logon,Specific profile logon and an Impersonated user logon with profile. (This is required for successful logon in Windows Service Applications)</p>
-<pre>
+<pre class="delphi">
    constructor Create; overload;
    constructor Create(const Profile : string); overload;
    constructor Create(const Profile : string;
@@ -37,7 +37,7 @@
 
 
 <p>Methods for loading stringlists, treeviews etc. and Object iteration.</p>
-<pre>
+<pre class="delphi">
    function LoadAddressList(StringList : TStrings) : boolean;
    function LoadObjectList(const FolderOle : OleVariant; 
                            List : TList) : boolean;
@@ -53,8 +53,8 @@
 
 
 <p>The above load various lists into stringlists,lists or treeviews. Freeing of lists,object constructs within these data structures are freed at each successive call to the load, however the final Deallocation is the responsibility of the developer, You can do this yourself or use the utility functions CdoDisposeXXX(). See code documentation for further understanding.</p>
-<pre>
- 
+
+<pre class="delphi">
    function First(const FolderOle : OleVariant; 
                   out ItemOle : OleVariant) : boolean;
    function Last(const FolderOle : OleVariant; 
@@ -70,7 +70,7 @@
 <p>The above provide iterations thru object such as Inbox,Contacts etc. The AsString returns a fields value from the object such as Email Address,Name,Company Name etc. (There are miriads of these defined in the CONST section "Field Tags").</p>
 
 <p>Properties</p>
-<pre>
+<pre class="delphi">
      property CurrentUser : OleVariant read FCurrentUser;
      property Connected : boolean read FConnected;
      property LastErrorMess : string read FlastError;
@@ -91,7 +91,7 @@
 <p>The Create constructor sets up the predefined objects InBox, OutBox, DeletedItems, SentItems, GlobalAddressList, Session and Contacts. The other properties are self explanatary.</p>
 
 <p>As I mentioned earlier the functionality of CDO is vast as objects such as InBox have many methods and properties that included Updating,Inserting Deleting etc. The CDO.HLP file will help to expose these for you. My class is the base of CDO to help simplify building applications and is probably best demonstrated by code snippet examples. Believe me a whole book could be written on this subject, but it is well worth studying as a faster alternative to using MS Outlook API.</p>
-<pre>
+<pre class="delphi">
 uses Cdo_Lib;
 var
   Cdo: TcdoSession;
@@ -127,7 +127,7 @@ begin
 end;
 </pre>
 
-<pre>
+<pre class="delphi">
 // Example of loading emails into a treeview and displaying on treeview click
  
 unit UBrowse;
@@ -214,7 +214,7 @@ end;
 end.
 </pre>
 
-<pre>
+<pre class="delphi">
 unit CDO_Lib;
  
 // =============================================================================

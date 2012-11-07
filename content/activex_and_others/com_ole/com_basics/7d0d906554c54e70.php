@@ -7,7 +7,7 @@
 <p>i:=Calc.Sum;</p>
 <p>Так давайте так и сделаем! Правда мы ограничены экспортом только функций, но мы сделаем так:</p>
 <p>Добавим в dll такую запись</p>
-<pre>type
+<pre class="delphi">type
 ICalc=record
 SetOpers:procedure (x,y:integer);
 Sum:function:integer;
@@ -17,7 +17,7 @@ end;
  
 </pre>
 <p>и процедуру:</p>
-<pre>procedure GetInterface(var Calc:ICalc);
+<pre class="delphi">procedure GetInterface(var Calc:ICalc);
 begin
 CreateObject;
 Calc.Sum:=Sum;
@@ -28,14 +28,14 @@ end;
 </pre>
 
 <p>и будем экспортировать только ее:</p>
-<pre>exports
+<pre class="delphi">exports
 GetInterface; 
  
 </pre>
 <p>Видете что происходит? Теперь вместо того, чтобы получать адрес каждой функции, мы можем получить сразу всю таблицу адресов. Причем создание объекта происходит в этой же функции, и пользователю больше не нужно знать функцию CreateObject и не забыть ее вызвать.</p>
 <p>Переделаем наш тестер.</p>
 <p>В описание типов добавим:</p>
-<pre>type
+<pre class="delphi">type
 ICalc=record
 SetOpers:procedure (x,y:integer);
 Sum:function:integer;
@@ -45,7 +45,7 @@ end;
 </pre>
 
 <p>изменим секцию var.</p>
-<pre>var
+<pre class="delphi">var
 Form1: TForm1;
 _Mod:Integer;
 GetInterface:procedure (var x:ICalc);
@@ -53,27 +53,32 @@ Calc:ICalc;
 </pre>
 
 <p>и процедуры где мы используем наш объект.</p>
-<pre>
+
+<pre class="delphi">
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-_Mod:=LoadLibrary('CalcDll.dll');
-GetInterface:=GetProcAddress(_Mod,'GetInterface');
-GetInterface(Calc);
-Calc.SetOpers(13,10);
+  _Mod:=LoadLibrary('CalcDll.dll');
+  GetInterface:=GetProcAddress(_Mod,'GetInterface');
+  GetInterface(Calc);
+  Calc.SetOpers(13,10);
 end;
+
 procedure TForm1.FormDestroy(Sender: TObject);
 begin
-Calc.Release;
-FreeLibrary(_Mod);
+  Calc.Release;
+  FreeLibrary(_Mod);
 end;
+
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-ShowMessage(IntToStr(Calc.diff));
+  ShowMessage(IntToStr(Calc.diff));
 end;
+
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-ShowMessage(IntToStr(Calc.Sum));
+  ShowMessage(IntToStr(Calc.Sum));
 end;
 </pre>
+
 <p>Теперь со стороны может показаться, что мы пользуемся объектом, хотя на самом деле это всего лиш таблица с указателями на функции.</p>
 

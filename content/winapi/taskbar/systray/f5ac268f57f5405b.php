@@ -163,7 +163,7 @@ begin
 end.
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>но правильнее было бы внедриться в Explorer и сабклассировать TrayClockWClass</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Krid</div>

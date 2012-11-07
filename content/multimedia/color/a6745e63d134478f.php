@@ -10,13 +10,13 @@ begin
   Result := Format('#%.2x%.2x%.2x', [GetRValue(RGBColor), GetGValue(RGBColor), GetBValue(RGBColor)]);
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Не нужно забывать о</p>
 <pre>uses SysUtils, Graphics;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 для функций Format и ColorToRGB! <br>
-<p>&nbsp;</p>
+<p></p>
 <div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

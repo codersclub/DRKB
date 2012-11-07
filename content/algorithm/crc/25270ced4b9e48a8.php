@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 function CRC32(const IniCRC:Integer;Source:AnsiString):Integer;
 asm
 Push EBX
@@ -105,7 +105,7 @@ end;
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 <hr />
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Быстрый алгоритм подсчета CRC32
  
@@ -224,7 +224,7 @@ end;
 <hr />
 
 <p>Приведен модуль для Delphi 1.0 (для Delphi 2.0 должны быть сделаны небольшие изменения):</p>
-<pre>
+<pre class="delphi">
 unit CRC32;
  
 {CRC32 рассчитывает код циклической избыточности (cyclic redundancy code - CRC),

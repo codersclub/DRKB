@@ -3,10 +3,10 @@
 
 
 <p>в .RC - файле подключаемом к проекту пишешь<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>100 ICON "100.ico"
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>для загрузки икоки:</p>
 <pre>
   with MainWindow do
@@ -38,7 +38,7 @@
  
   SendMessage(Handle, WM_SETICON, 1, LoadIcon(HInstance, MAKEINTRESOURCE(100)));
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

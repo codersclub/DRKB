@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 {
 Today I want to show how you may load some xls-file that is 
 password-protected, and how to save xls into another file 

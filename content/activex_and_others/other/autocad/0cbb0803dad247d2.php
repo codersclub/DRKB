@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Получение текущего чертежа из AutoCAD в формате DXF
  
@@ -70,8 +70,9 @@ begin
 end; 
 </pre>
 
-<p> Пример использования:</p>
-<pre>
+<p>Пример использования:</p>
+
+<pre class="delphi">
 if not GetAcadDXFText(Memo1.Lines) then
  ShowMessage('Невозможно получить данные от AutoCAD'); 
 </pre>

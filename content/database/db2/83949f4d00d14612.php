@@ -22,7 +22,7 @@
 <p>в CONFIG.SYS в переменную среды DB2COMM добавить (через запятую) IPXSPX и перезагрузить систему;</p>
 <p>создать командный файл DBIPXSET.CMD следующего вида:</p>
 <p>|------------------------------------------------------------------</p>
-<p>|db2 update dbm cfg using fileserver&nbsp; objectname dbserver</p>
+<p>|db2 update dbm cfg using fileserver  objectname dbserver</p>
 <p>|------------------------------------------------------------------</p>
 <p>где - &lt;NWSERVER&gt; - имя сервера;</p>
 

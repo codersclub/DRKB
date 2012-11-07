@@ -24,7 +24,7 @@ begin
       Result := i
 end;
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <p>...через цикл обхода элементов глобального массива LongMonthNames:</p>
 <pre>
@@ -39,4 +39,4 @@ End;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

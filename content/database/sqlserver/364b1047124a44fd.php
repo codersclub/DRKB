@@ -44,7 +44,7 @@ BEGIN
   execute @OLEResult = sp_OAMethod @FS,'CreateFolder',@bFolder OUT, @sFileDir
   IF @OLEResult &lt;&gt; 0 And @bFolder = 0
   BEGIN
- &nbsp;&nbsp; GOTO Error_Handler&nbsp;&nbsp;&nbsp; 
+    GOTO Error_Handler    
   END
 END
 --создать файл---
@@ -62,9 +62,9 @@ BEGIN
   GOTO Error_Handler
 END
 goto Done
-Error_Handler:&nbsp; --обработаем ошибку---
+Error_Handler:  --обработаем ошибку---
 EXEC @hr = sp_OAGetErrorInfo null, @source OUT, @desc OUT
-Done:&nbsp;&nbsp;&nbsp; 
+Done:    
 --очистим за собой всяческий OLE-мусор----
 EXECUTE @OLEResult = sp_OADestroy @FileID
 EXECUTE @OLEResult = sp_OADestr 

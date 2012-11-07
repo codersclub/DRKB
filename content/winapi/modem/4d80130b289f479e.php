@@ -68,7 +68,7 @@ end;
 <p>переменная состояния соединения, где</p>
 <p>TMyDialParam = Record</p>
 <p>AMsg : Integer; - код сообщения</p>
-<p>AState : TRasConnState; - статус соединения (тип переменной определен в &nbsp;RasUnit.pas)</p>
+<p>AState : TRasConnState; - статус соединения (тип переменной определен в  RasUnit.pas)</p>
 <p>AError : Integer; - код ошибки</p>
 <p>hRas: ThRASConn</p>
 <p>в эту переменную будет помещен handle (так сказать "ИНН") "удаленного соединения", к этой переменной будет обращаться функция RasHangUp для завершения соединения, тип переменной описан в RasUnit.pas</p>

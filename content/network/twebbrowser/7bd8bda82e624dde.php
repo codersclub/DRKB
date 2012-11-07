@@ -62,7 +62,7 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>А вот пример странички:</p>
 <pre>&lt;!-- This document was created with HomeSite v2.0 --&gt;
 &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"&gt;
@@ -80,6 +80,6 @@ The following links set and get a cookie onto your browser&lt;P&gt;
 &lt;/BODY&gt;
 &lt;/HTML&gt;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>&#169; Delphi 4 Developer's Guide</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -124,7 +124,7 @@ Adapter.adapt.adapter_address[5] );
 <div class="author">Автор: Daniel Wischnewski</div>
 <p>Для того, чтобы этот код работал, необходимо включить в проект юнит NB30. Простой вызов функции GetMACAddress возвращает адрес первого установленного сетевого адаптера.</p>
 <p>Совместимость: Delphi 3.x (или выше)</p>
-<p>Данный пример был составлен на основе статьи на сайте&nbsp; Borland:</p>
+<p>Данный пример был составлен на основе статьи на сайте  Borland:</p>
 <p><a href="https://community.borland.com/article/0,1410,26040,00.html " target="_blank">https://community.borland.com/article/0,1410,26040,00.html</a></p>
 <pre>
 uses 

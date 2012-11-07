@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 vvWord:= CreateOleObject('Word.Application.8');  
 vvWord.Application.Visible:=true;  
 vvWord.Documents.Open( TempFileName );  

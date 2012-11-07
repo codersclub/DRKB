@@ -22,7 +22,7 @@ procedure Proc(var a:Ta);
 procedure Proc(const a:Ta);
 </pre>
 внутри процедуры запрещено изменять данные переменной а
-<p>&nbsp;</p>
+<p></p>
 <p class="p_Heading1">Вариант 4.</p>
 <pre>
 procedure Proc(out a:Ta);

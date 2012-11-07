@@ -173,7 +173,7 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 type
@@ -188,7 +188,7 @@ GetMem(tImg, 4 * numberofentries);
 <p>Преимущество в том, что вы должны использовать столько памяти, сколько вам нужно. Недостаток в том, что вы должны кодировать все с tImg^[n]....</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 
 <hr />
 <p class="note">Примечание от Vit</p>

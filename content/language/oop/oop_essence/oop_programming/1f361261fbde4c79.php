@@ -19,7 +19,7 @@ type
         read FPercentCritical write SetPercentCritical;
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Поля, методы и свойства класса TMemoryGauge аналогичны тем, что определены в классе TDiskGauge. Отличие состоит в отсутствии поля DriveLetter и другой реализации конструктора Create и метода GetPercentFree. Если в будущем появится класс, описывающий измеритель ресурса какого-то нового типа, то придется снова определять общие для всех классов поля, методы и свойства. Чтобы избавиться от дублирования атрибутов при определении новых классов, воспользуемся механизмом наследования. Прежде всего выделим атрибуты, общие для всех измерителей ресурсов, в отдельный класс TResourceGauge:</p>
 <pre>
 type
@@ -54,7 +54,7 @@ begin
   if GetPercentFree &lt;= FPercentCritical then Beep;
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>При реализации класса TResourceGauge ничего не известно о том, что в действительности представляет собой ресурс, поэтому функция GetPercentFree возвращает нуль. Очевидно, что создавать объекты класса TResourceGauge не имеет смысла. Для чего тогда нужен класс TResourceGauge? Ответ: чтобы на его основе породить два других класса &#8212; TDiskGauge и TMemoryGauge, описывающих конкретные виды измерителей ресурсов, &#8212; измеритель диска и измеритель памяти:</p>
 <pre>
 type
@@ -68,11 +68,11 @@ type
    function GetPercentFree: Integer;
  end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Классы TDiskGauge и TMemoryGauge определены как наследники TResourceGauge (об этом говорит имя в скобках после слова class). Они автоматически включают в себя все описания, сделанные в классе TResourceGauge и добавляют к ним некоторые новые. В результате формируется следующее дерево классов (рис. 1):</p>
 <p><img src="/pic/embim1697.gif" width="203" height="94" vspace="1" hspace="1" border="0" alt=""></p>
 <p>Рисунок 1</p>
-<p>&nbsp;</p>
+<p></p>
 <p>Класс, который наследует атрибуты другого класса, называется порожденным классом или потомком. Естественно, что класс, от которого происходит наследование, выступает в роли базового, или предка. В примере класс TDiskGauge является непосредственным потомком класса TResourceGauge. Если от TDiskGauge породить новый класс, то он тоже будет потомком TResourceGauge, но уже не таким близким, как TDiskGauge.</p>
 <p>Очень важно, что в отношениях наследования любой класс может иметь только одного непосредственного предка и сколь угодно много потомков. Поэтому все связанные отношением наследования классы образуют иерархию. Примером иерархии классов является библиотека Visual Component Library (VCL); с ее помощью в Delphi обеспечивается разработка Windows-приложений.</p>
 <p>ПРЕДОК ПО УМОЛЧАНИЮ</p>
@@ -84,23 +84,26 @@ type
   end;
 </pre>
 <p>эквивалентно следующему:</p>
-&nbsp;</p>
+</p>
 <pre>
 type
   TResourceGauge = class(TObject)
    ...
   end;
 </pre>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <p>Класс TObject выступает корнем любой иерархии классов. Он содержит ряд методов, которые по наследству передаются всем остальным классам. Среди них конструктор Create, деструктор Destroy, процедура Free и некоторые другие методы.</p>
 <p>Таким образом, полная иерархия классов для измерителей ресурсов выглядит так (рис. 2):</p>
 <p><img src="/pic/embim1698.gif" width="203" height="144" vspace="1" hspace="1" border="0" alt=""></p>
 <p>Рисунок 2</p>
-<p>&nbsp;</p>
+<p></p>
 <p>ПЕРЕКРЫТИЕ АТРИБУТОВ В НАСЛЕДНИКАХ</p>
 <p>В механизме наследования можно условно выделить три основных момента:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="14">§</td><td>наследование полей;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="14">§</td><td>наследование свойств;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="14">§</td><td>наследование методов.</td></tr></table></div><p>Любой порожденный класс наследует от родительского все поля данных, поэтому классы TDiskGauge и TMemoryGauge автоматически содержат поле FPercentCritical, объявленное в классе TResourceGauge. Доступ к полям предка осуществляется по имени, как если бы они были определены в порожденном классе. В наследниках можно определять новые поля, но их имена должны отличаться от имен полей предка.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="14">§</td><td>наследование полей;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="14">§</td><td>наследование свойств;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="14">§</td><td>наследование методов.</td></tr></table></div>
+<p>Любой порожденный класс наследует от родительского все поля данных, поэтому классы TDiskGauge и TMemoryGauge автоматически содержат поле FPercentCritical, объявленное в классе TResourceGauge. Доступ к полям предка осуществляется по имени, как если бы они были определены в порожденном классе. В наследниках можно определять новые поля, но их имена должны отличаться от имен полей предка.</p>
 <p>Наследование свойств и методов имеет свои особенности.</p>
 <p>Свойство базового класса можно перекрыть (от англ. override) в производном классе, например чтобы добавить ему новый атрибут доступа или связать с другим полем или методом.</p>
 <p>Метод базового класса тоже можно перекрыть в производном классе, например чтобы изменить логику его работы. Обратимся, например, к классам TDiskGauge и TMemoryGauge. В них методы SetPercentCritical и CheckStatus унаследованы от TResourceGauge, так как логика их работы не зависит от типа ресурса. А вот метод GetPercentFree перекрыт, так как способ вычисления процента свободного пространства специфичен для диска и оперативной памяти:</p>
@@ -122,7 +125,7 @@ begin
   Result := 100 - MemoryStatus.dwMemoryLoad;
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>В классе TDiskGauge перекрыт еще и конструктор Create. Это необходимо для инициализации дополнительного поля DriveLetter:</p>
 <pre>
 constructor TDiskGauge.Create (ADriveLetter: Char) ;
@@ -141,7 +144,7 @@ var
   R := TDiskGauge.Create;
 ...
 </pre>
-&nbsp;</p>
+</p>
 <p>Объектная переменная R формально имеет тип TResourceGauge, а фактически связана с экземпляром класса TDiskGauge.</p>
 <p>Правило совместимости классов чаще всего применяется при передаче объектов в параметрах процедур и функций. Например, если процедура работает с объектом класса TResourceGauge, то вместо него можно передать объект класса TDiskGauge или TMemoryGauge.</p>
 <p>КОНТРОЛЬ И ПРЕОБРАЗОВАНИЕ ТИПОВ</p>
@@ -151,22 +154,22 @@ var
 var
   Obj: TObject;
 </pre>
-&nbsp;</p>
+</p>
 <p>к классу TResourceGauge или его наследнику, следует записать</p>
 <pre>
 if Obj is TResourceGauge then { да, принадлежит } ;
 </pre>
-&nbsp;</p>
+</p>
 <p>Для преобразования объекта к нужному типу используется оператор as, например:</p>
 <pre>
 with Obj as TResourceGauge do CheckStatus;
 </pre>
-&nbsp;</p>
+</p>
 <p>Стоит отметить, что для объектов применим и обычный способ приведения типа:</p>
 <pre>
 with TResourceGauge(Obj ) do CheckStatus;
 </pre>
-&nbsp;</p>
+</p>
 <p>Вариант с оператором as лучше, поскольку безопасен. Он генерирует ошибку (точнее, исключительную ситуацию) при выполнении программы (run-time error), если реальный экземпляр объекта Obj несовместим с классом TResourceGauge. Забегая вперед, скажем, что ошибку приведения типа можно обработать и таким образом избежать досрочного завершения приложения.</p>
 <p>ВИРТУАЛЬНЫЕ МЕТОДЫ</p>
 <p>ПОНЯТИЕ ВИРТУАЛЬНОГО МЕТОДА</p>
@@ -178,7 +181,7 @@ begin
   { if TResourceGauge.GetPereentFree &lt;= FPercentCritical then Beep; }
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Метод CheckStatus работает неправильно в наследниках TResourceGauge, так как внутри него вызов перекрытого метода GetPereentFree не происходит. Конечно, в классах TDiskGauge и TMemoryGauge можно продублировать все методы и свойства, которые прямо или косвенно вызывают GetPereentFree, но при этом теряются преимущества наследования. ООП предлагает изящное решение этой проблемы &#8212; метод GetPereentFree всего-навсего объявляется виртуальным:</p>
 <pre>
 type
@@ -200,7 +203,7 @@ type
     function GetPercentFree: Integer; override;
   end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Суть виртуальных методов в том, что они вызываются по фактическому типу экземпляра, а не по формальному типу, записанному в программе. Поэтому после сделанных изменений метод CheckStatus будет работать так, как ожидает программист:</p>
 <pre>
 procedure TResourceGauge.CheckStatus;
@@ -209,7 +212,7 @@ begin
   { if «фактический класс&gt;.GetPercentFree &lt;= FpercentCritical then Beep; }
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Работа виртуальных методов основана на механизме позднего связывания (late binding). В отличие от раннего связывания (early binding), характерного для статических методов, позднее связывание основано на вычислении адреса вызываемого метода при выполнении программы. Метод вычисляется по хранящемуся в каждом объекте описателю типа.</p>
 <p>Благодаря механизму наследования и виртуальным методам, в Delphi реализуется такая концепция ООП как полиморфизм. Полиморфизм существенно облегчает труд программиста, так как обеспечивает повторное использование кода уже написанных методов.</p>
 <p>АБСТРАКТНЫЕ ВИРТУАЛЬНЫЕ МЕТОДЫ</p>
@@ -222,7 +225,7 @@ type
      ...
   end;
 </pre>
-&nbsp;</p>
+</p>
 <p>Директива abstract записывается после слова virtual и исключает необходимость написания кода виртуального метода для данного класса. Такой метод называется абстрактным, т.е. подразумевает конкретное логическое действие, а не способ его реализации. Абстрактные виртуальные методы часто используются при создании классов-полуфабрикатов. Свою реализацию такие методы получают в законченных наследниках.</p>
 <p>ДИНАМИЧЕСКИЕ МЕТОДЫ</p>
 <p>Разновидностью виртуальных методов являются так называемые динамические методы. При их объявлении вместо слова virtual записывается ключевое слово dynamic, например:</p>
@@ -248,7 +251,10 @@ type
 <p>Методы обработки сообщений применяются внутри библиотеки VCL для обработки сообщений Windows и редко нужны ее пользователям, т.е. нам с вами.</p>
 <p>КЛАССЫ В ПРОГРАММНЫХ МОДУЛЯХ</p>
 <p>Классы очень удобно собирать в модули. При этом их описание помещается в секцию interface, а код методов &#8212; в секцию implementation. Создавая модули классов, нужно придерживаться следующих правил:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">q</td><td>все классы, предназначенные для использования за пределами модуля, следует определять в секции interface;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">q</td><td>описание классов, предназначенных для употребления внутри модуля, следует располагать в секции implementation;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">q</td><td>если модуль В использует модуль А, то в модуле В можно определять классы, порожденные от классов модуля А.</td></tr></table></div><p>Соберем рассмотренные ранее классы TResourceGauge, TDiskGauge и TmemoryGauge в отдельный модуль Resgauge:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">q</td><td>все классы, предназначенные для использования за пределами модуля, следует определять в секции interface;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">q</td><td>описание классов, предназначенных для употребления внутри модуля, следует располагать в секции implementation;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">q</td><td>если модуль В использует модуль А, то в модуле В можно определять классы, порожденные от классов модуля А.</td></tr></table></div>
+<p>Соберем рассмотренные ранее классы TResourceGauge, TDiskGauge и TmemoryGauge в отдельный модуль Resgauge:</p>
 <pre>
  
 unit Resgauge;
@@ -352,13 +358,13 @@ end.
 type
   TFewResourcesEvent = procedure (Sender: TObject) of object;
 </pre>
-&nbsp;</p>
+</p>
 <p>Переменная такого типа называется указателем на метод (method pointer). Она занимает в памяти 8 байт и хранит одновременно ссылку на объект и адрес его метода:</p>
 <pre>
 var
   OnFewResources: TFewResourcesEvent = nil;
 </pre>
-&nbsp;</p>
+</p>
 <p>Методы объектов, объявленные по приведенному выше шаблону, становятся совместимы по типу с переменной OnFewResources.</p>
 <pre>
 type
@@ -368,12 +374,12 @@ type
 var
   Form1: Tform1;
 </pre>
-&nbsp;</p>
+</p>
 Ecли переменную OnFewResources связать с методом FewResources объекта Form1</p>
 <pre>
 OnFewResources:= Form1.FewResources;
 </pre>
-&nbsp;</p>
+</p>
 <p>и переписать метод CheckStatus,</p>
 <pre>
 procedure TResourceGauge.CheckStatus ;
@@ -382,6 +388,6 @@ begin
    if Assigned(OnFewResources) then OnFewResources(Self) ;
 end;
 </pre>
-&nbsp;</p>
+</p>
 <p>то выдача предупреждения о нехватке ресурсов будет переадресована (говорят еще делегирована) методу FewResources объекта Form1. Обратите внимание, что вызов метода через указатель происходит лишь в том случае, если указатель не равен nil. Эта проверка выполняется с помощью стандартной функции Assigned, которая возвращает True, если ее аргумент является связанным указателем.</p>
 <p>Делегирование позволяет сосредоточить в одном объекте обработку событий, возникающих в других объектах. Это избавляет программиста от необходимости порождать многочисленные классы-наследники и перекрывать в них виртуальные методы. Делегирование широко применяется в Delphi. Например, все компоненты делегируют обработку своих событий форме, на которой они находятся.</p>

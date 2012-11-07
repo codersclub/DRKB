@@ -5,12 +5,12 @@
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <p>Установите DragMode = dmManual, создайте OnMouseDownHandler, внутри обработчика осуществите вызов BeginDrag(False). BeginDrag(False) в действительности не начинает перемещение, пока пользователь не переместит объект больше, чем на 5 пикселей, так что если пользователь просто щелкнет на компоненте, операция перетаскивания даже не начнется.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <p>Проблема заключается в том, что прежде, чем windows сможет обработать сообщение WM_MouseUp, курсор мыши передвинется дальше. Вот решение этой головоломки:</p>
 <p>Разрешите Windows как можно скорее обработатывать события мыши:</p>
@@ -39,8 +39,8 @@ end;
 <p>Переместите вызов BeginDrag в обработчик события OmMouseMove.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <p class="p_Heading1">Drag and Drop для двух компонентов TOutline</p>
 <div class="author">Автор: Lloyd Linklater (Sysop) (Delphi Technical Support)</div>
@@ -121,5 +121,5 @@ end.
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>

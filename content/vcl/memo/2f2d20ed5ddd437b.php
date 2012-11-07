@@ -101,7 +101,7 @@ End; { PostKeyEx }
 </pre>
 
 Пример:</p>
-&nbsp;</p>
+</p>
 <pre>
 procedure TForm1.SpeedButton2Click(Sender: TObject);
 Var

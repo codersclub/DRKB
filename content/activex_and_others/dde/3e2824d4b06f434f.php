@@ -3,7 +3,7 @@
 
 Для управления программными группами в Program Manager с помощью DDE мною был использован следующий модуль. За основу был взят код Steve Texeira (sp) из руководства Dephi Developers Guide.</p>
 <p>Работает под Win 3.1 и '95.</p>
-<pre>
+<pre class="delphi">
 unit Pm;
  
 interface

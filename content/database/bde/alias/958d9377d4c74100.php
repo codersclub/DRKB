@@ -4,7 +4,7 @@
 
 <div class="author">Автор: Tom Stickle</div>
 
-<pre>
+<pre class="delphi">
 var
   pszAliasName: PChar;  { Имя псевдонима }
   pszDriverType: PChar; { Тип драйвера для псевдонима }

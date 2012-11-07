@@ -8,13 +8,13 @@
 
 <p>Также можно создать до 4-х изображений для индикации состояния кнопки</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--------- Ширина ---------&gt;</p>
+<p>              &lt;--------- Ширина ---------&gt;</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +------+------+-----+------+&nbsp;&nbsp;&nbsp; ^</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |Курсор|Курсор|нажа-|недос-|&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |на кно|за пре| та&nbsp; |тупна |&nbsp; Высота</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | пке&nbsp; |делами|&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; |</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +------+------+-----+------+&nbsp;&nbsp;&nbsp; v</p>
+<p>              +------+------+-----+------+    ^</p>
+<p>              |Курсор|Курсор|нажа-|недос-|    |</p>
+<p>              |на кно|за пре| та  |тупна |  Высота</p>
+<p>              | пке  |делами|     |      |    |</p>
+<p>              +------+------+-----+------+    v</p>
 
 <p>Вы так же можете присвоить кнопке текстовый заголовок. Можно расположить текст и изображение в любом месте кнопки. Для этого в пример добавлены четыре свойства:</p>
 

@@ -197,4 +197,4 @@ end;
 end.
 </pre>
 <div class="author">Автор: Vit</div>
-&nbsp;</p>
+</p>

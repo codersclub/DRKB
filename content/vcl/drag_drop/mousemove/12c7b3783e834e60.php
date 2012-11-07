@@ -138,10 +138,10 @@ end;
 <p>Ну вот и всё. Надеюсь, вам понравится. Обругать меня вы можете по адресу yanval@yandex.ru</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr /><p class="p_Heading1">Перетаскивание картинки мышью</p>
-<p class="p_Heading1">&nbsp;</p>
+<p class="p_Heading1"></p>
 <div class="author">Автор: Пётр Соболь</div>
 <pre>
 type
@@ -209,4 +209,4 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

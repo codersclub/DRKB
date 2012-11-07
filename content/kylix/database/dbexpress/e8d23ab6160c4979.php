@@ -40,22 +40,22 @@ SET TERM ;^
 <p>Далее запустим IDE Kylix и создадим новое приложение. На главной форме приложения разместим следующие компоненты с закладки dbExpress и установим для них нижеуказанные свойства</p>
 <p>sc_conn:TDBConnection - настроить для соединения с созданной БД. (как это сделать см. "Коннект - есть коннект"). Св-во Connected - установить true.</p>
 <p>scd_emp:TSQLClientDataSet</p>
-<p> &nbsp;&nbsp; DBConnection - sc_conn</p>
-<p> &nbsp;&nbsp; CommandText - select ID,NAME from EMPOYEERS</p>
+<p>    DBConnection - sc_conn</p>
+<p>    CommandText - select ID,NAME from EMPOYEERS</p>
 
 <p>Двойным кликом мыши вызовем редактор полей. В редакторе полей правой кнопкой мыши вызовем всплывающее меню и в нем выберем пункт Add all fields. При этом поля набора данных будут определены явным образом. Выберем поле ID и установим его свойство Required в false, чтобы снять необходимость ручного ввода значения ID при вставке пользователем новой записи. После этого св-во Connected компонента sc_conn установим в false.</p>
 
 <p>ds_src:TDataSource</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DataSet:scd_emp</p>
+<p>                DataSet:scd_emp</p>
 <p>DBNavigator1:TDBNavigator</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DataSource - ds_src</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Align - alTop</p>
+<p>                DataSource - ds_src</p>
+<p>                Align - alTop</p>
 <p>Panel1:TPanel</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Align - alBottom</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Caption - ""(пустая строка)</p>
+<p>                Align - alBottom</p>
+<p>                Caption - ""(пустая строка)</p>
 <p>DBGrid1:TDBGrid</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DataSource - ds_src</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Align - alTop</p>
+<p>                DataSource - ds_src</p>
+<p>                Align - alTop</p>
 
 <p>На Panel1 разместим 4(Button) кнопки c именами b_connect, b_disconnect, b_count, b_fetch (заголовки - Caption - connect, disconnect, get count, fetch all соответсвтенно )и одну надпись (Label). На событие onClick кнопки b_connect навесим обработчик со следующим кодом</p>
 
@@ -77,7 +77,7 @@ SET TERM ;^
 <p>Для добавления записей существуют четыре метода</p>
 <p>Append -Добавление пустой записи в конец набора данных. Курсор помещается на добавленную запись и набор данных переходит в режим редактирования</p>
 <p>Insert - Добавление пустой записи в текущую позицию набора данных. Курсор помещается на добавленную запись и набор данных переходит в режим редактирования.</p>
-<p>AppendRecord(const Values: array of const)&nbsp; - Добавление записи в конец набора данных. Поля передаются через параметр Values</p>
+<p>AppendRecord(const Values: array of const)  - Добавление записи в конец набора данных. Поля передаются через параметр Values</p>
 <p>InsertRecord(const Values: array of const) Добавление записи в текущую позицию набора данных. Поля передаются через параметр Values</p>
 <p>Примеры добавления записей:</p>
 <p>// Использование Append</p>
@@ -93,7 +93,7 @@ SET TERM ;^
 
 <p>BeforeInsert - Событие, генерируемое перед вставкой новой записи в набор данных.</p>
 <p>AfterInsert - Событие, генерируемое после вставкой новой записи в набор данных</p>
-<p>OnNewRecord - Событие, генерируемое при вставке новой записи в набор данных&nbsp;</p>
+<p>OnNewRecord - Событие, генерируемое при вставке новой записи в набор данных</p>
 
 <p>При необходимости отменить вставку записи внутри обработчика события можно вызвать метод Abort.</p>
 <p>Порядок вызова событий</p>
@@ -185,9 +185,9 @@ if scd_emp.ChangeCount &gt; 0 then
 <p>Обработка ошибок</p>
 <p>Обработка ошибок также делится на обработку ошибок работы с буфером и обработку ошибок передачи данных на сервер БД. Для обработки ошибок вставки, удаления и редактирования в компоненте TSQLDataSet существуют несколько видов событий</p>
 
-<p>OnDeleteError - Возникает при наличии ошибок удаления записи&nbsp;</p>
-<p>OnEditError - Возникает при наличии ошибок редактирования или вставки записи&nbsp;</p>
-<p>OnPostError - Возникает при наличии ошибок записи сделанных изменений в буфер клиентского набора данных&nbsp;</p>
+<p>OnDeleteError - Возникает при наличии ошибок удаления записи</p>
+<p>OnEditError - Возникает при наличии ошибок редактирования или вставки записи</p>
+<p>OnPostError - Возникает при наличии ошибок записи сделанных изменений в буфер клиентского набора данных</p>
 
 <p>Обработчики вышеперечисленных событий в качестве одного из параметров получают параметр Action типа TDataAction. Изменяя значение этого параметра в обработчике можно варьировать реакцию на произошедшую ошибку. Возможные значения</p>
 

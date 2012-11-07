@@ -7,7 +7,9 @@
 <p>https://www.fmisolutions.com</p>
 <p>Перевод: &#169; Digimaster 2005</p>
 <p>Приложение может записывать сообщения в журнал используя следующие функции WinAPI. Подробное описание параметров этих функций содержится в документации к API.</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>RegisterEventSource - Открывает handle для доступа к журналу на локальной или удаленной машине.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ReportEvent - Собственно записывает сообщение.</td></tr></table></div><p>Для записи сообщений в журнал в упрощенной манере просто произведите вызов RegisterEventSource с именем машины (UNC), в журнал которой вы хотите поместить сообщение (nil для локальной машины), и именем события. Имя события это обычно имя приложения, но может быть чем-то более информативным. Как только источник событий зарегистрирован, можно записывать события при помощи ReportEvent с handle, который вернула RegisterEventSource.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>RegisterEventSource - Открывает handle для доступа к журналу на локальной или удаленной машине.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ReportEvent - Собственно записывает сообщение.</td></tr></table></div>
+<p>Для записи сообщений в журнал в упрощенной манере просто произведите вызов RegisterEventSource с именем машины (UNC), в журнал которой вы хотите поместить сообщение (nil для локальной машины), и именем события. Имя события это обычно имя приложения, но может быть чем-то более информативным. Как только источник событий зарегистрирован, можно записывать события при помощи ReportEvent с handle, который вернула RegisterEventSource.</p>
 <p>Пример:</p>
 <pre>
 VAR EventLog:THandle;
@@ -106,7 +108,10 @@ End;
 </pre>
 <p>Сообщение и ресурсы категорий.</p>
 <p>Информация, помещаемая в реестр вышеприведенным кодом, информирует журнал событий о том, где искать строки событий и категорий, основываясь на имени источника, которое использует приложение для записи в журнал. И, как мы уже говорили, чтобы журнал событий искал эти строки в нашем исполняемом файле, нам нужно включить эти строковые ресурсы в наш файл. Этот процесс состоит из следующих шагов:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Написание исходного файла таблицы сообщений (файл .mc).</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Компиляция .mc файла при помощи Microsoft message compiler.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Подключение получившейся информации к нашему Delphi приложению.</td></tr></table></div><p>Есть много примеров по написанию .mc файлов в Windows SDK и на различных сайтах, включая MSDN, однако документация не достаточно проста, поэтому приводим минимально достаточное описание для создания файла таблицы сообщений:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Написание исходного файла таблицы сообщений (файл .mc).</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Компиляция .mc файла при помощи Microsoft message compiler.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Подключение получившейся информации к нашему Delphi приложению.</td></tr></table></div>
+<p>Есть много примеров по написанию .mc файлов в Windows SDK и на различных сайтах, включая MSDN, однако документация не достаточно проста, поэтому приводим минимально достаточное описание для создания файла таблицы сообщений:</p>
 <p>;//Example Message source file exmess.mc</p>
 <p>MessageId=0</p>
 <p>Language=English</p>

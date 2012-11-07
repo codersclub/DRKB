@@ -41,9 +41,9 @@
 <p>  * Использование прообразов файлов для хранения образов страниц файла перед добавлением, корректировкой и удалением записей;</p>
 <p>  * Использование процесса транзакций для поддержки совместимости между файлами данных во время неоднократной корректировки файла.</p>
 <p>BTRIEVE УТИЛИТЫ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve включает две программы-утилиты так же, как и некоторые</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; диалоговые команды, позволяющие Вам выполнять тестирование и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; управление данными без составления прикладной программы. Они</p>
+<p>          Btrieve включает две программы-утилиты так же, как и некоторые</p>
+<p>          диалоговые команды, позволяющие Вам выполнять тестирование и</p>
+<p>          управление данными без составления прикладной программы. Они</p>
 <p>включают:</p>
 <p>  * BUTIL.EXE, утилиту командной строки, позволяющую Вам создавать и управлять файлами данных Btrieve.</p>
 <p>  * B.EXE, интерактивную программу-утилиту, которую можно использовать для инструктажа, тестирования и отладки логики Вашей прикладной программы.</p>
@@ -61,99 +61,99 @@
 <p>Btrieve всегда возвращает статусный код, ознчающий успех (статус=0) или неудачу (статус&lt;&gt;0) операции. Ваша прикладная задача должна всегда проверять ненулевые статусные коды и предпринимать соответствующие действия.</p>
 <p>Кроме того, Btrieve возвращает данные или другую информацию в индивидуальных параметрах, основываясь на цели операции.</p>
 <p>Таблица 1.1 перечисляет Btrieve-операции и коды операций и содержит краткое описание выполняемой операцией функции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Таблица 1.1 (Операции Btrieve)</p>
-<p>  &nbsp; &nbsp;---------------------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp;ОПЕРАЦИЯ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;КОД &nbsp; &nbsp;ОПИСАНИЕ</p>
-<p>  &nbsp; &nbsp;---------------------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp;Открыть &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; Делает файл доступным</p>
-<p>  &nbsp; &nbsp; &nbsp;(Open)</p>
-<p>  &nbsp; &nbsp; &nbsp;Закрыть &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; Отменяет доступ к файлу</p>
-<p>  &nbsp; &nbsp; &nbsp;(Close)</p>
-<p>  &nbsp; &nbsp; &nbsp;Вставить &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp; Вставляет новые записи в файл</p>
-<p>  &nbsp; &nbsp; &nbsp;(Insert)</p>
-<p>  &nbsp; &nbsp; &nbsp;Изменить &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; Изменяет текущую запись</p>
-<p>  &nbsp; &nbsp; &nbsp;(Update)</p>
-<p>  &nbsp; &nbsp; &nbsp;Удалить &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; Удаляет текущую запись из</p>
-<p>  &nbsp; &nbsp; &nbsp;(Delete) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файла</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Равную &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp; Получает запись со значением</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Equal) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ключа равным требуемому</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значению ключа</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Следующую &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6 &nbsp; &nbsp; &nbsp; Получает запись следующую за</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Next) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; текущей записью в индексном пути</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Предыдущую &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 &nbsp; &nbsp; &nbsp; Получает запись предшествующую</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Previous) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; текущей записи в индексном пути</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Большую &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; &nbsp; Получает запись со значением</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Greater) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ключа большим требуемого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения ключа</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Большую или &nbsp; &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; Получает запись со значением</p>
-<p>  &nbsp; &nbsp; &nbsp; Равную &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ключа равным или большим</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Greater or Equal) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; требуемого значения ключа</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Меньшую Чем &nbsp; &nbsp; &nbsp; &nbsp;10 &nbsp; &nbsp; &nbsp; Получает запись со значением</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Less Than) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ключа меньшим требуем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения ключа</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Меньшую Чем &nbsp; &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; Получает запись со значением</p>
-<p>  &nbsp; &nbsp; &nbsp;или Равную &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключа равным или меньшим</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Less Than or Equal) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; требуемого значения ключа</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Первую &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 12 &nbsp; &nbsp; &nbsp; Получает первую запись в</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get First) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;запрошенном пути доступа</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Последнюю &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;13 &nbsp; &nbsp; &nbsp; Получает последнюю запись в</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Last) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запрошенном пути доступа</p>
-<p>  &nbsp; &nbsp; &nbsp;Создать &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 14 &nbsp; &nbsp; &nbsp; Создает Btrieve-файл с</p>
-<p>  &nbsp; &nbsp; &nbsp;(Create) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; заданными характеристиками</p>
-<p>  &nbsp; &nbsp; &nbsp;Статистика &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15 &nbsp; &nbsp; &nbsp; Возвращает характеристики файла</p>
-<p>  &nbsp; &nbsp; &nbsp;(Stat) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; и индекса и число записей</p>
-<p>  &nbsp; &nbsp; &nbsp;Расширить &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16 &nbsp; &nbsp; &nbsp; Расширяет файл на два дисковых</p>
-<p>  &nbsp; &nbsp; &nbsp;(Extend) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; тома</p>
-<p>  &nbsp; &nbsp; &nbsp;Установить Директорию &nbsp; &nbsp; &nbsp; 17 &nbsp; &nbsp; &nbsp; Изменяет текущую директорию</p>
-<p>  &nbsp; &nbsp; &nbsp;(Set Directory)</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Директорию &nbsp; &nbsp; &nbsp; &nbsp; 18 &nbsp; &nbsp; &nbsp; Возвращает текущую директорию</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Directory)</p>
-<p>  &nbsp; &nbsp; &nbsp;Начать Транзакцию &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19 &nbsp; &nbsp; &nbsp; Отмечает начало набора логически</p>
-<p>  &nbsp; &nbsp; &nbsp;(Begin Transaction) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;связанных операций</p>
-<p>  &nbsp; &nbsp; &nbsp;Закончить Транзакцию &nbsp; &nbsp; &nbsp; &nbsp;20 &nbsp; &nbsp; &nbsp; Отмечает конец набора логически</p>
-<p>  &nbsp; &nbsp; &nbsp;(End Transaction) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;связанных операций</p>
-<p>  &nbsp; &nbsp; &nbsp;Снять Транзакцию &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;21 &nbsp; &nbsp; &nbsp; Удаляет операции выполненные</p>
-<p>  &nbsp; &nbsp; &nbsp;(Abort Transaction) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;во время незавершенной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; транзакции</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Позицию &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;22 &nbsp; &nbsp; &nbsp; Получает позицию текущей записи</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Position)</p>
-<p>  &nbsp; &nbsp; &nbsp;Получить Направление &nbsp; &nbsp; &nbsp; &nbsp;23 &nbsp; &nbsp; &nbsp; Получает запись в заданной</p>
-<p>  &nbsp; &nbsp; &nbsp;(Get Direct) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; позиции</p>
-<p>  &nbsp; &nbsp; &nbsp;Шаг на Следующую &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;24 &nbsp; &nbsp; &nbsp; Получает запись физически</p>
-<p>  &nbsp; &nbsp; &nbsp;(Step Next) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;следующую за текущей записью</p>
-<p>  &nbsp; &nbsp; &nbsp;Остановить &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;25 &nbsp; &nbsp; &nbsp; Завершает резидентные в памяти</p>
-<p>  &nbsp; &nbsp; &nbsp;(Stop) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; программы Администратора Записей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Record Manager) на рабочей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; станции</p>
-<p>  &nbsp; &nbsp; &nbsp;Версия &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;26 &nbsp; &nbsp; &nbsp; Возвращает загруженную в</p>
-<p>  &nbsp; &nbsp; &nbsp;(Version) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;текущее время версию Record</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Manager</p>
-<p>  &nbsp; &nbsp; &nbsp;Отмена Захвата &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;27 &nbsp; &nbsp; &nbsp; Отменяет захват записи или</p>
-<p>  &nbsp; &nbsp; &nbsp;(Unlock) записей &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; записей</p>
-<p>  &nbsp; &nbsp; &nbsp;Сброс &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 28 &nbsp; &nbsp; &nbsp; Освобождает все ресурсы, взятые</p>
-<p>  &nbsp; &nbsp; &nbsp;(Reset) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;рабочей станцией</p>
-<p>  &nbsp; &nbsp; &nbsp;Установить Владельца &nbsp; &nbsp; &nbsp; &nbsp;29 &nbsp; &nbsp; &nbsp; Присваивает файлу имя владельца</p>
-<p>  &nbsp; &nbsp; &nbsp;(Set Owner)</p>
-<p>  &nbsp; &nbsp; &nbsp;Стереть Владельца &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 30 &nbsp; &nbsp; &nbsp; Убирает имя владельца из файла</p>
-<p>  &nbsp; &nbsp; &nbsp;(Clear Owner)</p>
-<p>  &nbsp; &nbsp; &nbsp;Создать Дополнительный &nbsp; &nbsp; &nbsp;31 &nbsp; &nbsp; &nbsp; Создает дополнительный индекс</p>
-<p>  &nbsp; &nbsp; &nbsp;Индекс</p>
-<p>  &nbsp; &nbsp; &nbsp;(Create Supplemental Index)</p>
-<p>  &nbsp; &nbsp; &nbsp;Отбросить Дополнительный &nbsp; &nbsp;32 &nbsp; &nbsp; &nbsp; Убирает дополнительный индекс</p>
-<p>  &nbsp; &nbsp; &nbsp;Индекс</p>
-<p>  &nbsp; &nbsp; &nbsp;(Drop Supplemental Index)</p>
-<p>  &nbsp; &nbsp; &nbsp;Шаг на Первую &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 33 &nbsp; &nbsp; &nbsp; Возвращает запись физически</p>
-<p>  &nbsp; &nbsp; &nbsp;(Step First) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; первую в файле</p>
-<p>  &nbsp; &nbsp; &nbsp;Шаг на последнюю &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;34 &nbsp; &nbsp; &nbsp; Возвращает запись физически</p>
-<p>  &nbsp; &nbsp; &nbsp;(Step Last) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;последнюю в файле</p>
-<p>  &nbsp; &nbsp; &nbsp;Шаг на Предыдущую &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 35 &nbsp; &nbsp; &nbsp; Получает запись физически</p>
-<p>  &nbsp; &nbsp; &nbsp;(Step Next) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;предыдущую текущей записи</p>
-<p>  &nbsp; ---------------------------------------------------------------------</p>
+<p>                  Таблица 1.1 (Операции Btrieve)</p>
+<p>     ---------------------------------------------------------------------</p>
+<p>       ОПЕРАЦИЯ                    КОД    ОПИСАНИЕ</p>
+<p>     ---------------------------------------------------------------------</p>
+<p>       Открыть                      0       Делает файл доступным</p>
+<p>       (Open)</p>
+<p>       Закрыть                      1       Отменяет доступ к файлу</p>
+<p>       (Close)</p>
+<p>       Вставить                     2       Вставляет новые записи в файл</p>
+<p>       (Insert)</p>
+<p>       Изменить                     3       Изменяет текущую запись</p>
+<p>       (Update)</p>
+<p>       Удалить                      4       Удаляет текущую запись из</p>
+<p>       (Delete)                             файла</p>
+<p>       Получить Равную              5       Получает запись со значением</p>
+<p>       (Get Equal)                          ключа равным требуемому</p>
+<p>                                            значению ключа</p>
+<p>       Получить Следующую           6       Получает запись следующую за</p>
+<p>       (Get Next)                           текущей записью в индексном пути</p>
+<p>       Получить Предыдущую          7       Получает запись предшествующую</p>
+<p>       (Get Previous)                       текущей записи в индексном пути</p>
+<p>       Получить Большую             8       Получает запись со значением</p>
+<p>       (Get Greater)                        ключа большим требуемого</p>
+<p>                                            значения ключа</p>
+<p>       Получить Большую или         9       Получает запись со значением</p>
+<p>        Равную                              ключа равным или большим</p>
+<p>       (Get Greater or Equal)               требуемого значения ключа</p>
+<p>       Получить Меньшую Чем        10       Получает запись со значением</p>
+<p>       (Get Less Than)                      ключа меньшим требуем</p>
+<p>                                            значения ключа</p>
+<p>       Получить Меньшую Чем        11       Получает запись со значением</p>
+<p>       или Равную                           ключа равным или меньшим</p>
+<p>       (Get Less Than or Equal)             требуемого значения ключа</p>
+<p>       Получить Первую             12       Получает первую запись в</p>
+<p>       (Get First)                          запрошенном пути доступа</p>
+<p>       Получить Последнюю          13       Получает последнюю запись в</p>
+<p>       (Get Last)                           запрошенном пути доступа</p>
+<p>       Создать                     14       Создает Btrieve-файл с</p>
+<p>       (Create)                             заданными характеристиками</p>
+<p>       Статистика                  15       Возвращает характеристики файла</p>
+<p>       (Stat)                               и индекса и число записей</p>
+<p>       Расширить                   16       Расширяет файл на два дисковых</p>
+<p>       (Extend)                             тома</p>
+<p>       Установить Директорию       17       Изменяет текущую директорию</p>
+<p>       (Set Directory)</p>
+<p>       Получить Директорию         18       Возвращает текущую директорию</p>
+<p>       (Get Directory)</p>
+<p>       Начать Транзакцию           19       Отмечает начало набора логически</p>
+<p>       (Begin Transaction)                  связанных операций</p>
+<p>       Закончить Транзакцию        20       Отмечает конец набора логически</p>
+<p>       (End Transaction)                    связанных операций</p>
+<p>       Снять Транзакцию            21       Удаляет операции выполненные</p>
+<p>       (Abort Transaction)                  во время незавершенной</p>
+<p>                                            транзакции</p>
+<p>       Получить Позицию            22       Получает позицию текущей записи</p>
+<p>       (Get Position)</p>
+<p>       Получить Направление        23       Получает запись в заданной</p>
+<p>       (Get Direct)                         позиции</p>
+<p>       Шаг на Следующую            24       Получает запись физически</p>
+<p>       (Step Next)                          следующую за текущей записью</p>
+<p>       Остановить                  25       Завершает резидентные в памяти</p>
+<p>       (Stop)                               программы Администратора Записей</p>
+<p>                                            (Record Manager) на рабочей</p>
+<p>                                            станции</p>
+<p>       Версия                      26       Возвращает загруженную в</p>
+<p>       (Version)                            текущее время версию Record</p>
+<p>                                            Manager</p>
+<p>       Отмена Захвата              27       Отменяет захват записи или</p>
+<p>       (Unlock) записей                     записей</p>
+<p>       Сброс                       28       Освобождает все ресурсы, взятые</p>
+<p>       (Reset)                              рабочей станцией</p>
+<p>       Установить Владельца        29       Присваивает файлу имя владельца</p>
+<p>       (Set Owner)</p>
+<p>       Стереть Владельца           30       Убирает имя владельца из файла</p>
+<p>       (Clear Owner)</p>
+<p>       Создать Дополнительный      31       Создает дополнительный индекс</p>
+<p>       Индекс</p>
+<p>       (Create Supplemental Index)</p>
+<p>       Отбросить Дополнительный    32       Убирает дополнительный индекс</p>
+<p>       Индекс</p>
+<p>       (Drop Supplemental Index)</p>
+<p>       Шаг на Первую               33       Возвращает запись физически</p>
+<p>       (Step First)                         первую в файле</p>
+<p>       Шаг на последнюю            34       Возвращает запись физически</p>
+<p>       (Step Last)                          последнюю в файле</p>
+<p>       Шаг на Предыдущую           35       Получает запись физически</p>
+<p>       (Step Next)                          предыдущую текущей записи</p>
+<p>    ---------------------------------------------------------------------</p>
 <p>Смотри в главе 6 полное описание всех операций управления записями Btrieve. Глава 5 содержит инструкции по вызову Btrieve</p>
 <p>из BASIC, Pascal, COBOL и C. Приложения C, D, E и F содержат примеры программ, иллюстрирующих как инициализировать параметры, выполнять обращения к Btrieve-функциям и проверять возвращаемые статусные коды.</p>
 <p>КАК BTRIEVE РАБОТАЕТ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; NetWare Btrieve - базируемое на сервере дополнение Btrive Record</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Manager, работающее под управлением Advanced NetWare v2.1 и выше.</p>
+<p>          NetWare Btrieve - базируемое на сервере дополнение Btrive Record</p>
+<p>          Manager, работающее под управлением Advanced NetWare v2.1 и выше.</p>
 <p>Все Btrieve-запросы сетевой рабочей станции выполняются на сетевом сервере. По сравнению с программой базируемой у клиента конфигурация базируемая на сервере улучшает операции сетевых баз данных по следующим причинам:</p>
 <p>  * Выполнение на сервере является централизованным, допускающим эффективное управление множества пользователей.</p>
 <p>  * Количество сетевых запросов уменьшено, что приводит к более быстрому их выполнению из-за улучшенного применения сервера.</p>
@@ -161,9 +161,9 @@
 <p>Обращения к NetWare Btrieve имеют тот же формат, что и обращения к Btrieve в другой среде. Прикладные задачи единственного пользователя Btrieve, обращающегося к NetWare Btrieve, могут запросить дополнительные проверки статуса благодаря прверке параллелизма, запрашиваемого в многопользовательской среде.</p>
 <p>Кроме того, для обеспечения базируемой на сервере системы управления записями для прикладных задач рабочих станций NetWare Btrieve также включает средства, позволяющие VAPs использовать обращения Btrieve к BSERVER. Программа BROUTER обеспечивает необходимую связь между BSERVER и другими VAP-прграммами.</p>
 <p>ПРОГРАММА BSERVER</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Программа BSERVER должна быть загружена на каждый файл-сервер,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; где хранятся Btrieve-файлы. BSERVER состоит из ядра программы,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; осуществляющей взаимодействие специальных Btrieve-запросов,</p>
+<p>          Программа BSERVER должна быть загружена на каждый файл-сервер,</p>
+<p>          где хранятся Btrieve-файлы. BSERVER состоит из ядра программы,</p>
+<p>          осуществляющей взаимодействие специальных Btrieve-запросов,</p>
 <p>оболочки сервера и модуля сетевых коммуникаций. BSERVER выполняет следующие функции:</p>
 <p>  * Она выполняет весь ввод/вывод на диск для Btrieve-файлов хранящихся на сервере, где она резидентно находится.</p>
 <p>  * Она запрашивает и отменяет все запреты на уровне записей и на</p>
@@ -198,91 +198,91 @@
 <p>  * BREQUEST возвращает соответствующие данные и код статуса в параметрические переменные или структуры в памяти Вашей прикладной задачи, восстанавливает исходный стек и возвращает управление Вашей программе.</p>
 <p>Если прикладная задача на рабочей станции делает Btrieve-запросы как к локальному (неразделенному) устройству, так и к сетевому (разделенному) устройству, то на рабочей станции должна быть загружена копия Btrive Single User (однопользовательский Btrieve) или DOS 3.1 Networks также как и BREQUEST. BREQUEST определяет должен ли запрос быть передан в локальный Btrieve, обслуживающий неразделенные файлы, или в программу BSERVER, обслуживающую разделенные файлы на сервере.</p>
 <p>Рисунок 1.2 изображает пример конфигурации для простой сети Novell, использующей NetWare Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ФАЙЛ-СЕРВЕР</p>
-<p>  &nbsp; &nbsp;-----------&#172; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -----------------&#172; &nbsp; &nbsp; &nbsp; &nbsp;----------------&#172;</p>
-<p>  &nbsp; &nbsp;&#166;Диск сети &#166;&lt;---------&gt;&#166; &nbsp;NetWare &nbsp; &nbsp; &nbsp; &#166;&lt;---&#172; &nbsp; &#166;Локальный диск &#166;</p>
-<p>  &nbsp; &nbsp;L----------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +----------------+ &nbsp; &nbsp;&#166; &nbsp; L----------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;BSERVER.VAP &nbsp; &#166;&lt;---- &nbsp; &nbsp; &nbsp;/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L----------------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/ \ &nbsp; / \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \ /</p>
-<p>  &nbsp; &nbsp;----------------&#172; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;----------------&#172;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;DOS 3.x &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;DOS 3.x &nbsp; &nbsp; &nbsp;&#166;&lt;--&#172;</p>
-<p>  &nbsp; &nbsp;+---------------+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;+---------------+ &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; NetWare Shell &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;&#166; NetWare Shell &#166; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;+---------------+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;+---------------+ &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;&lt;------------ &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;Btrieve &nbsp; &nbsp; &nbsp;&#166;&lt;---</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;BREQUEST &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp;&#166; Record Manager&#166;&lt;--&#172;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;&lt;---&#172; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;+---------------+ &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;+---------------+ &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L-------&gt;&#166; &nbsp;BREQUEST &nbsp; &nbsp; &#166; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; Прикладная &nbsp; &nbsp;&#166;&lt;---- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----&gt;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;&lt;---</p>
-<p>  &nbsp; &nbsp;&#166; задача Btrieve&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;+---------------+</p>
-<p>  &nbsp; &nbsp;L---------------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;&#166; Прикладная &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp;Рабочая станция 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L---&gt;&#166; задача Btrieve&#166;</p>
-<p>  &nbsp; &nbsp;имеющая доступ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L----------------</p>
-<p>  &nbsp; &nbsp;только к разделенным &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Рабочая станция 2</p>
-<p>  &nbsp; &nbsp;Btrieve-файлам &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;имеющая досту</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;к разделенным и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;локальным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve-файлам</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 1.2</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Конфигурация сети, использующей BSERVER.VAP</p>
-<p>  &nbsp; &nbsp;(Обратите внимание, что Рабочая станция 2 имеет доступ как к</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; разделенным так и к локальным файлам )</p>
+<p>                                ФАЙЛ-СЕРВЕР</p>
+<p>     -----------&#172;           -----------------&#172;        ----------------&#172;</p>
+<p>     &#166;Диск сети &#166;&lt;---------&gt;&#166;  NetWare       &#166;&lt;---&#172;   &#166;Локальный диск &#166;</p>
+<p>     L-----------           +----------------+    &#166;   L----------------</p>
+<p>                            &#166;  BSERVER.VAP   &#166;&lt;----      /                             L-----------------            &#166;</p>
+<p>                                 / \   / \               \ /</p>
+<p>     ----------------&#172;            &#166;     &#166;        ----------------&#172;</p>
+<p>     &#166;  DOS 3.x      &#166;            &#166;     &#166;        &#166;  DOS 3.x      &#166;&lt;--&#172;</p>
+<p>     +---------------+            &#166;     &#166;        +---------------+   &#166;</p>
+<p>     &#166; NetWare Shell &#166;            &#166;     &#166;        &#166; NetWare Shell &#166;   &#166;</p>
+<p>     +---------------+            &#166;     &#166;        +---------------+   &#166;</p>
+<p>     &#166;               &#166;&lt;------------     &#166;        &#166;  Btrieve      &#166;&lt;---</p>
+<p>     &#166;  BREQUEST     &#166;                  &#166;        &#166; Record Manager&#166;&lt;--&#172;</p>
+<p>     &#166;               &#166;&lt;---&#172;             &#166;        +---------------+   &#166;</p>
+<p>     +---------------+    &#166;             L-------&gt;&#166;  BREQUEST     &#166;   &#166;</p>
+<p>     &#166; Прикладная    &#166;&lt;----                 ----&gt;&#166;               &#166;&lt;---</p>
+<p>     &#166; задача Btrieve&#166;                      &#166;    +---------------+</p>
+<p>     L----------------                      &#166;    &#166; Прикладная    &#166;</p>
+<p>     Рабочая станция 1                      L---&gt;&#166; задача Btrieve&#166;</p>
+<p>     имеющая доступ                              L----------------</p>
+<p>     только к разделенным                        Рабочая станция 2</p>
+<p>     Btrieve-файлам                              имеющая досту</p>
+<p>                                                 к разделенным и</p>
+<p>                                                 локальным</p>
+<p>                                                 Btrieve-файлам</p>
+<p>                    Рисунок 1.2</p>
+<p>          Конфигурация сети, использующей BSERVER.VAP</p>
+<p>     (Обратите внимание, что Рабочая станция 2 имеет доступ как к</p>
+<p>                разделенным так и к локальным файлам )</p>
 <p>Рисунок 1.3 иллюстрирует сеть с конфигурацией множества серверов. На этой диаграмме файл-серверы A и B обслуживают разделенные файлы сети. Обратите внимание, все станции сети могут делать запросы к обоим файл-серверам. Программы BREQUEST, загруженные на рабочие станции, посылают запросы на соответствующий файл-сервер. Правильная идентификация файл-серверов и томов существенна для правильного функционирования системы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ФАЙЛ-СЕРВЕР А</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -----------------&#172; &nbsp; &nbsp; &nbsp; &nbsp;-----------------&#172;</p>
-<p>  &nbsp; &nbsp;------------------------&gt;&#166; &nbsp; &nbsp;NetWare &nbsp; &nbsp; &#166;&lt;------&gt;&#166;Разделенный диск&#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;----------------&#172; &nbsp; &nbsp; +----------------+ &nbsp; &nbsp; &nbsp; &nbsp;L-----------------</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; &nbsp; &nbsp;DOS 3.x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp;BSERVER.VAP &nbsp; &#166;&lt;-----------------------&#172;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;+---------------+ &nbsp; &nbsp; L----------------- &nbsp;----------------&#172; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; NetWare Shell &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp;DOS 3.x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;+---------------+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +---------------+ &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; NetWare Shell &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;+-&gt;&#166; &nbsp; BREQUEST &nbsp; &nbsp;&#166;&lt;---&#172; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+---------------+ &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;+---------------+ &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----&gt;&#166; &nbsp; BREQUEST &nbsp; &nbsp;&#166;&lt;----+</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; Прикладная &nbsp; &nbsp;&#166;&lt;---- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; задача Btrieve&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;+---------------+ &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;L---------------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L---&gt;&#166; Прикладная &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;Рабочая станция 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; задача Btrieve&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L---------------- &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Рабочая станция 2 &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;----------------&#172; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; &nbsp;DOS 3.x &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; ----------&#172; &nbsp; &nbsp; &nbsp; ----------------&#172; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;+---------------+ &nbsp; &nbsp; &nbsp; &#166;Локальный&#166;&lt;-----&gt;&#166; &nbsp; &nbsp;DOS 3.x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; NetWare Shell &#166; &nbsp; &nbsp; &nbsp; &#166; &nbsp;диск &nbsp; &#166; &nbsp;----&gt;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;+---------------+ &nbsp; &nbsp; &nbsp; L---------- &nbsp;&#166; &nbsp; &nbsp;&#166;---------------&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;&#166; NetWare Shell &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;+-&gt;&#166; &nbsp; BREQUEST &nbsp; &nbsp;&#166;&lt;---&#172; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp;&#166;---------------&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L---&gt;&#166; Btrieve Record&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;+---------------+ &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----&gt;&#166; &nbsp; &nbsp;Manager &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; Прикладная &nbsp; &nbsp;&#166;&lt;---- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp;+---------------+ &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;&#166; задача Btrieve&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L---&gt;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;L---------------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; BREQUEST &nbsp; &nbsp;&#166;&lt;----+</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp;Рабочая станция 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----&gt;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp;+---------------+ &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp;&#166; Прикладная &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L---&gt;&#166; задача Btrieve&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L---------------- &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Рабочая станция 4 &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -----------------&#172; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp;L----------------------&gt;&#166; &nbsp;BSERVER.VAP &nbsp; &#166;&lt;-------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+----------------+</p>
-<p>  &nbsp; &nbsp;-----------------&#172; &nbsp; &nbsp; &nbsp;&#166; &nbsp; NetWare &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp;&#166;Разделенный диск&#166;&lt;----&gt;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp;L----------------- &nbsp; &nbsp; &nbsp;L-----------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ФАЙЛ-СЕРВЕР B</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 1.3</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Сеть с множеством файл-серверов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Обратите внимание, что BREQUEST, загруженный на каждую рабочую</p>
+<p>                                 ФАЙЛ-СЕРВЕР А</p>
+<p>                              -----------------&#172;        -----------------&#172;</p>
+<p>     ------------------------&gt;&#166;    NetWare     &#166;&lt;------&gt;&#166;Разделенный диск&#166;</p>
+<p>     &#166;  ----------------&#172;     +----------------+        L-----------------</p>
+<p>     &#166;  &#166;    DOS 3.x    &#166;     &#166;  BSERVER.VAP   &#166;&lt;-----------------------&#172;</p>
+<p>     &#166;  +---------------+     L-----------------  ----------------&#172;     &#166;</p>
+<p>     &#166;  &#166; NetWare Shell &#166;                         &#166;    DOS 3.x    &#166;     &#166;</p>
+<p>     &#166;  +---------------+                         +---------------+     &#166;</p>
+<p>     &#166;  &#166;               &#166;                         &#166; NetWare Shell &#166;     &#166;</p>
+<p>     +-&gt;&#166;   BREQUEST    &#166;&lt;---&#172;                    +---------------+     &#166;</p>
+<p>     &#166;  &#166;               &#166;    &#166;                    &#166;               &#166;     &#166;</p>
+<p>     &#166;  +---------------+    &#166;               ----&gt;&#166;   BREQUEST    &#166;&lt;----+</p>
+<p>     &#166;  &#166; Прикладная    &#166;&lt;----               &#166;    &#166;               &#166;     &#166;</p>
+<p>     &#166;  &#166; задача Btrieve&#166;                    &#166;    +---------------+     &#166;</p>
+<p>     &#166;  L----------------                    L---&gt;&#166; Прикладная    &#166;     &#166;</p>
+<p>     &#166;  Рабочая станция 1                         &#166; задача Btrieve&#166;     &#166;</p>
+<p>     &#166;                                            L----------------     &#166;</p>
+<p>     &#166;                                            Рабочая станция 2     &#166;</p>
+<p>     &#166;  ----------------&#172;                                               &#166;                                          &#166;</p>
+<p>     &#166;  &#166;  DOS 3.x      &#166;       ----------&#172;       ----------------&#172;     &#166;</p>
+<p>     &#166;  +---------------+       &#166;Локальный&#166;&lt;-----&gt;&#166;    DOS 3.x    &#166;     &#166;</p>
+<p>     &#166;  &#166; NetWare Shell &#166;       &#166;  диск   &#166;  ----&gt;&#166;               &#166;     &#166;</p>
+<p>     &#166;  +---------------+       L----------  &#166;    &#166;---------------&#166;     &#166;</p>
+<p>     &#166;  &#166;               &#166;                    &#166;    &#166; NetWare Shell &#166;     &#166;</p>
+<p>     +-&gt;&#166;   BREQUEST    &#166;&lt;---&#172;               &#166;    &#166;---------------&#166;     &#166;</p>
+<p>     &#166;  &#166;               &#166;    &#166;               L---&gt;&#166; Btrieve Record&#166;     &#166;</p>
+<p>     &#166;  +---------------+    &#166;               ----&gt;&#166;    Manager    &#166;     &#166;</p>
+<p>     &#166;  &#166; Прикладная    &#166;&lt;----               &#166;    +---------------+     &#166;</p>
+<p>     &#166;  &#166; задача Btrieve&#166;                    L---&gt;&#166;               &#166;     &#166;</p>
+<p>     &#166;  L----------------                         &#166;   BREQUEST    &#166;&lt;----+</p>
+<p>     &#166;  Рабочая станция 3                    ----&gt;&#166;               &#166;     &#166;</p>
+<p>     &#166;                                       &#166;    +---------------+     &#166;</p>
+<p>     &#166;                                       &#166;    &#166; Прикладная    &#166;     &#166;</p>
+<p>     &#166;                                       L---&gt;&#166; задача Btrieve&#166;     &#166;</p>
+<p>     &#166;                                            L----------------     &#166;</p>
+<p>     &#166;                                            Рабочая станция 4     &#166;</p>
+<p>     &#166;                       -----------------&#172;                         &#166;</p>
+<p>     L----------------------&gt;&#166;  BSERVER.VAP   &#166;&lt;-------------------------</p>
+<p>                             +----------------+</p>
+<p>     -----------------&#172;      &#166;   NetWare      &#166;</p>
+<p>     &#166;Разделенный диск&#166;&lt;----&gt;&#166;                &#166;</p>
+<p>     L-----------------      L-----------------</p>
+<p>                                ФАЙЛ-СЕРВЕР B</p>
+<p>                          Рисунок 1.3</p>
+<p>               Сеть с множеством файл-серверов</p>
+<p>           (Обратите внимание, что BREQUEST, загруженный на каждую рабочую</p>
 <p>станцию, может иметь доступ ко всем файл-серверам. Рабочая станция 4 имеет доступ как к разделенным так и к локальным Btrieve-файлам.)</p>
 <p>Если Вы используете множество файл-серверов или интерсеть, все файл-серверы не должны быть в "online" при старте BREQUEST на рабочих станциях. BREQUEST распознает новые файл-серверы или устройства при обращении к новому файл-серверу или при изменении распределения сетевых устройств.</p>
 <p>Д о с т у п к BSERVER ч е р е з BROUTER</p>
 <p>------------------------------------</p>
 <p class="note">Примечание:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Если Вы не используете Value-Added Process (VAP), доступный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NetWare Btrieve, можете пропустить этот раздел.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;______________________________________________________________</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующие шаги иллюстрируют управляющую логику при обращении</p>
+<p>             Если Вы не используете Value-Added Process (VAP), доступный</p>
+<p>             NetWare Btrieve, можете пропустить этот раздел.</p>
+<p>             ______________________________________________________________</p>
+<p>          Следующие шаги иллюстрируют управляющую логику при обращении</p>
 <p>прикладной программы рабочей станции к VAP, который затем обращается к BSERVER через программу BROUTER.</p>
 <p>  * Прикладная программа рабочей станции посылает запрос к VAP. Запрос может быть сформирован как Btrieve-вызова или в форме, треуемой VAP.</p>
 <p>  * Программа связи, включенная в прикладную программу. упаковывает запрос в сообщение сети, определяет какой сервер должен получить запрос и посылает соощение в VAP, резидентный на сервере.</p>
@@ -293,34 +293,34 @@
 <p>  * VAP возвращает соответствующую информацию в прикладную программу на рабочей станции.</p>
 <p>Если прикладная программа рабочей станции делает Btrieve-запрос к локальному (неразделенному) устройству и к VAP, вызывающему</p>
 <p>Btrieve, копия Btrieve Single User или DOS 3.1 Networks должна быть загружена на рабочую станцию. Рисунок 1.4 иллюстрирует логику управления, когда VAP имеет доступ к Btrieve-файлам используя NetWare Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;РАБОЧАЯ СТАНЦИЯ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------------&#172;</p>
-<p>  &nbsp; &nbsp; &nbsp;1. Прикладная программа &nbsp; &nbsp; &#166; &nbsp;Прикладная &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp;на рабочей станции &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;программа &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp;посылает запрос в VAP1 &nbsp; &nbsp; &nbsp;+-------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;Интерфейс VAP&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L---T----------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; / &nbsp; &nbsp; &nbsp; &nbsp;2. Интерфейс VAP1 посылает &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; 7. VAP1 возвращает</p>
-<p>  &nbsp; &nbsp; &nbsp;запрос на сервер &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; результаты</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; прикладную программу</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; рабочей станции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;СЕРВЕР&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \ / &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---------+--&#172;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---+ &nbsp; VAP1 &nbsp; &nbsp;&#166;&lt;-&#172;</p>
-<p>  &nbsp; &nbsp; &nbsp;3. VAP1 упаковывает запрос &#166; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;&#166; &nbsp;6. BROUTER возвращает</p>
-<p>  &nbsp; &nbsp; &nbsp;и выполняет прерывание &nbsp; &nbsp; &#166; &nbsp;+-----------+ &nbsp;&#166; &nbsp;результаты в VAP1</p>
-<p>  &nbsp; &nbsp; &nbsp;7B &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L-&gt;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +---</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;BROUTER &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp;4. BROUTER получает Btrieve---+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;&lt;-&#172; &nbsp;5. BSERVER выполняет</p>
-<p>  &nbsp; &nbsp; &nbsp;вызов и посылает его в &nbsp; &nbsp; &#166; &nbsp;+-----------+ &nbsp;&#166; &nbsp;запрос и посылает</p>
-<p>  &nbsp; &nbsp; &nbsp;BSERVER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;&#166; &nbsp;результаты в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L-&gt;&#166; &nbsp;BSERVER &nbsp;+--- &nbsp;BROUTER</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; -------&#172;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;&lt;---&gt;&#166; Диск &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L------------ &nbsp; &nbsp; L-------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Рисунок 1.4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Применение другого VAP с BSERVER</p>
+<p>                                 РАБОЧАЯ СТАНЦИЯ</p>
+<p>                                   --------------&#172;</p>
+<p>       1. Прикладная программа     &#166;  Прикладная &#166;</p>
+<p>       на рабочей станции          &#166;  программа  &#166;</p>
+<p>       посылает запрос в VAP1      +-------------+</p>
+<p>                                   &#166;Интерфейс VAP&#166;</p>
+<p>                                   L---T----------</p>
+<p>                                       &#166;     /        2. Интерфейс VAP1 посылает      &#166;      &#166;       7. VAP1 возвращает</p>
+<p>       запрос на сервер                &#166;      &#166;       результаты</p>
+<p>                                       &#166;      &#166;       прикладную программу</p>
+<p>                                       &#166;      &#166;       рабочей станции</p>
+<p>                                       &#166;СЕРВЕР&#166;</p>
+<p>                                      \ /     &#166;</p>
+<p>                                     ---------+--&#172;</p>
+<p>                                  ---+   VAP1    &#166;&lt;-&#172;</p>
+<p>       3. VAP1 упаковывает запрос &#166;  &#166;           &#166;  &#166;  6. BROUTER возвращает</p>
+<p>       и выполняет прерывание     &#166;  +-----------+  &#166;  результаты в VAP1</p>
+<p>       7B                         L-&gt;&#166;           +---</p>
+<p>                                     &#166;  BROUTER  &#166;</p>
+<p>       4. BROUTER получает Btrieve---+           &#166;&lt;-&#172;  5. BSERVER выполняет</p>
+<p>       вызов и посылает его в     &#166;  +-----------+  &#166;  запрос и посылает</p>
+<p>       BSERVER                    &#166;  &#166;           &#166;  &#166;  результаты в</p>
+<p>                                  L-&gt;&#166;  BSERVER  +---  BROUTER</p>
+<p>                                     &#166;           &#166;     -------&#172;</p>
+<p>                                     &#166;           &#166;&lt;---&gt;&#166; Диск &#166;</p>
+<p>                                     L------------     L-------</p>
+<p>                       Рисунок 1.4</p>
+<p>                  Применение другого VAP с BSERVER</p>
 <p>КЭШ-БУФЕРЫ</p>
 <p>Кэш-память - область памяти, резервируемая BSERVER для буферизации страниц, читаемых с диска. Вы определяете размер кэш-памяти при конфигурации BSERVER. Кэш-память разделена на ряд буферов, каждый - имеющий размер самой большой страницы, к которой будет иметь доступ Ваша прикладная программа. В основном большая кэш-память улучшает выполнение, т.к. позволяет большему количеству страниц быть в памяти в данное время. (См. Главу 3 для дополнительной информации о конфигурации BSERVER.)</p>
 <p>Когда Ваша прикладная программа делает запрос какой-либо записи, BSERVER сперва проверяет кэш-память ,чтобы посмотреть не находится ли уже страница, содержащая эту запись, в памяти. Если запись уже в кэш-памяти, BSERVER пересылает запись из кэш-памяти в буфер данных Вашей прикладной программы. Если страницы нет в кэш-памяти, BSERVER копирует страницу с диска в кэш-буфер до того, как пересылает требуемую запись в Вашу прикладную программу.</p>
@@ -330,22 +330,22 @@
 <p>Btrieve запрашивает определенную информацию из Вашей прикладной программы для выполнения операций управления записями и файлами. Ваша прикладная программа использует параметры Btrieve-обращения для задания информации, необходимой Btrieve и обеспечения места для возвращаемой Btrieve информации. При каждом обращении к Btrieve Ваша прикладная программа должна передать Btrieve все параметры, требуемые используемым Вами языком, даже если Вы и не ждете их значений. Этот раздел дает общее описание параметров и как Btrieve их использует.</p>
 <p>------------------------------------</p>
 <p class="note">Примечание:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Для специфической информации о том, как использовать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; параметры в определенном языке см. Главу 5 "Интерфейс</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; языков". Для информации о том, как Btrieve использует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; параметр для конкретной операции см. Главу 6 "Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; операции записи".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------------------------------------------</p>
+<p>               Для специфической информации о том, как использовать</p>
+<p>            параметры в определенном языке см. Главу 5 "Интерфейс</p>
+<p>            языков". Для информации о том, как Btrieve использует</p>
+<p>            параметр для конкретной операции см. Главу 6 "Btrieve-</p>
+<p>            операции записи".</p>
+<p>               -----------------------------------------------------------</p>
 <p>КОД ОПЕРАЦИИ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Параметр кода операции сообщает Btrieve, какую операцию Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполнить. Ваша прикладная программа должна задавать код операции</p>
+<p>          Параметр кода операции сообщает Btrieve, какую операцию Вы хотите</p>
+<p>          выполнить. Ваша прикладная программа должна задавать код операции</p>
 <p>при каждом обращении к Btrieve. Переменная, которую Вы определяете для хранения кода операции, должна быть 2-байтовым целым числом. Btrieve никогда не изменяет значение кода операции.</p>
 <p>КОД СТАТУСА</p>
 <p>Все Btrieve-операции возвращают значение кода статуса, информируя Вашу прикладную программу обо всех ошибках. Код статуса равный 0 показывает, что операция выполнена успешно. Для некоторых языков, в частности для С и Паскаля, вызов Btrieve - целая функция и Вашей прикладной программе не требуется задавать отдельный параметр для кода операции. Если Вы применяете язык, требующий отдельного параметра кода операции, задайте 2-байтовое целое для хранения возвращаемого значения.</p>
 <p>БЛОК ПОЗИЦИИ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve использует параметр блока позиции для хранения указателей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционирования и другой информации, необходимой для доступа к</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; какому-либо файлу. Ваша прикладная программа использует блок</p>
+<p>          Btrieve использует параметр блока позиции для хранения указателей</p>
+<p>          позиционирования и другой информации, необходимой для доступа к</p>
+<p>          какому-либо файлу. Ваша прикладная программа использует блок</p>
 <p>позиции для определения Btrieve-файла, к которому Вы хотите получить доступ при выполнении некоторой операции. Btrieve ожидает, что блок позиции - это 128-байтовый блок памяти. В зависимости от прикладного языка блок позиции может быть строкой, массивом или частью буфера файла (как, например, в Бейсике).</p>
 <p>Ваша прикладная программа должна присвоить уникальный блок позиции каждому Btrieve-файлу, его необходимо открыть и проинициализировать блоком пробелов или двоичных нулей до выполнения операции Open. Ваша прикладная программа НИКОГДА не должна писать в блок позиции после того, как он был проинициализирован и присвоен файлу, до тех пор пока Вы не</p>
 <p>выполните над файлом операцию Close. Вы можете тогда переинициализировать блок позиции таким образом, чтобы его можно было использовать для другого Btrieve-файла. Запись в блок позиции для открытого Btrieve--файла может привести к ошибкам или повреждению файла,</p>
@@ -357,7 +357,7 @@
 <p>ДЛИНА БУФЕРА ДАННЫХ</p>
 <p>Для всех операций, требующих буфер данных, Ваша прикладная программа должна задать для Btrieve длину буфера данных в байтах. Это необходимо потому, что</p>
 <p>  * Btrieve позволяет Вам определять файлы, допускающие записи переменной длины. Вы должны задать, какое количество байтов Вам хочется прочитать из этих записей или записать в них.</p>
-<p>  &nbsp; * Btrieve не распознает какие-либо структуры данных Вашей программы. Он явно не знает длину буфера данных в байтах. Это создает возможность записи данных, не имеющих значений, в Ваши файлы или возврата большего количества данных, чем может содержать буфер данных, и наложения записей на область памяти, следующую за буфером данных.</p>
+<p>    * Btrieve не распознает какие-либо структуры данных Вашей программы. Он явно не знает длину буфера данных в байтах. Это создает возможность записи данных, не имеющих значений, в Ваши файлы или возврата большего количества данных, чем может содержать буфер данных, и наложения записей на область памяти, следующую за буфером данных.</p>
 <p>Ваша прикладная программа должна определить буфер данных как 2-байтовое целое, При всех операциях Btrieve записывает некоторое значение в параметр длины буфера данных, даже если это значение равно 0 (показывающее, что не было возвращено данных). Поэтому Вы должны всегда инициализировать буфер данных соответствующей длины</p>
 <p>для какой-либо операции до вызова Btrieve.</p>
 <p>Применяйте следующие правила для инициализации значения параметра длины буфера данных:</p>
@@ -378,11 +378,11 @@
 <p>СИСТЕМНЫЕ ТРЕБОВАНИЯ</p>
 <p>NetWare Btrieve должeн запускаться под управлением NetWare v2.1x или выше. Для обеспечения индивидуальных операций записи на диск и сохранности файлов и их восстановления в случае сбоя файл-сервера требуется Система связи транзакций (Transaction Tracking System).</p>
 <p>------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;В а ж н о :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Сеть Btrieve не запускается под управлением</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ELS NetWare уровня I или Advanced NetWare 68, т.к.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;эти версии не поддерживают Value-Added Processes</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----------------------------------------------------</p>
+<p>             В а ж н о :</p>
+<p>             Сеть Btrieve не запускается под управлением</p>
+<p>             ELS NetWare уровня I или Advanced NetWare 68, т.к.</p>
+<p>             эти версии не поддерживают Value-Added Processes</p>
+<p>             ----------------------------------------------------</p>
 <p>Btrieve требует сетевой файл-сервер с памятью, достаточной для загрузки сети, BSERVER и BROUTER. В большинстве случаев файл-сервер должен иметь минимум 2МВ памяти для эффективного запуска и NetWare, и Btrieve.</p>
 <p>Программа "Btrieve инициатор запросов" (BREQUEST) требует приблизительно 25КВ памяти для каждого рабочего места (при допущении, что она загружена со стандартными режимами запуска). Точное количество требуемой памяти зависит от заданных Вами режимов запуска при загрузке программы.</p>
 <p>Если Вы используете систему межсетевого обмена, рабочие станции на вершинах этих сетей, использующие NetWare Btrieve, должны иметь доступ к файл-серверу, загруженному с BSERVER и BROUTER.</p>
@@ -394,26 +394,26 @@
 <p>BSERVER.VAP Файл, загружаемый NetWare как Value-Added Process</p>
 <p>на файл-сервер</p>
 <p>BROUTER.VAP Программа сообщений Btrieve. Эта программа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; используется для обеспечения межпроцессорных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; связей между BSERVER и другими VAP-продуктами,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;такими как NetWare SQL.</p>
+<p>                          используется для обеспечения межпроцессорных</p>
+<p>                          связей между BSERVER и другими VAP-продуктами,</p>
+<p>                 такими как NetWare SQL.</p>
 <p>BREQUEST.EXE Btrieve инициатор запросов для рабочих станции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DOS. Это резидентная в памяти программа,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;загружаемая Вами на каждую рабочую станцию,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; делающую Btrieve-запросы. BREQUEST пересылает</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve-запросы из Вашей &nbsp;прикладной программы на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;файл-сервер.</p>
+<p>                       DOS. Это резидентная в памяти программа,</p>
+<p>                 загружаемая Вами на каждую рабочую станцию,</p>
+<p>                          делающую Btrieve-запросы. BREQUEST пересылает</p>
+<p>                 Btrieve-запросы из Вашей  прикладной программы на</p>
+<p>                 файл-сервер.</p>
 <p>BREQURST.DLL Btrieve инициатор запросов для рабочих станций</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OS/2. Это библиотека динамических связей, которую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OS/2 связывает с каждой прикладной прграммой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve. Программы BREQUEST пересылают</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve-запросы из Вашей прикладной программы в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;файл-сервер.</p>
+<p>                       OS/2. Это библиотека динамических связей, которую</p>
+<p>                 OS/2 связывает с каждой прикладной прграммой</p>
+<p>                 Btrieve. Программы BREQUEST пересылают</p>
+<p>                 Btrieve-запросы из Вашей прикладной программы в</p>
+<p>                 файл-сервер.</p>
 <p>BTRCALLS.DLL Btrieve-подпрограмма динамических связей для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; рабочих станций OS/2. Эта программа включена</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; для устранения необходимости повторного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; редактирования связей программ OS/2 специально</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;для NetWare Btrieve.</p>
+<p>                          рабочих станций OS/2. Эта программа включена</p>
+<p>                          для устранения необходимости повторного</p>
+<p>                          редактирования связей программ OS/2 специально</p>
+<p>                 для NetWare Btrieve.</p>
 <p>Дискета "UTILITIES" содержит следующие файлы:</p>
 <p>BUTIL.EXE Автономная утилита Btrieve.</p>
 <p>BSETUP.EXE Утилита конфигурации и инсталяции Btrieve.</p>
@@ -425,8 +425,8 @@
 <p>QBIXBTRV.OBJ Объектный модуль, содержащий интерфейс</p>
 <p>Microsoft QuickBASIC с Btrieve.</p>
 <p>PASXBTRV.OBJ Объектный модуль, содержащий интерфейс</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Паскаля для IBM (или Microsoft) компилятора</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Паскаля</p>
+<p>                          Паскаля для IBM (или Microsoft) компилятора</p>
+<p>                          Паскаля</p>
 <p>TURXBTRV50S Исходный модуль, содержащий интерфейс</p>
 <p>Паскаля для компилятора Турбо-Паскаля.</p>
 <p>BEXTERN51S Исходный файл Паскаля, содержащий внешнее</p>
@@ -438,20 +438,20 @@
 <p>C2XBTRV.C Исходный модуль интерфейса C, используемый</p>
 <p>в прикладных задачах OS/2 в защищенном режиме.</p>
 <p>C2FXBTRV.C Исходный модуль интерфейса C, используемый в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; прикладных задачах OS/2 FAPI, запускаемых или в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;защищенном режиме или в режиме эмуляции.</p>
+<p>                          прикладных задачах OS/2 FAPI, запускаемых или в</p>
+<p>                 защищенном режиме или в режиме эмуляции.</p>
 <p>UPPER.ALT Файл, содержащий определение альтернативной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последовательности поиска, которая сравнивает</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;клавиши верхнего и нижнего регистра, как будто бы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;они были все на верхнем регистре.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp;B.EXE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Исполнитель Btrieve-функций, тестирующая и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; обучающая программа.</p>
+<p>                          последовательности поиска, которая сравнивает</p>
+<p>                 клавиши верхнего и нижнего регистра, как будто бы</p>
+<p>                 они были все на верхнем регистре.</p>
+<p>         B.EXE            Исполнитель Btrieve-функций, тестирующая и</p>
+<p>                          обучающая программа.</p>
 <p>README.DOC Документ, описывающий любые изменения или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; дополнения в Btrieve со времени опубликования</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;руководства.</p>
+<p>                          дополнения в Btrieve со времени опубликования</p>
+<p>                 руководства.</p>
 <p>INTRFACE.DOC Документ, описывающий интерфейс с языками,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; поставленный на дискете Btrieve, но не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; обсуждаемый в данном руководстве.</p>
+<p>                          поставленный на дискете Btrieve, но не</p>
+<p>                          обсуждаемый в данном руководстве.</p>
 <p>К О Н Ф И Г У Р А Ц И Я И И Н С Т А Л Я Ц И Я BTRIEVE</p>
 <p>До того, как Ваша прикладная программа сможет иметь доступ к NetWare Btrieve, Вы должны сперва конфигурировать Btrieve- программы и затем инсталировать их на файл-сервер.</p>
 <p>Файлы BSERVERR.VAP и BROUTER.VAP, включенные на дискету "PROGRAMS", снабжены стандартными вариантами инициализации. Т.к. эти значения адекватны для многих систем, возможно, Вам не потребуется их корректировать. В этой главе обсуждаются варианты конфигурации Btrieve и объясняется, как применять программу BSETUP.EXE для конфигурации и инсталяции соответствующих Вашим требованиям версий BSERVER.VAP и BROUTER.VAP на Вашем файл-сервере.</p>
@@ -536,12 +536,12 @@
 <p>BSETUP &lt;&lt;Enter&gt;</p>
 <p>ПРИМЕНЕНИЕ BSETUP</p>
 <p>Когда BSETUP загружен, появится меню подобное следующему:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Available Options</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Change File Server</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Install Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Remove Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Save Configuration</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Set Configuration</p>
+<p>                   Available Options</p>
+<p>             Change File Server</p>
+<p>             Install Btrieve</p>
+<p>             Remove Btrieve</p>
+<p>             Save Configuration</p>
+<p>             Set Configuration</p>
 <p>В следующих разделах обсуждается каждая опция и дается информация об их применении для конфигурации и инсталяции Btrieve. Опции представлены в наиболее вероятном порядке выполнения. Если Вам нужна более детальная помощь по задаче выполняемой в настоящее время, нажмите клавишу F1 (Помощь).</p>
 <p>Используйте клавиши Up и Down , чтобы высветить опции меню. Если Вы</p>
 <p>хотите выйти из меню, нажмите &lt;Esc&gt;.</p>
@@ -551,43 +551,43 @@
 <p>Опция "Change File Server" позволяет Вам выбрать файл-сервер, на котором Вы хотите конфигурировать, инсталировать, удалить или сохранить NetWare Btrieve.</p>
 <p>Для изменения файл-серверов выполните следующие шаги:</p>
 <p>  1. Используйте клавиши Up и Down , чтобы высветить опцию "Change File Server" и нажмите &lt;Enter&gt;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Появится меню, перечисляющее имена файл-серверов подключенных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; к рабочей станции в текущее время.</p>
+<p>          Появится меню, перечисляющее имена файл-серверов подключенных</p>
+<p>          к рабочей станции в текущее время.</p>
 <p>2) Используйте клавиши Up и Down , чтобы высветить имя файл-сервера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; на котором Вы хотите выполнять операцию BSETUP и нажмите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &lt;Enter&gt;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Будет короткая пауза и вновь появится меню "Available</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Options"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если у Вас есть права супервизора на выбранном Вами</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл-сервере, появятся все опции меню. Вы сможете сейчас</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; конфигурировать, инсталировать, удалять или сохранять NetWare</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve на этом файл-сервере.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если у Вас нет прав супервизора на выбранном Вами</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл-сервере, опции "Install NetWare Btrieve" и "Remove</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; NetWare Btrieve" не появятся. Вы сможете только</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; конфигурировать и сохранять конфигурацию NetWare Btrieve на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл-сервере, на котором Вы не имеете прав супервизора.</p>
+<p>          на котором Вы хотите выполнять операцию BSETUP и нажмите</p>
+<p>          &lt;Enter&gt;.</p>
+<p>          Будет короткая пауза и вновь появится меню "Available</p>
+<p>          Options"</p>
+<p>          Если у Вас есть права супервизора на выбранном Вами</p>
+<p>          файл-сервере, появятся все опции меню. Вы сможете сейчас</p>
+<p>          конфигурировать, инсталировать, удалять или сохранять NetWare</p>
+<p>          Btrieve на этом файл-сервере.</p>
+<p>          Если у Вас нет прав супервизора на выбранном Вами</p>
+<p>          файл-сервере, опции "Install NetWare Btrieve" и "Remove</p>
+<p>          NetWare Btrieve" не появятся. Вы сможете только</p>
+<p>          конфигурировать и сохранять конфигурацию NetWare Btrieve на</p>
+<p>          файл-сервере, на котором Вы не имеете прав супервизора.</p>
 <p>SET CONFIGURATION</p>
 <p>(Установка конфигурации)</p>
 <p>Опция "Set Configuration" позволяет Вам определять опции Btrieve для копирования Btrieve в текущую директорию.</p>
 <p>------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;В а ж н о :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Если BSERVER.VAP и BROUTER.VAP нет в текущей директории,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; когда Вы пытаетесь установить опции инициализации,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BSETUP возвратит сообщение об ошибке и прервет выполнение.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----------------------------------------------------------</p>
+<p>             В а ж н о :</p>
+<p>             Если BSERVER.VAP и BROUTER.VAP нет в текущей директории,</p>
+<p>          когда Вы пытаетесь установить опции инициализации,</p>
+<p>          BSETUP возвратит сообщение об ошибке и прервет выполнение.</p>
+<p>             ----------------------------------------------------------</p>
 <p>Чтобы установить одну или несколько опций инициализации, выполните следующие шаги:</p>
 <p>  1. Высветите меню "Set Configuration" в меню "Available Options" и нажмите &lt;Enter&gt;.</p>
 <p>Появится меню подобное следующему:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Number of open files: 20</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Number of handles: 60</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Number of locks: 20</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Number of transactions: 0</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Largest compressed record size: 8192</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Largest page size: 4096</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Number of sessions: 15</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console refresh count: 3</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Create files as transactional: Yes</p>
+<p>                         Number of open files: 20</p>
+<p>                         Number of handles: 60</p>
+<p>                           Number of locks: 20</p>
+<p>                     Number of transactions: 0</p>
+<p>          Largest compressed record size: 8192</p>
+<p>                       Largest page size: 4096</p>
+<p>                        Number of sessions: 15</p>
+<p>                      Console refresh count: 3</p>
+<p>            Create files as transactional: Yes</p>
 <p>Значения, отображенные в поле правой колонки, - это значения, определенные для этой опции в последний раз. Если Вы конфигурируете новую копию NetWare Btrieve, в полях появятся значения, заданные по умолчанию.</p>
 <p>2) Высветите поле, которое Вы хотите задать.</p>
 <p>3) Введите новое значение и нажмите &lt;Enter&gt;.</p>
@@ -622,13 +622,13 @@
 <p>Для отмены инсталяции в этот момент и возврата в меню "Available Options" нажмите &lt;Esc&gt;.</p>
 <p>Для продолжения инсталяции введите пароль для Btrieve из не болле, чем восьми символов, и нажмите &lt;Enter&gt;. Если Вы не хотите задавать пароль, но хотите продолжить инсталяцию, нажмите &lt;Enter&gt; при подсказке пароля. Появится подсказка "Install BROUTER".</p>
 <p>------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;В а ж н о :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Подсказка пароля - это последний шаг процесса инсталяции,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; когда Вы можете полностью отменить инсталяцию без инсталяции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программ NetWare Btrieve. Если Вы продвинулись немного дальше</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; в этом процессе, Вы должны синсталировать по крайней мере</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программу BSERVER.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----------------------------------------------------------</p>
+<p>             В а ж н о :</p>
+<p>          Подсказка пароля - это последний шаг процесса инсталяции,</p>
+<p>          когда Вы можете полностью отменить инсталяцию без инсталяции</p>
+<p>          программ NetWare Btrieve. Если Вы продвинулись немного дальше</p>
+<p>          в этом процессе, Вы должны синсталировать по крайней мере</p>
+<p>          программу BSERVER.</p>
+<p>             ----------------------------------------------------------</p>
 <p>4) Подсказка "Install BROUTER" дает Вам опцию инсталяции программы BROUTER в то же самое время, что и BSERVER.</p>
 <p>Для инсталяции как BSERVER так и BROUTER высветите "Yes" и нажмите &lt;Enter&gt;. BSETUP будет:</p>
 <p>  * Копировать BSERVER.VAP и BROUTER.VAP в директорий SYS\SYSTEM на предпочтительный файл-сервер;</p>
@@ -651,14 +651,14 @@
 <p>  * Удалять BSERVER.VAP (и BROUTER.VAP, если он инсталирован) из директория SYS:SYSTEM на предпочтительном файл-сервере:</p>
 <p>  * Удалять объектное имя Btrieve и пароль из сети.</p>
 <p>------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;В а ж н о :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если NetWare SQL определен как объектный модуль в программе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; связей Btrieve, BSETUP не удалит програмные файлы NetWare</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve. Вы должны удалить програмные файлы NetWare SQL с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл-сервера для того, чтобы суметь удалить програмные файлы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; NetWare Btrieve. См. Главу 3 "NetWare SQL User's Manual" для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; дополнительной информации,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ----------------------------------------------------------</p>
+<p>             В а ж н о :</p>
+<p>          Если NetWare SQL определен как объектный модуль в программе</p>
+<p>          связей Btrieve, BSETUP не удалит програмные файлы NetWare</p>
+<p>          Btrieve. Вы должны удалить програмные файлы NetWare SQL с</p>
+<p>          файл-сервера для того, чтобы суметь удалить програмные файлы</p>
+<p>          NetWare Btrieve. См. Главу 3 "NetWare SQL User's Manual" для</p>
+<p>          дополнительной информации,</p>
+<p>          ----------------------------------------------------------</p>
 <p>ОСТАНОВКА BTRIEVE VAPS</p>
 <p>Как только BSERVER и BROUTER активизированы, они остаются резидентными в памяти файл-сервера в течении всего времени работы операционной системы NetWare. Вы не можете удалить их из памяти файл-сервера, если сначала не удалите их с файл-сервера, применяя утилиту BSETUP (см. "REMOVE BTRIEVE" на предыдущих страницах) и затем не перезапустите операционную систему.</p>
 <p>Когда Вы запрашиваете команду DOWN на файл-сервере, BSERVER выполняет переустановку всех активных связей сети, имеющих доступ к файлам на файл-сервере.</p>
@@ -681,9 +681,9 @@
 <p>BREQUEST ДЛЯ РАБОЧИХ СТАНЦИЙ DOS</p>
 <p>Вы должны стартовать программу BREQUEST на рабочей станции до того, как рабочая станция сможет иметь доступ к файлам сети Btrieve через BSERVER.VAP Если вы хотите иметь доступ к локальным файлам на рабочей станции, Вы должны загрузить копию Btrieve Record Manager (или Single User или DOS 3.1 Network) до загрузки BREQUEST.</p>
 <p>Стартуйте BREQUEST на рабочей станции, выполнив следующую команду:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Накопитель&gt;BREQUEST[/R:число распределенных накопителей]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[/D:длина передаваемых данных]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[/S:число файл-серверов]</p>
+<p>           &lt;Накопитель&gt;BREQUEST[/R:число распределенных накопителей]</p>
+<p>                   [/D:длина передаваемых данных]</p>
+<p>                   [/S:число файл-серверов]</p>
 <p>Замените &lt;Накопитель&gt; именем накопителя, на котором хранится BREQUEST. Вы можете опустить имя накопителя, если BREQUEST хранится на накопителе, заданном по умолчанию, или если BREQUEST расположен в директории Вашего пути поиска.</p>
 <p>Опции запуска BREQUEST описаны на предыдущих страницах.</p>
 <p>Например, для задания 4 распределенных накопителей, длины передаваемых данных равной 2048 байт и 2 файл-серверов, применяйте следующую команду:</p>
@@ -698,19 +698,19 @@
 <p>См. руководство по OS/2 для дополнительной информации о LIBPATH</p>
 <p>и об определении размещения библиотек динамических связей.</p>
 <p>------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;В а ж н о :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BREQUEST.DLL и BTRCALLS.DLL,прграммы динамических связей,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; поставляемые с NetWare Btrieve, позволяют иметь доступ только</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; к перемещаемым файлам. Прикладная программа на рабочей станции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; OS/2 не может иметь доступ к локальным файлам с помощью этих</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программ.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ----------------------------------------------------------</p>
+<p>             В а ж н о :</p>
+<p>          BREQUEST.DLL и BTRCALLS.DLL,прграммы динамических связей,</p>
+<p>          поставляемые с NetWare Btrieve, позволяют иметь доступ только</p>
+<p>          к перемещаемым файлам. Прикладная программа на рабочей станции</p>
+<p>          OS/2 не может иметь доступ к локальным файлам с помощью этих</p>
+<p>          программ.</p>
+<p>          ----------------------------------------------------------</p>
 <p>И н и ц и а л и з а ц и я BREQUEST</p>
 <p>Вы можете задать опции инициализации, специфические для каждой прикладной программы Btrieve, запускаемой на рабочей станции. BREQUEST использует переменную среды OS/2 REQPARMS для определения опций инициализации, необходимых прикладной программе. Опции инициализации BREQUEST описаны на предыдущих страницах этой главы в разделе "Опции запуска BREQUEST".</p>
 <p>Установите опции инициализации BREQUEST, применяя следующую команду среды:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SET REQPARMS=[/R:число распределенных накопителей]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[/D:длина передаваемых данных]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[/S:число файл-серверов]</p>
+<p>            SET REQPARMS=[/R:число распределенных накопителей]</p>
+<p>                   [/D:длина передаваемых данных]</p>
+<p>                   [/S:число файл-серверов]</p>
 <p>Не делайте пробелов между именем переменной REQPARMS и знаком равенства. Вы можете вставлять пробелы между задаваемыми Вами опциями инициализации.</p>
 <p>Например, задавайте 4 распределенных накопителя, длину передаваемых данных в 2048 байт и 2 файл-сервера, применяя следующую команду:</p>
 <p>SET REQPARMS=/R:4/D:2048/S:2</p>
@@ -720,1053 +720,1053 @@
 <p>  * Ваша прикладная программа может запросить операцию Stop (Btrieve-операция 25).</p>
 <p>  * Вы можете запросить команду BUTIL_STOP из командной строки рабочей станции</p>
 <p>НА РАБОЧЕЙ СТАНЦИИ OS/2 операционная система удаляет программы динамических связей из памяти, когда завершена последняя прикладная программа Btrieve. Вы не можете удалить программы динамических связей из памяти, пока активна какая-либо прикладная программа Btrieve, т.к. операционная система динамически связываетих с прикладной программой при ее загрузке.</p>
-<p>{[logo.gif]} &nbsp;{[eXclusive Banner Network]}{[GooDoo 120]}</p>
+<p>{[logo.gif]}  {[eXclusive Banner Network]}{[GooDoo 120]}</p>
 <p>{Программы} &#8226;{Железо} &#8226; {Драйверы} &#8226; {Хостинг} &#8226;{Энциклопедия рекламы}</p>
 <p>| {&lt;&lt;} | {&lt;} | {&gt;} | {&gt;&gt;}</p>
 <p>------------------------------------</p>
 <p>ГЛАВА 4. УТИЛИТЫ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; NetWare Btrieve обеспечивает Вас полным набором утилит,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; помогающим Вам при создании и поддержке файлов, тестировании и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отладке. Вдобавок, NetWare Btrieve включает некоторые утилиты</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; командных строк, которые позволяют Вам управлять</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; функционированием NetWare Btrieve в Вашей сети.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Три утилиты NetWare Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - BUTIL.EXE - программа, содержащая команды позволяющие Вам</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; создавть и управлять файлами данных Btrieve;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - B.EXE (Исполнитель Btrieve-функций) - интерактивная утилита,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; которую Вы можете использовать для обучения, тестирования и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; отладки логики Вашой прикладной программы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Утилиты Командных Строк - утилиты, позволяющие Вам управлять</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; функционированием NetWare Btrieve в Вашей сети.</p>
+<p>          NetWare Btrieve обеспечивает Вас полным набором утилит,</p>
+<p>          помогающим Вам при создании и поддержке файлов, тестировании и</p>
+<p>          отладке. Вдобавок, NetWare Btrieve включает некоторые утилиты</p>
+<p>          командных строк, которые позволяют Вам управлять</p>
+<p>          функционированием NetWare Btrieve в Вашей сети.</p>
+<p>          Три утилиты NetWare Btrieve:</p>
+<p>            - BUTIL.EXE - программа, содержащая команды позволяющие Вам</p>
+<p>              создавть и управлять файлами данных Btrieve;</p>
+<p>            - B.EXE (Исполнитель Btrieve-функций) - интерактивная утилита,</p>
+<p>              которую Вы можете использовать для обучения, тестирования и</p>
+<p>              отладки логики Вашой прикладной программы.</p>
+<p>            - Утилиты Командных Строк - утилиты, позволяющие Вам управлять</p>
+<p>              функционированием NetWare Btrieve в Вашей сети.</p>
 <p>ПРОГРАММА BUTIL</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Программа BUTIL содержит полный набор команд для применения при</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; создании, поддержке и восстановлении файлов. Следующие разделы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; описывают, как запускать BUTIL, контролировать сообщения об</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ошибках BUTIL, создавать BUTIL-описания файлов и файлы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; альтернативной последовательности поиска. Команды BUTIL</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; представлены в алфавитном порядке под заголовком "Команды BUTIL"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ЗАПУСК BUTIL</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска BUTIL выполните следующие шаги:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 1) Стартуйте программу BREQUEST до запуска BUTIL. Если Вам нужна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;помощь в этой процедуре, см. "Программа BREQUEST" в Главе 3.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 2) Введите команду BUTIL в следующем формате:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;Устройство&gt;:BUTIL-COMMAND[Параметры][-O&lt;Владелец&gt;]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Устройство&gt; именем накопителя или другого устройства,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержащего програмные файлы Btrieve. вы можете опустить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; устройство, если Вы намерены использовать диск, заданный по</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; умолчанию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените _COMMAND именем Btrieve-команды (COPY, LOAD и т.д.),</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которую Вы хотите использовать. Вы должны поставить перед</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; командой &nbsp;черточку (-).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Параметры&gt; информацией, необходимой BUTIL для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполнения выбранной Вами команды. Команды описаны под заголовком</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; соответствующей команды.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; или именем владельца Btrieve-файла, к</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которому будет иметь доступ команда, или звездочкой (*). Если Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; используете звездочку вместо имени владельца, BUTIL подскажет Вам</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; имя владельца файла. BUTIL требует параметр -O&lt;Владелец&gt;, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; какой-либо из Btrieve-файлов, заданных в команде, требует имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; владельца.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BUTIL отбрасывает ведущие пробелы, тем не менее звездочка (*) -</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; первый непробельный символ параметра -O.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вы задаете два Btrieve-файла в команде, Вы должны задать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметр -O дважды, по разу для каждого файла. Если только второй</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл имеет имя владельца, BUTIL игнорирует первое имя владельца.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вы можете применять опцию "звездочка" дважды.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вы введете команду BUTIL без параметров, BUTIL покажет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; правильный формат команды для всех команд. Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; переназначить этот выход в файл или на принтер с помощью</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; переназначения DOS.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; СООБЩЕНИЯ ОБ ОШИБКАХ BUTIL</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BUTIL возвращает сообщения об ошибках двумя способами, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; зависимости от того, запускаете ли Вы ее из командной строки или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; из командного файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если какие-либо ошибки появляются во время запуска BUTIL из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; командной строки, на экране появится сообщение, описывающее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; проблему. См. Приложение B для информации о сообщениях об ошибках</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BUTIL и Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если какие-либо ошибки появляются во время запуска BUTIL из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; командного файла, BUTIL вернется на уровень ошибки DOS. Следующая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; таблица перечисляет и описывает уровни ошибок BUTIL.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Уровень ошибки &nbsp; Описание</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; Запуск утилиты завершен без ошибок.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; Запуск утилиты завершен, но появляются</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;нефатальные ошибки, такой как код статуса</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5 (Дубликат значения ключа).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; Запуск утилиты не завершен из-за</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;появления фатальной ошибки, такой как код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;статуса 2 (ошибка ввода/вывода).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете проверить уровень ошибки DOS, включая в командном файле</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; после команды BUTIl условие подобное следующему:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;IF ERRORLEVEL n ECHO сообщение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените n номером уровня ошибки BUTIL. Замените "сообщение"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значением сообщения.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Из-за способа, как DOs тестирует уровни ошибок в командах</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; командного файла, Вы всегда должны тестировать уровень ошибки 2</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; первым. Пример части командного файла, приведенный ниже,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; иллюстрирует один из способов анализа уровней ошибки BUTIL.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BUTIL-LOAD LOADFILE BTRFILE_OOWNERNAME</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; IF ERRORLEVEL 2 ECHO Фатальная ошибка:BUTIL операция не закончена</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; IF ERRORLEVEL 1 ECHO Не фатальная ошибка:Проверте на дубликаты в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;загружаемом файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; IF ERRORLEVEL 0 ECHO Операция закончена успешно.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; См. обсуждение командных файлов в руководстве по операционной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; системе для дополнительной информации о том, как использовать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условие ERRORLEVEL.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ОПИСАНИЕ ФАЙЛОВ BUTIL</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Некоторые из BUTIL-команд, включая CREATE, SAVE и SINDEX,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; используют ОПИСАНИЕ ФАЙЛА. Описание файла - это последовательный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ASCII файл, содержащий некоторую информацию, необходимую Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для выполнения этих операций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий раздел описывает элементы, используемые в описаниях</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлов BUTIL. Раздел, содержащий набор правил, которыми Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должны руководствоваться при создании описания файла, следует за</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; описанием элементов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;э л е м е н т о в &nbsp;ф а й л а</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Описание файлов состоит из списка ЭЛЕМЕНТОВ. элемент состоит из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключевого слова, за которым следует знак равенства (=), а затем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следует значение. Каждый элемент в описании файла соответствует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; какой-либо характеристике Btrieve-файла или определению ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Полное описание Btrieve-файла и характеристик ключей см. в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Главе 2 "Управление Btrieve-файлами".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ниже содержится объяснение описаний элементов файла. Описания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; некоторых элементов файла помечены "необязательное" и могут быть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; опущены при описании файла, если они не требуются для файла или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определения ключа. Элементы представлены в том порядке, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; котором они должны появляться в описании файла. Под заголовком</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; каждого элемента Вы найдете следующие подзаголовки.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Э л е м е н т &nbsp;- представляет правильный формат ключевого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; слова элемента. Значение представлено как переменная.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Переменные, представляющие числовые значения, показаны</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; символами nnnn. Другие значения объясняются в тексте,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; сопровождающем описание каждого элемента.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Г р а н и ц а &nbsp;- определяет границы допустимых значений,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; которые Вы можете задать для элемента.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - К о м а н д ы &nbsp; - список команд BUTIL, которым требуется</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; этот элемент в описании файлов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; За подзаголовками следует краткое описание элемента и как его</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; применять.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ПРИМЕЧАНИЕ:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Значения в описаниях элементов заключены в скобки. Не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; заключайте в скобки значения в Вашем описании файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Record Length</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Длина записи)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : record=&lt;nnnn&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : 4-4090</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Record Length" определяет длину логической записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данных в файле. Для записей фиксированной длины это значение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должно соответствовать длине параметра буфера данных, что</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполняет операции над файлом. Если Вы используете записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; переменной длины, задаваемая Вами длина записи должна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; соответствовать длине фиксированной части записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Минимальная длина записи данных должна быть достаточно большой,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; чтобы содержать все определенные для файла ключи, но не меньше</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; четырех байт. Длина записи плюс заголовки ее ключей плюс шесть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; байтов не должны превышать размер страницы файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Variable Length Records</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Записи переменной длины)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : variable=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Variable Length Records" задает, хотите ли Вы чтобы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл содержал записи переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте "y", если Вы хотите, чтобы создаваемый Вами файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержал записи переменной длины. Иначе, задайте "n".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Blank Truncation</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Отсечение пробелов)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : truncation=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Blank Truncation" задает, хотите ли Вы, чтобы Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполнял отсечение пробелов у записей переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ключевое слово truncation требуется только6 если Вы задаете "y"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для записи переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте "y", если Вы хотите, чтобы Btrieve использовал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отсечение пробелов. Иначе, задайте "n".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Data Compression</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Сжатие данных)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : compress=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Data Compression" задает, хотите ли Вы, чтобы Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполнял сжатие данных над записями, добавляемыми в файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте "y", если Вы хотите, чтобы Btrieve выполнял сжатие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данных. Иначе, задайте "n".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Key Count</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (счетчик ключа)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : key=&lt;nn&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : 1-24</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Key Count" задает число ключей, определенных для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла. Если Вы зададите значение 0 для этого элемента, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; создаст файл, состоящий только из данных. Иначе, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; создаст или стандартный Btrieve-файл или файл, состоящий</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; только из ключей, в зависимости от значения, заданного для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; элемента "Include Data".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для значений больших 0 Вы должны определить по крайней мере</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 1 ключ, но не более 8, если размер страницы равен 512 байтам.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если размер страницы - 102 байта или больше, Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определить до 24 ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Page Size</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Размер страницы)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : page=&lt;nnnn&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : 512-4096</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Page Size" задает физический размер страницы файла в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; байтах. Вы можете задавать любое число, кратное 512, до 4096.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Page pre-allocation</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Перераспределение страницы)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : allocation=&lt;nnnnn&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : 1-64K</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Page pre-allocation" задает количество страниц,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которое вы хотите перераспределить в файле. Если Вы не хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; перераспределять какие-либо страницы, не включайте это ключевое</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; слово в Ваше описание файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Replace Existing File (необязательный)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Замена существующего файла)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : replace=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Replace Existing File" показывает, что Вы не хотите,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; чтобы Btrieve создавал новый файл, если файл с таким же именем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; уже существует, и предупредил Вас о существовании файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте "n", если Вы не хотите создавать новый файл вместо</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существующего файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вы хотите заменить существующий Btrieve-файл на новый</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пустой файл с тем же самым именем, или задайте "y", или не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; включайте этот элемент в описание файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Include Data (необязательный)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Включение данных)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : data=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Include Data" задает, хотите ли Вы, чтобы Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; создал файл, состоящий только из ключей. Задайте "n", если Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; хотите, чтобы Btrieve создал файл, состоящий только из ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для создания стандартного файла или задайте "y" для элемента</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Include Data", или опустите этот элемент в описании файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для создания файла, состоящего только из данных, задайте "y"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для элемента "Include Data" и установите элемент "Key Count" в 0</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Free Space Threshold</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Граница свободного пространства)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : fthreshold=&lt;10 | 20 | 30&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : 10%, 20% или 30% от размера страницы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Free Space Threshold" задает величину свободного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пространства, которую Вы хотите, чтобы Btrieve зарезервировал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; на странице файла для расширения для записей переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Заданное Вами значение выражено в процентах от размера страницы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Не включайте элемент "Free Space Threshold" в описание файла,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; если файл не допускает записи переменной длины. Если вы задаете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "variable=y" и не задаете границу свободного пространства,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve будет использовать значение 5% от размера страницы,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданное по умолчанию.</p>
+<p>          Программа BUTIL содержит полный набор команд для применения при</p>
+<p>          создании, поддержке и восстановлении файлов. Следующие разделы</p>
+<p>          описывают, как запускать BUTIL, контролировать сообщения об</p>
+<p>          ошибках BUTIL, создавать BUTIL-описания файлов и файлы</p>
+<p>          альтернативной последовательности поиска. Команды BUTIL</p>
+<p>          представлены в алфавитном порядке под заголовком "Команды BUTIL"</p>
+<p>          ЗАПУСК BUTIL</p>
+<p>          Для запуска BUTIL выполните следующие шаги:</p>
+<p>          1) Стартуйте программу BREQUEST до запуска BUTIL. Если Вам нужна</p>
+<p>             помощь в этой процедуре, см. "Программа BREQUEST" в Главе 3.</p>
+<p>          2) Введите команду BUTIL в следующем формате:</p>
+<p>              &lt;Устройство&gt;:BUTIL-COMMAND[Параметры][-O&lt;Владелец&gt;]</p>
+<p>          Замените &lt;Устройство&gt; именем накопителя или другого устройства,</p>
+<p>          содержащего програмные файлы Btrieve. вы можете опустить</p>
+<p>          устройство, если Вы намерены использовать диск, заданный по</p>
+<p>          умолчанию.</p>
+<p>          Замените _COMMAND именем Btrieve-команды (COPY, LOAD и т.д.),</p>
+<p>          которую Вы хотите использовать. Вы должны поставить перед</p>
+<p>          командой  черточку (-).</p>
+<p>          Замените &lt;Параметры&gt; информацией, необходимой BUTIL для</p>
+<p>          выполнения выбранной Вами команды. Команды описаны под заголовком</p>
+<p>          соответствующей команды.</p>
+<p>          Замените &lt;Владелец&gt; или именем владельца Btrieve-файла, к</p>
+<p>          которому будет иметь доступ команда, или звездочкой (*). Если Вы</p>
+<p>          используете звездочку вместо имени владельца, BUTIL подскажет Вам</p>
+<p>          имя владельца файла. BUTIL требует параметр -O&lt;Владелец&gt;, если</p>
+<p>          какой-либо из Btrieve-файлов, заданных в команде, требует имя</p>
+<p>          владельца.</p>
+<p>          BUTIL отбрасывает ведущие пробелы, тем не менее звездочка (*) -</p>
+<p>          первый непробельный символ параметра -O.</p>
+<p>          Если Вы задаете два Btrieve-файла в команде, Вы должны задать</p>
+<p>          параметр -O дважды, по разу для каждого файла. Если только второй</p>
+<p>          файл имеет имя владельца, BUTIL игнорирует первое имя владельца.</p>
+<p>          вы можете применять опцию "звездочка" дважды.</p>
+<p>          Если Вы введете команду BUTIL без параметров, BUTIL покажет</p>
+<p>          правильный формат команды для всех команд. Вы можете</p>
+<p>          переназначить этот выход в файл или на принтер с помощью</p>
+<p>          переназначения DOS.</p>
+<p>          СООБЩЕНИЯ ОБ ОШИБКАХ BUTIL</p>
+<p>          BUTIL возвращает сообщения об ошибках двумя способами, в</p>
+<p>          зависимости от того, запускаете ли Вы ее из командной строки или</p>
+<p>          из командного файла.</p>
+<p>          Если какие-либо ошибки появляются во время запуска BUTIL из</p>
+<p>          командной строки, на экране появится сообщение, описывающее</p>
+<p>          проблему. См. Приложение B для информации о сообщениях об ошибках</p>
+<p>          BUTIL и Btrieve.</p>
+<p>          Если какие-либо ошибки появляются во время запуска BUTIL из</p>
+<p>          командного файла, BUTIL вернется на уровень ошибки DOS. Следующая</p>
+<p>          таблица перечисляет и описывает уровни ошибок BUTIL.</p>
+<p>                Уровень ошибки   Описание</p>
+<p>                       0         Запуск утилиты завершен без ошибок.</p>
+<p>                       1         Запуск утилиты завершен, но появляются</p>
+<p>                                 нефатальные ошибки, такой как код статуса</p>
+<p>                                 5 (Дубликат значения ключа).</p>
+<p>                       2         Запуск утилиты не завершен из-за</p>
+<p>                                 появления фатальной ошибки, такой как код</p>
+<p>                                 статуса 2 (ошибка ввода/вывода).</p>
+<p>          Вы можете проверить уровень ошибки DOS, включая в командном файле</p>
+<p>          после команды BUTIl условие подобное следующему:</p>
+<p>               IF ERRORLEVEL n ECHO сообщение</p>
+<p>          Замените n номером уровня ошибки BUTIL. Замените "сообщение"</p>
+<p>          значением сообщения.</p>
+<p>          Из-за способа, как DOs тестирует уровни ошибок в командах</p>
+<p>          командного файла, Вы всегда должны тестировать уровень ошибки 2</p>
+<p>          первым. Пример части командного файла, приведенный ниже,</p>
+<p>          иллюстрирует один из способов анализа уровней ошибки BUTIL.</p>
+<p>                 .</p>
+<p>                 .</p>
+<p>                 .</p>
+<p>          BUTIL-LOAD LOADFILE BTRFILE_OOWNERNAME</p>
+<p>          IF ERRORLEVEL 2 ECHO Фатальная ошибка:BUTIL операция не закончена</p>
+<p>          IF ERRORLEVEL 1 ECHO Не фатальная ошибка:Проверте на дубликаты в</p>
+<p>           загружаемом файле.</p>
+<p>          IF ERRORLEVEL 0 ECHO Операция закончена успешно.</p>
+<p>                 .</p>
+<p>                 .</p>
+<p>                 .</p>
+<p>          См. обсуждение командных файлов в руководстве по операционной</p>
+<p>          системе для дополнительной информации о том, как использовать</p>
+<p>          условие ERRORLEVEL.</p>
+<p>          ОПИСАНИЕ ФАЙЛОВ BUTIL</p>
+<p>          Некоторые из BUTIL-команд, включая CREATE, SAVE и SINDEX,</p>
+<p>          используют ОПИСАНИЕ ФАЙЛА. Описание файла - это последовательный</p>
+<p>          ASCII файл, содержащий некоторую информацию, необходимую Btrieve</p>
+<p>          для выполнения этих операций.</p>
+<p>          Следующий раздел описывает элементы, используемые в описаниях</p>
+<p>          файлов BUTIL. Раздел, содержащий набор правил, которыми Вы</p>
+<p>          должны руководствоваться при создании описания файла, следует за</p>
+<p>          описанием элементов.</p>
+<p>          О п и с а н и е  э л е м е н т о в  ф а й л а</p>
+<p>          Описание файлов состоит из списка ЭЛЕМЕНТОВ. элемент состоит из</p>
+<p>          ключевого слова, за которым следует знак равенства (=), а затем</p>
+<p>          следует значение. Каждый элемент в описании файла соответствует</p>
+<p>          какой-либо характеристике Btrieve-файла или определению ключа.</p>
+<p>          Полное описание Btrieve-файла и характеристик ключей см. в</p>
+<p>          Главе 2 "Управление Btrieve-файлами".</p>
+<p>          Ниже содержится объяснение описаний элементов файла. Описания</p>
+<p>          некоторых элементов файла помечены "необязательное" и могут быть</p>
+<p>          опущены при описании файла, если они не требуются для файла или</p>
+<p>          определения ключа. Элементы представлены в том порядке, в</p>
+<p>          котором они должны появляться в описании файла. Под заголовком</p>
+<p>          каждого элемента Вы найдете следующие подзаголовки.</p>
+<p>            - Э л е м е н т  - представляет правильный формат ключевого</p>
+<p>              слова элемента. Значение представлено как переменная.</p>
+<p>              Переменные, представляющие числовые значения, показаны</p>
+<p>              символами nnnn. Другие значения объясняются в тексте,</p>
+<p>              сопровождающем описание каждого элемента.</p>
+<p>            - Г р а н и ц а  - определяет границы допустимых значений,</p>
+<p>              которые Вы можете задать для элемента.</p>
+<p>            - К о м а н д ы   - список команд BUTIL, которым требуется</p>
+<p>              этот элемент в описании файлов.</p>
+<p>          За подзаголовками следует краткое описание элемента и как его</p>
+<p>          применять.</p>
+<p>                ----------------------------------------------------------</p>
+<p>                ПРИМЕЧАНИЕ:</p>
+<p>                Значения в описаниях элементов заключены в скобки. Не</p>
+<p>                заключайте в скобки значения в Вашем описании файла.</p>
+<p>                ----------------------------------------------------------</p>
+<p>          Record Length</p>
+<p>          (Длина записи)</p>
+<p>          Э л е м е н т : record=&lt;nnnn&gt;</p>
+<p>          Г р а н и ц а : 4-4090</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Record Length" определяет длину логической записи</p>
+<p>          данных в файле. Для записей фиксированной длины это значение</p>
+<p>          должно соответствовать длине параметра буфера данных, что</p>
+<p>          выполняет операции над файлом. Если Вы используете записи</p>
+<p>          переменной длины, задаваемая Вами длина записи должна</p>
+<p>          соответствовать длине фиксированной части записи.</p>
+<p>          Минимальная длина записи данных должна быть достаточно большой,</p>
+<p>          чтобы содержать все определенные для файла ключи, но не меньше</p>
+<p>          четырех байт. Длина записи плюс заголовки ее ключей плюс шесть</p>
+<p>          байтов не должны превышать размер страницы файла.</p>
+<p>          Variable Length Records</p>
+<p>          (Записи переменной длины)</p>
+<p>          Э л е м е н т : variable=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Variable Length Records" задает, хотите ли Вы чтобы</p>
+<p>          файл содержал записи переменной длины.</p>
+<p>          Задайте "y", если Вы хотите, чтобы создаваемый Вами файл</p>
+<p>          содержал записи переменной длины. Иначе, задайте "n".</p>
+<p>          Blank Truncation</p>
+<p>          (Отсечение пробелов)</p>
+<p>          Э л е м е н т : truncation=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Blank Truncation" задает, хотите ли Вы, чтобы Btrieve</p>
+<p>          выполнял отсечение пробелов у записей переменной длины.</p>
+<p>          Ключевое слово truncation требуется только6 если Вы задаете "y"</p>
+<p>          для записи переменной длины.</p>
+<p>          Задайте "y", если Вы хотите, чтобы Btrieve использовал</p>
+<p>          отсечение пробелов. Иначе, задайте "n".</p>
+<p>          Data Compression</p>
+<p>          (Сжатие данных)</p>
+<p>          Э л е м е н т : compress=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Data Compression" задает, хотите ли Вы, чтобы Btrieve</p>
+<p>          выполнял сжатие данных над записями, добавляемыми в файл.</p>
+<p>          Задайте "y", если Вы хотите, чтобы Btrieve выполнял сжатие</p>
+<p>          данных. Иначе, задайте "n".</p>
+<p>          Key Count</p>
+<p>          (счетчик ключа)</p>
+<p>          Э л е м е н т : key=&lt;nn&gt;</p>
+<p>          Г р а н и ц а : 1-24</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Key Count" задает число ключей, определенных для</p>
+<p>          файла. Если Вы зададите значение 0 для этого элемента, Btrieve</p>
+<p>          создаст файл, состоящий только из данных. Иначе, Btrieve</p>
+<p>          создаст или стандартный Btrieve-файл или файл, состоящий</p>
+<p>          только из ключей, в зависимости от значения, заданного для</p>
+<p>          элемента "Include Data".</p>
+<p>          Для значений больших 0 Вы должны определить по крайней мере</p>
+<p>          1 ключ, но не более 8, если размер страницы равен 512 байтам.</p>
+<p>          Если размер страницы - 102 байта или больше, Вы можете</p>
+<p>          определить до 24 ключей.</p>
+<p>          Page Size</p>
+<p>          (Размер страницы)</p>
+<p>          Э л е м е н т : page=&lt;nnnn&gt;</p>
+<p>          Г р а н и ц а : 512-4096</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Page Size" задает физический размер страницы файла в</p>
+<p>          байтах. Вы можете задавать любое число, кратное 512, до 4096.</p>
+<p>          Page pre-allocation</p>
+<p>          (Перераспределение страницы)</p>
+<p>          Э л е м е н т : allocation=&lt;nnnnn&gt;</p>
+<p>          Г р а н и ц а : 1-64K</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Page pre-allocation" задает количество страниц,</p>
+<p>          которое вы хотите перераспределить в файле. Если Вы не хотите</p>
+<p>          перераспределять какие-либо страницы, не включайте это ключевое</p>
+<p>          слово в Ваше описание файла.</p>
+<p>          Replace Existing File (необязательный)</p>
+<p>          (Замена существующего файла)</p>
+<p>          Э л е м е н т : replace=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Replace Existing File" показывает, что Вы не хотите,</p>
+<p>          чтобы Btrieve создавал новый файл, если файл с таким же именем</p>
+<p>          уже существует, и предупредил Вас о существовании файла.</p>
+<p>          Задайте "n", если Вы не хотите создавать новый файл вместо</p>
+<p>          существующего файла.</p>
+<p>          Если Вы хотите заменить существующий Btrieve-файл на новый</p>
+<p>          пустой файл с тем же самым именем, или задайте "y", или не</p>
+<p>          включайте этот элемент в описание файла.</p>
+<p>          Include Data (необязательный)</p>
+<p>          (Включение данных)</p>
+<p>          Э л е м е н т : data=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Include Data" задает, хотите ли Вы, чтобы Btrieve</p>
+<p>          создал файл, состоящий только из ключей. Задайте "n", если Вы</p>
+<p>          хотите, чтобы Btrieve создал файл, состоящий только из ключей.</p>
+<p>          Для создания стандартного файла или задайте "y" для элемента</p>
+<p>          "Include Data", или опустите этот элемент в описании файла.</p>
+<p>          Для создания файла, состоящего только из данных, задайте "y"</p>
+<p>          для элемента "Include Data" и установите элемент "Key Count" в 0</p>
+<p>          Free Space Threshold</p>
+<p>          (Граница свободного пространства)</p>
+<p>          Э л е м е н т : fthreshold=&lt;10 | 20 | 30&gt;</p>
+<p>          Г р а н и ц а : 10%, 20% или 30% от размера страницы</p>
+<p>          К о м а н д ы : CREATE</p>
+<p>          Элемент "Free Space Threshold" задает величину свободного</p>
+<p>          пространства, которую Вы хотите, чтобы Btrieve зарезервировал</p>
+<p>          на странице файла для расширения для записей переменной длины.</p>
+<p>          Заданное Вами значение выражено в процентах от размера страницы.</p>
+<p>          Не включайте элемент "Free Space Threshold" в описание файла,</p>
+<p>          если файл не допускает записи переменной длины. Если вы задаете</p>
+<p>          "variable=y" и не задаете границу свободного пространства,</p>
+<p>          Btrieve будет использовать значение 5% от размера страницы,</p>
+<p>          заданное по умолчанию.</p>
 <p>------------------------------------</p>
 <p class="note">Примечание:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Следующие элементы определяют информацию о ключах файла. вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;должны вводить информацию о ключах, начиная с позиции ключа,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;для каждого сегмента ключа, что Вы хотите определить.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Key Position</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Позиция ключа)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : position=&lt;nnn&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : 1-&lt;длина записи&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Key Position" показывает позицию сегмента ключа в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи. Позиция ключа должна быть по крайней мере равна 1 и не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; может быть больше значения, заданного Вами для длины запсии.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определяемые Вами ключи могут перекрываться.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Key Length</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Длина ключа)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : length=&lt;nnn&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : 1-&lt;ограничение для типа ключа&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Key Lehgth" определяет длину поля ключа или ключевого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сегмента. Сумма длины ключа и начальной позиции не должна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; превышать заданную длину записи файла. длина ключа должна быть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; показывает позицию сегмента ключа в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи. Позиция ключа должна быть по крайней мере равна 1 и не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; может быть больше значения, заданного Вами для длины запсии.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Определяемые Вами ключи могут перекрываться.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Duplicate Key Values</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Дубликаты значений ключа)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : duplicates=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Duplicate Key Values" задает, хотите ли Вы допустить,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; чтобы более чем одна запись в файле содержала одно и то же</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значение поля ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте "y", если Вы хотите допустить дубликаты значений ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Иначе, задайте "n".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Modifiable Key Values</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Модифицируемые значения ключа)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : modifiable=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Modifiable Key Values" задает, хотите ли Вы позволить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладной программе модифицировать значение ключа во время</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции Update.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте "y", если Вы хотите, чтобы значения этого ключа были</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; модифицируемыми. Иначе, задайте "n".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Key Type</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Тип ключа)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : type=&lt;значение типа ключа&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : Любой из типов Btrieve-ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Key Type" задает тип данных для ключа. Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; задать все слово (такое как "float") или только первые две буквы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; слова ("fl" для типа float). См. Приложение G для дополнительной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; информации о типах ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Descending Sort Order (необязательный)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Убывающий порядок сортировки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : descending=y</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Descending Sort Order" задает, хотите ли Вы, чтобы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve сортировал индекс в убывающем порядке.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Включите элемент "Descending Sort Order" &nbsp;и задайте "y", если Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; хотите, чтобы Btrieve сортировал значения ключа в убывающем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; порядке. Если Вы не включите этот элемент, Btrieve отсортирует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значения ключа в возрастающем порядке.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Alternate Collating Sequence</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Альтернативная последовательность поиска)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : alternate=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Alternate Collating Sequence" задает, хотите ли Вы,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; чтобы сортировка данных осуществлялась в последовательности,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отличающейся от стандартной ASCII последовательности. Это</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; полезно, если вы хотите применять алфавит, отличный от</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; английского, или если вы хотите просматривать символы нижнего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; регистра как символы верхнего регистра.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете задать альтернативную последовательность поиска только</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для ключей типа string, lstring или zstring (строка, l-строка или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; z-строка). Если Вы хотите, чтобы Btrieve сортировал индекс с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; помощью альтернативной последовательности поиска, введите "y" в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; это поле. Иначе, задайте "n".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Manual Key (необязательный)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Ручной ключ)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : manual=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Manual Key" задает, что определяемый Вами ключ или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сегмент ключа - ручной. Если вы определите сегмент ключа как</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ручной, Вы должны задать пустое значение для этого сегмента.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если ключ - сегментированный ключ и Вы определяете один сегмент</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; как ручной, Вы должны определить все сегменты как ручные.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Null Key</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Пустой ключ)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : null=&lt;y | n&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Null Key" задает, должен ли определяемый Вами ключ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; иметь пустое значение. Если Вы определяете пустое значение для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; одного сегмента сегментированного ключа, Вы должны определить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пустое значение для всех сегментов этого сегментированного ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Пустые значения, определяемые Вами для каждого сегмента, могут</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; быть разными.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вы можете включить элемент "Null Key" в файл-описание для команды</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; INDEX. Однако, INDEX не рассматривает какое-либо заданное Вами</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пустое значение. BUTIL допускает его для поддержки постоянных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; форматов для файлов-описаний CREATE, INDEX и SINDEX.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте "y", если Вы хотите определить пустое значение для этого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа. Иначе, задайте "n".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Null Key Value</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Пустое значение ключа)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : value=&lt;nnn&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : любое 1-байтовое шестнадцатиричное значение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Null Key value" задает в шестнадцатиричном виде</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значение, которое Вы хотите, чтобы Btrieve распознавал как пустой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; символ для ключа. Типичные пустые значения - 20 как пробел и 0</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; как двоичный ноль. &nbsp;Включайте этот элемент только, если Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определяете ключ как допускающий пустые значения. Если Вы задаете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "n" для элемента " Null Key", не включайте элемент</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Null Key Value" в файл-описание.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Segmented Key</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Сегментированный ключ)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : segment=&lt;y | n&gt;</p>
+<p>               Следующие элементы определяют информацию о ключах файла. вы</p>
+<p>               должны вводить информацию о ключах, начиная с позиции ключа,</p>
+<p>               для каждого сегмента ключа, что Вы хотите определить.</p>
+<p>               -----------------------------------------------------------</p>
+<p>          Key Position</p>
+<p>          (Позиция ключа)</p>
+<p>          Э л е м е н т : position=&lt;nnn&gt;</p>
+<p>          Г р а н и ц а : 1-&lt;длина записи&gt;</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Key Position" показывает позицию сегмента ключа в</p>
+<p>          записи. Позиция ключа должна быть по крайней мере равна 1 и не</p>
+<p>          может быть больше значения, заданного Вами для длины запсии.</p>
+<p>          определяемые Вами ключи могут перекрываться.</p>
+<p>          Key Length</p>
+<p>          (Длина ключа)</p>
+<p>          Э л е м е н т : length=&lt;nnn&gt;</p>
+<p>          Г р а н и ц а : 1-&lt;ограничение для типа ключа&gt;</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Key Lehgth" определяет длину поля ключа или ключевого</p>
+<p>          сегмента. Сумма длины ключа и начальной позиции не должна</p>
+<p>          превышать заданную длину записи файла. длина ключа должна быть</p>
+<p>          показывает позицию сегмента ключа в</p>
+<p>          записи. Позиция ключа должна быть по крайней мере равна 1 и не</p>
+<p>          может быть больше значения, заданного Вами для длины запсии.</p>
+<p>          Определяемые Вами ключи могут перекрываться.</p>
+<p>          Duplicate Key Values</p>
+<p>          (Дубликаты значений ключа)</p>
+<p>          Э л е м е н т : duplicates=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Duplicate Key Values" задает, хотите ли Вы допустить,</p>
+<p>          чтобы более чем одна запись в файле содержала одно и то же</p>
+<p>          значение поля ключа.</p>
+<p>          Задайте "y", если Вы хотите допустить дубликаты значений ключа.</p>
+<p>          Иначе, задайте "n".</p>
+<p>          Modifiable Key Values</p>
+<p>          (Модифицируемые значения ключа)</p>
+<p>          Э л е м е н т : modifiable=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Modifiable Key Values" задает, хотите ли Вы позволить</p>
+<p>          прикладной программе модифицировать значение ключа во время</p>
+<p>          операции Update.</p>
+<p>          Задайте "y", если Вы хотите, чтобы значения этого ключа были</p>
+<p>          модифицируемыми. Иначе, задайте "n".</p>
+<p>          Key Type</p>
+<p>          (Тип ключа)</p>
+<p>          Э л е м е н т : type=&lt;значение типа ключа&gt;</p>
+<p>          Г р а н и ц а : Любой из типов Btrieve-ключа</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Key Type" задает тип данных для ключа. Вы можете</p>
+<p>          задать все слово (такое как "float") или только первые две буквы</p>
+<p>          слова ("fl" для типа float). См. Приложение G для дополнительной</p>
+<p>          информации о типах ключа.</p>
+<p>          Descending Sort Order (необязательный)</p>
+<p>          Убывающий порядок сортировки</p>
+<p>          Э л е м е н т : descending=y</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Descending Sort Order" задает, хотите ли Вы, чтобы</p>
+<p>          Btrieve сортировал индекс в убывающем порядке.</p>
+<p>          Включите элемент "Descending Sort Order"  и задайте "y", если Вы</p>
+<p>          хотите, чтобы Btrieve сортировал значения ключа в убывающем</p>
+<p>          порядке. Если Вы не включите этот элемент, Btrieve отсортирует</p>
+<p>          значения ключа в возрастающем порядке.</p>
+<p>          Alternate Collating Sequence</p>
+<p>          (Альтернативная последовательность поиска)</p>
+<p>          Э л е м е н т : alternate=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Alternate Collating Sequence" задает, хотите ли Вы,</p>
+<p>          чтобы сортировка данных осуществлялась в последовательности,</p>
+<p>          отличающейся от стандартной ASCII последовательности. Это</p>
+<p>          полезно, если вы хотите применять алфавит, отличный от</p>
+<p>          английского, или если вы хотите просматривать символы нижнего</p>
+<p>          регистра как символы верхнего регистра.</p>
+<p>          Вы можете задать альтернативную последовательность поиска только</p>
+<p>          для ключей типа string, lstring или zstring (строка, l-строка или</p>
+<p>          z-строка). Если Вы хотите, чтобы Btrieve сортировал индекс с</p>
+<p>          помощью альтернативной последовательности поиска, введите "y" в</p>
+<p>          это поле. Иначе, задайте "n".</p>
+<p>          Manual Key (необязательный)</p>
+<p>          (Ручной ключ)</p>
+<p>          Э л е м е н т : manual=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Manual Key" задает, что определяемый Вами ключ или</p>
+<p>          сегмент ключа - ручной. Если вы определите сегмент ключа как</p>
+<p>          ручной, Вы должны задать пустое значение для этого сегмента.</p>
+<p>          Если ключ - сегментированный ключ и Вы определяете один сегмент</p>
+<p>          как ручной, Вы должны определить все сегменты как ручные.</p>
+<p>          Null Key</p>
+<p>          (Пустой ключ)</p>
+<p>          Э л е м е н т : null=&lt;y | n&gt;</p>
+<p>          Г р а н и ц а : нет</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Null Key" задает, должен ли определяемый Вами ключ</p>
+<p>          иметь пустое значение. Если Вы определяете пустое значение для</p>
+<p>          одного сегмента сегментированного ключа, Вы должны определить</p>
+<p>          пустое значение для всех сегментов этого сегментированного ключа.</p>
+<p>          Пустые значения, определяемые Вами для каждого сегмента, могут</p>
+<p>          быть разными.</p>
+<p>          вы можете включить элемент "Null Key" в файл-описание для команды</p>
+<p>          INDEX. Однако, INDEX не рассматривает какое-либо заданное Вами</p>
+<p>          пустое значение. BUTIL допускает его для поддержки постоянных</p>
+<p>          форматов для файлов-описаний CREATE, INDEX и SINDEX.</p>
+<p>          Задайте "y", если Вы хотите определить пустое значение для этого</p>
+<p>          ключа. Иначе, задайте "n".</p>
+<p>          Null Key Value</p>
+<p>          (Пустое значение ключа)</p>
+<p>          Э л е м е н т : value=&lt;nnn&gt;</p>
+<p>          Г р а н и ц а : любое 1-байтовое шестнадцатиричное значение</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Null Key value" задает в шестнадцатиричном виде</p>
+<p>          значение, которое Вы хотите, чтобы Btrieve распознавал как пустой</p>
+<p>          символ для ключа. Типичные пустые значения - 20 как пробел и 0</p>
+<p>          как двоичный ноль.  Включайте этот элемент только, если Вы</p>
+<p>          определяете ключ как допускающий пустые значения. Если Вы задаете</p>
+<p>          "n" для элемента " Null Key", не включайте элемент</p>
+<p>          "Null Key Value" в файл-описание.</p>
+<p>          Segmented Key</p>
+<p>          (Сегментированный ключ)</p>
+<p>          Э л е м е н т : segment=&lt;y | n&gt;</p>
 <p>Г р а н и ц а : нет</p>
 <p>К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Segmented Key" задает, имеет ли определяемый Вами ключ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; еще какие-либо сегменты.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте "y", если ключ имеет другой сегмент. Задайте "n", если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы определяете несегментированный ключ или последний сегмент</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сегментированного ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Alternate Collating Sequence Filename</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Имя файла альтернативной последовательности поиска)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Э л е м е н т : name=&lt;имя файла&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Г р а н и ц а : имя файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К о м а н д ы : CREATE, INDEX, SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Элемент "Alternate Collating Sequence Filename" задает имя файла,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержащего альтернативную последовательнось для создоваемого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вами файла7 вы можете включать любое число уровней директорий в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; имени файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если вы задаете элемент "Alternate Collating Sequence Filename",</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; не включайте это ключевое слово в Ваш файл-описание.</p>
+<p>          Элемент "Segmented Key" задает, имеет ли определяемый Вами ключ</p>
+<p>          еще какие-либо сегменты.</p>
+<p>          Задайте "y", если ключ имеет другой сегмент. Задайте "n", если</p>
+<p>          Вы определяете несегментированный ключ или последний сегмент</p>
+<p>          сегментированного ключа.</p>
+<p>          Alternate Collating Sequence Filename</p>
+<p>          (Имя файла альтернативной последовательности поиска)</p>
+<p>          Э л е м е н т : name=&lt;имя файла&gt;</p>
+<p>          Г р а н и ц а : имя файла</p>
+<p>          К о м а н д ы : CREATE, INDEX, SINDEX</p>
+<p>          Элемент "Alternate Collating Sequence Filename" задает имя файла,</p>
+<p>          содержащего альтернативную последовательнось для создоваемого</p>
+<p>          Вами файла7 вы можете включать любое число уровней директорий в</p>
+<p>          имени файла.</p>
+<p>          Если вы задаете элемент "Alternate Collating Sequence Filename",</p>
+<p>          не включайте это ключевое слово в Ваш файл-описание.</p>
 <p>П р а в и л а д л я ф а й л о в - о п и с а н и й</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующие правила применяются к файлам-описаниям BUTIL. Если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BUTIL возвращает ошибку при попытке получить доступ к файлу-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; описанию, произведите проверку в следующих областях.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Все элементы такие, как "type=fl", должны быть написаны</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; символами нижнего регистра.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Все элементы должны быть написаны правильно и отделены от</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; предыдущих элементов "белым пробелом" (т.е. пробелом,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; символом табуляции, CR/LF и т,д,)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Элементы должны быть представлены в файле-описателе в том</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; порядке, в каком они представлены в предыдущем разделе.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Ответы должны соответствовать друг другу. Например, если Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; задаете "null=y' для элемента "Null Key", должен появиться и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; элемент "Null Key Value" и его значение; иначе их не должно</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; быть. Если Вы задаете "alternate=y" для элемента "Alternate</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Collating Sequence" в одном или более сегментов ключа,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; элемент "Alternate Collating Sequence Filename" и полное или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; относительное имя пути файла альтернативной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последовательности поиска должны быть представлены как</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последний элемент файла-описания.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Удостоверьтесь, что существует достаточное количество</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; описаний ключей для формирования числа ключей, заданных в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; элементе "Key Count". Вводите информацию о ключе, начиная с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; позиции ключа, для каждого сегмента ключа в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Удостоверьтесь, что файл-описание не содержит символов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; форматирования текста. (Некоторые текстовые процессоры</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; помещают символы форматирования в текстовый файл. Файл-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; описание не долженсодержать никакие символы форматирования).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - BUTIL не проверяет на конец файл-описание. Если Вы не задали</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; альтернативную последовательность поиска, возможно включить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; слишком много описаний ключей и не получить сообщения об</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ошибке. Вы можете включать коментарии в конце файла-описания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; после всех описаний ключей и элемента "Alternate Collating</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sequence Filename".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Оббратите внимание, что файлы-описания для CREATE, INDEX и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SINDEX имеют слегка различные форматы.</p>
-<p>  &nbsp; &nbsp;ФАЙЛЫ АЛЬТЕРНАТИВНОЙ</p>
-<p>  &nbsp; &nbsp;ПОСЛЕДОВАТЕЛЬНОСТИ &nbsp;ПОИСКА</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Первые 265 байт файла альтернативной последовательности поиска</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержат определение последовательности поиска, отличной от</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; стандартной ASCII последовательности. Если Вы хотите создать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл альтернативной последовательности поиска, Вы должны написать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладну программу, генерирующую файл в заданном ниже формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Смещение &nbsp; &nbsp;Длина &nbsp; &nbsp;Описание</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;Байт знака. Этот байт должен всегда</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;содержать шестнадцатиричное значение AC.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; &nbsp;8-байтовое имя, которое однозначно</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;идентифицирует альтернативную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;последовательность поиска для Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp;256 &nbsp; &nbsp; 256-байтовая таблица, содержащая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;значение сортировки для каждого символа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Храните значение для каждого символа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;сортировки со смещением, соответствующим</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;представлению символа в ASCII</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;последовательности поиска. Например, для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;сортировки символа A как чего-то другого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;чем 0x41, храните новое значение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;сортировки со смещением 0x41 в этой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;таблице.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Например, если вы хотите вставить символ с шестнадцатиричным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значением 5D между буквами U (шестнадцатиричное 55) и V</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (шестнадцатиричное 56) в Вашей последовательности, байт 5D в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; этой последовательности будет содержать значение 56, а байты</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 56-5C в этой последовательности будет содержать значения 57-5D.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Файл UPPER.ALT, который Вы найдете на Вашей програмной дискете,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержит пример альтернативной последовательности поиска. Эта</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; частная последовательность сравнивает символы верхнего и нижнего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; регистра так, как будто они бы были все в верхнем регистре. Если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы имеете множество файлов с различными альтернативными</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; последовательностями поиска, все последовательности должны иметь</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; различные имена.</p>
+<p>          Следующие правила применяются к файлам-описаниям BUTIL. Если</p>
+<p>          BUTIL возвращает ошибку при попытке получить доступ к файлу-</p>
+<p>          описанию, произведите проверку в следующих областях.</p>
+<p>            - Все элементы такие, как "type=fl", должны быть написаны</p>
+<p>              символами нижнего регистра.</p>
+<p>            - Все элементы должны быть написаны правильно и отделены от</p>
+<p>              предыдущих элементов "белым пробелом" (т.е. пробелом,</p>
+<p>              символом табуляции, CR/LF и т,д,)</p>
+<p>            - Элементы должны быть представлены в файле-описателе в том</p>
+<p>              порядке, в каком они представлены в предыдущем разделе.</p>
+<p>            - Ответы должны соответствовать друг другу. Например, если Вы</p>
+<p>              задаете "null=y' для элемента "Null Key", должен появиться и</p>
+<p>              элемент "Null Key Value" и его значение; иначе их не должно</p>
+<p>              быть. Если Вы задаете "alternate=y" для элемента "Alternate</p>
+<p>              Collating Sequence" в одном или более сегментов ключа,</p>
+<p>              элемент "Alternate Collating Sequence Filename" и полное или</p>
+<p>              относительное имя пути файла альтернативной</p>
+<p>              последовательности поиска должны быть представлены как</p>
+<p>              последний элемент файла-описания.</p>
+<p>            - Удостоверьтесь, что существует достаточное количество</p>
+<p>              описаний ключей для формирования числа ключей, заданных в</p>
+<p>              элементе "Key Count". Вводите информацию о ключе, начиная с</p>
+<p>              позиции ключа, для каждого сегмента ключа в файле.</p>
+<p>            - Удостоверьтесь, что файл-описание не содержит символов</p>
+<p>              форматирования текста. (Некоторые текстовые процессоры</p>
+<p>              помещают символы форматирования в текстовый файл. Файл-</p>
+<p>              описание не долженсодержать никакие символы форматирования).</p>
+<p>            - BUTIL не проверяет на конец файл-описание. Если Вы не задали</p>
+<p>              альтернативную последовательность поиска, возможно включить</p>
+<p>              слишком много описаний ключей и не получить сообщения об</p>
+<p>              ошибке. Вы можете включать коментарии в конце файла-описания</p>
+<p>              после всех описаний ключей и элемента "Alternate Collating</p>
+<p>              Sequence Filename".</p>
+<p>            - Оббратите внимание, что файлы-описания для CREATE, INDEX и</p>
+<p>              SINDEX имеют слегка различные форматы.</p>
+<p>     ФАЙЛЫ АЛЬТЕРНАТИВНОЙ</p>
+<p>     ПОСЛЕДОВАТЕЛЬНОСТИ  ПОИСКА</p>
+<p>          Первые 265 байт файла альтернативной последовательности поиска</p>
+<p>          содержат определение последовательности поиска, отличной от</p>
+<p>          стандартной ASCII последовательности. Если Вы хотите создать</p>
+<p>          файл альтернативной последовательности поиска, Вы должны написать</p>
+<p>          прикладну программу, генерирующую файл в заданном ниже формате.</p>
+<p>              Смещение    Длина    Описание</p>
+<p>                  0         1      Байт знака. Этот байт должен всегда</p>
+<p>                                   содержать шестнадцатиричное значение AC.</p>
+<p>                  1         8      8-байтовое имя, которое однозначно</p>
+<p>                                   идентифицирует альтернативную</p>
+<p>                                   последовательность поиска для Btrieve.</p>
+<p>                  9        256     256-байтовая таблица, содержащая</p>
+<p>                                   значение сортировки для каждого символа.</p>
+<p>                                   Храните значение для каждого символа</p>
+<p>                                   сортировки со смещением, соответствующим</p>
+<p>                                   представлению символа в ASCII</p>
+<p>                                   последовательности поиска. Например, для</p>
+<p>                                   сортировки символа A как чего-то другого</p>
+<p>                                   чем 0x41, храните новое значение</p>
+<p>                                   сортировки со смещением 0x41 в этой</p>
+<p>                                   таблице.</p>
+<p>          Например, если вы хотите вставить символ с шестнадцатиричным</p>
+<p>          значением 5D между буквами U (шестнадцатиричное 55) и V</p>
+<p>          (шестнадцатиричное 56) в Вашей последовательности, байт 5D в</p>
+<p>          этой последовательности будет содержать значение 56, а байты</p>
+<p>          56-5C в этой последовательности будет содержать значения 57-5D.</p>
+<p>          Файл UPPER.ALT, который Вы найдете на Вашей програмной дискете,</p>
+<p>          содержит пример альтернативной последовательности поиска. Эта</p>
+<p>          частная последовательность сравнивает символы верхнего и нижнего</p>
+<p>          регистра так, как будто они бы были все в верхнем регистре. Если</p>
+<p>          Вы имеете множество файлов с различными альтернативными</p>
+<p>          последовательностями поиска, все последовательности должны иметь</p>
+<p>          различные имена.</p>
 <p>КОМАНДЫ BUTIL</p>
 <p>Следующие разделы описывают, как применять команды BUTIL:</p>
 <p>Команда Функция</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CLONE &nbsp; &nbsp; &nbsp; &nbsp;Создает пустой Btrieve-файл с теми же самыми</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; спецификациями, что и у существующего файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;COPY &nbsp; &nbsp; &nbsp; &nbsp; Копирует содержимое одного Btrieve-файла в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; другой Btrieve-файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CREATE &nbsp; &nbsp; &nbsp; Создает Btrieve-файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DROP &nbsp; &nbsp; &nbsp; &nbsp; Отбрасывает дополнительный индекс</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;EXTEND &nbsp; &nbsp; &nbsp; Создает разделенный файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;INDEX &nbsp; &nbsp; &nbsp; &nbsp;Создает внешний индексный файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;LOAD &nbsp; &nbsp; &nbsp; &nbsp; Загружает содержимое стандартного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последовательного файла в Btrieve-файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RECOVER &nbsp; &nbsp; &nbsp;Восстанавливает данные поврежденого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RESET &nbsp; &nbsp; &nbsp; &nbsp;Закрывает файлы данных и освобождает ресурсы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SAVE &nbsp; &nbsp; &nbsp; &nbsp; Сохраняет содержимое Btrieve-файла в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; стандартном последовательном файле</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SINDEX &nbsp; &nbsp; &nbsp; Создает дополнительный индекс</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;STAT &nbsp; &nbsp; &nbsp; &nbsp; Показывает статистику по атрибутам и текущим</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; размерам файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;STOP &nbsp; &nbsp; &nbsp; &nbsp; Завершает BREQUEST и локальный Record Manager</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (если он заружен) и удаляет их из памяти</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Показывает версию Btrieve и номера пересмотра</p>
+<p>               CLONE        Создает пустой Btrieve-файл с теми же самыми</p>
+<p>                            спецификациями, что и у существующего файла.</p>
+<p>               COPY         Копирует содержимое одного Btrieve-файла в</p>
+<p>                            другой Btrieve-файл</p>
+<p>               CREATE       Создает Btrieve-файл</p>
+<p>               DROP         Отбрасывает дополнительный индекс</p>
+<p>               EXTEND       Создает разделенный файл</p>
+<p>               INDEX        Создает внешний индексный файл</p>
+<p>               LOAD         Загружает содержимое стандартного</p>
+<p>                            последовательного файла в Btrieve-файл</p>
+<p>               RECOVER      Восстанавливает данные поврежденого</p>
+<p>                            Btrieve-файла</p>
+<p>               RESET        Закрывает файлы данных и освобождает ресурсы</p>
+<p>               SAVE         Сохраняет содержимое Btrieve-файла в</p>
+<p>                            стандартном последовательном файле</p>
+<p>               SINDEX       Создает дополнительный индекс</p>
+<p>               STAT         Показывает статистику по атрибутам и текущим</p>
+<p>                            размерам файла</p>
+<p>               STOP         Завершает BREQUEST и локальный Record Manager</p>
+<p>                            (если он заружен) и удаляет их из памяти</p>
+<p>               VER          Показывает версию Btrieve и номера пересмотра</p>
 <p>CLONE</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-CLONE &lt;Существующий файл&gt;&lt;Новый файл&gt;[-O &lt;Владелец&gt;]</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Команда CLONE создает новый пустой Btrieve-файл с теми же сам</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; спецификациями файла, включая дополнительные индексы,что и у</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существующего файла. Вы можете применять CLONE, когда Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заменить существующий файл, но не хотите разрушать информацию,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержащуюся в существующем файле, как это происходит при</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; применении Вами операции CREATE. Вдобавок, CLONE не требует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла-описания для создания нового файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; CLONE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска CLONE введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вместо &lt;Существующий файл&gt; введите имя Btrieve-файла, который Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; хотите получить. Вы можете задать полное имя пути, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вместо &lt;Новый файл&gt; введите имя, которое Вы хотите использовать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для нового пустого Btrieve-файла. Вы можете задать полное имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вместо &lt;Владелец&gt; введите имя владельца существующего файла,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; если оно требуется. Новый файл будет с именем владельца</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существующего файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующая команда получает файл NEWINV08-14-92T из файла INVOICE08-14-92T</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Имя владельца файла INVOICE08-14-92T - "Sandy"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-CLONE INVOICE08-14-92T NEWINV08-14-92T -O Sandy</p>
+<p>          Команда CLONE создает новый пустой Btrieve-файл с теми же сам</p>
+<p>          спецификациями файла, включая дополнительные индексы,что и у</p>
+<p>          существующего файла. Вы можете применять CLONE, когда Вы хотите</p>
+<p>          заменить существующий файл, но не хотите разрушать информацию,</p>
+<p>          содержащуюся в существующем файле, как это происходит при</p>
+<p>          применении Вами операции CREATE. Вдобавок, CLONE не требует</p>
+<p>          файла-описания для создания нового файла.</p>
+<p>          К а к   п р и м е н я т ь   CLONE</p>
+<p>          Для запуска CLONE введите команду в показанном выше формате.</p>
+<p>          Вместо &lt;Существующий файл&gt; введите имя Btrieve-файла, который Вы</p>
+<p>          хотите получить. Вы можете задать полное имя пути, если</p>
+<p>          требуется.</p>
+<p>          Вместо &lt;Новый файл&gt; введите имя, которое Вы хотите использовать</p>
+<p>          для нового пустого Btrieve-файла. Вы можете задать полное имя</p>
+<p>          пути, если требуется.</p>
+<p>          Вместо &lt;Владелец&gt; введите имя владельца существующего файла,</p>
+<p>          если оно требуется. Новый файл будет с именем владельца</p>
+<p>          существующего файла.</p>
+<p>          П р и м е р</p>
+<p>          Следующая команда получает файл NEWINV08-14-92T из файла INVOICE08-14-92T</p>
+<p>          Имя владельца файла INVOICE08-14-92T - "Sandy"</p>
+<p>               BUTIL-CLONE INVOICE08-14-92T NEWINV08-14-92T -O Sandy</p>
 <p>COPY</p>
 <p>Ф о р м а т к о м а н д ы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-COPY &lt;Входной файл&gt;&lt;Выходной файл&gt;[-O &lt;Владелец1&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [-O&lt;Владелец2&gt;]]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Команда COPY копирует содержимое одного Btrieve-файла в другой.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Наиболее общее применение COPY - изменение характеристик ключей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (таких как позиция ключа, длина ключа или значения ключей-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; дубликатов) Btrieve-файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; COPY берет каждую запись из входного файла и вставляет ее в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выходной файл, используя операции Btrieve Get и Insert. COPY</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполняет за один шаг ту же самую функцию, что и SAVE и следуемая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; за ней LOAD.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; COPY</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска COPY введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Входной файл&gt; на имя Btrieve-файла, из которого Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пересылаете записи. Вы можете задать полное имя пути, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Выходной файл&gt; на имя Btrieve-файла, в который Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; хотите вставить записи. Файл может быть как пустой, так и нет.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете задать полное имя пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец1&gt; и &lt;Владелец2&gt; именами владельцев Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлов, если требуется. Если &lt;Входной файл&gt; требует имя владельца</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете задать имя для &lt;Владелец1&gt; или использовать опцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "звездочка", описанную в начале этой главы. Если &lt;Выходной файл&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требует имя владельца, испоьзуйте обе опции &lt;Владелец1&gt; и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &lt;Владелец2&gt;. Если выходной файл не требует имя владельца, Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; можете оставить пробел вместо &lt;Владелец1&gt;. Используйте</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &lt;Владелец2&gt; для задания имени владельца для &nbsp;&lt;Выходной файл&gt;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После того6 как записи были скопированы из входного файла в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выходной файл, COPY отобразит на экране суммарное число</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; скопированных записей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующая команда копирует записи из файла CUSTOMER08-14-92T в файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ACCTRECV08-14-92T . Файл CUSTOMER08-14-92T не требует имя владельца.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Файл ACCTRECV08-14-92T имеет имя владельца "Pam".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-COPY CUSTOMER08-14-92T ACCTRECV08-14-92T -O -O Pam</p>
+<p>               BUTIL-COPY &lt;Входной файл&gt;&lt;Выходной файл&gt;[-O &lt;Владелец1&gt;</p>
+<p>                          [-O&lt;Владелец2&gt;]]</p>
+<p>          О п и с а н и е</p>
+<p>          Команда COPY копирует содержимое одного Btrieve-файла в другой.</p>
+<p>          Наиболее общее применение COPY - изменение характеристик ключей</p>
+<p>          (таких как позиция ключа, длина ключа или значения ключей-</p>
+<p>          дубликатов) Btrieve-файла.</p>
+<p>          COPY берет каждую запись из входного файла и вставляет ее в</p>
+<p>          выходной файл, используя операции Btrieve Get и Insert. COPY</p>
+<p>          выполняет за один шаг ту же самую функцию, что и SAVE и следуемая</p>
+<p>          за ней LOAD.</p>
+<p>          К а к   п р и м е н я т ь   COPY</p>
+<p>          Для запуска COPY введите команду в показанном выше формате.</p>
+<p>          Замените &lt;Входной файл&gt; на имя Btrieve-файла, из которого Вы</p>
+<p>          пересылаете записи. Вы можете задать полное имя пути, если</p>
+<p>          требуется.</p>
+<p>          Замените &lt;Выходной файл&gt; на имя Btrieve-файла, в который Вы</p>
+<p>          хотите вставить записи. Файл может быть как пустой, так и нет.</p>
+<p>          Вы можете задать полное имя пути, если требуется.</p>
+<p>          Замените &lt;Владелец1&gt; и &lt;Владелец2&gt; именами владельцев Btrieve-</p>
+<p>          файлов, если требуется. Если &lt;Входной файл&gt; требует имя владельца</p>
+<p>          Вы можете задать имя для &lt;Владелец1&gt; или использовать опцию</p>
+<p>          "звездочка", описанную в начале этой главы. Если &lt;Выходной файл&gt;</p>
+<p>          требует имя владельца, испоьзуйте обе опции &lt;Владелец1&gt; и</p>
+<p>          &lt;Владелец2&gt;. Если выходной файл не требует имя владельца, Вы</p>
+<p>          можете оставить пробел вместо &lt;Владелец1&gt;. Используйте</p>
+<p>          &lt;Владелец2&gt; для задания имени владельца для  &lt;Выходной файл&gt;.</p>
+<p>          После того6 как записи были скопированы из входного файла в</p>
+<p>          выходной файл, COPY отобразит на экране суммарное число</p>
+<p>          скопированных записей.</p>
+<p>          П р и м е р</p>
+<p>          Следующая команда копирует записи из файла CUSTOMER08-14-92T в файл</p>
+<p>          ACCTRECV08-14-92T . Файл CUSTOMER08-14-92T не требует имя владельца.</p>
+<p>          Файл ACCTRECV08-14-92T имеет имя владельца "Pam".</p>
+<p>               BUTIL-COPY CUSTOMER08-14-92T ACCTRECV08-14-92T -O -O Pam</p>
 <p>CREATE</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-CREATE &lt;Новое имя файла&gt;&lt;Файл-описание&gt;</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Команда CREATE генерирует пустой Btrieve-файл, используя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; характеристики заданные в файле-описании.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Вы сможете запустить CREATE, Вы должны сперва</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сгенерировать файл-описание в текстовом редакторе. Файлы-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; описанияля описаны в "Файлы-описания BUTIL".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска CREATE введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Новое имя файла&gt; на имя файла, который Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; создать. Вы можете задать полное имя пути, если требуется.</p>
+<p>          Команда CREATE генерирует пустой Btrieve-файл, используя</p>
+<p>          характеристики заданные в файле-описании.</p>
+<p>          К а к   п р и м е н я т ь   CREATE</p>
+<p>          До того, как Вы сможете запустить CREATE, Вы должны сперва</p>
+<p>          сгенерировать файл-описание в текстовом редакторе. Файлы-</p>
+<p>          описанияля описаны в "Файлы-описания BUTIL".</p>
+<p>          Для запуска CREATE введите команду в показанном выше формате.</p>
+<p>          Замените &lt;Новое имя файла&gt; на имя файла, который Вы хотите</p>
+<p>          создать. Вы можете задать полное имя пути, если требуется.</p>
 <p>------------------------------------</p>
 <p class="note">Примечание:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Если имя, заданное в &lt;Новое имя файла&gt; - имя существующего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve-файла, BUTIL создаст новый пустой файл вместо</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;существующего файла. Все данные, хранящиеся в существующем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;файле, будут потеряны и их нельзя будет восстановить.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вместо &lt;Файл-описание&gt; введите имя файла-описания, содержащего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; спецификации для нового файла. Вы можете задать полное имя пути,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р &nbsp; файла-описания для BUTIL-CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Файл-описание, показанный на Рисунке 3.1, создает Btrieve-файл с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; размером страницы 512 байт и двумя ключами. Фиксированная часть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи - длиной 98 байт. Файл допускает записи переменной длины,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; но не использует отсечение пробелов. Файл использует сжатие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данных. Граница свободного пространства установлена на 20%.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve будет перераспределять 100 страниц при создании файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Первый ключ (Ключ 0) - сегментированный ключ с двумя допускающими</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; дубликаты, немодифицируемыми, строковыми сегментами с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; альтернативной последовательностью поиска, определенной в файле</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; UPPER.ALT, и с пробелом вместо пустого значения. Второй ключ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Ключ 2) - числовой ключ без сегментов, не допускающий дубликатов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; но позволяющий модификацию. Он отсортирован в убывающем порядке.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;record=98 variable=y truncation=n</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Спецификации файла { &nbsp; &nbsp;compress=y key=2 page=512</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;allocation=100 replace=n fthreshold=20</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;position=1 length=5 duplicates=y</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ключ 0, сегмент 1 &nbsp;{ &nbsp; &nbsp;modifiable=n type=string alternate=y</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;null=y value=20 segment=y</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;position=6 length=10 duplicates=y</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ключ 0, сегмент 2 &nbsp;{ &nbsp; &nbsp;modifiable=n type=string alternate=y</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;null=y value=20 segment=n</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;position=16 length=2 duplicates=n</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ключ 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { &nbsp; &nbsp;modifiable=y type=numeric</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;descending=y alternate=n null=n</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;segment=n</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Имя файла &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;альтернативной &nbsp; &nbsp; { &nbsp; &nbsp;name=UPPER.ALT</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;последовательности |</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;поиска &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 1.3</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Пример файла-описания для CREATE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующая команда создает Btrieve-файл по имени ACCTS.NEW,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; используя описание, обеспечиваемое файлом-описанием BUILD.DES</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-CREATE ACCTS.NEW BUILD.DES</p>
+<p>               Если имя, заданное в &lt;Новое имя файла&gt; - имя существующего</p>
+<p>               Btrieve-файла, BUTIL создаст новый пустой файл вместо</p>
+<p>               существующего файла. Все данные, хранящиеся в существующем</p>
+<p>               файле, будут потеряны и их нельзя будет восстановить.</p>
+<p>               -----------------------------------------------------------</p>
+<p>          Вместо &lt;Файл-описание&gt; введите имя файла-описания, содержащего</p>
+<p>          спецификации для нового файла. Вы можете задать полное имя пути,</p>
+<p>          если требуется.</p>
+<p>          П р и м е р   файла-описания для BUTIL-CREATE</p>
+<p>          Файл-описание, показанный на Рисунке 3.1, создает Btrieve-файл с</p>
+<p>          размером страницы 512 байт и двумя ключами. Фиксированная часть</p>
+<p>          записи - длиной 98 байт. Файл допускает записи переменной длины,</p>
+<p>          но не использует отсечение пробелов. Файл использует сжатие</p>
+<p>          данных. Граница свободного пространства установлена на 20%.</p>
+<p>          Btrieve будет перераспределять 100 страниц при создании файла.</p>
+<p>          Первый ключ (Ключ 0) - сегментированный ключ с двумя допускающими</p>
+<p>          дубликаты, немодифицируемыми, строковыми сегментами с</p>
+<p>          альтернативной последовательностью поиска, определенной в файле</p>
+<p>          UPPER.ALT, и с пробелом вместо пустого значения. Второй ключ</p>
+<p>          (Ключ 2) - числовой ключ без сегментов, не допускающий дубликатов</p>
+<p>          но позволяющий модификацию. Он отсортирован в убывающем порядке.</p>
+<p>                                  |    record=98 variable=y truncation=n</p>
+<p>               Спецификации файла {    compress=y key=2 page=512</p>
+<p>                                  |    allocation=100 replace=n fthreshold=20</p>
+<p>                                  |    position=1 length=5 duplicates=y</p>
+<p>               Ключ 0, сегмент 1  {    modifiable=n type=string alternate=y</p>
+<p>                                  |    null=y value=20 segment=y</p>
+<p>                                  |    position=6 length=10 duplicates=y</p>
+<p>               Ключ 0, сегмент 2  {    modifiable=n type=string alternate=y</p>
+<p>                                  |    null=y value=20 segment=n</p>
+<p>                                  |    position=16 length=2 duplicates=n</p>
+<p>               Ключ 1             {    modifiable=y type=numeric</p>
+<p>                                  |    descending=y alternate=n null=n</p>
+<p>                                  |    segment=n</p>
+<p>               Имя файла          |</p>
+<p>               альтернативной     {    name=UPPER.ALT</p>
+<p>               последовательности |</p>
+<p>               поиска             |</p>
+<p>                                Рисунок 1.3</p>
+<p>                    Пример файла-описания для CREATE</p>
+<p>          П р и м е р</p>
+<p>          Следующая команда создает Btrieve-файл по имени ACCTS.NEW,</p>
+<p>          используя описание, обеспечиваемое файлом-описанием BUILD.DES</p>
+<p>               BUTIL-CREATE ACCTS.NEW BUILD.DES</p>
 <p>DROP</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-DROP &lt;Btrieve-файл&gt;&lt;Номер ключа&gt;[-O &lt;Владелец&gt;]</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете применять команду DROP для удаления дополнительного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индекса из Btrieve-файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve обновляет номер ключа других дополнительных индексов,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; если требуется, до завершения команды DROP.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; DROP</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска DROP введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, из которого Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; удаляете индекс. Вы можете задать полное имя пути, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Номер ключа&gt; на номер дополнительного индекса, который</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы хотите отбросить.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; именем владельца файла, если он существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий пример отбрасывает ключ с номером 6, дополнительный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индекс, из файла MAILER.ADR Имя владельца файла - "Sales".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-DROP MAILER.ADR 6 -O Sales</p>
+<p>          Вы можете применять команду DROP для удаления дополнительного</p>
+<p>          индекса из Btrieve-файла.</p>
+<p>          Btrieve обновляет номер ключа других дополнительных индексов,</p>
+<p>          если требуется, до завершения команды DROP.</p>
+<p>          К а к   п р и м е н я т ь   DROP</p>
+<p>          Для запуска DROP введите команду в показанном выше формате.</p>
+<p>          Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, из которого Вы</p>
+<p>          удаляете индекс. Вы можете задать полное имя пути, если</p>
+<p>          требуется.</p>
+<p>          Замените &lt;Номер ключа&gt; на номер дополнительного индекса, который</p>
+<p>          Вы хотите отбросить.</p>
+<p>          Замените &lt;Владелец&gt; именем владельца файла, если он существует.</p>
+<p>          П р и м е р</p>
+<p>          Следующий пример отбрасывает ключ с номером 6, дополнительный</p>
+<p>          индекс, из файла MAILER.ADR Имя владельца файла - "Sales".</p>
+<p>               BUTIL-DROP MAILER.ADR 6 -O Sales</p>
 <p>EXTEND</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-EXTEND &lt;Btrieve-файл&gt;&lt;Расширение файла&gt;[-O &lt;Владелец&gt;]</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Когда Вы создаете Btrieve-файл, Вы можете определять файл только</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для одного тома. EXTEND позволяет Вам расширять существующий</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл на два логических диска. Этот пункт полезен, когда данные,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержащиеся в одном файле, превышают физическую память одного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; диска или максимальный размер тома, поддерживаемый операционной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; системой.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; EXTEND</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска EXTEND введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, который Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; расширить. Вы можете задать полное имя пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Расширение файла&gt; на имя, которое Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; использовать для расширения файла. Обязательно включите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; спецификацию устройства для нового устройства. Устройство должно</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отличаться от заданного Вами для первоначального файла. Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; задать полное имя пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; именем владельца файла, если он существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если файл расширяется на два диска, Вы должны загрузить оба диска</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; до того, как Вы получите доступ к файлу. Более того, Вы должны</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; загружать расширение файла на то же устройство, что Вы задавли</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; при первом расширении файла. После того, как файл был расширен,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; нельзя выполнить обратную операцию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий пример расширяет файл MAILER.ADR в файл MAILER2.ADR в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; директорий \SALES устройства E. Имя владельца файла - "Sales".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-EXTEND MAILER.ADR E:\SALES\MAILER2.ADR -O Sales</p>
+<p>          Когда Вы создаете Btrieve-файл, Вы можете определять файл только</p>
+<p>          для одного тома. EXTEND позволяет Вам расширять существующий</p>
+<p>          файл на два логических диска. Этот пункт полезен, когда данные,</p>
+<p>          содержащиеся в одном файле, превышают физическую память одного</p>
+<p>          диска или максимальный размер тома, поддерживаемый операционной</p>
+<p>          системой.</p>
+<p>          К а к   п р и м е н я т ь   EXTEND</p>
+<p>          Для запуска EXTEND введите команду в показанном выше формате.</p>
+<p>          Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, который Вы хотите</p>
+<p>          расширить. Вы можете задать полное имя пути, если требуется.</p>
+<p>          Замените &lt;Расширение файла&gt; на имя, которое Вы хотите</p>
+<p>          использовать для расширения файла. Обязательно включите</p>
+<p>          спецификацию устройства для нового устройства. Устройство должно</p>
+<p>          отличаться от заданного Вами для первоначального файла. Вы можете</p>
+<p>          задать полное имя пути, если требуется.</p>
+<p>          Замените &lt;Владелец&gt; именем владельца файла, если он существует.</p>
+<p>          Если файл расширяется на два диска, Вы должны загрузить оба диска</p>
+<p>          до того, как Вы получите доступ к файлу. Более того, Вы должны</p>
+<p>          загружать расширение файла на то же устройство, что Вы задавли</p>
+<p>          при первом расширении файла. После того, как файл был расширен,</p>
+<p>          нельзя выполнить обратную операцию.</p>
+<p>          П р и м е р</p>
+<p>          Следующий пример расширяет файл MAILER.ADR в файл MAILER2.ADR в</p>
+<p>          директорий \SALES устройства E. Имя владельца файла - "Sales".</p>
+<p>               BUTIL-EXTEND MAILER.ADR E:\SALES\MAILER2.ADR -O Sales</p>
 <p>INDEX</p>
 <p>Ф о р м а т к о м а н д ы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-INDEX &lt;Btrieve-файл&gt;&lt;Индексный файл&gt;&lt;Файл-описание&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[-O &lt;Владелец&gt;]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Команда INDEX строит внешний индексный файл, опираясь на поле,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которое Вы предварительно не задали как ключ. Записи в новом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файле состоят только из 4-байтового адреса каждой записи в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; первоначальном Btrieve-файле, за которым следует значение, по</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которому Вы хотите сортировать.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После того, как Btrieve создал внешний индекс, Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; использовать внешний индекс для поиска записей данных в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; первоначальном файле двумя способами:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы можете применять команду SAVE для поиска записей файла,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; используя внешний индексный файл. См. обсуждение команды SAVE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; для дополнительной информации.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы можете создать прикладную программу, которая исследует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файл, используя внешний индекс. Прикладная программа должна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; сперва найти 4-байтовый адрес, используя значение ключа из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; индексного файла. Ваша прикладная программа может затем искать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запись из первоначального файла, используя 4-байтовый адрес в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; операции Get Direct.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; INDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Вы сможете построить внешний индекс, применяя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; команду INDEX, Вы должны создать файл-описание для задания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; характеристик нового ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска INDEX введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Btrieve-файл&gt; на имя существующего Btrieve-файла, для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которого Вы хотите построить внешний индекс. Вы можете задать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; полное имя пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Индексный файл&gt; на имя файла, в котором Btrieve должен</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; хранить внешний индекс. Вы можете задать полное имя пути, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ПРИМЕЧАНИЕ:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Так как и файл-оригинал, и индексный файл могут иметь</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;соответствующие прообразы, Вы не должны использовать одно и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;то же имя файла с двумя различными расширениями.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вместо &lt;Файл-описание&gt; введите имя создаваемого файла,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержащее определение нового ключа. Файл должен содержать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определение каждого сегмента нового ключа. Вы можете задать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; полное имя пути, если требуется. См. "Файлы-описания BUTIL" для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; полной информации о файлах-описаниях.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; именем владельца файла, если он существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р &nbsp; файла-описания для BUTIL-INDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Например, файл-описание на Рисунке 4.2 определяет новый ключ с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; одним сегментом. Ключ начинается в 30-ом байте записи и имеет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; длину в 10 байтов. Он допускает дубликаты, модифицируемый,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; строкового типа и не использует альтернативную последовательность</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; поиска.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;position=30 length=10 duplicates=y modifable=y type=string</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alternate=n segment=n</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После того, как Вы определили ключ для внешнего файла, INDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; создает файл. После создания файла INDEX отобразит на экране</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; количество проиндексированных записей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующая команда создает внешний индексный файл QUICKREF.IDX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для файла CUSTOMER08-14-92T Файл CUSTOMER08-14-92T не требует имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; владельца. Файл-описание, содержащий определение нового ключа, -</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; NEWIDX.DES.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-INDEX CUSTOMER08-14-92T QUICKREF.IDX NEWIDX.DES</p>
+<p>               BUTIL-INDEX &lt;Btrieve-файл&gt;&lt;Индексный файл&gt;&lt;Файл-описание&gt;</p>
+<p>                           [-O &lt;Владелец&gt;]</p>
+<p>          О п и с а н и е</p>
+<p>          Команда INDEX строит внешний индексный файл, опираясь на поле,</p>
+<p>          которое Вы предварительно не задали как ключ. Записи в новом</p>
+<p>          файле состоят только из 4-байтового адреса каждой записи в</p>
+<p>          первоначальном Btrieve-файле, за которым следует значение, по</p>
+<p>          которому Вы хотите сортировать.</p>
+<p>          После того, как Btrieve создал внешний индекс, Вы можете</p>
+<p>          использовать внешний индекс для поиска записей данных в</p>
+<p>          первоначальном файле двумя способами:</p>
+<p>            - Вы можете применять команду SAVE для поиска записей файла,</p>
+<p>              используя внешний индексный файл. См. обсуждение команды SAVE</p>
+<p>              для дополнительной информации.</p>
+<p>            - Вы можете создать прикладную программу, которая исследует</p>
+<p>              файл, используя внешний индекс. Прикладная программа должна</p>
+<p>              сперва найти 4-байтовый адрес, используя значение ключа из</p>
+<p>              индексного файла. Ваша прикладная программа может затем искать</p>
+<p>              запись из первоначального файла, используя 4-байтовый адрес в</p>
+<p>              операции Get Direct.</p>
+<p>          К а к   п р и м е н я т ь   INDEX</p>
+<p>          До того, как Вы сможете построить внешний индекс, применяя</p>
+<p>          команду INDEX, Вы должны создать файл-описание для задания</p>
+<p>          характеристик нового ключа.</p>
+<p>          Для запуска INDEX введите команду в показанном выше формате.</p>
+<p>          Замените &lt;Btrieve-файл&gt; на имя существующего Btrieve-файла, для</p>
+<p>          которого Вы хотите построить внешний индекс. Вы можете задать</p>
+<p>          полное имя пути, если требуется.</p>
+<p>          Замените &lt;Индексный файл&gt; на имя файла, в котором Btrieve должен</p>
+<p>          хранить внешний индекс. Вы можете задать полное имя пути, если</p>
+<p>          требуется.</p>
+<p>               -----------------------------------------------------------</p>
+<p>               ПРИМЕЧАНИЕ:</p>
+<p>               Так как и файл-оригинал, и индексный файл могут иметь</p>
+<p>               соответствующие прообразы, Вы не должны использовать одно и</p>
+<p>               то же имя файла с двумя различными расширениями.</p>
+<p>               -----------------------------------------------------------</p>
+<p>          Вместо &lt;Файл-описание&gt; введите имя создаваемого файла,</p>
+<p>          содержащее определение нового ключа. Файл должен содержать</p>
+<p>          определение каждого сегмента нового ключа. Вы можете задать</p>
+<p>          полное имя пути, если требуется. См. "Файлы-описания BUTIL" для</p>
+<p>          полной информации о файлах-описаниях.</p>
+<p>          Замените &lt;Владелец&gt; именем владельца файла, если он существует.</p>
+<p>          П р и м е р   файла-описания для BUTIL-INDEX</p>
+<p>          Например, файл-описание на Рисунке 4.2 определяет новый ключ с</p>
+<p>          одним сегментом. Ключ начинается в 30-ом байте записи и имеет</p>
+<p>          длину в 10 байтов. Он допускает дубликаты, модифицируемый,</p>
+<p>          строкового типа и не использует альтернативную последовательность</p>
+<p>          поиска.</p>
+<p>               position=30 length=10 duplicates=y modifable=y type=string</p>
+<p>               alternate=n segment=n</p>
+<p>          После того, как Вы определили ключ для внешнего файла, INDEX</p>
+<p>          создает файл. После создания файла INDEX отобразит на экране</p>
+<p>          количество проиндексированных записей.</p>
+<p>          П р и м е р</p>
+<p>          Следующая команда создает внешний индексный файл QUICKREF.IDX</p>
+<p>          для файла CUSTOMER08-14-92T Файл CUSTOMER08-14-92T не требует имя</p>
+<p>          владельца. Файл-описание, содержащий определение нового ключа, -</p>
+<p>          NEWIDX.DES.</p>
+<p>               BUTIL-INDEX CUSTOMER08-14-92T QUICKREF.IDX NEWIDX.DES</p>
 <p>LOAD</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-LOAD &lt;Входной файл&gt;&lt;Btrieve-файл&gt;[-O &lt;Владелец&gt;]</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Команда LOAD позволяет Вам добавлять записи из последовательного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла в Btrieve-файл без создания специально для этой цели</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладной программы. LOAD также обеспечивает удобный способ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; передачи записей из последовательного файла, созданного другой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программой, в Btrieve-файл. LOAD не выполняет преобразования</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данных в загружаемом файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После того, как Btrieve передаст записи, он отобразит на экране</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; суммарное число записей, загруженных в Btrieve-файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; LOAD</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Вы запустите команду LOAD, Вы должны создать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; последовательный файл, содержащий новые записи. Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; создать файл, применяя стандартный текстовый редактор или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладную программу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска команды LOAD ведите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Входной файл&gt; на имя последовательного файла,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержащего записи для загрузки в Btrieve-файл. Вы можете задать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; полное имя пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, в который Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; добавлять записи. Вы можете задать полное имя пути, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; LOAD ожидает, что каждая запись в &lt;Входной файл&gt; будет в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующем формате:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Первые n байтов должны быть длиной записи в ASCII.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ДЛЯ ФАЙЛОВ С ЗАПИСЯМИ ФИКСИРОВАННОЙ ДЛИНЫ задаваемая длина</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; должна всегда равняться длине записи, задаваемой Вами при</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; создании файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ДЛЯ ФАЙЛОВ С ЗАПИСЯМИ ПЕРЕМЕННОЙ ДЛИНЫ задаваемая длина</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; должна быть по крайней мере равна минимальной фиксированной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; длине записи, задаваемой Вами при создании файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - За длиной должен следовать один символ-разделитель (или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запятая, или пробел).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - За разделителем должны следовать сами данные. Длина данного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; должна быть в точности равна длине, заданной в начале записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Запись должна завершаться возвратом каретки/переводом строки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (шестнадцатеричному 0D0A )</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Последняя запись в файле должна содержать символ конца файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Ctrl-Z или шестнадцатеричное 1A). большинство текстовых</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; редакторов и команда SAVE автоматически вставляют этот символ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; в файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете создавть Ваш входной файл с помощью текстового</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; редактора или прикладной программы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ЕСЛИ ВЫ ИСПОЛЬЗУЕТЕ ТЕКСТОВЫЙ РЕДАКТОР ПРИ СОЗДАНИИ ЗАГРУЖАЕМОГО</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ВАМИ ФАЙЛА, удостоверьтесь, что Вы дополнили каждую запись</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пробелами для достижения заданной вами в начале записи длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Поля, содержащие двоичные данные, не могут быть отредактированы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; большинством текстовых редакторов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ЕСЛИ ВЫ ИСПОЛЬЗУЕТЕ ПРИКЛАДНУЮ ПРОГРАММУ ПРИ СОЗДАНИИ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ЗАГРУЖАЕМОГО ВАМИ ФАЙЛА, удостоверьтесь, что Вы добавили в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; каждую запись возврат каретки и перевод страницы и включили</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; конец файла в запись. Последовательные запросы ввода/вывода,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; обеспечиваемые большинством процессоров языков высокого уровня,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; добавляют автоматически символы возврата каретки, перевод строки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; и конца файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 4.3 иллюстрирует правильный формат каждой записи в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выходном файле. Допустим, что Btrieve-файл не допускает записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; переменной длины и имеет длину записи, равную 40 байт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;40,Запись за разделителем "запятая". &lt;CR/LF&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &#166; &nbsp; \________________________/ &nbsp; &nbsp;&#166; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; L- Возврат каретки/</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Данное &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp;перевод строки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L- 1 пробел для дополнения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;до соответствующей длины</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; L------ Разделитель "запятая"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L-------- Длина записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 4.3</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Формат записи для выходного файла</p>
+<p>          Команда LOAD позволяет Вам добавлять записи из последовательного</p>
+<p>          файла в Btrieve-файл без создания специально для этой цели</p>
+<p>          прикладной программы. LOAD также обеспечивает удобный способ</p>
+<p>          передачи записей из последовательного файла, созданного другой</p>
+<p>          программой, в Btrieve-файл. LOAD не выполняет преобразования</p>
+<p>          данных в загружаемом файле.</p>
+<p>          После того, как Btrieve передаст записи, он отобразит на экране</p>
+<p>          суммарное число записей, загруженных в Btrieve-файл.</p>
+<p>          К а к   п р и м е н я т ь   LOAD</p>
+<p>          До того, как Вы запустите команду LOAD, Вы должны создать</p>
+<p>          последовательный файл, содержащий новые записи. Вы можете</p>
+<p>          создать файл, применяя стандартный текстовый редактор или</p>
+<p>          прикладную программу.</p>
+<p>          Для запуска команды LOAD ведите команду в показанном выше формате.</p>
+<p>          Замените &lt;Входной файл&gt; на имя последовательного файла,</p>
+<p>          содержащего записи для загрузки в Btrieve-файл. Вы можете задать</p>
+<p>          полное имя пути, если требуется.</p>
+<p>          Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, в который Вы хотите</p>
+<p>          добавлять записи. Вы можете задать полное имя пути, если</p>
+<p>          требуется.</p>
+<p>          Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
+<p>          существует.</p>
+<p>          LOAD ожидает, что каждая запись в &lt;Входной файл&gt; будет в</p>
+<p>          следующем формате:</p>
+<p>            - Первые n байтов должны быть длиной записи в ASCII.</p>
+<p>              ДЛЯ ФАЙЛОВ С ЗАПИСЯМИ ФИКСИРОВАННОЙ ДЛИНЫ задаваемая длина</p>
+<p>              должна всегда равняться длине записи, задаваемой Вами при</p>
+<p>              создании файла.</p>
+<p>              ДЛЯ ФАЙЛОВ С ЗАПИСЯМИ ПЕРЕМЕННОЙ ДЛИНЫ задаваемая длина</p>
+<p>              должна быть по крайней мере равна минимальной фиксированной</p>
+<p>              длине записи, задаваемой Вами при создании файла.</p>
+<p>            - За длиной должен следовать один символ-разделитель (или</p>
+<p>              запятая, или пробел).</p>
+<p>            - За разделителем должны следовать сами данные. Длина данного</p>
+<p>              должна быть в точности равна длине, заданной в начале записи</p>
+<p>            - Запись должна завершаться возвратом каретки/переводом строки</p>
+<p>              (шестнадцатеричному 0D0A )</p>
+<p>            - Последняя запись в файле должна содержать символ конца файла.</p>
+<p>              (Ctrl-Z или шестнадцатеричное 1A). большинство текстовых</p>
+<p>              редакторов и команда SAVE автоматически вставляют этот символ</p>
+<p>              в файл.</p>
+<p>          Вы можете создавть Ваш входной файл с помощью текстового</p>
+<p>          редактора или прикладной программы.</p>
+<p>          ЕСЛИ ВЫ ИСПОЛЬЗУЕТЕ ТЕКСТОВЫЙ РЕДАКТОР ПРИ СОЗДАНИИ ЗАГРУЖАЕМОГО</p>
+<p>          ВАМИ ФАЙЛА, удостоверьтесь, что Вы дополнили каждую запись</p>
+<p>          пробелами для достижения заданной вами в начале записи длины.</p>
+<p>          Поля, содержащие двоичные данные, не могут быть отредактированы</p>
+<p>          большинством текстовых редакторов.</p>
+<p>          ЕСЛИ ВЫ ИСПОЛЬЗУЕТЕ ПРИКЛАДНУЮ ПРОГРАММУ ПРИ СОЗДАНИИ</p>
+<p>          ЗАГРУЖАЕМОГО ВАМИ ФАЙЛА, удостоверьтесь, что Вы добавили в</p>
+<p>          каждую запись возврат каретки и перевод страницы и включили</p>
+<p>          конец файла в запись. Последовательные запросы ввода/вывода,</p>
+<p>          обеспечиваемые большинством процессоров языков высокого уровня,</p>
+<p>          добавляют автоматически символы возврата каретки, перевод строки</p>
+<p>          и конца файла.</p>
+<p>          Рисунок 4.3 иллюстрирует правильный формат каждой записи в</p>
+<p>          выходном файле. Допустим, что Btrieve-файл не допускает записи</p>
+<p>          переменной длины и имеет длину записи, равную 40 байт.</p>
+<p>           40,Запись за разделителем "запятая". &lt;CR/LF&gt;</p>
+<p>           &#166; &#166;   \________________________/    &#166;   &#166;</p>
+<p>           &#166; &#166;                                 &#166;   L- Возврат каретки/</p>
+<p>           &#166; &#166;          Данное                 &#166;      перевод строки</p>
+<p>           &#166; &#166;                                 &#166;</p>
+<p>           &#166; &#166;                                 L- 1 пробел для дополнения</p>
+<p>           &#166; &#166;                                    до соответствующей длины</p>
+<p>           &#166; L------ Разделитель "запятая"</p>
+<p>           &#166;</p>
+<p>           L-------- Длина записи</p>
+<p>                                    Рисунок 4.3</p>
+<p>                         Формат записи для выходного файла</p>
 <p>П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий пример загружает последовательные записи из файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; MAILT в файл MAILER08-14-92T. Имя владельца для файла MAILER.ADR -</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Sales".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-LOAD MAILT MAILER.ADR -O Sales</p>
+<p>          Следующий пример загружает последовательные записи из файла</p>
+<p>          MAILT в файл MAILER08-14-92T. Имя владельца для файла MAILER.ADR -</p>
+<p>          "Sales".</p>
+<p>               BUTIL-LOAD MAILT MAILER.ADR -O Sales</p>
 <p>RECOVER</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-RECOVER &lt;Btrieve-файл&gt; &lt;Выходной файл&gt; [-O &lt;Владелец&gt;]</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Команда RECOVER читает записи из заданного Btrieve-файла,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; используя операции Step, и создает последовательный файл,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; совместимый с командой LOAD. Каждая запись заканчивается</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвратом каретки и переводом строки (шестнадцатиричное 0D0A).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Файл завершается концом файла (шестнадцатиричное 1A).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете применять RECOVER для поиска данных из поврежденного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-файла. Например, файл может быть поарежден при сбое</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; системы во время доступа к файлу в ускоренном режиме. Команда</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; RECOVER сможет найти многие, а возможно и все, записи из файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете затем использовать команду LOAD для добавления записей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; в новый неповрежденный Btrieve-файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; RECOVER</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска команды RECOVER введите команду в показанном выше</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Выходной файл&gt; на имя файла, где RECOVER будет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сохранять восстановленные записи. Вы можете задать полное имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, который Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; восстановить. Вы можете задать полное имя пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После того, как RECOVER найдет записи, она отобразит на экране</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; общее число восстановленных записей. Если логическое устройство,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержащее Ваш выходной файл, будет заполнено до того, как весь</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл будет восстановлен, RECOVER остановится, отобразит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; количество уже восстановленных записей и затем выдаст следующее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сообщение:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Disk volume is full. Enter new file name to continue</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;or . to quit, then press &lt;ENTER&gt;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Том диска заполнен. Введите имя нового файла для продолжения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;или . для выхода, затем нажмите &lt;ENTER&gt;.)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для продолжения операции в другой выходной файл выполните одну из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующих инструкций:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ ВОССТАНАВЛИВАЕТЕ BTRIEVE-ФАЙЛ НА ДИСКЕТУ, уберите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; полную дискету и замените ее другой отформатированной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; дискетой.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ ВОССТАНАВЛИВАЕТЕ BTRIEVE-ФАЙЛ НА ВИНЧЕСТЕР, задайте</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; другое логическое устройство, имеющее свободное пространство.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; В обоих случаях введите имя файла, который Вы хотите, чтобы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve использовал для продолжения хранения записей и нажмите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; клавишу Enter. Btrieve продолжит копирование записей из Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла в новый выходной файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если логическое устройство заполнено, а Вы хотите завершить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операцию RECOVER, введите точку (.) и нажмите &lt;Enter&gt;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий пример ищет записи из файла MAILER.ADR загружает их в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; последовательный файл файл MAILT. Имя владельца для файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; MAILER.ADR - "Sales".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-RECOVER MAILER.ADR MAILT -O Sales</p>
+<p>          Команда RECOVER читает записи из заданного Btrieve-файла,</p>
+<p>          используя операции Step, и создает последовательный файл,</p>
+<p>          совместимый с командой LOAD. Каждая запись заканчивается</p>
+<p>          возвратом каретки и переводом строки (шестнадцатиричное 0D0A).</p>
+<p>          Файл завершается концом файла (шестнадцатиричное 1A).</p>
+<p>          Вы можете применять RECOVER для поиска данных из поврежденного</p>
+<p>          Btrieve-файла. Например, файл может быть поарежден при сбое</p>
+<p>          системы во время доступа к файлу в ускоренном режиме. Команда</p>
+<p>          RECOVER сможет найти многие, а возможно и все, записи из файла.</p>
+<p>          Вы можете затем использовать команду LOAD для добавления записей</p>
+<p>          в новый неповрежденный Btrieve-файл.</p>
+<p>          К а к   п р и м е н я т ь   RECOVER</p>
+<p>          Для запуска команды RECOVER введите команду в показанном выше</p>
+<p>          формате.</p>
+<p>          Замените &lt;Выходной файл&gt; на имя файла, где RECOVER будет</p>
+<p>          сохранять восстановленные записи. Вы можете задать полное имя</p>
+<p>          пути, если требуется.</p>
+<p>          Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, который Вы хотите</p>
+<p>          восстановить. Вы можете задать полное имя пути, если требуется.</p>
+<p>          Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
+<p>          существует.</p>
+<p>          После того, как RECOVER найдет записи, она отобразит на экране</p>
+<p>          общее число восстановленных записей. Если логическое устройство,</p>
+<p>          содержащее Ваш выходной файл, будет заполнено до того, как весь</p>
+<p>          файл будет восстановлен, RECOVER остановится, отобразит</p>
+<p>          количество уже восстановленных записей и затем выдаст следующее</p>
+<p>          сообщение:</p>
+<p>               Disk volume is full. Enter new file name to continue</p>
+<p>               or . to quit, then press &lt;ENTER&gt;.</p>
+<p>              (Том диска заполнен. Введите имя нового файла для продолжения</p>
+<p>               или . для выхода, затем нажмите &lt;ENTER&gt;.)</p>
+<p>          Для продолжения операции в другой выходной файл выполните одну из</p>
+<p>          следующих инструкций:</p>
+<p>            - ЕСЛИ ВЫ ВОССТАНАВЛИВАЕТЕ BTRIEVE-ФАЙЛ НА ДИСКЕТУ, уберите</p>
+<p>              полную дискету и замените ее другой отформатированной</p>
+<p>              дискетой.</p>
+<p>            - ЕСЛИ ВЫ ВОССТАНАВЛИВАЕТЕ BTRIEVE-ФАЙЛ НА ВИНЧЕСТЕР, задайте</p>
+<p>              другое логическое устройство, имеющее свободное пространство.</p>
+<p>          В обоих случаях введите имя файла, который Вы хотите, чтобы</p>
+<p>          Btrieve использовал для продолжения хранения записей и нажмите</p>
+<p>          клавишу Enter. Btrieve продолжит копирование записей из Btrieve-</p>
+<p>          файла в новый выходной файл.</p>
+<p>          Если логическое устройство заполнено, а Вы хотите завершить</p>
+<p>          операцию RECOVER, введите точку (.) и нажмите &lt;Enter&gt;.</p>
+<p>          П р и м е р</p>
+<p>          Следующий пример ищет записи из файла MAILER.ADR загружает их в</p>
+<p>          последовательный файл файл MAILT. Имя владельца для файла</p>
+<p>          MAILER.ADR - "Sales".</p>
+<p>               BUTIL-RECOVER MAILER.ADR MAILT -O Sales</p>
 <p>RESET</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-RESET &lt;Номер связи&gt;</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; RESET выполняет Btrieve-операцию Reset для освобождения ресурсов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; используемых BREQUEST и Record Manager на рабочей станции. Она</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; освобождает все захваты, отменяет все незавершенные транзакции и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; закрывает все открытые файлы станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете освобождать рескрсы и чужой станции, введя номер связи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; станции &lt;Номер связи&gt;. Если Вы не знаете номер связи, консольные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; команды B ACTIVE, WHOAMI и USERLIST возвращают номера связей как</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; часть своего выхода.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; RESET</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска команды RESET введите команду в показанном выше</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете запросить эту команду с любой рабочей станции сети, на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которую загружен BREQUEST. Если Вы не задали номер станции,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BUTIL-RESET освободит ресурсы данной станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий пример освобождает ресурсы рабочей станции, используя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; номер связи 12 сети.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-RESET 12</p>
+<p>          RESET выполняет Btrieve-операцию Reset для освобождения ресурсов</p>
+<p>          используемых BREQUEST и Record Manager на рабочей станции. Она</p>
+<p>          освобождает все захваты, отменяет все незавершенные транзакции и</p>
+<p>          закрывает все открытые файлы станции.</p>
+<p>          Вы можете освобождать рескрсы и чужой станции, введя номер связи</p>
+<p>          станции &lt;Номер связи&gt;. Если Вы не знаете номер связи, консольные</p>
+<p>          команды B ACTIVE, WHOAMI и USERLIST возвращают номера связей как</p>
+<p>          часть своего выхода.</p>
+<p>          К а к   п р и м е н я т ь   RESET</p>
+<p>          Для запуска команды RESET введите команду в показанном выше</p>
+<p>          формате.</p>
+<p>          Вы можете запросить эту команду с любой рабочей станции сети, на</p>
+<p>          которую загружен BREQUEST. Если Вы не задали номер станции,</p>
+<p>          BUTIL-RESET освободит ресурсы данной станции.</p>
+<p>          П р и м е р</p>
+<p>          Следующий пример освобождает ресурсы рабочей станции, используя</p>
+<p>          номер связи 12 сети.</p>
+<p>               BUTIL-RESET 12</p>
 <p>SAVE</p>
 <p>Ф о р м а т к о м а н д ы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-SAVE &lt;Btrieve-файл&gt; &lt;Выходной файл&gt; &lt;Индекс(Y/N)&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [&lt;Индексный файл&gt; |&lt;Номер ключа&gt;][-O&lt;Владелец&gt;]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; SAVE позволяет Вам искать записи из Btrieve-файлов и хранить их в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отсортированном порядке в последовательном файле. Это - точная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; инверсия LOAD. Эта команда может быть использована в дополнение к</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; LOAD так, что данные из Btrieve-файла могут быть легко извлечены,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отредактированы и затем сохранены в другом Btrieve-файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; SAVE генерирует одну запись в выходном файле идля каждой записи,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; читаемой из Btrieve-файла. Каждая запись начинается со своей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; длины и заканчивается возвратом каретки и переводом строки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (0D0AH). Файл завершается концом файла (1AH) и совместим с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; большинством текстовых редакторов. SAVE не выполняет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; преобразования данных в записях. Поэтому, если Вы используете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; текстовый редактор для модификации выходного файла, содержащего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; двоичные данные, результат может быть непредсказуем.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После того, как SAVE завершит этот процесс, на экране будет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отображено суммарное число сохраненных записей.</p>
+<p>               BUTIL-SAVE &lt;Btrieve-файл&gt; &lt;Выходной файл&gt; &lt;Индекс(Y/N)&gt;</p>
+<p>                  [&lt;Индексный файл&gt; |&lt;Номер ключа&gt;][-O&lt;Владелец&gt;]</p>
+<p>          О п и с а н и е</p>
+<p>          SAVE позволяет Вам искать записи из Btrieve-файлов и хранить их в</p>
+<p>          отсортированном порядке в последовательном файле. Это - точная</p>
+<p>          инверсия LOAD. Эта команда может быть использована в дополнение к</p>
+<p>          LOAD так, что данные из Btrieve-файла могут быть легко извлечены,</p>
+<p>          отредактированы и затем сохранены в другом Btrieve-файле.</p>
+<p>          SAVE генерирует одну запись в выходном файле идля каждой записи,</p>
+<p>          читаемой из Btrieve-файла. Каждая запись начинается со своей</p>
+<p>          длины и заканчивается возвратом каретки и переводом строки</p>
+<p>          (0D0AH). Файл завершается концом файла (1AH) и совместим с</p>
+<p>          большинством текстовых редакторов. SAVE не выполняет</p>
+<p>          преобразования данных в записях. Поэтому, если Вы используете</p>
+<p>          текстовый редактор для модификации выходного файла, содержащего</p>
+<p>          двоичные данные, результат может быть непредсказуем.</p>
+<p>          После того, как SAVE завершит этот процесс, на экране будет</p>
+<p>          отображено суммарное число сохраненных записей.</p>
 <p>К а к п р и м е н я т ь SAVE</p>
 <p>Для запуска SAVE введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, содержащего записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для сохранения. Вы можете задать полное имя пути, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Выходной файл&gt; на имя последовательного файла, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; котором Вы хотите, чтобы Btrieve хранил записи. Вы можете задать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; полное имя пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Применяйте один из следующих методов для задания порядка, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; котором Вы хотите, чтобы SAVE хранила записи:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ ХОТИТЕ СОХРАНИТЬ ЗАПИСИ С ПОМОЩЬЮ ВНЕШНЕГО ИНДЕКСА,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; задайте Y для &lt;Индекс (Y/N)&gt; и замените &lt;Индексный файл&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; именем внешнего индексного файла. Вы можете задать полное имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ ХОТИТЕ СОХРАНИТЬ ЗАПИСИ С ПОМОЩЬЮ КЛЮЧА ОТЛИЧНОГО ОТ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0,задайте N для &lt;Индекс (Y/N)&gt; и замените &lt;Номер ключа&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; номером соответствующего ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ ХОТИТЕ СОХРАНИТЬ ЗАПИСИ С ПОМОЩЬЮ КЛЮЧА 0, не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; задавайте индексный файл или номер ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если логическое устройство, содержащее Ваш выходной файл, будет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заполнено до того, как был &nbsp;сохранен весь файл, SAVE остановится,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отобразит количество уже сохраненных записей и затем выдаст</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующее сообщение:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Disk volume is full. Enter new file name to continue</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;or . to quit, then press &lt;ENTER&gt;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Том диска заполнен. Введите имя нового файла для продолжения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;или . для выхода, затем нажмите &lt;ENTER&gt;.)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для продолжения операции в другой выходной файл выполните одну из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующих инструкций:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ СОХРАНЯЕТ BTRIEVE-ФАЙЛ НА ДИСКЕТЕ, уберите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; полную дискету и замените ее другой отформатированной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; дискетой.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ СОХРАНЯЕТЕ BTRIEVE-ФАЙЛ НА ВИНЧЕСТЕРЕ, задайте</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; другое логическое устройство, имеющее свободное пространство.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; В обоих случаях введите имя файла, который Вы хотите, чтобы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve использовал для продолжения хранения записей и нажмите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; клавишу Enter. Btrieve продолжит копирование записей из Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла в новый выходной файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если логическое устройство заполнено, а Вы хотите завершить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операцию RECOVER, введите точку (.) и нажмите &lt;Enter&gt;.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующие два примера иллюстрируют, как применять SAVE для поиска</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записей файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Первый пример используют файл внешних индексов QUICKER.IDX для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; поиска записей мз файла CUSTOMER08-14-92T и сохранения их в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; последовательном файле CUST.SAV.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-SAVE CUSTOMER08-14-92T CUST.SAV Y QUICKREF.IDX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий пример ищет записи из файла CUSTOMER08-14-92T, используя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; номер ключа 3 и сохраненяя их в последовательном файле CUST.SAV.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-SAVE CUSTOMER08-14-92T CUST.SAV N 3</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ф о р м а т &nbsp; к о м а н д ы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-SINDEX &lt;Btrieve-файл&gt; &lt;Файл-описание&gt; [-O &lt;Владелец&gt;]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; SINDEX создает дополнительный индекс для существующего Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла. Номер ключа нового индекса будет на единицу выше номера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; предыдущего наивысшего ключа для этого файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; SINDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Вы сможете запустиь SINDEX, Вы должны обеспечить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определение дополнительного индекса в файле-описании. См. "Файл-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; описание BUTIL" для дополнительной информации о файлах-описаниях</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BUTIL. Смотрите примеры файла-описания в разделе "SAVE" для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; руководства по созданию файла-описания SINDEX.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска SINDEX введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Btrieve-файл&gt; на имя существующего Btrieve-файла, для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которого Вы хотите создать индекс. Вы можете задать полное имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пути, если требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Файл-описание&gt; именем Btrieve-файла, для которого Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; создаете индекс. Вы можете задать полное имя пути, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий пример создает дополнительный индекс для файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; MAILER.ADR. Имя файла-описания - SUPPIDX.DES. Имя владельца</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-файла - "Sales".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-SINDEX CMAILER.ADR SUPPIDX.DES -O Sales</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STAT</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ф о р м а т &nbsp; к о м а н д ы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-RECOVER &lt;Имя файла&gt; [-O &lt;Владелец&gt;]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STAT показывает определенные характеристики Btrieve-файла и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статистику по его содержанию. &nbsp;Вы можете использовать STAT для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определения всех параметров, заданных для нового файла командой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; CREATE. Команда STAT также обеспечивает информацию по объему</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключей и записей файла и по имени файла-расширения, если он</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; STAT</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска STAT введите команду в показанном выше формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Имя файла&gt; на имя существующего Btrieve-файла, по</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которому Вы хотите получить статистику. Вы можете задать любое</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; количество уровней директорий в имени файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е р</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий пример - получение статистики по файлу ADDRESS.BTR.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Файл не имеет имени владельца.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BUTIL-STAT ADDRESS.BTR</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Этот пример показывает, что файл ADDRESS.BTR был определен с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; размером страницы в 1536 байт, длиной записи 147 байт и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 2 ключами. Файл использует сжатие данных, допускает записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; переменной длины и имеет границу свободного пространства 10%.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Первый ключ (Ключ 0) состоит из одного сегмента, начинается в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиции один, длиной 30 символов, допускает дубликаты,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; немодифицируемый, имеет строковый тип ключа и не имеет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определенного пустого значения. Ключ 0 отсортирован в убывающем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; порядке.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Второй ключ (Ключ 1) допускает дубликаты, модифицируемый, ручной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; и имеет пустое значение - шестнадцатиричное 20 (пробел). Он</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; состоит из двух сегментов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Первый сегмент начинается в позиции 31, длиной в 30 байтов,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; имеет строковый тип ключа и пустое значение - &nbsp;шестнадцатиричное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 20 (пробел). Второй сегмент начинается в позиции 55, имеет длину</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; четыре, строковый тип ключа, убывающий и имеет пустое значение -</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; шестнадцатиричное 20 (пробел).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; В файл было добавлено четырнадцать записей. Файл содержит 14</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; уникальных значений первого ключа и пять уникальных значений</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; второго. Файла-расширения нет.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------------------------------------------------------------&#172;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; File Stats for address.btr &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; Record Length = 147 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Compressed Records = Yes &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; Variable Records = Yes &nbsp; &nbsp; &nbsp; Free Space Threshold = 10% &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; Number of Keys = 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; Page Size = 1536 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Unused Pages = 0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; Total Records = 14 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; Key Position Length Duplicates Modifiable &nbsp;Type &nbsp;Null &nbsp;Total&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;0 &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;30 &nbsp; &nbsp; Yes &nbsp; &nbsp; &nbsp; &nbsp; No &nbsp; &nbsp; String&lt; __ &nbsp; &nbsp; 14 &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;1 &nbsp; &nbsp; &nbsp;31 &nbsp; &nbsp; &nbsp;30 &nbsp; &nbsp; Yes &nbsp; &nbsp; &nbsp; &nbsp;Yes &nbsp; &nbsp; String &nbsp;20M &nbsp; &nbsp; 5 &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;1 &nbsp; &nbsp; &nbsp;55 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; Yes &nbsp; &nbsp; &nbsp; &nbsp;Yes &nbsp; &nbsp; String&lt; 20M &nbsp; &nbsp; 5 &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L--------------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 4.4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Пример выхода BUTIL-STAT</p>
+<p>          Замените &lt;Btrieve-файл&gt; на имя Btrieve-файла, содержащего записи</p>
+<p>          для сохранения. Вы можете задать полное имя пути, если</p>
+<p>          требуется.</p>
+<p>          Замените &lt;Выходной файл&gt; на имя последовательного файла, в</p>
+<p>          котором Вы хотите, чтобы Btrieve хранил записи. Вы можете задать</p>
+<p>          полное имя пути, если требуется.</p>
+<p>          Применяйте один из следующих методов для задания порядка, в</p>
+<p>          котором Вы хотите, чтобы SAVE хранила записи:</p>
+<p>            - ЕСЛИ ВЫ ХОТИТЕ СОХРАНИТЬ ЗАПИСИ С ПОМОЩЬЮ ВНЕШНЕГО ИНДЕКСА,</p>
+<p>              задайте Y для &lt;Индекс (Y/N)&gt; и замените &lt;Индексный файл&gt;</p>
+<p>              именем внешнего индексного файла. Вы можете задать полное имя</p>
+<p>              пути, если требуется.</p>
+<p>            - ЕСЛИ ВЫ ХОТИТЕ СОХРАНИТЬ ЗАПИСИ С ПОМОЩЬЮ КЛЮЧА ОТЛИЧНОГО ОТ</p>
+<p>              0,задайте N для &lt;Индекс (Y/N)&gt; и замените &lt;Номер ключа&gt;</p>
+<p>              номером соответствующего ключа.</p>
+<p>            - ЕСЛИ ВЫ ХОТИТЕ СОХРАНИТЬ ЗАПИСИ С ПОМОЩЬЮ КЛЮЧА 0, не</p>
+<p>              задавайте индексный файл или номер ключа.</p>
+<p>          Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
+<p>          существует.</p>
+<p>          Если логическое устройство, содержащее Ваш выходной файл, будет</p>
+<p>          заполнено до того, как был  сохранен весь файл, SAVE остановится,</p>
+<p>          отобразит количество уже сохраненных записей и затем выдаст</p>
+<p>          следующее сообщение:</p>
+<p>               Disk volume is full. Enter new file name to continue</p>
+<p>               or . to quit, then press &lt;ENTER&gt;.</p>
+<p>              (Том диска заполнен. Введите имя нового файла для продолжения</p>
+<p>               или . для выхода, затем нажмите &lt;ENTER&gt;.)</p>
+<p>          Для продолжения операции в другой выходной файл выполните одну из</p>
+<p>          следующих инструкций:</p>
+<p>            - ЕСЛИ ВЫ СОХРАНЯЕТ BTRIEVE-ФАЙЛ НА ДИСКЕТЕ, уберите</p>
+<p>              полную дискету и замените ее другой отформатированной</p>
+<p>              дискетой.</p>
+<p>            - ЕСЛИ ВЫ СОХРАНЯЕТЕ BTRIEVE-ФАЙЛ НА ВИНЧЕСТЕРЕ, задайте</p>
+<p>              другое логическое устройство, имеющее свободное пространство.</p>
+<p>          В обоих случаях введите имя файла, который Вы хотите, чтобы</p>
+<p>          Btrieve использовал для продолжения хранения записей и нажмите</p>
+<p>          клавишу Enter. Btrieve продолжит копирование записей из Btrieve-</p>
+<p>          файла в новый выходной файл.</p>
+<p>          Если логическое устройство заполнено, а Вы хотите завершить</p>
+<p>          операцию RECOVER, введите точку (.) и нажмите &lt;Enter&gt;.</p>
+<p>          П р и м е р</p>
+<p>          Следующие два примера иллюстрируют, как применять SAVE для поиска</p>
+<p>          записей файла.</p>
+<p>          Первый пример используют файл внешних индексов QUICKER.IDX для</p>
+<p>          поиска записей мз файла CUSTOMER08-14-92T и сохранения их в</p>
+<p>          последовательном файле CUST.SAV.</p>
+<p>               BUTIL-SAVE CUSTOMER08-14-92T CUST.SAV Y QUICKREF.IDX</p>
+<p>          Следующий пример ищет записи из файла CUSTOMER08-14-92T, используя</p>
+<p>          номер ключа 3 и сохраненяя их в последовательном файле CUST.SAV.</p>
+<p>               BUTIL-SAVE CUSTOMER08-14-92T CUST.SAV N 3</p>
+<p>          SINDEX</p>
+<p>          Ф о р м а т   к о м а н д ы</p>
+<p>               BUTIL-SINDEX &lt;Btrieve-файл&gt; &lt;Файл-описание&gt; [-O &lt;Владелец&gt;]</p>
+<p>          О п и с а н и е</p>
+<p>          SINDEX создает дополнительный индекс для существующего Btrieve-</p>
+<p>          файла. Номер ключа нового индекса будет на единицу выше номера</p>
+<p>          предыдущего наивысшего ключа для этого файла.</p>
+<p>          К а к   п р и м е н я т ь   SINDEX</p>
+<p>          До того, как Вы сможете запустиь SINDEX, Вы должны обеспечить</p>
+<p>          определение дополнительного индекса в файле-описании. См. "Файл-</p>
+<p>          описание BUTIL" для дополнительной информации о файлах-описаниях</p>
+<p>          BUTIL. Смотрите примеры файла-описания в разделе "SAVE" для</p>
+<p>          руководства по созданию файла-описания SINDEX.</p>
+<p>          Для запуска SINDEX введите команду в показанном выше формате.</p>
+<p>          Замените &lt;Btrieve-файл&gt; на имя существующего Btrieve-файла, для</p>
+<p>          которого Вы хотите создать индекс. Вы можете задать полное имя</p>
+<p>          пути, если требуется.</p>
+<p>          Замените &lt;Файл-описание&gt; именем Btrieve-файла, для которого Вы</p>
+<p>          создаете индекс. Вы можете задать полное имя пути, если</p>
+<p>          требуется.</p>
+<p>          Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
+<p>          существует.</p>
+<p>          П р и м е р</p>
+<p>          Следующий пример создает дополнительный индекс для файла</p>
+<p>          MAILER.ADR. Имя файла-описания - SUPPIDX.DES. Имя владельца</p>
+<p>          Btrieve-файла - "Sales".</p>
+<p>               BUTIL-SINDEX CMAILER.ADR SUPPIDX.DES -O Sales</p>
+<p>          STAT</p>
+<p>          Ф о р м а т   к о м а н д ы</p>
+<p>               BUTIL-RECOVER &lt;Имя файла&gt; [-O &lt;Владелец&gt;]</p>
+<p>          О п и с а н и е</p>
+<p>          STAT показывает определенные характеристики Btrieve-файла и</p>
+<p>          статистику по его содержанию.  Вы можете использовать STAT для</p>
+<p>          определения всех параметров, заданных для нового файла командой</p>
+<p>          CREATE. Команда STAT также обеспечивает информацию по объему</p>
+<p>          ключей и записей файла и по имени файла-расширения, если он</p>
+<p>          существует.</p>
+<p>          К а к   п р и м е н я т ь   STAT</p>
+<p>          Для запуска STAT введите команду в показанном выше формате.</p>
+<p>          Замените &lt;Имя файла&gt; на имя существующего Btrieve-файла, по</p>
+<p>          которому Вы хотите получить статистику. Вы можете задать любое</p>
+<p>          количество уровней директорий в имени файла.</p>
+<p>          Замените &lt;Владелец&gt; именем владельца Btrieve-файла, если он</p>
+<p>          существует.</p>
+<p>          П р и м е р</p>
+<p>          Следующий пример - получение статистики по файлу ADDRESS.BTR.</p>
+<p>          Файл не имеет имени владельца.</p>
+<p>               BUTIL-STAT ADDRESS.BTR</p>
+<p>          Этот пример показывает, что файл ADDRESS.BTR был определен с</p>
+<p>          размером страницы в 1536 байт, длиной записи 147 байт и</p>
+<p>          2 ключами. Файл использует сжатие данных, допускает записи</p>
+<p>          переменной длины и имеет границу свободного пространства 10%.</p>
+<p>          Первый ключ (Ключ 0) состоит из одного сегмента, начинается в</p>
+<p>          позиции один, длиной 30 символов, допускает дубликаты,</p>
+<p>          немодифицируемый, имеет строковый тип ключа и не имеет</p>
+<p>          определенного пустого значения. Ключ 0 отсортирован в убывающем</p>
+<p>          порядке.</p>
+<p>          Второй ключ (Ключ 1) допускает дубликаты, модифицируемый, ручной</p>
+<p>          и имеет пустое значение - шестнадцатиричное 20 (пробел). Он</p>
+<p>          состоит из двух сегментов.</p>
+<p>          Первый сегмент начинается в позиции 31, длиной в 30 байтов,</p>
+<p>          имеет строковый тип ключа и пустое значение -  шестнадцатиричное</p>
+<p>          20 (пробел). Второй сегмент начинается в позиции 55, имеет длину</p>
+<p>          четыре, строковый тип ключа, убывающий и имеет пустое значение -</p>
+<p>          шестнадцатиричное 20 (пробел).</p>
+<p>          В файл было добавлено четырнадцать записей. Файл содержит 14</p>
+<p>          уникальных значений первого ключа и пять уникальных значений</p>
+<p>          второго. Файла-расширения нет.</p>
+<p>           --------------------------------------------------------------&#172;</p>
+<p>           &#166;                                                             &#166;</p>
+<p>           &#166; File Stats for address.btr                                  &#166;</p>
+<p>           &#166;                                                             &#166;</p>
+<p>           &#166; Record Length = 147          Compressed Records = Yes       &#166;</p>
+<p>           &#166; Variable Records = Yes       Free Space Threshold = 10%     &#166;</p>
+<p>           &#166; Number of Keys = 2                                          &#166;</p>
+<p>           &#166; Page Size = 1536             Unused Pages = 0               &#166;</p>
+<p>           &#166; Total Records = 14                                          &#166;</p>
+<p>           &#166;                                                             &#166;</p>
+<p>           &#166;                                                             &#166;</p>
+<p>           &#166; Key Position Length Duplicates Modifiable  Type  Null  Total&#166;</p>
+<p>           &#166;                                                             &#166;</p>
+<p>           &#166;  0       1      30     Yes         No     String&lt; __     14 &#166;</p>
+<p>           &#166;  1      31      30     Yes        Yes     String  20M     5 &#166;</p>
+<p>           &#166;  1      55       4     Yes        Yes     String&lt; 20M     5 &#166;</p>
+<p>           &#166;                                                             &#166;</p>
+<p>           L--------------------------------------------------------------</p>
+<p>                                    Рисунок 4.4</p>
+<p>                             Пример выхода BUTIL-STAT</p>
 <p>STOP</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-STOP</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STOP удаляет BREQUEST и Btrieve Record Manager из памяти и,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; когда возможно, возвращает распределенную память в операционную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; систему. После того, как Вы один раз запросили команду STOP, Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; не можете запускать прикладную программу Btrieve до тех пор, пока</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; не перезагрузите BREQUEST или Btrieve Record Manager.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp; STOP</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска STOP введите команду в показанном выше формате.</p>
+<p>          О п и с а н и е</p>
+<p>          STOP удаляет BREQUEST и Btrieve Record Manager из памяти и,</p>
+<p>          когда возможно, возвращает распределенную память в операционную</p>
+<p>          систему. После того, как Вы один раз запросили команду STOP, Вы</p>
+<p>          не можете запускать прикладную программу Btrieve до тех пор, пока</p>
+<p>          не перезагрузите BREQUEST или Btrieve Record Manager.</p>
+<p>          К а к   п р и м е н я т ь   STOP</p>
+<p>          Для запуска STOP введите команду в показанном выше формате.</p>
 <p>VER</p>
 <p>Ф о р м а т к о м а н д ы</p>
 <p>BUTIL-VER</p>
@@ -1775,71 +1775,71 @@
 <p>К а к п р и м е н я т ь VER</p>
 <p>Для запуска VER введите команду в показанном выше формате.</p>
 <p>ИСПОЛНИТЕЛЬ ФУНКЦИЙ BTRIEVE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Дискета Btrieve включает программу B, позволяющую Вам выполнять</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индивидуальные Btrieve-операции интерактивно. B.EXE - прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа Btrieve, выполняющая Btrieve-операции, опираясь на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; задаваемые Вами для различных подсказок значения. Каждая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; подсказка обьяснена дальше. Программа B полезна для изучения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; работы Btrieve, тестирования логики Вашей программы и отладки.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения B введите следующую команду после DOS-подсказки:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B &lt;Enter&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Когда Вы выполните B, появится меню с подсказками для каждого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуемого при вызове Btrieve параметра. Список кодов операций</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve приведен за подсказками.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения вызова Btrieve проинициализируйте все Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры, обычно требуемые для этой операции. Смотрите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; обсуждение Btrieve-операций записи в Главе 6 для информации о</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуемых параметрах. Например, для выполнения операции Open</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполните следующие шаги.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 1) Задайте код операции 0.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 2) Задайте режим "open" на подсказку "Key Number" (если надо).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 3) Задайте имя файла на подсказку "Key Buffer".</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 4) Нажмите &lt;F1&gt; для выполнения Btrieve-операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Программа B выполнит обращение к Btrieve и отобразит результат.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете продолжить выполнение Btrieve-операций. Для завершения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программы сперва закройте все открытые файлы, а затем нажмите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; клавишу Escape.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующий список описывает все подсказки меню утилиты B.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Подсказка &nbsp; &nbsp; &nbsp; Описание</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Function &nbsp; &nbsp; &nbsp; &nbsp;Введите код Btrieve-операции, которую Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;хотите выполнить. Список кодов операций</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;будет показан в нижней половине экрана.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;В Приложении A также имеется список кодов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve-операций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Key Path &nbsp; &nbsp; &nbsp; &nbsp;Задайте номер ключа для Btrieve-операции в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;поле пути ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Position Block &nbsp;Задайте файл, к которому Вы хотите получить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;доступ, в блоке позиции. B присвоит номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;файлу на подсказку блока позиции, когда Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;успешно откроете файл в Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Вы можете иметь до 10 открытых файлов. Когда</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Вы открываете файлы, задавайте номер файла в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;блоке позиции. Правильные значения от 0 до</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9 включительно. Начинайте с 0 для первого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;открываемого файла, 1 - для второго файла и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;так далее. После того, как Вы открыли файл,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;идентифицируйте его в последующих операциях,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;вводя его номер в поле блока позиции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Status &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve возвращает статус из каждой операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;в это поле. Полезно проинициализировать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;статус значением 99 или другим невероятным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;кодом перед каждой операцией. Это позволит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Вам увидеть изменение кода статуса при</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;завершении Btrieve-операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Data Buffer &nbsp; &nbsp; Установите длину буфера данных в правильное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Length &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;значение для операции, которую Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;выполнить.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Data Buffer &nbsp; &nbsp; Введите данные записи в это поле для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;операций Insert или Update. Вы можете вводить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;данные только в формате ASCII. Для операций</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Get Btrieve возвращает затребованные Вами</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;данные в буфер данных. Только ASCII данные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;отображаются на экране.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Key Buffer &nbsp; &nbsp; &nbsp;Сохраните или имя файла или значение ключа,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;в зависимости от выполняемой операции, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;буфере ключа. Как и в случае буфера данных,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;только ASCII данные могут быть введены или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;отображены.</p>
+<p>          Дискета Btrieve включает программу B, позволяющую Вам выполнять</p>
+<p>          индивидуальные Btrieve-операции интерактивно. B.EXE - прикладная</p>
+<p>          программа Btrieve, выполняющая Btrieve-операции, опираясь на</p>
+<p>          задаваемые Вами для различных подсказок значения. Каждая</p>
+<p>          подсказка обьяснена дальше. Программа B полезна для изучения</p>
+<p>          работы Btrieve, тестирования логики Вашей программы и отладки.</p>
+<p>          Для выполнения B введите следующую команду после DOS-подсказки:</p>
+<p>              B &lt;Enter&gt;</p>
+<p>          Когда Вы выполните B, появится меню с подсказками для каждого</p>
+<p>          требуемого при вызове Btrieve параметра. Список кодов операций</p>
+<p>          Btrieve приведен за подсказками.</p>
+<p>          Для выполнения вызова Btrieve проинициализируйте все Btrieve-</p>
+<p>          параметры, обычно требуемые для этой операции. Смотрите</p>
+<p>          обсуждение Btrieve-операций записи в Главе 6 для информации о</p>
+<p>          требуемых параметрах. Например, для выполнения операции Open</p>
+<p>          выполните следующие шаги.</p>
+<p>          1) Задайте код операции 0.</p>
+<p>          2) Задайте режим "open" на подсказку "Key Number" (если надо).</p>
+<p>          3) Задайте имя файла на подсказку "Key Buffer".</p>
+<p>          4) Нажмите &lt;F1&gt; для выполнения Btrieve-операции.</p>
+<p>             Программа B выполнит обращение к Btrieve и отобразит результат.</p>
+<p>          Вы можете продолжить выполнение Btrieve-операций. Для завершения</p>
+<p>          программы сперва закройте все открытые файлы, а затем нажмите</p>
+<p>          клавишу Escape.</p>
+<p>          Следующий список описывает все подсказки меню утилиты B.</p>
+<p>               Подсказка       Описание</p>
+<p>               Function        Введите код Btrieve-операции, которую Вы</p>
+<p>                               хотите выполнить. Список кодов операций</p>
+<p>                               будет показан в нижней половине экрана.</p>
+<p>                               В Приложении A также имеется список кодов</p>
+<p>                               Btrieve-операций.</p>
+<p>               Key Path        Задайте номер ключа для Btrieve-операции в</p>
+<p>                               поле пути ключа.</p>
+<p>               Position Block  Задайте файл, к которому Вы хотите получить</p>
+<p>                               доступ, в блоке позиции. B присвоит номер</p>
+<p>                               файлу на подсказку блока позиции, когда Вы</p>
+<p>                               успешно откроете файл в Btrieve.</p>
+<p>                               Вы можете иметь до 10 открытых файлов. Когда</p>
+<p>                               Вы открываете файлы, задавайте номер файла в</p>
+<p>                               блоке позиции. Правильные значения от 0 до</p>
+<p>                               9 включительно. Начинайте с 0 для первого</p>
+<p>                               открываемого файла, 1 - для второго файла и</p>
+<p>                               так далее. После того, как Вы открыли файл,</p>
+<p>                               идентифицируйте его в последующих операциях,</p>
+<p>                               вводя его номер в поле блока позиции.</p>
+<p>               Status          Btrieve возвращает статус из каждой операции</p>
+<p>                               в это поле. Полезно проинициализировать</p>
+<p>                               статус значением 99 или другим невероятным</p>
+<p>                               кодом перед каждой операцией. Это позволит</p>
+<p>                               Вам увидеть изменение кода статуса при</p>
+<p>                               завершении Btrieve-операции.</p>
+<p>               Data Buffer     Установите длину буфера данных в правильное</p>
+<p>               Length          значение для операции, которую Вы хотите</p>
+<p>                               выполнить.</p>
+<p>               Data Buffer     Введите данные записи в это поле для</p>
+<p>                               операций Insert или Update. Вы можете вводить</p>
+<p>                               данные только в формате ASCII. Для операций</p>
+<p>                               Get Btrieve возвращает затребованные Вами</p>
+<p>                               данные в буфер данных. Только ASCII данные</p>
+<p>                               отображаются на экране.</p>
+<p>               Key Buffer      Сохраните или имя файла или значение ключа,</p>
+<p>                               в зависимости от выполняемой операции, в</p>
+<p>                               буфере ключа. Как и в случае буфера данных,</p>
+<p>                               только ASCII данные могут быть введены или</p>
+<p>                               отображены.</p>
 <p>Следующие клавиши могут быть использованы при запуске программы B:</p>
 <p>Клавиши Описание</p>
 <p>&lt;Esc&gt; Завершает программу</p>
@@ -1850,227 +1850,227 @@
 <p>&lt;Down&gt; Передвигает на следующую подсказку</p>
 <p>&lt;Left&gt; Передвигает на символ влево</p>
 <p>&lt;Right&gt; Передвигает на символ вправо</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Обратная &nbsp; &nbsp; &nbsp; &nbsp;Передвигает на предыдущую подсказку</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; табуляция&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Табуляция&gt; &nbsp; &nbsp; &nbsp;Передвигает на следующую подсказку</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Ctrl-Home&gt; &nbsp; &nbsp; &nbsp;Передвигает на начало поля</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Ctrl-End&gt; &nbsp; &nbsp; &nbsp; Передвигает на конец поля</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Delete&gt; &nbsp; &nbsp; &nbsp; &nbsp; Удаляет символ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Insert&gt; &nbsp; &nbsp; &nbsp; &nbsp; Включает режим вставки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете задавать только ASCII значения в параметрах буфера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данных и буфера ключа.</p>
+<p>               &lt;Обратная        Передвигает на предыдущую подсказку</p>
+<p>                табуляция&gt;</p>
+<p>               &lt;Табуляция&gt;      Передвигает на следующую подсказку</p>
+<p>               &lt;Ctrl-Home&gt;      Передвигает на начало поля</p>
+<p>               &lt;Ctrl-End&gt;       Передвигает на конец поля</p>
+<p>               &lt;Delete&gt;         Удаляет символ</p>
+<p>               &lt;Insert&gt;         Включает режим вставки</p>
+<p>          Вы можете задавать только ASCII значения в параметрах буфера</p>
+<p>          данных и буфера ключа.</p>
 <p>КОНСОЛЬНЫЕ КОМАНДЫ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve обеспечивает консльными командами, позволяющими Вам</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; управлять файлами и текущим уровнем применения процесса BSERVER.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете выполнять эти команды с консоли любого файл-сервера,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; куда загружен BSERVER.VAP.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующие разделы описывают консольные команды NetWare Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Каждое описание включает следующую информацию:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Ф о р м а т &nbsp; к о м а н д ы . Этот раздел представляет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; консольную команду в том формате6 в каком она должна быть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; введена на файл=сервере, где загружен BSERVER.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Н а з н а ч е н и е . Этот раздел описывает применение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; команды.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - К а к &nbsp; п р и м е н я т ь &nbsp;( к о м а н д у ) . Этот раздел</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; описывает , как запрашивать команду, и результат выполнения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; команды.</p>
+<p>          Btrieve обеспечивает консльными командами, позволяющими Вам</p>
+<p>          управлять файлами и текущим уровнем применения процесса BSERVER.</p>
+<p>          Вы можете выполнять эти команды с консоли любого файл-сервера,</p>
+<p>          куда загружен BSERVER.VAP.</p>
+<p>          Следующие разделы описывают консольные команды NetWare Btrieve.</p>
+<p>          Каждое описание включает следующую информацию:</p>
+<p>            - Ф о р м а т   к о м а н д ы . Этот раздел представляет</p>
+<p>              консольную команду в том формате6 в каком она должна быть</p>
+<p>              введена на файл=сервере, где загружен BSERVER.</p>
+<p>            - Н а з н а ч е н и е . Этот раздел описывает применение</p>
+<p>              команды.</p>
+<p>            - К а к   п р и м е н я т ь  ( к о м а н д у ) . Этот раздел</p>
+<p>              описывает , как запрашивать команду, и результат выполнения</p>
+<p>              команды.</p>
 <p>B ACTIVE</p>
 <p>Ф о р м а т к о м а н д ы .</p>
 <p>B ACTIVE &lt;Экран&gt;</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Консольная команда B ACTIVE позволяет Вам получить список всех</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-файлов, открытых в текущее время на файл-сервере, и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; увидеть номер связи (рабочей станции) для каждого открытого файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; и типы захватов для каждого файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve отобразит результат команды в формате таблицы на экране.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующая информация будет показана для каждого файла:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Полное имя пути файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Номер связи сети, имеющей открытый файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Тип захватов для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете использовать номер связи, возвращаемый B ACTIVE, для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определения пользователя открытого файла. Вы можете также</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; использовать этот номер как параметр команд B RESET, BUTIL-RESET</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или Btrieve-операции Reset для закрытия файлов и освобождения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ресурсов некоторой станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если другой VAP имеет открытым этот же файл, B ACTIVE отобразит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; двухсимвольный код номера связи. Например, двухсимвольный код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для NetWare SQL - "NS". вы не можете использовать этот</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; двухсимвольный код как вход команды B RESET. Смотрите обсуждение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; команды B RESET на следующих страницах.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Коды для трех видов захвата:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Захват &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Транзакция &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;T</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Единичная запись &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Множество записей &nbsp; &nbsp; &nbsp; &nbsp; M</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp;B ACTIVE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска B ACTIVE введите команду в показанном выше формате на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сервере, где загружен BSERVER.VAP.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вставьте пробел между B и ACTIVE. Вы можете вводить команду</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; символами как нижнего, так и верхнего регистров.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; B ACTIVE будет показывать сообщение на верху экрана до тех пор,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пока не отобразит все активные файлы. Для просмотра</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; дополнительных экранов введите вновь команду B ACTIVE с номером</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &lt;Экрана&gt;, который Вы хотите посмотреть. Например, для прсмотра</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; второго экрана B ACTIVE введите следующее:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;B ACTIVE 2 &lt;Enter&gt;</p>
+<p>          Консольная команда B ACTIVE позволяет Вам получить список всех</p>
+<p>          Btrieve-файлов, открытых в текущее время на файл-сервере, и</p>
+<p>          увидеть номер связи (рабочей станции) для каждого открытого файла</p>
+<p>          и типы захватов для каждого файла.</p>
+<p>          Btrieve отобразит результат команды в формате таблицы на экране.</p>
+<p>          Следующая информация будет показана для каждого файла:</p>
+<p>            - Полное имя пути файла.</p>
+<p>            - Номер связи сети, имеющей открытый файл.</p>
+<p>            - Тип захватов для файла.</p>
+<p>          Вы можете использовать номер связи, возвращаемый B ACTIVE, для</p>
+<p>          определения пользователя открытого файла. Вы можете также</p>
+<p>          использовать этот номер как параметр команд B RESET, BUTIL-RESET</p>
+<p>          или Btrieve-операции Reset для закрытия файлов и освобождения</p>
+<p>          ресурсов некоторой станции.</p>
+<p>          Если другой VAP имеет открытым этот же файл, B ACTIVE отобразит</p>
+<p>          двухсимвольный код номера связи. Например, двухсимвольный код</p>
+<p>          для NetWare SQL - "NS". вы не можете использовать этот</p>
+<p>          двухсимвольный код как вход команды B RESET. Смотрите обсуждение</p>
+<p>          команды B RESET на следующих страницах.</p>
+<p>          Коды для трех видов захвата:</p>
+<p>              Захват                   Код</p>
+<p>              Транзакция                T</p>
+<p>              Единичная запись          A</p>
+<p>              Множество записей         M</p>
+<p>          К а к   п р и м е н я т ь  B ACTIVE</p>
+<p>          Для запуска B ACTIVE введите команду в показанном выше формате на</p>
+<p>          сервере, где загружен BSERVER.VAP.</p>
+<p>          Вставьте пробел между B и ACTIVE. Вы можете вводить команду</p>
+<p>          символами как нижнего, так и верхнего регистров.</p>
+<p>          B ACTIVE будет показывать сообщение на верху экрана до тех пор,</p>
+<p>          пока не отобразит все активные файлы. Для просмотра</p>
+<p>          дополнительных экранов введите вновь команду B ACTIVE с номером</p>
+<p>          &lt;Экрана&gt;, который Вы хотите посмотреть. Например, для прсмотра</p>
+<p>          второго экрана B ACTIVE введите следующее:</p>
+<p>               B ACTIVE 2 &lt;Enter&gt;</p>
 <p>B DOWN</p>
 <p>Ф о р м а т к о м а н д ы .</p>
 <p>B DOWN</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Консольная команда B DOWN освобождает все ресурсы, используемые</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BSERVER, и завершает выполнение BSERVER. Когда Вы запрашиваете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; B DOWN, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Закроет все открытые на файл-сервере файлы;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Освободит все захваты Btrieve на файл-сервере;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Снимет все транзакции на файл-сервере;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Отменит выполнение BSERVER.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вы запускаете другой VAP, используя BSERVER для доступа к</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлам сети, Вы должны перед запросом команды B DOWN :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Запросить команду B ACTIVE, чтобы удостовериться, что нет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; открытых файлов для других VAP.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если другие VAP имеют открытые Btrieve-файлы на файл-сервере,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; вы должны запросить соответствующую команду для этого VAP для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; того, чтобы закрыть его файлы и прервать процесс.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Например, если Вы запускаете NetWare SQL, Вы запросите команды</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; NS RESET и NS DOWN для того6 чтобы удостовериться, что все файлы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; NetWare SQL закрыты. После того, как Вы запросите команду B DOWN</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; рабочие станции и другие VAP не смогут получить доступ к Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлам через BSERVER до тех пор, пока вновь не будет запущен</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл-сервер.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp;B DOWN</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска B DOWN введите команду в показанном выше формате на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сервере, где загружен BSERVER.VAP. Вставьте пробел между B и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; DOWN. Вы можете вводить команду символами как нижнего, так и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; верхнего регистров.</p>
+<p>          Консольная команда B DOWN освобождает все ресурсы, используемые</p>
+<p>          BSERVER, и завершает выполнение BSERVER. Когда Вы запрашиваете</p>
+<p>          B DOWN, Btrieve:</p>
+<p>            - Закроет все открытые на файл-сервере файлы;</p>
+<p>            - Освободит все захваты Btrieve на файл-сервере;</p>
+<p>            - Снимет все транзакции на файл-сервере;</p>
+<p>            - Отменит выполнение BSERVER.</p>
+<p>          Если Вы запускаете другой VAP, используя BSERVER для доступа к</p>
+<p>          файлам сети, Вы должны перед запросом команды B DOWN :</p>
+<p>            - Запросить команду B ACTIVE, чтобы удостовериться, что нет</p>
+<p>              открытых файлов для других VAP.</p>
+<p>            - Если другие VAP имеют открытые Btrieve-файлы на файл-сервере,</p>
+<p>              вы должны запросить соответствующую команду для этого VAP для</p>
+<p>              того, чтобы закрыть его файлы и прервать процесс.</p>
+<p>          Например, если Вы запускаете NetWare SQL, Вы запросите команды</p>
+<p>          NS RESET и NS DOWN для того6 чтобы удостовериться, что все файлы</p>
+<p>          NetWare SQL закрыты. После того, как Вы запросите команду B DOWN</p>
+<p>          рабочие станции и другие VAP не смогут получить доступ к Btrieve-</p>
+<p>          файлам через BSERVER до тех пор, пока вновь не будет запущен</p>
+<p>          файл-сервер.</p>
+<p>          К а к   п р и м е н я т ь  B DOWN</p>
+<p>          Для запуска B DOWN введите команду в показанном выше формате на</p>
+<p>          сервере, где загружен BSERVER.VAP. Вставьте пробел между B и</p>
+<p>          DOWN. Вы можете вводить команду символами как нижнего, так и</p>
+<p>          верхнего регистров.</p>
 <p>B OFF</p>
 <p>Ф о р м а т к о м а н д ы .</p>
 <p>B OFF</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Консольная команда B OFFпрекращает обновление экрана предыдущей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; утилитой командной строки Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете запросить B OFF после того, как B ACTIVE, B STATUS или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; B USAGE показали необходимую Вам информацию. Если Вы не запросите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; B OFF, эти команды продолжат обновление экрана, даже если Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; запросите другую команду.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp;B OFF</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска B OFF введите команду в показанном выше формате на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сервере, где загружен BSERVER.VAP.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вставьте пробел между B и OFF. Вы можете вводить команду</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; символами как нижнего, так и верхнего регистров.</p>
+<p>          Консольная команда B OFFпрекращает обновление экрана предыдущей</p>
+<p>          утилитой командной строки Btrieve.</p>
+<p>          Вы можете запросить B OFF после того, как B ACTIVE, B STATUS или</p>
+<p>          B USAGE показали необходимую Вам информацию. Если Вы не запросите</p>
+<p>          B OFF, эти команды продолжат обновление экрана, даже если Вы</p>
+<p>          запросите другую команду.</p>
+<p>          К а к   п р и м е н я т ь  B OFF</p>
+<p>          Для запуска B OFF введите команду в показанном выше формате на</p>
+<p>          сервере, где загружен BSERVER.VAP.</p>
+<p>          Вставьте пробел между B и OFF. Вы можете вводить команду</p>
+<p>          символами как нижнего, так и верхнего регистров.</p>
 <p>B RESET</p>
 <p>Ф о р м а т к о м а н д ы .</p>
 <p>B RESET &lt;Номер связи&gt;</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Консольная команда B RESET освобождает все ресурсы, используемые</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; какой-либо станцией сети. Когда Вы запросите консольную команду</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; B RESET с номером связи станции, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Закроет все открытые на станции файлы;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Освободит все захваты станции;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Снимет все транзакции на станции;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Отменит выполнение BSERVER.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp;B RESET</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска B RESET введите команду в показанном выше формате на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сервере, где загружен BSERVER.VAP. Вставьте пробел между B и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; RESET. Вы можете вводить команду символами как нижнего, так и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; верхнего регистров.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Подставьте номер связи станции вместо &lt;Номер связи&gt;. Например,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для освобождения ресурсов станции 12 Вы должны будете запросить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующую команду на консоли сервера:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;B RESET 12 &lt;Enter&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используйте звездочку (*) для всех станций сети Btrieve, а не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; одной станции. Для освобождения всех станций сети, имеющих</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; открытые Btrieve-файлы, запросите следующую команду на консоли</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сервера:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;B RESET * &lt;Enter&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция B RESET не допускает двухсимвольную ASCII связь ID,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; означающую VAP, как вход. Для освобождения файлов, открытых VAP,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы должны использовать соответствующую команду для VAP.</p>
+<p>          Консольная команда B RESET освобождает все ресурсы, используемые</p>
+<p>          какой-либо станцией сети. Когда Вы запросите консольную команду</p>
+<p>          B RESET с номером связи станции, Btrieve:</p>
+<p>            - Закроет все открытые на станции файлы;</p>
+<p>            - Освободит все захваты станции;</p>
+<p>            - Снимет все транзакции на станции;</p>
+<p>            - Отменит выполнение BSERVER.</p>
+<p>          К а к   п р и м е н я т ь  B RESET</p>
+<p>          Для запуска B RESET введите команду в показанном выше формате на</p>
+<p>          сервере, где загружен BSERVER.VAP. Вставьте пробел между B и</p>
+<p>          RESET. Вы можете вводить команду символами как нижнего, так и</p>
+<p>          верхнего регистров.</p>
+<p>          Подставьте номер связи станции вместо &lt;Номер связи&gt;. Например,</p>
+<p>          для освобождения ресурсов станции 12 Вы должны будете запросить</p>
+<p>          следующую команду на консоли сервера:</p>
+<p>               B RESET 12 &lt;Enter&gt;</p>
+<p>          Используйте звездочку (*) для всех станций сети Btrieve, а не</p>
+<p>          одной станции. Для освобождения всех станций сети, имеющих</p>
+<p>          открытые Btrieve-файлы, запросите следующую команду на консоли</p>
+<p>          сервера:</p>
+<p>               B RESET * &lt;Enter&gt;</p>
+<p>          Операция B RESET не допускает двухсимвольную ASCII связь ID,</p>
+<p>          означающую VAP, как вход. Для освобождения файлов, открытых VAP,</p>
+<p>          Вы должны использовать соответствующую команду для VAP.</p>
 <p>B STATUS</p>
 <p>Ф о р м а т к о м а н д ы .</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;B STATUS</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете применять B STATUS для помощи в определении наиболее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; эффективного уровня ресурсов, распределенных для BSERVER, для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вашей среды.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; B STATUS возвращает информацию о запросах сети, пакетных буферах</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; и проведенных сеансах для файл-сервера, с которого Вы запросили</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; команду. Команда также возвращает сколько раз обновлялся экран</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; со времени запроса команды.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp;B STATUS</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска B STATUS введите команду в показанном выше формате на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сервере, где загружен BSERVER.VAP. Вставьте пробел между B и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STATUS. Вы можете вводить команду символами как нижнего, так и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; верхнего регистров.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Когда Вы выполните B STATUS, Btrieve покажет следующий экран:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Status for NetWare Btrieve Server VAP v5.xx</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Total requests processed: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Available, Max request buffers: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Available, Max SPX packet buffers: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Unprocessed SPX packet buffers: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Total SPX packets received: &nbsp; &nbsp; &nbsp; &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Total SPX packets sent: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Total SPX requests processed: &nbsp; &nbsp; &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Max, Peak SPX sessions: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Nuber of display iterations: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Значения "Current" - значения, накопленные во время запроса</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; команды B STATUS и отображаемые в первом столбце. Значения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Total" - значения, накопленные со времени загрузки BSERVER</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; и отображаемые во втором столбце. Значения "Max" - максимальные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значения ресурсов, допустимых в сети текущей конфигурации,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отображаются во втором столбце. Значения "Peak' отражают самую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; высокую степень использования ресурсов со времени загрузки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BSERVER. Следующие абзацы описывают информацию, возвращаемую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; командой B STATUS.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Current, Total requests processed" отражает число запросов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сети с помощью BSERVER с рабочих станций и других VAP таких,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; как NetWare SQL.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Available, Max request buffers" отражает число активных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; процессов для VAP. Для BSERVER это значение должно быть всегда</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; равно 1.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Available, Max SPX packet buffers" отражает число пакетных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; буферов NetWare, допустимых на BSERVER, и максимальное число</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; на сервере.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Unprocessed SPX packet buffers" отражает разницу между</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; максимальным числом допускаемых NetWare пакетных буферов на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сервере, и числом, допустимых для BSERVER.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Current, Total SPX packets received" отражает число сетевых</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пакетов, полученных BSERVER с рабочей станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Current, Total SPX packets sent" отражает число сетевых</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пакетов, посланных BSERVER на рабочую станцию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Current, Max, Peak SPX sessions" отражает число проведенных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сеанcов BSERVER и максимальное число. допустимое BSERVER.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Nuber of display iterations" отражает, сколько раз был</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; обновлен экран со времени запроса команды B STATUS.</p>
+<p>               B STATUS</p>
+<p>          О п и с а н и е</p>
+<p>          Вы можете применять B STATUS для помощи в определении наиболее</p>
+<p>          эффективного уровня ресурсов, распределенных для BSERVER, для</p>
+<p>          Вашей среды.</p>
+<p>          B STATUS возвращает информацию о запросах сети, пакетных буферах</p>
+<p>          и проведенных сеансах для файл-сервера, с которого Вы запросили</p>
+<p>          команду. Команда также возвращает сколько раз обновлялся экран</p>
+<p>          со времени запроса команды.</p>
+<p>          К а к   п р и м е н я т ь  B STATUS</p>
+<p>          Для запуска B STATUS введите команду в показанном выше формате на</p>
+<p>          сервере, где загружен BSERVER.VAP. Вставьте пробел между B и</p>
+<p>          STATUS. Вы можете вводить команду символами как нижнего, так и</p>
+<p>          верхнего регистров.</p>
+<p>          Когда Вы выполните B STATUS, Btrieve покажет следующий экран:</p>
+<p>                   Status for NetWare Btrieve Server VAP v5.xx</p>
+<p>            Current, Total requests processed:           nn   nn</p>
+<p>            Available, Max request buffers:              nn   nn</p>
+<p>            Available, Max SPX packet buffers:           nn   nn</p>
+<p>            Unprocessed SPX packet buffers:              nn</p>
+<p>            Current, Total SPX packets received:         nn   nn</p>
+<p>            Current, Total SPX packets sent:             nn   nn</p>
+<p>            Current, Total SPX requests processed:       nn   nn</p>
+<p>            Current, Max, Peak SPX sessions:             nn   nn   nn</p>
+<p>            Nuber of display iterations:                 nn</p>
+<p>          Значения "Current" - значения, накопленные во время запроса</p>
+<p>          команды B STATUS и отображаемые в первом столбце. Значения</p>
+<p>          Total" - значения, накопленные со времени загрузки BSERVER</p>
+<p>          и отображаемые во втором столбце. Значения "Max" - максимальные</p>
+<p>          значения ресурсов, допустимых в сети текущей конфигурации,</p>
+<p>          отображаются во втором столбце. Значения "Peak' отражают самую</p>
+<p>          высокую степень использования ресурсов со времени загрузки</p>
+<p>          BSERVER. Следующие абзацы описывают информацию, возвращаемую</p>
+<p>          командой B STATUS.</p>
+<p>          "Current, Total requests processed" отражает число запросов</p>
+<p>          сети с помощью BSERVER с рабочих станций и других VAP таких,</p>
+<p>          как NetWare SQL.</p>
+<p>          "Available, Max request buffers" отражает число активных</p>
+<p>          процессов для VAP. Для BSERVER это значение должно быть всегда</p>
+<p>          равно 1.</p>
+<p>          "Available, Max SPX packet buffers" отражает число пакетных</p>
+<p>          буферов NetWare, допустимых на BSERVER, и максимальное число</p>
+<p>          на сервере.</p>
+<p>          "Unprocessed SPX packet buffers" отражает разницу между</p>
+<p>          максимальным числом допускаемых NetWare пакетных буферов на</p>
+<p>          сервере, и числом, допустимых для BSERVER.</p>
+<p>          "Current, Total SPX packets received" отражает число сетевых</p>
+<p>          пакетов, полученных BSERVER с рабочей станции.</p>
+<p>          "Current, Total SPX packets sent" отражает число сетевых</p>
+<p>          пакетов, посланных BSERVER на рабочую станцию.</p>
+<p>          "Current, Max, Peak SPX sessions" отражает число проведенных</p>
+<p>          сеанcов BSERVER и максимальное число. допустимое BSERVER.</p>
+<p>          "Nuber of display iterations" отражает, сколько раз был</p>
+<p>          обновлен экран со времени запроса команды B STATUS.</p>
 <p>B USAGE</p>
 <p>Ф о р м а т к о м а н д ы .</p>
 <p>B USAGE</p>
 <p>О п и с а н и е</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете применять B USAGE для помощи в определении, был ли</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BSERVER сконфигурирован самым эффективным образом для Вашей среды.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Консольная команда B USAGE возвращает информацию о следующих</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; опциях конфигурации Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Открытые файлы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Драйверы файлов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Захваты</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Транзакции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; К а к &nbsp; п р и м е н я т ь &nbsp;B USAGE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для запуска B USAGE введите команду в показанном выше формате на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сервере, где загружен BSERVER.VAP. Вставьте пробел между B и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; USAGE. Вы можете вводить команду символами как нижнего, так и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; верхнего регистров. Когда Вы выполняете B USAGE, Btrieve покажет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; на экране:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Usage for NetWare Btrieve Server VAP v5.xx</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Max, Peak files: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nn &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Max, Peak handles: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nn &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Max, Peak locks: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nn &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Current, Max, Peak transactions: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn &nbsp; nn &nbsp; nn</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Значения "Current" - значения, находящиеся в использовании в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; настоящий момент и отображаемые в первом столбце. Значения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Max" - максимальные значения ресурсов, допустимых в сети текущей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; конфигурации BSERVER, отображаются во втором столбце. Значения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Peak" отражают самую высокую степень использования ресурсов со</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; времени загрузки BSERVER.</p>
-<p>{[logo.gif]} &nbsp;{[eXclusive Banner Network]}{[GooDoo 120]}</p>
+<p>          Вы можете применять B USAGE для помощи в определении, был ли</p>
+<p>          BSERVER сконфигурирован самым эффективным образом для Вашей среды.</p>
+<p>          Консольная команда B USAGE возвращает информацию о следующих</p>
+<p>          опциях конфигурации Btrieve:</p>
+<p>            - Открытые файлы</p>
+<p>            - Драйверы файлов</p>
+<p>            - Захваты</p>
+<p>            - Транзакции</p>
+<p>          К а к   п р и м е н я т ь  B USAGE</p>
+<p>          Для запуска B USAGE введите команду в показанном выше формате на</p>
+<p>          сервере, где загружен BSERVER.VAP. Вставьте пробел между B и</p>
+<p>          USAGE. Вы можете вводить команду символами как нижнего, так и</p>
+<p>          верхнего регистров. Когда Вы выполняете B USAGE, Btrieve покажет</p>
+<p>          на экране:</p>
+<p>                   Usage for NetWare Btrieve Server VAP v5.xx</p>
+<p>            Current, Max, Peak files:                    nn   nn   nn</p>
+<p>            Current, Max, Peak handles:                  nn   nn   nn</p>
+<p>            Current, Max, Peak locks:                    nn   nn   nn</p>
+<p>            Current, Max, Peak transactions:             nn   nn   nn</p>
+<p>          Значения "Current" - значения, находящиеся в использовании в</p>
+<p>          настоящий момент и отображаемые в первом столбце. Значения</p>
+<p>          "Max" - максимальные значения ресурсов, допустимых в сети текущей</p>
+<p>          конфигурации BSERVER, отображаются во втором столбце. Значения</p>
+<p>          "Peak" отражают самую высокую степень использования ресурсов со</p>
+<p>          времени загрузки BSERVER.</p>
+<p>{[logo.gif]}  {[eXclusive Banner Network]}{[GooDoo 120]}</p>
 <p>{Программы} &#8226;{Железо} &#8226; {Драйверы} &#8226; {Хостинг} &#8226;{Энциклопедия рекламы}</p>
 <p>| {&lt;&lt;} | {&lt;} | {&gt;} | {&gt;&gt;}</p>
 <p>------------------------------------</p>
@@ -2086,141 +2086,141 @@
 <p>Для описания интерфейса, не имеющегося в данном руководстве, смотрите файл INTERFACE.DOC на программной дискете Btrieve.</p>
 <p>------------------------------------</p>
 <p class="note">Примечание:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;До того, как Вы сможете вызвать Btrieve из прикладной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;программы на любом языке, Вы должны загрузить BREQUEST</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Инициатор запросов Btrieve) в память рабочей станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---------------------------------------------------------</p>
+<p>           До того, как Вы сможете вызвать Btrieve из прикладной</p>
+<p>           программы на любом языке, Вы должны загрузить BREQUEST</p>
+<p>           (Инициатор запросов Btrieve) в память рабочей станции.</p>
+<p>           ---------------------------------------------------------</p>
 <p>СВЯЗЬ BTRIVE И BASIC</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Интерфейс с Btrieve - в основном одинаков и для BASIC-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; компилятора, и для BASIC-интерпретатора. Для BASIC-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; компилятора Вы связываете интерфейс Btrieve с Вашей BASIC-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программой после компиляции. Для BASIC-интерпретатора Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; загружаете интерфейс Btrieve как резидентную в памяти программу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Формат обращений к Btrieve - один и тот же для обоих.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BASIC-ИНТЕРПРЕТАТОР</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для вызова Btrieve из BASIC-интерпретатора Ваша прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа должна инициировать выполнение BASIC с соответствующими</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметрами и правильно загрузить Btrieve-интерфейс с BASIC.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вы не выполнили правильно эти два шага, прикладная программа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve не стартует надлежащим образом, если вообще стартует.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; И н т е р ф е й с &nbsp; BASIC-интерпретатора</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-интерфейс с BASIC - подпрограмма на ассемблере,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; называющаяся BASXBTRV.EXE, которую прикладная программа на BASIC</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должна вызывать для для связи с Btrieve Record Manager.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; В операционной &nbsp;системе MS-DOS BASIC-интерфейс - &nbsp;резидентная в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; памяти программа, которую вы должны загрузить до того, как Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сможете запустить Вашу прикладную программу на BASIC. Каждая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; рабочая станция должна иметь свою загруженную копию BASXBTRV.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После того, как Вы один раз запустили Btrieve-интерфейс с BASIC,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа может использовать операторы CALL для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполнения Btrieve-операций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Интерфейсная программа пишет одну запись в выходной файл,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержащий адрес сегмента, в который она загружена, в десятичной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; форме. Ваша BASIC-программа читает этот файл и использует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; хранящийся там адрес сегмента в операторе DEF SEG. После того,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; как Ваша программа выполнит DEF SEG, она может использовать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; оператор CALL (описанный далее в этой главе) для связи с Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Record Manager.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для загрузки резидентного в памяти интерфейса введите следующую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; команду:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Устройство&gt;BASXBTRV&lt;Имя файла.Расширение&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Устройство&gt; на имя устройства, содержащего Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Замените &lt;Имя файла.Расширение&gt; на имя файла, который будет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; содержать адрес сегмента интерфейса. Вы должны задать имя файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; в виде:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Устройство&gt;:&lt;имя файла.Расширение&gt;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете опустить &lt;Устройство&gt;, если Вы намерены использовать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; устройство, заданное по умолчанию. Как только Вы однажды</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; загрузили интерфейс, он остается в памяти до перезапуска системы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для сетевой среды важно, является ли заданное для BASXBTRV при</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; инициализации имя файла локальным или уникальным именем файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Так как адрес сегмента, куда загружается BASXBTRV, может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отличаться для рабочих станций, каждая рабочая станция должна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; иметь свой собственный файл с адресом сегмента. Например, для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; загрузки BASXBTRV и задания SEGMENT.ADR в качестве файла с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; адресом сегмента Вы долджны запросить следующую команду:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BASXBTRV SEGMENT.ADR</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После того, как BASIC-интерфейс загрузится в память и запишет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; свой адрес сегмента в файл, на дисплее появится следующее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сообщение:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve Basic interface loaded at segment xxxxx</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Btrieve Basic интерфейс загружен в сегмент xxxxx)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша программа в BASIC-интерпретаторе должна включать следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операторы чтения и определения адреса сегмента, чтобы обращаться</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; к Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 30 OPEN "SEGMENT.ADR" FOR INPUT AS #1 'Открыть файл, содержаший</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; адрес сегмента</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 40 INPUT #1, SEG.ADDR% &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'Получить адрес</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;сегмента интерфейса</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 50 DEF SEG = SEG.ADDR% &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'Установить адрес для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;обращений к Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 4.1 иллюстрирует различные программы, загруженные в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; память, при запуске прикладной программы Btrieve, напмсанной на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BASIC-интерпретаторе. Первым загружен MS-DOS, за ним следует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; резидентный в памяти BASIC-интерфейс - BASXBTRV. Btrieve загружен</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; после интерфейса. Оставшаяся память доступна Вашей прикладной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программе.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Начало</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;памяти&gt;&gt;&gt; &nbsp;------------------------------&#172;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DOS 3.x &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BASXBTRV &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;(Интерфейс BASIC-интерпрет.) &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BREQUEST &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Прикладная программа Btrieve &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L------------------------------ &lt;&lt;Конец</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; памяти</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 5.1</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Карта резидентного в памяти BASIC-интерфейса</p>
+<p>          Интерфейс с Btrieve - в основном одинаков и для BASIC-</p>
+<p>          компилятора, и для BASIC-интерпретатора. Для BASIC-</p>
+<p>          компилятора Вы связываете интерфейс Btrieve с Вашей BASIC-</p>
+<p>          программой после компиляции. Для BASIC-интерпретатора Вы</p>
+<p>          загружаете интерфейс Btrieve как резидентную в памяти программу.</p>
+<p>          Формат обращений к Btrieve - один и тот же для обоих.</p>
+<p>          BASIC-ИНТЕРПРЕТАТОР</p>
+<p>          Для вызова Btrieve из BASIC-интерпретатора Ваша прикладная</p>
+<p>          программа должна инициировать выполнение BASIC с соответствующими</p>
+<p>          параметрами и правильно загрузить Btrieve-интерфейс с BASIC.</p>
+<p>          Если Вы не выполнили правильно эти два шага, прикладная программа</p>
+<p>          Btrieve не стартует надлежащим образом, если вообще стартует.</p>
+<p>          И н т е р ф е й с   BASIC-интерпретатора</p>
+<p>          Btrieve-интерфейс с BASIC - подпрограмма на ассемблере,</p>
+<p>          называющаяся BASXBTRV.EXE, которую прикладная программа на BASIC</p>
+<p>          должна вызывать для для связи с Btrieve Record Manager.</p>
+<p>          В операционной  системе MS-DOS BASIC-интерфейс -  резидентная в</p>
+<p>          памяти программа, которую вы должны загрузить до того, как Вы</p>
+<p>          сможете запустить Вашу прикладную программу на BASIC. Каждая</p>
+<p>          рабочая станция должна иметь свою загруженную копию BASXBTRV.</p>
+<p>          После того, как Вы один раз запустили Btrieve-интерфейс с BASIC,</p>
+<p>          Ваша прикладная программа может использовать операторы CALL для</p>
+<p>          выполнения Btrieve-операций.</p>
+<p>          Интерфейсная программа пишет одну запись в выходной файл,</p>
+<p>          содержащий адрес сегмента, в который она загружена, в десятичной</p>
+<p>          форме. Ваша BASIC-программа читает этот файл и использует</p>
+<p>          хранящийся там адрес сегмента в операторе DEF SEG. После того,</p>
+<p>          как Ваша программа выполнит DEF SEG, она может использовать</p>
+<p>          оператор CALL (описанный далее в этой главе) для связи с Btrieve</p>
+<p>          Record Manager.</p>
+<p>          Для загрузки резидентного в памяти интерфейса введите следующую</p>
+<p>          команду:</p>
+<p>               &lt;Устройство&gt;BASXBTRV&lt;Имя файла.Расширение&gt;</p>
+<p>          Замените &lt;Устройство&gt; на имя устройства, содержащего Btrieve-</p>
+<p>          файлы.</p>
+<p>          Замените &lt;Имя файла.Расширение&gt; на имя файла, который будет</p>
+<p>          содержать адрес сегмента интерфейса. Вы должны задать имя файла</p>
+<p>          в виде:</p>
+<p>               &lt;Устройство&gt;:&lt;имя файла.Расширение&gt;</p>
+<p>          Вы можете опустить &lt;Устройство&gt;, если Вы намерены использовать</p>
+<p>          устройство, заданное по умолчанию. Как только Вы однажды</p>
+<p>          загрузили интерфейс, он остается в памяти до перезапуска системы.</p>
+<p>          Для сетевой среды важно, является ли заданное для BASXBTRV при</p>
+<p>          инициализации имя файла локальным или уникальным именем файла.</p>
+<p>          Так как адрес сегмента, куда загружается BASXBTRV, может</p>
+<p>          отличаться для рабочих станций, каждая рабочая станция должна</p>
+<p>          иметь свой собственный файл с адресом сегмента. Например, для</p>
+<p>          загрузки BASXBTRV и задания SEGMENT.ADR в качестве файла с</p>
+<p>          адресом сегмента Вы долджны запросить следующую команду:</p>
+<p>               BASXBTRV SEGMENT.ADR</p>
+<p>          После того, как BASIC-интерфейс загрузится в память и запишет</p>
+<p>          свой адрес сегмента в файл, на дисплее появится следующее</p>
+<p>          сообщение:</p>
+<p>               Btrieve Basic interface loaded at segment xxxxx</p>
+<p>              (Btrieve Basic интерфейс загружен в сегмент xxxxx)</p>
+<p>          Ваша программа в BASIC-интерпретаторе должна включать следующие</p>
+<p>          операторы чтения и определения адреса сегмента, чтобы обращаться</p>
+<p>          к Btrieve:</p>
+<p>          30 OPEN "SEGMENT.ADR" FOR INPUT AS #1 'Открыть файл, содержаший</p>
+<p>                                                  адрес сегмента</p>
+<p>          40 INPUT #1, SEG.ADDR%                'Получить адрес</p>
+<p>                                                 сегмента интерфейса</p>
+<p>          50 DEF SEG = SEG.ADDR%                'Установить адрес для</p>
+<p>                                                 обращений к Btrieve</p>
+<p>          Рисунок 4.1 иллюстрирует различные программы, загруженные в</p>
+<p>          память, при запуске прикладной программы Btrieve, напмсанной на</p>
+<p>          BASIC-интерпретаторе. Первым загружен MS-DOS, за ним следует</p>
+<p>          резидентный в памяти BASIC-интерфейс - BASXBTRV. Btrieve загружен</p>
+<p>          после интерфейса. Оставшаяся память доступна Вашей прикладной</p>
+<p>          программе.</p>
+<p>                     Начало</p>
+<p>                     памяти&gt;&gt;&gt;  ------------------------------&#172;</p>
+<p>                                &#166;                             &#166;</p>
+<p>                                &#166;           DOS 3.x           &#166;</p>
+<p>                                &#166;                             &#166;</p>
+<p>                                +-----------------------------+</p>
+<p>                                &#166;                             &#166;</p>
+<p>                                &#166;          BASXBTRV           &#166;</p>
+<p>                                &#166;(Интерфейс BASIC-интерпрет.) &#166;</p>
+<p>                                &#166;                             &#166;</p>
+<p>                                +-----------------------------+</p>
+<p>                                &#166;                             &#166;</p>
+<p>                                &#166;          BREQUEST           &#166;</p>
+<p>                                &#166;                             &#166;</p>
+<p>                                +-----------------------------+</p>
+<p>                                &#166;                             &#166;</p>
+<p>                                &#166;Прикладная программа Btrieve &#166;</p>
+<p>                                &#166;                             &#166;</p>
+<p>                                L------------------------------ &lt;&lt;Конец</p>
+<p>                                                                  памяти</p>
+<p>                                  Рисунок 5.1</p>
+<p>                Карта резидентного в памяти BASIC-интерфейса</p>
 <p>З а п у с к BASIC-интерпретатора</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Обычно BASIC допускает длину записи 128 байт для любого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; открываемого программой файла. Для доступа к Btrieve-файлу с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; длиной логической записи большей 128 байтов Вы должны включить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметр размера файла, задающий длину логической записи файла,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; в команду, вызывающую BASIC-интерпретатор:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BASIC &nbsp;[/S:yyy]</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; В приведенном выше примере yyy - длина логической записи самого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; большого Btrieve-файла, к которому Ваша программа будет иметь</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; доступ. См. руководство по BASIC для дополнительной информации</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; по заданию этой опции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BASIC-КОМПИЛЯТОР</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения программы BASIC-компилятора, обращающейся к</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve, Вы должны связать программы соответствующего Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; интерфейса с об'ектным файлом BASIC-компилятора. Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; дискеиа содержит файл, который Вы должны включить в Ваш редактор</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BASIC-а: BASXBTRV.OBJ. Подробное описание редактора связей см. в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; руководстве по Вашей операционной системе и по BASIC.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для редактирования связей BASIC-программы, для которой об'ектный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл хранится в файле BASPROG, с Btrieve-интерфейсом BASICа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BASXBTRV.OBJ Вы должны ответить на подсказку редактора связей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для об'ектных модклей следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Object Modules [.OBJ]:basprog+basxbtrv</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ПРИМЕЧАНИЕ:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Quick BASIC использует файл QBIXBTRV.OBJ как</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;программу Btrieve-интерфейса и требует процедуры, отличные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;от других версий BASIC-а, для открытия файлов и просмотра</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;буфера данных. См. файл INTRFACE.DOC на дискете "PROGRAM"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-----------------------------------------------------------</p>
+<p>          Обычно BASIC допускает длину записи 128 байт для любого</p>
+<p>          открываемого программой файла. Для доступа к Btrieve-файлу с</p>
+<p>          длиной логической записи большей 128 байтов Вы должны включить</p>
+<p>          параметр размера файла, задающий длину логической записи файла,</p>
+<p>          в команду, вызывающую BASIC-интерпретатор:</p>
+<p>               BASIC  [/S:yyy]</p>
+<p>          В приведенном выше примере yyy - длина логической записи самого</p>
+<p>          большого Btrieve-файла, к которому Ваша программа будет иметь</p>
+<p>          доступ. См. руководство по BASIC для дополнительной информации</p>
+<p>          по заданию этой опции.</p>
+<p>          BASIC-КОМПИЛЯТОР</p>
+<p>          Для выполнения программы BASIC-компилятора, обращающейся к</p>
+<p>          Btrieve, Вы должны связать программы соответствующего Btrieve-</p>
+<p>          интерфейса с об'ектным файлом BASIC-компилятора. Btrieve-</p>
+<p>          дискеиа содержит файл, который Вы должны включить в Ваш редактор</p>
+<p>          BASIC-а: BASXBTRV.OBJ. Подробное описание редактора связей см. в</p>
+<p>          руководстве по Вашей операционной системе и по BASIC.</p>
+<p>          Для редактирования связей BASIC-программы, для которой об'ектный</p>
+<p>          файл хранится в файле BASPROG, с Btrieve-интерфейсом BASICа</p>
+<p>          BASXBTRV.OBJ Вы должны ответить на подсказку редактора связей</p>
+<p>          для об'ектных модклей следующим образом:</p>
+<p>                Object Modules [.OBJ]:basprog+basxbtrv</p>
+<p>               -----------------------------------------------------------</p>
+<p>               ПРИМЕЧАНИЕ:</p>
+<p>               Microsoft Quick BASIC использует файл QBIXBTRV.OBJ как</p>
+<p>               программу Btrieve-интерфейса и требует процедуры, отличные</p>
+<p>               от других версий BASIC-а, для открытия файлов и просмотра</p>
+<p>               буфера данных. См. файл INTRFACE.DOC на дискете "PROGRAM"</p>
+<p>               -----------------------------------------------------------</p>
 <p>ВЫЗОВ BTRIEVE ИЗ BASIC</p>
 <p>При использовании BASIC-компилятора и BASIC-интерпретатора шаги для вызова Btrieve - одни ите же. Для доступа к данным Btrieve- файла Ваша BASIC-прикладная программа должна сперва выполнить стандартный оператор BASICа OPEN NUL для размещения буфера:</p>
 <p>OPEN "NUL" AS # 1</p>
 <p>Когда BASIC выполнит оператор OPEN, он разместит область "Блок</p>
 <p>управления файлами" (FCB). Этот блок содержит помимо других вещей область буфера, в которой хранятся данные из файла во время передачи их на диск и с диска. BASIC позволяет вам определять эту буферную область как набор непрерывных строковых переменных в операторе FIELD.</p>
 <p>Например, если Вы задаете файл адресов, Ваша прикладная программа должна включать следующий оператор:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FIELD #1, 30 AS NAM$, 30 AS STREETS$, 30 AS CITY$,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 AS STATE$, 5 AS ZIP$</p>
+<p>           FIELD #1, 30 AS NAM$, 30 AS STREETS$, 30 AS CITY$,</p>
+<p>                     2 AS STATE$, 5 AS ZIP$</p>
 <p>Этот оператор показывает, что буфер полей, предварительно распределенный для файла #1, содержит записи, в которых первые 30 символов содержат имя, следующие 30 символов - улицу и т.д.</p>
 <p>BASIC ограничивает весь оператор длиной 255 символов. Если Ваша запись содержит очень много полей, Вы может быть и не сумеете полностью описать Ваши данные в одном операторе BASIC. BASIC позволяет применять столько операторов FIELDS, сколько потребуется для описания записей. Различные имена во всех операторах FIELD применимы в одно и то же время. Каждый новый оператор FIELD переопределяет буфер с позиции первого символа. Поэтому Вы должны использовать фиктивное поле как первый вход в последовательности операторов FIELD для расчета полей, которые были уже заданы.</p>
 <p>Например, если записи определенные предыдущим оператором FIELD содержали номер телефона после почтового индекса, Вы можете определить поле номера телефона в следующем операторе:</p>
@@ -2228,8 +2228,8 @@
 <p>Так как Btrieve использует буфер в FCB для передачи записей, прикладная программа должна включать оператор FIELD для того, чтобы иметь доступ к данным, возвращаемым Btrieve. Смотрите руководство по BASIc для полного описания операторов OPEN и FIELD. вы должны использовать команду LSET для сохранения значений в буфере, определенном оператором FIELD.</p>
 <p>После того, как стандартный оператор BASIC OPEN откроет Btrieve- файл, Ваша прикладная программа готова посылать запросы Btrieve Record Manager. Сперва Ваша прикладная программа выполняет Btrieve-операцию Open. После этого Btrieve обрабатывает все чтения, записи и модификации файлов через btrieve-запросы. Ваша прикладная пограмма должна выполнить Btrieve-операцию Close для завершения работы.</p>
 <p>Все обращения к Btrieve из BASIc должны быть в следующем формате:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CALL BTRV (Операция, Статус, FCB, Длина буфера данных,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Буфер ключа, Номер ключа)</p>
+<p>            CALL BTRV (Операция, Статус, FCB, Длина буфера данных,</p>
+<p>                 Буфер ключа, Номер ключа)</p>
 <p>Для BASIC-интерпретатора BTRV должно быть числом 0. В BASIC- компиляторе BTRV - внешнее имя, разрешаемое редактором связей. Хотя при каждом обращении требуются все параметры, Btrieve не использует все параметры для каждой операции. В некоторых случаях Btrieve игнорирует их значение. Более детальное описание параметров смотрите в Главе 5 этого руководства. Следующие разделы описывают каждый параметр.</p>
 <p>К о д о п е р а ц и и</p>
 <p>Параметр операции определяет, какую Btrieve-функцию вы хотите выполнить. Задаваемая Вами переменная должна быть целого типа и может быть одним из допустимых кодов Btrieve-операции, описанных в Главе 6 этого руководства. (также смотрите Приложение A для полного списка этих кодов). ваша прикладная программа должна задавать правильный код операции при каждом обращении к Btrieve. Btrieve Record Manager никогда не изменяет код.</p>
@@ -2239,7 +2239,7 @@
 <p>Б л о к у п р а в л е н и я ф а й л о м</p>
 <p>BASIC размещает область "Блока управления файлом" (FCB) при выполнении оператора OPEN. Btrieve использует этот блок для поддержки своей позиционной информации и передачи записей данных. Поэтому Ваша прикладная программа должна передавать адрес FCB для Record Manager при каждом обращении. Ваша прикладная программа должна использовать разные адреса FCB для каждого отдельного Btrieve-файла, к которому она имеет доступ.</p>
 <p>Для определения адреса FCB Ваша прикладная программа на Бейсике должна использовать оператор VARPTR. В следующем примере BASIC возвращает адрес FCB для файла, открытого как #1, в целую переменную FCB.ADDR%.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FCB.ADDR% = VARPTR(#1)</p>
+<p>               FCB.ADDR% = VARPTR(#1)</p>
 <p>Смотрите руководство по BASIC для полного описания оператора VARPTR.</p>
 <p>Д л и н а б у ф е р а д а н н ы х</p>
 <p>Для любой операции, использующей буфер данных, Ваша прикладная программа должна передавать длину буфера данных как целую переменную. Для файла с записями фиксированной длины этот параметр должен показывать длину записи, заданную при создании файла. Когда Вы добавляете записи или корректируете файл с записями переменной длины, этот параметр должен равняться длине записи, заданной при создании файла, плюс количество символов включенных за фиксированной частью записи. Когда Вы ищете записи переменной длины, этот параметр должен быть достаточно большим для размещения самой длинной записи файла.</p>
@@ -2264,26 +2264,26 @@
 <p>125 KEY.BUF$ = SPACEUNDEF</p>
 <p>130 CALL BTRV(OP%,STATUS%,FCB.ADDR%,BUF.LEN%,KEY.BUF$,KEY.NUM%) 140 IF STATUS% &lt;&gt; O THEN</p>
 <p>PRINT "Ошибка открытия файла. Статус =", STATUS% : END 150 PRINT "Первая запись файла",NAM$,STREET$,CITY$,STATE$,ZIP$</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Рисунок 5.2</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve-вызов из BASIC</p>
+<p>                      Рисунок 5.2</p>
+<p>                 Btrieve-вызов из BASIC</p>
 <p>СВЯЗЬ BTRIVE И PASCAL</p>
 <p>Для доступа к Btrieve-файлам прикладная программа на Паскале должна задать BTRV как целую функцию. Когда Ваша прикладная программа вызывает эту функцию, она выполняет различные типы доступа к файлу в зависимости от заданных параметров. Интерфейс Паскаля взаимодействует с Btrieve Record Manager. Вы должны загрузить Record Manager, резидентную в памяти программу на ассемблере, до запуска Вашей прикладной программы.</p>
 <p>Объявите Btrieve-функцию как внешнюю для IBM (или Microsoft) Pascal. Btrieve обеспечивает маленькой программой на ассемблере которую вы можете связать с Вашей прикладной программой на Паскале как внешнюю функцию. Для Turbo Pascal Btrieve обеспечивает исходный код интерфейса таким образом, что вы можете включить его с Вашей программой на Паскале для компиляции.</p>
 <p>Программная дискета Btrieve содержит файл, требуемый для включения в Ваш исходный файл на Паскале. Для IBM Pascal файл содержит объявление внешней функции для BTRV. Для Turbo Pascal файл содержит код всего Btrieve-интерфейса.</p>
 <p>Ваша прикладная программа получает доступ ко всем Btrieve-файлам, вызывая функцию BTRV. Это -целая функция, возвращающая статус операции. Если вы используете IBM (или Microsoft) Pascal, используйте метакоманду $INCLUDE для подключения файла BEXTERN114S. пример ниже показывает как определена внешняя функция BTRV:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; function BTRV ( &nbsp; &nbsp; OP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;vars POS_BLOCK &nbsp; &nbsp;: string;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;vars DATA_BUFFER &nbsp;: string;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;vars DATA_LEN &nbsp; &nbsp; : integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;vars KEY_BUFFER &nbsp; : string;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;KEY_NUMBER &nbsp; : integer ) :integer; extern;</p>
+<p>          function BTRV (     OP           : integer;</p>
+<p>                   vars POS_BLOCK    : string;</p>
+<p>                   vars DATA_BUFFER  : string;</p>
+<p>                   vars DATA_LEN     : integer;</p>
+<p>                   vars KEY_BUFFER   : string;</p>
+<p>                     KEY_NUMBER   : integer ) :integer; extern;</p>
 <p>Если вы используете Turbo Pascal, применяйте команду $I для подключения файла TURXBTRV114S. Btrieve-функция определяется следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; function BTRV ( &nbsp; &nbsp; OP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var &nbsp;POS_BLOCK,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var &nbsp;DATA_BUFFER;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var &nbsp;DATA_LEN &nbsp; &nbsp; : integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var &nbsp;KEY_BUFFER;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;KEY_NUMBER &nbsp; : integer ) :integer;</p>
+<p>          function BTRV (     OP           : integer;</p>
+<p>                   var  POS_BLOCK,</p>
+<p>                   var  DATA_BUFFER;</p>
+<p>                   var  DATA_LEN     : integer;</p>
+<p>                   var  KEY_BUFFER;</p>
+<p>                     KEY_NUMBER   : integer ) :integer;</p>
 <p>КОМПОНОВКА ПРИКЛАДНОЙ PASCAL-ПРОГРАММЫ С BTRIEVE</p>
 <p>Если вы используете IBM (или Microsoft) Pascal, вы должны подключить файл PASXBTRV.OBJ к редактору связей Паскаля. Для компановки объектного файла Паскаля (PASPROG) с интерфейсом IBM Pascal Вы должны ответить на подсказку редактора связей следующим образом:</p>
 <p>Object Modules[.OBJ]:pasprog+pasxbtrv</p>
@@ -2315,110 +2315,110 @@
 <p>файла. Поэтому Ваша прикладная программа должна сообщить Record Manager путь доступа для данной операции. Параметр номера ключа - целая переменная со значением от 0 до 23, где 0 -сегмент первого ключа. определенного для файла. Record Manager никогда не повторяет этот параметр.</p>
 <p>ПРИМЕР СПИСКА ПАРАМЕТРОВ</p>
 <p>IBM (или Microsoft) Pascal-программа, показанная ниже на Рисунке 5.3, открывает Btrieve-файл и ищет запись данных, соответствующую первому значению ключа 0 - полю имени.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; const</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B_GET_FST = 12;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B_OPEN = 0;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; type</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ADDRESS_REc = record</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;case integer of</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1: (NAME &nbsp; &nbsp; &nbsp;: string(30);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;STREET &nbsp; &nbsp; : string(30);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CITY &nbsp; &nbsp; &nbsp; : string(30);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;STATE &nbsp; &nbsp; &nbsp;: string(2);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ZIP &nbsp; &nbsp; &nbsp; &nbsp;: string(5));</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2: (ENTIRE &nbsp; &nbsp;: string(98));</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;end;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; var</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DATA_BUF &nbsp; &nbsp; &nbsp; &nbsp; : ADDRESS.REC;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DB_LEN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FILE_NAME &nbsp; &nbsp; &nbsp; &nbsp;: string(14);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KEY_BUF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: string(30);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; POS_BLOCK &nbsp; &nbsp; &nbsp; &nbsp;: string(128);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; begin</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FILE_NAME :='B:ADDRESS.BTR';</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS :=BTRV(B_OPEN,POS_BLOCK,DATA_BUF.ENTIRE,DB_LEN,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FILE_NAME,0);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if STATUS &lt;&gt; O then</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; begin</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;writelen(OUTPUT,'Ошибка открытия файла. Статус =',</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS); return;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;end;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DB_LEN :=sizeof(ADDRESS_REC);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS :=BTRV(B_GET_FST,POS_BLOCK,DATA_BUF.ENTIRE,DB_LEN,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KEY_BUF,0);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if STATUS &lt;&gt; O then</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; begin</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;writelen(OUTPUT,'Ошибка открытия файла. Статус =',</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;writelen(OUTPUT,'Первая запись файла',DATA_BUF.ENTIRE);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; end.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Рисунок 5.3</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Обращение к Btrieve из IBM PAscal</p>
+<p>          const</p>
+<p>            B_GET_FST = 12;</p>
+<p>            B_OPEN = 0;</p>
+<p>          type</p>
+<p>            ADDRESS_REc = record</p>
+<p>           case integer of</p>
+<p>            1: (NAME      : string(30);</p>
+<p>               STREET     : string(30);</p>
+<p>               CITY       : string(30);</p>
+<p>               STATE      : string(2);</p>
+<p>               ZIP        : string(5));</p>
+<p>            2: (ENTIRE    : string(98));</p>
+<p>           end;</p>
+<p>          var</p>
+<p>            DATA_BUF         : ADDRESS.REC;</p>
+<p>            DB_LEN           : integer;</p>
+<p>            FILE_NAME        : string(14);</p>
+<p>            KEY_BUF          : string(30);</p>
+<p>            POS_BLOCK        : string(128);</p>
+<p>            STATUS           : integer;</p>
+<p>          begin</p>
+<p>            FILE_NAME :='B:ADDRESS.BTR';</p>
+<p>            STATUS :=BTRV(B_OPEN,POS_BLOCK,DATA_BUF.ENTIRE,DB_LEN,</p>
+<p>                    FILE_NAME,0);</p>
+<p>            if STATUS &lt;&gt; O then</p>
+<p>                begin</p>
+<p>             writelen(OUTPUT,'Ошибка открытия файла. Статус =',</p>
+<p>                      STATUS); return;</p>
+<p>             end;</p>
+<p>            DB_LEN :=sizeof(ADDRESS_REC);</p>
+<p>            STATUS :=BTRV(B_GET_FST,POS_BLOCK,DATA_BUF.ENTIRE,DB_LEN,</p>
+<p>                    KEY_BUF,0);</p>
+<p>            if STATUS &lt;&gt; O then</p>
+<p>                begin</p>
+<p>             writelen(OUTPUT,'Ошибка открытия файла. Статус =',</p>
+<p>                      STATUS);</p>
+<p>            else</p>
+<p>             writelen(OUTPUT,'Первая запись файла',DATA_BUF.ENTIRE);</p>
+<p>          end.</p>
+<p>                     Рисунок 5.3</p>
+<p>                Обращение к Btrieve из IBM PAscal</p>
 <p>Рисунок 5.4 показывает ту же самую программу, написанную на Turbo Pascal. Это единственный пример для Turbo Pascal в этом руководстве. Все другие примеры приведены для IBM (Microsoft) Pascal.</p>
 <p>На рисунке 5.4 прикладная программа использует символьные массивы вместо строк для полей в буфере данных и буфере ключа, потому что Turbo Pascal хранит байт двоичной длины в первой позиции строкового поля при инициализации поля. Если Вы пытаетесь использовать такое значение как ключ Btrieve-файла без определения его как l-строки, результат будет непредсказуем. Когда Btrieve сравнивает значения ключей при случайном или последовательном поиске, он сравнивае их байт за байтом от абсолютного базиса. Байт длины рассматривается как часть значения вместо индикатора длины, пока ключ не будет определен как l-строка.</p>
 <p>Хотя пример на Рисунке 5.4 использует переменные записи для параметров блока позиции, буфера данных и буфера ключа, Btrieve не требует этого от Вас. Этот пример просто иллюстрирует один из способов написания программы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; const</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B_GET_FST = 12;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B_OPEN = 0;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; type</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ADDRESS_REC = record</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{Structure of address file entry}</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;case integer of</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1: (NAME &nbsp; &nbsp; &nbsp;: array[1..30] of char;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;STREET &nbsp; &nbsp; : array[1..30] of char;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CITY &nbsp; &nbsp; &nbsp; : array[1..30] of char;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;STATE &nbsp; &nbsp; &nbsp;: array[1..2] of char;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ZIP &nbsp; &nbsp; &nbsp; &nbsp;: array[1..5] of char;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2: (START &nbsp; &nbsp; : integer);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;end;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FILE_NAME = record</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; case integer of</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1:(VALUE &nbsp; : array[1..14] of char);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2:(START &nbsp; : integer);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KEY_BUF = record</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; case integer of</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1:(VALUE &nbsp; : array[1..30] of char);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2:(START &nbsp; : integer);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; var</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DATA_BUF &nbsp; &nbsp; &nbsp; &nbsp; : ADDRESS.REC;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DB_LEN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FNAME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: FILE_NAME;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KBUF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : KEY_BUF;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; POS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: record</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; case integer of</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1:(START &nbsp; : integer);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2:(BLK &nbsp; &nbsp; :array[1..128] of byte);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: integer;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; {$I TURXBTRV119S}</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; begin</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FNAME.VALUE :='B:ADDRESS.BTR';</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS :=BTRV(B_OPEN,POS_START,DATA_BUF.START,DB_LEN,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FNAME.START,0);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if STATUS &lt;&gt; O then</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;writelen(OUTPUT,'Ошибка открытия файла. Статус =',</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;begin</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DB_LEN :=sizeof(ADDRESS_REC);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS :=BTRV(B_GET_FST,POS.START,DATA_BUF.START,DB_LEN,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KBUF.STAT,0);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if STATUS &lt;&gt; O then</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;writelen(OUTPUT,'Ошибка открытия файла. Статус =',</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; STATUS)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;writelen(OUTPUT,'Первая запись файла',DATA_BUF.NAME,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DATA_BUF.STREET,DATA_BUF.CITY,DATA_BUF.STATE,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DATA_BUF.ZIP);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; end.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Рисунок 5.4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Обращение к Btrieve из Turbo Pascal</p>
+<p>          const</p>
+<p>            B_GET_FST = 12;</p>
+<p>            B_OPEN = 0;</p>
+<p>          type</p>
+<p>            ADDRESS_REC = record</p>
+<p>           {Structure of address file entry}</p>
+<p>           case integer of</p>
+<p>            1: (NAME      : array[1..30] of char;</p>
+<p>               STREET     : array[1..30] of char;</p>
+<p>               CITY       : array[1..30] of char;</p>
+<p>               STATE      : array[1..2] of char;</p>
+<p>               ZIP        : array[1..5] of char;</p>
+<p>            2: (START     : integer);</p>
+<p>           end;</p>
+<p>            FILE_NAME = record</p>
+<p>            case integer of</p>
+<p>               1:(VALUE   : array[1..14] of char);</p>
+<p>               2:(START   : integer);</p>
+<p>            end;</p>
+<p>            KEY_BUF = record</p>
+<p>            case integer of</p>
+<p>               1:(VALUE   : array[1..30] of char);</p>
+<p>               2:(START   : integer);</p>
+<p>            end;</p>
+<p>          var</p>
+<p>            DATA_BUF         : ADDRESS.REC;</p>
+<p>            DB_LEN           : integer;</p>
+<p>            FNAME            : FILE_NAME;</p>
+<p>            KBUF             : KEY_BUF;</p>
+<p>            POS              : record</p>
+<p>            case integer of</p>
+<p>               1:(START   : integer);</p>
+<p>               2:(BLK     :array[1..128] of byte);</p>
+<p>            end;</p>
+<p>            STATUS           : integer;</p>
+<p>            I                : integer;</p>
+<p>          {$I TURXBTRV119S}</p>
+<p>          begin</p>
+<p>            FNAME.VALUE :='B:ADDRESS.BTR';</p>
+<p>            STATUS :=BTRV(B_OPEN,POS_START,DATA_BUF.START,DB_LEN,</p>
+<p>                    FNAME.START,0);</p>
+<p>            if STATUS &lt;&gt; O then</p>
+<p>             writelen(OUTPUT,'Ошибка открытия файла. Статус =',</p>
+<p>                      STATUS)</p>
+<p>            else</p>
+<p>             begin</p>
+<p>            DB_LEN :=sizeof(ADDRESS_REC);</p>
+<p>            STATUS :=BTRV(B_GET_FST,POS.START,DATA_BUF.START,DB_LEN,</p>
+<p>                    KBUF.STAT,0);</p>
+<p>            if STATUS &lt;&gt; O then</p>
+<p>             writelen(OUTPUT,'Ошибка открытия файла. Статус =',</p>
+<p>                      STATUS)</p>
+<p>            else</p>
+<p>             writelen(OUTPUT,'Первая запись файла',DATA_BUF.NAME,</p>
+<p>                      DATA_BUF.STREET,DATA_BUF.CITY,DATA_BUF.STATE,</p>
+<p>                   DATA_BUF.ZIP);</p>
+<p>            end;</p>
+<p>          end.</p>
+<p>                     Рисунок 5.4</p>
+<p>                Обращение к Btrieve из Turbo Pascal</p>
 <p>СВЯЗЬ BTRIVE И C</p>
 <p>Btrieve-дискета содержит интерфейс для Microsoft и Latice C и для других компиляторов C. Формат обращений к Btrieve идентичен для всех. Связь с другими компиляторами C смотрите в Приложении F которое описывает, как связать Btrieve из ассемблера.</p>
 <p>Ваша Btrieve программная дискета содержит исходный код для каждого из этих интерфейсов. Весь C-интерфейс написан на C.</p>
@@ -2432,13 +2432,13 @@
 <p>Ваша прикладная программа выполняет обращения к Btrieve через целую функцию BTRV. Результат функции всегда целое значение, соответствующее одному из кодов статуса, перечисленных в</p>
 <p>Приложении B. После вызова Btrieve Ваша прикладная программа должна всегда проверять значение переменной статуса. Статус 0 показывает на успешное выполнение операции. Ваша прикладная программа должна быть способна распознавать и принимать решения по ненулевым статусам.</p>
 <p>Функция BTRV ожидает параметры следующего типа:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int BTRV(OP,POS_BLK,DATA_BUF,BUF_LEN,KEY_BUF,KEY_NUM)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;int &nbsp; OP; &nbsp; &nbsp; &nbsp; &nbsp; /* код операции */</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp;POS_BLK[]; &nbsp;/* блок позиции */</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp;DATA_BUF[]; /* буфер данных */</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;int &nbsp; *BUF_LEN; &nbsp; /* длина буфера данных */</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp;KEY_BUF[]; &nbsp;/* буфер ключа */</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;int &nbsp; KEY_NUM; &nbsp; &nbsp;/* номер ключа */</p>
+<p>            int BTRV(OP,POS_BLK,DATA_BUF,BUF_LEN,KEY_BUF,KEY_NUM)</p>
+<p>               int   OP;         /* код операции */</p>
+<p>               char  POS_BLK[];  /* блок позиции */</p>
+<p>               char  DATA_BUF[]; /* буфер данных */</p>
+<p>               int   *BUF_LEN;   /* длина буфера данных */</p>
+<p>               char  KEY_BUF[];  /* буфер ключа */</p>
+<p>               int   KEY_NUM;    /* номер ключа */</p>
 <p>Хотя при каждом обращении требуются все параметры, Btrieve не использует все параметры для каждой операции. В некоторых случаях Btrieve игнорирует их значение. Более детальное описание параметров смотрите в Главе 5 этого руководства. Следующие разделы описывают каждый параметр.</p>
 <p>К о д о п е р а ц и и</p>
 <p>Параметр операции определяет, какой тип Btrieve-функции Вы хотите выполнить. Могут быть операции чтения, записи, удаления или корректировки. Ваша прикладная программа должна быть способна задавать правильный код операции при каждом обращении к Btrieve. Record Manager никогда не изменяет код операции. Задаваемая Вами переменная должна быть целого типа и может быть одним из допустимых кодов операций, описанных в Главе 6. Приложение A содержит полный список этих кодов.</p>
@@ -2461,30 +2461,30 @@
 <p>#define B_OPEN 0</p>
 <p>#define B_FIRST 12</p>
 <p>main(){</p>
-<p>  &nbsp; &nbsp; &nbsp; struct ADDR_REC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/* Структура записи адреса в файле*/</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp;NAME[30];</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp;STREET[30];</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp;CITY[30];</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp;STATE[2];</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;char &nbsp;ZIP[5];</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;};</p>
+<p>        struct ADDR_REC          /* Структура записи адреса в файле*/</p>
+<p>            {</p>
+<p>               char  NAME[30];</p>
+<p>               char  STREET[30];</p>
+<p>               char  CITY[30];</p>
+<p>               char  STATE[2];</p>
+<p>               char  ZIP[5];</p>
+<p>             };</p>
 <p>struct ADDR_REC ADDR_BUF;</p>
 <p>int DB_LEN;</p>
 <p>char KEY_BUF[30];</p>
 <p>char POS_BLK[128];</p>
 <p>int STATUS;</p>
 <p>STATUS =BTRV(B_OPEN,POS_BLK,&amp;ADDR_BUF,&amp;DB_LEN,"ADDRESS.BTR",0); if (STATUS != O)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; {</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Ошибка открытия файла. Статус = %d", STATUS);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;exit(0);</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; }</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;DB_LEN = sizeof(ADDR_BUF);</p>
+<p>          {</p>
+<p>             print("Ошибка открытия файла. Статус = %d", STATUS);</p>
+<p>             exit(0);</p>
+<p>          }</p>
+<p>           DB_LEN = sizeof(ADDR_BUF);</p>
 <p>STATUS = BTRV(B_FIRST,POS_BLK,&amp;ADDR_BUF,&amp;DB_LEN,KEY_BUF,0); if (STATUS != O)</p>
 <p>print("Ошибка открытия файла. Статус = %d", STATUS); else</p>
 <p>print("Первая запись файла: %.97s",&amp;ADDR_BUF); };</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Рисунок 5.6</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Обращение к Btrieve из C</p>
+<p>                     Рисунок 5.6</p>
+<p>                  Обращение к Btrieve из C</p>
 <p>СВЯЗЬ BTRIVE И АCСЕМБЛЕРА</p>
 <p>Если Вы используете ассемблер или язык программирования, для которого нет интерфейса на Btrieve-дискете, Вы можете создать интерфейс, применяя ассемблер. Программа связи Btrieve с ассемблером требует выполнения трех основных шагов:</p>
 <p>  * Хранения Btrieve-параметров в памяти в формате, ожидаемом Btrieve Record Manager</p>
@@ -2493,39 +2493,39 @@
 <p>ХРАНЕНИЕ ПАРАМЕТРОВ</p>
 <p>Предыдущие разделы этой главы описывали только семь Btrieve- параметров: статус, код операции, блок позиции, буфер данных, длина буфера данных, буфер ключа и номер ключа. (BASIC-интерфейс объединяет блок позиции и буфер данных в один параметр - FCB. Паскаль и C интерфейс возвращают код статуса как значение функции.)</p>
 <p>В действительности Record Manager ожидает десять параметров. Программы интерфейса с языками, обеспечиваемые Btrieve, извлекают три параметра до передачи управления Record Manager. Для создания на ассемблере своего собственного интерфейса с Btrieve Вы должны проинициализировать все десять параметров. Следующий рисунок показывает все десять параметров Btrieve и их формат.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------------T----------T-----------------------------&#172;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; N параметра &#166; Смещение &#166; &nbsp; &nbsp; &nbsp; &nbsp;Содержание &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; 0 &nbsp; &nbsp;&#166; &nbsp;смещение буфера данных &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;сегмент &nbsp;буфера данных &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; 4 &nbsp; &nbsp;&#166; &nbsp;длина &nbsp; &nbsp;буфера данных &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; 6 &nbsp; &nbsp;&#166; &nbsp;смещение позиц.информации &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;сегмент &nbsp;позиц.информации &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; 10 &nbsp; &#166; &nbsp;смещение FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;сегмент &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; 14 &nbsp; &#166; &nbsp;код операции &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; 16 &nbsp; &#166; &nbsp;смещение буфера ключа &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;сегмент &nbsp;буфера ключа &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; 7,8 &nbsp; &nbsp; &#166; &nbsp; &nbsp; 20 &nbsp; &#166; &nbsp;длина ключа &nbsp;| номер ключа &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;9 &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; 22 &nbsp; &#166; &nbsp;смещение статуса &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;сегмент &nbsp;статуса &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-------------+----------+-----------------------------+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;10 &nbsp; &nbsp; &#166; &nbsp; &nbsp; 26 &nbsp; &#166; &nbsp;ID интерфейса &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L-------------+----------+------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Рисунок 5.7</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Структура Btrieve-параметров</p>
+<p>           --------------T----------T-----------------------------&#172;</p>
+<p>           &#166; N параметра &#166; Смещение &#166;        Содержание           &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;      1      &#166;     0    &#166;  смещение буфера данных     &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;             &#166;          &#166;  сегмент  буфера данных     &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;      2      &#166;     4    &#166;  длина    буфера данных     &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;      3      &#166;     6    &#166;  смещение позиц.информации  &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;             &#166;          &#166;  сегмент  позиц.информации  &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;      4      &#166;     10   &#166;  смещение FCB               &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;             &#166;          &#166;  сегмент  FCB               &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;      5      &#166;     14   &#166;  код операции               &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;      6      &#166;     16   &#166;  смещение буфера ключа      &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;             &#166;          &#166;  сегмент  буфера ключа      &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;     7,8     &#166;     20   &#166;  длина ключа  | номер ключа &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;      9      &#166;     22   &#166;  смещение статуса           &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;             &#166;          &#166;  сегмент  статуса           &#166;</p>
+<p>           +-------------+----------+-----------------------------+</p>
+<p>           &#166;      10     &#166;     26   &#166;  ID интерфейса              &#166;</p>
+<p>           L-------------+----------+------------------------------</p>
+<p>                     Рисунок 5.7</p>
+<p>                 Структура Btrieve-параметров</p>
 <p>До того, как Вы сможете обратиться к Btrieve, Вы должны проинициализировать область данных, содержащую все десять параметров, перечисленных на Рисунке 5.1. Храните смещение этой области данных в регистре DX. Btrieve ожидает адрес блока параметров в DS:DX, когда он получает управление.</p>
 <p>ОПИСАНИЕ ПАРАМЕТРОВ</p>
 <p>Следующие разделы описывают исе десять параметров, ожидаемых Btrieve при использовании программы интерфейса на ассемблере.</p>
@@ -2555,22 +2555,22 @@
 <p>Как только параметры проинициализированы, проверьте, что Record Manager загружен, до обращения к нему. Когда Record Manager загружен, он хранит точку входа в векторе прерываний 07BH. Удостоверьтесь, что слово вектора прерывания 07BH проинициализировано значением 033H, чтобы интерфейс мог определить, загружен ли Record Manager.</p>
 <p>ВЫЗОВ RECORD MANAGER</p>
 <p>После того, как Вы сохранили адрес Btrieve-параметров в DX и проверили, что Record Manager загружен, Вы готовы к вызову Btrieve. выполните прерывание 07BH и Record Manager выполнит Ваш запрос. Когда операция выполнена, Record Manager вернет управление в Вашу программу по инструкции, следующей за прерыванием. Следующий пример показывает программу, которая проверяет загружен ли Record Manager изатем выполняет прерывание.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; BTR_ERR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EQU 20</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; BTR_VECTOR &nbsp; &nbsp; &nbsp; &nbsp;EQU 07BH*4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PUSH DS</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SUB &nbsp;BX,BX &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ;Очистка BX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MOV &nbsp;DS,BX &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ;DS=&gt;абсолютный 0</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CMP &nbsp;WORD PTR BTR_VECTOR[BX],033H &nbsp;;Был ли Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; инициализирован</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; POP &nbsp;DS</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; JE &nbsp; DO_INT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;;Да - переход на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; выполнение прерывания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MOV &nbsp;STAT,BTR_ERR &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;;Нет - установка</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; статуса 20</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; JMP &nbsp;OUT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ;и возврат к вызывающей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; программе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DO_INT:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; INT &nbsp;07BH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;;Вызов Record Manager</p>
+<p>            BTR_ERR           EQU 20</p>
+<p>            BTR_VECTOR        EQU 07BH*4</p>
+<p>            PUSH DS</p>
+<p>            SUB  BX,BX                         ;Очистка BX</p>
+<p>            MOV  DS,BX                         ;DS=&gt;абсолютный 0</p>
+<p>            CMP  WORD PTR BTR_VECTOR[BX],033H  ;Был ли Btrieve</p>
+<p>                                    инициализирован</p>
+<p>            POP  DS</p>
+<p>            JE   DO_INT                        ;Да - переход на</p>
+<p>                                    выполнение прерывания</p>
+<p>            MOV  STAT,BTR_ERR                  ;Нет - установка</p>
+<p>                                    статуса 20</p>
+<p>            JMP  OUT                           ;и возврат к вызывающей</p>
+<p>                                    программе</p>
+<p>            DO_INT:</p>
+<p>            INT  07BH                          ;Вызов Record Manager</p>
 <p>ИНТЕРФЕЙС OS/2</p>
 <p>NetWare Btrieve включает два интерфейса для C-компилятора OS/2 (C2XBTRV.C и C2FXBTRV.C), которые Вы можете подключать к прикладным прогаммам, запускаемым на рабочих станциях OS/2. Интерфейс C2XBTRV.C - для применения с прикладными программами в защищенном режиме. Интерфейс C2FXBTRV.C - для применения с программами OS/2 FAPI.</p>
 <p>Если Вы используете язык, который может вызывать программу на ассемблере, Вы можете написать на ассемблере интерфейс с Btrieve, используя как руководство любой исходный текст интерфейса. Следующий раздел содержит руководство по применению интерфейса C и создания своего собственного интерфейса на ассемблере.</p>
@@ -2592,26 +2592,26 @@
 <p>Вы должны обеспечить редактору связей библиотеку BTRCALLS.LIB при компановке Ваших объектных файлов. Библиотека содержит записи-определения динамических связей, обеспечивающих соответствие между вызываемой программой и файлом BTRCALLS.DLL. если редактор связей не имеет доступа к BTRCALLS.LIB, он сообщит о недопустимой компановке для точек входа редактора динамических связей.</p>
 <p>------------------------------------</p>
 <p class="note">Примечание:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Для домашних прикладных программ Вы должны использовать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; интерфейс C2FXBTRV.C, скомпоновать Вашу прикладную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; программу и затем запустить утилиту OS/2 BIND. Программа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; BUTIL.EXE - пример прикладной программы FAPI.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -----------------------------------------------------------</p>
+<p>            Для домашних прикладных программ Вы должны использовать</p>
+<p>            интерфейс C2FXBTRV.C, скомпоновать Вашу прикладную</p>
+<p>            программу и затем запустить утилиту OS/2 BIND. Программа</p>
+<p>            BUTIL.EXE - пример прикладной программы FAPI.</p>
+<p>            -----------------------------------------------------------</p>
 <p>ИНТЕРФЕЙС С BROUTER</p>
 <p>Если Вы создаете VAP, использующий Btrieve-файлы, Вы должны подключить интерфейс с BROUTER к Вашей программе. Следуйте процедурам, описанным в разделе "Связь Btrieve с ассемблером" со следующими дополнениями:</p>
 <p>  * Запрашивайте вызов функции "Get Interrupt Vector" для определения, загружен ли BROUTER.</p>
 <p>  * Сохраните уникальный номер ID клиента в регистре AX до выполнения прерывания 7B.</p>
 <p>  * Идентифицируйте каждую рабочую станцию, имеющую доступ к</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Вашему VAP, уникальным 2-байтовым номером ID клиента. Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;должны обеспечить этот номер для BROUTER для целей процессов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;парралелизма и транзакций. Удобный метод для создания номера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ID клиента - сохранение номера связи рабочей станции в первом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;байте и уникальное двоичное значение во втором байте.</p>
+<p>           Вашему VAP, уникальным 2-байтовым номером ID клиента. Вы</p>
+<p>           должны обеспечить этот номер для BROUTER для целей процессов</p>
+<p>           парралелизма и транзакций. Удобный метод для создания номера</p>
+<p>           ID клиента - сохранение номера связи рабочей станции в первом</p>
+<p>           байте и уникальное двоичное значение во втором байте.</p>
 <p>  * Идентифицируйте Ваш VAP в BROUTER, используя уникальный 2-сивол, ASCII идентификатор в регистре BX. Этот идентификатор отличает Ваш VAP от всех других VAP, имеющих доступ к BROUTER. Свяжитесь с Novell Development Products Division, чтобы получить идентификатор для Вашего VAP. Адрес Novell Development Products Division:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Novell Development Products Division</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6034 West Courtyard</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Suite 220</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Austin, TX 78730</p>
+<p>                 Novell Development Products Division</p>
+<p>                    6034 West Courtyard</p>
+<p>                     Suite 220</p>
+<p>                    Austin, TX 78730</p>
 <p>Обычно Ваш интерфейс с BROUTER должен выполнить все следующие шаги:</p>
 <p>  * Проверить, загружен ли BROUTER, с помощью выполнения обращения к функции "Get Interrupt Vector".</p>
 <p>  * Сохранить блок Btrieve-параметров в памяти в формате, ожидаемом Record Manager.</p>
@@ -2619,2455 +2619,2455 @@
 <p>  * Сохранить номер ID клиента, который является уникальным для каждой рабочей станции, в регистре AX.</p>
 <p>  * Сохранить уникальный 2-символ, ASCII идентификатор для VAP, в регистре BX.</p>
 <p>  * Выполнить прерывание 7B, которое передает управление из Вашего VAP в BROUTER.</p>
-<p>{[logo.gif]} &nbsp;{[eXclusive Banner Network]}{[GooDoo 120]}</p>
+<p>{[logo.gif]}  {[eXclusive Banner Network]}{[GooDoo 120]}</p>
 <p>{Программы} &#8226;{Железо} &#8226; {Драйверы} &#8226; {Хостинг} &#8226;{Энциклопедия рекламы}</p>
 <p>| {&lt;&lt;} | {&lt;} | {&gt;} | {&gt;&gt;}</p>
 <p>------------------------------------</p>
 <p>ГЛАВА 6. ОПЕРАЦИИ ЗАПИСИ BTRIEVE</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; В этой главе описаны все 36 операций, которые может выполнять</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа при использовании Btrieve. Для каждой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции в этой главе представлена следующая информация:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Назначение операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Таблица, иллюстрирующая значения параметров ожидаемых Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; от Вашей прикладной программы и посылаемых Btrieve в Вашу</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; прикладную программу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Описание действия операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Предварительные условия, которым должна удовлетворять Ваша</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; прикладная программа для успешного выполнения операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Процедура инициализации параметров, требуемых для выполнения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Результаты успешного и ошибочного завершения операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Эффект, оказываемый операцией на Вашу текущую позицию в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Таблица параметров содержит шесть параметров Btrieve, включая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блок позиции и буфер данных. В Бейсике эти два параметра</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; объединены в один FCB параметр в интерфейсе Бейсика. При каждом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вызове Btrieve Ваша прикладная программа должна посылать в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve все параметры, требуемые для используемого Вами языка,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; даже если Btrieve не ждет значения какого-либо параметра или не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; посылает значение какого-либо параметра.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Параметр статуса не показан в таблице, т.к. Btrieve устанавливает</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; его одним и тем же образом для всех операций. До вызова Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; не ожидает инициализации статуса от Вашей прикладной программы и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; всегда возвращает значение статуса в Вашу прикладную программу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Примеры программ, иллюстрирующие каждую операцию для Pascal,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; COBOL, C и BASIC включены в Приложения C, D, E и F.</p>
+<p>          В этой главе описаны все 36 операций, которые может выполнять</p>
+<p>          Ваша прикладная программа при использовании Btrieve. Для каждой</p>
+<p>          операции в этой главе представлена следующая информация:</p>
+<p>            - Назначение операции.</p>
+<p>            - Таблица, иллюстрирующая значения параметров ожидаемых Btrieve</p>
+<p>              от Вашей прикладной программы и посылаемых Btrieve в Вашу</p>
+<p>              прикладную программу.</p>
+<p>            - Описание действия операции.</p>
+<p>            - Предварительные условия, которым должна удовлетворять Ваша</p>
+<p>              прикладная программа для успешного выполнения операции.</p>
+<p>            - Процедура инициализации параметров, требуемых для выполнения</p>
+<p>              операции.</p>
+<p>            - Результаты успешного и ошибочного завершения операции.</p>
+<p>            - Эффект, оказываемый операцией на Вашу текущую позицию в</p>
+<p>              файле.</p>
+<p>          Таблица параметров содержит шесть параметров Btrieve, включая</p>
+<p>          блок позиции и буфер данных. В Бейсике эти два параметра</p>
+<p>          объединены в один FCB параметр в интерфейсе Бейсика. При каждом</p>
+<p>          вызове Btrieve Ваша прикладная программа должна посылать в</p>
+<p>          Btrieve все параметры, требуемые для используемого Вами языка,</p>
+<p>          даже если Btrieve не ждет значения какого-либо параметра или не</p>
+<p>          посылает значение какого-либо параметра.</p>
+<p>          Параметр статуса не показан в таблице, т.к. Btrieve устанавливает</p>
+<p>          его одним и тем же образом для всех операций. До вызова Btrieve</p>
+<p>          не ожидает инициализации статуса от Вашей прикладной программы и</p>
+<p>          всегда возвращает значение статуса в Вашу прикладную программу.</p>
+<p>          Примеры программ, иллюстрирующие каждую операцию для Pascal,</p>
+<p>          COBOL, C и BASIC включены в Приложения C, D, E и F.</p>
 <p>ABORT TRANSACTION (21)</p>
 <p>(Отмена транзакции)</p>
 <p>Н а з н а ч е н и е :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Abort Transaction отменяет все операции, выполненные с начала</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; активной транзакции и завершает транзакцию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
+<p>          Abort Transaction отменяет все операции, выполненные с начала</p>
+<p>          активной транзакции и завершает транзакцию.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
 <p>О п и с а н и е :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа может выполнять операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Abort Transaction , чтобы завершить прерванную транзакцию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Abort Transaction &nbsp;отменяет все операции, выполненные после</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; начала предыдущей операции Begin Transaction, и завершает текущую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; транзакцию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До выполнения в Вашей прикладной программе операции Abort</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Transaction должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы должны задать файл контроля достоверности транзакции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (используя опцию запуска /T) при загрузке Btrieve&amp;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы должны успешно выполнить операцию Begin Transaction до</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; выполнения операции &nbsp;Abort Transaction.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции &nbsp;Abort Transaction установите код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции 21 до выполнения вызова Btrueve. Btrieve проигнорирует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; все остальные параметры при вызове Abort Transaction.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Abort Transaction завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвратит код статуса равный 0. Все операции Insert(2), Update(3)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; и Delete(4), выполненные с начала транзакции будут удалены из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Abort Transaction завершится с ошибками Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвратит ненулевой код статуса, указывающий на причину ошибки.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Наиболее распространенные ненулевые коды статуса для этой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 36 &nbsp;Нет конфигурации для транзакций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 39 &nbsp;Нет Begin Transaction</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Abort Transaction не оказывает влияния на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционирование.</p>
+<p>          Ваша прикладная программа может выполнять операцию</p>
+<p>          Abort Transaction , чтобы завершить прерванную транзакцию.</p>
+<p>          Abort Transaction  отменяет все операции, выполненные после</p>
+<p>          начала предыдущей операции Begin Transaction, и завершает текущую</p>
+<p>          транзакцию.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До выполнения в Вашей прикладной программе операции Abort</p>
+<p>          Transaction должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Вы должны задать файл контроля достоверности транзакции</p>
+<p>              (используя опцию запуска /T) при загрузке Btrieve&amp;</p>
+<p>            - Вы должны успешно выполнить операцию Begin Transaction до</p>
+<p>              выполнения операции  Abort Transaction.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции  Abort Transaction установите код</p>
+<p>          операции 21 до выполнения вызова Btrueve. Btrieve проигнорирует</p>
+<p>          все остальные параметры при вызове Abort Transaction.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Abort Transaction завершилась успешно, Btrieve</p>
+<p>          возвратит код статуса равный 0. Все операции Insert(2), Update(3)</p>
+<p>          и Delete(4), выполненные с начала транзакции будут удалены из</p>
+<p>          файлов.</p>
+<p>          Если операция Abort Transaction завершится с ошибками Btrieve</p>
+<p>          возвратит ненулевой код статуса, указывающий на причину ошибки.</p>
+<p>          Наиболее распространенные ненулевые коды статуса для этой</p>
+<p>          операции:</p>
+<p>            - 36  Нет конфигурации для транзакций.</p>
+<p>            - 39  Нет Begin Transaction</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Abort Transaction не оказывает влияния на</p>
+<p>          позиционирование.</p>
 <p>BEGIN TRANSACTION (19)</p>
 <p>(Начало транзакции)</p>
 <p>Н а з н а ч е н и е :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Begin Transaction помечает начало множества логически</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; связанных Btrieve-операций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Begin Transaction определяет начало транзакции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Транзакции полезны, когда Вам необходимо выполнить множество</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-операций для записи единственного события и если Ваша</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; база данных несовместима, если все операции не завершены.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Транзакция может включать любое число Btrieve-операций над не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; более чем 12 файлами. Заключая множество операций между Begin и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; End Transaction Вы можете быть уверены, что Btrieve не запишет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; какую-либо из этих операций до тех пор, пока не будут успешно</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; завершены все операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должны быть выполнены следующие предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы должны задать файл контроля достоверности транзакци при</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; конфигурации BSERVER.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Ваша прикладная программа должна закончить или отменить все</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; предыдущие транзакции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения Begin Transaction установите код операции в 19 до</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вызова Btrieve. Btrieve проигнорирует все другие параметры при</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вызове Begin Transaction.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Begin Transaction завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вернет код статуса равный 0.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершится с ошибками, Btrieve вернет ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса. Наиболее распространееные ненулевые коды статуса для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; этой операции:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 36 &nbsp;Нет конфигурации для транзакций</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 37 &nbsp;Транзакция не активна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Begin Transaction не оказывает влияния на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; CLEAR OWNER (30)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Очистить владельца)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Clear Owner удаляет имя владельца, связанное с Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлом.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Clear Owner удаляет имя владельца, присвоенное Вами файлу</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операцией Set Owner. Если предварительно данные были зашифрованы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve расшифрует данные во время операции Clear Owner.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Clear Owner должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Btrieve-файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Имя владельца должно быть присвоено файлу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Не должно быть активных транзакций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Clear Owner установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 30.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции, идентифицированный с файлом, который</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Вы хотите очистить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Clear Owner Btrieve больше не запрашивает имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; владельца при попытке открыть файл. Если Вы предварительно</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; зашифровали данные в Btrieve-файле,когда задавали владельца,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve расшифрует данные во время операции Clear Owner &nbsp;Чем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; больше данных должен расшифровать Btrieve, тем дольше выполняется</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операция Clear Owner.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Наиболее распростанееные ненулевые коды статуса для этой операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 &nbsp;Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;41 &nbsp;Операция недопустима</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Clear Owner не оказывает эффекта на позиционирование.</p>
+<p>          Операция Begin Transaction помечает начало множества логически</p>
+<p>          связанных Btrieve-операций.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Begin Transaction определяет начало транзакции.</p>
+<p>          Транзакции полезны, когда Вам необходимо выполнить множество</p>
+<p>          Btrieve-операций для записи единственного события и если Ваша</p>
+<p>          база данных несовместима, если все операции не завершены.</p>
+<p>          Транзакция может включать любое число Btrieve-операций над не</p>
+<p>          более чем 12 файлами. Заключая множество операций между Begin и</p>
+<p>          End Transaction Вы можете быть уверены, что Btrieve не запишет</p>
+<p>          какую-либо из этих операций до тех пор, пока не будут успешно</p>
+<p>          завершены все операции.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию,</p>
+<p>          должны быть выполнены следующие предварительные условия:</p>
+<p>            - Вы должны задать файл контроля достоверности транзакци при</p>
+<p>              конфигурации BSERVER.</p>
+<p>            - Ваша прикладная программа должна закончить или отменить все</p>
+<p>              предыдущие транзакции.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения Begin Transaction установите код операции в 19 до</p>
+<p>          вызова Btrieve. Btrieve проигнорирует все другие параметры при</p>
+<p>          вызове Begin Transaction.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Begin Transaction завершилась успешно, Btrieve</p>
+<p>          вернет код статуса равный 0.</p>
+<p>          Если операция завершится с ошибками, Btrieve вернет ненулевой код</p>
+<p>          статуса. Наиболее распространееные ненулевые коды статуса для</p>
+<p>          этой операции:</p>
+<p>            - 36  Нет конфигурации для транзакций</p>
+<p>            - 37  Транзакция не активна</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Begin Transaction не оказывает влияния на</p>
+<p>          позиционирование.</p>
+<p>          CLEAR OWNER (30)</p>
+<p>          (Очистить владельца)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Clear Owner удаляет имя владельца, связанное с Btrieve-</p>
+<p>          файлом.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;      &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;    x    &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Clear Owner удаляет имя владельца, присвоенное Вами файлу</p>
+<p>          операцией Set Owner. Если предварительно данные были зашифрованы</p>
+<p>          Btrieve расшифрует данные во время операции Clear Owner.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию</p>
+<p>          Clear Owner должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Btrieve-файл должен быть открыт.</p>
+<p>            - Имя владельца должно быть присвоено файлу.</p>
+<p>            - Не должно быть активных транзакций.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Clear Owner установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции в 30.</p>
+<p>            - Передайте блок позиции, идентифицированный с файлом, который</p>
+<p>              Вы хотите очистить</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          После операции Clear Owner Btrieve больше не запрашивает имя</p>
+<p>          владельца при попытке открыть файл. Если Вы предварительно</p>
+<p>          зашифровали данные в Btrieve-файле,когда задавали владельца,</p>
+<p>          Btrieve расшифрует данные во время операции Clear Owner  Чем</p>
+<p>          больше данных должен расшифровать Btrieve, тем дольше выполняется</p>
+<p>          операция Clear Owner.</p>
+<p>          Наиболее распростанееные ненулевые коды статуса для этой операции</p>
+<p>            -  3  Файл не открыт</p>
+<p>            -  41  Операция недопустима</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Clear Owner не оказывает эффекта на позиционирование.</p>
 <p>CLOSE (1)</p>
 <p>(Закрыть)</p>
 <p>Н а з н а ч е н и е :</p>
 <p>Операция Close закрывает Btrieve-файл.</p>
 <p>П р и м е н е н и е п а р а м е т р о в :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;      &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
 <p>О п и с а н и е :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; При завершении Вашей задачей доступа к Btrieve-файлу необходимо</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполнить операцию Close. Эта операция закрывает файл, связанный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; с заданным блоком позиции и отменяет все запреты, наложенные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладной задачей на файл. После операции Close Ваша прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа не может вновь иметь доступ к файлу до объявления</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; другой операции Open для этого файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию Close</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должны быть выполнены следующие предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Btrieve-файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Все транзакции должны быть закончены или отменены.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения этой операции установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Установите код операции в 1.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте достоверный блок позиции для файла, который Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; хотите закрыть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Close завершилась успешно, произойдет следующее:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Блок позиции дя закрытого файла не будет больше достоверным.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа может использовать его для другого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файла или может использовать область данных для других целей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Close завершилась ошибочно, файл останется открытым</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Наиболее распростанееный ненулевой код статуса для этой операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статус 3 (файл не открыт).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Close удаляет всю позиционную информацию, связанную с файлом.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; CREATE (14)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Создать)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Create создает Btrieve-файл с заданным набором</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; характеристик.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; x &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Create позволяет Вам создать Btrieve-файл из Вашей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладной программы. Она выполняет ту же функцию, что и утилита</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; CREATE, описанная в Главе 3. См. Главы 3 и 4 этого руководства</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для дополнительной информации о характеристиках файлов и ключей,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которые требуется задать при создании файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующие разделы описывают как хранить определение Btrieve-файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; в буфере данных. Порядок, в котором должны хранится различные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; спецификации файла и ключей, приведены в таблице. За таблицей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следуют разделы, описывающие как задавать:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Спецификации файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Характеристики ключей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Альтернативну последовательность поиска</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _ Длину буфера данных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve ожидает, что буфер данных будет отформатирован как</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; показано в Таблице 6.1.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; Описание &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;Длина&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +-----------------------+-----+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; длина записи &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; размер страницы &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;спецификации &nbsp; &#166; кол-во индексов &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файла &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; не используется &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; флаги файла &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;4 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; резервное слово &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; размещение &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L-----------------------+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; Описание &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Длина&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +-----------------------T-----+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; позиция ключа &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; длина ключа &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;спецификации &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ключей &nbsp; &nbsp; &nbsp; &#166; флаги ключа &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(повторяются) &nbsp;&#166; не используется &nbsp; &nbsp; &nbsp; &#166; &nbsp;4 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; тип расширенного ключа&#166; &nbsp;4 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; пустое значение &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; зарезервировано &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L-----------------------+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Таблица 6.1</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Структура буфера данных для операции Create</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; С п е ц и ф и к а ц и и &nbsp; ф а й л а . Храните спецификации файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; в первых 16 байтах буфера данных. Байты пронумерованы начиная с 0</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Храните информацию о длине записи, размере страницы и количестве</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индексов как целые. Для создания файла, состоящего только из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данных, установите число индексов в ноль.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы должны разместить "неиспользуемые" и "зарезервированные"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; области буфера данных, даже если Btrieve не использует их в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции Create. Инициализируете зарезервированные области нулем,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; чтобы обеспечить совместимость с будующими версиями Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Установка битов в слове флагов файла задает, допускает ли файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи переменной длины, усечение пробелов или сжатие данных, и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должен ли Btrieve перераспределять дисковое пространство для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла, Используйте два старших бита младшего айта для задания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; границы свободного пространства для страниц переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Биты в слове флагов файла пронумерованы с 0 до 15, начиная с 0</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; бита. Установите биты в соответствии со следующим описанием:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 0 = 1, Btrieve позволит файлу содержать записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 1 = 1, Btrieve усечет пробельные концы в записях</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 2 = 1, Btrieve перераспределит количество страниц,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; заданных Вами в слове распределения.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 3 = 1, Btrieve сожмет данные в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 4 = 1, Btrieve создаст файл, состоящий только из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 6 = 1, Btrieve установит 10% границу свободного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; пространства для страниц записей переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 7 = 1, Btrieve установит 20% границу свободного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; пространства для страниц записей переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 6 = 1 и бит 7 = 1, Btrieve установит 30% границу</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; свободного пространства для страниц записей переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующая таблица показывает двоичное и десятичное представление</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значений флагов файла:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Значения &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Двоичное &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Десятичное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; переменная длина &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00000001 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; усечение пробелов &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00000010 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; перераспределение &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00000100 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; сжатие данных &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00001000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; только ключи &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00010000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10% свободное пространство &nbsp; 01000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;64</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 20% свободное пространство &nbsp; 10000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 128</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 30% свободное пространство &nbsp; 11000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 192</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вам необходимо задать комбинацию из атрибутов файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; добавьте соответствующее значение флага. Например, для задания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла, допускающего записи переменной длины и усечение пробелов,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; инициализируйте флаги файла значением 3 (2+1). Btrieve игнорирует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; флаги усечение пробелов и грницы свободного пространства, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; флаг переменной длины установлен в 0.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вы устанавливаете бит флага перераспределения, используйте</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; слово распределения для хранения целого значения, задающего число</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; страниц, которое Вы хотите перераспределить файлу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Х а р а к т е р и с т и к и &nbsp; к л ю ч а . Поместите характеристики</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключей после блока спецификации файла. Назначьте 16-битовый блок</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; спецификации ключа для каждого сегмента ключа в файле. Код типа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; расширенного ключа и пустой символ имеют длину в 1 байт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Храните информацию для позиции ключа и длины ключа как целые.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Установите флаги ключа для задания атрибутов, нужных Вам для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа, в соответствии со следующим описанием:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 0 = 1, ключ допускает дубликаты.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 1 = 1, ключ - модифицируемый.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 2 = 0 и бит 8 = 0, ключ - строковый.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 2 = 1 и бит 8 = 0, ключ - двоичный.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 3 = 1, ключ имеет пустое значение.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 4 = 1, ключ имеет другой сегмент.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 5 = 1, ключ отсортирован с помощью последовательности</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; альтернативного поиска.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 6 = 1, ключ отсортирован в убывающем порядке.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Бит 7 игнорируется для операции Create.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 8 = 0, ключ - стандартного типа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 8 = 1, ключ - расширенного типа,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 9 = 1, ключ - ручной.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Хотя Btrieve игнорирует бит 7 для операции Create, Вы должны</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; инициализировать его значением 0 при создании файла. Когда Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; объявите операцию Stat (15), Btrieve установит бит 7 в 1, если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключ имеет дополнительный индекс и возвратит флаги ключа в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Следующая таблица показывает двоичные, шестнадцетиричные и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; десятичные значения флагов ключа:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Атрибут &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Двоичное &nbsp; Шестнадцатиричное &nbsp; Десятичное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; двойной &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00000001 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;01 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; модифицируемый &nbsp; &nbsp; &nbsp;00000010 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;02 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; двоичный &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00000100 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;04 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; пустой &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00001000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;08 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; сегментированный &nbsp; &nbsp;00010000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 16</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; альт.посл.поиска &nbsp; &nbsp;00100000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;20 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 32</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; убывающий &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 01000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;40 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 64</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; дополнительный &nbsp; &nbsp; &nbsp;10000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;80 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;128</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; расширенного типа 1 00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 100 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;256</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ручной &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10 00000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 200 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;512</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Присваивайте одни и те же атрибуты двойной, модифицируемый и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пустой для всех сегментов одного и того же ключа. Если Вы задаете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пустой атрибут для ключа, Вы должны присвоить различные пустые</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; характеристики для отдельных сегментов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Атрибут сегментированного ключа - флаг, показывающий что блок</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующего ключа в буфере данных ссылается на следующий сегмент</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; этого же ключа. Кроме того, Вы можете сделать каждый сегмент</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа или возрастающим или убывающим и задать любой тип данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Например, для создания файла с двумя ключами, первый из которых</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; состоит из двух сегментов, а второй - из одного сегмента,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; используйте бит 4 флагов ключа следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - В первом блоке ключей установите бит 4 слова флагов ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; в 1, показывающую что за этим ключом следует определение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; другого ключевого сегмента.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Во втором блоке ключей установите бит 4 слова флагов ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; в 0, показывающий что этот блок ключей определяет последний</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; сегмент первого ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - В третьем блоке ключей установите бит 4 слова флагов ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; в 0, показывающую что второй ключ имеет только один сегмент.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Задайте тип расширенного ключа как двоичное значение в байте 10</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блока спецификации ключей. Значения типов расширенных ключей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; показаны ниже:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Тип &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Значение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;string (строка) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;integer (целое) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;float (с плавающей запятой) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;date (дата) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;time (время) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;decimal (десятичное) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;money (деньги) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;logical (логическое) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 7</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;numeric (числовое) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 8</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;bfloat &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lstring (l-строка) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;zstring (z-строка) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;11</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;unsigned binary (двоичное без знака) &nbsp; &nbsp; &nbsp;14</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;autoincrement (автоинкремент) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 15</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Как и в случае флагов файла Вы можете задать комбинации</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; атрибутов ключей складывая соответствующие им значения флагов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Например, если ключ - расширенного типа, часть сегментированного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа и должен быть отсортирован в убывающем порядке, Вы должны</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; будете хранить 150H (336 десятичное) в слове флагов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Примечание:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Вы можете определить типы расширенного ключа "строка" и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"двоичное без знака" как стандартные типы так и как</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;расширенные типы. Это обеспечивает совместимость с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;прикладными программами, написанными для ранних версий</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve, в то время как в новых прикладных программах</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;допустимо использовать исключительно типы расширенных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; А л ь т е р н а т и в н а я &nbsp;п о с л е д о в а т е л ь н о с т ь</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; п о и с к а . Вы можете задать альтернативную последовательность</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; поиска для сортировки по любому числу ключевых сегментов файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Однако, Вы можете задать только ОДНУ альтернативную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; последовательность поиска для всего файла. Вы можете задать, что</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; некоторые сегменты одного ключа &nbsp;должны быть отсортированы в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; стандартной ASCII последовательности поиска, а другие сегменты</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должны быть отсортированы в альтернативной последовательности.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете задать альтернативную последовательность поиска для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа типа "l-строка", " z-строка" и "строка". Если Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; устанавливаете флаг альтернативной последовательности поиска для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; всех ключей или сегментов ключа в файле, поместите определение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; последовательности поиска непосредственно за последним блоком</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; спецификации ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т.е. актуальная последовательность поиска сама должна следовать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; за блоком спецификации ключей вместо имени файла, содержащего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; эту последовательность. Определение альтернативной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; последовательности поиска состоит из девяти байтов заголовка, за</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которыми следуют 256 символов, как это описано в разделе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; "Альтернативная последовательность поиска" в Главе 4.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Примечание:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Если Вы создаете множество файлов с различными</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;альтернативными последовательностями поиска, используйте</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;разные имена для каждой последовательности.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Д л и н а &nbsp; б у ф е р а &nbsp; д а н н ы х. Длина буфера данных должна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; быть достаточной для включения спецификаций файла, характеристик</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключей и альтернативной последовательности поиска, если она</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; задана. НЕ задавайте длину записи файла в этом параметре.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Например, для создания файла с двумя ключами, каждый из которых</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; имеет по одному сегменту, и с альтернативной последовательностью</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; поиска, буфер данных для операции Create должен иметь длину по</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; крайней мере 313 байтов, как показано ниже:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Спец. &nbsp; &nbsp; Спец. &nbsp; &nbsp; &nbsp; Спец. &nbsp; &nbsp; &nbsp; Альт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файла &nbsp;+ &nbsp;ключа 1 &nbsp;+ &nbsp;ключа 2 &nbsp;+ &nbsp;П-ть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ________________________________________</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16 &nbsp; &nbsp;+ &nbsp; 16 &nbsp; &nbsp; &nbsp;+ &nbsp; &nbsp;16 &nbsp; &nbsp; + &nbsp; 265 &nbsp; &nbsp; = &nbsp;313</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н о м е р &nbsp; к л ю ч а . &nbsp;Вы можете использовать параметр номера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа для того, чтобы задать хотите ли Вы, чтобы Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; предупредил Вас о существовании файла с тем же именем. Задайте</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значение номера ключа следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ НЕ ХОТИТЕ, ЧТОБЫ BTRIEVE СОЗДАВАЛ НОВЫЙ ФАЙЛ ВМЕСТО</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; СУЩЕСТВУЮЩЕГО, установите параметр номера ключа в -1. Если</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файл с тем же самым именем уже существует, Btrieve вернет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ненулевой статус и не будет создавать новый файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ЕСЛИ ВЫ ХОТИТЕ, ЧТОБЫ BTRIEVE СОЗДАВАЛ НОВЫЙ ФАЙЛ ВМЕСТО</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; СУЩЕСТВУЮЩЕГО, ИЛИ ЕСЛИ ВЫ НЕ ХОТИТЕ ПРОВЕРЯТЬ НАЛИЧИЕ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; СУЩЕСТВОВАНИЯ ФАЙЛА, установите параметр номера ключа в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ненулевое значение, предпочтительно в 0.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вы создаете пустой Btrieve-файл вместо ранее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существовавшего Btrieve-файла, будьте уверены, что файл закрыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; перед выполнением операции Create.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Create установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 14.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте спецификации файла, характеристики ключей и все</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; альтернативные последовательности поиска в буфере данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Все значения для спецификации файла и характеристики ключей,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; хранимые в буфере данных, должны быть в двоичном формате.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр номера ключа в -1, если Вы хотите, чтобы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Btrieve предупредил Вас о существовании файла с тем же самым</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; именем. Иначе, установите параметр номера ключа в 0.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте имя файла в буфере ключа. Удостовертесь, что имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файла завершается пробелом или двоичным нулем. Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; задать имя устройства и путь для файла, включая любое число</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; уровней директорий.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно Btrieve предупредит Вас о</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существовании файла с тем же самым именем или создаст новый файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; согласно Вашим спецификациям. Новый файл не будет содержать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записей. Операция Create не открывает файл. Ваша прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа должна выполнить операцию Open до того, как файл станет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; доступен.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась безуспешно, Btrieve вернет ненулевой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; код статуса, информирующий о причине. Наиболее часто встречающие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;2 Ошибка ввода/вывода файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 24 Ошибка размера страницы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 25 Ошибка ввода/вывода при создании</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 26 Число ключей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 27 Неверная позиция ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 28 Неверная длина записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 29 Неверная длина ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 48 Неверное определение альтернативной последовательности</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 49 Ошибка типа ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 59 Файл уже существует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; См. в Приложении B объяснение кодов статуса.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Create не устанавливает какую-либо позиционную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; информацию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; CREATE SUPPLEMENTAL INDEX</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Создание дополнительного индекса)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Create Supplemental Index добавляет дополнительный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индекс в файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp; &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Применяйте операцию Create Supplemental Index для добавления</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индекса в файл в любое время после того, как ббыл создан файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Create Supplemental Index, должны быть выполнены следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Btrieve-файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Количество существующих сегментов ключа в файле должно быть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; меньше или равно следующей формуле:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 24 - (число сегментов, которые надо добавить)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Флаги ключей, позиция и длина нового индекса должны</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; соответствовать файлу, в который Вы добавляете индекс.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Не должно быть активных транзакций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для создания дополнительного индекса установите следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 31.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Пошлите Btrieve блок позиции для файла, в который Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; добавить индекс.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните спецификации ключа для нового индекса в буфере</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; данных. Буфер данных состоит из 16-байтового блока</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; спецификации ключа для каждого сегмента создаваемого Вами</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; дополнительного индекса. Используйте ту же самую структуру</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; как в блоке спецификации ключа, используемом в &nbsp;операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Create (14).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр длины буфера данных равным количеству</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; байтов в буфере данных. Для нового индекса без альтернативной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последовательности поиска используйте следующую формулу для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; определения правильной длины буфера данных:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16 * &nbsp;(число сегментов)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Если новый ключ имеет альтернативную последовательность</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; поиска, используйте следующую формулу для определения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; правильной длины буфера данных:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16 * &nbsp; (число сегментов) + 265</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve немедленно начнет добавлять новый индекс в файл. Время,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуемое для этой операции, зависит от общего числа записей,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которые будут индексированы, размера файла и длины нового индекса.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Номер ключа нового индекса на единицу больше, чем номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; предыдущего самого старшего ключа. Вы можете использовать новый</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индекс для доступа к Вашим данным сразу по завершении операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Btrieve не может создать дополнительный индекс по какой-либо</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; причине, он вернет ненулевой статус показывающий причину и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; отбросит часть дополнительного индекса, которая уже построена.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Страницы файла, размещенные в дополнительном индексе до ошибки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; будут помещены в список свободного пространства файла и будут</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; повторно использованы, когда Вы добавляете записи или создаете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; другой дополнительный индекс.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Наиболее часто встречающие ошибки:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 27 Неверная позиция ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 28 Неверная длина записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 41 Недопустимая операция</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 45 Несуществующие флаги ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 49 Ошибка типа ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 56 Незавершенный индекс</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если во время создания дополнительного индекса отключится питание</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или система перезагрузится, Вы сможете получить доступ к данным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла через другие индексы файла. Однако, Btrieve вернет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевой статус, если Вы попытаетесь получить доступ к данных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; через незавершенный индекс. В этом случае отбросьте незавершенный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индекс с помощью операции Drop Supplemental Index (32) и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; запросите операцию Create Supplemental Index.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Create Supplemental Index не оказывает эффекта на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; DELETE (4)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Удалить)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Delete удаляет существующую запись из Btrieve-файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp; &#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp; &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете удалить существующую запись из файла, используя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операцию Delete. После удаления пространство в файле, где</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; хранилась удаленная запись, помещается в список свободного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пространства.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию Delete</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должны быть выполнены следующие предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл данных должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы не должны обращаться к файлу, содержащему запись для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; удаления, между поиском этой записи и ее удалением.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Delete установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте код операции равный 4.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте Btrieve блок позиции файла, из которого должна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; быть удалена запись.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Проинициализируйте параметр длины буфера данных величиной,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; равной длине удаляемой записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните номер ключа, используемый для поиска записи, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; параметре номера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Delete завершилась успешно, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Полностью удалит запись из файла;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Обновит все индексы ключей, чтобы отразить удаление;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установит длину буфера данных равной длине удаленной записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если невозможно успешно удалить запись, Btrieve возвратит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевой код статуса.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Наиболее часто встречающие ошибки:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 7 Другой номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 8 Неверное позиционирование</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Delete Btrieve удаляет всю существующую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционную информацию и устанавливает позицию в файле</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если существует дубликат, СЛЕДУЮЩЕЙ записью становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; первый дубликат, следующий за удаленной записью. Иначе,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; следующей записью становится первая запись со значением</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключа большим, чем значение ключа удаленной записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если существует дубликат, ПРЕДЫДУЩЕЙ записью становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; предыдущий дубликат с этим значением ключа. Иначе,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; предыдующей записью становится последняя запись данных для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; предыдущего значения ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; DROP SUPPLEMENTAL INDEX (32)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Отбросить дополнительный индекс)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Drop Supplemental Index удаляет дополнительный индекс</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; из существующего Btrieve-файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используйте операцию Drop Supplemental Index для удаления</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; дополнительного индекса из файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Drop Supplemental Index, должны быть выполнены следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Дополнительный индекс должен существовать в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Не должно быть активных транзакций</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для отбрасывания дополнительного индекса установите следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 32.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции Btrieve-файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните номер ключа для дополнительного индекса, который</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Вы хотите отбросить, в параметре номера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Drop Supplemental Index завершилась успешно,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Поместит страницы файла, размещенные для этого индекса, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; список свободного пространства для дальнейшего использования;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Декриментируйте (уменьшите на один) номера ключей всех</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; других дополнительных индексов с номерами ключей старшими,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем отбрасываемый индекс.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция не была успешной, Btrieve возвратит ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса в Вашу прикладную программу. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса для этой операции:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;6 Неверный номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 41 Недопустимая операция</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если процесс прерван во время отбрасывания индекса. Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; получить доступ к данным файла через другие индексы файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve возвратит код статуса 56 (Незавершенный индекс), если Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; попытаетесь получить доступ к файлу через незавершенный индекс. В</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; этом случае запросите вновь операцию Drop Supplemental Index.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Drop Supplemental Index не оказывает эффект на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; END TRANSACTION (20)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Конец транзакции)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; End Transaction завершает транзакцию и делает соответствующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; изменения в файлах данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; End Transaction отмечает завершение набора логически связанных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-операций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; End Transaction, она должна выполнить успешно операцию Begin</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Transaction (19).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции End Transaction установите код операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; равный 20. Btrieve проигнорирует все другие параметры вызова</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; End Transaction.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция End Transaction завершилась успешно, все операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ограниченные этой транзакцией будут записаны в Вашу базу данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа не может отменить транзакцию после</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции End Transaction.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция не была успешной, Btrieve возвратит ненулевой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статус. Наиболее часто встречающийся ненулевой код статуса - код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 38 (Ошибка управления транзакциями файла), которая появляется,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; если файл управления транзакциями был удален или не мог быть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записан по какой-либо причине.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция End Transaction не оказывает эффект на позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; EXTEND (16)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Расширить)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Extend разделяет файл на два логических устройства.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Extend позволяет Вашей прикладной программе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; распространять один Btrieve-файл на второе логическое устройство.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию Extend,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должны быть выполнены следующие предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Btrieve должен иметь доступ к тому, на который будет расширен</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Не должно быть активных транзакций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Extend установите следующие Btrueve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 16.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для расширяемого файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните имя расширяемого файла в буфере ключа. Задайте</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; имя устройства и имя полного пути файла. Завершайте имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; расширяемого файла пробелом или двоичным нулем.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте значение -1 в параметре номера ключа при выполнении</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; операции Extend, если Вы хотите, чтобы Btrieve начал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; немедленно хранить данные в расширяемом файле. Обычно Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; не помещает данные в расширяемый файл до того, как устройство</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; содержащее первоначальный файл не заполнится.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Extend завершилась успешно, Btrieve распространит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл на два логических тома. Для получения доступа к расширенному</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлу пользуйтесь следующим руководством:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Немедленно после расширения файла ваша прикладная задача</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; должна закрыть и открыть вновь файл до того, как она получит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; доступ к расширению.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Как первоначальное устройство так и устройство расширения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; должны бвть в "online", когда Ваша программа получает доступ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; к расширенному файлу. Btrieve должен быть способен найти</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; расширенный файл на заданном Вами логическом устройстве.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - После того, как Вы создали расширенный файл, Вы не можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; перемещать его на другое устройство. Когда Вы расширяете файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Btrieve пишет имя полного пути, заданного для этого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; расштрения в адрес первоначального файла данных. Поэтому</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; каждая рабочая станция должна использовать одно и то же</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; определение устройства для ссылки на устройство, содержащее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; расширяемый файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция не была успешной, Btrieve возвратит ненулевой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статус. Наиболее часто встречающиеся ошибки, возвращаемые</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операцией Extend:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 31 Файл уже расширен</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 32 Ошиббка ввода/выода при расширении</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 34 Невернре имя расширения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Extend не оказывает эффект на позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET DIRECT (23)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить направление)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Direct ищет запись данных, расположенную по заданному</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; физическому адресу в Btrieve-файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Get Direct позволяет Вашей прикладной программе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; искать запись, используя ее физическое расположение в файле</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вместо использования одного из заданных индексных путей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете использовать Get Direct следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы можете искать запись быстрее, используя физическое</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; расположение вместо значения ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы можете использовать операцию Get Direct для поиска</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4-байтового расположения записи, сохранить расположение и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; затем позже использовать Get Direct для возврата</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; непосредственно в это место.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы можете использовать 4-байтовое расположение для поиска</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; записи в цепочке дубликатов без повторного чтения всех</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; записей с начала цепочки.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вы можете изменить текущий путь доступа. Операция</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get Position, следуемая за операцией Get Direct с другим</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; номером ключа, устанавливает позиционирование для текущей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; записи в другом индексном дереве. Get Next возвратит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; следующую запись в файле, опираясь на новый путь доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Direct, должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Ваша прикладная программа должна предварительно найти</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4-байтовое расположение записи, запросив операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get Position.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Direct установите следующие Btrueve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 23.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните 4-байтовую позицию требуемой записи в первых</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; четырех байтах буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте общую длину буфера данных таким образом, чтобы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Btrieve мог определить, войдет ли запись в Ваш буфер.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте путь доступа, для которого должен установить</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; позиционирование Btrieve, в параметре номера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Get Direct завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохранит требуемую запись в буфере данных, переписав</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4-байтовую точку входа в первых четырех байтах.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохранит актуальную длину записи в параметре длины буфера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; данных;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните значение ключа для заданного ключа доступа в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; буфере ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Btrieve не может возвратить требуемую запись, он вернет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевой статус. Наиболее часто встречающиеся ненулевые коды</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 43 Неверный адрес записи данных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Get Direct Btrieve удаляет всю существующую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционную информацию и устанавливает текущую позицию согласно</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданному номеру ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - СЛЕДУЮЩАЯ запись становится следующим дубликатом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; возвращаемого значения ключа. Иначе, она становится первой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; записью для значения ключа большего, чем требуемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ПРЕДЫДУЩАЯ запись становится или предыдущим дубликатом для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; возвращаемого ключа или последним дубликатом значения ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; меньшего, чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET DIRECTORY (18)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить директорию)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Directory ищет текущую директорию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Get Directory возвращает текущую директорию для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданного логического устройства.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа сможет запрсить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Directory непосредственно после загрузки Record Manager.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Буфер ключа должен быть по крайней мере длиной в 65 символов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для поиска текущей директории установите следующие Btrueve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 18.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните номер логического устройства в параметре номера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключа до вызова Btrieve. Задайте устройство A как 1, 2 для B</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; и т.д. Для использования устройства по умолчанию задайте 0.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve возвратит текущую директорию, завершенную двоичным нулем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; в буфере ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Get Directory &nbsp;не оказывает эффект на позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET EQUAL (5)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить равную)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Equal ищет запись, соответствующую заданному значению ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Get Equal, Ваша прикладная программа может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; искать запись, опираясь на значение ключа заданное в буфере</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа сможет запрсить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Equal должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл не может быть файлом, состоящим только из данных без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; определенных индексов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции установите следующие Btrueve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Проинициализируйте код операции значением 5.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте требуемое значение ключа в буфере ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите номер ключа в правильный путь доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Проинициализируйте длину буфера данных значением равным длине</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; записи, которую Вы хотите найти.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Get Equal завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет требуемую запись в буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет длину записи в байтах в параметр длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Get Equal не была успешной,Btrieve вернет ненулевой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; код статуса указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;4 Не найдено значение ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Get Equal Btrieve удаляет всю существующую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционную информацию и устанавливает свою позицию в индексе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, СЛЕДУЮЩАЯ запись становится первым</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; дубликатом возвращаемого значения ключа. Иначе, следующая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запись становится первой записью для значения ключа большего,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем требуемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ПРЕДЫДУЩАЯ запись становится последним дубликатом значения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключа меньшего, чем возвращаемое. Если не существует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; дубликатов, предыдущая запись становится единственной записью</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; для значения ключа меньшего, чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET FIRST (12)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить первую)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get First ищет запись, соответствующую первому значению ключа для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданного пути доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Get First позволяет Вашей прикладной программе искать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; запись, соответствующую первому значению ключа для заданного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; номера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа сможет запрсить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get First должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл не может быть файлом, состоящим только из данных без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; определенных индексов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции установите следующие Btrueve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Проинициализируйте код операции значением 12.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте номер ключа для данного пути доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Get First завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет требуемую запись в буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохранит соответствующее значение ключа в буфере данных;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет длину записи в параметр длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Get First не была успешной, Btrieve вернет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевой код статуса указывающий на причину. Наиболее часто</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; встречающиеся ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;6 Неверный номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Get First Btrieve удаляет всю существующую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционную информацию и устанавливает свою позицию в индексе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ПРЕДЫДУЩАЯ запись указывает за начало файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - СЛЕДУЮЩАЯ запись становится следующим дубликатом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; возвращаемого значения ключа или, если не существует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; дубликатов, первой записью для значения ключа большего, чем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET GREATER (8)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить большую)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Greater ищет запись, соответствующую значению ключа большего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; чем заданное значение ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Get Greater Ваша прикладная программа может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; поднять путь доступа, задавая номер ключа для нахождения первого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значения ключа большего, чем задано в буфере ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Greater, должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл не может быть файлом, состоящим только из данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Greater установите следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 8.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните значение ключа в параметре буфера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр номера ключа в соответствии с правильным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; путем доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
+<p>          При завершении Вашей задачей доступа к Btrieve-файлу необходимо</p>
+<p>          выполнить операцию Close. Эта операция закрывает файл, связанный</p>
+<p>          с заданным блоком позиции и отменяет все запреты, наложенные</p>
+<p>          прикладной задачей на файл. После операции Close Ваша прикладная</p>
+<p>          программа не может вновь иметь доступ к файлу до объявления</p>
+<p>          другой операции Open для этого файла.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию Close</p>
+<p>          должны быть выполнены следующие предварительные условия:</p>
+<p>            - Btrieve-файл должен быть открыт.</p>
+<p>            - Все транзакции должны быть закончены или отменены.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения этой операции установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>             - Установите код операции в 1.</p>
+<p>            - Передайте достоверный блок позиции для файла, который Вы</p>
+<p>              хотите закрыть</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Close завершилась успешно, произойдет следующее:</p>
+<p>            - Блок позиции дя закрытого файла не будет больше достоверным.</p>
+<p>              Ваша прикладная программа может использовать его для другого</p>
+<p>              файла или может использовать область данных для других целей.</p>
+<p>          Если операция Close завершилась ошибочно, файл останется открытым</p>
+<p>          Наиболее распростанееный ненулевой код статуса для этой операции</p>
+<p>          статус 3 (файл не открыт).</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Close удаляет всю позиционную информацию, связанную с файлом.</p>
+<p>          CREATE (14)</p>
+<p>          (Создать)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Create создает Btrieve-файл с заданным набором</p>
+<p>          характеристик.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;   x     &#166;      x     &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;   x     &#166;            &#166;   x  &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Create позволяет Вам создать Btrieve-файл из Вашей</p>
+<p>          прикладной программы. Она выполняет ту же функцию, что и утилита</p>
+<p>          CREATE, описанная в Главе 3. См. Главы 3 и 4 этого руководства</p>
+<p>          для дополнительной информации о характеристиках файлов и ключей,</p>
+<p>          которые требуется задать при создании файла.</p>
+<p>          Следующие разделы описывают как хранить определение Btrieve-файла</p>
+<p>          в буфере данных. Порядок, в котором должны хранится различные</p>
+<p>          спецификации файла и ключей, приведены в таблице. За таблицей</p>
+<p>          следуют разделы, описывающие как задавать:</p>
+<p>            - Спецификации файла</p>
+<p>            - Характеристики ключей</p>
+<p>            - Альтернативну последовательность поиска</p>
+<p>            _ Длину буфера данных</p>
+<p>          Btrieve ожидает, что буфер данных будет отформатирован как</p>
+<p>          показано в Таблице 6.1.</p>
+<p>                            &#166;   Описание            &#166;Длина&#166;</p>
+<p>                            +-----------------------+-----+</p>
+<p>                            &#166; длина записи          &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; размер страницы       &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>             спецификации   &#166; кол-во индексов       &#166;  2  &#166;</p>
+<p>                файла       &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; не используется       &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; флаги файла           &#166;  4  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; резервное слово       &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; размещение            &#166;  2  &#166;</p>
+<p>                            L-----------------------+------</p>
+<p>                            &#166;   Описание             Длина&#166;</p>
+<p>                            +-----------------------T-----+</p>
+<p>                            &#166; позиция ключа         &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; длина ключа           &#166;  2  &#166;</p>
+<p>             спецификации   &#166;-----------------------&#166;-----&#166;</p>
+<p>               ключей       &#166; флаги ключа           &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>             (повторяются)  &#166; не используется       &#166;  4  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; тип расширенного ключа&#166;  4  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; пустое значение       &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; зарезервировано       &#166;  2  &#166;</p>
+<p>                            L-----------------------+------</p>
+<p>                                   Таблица 6.1</p>
+<p>                     Структура буфера данных для операции Create</p>
+<p>          С п е ц и ф и к а ц и и   ф а й л а . Храните спецификации файла</p>
+<p>          в первых 16 байтах буфера данных. Байты пронумерованы начиная с 0</p>
+<p>          Храните информацию о длине записи, размере страницы и количестве</p>
+<p>          индексов как целые. Для создания файла, состоящего только из</p>
+<p>          данных, установите число индексов в ноль.</p>
+<p>          Вы должны разместить "неиспользуемые" и "зарезервированные"</p>
+<p>          области буфера данных, даже если Btrieve не использует их в</p>
+<p>          операции Create. Инициализируете зарезервированные области нулем,</p>
+<p>          чтобы обеспечить совместимость с будующими версиями Btrieve.</p>
+<p>          Установка битов в слове флагов файла задает, допускает ли файл</p>
+<p>          записи переменной длины, усечение пробелов или сжатие данных, и</p>
+<p>          должен ли Btrieve перераспределять дисковое пространство для</p>
+<p>          файла, Используйте два старших бита младшего айта для задания</p>
+<p>          границы свободного пространства для страниц переменной длины.</p>
+<p>          Биты в слове флагов файла пронумерованы с 0 до 15, начиная с 0</p>
+<p>          бита. Установите биты в соответствии со следующим описанием:</p>
+<p>            - Если бит 0 = 1, Btrieve позволит файлу содержать записи</p>
+<p>              переменной длины.</p>
+<p>            - Если бит 1 = 1, Btrieve усечет пробельные концы в записях</p>
+<p>              переменной длины.</p>
+<p>            - Если бит 2 = 1, Btrieve перераспределит количество страниц,</p>
+<p>              заданных Вами в слове распределения.</p>
+<p>            - Если бит 3 = 1, Btrieve сожмет данные в файле.</p>
+<p>            - Если бит 4 = 1, Btrieve создаст файл, состоящий только из</p>
+<p>              ключей.</p>
+<p>            - Если бит 6 = 1, Btrieve установит 10% границу свободного</p>
+<p>              пространства для страниц записей переменной длины.</p>
+<p>            - Если бит 7 = 1, Btrieve установит 20% границу свободного</p>
+<p>              пространства для страниц записей переменной длины.</p>
+<p>            - Если бит 6 = 1 и бит 7 = 1, Btrieve установит 30% границу</p>
+<p>              свободного пространства для страниц записей переменной длины.</p>
+<p>          Следующая таблица показывает двоичное и десятичное представление</p>
+<p>          значений флагов файла:</p>
+<p>              Значения                     Двоичное          Десятичное</p>
+<p>              переменная длина             00000001             1</p>
+<p>              усечение пробелов            00000010             2</p>
+<p>              перераспределение            00000100             4</p>
+<p>              сжатие данных                00001000             8</p>
+<p>              только ключи                 00010000            16</p>
+<p>              10% свободное пространство   01000000            64</p>
+<p>              20% свободное пространство   10000000           128</p>
+<p>              30% свободное пространство   11000000           192</p>
+<p>          Если Вам необходимо задать комбинацию из атрибутов файла.</p>
+<p>          добавьте соответствующее значение флага. Например, для задания</p>
+<p>          файла, допускающего записи переменной длины и усечение пробелов,</p>
+<p>          инициализируйте флаги файла значением 3 (2+1). Btrieve игнорирует</p>
+<p>          флаги усечение пробелов и грницы свободного пространства, если</p>
+<p>          флаг переменной длины установлен в 0.</p>
+<p>          Если Вы устанавливаете бит флага перераспределения, используйте</p>
+<p>          слово распределения для хранения целого значения, задающего число</p>
+<p>          страниц, которое Вы хотите перераспределить файлу.</p>
+<p>          Х а р а к т е р и с т и к и   к л ю ч а . Поместите характеристики</p>
+<p>          ключей после блока спецификации файла. Назначьте 16-битовый блок</p>
+<p>          спецификации ключа для каждого сегмента ключа в файле. Код типа</p>
+<p>          расширенного ключа и пустой символ имеют длину в 1 байт.</p>
+<p>          Храните информацию для позиции ключа и длины ключа как целые.</p>
+<p>          Установите флаги ключа для задания атрибутов, нужных Вам для</p>
+<p>          ключа, в соответствии со следующим описанием:</p>
+<p>            - Если бит 0 = 1, ключ допускает дубликаты.</p>
+<p>            - Если бит 1 = 1, ключ - модифицируемый.</p>
+<p>            - Если бит 2 = 0 и бит 8 = 0, ключ - строковый.</p>
+<p>            - Если бит 2 = 1 и бит 8 = 0, ключ - двоичный.</p>
+<p>            - Если бит 3 = 1, ключ имеет пустое значение.</p>
+<p>            - Если бит 4 = 1, ключ имеет другой сегмент.</p>
+<p>            - Если бит 5 = 1, ключ отсортирован с помощью последовательности</p>
+<p>              альтернативного поиска.</p>
+<p>            - Если бит 6 = 1, ключ отсортирован в убывающем порядке.</p>
+<p>            - Бит 7 игнорируется для операции Create.</p>
+<p>            - Если бит 8 = 0, ключ - стандартного типа.</p>
+<p>            - Если бит 8 = 1, ключ - расширенного типа,</p>
+<p>            - Если бит 9 = 1, ключ - ручной.</p>
+<p>          Хотя Btrieve игнорирует бит 7 для операции Create, Вы должны</p>
+<p>          инициализировать его значением 0 при создании файла. Когда Вы</p>
+<p>          объявите операцию Stat (15), Btrieve установит бит 7 в 1, если</p>
+<p>          ключ имеет дополнительный индекс и возвратит флаги ключа в</p>
+<p>          буфер данных.</p>
+<p>          Следующая таблица показывает двоичные, шестнадцетиричные и</p>
+<p>          десятичные значения флагов ключа:</p>
+<p>            Атрибут             Двоичное   Шестнадцатиричное   Десятичное</p>
+<p>            двойной             00000001            01              1</p>
+<p>            модифицируемый      00000010            02              2</p>
+<p>            двоичный            00000100            04              4</p>
+<p>            пустой              00001000            08              8</p>
+<p>            сегментированный    00010000            10             16</p>
+<p>            альт.посл.поиска    00100000            20             32</p>
+<p>            убывающий           01000000            40             64</p>
+<p>            дополнительный      10000000            80            128</p>
+<p>            расширенного типа 1 00000000           100            256</p>
+<p>            ручной           10 00000000           200            512</p>
+<p>          Присваивайте одни и те же атрибуты двойной, модифицируемый и</p>
+<p>          пустой для всех сегментов одного и того же ключа. Если Вы задаете</p>
+<p>          пустой атрибут для ключа, Вы должны присвоить различные пустые</p>
+<p>          характеристики для отдельных сегментов.</p>
+<p>          Атрибут сегментированного ключа - флаг, показывающий что блок</p>
+<p>          следующего ключа в буфере данных ссылается на следующий сегмент</p>
+<p>          этого же ключа. Кроме того, Вы можете сделать каждый сегмент</p>
+<p>          ключа или возрастающим или убывающим и задать любой тип данных.</p>
+<p>          Например, для создания файла с двумя ключами, первый из которых</p>
+<p>          состоит из двух сегментов, а второй - из одного сегмента,</p>
+<p>          используйте бит 4 флагов ключа следующим образом:</p>
+<p>            - В первом блоке ключей установите бит 4 слова флагов ключа</p>
+<p>              в 1, показывающую что за этим ключом следует определение</p>
+<p>              другого ключевого сегмента.</p>
+<p>            - Во втором блоке ключей установите бит 4 слова флагов ключа</p>
+<p>              в 0, показывающий что этот блок ключей определяет последний</p>
+<p>              сегмент первого ключа.</p>
+<p>            - В третьем блоке ключей установите бит 4 слова флагов ключа</p>
+<p>              в 0, показывающую что второй ключ имеет только один сегмент.</p>
+<p>          Задайте тип расширенного ключа как двоичное значение в байте 10</p>
+<p>          блока спецификации ключей. Значения типов расширенных ключей</p>
+<p>          показаны ниже:</p>
+<p>                          Тип                              Значение</p>
+<p>                   string (строка)                            0</p>
+<p>                   integer (целое)                            1</p>
+<p>                   float (с плавающей запятой)                2</p>
+<p>                   date (дата)                                3</p>
+<p>                   time (время)                               4</p>
+<p>                   decimal (десятичное)                       5</p>
+<p>                   money (деньги)                             6</p>
+<p>                   logical (логическое)                       7</p>
+<p>                   numeric (числовое)                         8</p>
+<p>                   bfloat                                     9</p>
+<p>                   lstring (l-строка)                        10</p>
+<p>                   zstring (z-строка)                        11</p>
+<p>                   unsigned binary (двоичное без знака)      14</p>
+<p>                   autoincrement (автоинкремент)             15</p>
+<p>          Как и в случае флагов файла Вы можете задать комбинации</p>
+<p>          атрибутов ключей складывая соответствующие им значения флагов.</p>
+<p>          Например, если ключ - расширенного типа, часть сегментированного</p>
+<p>          ключа и должен быть отсортирован в убывающем порядке, Вы должны</p>
+<p>          будете хранить 150H (336 десятичное) в слове флагов.</p>
+<p>               --------------------------------------------------------</p>
+<p>               Примечание:</p>
+<p>               Вы можете определить типы расширенного ключа "строка" и</p>
+<p>               "двоичное без знака" как стандартные типы так и как</p>
+<p>               расширенные типы. Это обеспечивает совместимость с</p>
+<p>               прикладными программами, написанными для ранних версий</p>
+<p>               Btrieve, в то время как в новых прикладных программах</p>
+<p>               допустимо использовать исключительно типы расширенных</p>
+<p>               ключей.</p>
+<p>               --------------------------------------------------------</p>
+<p>          А л ь т е р н а т и в н а я  п о с л е д о в а т е л ь н о с т ь</p>
+<p>          п о и с к а . Вы можете задать альтернативную последовательность</p>
+<p>          поиска для сортировки по любому числу ключевых сегментов файла.</p>
+<p>          Однако, Вы можете задать только ОДНУ альтернативную</p>
+<p>          последовательность поиска для всего файла. Вы можете задать, что</p>
+<p>          некоторые сегменты одного ключа  должны быть отсортированы в</p>
+<p>          стандартной ASCII последовательности поиска, а другие сегменты</p>
+<p>          должны быть отсортированы в альтернативной последовательности.</p>
+<p>          Вы можете задать альтернативную последовательность поиска для</p>
+<p>          ключа типа "l-строка", " z-строка" и "строка". Если Вы</p>
+<p>          устанавливаете флаг альтернативной последовательности поиска для</p>
+<p>          всех ключей или сегментов ключа в файле, поместите определение</p>
+<p>          последовательности поиска непосредственно за последним блоком</p>
+<p>          спецификации ключей.</p>
+<p>          Т.е. актуальная последовательность поиска сама должна следовать</p>
+<p>          за блоком спецификации ключей вместо имени файла, содержащего</p>
+<p>          эту последовательность. Определение альтернативной</p>
+<p>          последовательности поиска состоит из девяти байтов заголовка, за</p>
+<p>          которыми следуют 256 символов, как это описано в разделе</p>
+<p>          "Альтернативная последовательность поиска" в Главе 4.</p>
+<p>               --------------------------------------------------------</p>
+<p>               Примечание:</p>
+<p>               Если Вы создаете множество файлов с различными</p>
+<p>               альтернативными последовательностями поиска, используйте</p>
+<p>               разные имена для каждой последовательности.</p>
+<p>               --------------------------------------------------------</p>
+<p>          Д л и н а   б у ф е р а   д а н н ы х. Длина буфера данных должна</p>
+<p>          быть достаточной для включения спецификаций файла, характеристик</p>
+<p>          ключей и альтернативной последовательности поиска, если она</p>
+<p>          задана. НЕ задавайте длину записи файла в этом параметре.</p>
+<p>          Например, для создания файла с двумя ключами, каждый из которых</p>
+<p>          имеет по одному сегменту, и с альтернативной последовательностью</p>
+<p>          поиска, буфер данных для операции Create должен иметь длину по</p>
+<p>          крайней мере 313 байтов, как показано ниже:</p>
+<p>                  Спец.     Спец.       Спец.       Альт.</p>
+<p>                  файла  +  ключа 1  +  ключа 2  +  П-ть</p>
+<p>                  ________________________________________</p>
+<p>                   16    +   16      +    16     +   265     =  313</p>
+<p>          Н о м е р   к л ю ч а .  Вы можете использовать параметр номера</p>
+<p>          ключа для того, чтобы задать хотите ли Вы, чтобы Btrieve</p>
+<p>          предупредил Вас о существовании файла с тем же именем. Задайте</p>
+<p>          значение номера ключа следующим образом:</p>
+<p>            - ЕСЛИ ВЫ НЕ ХОТИТЕ, ЧТОБЫ BTRIEVE СОЗДАВАЛ НОВЫЙ ФАЙЛ ВМЕСТО</p>
+<p>              СУЩЕСТВУЮЩЕГО, установите параметр номера ключа в -1. Если</p>
+<p>              файл с тем же самым именем уже существует, Btrieve вернет</p>
+<p>              ненулевой статус и не будет создавать новый файл.</p>
+<p>            - ЕСЛИ ВЫ ХОТИТЕ, ЧТОБЫ BTRIEVE СОЗДАВАЛ НОВЫЙ ФАЙЛ ВМЕСТО</p>
+<p>              СУЩЕСТВУЮЩЕГО, ИЛИ ЕСЛИ ВЫ НЕ ХОТИТЕ ПРОВЕРЯТЬ НАЛИЧИЕ</p>
+<p>              СУЩЕСТВОВАНИЯ ФАЙЛА, установите параметр номера ключа в</p>
+<p>              ненулевое значение, предпочтительно в 0.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          Если Вы создаете пустой Btrieve-файл вместо ранее</p>
+<p>          существовавшего Btrieve-файла, будьте уверены, что файл закрыт</p>
+<p>          перед выполнением операции Create.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Create установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции в 14.</p>
+<p>            - Задайте спецификации файла, характеристики ключей и все</p>
+<p>              альтернативные последовательности поиска в буфере данных.</p>
+<p>              Все значения для спецификации файла и характеристики ключей,</p>
+<p>              хранимые в буфере данных, должны быть в двоичном формате.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>            - Установите параметр номера ключа в -1, если Вы хотите, чтобы</p>
+<p>              Btrieve предупредил Вас о существовании файла с тем же самым</p>
+<p>              именем. Иначе, установите параметр номера ключа в 0.</p>
+<p>            - Задайте имя файла в буфере ключа. Удостовертесь, что имя</p>
+<p>              файла завершается пробелом или двоичным нулем. Вы можете</p>
+<p>              задать имя устройства и путь для файла, включая любое число</p>
+<p>              уровней директорий.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно Btrieve предупредит Вас о</p>
+<p>          существовании файла с тем же самым именем или создаст новый файл</p>
+<p>          согласно Вашим спецификациям. Новый файл не будет содержать</p>
+<p>          записей. Операция Create не открывает файл. Ваша прикладная</p>
+<p>          программа должна выполнить операцию Open до того, как файл станет</p>
+<p>          доступен.</p>
+<p>          Если операция завершилась безуспешно, Btrieve вернет ненулевой</p>
+<p>          код статуса, информирующий о причине. Наиболее часто встречающие</p>
+<p>          ненулевые коды:</p>
+<p>            -  2 Ошибка ввода/вывода файла</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>            - 24 Ошибка размера страницы</p>
+<p>            - 25 Ошибка ввода/вывода при создании</p>
+<p>            - 26 Число ключей</p>
+<p>            - 27 Неверная позиция ключа</p>
+<p>            - 28 Неверная длина записи</p>
+<p>            - 29 Неверная длина ключа</p>
+<p>            - 48 Неверное определение альтернативной последовательности</p>
+<p>            - 49 Ошибка типа ключа</p>
+<p>            - 59 Файл уже существует</p>
+<p>          См. в Приложении B объяснение кодов статуса.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Create не устанавливает какую-либо позиционную</p>
+<p>          информацию.</p>
+<p>          CREATE SUPPLEMENTAL INDEX</p>
+<p>          (Создание дополнительного индекса)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Create Supplemental Index добавляет дополнительный</p>
+<p>          индекс в файл.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;     x      &#166;  x   &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Применяйте операцию Create Supplemental Index для добавления</p>
+<p>          индекса в файл в любое время после того, как ббыл создан файл.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию</p>
+<p>          Create Supplemental Index, должны быть выполнены следующие</p>
+<p>          предварительные условия:</p>
+<p>            - Btrieve-файл должен быть открыт.</p>
+<p>            - Количество существующих сегментов ключа в файле должно быть</p>
+<p>              меньше или равно следующей формуле:</p>
+<p>                24 - (число сегментов, которые надо добавить)</p>
+<p>            - Флаги ключей, позиция и длина нового индекса должны</p>
+<p>              соответствовать файлу, в который Вы добавляете индекс.</p>
+<p>            - Не должно быть активных транзакций.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для создания дополнительного индекса установите следующие</p>
+<p>          Btrieve-параметры:</p>
+<p>            - Установите код операции в 31.</p>
+<p>            - Пошлите Btrieve блок позиции для файла, в который Вы хотите</p>
+<p>              добавить индекс.</p>
+<p>            - Сохраните спецификации ключа для нового индекса в буфере</p>
+<p>              данных. Буфер данных состоит из 16-байтового блока</p>
+<p>              спецификации ключа для каждого сегмента создаваемого Вами</p>
+<p>              дополнительного индекса. Используйте ту же самую структуру</p>
+<p>              как в блоке спецификации ключа, используемом в  операции</p>
+<p>              Create (14).</p>
+<p>            - Установите параметр длины буфера данных равным количеству</p>
+<p>              байтов в буфере данных. Для нового индекса без альтернативной</p>
+<p>              последовательности поиска используйте следующую формулу для</p>
+<p>              определения правильной длины буфера данных:</p>
+<p>                 16 *  (число сегментов)</p>
+<p>              Если новый ключ имеет альтернативную последовательность</p>
+<p>              поиска, используйте следующую формулу для определения</p>
+<p>              правильной длины буфера данных:</p>
+<p>                 16 *   (число сегментов) + 265</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Btrieve немедленно начнет добавлять новый индекс в файл. Время,</p>
+<p>          требуемое для этой операции, зависит от общего числа записей,</p>
+<p>          которые будут индексированы, размера файла и длины нового индекса.</p>
+<p>          Номер ключа нового индекса на единицу больше, чем номер</p>
+<p>          предыдущего самого старшего ключа. Вы можете использовать новый</p>
+<p>          индекс для доступа к Вашим данным сразу по завершении операции.</p>
+<p>          Если Btrieve не может создать дополнительный индекс по какой-либо</p>
+<p>          причине, он вернет ненулевой статус показывающий причину и</p>
+<p>          отбросит часть дополнительного индекса, которая уже построена.</p>
+<p>          Страницы файла, размещенные в дополнительном индексе до ошибки</p>
+<p>          будут помещены в список свободного пространства файла и будут</p>
+<p>          повторно использованы, когда Вы добавляете записи или создаете</p>
+<p>          другой дополнительный индекс.</p>
+<p>          Наиболее часто встречающие ошибки:</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>            - 27 Неверная позиция ключа</p>
+<p>            - 28 Неверная длина записи</p>
+<p>            - 41 Недопустимая операция</p>
+<p>            - 45 Несуществующие флаги ключа</p>
+<p>            - 49 Ошибка типа ключа</p>
+<p>            - 56 Незавершенный индекс</p>
+<p>          Если во время создания дополнительного индекса отключится питание</p>
+<p>          или система перезагрузится, Вы сможете получить доступ к данным</p>
+<p>          файла через другие индексы файла. Однако, Btrieve вернет</p>
+<p>          ненулевой статус, если Вы попытаетесь получить доступ к данных</p>
+<p>          через незавершенный индекс. В этом случае отбросьте незавершенный</p>
+<p>          индекс с помощью операции Drop Supplemental Index (32) и</p>
+<p>          запросите операцию Create Supplemental Index.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Create Supplemental Index не оказывает эффекта на</p>
+<p>          позиционирование.</p>
+<p>          DELETE (4)</p>
+<p>          (Удалить)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Delete удаляет существующую запись из Btrieve-файла.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;  x   &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;            &#166;  x   &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Вы можете удалить существующую запись из файла, используя</p>
+<p>          операцию Delete. После удаления пространство в файле, где</p>
+<p>          хранилась удаленная запись, помещается в список свободного</p>
+<p>          пространства.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию Delete</p>
+<p>          должны быть выполнены следующие предварительные условия:</p>
+<p>            - Файл данных должен быть открыт.</p>
+<p>            - Вы не должны обращаться к файлу, содержащему запись для</p>
+<p>              удаления, между поиском этой записи и ее удалением.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Delete установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Задайте код операции равный 4.</p>
+<p>            - Передайте Btrieve блок позиции файла, из которого должна</p>
+<p>              быть удалена запись.</p>
+<p>            - Проинициализируйте параметр длины буфера данных величиной,</p>
+<p>              равной длине удаляемой записи.</p>
+<p>            - Сохраните номер ключа, используемый для поиска записи, в</p>
+<p>              параметре номера ключа.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Delete завершилась успешно, Btrieve:</p>
+<p>            - Полностью удалит запись из файла;</p>
+<p>            - Обновит все индексы ключей, чтобы отразить удаление;</p>
+<p>            - Установит длину буфера данных равной длине удаленной записи.</p>
+<p>          Если невозможно успешно удалить запись, Btrieve возвратит</p>
+<p>          ненулевой код статуса.</p>
+<p>          Наиболее часто встречающие ошибки:</p>
+<p>            - 7 Другой номер ключа</p>
+<p>            - 8 Неверное позиционирование</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Delete Btrieve удаляет всю существующую</p>
+<p>          позиционную информацию и устанавливает позицию в файле</p>
+<p>          следующим образом:</p>
+<p>            - Если существует дубликат, СЛЕДУЮЩЕЙ записью становится</p>
+<p>              первый дубликат, следующий за удаленной записью. Иначе,</p>
+<p>              следующей записью становится первая запись со значением</p>
+<p>              ключа большим, чем значение ключа удаленной записи.</p>
+<p>            - Если существует дубликат, ПРЕДЫДУЩЕЙ записью становится</p>
+<p>              предыдущий дубликат с этим значением ключа. Иначе,</p>
+<p>              предыдующей записью становится последняя запись данных для</p>
+<p>              предыдущего значения ключа.</p>
+<p>          DROP SUPPLEMENTAL INDEX (32)</p>
+<p>          (Отбросить дополнительный индекс)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Drop Supplemental Index удаляет дополнительный индекс</p>
+<p>          из существующего Btrieve-файла.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;      &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используйте операцию Drop Supplemental Index для удаления</p>
+<p>          дополнительного индекса из файла.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию</p>
+<p>          Drop Supplemental Index, должны быть выполнены следующие</p>
+<p>          предварительные условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Дополнительный индекс должен существовать в файле.</p>
+<p>            - Не должно быть активных транзакций</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для отбрасывания дополнительного индекса установите следующие</p>
+<p>          Btrieve-параметры:</p>
+<p>            - Установите код операции равный 32.</p>
+<p>            - Передайте блок позиции Btrieve-файла</p>
+<p>            - Сохраните номер ключа для дополнительного индекса, который</p>
+<p>              Вы хотите отбросить, в параметре номера ключа.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Drop Supplemental Index завершилась успешно,</p>
+<p>          Btrieve:</p>
+<p>            - Поместит страницы файла, размещенные для этого индекса, в</p>
+<p>              список свободного пространства для дальнейшего использования;</p>
+<p>            - Декриментируйте (уменьшите на один) номера ключей всех</p>
+<p>              других дополнительных индексов с номерами ключей старшими,</p>
+<p>              чем отбрасываемый индекс.</p>
+<p>          Если операция не была успешной, Btrieve возвратит ненулевой код</p>
+<p>          статуса в Вашу прикладную программу. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса для этой операции:</p>
+<p>            -  6 Неверный номер ключа</p>
+<p>            - 41 Недопустимая операция</p>
+<p>          Если процесс прерван во время отбрасывания индекса. Вы можете</p>
+<p>          получить доступ к данным файла через другие индексы файла.</p>
+<p>          Btrieve возвратит код статуса 56 (Незавершенный индекс), если Вы</p>
+<p>          попытаетесь получить доступ к файлу через незавершенный индекс. В</p>
+<p>          этом случае запросите вновь операцию Drop Supplemental Index.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Drop Supplemental Index не оказывает эффект на</p>
+<p>          позиционирование.</p>
+<p>          END TRANSACTION (20)</p>
+<p>          (Конец транзакции)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          End Transaction завершает транзакцию и делает соответствующие</p>
+<p>          изменения в файлах данных.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          End Transaction отмечает завершение набора логически связанных</p>
+<p>          Btrieve-операций.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию</p>
+<p>          End Transaction, она должна выполнить успешно операцию Begin</p>
+<p>          Transaction (19).</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции End Transaction установите код операции</p>
+<p>          равный 20. Btrieve проигнорирует все другие параметры вызова</p>
+<p>          End Transaction.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция End Transaction завершилась успешно, все операции</p>
+<p>          ограниченные этой транзакцией будут записаны в Вашу базу данных.</p>
+<p>          Ваша прикладная программа не может отменить транзакцию после</p>
+<p>          операции End Transaction.</p>
+<p>          Если операция не была успешной, Btrieve возвратит ненулевой</p>
+<p>          статус. Наиболее часто встречающийся ненулевой код статуса - код</p>
+<p>          38 (Ошибка управления транзакциями файла), которая появляется,</p>
+<p>          если файл управления транзакциями был удален или не мог быть</p>
+<p>          записан по какой-либо причине.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция End Transaction не оказывает эффект на позиционирование.</p>
+<p>          EXTEND (16)</p>
+<p>          (Расширить)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Extend разделяет файл на два логических устройства.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;      &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Extend позволяет Вашей прикладной программе</p>
+<p>          распространять один Btrieve-файл на второе логическое устройство.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию Extend,</p>
+<p>          должны быть выполнены следующие предварительные условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Btrieve должен иметь доступ к тому, на который будет расширен</p>
+<p>              файл.</p>
+<p>            - Не должно быть активных транзакций.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Extend установите следующие Btrueve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции равный 16.</p>
+<p>            - Передайте блок позиции для расширяемого файла.</p>
+<p>            - Сохраните имя расширяемого файла в буфере ключа. Задайте</p>
+<p>              имя устройства и имя полного пути файла. Завершайте имя</p>
+<p>              расширяемого файла пробелом или двоичным нулем.</p>
+<p>            - Задайте значение -1 в параметре номера ключа при выполнении</p>
+<p>              операции Extend, если Вы хотите, чтобы Btrieve начал</p>
+<p>              немедленно хранить данные в расширяемом файле. Обычно Btrieve</p>
+<p>              не помещает данные в расширяемый файл до того, как устройство</p>
+<p>              содержащее первоначальный файл не заполнится.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Extend завершилась успешно, Btrieve распространит</p>
+<p>          файл на два логических тома. Для получения доступа к расширенному</p>
+<p>          файлу пользуйтесь следующим руководством:</p>
+<p>            - Немедленно после расширения файла ваша прикладная задача</p>
+<p>              должна закрыть и открыть вновь файл до того, как она получит</p>
+<p>              доступ к расширению.</p>
+<p>            - Как первоначальное устройство так и устройство расширения</p>
+<p>              должны бвть в "online", когда Ваша программа получает доступ</p>
+<p>              к расширенному файлу. Btrieve должен быть способен найти</p>
+<p>              расширенный файл на заданном Вами логическом устройстве.</p>
+<p>            - После того, как Вы создали расширенный файл, Вы не можете</p>
+<p>              перемещать его на другое устройство. Когда Вы расширяете файл</p>
+<p>              Btrieve пишет имя полного пути, заданного для этого</p>
+<p>              расштрения в адрес первоначального файла данных. Поэтому</p>
+<p>              каждая рабочая станция должна использовать одно и то же</p>
+<p>              определение устройства для ссылки на устройство, содержащее</p>
+<p>              расширяемый файл.</p>
+<p>          Если операция не была успешной, Btrieve возвратит ненулевой</p>
+<p>          статус. Наиболее часто встречающиеся ошибки, возвращаемые</p>
+<p>          операцией Extend:</p>
+<p>            - 31 Файл уже расширен</p>
+<p>            - 32 Ошиббка ввода/выода при расширении</p>
+<p>            - 34 Невернре имя расширения</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Extend не оказывает эффект на позиционирование.</p>
+<p>          GET DIRECT (23)</p>
+<p>          (Получить направление)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Direct ищет запись данных, расположенную по заданному</p>
+<p>          физическому адресу в Btrieve-файле.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;      x     &#166;   x  &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;      x     &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Get Direct позволяет Вашей прикладной программе</p>
+<p>          искать запись, используя ее физическое расположение в файле</p>
+<p>          вместо использования одного из заданных индексных путей.</p>
+<p>          Вы можете использовать Get Direct следующим образом:</p>
+<p>            - Вы можете искать запись быстрее, используя физическое</p>
+<p>              расположение вместо значения ключа.</p>
+<p>            - Вы можете использовать операцию Get Direct для поиска</p>
+<p>              4-байтового расположения записи, сохранить расположение и</p>
+<p>              затем позже использовать Get Direct для возврата</p>
+<p>              непосредственно в это место.</p>
+<p>            - Вы можете использовать 4-байтовое расположение для поиска</p>
+<p>              записи в цепочке дубликатов без повторного чтения всех</p>
+<p>              записей с начала цепочки.</p>
+<p>            - Вы можете изменить текущий путь доступа. Операция</p>
+<p>              Get Position, следуемая за операцией Get Direct с другим</p>
+<p>              номером ключа, устанавливает позиционирование для текущей</p>
+<p>              записи в другом индексном дереве. Get Next возвратит</p>
+<p>              следующую запись в файле, опираясь на новый путь доступа.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию</p>
+<p>          Get Direct, должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Ваша прикладная программа должна предварительно найти</p>
+<p>              4-байтовое расположение записи, запросив операцию</p>
+<p>              Get Position.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Direct установите следующие Btrueve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции равный 23.</p>
+<p>            - Сохраните 4-байтовую позицию требуемой записи в первых</p>
+<p>              четырех байтах буфера данных.</p>
+<p>            - Задайте общую длину буфера данных таким образом, чтобы</p>
+<p>              Btrieve мог определить, войдет ли запись в Ваш буфер.</p>
+<p>            - Задайте путь доступа, для которого должен установить</p>
+<p>              позиционирование Btrieve, в параметре номера ключа.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Get Direct завершилась успешно, Btrieve</p>
+<p>            - Сохранит требуемую запись в буфере данных, переписав</p>
+<p>              4-байтовую точку входа в первых четырех байтах.</p>
+<p>            - Сохранит актуальную длину записи в параметре длины буфера</p>
+<p>              данных;</p>
+<p>            - Сохраните значение ключа для заданного ключа доступа в</p>
+<p>              буфере ключа.</p>
+<p>          Если Btrieve не может возвратить требуемую запись, он вернет</p>
+<p>          ненулевой статус. Наиболее часто встречающиеся ненулевые коды</p>
+<p>          статуса:</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>            - 43 Неверный адрес записи данных</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Get Direct Btrieve удаляет всю существующую</p>
+<p>          позиционную информацию и устанавливает текущую позицию согласно</p>
+<p>          заданному номеру ключа.</p>
+<p>            - СЛЕДУЮЩАЯ запись становится следующим дубликатом</p>
+<p>              возвращаемого значения ключа. Иначе, она становится первой</p>
+<p>              записью для значения ключа большего, чем требуемое.</p>
+<p>            - ПРЕДЫДУЩАЯ запись становится или предыдущим дубликатом для</p>
+<p>              возвращаемого ключа или последним дубликатом значения ключа</p>
+<p>              меньшего, чем возвращаемое.</p>
+<p>          GET DIRECTORY (18)</p>
+<p>          (Получить директорию)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Directory ищет текущую директорию.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;            &#166;      &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Get Directory возвращает текущую директорию для</p>
+<p>          заданного логического устройства.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа сможет запрсить операцию</p>
+<p>          Get Directory непосредственно после загрузки Record Manager.</p>
+<p>          Буфер ключа должен быть по крайней мере длиной в 65 символов.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для поиска текущей директории установите следующие Btrueve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции равный 18.</p>
+<p>            - Сохраните номер логического устройства в параметре номера</p>
+<p>              ключа до вызова Btrieve. Задайте устройство A как 1, 2 для B</p>
+<p>              и т.д. Для использования устройства по умолчанию задайте 0.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Btrieve возвратит текущую директорию, завершенную двоичным нулем</p>
+<p>          в буфере ключа.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Get Directory  не оказывает эффект на позиционирование.</p>
+<p>          GET EQUAL (5)</p>
+<p>          (Получить равную)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Equal ищет запись, соответствующую заданному значению ключа.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Get Equal, Ваша прикладная программа может</p>
+<p>          искать запись, опираясь на значение ключа заданное в буфере</p>
+<p>          ключа.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа сможет запрсить операцию</p>
+<p>          Get Equal должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Файл не может быть файлом, состоящим только из данных без</p>
+<p>              определенных индексов.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции установите следующие Btrueve-параметры:</p>
+<p>            - Проинициализируйте код операции значением 5.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Задайте требуемое значение ключа в буфере ключа.</p>
+<p>            - Установите номер ключа в правильный путь доступа.</p>
+<p>            - Проинициализируйте длину буфера данных значением равным длине</p>
+<p>              записи, которую Вы хотите найти.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Get Equal завершилась успешно, Btrieve</p>
+<p>            - Вернет требуемую запись в буфер данных.</p>
+<p>            - Вернет длину записи в байтах в параметр длины буфера данных.</p>
+<p>          Если операция Get Equal не была успешной,Btrieve вернет ненулевой</p>
+<p>          код статуса указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  4 Не найдено значение ключа</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Get Equal Btrieve удаляет всю существующую</p>
+<p>          позиционную информацию и устанавливает свою позицию в индексе</p>
+<p>          следующим образом:</p>
+<p>            - Если дубликат существует, СЛЕДУЮЩАЯ запись становится первым</p>
+<p>              дубликатом возвращаемого значения ключа. Иначе, следующая</p>
+<p>              запись становится первой записью для значения ключа большего,</p>
+<p>              чем требуемое.</p>
+<p>            - ПРЕДЫДУЩАЯ запись становится последним дубликатом значения</p>
+<p>              ключа меньшего, чем возвращаемое. Если не существует</p>
+<p>              дубликатов, предыдущая запись становится единственной записью</p>
+<p>              для значения ключа меньшего, чем возвращаемое.</p>
+<p>          GET FIRST (12)</p>
+<p>          (Получить первую)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get First ищет запись, соответствующую первому значению ключа для</p>
+<p>          заданного пути доступа.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Get First позволяет Вашей прикладной программе искать</p>
+<p>          запись, соответствующую первому значению ключа для заданного</p>
+<p>          номера ключа.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа сможет запрсить операцию</p>
+<p>          Get First должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Файл не может быть файлом, состоящим только из данных без</p>
+<p>              определенных индексов.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции установите следующие Btrueve-параметры:</p>
+<p>            - Проинициализируйте код операции значением 12.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Задайте номер ключа для данного пути доступа.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Get First завершилась успешно, Btrieve</p>
+<p>            - Вернет требуемую запись в буфер данных.</p>
+<p>            - Сохранит соответствующее значение ключа в буфере данных;</p>
+<p>            - Вернет длину записи в параметр длины буфера данных.</p>
+<p>          Если операция Get First не была успешной, Btrieve вернет</p>
+<p>          ненулевой код статуса указывающий на причину. Наиболее часто</p>
+<p>          встречающиеся ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  6 Неверный номер ключа</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Get First Btrieve удаляет всю существующую</p>
+<p>          позиционную информацию и устанавливает свою позицию в индексе</p>
+<p>          следующим образом:</p>
+<p>            - ПРЕДЫДУЩАЯ запись указывает за начало файла.</p>
+<p>            - СЛЕДУЮЩАЯ запись становится следующим дубликатом</p>
+<p>              возвращаемого значения ключа или, если не существует</p>
+<p>              дубликатов, первой записью для значения ключа большего, чем</p>
+<p>              возвращаемое.</p>
+<p>          GET GREATER (8)</p>
+<p>          (Получить большую)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Greater ищет запись, соответствующую значению ключа большего</p>
+<p>          чем заданное значение ключа.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Get Greater Ваша прикладная программа может</p>
+<p>          поднять путь доступа, задавая номер ключа для нахождения первого</p>
+<p>          значения ключа большего, чем задано в буфере ключа.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию</p>
+<p>          Get Greater, должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Файл не может быть файлом, состоящим только из данных.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Greater установите следующие</p>
+<p>          Btrieve-параметры:</p>
+<p>            - Установите код операции равный 8.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Сохраните значение ключа в параметре буфера ключа.</p>
+<p>            - Установите параметр номера ключа в соответствии с правильным</p>
+<p>              путем доступа.</p>
+<p>            - Задайте длину буфера данных.</p>
 <p>Р е з у л ь т а т :</p>
 <p>Если операция завершилась успешно, Btrieve</p>
 <p>  * Вернет соответствующую запись в буфер данных.</p>
 <p>  * Вернет длину записи в параметр длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция не была успешной, Btrieve вернет ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса, указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;6 Неверный номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Get Greater Btrieve удаляет всю существующую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционную информацию и устанавливает свою позицию в индексе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, СЛЕДУЮЩАЯ запись становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; первым дубликатом возвращаемого значения. Иначе, следующая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запись становится первой записью для значения ключа большего,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем возвращаемое.</p>
+<p>          Если операция не была успешной, Btrieve вернет ненулевой код</p>
+<p>          статуса, указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  6 Неверный номер ключа</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Get Greater Btrieve удаляет всю существующую</p>
+<p>          позиционную информацию и устанавливает свою позицию в индексе</p>
+<p>          следующим образом:</p>
+<p>            - Если дубликат существует, СЛЕДУЮЩАЯ запись становится</p>
+<p>              первым дубликатом возвращаемого значения. Иначе, следующая</p>
+<p>              запись становится первой записью для значения ключа большего,</p>
+<p>              чем возвращаемое.</p>
 <p>  * ПРЕДЫДУЩАЯ запись становится последним дубликатом значения ключа меньшего возвращаемого. Иначе, предыдущая запись становится единственной записью для значения ключа меньшего, чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET GREATER OR EQUAL (9)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить большую или равную)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Greater Or Equal ищет запись со значением ключа большим или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; равным заданному значению ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Get Greater Or Equal позволяет Вашей прикладной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программе находить запись или равную или большую чем заданное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значение ключа. Btrieve сперва ищет значение ключа равное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданному значению. Если Btrieve не может найти равное значение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа, он поднимает путь доступа до тех пор. пока он не найдет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; запись со следующим старшим значением ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Greater Or Equal, должны быть выполнены следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл не может быть файлом, состоящим только из данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Greater Or Equal установите следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 9.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните значение ключа в параметре буфера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр номера ключа в соответствии с правильным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; путем доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет соответствующую запись в буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет длину записи в параметр длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция не была успешной, Btrieve вернет ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса, указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;6 Неверный номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Get Greater Or Equal Btrieve удаляет всю</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существующую позиционную информацию и устанавливает текущую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позицию следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - СЛЕДУЮЩАЯ запись становится первым дубликатом возвращаемого</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения ключа, если дубликат существует. Иначе, он</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; становится первой записью для значения ключа большего,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ПРЕДЫДУЩАЯ запись становится последним дубликатом значения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключа меньшего возвращаемого, или, если дубликат не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; существует, единственной записью для значения ключа меньшего,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET KEY (+50)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить ключ)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Key позволяет Вам выполнять операцию Get без действительного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; поиска записи даных. Вы можете использовать Get Key для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определения наличия значения в файле. Операция Get Key как правило</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; быстрее, чем соответствующая Get операция. Операция Get Key</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; может быть использована с любой из следующих Get операций:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET EQUAL (5)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET NEXT (6)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET PREVIOUS (7)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET GREATER (8)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET GREATER OR EQUAL (9)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET LESS THAN (10)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET LESS THAN OR EQUAL (11)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET FIRST (12)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - GET LAST (13)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Параметры - те же самые как и в соответствующей Get операции, за</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; исключением того, что Btrieve игнорирует длину буфера данных и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; не возвращает запись в буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Предварительные условия для операции Get Key - те же самые, что</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; и в соответствующей Get операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Key установите Btrieve-параметры так</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; как бы Вы установили их для соответствующей Get операции. Вам не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуется инициализировать длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы должны добавить 50 к коду операции Get, которую Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполнить. Например, для выполнения операции Get Key (код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции 50) с операцией Get Equal (код операции 5) используйте</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 55 для кода операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Btrieve найдет требуемый ключ, он возвратит ключ в буфер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа и статус равный 0. Иначе, Btrieve возвратит ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса, показывающий почему он не может найти ключ.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Get Key устанавливает текущее позиционирование точно в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; соответствии с тем, что делает соответствующая Get операция, за</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; исключением того, что Get Next Key и Get Previous Key не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвращает дубликаты.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET LAST (13)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить последнюю)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Last ищет запись, сооответствующую значению последнего ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для заданного пути доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Get Last Ваша прикладная программа может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; находить последнюю запись, которая соответствует последнему</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значению ключа для заданного номера ключа. Если дубликаты</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существуют для последнего значения ключа, возвращаемая запись</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; будет последним дубликатом.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Last, должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл не может быть файлом, состоящим только из данных без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; заданных индексов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения этой операции установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Проинициализируйте код операции значением 13.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте номер ключа для пути доступа.</p>
+<p>          GET GREATER OR EQUAL (9)</p>
+<p>          (Получить большую или равную)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Greater Or Equal ищет запись со значением ключа большим или</p>
+<p>          равным заданному значению ключа.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Get Greater Or Equal позволяет Вашей прикладной</p>
+<p>          программе находить запись или равную или большую чем заданное</p>
+<p>          значение ключа. Btrieve сперва ищет значение ключа равное</p>
+<p>          заданному значению. Если Btrieve не может найти равное значение</p>
+<p>          ключа, он поднимает путь доступа до тех пор. пока он не найдет</p>
+<p>          запись со следующим старшим значением ключа.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию</p>
+<p>          Get Greater Or Equal, должны быть выполнены следующие</p>
+<p>          предварительные условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Файл не может быть файлом, состоящим только из данных.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Greater Or Equal установите следующие</p>
+<p>          Btrieve-параметры:</p>
+<p>            - Установите код операции равный 9.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Сохраните значение ключа в параметре буфера ключа.</p>
+<p>            - Установите параметр номера ключа в соответствии с правильным</p>
+<p>              путем доступа.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Вернет соответствующую запись в буфер данных.</p>
+<p>            - Вернет длину записи в параметр длины буфера данных.</p>
+<p>          Если операция не была успешной, Btrieve вернет ненулевой код</p>
+<p>          статуса, указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  6 Неверный номер ключа</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Get Greater Or Equal Btrieve удаляет всю</p>
+<p>          существующую позиционную информацию и устанавливает текущую</p>
+<p>          позицию следующим образом:</p>
+<p>            - СЛЕДУЮЩАЯ запись становится первым дубликатом возвращаемого</p>
+<p>              значения ключа, если дубликат существует. Иначе, он</p>
+<p>              становится первой записью для значения ключа большего,</p>
+<p>              чем возвращаемое.</p>
+<p>            - ПРЕДЫДУЩАЯ запись становится последним дубликатом значения</p>
+<p>              ключа меньшего возвращаемого, или, если дубликат не</p>
+<p>              существует, единственной записью для значения ключа меньшего,</p>
+<p>              чем возвращаемое.</p>
+<p>          GET KEY (+50)</p>
+<p>          (Получить ключ)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Key позволяет Вам выполнять операцию Get без действительного</p>
+<p>          поиска записи даных. Вы можете использовать Get Key для</p>
+<p>          определения наличия значения в файле. Операция Get Key как правило</p>
+<p>          быстрее, чем соответствующая Get операция. Операция Get Key</p>
+<p>          может быть использована с любой из следующих Get операций:</p>
+<p>            - GET EQUAL (5)</p>
+<p>            - GET NEXT (6)</p>
+<p>            - GET PREVIOUS (7)</p>
+<p>            - GET GREATER (8)</p>
+<p>            - GET GREATER OR EQUAL (9)</p>
+<p>            - GET LESS THAN (10)</p>
+<p>            - GET LESS THAN OR EQUAL (11)</p>
+<p>            - GET FIRST (12)</p>
+<p>            - GET LAST (13)</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>          Параметры - те же самые как и в соответствующей Get операции, за</p>
+<p>          исключением того, что Btrieve игнорирует длину буфера данных и</p>
+<p>          не возвращает запись в буфер данных.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          Предварительные условия для операции Get Key - те же самые, что</p>
+<p>          и в соответствующей Get операции.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Key установите Btrieve-параметры так</p>
+<p>          как бы Вы установили их для соответствующей Get операции. Вам не</p>
+<p>          требуется инициализировать длину буфера данных.</p>
+<p>          Вы должны добавить 50 к коду операции Get, которую Вы хотите</p>
+<p>          выполнить. Например, для выполнения операции Get Key (код</p>
+<p>          операции 50) с операцией Get Equal (код операции 5) используйте</p>
+<p>          55 для кода операции.</p>
+<p>          Если Btrieve найдет требуемый ключ, он возвратит ключ в буфер</p>
+<p>          ключа и статус равный 0. Иначе, Btrieve возвратит ненулевой код</p>
+<p>          статуса, показывающий почему он не может найти ключ.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Get Key устанавливает текущее позиционирование точно в</p>
+<p>          соответствии с тем, что делает соответствующая Get операция, за</p>
+<p>          исключением того, что Get Next Key и Get Previous Key не</p>
+<p>          возвращает дубликаты.</p>
+<p>          GET LAST (13)</p>
+<p>          (Получить последнюю)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Last ищет запись, сооответствующую значению последнего ключа</p>
+<p>          для заданного пути доступа.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Get Last Ваша прикладная программа может</p>
+<p>          находить последнюю запись, которая соответствует последнему</p>
+<p>          значению ключа для заданного номера ключа. Если дубликаты</p>
+<p>          существуют для последнего значения ключа, возвращаемая запись</p>
+<p>          будет последним дубликатом.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию</p>
+<p>          Get Last, должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Файл не может быть файлом, состоящим только из данных без</p>
+<p>              заданных индексов.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения этой операции установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Проинициализируйте код операции значением 13.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>            - Задайте номер ключа для пути доступа.</p>
 <p>Р е з у л ь т а т :</p>
 <p>Если операция завершилась успешно, Btrieve</p>
 <p>  * Вернет требуемую запись в буфер данных.</p>
 <p>  * Сохранит значение соответствующего ключа в буфере ключа;</p>
 <p>  * Возвратит длину записи в параметре длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Btrieve не может вернуть запись, он возвратит ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса, указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;6 Неверный номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Get Last Btrieve удаляет всю существующую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционную информацию и устанавливает текущую позицию в индексе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - СЛЕДУЮЩАЯ запись указывает за конец файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ПРЕДЫДУЩАЯ запись становится предыдущим дубликатом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; возвращаемого значения ключа или, если дубликат не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; существует, последним дубликатом для значения ключа меньшего,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET LESS THAN (10)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить меньшую чем)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Less Than ищет запись, сооответствующую значению ключа,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которое сеньше заданного значения ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Get Less Than Ваша прикладная программа может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; находить запись, которая соответствует первому значению ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; меньшему чем заданное значение ключа. Btrieve поднимает путь</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; доступа, заданный номером ключа для нахождения первого значения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключа меньшего требуемого. Как только он найдет правильное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; значение ключа, он возвратит соответствующую запись данных в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Less Tnan, должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл не может быть файлом, состоящим только из данных без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; заданных индексов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Less Than установите следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 10.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните значение ключа в параметре буфера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр номера ключа в соответствии с правильным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; путем доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет запись в буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет значение ключа для этой записи в буфер ключа;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Возвратит длину записи в параметре длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Btrieve не может вернуть запись, он возвратит ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса, указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;6 Неверный номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Get Less Than Btrieve удаляет всю существующую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционную информацию и устанавливает текущую позицию в индексе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, СЛЕДУЮЩАЯ запись становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; первым дубликатом возвращаемого значения. Иначе, следующая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запись становится первой записью для значения ключа большего,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, ПРЕДЫДУЩАЯ запись становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последним дубликатом значения ключа меньшего возвращаемого.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Иначе, предыдущая запись становится единственной записью для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения ключа меньшего, чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET LESS THAN OR EQUAL (11)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить меньшую или равную)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Less Than Or Equal ищет запись со значением ключа меньшим или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; равным заданному значению ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Get Less Than Or Equal Ваша прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа может находить запись, которая равна или меньше</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданному значению ключа. Btrieve сперва ищет в пути доступа для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданного значения ключа. Если он не находит значение, то</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; поднимает путь доступа, заданный номером ключа для нахождения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; первого значения ключа меньшего требуемого. Как только он найдет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; правильное значение ключа, он возвратит соответствующую запись</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данных в буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Less Tnan Or Equal, должны быть выполнены следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл не может быть файлом, состоящим только из данных без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; заданных индексов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Less Than Or Equal установите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующие Btrieve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 11.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните значение ключа в параметре буфера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр номера ключа в соответствии с правильным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; путем доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет запись в буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет значение ключа для этой записи в буфер ключа;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Возвратит длину записи в параметре длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Btrieve не может вернуть запись, он возвратит ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса, указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;6 Неверный номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; После операции Get Less Than Or Equal Btrieve удаляет всю</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; существующую позиционную информацию и устанавливает текущую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позицию в индексе следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, СЛЕДУЮЩАЯ запись становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; первым дубликатом возвращаемого значения. Иначе, следующая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запись становится первой записью для значения ключа большего,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, ПРЕДЫДУЩАЯ запись становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последним дубликатом значения ключа меньшего возвращаемого.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Иначе, предыдущая запись становится единственной записью для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения ключа меньшего, чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET NEXT (6)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить следующую)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Next ищет запись из Btrieve-файла, следующую за текущей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записью в пути ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Get Next Ваша прикладная программа может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; находить записи в порядке согласно заданному пути доступа. Только</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции Get First, Get Next, Get Previous и Get Last позволяют</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладной программе искать записи для значений ключей-дубликатов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Next, должны быть выполнены следующие предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл не может быть файлом, состоящим только из данных без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; заданных индексов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Ваша прикладная программа должна установить позицию в индексе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; при Btrieve-вызове немедленно перед операцией Get Next.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Next установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 6.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните значение ключа из предыдущей операции в буфере</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключа. Передайте буфер ключа ТОЧНО соответствующее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; возвращаемому Btrieve при предыдущем вызове, т.к. Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; может понадобиться предварительно сохраненная там информация</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; для определения текущей позиции в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр номера ключа в соответствии с путем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; доступа, используемым при предыдущем обращении. Вы не можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; изменять пути доступа, используя операцию Get Next.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет запись в буфер данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет значение ключа для этой записи в буфер ключа;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Возвратит длину записи в параметре длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Btrieve не может вернуть запись, он возвратит ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса, указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;6 Неверный номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;7 Другой номер ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;9 Конец файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 82 Потеря позиции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve использует позиционирование, установленное предыдущим</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вызовом, для выполнения операции Get Next, заменяя позиционную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; информацию следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, СЛЕДУЮЩАЯ запись становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; первым дубликатом возвращаемого значения. Иначе, следующая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запись становится первой записью для значения ключа большего,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, ПРЕДЫДУЩАЯ запись становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последним дубликатом значения ключа меньшего возвращаемого.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Иначе, предыдущая запись становится единственной записью для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения ключа меньшего, чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET POSITION (22)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить позицию)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Position возвращает физическую позицию текущей записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Get Position Ваша прикладная программа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; может получить 4-байтовую позицию текущей записи в Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файле. Для того, чтобы установить текущую запись Ваша прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа может выполнить любую другую Get операцию, операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Insert или операцию Update. Ваша прикладная программа может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; затем запросить операцию Get Position для поиска адреса записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Как только Ваша прикладная программа узнает адрес записи, она</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; может использовать операцию Get Direct для поиска этой записи</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; непосредственно по физическому расположению в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve не выполняет какой либо ввод/вывод на диск при запросе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Direct.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Position, должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Btrieve-обращение к файлу непосредственно до вызова Get</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Position должно найти запись. Вы не можете запросить вызов,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; используя тот же самый блок позиции, между поиском записи и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; вызовом Get Position.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Position установите следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrueve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 22.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Используйте буфер данных достаточно длинный для хранения</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4-байтовой позиции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите длину буфера данных равную по крайней мере</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; четырем байтам.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Get завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Возвратит позицию запсии в буфер данных. Позиция - 4-байтовое</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; двоичное значение (самое важное первое слово), показывающее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; точку входа записи (в байтах) в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установит длину буфера данных равную четырем байтам.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Btrieve не может определить текущую запись или не может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвратить позицию, он вернет ненулевой код статуса указывающий</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; на причину. Наиболее часто встречающийся ненулевой статус,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвращаемый Btrieve, - код статуса 8 (Неверное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционирование).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Get Position не оказывает эффект на позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; GET PREVIOUS (7)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Получить предыдующую)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Previous ищет запись, предшествующую текущей записи в пути</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Get Previous Ваша прикладная программа может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; находить записи в порядке согласно заданному пути доступа. Только</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции Get First, Get Next, Get Previous и Get Last позволяют</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладной программе искать записи для значений ключей-дубликатов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get Previous, должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Btrieve-обращение к файлу непосредственно до вызова Get</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Previous должно найти запись. Вы не можете запросить вызов,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; используя тот же самый блок позиции, между поиском записи и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; вызовом Get Previous.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Get Previous установите следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 7.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте правильный номер ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте буфер ключа точно соответствующий возвращаемому</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Btrieve при предыдущем вызове, т.к. Btrieve может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; понадобиться предварительно сохраненная там информация</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; для определения текущей позиции в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Заменит буфер ключа значением ключа для новой записи;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Возвратит предыдущую запись в буфер данных;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Возвратит длину записи в параметре длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция не была успешной, Btrieve возвратит ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса, указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;9 Конец файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve использует позиционирование, установленное предыдущим</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вызовом, для выполнения операции Get Previous следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Запись, которая была текущей при инициации вызова, становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; СЛЕДУЮЩЕЙ записью.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если дубликат существует, ПРЕДЫДУЩАЯ запись становится</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; последним дубликатом значения ключа меньшего возвращаемого.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Иначе, предыдущая запись становится единственной записью для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения ключа меньшего, чем возвращаемое.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; INSERT (4)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Добавить)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Insert добавляет запись в файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &#166; &nbsp;x &nbsp; &#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа может использовать операцию Insert для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; добавления новой записи в файл. Btrieve обновляет все индексы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ключей для отражения значений ключей новой записи во время</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; добавления записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию Insert,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должны быть выполнены следующие предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл данных должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Добавляемая запись должна быть соответствующей длины и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения ключей должны соответствовать ключам, определенным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Insert установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте код операции равный 2.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните новую запись данных в буфере данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных. Это значение должно быть по</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; крайней мере равно длине фиксированной части записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте номер ключа, для которого Вы хотите, чтобы Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; сохранял позицию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Insert завершилась успешно, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Поместит новую запись в файл;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Обновит всю индексную информацию, чтобы отразить добавление</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; новой записи;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Возвратит значение ключа для текущего пути доступа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Insert не была успешной , Btrieve возвратит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевой код статуса. Наиболее часто встречающие ошибки:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;2 ошибка ввода/вывода</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;5 Ошибка дубликатов</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 14 Ошибка открытия прообраза</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 15 Ошика ввода/вывода прообраза</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 18 Диск полный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 21 Буфер ключа слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Insert удаляет всю существующую позиционную информацию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Опираясь на заданный Вами номер ключа Btrieve устанавливает свою</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позицию в индексе следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Первая запись данных со значением ключа большим только что</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; добавленного становится СЛЕДУЮЩЕЙ записью.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Последняя запись данных со значением ключа меньшим только что</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; добавленного становится ПРЕДЫДУЩЕЙ записью.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; LOCKS</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Блокировки)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Блокировки позволяют Вам управлять доступом к записям и файлам,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; предохраняя рабочую станцию от выполнения конфликтных операций</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; над базой данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П &nbsp;а р а м е т р ы &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; За исключением кода операции параметры для блокировок - те же</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; самые как и в соответствующей операции записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve различает два различных вида блокировок записей:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; единичные блокировки и множественные блокировки. Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; задать вид блокировки с ожиданием или без ожидания как для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; единичных блокировок, так и для множественных блокировок записей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете задать блокировку с любой операцией &nbsp;Get, Stop, Open</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или Begin Transaction. Добавляя смещение блокировки к операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Begin Transaction задавайте, хотите ли Вы транзакцию с ожиданием</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или без ожидания. Это не приведет Btrieve к использованию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блокировок записей в течении транзакции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ЕДИНИЧНЫЕ БЛОКИРОВКИ ЗАПИСЕЙ. Когда рабочая станция использует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; единичные блокировки записей, она может звблокировать только одну</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; запись в файле в какой-либо момент времени. Btrieve отменяет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; единичную блокировку записи, когда Btrieve запрашивает другую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get операцию с блокировкой для того же самого файла, корректирует</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или удалеет заблокированную запись, или запрашивает операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Unlock.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; МНОЖЕСТВЕННЫЕ БЛОКИРОВКИ ЗАПИСЕЙ. Множественные блокировки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записей позволяют прикладной программе блокировать множественные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи в файле и затем корректировать или удалять эти записи по</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; необходимости. Когда Вы используете множественные блокировки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записей, Btrieve также блокирует только одну запись для каждой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Get операции. Однако, он НЕ отменяет блокировку записи, когда Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; корректируете заблокированную запись или запрашивает другую Get</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операцию с множественной блокировкой. Ваша прикладная программа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; может отменить одну или все множественные блокировки записей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; используя операцию Unlock.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; БЛОКИРОВКИ С ОЖИДАНИЕМ. Если другая рабочая станция имеет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заблокированную запись или имеет прерванную транзакцию для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла, когда Вы запрашиваете блокировку с опцией ожидания,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve будет ждать до тех пор, пока запись не станет доступной,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; до того, как вернуть управление в прикладную программу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; БЛОКИРОВКИ БЕЗ ОЖИДАНИЯ. Если другая рабочая станция имеет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заблокированную запись или имеет прерванную транзакцию для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла, когда Вы запрашиваете блокировку с опцией без ожидания,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve немедленно возвратит статус 84 или 85 в прикладную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программу, показывающий что запись - занята.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; За исключением кода операции требуемые для операции блокировки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры идентичны требуемымв соответствующей операцией без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блокировки.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для задания блокировки записи Ваша прикладная программа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прибавляет значение (называемое "смещение блокировки") к любому</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; коду операции Get, Step,, Open или Begin Transaction. Следующая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; таблица иллюстрирует значения смещений блокировки:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Значение &nbsp; &nbsp;Тип блокировки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+100 &nbsp; &nbsp; &nbsp;единичная блокировка записи с ожиданием</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+200 &nbsp; &nbsp; &nbsp;единичная блокировка записи без ожидания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+300 &nbsp; &nbsp; &nbsp;множественная блокировка записи с ожиданием</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+400 &nbsp; &nbsp; &nbsp;множественная блокировка записи без ожидания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используйте значения смещений блокировки следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ДЛЯ ЗАДАНИЯ ЕДИНИЧНОЙ БЛОКИРОВКИ ЗАПИСИ прибавьте 100</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (с ожиданием) или 200 (без ожидания) к коду операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - ДЛЯ ЗАДАНИЯ МНОЖЕСТВЕННОЙ БЛОКИРОВКИ ЗАПИСИ прибавьте 300</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (с ожиданием) или 400 (без ожидания) к коду операции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Например, для запроса Get Equal с единичной блокировкой записи с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ожиданием код операции будет (100 + 5) или 105. Для той же самой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции со множественной блокировкой записи с ожиданием код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции будет (300 + 5) или 305. Для запроса Get Last с</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; единичной блокировкой записи без ожидания код операции будет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (13 + 200) или 213. Для той же самой операции со множественной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блокировкой записи без ожидания код операции будет (13 + 400) или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; 413.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для задания транзакции с ожиданием установите код операции в 119</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или 319. В этом случае код блокировки задает, что Вы хотите,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; чтобы Btrieve ждал &nbsp;файл или запись, если они заняты другой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; рабочей станцией. Задание 319 для операции Begin Transaction -</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; эквивалентно заданию или 19 или 119. См. описание управления</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; транзакциями в Главе 2 для дополнительной информации.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете также запросить Begin transaction без ожидания с кодом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции 219 или 419. В этом случае Btrieve возвратит статус 84</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или 85, если Ваша прикладная программа попытается получить доступ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; к заблокированной записи или файлу с транзакцией. См. описание &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;выполнения операции Get Key установите Btrieve-параметры так</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; управления транзакциями в Главе 2 для дополнительной информации.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ОТКРЫТИЕ ЗАБЛОКИРОВАННЫХ ФАЙЛОВ. Если файл - заблокирован, когда</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; рабочая станция пытается его открыть, Btrieve обычно ждет пока</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файл не станет доступен до выполнения операции Open. Это</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; эквивалентно блокировке с ожиданием.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы можете задать запрос открытия без ожидания, посылая или 200</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или 400 как код операции для операции Open (0 + 200 или 0 + 400)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если файл, который Вы пытаетесь открыть, заблокирован, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвратит код статуса 85 (Файл занят) в прикладную прграмму. Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; можете попытаться затем повторить операцию, пока файл не станет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; доступен.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ОТМЕНА МНОЖЕСТВЕННЫХ БЛОКИРОВОК ЗАПИСЕЙ. Как упоминалось раньше,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve не отменяет автоматически множественную блокировку, как</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; он делает в случае единичной блокировки. Записи, которые Вы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блокируете множественной блокировкой записи, остаются</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заблокированы, пока Вы не сделаете следующее:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Отмените блокировку запросив Btrieve-операцию Unlock (27).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Удалите запись.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Запросите Btrieve-операцию Reset (28).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Закроете файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Получите доступ к файлу с транзакцией.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы не можете смешивать единичные и множественные блокировки в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; одном и том же файле с одной рабочей станции. Если единичная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блокировка записи (+100/+200) не отменена, когда рабочая станция</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; посылает запрос со множественной блокировкой (+300/+400), Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвратит ошибку несовместимости блокировок. Обратная ситуация</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; приведет к той же самой ошиббке. В обоих случаях Btrieve не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заблокирует запись. Это не значит, что рабочая станция ограничена</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; только одним типом блокировки для файла. Btrieve будет возвращать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ошибку, если только один тип блокировки ИСПОЛЬЗУЕТСЯ В НАСТОЯЩЕЕ</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ВРЕМЯ, когда рабочая станция пытается использовать блокировку</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; другого типа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если рабочая станция пытается разблокировать множественную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блокировку записи, когда она не установлена в позицию этой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи, Btrieve возвратит статус ошибки блокировки.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вдобавок, Btrieve возвратит статус ошибки блокировки, если Ваша</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладная программа попытается заблокировать больше записей, чем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вы задали при конфигурации BSERVER. См. описание опций</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; инициализации NetWare Btrieve в Главе 3 для дополнительной</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; информации.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Наиболее часто встречающиеся ненулевые коды статуса, возвращаемые</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve из безуспешных операций блокировки:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 81 Ошибка блокировки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 84 Запись занята</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 85 Файл занят</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 93 Несовместимый тип бблокировки</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операции запрета не оказывают действия на позицию Btrieve в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; индексе.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; OPEN (0)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Открыть)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Open делает файл доступным.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &#166; &nbsp;x &nbsp; &#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша задача не может получить доступ к Btrieve-файлу до тех пор,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пока она сперва не выполнит операцию Open. Файл не должен</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; находиться в текущей директории, пока вы задаете полное имя пути.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запросит операцию Open,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; должны быть выполнены следующие предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл, который должен быть открыт, должен существовать на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; доступном устройстве. Если файл имеет расширение, оба</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; устройства хранения, на которых расположен файл, должны быть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; доступны.</p>
+<p>          Если Btrieve не может вернуть запись, он возвратит ненулевой код</p>
+<p>          статуса, указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  6 Неверный номер ключа</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Get Last Btrieve удаляет всю существующую</p>
+<p>          позиционную информацию и устанавливает текущую позицию в индексе</p>
+<p>          следующим образом:</p>
+<p>            - СЛЕДУЮЩАЯ запись указывает за конец файла.</p>
+<p>            - ПРЕДЫДУЩАЯ запись становится предыдущим дубликатом</p>
+<p>              возвращаемого значения ключа или, если дубликат не</p>
+<p>              существует, последним дубликатом для значения ключа меньшего,</p>
+<p>              чем возвращаемое.</p>
+<p>          GET LESS THAN (10)</p>
+<p>          (Получить меньшую чем)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Less Than ищет запись, сооответствующую значению ключа,</p>
+<p>          которое сеньше заданного значения ключа.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Get Less Than Ваша прикладная программа может</p>
+<p>          находить запись, которая соответствует первому значению ключа</p>
+<p>          меньшему чем заданное значение ключа. Btrieve поднимает путь</p>
+<p>          доступа, заданный номером ключа для нахождения первого значения</p>
+<p>          ключа меньшего требуемого. Как только он найдет правильное</p>
+<p>          значение ключа, он возвратит соответствующую запись данных в</p>
+<p>          буфер данных.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию</p>
+<p>          Get Less Tnan, должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Файл не может быть файлом, состоящим только из данных без</p>
+<p>              заданных индексов.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Less Than установите следующие</p>
+<p>          Btrieve-параметры:</p>
+<p>            - Установите код операции в 10.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Сохраните значение ключа в параметре буфера ключа.</p>
+<p>            - Установите параметр номера ключа в соответствии с правильным</p>
+<p>              путем доступа.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Вернет запись в буфер данных.</p>
+<p>            - Вернет значение ключа для этой записи в буфер ключа;</p>
+<p>            - Возвратит длину записи в параметре длины буфера данных.</p>
+<p>          Если Btrieve не может вернуть запись, он возвратит ненулевой код</p>
+<p>          статуса, указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  6 Неверный номер ключа</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Get Less Than Btrieve удаляет всю существующую</p>
+<p>          позиционную информацию и устанавливает текущую позицию в индексе</p>
+<p>          следующим образом:</p>
+<p>            - Если дубликат существует, СЛЕДУЮЩАЯ запись становится</p>
+<p>              первым дубликатом возвращаемого значения. Иначе, следующая</p>
+<p>              запись становится первой записью для значения ключа большего,</p>
+<p>              чем возвращаемое.</p>
+<p>            - Если дубликат существует, ПРЕДЫДУЩАЯ запись становится</p>
+<p>              последним дубликатом значения ключа меньшего возвращаемого.</p>
+<p>              Иначе, предыдущая запись становится единственной записью для</p>
+<p>              значения ключа меньшего, чем возвращаемое.</p>
+<p>          GET LESS THAN OR EQUAL (11)</p>
+<p>          (Получить меньшую или равную)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Less Than Or Equal ищет запись со значением ключа меньшим или</p>
+<p>          равным заданному значению ключа.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Get Less Than Or Equal Ваша прикладная</p>
+<p>          программа может находить запись, которая равна или меньше</p>
+<p>          заданному значению ключа. Btrieve сперва ищет в пути доступа для</p>
+<p>          заданного значения ключа. Если он не находит значение, то</p>
+<p>          поднимает путь доступа, заданный номером ключа для нахождения</p>
+<p>          первого значения ключа меньшего требуемого. Как только он найдет</p>
+<p>          правильное значение ключа, он возвратит соответствующую запись</p>
+<p>          данных в буфер данных.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию</p>
+<p>          Get Less Tnan Or Equal, должны быть выполнены следующие</p>
+<p>          предварительные условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Файл не может быть файлом, состоящим только из данных без</p>
+<p>              заданных индексов.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Less Than Or Equal установите</p>
+<p>          следующие Btrieve-параметры:</p>
+<p>            - Установите код операции в 11.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Сохраните значение ключа в параметре буфера ключа.</p>
+<p>            - Установите параметр номера ключа в соответствии с правильным</p>
+<p>              путем доступа.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Вернет запись в буфер данных.</p>
+<p>            - Вернет значение ключа для этой записи в буфер ключа;</p>
+<p>            - Возвратит длину записи в параметре длины буфера данных.</p>
+<p>          Если Btrieve не может вернуть запись, он возвратит ненулевой код</p>
+<p>          статуса, указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  6 Неверный номер ключа</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          После операции Get Less Than Or Equal Btrieve удаляет всю</p>
+<p>          существующую позиционную информацию и устанавливает текущую</p>
+<p>          позицию в индексе следующим образом:</p>
+<p>            - Если дубликат существует, СЛЕДУЮЩАЯ запись становится</p>
+<p>              первым дубликатом возвращаемого значения. Иначе, следующая</p>
+<p>              запись становится первой записью для значения ключа большего,</p>
+<p>              чем возвращаемое.</p>
+<p>            - Если дубликат существует, ПРЕДЫДУЩАЯ запись становится</p>
+<p>              последним дубликатом значения ключа меньшего возвращаемого.</p>
+<p>              Иначе, предыдущая запись становится единственной записью для</p>
+<p>              значения ключа меньшего, чем возвращаемое.</p>
+<p>          GET NEXT (6)</p>
+<p>          (Получить следующую)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Next ищет запись из Btrieve-файла, следующую за текущей</p>
+<p>          записью в пути ключей.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Get Next Ваша прикладная программа может</p>
+<p>          находить записи в порядке согласно заданному пути доступа. Только</p>
+<p>          операции Get First, Get Next, Get Previous и Get Last позволяют</p>
+<p>          прикладной программе искать записи для значений ключей-дубликатов</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию</p>
+<p>          Get Next, должны быть выполнены следующие предварительные условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Файл не может быть файлом, состоящим только из данных без</p>
+<p>              заданных индексов.</p>
+<p>            - Ваша прикладная программа должна установить позицию в индексе</p>
+<p>              при Btrieve-вызове немедленно перед операцией Get Next.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Next установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции в 6.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Сохраните значение ключа из предыдущей операции в буфере</p>
+<p>              ключа. Передайте буфер ключа ТОЧНО соответствующее</p>
+<p>              возвращаемому Btrieve при предыдущем вызове, т.к. Btrieve</p>
+<p>              может понадобиться предварительно сохраненная там информация</p>
+<p>              для определения текущей позиции в файле.</p>
+<p>            - Установите параметр номера ключа в соответствии с путем</p>
+<p>              доступа, используемым при предыдущем обращении. Вы не можете</p>
+<p>              изменять пути доступа, используя операцию Get Next.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Вернет запись в буфер данных.</p>
+<p>            - Вернет значение ключа для этой записи в буфер ключа;</p>
+<p>            - Возвратит длину записи в параметре длины буфера данных.</p>
+<p>          Если Btrieve не может вернуть запись, он возвратит ненулевой код</p>
+<p>          статуса, указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  6 Неверный номер ключа</p>
+<p>            -  7 Другой номер ключа</p>
+<p>            -  9 Конец файла</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>            - 82 Потеря позиции</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Btrieve использует позиционирование, установленное предыдущим</p>
+<p>          вызовом, для выполнения операции Get Next, заменяя позиционную</p>
+<p>          информацию следующим образом:</p>
+<p>            - Если дубликат существует, СЛЕДУЮЩАЯ запись становится</p>
+<p>              первым дубликатом возвращаемого значения. Иначе, следующая</p>
+<p>              запись становится первой записью для значения ключа большего,</p>
+<p>              чем возвращаемое.</p>
+<p>            - Если дубликат существует, ПРЕДЫДУЩАЯ запись становится</p>
+<p>              последним дубликатом значения ключа меньшего возвращаемого.</p>
+<p>              Иначе, предыдущая запись становится единственной записью для</p>
+<p>              значения ключа меньшего, чем возвращаемое.</p>
+<p>          GET POSITION (22)</p>
+<p>          (Получить позицию)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Position возвращает физическую позицию текущей записи.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;    x    &#166;      x     &#166;   x  &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Get Position Ваша прикладная программа</p>
+<p>          может получить 4-байтовую позицию текущей записи в Btrieve-</p>
+<p>          файле. Для того, чтобы установить текущую запись Ваша прикладная</p>
+<p>          программа может выполнить любую другую Get операцию, операцию</p>
+<p>          Insert или операцию Update. Ваша прикладная программа может</p>
+<p>          затем запросить операцию Get Position для поиска адреса записи.</p>
+<p>          Как только Ваша прикладная программа узнает адрес записи, она</p>
+<p>          может использовать операцию Get Direct для поиска этой записи</p>
+<p>          непосредственно по физическому расположению в файле.</p>
+<p>          Btrieve не выполняет какой либо ввод/вывод на диск при запросе</p>
+<p>          Get Direct.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию</p>
+<p>          Get Position, должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Btrieve-обращение к файлу непосредственно до вызова Get</p>
+<p>              Position должно найти запись. Вы не можете запросить вызов,</p>
+<p>              используя тот же самый блок позиции, между поиском записи и</p>
+<p>              вызовом Get Position.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Position установите следующие</p>
+<p>          Btrueve-параметры:</p>
+<p>            - Установите код операции равный 22.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Используйте буфер данных достаточно длинный для хранения</p>
+<p>              4-байтовой позиции.</p>
+<p>            - Установите длину буфера данных равную по крайней мере</p>
+<p>              четырем байтам.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Get завершилась успешно, Btrieve</p>
+<p>            - Возвратит позицию запсии в буфер данных. Позиция - 4-байтовое</p>
+<p>              двоичное значение (самое важное первое слово), показывающее</p>
+<p>              точку входа записи (в байтах) в файле.</p>
+<p>            - Установит длину буфера данных равную четырем байтам.</p>
+<p>          Если Btrieve не может определить текущую запись или не может</p>
+<p>          возвратить позицию, он вернет ненулевой код статуса указывающий</p>
+<p>          на причину. Наиболее часто встречающийся ненулевой статус,</p>
+<p>          возвращаемый Btrieve, - код статуса 8 (Неверное</p>
+<p>          позиционирование).</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Get Position не оказывает эффект на позиционирование.</p>
+<p>          GET PREVIOUS (7)</p>
+<p>          (Получить предыдующую)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Get Previous ищет запись, предшествующую текущей записи в пути</p>
+<p>          ключей.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Get Previous Ваша прикладная программа может</p>
+<p>          находить записи в порядке согласно заданному пути доступа. Только</p>
+<p>          операции Get First, Get Next, Get Previous и Get Last позволяют</p>
+<p>          прикладной программе искать записи для значений ключей-дубликатов</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию</p>
+<p>          Get Previous, должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Btrieve-обращение к файлу непосредственно до вызова Get</p>
+<p>              Previous должно найти запись. Вы не можете запросить вызов,</p>
+<p>              используя тот же самый блок позиции, между поиском записи и</p>
+<p>              вызовом Get Previous.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Get Previous установите следующие</p>
+<p>          Btrieve-параметры:</p>
+<p>            - Установите код операции в 7.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Задайте правильный номер ключа.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>            - Передайте буфер ключа точно соответствующий возвращаемому</p>
+<p>              Btrieve при предыдущем вызове, т.к. Btrieve может</p>
+<p>              понадобиться предварительно сохраненная там информация</p>
+<p>              для определения текущей позиции в файле.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Заменит буфер ключа значением ключа для новой записи;</p>
+<p>            - Возвратит предыдущую запись в буфер данных;</p>
+<p>            - Возвратит длину записи в параметре длины буфера данных.</p>
+<p>          Если операция не была успешной, Btrieve возвратит ненулевой код</p>
+<p>          статуса, указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  9 Конец файла</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Btrieve использует позиционирование, установленное предыдущим</p>
+<p>          вызовом, для выполнения операции Get Previous следующим образом:</p>
+<p>            - Запись, которая была текущей при инициации вызова, становится</p>
+<p>              СЛЕДУЮЩЕЙ записью.</p>
+<p>            - Если дубликат существует, ПРЕДЫДУЩАЯ запись становится</p>
+<p>              последним дубликатом значения ключа меньшего возвращаемого.</p>
+<p>              Иначе, предыдущая запись становится единственной записью для</p>
+<p>              значения ключа меньшего, чем возвращаемое.</p>
+<p>          INSERT (4)</p>
+<p>          (Добавить)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Insert добавляет запись в файл.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;      x     &#166;  x   &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;            &#166;      &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Ваша прикладная программа может использовать операцию Insert для</p>
+<p>          добавления новой записи в файл. Btrieve обновляет все индексы</p>
+<p>          ключей для отражения значений ключей новой записи во время</p>
+<p>          добавления записи.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию Insert,</p>
+<p>          должны быть выполнены следующие предварительные условия:</p>
+<p>            - Файл данных должен быть открыт.</p>
+<p>            - Добавляемая запись должна быть соответствующей длины и</p>
+<p>              значения ключей должны соответствовать ключам, определенным</p>
+<p>              для файла.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Insert установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Задайте код операции равный 2.</p>
+<p>            - Сохраните новую запись данных в буфере данных.</p>
+<p>            - Задайте длину буфера данных. Это значение должно быть по</p>
+<p>              крайней мере равно длине фиксированной части записи.</p>
+<p>            - Задайте номер ключа, для которого Вы хотите, чтобы Btrieve</p>
+<p>              сохранял позицию.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Insert завершилась успешно, Btrieve:</p>
+<p>            - Поместит новую запись в файл;</p>
+<p>            - Обновит всю индексную информацию, чтобы отразить добавление</p>
+<p>              новой записи;</p>
+<p>            - Возвратит значение ключа для текущего пути доступа.</p>
+<p>          Если операция Insert не была успешной , Btrieve возвратит</p>
+<p>          ненулевой код статуса. Наиболее часто встречающие ошибки:</p>
+<p>            -  2 ошибка ввода/вывода</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  5 Ошибка дубликатов</p>
+<p>            - 14 Ошибка открытия прообраза</p>
+<p>            - 15 Ошика ввода/вывода прообраза</p>
+<p>            - 18 Диск полный</p>
+<p>            - 21 Буфер ключа слишком мал</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Insert удаляет всю существующую позиционную информацию.</p>
+<p>          Опираясь на заданный Вами номер ключа Btrieve устанавливает свою</p>
+<p>          позицию в индексе следующим образом:</p>
+<p>            - Первая запись данных со значением ключа большим только что</p>
+<p>              добавленного становится СЛЕДУЮЩЕЙ записью.</p>
+<p>            - Последняя запись данных со значением ключа меньшим только что</p>
+<p>              добавленного становится ПРЕДЫДУЩЕЙ записью.</p>
+<p>          LOCKS</p>
+<p>          (Блокировки)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Блокировки позволяют Вам управлять доступом к записям и файлам,</p>
+<p>          предохраняя рабочую станцию от выполнения конфликтных операций</p>
+<p>          над базой данных.</p>
+<p>          П  а р а м е т р ы  :</p>
+<p>          За исключением кода операции параметры для блокировок - те же</p>
+<p>          самые как и в соответствующей операции записи.</p>
+<p>          О п и с а н и е  :</p>
+<p>          Btrieve различает два различных вида блокировок записей:</p>
+<p>          единичные блокировки и множественные блокировки. Вы можете</p>
+<p>          задать вид блокировки с ожиданием или без ожидания как для</p>
+<p>          единичных блокировок, так и для множественных блокировок записей.</p>
+<p>          Вы можете задать блокировку с любой операцией  Get, Stop, Open</p>
+<p>          или Begin Transaction. Добавляя смещение блокировки к операции</p>
+<p>          Begin Transaction задавайте, хотите ли Вы транзакцию с ожиданием</p>
+<p>          или без ожидания. Это не приведет Btrieve к использованию</p>
+<p>          блокировок записей в течении транзакции.</p>
+<p>          ЕДИНИЧНЫЕ БЛОКИРОВКИ ЗАПИСЕЙ. Когда рабочая станция использует</p>
+<p>          единичные блокировки записей, она может звблокировать только одну</p>
+<p>          запись в файле в какой-либо момент времени. Btrieve отменяет</p>
+<p>          единичную блокировку записи, когда Btrieve запрашивает другую</p>
+<p>          Get операцию с блокировкой для того же самого файла, корректирует</p>
+<p>          или удалеет заблокированную запись, или запрашивает операцию</p>
+<p>          Unlock.</p>
+<p>          МНОЖЕСТВЕННЫЕ БЛОКИРОВКИ ЗАПИСЕЙ. Множественные блокировки</p>
+<p>          записей позволяют прикладной программе блокировать множественные</p>
+<p>          записи в файле и затем корректировать или удалять эти записи по</p>
+<p>          необходимости. Когда Вы используете множественные блокировки</p>
+<p>          записей, Btrieve также блокирует только одну запись для каждой</p>
+<p>          Get операции. Однако, он НЕ отменяет блокировку записи, когда Вы</p>
+<p>          корректируете заблокированную запись или запрашивает другую Get</p>
+<p>          операцию с множественной блокировкой. Ваша прикладная программа</p>
+<p>          может отменить одну или все множественные блокировки записей</p>
+<p>          используя операцию Unlock.</p>
+<p>          БЛОКИРОВКИ С ОЖИДАНИЕМ. Если другая рабочая станция имеет</p>
+<p>          заблокированную запись или имеет прерванную транзакцию для</p>
+<p>          файла, когда Вы запрашиваете блокировку с опцией ожидания,</p>
+<p>          Btrieve будет ждать до тех пор, пока запись не станет доступной,</p>
+<p>          до того, как вернуть управление в прикладную программу.</p>
+<p>          БЛОКИРОВКИ БЕЗ ОЖИДАНИЯ. Если другая рабочая станция имеет</p>
+<p>          заблокированную запись или имеет прерванную транзакцию для</p>
+<p>          файла, когда Вы запрашиваете блокировку с опцией без ожидания,</p>
+<p>          Btrieve немедленно возвратит статус 84 или 85 в прикладную</p>
+<p>          программу, показывающий что запись - занята.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          За исключением кода операции требуемые для операции блокировки</p>
+<p>          параметры идентичны требуемымв соответствующей операцией без</p>
+<p>          блокировки.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для задания блокировки записи Ваша прикладная программа</p>
+<p>          прибавляет значение (называемое "смещение блокировки") к любому</p>
+<p>          коду операции Get, Step,, Open или Begin Transaction. Следующая</p>
+<p>          таблица иллюстрирует значения смещений блокировки:</p>
+<p>                 Значение    Тип блокировки</p>
+<p>                   +100      единичная блокировка записи с ожиданием</p>
+<p>                   +200      единичная блокировка записи без ожидания</p>
+<p>                   +300      множественная блокировка записи с ожиданием</p>
+<p>                   +400      множественная блокировка записи без ожидания</p>
+<p>          Используйте значения смещений блокировки следующим образом:</p>
+<p>            - ДЛЯ ЗАДАНИЯ ЕДИНИЧНОЙ БЛОКИРОВКИ ЗАПИСИ прибавьте 100</p>
+<p>              (с ожиданием) или 200 (без ожидания) к коду операции.</p>
+<p>            - ДЛЯ ЗАДАНИЯ МНОЖЕСТВЕННОЙ БЛОКИРОВКИ ЗАПИСИ прибавьте 300</p>
+<p>              (с ожиданием) или 400 (без ожидания) к коду операции.</p>
+<p>          Например, для запроса Get Equal с единичной блокировкой записи с</p>
+<p>          ожиданием код операции будет (100 + 5) или 105. Для той же самой</p>
+<p>          операции со множественной блокировкой записи с ожиданием код</p>
+<p>          операции будет (300 + 5) или 305. Для запроса Get Last с</p>
+<p>          единичной блокировкой записи без ожидания код операции будет</p>
+<p>          (13 + 200) или 213. Для той же самой операции со множественной</p>
+<p>          блокировкой записи без ожидания код операции будет (13 + 400) или</p>
+<p>          413.</p>
+<p>          Для задания транзакции с ожиданием установите код операции в 119</p>
+<p>          или 319. В этом случае код блокировки задает, что Вы хотите,</p>
+<p>          чтобы Btrieve ждал  файл или запись, если они заняты другой</p>
+<p>          рабочей станцией. Задание 319 для операции Begin Transaction -</p>
+<p>          эквивалентно заданию или 19 или 119. См. описание управления</p>
+<p>          транзакциями в Главе 2 для дополнительной информации.</p>
+<p>          Вы можете также запросить Begin transaction без ожидания с кодом</p>
+<p>          операции 219 или 419. В этом случае Btrieve возвратит статус 84</p>
+<p>          или 85, если Ваша прикладная программа попытается получить доступ</p>
+<p>          к заблокированной записи или файлу с транзакцией. См. описание                              выполнения операции Get Key установите Btrieve-параметры так</p>
+<p>          управления транзакциями в Главе 2 для дополнительной информации.</p>
+<p>          ОТКРЫТИЕ ЗАБЛОКИРОВАННЫХ ФАЙЛОВ. Если файл - заблокирован, когда</p>
+<p>          рабочая станция пытается его открыть, Btrieve обычно ждет пока</p>
+<p>          файл не станет доступен до выполнения операции Open. Это</p>
+<p>          эквивалентно блокировке с ожиданием.</p>
+<p>          Вы можете задать запрос открытия без ожидания, посылая или 200</p>
+<p>          или 400 как код операции для операции Open (0 + 200 или 0 + 400)</p>
+<p>          Если файл, который Вы пытаетесь открыть, заблокирован, Btrieve</p>
+<p>          возвратит код статуса 85 (Файл занят) в прикладную прграмму. Вы</p>
+<p>          можете попытаться затем повторить операцию, пока файл не станет</p>
+<p>          доступен.</p>
+<p>          ОТМЕНА МНОЖЕСТВЕННЫХ БЛОКИРОВОК ЗАПИСЕЙ. Как упоминалось раньше,</p>
+<p>          Btrieve не отменяет автоматически множественную блокировку, как</p>
+<p>          он делает в случае единичной блокировки. Записи, которые Вы</p>
+<p>          блокируете множественной блокировкой записи, остаются</p>
+<p>          заблокированы, пока Вы не сделаете следующее:</p>
+<p>            - Отмените блокировку запросив Btrieve-операцию Unlock (27).</p>
+<p>            - Удалите запись.</p>
+<p>            - Запросите Btrieve-операцию Reset (28).</p>
+<p>            - Закроете файл.</p>
+<p>            - Получите доступ к файлу с транзакцией.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Вы не можете смешивать единичные и множественные блокировки в</p>
+<p>          одном и том же файле с одной рабочей станции. Если единичная</p>
+<p>          блокировка записи (+100/+200) не отменена, когда рабочая станция</p>
+<p>          посылает запрос со множественной блокировкой (+300/+400), Btrieve</p>
+<p>          возвратит ошибку несовместимости блокировок. Обратная ситуация</p>
+<p>          приведет к той же самой ошиббке. В обоих случаях Btrieve не</p>
+<p>          заблокирует запись. Это не значит, что рабочая станция ограничена</p>
+<p>          только одним типом блокировки для файла. Btrieve будет возвращать</p>
+<p>          ошибку, если только один тип блокировки ИСПОЛЬЗУЕТСЯ В НАСТОЯЩЕЕ</p>
+<p>          ВРЕМЯ, когда рабочая станция пытается использовать блокировку</p>
+<p>          другого типа.</p>
+<p>          Если рабочая станция пытается разблокировать множественную</p>
+<p>          блокировку записи, когда она не установлена в позицию этой</p>
+<p>          записи, Btrieve возвратит статус ошибки блокировки.</p>
+<p>          Вдобавок, Btrieve возвратит статус ошибки блокировки, если Ваша</p>
+<p>          прикладная программа попытается заблокировать больше записей, чем</p>
+<p>          Вы задали при конфигурации BSERVER. См. описание опций</p>
+<p>          инициализации NetWare Btrieve в Главе 3 для дополнительной</p>
+<p>          информации.</p>
+<p>          Наиболее часто встречающиеся ненулевые коды статуса, возвращаемые</p>
+<p>          Btrieve из безуспешных операций блокировки:</p>
+<p>            - 81 Ошибка блокировки</p>
+<p>            - 84 Запись занята</p>
+<p>            - 85 Файл занят</p>
+<p>            - 93 Несовместимый тип бблокировки</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операции запрета не оказывают действия на позицию Btrieve в</p>
+<p>          индексе.</p>
+<p>          OPEN (0)</p>
+<p>          (Открыть)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Open делает файл доступным.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;      x     &#166;  x   &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Ваша задача не может получить доступ к Btrieve-файлу до тех пор,</p>
+<p>          пока она сперва не выполнит операцию Open. Файл не должен</p>
+<p>          находиться в текущей директории, пока вы задаете полное имя пути.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запросит операцию Open,</p>
+<p>          должны быть выполнены следующие предварительные условия:</p>
+<p>            - Файл, который должен быть открыт, должен существовать на</p>
+<p>              доступном устройстве. Если файл имеет расширение, оба</p>
+<p>              устройства хранения, на которых расположен файл, должны быть</p>
+<p>              доступны.</p>
 <p>  * Управление файла должно быть доступно для файла.</p>
 <p>П р о ц е д у р а :</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Open установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 0.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Поместите имя файла, который хотите открыть, в параметр</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ббуфера ключа. Завершите имя файла пробелом или двоичным</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; нулем. Если файла нет в текущей директории, задайте имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; устройства и имя пути для файла, включающее уровни директорий.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если файл имеет владельца, задайте имя владельца, завершенное</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; двоичным 0, в ббуфере данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину имени владельца, включая двоичный 0, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; параметре длины буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте один из следующих режимов спецификаций в параметре</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; номера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Режим &nbsp; &nbsp;Описание</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-1 &nbsp; &nbsp; &nbsp;Ускоренный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;В ускоренном режиме Ваша прикладная программа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;может заблокировать способность автоматического</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;восстановления данных для того, чтобы увеличит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;возможность корректировки. См. "Ускоренный доступ"</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;для более подробного описания этой опции. Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;блокирует буфер в кэш-памяти для всех файлов,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;открытых в режиме ускорения. Число файл, которые</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Вы можете открыть одновременно в ускоренном</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;режиме, зависит от опций памяти и размера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;страницы, заданных Вами при загрузке Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-2 &nbsp; &nbsp; &nbsp;Только чтение</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Этот режим позволяет Вашей прикладной программе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;открыть поврежденный файл, который Btrieve не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;может автоматически восстановить. Когда Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;открывает файл в режиме "только чтение", Ваша</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;прикладная программа может только читать файл; она</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;не может выполнять корректировки. Если были</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;повреждены индексы файла, записи можно найти</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;открывая файл в режиме "только чтение" и затем</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;используя операцию Step Next.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-3 &nbsp; &nbsp; &nbsp;Верификация</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Режим верификации применим только к файлам,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;расположенным на локальных DOS-дисках. Если Ваша</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;прикладная программа открывает локальный файл в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;режиме верификации, Btrieve имеет опцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;верификации DOS во время каждой операции. После</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;каждой записи на диск операционная система</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;перечитывает данные, чтобы удостовериться в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;правильности их записи. Хотя ошибки записи на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;диск очень редки, Btrieve обеспечивает эту функцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;на случай, если Вы хотите прверить правильность</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;записи критических данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -4 &nbsp; &nbsp; Исключительный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Исключительный режим дает рабочей станции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;исключительный доступ к файлу на разделяемом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;устройстве. Никакая другая рабочая станция не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;может открыть этот файл до тех пор, пока рабочая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;станция, имеющая исключительный доступ к файлу,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;не закроет его. Исключительный режим имеет место</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;только для файлов, расположенных на разделяемом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;устройстве. Если Вы запросите исключительный режим</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;для файла на локальном диске, Btrieve откроет файл</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;в обычном режиме.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Другие &nbsp;Нормальный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для доступа к Bteieve-файлу из Бейсика необходимы два шага.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Во-первых, Ваша прикладная программа должна запросить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BASIC OPEN для устройства NUL для того, чтобы использовать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; утверждение FIELD для буфера данных файла. (См. "Вызов Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; из BASIC" для дополнительной информации). Во-вторых, прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа должна выполнить Btrieve-операцию Open. другие языки не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; требуют первого шага.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve допускает до 255 открытых файлов для BASIC-компилятора,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Pascal, COBOL или C прикладных задач. Когда множественные файлы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; открыты в одно и то же время, Btrieve использует блок текущей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиции для определения, к какому файлу нужен доступ при данном</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; вызове.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ПРИМЕЧАНИЕ:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Хотя Btrieve позволяет прикладной программе открывать до</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;255 файлов, BASIC-интерпретатор и некоторые компиляторы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BASIC-а позволяют максимально только 15 открытых файлов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Для доступа к более, чем трем файлам, BASIC требует, чтобы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Вы задали параметр файлов / при инициации BASIC-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;интерпретатора. Когда Вы открываете множественные файлы в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;одно и то же время из BASIC-а, Btrieve использует FCB для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;определения, к какому файлу нужен доступ при данном</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;вызове. См. документацию по BASIC-интерпретатору или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;компилятору для дополнительной информации.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;---------------------------------------------------------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Opene завершилась успешно, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Назначьте обработчик файла для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Зарезервируйте блок позиции, передаваемый при вызове Open для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; вновь открываемогофайла;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сделайте файл доступным.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Open завершилась ошибочно, Btrieve возвратит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевой код статуса. Наиболее распростанееные ненулевые коды</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса для операции Open:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;2 Ошибка ввода/вывода</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 46 Путь доступа к файлу неверен</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 85 Файл занят</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 86 Таблица файла заполнена</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 87 Таблица обработки заполнена</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Open не устанавливает какую-либо позиционную информацию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; RESET (28)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Сброс)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Reset освобождает все ресурсы, захваченные рабочей станцией,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; такие как оставшиеся блокировки при ошибочном завершении</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; прикладной программы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа может выполнять операцию Reset для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; освобождения всех ресурсов, захваченных рабочей станцией в сети.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Эта операция отменяет все транзакции рабочей станции, отменяет все</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блокировки и закрывает открытые файлы рабочей станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа может запрсить операцию Reset в любое</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; время после загрузки Record Manager.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Reset установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 28.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите парвметр номера ключа в -1, если Ваша прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; программа освобождает ресурсы для другой рабочей станции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; сети.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните номер связи рабочей станции, на которой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; осуществляется сброс, как целое число в первых 2 байтах</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; буфера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Reset завершилась успешно, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Закроет все открытые файлы для заданной рабочей станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Отменит все блокировки, заданные данной рабочей станцией.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Отменит все активные транзакции на данной рабочей станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция не была успешной &nbsp;по какой-либо причине, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвратит ненулевой код статуса.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Reset разрушает всю позиционную информацию, т.к.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; закрывает все открытые файлы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; SET DIRECTORY (17)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Установить директорию)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Set Directory устанавливает текущую директорию в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданное значение.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Set Directory изменяет текущую директорию на директорию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; заданную в параметре буфера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Set Directory, устройство-приемник и директория должны стать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; доступны.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для установки текущей директории установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 17.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните требуемое устройство и путь директории, завершенные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; двоичным 0, в буфере ключа. Если Вы опустите имя устройства,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Btrieve будет использовать устройство, заданное по умолчанию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Если Вы не задатите полный путь для директории, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; добавит путь директории, заданный в буфере ключа, к текущей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; директории.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Set Directory завершилась успешно, Btrieve сделает</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; директорию, заданную в буфере ключа, текущей директорией.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция не была успешной, Btrieve оставит текущую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; директорию неизмененной и возвратит ненулевой статус.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Set Directory не оказывает эффект на позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; SET OWNER (29)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Установить владельца)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Set Owner присваивает имя владельца файлу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Set Owner присваивает имя владельца файлу таким образом</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; что пользователи, не знающие это имя, не могут получить доступ к</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файлу. Если для файла было установлено имя владельца,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пользователи или прикладные программы должны задавть имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; владельца всякий раз, как они пытаются открыть файл. Вы можете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; задать, чтобы имя владельца требовалось при любом доступе или</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; только при корректировке.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Когда Вы присвоите имя владельца файлу, Вы можете также указать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve зашифровать данные файла на диске. Если Вы задаете</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; шифровку данных, Btrieve зашифрует все данные во время операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Set Owner. Чем длиннее файл, тем дольше выполняется Set Owner&amp;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа запрсит операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Set Owner, должны быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Не должно быть активных транзакций.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Имя владельца не должно уже быть присвоено файлу.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Set Owner установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 29.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции, определяющий файл, что Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; защитить.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните имя владельца в буфере данных и в буфере ключа и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; передайте длину буфера данных. Bteieve требует имя в обоих</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; буферах, чтобы избежать возможность случайного задания</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; неправильного значения. Имя владельца может быть длиной до</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; восьми символов и должно завершаться двоичным 0.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр номера ключа в целое число, задающее тип</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ограничений доступа, которые Вы хотите задать для файла, и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; должны ли быть данные зашифрованы. В Таблице 6.2 перечислены</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значения, задаваемые Вами для номера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Значение &nbsp; Описание</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp;Запросы имени владельца при любом методе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;доступа (нет шифровки данных)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp;Предоставление доступа "только чтение" без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;имени владельца (нет шифровки данных)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2 &nbsp; &nbsp; &nbsp;Запросы имени владельца при любом методе</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;доступа (с шифровкой данных)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp;Предоставление доступа "только чтение" без</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;имени владельца (с шифровкой данных)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Таблица 6.2</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Коды имени владельца и шифровки данных</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Set Owner завершилась успешно, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Не позволит получить доступ к файлу, пока не будет задано имя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; владельца;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Зашифрует данные в файле, если задана шифровка.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Как только Ваша прикладная программа установит имя владельца, оно</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; останется действительным до тех пор, пока Ваша прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа не запросит операцию Clear Owner.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Set Owner не была успешной, Btrieve возвратит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевой статус. Наиболее часто встречающиеся ненулевые коды</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 41 Недопустимая операция</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 50 Владелец уже установлен</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 51 Неправильное имя владельца</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Set Owner не оказывает эффект на позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STAT (15)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Статистика)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Stat ищет характеристики для заданного файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; x &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp;x &nbsp; &nbsp; &#166; &nbsp; x &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Используя операцию Stat Ваша прикладная программа может</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определять характеристики, заданные для файла при его создании.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Вдобавок операция Stat возвращает число записей в файле, число</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; уникальных значений ключей, храниых для каждого индекса в файле,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; число неиспользуемых страниц в файле и все дополнительные индексы</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; определенные для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve возвращает характеристики файла в буфер данных в том же</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; самом двоичном формате как и в операции Create. Для 4-байтовых</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; переменных (число ключей и записей) Btrieve возвращает младшую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; часть числа в первых 2 байтах, за которыми следует старшая часть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; числа в последних 2 байтах. Зарезервированные области также</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; размещаются, хотя Btrieve игнорирует их в операции Stat.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Флаги файла появляются как показано ниже:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 0 = 1, файл допускает записи переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 1 = 1, Btrieve усечет пробельные концы в записях</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; переменной длины.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 2 = 1, Btrieve перераспределит страницы для файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 3 = 1, Btrieve сожмет данные в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 4 = 1, Btrieve создаст файл, состоящий только из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 6 = 1, Btrieve установит 10% границу свободного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; пространства.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 7 = 1, Btrieve установит 20% границу свободного</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; пространства.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 6 = 1 и бит 7 = 1, Btrieve установит 30% границу</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; свободного пространства.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Спецификации ключа появляются непосредственно за спецификациями</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла и повторяются для каждого сегмента в файле. Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; устанавливает флаги ключа следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 0 = 1, ключ допускает дубликаты.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 1 = 1, ключ - модифицируемый.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 2 = 0 и бит 8 = 0, ключ - строковый.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 2 = 1 и бит 8 = 0, ключ - двоичный.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 3 = 1, ключ имеет пустое значение.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 4 = 1, ключ имеет другой сегмент.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 5 = 1, ключ отсортирован с помощью последовательности</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; альтернативного поиска.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 6 = 1, ключ отсортирован в убывающем порядке.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Бит 7 игнорируется для операции Create.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 8 = 0, ключ - стандартного типа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 8 = 1, ключ - расширенного типа,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Если бит 9 = 1, ключ - ручной.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; См. операцию Create в этой главе, где находится таблица</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; иллюстрирующая десятичные значения этих флагов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если Вы задаете альтернативную последовательность поиска</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; для любого из ключей или ключевых сегментов файла, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; возвратит определение последовательности непосредственно за</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блоком спецификаций последненго ключа. Btrieve возвратит буфер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данных в формате, показанном в Таблице 6.3.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; Описание &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;Длина&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +-----------------------+-----+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; длина записи &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; размер страницы &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;спецификации &nbsp; &#166; кол-во индексов &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; файла &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; кол-во заисей &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;4 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; флаги файла &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; резервное слово &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;неиспользуемые страницы&#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L-----------------------+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; Описание &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;Длина&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +-----------------------+-----+</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; позиция ключа &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; длина ключа &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;спецификации &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ключей &nbsp; &nbsp; &nbsp; &#166; флаги ключа &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;2 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(повторяются) &nbsp;&#166; кол-во ключей &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp;4 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; тип расширенного ключа&#166; &nbsp;1 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; пустое значение &nbsp; &nbsp; &nbsp; &#166; &nbsp;1 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;-----------------------&#166;-----&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; зарезервировано &nbsp; &nbsp; &nbsp; &#166; &nbsp;4 &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; L-----------------------+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Таблица 6.3</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Буфера данных для операции Stat</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До выполненият операции Stat Ваша прикладная программа должна</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; сперва открыть Btrieve-файл.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Stat установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции в 15.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Покажите буфер данных (для хранения статистики по файлу и</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключам) и альтернативную последовательность поиска, если она</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; задана.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Покажите буфер ключа длиной по крайней мере 64 символа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Stat завершилась успешно, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Возвратит характеристики файла и ключей в буфер данных;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Сохранит имя расширения файла, завершенное двоичным нулем, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;буфер ключа, если Вы до этого расширили файл. Иначе, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;проинициализирует первый байт буфера ключа нулем.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась безуспешно, Btrieve вернет ненулевой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; код статуса, информирующий о причине. Наиболее часто встречающие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Stat Create не устанавливает какую-либо позиционную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; информацию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STEP FIRST (33)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Шаг на первую)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step First ищет запись, размещенную физически первой в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step First позволяет Вашей прикладной программе искать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; запись, размещенную физически первой в файле. Btrieve не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; использует индексный путь для поиска записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа сможет выполнить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step First, файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Step First установите следующие Btrueve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте код операции равный 33.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Покажите буфер данных, в котором хранится возвращаемая запись</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр длины буфера данных равный длине буфера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет физически первую запись файла в буфер данных Вашей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; прикладной программы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установит параметр длины буфера данных равный количеству</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; байтов в возвращаемой записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция &nbsp;не была успешной, Btrieve вернет ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;9 Конец файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Step First не устанавливает позицию в индексе.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STEP LAST (33)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Шаг на последнюю)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Last ищет запись, размещенную физически последней в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Last позволяет Вашей прикладной программе искать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; запись, размещенную физически последней в файле. Btrieve не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; использует индексный путь для поиска записи при операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Last.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа сможет выполнить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Last, файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Step Last установите следующие Btrueve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте код операции равный 34.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Покажите буфер данных, в котором хранится возвращаемая запись</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите параметр длины буфера данных равный длине буфера</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет физически последнюю запись файла в буфер данных;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установит параметр длины буфера данных равный количеству</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; байтов в возвращаемой записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция &nbsp;не была успешной, Btrieve вернет ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;9 Конец файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Step Last не устанавливает позицию в индексе.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STEP NEXT (24)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Шаг на следующую)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Next ищет запись, физически следующую за текущей записью.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Next позволяет Вашей прикладной программе искать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи в том порядке, в котором они физически хранятся. Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; не использует индексный путь для поиска записи при операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Next. Операция Step Next, запрашиваемая непосредственно после</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операции Open, возвращает первую запись в файле. Операция</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Next, запрашиваемая непосредственно после любой операции Get</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; или Step, возвращает запись, физически следующую за записью,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; найденной предыдущей операцией.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ваша прикладная программа не может прогнозировать порядок, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; котором записи будут возвращаться операцией Step Next.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа сможет выполнить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Next, файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Step Next установите следующие Btrueve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте код операции равный 24.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Покажите буфер данных, в котором хранится возвращаемая запись</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет физически последнюю запись файла в буфер данных Вашей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; прикладной программы;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установит параметр длины буфера данных равный количеству</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; байтов в возвращаемой записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция &nbsp;не была успешной, Btrieve вернет ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;9 Конец файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Step Next не устанавливает позицию в индексе.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STEP PREVIOUS (36)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Шаг на предыдующую)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Previous позволяет Вашей прикладной программе искать запись</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; физически предшествующую текущей записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Previous позволяет Вашей прикладной программе искать</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи в том порядке, в котором они физически хранятся. Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; не использует индексный путь для поиска записи при операции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step Previous. Операция Step Previous, запрашиваемая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; непосредственно после любой операции Get или Step, возвращает</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; запись, физически предшествующую записи, найденной предыдущей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; операцией.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная программа сможет выполнить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Step previous, должен быть выполнены следующие предварительные</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Предыдущей операцией должна быть успешно выполненная операция</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Get или Step.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Step Previous установите следующие Btrueve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте код операции равный 35.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции для файла.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Покажите буфер данных, в котором хранится возвращаемая запись</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Задайте длину буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Вернет физически последнюю запись файла в буфер данных Вашей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; прикладной программы;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установит параметр длины буфера данных равный количеству</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; байтов в возвращаемой записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция &nbsp;не была успешной, Btrieve вернет ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса указывающий на причину. Наиболее часто встречающиеся</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; ненулевые коды статуса:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;3 Файл не открыт</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;9 Конец файла</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Step Previous не устанавливает позицию в индексе.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; STOP (25)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Остановить)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Stop завершает программу BREQUEST и удаляет ее из</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; памяти рабочей станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Stop удаляет программу запросов (BREQUEST) из памяти рабочей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; станции. Btrieve прикладная программа на рабочей станции не</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; может выполнять какие-либо другие Btrieve- операции до тех пор,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пока вы не стартуете вновь BREQUEST.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Stop удаляеттолько из памяти рабочей станции, где</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; выполняется Btrieve-запрос. вы не можете остановить BREQUEST на</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; другой рабочей станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; BREQUEST должен быть загружен до того, как Ваша прикладная</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; программа сможет Запросить операцию Stop.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Stop Ваша прикладная программа задает</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; код операции равный 25.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Stop завершилась успешно, Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Удалит BREQUEST из памяти на рабочей станции:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Закроет все предварительно открытые файлы для раочей станции</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Снимет все активные транзакции;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Отменит все блокировки на рвбочей станции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Stop не была успешной, Btrieve вернет ненулевой код</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статуса. Наиболее часто встречающийся &nbsp;ненулевой код статуса 20</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (BREQUEST не загружен).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Stop не устанавливает какую-либо позицию.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; UNLOCK (27)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Отмена блокировки)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Unlock отменяет блокировки одной или более записей,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; которые предварительно были заблокированы.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Unlock полностью отменяет блокировки одной или более записей для</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; файла, связанного с заданным блоком позиции.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная &nbsp;программа сможет запросить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Unlock на рвбочей станции, рабочая станция должна установить по</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; крайней мере блокировку одной записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для отмены единичной блокировки записи,установите следующие</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Btrieve-параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 27.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции файла, содержащего заблокированную</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; запись.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите номер ключа в неотрицательное значение.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для отмены множественной блокировки записи одного типа, сперва</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; найдите 4-байтовую позицию записи, которую Вы хотите</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; разблокировать, с помощью операции Get Position (22) для этой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; записи. Затем запросите операцию Unlock , устанавливая</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Btrieve-параметры следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 27.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте Btrieve блок позиции файла, содержащего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; заблокированную запись.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните (в буфере данных) 4-байтовую позицию, возвращаемую</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Btrieve.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите длину буфера данных равную 4.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Проинициализируйте параметр номера &nbsp;ключа -1.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для отмены всех множественных блокировок записи файла Вы должны</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; устанавить Btrieve-параметры следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 27.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте Btrieve блок позиции файла, содержащего</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; множественные блокировки.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Проинициализируйте параметр номера &nbsp;ключа -2.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Unlock завершилась успешно, Btrieve отменит все</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; блокировки, задаваемые этой операцией.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Unlock не была успешной, Btrieve вернет ненулевой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статус. Наиболее часто встречающийся &nbsp;ненулевой код статуса 81</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Ошибка блокировки).</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Unlock не оказывает действие на позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; UPDATE (3)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Корректировка)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Update корректирует существующую запись в файле.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166; &nbsp;x</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp;x &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp;&#166; &nbsp;x &nbsp;&#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Update изменяет информацию в существующей записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Ваша прикладная &nbsp;программа сможет запросить операцию</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Update, должны встретиться следующие предварительные условия:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Файл должен быть открыт.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Btrieve-обращение к файлу, выполняемое непосредственно перед</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; вызовом Update, должно найти запись6 которая будет</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; корректироваться. вы не можете запрашивать вызов, используя</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; тот же самый блок позиции, во время между поиском Вашей</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; прикладной программой записи и корректировкой записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Update установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 3.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Передайте блок позиции файла, содержащего эту запись.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните скорректированную запись в буфере данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите длину буфера данных равной длине корректируемой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; записи.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Сохраните номер ключа, используемый для поиска запис, в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; параметре номера ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Update завершилась успешно, Btrieve:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Заменит заменит запись, хранящуюся в файле, новым значением</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; из буфера данных.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Обновит индексы ключей для отражения любых изменений в</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; значениях ключей.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Заменит параметр буфера ключа, если потребуется.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Update не была успешной, Btrieve вернет ненулевой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; код статуса. Наиболее часто встречающиеся &nbsp;ненулевые коды статуса</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;5 Ошибка дубликата ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;7 Другой номер ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;8 Неправильное позиционирование.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 10 Ошибка модифицируемого ключа.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 14 Ошибка открытия прообраза.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 15 Ошибка ввода/вывода прообраза.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 22 Буфер данных слишком мал.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 80 Ошибка конфликта.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Update изменяет позиционную информацию только когда</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; изменяется значение ключа. В этом случае Btrieve устанавливает</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; свою позицию в индексе, опираясь на заданный Вами номер ключа,</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; следующим образом:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Первая запись со значением ключа большим, чем обновленный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключ, становится СЛЕДУЮЩЕЙ записью.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Первая запись со значением ключа меньшим, чем обновленный</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ключ, становится ПРЕДЫДУЩЕЙ записью.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; VERSION (26)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; (Версия)</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Н а з н а ч е н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Version возвращает текущую версию Btrieve и номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; пересмотра.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р и м е н е н и е &nbsp; п а р а м е т р о в &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------T----------------------T------T-----T------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp;FCB &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166;Длина &#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166;данных&#166;ключа&#166;ключа</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --------+---------+------------+------+-----+------</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Ожидаемые &nbsp; &nbsp; &nbsp; x &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Возвращаемые &nbsp; &nbsp; &nbsp; &nbsp;&#166; &nbsp; &nbsp; &nbsp; &nbsp; &#166; &nbsp; &nbsp; x &nbsp; &nbsp; &nbsp;&#166; &nbsp; x &nbsp;&#166; &nbsp; &nbsp; &#166;</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; О п и с а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Эта операция возвращает текущую версию Btrieve и номер пересмотра.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р е д в а р и т е л ь н ы е &nbsp; &nbsp;у с л о в и я &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; До того, как Вы сможете запросить операцию Version, должен быть</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; загружен Btrieve Record Manager.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; П р о ц е д у р а &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Для выполнения операции Version установите следующие Btrieve-</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; параметры:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите код операции равный 26.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Посмотрите, чтобы буфер данных был по крайней мере длиной 5</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; байтов.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Установите длину буфера данных равной 5.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Р е з у л ь т а т &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Version завершилась успешно, Btrieve возвратит</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; данные в буфер данных в следующем формате:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Размер &nbsp; &nbsp; Описание</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; Целое число, содержащее номер версии</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp; Целое число, содержащее номер пересмотра</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp; Символ, содержащий "N" для NetWare Btrieve</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Если операция Version не была успешной, Btrieve вернет ненулевой</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; статус.</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Т е к у щ е е &nbsp; п о з и ц и о н и р о в а н и е &nbsp;:</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Операция Version не оказывает влияния на текущее</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; позиционирование.</p>
+<p>          Для выполнения операции Open установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции в 0.</p>
+<p>            - Поместите имя файла, который хотите открыть, в параметр</p>
+<p>              ббуфера ключа. Завершите имя файла пробелом или двоичным</p>
+<p>              нулем. Если файла нет в текущей директории, задайте имя</p>
+<p>              устройства и имя пути для файла, включающее уровни директорий.</p>
+<p>            - Если файл имеет владельца, задайте имя владельца, завершенное</p>
+<p>              двоичным 0, в ббуфере данных.</p>
+<p>            - Задайте длину имени владельца, включая двоичный 0, в</p>
+<p>              параметре длины буфера данных.</p>
+<p>            - Задайте один из следующих режимов спецификаций в параметре</p>
+<p>              номера ключа.</p>
+<p>                Режим    Описание</p>
+<p>                 -1      Ускоренный</p>
+<p>                         В ускоренном режиме Ваша прикладная программа</p>
+<p>                         может заблокировать способность автоматического</p>
+<p>                         восстановления данных для того, чтобы увеличит</p>
+<p>                         возможность корректировки. См. "Ускоренный доступ"</p>
+<p>                         для более подробного описания этой опции. Btrieve</p>
+<p>                         блокирует буфер в кэш-памяти для всех файлов,</p>
+<p>                         открытых в режиме ускорения. Число файл, которые</p>
+<p>                         Вы можете открыть одновременно в ускоренном</p>
+<p>                         режиме, зависит от опций памяти и размера</p>
+<p>                         страницы, заданных Вами при загрузке Btrieve.</p>
+<p>                 -2      Только чтение</p>
+<p>                         Этот режим позволяет Вашей прикладной программе</p>
+<p>                         открыть поврежденный файл, который Btrieve не</p>
+<p>                         может автоматически восстановить. Когда Btrieve</p>
+<p>                         открывает файл в режиме "только чтение", Ваша</p>
+<p>                         прикладная программа может только читать файл; она</p>
+<p>                         не может выполнять корректировки. Если были</p>
+<p>                         повреждены индексы файла, записи можно найти</p>
+<p>                         открывая файл в режиме "только чтение" и затем</p>
+<p>                         используя операцию Step Next.</p>
+<p>                 -3      Верификация</p>
+<p>                         Режим верификации применим только к файлам,</p>
+<p>                         расположенным на локальных DOS-дисках. Если Ваша</p>
+<p>                         прикладная программа открывает локальный файл в</p>
+<p>                         режиме верификации, Btrieve имеет опцию</p>
+<p>                         верификации DOS во время каждой операции. После</p>
+<p>                         каждой записи на диск операционная система</p>
+<p>                         перечитывает данные, чтобы удостовериться в</p>
+<p>                         правильности их записи. Хотя ошибки записи на</p>
+<p>                         диск очень редки, Btrieve обеспечивает эту функцию</p>
+<p>                         на случай, если Вы хотите прверить правильность</p>
+<p>                         записи критических данных.</p>
+<p>                  -4     Исключительный</p>
+<p>                         Исключительный режим дает рабочей станции</p>
+<p>                         исключительный доступ к файлу на разделяемом</p>
+<p>                         устройстве. Никакая другая рабочая станция не</p>
+<p>                         может открыть этот файл до тех пор, пока рабочая</p>
+<p>                         станция, имеющая исключительный доступ к файлу,</p>
+<p>                         не закроет его. Исключительный режим имеет место</p>
+<p>                         только для файлов, расположенных на разделяемом</p>
+<p>                         устройстве. Если Вы запросите исключительный режим</p>
+<p>                         для файла на локальном диске, Btrieve откроет файл</p>
+<p>                         в обычном режиме.</p>
+<p>                 Другие  Нормальный</p>
+<p>          Для доступа к Bteieve-файлу из Бейсика необходимы два шага.</p>
+<p>          Во-первых, Ваша прикладная программа должна запросить операцию</p>
+<p>          BASIC OPEN для устройства NUL для того, чтобы использовать</p>
+<p>          утверждение FIELD для буфера данных файла. (См. "Вызов Btrieve</p>
+<p>          из BASIC" для дополнительной информации). Во-вторых, прикладная</p>
+<p>          программа должна выполнить Btrieve-операцию Open. другие языки не</p>
+<p>          требуют первого шага.</p>
+<p>          Btrieve допускает до 255 открытых файлов для BASIC-компилятора,</p>
+<p>          Pascal, COBOL или C прикладных задач. Когда множественные файлы</p>
+<p>          открыты в одно и то же время, Btrieve использует блок текущей</p>
+<p>          позиции для определения, к какому файлу нужен доступ при данном</p>
+<p>          вызове.</p>
+<p>                 ---------------------------------------------------------</p>
+<p>                 ПРИМЕЧАНИЕ:</p>
+<p>                 Хотя Btrieve позволяет прикладной программе открывать до</p>
+<p>                 255 файлов, BASIC-интерпретатор и некоторые компиляторы</p>
+<p>                 BASIC-а позволяют максимально только 15 открытых файлов.</p>
+<p>                 Для доступа к более, чем трем файлам, BASIC требует, чтобы</p>
+<p>                 Вы задали параметр файлов / при инициации BASIC-</p>
+<p>                 интерпретатора. Когда Вы открываете множественные файлы в</p>
+<p>                 одно и то же время из BASIC-а, Btrieve использует FCB для</p>
+<p>                 определения, к какому файлу нужен доступ при данном</p>
+<p>                 вызове. См. документацию по BASIC-интерпретатору или</p>
+<p>                 компилятору для дополнительной информации.</p>
+<p>                 ---------------------------------------------------------</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Opene завершилась успешно, Btrieve:</p>
+<p>            - Назначьте обработчик файла для файла.</p>
+<p>            - Зарезервируйте блок позиции, передаваемый при вызове Open для</p>
+<p>              вновь открываемогофайла;</p>
+<p>            - Сделайте файл доступным.</p>
+<p>          Если операция Open завершилась ошибочно, Btrieve возвратит</p>
+<p>          ненулевой код статуса. Наиболее распростанееные ненулевые коды</p>
+<p>          статуса для операции Open:</p>
+<p>            -  2 Ошибка ввода/вывода</p>
+<p>            - 46 Путь доступа к файлу неверен</p>
+<p>            - 85 Файл занят</p>
+<p>            - 86 Таблица файла заполнена</p>
+<p>            - 87 Таблица обработки заполнена</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Open не устанавливает какую-либо позиционную информацию.</p>
+<p>          RESET (28)</p>
+<p>          (Сброс)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Reset освобождает все ресурсы, захваченные рабочей станцией,</p>
+<p>          такие как оставшиеся блокировки при ошибочном завершении</p>
+<p>          прикладной программы.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;            &#166;      &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Ваша прикладная программа может выполнять операцию Reset для</p>
+<p>          освобождения всех ресурсов, захваченных рабочей станцией в сети.</p>
+<p>          Эта операция отменяет все транзакции рабочей станции, отменяет все</p>
+<p>          блокировки и закрывает открытые файлы рабочей станции.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          Ваша прикладная программа может запрсить операцию Reset в любое</p>
+<p>          время после загрузки Record Manager.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Reset установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции равный 28.</p>
+<p>            - Установите парвметр номера ключа в -1, если Ваша прикладная</p>
+<p>              программа освобождает ресурсы для другой рабочей станции</p>
+<p>              сети.</p>
+<p>            - Сохраните номер связи рабочей станции, на которой</p>
+<p>              осуществляется сброс, как целое число в первых 2 байтах</p>
+<p>              буфера ключа.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Reset завершилась успешно, Btrieve:</p>
+<p>            - Закроет все открытые файлы для заданной рабочей станции.</p>
+<p>            - Отменит все блокировки, заданные данной рабочей станцией.</p>
+<p>            - Отменит все активные транзакции на данной рабочей станции.</p>
+<p>          Если операция не была успешной  по какой-либо причине, Btrieve</p>
+<p>          возвратит ненулевой код статуса.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Reset разрушает всю позиционную информацию, т.к.</p>
+<p>          закрывает все открытые файлы.</p>
+<p>          SET DIRECTORY (17)</p>
+<p>          (Установить директорию)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Set Directory устанавливает текущую директорию в</p>
+<p>          заданное значение.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;            &#166;      &#166;  x  &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Set Directory изменяет текущую директорию на директорию</p>
+<p>          заданную в параметре буфера ключа.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию</p>
+<p>          Set Directory, устройство-приемник и директория должны стать</p>
+<p>          доступны.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для установки текущей директории установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции равный 17.</p>
+<p>            - Сохраните требуемое устройство и путь директории, завершенные</p>
+<p>              двоичным 0, в буфере ключа. Если Вы опустите имя устройства,</p>
+<p>              Btrieve будет использовать устройство, заданное по умолчанию.</p>
+<p>              Если Вы не задатите полный путь для директории, Btrieve</p>
+<p>              добавит путь директории, заданный в буфере ключа, к текущей</p>
+<p>              директории.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Set Directory завершилась успешно, Btrieve сделает</p>
+<p>          директорию, заданную в буфере ключа, текущей директорией.</p>
+<p>          Если операция не была успешной, Btrieve оставит текущую</p>
+<p>          директорию неизмененной и возвратит ненулевой статус.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Set Directory не оказывает эффект на позиционирование.</p>
+<p>          SET OWNER (29)</p>
+<p>          (Установить владельца)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Set Owner присваивает имя владельца файлу.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;     x      &#166;   x  &#166;  x  &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Set Owner присваивает имя владельца файлу таким образом</p>
+<p>          что пользователи, не знающие это имя, не могут получить доступ к</p>
+<p>          файлу. Если для файла было установлено имя владельца,</p>
+<p>          пользователи или прикладные программы должны задавть имя</p>
+<p>          владельца всякий раз, как они пытаются открыть файл. Вы можете</p>
+<p>          задать, чтобы имя владельца требовалось при любом доступе или</p>
+<p>          только при корректировке.</p>
+<p>          Когда Вы присвоите имя владельца файлу, Вы можете также указать</p>
+<p>          Btrieve зашифровать данные файла на диске. Если Вы задаете</p>
+<p>          шифровку данных, Btrieve зашифрует все данные во время операции</p>
+<p>          Set Owner. Чем длиннее файл, тем дольше выполняется Set Owner&amp;</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа запрсит операцию</p>
+<p>          Set Owner, должны быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Не должно быть активных транзакций.</p>
+<p>            - Имя владельца не должно уже быть присвоено файлу.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Set Owner установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции равный 29.</p>
+<p>            - Передайте блок позиции, определяющий файл, что Вы хотите</p>
+<p>              защитить.</p>
+<p>            - Сохраните имя владельца в буфере данных и в буфере ключа и</p>
+<p>              передайте длину буфера данных. Bteieve требует имя в обоих</p>
+<p>              буферах, чтобы избежать возможность случайного задания</p>
+<p>              неправильного значения. Имя владельца может быть длиной до</p>
+<p>              восьми символов и должно завершаться двоичным 0.</p>
+<p>            - Установите параметр номера ключа в целое число, задающее тип</p>
+<p>              ограничений доступа, которые Вы хотите задать для файла, и</p>
+<p>              должны ли быть данные зашифрованы. В Таблице 6.2 перечислены</p>
+<p>              значения, задаваемые Вами для номера ключа.</p>
+<p>                  Значение   Описание</p>
+<p>                      0      Запросы имени владельца при любом методе</p>
+<p>                             доступа (нет шифровки данных)</p>
+<p>                      1      Предоставление доступа "только чтение" без</p>
+<p>                             имени владельца (нет шифровки данных)</p>
+<p>                      2      Запросы имени владельца при любом методе</p>
+<p>                             доступа (с шифровкой данных)</p>
+<p>                      3      Предоставление доступа "только чтение" без</p>
+<p>                             имени владельца (с шифровкой данных)</p>
+<p>                            Таблица 6.2</p>
+<p>                Коды имени владельца и шифровки данных</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Set Owner завершилась успешно, Btrieve:</p>
+<p>            - Не позволит получить доступ к файлу, пока не будет задано имя</p>
+<p>              владельца;</p>
+<p>            - Зашифрует данные в файле, если задана шифровка.</p>
+<p>          Как только Ваша прикладная программа установит имя владельца, оно</p>
+<p>          останется действительным до тех пор, пока Ваша прикладная</p>
+<p>          программа не запросит операцию Clear Owner.</p>
+<p>          Если операция Set Owner не была успешной, Btrieve возвратит</p>
+<p>          ненулевой статус. Наиболее часто встречающиеся ненулевые коды</p>
+<p>          статуса:</p>
+<p>            - 41 Недопустимая операция</p>
+<p>            - 50 Владелец уже установлен</p>
+<p>            - 51 Неправильное имя владельца</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Set Owner не оказывает эффект на позиционирование.</p>
+<p>          STAT (15)</p>
+<p>          (Статистика)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Stat ищет характеристики для заданного файла.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;   x     &#166;      x     &#166;   x  &#166;  x  &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;      x     &#166;   x  &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Используя операцию Stat Ваша прикладная программа может</p>
+<p>          определять характеристики, заданные для файла при его создании.</p>
+<p>          Вдобавок операция Stat возвращает число записей в файле, число</p>
+<p>          уникальных значений ключей, храниых для каждого индекса в файле,</p>
+<p>          число неиспользуемых страниц в файле и все дополнительные индексы</p>
+<p>          определенные для файла.</p>
+<p>          Btrieve возвращает характеристики файла в буфер данных в том же</p>
+<p>          самом двоичном формате как и в операции Create. Для 4-байтовых</p>
+<p>          переменных (число ключей и записей) Btrieve возвращает младшую</p>
+<p>          часть числа в первых 2 байтах, за которыми следует старшая часть</p>
+<p>          числа в последних 2 байтах. Зарезервированные области также</p>
+<p>          размещаются, хотя Btrieve игнорирует их в операции Stat.</p>
+<p>          Флаги файла появляются как показано ниже:</p>
+<p>            - Если бит 0 = 1, файл допускает записи переменной длины.</p>
+<p>            - Если бит 1 = 1, Btrieve усечет пробельные концы в записях</p>
+<p>              переменной длины.</p>
+<p>            - Если бит 2 = 1, Btrieve перераспределит страницы для файла</p>
+<p>            - Если бит 3 = 1, Btrieve сожмет данные в файле.</p>
+<p>            - Если бит 4 = 1, Btrieve создаст файл, состоящий только из</p>
+<p>              ключей.</p>
+<p>            - Если бит 6 = 1, Btrieve установит 10% границу свободного</p>
+<p>              пространства.</p>
+<p>            - Если бит 7 = 1, Btrieve установит 20% границу свободного</p>
+<p>              пространства.</p>
+<p>            - Если бит 6 = 1 и бит 7 = 1, Btrieve установит 30% границу</p>
+<p>              свободного пространства.</p>
+<p>          Спецификации ключа появляются непосредственно за спецификациями</p>
+<p>          файла и повторяются для каждого сегмента в файле. Btrieve</p>
+<p>          устанавливает флаги ключа следующим образом:</p>
+<p>            - Если бит 0 = 1, ключ допускает дубликаты.</p>
+<p>            - Если бит 1 = 1, ключ - модифицируемый.</p>
+<p>            - Если бит 2 = 0 и бит 8 = 0, ключ - строковый.</p>
+<p>            - Если бит 2 = 1 и бит 8 = 0, ключ - двоичный.</p>
+<p>            - Если бит 3 = 1, ключ имеет пустое значение.</p>
+<p>            - Если бит 4 = 1, ключ имеет другой сегмент.</p>
+<p>            - Если бит 5 = 1, ключ отсортирован с помощью последовательности</p>
+<p>              альтернативного поиска.</p>
+<p>            - Если бит 6 = 1, ключ отсортирован в убывающем порядке.</p>
+<p>            - Бит 7 игнорируется для операции Create.</p>
+<p>            - Если бит 8 = 0, ключ - стандартного типа.</p>
+<p>            - Если бит 8 = 1, ключ - расширенного типа,</p>
+<p>            - Если бит 9 = 1, ключ - ручной.</p>
+<p>          См. операцию Create в этой главе, где находится таблица</p>
+<p>          иллюстрирующая десятичные значения этих флагов.</p>
+<p>          Если Вы задаете альтернативную последовательность поиска</p>
+<p>          для любого из ключей или ключевых сегментов файла, Btrieve</p>
+<p>          возвратит определение последовательности непосредственно за</p>
+<p>          блоком спецификаций последненго ключа. Btrieve возвратит буфер</p>
+<p>          данных в формате, показанном в Таблице 6.3.</p>
+<p>                            &#166;   Описание            &#166;Длина&#166;</p>
+<p>                            +-----------------------+-----+</p>
+<p>                            &#166; длина записи          &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; размер страницы       &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>             спецификации   &#166; кол-во индексов       &#166;  2  &#166;</p>
+<p>                файла       &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; кол-во заисей         &#166;  4  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; флаги файла           &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; резервное слово       &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166;неиспользуемые страницы&#166;  2  &#166;</p>
+<p>                            L-----------------------+------</p>
+<p>                            &#166;   Описание            &#166;Длина&#166;</p>
+<p>                            +-----------------------+-----+</p>
+<p>                            &#166; позиция ключа         &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; длина ключа           &#166;  2  &#166;</p>
+<p>             спецификации   &#166;-----------------------&#166;-----&#166;</p>
+<p>               ключей       &#166; флаги ключа           &#166;  2  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>             (повторяются)  &#166; кол-во ключей         &#166;  4  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; тип расширенного ключа&#166;  1  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; пустое значение       &#166;  1  &#166;</p>
+<p>                            &#166;-----------------------&#166;-----&#166;</p>
+<p>                            &#166; зарезервировано       &#166;  4  &#166;</p>
+<p>                            L-----------------------+------</p>
+<p>                                   Таблица 6.3</p>
+<p>                            Буфера данных для операции Stat</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До выполненият операции Stat Ваша прикладная программа должна</p>
+<p>          сперва открыть Btrieve-файл.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Stat установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции в 15.</p>
+<p>            - Передайте блок позиции файла.</p>
+<p>            - Покажите буфер данных (для хранения статистики по файлу и</p>
+<p>              ключам) и альтернативную последовательность поиска, если она</p>
+<p>              задана.</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>            - Покажите буфер ключа длиной по крайней мере 64 символа.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Stat завершилась успешно, Btrieve:</p>
+<p>             - Возвратит характеристики файла и ключей в буфер данных;</p>
+<p>             - Сохранит имя расширения файла, завершенное двоичным нулем, в</p>
+<p>               буфер ключа, если Вы до этого расширили файл. Иначе, Btrieve</p>
+<p>               проинициализирует первый байт буфера ключа нулем.</p>
+<p>          Если операция завершилась безуспешно, Btrieve вернет ненулевой</p>
+<p>          код статуса, информирующий о причине. Наиболее часто встречающие</p>
+<p>          ненулевые коды:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Stat Create не устанавливает какую-либо позиционную</p>
+<p>          информацию.</p>
+<p>          STEP FIRST (33)</p>
+<p>          (Шаг на первую)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Step First ищет запись, размещенную физически первой в файле.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Step First позволяет Вашей прикладной программе искать</p>
+<p>          запись, размещенную физически первой в файле. Btrieve не</p>
+<p>          использует индексный путь для поиска записи.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа сможет выполнить операцию</p>
+<p>          Step First, файл должен быть открыт.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Step First установите следующие Btrueve-</p>
+<p>          параметры:</p>
+<p>            - Задайте код операции равный 33.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Покажите буфер данных, в котором хранится возвращаемая запись</p>
+<p>            - Установите параметр длины буфера данных равный длине буфера</p>
+<p>              данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Вернет физически первую запись файла в буфер данных Вашей</p>
+<p>              прикладной программы.</p>
+<p>            - Установит параметр длины буфера данных равный количеству</p>
+<p>              байтов в возвращаемой записи.</p>
+<p>          Если операция  не была успешной, Btrieve вернет ненулевой код</p>
+<p>          статуса указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  9 Конец файла</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Step First не устанавливает позицию в индексе.</p>
+<p>          STEP LAST (33)</p>
+<p>          (Шаг на последнюю)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Step Last ищет запись, размещенную физически последней в файле.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Step Last позволяет Вашей прикладной программе искать</p>
+<p>          запись, размещенную физически последней в файле. Btrieve не</p>
+<p>          использует индексный путь для поиска записи при операции</p>
+<p>          Step Last.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа сможет выполнить операцию</p>
+<p>          Step Last, файл должен быть открыт.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Step Last установите следующие Btrueve-</p>
+<p>          параметры:</p>
+<p>            - Задайте код операции равный 34.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Покажите буфер данных, в котором хранится возвращаемая запись</p>
+<p>            - Установите параметр длины буфера данных равный длине буфера</p>
+<p>              данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Вернет физически последнюю запись файла в буфер данных;</p>
+<p>            - Установит параметр длины буфера данных равный количеству</p>
+<p>              байтов в возвращаемой записи.</p>
+<p>          Если операция  не была успешной, Btrieve вернет ненулевой код</p>
+<p>          статуса указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  9 Конец файла</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Step Last не устанавливает позицию в индексе.</p>
+<p>          STEP NEXT (24)</p>
+<p>          (Шаг на следующую)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Step Next ищет запись, физически следующую за текущей записью.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Step Next позволяет Вашей прикладной программе искать</p>
+<p>          записи в том порядке, в котором они физически хранятся. Btrieve</p>
+<p>          не использует индексный путь для поиска записи при операции</p>
+<p>          Step Next. Операция Step Next, запрашиваемая непосредственно после</p>
+<p>          операции Open, возвращает первую запись в файле. Операция</p>
+<p>          Step Next, запрашиваемая непосредственно после любой операции Get</p>
+<p>          или Step, возвращает запись, физически следующую за записью,</p>
+<p>          найденной предыдущей операцией.</p>
+<p>          Ваша прикладная программа не может прогнозировать порядок, в</p>
+<p>          котором записи будут возвращаться операцией Step Next.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа сможет выполнить операцию</p>
+<p>          Step Next, файл должен быть открыт.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Step Next установите следующие Btrueve-</p>
+<p>          параметры:</p>
+<p>            - Задайте код операции равный 24.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Покажите буфер данных, в котором хранится возвращаемая запись</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Вернет физически последнюю запись файла в буфер данных Вашей</p>
+<p>              прикладной программы;</p>
+<p>            - Установит параметр длины буфера данных равный количеству</p>
+<p>              байтов в возвращаемой записи.</p>
+<p>          Если операция  не была успешной, Btrieve вернет ненулевой код</p>
+<p>          статуса указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  9 Конец файла</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Step Next не устанавливает позицию в индексе.</p>
+<p>          STEP PREVIOUS (36)</p>
+<p>          (Шаг на предыдующую)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Step Previous позволяет Вашей прикладной программе искать запись</p>
+<p>          физически предшествующую текущей записи.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;            &#166;   x  &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;    x    &#166;     x      &#166;   x  &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Step Previous позволяет Вашей прикладной программе искать</p>
+<p>          записи в том порядке, в котором они физически хранятся. Btrieve</p>
+<p>          не использует индексный путь для поиска записи при операции</p>
+<p>          Step Previous. Операция Step Previous, запрашиваемая</p>
+<p>          непосредственно после любой операции Get или Step, возвращает</p>
+<p>          запись, физически предшествующую записи, найденной предыдущей</p>
+<p>          операцией.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная программа сможет выполнить операцию</p>
+<p>          Step previous, должен быть выполнены следующие предварительные</p>
+<p>          условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Предыдущей операцией должна быть успешно выполненная операция</p>
+<p>              Get или Step.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Step Previous установите следующие Btrueve-</p>
+<p>          параметры:</p>
+<p>            - Задайте код операции равный 35.</p>
+<p>            - Передайте блок позиции для файла.</p>
+<p>            - Покажите буфер данных, в котором хранится возвращаемая запись</p>
+<p>            - Задайте длину буфера данных.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция завершилась успешно, Btrieve</p>
+<p>            - Вернет физически последнюю запись файла в буфер данных Вашей</p>
+<p>              прикладной программы;</p>
+<p>            - Установит параметр длины буфера данных равный количеству</p>
+<p>              байтов в возвращаемой записи.</p>
+<p>          Если операция  не была успешной, Btrieve вернет ненулевой код</p>
+<p>          статуса указывающий на причину. Наиболее часто встречающиеся</p>
+<p>          ненулевые коды статуса:</p>
+<p>            -  3 Файл не открыт</p>
+<p>            -  9 Конец файла</p>
+<p>            - 22 Буфер данных слишком мал</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Step Previous не устанавливает позицию в индексе.</p>
+<p>          STOP (25)</p>
+<p>          (Остановить)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Stop завершает программу BREQUEST и удаляет ее из</p>
+<p>          памяти рабочей станции.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Stop удаляет программу запросов (BREQUEST) из памяти рабочей</p>
+<p>          станции. Btrieve прикладная программа на рабочей станции не</p>
+<p>          может выполнять какие-либо другие Btrieve- операции до тех пор,</p>
+<p>          пока вы не стартуете вновь BREQUEST.</p>
+<p>          Операция Stop удаляеттолько из памяти рабочей станции, где</p>
+<p>          выполняется Btrieve-запрос. вы не можете остановить BREQUEST на</p>
+<p>          другой рабочей станции.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          BREQUEST должен быть загружен до того, как Ваша прикладная</p>
+<p>          программа сможет Запросить операцию Stop.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Stop Ваша прикладная программа задает</p>
+<p>          код операции равный 25.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Stop завершилась успешно, Btrieve</p>
+<p>            - Удалит BREQUEST из памяти на рабочей станции:</p>
+<p>            - Закроет все предварительно открытые файлы для раочей станции</p>
+<p>            - Снимет все активные транзакции;</p>
+<p>            - Отменит все блокировки на рвбочей станции.</p>
+<p>          Если операция Stop не была успешной, Btrieve вернет ненулевой код</p>
+<p>          статуса. Наиболее часто встречающийся  ненулевой код статуса 20</p>
+<p>          (BREQUEST не загружен).</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Stop не устанавливает какую-либо позицию.</p>
+<p>          UNLOCK (27)</p>
+<p>          (Отмена блокировки)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Unlock отменяет блокировки одной или более записей,</p>
+<p>          которые предварительно были заблокированы.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;     x      &#166;   x  &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;         &#166;            &#166;      &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Unlock полностью отменяет блокировки одной или более записей для</p>
+<p>          файла, связанного с заданным блоком позиции.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная  программа сможет запросить операцию</p>
+<p>          Unlock на рвбочей станции, рабочая станция должна установить по</p>
+<p>          крайней мере блокировку одной записи.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для отмены единичной блокировки записи,установите следующие</p>
+<p>          Btrieve-параметры:</p>
+<p>            - Установите код операции равный 27.</p>
+<p>            - Передайте блок позиции файла, содержащего заблокированную</p>
+<p>              запись.</p>
+<p>            - Установите номер ключа в неотрицательное значение.</p>
+<p>          Для отмены множественной блокировки записи одного типа, сперва</p>
+<p>          найдите 4-байтовую позицию записи, которую Вы хотите</p>
+<p>          разблокировать, с помощью операции Get Position (22) для этой</p>
+<p>          записи. Затем запросите операцию Unlock , устанавливая</p>
+<p>           Btrieve-параметры следующим образом:</p>
+<p>            - Установите код операции равный 27.</p>
+<p>            - Передайте Btrieve блок позиции файла, содержащего</p>
+<p>              заблокированную запись.</p>
+<p>            - Сохраните (в буфере данных) 4-байтовую позицию, возвращаемую</p>
+<p>              Btrieve.</p>
+<p>            - Установите длину буфера данных равную 4.</p>
+<p>            - Проинициализируйте параметр номера  ключа -1.</p>
+<p>          Для отмены всех множественных блокировок записи файла Вы должны</p>
+<p>          устанавить Btrieve-параметры следующим образом:</p>
+<p>            - Установите код операции равный 27.</p>
+<p>            - Передайте Btrieve блок позиции файла, содержащего</p>
+<p>              множественные блокировки.</p>
+<p>            - Проинициализируйте параметр номера  ключа -2.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Unlock завершилась успешно, Btrieve отменит все</p>
+<p>          блокировки, задаваемые этой операцией.</p>
+<p>          Если операция Unlock не была успешной, Btrieve вернет ненулевой</p>
+<p>          статус. Наиболее часто встречающийся  ненулевой код статуса 81</p>
+<p>          (Ошибка блокировки).</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Unlock не оказывает действие на позиционирование.</p>
+<p>          UPDATE (3)</p>
+<p>          (Корректировка)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Update корректирует существующую запись в файле.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;    x    &#166;     x      &#166;   x  &#166;     &#166;  x</p>
+<p>          Возвращаемые        &#166;    x    &#166;            &#166;      &#166;  x  &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Операция Update изменяет информацию в существующей записи.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Ваша прикладная  программа сможет запросить операцию</p>
+<p>          Update, должны встретиться следующие предварительные условия:</p>
+<p>            - Файл должен быть открыт.</p>
+<p>            - Btrieve-обращение к файлу, выполняемое непосредственно перед</p>
+<p>              вызовом Update, должно найти запись6 которая будет</p>
+<p>              корректироваться. вы не можете запрашивать вызов, используя</p>
+<p>              тот же самый блок позиции, во время между поиском Вашей</p>
+<p>              прикладной программой записи и корректировкой записи.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Update установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции равный 3.</p>
+<p>            - Передайте блок позиции файла, содержащего эту запись.</p>
+<p>            - Сохраните скорректированную запись в буфере данных.</p>
+<p>            - Установите длину буфера данных равной длине корректируемой</p>
+<p>              записи.</p>
+<p>            - Сохраните номер ключа, используемый для поиска запис, в</p>
+<p>              параметре номера ключа.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Update завершилась успешно, Btrieve:</p>
+<p>            - Заменит заменит запись, хранящуюся в файле, новым значением</p>
+<p>              из буфера данных.</p>
+<p>            - Обновит индексы ключей для отражения любых изменений в</p>
+<p>              значениях ключей.</p>
+<p>            - Заменит параметр буфера ключа, если потребуется.</p>
+<p>          Если операция Update не была успешной, Btrieve вернет ненулевой</p>
+<p>          код статуса. Наиболее часто встречающиеся  ненулевые коды статуса</p>
+<p>            -  5 Ошибка дубликата ключа.</p>
+<p>            -  7 Другой номер ключа.</p>
+<p>            -  8 Неправильное позиционирование.</p>
+<p>            - 10 Ошибка модифицируемого ключа.</p>
+<p>            - 14 Ошибка открытия прообраза.</p>
+<p>            - 15 Ошибка ввода/вывода прообраза.</p>
+<p>            - 22 Буфер данных слишком мал.</p>
+<p>            - 80 Ошибка конфликта.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Update изменяет позиционную информацию только когда</p>
+<p>          изменяется значение ключа. В этом случае Btrieve устанавливает</p>
+<p>          свою позицию в индексе, опираясь на заданный Вами номер ключа,</p>
+<p>          следующим образом:</p>
+<p>            - Первая запись со значением ключа большим, чем обновленный</p>
+<p>              ключ, становится СЛЕДУЮЩЕЙ записью.</p>
+<p>            - Первая запись со значением ключа меньшим, чем обновленный</p>
+<p>              ключ, становится ПРЕДЫДУЩЕЙ записью.</p>
+<p>          VERSION (26)</p>
+<p>          (Версия)</p>
+<p>          Н а з н а ч е н и е  :</p>
+<p>          Операция Version возвращает текущую версию Btrieve и номер</p>
+<p>          пересмотра.</p>
+<p>          П р и м е н е н и е   п а р а м е т р о в  :</p>
+<p>                      --------T----------------------T------T-----T------</p>
+<p>                              &#166;        FCB           &#166;Длина &#166;     &#166;</p>
+<p>                      Операция&#166;Блок поз.&#166;Буфер данных&#166;буфера&#166;Буфер&#166;Номер</p>
+<p>                              &#166;         &#166;            &#166;данных&#166;ключа&#166;ключа</p>
+<p>                      --------+---------+------------+------+-----+------</p>
+<p>          Ожидаемые       x   &#166;         &#166;            &#166;   x  &#166;     &#166;</p>
+<p>          Возвращаемые        &#166;         &#166;     x      &#166;   x  &#166;     &#166;</p>
+<p>          О п и с а н и е  :</p>
+<p>          Эта операция возвращает текущую версию Btrieve и номер пересмотра.</p>
+<p>          П р е д в а р и т е л ь н ы е    у с л о в и я  :</p>
+<p>          До того, как Вы сможете запросить операцию Version, должен быть</p>
+<p>          загружен Btrieve Record Manager.</p>
+<p>          П р о ц е д у р а  :</p>
+<p>          Для выполнения операции Version установите следующие Btrieve-</p>
+<p>          параметры:</p>
+<p>            - Установите код операции равный 26.</p>
+<p>            - Посмотрите, чтобы буфер данных был по крайней мере длиной 5</p>
+<p>              байтов.</p>
+<p>            - Установите длину буфера данных равной 5.</p>
+<p>          Р е з у л ь т а т  :</p>
+<p>          Если операция Version завершилась успешно, Btrieve возвратит</p>
+<p>          данные в буфер данных в следующем формате:</p>
+<p>                Размер     Описание</p>
+<p>                   2       Целое число, содержащее номер версии</p>
+<p>                   2       Целое число, содержащее номер пересмотра</p>
+<p>                   1       Символ, содержащий "N" для NetWare Btrieve</p>
+<p>          Если операция Version не была успешной, Btrieve вернет ненулевой</p>
+<p>          статус.</p>
+<p>          Т е к у щ е е   п о з и ц и о н и р о в а н и е  :</p>
+<p>          Операция Version не оказывает влияния на текущее</p>
+<p>          позиционирование.</p>
 
 

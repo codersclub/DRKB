@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 {
   If you tried to work with messages from Delphi, you know that received message have the
   SenderName property (name of sender) but doesn't allow to read the real address of sender.

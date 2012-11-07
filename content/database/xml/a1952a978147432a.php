@@ -237,8 +237,8 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <p>Пример использования:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);

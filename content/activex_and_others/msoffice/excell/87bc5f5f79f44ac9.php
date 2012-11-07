@@ -3,7 +3,7 @@
 
 
 <p>Можно выводить данные последовательно в каждую ячейку, но это очинь сильно замедляет работу. Лучше сформировать вариантный массив, и выполнить присвоение области (Range) этого массива.</p>
-<pre>
+<pre class="delphi">
 var
     ExcelApp, Workbook, Range, Cell1, Cell2, ArrayData  : Variant;
     TemplateFile : String;

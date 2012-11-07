@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 Автор: ___Nikolay</p>
-<pre>
+<pre class="delphi">
 unit uMain;
  
 interface

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 unit ADO;
 {This unit provides a quick access into ADO
       It handles all it's own exceptions
@@ -466,4 +466,5 @@ end;
  
 end.
 </pre>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

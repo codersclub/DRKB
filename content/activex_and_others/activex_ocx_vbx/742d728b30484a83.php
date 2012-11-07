@@ -2,12 +2,18 @@
 <div class="date">01.01.2007</div>
 
 
-<p>запустить "Regsvr32.exe имя_файла" из каталога c:\windows\system(32)</p>
 <div class="author">Автор: Vit</div>
+
+<p>запустить "Regsvr32.exe имя_файла" из каталога c:\windows\system(32)</p>
+
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
+
 <hr />
+
+<div class="author">Автор: Fantasist</div>
+
 <p>1. Регистрация ActiveX:</p>
-<pre>function RegActiveX(FileName:string):HRESULT;
+<pre class="delphi">function RegActiveX(FileName:string):HRESULT;
 var
 hMod:Integer;
 RegProc:function:HRESULT; //HRESULT = Longint
@@ -23,7 +29,7 @@ end;
 </pre>
 
 <p>2. Регистрация Type Library:</p>
-<pre>procedure RegisterTypeLibrary(FileName:string);
+<pre class="delphi">procedure RegisterTypeLibrary(FileName:string);
 var
 Name: WideString;
 HelpPath: WideString;
@@ -39,14 +45,12 @@ end;
 </pre>
 
 <p>Здесь используется интерфейс ITypeLib и API функция RegisterTypeLib. И то и другое объявленно в модуле ActiveX, если я не ошибаюсь.</p>
-<p>Hint: если вы регистрируете библиотеку типов изнутри модулчя, то его имя можно получить с помощью следующей функции:</p>
-<pre>function GetModuleFileName: string;
+<p>Hint: если вы регистрируете библиотеку типов изнутри модуля, то его имя можно получить с помощью следующей функции:</p>
+<pre class="delphi">function GetModuleFileName: string;
 var Buffer: array[0..261] of Char;
 begin
-SetString(Result, Buffer, Windows.GetModuleFileName(HInstance,
-Buffer, SizeOf(Buffer)));
+  SetString(Result, Buffer, Windows.GetModuleFileName(HInstance, Buffer, SizeOf(Buffer)));
 end;
 </pre>
 
-<div class="author">Автор: Fantasist</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>

@@ -5,7 +5,8 @@
 <p>Естественно, что WMI - это не только набор параметров. А что это такое - читайте ниже.</p>
 <p>2. Введение.Для того, чтобы не лишиться большей части потенциальных читателей на начальном этапе, скажу сразу, что применение Windows Management Instrumentation (WMI) я буду рассматривать в основном с практической точки зрения (т.е. теории в этой статье будет немного). Сразу хочу оговориться, что т.к. я собираюсь осветить вопрос практического использования технологии WMI в Delphi и намериваюсь достигнуть этой цели достаточно быстро, то я не стану разжёвывать все, с чем нам придётся сталкиваться по ходу повествования и ограничусь минимумом теории. Так что материал изначально ориентирован на тех читателей, кто уверено чувствует себя в области применения интерфейсов, технологии COM и кто умеет работать с литературой.</p>
 <p>Так же, я не стану излагать всю теорию, непосредственно связанную с технологией WMI, т.к. во-первых, это достаточно утомительно, а во-вторых, это уже сделано в лучшем виде, и заниматься перепечатыванием не имеет смысла. Итак, дальнейшее прочтение статьи и использование прилагаемых к ней примеров возможно и без понимания самой сути WMI, но, согласитесь, смысла в этом чуть. Так что очень рекомендую прочитать следующее:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>"Внутри Windows Management Interface".</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>"Сценарии WMI для начинающих"</td></tr></table></div>Примечание:<br>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>"Внутри Windows Management Interface".</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>"Сценарии WMI для начинающих"</td></tr></table></div>Примечание:<br>
 <p>: авторы статьи "Внутри Windows Management Interface" интерпретируют аббревиатуру WMI как Windows Management Interface, хотя сами создатели (фирма Microsoft) придерживаются следующей трактовки: Windows Management Instrumentation, что в общем говоря правильнее. Но и интерпретация буквы "I", как "Interface", а не как " Instrumentation " вполне понятна и простительна, т.к. многие разработчики рассматривают WMI не иначе как набор интерфейсов, позволяющих получать доступ к определённым компонентам системы.</p>
 <p>Надеюсь, что предложенные мной к прочтению статьи были прочитаны и поняты, т.к. дальнейшие повествование подразумевает собой понимание структуры WMI и назначения всех её составляющих. Все даваемые мной ниже пояснения всего лишь дополнение к общей теории, а даваемые определения - дополнения к тем, что были даны в вышеупомянутых статьях (или же умышленно утрированные для акцентирования внимания на наиболее важных для понимания моментах). Если же вы прочли вышеперечисленные статьи и всё чётко поняли, то вас не запутают и не введут в заблуждение мои, не претендующие на непогрешимость и полноту, определения :) <br>
 <p>Итак, начали.</p>
@@ -27,11 +28,20 @@
 <p>4. Практика.</p>
 <p>Подготовка.</p>
 <p>Итак, начнём с того, что нам необходимо сделать перед тем, как непосредственно начать использовать мощь технологии WMI в своих программах:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>установить систему Windows 2000 или NT 4.0 SP4 и выше;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>установить Microsoft Internet Explorer (IE) 5.0 и выше;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>установить WMI SDK;</td></tr></table></div><p>После того, как вы установили WMI SDK, импортируйте следующие библиотеки типов:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Active DS Type Library (Version 1.0)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Microsoft WMI Scripting v1.1 Library (Version 1.1)</td></tr></table></div><p>Отлично, теперь в палитре компонентов у вас появились новые элементы, которые мы и будем в дальнейшем использовать.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>установить систему Windows 2000 или NT 4.0 SP4 и выше;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>установить Microsoft Internet Explorer (IE) 5.0 и выше;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>установить WMI SDK;</td></tr></table></div>
+<p>После того, как вы установили WMI SDK, импортируйте следующие библиотеки типов:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Active DS Type Library (Version 1.0)</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Microsoft WMI Scripting v1.1 Library (Version 1.1)</td></tr></table></div>
+<p>Отлично, теперь в палитре компонентов у вас появились новые элементы, которые мы и будем в дальнейшем использовать.</p>
 <p>Порядок действий.</p>
 <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Первым делом нам необходимо подсоединиться к интересующему нас пространству имён. Для данной цели используется интерфейс IWbemLocator и его единственный метод ConnectServer, который позволит нашей программе (в данном случае наша программа является WMI клиентом) получить указатель на интерфейс IWbemServices, который связан с выбранным нами пространством имён на выбранном нами компьютере (не стоит забывать, что технология WMI основана на COM/DCOM, что позволяет использовать её удалённо). Методы объектов типа SWbemServices предназначены для произведения операций в выбранном пространстве имён. <br>
-<p>Да, надеюсь, вы знаете, где можно посмотреть имя интересующего вас пространства имён и WMI класса, если нет, то перечитываем предложенные к прочтению статьи или открываем WMI SDK и просматриваем раздел Win32 Classes.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>После того, как мы подсоединились к выбранному нами пространству имён и получили указатель на объект, связанный с данным пространством имён, нам необходимо получить описание интересующего нас класса в выбранном нами пространстве имён (возможно, звучит мудрёно, но на практике всё гораздо проще, в чём вы скоро сами убедитесь). Для этого воспользуемся методом Get объекта SWbemServices, который вернёт описание (definition) указанного нами класса (на этом этапе вы уже можете считать имена свойств класса и названия поддерживаемых им методов, естественно, все свойства будут содержать null; так же вы можете создать свой класс на базе полученного описания и дополнить его своими свойствами и методами). Таким образом, мы получим указатель на объект типа SWbemObject.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Затем нам необходимо получить непосредственно экземпляр (instance) класса, описание которого мы получили. Для этого воспользуемся методом Instances_ объекта SWbemObject, который создаст объект, осуществляющий нумерацию всех экземпляров (instances) данного класса типа SWbemObjectSet. Говоря по-русски, будет создана коллекция всех объектов данного класса. Полученный объект SWbemObjectSet будет содержать объекты SWbemObject.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Вот собственно и всё. Получив из объекта SWbemObjectSet экземпляр класса, нам остаётся считать его свойства и воспользоваться его методами.</td></tr></table></div><p>Теперь перейдём к рассмотрению самих примеров. Вашему вниманию будут предложены четыре примера, полные исходные тексты и рабочие exe-файлы которых вы найдёте в прилагаемом к статье архиве.</p>
+<p>Да, надеюсь, вы знаете, где можно посмотреть имя интересующего вас пространства имён и WMI класса, если нет, то перечитываем предложенные к прочтению статьи или открываем WMI SDK и просматриваем раздел Win32 Classes.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>После того, как мы подсоединились к выбранному нами пространству имён и получили указатель на объект, связанный с данным пространством имён, нам необходимо получить описание интересующего нас класса в выбранном нами пространстве имён (возможно, звучит мудрёно, но на практике всё гораздо проще, в чём вы скоро сами убедитесь). Для этого воспользуемся методом Get объекта SWbemServices, который вернёт описание (definition) указанного нами класса (на этом этапе вы уже можете считать имена свойств класса и названия поддерживаемых им методов, естественно, все свойства будут содержать null; так же вы можете создать свой класс на базе полученного описания и дополнить его своими свойствами и методами). Таким образом, мы получим указатель на объект типа SWbemObject.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Затем нам необходимо получить непосредственно экземпляр (instance) класса, описание которого мы получили. Для этого воспользуемся методом Instances_ объекта SWbemObject, который создаст объект, осуществляющий нумерацию всех экземпляров (instances) данного класса типа SWbemObjectSet. Говоря по-русски, будет создана коллекция всех объектов данного класса. Полученный объект SWbemObjectSet будет содержать объекты SWbemObject.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Вот собственно и всё. Получив из объекта SWbemObjectSet экземпляр класса, нам остаётся считать его свойства и воспользоваться его методами.</td></tr></table></div>
+<p>Теперь перейдём к рассмотрению самих примеров. Вашему вниманию будут предложены четыре примера, полные исходные тексты и рабочие exe-файлы которых вы найдёте в прилагаемом к статье архиве.</p>
 <p>5. Примеры.</p>
 <p>5.1. Получение данных о центральном процессоре.</p>
 <p>Этот первый пример я старался сделать как можно нагляднее и разберу я его достаточно подробно. В остальных же 3-х примерах я не буду повторяться в комментариях, а постараюсь продемонстрировать некоторые приёмы, которые, возможно, помогут вам в дальнейшем в ваших собственных программах.</p>
@@ -144,9 +154,16 @@ objwbemServices = ConnectServer(</p>
   [iSecurityFlags = 0],</p>
   [objwbemNamedValueSet = null]</p>
   )</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>strServer - необязательный к указанию параметр, содержащий имя компьютера к пространству имён которого вы желаете подключиться. Если не указан, имеется в виду данный компьютер;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>strNameSpace - необязательный к указанию параметр, содержащий строку, указывающую к какому пространству имён вы собираетесь подключиться. Если не указан, то устанавливается в значение по умолчанию.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StrUser - необязательный к указанию параметр, содержащий строку с именем пользователя, которое будет использовано при подключении. При применении на локальной машине должна содержать нулевую строку. Применяется только при подключении к удалённой машине.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StrPassword - см. StrUser.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StrLocale - необязательный к указанию параметр, содержащий код местности (localization code). Должен содержать нулевую строку для применения действующего кода местности.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StrAuthority - необязательный к указанию параметр, предназначенный для работы в сетях с системой Kerberos.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ISecurityFlags - необязательный к указанию параметр. Если содержит 0, то метод ConnectServer вернёт результат только после того, как соединение с сервером будет установлено, т.е. если соединение установить не удалось - ваша программа повиснет. Если содержит значение wbemConnectFlagUseMaxWait, то приложение ждёт две минуты после чего возвращает код ошибки.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ObjwbemNamedValueSet - необязательный к указанию параметр. Обычно его не определяют (nil). Вообще говоря, можно указать объект типа SWbemNamedValueSet, который будет содержать информацию, которая может быть использована провайдером, обслуживающим данный запрос.</td></tr></table></div>Подробнее обо всех свойствах см. Platform SDK.</p>
-&nbsp;<br>
-<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>strServer - необязательный к указанию параметр, содержащий имя компьютера к пространству имён которого вы желаете подключиться. Если не указан, имеется в виду данный компьютер;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>strNameSpace - необязательный к указанию параметр, содержащий строку, указывающую к какому пространству имён вы собираетесь подключиться. Если не указан, то устанавливается в значение по умолчанию.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StrUser - необязательный к указанию параметр, содержащий строку с именем пользователя, которое будет использовано при подключении. При применении на локальной машине должна содержать нулевую строку. Применяется только при подключении к удалённой машине.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StrPassword - см. StrUser.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StrLocale - необязательный к указанию параметр, содержащий код местности (localization code). Должен содержать нулевую строку для применения действующего кода местности.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>StrAuthority - необязательный к указанию параметр, предназначенный для работы в сетях с системой Kerberos.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ISecurityFlags - необязательный к указанию параметр. Если содержит 0, то метод ConnectServer вернёт результат только после того, как соединение с сервером будет установлено, т.е. если соединение установить не удалось - ваша программа повиснет. Если содержит значение wbemConnectFlagUseMaxWait, то приложение ждёт две минуты после чего возвращает код ошибки.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ObjwbemNamedValueSet - необязательный к указанию параметр. Обычно его не определяют (nil). Вообще говоря, можно указать объект типа SWbemNamedValueSet, который будет содержать информацию, которая может быть использована провайдером, обслуживающим данный запрос.</td></tr></table></div>Подробнее обо всех свойствах см. Platform SDK.</p>
+ <br>
+<p></p>
 <p class="note">Примечание 2</p>
 Теперь получим описание интересующего нас класса, т.е. Win32_Processor. <br>
 Делается это с помощью метода Get полученного нами объекта Service. <br>
@@ -156,9 +173,11 @@ objWbemObject = Get(</p>
   [iFlags = 0],</p>
   [objWbemNamedValueSet = null]</p>
   )</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>strObjectPath - необязательный к указанию параметр, содержащий название класса, описание которого мы желаем получить. Если данный параметр будет содержать нулевую строку, то будет создан новый класс.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IFlags - необязательный к указанию параметр. Принимает только одно значение: wbemFlagUseAmendedQualifiers.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ObjWbemNamedValueSet - см. выше.</td></tr></table></div>Подробнее обо всех свойствах см. Platform SDK.</p>
-&nbsp;<br>
-<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>strObjectPath - необязательный к указанию параметр, содержащий название класса, описание которого мы желаем получить. Если данный параметр будет содержать нулевую строку, то будет создан новый класс.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>IFlags - необязательный к указанию параметр. Принимает только одно значение: wbemFlagUseAmendedQualifiers.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ObjWbemNamedValueSet - см. выше.</td></tr></table></div>Подробнее обо всех свойствах см. Platform SDK.</p>
+ <br>
+<p></p>
 <p class="note">Примечание 3</p>
 Теперь надо получить коллекцию экземпляров класса Win32_Processor. <br>
 Делается это с помощью метода Instances_ объекта SObject. <br>
@@ -167,8 +186,9 @@ objWbemObjectSet = Instances_(</p>
   [iFlags = wbemFlagReturnImmediately],</p>
   [objwbemNamedValueSet = null]</p>
   )</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>iFlags - необязательный к указанию параметр, содержащий числовое значение типа Integer, определяющее поведение данного запроса.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ObjwbemNamedValueSet - см. выше.</td></tr></table></div>Подробнее обо всех свойствах см. Platform SDK.</p>
-&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>iFlags - необязательный к указанию параметр, содержащий числовое значение типа Integer, определяющее поведение данного запроса.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>ObjwbemNamedValueSet - см. выше.</td></tr></table></div>Подробнее обо всех свойствах см. Platform SDK.</p>
+</p>
 <p>Исходный код и exe-файл данного примера вы сможете найти в прилагаемом к статье архиве в каталогах \source\GetProcessorData и \Exe-files соответственно.</p>
 <p>Вот что у меня получилось:</p>
 
@@ -282,7 +302,7 @@ end.
 </pre>
 
 <p>Исходный код и exe-файл данного примера вы сможете найти в прилагаемом к статье архиве в каталогах \source\ GetProcessData и \Exe-files соответственно. <br>
-&nbsp;<br>
+ <br>
 <p>5.3. Запуск приложений и выключение компьютера.</p>
 <p>В данном примере я продемонстрирую, как использовать методы, предоставляемые провайдерами.</p>
 <pre>var
@@ -394,12 +414,12 @@ end.
 <p>Пояснения к коду:</p>
 <p class="note">Примечание 1</p>
 Security_ - данное свойство используется в том случае, когда вы собираетесь считать или установить настройки безопасности для объекта SWbemServices. Объект SWbemSecurity имеет следующие свойства: AuthenticationLevel, ImpersonationLevel, Privileges. Нас в данном случае будет интересовать только второе свойство. ImpersonationLevel - Числовое значение. Данное свойство определяет, может ли процесс, владельцем которого является WMI, пользоваться правами вашей учётной записи, что может быть необходимо при обращении к другим процессам. Я буду пользоваться значением '3' (wbemImpersonationLevelImpersonate), что означает, что я наделяю данный объект правами того, кто его вызвал. Об остальных уровнях наследования прав читайте в SDK. <br>
-<p>&nbsp;</p>
-&nbsp;</p>
+<p></p>
+</p>
 <p class="note">Примечание 2</p>
 Свойство Methods_ объекта SWbemObject представляет собой объект типа SWbemMethodSet, который является не чем иным, как коллекцией методов данного класса (или экземпляра класса).<br>
 Данное свойство предназначено только для чтения (read-only).<br>
-&nbsp;<br>
+ <br>
 Единственный метод Item объекта SWbemMethodSet возвращает объект типа SWbemMethod. <br>
 <p>Метод Item принимает следующие параметры:</p>
 objMethod = Item(</p>
@@ -407,8 +427,8 @@ objMethod = Item(</p>
   [iFlags = 0]</p>
   )</p>
 strName - необходимый параметр. Имя метода, указатель на который должен быть возвращён данным методом. <br>
-<p>&nbsp;</p>
-&nbsp;</p>
+<p></p>
+</p>
 <p class="note">Примечание 3</p>
 Свойство InParameters объекта SWbemMethod определяет входные параметры для данного метода. Метод SpawnInstance_ объекта SWbemObject создаёт новый экземпляр класса.<br>
 <p>Данный метод имеет следующие входные параметры:</p>
@@ -417,8 +437,8 @@ objNewInstance = SpawnInstance_(</p>
   )</p>
 Единственный параметр iFlags зарезервирован и не обязателен к указанию.<br>
 Если указывается, то должен быть равен 0. <br>
-<p>&nbsp;</p>
-&nbsp;</p>
+<p></p>
+</p>
 <p class="note">Примечание 4</p>
 Свойство Properties_ объекта SWbemObject представляет собой объект типа SWbemPropertySet, который является коллекцией свойств для данного класса или экземпляра.<br>
 Метод Add объекта SWbemPrivilegeSet добавляет объект типа SWbemProperty к объекту SWbemPrivilegeSet. <br>
@@ -429,16 +449,19 @@ objProperty = Add(</p>
   [bIsArray = FALSE],</p>
   [iFlags = 0]</p>
   )</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>strName - обязательный к указанию параметр. Имя нового свойства.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>iCIMType - обязательный к указанию параметр. Определяет тип (CIMType) свойства.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>bIsArray - необязательный к указанию параметр. Определяющий является ли данное свойство массивом. По умолчанию False.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>iFlags - необязательный к указанию параметр. Зарезервирован. Если указывается, то должен быть равен 0.</td></tr></table></div>&nbsp;<br>
-<p>&nbsp;</p>
-&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>strName - обязательный к указанию параметр. Имя нового свойства.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>iCIMType - обязательный к указанию параметр. Определяет тип (CIMType) свойства.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>bIsArray - необязательный к указанию параметр. Определяющий является ли данное свойство массивом. По умолчанию False.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>iFlags - необязательный к указанию параметр. Зарезервирован. Если указывается, то должен быть равен 0.</td></tr></table></div> <br>
+<p></p>
+</p>
 <p class="note">Примечание 5</p>
 Для получения коллекции экземпляров Win32_OperatingSystem я намеренно воспользовался методом ExecQuery объекта ISWbemServices, что бы продемонстрировать работу данной ф-ии. <br>
 Использование данного метода равносильно используемой мною ранее конструкции. <br>
-&nbsp;<br>
+ <br>
 Кстати, синтаксис WQL вам ничего не напоминает? ;) Правильно - WQL прямой потомок ANSI SQL, и соответствует синтаксису SQL. В WQL введены незначительные семантические изменения необходимые для работы с WMI. Так что вам даже не придётся учить новый язык запросов, для того что бы использовать WMI - Microsoft оказалась гуманной и мудрой в этом отношении и в очередной раз не усложнила нашу жизнь :) <br>
 <p>Для интересующихся правилами составления запросов: откруваем SDK, раздел "Querying with WQL", всё понятно и доступно.</p>
-&nbsp;</p>
+</p>
 <p>Исходный код и exe-файл данного примера вы сможете найти в прилагаемом к статье архиве в каталогах \source\ UseMethods и \Exe-files соответственно.</p>
 
 <p>5.4. Получения значений c температурных сенсоров и с установленных вентиляторов.</p>
@@ -454,7 +477,7 @@ SObject := Service.Get('Win32_Fan', wbemFlagUseAmendedQualifiers, nil);
 <p>Между тем, имеется информация о том, что данные параметры удаётся без проблем получить на материнских платах с чипсетами (chipset) фирмы Intel. Ничего по этому поводу сказать не могу - у меня в момент написания данной статьи не было возможности протестировать данный пример на компьютерах на базе чипсетов от Intel.</p>
 <p>Исходный код и exe-файл данного примера вы сможете найти в прилагаемом к статье архиве в каталогах \source\ FanAndTemperature и \Exe-files соответственно.</p>
 <p>6. Послесловие.На этом я закончу рассказ о применении технологии WMI. Надеюсь, что теперь вы прониклись мыслью о том, что WMI крайне удобная и относительно несложная в реализации технология, которая поможет решить массу ваших проблем :) Microsoft продолжает активно развивать WMI, и в скором времени мы получим мощнейший инструмент, области применения которого очень и очень обширны. Нам, людям занимающимся программированием, как никому другому приходится год от года, месяц от месяца пополнять свой "боевой" арсенал всё новыми и новыми знаниями, приёмами, инструментами и методологиями. На мой взгляд, технология WMI может занять достойное место в вашем личном арсенале знаний. <br>
-&nbsp;<br>
+ <br>
 P.S. <br>
 <p>Если вам что-то не понятно в примерах или самой теории, то прежде чем отягощать кого-либо своими расспросами, откройте Platform SDK Documentation, затратьте немного своего драгоценного времени и поищите самостоятельно ответы на свои вопросы. Как показывает практика многих поколений - решение, найденное самостоятельно, стоит нескольких, полученных от кого-то. Но если всё же у вас ничего не выйдет - пишите мне, будем разбираться вместе :)</p>
 

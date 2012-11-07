@@ -4,7 +4,7 @@
 <p>Легенда</p>
 Легенда диаграммы представляет собой подписи к той части, которая передает информацию в графическом виде. Как и любая область, она обладает типичными свойствами, присущими им. Есть одно отличие - шрифт элемента легенды. Чтобы легенда была видима на диаграмме, установите поле HasLegend объекта Chart в True.E.Charts.Item[name].HasLegend:=True. Затем можно установить координаты и размеры легенды, параметры границы (рамки) и области. Для этого используем следующие функции:</p>
 Установка размеров и координат.</p>
-<pre>
+<pre class="delphi">
 Function PositionSizeLegend (Name:variant;
   Left,Top,Width,Height:real):boolean;
 begin
@@ -19,9 +19,9 @@ begin
  end;
 End;
 </pre>
-&nbsp;</p>
+</p>
 Установка типа и цвета рамки.</p>
-<pre>
+<pre class="delphi">
 Function BorderLegend (Name:variant;
   Color,LineStyle,Weight:integer):boolean;
 begin
@@ -35,9 +35,9 @@ begin
  end;
 End;
 </pre>
-&nbsp;</p>
+</p>
 Установка цвета и типа узора области.</p>
-<pre>
+<pre class="delphi">
 Function BrushLegend (Name:variant;
   Color,Pattern,PatternColor:integer):boolean;
 begin
@@ -51,9 +51,9 @@ begin
  end;
 End;
 </pre>
-&nbsp;</p>
+</p>
 Заливка области из файла.</p>
-<pre>
+<pre class="delphi">
 Function BrushLegendFromFile (Name:variant;File_: string):boolean;
 begin
  BrushLegendFromFile:=true;
@@ -65,10 +65,10 @@ begin
  end;
 End;
 </pre>
-&nbsp;</p>
+</p>
 Шрифт элемента легенды.</p>
 Объект Legend имеет доступ к коллекции LegendEntries, посредством которой можно получить доступ к шрифту элемента легенды. Например: E.Charts.Item[name].Legend.LegendEntries.Item[LegendEntries].Font, где LegendEntries - индекс элемента. Чтобы согласовать поля объектов "Шрифт" в Excel и Delphi, напишем функцию FontToEFont, которая преобразует шрифт объекта Delphi в шрифт объекта Excel. Эту функцию можно будет использовать везде, где необходимо установить шрифт.</p>
-<pre>
+<pre class="delphi">
 Function FontToEFont (font:Tfont;EFont:variant):boolean;
 Begin
  FontToEFont:=true;
@@ -93,9 +93,9 @@ Begin
  end;
 End;
 </pre>
-&nbsp;</p>
+</p>
 Функция FontLegendEntries устанавливает шрифт элемента(LegendEntries) легенды(Name).</p>
-<pre>
+<pre class="delphi">
 Function FontLegendEntries(Name,LegendEntries:variant;
   Font:TFont):boolean;
 begin
@@ -108,4 +108,4 @@ begin
  end;
 End;
 </pre>
-&nbsp;</p>
+</p>

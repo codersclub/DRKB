@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 unit Findbde;
  
 interface
@@ -52,10 +52,12 @@ end.
 <p>Сборник Kuliba</p>
 
 <hr />
+
 <p>Способ 1:</p>
 
 <p>Следующая функция получает структуру SysVersion и записывает результаты в stringlist.</p>
-<pre>
+
+<pre class="delphi">
 uses dbierrs, DBTables; 
 ... 
  
@@ -85,7 +87,8 @@ end;
 
 
 <p>Вызов этой функции выглядит следующим образом:</p>
-<pre>
+
+<pre class="delphi">
 var hStrList: TStringList; 
     Ver: SYSVersion; 
 begin 
@@ -101,15 +104,18 @@ end;
 
 <p>Возможные результаты (отображаемые в memo-поле):</p>
 
-<p>ENGINE VERSION=500</p>
-<p>INTERFACE LEVEL=500</p>
-<p>VERSION DATE=09.06.98</p>
-<p>VERSION TIME=17:06:13</p>
+<pre>
+ENGINE VERSION=500
+INTERFACE LEVEL=500
+VERSION DATE=09.06.98
+VERSION TIME=17:06:13
+</pre>
 
 <p>Способ 2:</p>
 
 <p>Читаем ключ в реестре:</p>
-<pre>
+
+<pre class="delphi">
 RootKey := HKEY_LOCAL_MACHINE; 
 OpenKey(`SOFTWARE\Borland\Database Engine`, False); 
 try 
@@ -125,13 +131,13 @@ end;
 <p>Способ 3:</p>
 
 <p>Можно попробовать установить BDE</p>
-<pre>
- 
+
+<pre class="delphi">
   IsBDEExist := (dbiInit(nil) = 0) 
- 
 </pre>
 
 <p>PS: Последний способ более предпочтителен, так как анинсталлер мог удалить BDE-файлы, но оставить в реестре ключ :)</p>
+
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 
 

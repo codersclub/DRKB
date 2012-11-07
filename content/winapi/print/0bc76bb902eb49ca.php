@@ -18,14 +18,14 @@
 <p>Измените ИМЯ МОДУЛЯ на NewPrint.pas</p>
 
 <p>с:</p>
-<p> &nbsp;&nbsp; unit Printers</p>
+<p>    unit Printers</p>
 
 <p>на:</p>
-<p> &nbsp;&nbsp; unit NewPrint</p>
+<p>    unit NewPrint</p>
 
 <p>Добавьте декларацию следующего PUBLIC метода класса TPrinter в секции Interface модуля NewPrint.pas:</p>
 
-<p> &nbsp;&nbsp; procedure NewPageDC(DM: PDevMode);</p>
+<p>    procedure NewPageDC(DM: PDevMode);</p>
 
 <p>Добавьте следующую процедуру в секцию реализации NewPrint.pas:</p>
 <pre>
@@ -48,11 +48,11 @@ end;
 <p>Теперь вдобавок к старым методам (таким как BeginDoc, EndDoc, NewPage и др.), у вас появилась возможность изменения свойств принтера "на лету", т.е. между страницами при печати одного и того же документа. (Пример приведен ниже.)</p>
 <p>Вместо вызова:</p>
 
-<p> &nbsp;&nbsp; Printer.NewPage;</p>
+<p>    Printer.NewPage;</p>
 
 <p>напишите:</p>
 
-<p> &nbsp;&nbsp; Printer.NewPageDC(DevMode);</p>
+<p>    Printer.NewPageDC(DevMode);</p>
 
 <p>Вот небольшой пример:</p>
 <pre>

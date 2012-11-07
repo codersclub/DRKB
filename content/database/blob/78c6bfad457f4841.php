@@ -10,9 +10,9 @@
 
 <p>Теперь о проэкте. Он имеет одну форму frmMain. Содержимое файлов проэкта привожу ниже. Для работы также необходима таблица Table.db, имеющая структуру:</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;Имя поля &nbsp; &nbsp; &nbsp; &nbsp;Тип &nbsp; &nbsp; &nbsp; &nbsp;Размер</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;BLOBData &nbsp; &nbsp; &nbsp; &nbsp;B &nbsp; &nbsp; &nbsp; &nbsp;64</p>
+<p>        Имя поля        Тип        Размер</p>
+<p>        ID                +</p>
+<p>        BLOBData        B        64</p>
 
 <p>и Alias с именем CBDB указывающий на каталог с этой таблицей.</p>
 <p>Для упрощения размещения компонентов в форме проделайте следующее:</p>

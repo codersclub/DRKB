@@ -86,7 +86,7 @@ begin
 end;
 </pre>
 <p>Пример работы с корзиной можно скачать здесь:<br>
-<p>&nbsp;</p>
+<p></p>
 <p><a href="/zip/rbin.zip">
 rbin.zip
 </a>

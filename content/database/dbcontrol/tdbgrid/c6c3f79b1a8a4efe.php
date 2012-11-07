@@ -35,7 +35,7 @@ end;
 </pre>
 
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
-&nbsp;</p>
+</p>
 <hr />
 <p>С DBGrids это делается намного проще. Здесь мы будем использовать событие "OnDrawColumnCell". Следующий пример разукрашивает ячейки колонки "Status" когда значение НЕ равно "a". Если Вы хотите закрасить целую линию, то достаточно удалить условие "If..." (смотрите ниже)</p>
 <pre>procedure TForm1.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;

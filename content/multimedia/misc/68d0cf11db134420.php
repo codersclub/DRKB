@@ -25,8 +25,8 @@ begin
   else Result := NoImage;
 end;
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <p>Пользоваться можно так:</p>
 <pre>
 case KindOfImage(MemoryStream.Memory) of
@@ -52,5 +52,5 @@ end;
 </pre>
 <div class="author">Автор: Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-&nbsp;<br>
+ <br>
 

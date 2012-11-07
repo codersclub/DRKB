@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { 
   If you are using Delphi 2+ and have the ActiveX component TVSSpell, it is very 
   simple to add a spell checker to your TMemo applications. 

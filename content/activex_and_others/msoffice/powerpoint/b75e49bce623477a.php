@@ -2,12 +2,15 @@
 <div class="date">01.01.2007</div>
 
 <p>Early binding:</p>
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 24px 0px 24px;"><pre>PowerPoint.Quit; 
+<pre class="delphi">PowerPoint.Quit; 
 PowerPoint := nil; 
 </pre>
-&nbsp;</p>
+
+</p>
+
 <p>Late binding:</p>
-<pre>
+
+<pre class="delphi">
 PowerPoint.Quit; 
 PowerPoint := UnAssigned; 
 </pre>

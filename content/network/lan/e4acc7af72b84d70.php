@@ -3,7 +3,7 @@
 
 
 <p>Имя виртуального устройства можно получить вот так:<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 
  
@@ -68,8 +68,8 @@ begin
     //RaiseLastOSError;
 end;
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <div class="author">Автор: Александр (Rouse_) Багель</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

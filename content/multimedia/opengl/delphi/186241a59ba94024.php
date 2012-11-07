@@ -24,7 +24,7 @@ Forms,ExtCtrls, Dialogs, glaux
 
 <p>Далее в процедуре TForm1.draww, после того как переведём</p>
 <p>камеру в нужную точку функцией</p>
- &nbsp; glTranslatef(0.0, 0.0, -7.0);</p>
+   glTranslatef(0.0, 0.0, -7.0);</p>
 <p>можно рисовать всё, что угодно.</p>
 <pre>procedure TForm1.draww;
 Begin

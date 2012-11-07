@@ -11,13 +11,13 @@
 <p>FileExists(const FileName: string) - применяется для проверки наличия файла</p>
 <p>FileGetAttr(const FileName: string): Integer;</p>
 <p>FileSetAttr(const FileName: string; Attr: Integer): Integer; - функции для работы с атрибутами файлов. Вот список возможных атрибутов:</p>
-<p>faReadOnly &nbsp; &nbsp; &nbsp; &nbsp;$00000001 &nbsp; &nbsp; &nbsp; &nbsp;Read-only files</p>
-<p>faHidden &nbsp; &nbsp; &nbsp; &nbsp;$00000002 &nbsp; &nbsp; &nbsp; &nbsp;Hidden files</p>
-<p>faSysFile &nbsp; &nbsp; &nbsp; &nbsp;$00000004 &nbsp; &nbsp; &nbsp; &nbsp;System files</p>
-<p>faVolumeID &nbsp; &nbsp; &nbsp; &nbsp;$00000008 &nbsp; &nbsp; &nbsp; &nbsp;Volume ID files</p>
-<p>faDirectory &nbsp; &nbsp; &nbsp; &nbsp;$00000010 &nbsp; &nbsp; &nbsp; &nbsp;Directory files</p>
-<p>faArchive &nbsp; &nbsp; &nbsp; &nbsp;$00000020 &nbsp; &nbsp; &nbsp; &nbsp;Archive files</p>
-<p>faAnyFile &nbsp; &nbsp; &nbsp; &nbsp;$0000003F &nbsp; &nbsp; &nbsp; &nbsp;Any file</p>
+<p>faReadOnly        $00000001        Read-only files</p>
+<p>faHidden        $00000002        Hidden files</p>
+<p>faSysFile        $00000004        System files</p>
+<p>faVolumeID        $00000008        Volume ID files</p>
+<p>faDirectory        $00000010        Directory files</p>
+<p>faArchive        $00000020        Archive files</p>
+<p>faAnyFile        $0000003F        Any file</p>
 <p>(Естественно не все атрибуты применимы во всех случаях)</p>
 <p>RemoveDir(const Dir: string): Boolean; - удаляет папку(пустую)</p>
 <p>DeleteFile(const FileName: string): Boolean; - удаляет файл</p>

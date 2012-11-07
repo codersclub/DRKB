@@ -1,7 +1,6 @@
 <h1>Access Violation при передаче неполного параметра</h1>
 <div class="date">01.01.2007</div>
 
-
 <div class="author">Автор: Дмитрий Померанцев</div>
 
 <p>Проблема обнаружена под операционной системой Windows 2000 SP3, в среде Delphi6, Delphi7 (скорее всего не зависит от версии Delphi) с использованием Microsoft Jet DB Engine версия 4, SP3.</p>
@@ -12,7 +11,7 @@
 
 <p>Допустим, есть база данных в MS Access 2000, имеющая таблицу main и в ней целочисленное (INT) поле id в качестве главного ключа. Так же есть компонент ADOQuery1: TADOQuery, для доступа к базе данных. Максимальное значение поля id может быть получено следующим кодом:</p>
 
-<pre>
+<pre class="delphi">
 ADOQuery1.Active := false;
 ADOQuery1.SQL.Clear;
 ADOQuery1.SQL.Add('SELECT max(id)'); // -- Сбой здесь !!!
@@ -20,7 +19,6 @@ ADOQuery1.SQL.Add('AS idmax');
 ADOQuery1.SQL.Add('FROM main');
 ADOQuery1.Active := true;
 </pre>
-
 
 
 <p>Как было показано в комментарии, исключение возникает в процессе добавления текста в запрос, но при этом в сообщении об ошибке указывалось, что исключение произошло внутри библиотеки Jet.</p>
@@ -43,7 +41,7 @@ ADOQuery1.Active := true;
 
 <p>1. Передавать запрос целиком &#8212; одной строкой. Пример:</p>
 
-<pre>
+<pre class="delphi">
 ADOQuery1.Active := false;
 ADOQuery1.SQL.Text := 'SELECT max(id) AS idmax FROM main;';
 ADOQuery1.Active := true;
@@ -61,7 +59,7 @@ ADOQuery1.Active := true;
 
 <p>Еще один вариант решения - использовать стандартные возможности TStrings по управлению обновлением:</p>
 
-<pre>
+<pre class="delphi">
 ADOQuery1.SQL.BeginUpdate;
 try
   ADOQuery1.SQL.Clear;
@@ -74,8 +72,7 @@ end;
 </pre>
 
 
-
-
 <p>В этом случае событие OnChange произойдет только при выполнении EndUpdate.</p>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 

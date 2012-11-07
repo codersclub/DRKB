@@ -38,7 +38,7 @@ end;
 <p>Измените recipientaddress@recipienthost.com на Ваш собственный e-mail</p>
 <p>адресс. У Вас должен быть проинсталирован Outlook,</p>
 <p>{Я не уверен, что это будет работать в Outlook Express.}</p>
-<p class="note">Примечание Vit: Это точно не будет работать в&nbsp; Outlook Express</p>
+<p class="note">Примечание Vit: Это точно не будет работать в  Outlook Express</p>
 <pre>
 uses ComObj; {Delphi 5} 
  

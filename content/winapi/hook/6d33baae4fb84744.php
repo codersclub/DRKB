@@ -14,18 +14,18 @@
 <p>Далее следует краткое описание каждой процедуры и структуры, необходимой для ловушки.</p>
 <p>функция The SetWindowsHookEx</p>
 <p>Функция SetWindowsHookEx необходима для установки ловушки. Давайте посмотрим на аргументы данной функции:</p>
-Name  &nbsp; &nbsp; &nbsp; &nbsp;Type  &nbsp; &nbsp; &nbsp; &nbsp;Description  &nbsp; &nbsp; &nbsp; 
-idHook  &nbsp; &nbsp; &nbsp; &nbsp;Integer  &nbsp; &nbsp; &nbsp; &nbsp;Число, представляющее тип ловушки - например WH_KEYBOARD  &nbsp; &nbsp; &nbsp; 
-lpfn  &nbsp; &nbsp; &nbsp; &nbsp;TFNHookProc  &nbsp; &nbsp; &nbsp; &nbsp;Адрес в памяти функции ловушки  &nbsp; &nbsp; &nbsp; 
-hMod  &nbsp; &nbsp; &nbsp; &nbsp;Hinst  &nbsp; &nbsp; &nbsp; &nbsp;Дескриптор dll в которой находится функция. Если это локальная ловушка, то этот параметр 0.  &nbsp; &nbsp; &nbsp; 
-dwThreadID  &nbsp; &nbsp; &nbsp; &nbsp;Cardinal  &nbsp; &nbsp; &nbsp; &nbsp;'id потока', который Ваша программа будет контролировать. Если это глобальная ловушка, то параметр должен быть 0.  &nbsp; &nbsp; &nbsp; 
+Name         Type         Description        
+idHook         Integer         Число, представляющее тип ловушки - например WH_KEYBOARD        
+lpfn         TFNHookProc         Адрес в памяти функции ловушки        
+hMod         Hinst         Дескриптор dll в которой находится функция. Если это локальная ловушка, то этот параметр 0.        
+dwThreadID         Cardinal         'id потока', который Ваша программа будет контролировать. Если это глобальная ловушка, то параметр должен быть 0.        
 <p>SetWindowsHookEx возвращает дескриптор (т.е. идентификатор) текущей ловушки, который можно использовать в функции UnhookWindowsHookEx для последующего удаления ловушки.</p>
 <p>Функция hook</p>
 <p>Функция hook это процедура, которая вызывает в случае, если необходимое нам событие происходит. Например, если установлена ловушка типа WH_KEYBOARD, то окно будет передавать в ловушку информацию о том, какая клавища была нажата. Для Вашей процедуры hook необходимы следующие аргументы:</p>
-Name  &nbsp; &nbsp; &nbsp; &nbsp;Type  &nbsp; &nbsp; &nbsp; &nbsp;Description  &nbsp; &nbsp; &nbsp; 
-Code  &nbsp; &nbsp; &nbsp; &nbsp;Integer  &nbsp; &nbsp; &nbsp; &nbsp;Указывает на то, что означают следующие два параметра  &nbsp; &nbsp; &nbsp; 
-wParam  &nbsp; &nbsp; &nbsp; &nbsp;word  &nbsp; &nbsp; &nbsp; &nbsp;Параметр размером в 1 слово (word)  &nbsp; &nbsp; &nbsp; 
-lParam  &nbsp; &nbsp; &nbsp; &nbsp;longword  &nbsp; &nbsp; &nbsp; &nbsp;Параметр размером в 2 слова &nbsp; &nbsp; &nbsp; 
+Name         Type         Description        
+Code         Integer         Указывает на то, что означают следующие два параметра        
+wParam         word         Параметр размером в 1 слово (word)        
+lParam         longword         Параметр размером в 2 слова       
 <p>Функция hook возвращает значение типа longword.</p>
 <p>Функция CallNextHookEx</p>
 <p>Данная функция предназначена для работы с цепочкой функций ловушек. Когда ловушка установлена на определённое событие, то может возникнуть такая ситуация, когда кто-нибудь тоже захочет установить ловушку на это же событие. Когда Вы устанавливаете ловушку при помощи SetWindowsHookEx, то Ваша процедура ловушки добавляется в начало списка процедур ловушек. Поэтому основная задача функции CallNextHookEx заключается в том, чтобы вызвать следующий в списке обработчик ловушки. Когда Ваша процедура ловушки завершится, то она должна вызовать CallNextHookEx, а затем вернуть заданное значение, в зависимости от типа ловушки.</p>

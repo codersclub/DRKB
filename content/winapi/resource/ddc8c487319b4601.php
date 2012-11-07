@@ -45,7 +45,7 @@ end.
 <p> DATAARRAY RCDATA "data.dat"</p>
 
 <p>Сохраните это, откройте сессию DOS, перейдите в каталог где вы сохранили data.rc (там же, где и data.dat!) и выполните следующую команду:</p>
-<p> brcc data.rc&nbsp;&nbsp; (brcc32 для Delphi 2.0)</p>
+<p> brcc data.rc   (brcc32 для Delphi 2.0)</p>
 <p>Теперь вы имеете файл data.res, который можете подключить к своему Delphi-проекту. Во время выполнения приложения вы можете генерировать указатель на данные этого ресурса и иметь к ним доступ, что и требовалось.</p>
 <pre>
  
@@ -86,4 +86,5 @@ end.
 
 <p>Теперь вы можете ссылаться на элементы массива с помощью синтаксиса pData^[i,j].</p>
 
-<div class="author">Автор: Peter Below</div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Peter Below</div>
+<p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

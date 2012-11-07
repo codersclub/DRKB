@@ -42,8 +42,12 @@
 <p>Пример можно скачать здесь</p>
 <p>Параметры страницы.</p>
 <p>Начнем с полей страницы. Во первых для того чтобы добраться до параметров страницы у листа Excel имеется свойство объект PageSetup его мы и будем использовать. Для установки размеров полей необходимо изменить соответствующие свойства PageSetup, вот эти свойства:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>LeftMargin - Левое поле</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>RightMargin - Правое поле</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TopMargin - Верхнее поле</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>BottomMargin - Нижнее поле</td></tr></table></div><p>Значение размеров полей необходимо указывать в пикселях, к чему мы не очень привыкли, поэтому воспользуемся функцией InchesToPoints объекта Application, которая переводит значение в дюймах в значение в пикселях. Теперь напишем процедуру которая подключит Excel и установит поля равные 0.44 дюйма (приблизительно 1 см):</p>
-<pre>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>LeftMargin - Левое поле</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>RightMargin - Правое поле</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TopMargin - Верхнее поле</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>BottomMargin - Нижнее поле</td></tr></table></div>
+<p>Значение размеров полей необходимо указывать в пикселях, к чему мы не очень привыкли, поэтому воспользуемся функцией InchesToPoints объекта Application, которая переводит значение в дюймах в значение в пикселях. Теперь напишем процедуру которая подключит Excel и установит поля равные 0.44 дюйма (приблизительно 1 см):</p>
+<pre class="delphi">
 procedure Connect;
 var
   Excel:Variant;
@@ -65,32 +69,39 @@ end;
 <p>Здесь мы указываем вторую и третью строки для печати на каждой странице.</p>
 <p>Шрифты и цвета.</p>
 <p>Для установки шрифта и размера текста выделите нужный диапазон и установите свойство Name объекта-свойства Font объекта Selection или свойство Size для изменения размера:</p>
-<pre>
- 
+
+<pre class="delphi">
   Excel.ActiveWorkBook.WorkSheets[1].Range['F1'].Select;
   Excel.Selection.Font.Name:='Courier New';
   Excel.Selection.Font.Size:=18;
 </pre>
 <p>Если Вы хотите установить жирный или, например, наклонный стиль написания текста установите соответствующие свойства:</p>
-<pre>
+<pre class="delphi">
   Excel.ActiveWorkBook.WorkSheets[1].Range['G1'].Select;
   Excel.Selection.Font.Bold:=true; // Для жирного текста
   Excel.Selection.Font.Italic:=true; // Для наклонного текста
 </pre>
 <p>Для указания цвета текста измените свойство ColorIndex все того же объекта Font:</p>
-<pre>
+<pre class="delphi">
   Excel.ActiveWorkBook.WorkSheets[1].Range['A1'].Select;
   Excel.Selection.Font.ColorIndex:=3;
 </pre>
 <p>Вот несколько индексов цветов:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Индекс - Цвет</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>0 - Авто</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>2 - Белый</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>3 - Красный</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>5 - Синий</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>6 - Желтый</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>10 - Зеленый</td></tr></table></div><p>Для изменения цвета фона ячейки используйте объект Interior свойства Selection:</p>
-<pre>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Индекс - Цвет</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>0 - Авто</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>2 - Белый</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>3 - Красный</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>5 - Синий</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>6 - Желтый</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>10 - Зеленый</td></tr></table></div>
+<p>Для изменения цвета фона ячейки используйте объект Interior свойства Selection:</p>
+<pre class="delphi">
   Excel.ActiveWorkBook.WorkSheets[1].Range['H1'].Select;
   Excel.Selection.Interior.ColorIndex:=3; // Цвет
 </pre>
 <p>Колонтитулы.</p>
 <p>Для добавления колонтитула к документу достаточно указать его содержание:</p>
-<pre>
+<pre class="delphi">
   Excel.ActiveSheet.PageSetup.LeftFooter:='Левый нижний колонтитул';
   Excel.ActiveSheet.PageSetup.CenterFooter:='Центральный нижний колонтитул';
   Excel.ActiveSheet.PageSetup.RightFooter:='Правый нижний колонтитул';
@@ -99,7 +110,7 @@ end;
   Excel.ActiveSheet.PageSetup.RightHeader:='Правый верхний колонтитул';
 </pre>
 <p>Для изменения размера шрифта добавьте к колонтитулу управляющий символ "&amp;" и размер шрифта:</p>
-<pre>
+<pre class="delphi">
   Excel.ActiveSheet.PageSetup.LeftFooter:='&amp;7Левый нижний колонтитул';
 </pre>
 

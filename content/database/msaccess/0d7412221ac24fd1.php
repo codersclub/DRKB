@@ -143,12 +143,12 @@ begin
     Catalog = nil;
   end;
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <p class="note">Примечание от Vit.</p>
 <p>Это не самый лучший способ... Гораздо универсальнее и надёжнее воспользоваться стандартными средствами SQL и создать необходимые изменения при помощи запросов SQL, в частности</p>
 <p>Create Table</p>
-<p>Create &nbsp;Index</p>
+<p>Create  Index</p>
 <p>Create Clustered Index</p>
 <p>Alter Table</p>
 <p>и т.п.</p>

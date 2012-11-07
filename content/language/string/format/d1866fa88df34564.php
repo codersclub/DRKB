@@ -41,8 +41,8 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 function TfrmLoadProtocolTable.ToMixCase(InString: string): string;
@@ -62,8 +62,8 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
@@ -101,4 +101,4 @@ begin
   Result := S;
 end;
 </pre>
-&nbsp;</p>
+</p>

@@ -2,8 +2,9 @@
 <div class="date">01.01.2007</div>
 
 
-<p>With Paradox:</p>
-<pre>
+<pre class="delphi">
+With Paradox:
+
 procedure BDEGetPDXUserList(AList: TStrings);
 var
   hCur: hDBICur;

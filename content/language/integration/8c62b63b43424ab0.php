@@ -6,7 +6,7 @@
 <p>Note that there are four procedures provided: SimulateKeyDown(), SimulateKeyUp(), SimulateKeystroke(), and SendKeys(), to allow greater control in your ability to send keystrokes.</p>
 <p>The SimulateKeyDown(), SimulateKeyUp(), and SimulateKeystroke() procedures expect a virtural key code (like VK_F1). The SimulateKeystroke() procedure accepts an extra parameter that is useful when simulating the PrintScreen key. When extra is set to zero, the entire screen will be captured to the windows clipboard. When extra is set to one, only the active window will be captured.</p>
 <p>The four button click methods demonstrate the use of these functions:</p>
-<p>ButtonClick1 -&nbsp; Toggles the cap lock.</p>
+<p>ButtonClick1 -  Toggles the cap lock.</p>
 <p>ButtonClick2 - Captures the entire screen to the clipboard.</p>
 <p>ButtonClick3 - Capture the active window to the clipboard.</p>
 <p>ButtonClick4 - Set the focus to an edit control and sends it a string.</p>

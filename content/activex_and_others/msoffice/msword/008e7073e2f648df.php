@@ -4,7 +4,7 @@
 
 
 <p>Footer:</p>
-<pre>
+<pre class="delphi">
 { ... }
 aDoc := WordApp.Documents.Add(EmptyParam, EmptyParam);
 aDoc.Sections.Item(1).Footers.Item(wdHeaderFooterPrimary).Range.Text :=

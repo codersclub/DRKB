@@ -1,13 +1,14 @@
 <h1>Индекс БД в другом каталоге</h1>
-<div class="date">01.01.2007</div>
+<div class="date">10.01.01 19:54</div>
 
 
 <p>Подскажите как работать c dbf под Delphi 5 , когда индексы расположены в другом каталоге?</p>
 
-<p>Serg</p>
-<p>(10.01.01 19:54) можно сделать следующее:</p>
+<div class="author">Автор: Serg</div>
 
-<pre>
+<p>можно сделать следующее:</p>
+
+<pre class="delphi">
 Vnhead_Cdx := TStringList.Create;
 Vnhead_Cdx.Add('c:\parus\bumi1\idx\vnhead.cdx');
 Vnhead.IndexFiles := Vnhead_Cdx;

@@ -23,4 +23,4 @@ end;
 <p>Здесь мы исходим из предположения, что у вас имеется маска редактирования, допускающая формат hh:mm или hh:mm:ss.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

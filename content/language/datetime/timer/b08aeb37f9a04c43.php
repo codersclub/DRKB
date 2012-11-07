@@ -16,7 +16,7 @@ procedure Delay(dwMilliseconds: Longint);
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
 <p class="note">Примечание от Vit
-<p>Функция будет "безбожно" жрать процессорное время. Если ожидаемые интервалы &nbsp;задержек достаточно велики, то очень желательно её дополнить следующим образом:</p>
+<p>Функция будет "безбожно" жрать процессорное время. Если ожидаемые интервалы  задержек достаточно велики, то очень желательно её дополнить следующим образом:</p>
 <pre>
 procedure Delay(dwMilliseconds: Longint);
 

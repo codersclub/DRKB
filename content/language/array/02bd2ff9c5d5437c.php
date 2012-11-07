@@ -16,7 +16,7 @@ Begin
     Move( S[1], FixedStr, Length(S));
 End;
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 function StrToArrays(str, r: string; out Temp: TStrings): Boolean;

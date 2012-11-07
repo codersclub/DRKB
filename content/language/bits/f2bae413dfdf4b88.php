@@ -23,4 +23,4 @@ end;
 <p>Эта функция возвращает (t shr shift) and Mask. Если же ассемблер не поможет, надо или переделывать алгоритм, или менять компьютер :))</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

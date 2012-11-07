@@ -6,7 +6,7 @@
 
 <p>Использyй ноpмальнyю тpансляцию ошибок в Application.OnException. Вpоде это.</p>
 
-<pre>
+<pre class="delphi">
 procedure DBExceptionTranslate(E: EDBEngineError); 
  
 function OriginalMessage: string;

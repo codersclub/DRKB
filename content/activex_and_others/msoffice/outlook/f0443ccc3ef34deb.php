@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { 
   1.  Create an ActiveX-Library 
   Save the project as e.g. "OLAddIn.dpr" 
@@ -64,7 +64,7 @@ begin
 end. 
 </pre>
 
-<pre>
+<pre class="delphi">
 unit AddIn; 
  
 {$WARN SYMBOL_PLATFORM OFF} 

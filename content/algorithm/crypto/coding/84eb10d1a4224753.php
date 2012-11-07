@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 function Decode(const S: AnsiString): AnsiString; 
 const 
   Map: array[Char] of Byte = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
@@ -46,7 +46,7 @@ begin
   end 
 end; 
 </pre>
-<pre>
+<pre class="delphi">
 function Encode(const S: AnsiString): AnsiString; 
 const 
   Map: array[0..63] of Char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 
@@ -70,8 +70,10 @@ end;
 </pre>
 
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
+
 <hr />
-<pre>
+
+<pre class="delphi">
 type TAByte = array [0..maxInt-1] of byte;
 type TPAByte = ^TAByte;
  
@@ -174,11 +176,13 @@ b:=Encode( a );
 showmessage( b );
 a:=Decode( b );
 showmessage( a ); 
- 
 </pre>
+
 <div class="author">Автор: P.O.D.</div>
+
 <hr />
-<pre>
+
+<pre class="delphi">
 const
   Codes64 = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/';
  
@@ -214,7 +218,7 @@ end;
  
 </pre>
 
-<pre>
+<pre class="delphi">
 const
   Codes64 = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/';
  
@@ -251,8 +255,10 @@ begin
 end;
 </pre>
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
+
 <hr />
-<pre>
+
+<pre class="delphi">
 { 64-битное декодирование файлов }
 { Arne de Bruijn }
 uses dos;

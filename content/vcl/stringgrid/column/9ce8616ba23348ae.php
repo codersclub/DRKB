@@ -28,7 +28,7 @@ end;
 Form1.ShowModal;
 ...
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>а не так:</p>
 <pre>
 ...
@@ -39,7 +39,7 @@ fr1 := Tform1.Create(Application);
 fr1.Show;
 ...
 </pre>
-&nbsp;<br>
+ <br>
 
 <hr />
 
@@ -71,7 +71,7 @@ begin
 end;
  
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 procedure GridDeleteRow(RowNumber: Integer; Grid: TstringGrid);

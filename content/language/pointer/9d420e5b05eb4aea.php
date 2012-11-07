@@ -48,6 +48,6 @@ begin
   FreeMem(P);
 end;
 </pre>
-&nbsp;</p>
+</p>
 
 <div class="author">Автор: Мироводин Дмитрий, mirovodin@mail.ru</div>

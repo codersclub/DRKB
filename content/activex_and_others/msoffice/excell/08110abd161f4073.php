@@ -3,7 +3,7 @@
 
 
 <p>{1. With OLE Automation }</p>
-<pre>
+<pre class="delphi">
 uses
   ComObj;
  
@@ -61,7 +61,7 @@ end;
 
 
 <p>// Example:</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   if SaveAsExcelFile(stringGrid1, 'My Stringgrid Data', 'c:\MyExcelFile.xls') then
@@ -71,7 +71,7 @@ end;
 
 <p>{**************************************************************}</p>
 <p>{2. Without OLE }</p>
-<pre>
+<pre class="delphi">
 procedure XlsWriteCellLabel(XlsStream: TStream; const ACol, ARow: Word;
   const AValue: string);
 var
@@ -117,7 +117,7 @@ end;
 
 
 <p>// Example:</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   if SaveAsExcelFile(StringGrid1, 'c:\MyExcelFile.xls') then
@@ -126,7 +126,7 @@ end;
 </pre>
 <p>{**************************************************************}</p>
 <p>{3. Code by Reinhard Schatzl }</p>
-<pre>
+<pre class="delphi">
 uses
   ComObj;
  
@@ -259,7 +259,7 @@ end;
 
 
 <p>//Example</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   //StringGrid inhalt in Excel exportieren
@@ -271,7 +271,7 @@ end;
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
 
 <hr />
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Работа с MS Excel
  
@@ -613,7 +613,7 @@ end.
 
 
 <p> Пример использования:</p>
-<pre>
+<pre class="delphi">
 unit Example;
 ...
 uses ..., ExcelModule;

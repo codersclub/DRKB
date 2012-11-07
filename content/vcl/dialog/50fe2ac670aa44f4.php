@@ -3,7 +3,7 @@
 
 
 <p>Вообще, винда предоставляет возможность расширения некоторых стандартных диалогов с помощью шаблонов и hook-процедуры. Например, для OpenFileDialog'а пишется к примеру, такой rc-скрипт с шаблоном<br>
-&nbsp;<br>
+ <br>
 <p>myres.rc</p>
 <pre>
 OFT DIALOG -1, 1, 304, 62
@@ -18,18 +18,18 @@ FONT 8, "MS Sans Serif"
 </pre>
 <br>
 потом он компилится <br>
-<p>&nbsp;</p>
+<p></p>
 <p>brcc32.exe myres.rc</p>
-<p>&nbsp;<br>
-&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
+ <br>
 и получается myres.res, который линкуется к проекту директивой {$R} (удобнее, конечно создавать и компилить шаблон в каком-нить редакторе ресурсов, типа Resource Workshop'а).<br>
-&nbsp;<br>
+ <br>
 Ну а в проге заполняется структура TOpenFileName (надо в uses подключить commdlg), у которой в поле lpTemplateName задается имя шаблона, а в поле lpfnHook - hook-процедура. В этой hook-процедуре и обрабатывается реакция на дополнительные контролы (например чекбоксы). Там же можно обработать смену типа файла, директории, выбранного файла, нажатие на OK, etc. <br>
 Ну а для показа самого диалога вызывается API'шная GetOpenFileName <br>
-&nbsp;<br>
+ <br>
 Короче, вот пример кода<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 uses
  commdlg;
@@ -108,7 +108,7 @@ begin
 end;
  
 </pre>
-&nbsp;<br>
+ <br>
 <div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
-<p>&nbsp;</p>
+<p></p>

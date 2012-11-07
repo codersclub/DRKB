@@ -15,7 +15,7 @@
 <p>Посылка данных в Excel</p>
 
 <p>Это можно сделать с помощью следующей процедуры :</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.BitBtnToExcelOnClick(Sender: TObject);
 var
   WorkBk: _WorkBook; //  определяем WorkBook
@@ -74,7 +74,7 @@ end;
 
 <p>Это можно сделать с помощью следующей процедуры :</p>
 
-<pre>
+<pre class="delphi">
 procedure TForm1.BitBtnFromExcelOnClick(Sender: TObject);
 var
   WorkBk: _WorkBook;

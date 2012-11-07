@@ -40,7 +40,7 @@
 <p>Интегрированная картография включает несколько DLL библиотек но не предоставляет к ним доступ напрямую.</p>
 <p>Запуск и связывание с сервером MapInfo</p>
 <p>Итак рассмотрим простейший компонент для запуска и управления MapInfo (TKDMapInfoServer),следует заметить что мной не ставилась написание специализированного компонента - я представляю основы.</p>
-<pre>
+<pre class="delphi">
 unit KDMapInfoServer;
  
 interface
@@ -321,7 +321,8 @@ end.
 <p>Затем, в желаемой точке включения окна MapInfo в Ваше приложение передайте MapInfo оператор Set Next Document, за которым следует MapBasic-оператор, создающий окно.</p>
 <p>Оператор Set Next Document позволяет Вам "переподчинять" окна документов. Синтаксис этого оператора требует указания уникального номера HWND элемента управления в Вашей программе. При последующем создании окна-документа MapInfo (с использованием операторов Map, Graph, Browse, Layout или Create Legend) создаваемое окно становится для окна порождающим объектом.</p>
 <p>Примеры приведены из компонента но тоже самое можно выполнить и метолом Do непосредственно, но вы это уже я думаю поняли</p>
-<pre>
+
+<pre class="delphi">
 ExecuteCommandMapBasic('Set Application Window %D', [FOwner.Handle]);
 ExecuteCommandMapBasic('Set Window Info Parent %D', [FOwner.Handle]);
 ExecuteCommandMapBasic('Set Next Document Parent %D Style 1', [FPanel.Handle]); 

@@ -12,7 +12,7 @@
 <p>или метод</p>
 <p>procedure Open;</p>
 <p>В противном случае достаточно использовать метод</p>
-<p>function ExecSQL: Integer;&nbsp;</p>
+<p>function ExecSQL: Integer;</p>
 <p>Число обработанных запросом записей возвращает свойство</p>
 <p>property RowsAffected: Integer;</p>
 

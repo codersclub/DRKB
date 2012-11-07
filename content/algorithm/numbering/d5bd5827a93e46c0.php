@@ -80,10 +80,10 @@ end;
 <p>The following function will convert a number from one base to</p>
 <p>a number of another base:</p>
 <p>procedure RadixStr(NumStr : pChar;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Radix : LongInt;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ResultStr : pChar;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NewRadix : LongInt;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var ErrorCode : LongInt);</p>
+<p>                   Radix : LongInt;</p>
+<p>                   ResultStr : pChar;</p>
+<p>                   NewRadix : LongInt;</p>
+<p>                   var ErrorCode : LongInt);</p>
 <p>The RadixStr() function takes a pointer to a null terminated string</p>
 <p>containing a number of one base, and fills a buffer with a null</p>
 <p>terminated string containing the number converted to another base.</p>
@@ -97,30 +97,30 @@ end;
 <p>hold the resulting string.</p>
 <p>NewRadix: The base to use in the conversion. The base must be in the</p>
 <p>range of 2 to 36;</p>
-<p>ErrorCode: Upon return, contains&nbsp; the return code 0 if successful, or</p>
+<p>ErrorCode: Upon return, contains  the return code 0 if successful, or</p>
 <p>the character number of the offending character contained in the</p>
 <p>buffer NumStr.</p>
 <p>Examples of calling the RadixStr() function:</p>
 <p>{Convert Hex to Decimal}</p>
 <p>RadixStr('FF',</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lpBuffer,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Code);</p>
+<p>         16,</p>
+<p>         lpBuffer,</p>
+<p>         10,</p>
+<p>         Code);</p>
 <p>Should return the string '255' in lpbuffer^.</p>
 <p>{Convert Decimal to Binary}</p>
 <p>RadixStr('255',</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lpBuffer,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Code);</p>
+<p>         10,</p>
+<p>         lpBuffer,</p>
+<p>         2,</p>
+<p>         Code);</p>
 <p>Should return the string '11111111' in lpbuffer^.</p>
 <p>{Convert Hex to Octal}</p>
 <p>RadixStr('FF',</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lpBuffer,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Code);</p>
+<p>         16,</p>
+<p>         lpBuffer,</p>
+<p>         8,</p>
+<p>         Code);</p>
 <p>Should return the string '377' in lpbuffer^.</p>
 <pre>
 {Function code}

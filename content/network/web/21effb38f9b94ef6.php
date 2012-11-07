@@ -15,7 +15,7 @@
 <p>6. В диалоговом окне Action Editor нажмите кнопку Add New, при этом в окне Object Inspector отобразятся свойства и события созданного ActionItem.</p>
 <p>7. Установите свойство Default созданного ActionItem равным true.</p>
 <p>8. Создайте обработчик события OnAction для созданного ActionItem и напишите в него код:</p>
-<p> &nbsp;&nbsp; Response.Content := '&lt;html&gt;&lt;body&gt;Hello ISAPI!&lt;/body&gt;&lt;/html&gt;';</p>
+<p>    Response.Content := '&lt;html&gt;&lt;body&gt;Hello ISAPI!&lt;/body&gt;&lt;/html&gt;';</p>
 <p>У вас должен получиться код приведенный в примере 1.</p>
 <p>Пример 1</p>
 <p>procedure TWebModule1.WebModule1WebActionItem1Action(Sender: TObject;</p>

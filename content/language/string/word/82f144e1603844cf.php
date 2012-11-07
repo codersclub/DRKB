@@ -34,7 +34,7 @@ end;
 </pre>
 <div class="author">Автор: TP@MB@Y</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 function GetToken(aString, SepChar: string; TokenNum: Byte): string;
@@ -121,8 +121,8 @@ end;
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 function CopyColumn(const s_string: string; c_fence: char; i_index: integer):
@@ -161,8 +161,8 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****

@@ -34,16 +34,16 @@ Jet OLEDB:SFP=False
 <p>Так же для открытия базы данных Access можно воспользоваться BDE которая содержит родной драйвер (MSACCESS). В компоненте Database установите следующие свойства:</p>
 
 <p>DatabaseName = Any_name (или Alias_name)</p>
-<p>DriverName&nbsp;&nbsp; = MSACCESS</p>
-<p>LoginPrompt&nbsp; = False</p>
-<p>Params&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = PATH=d:\path</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DATABASE NAME=d:\path\filename.mdb</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TRACE MODE=0</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LANGDRIVER=Access General</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; USER NAME=Admin</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PASSWORD=your_password</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Open/MODE=Read/Write</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SQLPASSTHRU MODE=Not SHARED</p>
+<p>DriverName   = MSACCESS</p>
+<p>LoginPrompt  = False</p>
+<p>Params       = PATH=d:\path</p>
+<p>               DATABASE NAME=d:\path\filename.mdb</p>
+<p>               TRACE MODE=0</p>
+<p>               LANGDRIVER=Access General</p>
+<p>               USER NAME=Admin</p>
+<p>               PASSWORD=your_password</p>
+<p>               Open/MODE=Read/Write</p>
+<p>               SQLPASSTHRU MODE=Not SHARED</p>
 
 <p>Значения свойства DatabaseName объекта Database, это то, которое Вы будете использовать в свойстве DatabaseName компонентов Table и Query, которые представляют таблицы и запросы для этой базы данных (тем самым связывая их с объектом Database).</p>
 

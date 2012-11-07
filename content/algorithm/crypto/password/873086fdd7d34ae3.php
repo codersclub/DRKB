@@ -66,8 +66,12 @@ begin
 end.
 </pre>
 <p>Теория:</p>
-<p>Самое основное в нашей DLL &#8211; это процедура RunStopHook. Ей передаётся один только параметр. Если он равен true, то я регистрирую ловушку, которая будет ловить все сообщения Windows на себя. Для этого используется функция SetWindowsHookEx. У этой функции четыре параметра:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Тип ловушки. Я указал WH_GETMESSAGE, которая ловит все сообщения.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Указатель на функцию, которой будут пересылаться сообщения Windows.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Указатель на приложение.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Идентификатор потока. Если ноль, то используется текущий.</td></tr></table></div><p>В качестве второго параметра я указал имя функции SysMsgProc. Она так же описана в этой dll. Давай на неё посмотрим.</p>
+<p>Самое основное в нашей DLL - это процедура RunStopHook. Ей передаётся один только параметр. Если он равен true, то я регистрирую ловушку, которая будет ловить все сообщения Windows на себя. Для этого используется функция SetWindowsHookEx. У этой функции четыре параметра:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Тип ловушки. Я указал WH_GETMESSAGE, которая ловит все сообщения.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Указатель на функцию, которой будут пересылаться сообщения Windows.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Указатель на приложение.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Идентификатор потока. Если ноль, то используется текущий.</td></tr></table></div>
+<p>В качестве второго параметра я указал имя функции SysMsgProc. Она так же описана в этой dll. Давай на неё посмотрим.</p>
 <p>Ловушка для сообщений:</p>
 <p>В первой строке я передаю пойманное сообщение остальным ловушкам установленным в системе с помощью CallNextHookEx. После этого я получаю окно сгенерировавшее событие и проверяю тип события. Если была кликнута левая кнопка крысы и удержана пимпа Control, то убрать звёздочки.</p>
 <p>Я не могу больше останавливаться на этой DLL потому что моя рубрика не резиновая. Придётся тебе разбираться с происходящим по комментариям.</p>

@@ -2,7 +2,8 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>unit Unit1;
+<pre class="delphi">
+unit Unit1;
 
  
 interface

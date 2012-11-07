@@ -5,9 +5,11 @@
 
 <p>Open a new Application and place:</p>
 
-<p>  a button named Button3,</p>
-<p>  a RitchText object named WordEditor</p>
-<p>  and an OpenDialog component.</p>
+<ul>
+<li>a button named Button3,</li>
+<li>a RitchText object named WordEditor</li>
+<li>and an OpenDialog component.</li>
+</ul>
 
 <p>From now on, you can browse for any *.doc file and load it into the RitchText object.</p>
 
@@ -15,15 +17,50 @@
 
 <p>Other File Formats:</p>
 
-Argument Format&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;File Format  &nbsp; &nbsp; &nbsp; 
-0 &nbsp; &nbsp; &nbsp; &nbsp;Normal (Word format)  &nbsp; &nbsp; &nbsp; 
-1 &nbsp; &nbsp; &nbsp; &nbsp;Document Template  &nbsp; &nbsp; &nbsp; 
-2 &nbsp; &nbsp; &nbsp; &nbsp;Text Only (extended characters saved in ANSI character set)  &nbsp; &nbsp; &nbsp; 
-3 &nbsp; &nbsp; &nbsp; &nbsp;Text+Breaks (plain text with line breaks; extended characters saved in ANSI character set)  &nbsp; &nbsp; &nbsp; 
-4 &nbsp; &nbsp; &nbsp; &nbsp;Text Only (PC-8) (extended characters saved in IBM PC character set)  &nbsp; &nbsp; &nbsp; 
-5 &nbsp; &nbsp; &nbsp; &nbsp;Text+Breaks (PC-8) (text with line breaks; extended characters saved in IBM PC character set)  &nbsp; &nbsp; &nbsp; 
-6 &nbsp; &nbsp; &nbsp; &nbsp;Rich-text format (RTF)  &nbsp; &nbsp; &nbsp; 
-<pre>
+<table>
+<tr>
+  <th>Argument</th>
+  <th>Format</th>
+  <th>File Format</th>
+</tr>
+<tr>
+  <td>0</td>
+  <td>Normal</td>
+  <td>(Word format)</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>Document Template</td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>2
+  <td>Text Only</td>
+  <td>(extended characters saved in ANSI character set)</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Text+Breaks</td>
+  <td>(plain text with line breaks; extended characters saved in ANSI character set)</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Text Only</td>
+  <td>(PC-8) (extended characters saved in IBM PC character set)</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>Text+Breaks</td>
+  <td>(PC-8) (text with line breaks; extended characters saved in IBM PC character set)</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>(RTF)</td>
+  <td>Rich-text format</td>
+</tr>
+</table>
+
+<pre class="delphi">
 procedure TImport_Form.ToolButton3Click(Sender: TObject);
 var
   WordApp: Variant;

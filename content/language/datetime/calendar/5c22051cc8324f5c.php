@@ -75,4 +75,4 @@ function Persia_to_Ger_date(aa: ShortString; ResultKind: Byte = 0): ShortString;
  end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
-&nbsp;</p>
+</p>

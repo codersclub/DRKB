@@ -2,14 +2,17 @@
 <div class="date">01.01.2007</div>
 
 <p>There are several different ways to start Outlook from your Delphi app.</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Using D5's components</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Using the type library (early binding)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Without using the type library (late binding)</td></tr></table></div><p>You'll notice that just starting up the Outlook application is not enough to get going - you also have to get the namespace and call its Logon method, like this:</p>
-<p> &nbsp;&nbsp; NmSpace.Logon('', '', False, False);</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Using D5's components</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Using the type library (early binding)</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Without using the type library (late binding)</td></tr></table></div>
+<p>You'll notice that just starting up the Outlook application is not enough to get going - you also have to get the namespace and call its Logon method, like this:</p>
+<p>    NmSpace.Logon('', '', False, False);</p>
 <p>I've used this line in the following code snippets, but note that you may have to supply different arguments to this method if you have user profiles set up on your computer. The Logon method takes four parameters: the first two, Profile and Password, are self-explanatory. The third, ShowDialog, lets you display a logon dialog for the user. If the fourth, NewSession, is set to True, a new MAPI session is started, rather than connecting to an existing one.</p>
 <p>Bear in mind that when you've logged on you still won't see Outlook - until you display a folder, as shown in the following examples.</p>
 
 <p>Using Delphi 5's components</p>
 <p>Drop an OutlookApplication component on your form. When you want Outlook to start, use its Connect method:</p>
-<pre>
+<pre class="delphi">
   var
     NmSpace: NameSpace;
     Folder: MAPIFolder;
@@ -26,7 +29,7 @@
 <p>Opening Outlook (early binding)</p>
 <p>Before you can use this method, you must have imported the Outlook type library (unless you have Delphi 5).</p>
 <p>One way of starting Outlook is to try the GetActiveObject call, to get a running instance of Outlook, but put a call to CoApplication.Create in an except clause. But except clauses are slow, and can cause problems within the IDE for people who like Break On Exceptions set to True. The following code removes the need for a try...except clause, by avoiding using OleCheck on GetActiveObject in the case when Outlook is not running.</p>
-<pre>
+<pre class="delphi">
 uses Windows, ComObj, ActiveX, 
             Outlook_TLB;  // Outlook8; for D5 users    
  
@@ -49,11 +52,11 @@ begin
   Folder.Display;
   ...
 </pre>
-&nbsp;</p>
+</p>
 
 <p>Without using the type library</p>
 <p>Automation is so much easier and faster using type libraries (early binding) that you should avoid managing without if at all possible. But if you really can't, here's how to get started:</p>
-<pre>
+<pre class="delphi">
 var 
   Outlook, NmSpace, Folder: OleVariant; 
 begin 
@@ -63,12 +66,12 @@ begin
   Folder := NmSpace.GetDefaultFolder(olFolderInbox);
   Folder.Display;
 </pre>
-&nbsp;</p>
+</p>
 Back to 'HowDoI'</p>
 
 <p>&gt;&gt;&gt;&gt;&gt;How to close Outlook&lt;&lt;&lt;&lt;&lt;</p>
 <p>Assuming your Outlook application variable is called Outlook, and the namespace variable you logged on with (see How to start Outlook) is NmSpace:</p>
-<pre>
+<pre class="delphi">
   NmSpace.Logoff;
   Outlook.Quit;
   Outlook.Disconnect;    // Using the D5 components
@@ -81,7 +84,7 @@ Back to 'HowDoI'</p>
 
 <p>&gt;&gt;&gt;&gt;&gt;How to compose an email&lt;&lt;&lt;&lt;&lt;</p>
 <p>In early binding:</p>
-<pre>
+<pre class="delphi">
 var
   MI: MailItem;
 begin
@@ -92,9 +95,9 @@ begin
   MI.Attachments.Add('C:\CreditCardNo.txt', EmptyParam, EmptyParam, EmptyParam);
   MI.Send;
 </pre>
-&nbsp;</p>
+</p>
 <p>In late binding, MI has to be a variant, and it's constructed like this:</p>
-<pre>
+<pre class="delphi">
 const
   olMailItem = 0;
 var
@@ -102,7 +105,7 @@ var
 begin
   MI := Outlook.CreateItem(olMailItem);
 </pre>
-&nbsp;</p>
+</p>
 <p>The rest of the code is the same as in early binding.</p>
 <p>In Outlook 98, you can also send HTML-formatted emails, by assigning the HTML as a string to the MailItem's HTMLBody property instead of the Body property. But this isn't possible with Outlook 97, and so can't be done with the D5 component either, unless you import the type library for Outlook 98 (MSOutl85.olb).</p>
 <p>Unfortunately there doesn't seem to be any way to send true RTF-formatted emails.</p>

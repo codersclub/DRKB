@@ -6,5 +6,5 @@
 
 <p>Update  незамедлительная перерисовка</p>
 
-<p>Refresh&nbsp; Invalidate + Update</p>
+<p>Refresh  Invalidate + Update</p>
 

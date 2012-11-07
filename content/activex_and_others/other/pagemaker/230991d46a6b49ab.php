@@ -8,26 +8,26 @@
 <p>Итак начнем.</p>
 <p>В документации поставляемой фирмой Adobe к данному пакету написано что PageMaker поддерживает динамический обмен данными (DDE) с любыми приложениями.</p>
 <p>В данном компоненте реализована 3 основных метода , это -</p>
-<pre>Property PathPageMaker : String Read FPathPageMaker Write SetPathPageMaker;
+<pre class="delphi">Property PathPageMaker : String Read FPathPageMaker Write SetPathPageMaker;
 </pre>
 
 метод служащий для указания пути к исполняемому файлу Pagemaker, используется для того что-бы TDDEClientConv запустил данное приложение в виде DDE сервера</p>
-<pre>Property Enable : Boolean Read FEnable Write SetEnable; 
+<pre class="delphi">Property Enable : Boolean Read FEnable Write SetEnable; 
 </pre>
 
 метод используется для запуска Adobe PageMaker , т.е фактически для установки DDE соединения</p>
-<pre>Property UnitMeasurement : TUnitMeasurement Read FunitMeasurement Write SetUnitMeasurement; 
+<pre class="delphi">Property UnitMeasurement : TUnitMeasurement Read FunitMeasurement Write SetUnitMeasurement; 
 </pre>
 
 метод определяет единицы измерения которыми будет оперировать PageMaker при передаче команд. Например команда PageMaker Script Language PageSize позволяет установить размер страницы как в миллиметрах так и в дюймах - что бы не заботится об установки единиц измерения в командах и создан этот метод позволяющий гибко реализовать задание размеров в той форме в какой установил программист.</p>
 <p class="p_Heading1">Реализация передач команд серверу</p>
 <p>Для этого в компоненте в разделе реализована функция</p>
-<pre>Procedure ExecuteMacroPM(Str:String); // Выполнить макрос
+<pre class="delphi">Procedure ExecuteMacroPM(Str:String); // Выполнить макрос
 </pre>
 <p>Которая в свою очередь вызывает метод TDDEClientConv.</p>
 <p>К сожалению разработчики немного запутали передачу логических данных в процедуры и функции Script Language и в разные функциях булевые значения могут передаваться в виде '0' -логического "НЕТ" , так и в виде строкового ".F." , "OFF" или "False"</p>
 <p>В общем для обработки преобразования реализовано несколько функций</p>
-<pre>
+<pre class="delphi">
 // вернуть строковый On Off
 Function  ReturnOnOffStr(Value: Boolean) : String;
  
@@ -41,7 +41,7 @@ Function  Return0_1Str(Value: Boolean) : String;
 </pre>
 <p>Реализация приема данных из DDE сервера</p>
 <p>Запрос данных с сервера в компоненте к сожалению не реализован функцией т.к. компонент в свое время был написан за два часа в очень скоростном режиме, если вы обратите внимание на некоторые функции то запрос данных с DDE сервера в них реализован примерно так</p>
-<pre>var
+<pre class="delphi">var
 PcharReply : Array[0..1023] of char;
 begin
 PcharReply := DDE.RequestData('GetPMState');
@@ -51,16 +51,16 @@ PcharReply := DDE.RequestData('GetPMState');
 <p>Данные, поступившие от DDE сервера представляют собой строку параметров заключенную в апострофы где передаваемые данные разделены запятыми.</p>
 <p>Число параметров может колебаться в произвольной степени в зависимости от функции Script Language.</p>
 <p>Для чтение параметров создана функция</p>
-<pre>// получить параметр вернутый PM по порядковому значению
+<pre class="delphi">// получить параметр вернутый PM по порядковому значению
 Function  EncodeParams(Value : PChar; NN : Integer) : String;
 </pre>
 <p>возвращающая параметр в виде строки, причем NN - является номером параметра в переданном списке (причем для чтения самого первого параметра нужно указать NN равным 0)</p>
 <p class="p_Heading1">Команды и функции Script Language.</p>
 <p>Основные команды и функции в компоненте реализованы с префиксом "PM_"<br>
 <p>Например</p>
-<pre>// Установить текущую страницу публикации
+<pre class="delphi">// Установить текущую страницу публикации
 procedure PM_Page(const nPages  : Integer);  virtual;
-// Получить текущуу страницу в публикации
+// Получить текущую страницу в публикации
 Function  PM_GetPageNumber : TPageNumber;  virtual;
 // Получить количество страниц
 Function  PM_GetPages : Integer;   virtual;

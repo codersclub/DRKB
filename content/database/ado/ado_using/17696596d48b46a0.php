@@ -8,12 +8,12 @@
 <p>Набор данных</p>
 <p>Перед открытием набора данных необходимо установить тип используемой при редактировании записей блокировки. Для этого применяется свойство</p>
 <p>type TADOLockType = (ItUnspecified, ItReadOnly, ItPessimistic, ItOptimistic, ItBatchOptimistic); property LockType: TADOLockType;</p>
-<p>ItUnspecified &#8212; блокировка задается источником данных, а не компонентом;&nbsp;</p>
+<p>ItUnspecified &#8212; блокировка задается источником данных, а не компонентом;</p>
 <p>ItReadOnly &#8212; набор данных откроется в режиме только для чтения;</p>
 <p>ItPessimistic &#8212; редактируемая запись блокируется на все время редактирования до момента сохранения в хранилище данных;</p>
 <p>ItOptimistic &#8212; запись блокируется только на время сохранения изменений в хранилище данных;</p>
 <p>ItBatchOptimistic &#8212; запись блокируется на время сохранения в хранилище данных при вызове метода updateBatch.</p>
-<p> Примечание&nbsp;</p>
+<p> Примечание</p>
 <p>Для того чтобы установка блокировки сработала, свойство LockType должно быть обязательно модифицировано до открытия набора данных.</p>
 <p>Набор данных открывается методом Open и закрывается методом close. Также можно использовать свойство</p>
 <p>property Active: Boolean;</p>
@@ -29,7 +29,7 @@
 <p>  var EventStatus: TEventStatus) of object; property OnFetchComplete:   TRecordsetEvent;</p>
 <p>где Error &#8212; ссылка на объект ошибки ADO, если она возникла.</p>
 <p>Если же набор данных работает в асинхронном режиме, при обновлении вызывается метод-обработчик</p>
-<p>TFetchProgressEvent = procedure(DataSet: TCustomADODataSet; Progress, MaxProgress: Integer; var EventStatus: TEventStatus) of object;&nbsp;</p>
+<p>TFetchProgressEvent = procedure(DataSet: TCustomADODataSet; Progress, MaxProgress: Integer; var EventStatus: TEventStatus) of object;</p>
 <p>property OnFetchProgress: TFetchProgressEvent;</p>
 <p>где параметр Progress показывает долю выполнения операции.</p>
 <p>Курсор набора данных</p>
@@ -54,11 +54,11 @@
 <p>Если курсор расположен на клиенте (CursorType = ciusedient), то для него доступен только один тип &#8212; ctStatic.</p>
 <p>Соответственно до и после каждого перемещения курсора в наборе данных вызываются методы - обработчики:</p>
 <p>TRecordsetReasonEvent = procedure(DataSet: TCustomADODataSet;</p>
-<p>  const Reason: TEventReason;&nbsp;</p>
+<p>  const Reason: TEventReason;</p>
 <p>  var EventStatus: TEventStatus) of object;</p>
 <p>property OnWillMove: TRecordsetReasonEvent;</p>
 <p>и</p>
-<p>TPRecordsetErrorEvent = procedure(DataSet: TCustomADODataSet; const --eason: TEventReason; const Error: Error; var EventStatus: TEventStatus) if object;&nbsp;</p>
+<p>TPRecordsetErrorEvent = procedure(DataSet: TCustomADODataSet; const --eason: TEventReason; const Error: Error; var EventStatus: TEventStatus) if object;</p>
 <p>property OnMoveComplete: TRecordsetErrorEvent;</p>
 <p>где параметр Reason позволяет узнать, какой метод вызвал это перемещение.</p>
 <p>Локальный буфер</p>
@@ -110,17 +110,17 @@
 <p>function UpdateStatus: TUpdateStatus; override;</p>
 <p>возвращает информацию о состоянии текущей записи.</p>
 <p>Соответственно до и после изменения записи вызываются методы-обработчики</p>
-<p>TWillChangeRecordEvent = procedure(DataSet: TCustomADODataSet; const Reason: TEventReason;&nbsp; const RecordCount: Integer; var EventStatus: TEventStatus) of object;</p>
+<p>TWillChangeRecordEvent = procedure(DataSet: TCustomADODataSet; const Reason: TEventReason;  const RecordCount: Integer; var EventStatus: TEventStatus) of object;</p>
 <p>property OnWillChangeRecord: TWillChangeRecordEvent;</p>
 <p>И</p>
-<p>TRecordChangeCompleteEvent = procedure(DataSet: TCustomADODataSet; const Reason: TEventReason; const RecordCount: Integer; const Error: Error;&nbsp;</p>
+<p>TRecordChangeCompleteEvent = procedure(DataSet: TCustomADODataSet; const Reason: TEventReason; const RecordCount: Integer; const Error: Error;</p>
 <p>var EventStatus: TEventStatus) of object;</p>
 <p>property OnRecordChangeComplete: TrecordChangeCompleteEvent;</p>
 <p>где параметр Reason позволяет узнать, какой метод изменил записи, а параметр RecordCount возвращает число измененных записей.</p>
 <p>Фильтрация</p>
 <p>Помимо обычной фильтрации , основанной на свойствах Filter, Filtered и методе-обработчике onFilterRecord, класс TCustomADODataSet предоставляет разработчику дополнительные возможности.</p>
 <p>Свойство</p>
-<p>TFilterGroup = (fgUnassigned, fgNone, fgPendingRecords, fgAffectedRecords, fgFetchedRecords, fgPredicate, fgConflictingRecords);&nbsp;</p>
+<p>TFilterGroup = (fgUnassigned, fgNone, fgPendingRecords, fgAffectedRecords, fgFetchedRecords, fgPredicate, fgConflictingRecords);</p>
 <p>property FilterGroup: TFilterGroup;</p>
 <p>задает групповой фильтр для записей, основываясь на информации о состоянии каждой записи набора данных, подобно рассмотренному выше свойству RecordStatus.</p>
 <p>Фильтрация возможна по следующим параметрам:</p>
@@ -131,15 +131,15 @@
 <p> fgFetchedRecords &#8212; имеем записи, полученные при последнем обновлении из источника данных;</p>
 <p> fgPredicate &#8212; видны только удаленные записи;</p>
 <p> fgConfiictingRecords &#8212; отображаются модифицированные записи, при сохранении которых в хранилище данных возникла ошибка.</p>
-<p>Для того чтобы групповая фильтрация заработала, необходимы два дополнительных условия. Во-первых, фильтрация должна быть включена &#8212; свойство Filtered должно иметь Значение True.&nbsp;</p>
+<p>Для того чтобы групповая фильтрация заработала, необходимы два дополнительных условия. Во-первых, фильтрация должна быть включена &#8212; свойство Filtered должно иметь Значение True.</p>
 <p>Во- вторых , свойство LockType должно иметь значение ItBatchOptimistic.</p>
 <p>with ADODataSet do</p>
 <p>  begin</p>
-<p> &nbsp;&nbsp; Close;</p>
-<p> &nbsp;&nbsp; LockType := ItbatchOptimistic;</p>
-<p> &nbsp;&nbsp; Filtered := True;</p>
-<p> &nbsp;&nbsp; FilterGroup := fgFetchedRecords;</p>
-<p> &nbsp;&nbsp; Open;</p>
+<p>    Close;</p>
+<p>    LockType := ItbatchOptimistic;</p>
+<p>    Filtered := True;</p>
+<p>    FilterGroup := fgFetchedRecords;</p>
+<p>    Open;</p>
 <p>  end;</p>
 <p>Метод</p>
 <p>procedure FilterOnBookmarks(Bookmarks: array of const);</p>
@@ -162,7 +162,7 @@
 <p>Если порядок сортировки не указан, по умолчанию задается прямой порядок.</p>
 <p>Команда ADO</p>
 <p>Для выполнения запросов к источнику данных любой компонент ADO инкапсулирует специальный объект команды ADO.</p>
-<p>При использовании компонентов-потомков класса TCustomADODataSet обычно нет необходимости применять объект команды напрямую. И хотя все реальное взаимодействие объекта набора данных ADO с источником данных осуществляется через объект команды, настройка и выполнение команды скрыты в свойствах и методах компонентов ADO. Тем не менее в классе TCustomADODataSet доступ к объекту команды можно получить при помощи свойства&nbsp;</p>
+<p>При использовании компонентов-потомков класса TCustomADODataSet обычно нет необходимости применять объект команды напрямую. И хотя все реальное взаимодействие объекта набора данных ADO с источником данных осуществляется через объект команды, настройка и выполнение команды скрыты в свойствах и методах компонентов ADO. Тем не менее в классе TCustomADODataSet доступ к объекту команды можно получить при помощи свойства</p>
 <p>property Command: TADOCommand;</p>
 <p>При необходимости выполнить команду ADO, не связанную с конкретным набором данных, разработчик может использовать отдельный компонент TADOCommand, также расположенный на странице ADO Палитры компонентов.</p>
 <p>Тип команды задается свойством</p>

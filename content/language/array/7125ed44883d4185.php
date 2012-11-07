@@ -33,7 +33,7 @@ end;
 </pre>
 
 <p>Взято с сайта <a href="https://www.swissdelphicenter.ch/en/tipsindex.php" target="_blank">https://www.swissdelphicenter.ch/en/tipsindex.php</a></p>
-&nbsp;</p>
+</p>
 
 <hr />
 

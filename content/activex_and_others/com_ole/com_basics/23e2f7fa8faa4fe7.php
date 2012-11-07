@@ -4,7 +4,7 @@
 
 <p>Теперь, давайте соберем код. Прошу учесть, что практически не делается никаких проверок - это демонстрационный код. Но работающий.</p>
 <p>В начале код dll c объектом.</p>
-<pre>
+<pre class="delphi">
 library CalcDll;
  
 uses
@@ -111,8 +111,10 @@ exports
 begin
 end.
 </pre>
+
 <p>А теперь тестер.</p>
-<pre>
+
+<pre class="delphi">
 unit tstcl;
  
 interface

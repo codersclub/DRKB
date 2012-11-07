@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Некоторые функции для работы с MSWord и MSExcel
  
@@ -726,7 +726,7 @@ end.
 </pre>
 
 <p> Пример использования:</p>
-<pre>
+<pre class="delphi">
 Uses
      ComObj;
 ....

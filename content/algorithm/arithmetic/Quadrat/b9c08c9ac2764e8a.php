@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Вычисление квадратного корня (алгоритм Ньютона)
  
@@ -29,7 +29,7 @@ end;
 </pre>
 
 <p> Пример использования:</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.FormCreate(Sender: TObject);
 var n: Double;
 begin

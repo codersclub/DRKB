@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { 
   This function starts a hidden word instance, opens a specified document "ADocument" 
   and replaces (all) occurrences of "SearchString" with a specified "ReplaceString". 

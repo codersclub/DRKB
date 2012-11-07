@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 <p>Protocol / Port - Application protocol - System service name<br>
-&nbsp;<br>
+ <br>
 Protocol 47 - GRE - GRE (IP protocol 47) Routing and Remote Access<br>
 Protocol 50 - ESP - IPsec ESP (IP protocol 50) Routing and Remote Access<br>
 Protocol 51 - n/a AH IPsec AH (IP protocol 51) Routing and Remote Access<br>
@@ -166,9 +166,9 @@ TCP Port 6002 - Directory Referral Exchange Server 2003<br>
 TCP Port 6004 - DSProxy/NSPI Exchange Server 2003<br>
 TCP Port 42424 - ASP.Net Session State ASP.NET State Service<br>
 TCP Port 51515 - MOM-Clear Microsoft Operations Manager 2000<br>
-&nbsp;<br>
-&nbsp;<br>
+ <br>
+ <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Rouse_</div>
-&nbsp;<br>
+ <br>
 

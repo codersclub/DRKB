@@ -23,7 +23,15 @@
 <p class="p_Heading1">Шаг 2. Создание пустого модуля компонента</p>
 <p>Рассматривать этот шаг я буду исходя из устройства Дельфи 3, в других версиях этот процесс не сильно отличается. Давайте попробуем создать кнопку, у которой будет доступна информация о количестве кликов по ней.</p>
 <p>Чтобы приступить к непосредственному написанию компонента, вам необходимо сделать следующее:</p>
-<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Закройте проекты, которые вы разрабатывали (формы и модули)</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В основном меню выберите Component -&gt; New Component...</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Перед вами откроется диалоговое окно с названием "New Component"</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В поле Ancestor Type (тип предка) выберите класс компонента, который вы хотите модифицировать. В нашем случае вам надо выбрать класс TButton</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В поле Class Name введите имя класса, который вы хотите получить. Имя обязательно должно начинаться с буквы "T". Мы напишем туда, например, TCountBtn</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В поле Palette Page укажите имя закладки на которой этот компонент появиться после установки. Введем туда MyComponents (теперь у вас в Делфьи будет своя закладка с компонентами!).</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Поле Unit File Name заполняется автоматически, в зависимости от выбранного имени компонента. Это путь куда будет сохранен ваш модуль.</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В поле Search Path ничего изменять не нужно.</td></tr></table></div><div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Теперь нажмите на кнопку Create Unit и получите следующее:</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Закройте проекты, которые вы разрабатывали (формы и модули)</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В основном меню выберите Component -&gt; New Component...</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Перед вами откроется диалоговое окно с названием "New Component"</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В поле Ancestor Type (тип предка) выберите класс компонента, который вы хотите модифицировать. В нашем случае вам надо выбрать класс TButton</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В поле Class Name введите имя класса, который вы хотите получить. Имя обязательно должно начинаться с буквы "T". Мы напишем туда, например, TCountBtn</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В поле Palette Page укажите имя закладки на которой этот компонент появиться после установки. Введем туда MyComponents (теперь у вас в Делфьи будет своя закладка с компонентами!).</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Поле Unit File Name заполняется автоматически, в зависимости от выбранного имени компонента. Это путь куда будет сохранен ваш модуль.</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>В поле Search Path ничего изменять не нужно.</td></tr></table></div>
+<div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Теперь нажмите на кнопку Create Unit и получите следующее:</td></tr></table></div>
 <pre>
 unit CountBtn;
  
@@ -164,7 +172,7 @@ end;
 end. 
 </pre>
 <p>Скорее сохраняйтесь, дабы не потерять случайным образом байты набранного кода:)).</p>
-&nbsp;</p>
+</p>
 
 <p class="p_Heading1">Шаг 5. Устанавливаем компонент</p>
 <p>Если вы сумели написать и понять, все то что здесь предложено, то установка компонента не должна вызвать у вас никаких проблем. Все здесь делается очень просто. В главном меню выберите пункт Component -&gt; Install Component. перед вами открылось диалоговое окно Install Component. В нем вы увидите две закладки: Into exsisting Package и Into new Package. Вам предоставляется выбор установить ваш компонент в уже существующий пакет или в новый пакет соответственно. Мы выберем в уже существующий пакет.</p>
@@ -209,7 +217,7 @@ end;
 <p>Объясню что произошло. Вначале мы увеличиваем счетчик на единицу. Затем проверяем какое значение имеет свойство ShowType. Если Normal, то ничего не делаем, а если CountToCaption, то в надпись на кнопке выводим количество кликов. Не так уж и сложно как это могло показаться с первого раза.</p>
 
 <p class="p_Heading1">Имплантируем таймер в компонент</p>
-<p class="p_Heading1">&nbsp;</p>
+<p class="p_Heading1"></p>
 <p>Очень часто бывает, что вам необходимо вставить в компонент, какой-нибудь другой компонент, например, таймер. Как обычно будем рассматривать этот процесс на конкретном примере. Сделаем так, что через каждые 10 секунд значение счетчика кликов будет удваиваться. Для этого мы встроим таймер в нашу кнопку. Нам понадобиться сделать несколько несложных шагов.</p>
 <p>После раздела uses, где описаны добавленные в программу модули, объявите переменную типа TTimer. Назовем ее Timer. Приведу небольшой участок кода:</p>
 <pre>
@@ -400,7 +408,7 @@ end;
 </pre>
 <p>Теперь сколько бы пользователь не вводил нулей значение SecondNumber будет единицей. Такие процедуры проверки рекомендуется использовать везде, где только допустимо появление исключительной ситуации.</p>
 <p class="p_Heading1">Использование другого компонента в вашем</p>
-<p class="p_Heading1">&nbsp;</p>
+<p class="p_Heading1"></p>
 <p>Попробуем создать такой компонент. Это будет обычная метка (Label), у которой будет две процедуры: ChangeBackColor и ChangeFontColor, которые соответственно будут менять цвет фона метки и цвет текста. Для этого нам понадобиться ColorDialog, который будет создаваться вместе с компонентом, а потом с помощью процедур он будет активироваться. Назовем компонент ColorLabel. Вначале добавим в uses два модуля: Dialogs, StdCtrls (в них находятся описания классаов диалога и метки). Теперь нам надо объявить переменную типа TColorDialog. Объявление идет сразу после секции Uses.</p>
 <p>Примерно это выглядит так:</p>
 <pre>
@@ -672,7 +680,7 @@ end;
 end. 
 </pre>
 <p>Попробуйте установить этот компонент. Когда вы будете размещать его на форме, то будет виден "контейнер", на котором располагаются Edit и Label. Использование в качестве предка компонента класса TWinControl, очень удобно если вы хотите объединить несколько визуальных компонентов.</p>
-<p class="p_Heading1">&nbsp;</p>
+<p class="p_Heading1"></p>
 <p class="p_Heading1">Обработка событий OnMouseDown, OnMouseMove и OnMouseUp</p>
 <p>Часто возникает необходимость обработки событий нажатия и отпускания кнопки в вашем компоненте. Сейчас мы это и рассмотрим. Только ради примера сделаем компонент, который будет считать количество нажатий и отпусканий кнопки в его области, допустим это будет панель (Tpanel). Для этого в директиве Private надо объявить следующие процедуры и поля:</p>
 <pre>

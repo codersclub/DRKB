@@ -51,10 +51,10 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Должно работать, только лучше указывать полный путь до папки запускаемого приложения... без этого у меня некоторые приложения не запускались(один из параметров после 'notepad').</p>
-&nbsp;<br>
+ <br>
 
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: win_nt</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

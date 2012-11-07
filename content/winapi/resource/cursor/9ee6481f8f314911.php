@@ -29,7 +29,7 @@ end;
 </pre>
 
 
-<p>You can also use LoadImage instead of LoadCursorFromFile like this:&nbsp;</p>
+<p>You can also use LoadImage instead of LoadCursorFromFile like this:</p>
 
 <p>  hCur := LoadImage(0, PChar(PChar('path_to_my_cursor')), IMAGE_CURSOR, 0, 0,</p>
 <p>  LR_DEFAULTSIZE or LR_LOADFROMFILE);</p>

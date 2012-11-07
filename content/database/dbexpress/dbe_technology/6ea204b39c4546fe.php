@@ -6,14 +6,14 @@
 
 <p>Драйверы dbExpress</p>
 
-<p>Сервер БД&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;Драйвер&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Клиентское ПО</p>
+<p>Сервер БД          Драйвер                  Клиентское ПО</p>
 
-<p>DB2&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dbexpdb2.dll&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;Db2cli.dll</p>
-<p>InterBase&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;Dbexpint.dll&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;GDS32.DLL</p>
-<p>Informix&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;Dbexpinf.dll&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;Isqlb09a.dll</p>
-<p>MS SQL Server Dbexpmss.dll&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;OLE DB</p>
-<p>MySQL&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;Dbexpmys.dll&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;LIBMYSQL.DLL</p>
-<p>Oracle&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;Dbexpora.dll&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;OCI.DLL</p>
+<p>DB2                  Dbexpdb2.dll          Db2cli.dll</p>
+<p>InterBase          Dbexpint.dll          GDS32.DLL</p>
+<p>Informix          Dbexpinf.dll          Isqlb09a.dll</p>
+<p>MS SQL Server Dbexpmss.dll          OLE DB</p>
+<p>MySQL          Dbexpmys.dll          LIBMYSQL.DLL</p>
+<p>Oracle          Dbexpora.dll          OCI.DLL</p>
 
 <p>Перечисленные в табл. файлы находятся в папке \Delphi7\Bin.</p>
 

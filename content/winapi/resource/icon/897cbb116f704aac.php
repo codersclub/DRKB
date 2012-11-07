@@ -27,6 +27,6 @@ begin
          (OleSavePictureFile(ipd, StringToOLEStr(FileName))=S_OK)
 end;
 </pre>
-&nbsp;</p>
+</p>
 <div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -65,9 +65,9 @@ end;
 end.
  
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: Rouse_</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p>&nbsp;</p>
-&nbsp;<br>
+<p></p>
+ <br>
 

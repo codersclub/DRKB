@@ -291,7 +291,7 @@ end;
  
 end.
 </pre>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <a href="https://articles.org.ru" target="_blank">https://articles.org.ru</a></p>
-&nbsp;</p>
+</p>

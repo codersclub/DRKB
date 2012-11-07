@@ -62,71 +62,71 @@
 <p>////////////////////////////////////////////////////////////////////////////</p>
 <p>// ## Назначение: Точка входа хранимой процедуры "Обновление справочника серий"</p>
 <p>// ## Описание:</p>
-<p>// ## Аргументы:&nbsp; Параметры&nbsp; хранимой процедуры:</p>
-<p>// ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Входные: Нет</p>
-<p>// ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Выходные: Таблица со списком новых серий</p>
-<p>// ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - идентификатор записи,</p>
-<p>// ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grup char(5)&nbsp;&nbsp;&nbsp; - группа,</p>
-<p>// ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NNum char(13)&nbsp;&nbsp; - номенклатурный номер,</p>
-<p>// ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name char(34)&nbsp;&nbsp; - наименование сертификата,</p>
-<p>// ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Series char(25) - серия</p>
-<p>// ## Возврат:&nbsp;&nbsp;&nbsp; Код ошибки</p>
+<p>// ## Аргументы:  Параметры  хранимой процедуры:</p>
+<p>// ##             Входные: Нет</p>
+<p>// ##             Выходные: Таблица со списком новых серий</p>
+<p>// ##             ID integer      - идентификатор записи,</p>
+<p>// ##             Grup char(5)    - группа,</p>
+<p>// ##             NNum char(13)   - номенклатурный номер,</p>
+<p>// ##             Name char(34)   - наименование сертификата,</p>
+<p>// ##             Series char(25) - серия</p>
+<p>// ## Возврат:    Код ошибки</p>
 <p>// ## Исключения: нет</p>
 <p>extern "C" UNSIGNED32 __declspec(dllexport) WINAPI RefreshSeries</p>
 <p>(</p>
-<p> &nbsp; UNSIGNED32&nbsp;&nbsp; a_ConnectionID, // Идентификатор сессии</p>
-<p> &nbsp; UNSIGNED8&nbsp;&nbsp; *a_UserName,&nbsp;&nbsp;&nbsp;&nbsp; // Имя пользователя (логин)</p>
-<p> &nbsp; UNSIGNED8&nbsp;&nbsp; *a_Password,&nbsp;&nbsp;&nbsp;&nbsp; // Пароль пользователя</p>
-<p> &nbsp; UNSIGNED8&nbsp;&nbsp; *a_ProcName,&nbsp;&nbsp;&nbsp;&nbsp; // Имя хранимой процедуры(не пользоваться:</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // будет исключено в следующей версии</p>
-<p> &nbsp; UNSIGNED32&nbsp;&nbsp; a_RecNum,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Аргумент зарезервирован для тригера</p>
-<p> &nbsp; UNSIGNED8&nbsp;&nbsp; *a_InpName,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Имя таблицы входных аргументов хранимой процедуры</p>
-<p> &nbsp; UNSIGNED8&nbsp;&nbsp; *a_OutName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Имя таблицы&nbsp; выходных аргументов хранимой процедуры</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // или возращаемого курсора данных</p>
+<p>   UNSIGNED32   a_ConnectionID, // Идентификатор сессии</p>
+<p>   UNSIGNED8   *a_UserName,     // Имя пользователя (логин)</p>
+<p>   UNSIGNED8   *a_Password,     // Пароль пользователя</p>
+<p>   UNSIGNED8   *a_ProcName,     // Имя хранимой процедуры(не пользоваться:</p>
+<p>                               // будет исключено в следующей версии</p>
+<p>   UNSIGNED32   a_RecNum,       // Аргумент зарезервирован для тригера</p>
+<p>   UNSIGNED8   *a_InpName,      // Имя таблицы входных аргументов хранимой процедуры</p>
+<p>   UNSIGNED8   *a_OutName       // Имя таблицы  выходных аргументов хранимой процедуры</p>
+<p>                               // или возращаемого курсора данных</p>
 <p>)</p>
 <p>{</p>
-<p> &nbsp; try</p>
-<p> &nbsp; {</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TModuleAEP* ModuleAEP = (TModuleAEP*)gAEPSessionMgr-&gt;GetDM(a_ConnectionID);</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ModuleAEP-&gt;ParamsReconnect((char*)a_InpName, (char*)a_OutName);</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ModuleAEP-&gt;RefreshSeries();</p>
-<p> &nbsp; }</p>
-<p> &nbsp; catch( EADSDatabaseError *E )</p>
-<p> &nbsp; {</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return E-&gt;ACEErrorCode;</p>
-<p> &nbsp; }</p>
-<p> &nbsp; return AE_SUCCESS;</p>
+<p>   try</p>
+<p>   {</p>
+<p>       TModuleAEP* ModuleAEP = (TModuleAEP*)gAEPSessionMgr-&gt;GetDM(a_ConnectionID);</p>
+<p>       ModuleAEP-&gt;ParamsReconnect((char*)a_InpName, (char*)a_OutName);</p>
+<p>       ModuleAEP-&gt;RefreshSeries();</p>
+<p>   }</p>
+<p>   catch( EADSDatabaseError *E )</p>
+<p>   {</p>
+<p>       return E-&gt;ACEErrorCode;</p>
+<p>   }</p>
+<p>   return AE_SUCCESS;</p>
 <p>}</p>
 <p>void __fastcall TCertModuleAEP::RefreshSeries(void)</p>
 <p>{</p>
 <p>try</p>
 <p>{</p>
-<p> &nbsp; FreeSeries_-&gt;Active = true;</p>
-<p> &nbsp; Series_-&gt;Active = true;</p>
-<p> &nbsp; NewSeries_-&gt;Active = true;</p>
-<p> &nbsp; try</p>
-<p> &nbsp; {</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Series_-&gt;Last();</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int LastID = Series_ID-&gt;AsInteger;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NewSeries_-&gt;AdsCopyTableContents(Series_);</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Series_-&gt;Filter = Format("ID &gt; %d",ARRAYOFCONST((LastID)));</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Series_-&gt;Filtered = true;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Series_-&gt;AdsCopyTableContents(FreeSeries_);</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Series_-&gt;AdsCopyTableContents(Output_);</p>
-<p> &nbsp; }</p>
-<p> &nbsp; __finally</p>
-<p> &nbsp; {</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Series_-&gt;Filtered = false;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Series_-&gt;Active = false;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FreeSeries_-&gt;Active = false;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NewSeries_-&gt;Active = false;</p>
-<p> &nbsp; }</p>
+<p>   FreeSeries_-&gt;Active = true;</p>
+<p>   Series_-&gt;Active = true;</p>
+<p>   NewSeries_-&gt;Active = true;</p>
+<p>   try</p>
+<p>   {</p>
+<p>       Series_-&gt;Last();</p>
+<p>       int LastID = Series_ID-&gt;AsInteger;</p>
+<p>       NewSeries_-&gt;AdsCopyTableContents(Series_);</p>
+<p>       Series_-&gt;Filter = Format("ID &gt; %d",ARRAYOFCONST((LastID)));</p>
+<p>       Series_-&gt;Filtered = true;</p>
+<p>       Series_-&gt;AdsCopyTableContents(FreeSeries_);</p>
+<p>       Series_-&gt;AdsCopyTableContents(Output_);</p>
+<p>   }</p>
+<p>   __finally</p>
+<p>   {</p>
+<p>       Series_-&gt;Filtered = false;</p>
+<p>       Series_-&gt;Active = false;</p>
+<p>       FreeSeries_-&gt;Active = false;</p>
+<p>       NewSeries_-&gt;Active = false;</p>
+<p>   }</p>
 <p>}</p>
 <p>catch(Exception&amp; Exc)</p>
 <p>{</p>
-<p> &nbsp; Output_-&gt;Append();</p>
-<p> &nbsp; Output_-&gt;FieldByName("Name")-&gt;AsString = Exc.Message;</p>
-<p> &nbsp; Output_-&gt;Post();</p>
+<p>   Output_-&gt;Append();</p>
+<p>   Output_-&gt;FieldByName("Name")-&gt;AsString = Exc.Message;</p>
+<p>   Output_-&gt;Post();</p>
 <p>}</p>
 <p>}</p>
 <p>- наличие триггеров - имееются с в режиме Database, начиная с версии 7. Поддерживаются три вида триггеров BEFORE, AFTER и INSTEAD OF. Триггера могут быть написаны либо также как AEP, в виде dll, COM, либо они могут предствалять из себя SQL-выражение</p>
@@ -151,69 +151,69 @@
 <p> adstable,</p>
 <p> COMobj;</p>
 <p>// Utility Function Prototype</p>
-<p>procedure SetError ( conn : TAdsConnection; code : UNSIGNED32; err&nbsp; : string ); forward;</p>
+<p>procedure SetError ( conn : TAdsConnection; code : UNSIGNED32; err  : string ); forward;</p>
 <p>// Sample Advantage Trigger function. If you change the name of this</p>
 <p>// function, remember to also change the name in the exports list at the bottom</p>
 <p>// of this file.</p>
 <p>function InsertGUID</p>
 <p>(</p>
 <p> ulConnectionID : UNSIGNED32; // (I) Unique ID identifying the user causing this trig</p>
-<p> hConnection&nbsp;&nbsp;&nbsp; : ADSHANDLE;&nbsp; // (I) Active ACE connection handle user can perform</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;&nbsp;&nbsp;&nbsp; operations on</p>
-<p> pcTriggerName&nbsp; : PChar;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (I) Name of the trigger object in the dictionary</p>
-<p> pcTableName&nbsp;&nbsp;&nbsp; : PChar;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (I) Name of the base table that caused the trigger</p>
-<p> ulEventType&nbsp;&nbsp;&nbsp; : UNSIGNED32; // (I) Flag with event type (insert, update, etc.)</p>
-<p> ulTriggerType&nbsp; : UNSIGNED32; // (I) Flag with trigger type (before, after, etc.)</p>
-<p> ulRecNo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : UNSIGNED32&nbsp; // (I) Record number of the record being modified</p>
+<p> hConnection    : ADSHANDLE;  // (I) Active ACE connection handle user can perform</p>
+<p>                              //     operations on</p>
+<p> pcTriggerName  : PChar;      // (I) Name of the trigger object in the dictionary</p>
+<p> pcTableName    : PChar;      // (I) Name of the base table that caused the trigger</p>
+<p> ulEventType    : UNSIGNED32; // (I) Flag with event type (insert, update, etc.)</p>
+<p> ulTriggerType  : UNSIGNED32; // (I) Flag with trigger type (before, after, etc.)</p>
+<p> ulRecNo        : UNSIGNED32  // (I) Record number of the record being modified</p>
 <p>) : UNSIGNED32;</p>
 <p>{$IFDEF WIN32}stdcall;{$ENDIF}{$IFDEF LINUX}cdecl;{$ENDIF} // Do not change the prototype.</p>
 <p>const</p>
 <p> // In this case, the first field is the Primary Key field</p>
-<p> //&nbsp;&nbsp; in the base table that needs the AutoGUID value.</p>
+<p> //   in the base table that needs the AutoGUID value.</p>
 <p> // This constant definition is necessary because</p>
-<p> //&nbsp;&nbsp; triggers don't take parameters.</p>
-<p> iGUIDfieldNum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Integer = 0;</p>
+<p> //   triggers don't take parameters.</p>
+<p> iGUIDfieldNum           : Integer = 0;</p>
 <p>var</p>
-<p> oConn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : TAdsConnection;</p>
+<p> oConn                   : TAdsConnection;</p>
 <p> oNewTable, oSourceTable : TAdsTable;</p>
-<p> iFieldNum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Integer;</p>
+<p> iFieldNum               : Integer;</p>
 <p>begin</p>
 <p> // Result is currently reserved and not used. Always return zero.</p>
 <p> Result := 0;</p>
 <p> // Allocate a connection object using an active connection, no need to open it after this.</p>
 <p> oConn := TAdsConnection.CreateWithHandle( nil, hConnection );</p>
 <p> try</p>
-<p> &nbsp; try</p>
-<p> &nbsp;&nbsp;&nbsp; oConn.Name := 'conn';</p>
-<p> &nbsp;&nbsp;&nbsp; oNewTable := TAdsTable.Create( nil );</p>
-<p> &nbsp;&nbsp;&nbsp; oNewTable.DatabaseName := oConn.Name;</p>
-<p> &nbsp;&nbsp;&nbsp; oNewTable.TableName := '__new';</p>
-<p> &nbsp;&nbsp;&nbsp; oNewTable.Open;</p>
-<p> &nbsp;&nbsp;&nbsp; oSourceTable := TAdsTable.Create( nil );</p>
-<p> &nbsp;&nbsp;&nbsp; oSourceTable.DatabaseName := oConn.Name;</p>
-<p> &nbsp;&nbsp;&nbsp; oSourceTable.TableName := pcTableName;</p>
-<p> &nbsp;&nbsp;&nbsp; oSourceTable.Open;</p>
-<p> &nbsp;&nbsp;&nbsp; oSourceTable.Insert;</p>
-<p> &nbsp;&nbsp;&nbsp; //&nbsp; Copy all new field values over without posting.</p>
-<p> &nbsp;&nbsp;&nbsp; for iFieldNum := 0 to Pred(oSourceTable.FieldCount) do</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not oNewTable.Fields[iFieldNum].IsNull then</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oSourceTable.Fields[iFieldNum].Value :=</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oNewTable.Fields[iFieldNum].Value</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oSourceTable.Fields[iFieldNum].Clear;</p>
-<p> &nbsp;&nbsp;&nbsp; //&nbsp; Now set the GUID field value to a GUID value.</p>
-<p> &nbsp;&nbsp;&nbsp; oSourceTable.Fields[iGUIDfieldNum].AsString := CreateClassID;</p>
-<p> &nbsp;&nbsp;&nbsp; oSourceTable.Post;</p>
-<p> &nbsp; except</p>
-<p> &nbsp;&nbsp;&nbsp; on E : EADSDatabaseError do</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetError( oConn, E.ACEErrorCode, E.message );</p>
-<p> &nbsp;&nbsp;&nbsp; on E : Exception do</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetError( oConn, 0, E.message );</p>
-<p> &nbsp; end;</p>
+<p>   try</p>
+<p>     oConn.Name := 'conn';</p>
+<p>     oNewTable := TAdsTable.Create( nil );</p>
+<p>     oNewTable.DatabaseName := oConn.Name;</p>
+<p>     oNewTable.TableName := '__new';</p>
+<p>     oNewTable.Open;</p>
+<p>     oSourceTable := TAdsTable.Create( nil );</p>
+<p>     oSourceTable.DatabaseName := oConn.Name;</p>
+<p>     oSourceTable.TableName := pcTableName;</p>
+<p>     oSourceTable.Open;</p>
+<p>     oSourceTable.Insert;</p>
+<p>     //  Copy all new field values over without posting.</p>
+<p>     for iFieldNum := 0 to Pred(oSourceTable.FieldCount) do</p>
+<p>       if not oNewTable.Fields[iFieldNum].IsNull then</p>
+<p>           oSourceTable.Fields[iFieldNum].Value :=</p>
+<p>           oNewTable.Fields[iFieldNum].Value</p>
+<p>          else</p>
+<p>           oSourceTable.Fields[iFieldNum].Clear;</p>
+<p>     //  Now set the GUID field value to a GUID value.</p>
+<p>     oSourceTable.Fields[iGUIDfieldNum].AsString := CreateClassID;</p>
+<p>     oSourceTable.Post;</p>
+<p>   except</p>
+<p>     on E : EADSDatabaseError do</p>
+<p>       SetError( oConn, E.ACEErrorCode, E.message );</p>
+<p>     on E : Exception do</p>
+<p>       SetError( oConn, 0, E.message );</p>
+<p>   end;</p>
 <p> finally</p>
-<p> &nbsp; FreeAndNil(oSourceTable);</p>
-<p> &nbsp; FreeAndNil(oNewTable);</p>
-<p> &nbsp; FreeAndNil(oConn);</p>
+<p>   FreeAndNil(oSourceTable);</p>
+<p>   FreeAndNil(oNewTable);</p>
+<p>   FreeAndNil(oConn);</p>
 <p> end;</p>
 <p>end;</p>
 <p>// Utility function to return an error from a trigger.</p>
@@ -221,12 +221,12 @@
 <p>(</p>
 <p> conn : TAdsConnection;</p>
 <p> code : UNSIGNED32;</p>
-<p> err&nbsp; : string</p>
+<p> err  : string</p>
 <p>);</p>
 <p>begin</p>
 <p> // Errors can be returned by placing a row into the __error table.</p>
 <p> conn.Execute( 'INSERT INTO __error VALUES( ' + IntToStr( code ) +</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ', ' + QuotedStr( err ) + ' )' );</p>
+<p>               ', ' + QuotedStr( err ) + ' )' );</p>
 <p>end;</p>
 <p>exports</p>
 <p> InsertGUID;</p>
@@ -291,8 +291,8 @@
 <p>DROP VIEW</p>
 <p>EXECUTE PROCEDURE</p>
 <p>GRANT -- давать права пользователю(группе пользователей) на выполнение операции на таблице(столбце)</p>
-<p>QUOTE  &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p> // разрешается sales_group просматривать поле accounts таблицы customers GRANT SELECT ON customers.accounts TO sales_group&nbsp; //разрешается user1 вставке записи вводить значение для поля accounts таблицы customers GRANT INSERT( accounts ) ON customers TO user1 //для managers разрешаются все действия над таблицей customers GRANT ALL ON customers TO managers  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>QUOTE</p>
+<p> // разрешается sales_group просматривать поле accounts таблицы customers GRANT SELECT ON customers.accounts TO sales_group  //разрешается user1 вставке записи вводить значение для поля accounts таблицы customers GRANT INSERT( accounts ) ON customers TO user1 //для managers разрешаются все действия над таблицей customers GRANT ALL ON customers TO managers</p>
 <p>GRANT быть применен к таблице(столбцу), view, процедуре линку со следующими ключами (в зависимости от типа объекта и типа операции)</p>
 <p>SELECT, SELECT( columnname )</p>
 <p>INSERT, INSERT( columnname )</p>
@@ -309,8 +309,8 @@
 <p>UPDATE</p>
 <p>Кроме того имеется возможность получить с помощью SQL - выражения всю информацию по метаданным используюя системные псевдо таблицы</p>
 <p>Например, получение всех объектов из справочника БД</p>
-<p>QUOTE  &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p> SELECT * FROM system.objects  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>QUOTE</p>
+<p> SELECT * FROM system.objects</p>
 <p>system.dictinary - информация об базе данных :версия (не путать с версией сервера, имеется в виду именно версия БД), путь, ключ шифрования(если применено и только если запршивает админ), разрешение работы через интернет, прав доступа и .тд.</p>
 <p>system.objects - все объекты</p>
 <p>system.tables - таблицы</p>

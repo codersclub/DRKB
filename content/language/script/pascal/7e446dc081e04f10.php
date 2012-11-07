@@ -15,7 +15,10 @@
 Как правило, лексический анализатор создается как отдельная часть компилятора, так что синтаксический анализатор по существу видит только поток входных лексем. Теоретически нет необходимости отделять эту функцию от остальной части синтаксического анализатора. Имеется только один набор синтаксических уравнений, который определяет весь язык, поэтому теоретически мы могли бы написать весь анализатор в одном модуле.</p>
 Зачем необходимо разделение? Ответ имеет и теоретическую и практическую основы.</p>
 В 1956 Ноам Хомский определил "Иерархию Хомского" для грамматик. Вот они:</p>
-<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Тип 0. Неограниченные (например Английский язык)</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Тип 1. Контекстно-зависимые</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Тип 2. Контекстно-свободные</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Тип 3. Регулярные.</td></tr></table></div>Некоторые характеристики типичных языков программирования (особенно старых, таких как Фортран) относят их к Типу 1, но большая часть всех современных языков программирования может быть описана с использованием только двух последних типов и с ними мы и будем здесь работать.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Тип 0. Неограниченные (например Английский язык)</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Тип 1. Контекстно-зависимые</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Тип 2. Контекстно-свободные</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Тип 3. Регулярные.</td></tr></table></div>Некоторые характеристики типичных языков программирования (особенно старых, таких как Фортран) относят их к Типу 1, но большая часть всех современных языков программирования может быть описана с использованием только двух последних типов и с ними мы и будем здесь работать.</p>
 Хорошая сторона этих двух типов в том, что существуют очень специфические пути для их анализа. Было показано, что любая регулярная грамматика может быть анализирована с использованием частной формы абстрактной машины, называемой конечным автоматом. Мы уже реализовывали конечные автоматы в некоторых их наших распознающих программ.</p>
 Аналогично грамматики Типа 2 (контекстно-свободные) всегда могут быть анализированы с использованием магазинного автомата (конечный автомат, дополненный стеком). Мы также реализовывали эти машины. Вместо реализации явного стека для выполнения работы мы положились на встроенный стек связанный с рекурсивным кодированием и это фактически является предпочтительным способом для нисходящего синтаксического анализа.</p>
 Случается что в реальных, практических грамматиках части, которые квалифицируются как регулярные выражения, имеют склонность быть низкоуровневыми частями, как определение идентификатора:</p>
@@ -35,13 +38,13 @@
      &lt;number ::= [&lt;digit&gt;]+</p>
  (Не забудьте, что "*" указывает на ноль или более повторений условия в квадратных скобках, а "+" на одно и более.)</p>
 Мы уже работали с подобными элементами в третьей главе. Давайте начнем (как обычно) с пустого Cradle. Не удивительно, что нам понадобится новая процедура распознавания:</p>
-&nbsp;</p>
+</p>
 { Recognize an Alphanumeric Character }</p>
 function IsAlNum(c: char): boolean; <br>
 begin <br>
    IsAlNum := IsAlpha(c) or IsDigit(c); <br>
 <p>end;</p>
-&nbsp;</p>
+</p>
 Используя ее, давайте напишем следующие две подпрограммы, которые очень похожи на те, которые мы использовали раньше:</p>
 <pre>
 { Get an Identifier } 
@@ -70,8 +73,8 @@ begin
    GetNum := x; 
 end;  
 </pre>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 (Заметьте, что эта версия GetNum возвращает строку, а не целое число, как прежде).</p>
 Вы можете легко проверить что эти подпрограммы работают, вызвав их из основной программы:</p>
      WriteLn(GetName);</p>
@@ -97,7 +100,7 @@ begin
    SkipWhite; 
 end;
 </pre>
-&nbsp;</p>
+</p>
 Мы можем вызвать ее из новой основной программы:</p>
 <pre>
 { Main Program } 
@@ -109,7 +112,7 @@ begin
    until Token = CR; 
 end.
 </pre>
-&nbsp;</p>
+</p>
  (Вы должны добавить описание строки Token в начало программы. Сделайте ее любой удобной длины, скажем 16 символов).</p>
 Теперь запустите программу. Заметьте, что входная строка действительно разделяется на отдельные токены.</p>
 КОНЕЧНЫЕ АВТОМАТЫ</p>
@@ -146,7 +149,7 @@ begin
    until Token = '.'; 
 end. 
 </pre>
-&nbsp;</p>
+</p>
 Обратите внимание на "охраняющую" проверку, предшествующую вызову Fin. Это то, что заставляет все это работать, и проверяет, то мы не пытаемся прочитать строку дальше.</p>
 Сейчас испытайте этот код. Я думаю он понравится вам больше.</p>
 Если вы обратитесь к коду, который мы написали в последней главе, вы обнаружите, что я расставил вызовы Fin по всему коду, где прерывание строки было бы уместным. Это одна из тех областей, которые действительно влияют на восприятие, о котором я упомянул. В этой точке я должен убедить вас поэкспериментировать с различными способами организациями и посмотреть, как вам это понравится. Если вы хотите, чтобы ваш язык был по настоящему свободного стиля, тогда новые строки должны быть прозрачны. В этом случае наилучшим подходом было бы поместить следующие строки в начале Scan:</p>
@@ -187,8 +190,8 @@ begin
    SkipWhite; 
 end;
 </pre>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
 Теперь испытайте программу. Вы убедитесь, что любые фрагменты кода, которые вы  захотите бросить в нее будут аккуратно разложены на индивидуальные токены.</p>
 СПИСКИ, ЗАПЯТЫЕ И КОМАНДНЫЕ СТРОКИ.</p>
 Прежде чем возвратиться к основной цели нашего обучения, я хотел бы немного выступить.</p>
@@ -205,9 +208,9 @@ begin
    end; 
 end; 
 </pre>
-&nbsp;</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
+</p>
 Эта процедура из восьми строк пропустит разделитель, состоящий из любого числа (включая ноль) пробелов, с нулем или одной запятой, вложенной в строку.</p>
 Временно измените вызов SkipWhite в Scan на вызов SkipComma и попробуйте ввести какие-нибудь списки. Хорошо работает, да? Разве вы не хотите, чтобы больше создателей программ знало о SkipComma?</p>
 К слову сказать, я обнаружил, что добавление эквивалента SkipComma в мою программу на ассемблере для Z80 заняло всего шесть дополнительных байт кода. Даже на 64K машинах это не слишком большая цена за дружелюбие к пользователю.</p>
@@ -235,9 +238,9 @@ type Symbol = string[8];
      SymTab = array[1..1000] of Symbol; 
      TabPtr = ^SymTab; 
 </pre>
-&nbsp;</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
+</p>
 (Размерность, использованная в SymTab не настоящая... память не распределяется непосредственно этим объявлением,  а размерность должна быть только "достаточно большой")</p>
 Затем, сразу после этих объявлений, добавьте следующее:</p>
 <pre>
@@ -245,7 +248,7 @@ type Symbol = string[8];
 const KWlist: array [1..4] of Symbol = 
                ('IF', 'ELSE', 'ENDIF', 'END'); 
 </pre>
-&nbsp;</p>
+</p>
 Затем, вставьте следующую новую функцию:</p>
 <pre>
 { Table Lookup } 
@@ -265,7 +268,7 @@ begin
    Lookup := i; 
 end; 
 </pre>
-&nbsp;</p>
+</p>
 Чтобы проверить ее вы можете временно изменить основную программу следующим образом:</p>
 <pre>
 { Main Program } 
@@ -274,9 +277,9 @@ begin
    WriteLn(Lookup(Addr(KWList), Token, 4)); 
 end.
 </pre>
-&nbsp;<br>
-<p>&nbsp;</p>
-&nbsp;</p>
+ <br>
+<p></p>
+</p>
 Обратите внимание как вызывается Lookup: функция Addr устанавливает указатель на KWList, который передается в Lookup.</p>
 ОК, испытайте ее. Так как здесь мы пропускаем Scan, для получения соответствия вы должны набирать ключевые слова в верхнем регистре.</p>
 Теперь, когда мы можем распознавать ключевые слова, далее необходимо договориться о возвращаемых для них кодах.</p>
@@ -318,9 +321,9 @@ begin
    SkipWhite; 
 end;
 </pre>
-&nbsp;<br>
-<p>&nbsp;</p>
-&nbsp;</p>
+ <br>
+<p></p>
+</p>
 (Заметьте, что Scan сейчас стала процедурой а не функцией).</p>
 <pre>
 { Main Program } 
@@ -339,9 +342,9 @@ begin
 end.
 </pre>
 Наконец, измените основную программу:</p>
-&nbsp;<br>
-<p>&nbsp;</p>
-&nbsp;</p>
+ <br>
+<p></p>
+</p>
 Мы заменили строку Token, используемую раньше, на перечислимый тип. Scan возвращает тип в переменной Token и возвращает саму строку в новой переменной Value.</p>
 ОК, откомпилируйте программу и погоняйте ее. Если все работает, вы должны увидеть, что теперь мы распознаем ключевые слова.</p>
 Теперь у нас все работает правильно, и было легко сгенерировать это из того, что мы имели раньше. Однако, она все равно кажется мне немного "перегруженной". Мы можем ее немного упростить, позволив GetName, GetNum, GetOp и Scan работать с глобальными переменными Token и Value, вследствие этого удаляя их локальные копии. Кажется немного умней было бы переместить просмотр таблицы в GetName. Тогда новая форма для этих четырех процедур будет такой:</p>
@@ -407,9 +410,9 @@ begin
    SkipWhite; 
 end; 
 </pre>
-&nbsp;</p>
-&nbsp;</p>
-&nbsp;<br>
+</p>
+</p>
+ <br>
 <p> </p>
 ВОЗВРАЩЕНИЕ СИМВОЛА</p>
 По существу, все сканеры, которые я когда-либо видел, и которые написаны на Паскале, использовали механизм перечислимых типов, который я только что описал. Это конечно работающий механизм, но он не кажется мне самым простым подходом.</p>
@@ -497,9 +500,9 @@ begin
    until Value = 'END'; 
 end. 
 </pre>
-&nbsp;</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
+</p>
 Эта программа должна работать также как и предыдущая версия. Небольшое различие в структуре, может быть, но она кажется мне более простой.</p>
 РАСПРЕДЕЛЕННЫЕ СКАНЕРЫ ПРОТИВ ЦЕНТРАЛИЗОВАННЫХ</p>
 Структура лексического анализатора, которую я только что вам показал, весьма стандартна и примерно 99% всех компиляторов используют что-то очень близкое к ней. Это, однако, не единственно возможная структура, или даже не всегда самая лучшая.</p>
@@ -857,16 +860,24 @@ begin
     DoProgram; 
 end.
 </pre>
-&nbsp;<br>
-<p>&nbsp;</p>
-&nbsp;<br>
+ <br>
+<p></p>
+ <br>
 <p> </p>
    Пара комментариев:</p>
-<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Форма синтаксического анализатора выражений, использующего FirstTerm и т.п., немного отличается от того, что вы видели ранее. Это еще одна вариация на ту же самую тему. Не позволяйте им вертеть вами... изменения необязательны для того, что будет дальше.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Заметьте, что как обычно я добавил вызовы Fin в стратегических местах для поддержки множественных строк.</td></tr></table></div>Прежде чем приступить к добавлению сканера, сначала скопируйте этот файл и проверьте, что он действительно корректно выполняет анализ. Не забудьте "кода": "i" для IF, "l" для ELSE и "e" для ELSE или ENDIF.</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Форма синтаксического анализатора выражений, использующего FirstTerm и т.п., немного отличается от того, что вы видели ранее. Это еще одна вариация на ту же самую тему. Не позволяйте им вертеть вами... изменения необязательны для того, что будет дальше.</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Заметьте, что как обычно я добавил вызовы Fin в стратегических местах для поддержки множественных строк.</td></tr></table></div>Прежде чем приступить к добавлению сканера, сначала скопируйте этот файл и проверьте, что он действительно корректно выполняет анализ. Не забудьте "кода": "i" для IF, "l" для ELSE и "e" для ELSE или ENDIF.</p>
 Если программа работает, тогда давайте поспешим. При добавлении модулей сканера в программу поможет систематический план. Во всех синтаксических анализаторах, которые мы написали до этого времени, мы придерживались соглашения, что текущий предсказывающий символ должен всегда быть непустым символом. Мы предварительно загружали предсказывающий символ в Init и после этого оставляли "помпу запущенной". Чтобы позволить программе работать правильно с новыми строками мы должны ее немного модифицировать и обрабатывать символ новой строки как допустимый токен.</p>
 В много символьной версии правило аналогично: текущий предсказывающий символ должен всегда оставаться на начале следующей лексемы или на новой строке.</p>
 Много символьная версия показана ниже. Чтобы получить ее я сделал следующие изменения:</p>
-<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Добавлены переменные Token и Value и определения типов, необходимые для Lookup.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Добавлено определение KWList и KWcode.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Добавлен Lookup.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>GetName и GetNum заменены их много символьными версиями. (Обратите внимание, что вызов Lookup был перемещен из GetName, так что он не будет выполняться внутри выражений).</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Создана новая, рудиментарная Scan, которая вызывает GetName затем сканирует ключевые слова.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Создана новая процедура MatchString, которая ищет конкретное ключевое слово. Заметьте, что в отличие от Match, MatchString не считывает следующее ключевое слово.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Изменен Block для вызова Scan.</td></tr></table></div><div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Немного изменены вызовы Fin. Fin теперь вызывается из GetName.</td></tr></table></div>Программа полностью:</p>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Добавлены переменные Token и Value и определения типов, необходимые для Lookup.</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Добавлено определение KWList и KWcode.</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Добавлен Lookup.</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>GetName и GetNum заменены их много символьными версиями. (Обратите внимание, что вызов Lookup был перемещен из GetName, так что он не будет выполняться внутри выражений).</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Создана новая, рудиментарная Scan, которая вызывает GetName затем сканирует ключевые слова.</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Создана новая процедура MatchString, которая ищет конкретное ключевое слово. Заметьте, что в отличие от Match, MatchString не считывает следующее ключевое слово.</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Изменен Block для вызова Scan.</td></tr></table></div>
+<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Немного изменены вызовы Fin. Fin теперь вызывается из GetName.</td></tr></table></div>Программа полностью:</p>
 <pre>
 program KISS; 
  
@@ -1249,9 +1260,9 @@ begin
    DoProgram; 
 end. 
 </pre>
-&nbsp;</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
+</p>
 Сравните эту программу с ее одно-символьным вариантом. Я думаю вы согласитесь, что различия минимальны.</p>
 ЗАКЛЮЧЕНИЕ</p>
 К этому времени вы узнали как анализировать и генерировать код для выражений, булевых выражений и управляющих структур. Теперь вы изучили, как разрабатывать лексические анализаторы и как встроить их элементы в транслятор. Вы все еще не видели всех элементов, объединенных в одну программу, но на основе того, что мы сделали ранее вы должны прийти к заключению, что легко расширить наши ранние программы для включения лексических анализаторов.</p>

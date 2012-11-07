@@ -9,6 +9,6 @@ begin
   ShowCursor(False);
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 Автор: s-mike <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

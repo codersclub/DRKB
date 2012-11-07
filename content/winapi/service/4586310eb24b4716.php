@@ -24,7 +24,7 @@ end.
 <p>
 
 <p>На этом подготовительный этап закончен - начинаем писАть сервис.</p>
-Главная часть программы &nbsp; &nbsp; &nbsp; 
+Главная часть программы       
 <p>Как уже отмечалось - сервис это обычная программа. Программа в Pascal'е находится между begin и end. После запуска нашего сервиса (здесь и далее под запуском сервиса понимается именно запуск его из Менеджера сервисов, а не просто запуск exe'шника сервиса) менеджер сервисов ждет пока наш сервис вызовет функцию StartServiceCtrlDispatcher.Ждать он будет недолго - если в нашем exe'шнике несколько сервисов то секунд 30, если один - около секунды, поэтому помещаем вызов StartServiceCtrlDispatcher поближе к begin.</p>
 
 <p>StartServiceCtrlDispatcher качестве аргумента требует _SERVICE_TABLE_ENTRYA, поэтому добавляем в var DispatchTable : array [0..кол-во сервисов] of _SERVICE_TABLE_ENTRYA; и заполняем этот массив (естественно перед вызовом StartServiceCtrlDispatcher).</p>
@@ -59,7 +59,7 @@ end.
 <p>StartServiceCtrlDispatcher выполнится только после того, как все сервисы будут остановлены.</p>
 
 <p>Функция LogError протоколирует ошибки - напишите ее сами.</p>
-Функция ServiceMain &nbsp; &nbsp; &nbsp; 
+Функция ServiceMain       
 <p>ServiceMain - основная функция сервиса. Если в ехешнике несколько сервисов, но для каждого сервиса пишется своя ServiceMain функция. Имя функции может быть любым! и передается в DispatchTable.lpServiceProc:=@ServiceMain (см.предыдущущий абзац). У меня она называется ServiceProc и описывается так:</p>
 <p>procedure ServiceProc(argc : DWORD;var argv : array of PChar);stdcall;</p>
 <p>argc кол-во аргументов и их массив argv передаются менеджером сервисов из настроек сервиса. НЕ ЗАБЫВАЙТЕ STDCALL!!! Такая забывчивость - частая причина ошибки в программе.</p>
@@ -100,17 +100,17 @@ end.
 </td>
 <td width="241" style="width: 241px;">интерактивный сервис (может взаимодействовать с пользователем).</p>
 </td>
-<td width="241" style="width: 241px;">&nbsp;
+<td width="241" style="width: 241px;"> 
 </td>
 </tr>
 </table>
 <p>Остальные константы - о драйверах. Если надо - смотрите их в MSDN.</p>
 
-dwControlsAccepted - принимаемые сообщения (какие сообщения мы будем обрабатывать)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-SERVICE_ACCEPT_PAUSE_CONTINUE &nbsp; &nbsp; &nbsp; &nbsp;приостановка/перезапуск &nbsp; &nbsp; &nbsp; 
-SERVICE_ACCEPT_STOP &nbsp; &nbsp; &nbsp; &nbsp;остановка сервиса &nbsp; &nbsp; &nbsp; 
-SERVICE_ACCEPT_SHUTDOWN &nbsp; &nbsp; &nbsp; &nbsp;перезагрузка компьютера &nbsp; &nbsp; &nbsp; 
-SERVICE_ACCEPT_PARAMCHANGE &nbsp; &nbsp; &nbsp; &nbsp;изменение параметров сервиса без перезапуска (Win2000 и выше) &nbsp; &nbsp; &nbsp; 
+dwControlsAccepted - принимаемые сообщения (какие сообщения мы будем обрабатывать)                
+SERVICE_ACCEPT_PAUSE_CONTINUE        приостановка/перезапуск       
+SERVICE_ACCEPT_STOP        остановка сервиса       
+SERVICE_ACCEPT_SHUTDOWN        перезагрузка компьютера       
+SERVICE_ACCEPT_PARAMCHANGE        изменение параметров сервиса без перезапуска (Win2000 и выше)       
 <p>Остальные сообщения смотрите опять же в MSDN (куда уж без него ;-)</p>
 
 <p>dwWin32ExitCode и dwServiceSpecificExitCode - коды ошибок сервиса. Если все идет нормально, то они должны быть равны нулю, иначе коду ошибки.</p>
@@ -174,18 +174,18 @@ end;
  
 </pre>
 
-Функция Handler &nbsp; &nbsp; &nbsp; 
+Функция Handler       
 <p>Функция Handler будет вызываться менеджером сервисов при передаче сообщений сервису. Опять же название функции - любое. Адрес функции передается с помощью функции RegisterServiceCtrlHandler (см. выше). Функция имеет один параметр типа DWORD (Cardinal) - сообщение сервису. Если в одном процессе несколько сервисов - для каждого из них должна быть своя функция.</p>
 <p>procedure ServiceCtrlHandler(Opcode : Cardinal);stdcall;</p>
 <p>Опять не забываем про stdcall.</p>
 
 <p>Итак, функция получает код сообщения, который мы и проверяем. Начинаем вспоминать, что мы писали в ServiceStatus.dwControlsAccepted. У меня это SERVICE_ACCEPT_STOP и SERVICE_ACCEPT_PAUSE_CONTINUE, значит, мне надо проверять сообщения SERVICE_CONTROL_PAUSE, SERVICE_CONTROL_CONTINUE, SERVICE_CONTROL_STOP и выполнять соответствующие действия. Остальные сообщения:</p>
 
-ServiceStatus.dwControlsAccepted &nbsp; &nbsp; &nbsp; &nbsp;Обрабатываемые сообщения &nbsp; &nbsp; &nbsp; 
-SERVICE_ACCEPT_PAUSE_CONTINUE &nbsp; &nbsp; &nbsp; &nbsp;SERVICE_CONTROL_PAUSE и SERVICE_CONTROL_CONTINUE  &nbsp; &nbsp; &nbsp; 
-SERVICE_ACCEPT_STOP &nbsp; &nbsp; &nbsp; &nbsp;SERVICE_CONTROL_STOP &nbsp; &nbsp; &nbsp; 
-SERVICE_ACCEPT_SHUTDOWN &nbsp; &nbsp; &nbsp; &nbsp;SERVICE_CONTROL_SHUTDOWN &nbsp; &nbsp; &nbsp; 
-SERVICE_ACCEPT_PARAMCHANGE &nbsp; &nbsp; &nbsp; &nbsp;SERVICE_CONTROL_PARAMCHANGE &nbsp; &nbsp; &nbsp; 
+ServiceStatus.dwControlsAccepted        Обрабатываемые сообщения       
+SERVICE_ACCEPT_PAUSE_CONTINUE        SERVICE_CONTROL_PAUSE и SERVICE_CONTROL_CONTINUE        
+SERVICE_ACCEPT_STOP        SERVICE_CONTROL_STOP       
+SERVICE_ACCEPT_SHUTDOWN        SERVICE_CONTROL_SHUTDOWN       
+SERVICE_ACCEPT_PARAMCHANGE        SERVICE_CONTROL_PARAMCHANGE       
 <p>Также надо обрабатывать SERVICE_CONTROL_INTERROGATE. Что это такое - непонятно, но обрабатывать надо :) Передаем новый статус сервиса менеджеру сервисов функцией SetServiceStatus.</p>
 
 <p>Пример функции Handler:</p>
@@ -232,7 +232,7 @@ end;
 </pre>
 
 
-Реализация главной функции программы &nbsp; &nbsp; &nbsp; 
+Реализация главной функции программы       
 <p>В функции ServiceMain (см.там, где отмечено) пишем код сервиса. Так как сервис обычно постоянно находится в памяти компьютера, то скорее всего код будет находиться в цикле. Например в таком :</p>
 <pre>
 repeat

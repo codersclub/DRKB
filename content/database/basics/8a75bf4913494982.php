@@ -4,21 +4,29 @@
 
 <p>Теперь покажу на примере как можно использовать квери для наиболее простых, но очень частых и нужных операций:</p>
 <p>1) Выбор только тех строк (записей) которые отвечают условию (например тех где в поле category записано 'Snapper')</p>
-<pre>SELECT * FROM biolife 
+
+<pre class="sql">
+SELECT * FROM biolife 
 where category='Snapper' 
 </pre>
 
 <p>2) Выбор только нужных столбцов (например нам нужны только столбцы Category и common_name )</p>
-<pre>SELECT Category, common_name FROM biolife 
+<pre class="sql">
+SELECT Category, common_name FROM biolife 
 </pre>
 
 <p>3) Выбор записей отсортированных в определённом порядке (например в алфавитном порядке поля Category)</p>
-<pre>SELECT * FROM biolife 
+
+<pre class="sql">SELECT * FROM biolife 
 Order by Category
 </pre>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p></p>
+
 <p>4) Запрос может комбинировать в себе всё перечисленное</p>
-<pre>SELECT Category, common_name FROM biolife 
+
+<pre class="sql">
+SELECT Category, common_name FROM biolife 
 where category='Snapper' 
 Order by common_name 
 </pre>

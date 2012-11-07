@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Импорт активного документа Word
  
@@ -42,7 +42,7 @@ begin
 end; 
 </pre>
 <p> Пример использования:</p>
-<pre>
+<pre class="delphi">
 if not ImportWordActiveDocument(Memo1.Lines) then 
  ShowMessage('Error'); 
 </pre>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Вычисление автокорреляционной функции
  

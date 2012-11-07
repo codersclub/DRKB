@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 <p>The example of a simple movie creating which shows rectangle moving and circle transforming is below</p>
-<pre>
+<pre class="delphi">
 Procedure MakeSWF;
  var Movie: TFlashMovie;
      Shape1, Shape2: TFlashShape;

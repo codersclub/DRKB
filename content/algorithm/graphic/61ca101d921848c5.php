@@ -95,7 +95,7 @@ end;
 var
 moving: integer = -1;
 oldr: TRect; 
-&nbsp;
+ 
 procedure FillRandom(NewN: integer);
 var
 i: integer;

@@ -35,14 +35,16 @@ function BluetoothFindFirstRadio(
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае успешного выполнения функция вернет корректный описатель в phRadio и корректный описатель в качестве результата</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки будет возвращен 0. Для получения кода ошибки используйте функцию GetLastError</td></tr></table></div><p>BluetoothFindNextRadio - находит следующий установленный радиомодуль Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае успешного выполнения функция вернет корректный описатель в phRadio и корректный описатель в качестве результата</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки будет возвращен 0. Для получения кода ошибки используйте функцию GetLastError</td></tr></table></div>
+<p>BluetoothFindNextRadio - находит следующий установленный радиомодуль Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothFindNextRadio(
              hFind : HBLUETOOTH_RADIO_FIND;
              var phRadio : THandle): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -59,12 +61,14 @@ function BluetoothFindNextRadio(
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если устройство найдено. В phRadio корректный описатель на найденный радиомодуль.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае отсутствия устройства. phRadio содержит некорректный описатель. Используйте GetLastError для получения кода ошибки.</td></tr></table></div><p>BluetoothFindRadioClose - закрывает описатель перечисления радиомодулей Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если устройство найдено. В phRadio корректный описатель на найденный радиомодуль.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае отсутствия устройства. phRadio содержит некорректный описатель. Используйте GetLastError для получения кода ошибки.</td></tr></table></div>
+<p>BluetoothFindRadioClose - закрывает описатель перечисления радиомодулей Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothFindRadioClose(hFind : HBLUETOOTH_RADIO_FIND): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -75,7 +79,9 @@ function BluetoothFindRadioClose(hFind : HBLUETOOTH_RADIO_FIND): BOOL; stdcall;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE если описатель успешно закрыт.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае ошибки. Для получения кода ошибки используйте GetLastError.</td></tr></table></div><p>Теперь у нас достаточно знаний, чтобы получить список установленных радиомодулей Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE если описатель успешно закрыт.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае ошибки. Для получения кода ошибки используйте GetLastError.</td></tr></table></div>
+<p>Теперь у нас достаточно знаний, чтобы получить список установленных радиомодулей Bluetooth.</p>
 <p>Напишем вот такую процедуру:</p>
 <pre>
 procedure EnumRadio;
@@ -103,7 +109,7 @@ begin
   end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Это, конечно, все здорово, но в принципе бесполезно. Давайте что-нибудь сделаем еще. Например, получим информацию о радиомодуле Bluetooth.</p>
 <p>Получение информации о радиомодуле Bluetooth</p>
 <p>Для получения информации о радиомодуле Bluetooth используется функция</p>
@@ -113,7 +119,7 @@ end;
 function BluetoothGetRadioInfo(hRadio : THandle;
                     var pRadioInfo : BLUETOOTH_RADIO_INFO): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -130,7 +136,8 @@ function BluetoothGetRadioInfo(hRadio : THandle;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS если информация получена, в противном случае код ошибки.</td></tr></table></div><p>Структура BLUETOOTH_RADIO_INFO выгляди вот так:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS если информация получена, в противном случае код ошибки.</td></tr></table></div>
+<p>Структура BLUETOOTH_RADIO_INFO выгляди вот так:</p>
 <pre>
 _BLUETOOTH_RADIO_INFO = record
 dwSize : dword;
@@ -141,8 +148,8 @@ lmpSubversion : word;
 manufacturer : word;
 end;
 </pre>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>dwSize</p>
@@ -196,7 +203,7 @@ begin
   end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Заключение</p>
 <p>Вот пока и все. В следующей статье рассмотрим, как получить список присоединенных устройств и опросить сервисы, которые они представляют.</p>
 <p>Работа с Bluetooth в Delphi</p>
@@ -215,7 +222,7 @@ function BluetoothFindFirstDevice(
            const pbtsp : BLUETOOTH_DEVICE_SEARCH_PARAMS;
            var pbtdi : BLUETOOTH_DEVICE_INFO): HBLUETOOTH_DEVICE_FIND; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -232,13 +239,15 @@ function BluetoothFindFirstDevice(
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае успешного выполнения функция вернет корректный описатель в качестве результата.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки будет возвращен 0. Для получения кода ошибки используйте функцию GetLastError</td></tr></table></div><p>BluetoothFindNextDevice - находит следующее устройство Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае успешного выполнения функция вернет корректный описатель в качестве результата.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки будет возвращен 0. Для получения кода ошибки используйте функцию GetLastError</td></tr></table></div>
+<p>BluetoothFindNextDevice - находит следующее устройство Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothFindNextDevice(hFind : HBLUETOOTH_DEVICE_FIND;
                                  var pbtdi : BLUETOOTH_DEVICE_INFO): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -255,12 +264,14 @@ function BluetoothFindNextDevice(hFind : HBLUETOOTH_DEVICE_FIND;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если устройство найдено.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае отсутствия устройства. Используйте GetLastError для получения кода ошибки.</td></tr></table></div><p>BluetoothFindDeviceClose - закрывает описатель перечисления устройств Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если устройство найдено.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае отсутствия устройства. Используйте GetLastError для получения кода ошибки.</td></tr></table></div>
+<p>BluetoothFindDeviceClose - закрывает описатель перечисления устройств Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothFindDeviceClose(hFind : HBLUETOOTH_DEVICE_FIND): BOOL; stdcall;
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -271,13 +282,15 @@ function BluetoothFindDeviceClose(hFind : HBLUETOOTH_DEVICE_FIND): BOOL; stdcall
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE если описатель успешно закрыт.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае ошибки. Для получения кода ошибки используйте GetLastError.</td></tr></table></div><p>BluetoothGetDeviceInfo - возвращает информацию об указанном устройстве Bluetooth.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE если описатель успешно закрыт.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет FALSE в случае ошибки. Для получения кода ошибки используйте GetLastError.</td></tr></table></div>
+<p>BluetoothGetDeviceInfo - возвращает информацию об указанном устройстве Bluetooth.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothGetDeviceInfo(hRadio : THandle;
                        var pbtdi : BLUETOOTH_DEVICE_INFO): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -294,7 +307,8 @@ function BluetoothGetDeviceInfo(hRadio : THandle;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS если выполнено успешно и информация занесена в структуру pbtdi. Остальные значения &#8211; код ошибки.</td></tr></table></div><p>Обладая этими знаниями, можно написать процедуру получения информации об устройствах Bluetooth:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS если выполнено успешно и информация занесена в структуру pbtdi. Остальные значения - код ошибки.</td></tr></table></div>
+<p>Обладая этими знаниями, можно написать процедуру получения информации об устройствах Bluetooth:</p>
 <pre>
 procedure GetDevices(_hRadio: THandle);
 var
@@ -331,7 +345,7 @@ BluetoothFindDeviceClose(DeviceFind);
 end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Заключение</p>
 <p>Пока все. В следующей части рассмотрим способы получения информации о сервисах, предоставляемых устройствами Bluetooth.</p>
 <p>Работа с Bluetooth в Delphi</p>
@@ -341,14 +355,14 @@ end;
 <p>Вступление</p>
 <p>И так, в предыдущих частях мы научились получать список локальных радиомодулей Bluetooth и удаленных устройств Bluetooth. Нам осталось научиться получать список сервисов, предоставляемых удаленным устройством и управлять локальными радиомодулями. Так же, необходимо разобраться, как же все-таки передаются данные между различными устройствами Bluetooth.</p>
 <p>В этой части, а она будет самой длинной и информативной, мы создадим программу, которая поможет нам обобщить полученную информацию и покажет, как использовать новые функции, которые здесь будут описаны.</p>
-<p>Прежде, чем мы приступим, давайте определимся в терминах. Microsoft в своей документации вводит два термина: Radio и Device. Radio &#8211; это локальный радиомодуль Bluetooth (USB-брелок, интегрированное решение, в общем то, что установлено на вашем компьютере). Device &#8211; это то устройство Bluetooth с которым вы хотите обмениваться информацией. Будь то телефон, КПК, гарнитура или еще что-то. Важно понимать, что если мы пишем программу для PDA, то когда она работает на PDA - его модуль Bluetooth будет Radio, а компьютер - Device. Если же она работает на компьютере, то компьютерный модуль &#8211; Radio, а PDA &#8211; Device.</p>
+<p>Прежде, чем мы приступим, давайте определимся в терминах. Microsoft в своей документации вводит два термина: Radio и Device. Radio - это локальный радиомодуль Bluetooth (USB-брелок, интегрированное решение, в общем то, что установлено на вашем компьютере). Device - это то устройство Bluetooth с которым вы хотите обмениваться информацией. Будь то телефон, КПК, гарнитура или еще что-то. Важно понимать, что если мы пишем программу для PDA, то когда она работает на PDA - его модуль Bluetooth будет Radio, а компьютер - Device. Если же она работает на компьютере, то компьютерный модуль - Radio, а PDA - Device.</p>
 <p>Что мы знаем</p>
 <p>К сожалению, документация Microsoft по Bluetooth API и работе с Bluetooth настолько скудна (у меня получилось 50 страниц в Word с оформлением), а примеров они вообще не предоставляют, что из нее очень трудно понять, как же все-таки работает эта технология.</p>
 <p>Когда я только начинал изучать этот предмет, я перерыл весь Internet, но так ничего вразумительного не нашел.</p>
 <p>По-этому, здесь мне хочется дать наиболее полную и подробную информацию об этом вопросе, что бы вы не столкнулись с той же проблемой отсутствия информации.</p>
 <p>И так, приступим.</p>
 <p>Создание проекта</p>
-<p>Давайте создадим в Delphi новый проект и сохраним его под именем BTWork, а модуль &#8211; под именем Main.</p>
+<p>Давайте создадим в Delphi новый проект и сохраним его под именем BTWork, а модуль - под именем Main.</p>
 <p>Главную и пока единственную форму, назовем fmMain. Заголовок BTWork.</p>
 <p>Теперь нам понадобятся файл JwaBluetoothAPI.pas, JwaBtHDef.pas и JwaBthSdpDef.pas. Их можно найти в примерах из предыдущих частей или в библиотеке BTClasses.</p>
 <p>Для того, чтобы не тянуть с собой все остальные файлы из JWA, давайте эти чуть-чуть исправим. Найдите в них строку</p>
@@ -365,24 +379,24 @@ uses<br>
  
 {$I jediapilib.inc} 
 </pre>
-&nbsp;</p>
+</p>
 <p>И в файле JwaBluetoothAPI удалите все, что находится между {$IFDEF DYNAMIC_LINK} и {$ELSE} вместе с этими DEF. И в конце этого файле удалите {$ENDIF}.</p>
 <p>Далее, в JwaBluetoothAPI.pas после</p>
 implementation<br>
-&nbsp;<br>
+ <br>
 uses<br>
 <p>JwaWinDLLNames;</p>
 <p>Напишите</p>
 const<br>
 <p>btapi = 'irprops.cpl';</p>
 <p>Да простят нас ребята, которые эту библиотеку писали!</p>
-<p>Все эти действия я делал для того, что бы уменьшить архив примера. Да и не нужно тянуть за собой много лишнего. Хотя сама библиотека весьма полезна. Один модуль JwaWindows чего стоит. Там очень много интересного есть. Ну да ладно &#8211; что-то я отвлекся.</p>
+<p>Все эти действия я делал для того, что бы уменьшить архив примера. Да и не нужно тянуть за собой много лишнего. Хотя сама библиотека весьма полезна. Один модуль JwaWindows чего стоит. Там очень много интересного есть. Ну да ладно - что-то я отвлекся.</p>
 <p>После того, как мы кастрировали эти модули, давайте добавим их в наш проект. Готово?</p>
 <p>В этом приложении мы будем получать список локальных радиомодулей, устройств, к ним присоединенных, список сервисов, предоставляемых устройствами. Также мы должны управлять радиомодулями и научиться проходить авторизацию.</p>
 <p>Приступаем.</p>
 <p>Оформление главной формы</p>
 <p>На главную форму поместим компонент TPanel и установите следующие свойства:<br>
-<p>&nbsp;</p>
+<p></p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>Свойство</p>
@@ -410,7 +424,7 @@ const<br>
 </tr>
 </table>
 <p>Далее поместим компонент TTreeView и установите свойства как в таблице:<br>
-<p>&nbsp;</p>
+<p></p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>Свойство</p>
@@ -456,7 +470,7 @@ const<br>
 </tr>
 </table>
 <p>Правее TTreeView поместим TSplitter и установим следующие его свойства:<br>
-<p>&nbsp;</p>
+<p></p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>Свойство</p>
@@ -478,7 +492,7 @@ const<br>
 </tr>
 </table>
 <p>И, наконец, помещаем компонент TListView еще правее TSplitter. Устанавливаем его свойства как в таблице:<br>
-<p>&nbsp;</p>
+<p></p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>Свойство</p>
@@ -554,7 +568,7 @@ const<br>
 </tr>
 </table>
 <p>На TPanel поместим кнопку TButton.<br>
-<p>&nbsp;</p>
+<p></p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>Свойство</p>
@@ -585,7 +599,7 @@ begin
 btRefresh.Click;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>А в обработчике OnClick кнопки btRefresh напишем следующее:</p>
 <pre>
 procedure TfmMain.btRefreshClick(Sender: TObject);
@@ -705,7 +719,7 @@ Items[0].Expand(True);
 end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>В uses нашего модуля, который относится к главной форме, допишем:</p>
 <pre>
 implementation // Уже написано!!!
@@ -713,7 +727,7 @@ implementation // Уже написано!!!
 uses // Дописать!
 JwaBluetoothAPIs, Windows, SysUtils, Dialogs; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Ниже добавим функцию:</p>
 <pre>// Преобразует адрес из внутреннего формата (dword) в строку,
 // принятую для представления адресов устройств Bluetooth.
@@ -741,7 +755,7 @@ cTimeoutMultiplier : UCHAR;
 hRadio : THandle;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Члены:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -808,7 +822,7 @@ stLastUsed : SYSTEMTIME;
 szName : array [0..BLUETOOTH_MAX_NAME_SIZE - 1] of WideChar;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Члены:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1122,14 +1136,14 @@ if ASelected.ImageIndex &gt; 0 then ShowDevices;
 end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>В этом коде появилось три новые функции, которые выделены жирным шрифтом. Вот они</p>
 <p>BluetoothIsConnectable - определяет, возможно ли подключение к указанному радиомодулю.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothIsConnectable(const hRadio : THandle): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1140,12 +1154,14 @@ function BluetoothIsConnectable(const hRadio : THandle): BOOL; stdcall;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если указанный радиомодуль разрешает входящие подключения. Если hRadio=0, то вернет TRUE, если хотя бы один радиомодуль разрешает входящие подключения.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Если входящие подключения запрещены, то вернет FALSE.</td></tr></table></div><p>BluetoothIsDiscoverable - определяет, будет ли виден указанный радиомодуль другим при поиске. Если просматриваются все радиомодули, то вернет TRUE если хотя бы один разрешает обнаружение.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если указанный радиомодуль разрешает входящие подключения. Если hRadio=0, то вернет TRUE, если хотя бы один радиомодуль разрешает входящие подключения.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Если входящие подключения запрещены, то вернет FALSE.</td></tr></table></div>
+<p>BluetoothIsDiscoverable - определяет, будет ли виден указанный радиомодуль другим при поиске. Если просматриваются все радиомодули, то вернет TRUE если хотя бы один разрешает обнаружение.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothIsDiscoverable(const hRadio : THandle): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1156,7 +1172,9 @@ function BluetoothIsDiscoverable(const hRadio : THandle): BOOL; stdcall;
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если указанный радиомодуль разрешает обнаружение. Если hRadio=0, то вернет TRUE, если хотя бы один радиомодуль разрешает обнаружение.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Если обнаружение запрещено, то вернет FALSE.</td></tr></table></div><p>BluetoothEnumerateInstalledServices - получает список GUID сервисов, предоставляемых устройством. Если параметр hRadio=0, то просматривает все радиомодули.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет TRUE, если указанный радиомодуль разрешает обнаружение. Если hRadio=0, то вернет TRUE, если хотя бы один радиомодуль разрешает обнаружение.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Если обнаружение запрещено, то вернет FALSE.</td></tr></table></div>
+<p>BluetoothEnumerateInstalledServices - получает список GUID сервисов, предоставляемых устройством. Если параметр hRadio=0, то просматривает все радиомодули.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothEnumerateInstalledServices(
@@ -1165,7 +1183,7 @@ function BluetoothEnumerateInstalledServices(
               var pcServices : dword;
               pGuidServices : PGUID): dword; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1183,7 +1201,7 @@ function BluetoothEnumerateInstalledServices(
 <tr>
 <td><p>pcServices</p>
 </td>
-<td><p>При вызове &#8211; количество записей в массиве pGuidServices, возвращает в этом параметре реальное количество сервисов, предоставляемых устройством.</p>
+<td><p>При вызове - количество записей в массиве pGuidServices, возвращает в этом параметре реальное количество сервисов, предоставляемых устройством.</p>
 </td>
 </tr>
 <tr>
@@ -1194,7 +1212,10 @@ function BluetoothEnumerateInstalledServices(
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS, если вызов успешен и количество сервисов в pcServices соответствует реальности.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_MORE_DATA, если вызов успешен, но выделенное количество памяти (pcServices при вызове) меньше, чем количество предоставляемых сервисов.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки &#8211; другие коды ошибок Win32.</td></tr></table></div><p>Примечания:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_SUCCESS, если вызов успешен и количество сервисов в pcServices соответствует реальности.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Вернет ERROR_MORE_DATA, если вызов успешен, но выделенное количество памяти (pcServices при вызове) меньше, чем количество предоставляемых сервисов.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>В случае ошибки - другие коды ошибок Win32.</td></tr></table></div>
+<p>Примечания:</p>
 <p>Посмотрите на код получения списка сервисов:</p>
 <pre>
 // Получаем размер массива сервисов
@@ -1211,7 +1232,7 @@ SetLength(Services, ServiceCount);
 // Получаем список сервисов
 BluetoothEnumerateInstalledServices(hRadio, Info, ServiceCount, PGUID(Services)) 
 </pre>
-&nbsp;</p>
+</p>
 <p>Сначала мы вызываем функцию с pcServices=0 и pGuidServices=nil для того, чтобы получить количество сервисов, предоставляемых устройством.</p>
 <p>Потом выделяем память (SetLength()) и только затем вызываем функцию с реальными параметрами и получаем список сервисов.</p>
 <p>Еще важное замечание. В файле JwaBluetoothAPIs.pas параметр pbtdi имеет тип PBLUETOOTH_DEVICE_INFO, который раскрывается в BLUETOOTH_DEVICE_INFO. Заметьте, что это НЕ УКАЗАТЕЛЬ. Это не верно, так как в исходном виде функция требует именно указатель. По-этому, я ввел тип</p>
@@ -1342,7 +1363,7 @@ else Caption := 'Connectable';
 end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>И то же самое напишем для обработчика события OnUpdate - acDiscoverable:</p>
 <pre>
 procedure TfmMain.acDiscoverableUpdate(Sender: TObject);
@@ -1364,7 +1385,7 @@ else Caption := 'Discoverable';
 end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Теперь обработчик события OnExecute для acConnectable:</p>
 <pre>
 procedure TfmMain.acConnectableExecute(Sender: TObject);
@@ -1379,7 +1400,7 @@ then MessageDlg('Unable to change Radio state', mtError, [mbOK], 0)
 else TreeViewChange(TreeView, TreeView.Selected);
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Такой же обработчик напишем и для OnExecute - acDiscoverable:</p>
 <pre>
 procedure TfmMain.acConnectableExecute(Sender: TObject);
@@ -1394,7 +1415,7 @@ then MessageDlg('Unable to change Radio state', mtError, [mbOK], 0)
 else TreeViewChange(TreeView, TreeView.Selected);
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Вывод окна свойств устройства</p>
 <p>Важно: Если Windows сам использует радиомодуль, то он не даст поменять статус, хотя и функция выполнится без ошибок!</p>
 <p>Здесь мы ввели две новые функции (выделены жирным):</p>
@@ -1405,7 +1426,7 @@ function BluetoothEnableIncomingConnections(
 hRadio : THandle;
 fEnabled : BOOL): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1417,17 +1438,19 @@ fEnabled : BOOL): BOOL; stdcall;
 <tr>
 <td><p>fEnabled</p>
 </td>
-<td><p>TRUE &#8211; разрешаем подключения; FALSE &#8211; запрещаем.
+<td><p>TRUE - разрешаем подключения; FALSE - запрещаем.
 </td>
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен и статус изменен,</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае.</td></tr></table></div><p>BluetoothEnableDiscovery - функция разрешает/запрещает обнаружение локального радиомодуля Bluetooth</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен и статус изменен,</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае.</td></tr></table></div>
+<p>BluetoothEnableDiscovery - функция разрешает/запрещает обнаружение локального радиомодуля Bluetooth</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothEnableDiscovery(hRadio : THandle; fEnabled : BOOL): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1439,12 +1462,14 @@ function BluetoothEnableDiscovery(hRadio : THandle; fEnabled : BOOL): BOOL; stdc
 <tr>
 <td><p>fEnabled</p>
 </td>
-<td><p>TRUE &#8211; разрешаем обнаружение; FALSE &#8211; запрещаем.
+<td><p>TRUE - разрешаем обнаружение; FALSE - запрещаем.
 </td>
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен и статус изменен,</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае.</td></tr></table></div><p>Теперь давайте научимся выводить системное окно свойств устройства Bluetooth. Для этого добавим к ActionList еще один TAction вот с такими свойствами:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен и статус изменен,</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае.</td></tr></table></div>
+<p>Теперь давайте научимся выводить системное окно свойств устройства Bluetooth. Для этого добавим к ActionList еще один TAction вот с такими свойствами:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>Свойство</p>
@@ -1501,7 +1526,7 @@ Assigned(SelectedItem) and
 (SelectedNode.ImageIndex &gt; 0);
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>И обработчик OnExecute для нее же:</p>
 <pre>
 procedure TfmMain.acPropertyExecute(Sender: TObject);
@@ -1512,7 +1537,7 @@ Info := BLUETOOTH_DEVICE_INFO(ListView.Selected.Data^);
 BluetoothDisplayDeviceProperties(Handle, Info);
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Важно: В исходном виде в файле JwaBluetoothAPIs функция BluetoothDisplayDeviceProperties объявлена не верно. Второй параметр должен быть указателем, а там он передается как структура. Я исправил функцию так, чтобы он передавался как var-параметр (по ссылке). Используйте модуль JwaBluetoothAPIs из этого примера, чтобы не возникало ошибок доступа к памяти.</p>
 <p>Важно: Ни в этой процедуре, ни ранее, ни далее я не провожу проверку ошибок, чтобы не загромождать код лишними подробностями. В реальном приложении НЕОБХОДИМО проверять возвращаемые функциями значения и указатели.</p>
 <p>И так, в этом коде есть новая функция, выделенная жирным шрифтом.</p>
@@ -1540,9 +1565,11 @@ hwndParent : HWND;<br>
 </td>
 </tr>
 </table>
-<p>&nbsp;<br>
+<p> <br>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае (код ошибки можно узнать вызовом функции GetLastError).</td></tr></table></div><p>Выбор устройства</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - в противном случае (код ошибки можно узнать вызовом функции GetLastError).</td></tr></table></div>
+<p>Выбор устройства</p>
 <p>Рассмотрим, как вызвать окно диалога выбора устройства.</p>
 <p>Добавим в наш проект на Panel еще одну кнопку TButton и установите ее свойства как в таблице:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
@@ -1586,7 +1613,7 @@ BluetoothSelectDevices(@ASelParams);
 BluetoothSelectDevicesFree(@ASelParams);
 end 
 </pre>
-&nbsp;</p>
+</p>
 <p>В этой части кода две новые функции.</p>
 <p>BluetoothSelectDevices - функция разрешает/запрещает обнаружение локального радиомодуля Bluetooth.</p>
 <p>Объявление функции:</p>
@@ -1626,7 +1653,7 @@ function BluetoothSelectDevices(<br>
 <tr>
 <td><p>Другие ошибки Win32</p>
 </td>
-<td><p>&nbsp;
+<td><p> 
 </td>
 </tr>
 </table>
@@ -1651,7 +1678,7 @@ cNumDevices : DWORD;
 pDevices : __PBLUETOOTH_DEVICE_INFO; 
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Члены:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1735,7 +1762,7 @@ end;
 <tr>
 <td><p>cNumDevices</p>
 </td>
-<td><p>Как входной параметр &#8211; количество устройств, которое требуется вернуть. Если 0, то нет ограничений. Как выходной параметр &#8211; количество возвращенных устройств (выбранных).</p>
+<td><p>Как входной параметр - количество устройств, которое требуется вернуть. Если 0, то нет ограничений. Как выходной параметр - количество возвращенных устройств (выбранных).</p>
 </td>
 </tr>
 <tr>
@@ -1760,9 +1787,11 @@ function BluetoothSelectDevices(<br>
 </tr>
 </table>
 <p>Возвращаемые значения:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен,</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - нечего освобождать.</td></tr></table></div><p>Управление сервисами</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>TRUE - если вызов успешен,</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>FALSE - нечего освобождать.</td></tr></table></div>
+<p>Управление сервисами</p>
 <p>Для управления сервисами Microsoft Bluetooth API предоставляет функцию:</p>
-<p>BluetoothSetServiceState - включает или выключает указанный сервис для устройства Bluetooth. Система проецирует сервис Bluetooth на соответствующий драйвер. При отключении сервиса &#8211; драйвер удаляется. При его включении &#8211; драйвер устанавливается. Если выполняется включение не поддерживаемого сервиса, то драйвер не будет установлен.</p>
+<p>BluetoothSetServiceState - включает или выключает указанный сервис для устройства Bluetooth. Система проецирует сервис Bluetooth на соответствующий драйвер. При отключении сервиса - драйвер удаляется. При его включении - драйвер устанавливается. Если выполняется включение не поддерживаемого сервиса, то драйвер не будет установлен.</p>
 <p>Объявление функции:</p>
 <pre>
 function BluetoothSetServiceState(
@@ -1771,8 +1800,8 @@ var pbtdi : PBLUETOOTH_DEVICE_INFO;
 const pGuidService : TGUID;
 dwServiceFlags : DWORD): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
-<p>&nbsp;<br>
+</p>
+<p> <br>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1797,12 +1826,12 @@ dwServiceFlags : DWORD): DWORD; stdcall;
 <td><p>dwServiceFlags</p>
 </td>
 <td><p>Флаги управления сервисом:<br>
-BLUETOOTH_SERVICE_DISABLE &#8211; отключает сервис;<br>
-BLUETOOTH_SERVICE_ENABLE &#8211; включает сервис. 
+BLUETOOTH_SERVICE_DISABLE - отключает сервис;<br>
+BLUETOOTH_SERVICE_ENABLE - включает сервис. 
 </td>
 </tr>
 </table>
-<p>&nbsp;<br>
+<p> <br>
 <p>Возвращает ERROR_SUCCESS если вызов прошел успешно. Если вызов не удался вернет один из следующих кодов:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1820,7 +1849,7 @@ BLUETOOTH_SERVICE_ENABLE &#8211; включает сервис.
 <tr>
 <td><p>Другие ошибки Win32</p>
 </td>
-<td><p>&nbsp;
+<td><p> 
 </td>
 </tr>
 </table>
@@ -1881,7 +1910,7 @@ SelectedItem: TListItem;
 begin
 SelectedNode := TreeView.Selected;
 SelectedItem := ListView.Selected;
-&nbsp;
+ 
 TAction(Sender).Enabled := Assigned(SelectedNode) and
 Assigned(SelectedItem) and
 (SelectedNode.ImageIndex = -2);
@@ -1909,7 +1938,7 @@ end;
 function BluetoothRemoveDevice(
 var pAddress : BLUETOOTH_ADDRESS): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -1983,7 +2012,7 @@ begin
 TAction(Sender).Enabled := acProperty.Enabled;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>А для события OnExecute вот такой код:</p>
 <pre>
 procedure TfmMain.acRemoveExecute(Sender: TObject);
@@ -1998,7 +2027,7 @@ MessageDlg('Device not found', mtError, [mbOK], 0);
 TreeViewChange(TreeView, TreeView.Selected);
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Процедура выполняется достаточно долго, так что не думайте, что программа зависла.</p>
 <p>Важно: Устройство удаляется из списка. Однако, если уже иметь адрес устройства, то можно получить о нем информацию.</p>
 <p>Есть еще одно функция, которая связана с BluetoothRemoveDevice. Это:</p>
@@ -2008,16 +2037,16 @@ end;
 function BluetoothUpdateDeviceRecord(
 var pbtdi : BLUETOOTH_DEVICE_INFO): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
 <td><p>pbtdu</p>
 </td>
 <td><p>Указатель на структуру BLUETOOTH_DEVICE_INFO. В ней должны быть заполнены поля:<br>
-dwSize &#8211; размер структуры;<br>
-Address &#8211; адрес устройства;<br>
-szName &#8211; новое имя устройства. 
+dwSize - размер структуры;<br>
+Address - адрес устройства;<br>
+szName - новое имя устройства. 
 </td>
 </tr>
 </table>
@@ -2044,7 +2073,7 @@ szName &#8211; новое имя устройства.
 <tr>
 <td><p>Другие ошибки Win32</p>
 </td>
-<td><p>&nbsp;
+<td><p> 
 </td>
 </tr>
 </table>
@@ -2110,7 +2139,7 @@ TreeViewChange(TreeView, TreeView.Selected);
 end;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Как видите, все просто.</p>
 <p>И так, удалять устройства мы умеем. Давайте теперь научимся добавлять их. Для этого Bluetooth API предоставляет две функции:</p>
 <p>BluetoothAuthenticateDevice - отправляет запрос на авторизацию удаленному устройству Bluetooth. Есть два режима авторизации: "Wizrd mode" и "Blind Mode".</p>
@@ -2186,7 +2215,7 @@ end;
 <tr>
 <td><p>Другие ошибки Win32</p>
 </td>
-<td><p>&nbsp;
+<td><p> 
 </td>
 </tr>
 </table>
@@ -2281,7 +2310,7 @@ hRadio : THandle;
 cDevices : DWORD;
 rgpbtdi : __PBLUETOOTH_DEVICE_INFO): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -2338,7 +2367,7 @@ rgpbtdi : __PBLUETOOTH_DEVICE_INFO): DWORD; stdcall;
 <tr>
 <td><p>Другие ошибки Win32</p>
 </td>
-<td><p>&nbsp;
+<td><p> 
 </td>
 </tr>
 </table>
@@ -2350,7 +2379,7 @@ hRadio : THandle;
 cDevices : DWORD;
 pbtdi : PBLUETOOTH_DEVICE_INFO): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Это не верно, так как в документации Microsoft указано, что параметр rgpbtdi должен передаваться как указатель (что подразумевает запись PBLUETOOTH_DEVICE_INFO), но как я писал выше, этот тип ошибочен. Он не является указателем. Я изменил функцию так, как показано выше. По поводу типа __PBLUETOOTH_DEVICE_INFO я писал выше.</p>
 <p>Описывать с примером, как использовать эти функции не буду, так как они тривиальны (если вы прочитали все вышеизложенное). Остались последние три функции, которые мы не рассмотрели:</p>
 <p>BluetoothRegisterForAuthentication - регистрирует функцию обратного вызова, которая будет вызываться на запрос устройства об авторизации. Если несколько приложений зарегистрировало такую функцию, то будет вызвана функция в последнем приложении.</p>
@@ -2362,7 +2391,7 @@ function BluetoothRegisterForAuthentication(
   pfnCallback : PFN_AUTHENTICATION_CALLBACK;
   pvParam : Pointer): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -2407,7 +2436,7 @@ function BluetoothRegisterForAuthentication(
 <tr>
 <td><p>Другие ошибки Win32</p>
 </td>
-<td><p>&nbsp;
+<td><p> 
 </td>
 </tr>
 </table>
@@ -2417,7 +2446,7 @@ function BluetoothRegisterForAuthentication(
 function BluetoothUnregisterAuthentication(
 hRegHandle : HBLUETOOTH_AUTHENTICATION_REGISTRATION): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -2437,7 +2466,7 @@ hRadio : THandle;
 pbtdi : PBLUETOOTH_DEVICE_INFO;
 pszPasskey : LPWSTR): DWORD; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -2482,7 +2511,7 @@ pszPasskey : LPWSTR): DWORD; stdcall;
 <tr>
 <td><p>Другие ошибки Win32</p>
 </td>
-<td><p>&nbsp;
+<td><p> 
 </td>
 </tr>
 </table>
@@ -2495,7 +2524,7 @@ PFN_AUTHENTICATION_CALLBACK =
 function(pvParam : Pointer;
 pDevice : PBLUETOOTH_DEVICE_INFO): BOOL; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -2534,19 +2563,19 @@ pDevice : PBLUETOOTH_DEVICE_INFO): BOOL; stdcall;
 <p>Вы также должны более или менее разбираться в технологии Winsock.</p>
 <p>Bluetooth и Winsock</p>
 <p>Как не странно это звучит, но Microsoft решила реализовать всю функциональность по передаче данных посредством Windows Socket Model. Тем, кто писал что-либо для IrDA это должно показаться знакомым.</p>
-<p>На мой взгляд &#8211; правильное решение. Зачем огород городить, когда уже есть проверенные средства.</p>
+<p>На мой взгляд - правильное решение. Зачем огород городить, когда уже есть проверенные средства.</p>
 <p>Я не буду описывать здесь все правила применения функций WinSock к работе с Bluetooth. Остановлюсь лишь на практической стороне вопроса. А именно - передача данных.</p>
 <p>В статье мы сделаем простенький Bluetooth-клиент, который будет подсоединяться к удаленному устройству как к модему и позволит вам выполнять AT-команды. Весьма полезная вещь. Учтите, что данный клиент будет требовать авторизации устройств и не будет требовать наличия в системе каких-либо виртуальных COM-портов.</p>
 <p>Сервисы и профили</p>
-<p>Сервисы и профили... Это два краеугольных понятия Bluetooth. В некотором смысле &#8211; они идентичны.</p>
-<p>Сервис &#8211; приложение-сервер, которое регистрирует определенным образом параметры в стеке протоколов Bluetooth. Наименование (GUID) всех сервисов строго определены Bluetooth.org.</p>
-<p>Профиль &#8211; соглашения и стандарты работы сервиса. Понятнее объяснить не смогу.</p>
+<p>Сервисы и профили... Это два краеугольных понятия Bluetooth. В некотором смысле - они идентичны.</p>
+<p>Сервис - приложение-сервер, которое регистрирует определенным образом параметры в стеке протоколов Bluetooth. Наименование (GUID) всех сервисов строго определены Bluetooth.org.</p>
+<p>Профиль - соглашения и стандарты работы сервиса. Понятнее объяснить не смогу.</p>
 <p>Начало</p>
 <p>И так, прежде чем можно будет использовать библиотеку WinSock, ее необходимо инициализировать. Делается это вызовом функции WSAStartup. Вот как она выглядит:</p>
 <pre>
 function WSAStartup(wVersionRequired: Word; var lpWSAData: WSAData): Integer; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Не буду описывать все параметры, так как они есть в любой справочной системе (MSDN, Delphi). Скажу только, что для использования WinSock с Bluetooth необходимо указаь в качестве параметра wVersionRequired номер версии $0202.</p>
 <p>Вот как выглядит вызов этой функции:</p>
 <pre>
@@ -2556,12 +2585,12 @@ begin
 if WSAStartUp($0202, Data) &lt;&gt; 0 then
 raise Exception.Create('Winsock Initialization Failed.'); 
 </pre>
-&nbsp;</p>
+</p>
 <p>По окончанию работы с WinSock библиотеку необходимо освободить. Для этого существует функция WSACleanup.</p>
 <pre>
 function WSACleanup: Integer; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Вызывается она просто, без всяких параметров. Возвращаемое значение, в принципе, можно не проверять:</p>
 WSACleanup;</p>
 <p>Создание клиента</p>
@@ -2569,7 +2598,7 @@ WSACleanup;</p>
 <pre>
 function socket(af, type_, protocol: Integer): TSocket; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Вот как это делается:</p>
 <pre>
 var
@@ -2579,7 +2608,7 @@ ASocket := socket(AF_BTH, SOCK_STREAM, BTHPROTO_RFCOMM);
 if ASocket = INVALID_SOCKET then 
 RaiseLastOsError; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Функция вернет корректный описатель сокета, либо INVALID_SOCKET в случае ошибки. Запомните, что Bluetooth поддерживает только потоковые сокеты (SOCK_STREAM).</p>
 <p>Далее нам необходимо заполнить структуру SOCKADDR_BTH. В эту структуру записывается информация о сервере, к которому нам нужно подключиться (адрес, сервис и т.п.). Делается это следующим образом:</p>
 <pre>
@@ -2597,7 +2626,7 @@ serviceClassId := SerialPortServiceClass_UUID;
 port := DWORD(BT_PORT_ANY);
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Здесь в переменной ADeviceAddress должен быть адрес устройства (Int64), присоединяемся к любому порту (BT_PORT_ANY) сервиса SerialPortServiceClass.</p>
 <p>Далее вызываем функцию connect, которая имеет вид:</p>
 <pre>
@@ -2607,20 +2636,20 @@ function connect(s: TSocket; name: PSockAddr; namelen: Integer): Integer; stdcal
 <pre>
 if connect(ASocket, @Addr, AddrSize) &lt;&gt; 0 then RaiseLastOsError; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Если функция выполнится успешно, вернет 0, в противном случае отличное от нуля значение.</p>
 <p>После того, как соединение установлено, можно передавать и принимать данные через сокет функциями send и recv.</p>
 <pre>
 function send(s: TSocket; var buf; len, flags: Integer): Integer; stdcall;
 function recv(s: TSocket; var buf; len, flags: Integer): Integer; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Функции возвращают количество переданных или принятых байт в случае успеха и отрицательное число в случае ошибки. Количество переданных или принятых байт может быть меньше, чем указанная в параметре len длина буфера. Тогда вам нужно повторить передачу/прием оставшихся байт.</p>
 <p>Ну и закрытие сокета осуществляется вызовом функции closesocket:</p>
 <pre>
 function closesocket(s: TSocket): Integer; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Опять же, возвращаемое значение можно проигнорировать (если вы знаете, что делаете).</p>
 <p>В общем то, вышеуказанный материал не представляет ничего нового для тех, кто хоть раз программировал под WinSock. Единственное, на что следует обратить внимание, это новые константы AF_BTH и BTHPROTO_RFCOMM.</p>
 <p>Создание сервера</p>
@@ -2629,19 +2658,19 @@ function closesocket(s: TSocket): Integer; stdcall;
 <pre>
 function bind(s: TSocket; name: PSockAddr; namelen: Integer): Integer; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Которая вызывается следующим образом:</p>
 <pre>
 if Bind(ASocket, @Addr, AddrSize) &lt;&gt; 0 then 
 RaiseLastOsError; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Далее вызываем функцию listen, для того чтобы сервер начал прослушивать сокет на предмет подключения клиентов и функцию accept для приема входящего подключения:</p>
 <pre>
 function listen(s: TSocket; backlog: Integer): Integer; stdcall;
 function accept(s: TSocket; addr: PSockAddr; addrlen: PINT): TSocket; stdcall; 
 </pre>
-&nbsp;</p>
+</p>
 <p>Делается это вот так:</p>
 <pre>
 var
@@ -2651,8 +2680,8 @@ if listen(ASocket, 10) &lt;&gt; 0 then
 RaiseLastOSError;
 AClientSocket = accept(ASocket, nil, nil); 
 </pre>
-&nbsp;</p>
-<p>После подключения клиента можно работать с AClientSocket &#8211; передавать и принимать данные.</p>
+</p>
+<p>После подключения клиента можно работать с AClientSocket - передавать и принимать данные.</p>
 <p>Если вы не желаете больше принимать входящие подключения, закройте слушающий сокет.</p>
 <p>Что осталось за кадром</p>
 <p>Как и обещал, я коротко описал процедуры, необходимые для построения простого клиента и сервера, которые будут работать с Bluetooth через WinSock. Однако, здесь я не рассматривал вопросы регистрации сервисов и протоколы верхнего уровня.</p>

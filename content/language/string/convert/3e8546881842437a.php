@@ -43,7 +43,7 @@ end;
  
 </pre>
 <p>Так же можно пользоваться другими вариантами, например:</p>
-<p>varCurrency &nbsp;: Result := CurrToStrF(Value ,ffFixed,CurrencyDecimals);</p>
+<p>varCurrency  : Result := CurrToStrF(Value ,ffFixed,CurrencyDecimals);</p>
 <p>и</p>
 <p>varDate: Result := DateToStr(Value);</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>

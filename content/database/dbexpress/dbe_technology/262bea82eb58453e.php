@@ -80,7 +80,7 @@ end;
 <p>Метод GetTableNames дополнительно управляется свойством</p>
 
 <p>TTableScope = (tsSynonym, tsSysTable, tsTable, tsView);</p>
-<p>TTableScopes = set of TTableScope;&nbsp;</p>
+<p>TTableScopes = set of TTableScope;</p>
 <p>property TableScope: TTableScopes;</p>
 
 <p>которое позволяет задать тип таблиц, имена которых попадают в список. Для каждой таблицы можно получить список полей, использовав метод</p>
@@ -95,7 +95,7 @@ end;
 
 <p>Аналогичным образом метод</p>
 
-<p>procedure GetProcedureNames(List: TStrings);&nbsp;</p>
+<p>procedure GetProcedureNames(List: TStrings);</p>
 
 <p>возвращает список доступных хранимых процедур, а метод</p>
 

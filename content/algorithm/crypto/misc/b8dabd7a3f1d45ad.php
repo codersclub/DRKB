@@ -10,10 +10,20 @@
 
 <p>The basic algorithm:</p>
 
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>1. &nbsp; &nbsp; &nbsp; &nbsp;add the values of the digits in the odd positions (1, 3, 5...)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">2.</td><td>2. &nbsp; &nbsp; &nbsp; &nbsp;multiply this result by 3</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">3.</td><td>3. &nbsp; &nbsp; &nbsp; &nbsp;add the values of the digits in the even positions (2, 4, 6...)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">4.</td><td>4. &nbsp; &nbsp; &nbsp; &nbsp;sum the results of steps 2 and 3</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">5.</td><td>5. &nbsp; &nbsp; &nbsp; &nbsp;the check digit is the smallest number which, when added to the result in step 4, produces a multiple of 10.</td></tr></table></div>
+1. add the values of the digits in the odd positions (1, 3, 5...)<br>
+2. multiply this result by 3<br>
+3. add the values of the digits in the even positions (2, 4, 6...)<br>
+4. sum the results of steps 2 and 3<br>
+5. the check digit is the smallest number which, when added to the result in step 4, produces a multiple of 10.<br>
+
 <p>Small example. Assume the source data is 08137919805</p>
 
-<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>1. &nbsp; &nbsp; &nbsp; &nbsp;0+1+7+1+8+5=22</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">2.</td><td>2. &nbsp; &nbsp; &nbsp; &nbsp;22*3=66</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">3.</td><td>3. &nbsp; &nbsp; &nbsp; &nbsp;8+3+9+9+0=29</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">4.</td><td>4. &nbsp; &nbsp; &nbsp; &nbsp;66+29=95</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">5.</td><td>5. &nbsp; &nbsp; &nbsp; &nbsp;95+??=100 where ?? is a 5 (our checksum)</td></tr></table></div>
+1. 0+1+7+1+8+5=22<br>
+2. 22*3=66<br>
+3. 8+3+9+9+0=29<br>
+4. 66+29=95<br>
+5. 95+??=100 where ?? is a 5 (our checksum)<br>
+
 <p>My implementation in the Pascal:</p>
 
 <pre>
@@ -47,7 +57,6 @@ begin
 end;
 </pre>
 
-
 <p>You can expand or optimize this algorithm for own needs.</p>
 
 <p>For example, I modified it and now I use it for any characters (not only digits) in source value.</p>
@@ -55,6 +64,7 @@ end;
 <p>The original algorithm I used for UPC-barcode validation in the SMReport Designer and the my extended algorithm I use in the serial number generation as part of the protection schema (in the shareware projects).</p>
 
 <hr />
+
 <pre>
 function BarCodeValid(ACode: string): boolean;
 var

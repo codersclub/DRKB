@@ -11,18 +11,18 @@ function MaxInt(var Int1, Int2: Integer): Integer;
   far cdecl export;
 begin
   if (Int1 &gt; Int2) then
- &nbsp;&nbsp; Result := Int1
+    Result := Int1
   else
- &nbsp;&nbsp; Result := Int2;
+    Result := Int2;
 end;
 
 function MinInt(var Int1, Int2: Integer): Integer;
   far cdecl export;
 begin
   if (Int1 &lt; Int2) then
- &nbsp;&nbsp; Result := Int1
+    Result := Int1
   else
- &nbsp;&nbsp; Result := Int2;
+    Result := Int2;
 end;
 
 exports

@@ -4,17 +4,17 @@
 <p>Здесь мы рассмотрим пример того, как управлять объектами Word-а (Excel - аналогично) из программ на Delphi.</p>
 <p>а). Для чего это нужно ?<br>
 Задачи могут быть самые разные, в общем случае это использование возможностей Word-а в своей программе, н-р: проверка текста на орфографию; печать текста, графики; экспорт отчетов в Word или изначальное создание их там и т.д.<br>
-&nbsp;<br>
+ <br>
 б). Подготовительные работы. На самом деле существует несколько способов сделать это, мы рассмотрим только один (пример кроме Delphi 5, в Delphi5 для этого есть компоненты на закладке Servers переименуете в программе типы на соответствующие компоненты, дальше так же).<br>
 Для начала начнем новый проект File, New Application; File, Save All. Создадим отдельную папку для проекта и сохраним Unit1 как Main, а Project1 как WordWriter.<br>
 Далее для работы с Word-ом нам потребуется библиотека типов Word-а, это делается так:<br>
 <p>Project, Import Type Library, Add, далее переходим в папку, где стоит Word ( у меня это - "c:\program files\microsoft office) , заходим в папку Office и выбираем файл - msword8.olb (цифра -? версии Word-а - у Вас может отличаться ) или excel8.olb (для Excel).Нажимаем Оk. Delphi создаст 2 файла - Word_tlb.pas и Office_tlb.pas, их надо включить в раздел uses модуля Main нашего проекта:</p>
-<pre>uses ... ,Office_Tlb, word_tlb; 
+<pre class="delphi">uses ... ,Office_Tlb, word_tlb; 
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>в). Теперь займемся непосредственно программированием.</p>
 <p>В разделе var опишем следующие переменные:</p>
-<pre>// класс приложения ворда
+<pre class="delphi">// класс приложения ворда
 WordApp:Word_tlb.Application_;
 // класс чего-то типа выделения,
 // т.е. говоришь - выделить ячейку с ... по, а результат скидываешь
@@ -49,9 +49,9 @@ i:integer;
 <p>9. Ниже размещаем компонент Edit3 типа tEdit, св-во Text меняем на '0'</p>
 <p>10. И, наконец, в самом низу панели размещаем кнопку BitBtn1 типа tBitBtn, меняем св-во 'Kind' на 'bkOk'.</p>
 <p>Теперь напашем обработчики - именно в них и заключается вся функциональность программы: <br>
-&nbsp;<br>
+ <br>
 <p>1. Назначим обработчик OnClick компоненту Button1 :</p>
-<pre>procedure TForm1.Button1Click(Sender: TObject);
+<pre class="delphi">procedure TForm1.Button1Click(Sender: TObject);
 begin
 // если заголовок 'Выход', то закрываем программу
 if button1.caption='Выход' then 
@@ -120,7 +120,7 @@ tabl.Cell(i,1).Range.Text:=inttostr(i);
 end;
 </pre>
 <p>2. Зададим обработчик формы:</p>
-<pre>procedure TForm1.FormDestroy(Sender: TObject);
+<pre class="delphi">procedure TForm1.FormDestroy(Sender: TObject);
 var
 // для параметров
 SaveChanges:olevariant; 
@@ -148,7 +148,7 @@ end;
 end;
 </pre>
 <p>3. Назначим обработчик OnClick компоненту Bitbtn1 :</p>
-<pre>procedure TForm1.BitBtn1Click(Sender: TObject);
+<pre class="delphi">procedure TForm1.BitBtn1Click(Sender: TObject);
 begin
 // в соотв ячейку ставим соотв значение, 
 // а можно и наоборот - получать значение из ячейки в переменную

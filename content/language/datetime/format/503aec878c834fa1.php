@@ -139,27 +139,27 @@ end;
 <hr /><p>When extracting data from text or other operating systems the format of date strings can vary dramatically. Borland function StrToDateTime() converts a string to a TDateTime value, but it is limited to the fact that the string parameter must be in the format of the current locale's date/time format. eg. "MM/DD/YY HH:MM:SS"</p>
 <p>Answer:</p>
 <p>This is of little use when extracting dates such as ..</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;1) "Friday 18 October 2002 08:34am (45 secs)"&nbsp; or "Wednesday 15 May 2002 06:12 (22 secs)"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;2) "20020431"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;3) "12.Nov.03"</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;4) "14 Hour 31 Minute 25 Second 321 MSecs"</p>
+<p>        1) "Friday 18 October 2002 08:34am (45 secs)"  or "Wednesday 15 May 2002 06:12 (22 secs)"</p>
+<p>        2) "20020431"</p>
+<p>        3) "12.Nov.03"</p>
+<p>        4) "14 Hour 31 Minute 25 Second 321 MSecs"</p>
 <p>This function will evaluate a DateTime string in accordance to the DateTime specifier format string supplied. The following specifiers are supported ...</p>
-<p>  dd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as a number with a leading zero or space (01-31).&nbsp;&nbsp;</p>
-<p>  ddd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as an abbreviation (Sun-Sat)</p>
-<p>  dddd  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the day as a full name (Sunday-Saturday)</p>
-<p>  mm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as a number with a leading zero or space (01-12).</p>
-<p>  mmm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as an abbreviation (Jan-Dec)</p>
-<p>  mmmm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the month as a full name (January-December)</p>
-<p>  yy  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the year as a two-digit number (00-99).</p>
-<p>  yyyy &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the year as a four-digit number (0000-9999).</p>
-<p>  hh  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the hour with a leading zero or space (00-23)</p>
-<p>  nn  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the minute with a leading zero or space (00-59).</p>
-<p>  ss  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the second with a leading zero or space (00-59).</p>
-<p>  zzz  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the millisecond with a leading zero (000-999).</p>
-<p>  ampm  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Specifies am or pm flag hours (0..12)</p>
-<p>  ap  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Specifies a or p flag hours (0..12)</p>
+<p>  dd                         the day as a number with a leading zero or space (01-31).</p>
+<p>  ddd                         the day as an abbreviation (Sun-Sat)</p>
+<p>  dddd                         the day as a full name (Sunday-Saturday)</p>
+<p>  mm                         the month as a number with a leading zero or space (01-12).</p>
+<p>  mmm                 the month as an abbreviation (Jan-Dec)</p>
+<p>  mmmm                 the month as a full name (January-December)</p>
+<p>  yy                         the year as a two-digit number (00-99).</p>
+<p>  yyyy                         the year as a four-digit number (0000-9999).</p>
+<p>  hh                         the hour with a leading zero or space (00-23)</p>
+<p>  nn                         the minute with a leading zero or space (00-59).</p>
+<p>  ss                         the second with a leading zero or space (00-59).</p>
+<p>  zzz                         the millisecond with a leading zero (000-999).</p>
+<p>  ampm                 Specifies am or pm flag hours (0..12)</p>
+<p>  ap                         Specifies a or p flag hours (0..12)</p>
 <p>  (Any other character corresponds to a literal or delimiter.)</p>
-<p>NOTE : One assumption I have to make is that DAYS, MONTHS, HOURS and MINUTES have a leading&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZERO or SPACE (ie. are 2 chars long) and MILLISECONDS are 3 chars long (ZERO or SPACE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padded)</p>
+<p>NOTE : One assumption I have to make is that DAYS, MONTHS, HOURS and MINUTES have a leading                       ZERO or SPACE (ie. are 2 chars long) and MILLISECONDS are 3 chars long (ZERO or SPACE                        padded)</p>
 <p>Using function</p>
 <pre>
 DateTimeStrEval(const DateTimeFormat : string; const DateTimeStr : string) : TDateTime; 

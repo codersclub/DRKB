@@ -236,7 +236,7 @@ StopBits := ONESTOPBIT; // одино?ный стоп-бит
 Flags := EV_RXCHAR + EV_EVENT2;
 End;
 </pre>
-&nbsp;</p>
+</p>
 <p>Параметры : DCBlength</p>
 <p>Размер DCB структуры.</p>
 <p>BaudRate</p>

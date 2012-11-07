@@ -104,7 +104,7 @@ begin
     WS_EX_TRANSPARENT;
 end;
 </pre>
-<div class="author">Автор:&nbsp; Smike</div>
+<div class="author">Автор:  Smike</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Вместо перекрытия CreateParams():<br>
 <p>Сделать "прозрачным" для мышки:</p>
@@ -115,11 +115,11 @@ setWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) or WS_EX_T
 <pre>
 setWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) and not WS_EX_TRANSPARENT);
 </pre>
-<p>&nbsp;<br>
-<div class="author">Автор:&nbsp; Vitalik</div>
+<p> <br>
+<div class="author">Автор:  Vitalik</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Еще одно хорошее решение. Его преимущество в том, что работать оно будет на всех системах, включая Win9x.<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 procedure TForm1.HandleMessage(var Msg: tagMSG;var Handled: Boolean);
 Var
@@ -149,7 +149,7 @@ begin
   Application.OnMessage:=HandleMessage;
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 
 <div class="author">Автор: Scorpy</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

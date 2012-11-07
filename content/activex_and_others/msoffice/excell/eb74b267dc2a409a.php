@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { 
   This is a simple example how to print an Excel file using OLE. 
 } 

@@ -14,14 +14,14 @@
 
 
 
-<p>Создатель <strong>DRKB</strong> и&nbsp;долгое время единственный ее разработчик:
+<p>Создатель <strong>DRKB</strong> и долгое время единственный ее разработчик:
 <strong>Виталий Невзоров</strong> (Vit):
 <br>
 &middot; <strong><a href="https://forum.vingrad.ru/index.php?showuser=10" title="Vit на сайте vingrad.ru" target="_blank">Vit на сайте vingrad.ru</a></strong>
 <br>
 &middot; <strong><a href="https://forum.sources.ru/index.php?showuser=4453" title="Vit на сайте sources.ru" target="_blank">Vit на сайте sources.ru</a></strong>
 </p>
-<p>Виталий является автором всех версий вплоть до&nbsp;<b>3.0</b> включительно. (Это последняя версия, выпущенная за его авторством.)</p>
+<p>Виталий является автором всех версий вплоть до <b>3.0</b> включительно. (Это последняя версия, выпущенная за его авторством.)</p>
 
 <p>К несчастью, Виталий Невзоров погиб в автокатастрофе 07 июля 2009г...</p>
 
@@ -31,9 +31,9 @@
 <p>Vingrad.ru: <a href="https://forum.vingrad.ru/index.php?act=Members" target="_blank">https://forum.vingrad.ru/index.php?act=Members</a></p>
 <p>Sourсes.ru: <a href="https://forum.sources.ru/index.php?act=Members" target="_blank">https://forum.sources.ru/index.php?act=Members</a></p>
 
-<p>&nbsp;</p>
+<p></p>
 
-<p>Модульная сетка и&nbsp;начальный дизайн сайта разработан: <strong><a href="https://www.colorcat.ru/" title="Sofiyan (Caramel)" target="_blank">Sofiyan</a></strong> (<strong>Caramel</strong>).</p>
+<p>Модульная сетка и начальный дизайн сайта разработан: <strong><a href="https://www.colorcat.ru/" title="Sofiyan (Caramel)" target="_blank">Sofiyan</a></strong> (<strong>Caramel</strong>).</p>
 
 <p>Онлайн-версия сайта: <strong><a href="https://forum.sources.ru/index.php?showuser=2" title="Valery Votintsev (vot)" target="_blank">Valery Votintsev</strong> (vot)</a>.</p>
 

@@ -43,7 +43,7 @@ end;
 S := 'Ваш старый пароль: &lt;' + Decrypt(S, StartKey, MultKey, AddKey) + '&gt;'; 
 </pre>
 <hr /><br>
-&nbsp;
+ 
 <pre>
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Расшифровка строки InString, зашифрованной с помощью функции EncryptEX

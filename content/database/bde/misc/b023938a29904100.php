@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 {
   If a database or a table is local on a PC installed (Paradox or Dbase)
   and the BDE-setting "LOCAL SHARE" is FALSE, then changings are not

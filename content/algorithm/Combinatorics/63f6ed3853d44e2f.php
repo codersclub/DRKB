@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Алгоритм оптимального распределения камней по ящикам
  
@@ -446,7 +446,7 @@ end.
  
 </pre>
 <p> Пример использования:</p>
-<pre>
+<pre class="delphi">
 unit BagU;
  
 interface

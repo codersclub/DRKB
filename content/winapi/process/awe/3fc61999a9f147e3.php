@@ -7,7 +7,7 @@
 function AllocateUserPhysicalPages(
   hProcess: THandle, // дескриптор процесса
   var NumberOfPages: Cardinal, // число страниц
-  var UserPfnArray: Pointer&nbsp;&nbsp;&nbsp; // адрес хранилища
+  var UserPfnArray: Pointer    // адрес хранилища
 ): Boolean; stdcall;
 </pre>
 <p><b>Параметры</b></p>

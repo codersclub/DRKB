@@ -44,7 +44,7 @@ begin
 end;
 </pre>
 
-&nbsp;</p>
+</p>
 <hr />
 <pre>{ **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Power off (не убивает процессы)
@@ -80,7 +80,7 @@ end;
 ExitWinNT(True); 
 </pre>
 
-&nbsp;</p>
+</p>
 <hr />
 <p>Сегодня мы напишем прогу на WinApi, выключающую W2k, и занимающую всего 10 Кб!</p>
 <pre>program reboot;
@@ -187,7 +187,7 @@ out  64h,al
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>ExitWindowsEx(EWX_FORCE,0);
 </pre>
@@ -199,6 +199,6 @@ out  64h,al
 
 <div class="author">Автор: Vit</div>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
-<hr /><p>&nbsp;
-<p>&nbsp;</p>
+<hr /><p> 
+<p></p>
 

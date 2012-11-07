@@ -1,8 +1,7 @@
 <h1>Как получить список всех зарегистрированных typelibs?</h1>
 <div class="date">01.01.2007</div>
 
-
-<pre>
+<pre class="delphi">
  uses
   Registry;
  

@@ -67,18 +67,18 @@ end;
 
 <p>The pseudo-code for this is pretty easy.</p>
 
-<p>1. &nbsp; &nbsp; &nbsp; &nbsp;1. &nbsp; &nbsp; &nbsp; &nbsp;Get a listing of all tables in the SQL Server database passed to the procedure.</p>
-<p>2. &nbsp; &nbsp; &nbsp; &nbsp;2. &nbsp; &nbsp; &nbsp; &nbsp;Get a table name from the table name array.</p>
-<p>3. &nbsp; &nbsp; &nbsp; &nbsp;3. &nbsp; &nbsp; &nbsp; &nbsp;If a passed table name happens to be in the list of table retrieved from the database, DROP it.</p>
-<p>4. &nbsp; &nbsp; &nbsp; &nbsp;4. &nbsp; &nbsp; &nbsp; &nbsp;Repeat 2. and 3. until all table names have been exhausted.</p>
+<p>1.        1.        Get a listing of all tables in the SQL Server database passed to the procedure.</p>
+<p>2.        2.        Get a table name from the table name array.</p>
+<p>3.        3.        If a passed table name happens to be in the list of table retrieved from the database, DROP it.</p>
+<p>4.        4.        Repeat 2. and 3. until all table names have been exhausted.</p>
 
 <p>The reason why I do the comparison in step 3 is because if you issue a DROP query against a non-existent table, SQL Server will issue an exception. This methodology avoids that issue entirely.</p>
 
 <p>Below is a detailed description of the parameters.</p>
 
-Ses &nbsp; &nbsp; &nbsp; &nbsp;var TSession &nbsp; &nbsp; &nbsp; &nbsp;This is a session instance variable that you pass by reference into the procedure. Note: It MUST be instantiated prior to use. The procedure does not create an instance. It assumes it already exists. This is especially necessary when using this procedure within a thread. But if you're not creating a multi- threaded application, then you can use the default Session variable. &nbsp; &nbsp; &nbsp; 
-DBName &nbsp; &nbsp; &nbsp; &nbsp;String &nbsp; &nbsp; &nbsp; &nbsp;Name of the MS SQL Server client database &nbsp; &nbsp; &nbsp; 
-<p>ArTables &nbsp; &nbsp; &nbsp; &nbsp;Array of String &nbsp; &nbsp; &nbsp; &nbsp;This is an open array of string that you can pass into the procedure. This means that you can pass any size array and the procedure will handle it. For instance, in the Primary table maker program, I define an array as follows:&nbsp;</p>
+Ses        var TSession        This is a session instance variable that you pass by reference into the procedure. Note: It MUST be instantiated prior to use. The procedure does not create an instance. It assumes it already exists. This is especially necessary when using this procedure within a thread. But if you're not creating a multi- threaded application, then you can use the default Session variable.       
+DBName        String        Name of the MS SQL Server client database       
+<p>ArTables        Array of String        This is an open array of string that you can pass into the procedure. This means that you can pass any size array and the procedure will handle it. For instance, in the Primary table maker program, I define an array as follows:</p>
 <pre>
 arPat[0] := 'dbo.Temp0';
 arPat[1] := 'dbo.Temp1';
@@ -93,8 +93,8 @@ arPat[9] := 'dbo.' + FDisease + 'CrossTbl_' + FQtrYr;
 arPat[10] := 'dbo.' + FDisease + 'Primary_' + FQtrYr;
 </pre>
 
- and pass it into the procedure. &nbsp; &nbsp; &nbsp; 
-<p>StatMsg &nbsp; &nbsp; &nbsp; &nbsp;TStatusMsg &nbsp; &nbsp; &nbsp; &nbsp;This is a procedural type of : procedure(Msg : String). You can't use a class method for this procedure; instead, you declare a regular procedure that references a regular procedure. For example, I declare an interface-level procedure called StatMsg that references a thread instance variable and a method as follows:&nbsp;</p>
+ and pass it into the procedure.       
+<p>StatMsg        TStatusMsg        This is a procedural type of : procedure(Msg : String). You can't use a class method for this procedure; instead, you declare a regular procedure that references a regular procedure. For example, I declare an interface-level procedure called StatMsg that references a thread instance variable and a method as follows:</p>
 <pre>
 procedure StatMsg(Msg: string); 
 begin   
@@ -103,7 +103,7 @@ thr.Synchronize(thr.UpdateStatus);
 end;  
 </pre>
 
-The trick here is that "thr" is the instance variable used to instantiate my thread class. The instance variable resides in the main form of my application. This means that it too must be declared as an interface variable. &nbsp; &nbsp; &nbsp; 
+The trick here is that "thr" is the instance variable used to instantiate my thread class. The instance variable resides in the main form of my application. This means that it too must be declared as an interface variable.       
 <p>I'm usually averse to using global variables and procedures. It's against structured programming conventions. However, what this procedure buys me is the ability to place it in a centralized library and utilize it in all my programs.</p>
 
 <p>Before you use this, please make sure you review the table above. You need to declare a type of TStatusMsg prior to declaring the procedure. If you don't, you'll get a compilation error.</p>

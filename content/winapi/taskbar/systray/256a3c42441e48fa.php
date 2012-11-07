@@ -79,7 +79,7 @@ protected
   procedure ControlWindow(var Msg: TMessage); message WM_SYSCOMMAND;
   procedure IconMouse(var Msg: TMessage); message WM_USER + 1;
 </pre>
-<p> &nbsp;&nbsp; Теперь описываем собственно процедуру.</p>
+<p>    Теперь описываем собственно процедуру.</p>
 
 <pre>
     procedure TForm1.IconMouse(var Msg: TMessage);
@@ -109,7 +109,7 @@ protected
 
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
 
-<hr />Для&nbsp; работы&nbsp; с&nbsp; SystemTray&nbsp; существует всего одна функция. Вот ее</p>
+<hr />Для  работы  с  SystemTray  существует всего одна функция. Вот ее</p>
 <p>Си-прототип:</p>
 <pre>
        WINSHELLAPI BOOL WINAPI Shell_NotifyIcon(
@@ -117,10 +117,10 @@ protected
                                PNOTIFYICONDATA pnid  // pointer to structure);
 </pre>
 
-<p>Эта&nbsp; функция описана в заголовочном файле Win32-SDK " shellapi.h" ,</p>
-<p>включаемом&nbsp;&nbsp; в&nbsp; программу&nbsp; при&nbsp; включении&nbsp; " windows.h" .&nbsp; Параметр</p>
-<p>dwMessage&nbsp;&nbsp; может&nbsp; принимать&nbsp; одно&nbsp; из&nbsp; трех&nbsp; значений:&nbsp; NIM_ADD,</p>
-<p>NIM_DELETE,&nbsp; NIM_MODIFY.&nbsp; Для&nbsp; добавления&nbsp; иконки&nbsp; он должен быть</p>
+<p>Эта  функция описана в заголовочном файле Win32-SDK " shellapi.h" ,</p>
+<p>включаемом   в  программу  при  включении  " windows.h" .  Параметр</p>
+<p>dwMessage   может  принимать  одно  из  трех  значений:  NIM_ADD,</p>
+<p>NIM_DELETE,  NIM_MODIFY.  Для  добавления  иконки  он должен быть</p>
 <p>установлен в NIM_ADD.</p>
 <p>Параметр pnid имеет тип PNOTIFYDATA, который описан как:</p>
 <pre>
@@ -135,33 +135,33 @@ protected
                                       } NOTIFYICONDATA, *PNOTIFYICONDATA;
 </pre>
 
-<p> &nbsp;&nbsp;&nbsp; Поля структуры NOTIFYICONDATA имеют следующий смысл:</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cbSize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - размер структуры, должен быть</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sizeof(NOTIFYICONDATA).</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hWnd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - дескриптор окна, которое будет получать события</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; мыши над иконкой.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - уникальный идентификатор иконки. Идентификатор</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; должен быть уникален в пределах окна - обрабо-</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; тчика, передаваемого в hWnd.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uFlags&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - битовое поле, определяющее какое из следующих</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; полей несет действительную информацию.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Может быть одним из следующих значений: NIF_ICON,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NIF_MESSAGE, NIF_TIP или их OR-комбинацией.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uCallbackMessage - сообщение, передаваемое окну - обработчику при</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; событиях мыши. Желательно получать номер</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; сообщения вызовом RegisterWindowMessage(),</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; но допускаются и значения WM_USER+N, где N &gt;&nbsp; 0.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hIcon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - дескриптор иконки, помещаемой на Tray.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; szTip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - текст для ToolTip'а, если szTip[0] = 0x00, то</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ToolTip'а не будет.</p>
-<p> &nbsp;&nbsp;&nbsp; Таким&nbsp;&nbsp; образом,&nbsp;&nbsp; для&nbsp;&nbsp; добавления&nbsp; иконки&nbsp; на&nbsp; Tray&nbsp; необходимо</p>
-<p> &nbsp;&nbsp;&nbsp; заполнить&nbsp; экземпляр&nbsp; структуры&nbsp; NOTIFYICONDATA и вызвать функцию</p>
-<p> &nbsp;&nbsp;&nbsp; Shell_NotifyIcon()&nbsp;&nbsp; с&nbsp;&nbsp; параметром&nbsp;&nbsp; NIM_ADD&nbsp;&nbsp; и&nbsp; указателем&nbsp; на</p>
-<p> &nbsp;&nbsp;&nbsp; заполненный экземпляр структуры.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; При&nbsp; добавлении&nbsp; иконки необходимо заполнить поля cbSize, hWnd,</p>
-<p> &nbsp;&nbsp;&nbsp; uID,&nbsp; uFlags,&nbsp; uCallbackMessage, hIcon. Поле szTip можно оставить</p>
-<p> &nbsp;&nbsp;&nbsp; пустым,&nbsp; если&nbsp; вам не нужен ToolTip. Поле uFlags должно содержать</p>
-<p> &nbsp;&nbsp;&nbsp; как минимум NIF_MESSAGE | NIF_ICON.</p>
+<p>     Поля структуры NOTIFYICONDATA имеют следующий смысл:</p>
+<p>         cbSize          - размер структуры, должен быть</p>
+<p>                           sizeof(NOTIFYICONDATA).</p>
+<p>         hWnd            - дескриптор окна, которое будет получать события</p>
+<p>                           мыши над иконкой.</p>
+<p>         uID             - уникальный идентификатор иконки. Идентификатор</p>
+<p>                           должен быть уникален в пределах окна - обрабо-</p>
+<p>                           тчика, передаваемого в hWnd.</p>
+<p>         uFlags          - битовое поле, определяющее какое из следующих</p>
+<p>                           полей несет действительную информацию.</p>
+<p>                           Может быть одним из следующих значений: NIF_ICON,</p>
+<p>                           NIF_MESSAGE, NIF_TIP или их OR-комбинацией.</p>
+<p>        uCallbackMessage - сообщение, передаваемое окну - обработчику при</p>
+<p>                           событиях мыши. Желательно получать номер</p>
+<p>                           сообщения вызовом RegisterWindowMessage(),</p>
+<p>                           но допускаются и значения WM_USER+N, где N &gt;  0.</p>
+<p>        hIcon            - дескриптор иконки, помещаемой на Tray.</p>
+<p>        szTip            - текст для ToolTip'а, если szTip[0] = 0x00, то</p>
+<p>                           ToolTip'а не будет.</p>
+<p>     Таким   образом,   для   добавления  иконки  на  Tray  необходимо</p>
+<p>     заполнить  экземпляр  структуры  NOTIFYICONDATA и вызвать функцию</p>
+<p>     Shell_NotifyIcon()   с   параметром   NIM_ADD   и  указателем  на</p>
+<p>     заполненный экземпляр структуры.</p>
+<p>       При  добавлении  иконки необходимо заполнить поля cbSize, hWnd,</p>
+<p>     uID,  uFlags,  uCallbackMessage, hIcon. Поле szTip можно оставить</p>
+<p>     пустым,  если  вам не нужен ToolTip. Поле uFlags должно содержать</p>
+<p>     как минимум NIF_MESSAGE | NIF_ICON.</p>
 
 <p>Взято из FAQ:</p>
 <a href="https://blackman.km.ru/myfaq/cont4.phtml]http://blackman.km.ru/myfaq/cont4.phtml" target="_blank">https://blackman.km.ru/myfaq/cont4.phtml]http://blackman.km.ru/myfaq/cont4.phtml</a></p>

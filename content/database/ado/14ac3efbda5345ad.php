@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { 
   Exporting a DBGrid to excel without OLE 
  
@@ -52,7 +52,7 @@ type TScrollEvents = class
        BeforeScroll_Event: TDataSetNotifyEvent; 
        AfterScroll_Event: TDataSetNotifyEvent; 
        AutoCalcFields_Property: Boolean; 
-  end; 
+end; 
  
 procedure DisableDependencies(DataSet: TDataSet; var ScrollEvents: TScrollEvents); 
 procedure EnableDependencies(DataSet: TDataSet; ScrollEvents: TScrollEvents); 

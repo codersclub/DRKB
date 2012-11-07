@@ -49,11 +49,11 @@ end;
 
 <p>Как использовать:</p>
 
-<p> &nbsp;&nbsp; Function SetProcessPriority( Priority : Integer ) : Integer;</p>
+<p>    Function SetProcessPriority( Priority : Integer ) : Integer;</p>
 
 <p>для установки приоритета Вашего приложения, либо:</p>
 
-<p> &nbsp;&nbsp; Function GetProcessPriority : Integer;</p>
+<p>    Function GetProcessPriority : Integer;</p>
 
 <p>для получения приоритета.</p>
 

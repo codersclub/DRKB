@@ -17,14 +17,23 @@
 <p>Затем пришла Win32, которая смогла поддержать много поточность. Но к этому моменту мозги уже были запудрены (то есть разработчики считали блокирующие сокеты порождением дьявола), и уже было тяжело изменить содеянное. По этому поношение блокирующих режимов продолжается.</p>
 <p>В реальности в Юникс есть только блокирующие сокеты. Блокирующие сокеты также имеют и свои преимущества, и они намного лучше, для много поточности, безопасности и других аспектов. Некоторые расширения была добавлены и в Юникс для не блокирующих сокетов. Тем не менее, они работают совсем по другому, чем в Windows. Они также нестандартны и не очень распространены. Блокирующие сокеты в Юниксе используются почти во всех случаях, и будут и далее использоваться.</p>
 <p>Достоинства блокирующего режима</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Проще программировать - Блокирующие режимы проще программировать. Весь пользовательский код может находиться в одном месте и выполняться в естественном, последовательном порядке.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Проще перенос в Юникс - Поскольку Юникс использует блокирующие сокеты, переносимый код написать в данном случае проще. Indy использует этот факт для написания единого кода.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Удобнее работать с потоками - Поскольку у блокирующих сокетов последовательность приобретена по наследственности, поэтому их очень просто использовать в потоках.</td></tr></table></div><p>Недостатки блокирующего режима</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Пользовательский интерфейс замораживается в клиентах - Вызов блокирующего сокета не возвращает управления, пока не выполнит свою задачу. Когда такой вызов делается в главном потоке приложения, приложение не может обрабатывать пользовательские сообщения. Из-за этого пользовательский интерфейс замораживается, не обновляются окна, и другие сообщения не могут быть обработаны пока управление не будет возвращено из блокирующего сокета.</td></tr></table></div><p>Компонент TIdAntiFreeze</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Проще программировать - Блокирующие режимы проще программировать. Весь пользовательский код может находиться в одном месте и выполняться в естественном, последовательном порядке.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Проще перенос в Юникс - Поскольку Юникс использует блокирующие сокеты, переносимый код написать в данном случае проще. Indy использует этот факт для написания единого кода.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Удобнее работать с потоками - Поскольку у блокирующих сокетов последовательность приобретена по наследственности, поэтому их очень просто использовать в потоках.</td></tr></table></div>
+<p>Недостатки блокирующего режима</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Пользовательский интерфейс замораживается в клиентах - Вызов блокирующего сокета не возвращает управления, пока не выполнит свою задачу. Когда такой вызов делается в главном потоке приложения, приложение не может обрабатывать пользовательские сообщения. Из-за этого пользовательский интерфейс замораживается, не обновляются окна, и другие сообщения не могут быть обработаны пока управление не будет возвращено из блокирующего сокета.</td></tr></table></div>
+<p>Компонент TIdAntiFreeze</p>
 <p>В Indy имеется специальный компонент, который решает проблему замораживания пользовательского интерфейса. Просто добавьте один компонент TIdAntiFreeze куда ни будь в своем приложении, и вы сможете выполнять блокирующие вызовы без замораживания пользовательского интерфейса.</p>
 <p>TIdAntiFreeze работает по внутреннему таймеру вне стека вызовов и вызывает Application.ProcessMessages по окончанию таймаута. Внешние вызовы к Indy продолжают оставаться блокирующими и поэтому работают точно также как и без использования компонента TIdAntiFreeze. Использование TIdAntiFreeze позволяет получить все преимущества блокирующих сокетов, без из недостатков.</p>
 <p>Кодовые потоки (Threading)</p>
 <p>С блокирующими сокетами почти всегда используются кодовые потоки. Не блокирующие сокеты также могут использовать потоки, но это требует некоторой дополнительной обработки и их преимущества в этом случае теряются, по сравнению с блокирующими сокетами.</p>
 <p>Достоинства потоков</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Настройка приоритетов - Приоритеты отдельных потоков могут быть настроены. Это позволяет выполнять выделять отдельным задачам больше или меньше процессорного времени.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Инкапсуляция - Каждое соединение может содержать некоторое подобие интерфейса с другим соединением.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Безопасность - Каждый поток может иметь различные атрибуты безопасности.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Несколько процессоров - дает преимущество на системах с несколькими процессорами.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Не нужна сериализация - предоставляет полную конкурентность. Без много поточности все запросы должны быть обработаны в одном потоке. Поэтому каждая задача должна быть разбита на небольшие куски, чтобы она могла работать быстро. Пока выполняется один блок, все остальные вынуждены ожидать его окончания. По окончанию одного блока выполняется следующий и так далее. С многопоточностью каждая задача может быть запрограммирована как одно целое и операционная система распределяет время между всеми задачами.</td></tr></table></div><p>Опрос потоков</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Настройка приоритетов - Приоритеты отдельных потоков могут быть настроены. Это позволяет выполнять выделять отдельным задачам больше или меньше процессорного времени.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Инкапсуляция - Каждое соединение может содержать некоторое подобие интерфейса с другим соединением.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Безопасность - Каждый поток может иметь различные атрибуты безопасности.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Несколько процессоров - дает преимущество на системах с несколькими процессорами.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Не нужна сериализация - предоставляет полную конкурентность. Без много поточности все запросы должны быть обработаны в одном потоке. Поэтому каждая задача должна быть разбита на небольшие куски, чтобы она могла работать быстро. Пока выполняется один блок, все остальные вынуждены ожидать его окончания. По окончанию одного блока выполняется следующий и так далее. С многопоточностью каждая задача может быть запрограммирована как одно целое и операционная система распределяет время между всеми задачами.</td></tr></table></div>
+<p>Опрос потоков</p>
 <p>Создание и уничтожение потоков очень интенсивно использует ресурсы. Это особо тяжелая задача для серверов, которые имеют коротко живущие соединения. Каждый сервер создает поток, использует его короткое время и затем уничтожает. Это приводит к очень частому созданию и удалению потоков. Примером этого является Веб сервер. Посылается одиночный запрос, и возвращается простой ответ. При использовании браузера, при просмотре какого либо Веб сайта, могут происходить сотни соединений и отсоединений</p>
 <p>Опрос потоков может исправить эту ситуацию. Вместо создания и уничтожения потоков по требованию, потоки выбираются из списка неиспользуемых, но уже созданных потоков, из пула. Когда поток уже не нужен, он возвращается в пул, вместо его уничтожения. Потоки в пуле помечаются как неиспользуемые и поэтому они не жрут процессорное время. Для еще большего улучшения потоки могут динамически подстраиваться под текущие нужды системы.</p>
 <p>Indy поддерживает опрос потоков. Пул потоков в Indy доступен через компонент TIdThreadMgrPool.</p>
@@ -39,7 +48,11 @@
 <p>Например, с другими компонентами, когда вы вызывает соединение вы должны или ждать возникновение события соединения или в цикле ожидать когда свойство покажет что соединение произошло. С Indy вы можете вызвать метод Connect, и ожидать возврата из него. Возврат будет произведен в случае успешного соединения или возбуждения исключения в случае проблемы. Поэтому работа с Indy очень похоже на работу с файлами. Indy позволяет разместить весь ваш код в одном месте, вместо размазывания по разным событиям. В дополнение, Indy очень прост и наиболее удобен при работе с потоками.</p>
 <p>Насколько Indy отличается</p>
 <p>Краткий обзор</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Используются блокирующие вызовы</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Не ориентирован на события - события есть, но они используются для информационных нужд, и реально не требуются.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Разработан для потоков - Indy разработан для потоков, тем не менее, может использоваться и без потоков.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Последовательное программирование</td></tr></table></div><p>Подробное рассмотрение</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Используются блокирующие вызовы</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Не ориентирован на события - события есть, но они используются для информационных нужд, и реально не требуются.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Разработан для потоков - Indy разработан для потоков, тем не менее, может использоваться и без потоков.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Последовательное программирование</td></tr></table></div>
+<p>Подробное рассмотрение</p>
 <p>Indy не только использует блокирующие вызовы (синхронные) но еще и работает так. Типичная сессия в Indy выглядит так:</p>
 <p>with IndyClient do begin</p>
 <p>  Connect; Try</p>
@@ -50,17 +63,17 @@
 <p>procedure TFormMain.TestOnClick(Sender: TComponent);</p>
 <p>begin</p>
 <p>  with SocketComponent do begin</p>
-<p> &nbsp;&nbsp; Connect; try</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; while not Connected do begin</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; if IsError then begin</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Abort;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; end;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; Application.ProcessMessages;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; OutData := 'Data To send';</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; while length(OutData) &gt; 0 do begin</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application.ProcessMessages;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; end;</p>
-<p> &nbsp;&nbsp; finally Disconnect; end;</p>
+<p>    Connect; try</p>
+<p>      while not Connected do begin</p>
+<p>      if IsError then begin</p>
+<p>        Abort;</p>
+<p>      end;</p>
+<p>      Application.ProcessMessages;</p>
+<p>      OutData := 'Data To send';</p>
+<p>      while length(OutData) &gt; 0 do begin</p>
+<p>        Application.ProcessMessages;</p>
+<p>      end;</p>
+<p>    finally Disconnect; end;</p>
 <p>  end;</p>
 <p>end;</p>
 <p>procedure TFormMain.OnConnectError;</p>
@@ -87,7 +100,7 @@
 <p>  Host := 'zip.pbe.com'; // Host to call</p>
 <p>  Port := 6000; // Port to call the server on</p>
 <p>  Connect; Try</p>
-<p> &nbsp;&nbsp; // Do your stuff here</p>
+<p>    // Do your stuff here</p>
 <p>  finally Disconnect; end;</p>
 <p>end;</p>
 <p>Обзор серверов Indy</p>
@@ -165,7 +178,9 @@ end.
 </pre>
 <p>Единственные части в проекте, специфические для Indy, это компонент IdTCPServer1, методы IdTCPServer1Connect и IdTCPServer1Execute.</p>
 <p>На форме размещен компонент IdTCPServer1 типа TIdTCPServer. Изменены следующие свойства:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Active = True - После старта приложения сервер прослушивает.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>DefaultPort = 6000 - Значение порта для данного проекта. Сервер слушает запросы клиента на этом порту.</td></tr></table></div><p>Метод IdTCPServer1Execute связан с событием OnExecute сервера. Событие OnExecute возбуждается после того, как соединение клиента акцепцировано. Событие OnExecute отличается от других известных вам событий. OnExecute выполняется в контексте потока. Событие потока вызывается и ему передается аргумент AThread, переданный в метод. Это важно, поскольку множество событий OnExecute может выполняться в одно и тоже время. Это сделано для того, чтобы сервер мог работать без создания нового компонента. Есть также методы, которые могут быть перекрыты при построении наследников.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Active = True - После старта приложения сервер прослушивает.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>DefaultPort = 6000 - Значение порта для данного проекта. Сервер слушает запросы клиента на этом порту.</td></tr></table></div>
+<p>Метод IdTCPServer1Execute связан с событием OnExecute сервера. Событие OnExecute возбуждается после того, как соединение клиента акцепцировано. Событие OnExecute отличается от других известных вам событий. OnExecute выполняется в контексте потока. Событие потока вызывается и ему передается аргумент AThread, переданный в метод. Это важно, поскольку множество событий OnExecute может выполняться в одно и тоже время. Это сделано для того, чтобы сервер мог работать без создания нового компонента. Есть также методы, которые могут быть перекрыты при построении наследников.</p>
 <p>Событие OnConnect вызывается после того, как соединение было акцепцировано и поток для него был создан. В данном сервере это используется для посылки приветственного сообщения клиенту. При желании это также может быть выполнено и в событии OnExecute.</p>
 <p>Событие OnExecute может быть возбуждено несколько раз, пока соединение не будет разъединено или потеряно. Этим устраняется необходимость проверять соединение, на предмет разъединения или потери в цикле внутри события.</p>
 <p>IdTCPServer1Execute использует две базовые функции, ReadLn и WriteLn. ReadLn читает строку из соединения, а WriteLn посылает строку в соединение.</p>
@@ -255,8 +270,17 @@ end.
 </pre>
 <p>Единственные части специфические для клиентского компонента - это метод Button1Click.</p>
 <p>Компонент Client типа TIdTCPClient и размещен на форме. Изменены следующие свойства:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Host = 127.0.0.1 - Сервер находится на той же самой машине, что и клиент.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Port = 6000 - Порт сервера</td></tr></table></div><p>Метод Button1Click связан с событием OnClick компоненты Button1. При нажатии кнопки вызывается этот метод. Indy часть этого метода может быть уменьшена до следующего:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Соединение с сервером (Connect;)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Чтения приветствия с сервера.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Для каждой строки введенной пользователем в TMemo:</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Посылка запроса на сервер (WriteLn('ZipCode ' + memoInput.Lines[i]);)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Чтение ответа с сервера (s := ReadLn;)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Посылка команды Quit (WriteLn('Quit');)</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Разъединение (Disconnect;)</td></tr></table></div><p>Тестирование</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Host = 127.0.0.1 - Сервер находится на той же самой машине, что и клиент.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>Port = 6000 - Порт сервера</td></tr></table></div>
+<p>Метод Button1Click связан с событием OnClick компоненты Button1. При нажатии кнопки вызывается этот метод. Indy часть этого метода может быть уменьшена до следующего:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Соединение с сервером (Connect;)</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Чтения приветствия с сервера.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Для каждой строки введенной пользователем в TMemo:</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Посылка запроса на сервер (WriteLn('ZipCode ' + memoInput.Lines[i]);)</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Чтение ответа с сервера (s := ReadLn;)</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Посылка команды Quit (WriteLn('Quit');)</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Разъединение (Disconnect;)</td></tr></table></div>
+<p>Тестирование</p>
 <p>Данный пример был протестирован и работает при установленном TCP/IP. Вы может изменить его для работы через сеть с одного компьютера с другим. Запустив сервер на другом компьютере и изменив имя или IP сервера на клиенте.</p>
 <p>Для тестирования проектов откомпилируйте и запустите сервер. Затем откомпилируйте и запустите клиента. Введите почтовый индекс в мемо поле и нажмите клавишу lookup.</p>
 <p>Отладка</p>

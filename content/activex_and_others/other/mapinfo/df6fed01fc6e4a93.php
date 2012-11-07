@@ -30,7 +30,7 @@
 <p>Что-бы вам просмотреть методы и свойства данногоAutomation Object.-а. откройте MICallBack.dpr и в меню Run Delphi выбирите TypeLibrary</p>
 <p>Откроется окно - Где я реализовал CallBack методы MapInfo и создал сервер автоматизации MICallBack. Обратите внимание, что у данного сервера помимо присутствия интерфейса IMapInfoCallBack присутствует и еще интерфейс ImapInfoCallBackEvents (он нам нужен будет для перенаправления событий в компонент и далее в обработчик).</p>
 <p>Листинг интерфейсного модуля</p>
-<pre>
+<pre class="delphi">
 unit Call;
  
 {$WARN SYMBOL_PLATFORM OFF}
@@ -114,7 +114,7 @@ end.
 <p>Обратите внимание на присутствие двух предопределенных методов MapInfo SetStatusText и WindowContentsChanged.</p>
 <p>Метод MyEvent я пока зарезервировал для реализации своих сообщений (более подробно будет изложено в 3 части цикла)</p>
 <p>И так что мы видим.</p>
-<pre>
+<pre class="delphi">
 // если есть обработчик
 if FEvents &lt;&gt; nil then
 begin
@@ -125,7 +125,7 @@ begin
 
 <p>Как заставить MapInfo пересылать CallBack данному OLE серверу и как нам обрабатывать сообщения в компоненте от OLE сервера.</p>
 <p>Итак представляю переработанный компонент -</p>
-<pre>
+<pre class="delphi">
 unit KDMapInfoServer;
  
 interface
@@ -539,7 +539,7 @@ end.
 
 
 <p>И так что добавилось - Метод CreateMapInfoServer;</p>
-<pre>
+<pre class="delphi">
   // Создаем наш сервер OLE
   srv_ole := CreateOleObject('MICallBack.MapInfoCallBack') as IDispatch;
   srv_vtable := CoMapInfoCallBack.Create;
@@ -557,7 +557,7 @@ end;
 <p>Реализация FServer.SetCallBack(srv_disp); - данным кодом мы заставили MapInfo уведомлять наш OLE сервер.</p>
 <p>Хорошо, скажете вы, ну заставили но он то уведомляет сервер OLE а не нашу программу, для этого я ввел следующий код (прим. Реализацию использования интерфейса событий OLE сервера я подробно расписывать не стану - для этого читайте в книгах главы по COM)</p>
 <p>Я сделал так: ввел класс отвечающий за принятие событий от COM(OLE) объекта</p>
-<pre>
+<pre class="delphi">
 TEvent = class(TInterfacedObject,IUnknown,IDispatch)
 private
   FAppConnection : Integer;

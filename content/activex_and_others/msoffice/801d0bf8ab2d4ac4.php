@@ -3,7 +3,7 @@
 
 
 <p>Microsoft Antivirus API позволяет создавать приложения для сканирования документов MS Office перед их открытием (а также сканирование закачек IE, содержащих код).</p>
-<pre>
+<pre class="delphi">
 unit msoav; 
  
 interface 

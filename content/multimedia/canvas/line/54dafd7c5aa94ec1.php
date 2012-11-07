@@ -89,9 +89,9 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 Более развернутую демку можно найти в папке {$DELPHI7}/Demos/Doc/Graphex<br>
-&nbsp;<br>
+ <br>
 <div class="author">Автор: Mischka</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 unit Unit1; 
 interface
 uses Windows, Messages, SysUtils, Classes, Graphics,      Controls, Forms,      Dialogs, Buttons,ComCtrls, ExtCtrls, OleCtnrs;

@@ -19,7 +19,7 @@ begin
   Result := rslt + str;
 end; 
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 function ReplaceStr(const S, Srch, Replace: string): string;
@@ -46,9 +46,9 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
+</p>
 <hr />
 <pre>
 { **** UBPFD *********** by delphibase.endimus.com ****
@@ -80,6 +80,6 @@ begin
 end;
  
 </pre>
-&nbsp;</p>
+</p>
 <hr /><p>А стандартная функция StringReplace  чем не устраивает?</p>
 <div class="author">Автор: Vit</div>

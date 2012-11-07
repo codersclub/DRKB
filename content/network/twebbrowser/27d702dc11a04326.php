@@ -18,11 +18,11 @@ end;
 <p>Рассмотрим подробнее параметры, передаваемые в метод Navigate.</p>
 <p>Первым параметром передается строка с URL, указывающим адрес, из которого должна осуществляться загрузка. Поддерживаются все протоколы, доступные в IE, например file:// - загрузка файла, res:// - загрузка из ресурса.</p>
 <p>Остальные параметры не являются обязательными и служат для передачи дополнительной информации.</p>
-<p>Flags &nbsp; &nbsp; &nbsp; &nbsp;Целое число, представляющее из себя битовую маску из следующих флагов: 1&nbsp; Открыть ресурс в новом окне 2&nbsp; Не добавлять страницу в историю просмотренных 4&nbsp; Не загружать страницу из кэша 8&nbsp; Не сохранять страницу в кэше &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>TargetFrameName &nbsp; &nbsp; &nbsp; &nbsp;Задает имя фрейма, в который будет загружена страница &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>PostData &nbsp; &nbsp; &nbsp; &nbsp;Задает данные для запроса с сервера методом HTTP POST. Если этот параметр пустой &#8211; используется метод GET &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Headers &nbsp; &nbsp; &nbsp; &nbsp;Задает дополнительные заголовки HTTP &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Наиболее интересным является параметр PostData, позволяющий передать на Web-Server данные, полученные в результате заполнения формы, если этот сервер требует HTTP &#8211; транзакции POST. Например, следующий фрагмент кода передает на сервер имя пользователя и пароль, заполненные в форме Delphi</p>
+<p>Flags        Целое число, представляющее из себя битовую маску из следующих флагов: 1  Открыть ресурс в новом окне 2  Не добавлять страницу в историю просмотренных 4  Не загружать страницу из кэша 8  Не сохранять страницу в кэше</p>
+<p>TargetFrameName        Задает имя фрейма, в который будет загружена страница</p>
+<p>PostData        Задает данные для запроса с сервера методом HTTP POST. Если этот параметр пустой - используется метод GET</p>
+<p>Headers        Задает дополнительные заголовки HTTP</p>
+<p>Наиболее интересным является параметр PostData, позволяющий передать на Web-Server данные, полученные в результате заполнения формы, если этот сервер требует HTTP - транзакции POST. Например, следующий фрагмент кода передает на сервер имя пользователя и пароль, заполненные в форме Delphi</p>
 <pre>
 var
   LoginDialog: TLoginDialog;
@@ -48,7 +48,7 @@ finally
 end;
 </pre>
 
-<p>На Web-сервере этот запрос может быть обработан, например, следующим ASP &#8211; скриптом:</p>
+<p>На Web-сервере этот запрос может быть обработан, например, следующим ASP - скриптом:</p>
 <pre>  Dim sConnect
   Dim sUserName
   Dim sPassword
@@ -74,20 +74,20 @@ procedure TWebBrowser.ExecWB(
 
 <p>CmdID может быть одной из констант OLECMDID, определенных в файле ShDocVw.pas.</p>
 <p>Параметр cmdexecopt может принимать одно из следующих четырех значений:</p>
-<p>OLECMDEXECOPT_DODEFAULT &nbsp; &nbsp; &nbsp; &nbsp;Выполнить команду с настройками «по умолчанию» &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>OLECMDEXECOPT_PROMPTUSER &nbsp; &nbsp; &nbsp; &nbsp;Запросить у пользователя настройки для выполнения команды (например, при печати &#8211; вывести диалог Print Setup) &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>OLECMDEXECOPT_DONTPROMPTUSER &nbsp; &nbsp; &nbsp; &nbsp;Выполнить команду не запрашивая пользователя &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>OLECMDEXECOPT_SHOWHELP &nbsp; &nbsp; &nbsp; &nbsp;Вывести справку о команде &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Параметры pvaIn и pvaOut &#8211; дополнительные и зависят от конкретной команды.</p>
+<p>OLECMDEXECOPT_DODEFAULT        Выполнить команду с настройками «по умолчанию»</p>
+<p>OLECMDEXECOPT_PROMPTUSER        Запросить у пользователя настройки для выполнения команды (например, при печати - вывести диалог Print Setup)</p>
+<p>OLECMDEXECOPT_DONTPROMPTUSER        Выполнить команду не запрашивая пользователя</p>
+<p>OLECMDEXECOPT_SHOWHELP        Вывести справку о команде</p>
+<p>Параметры pvaIn и pvaOut - дополнительные и зависят от конкретной команды.</p>
 <p>Имеется возможность запросить у TWebBrowser доступность той или иной команды при помощи функции:</p>
 <p>function TWebBrowser.QueryStatusWB(</p>
-<p>  cmdID: OLECMDID&nbsp;&nbsp; // идентификатор команды</p>
+<p>  cmdID: OLECMDID   // идентификатор команды</p>
 <p>): OLECMDF; safecall;</p>
 <p>Функция возвращает битовую маску из следующих значений:</p>
-<p>OLECMDF_SUPPORTED &nbsp; &nbsp; &nbsp; &nbsp;Команда поддерживается &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>OLECMDF_ENABLED &nbsp; &nbsp; &nbsp; &nbsp;Команда поддерживается и разрешена &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>OLECMDF_LATCHED &nbsp; &nbsp; &nbsp; &nbsp;Команда &#8211; переключатель и сейчас включена &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>OLECMDF_NINCHED &nbsp; &nbsp; &nbsp; &nbsp;Зарезервировано &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>OLECMDF_SUPPORTED        Команда поддерживается</p>
+<p>OLECMDF_ENABLED        Команда поддерживается и разрешена</p>
+<p>OLECMDF_LATCHED        Команда - переключатель и сейчас включена</p>
+<p>OLECMDF_NINCHED        Зарезервировано</p>
 <p>Таким образом, можно настраивать интерфейс, в зависимости от поддерживаемых текущей версией TWebBrowser возможностей:</p>
 <pre>
 var
@@ -158,7 +158,7 @@ end;
 
 <p>Использование недокументированного вызова в данном случае оправдано, т.к. в версии 4 этот вызов уже не будет изменяться, а в версию 5 мы обнаруживаем и используем документированный метод. В то же время IE4 еще достаточно распространен и совсем лишать программу возможности поиска на таких компьютерах не оправдано.</p>
 Тонкая настройка</p>
-<p>Если необходима более тонкая настройка компонента &#8211; необходимо реализовать интерфейс IDocHostUIHandler, позволяющий программисту взять под контроль поведение TWebBrowser.</p>
+<p>Если необходима более тонкая настройка компонента - необходимо реализовать интерфейс IDocHostUIHandler, позволяющий программисту взять под контроль поведение TWebBrowser.</p>
 <p>Интерфейс объявлен как:</p>
 <pre>
 type
@@ -237,9 +237,9 @@ type
 <p>function ShowContextMenu(const dwID: DWORD; const ppt: PPOINT;</p>
 <p>  const pcmdtReserved: IUnknown;</p>
 <p>  const pdispReserved: IDispatch): HRESULT;</p>
-<p>Эта функция вызывается, когда TWebBrowser должен показать контекстное меню. Если Вы отображаете собственное меню, либо хотите подавить меню &#8211; функция должна вернуть S_OK, если меню должен показать TWebBrowser &#8211; S_FALSE.</p>
+<p>Эта функция вызывается, когда TWebBrowser должен показать контекстное меню. Если Вы отображаете собственное меню, либо хотите подавить меню - функция должна вернуть S_OK, если меню должен показать TWebBrowser - S_FALSE.</p>
 <p>В неё передаются следующие параметры:</p>
-<p>DwID &#8211; идентификатор меню, который может принимать одно из следующих значений:</p>
+<p>DwID - идентификатор меню, который может принимать одно из следующих значений:</p>
 <p>const</p>
 <p>  CONTEXT_MENU_DEFAULT = 0;</p>
 <p>  CONTEXT_MENU_IMAGE = 1;</p>
@@ -250,10 +250,10 @@ type
 <p>  CONTEXT_MENU_ANCHOR = 6;</p>
 <p>  CONTEXT_MENU_IMGDYNSRC = 7;</p>
 <p>в зависимости от значения идентификатора Вы можете вывести подходящее меню</p>
-<p>ppt &#8211; координаты, в которых должно быть показано меню</p>
-<p>pcmdtReserved &#8211; интерфейс IOleCommandTarget, позволяющий запросить состояние команд и их выполнение</p>
-<p>pdispReserved &#8211; интерфейс IDispatch объекта, для которого вызывается меню</p>
-<p>Простейшая реализация&nbsp;&nbsp;&nbsp; этого метода может выглядеть следующим образом:</p>
+<p>ppt - координаты, в которых должно быть показано меню</p>
+<p>pcmdtReserved - интерфейс IOleCommandTarget, позволяющий запросить состояние команд и их выполнение</p>
+<p>pdispReserved - интерфейс IDispatch объекта, для которого вызывается меню</p>
+<p>Простейшая реализация    этого метода может выглядеть следующим образом:</p>
 <pre>
 function TcustomizedWebBrowser.ShowContextMenu(const dwID: DWORD;
   const ppt: PPOINT;  const pcmdtReserved: IUnknown; 
@@ -280,32 +280,32 @@ TDocHostInfo = packed record
 end;
 </pre>
 
-<p>dwFlags &#8211; битовая маска из следующих флагов:</p>
-<p>DOCHOSTUIFLAG_DIALOG &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Запрещает выделение текста в форме &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIFLAG_DISABLE_HELP_MENU &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Запрещает контекстное меню &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIFLAG_NO3DBORDER &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Подавляет вывод 3-мерной рамки вокруг компонента &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIFLAG_SCROLL_NO &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Отключает полосы прокрутки &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIFLAG_DISABLE_SCRIPT_INACTIVE &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Запрещает исполнение скриптов  &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIFLAG_OPENNEWWIN &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Открывает ссылки в новых окнах &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIFLAG_FLAT_SCROLLBAR &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Использует плоский стиль для полос прокрутки &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIFLAG_DIV_BLOCKDEFAULT &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>При вводе возврата каретки в режиме редактирования будет использоваться тег &lt;DIV &gt;, вместо &lt;P&gt; &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIFLAG_ACTIVATE_CLIENTHIT_ONLY &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Компонент получает фокус только при щелчке мышью в клиентской области окна. При щелчке в не клиентской области (например на полосе прокрутке) компонент фокуса не получает. &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>dwFlags - битовая маска из следующих флагов:</p>
+<p>DOCHOSTUIFLAG_DIALOG</p>
+<p>Запрещает выделение текста в форме</p>
+<p>DOCHOSTUIFLAG_DISABLE_HELP_MENU</p>
+<p>Запрещает контекстное меню</p>
+<p>DOCHOSTUIFLAG_NO3DBORDER</p>
+<p>Подавляет вывод 3-мерной рамки вокруг компонента</p>
+<p>DOCHOSTUIFLAG_SCROLL_NO</p>
+<p>Отключает полосы прокрутки</p>
+<p>DOCHOSTUIFLAG_DISABLE_SCRIPT_INACTIVE</p>
+<p>Запрещает исполнение скриптов</p>
+<p>DOCHOSTUIFLAG_OPENNEWWIN</p>
+<p>Открывает ссылки в новых окнах</p>
+<p>DOCHOSTUIFLAG_FLAT_SCROLLBAR</p>
+<p>Использует плоский стиль для полос прокрутки</p>
+<p>DOCHOSTUIFLAG_DIV_BLOCKDEFAULT</p>
+<p>При вводе возврата каретки в режиме редактирования будет использоваться тег &lt;DIV &gt;, вместо &lt;P&gt;</p>
+<p>DOCHOSTUIFLAG_ACTIVATE_CLIENTHIT_ONLY</p>
+<p>Компонент получает фокус только при щелчке мышью в клиентской области окна. При щелчке в не клиентской области (например на полосе прокрутке) компонент фокуса не получает.</p>
 <p>dwDoubleClick задает реакцию на двойной щелчок мышью и может принимать одно из следующих значений:</p>
-<p>DOCHOSTUIDBLCLK_DEFAULT &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Выполнять действие «по умолчанию» &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIDBLCLK_SHOWPROPERTIES &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Показывать окно свойств страницы &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>DOCHOSTUIDBLCLK_SHOWCODE DOCHOSTUIFLAG_DIALOG &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Показывать HTML-код страницы &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>DOCHOSTUIDBLCLK_DEFAULT</p>
+<p>Выполнять действие «по умолчанию»</p>
+<p>DOCHOSTUIDBLCLK_SHOWPROPERTIES</p>
+<p>Показывать окно свойств страницы</p>
+<p>DOCHOSTUIDBLCLK_SHOWCODE DOCHOSTUIFLAG_DIALOG</p>
+<p>Показывать HTML-код страницы</p>
 <p>Метод должен вернуть S_OK или код ошибки OLE</p>
 <p>Например, чтобы создать окно с плоскими полосами прокрутки и без 3-мерной рамки необходимо реализовать этот метод следующим образом:</p>
 <pre>
@@ -363,7 +363,7 @@ end;
 <p>HKCU\Software\Microsoft\Internet Explorer\PageSetup</p>
 <p>перед печатью и восстановление их после печати.</p>
 <p>function GetExternal(var ppDispatch: IDispatch): HRESULT; stdcall;</p>
-<p>Позволяет вернуть указатель на реализованный в Вашем приложении интерфейс IDispatch, который будет доступен для скриптов в TWebBrowser. Если Вы не реализуете этого интерфейса &#8211; параметр ppDispatch должен быть инициализирован в NIL. Метод возвращает S_OK в случае успеха или код ошибки OLE в случае ошибки.</p>
+<p>Позволяет вернуть указатель на реализованный в Вашем приложении интерфейс IDispatch, который будет доступен для скриптов в TWebBrowser. Если Вы не реализуете этого интерфейса - параметр ppDispatch должен быть инициализирован в NIL. Метод возвращает S_OK в случае успеха или код ошибки OLE в случае ошибки.</p>
 <p>Методы этого интерфейса доступны из скриптов, выполняющихся в TWebBrowser следующим образом:</p>
 <p>window.external.MethodName</p>
 <p>Реализовать IDispatch можно, например, при помощи класса TAutoObject.</p>
@@ -382,7 +382,7 @@ end;
 <p> Document: IHtmlDocument2;</p>
 <p>...</p>
 <p>Document := WebBrowser.Document as IHtmlDocument2;</p>
-<p>Документ в DOM представляет из себя набор коллекций элементов. Для доступа к коллекции служит интерфейс IHtmlElementCollection, а к элементу коллекции &#8211; IHtmlElement. Следующий пример выводит все тэги, имеющиеся в текущем документе и текст внутри тэгов.</p>
+<p>Документ в DOM представляет из себя набор коллекций элементов. Для доступа к коллекции служит интерфейс IHtmlElementCollection, а к элементу коллекции - IHtmlElement. Следующий пример выводит все тэги, имеющиеся в текущем документе и текст внутри тэгов.</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
 var
@@ -456,7 +456,7 @@ end;
 <p>В Memo1.Lines в дизайнере запишем следующий текст:</p>
 <p>&lt;HTML&gt;</p>
 <p>  &lt;HEAD&gt;</p>
-<p> &nbsp;&nbsp; &lt;TITLE&gt;Hello World&lt;/TITLE&gt;</p>
+<p>    &lt;TITLE&gt;Hello World&lt;/TITLE&gt;</p>
 <p>  &lt;/HEAD&gt;</p>
 <p>  &lt;BODY&gt;</p>
 <p>Hello again !</p>

@@ -3,7 +3,7 @@
 
 
 <p>Используйте Win32_Find_Data поле TSearchRec. <br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
              procedure TForm1.Button1Click(Sender: TObject); 
              var 
@@ -72,6 +72,6 @@ end;
 end.
 </pre>
 &copy;Drkb::03166
-&nbsp;
+ 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Rouse_</div>

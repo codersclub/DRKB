@@ -109,9 +109,9 @@ begin
    ApiScrCapture('1.bmp');
 end.
 </pre>
-&nbsp;<br>
+ <br>
 
-<p>&nbsp;<br>
+<p> <br>
 Автор: Arazel <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr />

@@ -25,11 +25,11 @@
      end;
    End;
 </pre>
-&nbsp;</p>
+</p>
 Использование:</p>
-&nbsp;</p>
+</p>
 <pre>
   chDir(ExtractFileDir(Application.Exename));
   ConcatFiles('sum.txt', ['project1.dpr','unit1.pas','unit2.pas']);
 </pre>
-&nbsp;</p>
+</p>

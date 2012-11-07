@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 function GetCheckSum(FileName: string): DWORD; 
 var 
   F: file of DWORD; 

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { 
   Example of calculating a simple checksum. 
   Beispiel, wie eine einfache Checksumme berechnet werden kann. 

@@ -4,13 +4,13 @@
 
 <pre>{ **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Определение видеокарты
-&nbsp;
+ 
 Зависимости: Windows
-Автор:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gua, gua@ukr.net, ICQ:141585495, Simferopol
-Copyright:&nbsp;&nbsp; Gua
-Дата:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18 июля 2002 г.
+Автор:       Gua, gua@ukr.net, ICQ:141585495, Simferopol
+Copyright:   Gua
+Дата:        18 июля 2002 г.
 ********************************************** }
-&nbsp;
+ 
 function GetDisplayDevice: string;
 var
   lpDisplayDevice: TDisplayDevice;

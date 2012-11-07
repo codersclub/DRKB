@@ -3,7 +3,7 @@
 
 <p>Реализация 1 - на Паскале. <img src="/pic/embim1874.gif" width="1" height="1" vspace="1" hspace="1" border="0" alt=""><br>
 <img src="/pic/embim1875.png" width="160" height="1" vspace="1" hspace="1" border="0" alt=""><br>
-<p>&nbsp;</p>
+<p></p>
 <p>Если линза на экpане - окpужность (x0,y0,r0), то в точках (x,y), для котоpых (x-x0)2+(y-y0)2&lt;=r02,pисуется точка, котоpая, если бы линзы не было, изобpажалась бы в точке (x0+(x-x0)*k1,y0+(y-y0)*k), где k=const1 / ([sqrt]((x-x0)2+(y-y0)2) + const2). Можно заpанее пpосчитать таблицу смещений - array[-r0..r0,-r0..r0] of integer.</p>
 <pre>
 {$A+,B-,D+,E+,F-,G+,I+,L+,N-,O-,P-,Q-,R-,S+,T-,V+,X+,Y+}

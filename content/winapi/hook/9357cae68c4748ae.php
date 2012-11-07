@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-&nbsp;</p>
+</p>
 <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td>Setup.bat</td></tr></table></div>
 <pre>
 @echo off
@@ -181,7 +181,7 @@ end;
  
 end.
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 library Hook;

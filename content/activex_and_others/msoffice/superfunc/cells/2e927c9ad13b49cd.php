@@ -1,9 +1,9 @@
 <h1>Выравнивание текста в ячейке Excel</h1>
 <div class="date">01.01.2007</div>
 
-<p>Выравнивание текста в ячейке</p>
-Следующим шагом изменения режима отображения данных в ячейках книги Excel рассмотрим выравнивание текста по горизонтали и вертикали. Для выравнивания по горизонтали используется свойство HorizontalAlignment объекта Range, которое применяем в функции SetHorizontalAlignment. Если записывать в аргумент alignment:integer этой функции определенные числовые константы, то получим различные варианты выравнивания текста по горизонтали. Смотрите список констант и функцию, реализующую выравнивание текста по горизонтали.</p>
-<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><pre>const
+<p>Следующим шагом изменения режима отображения данных в ячейках книги Excel рассмотрим выравнивание текста по горизонтали и вертикали. Для выравнивания по горизонтали используется свойство HorizontalAlignment объекта Range, которое применяем в функции SetHorizontalAlignment. Если записывать в аргумент alignment:integer этой функции определенные числовые константы, то получим различные варианты выравнивания текста по горизонтали. Смотрите список констант и функцию, реализующую выравнивание текста по горизонтали.</p>
+
+<pre class="delphi">const
  xlHAlignCenter=-4108;
  xlHAlignDistributed=-4117;
  xlHAlignJustify=-4130;
@@ -18,15 +18,16 @@ begin
  SetHorizontalAlignment:=true;
  try
   E.ActiveWorkbook.Sheets.Item[sheet].Range
- &nbsp; [range].HorizontalAlignment:=alignment;
+   [range].HorizontalAlignment:=alignment;
  except
   SetHorizontalAlignment:=false;
  end;
 End;
 </pre>
-&nbsp;</p>
-Для выравнивания по вертикали используем свойство VerticalAlignment объекта Range. Смотрите набор констант и функцию SetVerticalAlignment.</p>
-<div style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><pre>const
+
+<p>Для выравнивания по вертикали используем свойство VerticalAlignment объекта Range. Смотрите набор констант и функцию SetVerticalAlignment.</p>
+
+<pre class="delphi">const
  xlVAlignBottom=-4107;
  xlVAlignCenter=-4108;
  xlVAlignDistributed=-4117;
@@ -38,10 +39,9 @@ begin
  SetVerticalAlignment:=true;
  try
   E.ActiveWorkbook.Sheets.Item[sheet].Range
- &nbsp; [range].VerticalAlignment:=alignment;
+   [range].VerticalAlignment:=alignment;
  except
   SetVerticalAlignment:=false;
  end;
 End;
 </pre>
-&nbsp;</p>

@@ -79,7 +79,7 @@ finally
  EmptyClipBoard;
 end;
 </pre>
-&nbsp;</p>
+</p>
 <div class="author">Автор: Song</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <hr /><p>Еще один способ получения скриншота окна, на чистом WinApi:</p>

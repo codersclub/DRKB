@@ -56,9 +56,9 @@ begin
 end;
 </pre>
 &copy;Drkb::02133</p>
-<p>&nbsp;<br>
+<p> <br>
 PS только для NT4 и выше. Для Win9x юзать GetWindowModuleFileName.<br>
-&nbsp;<br>
+ <br>
 <div class="author">Автор: Krid</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
-<p>&nbsp;</p>
+<p></p>

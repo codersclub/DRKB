@@ -296,7 +296,7 @@ begin
   end;
 end.
 </pre>
-&nbsp;</p>
+</p>
 
 <hr />
 
@@ -710,17 +710,17 @@ end.
 <p>Прежде всего создайте новый, пустой проект, выбрав пункт New Project из меню File. (Если вы находитесь в репозитарии, выберите "Blank project".)</p>
 <p>Конфигурационная форма</p>
 <p>Первое, что видит большинство людей при запуске хранителя экрана - диалог настройки. В нем пользователь может определить значения для специфических опций хранителя экрана. Для того, чтобы создать такую форму, измените свойства Form1 (создается автоматически при создании нового проекта) как показано ниже:</p>
-<p>BorderIcons&nbsp;&nbsp;&nbsp;&nbsp; [biSystemMenu]</p>
-<p>  biSystemMenu&nbsp; True</p>
-<p>  biMinimize&nbsp;&nbsp;&nbsp; False</p>
-<p>  biMaximize&nbsp;&nbsp;&nbsp; False</p>
-<p>BorderStyle&nbsp;&nbsp;&nbsp;&nbsp; bsDialog</p>
-<p>Caption&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Configuration</p>
-<p>Height&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 162</p>
-<p>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CfgFrm</p>
-<p>Position&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; poScreenCenter</p>
-<p>Visible&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False</p>
-<p>Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 266</p>
+<p>BorderIcons     [biSystemMenu]</p>
+<p>  biSystemMenu  True</p>
+<p>  biMinimize    False</p>
+<p>  biMaximize    False</p>
+<p>BorderStyle     bsDialog</p>
+<p>Caption         Configuration</p>
+<p>Height          162</p>
+<p>Name            CfgFrm</p>
+<p>Position        poScreenCenter</p>
+<p>Visible         False</p>
+<p>Width           266</p>
 <p>Нам необходимо предоставить возможность изменять максимальное количество сфер, выводимых на экране, их размер и скорость рисования. Для того, чтобы это сделать, добавьте следующие три компонента Label (из палитры Standard) и компонент SpinEdit (из палитры Samples): (Примечание: Для быстрого размещения этих компонентов на форме скопируйте этот текст в буфер обмена и замените текст описания формы, выводимый при нажатии на пункт меню "View as Text" контекстного меню формы.)</p>
 <pre>
 object Label1: TLabel
@@ -917,15 +917,15 @@ end; {TCfgFrm.btnTestClick}
 <p>Затем добавьте "Scrn" в список используемых модулей в секции реализации. Scrn - это модуль формы хранителя экрана, который мы создадим в следующем шаге. Ну а пока сохраните созданный нами модуль с именем "Cfg", выбрав пункт "Save File As" в меню "File".</p>
 <p>Форма хранителя экрана</p>
 <p>Сам хранитель экрана будет просто большой, черной формой без заголовка, занимающей весь экран, на котором и будет разворачиваться наше представление. Для того, чтобы создать вторую форму, выберите пункт New Form в меню File или "Blank form" в репозитарии.</p>
-<p>BorderIcons&nbsp;&nbsp;&nbsp;&nbsp; []</p>
-<p>  biSystemMenu&nbsp; False</p>
-<p>  biMinimize&nbsp;&nbsp;&nbsp; False</p>
-<p>  biMaximize&nbsp;&nbsp;&nbsp; False</p>
-<p>BorderStyle&nbsp;&nbsp;&nbsp;&nbsp; bsNone</p>
-<p>Color&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clBlack</p>
-<p>FormStyle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fsStayOnTop</p>
-<p>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ScrnFrm</p>
-<p>Visible&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False</p>
+<p>BorderIcons     []</p>
+<p>  biSystemMenu  False</p>
+<p>  biMinimize    False</p>
+<p>  biMaximize    False</p>
+<p>BorderStyle     bsNone</p>
+<p>Color           clBlack</p>
+<p>FormStyle       fsStayOnTop</p>
+<p>Name            ScrnFrm</p>
+<p>Visible         False</p>
 <p>Расположите на форме единственный Delphi компонент - таймер из палитры System. Установите его свойства как указано ниже:</p>
 <pre>
 object tmrTick: TTimer

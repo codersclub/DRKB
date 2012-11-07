@@ -37,12 +37,12 @@ end;
  
 Str := DelSpaces(Str); 
 </pre>
-&nbsp;</p>
+</p>
 <hr />
 <p class="p_Heading1">Изобретателям велосипеда посвящается:</p>
-<p class="p_Heading1">&nbsp;</p>
+<p class="p_Heading1"></p>
 <p class="p_Heading1">TrimRight - удаляет пробелы в начале строки, в том числе и в юникодных строках</p>
 <p class="p_Heading1">TrimLeft - удаляет пробелы в конце строки, в том числе и в юникодных строках</p>
 <p class="p_Heading1">Trim - удаляет пробелы в начале и в коце строки, в том числе и в юникодных строках</p>
 <div class="author">Автор: Vit</div>
-<p class="p_Heading1">&nbsp;</p>
+<p class="p_Heading1"></p>

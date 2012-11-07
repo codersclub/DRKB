@@ -99,7 +99,7 @@ end;
 end.
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 Автор: Rouse_<br>
 

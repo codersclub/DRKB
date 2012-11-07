@@ -44,13 +44,13 @@ begin
   end;
 end;
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
+ <br>
 Параметры: путь к объекту, имя пользователя, маска доступа, ее расчитываешь вот так:<br>
 http://msdn.microsoft.com/library/default....access_mask.asp<br>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
 <div class="author">Автор: Александр (Rouse_) Багель</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
 

@@ -12,14 +12,14 @@
 <p>Для начала начнем новый проект File, New Application; File, Save All. Создадим отдельную папку для проекта и сохраним Unit1 как Main, а Project1 как WordWriter.</p>
 <p>Далее для работы с Word-ом нам потребуется библиотека типов Word-а, это делается так:</p>
 <p>Project, Import Type Library, Add, далее переходим в папку, где стоит Word ( у меня это - "c:\program files\microsoft office) , заходим в папку Office и выбираем файл - msword8.olb (цифра -? версии Word-а - у Вас может отличаться ) или excel8.olb (для Excel).Нажимаем Оk. Delphi создаст 2 файла - Word_tlb.pas и Office_tlb.pas, их надо включить в раздел uses модуля Main нашего проекта:</p>
-<pre>
+<pre class="delphi">
 uses ... ,Office_Tlb, word_tlb;
 </pre>
 
 
 <p>в). Теперь займемся непосредственно программированием.</p>
 <p>В разделе var опишем следующие переменные:</p>
-<pre>
+<pre class="delphi">
 // класс приложения ворда
 WordApp:Word_tlb.Application_;
 // класс чего-то типа выделения,
@@ -59,7 +59,7 @@ i:integer;
 <p>Теперь напашем обработчики - именно в них и заключается вся функциональность программы:</p>
 
 <p>1. Назначим обработчик OnClick компоненту Button1 :</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 // если заголовок 'Выход', то закрываем программу
@@ -131,7 +131,7 @@ end;
 
 
 <p>2. Зададим обработчик формы:</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.FormDestroy(Sender: TObject);
 var
    // для параметров
@@ -161,7 +161,7 @@ end;
 </pre>
 
 <p>3. Назначим обработчик OnClick компоненту Bitbtn1 :</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.BitBtn1Click(Sender: TObject);
 begin
 // в соотв ячейку ставим соотв значение, 

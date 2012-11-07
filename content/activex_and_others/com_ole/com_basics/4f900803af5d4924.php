@@ -3,7 +3,8 @@
 
 
 <p>Ура. До нас и за нас все уже стандатизировали. Давайте этим воспользуемся и напишим теперь наш модуль в постандарту. Напишим dll.</p>
-<pre>library CalcDll;
+
+<pre class="delphi">library CalcDll;
 uses SysUtils, Classes;
 type
 MyCalc=class
@@ -57,7 +58,7 @@ end.
 </pre>
 
 <p>Напишим программку - протестировать наш модуль.</p>
-<pre>unit tstcl;
+<pre class="delphi">unit tstcl;
 interface
 uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls;
 type

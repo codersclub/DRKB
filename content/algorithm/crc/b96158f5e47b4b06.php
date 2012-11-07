@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 // The constants here are for the CRC-32 generator 
 // polynomial, as defined in the Microsoft 
 // Systems Journal, March 1995, pp. 107 - 108 
@@ -174,7 +174,7 @@ end;
 
 
 <hr />
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Быстрый алгоритм подсчета CRC32
  
@@ -270,7 +270,7 @@ end.
 </pre>
 
 <p> Пример использования:</p>
-<pre>
+<pre class="delphi">
 uses
   CRCunit;
 procedure TForm1.Button1Click(Sender: TObject);
@@ -283,7 +283,7 @@ end;
  
 </pre>
 <hr />
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; Расчёт контрольной суммы файла CRC-32
  

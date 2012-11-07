@@ -40,7 +40,7 @@ begin
 
 <p>  Прежде чем поступит команда startpage()(см.модуль printers.pas в каталоге Source\VCL), вы можете передать принтеру следующий код:</p>
 
-<p> &nbsp;&nbsp; DevMode.dmPaperSize := DMPAPER_LEGAL</p>
+<p>    DevMode.dmPaperSize := DMPAPER_LEGAL</p>
 <p>{сброс настроек}</p>
 
 <p>  Windows.ResetDc(dc, Devmode^);</p>

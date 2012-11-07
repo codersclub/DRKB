@@ -87,11 +87,11 @@ CommBlock, NewCommBlock: TCommBlock;
 RecThread: TIdPeerThread;
 i, ConnN: Integer;
 itmp: integer;
-&nbsp;
+ 
 begin
 if not AThread.Terminated and AThread.Connection.Connected then
 begin
-&nbsp;
+ 
 AThread.Connection.ReadBuffer (CommBlock, SizeOf (CommBlock));
 ActClient := PClient(AThread.Data);
 ActClient.LastAction := Now; // update the time of last action
@@ -279,7 +279,7 @@ if RusCompare(CB.Command,'MESSAGE') Or (RusCompare(CB.Command,cmdSendPrav)) or (
 (RusCompare(CB.Command,cmdReconnected)) or (RusCompare(CB.Command,cmdReconnectedAll))
 or (RusCompare(CB.Command,cmdSetOcenk))
 or RusCompare(CB.Command, cmdRegComp)
-&nbsp;
+ 
 then Str.Add (CB.MyUserName + ': ' + CB.Msg)
 else
 if RusCompare(CB.Command,'DIALOG') then
@@ -294,7 +294,7 @@ end;
 <p>В обработчике щелчка кнопки опишем команду посылки сообщения:</p>
 <pre>var
 CommBlock : TCommBlock;
-&nbsp;
+ 
 begin
 inherited;
 // Команда, которую мы посылаем
@@ -307,7 +307,7 @@ CommBlock.Msg := EditMessage.Text;
 CommBlock.ReceiverName := EditRecipient.Text;
 // Название компьютера, который посылает сообщение 
 CommBlock.ComputerName := RusUpperCase(Client.LocalName);
-&nbsp;
+ 
 Client.WriteBuffer (CommBlock, SizeOf (CommBlock), true);
 end; 
 </pre>

@@ -15,7 +15,7 @@
 <p>• "перетаскиванием" объекта из сервера OLE в форму, содержащую контейнер, с помощью Drag&amp;Drop;</p>
 <p>• помещением объекта из буфера обмена (посредством вызова диалога PasteSpecialDIg).</p>
 <p>Общим является то, что во всех трех способах формируется поначалу определенная структура данных (типа BOLEInitInfo). Она является "визитной кар</p>
-<p>точкой" сервера OLE и его данных. Как только &nbsp; &nbsp; &nbsp; &nbsp;значение указателя на нее присваивается свойству контейнера property PInitInfo: Pointer;</p>
+<p>точкой" сервера OLE и его данных. Как только        значение указателя на нее присваивается свойству контейнера property PInitInfo: Pointer;</p>
 <p>происходит процесс внедрения или связывания объекта. При этом может произойти активизация сервера. Несколько примеров использования этого свойства рассмотрено ниже.</p>
 <p>Сразу после присвоения значения свойству контейнера PInitInfo потребность в созданной структуре отпадает. Ее можно уничтожить при помощи процедуры:</p>
 <p>procedure ReleaseOLEInitInfо(PInitInfo: Pointer);</p>
@@ -63,11 +63,11 @@ end;
 <p>fmtResultName &#8212; имя формата, которое появится в комментариях внутри этого диалога. Например, если значение fmtResultName равно "Bitmap", то пользователь получит примерно следующий комментарий: "Inserts the contents of the Clipboard into your document as Bitmap";</p>
 <p>fmtIsLinkable &#8212; показывает, могут ли данные в этом формате играть роль связанных объектов.</p>
 <p>fmtMedium &#8212; константа, идентифицирующая тип данных в буфере обмена. Связана со значением поля fmtid следующим образом:</p>
-<p>BOLEMEDSTREAM &nbsp; &nbsp; &nbsp; &nbsp;Связанные объекты OLE. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>BOLEMEDSTORAGE &nbsp; &nbsp; &nbsp; &nbsp;Внедренные объекты OLE. &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>BOLEMEDMFPICT &nbsp; &nbsp; &nbsp; &nbsp;Метафайлы (CF.METAFILEPICT). &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>BOLEMEDGDI &nbsp; &nbsp; &nbsp; &nbsp;Графические данные (CF BITMAP, CF SYLK, CF DIP, CF TIFF, CF DIB, CF PALETTE, CF PENDATA, CFJUFF, CFWAVE). &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>BOLEMEDHGLOBAL &nbsp; &nbsp; &nbsp; &nbsp;Все прочие данные. &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>BOLEMEDSTREAM        Связанные объекты OLE.</p>
+<p>BOLEMEDSTORAGE        Внедренные объекты OLE.</p>
+<p>BOLEMEDMFPICT        Метафайлы (CF.METAFILEPICT).</p>
+<p>BOLEMEDGDI        Графические данные (CF BITMAP, CF SYLK, CF DIP, CF TIFF, CF DIB, CF PALETTE, CF PENDATA, CFJUFF, CFWAVE).</p>
+<p>BOLEMEDHGLOBAL        Все прочие данные.</p>
 <p>Специально для вычисления значения поля fmtMedium по формату данных предусмотрена функция:</p>
 <p>function BOLEMediumCalc(frntid: Word): BOLEMedium;</p>
 <p>Заполнить требуемый массив можно, например, так:</p>
@@ -126,11 +126,11 @@ end;
 </pre>
 
 <p>Его свойства приведены в таблице:</p>
-<p>@ property DropForm: TForm;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Определяет форму, в которую перемещены данные. Значение обычно равно Self.</p>
-<p>(Ro) property DropRect: TRect;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Определяет&nbsp; ПрЯМОуГОЛЬНИК,&nbsp; В&nbsp; КОТОрЫН</p>
+<p>@ property DropForm: TForm;       Определяет форму, в которую перемещены данные. Значение обычно равно Self.</p>
+<p>(Ro) property DropRect: TRect;       Определяет  ПрЯМОуГОЛЬНИК,  В  КОТОрЫН</p>
 <p>производилось перемещение. Обычно стягивается в точку, где была отпущена кнопка мыши.</p>
-<p>(Ro) property DataFormat: Word;&nbsp;&nbsp;&nbsp;&nbsp; Определяет формат перемещенных данных. (Ro) property DataHandle: THandle;&nbsp;&nbsp; Содержит дескриптор перемещенных данных.</p>
-<p>(Ro) property pinitinfo: pointer;&nbsp;&nbsp;&nbsp; Содержит указатель на структуру для инициализации.</p>
+<p>(Ro) property DataFormat: Word;     Определяет формат перемещенных данных. (Ro) property DataHandle: THandle;   Содержит дескриптор перемещенных данных.</p>
+<p>(Ro) property pinitinfo: pointer;    Содержит указатель на структуру для инициализации.</p>
 <p>Сброшенные данные могут как представлять объект OLE, так и иметь один из обычных форматов. Логическая взаимосвязь между тремя последними свойствами такая:</p>
 <p>• если получен объект OLE, то в параметре DataFormat возвращается значение -1. В этом случает дескриптор DataHandle недействителен, смысл имеет только свойство PInitInfo;</p>
 <p>• если получены данные в одном из обычных форматов, то свойство DataFormat содержит идентификатор этого формата, DataHandle &#8212; дескриптор соответствующих данных, a PInitInfo имеет значение nil.</p>

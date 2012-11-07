@@ -18,7 +18,9 @@
 <p>Аргументы: [имя] - строка, указывающая имя почтового ящика</p>
 <p>Описание: Передаёт серверу имя пользователя.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK name is a valid mailbox</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR never heard of mailbox name</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK name is a valid mailbox</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR never heard of mailbox name</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: USER MonstrVB</p>
 <p>S: +OK MonstrVB is a real hoopy frood</p>
 <p>...</p>
@@ -29,7 +31,10 @@
 <p>Аргументы: [пароль] - пароль для почтового ящика</p>
 <p>Описание: Передаёт серверу пароль почтового ящика.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK maildrop locked and ready</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR invalid password</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR unable to lock maildrop</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK maildrop locked and ready</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR invalid password</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR unable to lock maildrop</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: USER MonstrVB</p>
 <p>S: +OK MonstrVB is a real hoopy frood</p>
 <p>C: PASS mymail</p>
@@ -44,7 +49,8 @@
 <p>Аргументы: нет</p>
 <p>Описание: Сервер завершает POP3 сессию и переходит в режим UPDATE.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: QUIT</p>
 <p>S: +OK dewey POP3 server signing off</p>
 
@@ -54,7 +60,8 @@
 <p>Аргументы: нет</p>
 <p>Описание: В ответ на вызов команды сервер выдаёт положительный ответ "+OK", за которым следует количество сообщений в почтовом ящике и их общий размер в символах. Сообщения, которые помечены для удаления не учитываются в ответе сервера.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK n s</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK n s</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: STAT</p>
 <p>S: +OK 2 320</p>
 
@@ -62,7 +69,9 @@
 <p>Аргументы: [сообщение] - номер сообщения (необязательный аргумент)</p>
 <p>Описание: Если был передан аргумент, то сервер выдаёт информацию о указанном сообщении. Если аргумент не был передан, то сервер выдаёт информацию о всех сообщениях, находящихся в почтовом ящике. Сообщения, помеченные для удаления не перечисляются.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK scan listing follows</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR no such message</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK scan listing follows</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR no such message</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: LIST</p>
 <p>S: +OK 2 messages (320 octets)</p>
 <p>S: 1 120</p>
@@ -79,7 +88,9 @@
 <p>Аргументы: [сообщение] - номер сообщения</p>
 <p>Описание: После положительного ответа сервер передаёт содержание сообщения.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK message follows</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR no such message</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK message follows</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR no such message</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: RETR 1</p>
 <p>S: +OK 120 octets</p>
 <p>S:</p>
@@ -89,7 +100,9 @@
 <p>Аргументы: [ообщение] - номер сообщения</p>
 <p>Описание: POP3 сервер помечает указанное сообщение как удалённое, но не удалет его, пока сессия не перейдёт в редим UPDATE.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK message deleted</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR no such message</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK message deleted</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>-ERR no such message</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: DELE 1</p>
 <p>S: +OK message 1 deleted</p>
 <p>...</p>
@@ -100,7 +113,8 @@
 <p>Аргументы: нет</p>
 <p>Описание: POP3 сервер ничего не делает и вседа отвечает полжительно.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: NOOP</p>
 <p>S: +OK</p>
 
@@ -108,7 +122,8 @@
 <p>Аргументы: нет</p>
 <p>Описание: Если какие - то сообщения были помечены для удаления, то с них снимается эта метка.</p>
 <p>Возможные ответы:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK</td></tr></table></div><p>Примеры:</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>+OK</td></tr></table></div>
+<p>Примеры:</p>
 <p>C: RSET</p>
 <p>S: +OK maildrop has 2 messages (320 octets)</p>
 

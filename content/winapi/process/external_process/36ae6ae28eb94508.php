@@ -40,8 +40,8 @@ begin
 end.
 </pre>
 
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 <p>Приложение:</p>
 <pre>
 ////////////////////////////////////////////////////////////////////////////////
@@ -294,8 +294,8 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <p class="author">Автор: Rouse_<br>
-&nbsp;<br>
+ <br>
 <p>Проект также доступен по адресу: http://rouse.front.ru/injectlib.zip</p>

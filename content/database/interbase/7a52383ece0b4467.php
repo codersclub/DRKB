@@ -12,9 +12,9 @@
 
 <pre>  CREATE TABLE WITHBLOB
   (
- &nbsp;&nbsp; ID CHAR(3) NOT NULL PRIMARY KEY,
- &nbsp;&nbsp; MEMO BLOB SUB_TYPE 1,
- &nbsp;&nbsp; AMOUNT NUMERIC
+    ID CHAR(3) NOT NULL PRIMARY KEY,
+    MEMO BLOB SUB_TYPE 1,
+    AMOUNT NUMERIC
   )
 </pre>
 
@@ -35,8 +35,8 @@
 
 <p>При определении объектов TField для InterBase BLOB-полей в Delphi, следует относить различные подтипы BLOB-поля к производным типам TField следующим образом:</p>
 
-<p>  Подтип 0:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TBlobField</p>
-<p>  Подтип 1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TMemoField</p>
+<p>  Подтип 0:         TBlobField</p>
+<p>  Подтип 1:         TMemoField</p>
 <p>  Пользовательский: TBlobField</p>
 
 <p>Поскольку, как встроенный подтип 0, так и пользовательский подтип, относятся к объектам TBlobField, то забота об определении используемого подтипа во время проектирования приложения ложится на программиста. Единственный способ отличить подтип 0 от пользовательского подтипа заключается в просмотре информации о метаданных таблицы, что не может быть сделано с помощью Delphi. Для просмотра метаданных таблицы может быть использована утилита Local InterBase Server под названием WISQL.</p>

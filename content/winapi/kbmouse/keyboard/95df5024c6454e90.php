@@ -1960,7 +1960,7 @@ end.
  
 SendKeys('A', False); 
 </pre>
-<p>&nbsp;</p>
+<p></p>
 
 <hr />
 

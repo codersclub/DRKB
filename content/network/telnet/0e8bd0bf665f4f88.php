@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 <p>Учимся работать с POP3 по telnetу.</p>
-<p> &nbsp;&nbsp; Как люди получают почту, другими словами, вы никогда не задумывались,</p>
+<p>    Как люди получают почту, другими словами, вы никогда не задумывались,</p>
 <p> что делает ваш почтовый клиент в интернете, чтобы получить ее?</p>
 <p> Я попытаюсь удовлетворить ваше любопытство...</p>
 <p> Возможно будет несколько незнакомых терминов, но для их понимания советую</p>
@@ -10,7 +10,7 @@
 <p> Итак, в настройках почтового клиента вы вводите</p>
 <p> smtp_server ( сервер для передачи писем, написанных вами )</p>
 <p> pop3_server ( вот с ним-то мы и поэкспериментируем )</p>
-<p> pop3_login&nbsp; ( требуются для регистрации на pop3_server'e )</p>
+<p> pop3_login  ( требуются для регистрации на pop3_server'e )</p>
 <p> pop3_pass</p>
 <p> При отправлении вашей почты клиент создает tcp-соединение</p>
 <p> с адресом smtp_server порт 25 и грубо говоря пихает в этот порт вашу почту</p>
@@ -30,39 +30,39 @@
 <p> Далее, получив приглашение</p>
 <p> +OK sendmail POP3 Server (Version F.U.C.K) ready at &lt;01.01.80&gt;</p>
 <p> мы можем вводить команды:</p>
-<p> Команда &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (в качестве ответа на них сервер выдает +OK comments)</p>
-<p> USER pop3_login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Логин пользователя</p>
-<p> PASS pop3_pass&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Пароль пользователя</p>
-<p> LIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Посмотреть состояние ящика</p>
-<p> STAT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Скольно писем и какой объем</p>
-<p> RETR X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Скачать письмо номер X</p>
-<p> TOP&nbsp; X&nbsp; Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Посмотреть Y строчек (начиная с тела) X письма</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( удобно, если ваш ящик забомбили большими файлами,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; и вы можете удалить нужное письмо, не скачивая его)</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В принципе это может делать The Bat! mailer</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( dispatch mail on server )</p>
-<p> DELE X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Удалить письмо с номером X</p>
-<p> QUIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Выход</p>
+<p> Команда              (в качестве ответа на них сервер выдает +OK comments)</p>
+<p> USER pop3_login      Логин пользователя</p>
+<p> PASS pop3_pass       Пароль пользователя</p>
+<p> LIST                 Посмотреть состояние ящика</p>
+<p> STAT                 Скольно писем и какой объем</p>
+<p> RETR X               Скачать письмо номер X</p>
+<p> TOP  X  Y            Посмотреть Y строчек (начиная с тела) X письма</p>
+<p>                      ( удобно, если ваш ящик забомбили большими файлами,</p>
+<p>                      и вы можете удалить нужное письмо, не скачивая его)</p>
+<p>                      В принципе это может делать The Bat! mailer</p>
+<p>                      ( dispatch mail on server )</p>
+<p> DELE X               Удалить письмо с номером X</p>
+<p> QUIT                 Выход</p>
 <p> Теперь мы удовлетворили любопытство и переходим к серьезным вещам.</p>
-<p> 2)&nbsp; если существует проблема с регистрацией, то полные комментарии можно</p>
-<p> &nbsp;&nbsp;&nbsp; получить в отрицательном ответе сервера ("-ERR"), например</p>
-<p> &nbsp;&nbsp;&nbsp; USER lalal</p>
-<p> &nbsp;&nbsp;&nbsp; -ERR invalid usercode or password</p>
+<p> 2)  если существует проблема с регистрацией, то полные комментарии можно</p>
+<p>     получить в отрицательном ответе сервера ("-ERR"), например</p>
+<p>     USER lalal</p>
+<p>     -ERR invalid usercode or password</p>
 <p> 3) Читать чужую почту, по возможности не оставляя следов.</p>
-<p> &nbsp;&nbsp; Используем ТОЛЬКО команды RETR/TOP после регистрации.</p>
-<p> &nbsp;&nbsp; Естественно, не надо удалять письма командой DELE!</p>
-<p> &nbsp;&nbsp; Останутся ли следы ?</p>
-<p> &nbsp;&nbsp; В принципе при скачивании почты в письмо добавляется флаг</p>
-<p> &nbsp;&nbsp; Status: RO</p>
-<p> &nbsp;&nbsp; Он по умолчанию не виден в почтовом клиенте, но если включить что-то</p>
-<p> &nbsp;&nbsp; типа show raw message, то пользователь-параноик может понять, в чем дело.</p>
-<p> &nbsp;&nbsp; =&gt; Если вы получаете почту с таким флагом, значит кто-то ее уже прочитал.</p>
+<p>    Используем ТОЛЬКО команды RETR/TOP после регистрации.</p>
+<p>    Естественно, не надо удалять письма командой DELE!</p>
+<p>    Останутся ли следы ?</p>
+<p>    В принципе при скачивании почты в письмо добавляется флаг</p>
+<p>    Status: RO</p>
+<p>    Он по умолчанию не виден в почтовом клиенте, но если включить что-то</p>
+<p>    типа show raw message, то пользователь-параноик может понять, в чем дело.</p>
+<p>    =&gt; Если вы получаете почту с таким флагом, значит кто-то ее уже прочитал.</p>
 <p> 4) Подбор паролей по POP3</p>
-<p> &nbsp;&nbsp; В некоторых ( в большинстве?) демонах возможно неограниченное число попыток</p>
-<p> &nbsp;&nbsp; регистрации на Pop3 сервере. Само собой, это можно использовать для подбора</p>
-<p> &nbsp;&nbsp; паролей.</p>
-<p> &nbsp;&nbsp; Исходники под Unix pop3hack.c можно найти на www.rootshell.com</p>
+<p>    В некоторых ( в большинстве?) демонах возможно неограниченное число попыток</p>
+<p>    регистрации на Pop3 сервере. Само собой, это можно использовать для подбора</p>
+<p>    паролей.</p>
+<p>    Исходники под Unix pop3hack.c можно найти на www.rootshell.com</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp; Edited on 05/07/1999 23:52:26</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; QWERTY.NANKO.RU</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>      Edited on 05/07/1999 23:52:26</p>
+<p>      QWERTY.NANKO.RU</p>
+<p></p>

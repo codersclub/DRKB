@@ -16,4 +16,5 @@
 
 <p>Надеюсь я помог вам.</p>
 
-<div class="author">Автор: Mike Leftwich (Ensemble Corp)</div><p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
+<div class="author">Автор: Mike Leftwich (Ensemble Corp)</div>
+<p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

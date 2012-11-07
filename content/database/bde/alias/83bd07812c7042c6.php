@@ -36,7 +36,8 @@
 <p>В компоненте TDataSource свойству DataSet присваиваем 'Table1'.</p>
 <p>В компоненте DBGrid свойству DataSource присваиваем 'DataSource1'.</p>
 <p>Создаем в компоненте TButton обработчик события OnClick.</p>
-<pre>
+
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   Table1.Tablename:= 'CUSTOMER';
@@ -48,7 +49,7 @@ end;
 <p>Запускаем приложение.</p>
 <p>*** В качестве альтернативы шагам 3 - 11, вы можете включить все эти действия в сам обработчик:</p>
 
-<pre>
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   Database1.DatabaseName:= 'MyNewAlias';
@@ -74,26 +75,30 @@ end;
 <p>Присваиваем базе данных имя 'MyNewAlias'. Это имя будет выполнять роль псевдонима в свойстве DatabaseName для компонентов типа TTable, TQuery, TStoredProc.</p>
 <p>Выбираем в поле Driver Name (имя драйвера) пункт INTRBASE.</p>
 <p>Щелкаем на кнопке Defaults. Это автоматически добавляет путь (PATH=) в секцию перекрытых параметров (окно Parameter Overrides).</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SERVER NAME=IB_SERVEER:/PATH/DATABASE.GDB</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;USER NAME=MYNAME</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;OPEN MODE=READ/WRITE</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SCHEMA CACHE SIZE=8</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;LANGDRIVER=</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SQLQRYMODE=</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SQLPASSTHRU MODE=NOT SHARED</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SCHEMA CACHE TIME=-1</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;PASSWORD=</p>
+<pre>
+        SERVER NAME=IB_SERVEER:/PATH/DATABASE.GDB
+        USER NAME=MYNAME
+        OPEN MODE=READ/WRITE
+        SCHEMA CACHE SIZE=8
+        LANGDRIVER=
+        SQLQRYMODE=
+        SQLPASSTHRU MODE=NOT SHARED
+        SCHEMA CACHE TIME=-1
+        PASSWORD=
+</pre>
 
 <p>Устанавливаем следующие параметры</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SERVER NAME=C:\IBLOCAL\EXAMPLES\EMPLOYEE.GDB</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;USER NAME=SYSDBA</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;OPEN MODE=READ/WRITE</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SCHEMA CACHE SIZE=8</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;LANGDRIVER=</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SQLQRYMODE=</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SQLPASSTHRU MODE=NOT SHARED</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;SCHEMA CACHE TIME=-1</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;PASSWORD=masterkey</p>
+<pre>
+        SERVER NAME=C:\IBLOCAL\EXAMPLES\EMPLOYEE.GDB
+        USER NAME=SYSDBA
+        OPEN MODE=READ/WRITE
+        SCHEMA CACHE SIZE=8
+        LANGDRIVER=
+        SQLQRYMODE=
+        SQLPASSTHRU MODE=NOT SHARED
+        SCHEMA CACHE TIME=-1
+        PASSWORD=masterkey
+</pre>
 
 <p>В компоненте TDatabase свойство LoginPrompt устанавливаем в 'False'. Если в секции перекрытых параметров (Parameter Overrides) задан пароль (ключ PASSWORD) и свойство LoginPrompt установлено в 'False', при соединении с базой данный пароль запрашиваться не будет. Предупреждение: при неправильно указанном пароле в секции Parameter Overrides и неактивном свойстве LoginPrompt вы не сможете получить доступ к базе данных, поскольку нет возможности ввести правильный пароль - диалоговое окно "Ввод пароля" отключено свойством LoginPrompt.</p>
 <p>Нажимаем кнопку OK и закрываем окно редактора.</p>
@@ -101,7 +106,8 @@ end;
 <p>В компоненте TDataSource свойству DataSet присваиваем 'Query1'.</p>
 <p>В компоненте DBGrid свойству DataSource присваиваем 'DataSource1'.</p>
 <p>Создаем в компоненте TButton обработчик события OnClick.</p>
-<pre>
+
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   Query1.SQL.Clear;
@@ -117,6 +123,7 @@ end;
 
 
 <p>Запускаем приложение.</p>
+
 <p>Пример #3: Ввод псевдонима пользователем</p>
 
 <p>Этот пример выводит диалоговое окно и создает псевдоним на основе информации, введенной пользователем.</p>
@@ -124,9 +131,10 @@ end;
 <p>Директория, имя сервера, путь, имя базы данных и другая необходимая информация для получения псевдонима может быть получена приложением из диалогово окна или конфигурационного .INI файла.</p>
 
 <p>Выполняем шаги 1-11 из примера #1.</p>
+
 <p>Пишем следующий обработчик события OnClick компонента TButton:</p>
 
-<pre>
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 var
   NewString: string;
@@ -152,5 +160,6 @@ end;
 
 
 <p>Запускаем приложение.</p>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>
 

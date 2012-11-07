@@ -19,32 +19,32 @@ begin for i:=2 to n do
 end;
 </pre>
 <p>  Пример 1. Проходим по массиву снизу вверх. Меньшие/более легкие/</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; элементы 'всплывают' наверх, давая название методу.</p>
-<p>  Hачальные &nbsp;i &nbsp; &nbsp; &nbsp;i &nbsp; &nbsp; &nbsp;i &nbsp; &nbsp; &nbsp;i &nbsp; &nbsp; &nbsp;i &nbsp; &nbsp; &nbsp;i &nbsp; &nbsp; &nbsp;i</p>
-<p>  &nbsp; ключи &nbsp; &nbsp;2 &nbsp; &nbsp; &nbsp;3 &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp;5 &nbsp; &nbsp; &nbsp;6 &nbsp; &nbsp; &nbsp;7 &nbsp; &nbsp; &nbsp;8</p>
-<p>  &nbsp; &nbsp;44 /-&gt; 06 &nbsp; &nbsp; 06 &nbsp; &nbsp; 06 &nbsp; &nbsp; 06 &nbsp; &nbsp; 06 &nbsp; &nbsp; 06 &nbsp; &nbsp; 06 &nbsp;</p>
-<p>  &nbsp; &nbsp;55 | &nbsp; 44 /-&gt; 12 &nbsp; &nbsp; 12 &nbsp; &nbsp; 12 &nbsp; &nbsp; 12 &nbsp; &nbsp; 12 &nbsp; &nbsp; 12</p>
-<p>  &nbsp; &nbsp;12 | &nbsp; 55 | &nbsp; 44 /-&gt; 18 &nbsp; &nbsp; 18 &nbsp; &nbsp; 18 &nbsp; &nbsp; 18 &nbsp; &nbsp; 18</p>
-<p>  &nbsp; &nbsp;42 | &nbsp; 12-/ &nbsp; 55 | &nbsp; 44 /-&gt; 42 &nbsp; &nbsp; 42 &nbsp; &nbsp; 42 &nbsp; &nbsp; 42</p>
-<p>  &nbsp; &nbsp;94 | &nbsp; 42 /-&gt; 18-/ &nbsp; 55 | &nbsp; 44 --&gt; 44 &nbsp; &nbsp; 44 &nbsp; &nbsp; 44</p>
-<p>  &nbsp; &nbsp;18 | &nbsp; 94 | &nbsp; 42 &nbsp; &nbsp; 42-/ &nbsp; 55 &nbsp; &nbsp; 55 --&gt; 55 &nbsp; &nbsp; 55</p>
-<p>  &nbsp; &nbsp;06-/ &nbsp; 18-/ &nbsp; 94 -&gt; &nbsp;67 &nbsp; &nbsp; 67 &nbsp; &nbsp; 67 &nbsp; &nbsp; 67 --&gt; 67</p>
-<p>  &nbsp; &nbsp;67 &nbsp; &nbsp; 67 &nbsp; &nbsp; 67-/ &nbsp; 94 &nbsp; &nbsp; 94 &nbsp; &nbsp; 94 &nbsp; &nbsp; 94 &nbsp; &nbsp; 94</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>            элементы 'всплывают' наверх, давая название методу.</p>
+<p>  Hачальные  i      i      i      i      i      i      i</p>
+<p>    ключи    2      3      4      5      6      7      8</p>
+<p>     44 /-&gt; 06     06     06     06     06     06     06</p>
+<p>     55 |   44 /-&gt; 12     12     12     12     12     12</p>
+<p>     12 |   55 |   44 /-&gt; 18     18     18     18     18</p>
+<p>     42 |   12-/   55 |   44 /-&gt; 42     42     42     42</p>
+<p>     94 |   42 /-&gt; 18-/   55 |   44 --&gt; 44     44     44</p>
+<p>     18 |   94 |   42     42-/   55     55 --&gt; 55     55</p>
+<p>     06-/   18-/   94 -&gt;  67     67     67     67 --&gt; 67</p>
+<p>     67     67     67-/   94     94     94     94     94</p>
+<p></p>
 <p> Алгоритм пузырька очень медленен и неэффективен. Тем не менее,</p>
 <p>у него есть громадный плюс: он прост и его можно по-всякому улучшать.</p>
 <p>Чем мы сейчас и займемся.</p>
-<p>  &nbsp;Посмотрите на пример 1. Три последних прохода никак не влияют на</p>
+<p>   Посмотрите на пример 1. Три последних прохода никак не влияют на</p>
 <p>порядок элементов, поскольку те уже отсортированы. Очевидный способ улучшить</p>
 <p>алгоритм - запоминать, производился ли на данном проходе какой-либо обмен.</p>
 <p>Если нет - это означает, что алгоритм может закончить работу.</p>
-<p>  &nbsp;Этот процесс улучшения можно продолжить, если запоминать не столько</p>
+<p>   Этот процесс улучшения можно продолжить, если запоминать не столько</p>
 <p>сам файт обмена, но и место (индекс) последнего обмена. Ведь ясно, что</p>
 <p>все пары соседих элементов с индексами, меньшими этого индекса k,</p>
 <p>уже расположены в нужном порядке. Поэтому следующие прозоды можно заканчивать</p>
 <p>на этом индексе, вместо того чтобы двигаться до установленной заранее</p>
 <p>нижней границы i.</p>
-<p>  &nbsp; Пойдем дальше: внимательный человек легко может заметить странную</p>
+<p>    Пойдем дальше: внимательный человек легко может заметить странную</p>
 <p>асимметрию: один неправильно расположенный 'пузырек' в 'тяжелом'</p>
 <p>конце рассортированного массива всплывет за один проход, а неправильно</p>
 <p>расположенный элемент в легком конце будет опускаться на правильное</p>
@@ -56,19 +56,19 @@ end;
 <p>Получившийся алгоритм иногда называют 'шейкер-сортировкой'.</p>
 <p>  Пример его работы на том же входном массиве.</p>
 
-<p>  &nbsp; &nbsp; &nbsp; &nbsp;l &nbsp;= &nbsp;2 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; &nbsp; 4 &nbsp; &nbsp; &nbsp; 4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp;r &nbsp;= &nbsp;8 &nbsp; &nbsp; &nbsp; 8 &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; 7 &nbsp; &nbsp; &nbsp; 4</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 44 &nbsp;/-&gt; 06 &nbsp; &nbsp; &nbsp;06 &nbsp; &nbsp; &nbsp;06 &nbsp; &nbsp; &nbsp;06</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 55 &nbsp;| &nbsp; 44 &nbsp; &nbsp; &nbsp;44 &nbsp;/-&gt; 12 &nbsp; &nbsp; &nbsp;12</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 12 &nbsp;| &nbsp; 55 -\ &nbsp; 12 -/ &nbsp; 44 -\ &nbsp; 18</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 42 &nbsp;| &nbsp; 12 &nbsp;| &nbsp; 42 &nbsp;/-&gt; 18 &nbsp;| &nbsp; 42</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 94 &nbsp;| &nbsp; 42 &nbsp;\-&gt; 55 &nbsp;| &nbsp; 42 &nbsp;\-&gt; 44</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18 &nbsp;| &nbsp; 94 -\ &nbsp; 18 -/ &nbsp; 55 &nbsp; &nbsp; &nbsp;55</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 06 -/ &nbsp; 18 &nbsp;| &nbsp; 67 &nbsp; &nbsp; &nbsp;67 &nbsp; &nbsp; &nbsp;67</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 67 &nbsp; &nbsp; &nbsp;67 &nbsp;\-&gt; 94 &nbsp; &nbsp; &nbsp;94 &nbsp; &nbsp; &nbsp;94</p>
-<p> Проходы: &nbsp; &nbsp; /|\ &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;/|\ &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;/|\</p>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;\|/ &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;\|/ &nbsp; &nbsp; &nbsp;|</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>         l  =  2       3       3       4       4</p>
+<p>         r  =  8       8       7       7       4</p>
+<p>              44  /-&gt; 06      06      06      06</p>
+<p>              55  |   44      44  /-&gt; 12      12</p>
+<p>              12  |   55 -\   12 -/   44 -\   18</p>
+<p>              42  |   12  |   42  /-&gt; 18  |   42</p>
+<p>              94  |   42  \-&gt; 55  |   42  \-&gt; 44</p>
+<p>              18  |   94 -\   18 -/   55      55</p>
+<p>              06 -/   18  |   67      67      67</p>
+<p>              67      67  \-&gt; 94      94      94</p>
+<p> Проходы:     /|\      |      /|\      |      /|\</p>
+<p>               |      \|/      |      \|/      |</p>
+<p></p>
 
 <pre>
 procedure ShakerSort;
@@ -91,15 +91,15 @@ begin l:=2; r:=n; k:=n;
 end;
         
 </pre>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p></p>
+<p></p>
 <p>Анализ алгоритма простого пузырька:</p>
-<p>  Число сравнений &nbsp;</p>
-<p>  &nbsp; C = 1/2 (n^2 - n),</p>
+<p>  Число сравнений</p>
+<p>    C = 1/2 (n^2 - n),</p>
 <p> Числа пересылок:</p>
-<p>  &nbsp;Mmin = 0, Mсреднее = 3/4 (n^2 - n), Mmax = 3/2 (n^2 - n). &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
-<p>Анализ шейкер-сортировки (из книги Д.Кнута): &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>   Mmin = 0, Mсреднее = 3/4 (n^2 - n), Mmax = 3/2 (n^2 - n).</p>
+<p></p>
+<p>Анализ шейкер-сортировки (из книги Д.Кнута):</p>
 <p>  Минимальное число сравнений Cmin = n-1</p>
 <p>  Среднее число проходов пропорционально n - k1*корень(n),</p>
 <p>  Cреднее число сравнений пропорционально 1/2 ( n^2 - n(k2+ln(n)) ).</p>

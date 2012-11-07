@@ -16,8 +16,8 @@ begin
     Listbox1.Items.Add((Explorer.Item(I) as IWebbrowser2).LocationUrl);
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: Александр (Rouse_) Багель</div>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-&nbsp;<br>
+ <br>
 

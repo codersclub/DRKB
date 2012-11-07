@@ -10,10 +10,10 @@
 
 <p>It will be installed Microsoft(r) Windows(r) Script wich containes:</p>
 
-<p> &nbsp;&nbsp; Visual Basic(r) Script Edition (VBScript.) Version 5.6,</p>
-<p> &nbsp;&nbsp; JScript(r) Version 5.6, Windows Script Components,</p>
-<p> &nbsp;&nbsp; Windows Script Host 5.6,</p>
-<p> &nbsp;&nbsp; Windows Script Runtime Version 5.6.</p>
+<p>    Visual Basic(r) Script Edition (VBScript.) Version 5.6,</p>
+<p>    JScript(r) Version 5.6, Windows Script Components,</p>
+<p>    Windows Script Host 5.6,</p>
+<p>    Windows Script Runtime Version 5.6.</p>
 
 <p>We are interested in the implementation of regular expressions, which is in the file "vbscript.dll". Every time you will want to run a program, wich exploits regular expressions by using "Microsoft(r) Windows(r) Script", on a given computer, it will be needed to copy the file "vbscript.dll" on the target computer and register it with the following command line:</p>
 
@@ -27,15 +27,15 @@ regsvr32 vbscript.dll
 
 <p>In the delphi menu, select "Project" then "Import type library": it shows a mask containing a list. Inside the list select "Microsoft VBScript Regular Expressions" (followed by a version number). It is possible that there are more then one item with this name (it only changes the version number): in this situation select the item with the higher version number. In date September the 23th 2002, the package that can be downloaded from Microsoft's internet site returns the following value:</p>
 
-<p> &nbsp;&nbsp; "Microsoft VBScript Regular Expressions 5.5 (Version 5.5)"</p>
+<p>    "Microsoft VBScript Regular Expressions 5.5 (Version 5.5)"</p>
 
 <p>This version supplies the following "Class Names"</p>
 <p>}</p>
 
-<p> &nbsp;&nbsp; TRegExp</p>
-<p> &nbsp;&nbsp; TMatch</p>
-<p> &nbsp;&nbsp; TMatchCollection</p>
-<p> &nbsp;&nbsp; TSubMatches</p>
+<p>    TRegExp</p>
+<p>    TMatch</p>
+<p>    TMatchCollection</p>
+<p>    TSubMatches</p>
 
 <pre>
 {

@@ -42,5 +42,5 @@ begin
 end.
 </pre>
 
-&nbsp;</p>
+</p>
 <div class="author">Автор: Григорий Ситнин, gregor@gregor.ru, Москва</div>

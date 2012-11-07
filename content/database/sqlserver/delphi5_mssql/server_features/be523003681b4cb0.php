@@ -4,20 +4,20 @@
 
 <p>В MS SQL Server поддерживаются все определенные стандартом ANSI SQL 92 уровни изоляции транзакций:</p>
 
-READ UNCOMMITTED &nbsp; &nbsp; &nbsp; &nbsp;Позволяет транзакции читать неподтвержденные данные, других транзакций. &nbsp; &nbsp; &nbsp; 
-READ COMMITTED &nbsp; &nbsp; &nbsp; &nbsp;Предотвращает считывание транзакцией данных, не подтвержденных другой транзакцией &nbsp; &nbsp; &nbsp; 
-REPEATABLE READ &nbsp; &nbsp; &nbsp; &nbsp;Все блокировки удерживаются до конца транзакции, гарантируя идентичность повторно считанных данных прочитанным ранее. &nbsp; &nbsp; &nbsp; 
-SERIALIZABLE &nbsp; &nbsp; &nbsp; &nbsp;Гарантирует отсутствие «фантомов». Реализуется за блокирования диапазонов записей, внутри которых эти «фантомы» могут появиться. &nbsp; &nbsp; &nbsp; 
+READ UNCOMMITTED        Позволяет транзакции читать неподтвержденные данные, других транзакций.       
+READ COMMITTED        Предотвращает считывание транзакцией данных, не подтвержденных другой транзакцией       
+REPEATABLE READ        Все блокировки удерживаются до конца транзакции, гарантируя идентичность повторно считанных данных прочитанным ранее.       
+SERIALIZABLE        Гарантирует отсутствие «фантомов». Реализуется за блокирования диапазонов записей, внутри которых эти «фантомы» могут появиться.       
 <p>Для установки текущего уровня изоляции используется оператор</p>
 
 <pre>
 SET TRANSACTION ISOLATION LEVEL
- &nbsp;&nbsp; {
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; READ COMMITTED 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  READ UNCOMMITTED 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  REPEATABLE READ 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  SERIALIZABLE
- &nbsp;&nbsp; }
+    {
+        READ COMMITTED 
+         READ UNCOMMITTED 
+         REPEATABLE READ 
+         SERIALIZABLE
+    }
 </pre>
 
 
@@ -32,11 +32,11 @@ SET TRANSACTION ISOLATION LEVEL
 <pre>INSERT MyTable VALUES (1)
 -- Выполнился внутри отдельной транзакции
 BEGIN TRANSACTION
--&#8211; Начали явную транзакцию
+-- Начали явную транзакцию
 INSERT MyTable VALUES (2) 
 INSERT MyTable VALUES (3) 
 COMMIT
-&#8211;- завершили явную транзакцию
+-- завершили явную транзакцию
 </pre>
 
 
@@ -46,10 +46,10 @@ COMMIT
 
 
 <p>то сервер начинает новую транзакцию, если она еще не начата и выполнился один из следующих операторов:</p>
-ALTER TABLE &nbsp; &nbsp; &nbsp; &nbsp;FETCH &nbsp; &nbsp; &nbsp; &nbsp;REVOKE &nbsp; &nbsp; &nbsp; 
-CREATE &nbsp; &nbsp; &nbsp; &nbsp;GRANT &nbsp; &nbsp; &nbsp; &nbsp;SELECT &nbsp; &nbsp; &nbsp; 
-DELETE &nbsp; &nbsp; &nbsp; &nbsp;INSERT &nbsp; &nbsp; &nbsp; &nbsp;TRUNCATE TABLE &nbsp; &nbsp; &nbsp; 
-DROP &nbsp; &nbsp; &nbsp; &nbsp;OPEN &nbsp; &nbsp; &nbsp; &nbsp;UPDATE &nbsp; &nbsp; &nbsp; 
+ALTER TABLE        FETCH        REVOKE       
+CREATE        GRANT        SELECT       
+DELETE        INSERT        TRUNCATE TABLE       
+DROP        OPEN        UPDATE       
 <p>Транзакция продолжается до тех пор, пока не будет выдана команда COMMIT или ROLLBACK.</p>
 
 <p>Возможно создание вложенных транзакций. При этом функция @@TRANCOUNT показывает глубину вложенности транзакции. Например:</p>
@@ -75,7 +75,7 @@ END
 </pre>
 
 
-<p>При запуске вне контекста транзакции процедура выполнит свою транзакцию. Если она запущена внутри транзакции &#8211; внутренние BEGIN TRANSACTION и COMMIT просто увеличат и уменьшат счетчик транзакций.</p>
+<p>При запуске вне контекста транзакции процедура выполнит свою транзакцию. Если она запущена внутри транзакции - внутренние BEGIN TRANSACTION и COMMIT просто увеличат и уменьшат счетчик транзакций.</p>
 <p>Поведение ROLLBACK отличается от вышеописанного. ROLLBACK всегда, независимо от текущего уровня вложенности устанавливает @@TRANCOUNT в 0 и отменяет все изменения, начиная с начала самой внешней транзакции. Если в хранимой процедуре возможен откат её действий, исходя из какого-то условия, можно использовать точки сохранения (savepoint)</p>
 <pre>CREATE PROCEDURE Foo 
 AS BEGIN
@@ -114,7 +114,7 @@ END
 GO
 
 INSERT MyTable VALUES (1)
-INSERT MyTable VALUES (2) &#8211; Вызовет ROLLBACK в триггере
+INSERT MyTable VALUES (2) - Вызовет ROLLBACK в триггере
 -- Операторы, начиная отсюда не выполнятся
 INSERT MyTable VALUES (3)
 INSERT MyTable VALUES (4)

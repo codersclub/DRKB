@@ -56,7 +56,7 @@ end;
 <p>Этот компонент не позволяет делать многочисленный выбор....</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <p>В данном модуле демонстрируется техника изменения цвета у выводимого в StringGrid текста.</p>
 <pre>

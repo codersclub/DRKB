@@ -30,7 +30,7 @@
 
 <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> должен быть создан группирующий и суммирующий запрос SQL, обеспечивающий открытие набора данных для кросстаба;</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> перед отображением данных необходимо настроить параметры размерностей кросстаба;</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> непосредственный показ данных в кросстабе;</td></tr></table><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="13">&#183;</td><td> работающий кросстаб должен эффективно управляться на уровне размерностей.</td></tr></table>Для этого в форме приложения требуется разместить как минимум пять компонентов со страницы Decision Cube Палитры компонентов.</p>
 
-<p>Для создания запроса SQL можно использовать компонент TDecisionQuery или обычный компонент&nbsp; TQuery.</p>
+<p>Для создания запроса SQL можно использовать компонент TDecisionQuery или обычный компонент  TQuery.</p>
 
 <p>Запрос должен быть связан с компонентом TDecisionCube, который осуществляет подготовку набора данных запроса к многомерному показу.</p>
 
@@ -47,16 +47,16 @@
 <p>Как связать компоненты многомерного представления данных</p>
 
 <p>TBecisionCube</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DataSet=DecisionQuery1 Определяет компонент доступа к данным,&nbsp; который создает набор данных</p>
+<p>        DataSet=DecisionQuery1 Определяет компонент доступа к данным,  который создает набор данных</p>
 
 <p>TDecisionSource</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DecisionCube=DecisionCubel Указывает на компонент формирования многомерного набора данных</p>
+<p>        DecisionCube=DecisionCubel Указывает на компонент формирования многомерного набора данных</p>
 
 <p>TDecisionGrid</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DecisionSource=DecisionSourcel&nbsp; Ссылается на компонент TDecisionSource</p>
+<p>        DecisionSource=DecisionSourcel  Ссылается на компонент TDecisionSource</p>
 
 <p>TDecisionPivot</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;DecisionSource= DecisionSourcel Ссылается на компонент TDecisionSource</p>
+<p>        DecisionSource= DecisionSourcel Ссылается на компонент TDecisionSource</p>
 
 <p>Если задать текст запроса SQL и открыть набор данных, то вся цепочка заработает, причем ее поведение ничем не отличается от поведения во время выполнения приложения.</p>
 
@@ -214,7 +214,7 @@
 <p>Определяет режим отображения данных размерности</p>
 
 <p>property BaseName: string;</p>
-<p>Содержит имя поля размерности&nbsp; в таблице базы данных</p>
+<p>Содержит имя поля размерности  в таблице базы данных</p>
 
 <p>property BinFormat: string;</p>
 <p>Определяет способ форматирования диапазона значений размерности</p>
@@ -235,11 +235,11 @@
 
 <p>property Loaded: Boolean; Значение True говорит о том, что данный элемент загружен в многомерный набор данных</p>
 
-<p>property StartDate: TDate;Определяет начальный элемент&nbsp; для группировки по дате</p>
+<p>property StartDate: TDate;Определяет начальный элемент  для группировки по дате</p>
 
 <p>property StartValue: String;Определяет начальный элемент : для группировки по значению</p>
 
-<p>property ValueCount: Integer;Возвращает число уникальных&nbsp; элементов в размерности</p>
+<p>property ValueCount: Integer;Возвращает число уникальных  элементов в размерности</p>
 
 <p>Компонент TDecisionSource</p>
 

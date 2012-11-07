@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 {uses должен включать в себя db, dbitypes, dbiprocs }
  
 procedure TForm1.FormCreate(Sender: TObject);
@@ -25,6 +25,8 @@ end;
 </pre>
 
 <div class="author">Автор: OAmiry (Borland)</div>
+
 <p>Взято из Советов по Delphi от <a href="mailto:mailto:webmaster@webinspector.com" target="_blank">Валентина Озерова</a></p>
+
 <p>Сборник Kuliba</p>
 

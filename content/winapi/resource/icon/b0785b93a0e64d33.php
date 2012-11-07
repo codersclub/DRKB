@@ -191,8 +191,8 @@ end;
  
 end.
 </pre>
-&nbsp;</p>
-&nbsp;</p>
+</p>
+</p>
 <hr />
 <pre>
 {  Comment: 

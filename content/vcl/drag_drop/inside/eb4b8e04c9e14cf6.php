@@ -19,4 +19,4 @@ UmpteenthDynImage.MouseDown := TForm1.GenericMouseDown;
 <p>Это должно быть синтаксически закрытым. Вы можете просто назначать каждый динамический объект методу GenericMouseDown, и они все им будут пользоваться. Предок dummyImage позволяет легко разрушать все динамические объекты обычным деструктором dummyImage.</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

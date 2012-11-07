@@ -372,8 +372,8 @@ end.
 <p>В вашем .DEF-файле добавьте следующие строки:</p>
 
 <p>IMPORTS</p>
-<p>  Min&nbsp; =MINMAX.Min</p>
-<p>  Max&nbsp; =MINMAX.Max</p>
+<p>  Min  =MINMAX.Min</p>
+<p>  Max  =MINMAX.Max</p>
 
 <p>Объявите в вашем C-приложени прототип функций, как показано ниже:</p>
 

@@ -1,23 +1,21 @@
 <h1>О руссификации Informix</h1>
 <div class="date">01.01.2007</div>
 
-
-<p>О Руссификации INFORMIX.</p>
 <p>Данные типа char в INFORMIX имеют длину 8 бит на символ и поэтому могут хранить как английские, так и русские буквы. <br>
 Встроенной сортировки по русскому алфавиту INFORMIX не реализовал. Для русской сортировки пользуйтесь предварительной перекодировкой. (См. например подпрограммку koder в демонстрационной базе ZAWOD). <br>
 Во время ввода пользователь должен переключаться с русского на английский клавишей CONTROL-O, а с английского на русский клавишей CONTROL-N. <br>
 <p>Должна быть установлена переменная окружения</p>
 <p>KEYBMAP="маршрутное имя файла с перекодировочной таблицей"</p>
-<p>&nbsp;<br>
+<p> <br>
 <p>По умолчанию применяется KEYBMAP=/usr/informix/keybmap/dasher, которая устанавливает клавиатуру "ЯВЕРТЫ" под стандарт терминалов БЕСТЫ, и начальный алфавит - русский.</p>
 <p>KEYBMAP=/usr/informix/keybmap/dasherE export KEYBMAP</p>
-<p>&nbsp;<br>
+<p> <br>
 <p>Такой командой устанавливают клавиатуру "ЯВЕРТЫ", и начальный алфавит - английский</p>
 <p>KEYBMAP=/usr/informix/keybmap/dasherD export KEYBMAP</p>
-<p>&nbsp;<br>
+<p> <br>
 <p>Клавиатура "ЙЦУКЕН" под стандарт персонального компьютера.</p>
 <p>KEYBMAP=/usr/informix/keybmap/dasherP export KEYBMAP</p>
-<p>&nbsp;<br>
+<p> <br>
 Клавиатура "ЙЦУКЕН" под стандарт русской пишущей машинки. <br>
 В файле /usr/informix/keybmap/dasher лежит таблица перевода введенных с клавиатуры латинских символов в соответствующие им русские. Перекодировочная таблица соответствует "QWERTY"-английской клавиатуре. (Т.е. 'a' переводится в 'а', 'c' переводится в 'ц' и т.д.). Создается файл /usr/informix/keybmap/dasher программой, лежащей в /usr/informix/keybmap/crmap_dasher.c <br>
 Чтобы установить другое расположение русских букв на клавиатуре переделайте эту программу. Для этого переставьте в нужном вам порядке содержимое массива russmap. <br>
@@ -27,28 +25,28 @@
 <p>Переменные Окружения</p>
 <p>Для настройки INFORMIX использует переменные окружения. Вы можете изменить любое из допущений, принимаемых INFORMIX по умолчанию, установкой одной или нескольких переменных окружения, распознаваемых INFORMIX. <br>
 <p>Например сделать так, чтобы переменные типа MONEY изображались не в формате $149.50, а в формате руб 149.50 коп можно командой</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBMONEY='руб . коп' export DBMONEY</p>
-<p>&nbsp;<br>
+<p>        DBMONEY='руб . коп' export DBMONEY</p>
+<p> <br>
 <p>DBPATH указывает список директорий где (помимо текущей) INFORMIX ищет базы данных и связанные с ними файлы.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBPATH=/udd/iwanow:/udd/petrow export DBPATH</p>
-<p>&nbsp;<br>
+<p>        DBPATH=/udd/iwanow:/udd/petrow export DBPATH</p>
+<p> <br>
 <p>Заставит искать базы данных не только в текущей директории, но и в директориях Петрова и Иванова</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBPATH=//hostname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *OnL*</p>
-<p>&nbsp;<br>
+<p>        DBPATH=//hostname                               *OnL*</p>
+<p> <br>
 Заставит искать базы данных OnLine на удаленном компьютере. <br>
 Обычно же устанавливают переменные конкретно для вашей рабочей станции в файле /etc/profile который автоматически выполняет файл /config/profiles/informix.sh <br>
 <p>Примерное содержание файла /config/profiles/informix.sh</p>
 <p>INFORMIXDIR=/usr/informix export INFORMIXDIR</p>
-<p>DBPRINT=pp export DBPRINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # программа печати - pp</p>
-<p>DBEDIT='rk -E' export DBEDIT&nbsp;&nbsp;&nbsp; # пользовательский редактор</p>
-<p># DBDATE=DMY4. export DBDATE&nbsp;&nbsp;&nbsp; # формат даты 24.09.1991</p>
+<p>DBPRINT=pp export DBPRINT       # программа печати - pp</p>
+<p>DBEDIT='rk -E' export DBEDIT    # пользовательский редактор</p>
+<p># DBDATE=DMY4. export DBDATE    # формат даты 24.09.1991</p>
 <p># DBMONEY='. руб' export DBMONEY# совковый стандарт денег</p>
 <p>PATH=$PATH:$INFORMIXDIR/bin export PATH # выполняемые модули</p>
 <p>SQLEXEC=$INFORMIXDIR/lib/sqlexec export SQLEXEC # сервер - SE</p>
 <p>TERMCAP=$INFORMIXDIR/etc/termcap export TERMCAP</p>
-<p>case $TERM in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # таблица русификации клавиатуры</p>
+<p>case $TERM in                 # таблица русификации клавиатуры</p>
 <p>d460* | d211* | cham | vt* )</p>
-<p> &nbsp; KEYBMAP=$INFORMIXDIR/keybmap/dasher&nbsp; # яверты/qwerty</p>
+<p>   KEYBMAP=$INFORMIXDIR/keybmap/dasher  # яверты/qwerty</p>
 <p> # KEYBMAP=$INFORMIXDIR/keybmap/dasherE # qwerty/яверты</p>
 <p> # KEYBMAP=$INFORMIXDIR/keybmap/dasherD # йцукен/qwerty IBM PC</p>
 <p> # KEYBMAP=$INFORMIXDIR/keybmap/dasherP # йцукен/qwerty пишмаш</p>
@@ -62,15 +60,17 @@ INFORMIX имеет свой собственный termcap файл с опис
 Стандартный режим задается стандартным значением переменной TERM. Для TATUNG TERM=d211, для DASHER-460 TERM=d460. В этом режиме я и рекомендую вам работать. Включается он по умолчанию. <br>
 <p>Стандартный режим имеет следующие недостатки:</p>
 <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Некоторые CONTROL-ключи в нем не работают, поскольку их ASCII коды совпадают с кодами "стрелок" вправо/влево/вверх/вниз Это было бы легко пережить, если бы этими ключами не были CONTROL-W - ключ, вызывающий HELP-подсказку в среде INFORMIX и CONTROL-X - ключ "уничтожить символ". <br>
-Следует заметить, что терминалы, работающие в ANSI режиме (посылающие функциональными клавишами длинные ESC-последовательности) плохо переносят русификацию клавиатуры.</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Недостаток режима ANSI один: функциональные клавиши и стрелки на нем периодически сбоят. <br>
+Следует заметить, что терминалы, работающие в ANSI режиме (посылающие функциональными клавишами длинные ESC-последовательности) плохо переносят русификацию клавиатуры.</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Недостаток режима ANSI один: функциональные клавиши и стрелки на нем периодически сбоят. <br>
 Выглядит это так: десять раз вы нажимаете на "стрелку влево" и она срабатывает как "стрелка влево" а в одиннадцатый (или в восьмой) раз она срабатывает как целая пачка нажатых клавиш: ESC, '[', '1', 'D'. Иногда это может оказаться весьма неприятно, особенно если за терминалом сидит неопытный пользователь. <br>
-Представьте: вы находитесь в экранной форме, нажимаете стрелку чтобы сдвинуться, а вместо движения у вас срабатывает ESCAPE ("завершить ввод") а потом клавиша 'D', на которой в меню часто бывает навешано что-нибудь типа Drop или Delete.</td></tr></table></div><p>&nbsp;<br>
+Представьте: вы находитесь в экранной форме, нажимаете стрелку чтобы сдвинуться, а вместо движения у вас срабатывает ESCAPE ("завершить ввод") а потом клавиша 'D', на которой в меню часто бывает навешано что-нибудь типа Drop или Delete.</td></tr></table></div>
+<p> <br>
 <p>Устанавливается ANSI режим так: установите значение переменной TERM=d211-tansi или TERM=d460-tansi соответственно. Сделать это можно и в общем профайле /config/profiles/informix.sh, и в личном профайле .profile, или непосредственно вручную с помощью команды</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TERM=d460-tansi export TERM</p>
-<p>&nbsp;<br>
+<p>        TERM=d460-tansi export TERM</p>
+<p> <br>
 <p>или только на время работы INFORMIX, стартовав его так:</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TERM=$TERM-tansi&nbsp;&nbsp;&nbsp;&nbsp; r4gl</p>
-<p>&nbsp;<br>
+<p>        TERM=$TERM-tansi     r4gl</p>
+<p> <br>
 Решать, какой режим - Стандартный с неработающими ^W и ^X, или ANSI со сбоящими клавишами - ему менее противен, имеет смысл каждому пользователю индивидуально, исходя из личных вкусов. <br>
 <p>Список допустимых следующие значения переменной TERM для TATUNG ET10:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
@@ -99,7 +99,7 @@ INFORMIX имеет свой собственный termcap файл с опис
 </td>
 </tr>
 </table>
-<p>&nbsp;<br>
+<p> <br>
 <p>Допустимы следующие значения TERM для для DASHER D460:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -121,7 +121,7 @@ INFORMIX имеет свой собственный termcap файл с опис
 </td>
 </tr>
 </table>
-<p>&nbsp;<br>
+<p> <br>
 <p>Обеспечивается также работа с другими типами терминалов. См. начало файла /usr/informix/etc/termcap</p>
 <p>Настройка UNIX для работы с INFORMIX</p>
 <p>Если при запуске нескольких процессов INFORMIX программы начинают слетать с сообщением 1250 "Unable create a pipe", значит в вашей системе слишком мало socketов. А требуется их по 4 штуки на каждую запускаемую программу INFORMIX'а. <br>

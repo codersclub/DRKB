@@ -7,4 +7,4 @@ EXEC sp_addextendedproperty 'PropertyName', 'PropertyValue', 'user', dbo, 'table
 </pre>
 
 <div class="author">Автор: Vit</div>
-<p>&nbsp;</p>
+<p></p>

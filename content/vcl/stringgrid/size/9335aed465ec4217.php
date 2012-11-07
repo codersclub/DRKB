@@ -20,7 +20,7 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <p>Нижеприведенный код выравняет данные компонента по правому краю:</p>
 <pre>
@@ -57,7 +57,7 @@ end;
 <p>Вы наверное уже обратили внимание на объявление локальных переменных lCol и lRow. На входе я присваиваю им значения параметров Col и Row (имя, которое дало мне Delphi IDE). Дело в том, что объект TStringGrid имеет свойства с именами Col и Row. Эти свойства будут доступны в теле блока "with Sender as TStringGrid", но они не являются параметрами для всех обявленных в шапке блока объектов ((речь идет об объекте Canvas, у которого нет свойств с именами Col и Row - В.О.)).</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 procedure WriteText(ACanvas: TCanvas; const ARect: TRect; DX, DY: Integer;
@@ -110,7 +110,7 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <p>Создайте ваш собственный метод drawcell на примере того, что приведен ниже:</p>
 <pre>
@@ -142,7 +142,7 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-<p>&nbsp;</p>
+<p></p>
 
 <hr />
 

@@ -25,4 +25,4 @@ LOGPIXELSY),
   end;
 end;
 </pre>
-&nbsp;</p>
+</p>

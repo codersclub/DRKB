@@ -4,7 +4,7 @@
 
 <p>Данный пример ищет активный экземпляр Excel и делает его видимым</p>
 
-<pre>
+<pre class="delphi">
 var
     ExcelApp : Variant;
 begin

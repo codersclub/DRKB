@@ -286,9 +286,9 @@ begin
 end.
  
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 Приложение:<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -395,11 +395,11 @@ end;
  
 end.
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Демонстрационный пример перехвата вызовов API функций, посредством изменения таблицы импорта.</p>
 <p><a href="/zip/iatchange.zip">Скачать демонстрационный пример</a>
 </p>
 <div class="author">Автор: Александр (Rouse_) Багель</div>
 <p><a href="https://rouse.drkb.ru" target="_blank">https://rouse.drkb.ru</a></p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a><br>
-<p>&nbsp;</p>
+<p></p>

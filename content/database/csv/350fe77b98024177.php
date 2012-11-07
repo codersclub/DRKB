@@ -12,64 +12,64 @@
 <p>Файл схемы для файла данных ASCII содержит информацию, которая определяет оба типа файла (версии с разделительной запятой и полем с фиксированной длиной), а также определяет поля, которые представлены значениями данных в каждой строке файла данных ASCII. (Все поля файла схемы нечуствительны к регистру, поэтому написание "ascii" равнозначно написанию "ASCII".) Для того, чтобы файл схемы был признан в качестве такового, он должен иметь то же имя, что и файл данных ASCII, для которого он содержит схему, но иметь расширение .SCH (SCHema - схема). Атрибуты описания файла:</p>
 
 <p>  File name: Располагаемый в квадратных скобках, данный атрибут определяет</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; имя файла ASCII данных (с расширением имени файла,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; которое должно быть .TXT).</p>
+<p>             имя файла ASCII данных (с расширением имени файла,</p>
+<p>             которое должно быть .TXT).</p>
 
-<p>  Filetype:&nbsp; Определяет, имеет ли файл ASCII данных структуру файла с</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; полями фиксированной длины (используется атрибут FIXED) или</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; файлом с разделительной запятой (со значениями данных, которые</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; потенциально могут изменять длину (используется атрибут VARYING).</p>
+<p>  Filetype:  Определяет, имеет ли файл ASCII данных структуру файла с</p>
+<p>             полями фиксированной длины (используется атрибут FIXED) или</p>
+<p>             файлом с разделительной запятой (со значениями данных, которые</p>
+<p>             потенциально могут изменять длину (используется атрибут VARYING).</p>
 
 <p>  Delimiter: Определяет символ, которым "окантуривают" значения данных типа</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String (обычно двойные кавычки, десятичный ASCII код 34).</p>
+<p>             String (обычно двойные кавычки, десятичный ASCII код 34).</p>
 
 <p>  Separator: Определяет символ, который используется для разделения отдельных</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; значений данных (обычно запятая). Данный символ должен быть</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; видимым символом, т.е. не может быть пробелом (десятичный ASCII</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; код 32).</p>
+<p>             значений данных (обычно запятая). Данный символ должен быть</p>
+<p>             видимым символом, т.е. не может быть пробелом (десятичный ASCII</p>
+<p>             код 32).</p>
 
-<p>  CharSet:&nbsp;&nbsp; Определяет драйвер языка (используется атрибут ASCII).</p>
+<p>  CharSet:   Определяет драйвер языка (используется атрибут ASCII).</p>
 <p>Расположенные ниже атрибуты файла являются определениями поля, задающими правила для каждой строки файла данных ASCII. Данные определения служат источником информации для Delphi и BDE, первоначально необходимой для создания виртуального поля в памяти, в свою очередь служащее для хранения значений данных; тип данных виртуального поля определяется после чтения и трансляции данных из ASCII файла, определения размера и применения атрибутов. Различные атрибуты, определяющие поле файла данных ASCII:</p>
 
-<p>  Field:&nbsp;&nbsp;&nbsp; Имя виртуального поля (всегда будет "Field"), сопровождаемое</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; целым числом, определяющим порядковый номер поля относительно</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; других полей в файле данных ASCII. Например, первое поле -</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Field1, второе Field2, и т.д..</p>
+<p>  Field:    Имя виртуального поля (всегда будет "Field"), сопровождаемое</p>
+<p>               целым числом, определяющим порядковый номер поля относительно</p>
+<p>               других полей в файле данных ASCII. Например, первое поле -</p>
+<p>               Field1, второе Field2, и т.д..</p>
 
 <p>  Field name: Определяет выводимое имя поля, отображаемое в виде</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; заголовка колонки в TDBGrid. Соглашения имен для</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; таблиц ASCII такие же, как и для таблиц Paradox.</p>
+<p>                      заголовка колонки в TDBGrid. Соглашения имен для</p>
+<p>                      таблиц ASCII такие же, как и для таблиц Paradox.</p>
 
-<p>  Field type:&nbsp;&nbsp; Определяет, какой тип данных BDE должен использоваться при</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; трансляции значений данных каждого поля и сообщает</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delphi тип виртуального поля, которое необходимо создать.</p>
+<p>  Field type:   Определяет, какой тип данных BDE должен использоваться при</p>
+<p>                      трансляции значений данных каждого поля и сообщает</p>
+<p>                      Delphi тип виртуального поля, которое необходимо создать.</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Используйте определение Для значений типа</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----------------------- ----------------------------</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Символ</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FLOAT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 64-битное число с плавающей точкой</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NUMBER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16-битное целое</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BOOL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Boolean (T или F)</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LONGINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32-битное длинное целое</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Поле Date.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Поле Time.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TIMESTAMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Поле Date + Time.</p>
+<p>                      Используйте определение Для значений типа</p>
+<p>                      ----------------------- ----------------------------</p>
+<p>                      CHAR                    Символ</p>
+<p>                      FLOAT                   64-битное число с плавающей точкой</p>
+<p>                      NUMBER               16-битное целое</p>
+<p>                      BOOL                    Boolean (T или F)</p>
+<p>                      LONGINT              32-битное длинное целое</p>
+<p>                      DATE                    Поле Date.</p>
+<p>                      TIME                    Поле Time.</p>
+<p>                      TIMESTAMP        Поле Date + Time.</p>
 
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Фактически формат для значений данных даты и времени</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; будет определяться текущими настройками конфигурации BDE,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; страница с закладкой Date.)</p>
+<p>                      (Фактически формат для значений данных даты и времени</p>
+<p>                      будет определяться текущими настройками конфигурации BDE,</p>
+<p>                      страница с закладкой Date.)</p>
 
-<p>  Data value length:&nbsp; Максимальная длина значения данных соответствующего поля.</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Данный атрибут определяет длину виртуального поля,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; создаваемое Delphi для получения считываемых значений из</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ASCII-файла.</p>
+<p>  Data value length:  Максимальная длина значения данных соответствующего поля.</p>
+<p>                      Данный атрибут определяет длину виртуального поля,</p>
+<p>                      создаваемое Delphi для получения считываемых значений из</p>
+<p>                      ASCII-файла.</p>
 
 <p>  Number of decimals: Приложение к полю типа FLOAT; определяет количество цифр</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; справа от десятичной точки; необходимо для включения в</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; определение виртуального поля.</p>
+<p>                      справа от десятичной точки; необходимо для включения в</p>
+<p>                      определение виртуального поля.</p>
 
-<p>  Offset:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Отступ от начала строки, позиция начала данных описываемого</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; поля; задается для всех строк файла.</p>
+<p>  Offset:          Отступ от начала строки, позиция начала данных описываемого</p>
+<p>                      поля; задается для всех строк файла.</p>
 <p>Например, приведенное ниже определение поля относится к первому полю таблицы ASCII. Данная строка определяет значения данных типа String с именем "Text", максимальная длина значения данных составляет три символа (и в Delphi компонентах для работы с базами данных, типа TDBGrid, поле будет отображаться только тремя символами), десятичный порядок (значение данных типа String никогда не сможет иметь десятичные значения, тем более после запятой), и смещение относительно нулевой позиции (поскольку описываемая область первая, то она сама начинается с нулевой позиции, перед ней не находится ни одно поле).</p>
 
 <p>  Field1=Text,Char,3,00,00</p>

@@ -18,21 +18,21 @@
 Получив такой заголовок, браузер перезапрашивает у сервера новый URL http://www.yahoo.com, и в ответ получает следующее:</p>
   HTTP/1.0 200 OK</p>
   Content-Length: 9332</p>
-  Expires: Wed, 18 Mar 1998 08:00:03 GMT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  Expires: Wed, 18 Mar 1998 08:00:03 GMT</p>
   Content-Type: text/html</p>
-&nbsp;</p>
+</p>
   &lt;html&gt;&lt;head&gt;&lt;title&gt;Yahoo!&lt;/title&gt;</p>
   &lt;base href="https://www.yahoo.com/"&gt;&lt;/head&gt;</p>
   &lt;body&gt;&lt;center&gt;</p>
   &lt;form action="http://search.yahoo.com/bin/search"&gt;</p>
   &lt;a href="/bin/top3"&gt;</p>
   &lt;img width=460 height=59 border=0 usemap="#top3" ismap</p>
- &nbsp;&nbsp; src="http://us.yimg.com/i/main32.gif" alt="Yahoo!"&gt;&lt;/a&gt;</p>
+    src="http://us.yimg.com/i/main32.gif" alt="Yahoo!"&gt;&lt;/a&gt;</p>
   &lt;br&gt;</p>
   &lt;table cellpadding=3 cellspacing=0&gt;</p>
- &nbsp;&nbsp; &lt;tr&gt;</p>
- &nbsp;&nbsp;&nbsp;&nbsp; &lt;td align=center nowrap&gt;</p>
+    &lt;tr&gt;</p>
+      &lt;td align=center nowrap&gt;</p>
   ...</p>
 Таким образом происходит просто переадресация на другую страницу!</p>
-&nbsp;</p>
+</p>
 И последнее замечание: вам не нужно заботиться самим о выводе строк типа "HTTP/1.0...", и "Content-Length: ...", поскольку это делает автоматически сам сервер.</p>

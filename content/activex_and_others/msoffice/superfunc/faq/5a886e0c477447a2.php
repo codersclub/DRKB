@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 <p>Для печати без отображения диалога я использую метод PrintOut. В качестве аргумента этого метода можно указать количество копий, но можно использовать и другие параметры, которые устанавливаются в диалоге печати (см. Help по VB). Приведу только простой пример функции для печати нескольких копий.</p>
-<pre>
+<pre class="delphi">
 Function PrintOutDoc(NumCopies:integer):boolean;
 begin
  PrintOutDoc:=true;
@@ -12,5 +12,5 @@ begin
   PrintOutDoc:=false;
 end;
 </pre>
-&nbsp;</p>
+</p>
 

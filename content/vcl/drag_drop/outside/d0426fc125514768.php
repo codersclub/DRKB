@@ -32,4 +32,4 @@ end;
 <p>OK? Первоначально вызов DragAcceptFiles работает с дескриптором главной формы...</p>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>

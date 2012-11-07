@@ -6,7 +6,7 @@
 
 <p>Можете попробовать сделать так:</p>
 
-<pre>
+<pre class="delphi">
 type Tcodes = (c1,c2,c3,c4);
  
 var code: Tcodes;
@@ -15,4 +15,5 @@ code := Tcodes(Table1Field1.AsInteger);
 if code in [c2,c4] then .....
   Table1Field1.AsInteger := Integer(code);
 </pre>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

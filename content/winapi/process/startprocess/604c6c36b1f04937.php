@@ -37,7 +37,7 @@ end;
 <p>Если заменить</p>
 <p>WaitForSingleObject(pi.hProcess,INFINITE);</p>
 <p>на</p>
-<p>while WaitforSingleObject(PI.hProcess,200)=WAIT_TIMEOUT do &nbsp; application.ProcessMessages;</p>
+<p>while WaitforSingleObject(PI.hProcess,200)=WAIT_TIMEOUT do   application.ProcessMessages;</p>
 <p>то вызывающая программа не будет казаться завешанной и будет отвечать на сообщения</p>
 <p class="note">Примечание Mikel: В RxLib есть функция для этого: FileExecuteWait</p>
 <p>Взято с Vingrad.ru <a href="https://forum.vingrad.ru" target="_blank">https://forum.vingrad.ru</a></p>
@@ -82,20 +82,20 @@ begin
   FillChar(StartInfo, SizeOf(StartInfo), #0); 
   with StartInfo do 
   begin 
- &nbsp;&nbsp; cb := SizeOf(SUInfo); 
- &nbsp;&nbsp; dwFlags := STARTF_USESHOWWINDOW; 
- &nbsp;&nbsp; wShowWindow := WinState; 
+    cb := SizeOf(SUInfo); 
+    dwFlags := STARTF_USESHOWWINDOW; 
+    wShowWindow := WinState; 
   end; 
   Result := CreateProcess(nil, PChar( String( CmdLine ) ), nil, nil, false, 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATE_NEW_CONSOLE or NORMAL_PRIORITY_CLASS, nil, 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PChar(ExtractFilePath(Filename)),StartInfo,ProcInfo); 
+                          CREATE_NEW_CONSOLE or NORMAL_PRIORITY_CLASS, nil, 
+                          PChar(ExtractFilePath(Filename)),StartInfo,ProcInfo); 
   { Ожидаем завершения приложения } 
   if Result then 
   begin 
- &nbsp;&nbsp; WaitForSingleObject(ProcInfo.hProcess, INFINITE); 
- &nbsp;&nbsp; { Free the Handles } 
- &nbsp;&nbsp; CloseHandle(ProcInfo.hProcess); 
- &nbsp;&nbsp; CloseHandle(ProcInfo.hThread); 
+    WaitForSingleObject(ProcInfo.hProcess, INFINITE); 
+    { Free the Handles } 
+    CloseHandle(ProcInfo.hProcess); 
+    CloseHandle(ProcInfo.hThread); 
   end; 
 end;
 </pre>
@@ -106,7 +106,7 @@ ExecAndWait( 'C:\windows\calc.exe', '', SH_SHOWNORMAL);
 <p>Параметр FileName = Имя внешней программы.</p>
 <p>Параметр Params = Параметры, необходимые для запуска внешней программы</p>
 <p>Параметр WinState = Указывает - как будет показано окно:</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Для этого параметра мы можем так же использовать следующие константы:</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW_HIDE, SW_MAXIMIZE, SW_MINIMIZE, SW_SHOWNORMAL</p>
+<p>                Для этого параметра мы можем так же использовать следующие константы:</p>
+<p>                SW_HIDE, SW_MAXIMIZE, SW_MINIMIZE, SW_SHOWNORMAL</p>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 

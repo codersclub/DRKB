@@ -3,7 +3,7 @@
 
 
 <p>В примере для глобального перехвата нажатия клавиши print screen регистрируется горячая клавиша (hot key). <br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 type 
                TForm1 = class(TForm) 

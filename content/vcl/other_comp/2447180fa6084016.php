@@ -4,18 +4,18 @@
 
 <p>Что такое VirtualTreeView?<br>
 Это компонент, заменяющий стандартные TTreeView, TStringGrid, TListView, отличается высокой скоростью и удобством работы, а также имеет много расширений.<br>
-&nbsp;<br>
+ <br>
 Найти сам компонент можно на сайте:<br>
 http://delphi-gems.com/VirtualTreeview/<br>
-&nbsp;<br>
+ <br>
 Существует хорошее расширение компонента для работы отображения файлов, аналогично Windows Explorer:<br>
 <p>https://www.mustangpeak.net/</p>
 
 <p>Основы работы с компонентом<br>
 Рассмотрим пример простейшего приложения с использованием этого компонента, где он будет использоваться только для отображения данных. Думаю, он будет полезен тем, кто начинает работу с этим компонентом.<br>
-&nbsp;<br>
+ <br>
 Если компоненты правильно установлены в среде Дельфи, то для начала нужно найти в палитре компонентов найти вкладку VirtualControls, а в ней компонент VirtualStringTree и положить его на форму. Назовем его VST.<br>
-&nbsp;<br>
+ <br>
 <p>Компонент не хранит названий элементов дерева. Но зато каждому элементу можно сопоставить указатель на любую структуру данных, где можно хранить название элемента и не только. В связи с этим создадим простую запись, где будет храниться название элемента и его порядковый номер:</p>
 <pre>
 type
@@ -25,7 +25,7 @@ type
     ElementNumber: Integer;
   end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <p>Теперь укажем компоненту, с каким размером данных он будет работать:</p>
 <pre>
 procedure TForm1.FormCreate(Sender: TObject);
@@ -34,7 +34,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>И, наконец, займемся самым главным - заполним дерево:</p>
 <pre>
 procedure TForm1.Button1Click(Sender: TObject);
@@ -62,7 +62,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>Естественно названия элементов отображаться не будут. Для отображения названий элементов нужно создать обработчик события OnGetText:</p>
 <pre>
 procedure TForm1.VSTGetText(Sender: TBaseVirtualTree; Node: PVirtualNode;
@@ -77,7 +77,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>А теперь немного расширим функциональность нашего приложения: добавим возможность отображения порядковых номеров элементов, которые хранятся в TVSTRecord.ElementNumber:</p>
 <pre>
 procedure TForm1.VSTGetText(Sender: TBaseVirtualTree; Node: PVirtualNode;
@@ -92,7 +92,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>И в завершение необходимо создать обработчик события OnFreeNode, где должна освобождаться память, выделенная под TVSTRecord или любые другие данные, связанные с деревом:</p>
 <pre>
 procedure TForm1.VSTFreeNode(Sender: TBaseVirtualTree; Node: PVirtualNode);
@@ -106,7 +106,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>Освобождение элементов особенно актуально, если в дереве будут динамически создаваться и удаляться элементы.</p>
 
 <p>Создание многострочного дерева<br>
@@ -138,7 +138,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 Следующим шагом нужно добавить хотя бы одну колонку в дерево, причем желательно выставить опцию hoAutoResize в True в VST.Header.Options.<br>
 <p>И наконец создаем обработчики двух событий - OnInitNode и OnMeasureItem:</p>
 <pre>
@@ -161,7 +161,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>Что приведет к отображению дерева с многострочными элементами.</p>
 
 <p>Многострочные деревья в Win9x<br>
@@ -179,7 +179,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>После этого VirtualTreeView будет нормально переносить текст под Win9x, а не только под 2000/XP.</p>
 
 <p>Сортировка VirtualStringTree<br>
@@ -229,7 +229,7 @@ begin
 end;
 </pre>
 
-<p>&nbsp;<br>
+<p> <br>
 <p>Перемещение узлов в VirtualTree с помощью Drag&amp;Drop</p>
 <pre>
 
@@ -270,10 +270,10 @@ begin
   CellText := 'Node# ' + IntToStr(PInteger(Sender.GetNodeData(Node))^)
 end;
 </pre>
-<p>&nbsp;<br>
-&nbsp;<br>
+<p> <br>
+ <br>
 Также нужно отметить событие OnDragAllowed, в котором можно указать какие узлы можно перемещать, а какие нет. Это событие вызывается только при ручном режиме Drag&amp;Drop'а <br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 procedure TForm1.FormCreate(Sender: TObject);
 
@@ -293,9 +293,9 @@ end;
 </pre>
 
 <p>Предыдущий пример был для случая TreeOptions.SelectionOptions := TreeOptions.SelectionOptions - [toMultiSelect]<br>
-&nbsp;<br>
+ <br>
 В случае мультивыделения код изменяется следующим образом<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 procedure TForm1.VSTInitNode(Sender: TBaseVirtualTree; ParentNode,
   Node: PVirtualNode; var InitialStates: TVirtualNodeInitStates);
@@ -350,11 +350,11 @@ end;
 
 <p>Запретить скроллинг, когда строка шире, чем дерево<br>
 Если название узла очень длинное и не влезает по ширине в дерево, то появляется горизонтальный скроллбар. И когда выделяешь такой узел то он центруется по горизонтали.<br>
-&nbsp;<br>
+ <br>
 В стандартном дереве с этим сталкиваться не приходилось никому. Поскольку это поведение является достаточно необычным, то возникает вопрос, как это побороть.<br>
-&nbsp;<br>
+ <br>
 Отключить это можно опцией TreeOptions.AutoOptions -&gt; toDisableAutoscrollOnFocus = True (см. скриншот) <br>
-&nbsp;<br>
+ <br>
 
 <p>Сохранение и загрузка</p>
 <pre>
@@ -452,8 +452,8 @@ begin
   Result := PaintInfo.CellRect.Bottom - PaintInfo.CellRect.Top;
 end;
 </pre>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>
 <p class="author">Автор: Smike and Jack128<br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
-<p>&nbsp;</p>
+<p></p>

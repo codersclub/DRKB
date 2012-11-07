@@ -8,47 +8,47 @@
 
 <p>Данный список указывает количество байт каждого типа поля таблицы Paradox, занимаемое в структуре записи. Имейте в виду, что указанный размер занимает каждое поля в самом файле .DB, не во вспомогательных файлах типа .MB.</p>
 
-<p> &nbsp; Тип данных&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Байт</p>
-<p> &nbsp; -----------------------------------------------------------</p>
-<p> &nbsp; Alphanumeric&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 байт на символ, до 255</p>
-<p> &nbsp; AutoIncrement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 байта</p>
-<p> &nbsp; Binary (BLOB)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0 - 240) [1]</p>
-<p> &nbsp; Bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 на символ, максимально до 255.</p>
-<p> &nbsp; BCD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17</p>
-<p> &nbsp; Currency (Денежный)&nbsp;&nbsp; 8</p>
-<p> &nbsp; Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</p>
-<p> &nbsp; Formatted Memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0 - 240)</p>
-<p> &nbsp; Graphic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0 - 240)</p>
-<p> &nbsp; Memo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1 - 240) [2]</p>
-<p> &nbsp; Logical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</p>
-<p> &nbsp; LongInt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</p>
-<p> &nbsp; Numeric (Числовой)&nbsp;&nbsp;&nbsp; 8</p>
-<p> &nbsp; OLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 байт + 1 на символ. В пределе</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0 - 240)</p>
-<p> &nbsp; SmallInt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</p>
-<p> &nbsp; Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</p>
-<p> &nbsp; TimeStamp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8</p>
+<p>   Тип данных           Байт</p>
+<p>   -----------------------------------------------------------</p>
+<p>   Alphanumeric          1 байт на символ, до 255</p>
+<p>   AutoIncrement         4 байта</p>
+<p>   Binary (BLOB)        10 байт + 1 на символ. В пределе</p>
+<p>                           (0 - 240) [1]</p>
+<p>   Bytes                 1 на символ, максимально до 255.</p>
+<p>   BCD                  17</p>
+<p>   Currency (Денежный)   8</p>
+<p>   Date                  4</p>
+<p>   Formatted Memo       10 байт + 1 на символ. В пределе</p>
+<p>                           (0 - 240)</p>
+<p>   Graphic              10 байт + 1 на символ. В пределе</p>
+<p>                           (0 - 240)</p>
+<p>   Memo                 10 байт + 1 на символ. В пределе</p>
+<p>                           (1 - 240) [2]</p>
+<p>   Logical               1</p>
+<p>   LongInt               4</p>
+<p>   Numeric (Числовой)    8</p>
+<p>   OLE                  10 байт + 1 на символ. В пределе</p>
+<p>                           (0 - 240)</p>
+<p>   SmallInt              2</p>
+<p>   Time                  4</p>
+<p>   TimeStamp             8</p>
 
 <p>Пределы:</p>
-<p> &nbsp; Maximum Field Count&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp; 255 полей</p>
-<p> &nbsp; (максимальное количество</p>
-<p> &nbsp;&nbsp; полей)</p>
-<p> &nbsp; Maximum Blocks per table :&nbsp; 64К</p>
-<p> &nbsp; (максимальное количество</p>
-<p> &nbsp;&nbsp; блоков в таблице)</p>
-<p> &nbsp; Maximum Block Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp; 32К символов</p>
-<p> &nbsp; (максимальный размер</p>
-<p> &nbsp;&nbsp; блока)</p>
-<p> &nbsp; Max Record Size, unkeyed :&nbsp; Текущий размер блока - 6 байта [3]</p>
-<p> &nbsp; (максимальный размер</p>
-<p> &nbsp;&nbsp; записи, неключевой)</p>
-<p> &nbsp; Max Record Size, keyed&nbsp;&nbsp; :&nbsp; (BlockSize - 6) / 3, округляется в меньшую сторону</p>
-<p> &nbsp; (максимальный размер&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; до ближайшего размера блока. [4]&nbsp;&nbsp;&nbsp;</p>
-<p> &nbsp;&nbsp; записи, ключевой)</p>
+<p>   Maximum Field Count      :  255 полей</p>
+<p>   (максимальное количество</p>
+<p>    полей)</p>
+<p>   Maximum Blocks per table :  64К</p>
+<p>   (максимальное количество</p>
+<p>    блоков в таблице)</p>
+<p>   Maximum Block Size       :  32К символов</p>
+<p>   (максимальный размер</p>
+<p>    блока)</p>
+<p>   Max Record Size, unkeyed :  Текущий размер блока - 6 байта [3]</p>
+<p>   (максимальный размер</p>
+<p>    записи, неключевой)</p>
+<p>   Max Record Size, keyed   :  (BlockSize - 6) / 3, округляется в меньшую сторону</p>
+<p>   (максимальный размер        до ближайшего размера блока. [4]</p>
+<p>    записи, ключевой)</p>
 <p>Сноски:</p>
 <p>[1] Все blob-поля содержат 10-байтовые указатели на .MB-файл, которые указывают где могут быть найдены "остальные" значения поля.</p>
 

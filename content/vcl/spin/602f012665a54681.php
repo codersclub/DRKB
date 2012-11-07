@@ -31,7 +31,7 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <p>...массив ячеек TEdit будет просто замечательным, но я не могу понять как мне их создавать и делать видимыми.</p>
 <p>Допустим, если они имеют имена с Edit1 по Edit 9, то можно попробовать сделать так:</p>

@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Запуск и закрытие Excel, добавление и удаление книг и листов
  
@@ -162,7 +162,8 @@ end.
 </pre>
 
 <p> Пример использования:</p>
-<pre>
+
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 //вызов Excel, true - если хотите при вызове Excel отобразить окно Excel

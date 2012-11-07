@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 <p>Вот небольшой пример, скопированный из моего проекта:</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.PrintSave(Doc: string);
 var
   ProdDoc, ArchDoc: string;

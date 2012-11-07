@@ -7,25 +7,25 @@
 Примечание:<br>
 <p>сравнивались только русская и английская (American English) версии Excel с номером версии 9.0 (MS Office 2000) и выше. Другие версии не рассматривались.</p>
 Описание типов объектов, применяемых в примерах:</p>
-<pre>
+<pre class="delphi">
 XL: TExcelApplication;
 WB: TExcelWorkbook;
 ASheet: TExcelWorksheet;
 R: Range; // ExcelRange - для Delphi7
 </pre>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>
 Используемые в примерах "дополнительные" модули:<br>
 <p>OleServer, Excel2000, Office2000 из стандартной поставки Delphi Enterprise версии 6 и выше.</p>
 <p>У вас русская версия Excel?</p>
 Определить наличие русской версии Excel возможно так:</p>
-<pre>
+<pre class="delphi">
 if XL.LanguageSettings.LanguageID[msoLanguageIDUI] = 1049 
 {или $0419}
   then { Excel имеет русский интерфейс пользователя };
 </pre>
 Английская версия Excel (English United States) вернет 1033 (или $0409), немецкая (German Standard) - $0407. Значения соответствуют LCID, описанным в MS SDK Help "Language Identifiers". LCID интерфейса пользователя и файла Excel.exe файла может быть неодинаковым (например, после установки MUI). Константа msoLanguageIDUI находится в модуле Office2000.pas и описана так:</p>
-<pre>
+<pre class="delphi">
 const
   msoLanguageIDUI = $00000002;
 </pre>
@@ -34,7 +34,7 @@ const
 Далее мы рассмотрим приемы работы с "русским" Excel'ем.</p>
 <p>Работа со свойством объекта Range NumberFormat</p>
 NumberFormat и NumberFormatLocal четко работают в VBA и полностью соответствуют своему содержанию в названиях, но только не при работе из Delphi. В Excel2000.pas (D7) они описаны как</p>
-<pre>
+<pre class="delphi">
 ExcelRange = dispinterface
     ['{00020846-0000-0000-C000-000000000046}']
     ...
@@ -44,7 +44,7 @@ ExcelRange = dispinterface
 Но, при попытке записи форматов из Delphi, выясняется, что NumberFormat и NumberFormatLocal ведут себя идентично, причем NumberFormat соответствует NumberFormatLocal (лучше было бы наоборот :). Т.е. в русской версии все форматы нужно писать "по-русски" (можно прямо в NumberFormat, в VBA - нельзя).</p>
 <p>Формат даты</p>
 Код на VBA (эталон):</p>
-<pre>
+<pre class="vb">
 Sub Test1()
   Dim R As Range
   Set R = Range("a1")
@@ -59,7 +59,7 @@ Sub Test1()
 End Sub
 </pre>
 Код на Delphi:</p>
-<pre>
+<pre class="delphi">
 R := ASheet.Range['A1', EmptyParam];
 R.Value2 := Date;
 R.NumberFormat := 'd/mm/yy'; // ОШИБКА!
@@ -72,7 +72,7 @@ R.NumberFormatLocal := 'd/mm/yy'; // ОШИБКА
 И это еще не все! Заходим в настройки Excel'я "Сервис/Параметры" переходим на закладку "Международные" и видим опять "Разделитель целой и дробной части", "Разделитель разрядов" и чекбокс "Использовать системные разделители". Т.е. использование системных разделителей не может гарантировать правильного применения при форматировании чисел в Excel'е. Решение: использовать свойство ExcelApplication.International (о нем дальше). Причем, даже при установленном свойстве ExcelApplication.UseSystemSeparators = False и отличных от системных ExcelApplication.DecimalSeparator и ExcelApplication.ThousandsSeparator, ExcelApplication.International отработает корректно.</p>
 Далее рассмотрим примеры работы (или не работы), приняв "стандартные" настройки для русских Windows:</p>
 Код на VBA (эталон):</p>
-<pre>
+<pre class="vb">
 Sub Test2()
   Dim R As Range
   Set R = Range("a1")
@@ -87,7 +87,7 @@ Sub Test2()
 End Sub
 </pre>
 Код на Delphi:</p>
-<pre>
+<pre class="delphi">
 R := ASheet.Range['A1', EmptyParam];
 R.Value2 := 1234567.89;
 R.NumberFormat := '#,##0.00'; // не работает
@@ -100,7 +100,7 @@ R.NumberFormat := '# ##0,00'; //
 <p>в примерах значения записываются в Value2 для предотвращения форматирования "на лету" самим Excel'ем. Так число 123.45, записанное в Value будет автоматически отформатировано Excel'ем в формат валюты, а присвоение Value = Date будет автоматически переведено в формат даты. Запись в Value2 "воспринимает" значение как Double. Подробнее смотрите в справке VBA для Excel'я.</p>
 Решения (с использованием ExcelApplication.International):</p>
 Для получения формата даты можно написать функцию:</p>
-<pre>
+<pre class="delphi">
 function XL_GetShortDateFormat(XLApp: ExcelApplication): String;
 var d, m, y: Integer;
 begin
@@ -123,7 +123,7 @@ end;
 </pre>
 
 Для формата чисел:</p>
-<pre>
+<pre class="delphi">
 function XL_GetNumberFormat
 (XLApp: ExcelApplication): String;
 begin
@@ -155,7 +155,7 @@ Range.NumberFormat := '';</p>
 <p>Перечень цветов по-русски, которые можно задавать в формате: черный, красный, зеленый, синий, фиолетовый, желтый, белый. Список небогатый.</p>
 <p>Формулы на листе</p>
 К счастью, работа со свойствами Formula и FormulaLocal в VBA и Delphi идентична и соответствуют своим названиям. Хочется отметить только один нюанс (это, кстати, действительно и для VBA) - при написании "русских" формул нужно учитывать системную переменную ListSeparator. Так, если на другом компьютере пользователь изменит его со стандартного для русской версии Windows символа ";" на "," (например, как это делаю я :), то присвоение Range.FormulaLocal := '=округл(A1*B1; 2)'; вызовет ошибку! Поэтому, с учетом "разделителя элементов списка" нужно писать так:</p>
-<pre>
+<pre class="delphi">
 Range.FormulaLocal := Format('=округл(A1*B1%s 2)', 
 [ListSeparator]);
 или
@@ -167,7 +167,7 @@ Range.Formula := '=round(A1*B1, 2)';
 <p>Запись формул из Variant-ного массива</p>
 Запись в свойство Formula, FormulaLocal, Value, Value2 из Variant-ного массива идентична в русском Excel'е и при работе из Delphi. Но, если мы хотим вставлять формулы прямо из массива, все они должны быть только русскими! Вот здесь то и всплывает необходимость определения наличия русской версии Excel'я (впрочем, это уже касалось задания цвета в свойстве NumberFormat).</p>
 <p>Код на VBA:</p>
-<pre>
+<pre class="vb">
 Sub TestVariant()
  
   Dim MyVar(2, 2) As Variant ' 3 строки, 3 колонки
@@ -200,7 +200,7 @@ Sub TestVariant()
   End With
 </pre>
 Код на Delphi (тут мы применим знание написания русских формул, описанный выше, а именно ListSeparator):</p>
-<pre>
+<pre class="delphi">
 var
   MyVar: Variant;
   IsRusXL: Boolean;
@@ -252,15 +252,15 @@ begin
 <p>Sub Макрос1()</p>
 <p>'</p>
 <p>  ActiveSheet.PageSetup.CenterFooter = _</p>
-<p> &nbsp;&nbsp; "&amp;""Arial""&amp;8Лист &amp;""Arial,полужирный""&amp;P" &amp; _</p>
-<p> &nbsp;&nbsp; "&amp;""Arial,обычный"" из &amp;""Arial,полужирный""&amp;N"</p>
+<p>    "&amp;""Arial""&amp;8Лист &amp;""Arial,полужирный""&amp;P" &amp; _</p>
+<p>    "&amp;""Arial,обычный"" из &amp;""Arial,полужирный""&amp;N"</p>
 <p>End Sub</p>
 Т.е. при выводе на печать мы хотим, чтоб в нижний колонтитул по центру выводился текст, к примеру "Лист 1 из 5".</p>
 Примечание:<br>
 <p>если вы хотите увидеть работу вашего макроса в действии (чтоб работал PrintPreview), обязательно внесите на лист хоть какие-нибудь данные.</p>
 Внимание! Суммарная длина текста в нижнем или верхнем (левый + по_центру + правый) колонтитулах не должна превышать 250 символов (как и в ячейке).</p>
 Вроде бы все ясно, осталось только переписать его под Delphi:</p>
-<pre>
+<pre class="delphi">
 ASheet.PageSetup.CenterFooter :=
   '&amp;"Arial"&amp;8Лист &amp;"Arial,полужирный"&amp;P' +
   '&amp;"Arial,обычный" из &amp;"Arial,полужирный"&amp;N';
@@ -268,20 +268,20 @@ ASheet.PageSetup.CenterFooter :=
 Проверяем в Excel'е "Предварительный просмотр" - оба, и не работает! А как же должно работать?</p>
 Припоминая русификацию еще Excel'я 4-й версии, напишем русские эквиваленты:</p>
 <p>ASheet.PageSetup.CenterFooter :=</p>
-<p> &nbsp;&nbsp; '&amp;"Arial"&amp;8Лист &amp;"Arial,полужирный"&amp;С' + // <br>
+<p>    '&amp;"Arial"&amp;8Лист &amp;"Arial,полужирный"&amp;С' + // <br>
 <p>Страница - Page</p>
-<p> &nbsp; '&amp;"Arial,обычный" из &amp;"Arial,полужирный"&amp;К'; //<br>
+<p>   '&amp;"Arial,обычный" из &amp;"Arial,полужирный"&amp;К'; //<br>
 <p> Количество - Number</p>
 Сработало! Ну, и теперь добавим распознавание русской версии:</p>
 <p>if XL.LanguageSettings.LanguageID[msoLanguageIDUI] = $0419</p>
 <p>  then ASheet.PageSetup.CenterFooter := //<br>
 <p> русские коды форматирования</p>
-<p> &nbsp;&nbsp; '&amp;"Arial"&amp;8Лист &amp;"Arial,полужирный"&amp;С' +</p>
-<p> &nbsp;&nbsp; '&amp;"Arial,обычный" из &amp;"Arial,полужирный"&amp;К'</p>
+<p>    '&amp;"Arial"&amp;8Лист &amp;"Arial,полужирный"&amp;С' +</p>
+<p>    '&amp;"Arial,обычный" из &amp;"Arial,полужирный"&amp;К'</p>
 <p>  else ASheet.PageSetup.CenterFooter := //<br>
 <p> английские коды форматирования</p>
-<p> &nbsp;&nbsp; '&amp;"Arial"&amp;8Лист &amp;"Arial,bold"&amp;P' +</p>
-<p> &nbsp;&nbsp; '&amp;"Arial,normal" из &amp;"Arial,bold"&amp;N';</p>
+<p>    '&amp;"Arial"&amp;8Лист &amp;"Arial,bold"&amp;P' +</p>
+<p>    '&amp;"Arial,normal" из &amp;"Arial,bold"&amp;N';</p>
 Вывод: при вставке кодов форматирования из Delphi в русский Excel должны вставляться только русские коды форматирования. А где их взять? Вот список кодов форматирования, полученных методом пробы:</p>
 <table cellspacing="0" cellpadding="0" border="0" style="border: none border-spacing:0px; border-collapse: collapse;">
 <tr>
@@ -461,11 +461,11 @@ ASheet.PageSetup.CenterFooter :=
 </td>
 </tr>
 </table>
-<p>&nbsp;<br>
-<p>&nbsp;</p>
+<p> <br>
+<p></p>
 И еще один опыт:</p>
 <p>ASheet.PageSetup.CenterFooter :=</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp; '&amp;"Arial"&amp;8Лист &amp;"Arial,bold"&amp;С&amp;"Arial,normal"<br>
+<p>      '&amp;"Arial"&amp;8Лист &amp;"Arial,bold"&amp;С&amp;"Arial,normal"<br>
 <p> из &amp;"Arial,bold"&amp;К';</p>
 Работает! Т.е. начертания (Style у класса TFont в Delphi) шрифтов можно уверенно писать по-английски. Или заменить на коды форматирования:</p>
 <p>ASheet.PageSetup.CenterFooter := <br>
@@ -479,4 +479,8 @@ ASheet.PageSetup.CenterFooter :=
 <p>#10'Вторая строка';</p>
 <p>Выводы</p>
 При работе с русским Excel'ем из Delphi необходимо соблюдать следующие правила:</p>
-<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при задании форматов использовать только русские форматы чисел и даты;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при цветном форматировании чисел указывать цвета только на русском языке;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при записи формул из вариантного массива использовать только русские формулы;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при создании колонтитулов использовать только русские коды форматирования;</td></tr></table></div><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>для совместимости с английской версий необходимо проверять LCID интрефейса пользователя Excel'я и действовать соответственно.</td></tr></table></div>Мне не удалось найти документацию, касающуюся моментов описанных выше. Весь материал построен чисто на собственном опыте. И еще: не было возможности проверить на полностью английских версиях Windows и Office.</p>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при задании форматов использовать только русские форматы чисел и даты;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при цветном форматировании чисел указывать цвета только на русском языке;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при записи формул из вариантного массива использовать только русские формулы;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>при создании колонтитулов использовать только русские коды форматирования;</td></tr></table></div>
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#183;</td><td>для совместимости с английской версий необходимо проверять LCID интрефейса пользователя Excel'я и действовать соответственно.</td></tr></table></div>Мне не удалось найти документацию, касающуюся моментов описанных выше. Весь материал построен чисто на собственном опыте. И еще: не было возможности проверить на полностью английских версиях Windows и Office.</p>

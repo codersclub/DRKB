@@ -4,12 +4,12 @@
 
 <p>При создании окна обработчики событий выполняются в следующем порядке:</p>
 
-<p> &nbsp; &nbsp; &nbsp; &nbsp;OnCreate</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;OnShow</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;OnPaint</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;OnActivate</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;OnResize</p>
-<p> &nbsp; &nbsp; &nbsp; &nbsp;OnPaint (снова)</p>
+<p>        OnCreate</p>
+<p>        OnShow</p>
+<p>        OnPaint</p>
+<p>        OnActivate</p>
+<p>        OnResize</p>
+<p>        OnPaint (снова)</p>
 
 <p>Copyright © 1996 Epsylon Technologies</p>
 <p>Взято из FAQ Epsylon Technologies (095)-913-5608; (095)-913-2934; (095)-535-5349</p>

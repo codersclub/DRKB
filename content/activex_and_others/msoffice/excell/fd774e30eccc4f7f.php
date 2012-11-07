@@ -7,14 +7,15 @@
 
 <p>If WS is your worksheet:</p>
 
-<pre>
+<pre class="delphi">
 { ... }
 WS.Shapes.AddPicture('C:\Pictures\Small.Bmp', EmptyParam, EmptyParam, 10, 160,
   EmptyParam, EmptyParam);
 </pre>
 
 <p>or</p>
-<pre>
+
+<pre class="delphi">
 { ... }
 var
   Pics: Excel2000.Pictures; {or whichever Excel}
@@ -31,7 +32,8 @@ Pic.Left := WS.Range['D4', 'D4'].Left;
 
 
 <p>EmptyParam a special variant (declared in Variants.pas in D6+). However in later versions of Delphi some conversions cause problems. This should work:</p>
-<pre>
+
+<pre class="delphi">
 uses
   OfficeXP;
  

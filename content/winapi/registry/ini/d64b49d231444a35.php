@@ -22,7 +22,7 @@ RenameFile('c:\test.ini', 'c:\test1.ini');
 <p>WritePrivateProfileString(nil, nil, nil, PChar(IniFileName));</p>
 <p>Для получения дополнительной информации обратитесь к электронной справке к разделу 'WritePrivateProfileString'</p>
 <div class="author">Автор: Tony Chang</div>
-&nbsp;</p>
+</p>
 <hr /><p>Как указать системе на необходимость сбросить буфер INI-файла на диск</p>
 <pre>
 procedure FlushIni(FileName: string);

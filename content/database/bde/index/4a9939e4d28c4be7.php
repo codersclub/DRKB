@@ -6,7 +6,7 @@
 
 <p>Ниже приведен код обработчика кнопки OnClick, с помощью которого строится индекс:</p>
 
-<pre>
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject);
 var
   bActive, bExclusive: Boolean;
@@ -30,4 +30,5 @@ end;
 </pre>
 
 <p>Если вы собираетесь запускать проект из Delphi, пожалуйста убедитесь в том, что свойство таблицы Active в режиме проектирования установлено в False.</p>
+
 <p>Взято с <a href="https://delphiworld.narod.ru" target="_blank">https://delphiworld.narod.ru</a></p>

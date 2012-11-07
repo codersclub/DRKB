@@ -4,7 +4,7 @@
 
 
 <p>You should use a variant because the Find.Execute method is a bit buggy. Something like this, for example:</p>
-<pre>
+<pre class="delphi">
 { ... }
 var
   Rnge: OleVariant;
@@ -17,7 +17,8 @@ Rnge.Find.Execute('old', Wrap := wdFindContinue, ReplaceWith := 'new', Replace :
 </pre>
 
 <hr />
-<pre>
+
+<pre class="delphi">
 { ... }
   { Create the OLE Object }
 WordApp := CreateOLEObject('Word.Application');
@@ -43,7 +44,8 @@ WordApp := Unassigned;
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>
 
 <hr />
-<pre>
+
+<pre class="delphi">
 { **** UBPFD *********** by kladovka.net.ru ****
 &gt;&gt; Заменить строки в файле Word
  
@@ -129,7 +131,7 @@ end;
 
 
 <p> Пример использования:</p>
-<pre>
+<pre class="delphi">
 procedure TForm1.Button1Click(Sender: TObject); 
 begin 
   WordStringReplace('C:\SomeStrangeDoc.doc','Маша ела кашу','Маша съела кашу :)',

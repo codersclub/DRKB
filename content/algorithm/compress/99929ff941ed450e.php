@@ -403,7 +403,7 @@
 </td>
 <td><p>46</p>
 </td>
-<td><p>&nbsp;
+<td><p> 
 </td>
 </tr>
 </table>

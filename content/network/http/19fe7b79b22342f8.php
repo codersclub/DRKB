@@ -9,7 +9,7 @@
 204 No Content <br>
 205 Reset Content <br>
 206 Partial Content <br>
-&nbsp;<br>
+ <br>
 Перенаправляющие <br>
 300 Multiple Choices <br>
 301 Moved Permanently <br>
@@ -17,7 +17,7 @@
 303 See Other <br>
 304 Not Modified <br>
 305 Use Proxy (proxy redirect) <br>
-&nbsp;<br>
+ <br>
 Клиентские ошибки <br>
 400 Bad Request <br>
 401 Unauthorized <br>
@@ -35,7 +35,7 @@
 413 Request Entity To Large <br>
 414 Request-URI Too Long <br>
 415 Unsupported Media Type <br>
-&nbsp;<br>
+ <br>
 Ошибки сервера <br>
 500 Internal Server Error <br>
 501 Not Implemented <br>
@@ -43,9 +43,9 @@
 503 Service Unavailable <br>
 504 Gateway Timeout <br>
 505 HTTP Version Not Supported <br>
-&nbsp;<br>
+ <br>
 <p>Дополнительная информация здесь: Hypertext Transfer Protocol -- HTTP/1.0</p>
-<p>&nbsp;<br>
+<p> <br>
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Rouse_</div>
 

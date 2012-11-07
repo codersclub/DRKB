@@ -27,7 +27,7 @@ to=78422973421&amp;msg=sms&amp;dcs=0 (1)</p>
 &lt; input type=reset value="clean"&gt; <br>
 &lt; input type=submit value="send &gt;&gt;"&gt; <br>
 <p>&lt; /form&gt;</p>
-&nbsp;<br>
+ <br>
 <p>Очевидно, что это форма со следующими компонентами :</p>
 1) поле для ввода текста с именем to , куда вводится номер абонента <br>
 2) элемент ввода текста с именем msg , куда вводится текст сообщения <br>
@@ -78,7 +78,7 @@ webbrowser1.navigate2(vwebaddr,vflags,vframe,vpostdata,vheaders);
 except
 end; 
 </pre>
-&nbsp;</p>
+</p>
 Разберем код построчно.</p>
 stpostdata:='to='+combobox1.text+'&amp;msg='+text+'&amp;dcs=0';</p>
 заполняем строковую переменную stpostdata значениями полей. Отправляем обычный sms, поэтому dcs=0, исходя из значений в html форме</p>

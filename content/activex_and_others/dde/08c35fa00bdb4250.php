@@ -6,7 +6,7 @@
 <p>Клиент может "пропихивать" (POKE) данные на сервер.</p>
 <p>Сервер может автоматически передавать данные клиенту, после чего клиент обновляет свой вид на основе результатов, полученных от сервера.</p>
 <p>Данные сервера изменяются, после чего клиент делает запрос серверу для получения новых данных и обновляет свой вид.</p>
-<pre>
+<pre class="delphi">
 { *** НАЧАЛО КОДА DDEMLCLI.DPR *** }
 program Ddemlcli;
  
@@ -24,7 +24,7 @@ begin
 end.
 { ***  КОНЕЦ КОДА DDEMLCLI.DPR *** }
 </pre>
-<pre>
+<pre class="delphi">
 { *** НАЧАЛО КОДА DDEMLCLU.DFM *** }
 object Form1: TForm1
  
@@ -87,7 +87,7 @@ end
 { ***  КОНЕЦ КОДА DDEMLCLU.DFM *** }
 </pre>
 
-<pre>
+<pre class="delphi">
 { *** НАЧАЛО КОДА DDEMLCLU.PAS *** }
 {***************************************************}
 {                                                   }
@@ -497,7 +497,7 @@ end;
 end. { ***  КОНЕЦ КОДА DDEMLCLU.PAS *** }
 </pre>
 
-<pre>
+<pre class="delphi">
 { *** НАЧАЛО КОДА DDEMLSVR.DPR *** }
 program Ddemlsvr;
  
@@ -517,7 +517,7 @@ begin
 end.
 { ***  КОНЕЦ КОДА DDEMLSVR.DPR *** }
 </pre>
-<pre>
+<pre class="delphi">
 { *** НАЧАЛО КОДА DDESVRU.DFM *** }
 object Form1: TForm1
  
@@ -619,7 +619,7 @@ end
 { ***  КОНЕЦ КОДА DDESVRU.DFM *** }
 </pre>
 
-<pre>
+<pre class="delphi">
 { *** НАЧАЛО КОДА DDESVRU.PAS *** }
 {***************************************************}
 {                                                   }
@@ -1105,7 +1105,7 @@ end.
 { ***  КОНЕЦ КОДА DDESVRU.PAS *** }
 </pre>
 
-<pre>
+<pre class="delphi">
 { *** НАЧАЛО КОДА DDEDLG.DFM *** }
 object DataEntry: TDataEntry
  
@@ -1299,7 +1299,7 @@ end
 { ***   КОНЕЦ КОДА DDEDLG.DFM *** }
 </pre>
 
-<pre>
+<pre class="delphi">
 { *** НАЧАЛО КОДА DDEDLG.PAS *** }
 {***************************************************}
 {                                                   }

@@ -28,7 +28,7 @@ NewStr:=RemoveInvalid('&lt;брак&gt;','Этот &lt;брак&gt; в моей 
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr /><p>Используйте стандартную функцию Pascal DELETE...</p>
 <p>Пользуясь тем же примером, вы можете сделать так....</p>
 <pre>Target:='&lt;брак&gt;';
@@ -41,7 +41,7 @@ end;
 
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
-&nbsp;</p>
+</p>
 <hr />
 <p>Всё даже проще:</p>
 <pre>

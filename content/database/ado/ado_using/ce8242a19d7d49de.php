@@ -36,7 +36,7 @@
 
 <p>function Execute: _RecordSet; overload;</p>
 <p>function Execute(const Parameters: OleVariant): _Recordset;overload;</p>
-<p>function Execute(var RecordsAffected: Integer; var Parameters: OleVariant;&nbsp;&nbsp;&nbsp; ExecuteOptions: TExecuteOptions = []): _RecordSet; overload;</p>
+<p>function Execute(var RecordsAffected: Integer; var Parameters: OleVariant;    ExecuteOptions: TExecuteOptions = []): _RecordSet; overload;</p>
 
 <p>Разработчик может использовать любую из представленных нотаций перегружаемого метода:</p>
 
@@ -47,7 +47,7 @@
 <p>TExecuteOption = (eoAsyncExecute, eoAsyncFetch, eoAsyncFetchNonBlocking, eoExecuteNoRecords);</p>
 <p>TExecuteOptions = set of TExecuteOption;</p>
 
-<p>eoAsyncExecute &#8212; асинхронное выполнение команды;&nbsp;</p>
+<p>eoAsyncExecute &#8212; асинхронное выполнение команды;</p>
 
 <p>eoAsyncFetch &#8212; асинхронная передача данных;</p>
 

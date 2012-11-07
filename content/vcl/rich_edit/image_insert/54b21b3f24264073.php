@@ -234,7 +234,7 @@ end.
 </pre>
 
 Примеры использования:<br>
-<p>&nbsp;</p>
+<p></p>
 <pre>
 uses re_bmp;
  
@@ -261,11 +261,11 @@ end;
 </pre>
 <br>
 Таким же образом можно вставлять картинки не только в TRichEdit, но и в RxRichEdit, стандартный виндовый RichEdit, etc.<br>
-&nbsp;<br>
-&nbsp;
+ <br>
+ 
 <p>Взято из <a href="https://forum.sources.ru" target="_blank">https://forum.sources.ru</a></p>
 <div class="author">Автор: Krid</div>
-&nbsp;</p>
+</p>
 <hr />
 <pre>
 uses

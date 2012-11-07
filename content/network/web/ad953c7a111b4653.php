@@ -18,18 +18,20 @@ url будет выглядеть как machine:5000/path при доступе
 или 127.0.0.1:5000/path при доступе с локального хоста. <br>
 Следует сразу поговорить о двух тонкостях, не имеющих прямого <br>
 <p>отношения к написанию web сервера</p>
-&nbsp;<br>
-<p>&nbsp;</p>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
+ <br>
+<p></p>
 <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Два приложения на одном компьютере не могут одновременно <br>
 использовать один и тот-же порт. Поэтому следует выносить <br>
 номер порта в настройки программы и (или) предусматривать <br>
 механизм автоматического выбора одного из альтернативных <br>
-портов на случай, если основной уже занят.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Следствием из несоблюдения пункта 1 является <br>
+портов на случай, если основной уже занят.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Следствием из несоблюдения пункта 1 является <br>
 невозможность запуска двух копий одной программы без <br>
 принятия соответствующих мер <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Программа может быть запущена на компьютере, не <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>Программа может быть запущена на компьютере, не <br>
 настроенном на работу с сетью. Попытка использования <br>
 компонента tserversocket в этом случае приведет к ошибкам, <br>
 которые могут помешать нормальному запуску программы.</td></tr></table></div>Решением всех этих проблем может послужить следующий совет: <br>
@@ -40,19 +42,20 @@ url будет выглядеть как machine:5000/path при доступе
 Протокол http - краткая справочная информация. Обмен по <br>
 протоколу http производится в т.н. транзакциях, которые <br>
 <p>состоят из трех шагов</p>
-&nbsp;<br>
-<p>&nbsp;</p>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
+ <br>
+<p></p>
 <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Установка соединения. Производится по инициативе клиента <br>
 и для этого необходимо знать порт, по которому работает <br>
-сервер.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Запрос клиента. Клиент передает серверу http запрос <br>
+сервер.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">1.</td><td>Запрос клиента. Клиент передает серверу http запрос <br>
 (содержащий http метод, идентификатор ресурса и версию <br>
 протокола) + дополнительную информацию. Пример типового <br>
 запроса "get /book/index.htm http/1.0". Запрос как правило <br>
 завершается пустой строкой и обязательным crlf. Вот полный <br>
 пример запроса ie5 (перехваченный кстати при помощи примера <br>
-<p>2):</td></tr></table></div>&nbsp;</p>
+<p>2):</td></tr></table></div></p>
 get /btn7.gif http/1.1</p>
 accept: */*</p>
 referer: http://127.0.0.1:5000/</p>
@@ -86,45 +89,69 @@ ie. Он выдает запрос, получает ответ и начина�
 на сервер и что принято в ответ).</td></tr></table></div>Классы кодов ответа http. Как говорилось ранее, код ответа <br>
 представляет собой трехзначное число. Коды сгруппированы в <br>
 <p>пять категорий, категория определяется первой цифрой</p>
-&nbsp;<br>
-<p>&nbsp;</p>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
+ <br>
+<p></p>
 <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>1** Информационная. На данный момент зарезервирована <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>2** Успешно. Сообщает об успешном выполнении запроса <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>3** Перенаправление. Указывает клиенту, что для <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>2** Успешно. Сообщает об успешном выполнении запроса <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>3** Перенаправление. Указывает клиенту, что для <br>
 выполнения запроса необходимы дополнительные действия <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>4** Ошибка клиента. Сообщает клиенту о том, что запрос <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>4** Ошибка клиента. Сообщает клиенту о том, что запрос <br>
 неполный или содержит синтаксические ошибки. Кроме того, <br>
 ошибки этой категории возникают, если запрошенный ресурс не <br>
 найден или недоступен <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>5** Ошибка сервера. Возникает, если сервер перегружен, <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>5** Ошибка сервера. Возникает, если сервер перегружен, <br>
 недоступен или в работе сервера возникли какие либо ошибки <br>
-&nbsp;</td></tr></table></div>&nbsp;<br>
-<p>&nbsp;</p>
+</td></tr></table></div> <br>
+<p></p>
 Наибольший интерес представляют собой следующие коды (они <br>
 <p>наиболее распространены)</p>
 <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>200 ОК <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>201 Успешная команда post</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>202 Запрос принят <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>203 Запрос get либо head выполнен <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>204 Запрос выполнен, но нет содержимого <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>300 Ресурс обнаружен в нескольких местах <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>301 Ресурс удален навсегда <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>302 Ресурс временно удален <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>304 Ресурс изменен <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>400 Плохой запрос от клиента <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>401 Неавторизованный запрос <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>402 Необходима оплата за запрос <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>403 Доступ к ресурсу запрещен <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>404 Ресурс не найден <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>405 Метод неприменим для данного ресурса <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>406 Недопустимый тип ресурса <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>410 Ресурс недоступен <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>500 Внутренняя ошибка сервера <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>501 Метод не выполнен <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>502 Перегрузка сервера или неисправный шлюз <br>
-&nbsp;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>503 Сервер недоступен или таймаут шлюза</td></tr></table></div>&nbsp;<br>
-<p>&nbsp;</p>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>201 Успешная команда post</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>202 Запрос принят <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>203 Запрос get либо head выполнен <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>204 Запрос выполнен, но нет содержимого <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>300 Ресурс обнаружен в нескольких местах <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>301 Ресурс удален навсегда <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>302 Ресурс временно удален <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>304 Ресурс изменен <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>400 Плохой запрос от клиента <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>401 Неавторизованный запрос <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>402 Необходима оплата за запрос <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>403 Доступ к ресурсу запрещен <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>404 Ресурс не найден <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>405 Метод неприменим для данного ресурса <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>406 Недопустимый тип ресурса <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>410 Ресурс недоступен <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>500 Внутренняя ошибка сервера <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>501 Метод не выполнен <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>502 Перегрузка сервера или неисправный шлюз <br>
+</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr><td width="24">&#9632;</td><td>503 Сервер недоступен или таймаут шлюза</td></tr></table></div> <br>
+<p></p>
 Методы протокола http</p>
 Данная статья не преследует цель описать подробность <br>
 протокола http, но для понимания принципов работы примера <br>
@@ -144,16 +171,16 @@ ie. Он выдает запрос, получает ответ и начина�
 <p>сервер передает только заголовок (но не передает данные).</p>
 Метод post</p>
 Метод post применяется для передачи серверу данных</p>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
 Метод put</p>
 Метод put предназначен для сохранения данных, переданных <br>
 <p>после заголовка запроса, под именем, указанным в запросе.</p>
 Метод delete</p>
 Метод delete используется для удаления ресурсов с указанным <br>
 <p>в запросе именем</p>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+<p></p>
 Итак, мы поговорили о теории (причем это не теория, а <br>
 краткий ликбез). Найти более подробное описание достаточно <br>
 легко, есть масса сайтов, специализирующихся на подобной <br>
@@ -181,8 +208,8 @@ get. Данный пример может служить прототипом д
 огрех - периодически вылетала ошибка socket error 10054, <br>
 связанная с тем, что ie брал странички из кеша и рвал <br>
 <p>соединение в процессе их передачи.</p>
-&nbsp;<br>
-&nbsp;<br>
-<p>&nbsp;</p>
+ <br>
+ <br>
+<p></p>
 Источник: <a href="www.codersclub.net" target="_blank">www.codersclub.net</a></p>
 

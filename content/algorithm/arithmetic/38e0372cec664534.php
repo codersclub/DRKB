@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 function RoundStr(Zn: Real; kol_zn: Integer): Real;
 var
   snl, s, s0, s1, s2: string;
@@ -44,7 +44,7 @@ end;
 
 <hr />
 
-<pre>
+<pre class="delphi">
 function RoundEx(X: Double; Precision: Integer ): Double;
 {
 Precision :
@@ -72,7 +72,7 @@ end;
 <hr />
 
 <p>Округление дробных чисел с точностью i - количество знаков после запятой, S - дробное число в строковом виде.</p>
-<pre>
+<pre class="delphi">
 function FormatData(s: String; i: Integer): String;
 begin
   Result:=FloatToStr(Round(StrToFloat(s)*exp(i*ln(10)))/(exp(i*ln(10))));
@@ -84,7 +84,7 @@ end;
 <hr />
 
 <p>Как округлять до сотых в большую сторону</p>
-<pre>
+<pre class="delphi">
 uses Math;
  
 // Прибавляешь 0.5 затем округляешь:
@@ -105,7 +105,7 @@ end;
 
 <hr />
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; «Округление» в большую сторону
  
@@ -135,7 +135,7 @@ RoundNext(9, 3) // = 12
 
 <hr />
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; «Округление» в меньшую сторону
  
@@ -165,7 +165,7 @@ RoundPrev(9, 3) // = 9
 
 <hr />
 
-<pre>
+<pre class="delphi">
 { **** UBPFD *********** by delphibase.endimus.com ****
 &gt;&gt; «Округление» до ближайшего кратного
  
@@ -204,12 +204,14 @@ asm
 @@30:
    pop ebx
 end;
- 
 </pre>
+
 <hr />
+
 <p>Округление дробного числа до N знаков после запятой</p>
 <div class="author">Автор: Perceptron</div>
-<pre>
+
+<pre class="delphi">
 function RoundEx(chislo: double; Precision: Integer): string;
 var
   ChisloInStr: string;
@@ -228,9 +230,11 @@ end;
 </pre>
 <p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
 <p>DelphiWorld 6.0</p>
+
 <hr />
+
 <p>Округление чисел c определенной точностью</p>
-<pre>
+<pre class="delphi">
 function Rounder(var Value: Double; Decimals: Integer): Double;
  var
    j: Integer;
@@ -258,8 +262,10 @@ function Rounder(var Value: Double; Decimals: Integer): Double;
  end;
 </pre>
 <p>Взято с сайта: <a href="https://www.swissdelphicenter.ch" target="_blank">https://www.swissdelphicenter.ch</a></p>
+
 <hr />
-<pre>
+
+<pre class="delphi">
 { 
   The function Round of the Delphi doesn't work 
   like it is usually expected. 

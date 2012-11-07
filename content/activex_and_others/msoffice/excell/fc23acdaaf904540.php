@@ -3,7 +3,7 @@
 
 
 
-<pre>
+<pre class="delphi">
 { ... }
 WB := Excel.Workbooks[1];
 for Idx := 1 to WB.Worksheets.Count do

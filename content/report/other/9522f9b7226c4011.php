@@ -57,13 +57,13 @@
 
 <p>// Синтаксис функций:</p>
 <p>PEOutputToWindow(printJob : Smallint; title: PChar;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left: Integer; top: Integer;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; width: Integer; height: Integer;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; style: DWord;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parentWindow : HWnd): Bool;</p>
+<p>                   left: Integer; top: Integer;</p>
+<p>                   width: Integer; height: Integer;</p>
+<p>                   style: DWord;</p>
+<p>                   parentWindow : HWnd): Bool;</p>
 
 <p>PEOutputToPrinter(printJob: Word;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nCopies: Integer)): Bool;</p>
+<p>                   nCopies: Integer)): Bool;</p>
 <p>{</p>
 <p>где,</p>
 <p> printJob - дескриптор задачи</p>
@@ -73,9 +73,9 @@
 <p> parentWindow - дескриптор окна в котором будет окно отчета.</p>
 <p> nCopies - количество копий.</p>
 <p>Пример:</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result:= PEOutputToWindow(FHandleJob,</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PChar(TForm(Self).Caption),</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, 0, 0, 0, 0, FWindow);</p>
+<p>        Result:= PEOutputToWindow(FHandleJob,</p>
+<p>        PChar(TForm(Self).Caption),</p>
+<p>        0, 0, 0, 0, 0, FWindow);</p>
 <p>}</p>
 
 
@@ -84,7 +84,7 @@
 
 <p>// Синтаксис функции:</p>
 <p>function PEStartPrintJob(printJob: Word;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; waitUntilDone: Bool): Bool;</p>
+<p>                         waitUntilDone: Bool): Bool;</p>
 <p>{</p>
 <p>где,</p>
 <p>  printJob - дескриптор задачи.</p>
@@ -112,15 +112,15 @@
 <p>В итоге получается схема вызовов:</p>
 
 <p>PEOpenEngine</p>
-<p> &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>     |</p>
 <p>PEOpenPrintJob</p>
-<p> &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>     |</p>
 <p>PEOutputToWindow</p>
-<p> &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>     |</p>
 <p>PEStartPrintJob</p>
-<p> &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>     |</p>
 <p>PEClosePrintJob</p>
-<p> &nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>     |</p>
 <p>PECloseEngine</p>
 
 <p>Пример просмотра отчета</p>
@@ -177,9 +177,9 @@ end;
 
 <p>// Синтаксис функции:</p>
 <p>function PEGetNthTableLogOnInfo</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (printJob: Word;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tableN: Integer;</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var logOnInfo: PELogOnInfo): Bool;</p>
+<p>         (printJob: Word;</p>
+<p>         tableN: Integer;</p>
+<p>         var logOnInfo: PELogOnInfo): Bool;</p>
 <p>{</p>
 <p>где,</p>
 <p>  printJob - дескриптор задачи.</p>
@@ -210,19 +210,19 @@ end;
 <p>  PELogonUserType = array[0..PE_USERID_LEN - 1] of Сhar;</p>
 <p>  PELogonPassType = array[0..PE_PASSWORD_LEN - 1] of Сhar;</p>
 <p>  PELogOnInfo = record</p>
-<p> &nbsp;&nbsp; StructSize: Word;</p>
-<p> &nbsp;&nbsp; ServerName: PELogonServerType;</p>
-<p> &nbsp;&nbsp; DatabaseName: PELogonDbType;</p>
-<p> &nbsp;&nbsp; UserId: PELogonUserType;</p>
-<p> &nbsp;&nbsp; Password: PELogonPassType;</p>
+<p>    StructSize: Word;</p>
+<p>    ServerName: PELogonServerType;</p>
+<p>    DatabaseName: PELogonDbType;</p>
+<p>    UserId: PELogonUserType;</p>
+<p>    Password: PELogonPassType;</p>
 <p>  end;</p>
 <p>{</p>
 <p>  где,</p>
-<p> &nbsp;&nbsp; StructSize - размер структуры.Заполняется обязательно.</p>
-<p> &nbsp;&nbsp; ServerName - имя сервера или путь к файлу БД.</p>
-<p> &nbsp;&nbsp; DatabaseName - имя БД.</p>
-<p> &nbsp;&nbsp; UserId - пользователь.</p>
-<p> &nbsp;&nbsp; Password - пароль пользователя.</p>
+<p>    StructSize - размер структуры.Заполняется обязательно.</p>
+<p>    ServerName - имя сервера или путь к файлу БД.</p>
+<p>    DatabaseName - имя БД.</p>
+<p>    UserId - пользователь.</p>
+<p>    Password - пароль пользователя.</p>
 <p>}</p>
 
 
@@ -275,7 +275,7 @@ end;
 
 <p>ParameterInfo.Name // - имя параметра.</p>
 <p>ParameterInfo.ValueType // - тип данных параметра.</p>
-<p>ParameterInfo.DefaultValue&nbsp; // - значение по умолчанию.</p>
+<p>ParameterInfo.DefaultValue  // - значение по умолчанию.</p>
 
 
 <p>Структура ValueInfo содержит в одном из своих полей значение параметра. Вы можете посмотреть в примере функцию FormatCrystalValue, чтобы разобраться с полями структуры.</p>

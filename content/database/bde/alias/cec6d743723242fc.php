@@ -3,7 +3,8 @@
 
 
 <p>The following function uses the GetAliasParams method of TSession to get the directory mapping for an alias:</p>
-<pre>
+
+<pre class="delphi">
 uses DbiProcs, DBiTypes;
  
 function GetDataBaseDir(const Alias: string): string;
@@ -29,8 +30,10 @@ end;
 </pre>
 
 <p>Взято с Delphi Knowledge Base: <a href="https://www.baltsoft.com/" target="_blank">https://www.baltsoft.com/</a></p>
+
 <hr />
-<pre>
+
+<pre class="delphi">
 {
   Here's a demo to demonstrate how to get info about aliases in Delphi.
   First, create a new project with a listbox and 3 labels (called ListBox1,

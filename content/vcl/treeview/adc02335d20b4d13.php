@@ -69,7 +69,7 @@ begin
     Dispose(PString(Node.Data));
 end;
 </pre>
-<p>&nbsp;<br>
+<p> <br>
 <div class="author">Автор: Dynamic</div>
-&nbsp;<br>
+ <br>
 

@@ -3,15 +3,17 @@
 
 <p>PowerPoint.Save;</p>
 <p>Or for SaveAs:</p>
-<pre>var
+<pre class="delphi">var
   EmbedFonts: OleVariant;
 begin
   EmbedFonts := False;
   PowerPoint.ActivePresentation.SaveAs('PresName.ppt', ppSaveAsPresentation, EmbedFonts);
 </pre>
-&nbsp;<br>
+
+<br>
 <p>The second parameter for SaveAs determines the save format - possible values are ppSaveAsAddIn, ppSaveAsPowerPoint3, ppSaveAsPowerPoint4, ppSaveAsPowerPoint7, ppSaveAsPresentation, ppSaveAsRTF, or ppSaveAsTemplate. These are constants defined in the type library. If you aren't using the type library, you can define them yourself like this:</p>
-<pre>
+
+<pre class="delphi">
 const
   ppSaveAsPresentation = $00000001;
   ppSaveAsPowerPoint7 = $00000002;

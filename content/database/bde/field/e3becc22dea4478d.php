@@ -2,7 +2,7 @@
 <div class="date">01.01.2007</div>
 
 
-<pre>
+<pre class="delphi">
 uses
   Forms, Classes, Controls, StdCtrls, Db, DBTables, DBCtrls;
  
@@ -53,5 +53,6 @@ end;
 end.
 </pre>
 
-<p><a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
+<p>Взято с <a href="https://delphiworld.narod.ru/" target="_blank">https://delphiworld.narod.ru/</a></p>
+
 <p>DelphiWorld 6.0</p>

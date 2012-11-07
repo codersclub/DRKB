@@ -87,7 +87,7 @@ end;
     end;
   end;
 </pre>
-&nbsp;<br>
+ <br>
 <p>пример использования:</p>
 <pre>
 ModColors(BitMap, RGB(150,150,150));
