@@ -1,0 +1,2 @@
+TPanel, TToolBar, TCoolBar
+==========================

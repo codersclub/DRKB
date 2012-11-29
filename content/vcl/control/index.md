@@ -1,0 +1,2 @@
+TPageControl, TTabControl, TNotebook, TTabSet
+=============================================
