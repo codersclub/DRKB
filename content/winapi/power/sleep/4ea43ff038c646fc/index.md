@@ -1,0 +1,37 @@
+---
+Title: Поддерживает ли система suspend?
+Date: 01.01.2007
+---
+
+Поддерживает ли система suspend?
+================================
+
+::: {.date}
+01.01.2007
+:::
+
+    function SuspendAllowed: Boolean;
+    type
+      TIsPwrSuspendAllowed = function: Boolean;
+      stdcall;
+    var
+      hPowrprof: HMODULE;
+      IsPwrSuspendAllowed: TIsPwrSuspendAllowed;
+    begin
+      Result := False;
+      hPowrprof := LoadLibrary('powrprof.dll');
+      if hPowrprof <> 0 then
+      begin
+        try
+          @IsPwrSuspendAllowed := GetProcAddress(hPowrprof, 'IsPwrSuspendAllowed');
+          if @IsPwrSuspendAllowed <> nil then
+          begin
+            Result := IsPwrSuspendAllowed;
+          end;
+        finally
+          FreeLibrary(hPowrprof);
+        end;
+      end;
+    end;
+
+Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

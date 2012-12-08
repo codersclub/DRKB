@@ -1,3 +1,10 @@
+---
+Title: Суперфункции Microsoft Word и Microsoft Excel (статья)
+Date: 01.01.2007
+children: auto
+---
+
+
 Суперфункции Microsoft Word и Microsoft Excel (статья)
 ======================================================
 

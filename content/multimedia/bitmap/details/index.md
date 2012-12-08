@@ -1,3 +1,9 @@
+---
+Title: Bitmap.PixelFormat -- подробности
+Date: 01.01.2007
+---
+
+
 Bitmap.PixelFormat -- подробности
 =================================
 

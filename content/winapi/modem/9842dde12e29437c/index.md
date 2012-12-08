@@ -1,0 +1,139 @@
+---
+Title: АТ команды модема
+Date: 01.01.2007
+---
+
+
+АТ команды модема
+=================
+
+::: {.date}
+01.01.2007
+:::
+
+A --- Команда ответа (Answer Command)
+
+Bn --- Настройка связи (Communications Options)
+
+D --- Команда набора (Dial Command)
+
+En --- Команда выбора символа эха (Select Command Character Echo Option)
+
+Hn --- Управление Switchhook - эмуляция нажатия телефонного рычага
+(Control The Switchhook)
+
+I0 --- Идентификация кода продукта (Identify The Product Code)
+
+I2 --- Выполнение теста контрольной суммы ROM ( Perform ROM Checksum
+Test)
+
+I7 --- Номер версии (Version Number)
+
+Ln --- Выбор уровня громкости динамика (Select Speaker Volume Level)
+
+Mn --- Функция выбора опций динамика (Select Speaker Function Option)
+
+Nn --- Выбор опций для установления связи (Select Negotiate Handshake
+Option)
+
+On --- Переход к онлайновым командам (Go Online Command)
+
+P --- Выбор метода пульсового набора (Select Pulse Dialing Method)
+
+Qn --- Выбор опции результирующего кода (Select Result Code Option)
+
+Sn= --- Запись в S-регистр (Write To An S-Register)
+
+Sn? --- Чтение S-регистра (Read An S-Register)
+
+T --- Выбор метода тонового набора (Select Tone Dialing Method)
+
+Vn --- Выбор опции формата ответа (Select Response Format Option)
+
+Wn --- Выбор расширенного результирующего кода (Select Extended Result
+Code)
+
+Xn --- Выбор опции модемного вызова (Select Call Progress Option)
+
+Yn --- Выбор опции бездействия для разъединения (Select Long Space
+Disconnect Option)
+
+Zn --- Выполнение мягкого сброса (Perform Soft Reset)
+
+An --- Выбор роли автоответчика (Select Originate/Answer Role For
+Autoanswer)
+
+Cn --- Выбор опции определения передаваемых данных (Select Data Carrier
+Detect Option)
+
+Dn --- Выбор опции готовности терминала данных (Select Data Terminal
+Ready Option)
+
+F --- Загрузка заводских установок (Load Factory Default Profile)
+
+Gn --- Выбор опции защиты тонового набора (Select Guard Tone Option)
+
+Kn --- Выбор опций потока ConTDol (Select Flow ConTDol Option)
+
+Pn --- Выбор параметров пульсового набора (Select Pulse Dialing
+Parameters)
+
+Qn --- Выбор опций режима связи (Select Communications Mode Option)
+
+Rn --- Выбор опций RTS/CTS (Select RTS/CTS Option)
+
+Sn --- Выбор опций готовности передачи данных (Select Data Set Ready
+Option)
+
+T0 --- Тест завершения в процессе (Terminate Test In Process)
+
+T1 --- Инициирование локального аналога сетевой петли (Initiate Local
+Analog Loopback)
+
+T3 --- Выполнение локальной цифровой сетевой петли (Perform Local
+Digital Loopback)
+
+T4 --- Включение предоставления RDL-запросов (Enable Granting Of RDL
+Requests)
+
+T5 --- Запрет предоставления RDL-запросов (Deny Granting Of RDL
+Requests)
+
+T6 --- Инициирование удаленной цифровой сетевой петли (Initiate Remote
+Digital Loopback)
+
+T7 --- Иниицирование внутреннего теста RDL (Initiate RDL With Self Test)
+
+T8 --- Внутренний тест локальной сетевой петли (Local Loopback With Self
+Test)
+
+T19 --- Выполнение теста RTS/CTS кабеля (Perform RTS/CTS Cable Test)
+
+Un --- Отмена TDellis кодирования (Disable TDellis Coding)
+
+V --- Просмотр профилей конфигурации (View Configuration Profiles)
+
+Wn --- Сохранение активного профиля (Store Active Profile)
+
+Xn --- Выбор источника синхронизации времени TDansmit (Store Active
+Profile)
+
+Yn --- Выбор сохранения профиля для аппаратного перезапуска (Select
+Stored Profile For Hard Reset)
+
+Zn= --- Сохранение телефонного номера (Store Telephone Number)
+
+, --- Пауза (Perform Pause)
+
+= --- Запись в S-регистр (Write To An S-Register)
+
+? --- Чтение S-регистра (Read An S-Register)
+
+P --- Выбор пульсового набора (Select Pulse Dialing)
+
+Т --- Тоновый набор (Tone)
+
+Взято из Советов по Delphi от [Валентина
+Озерова](mailto:mailto:webmaster@webinspector.com)
+
+Сборник Kuliba

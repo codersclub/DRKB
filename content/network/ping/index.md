@@ -1,2 +1,7 @@
+---
+Title: Ping
+---
+
+
 Ping
 ====

@@ -1,0 +1,434 @@
+---
+Title: Как написать свой хранитель экрана?
+Date: 01.01.2007
+---
+
+Как написать свой хранитель экрана?
+===================================
+
+::: {.date}
+01.01.2007
+:::
+
+1.В файл проекта (\*.DPR) добавить строку {\$D SCRNSAVE \<название
+хранителя\>} после строки подключения модулей (Uses\...). 2.У окна формы
+убрать системное меню, кнопки и придать свойству WindowState значение
+wsMaximize. 3.Предусмотреть выход из хранителя при нажатии на клавиши
+клавиатуры, мыши и при перемещении курсора мыши. 4.Проверить параметры с
+которым был вызван хранитель и если это /c - показать окно настройки
+хранителя, а иначе (можно проверять на /s, а можно и не проверять) сам
+хранитель. /p - для отображения в окне установок хранителя экрана.
+5.Скомпилировать хранитель экрана. 6.Переименовать \*.EXE файл в файл
+\*.SCR и скопировать его в каталог WINDOWS\\SYSTEM\\. 7.Установить новый
+хранитель в настройках системы! Название хранителя может состоять из
+нескольких слов с пробелами, на любом языке. При работе хранителя
+необходимо прятать курсор мыши, только не забывайте восстанавливать его
+после выхода. Все параметры и настройки храните в файле .INI, так как
+хранитель и окно настройки не связаны друг с другом напрямую. Старайтесь
+сделать свой хранитель как можно меньше и быстрее. Иначе ваши долго
+работающие (в фоновом режиме) приложения будут работать еше дольше!
+
+{в файле \*.DPR}
+
+{\$D SCRNSAVE Пример хранителя экрана}
+
+{проверить переданные параметры}
+
+    IF (ParamStr(1) = '/c') OR (ParamStr(1) = '/C') THEN
+     
+    {скрыть курсор мыши}
+    ShowCursor(False);
+     
+    {восстановить курсор мыши}
+    ShowCursor(True);
+
+Главное о чем стоит упомянуть это, что ваш хранитель экрана будет
+работать в фоновом режиме и он не должен мешать работе других запущенных
+программ. Поэтому сам хранитель должен быть как можно меньшего объема.
+Для уменьшения объема файла в описанной ниже программе не используется
+визуальные компоненты Delphi, включение хотя бы одного из них приведет к
+увеличению размера файла свыше 200кб, а так, описанная ниже программа,
+имеет размер всего 20кб!!! Технически, хранитель экрана является
+нормальным EXE файлом (с расширением .SCR), который управляется через
+командные параметры строки. Например, если пользователь хочет изменить
+параметры вашего хранителя, Windows выполняет его с параметром \"-c\" в
+командной строке. Поэтому начать создание вашего хранителя экрана
+следует с создания примерно следующей функции:
+
+    Procedure RunScreenSaver;
+    Var S : String;
+    Begin
+      S := ParamStr(1);
+      If (Length(S) > 1) Then Begin
+            Delete(S,1,1); { delete first char - usally "/" or "-" }
+            S[1] := UpCase(S[1]);
+      End;
+      LoadSettings; { load settings from registry }
+      If (S = 'C') Then RunSettings
+      Else If (S = 'P') Then RunPreview
+      Else If (S = 'A') Then RunSetPassword
+      Else RunFullScreen;
+    End;
+
+Поскольку нам нужно создавать небольшое окно предварительного просмотра
+и полноэкранное окно, их лучше объединить используя единственный класс
+окна. Следуя правилам хорошего тона, нам также нужно использовать
+многочисленные нити. Дело в том, что, во-первых, хранитель не должен
+переставать работать даже если что-то \"тяжелое\" случилось, и
+во-вторых, нам не нужно использовать таймер. Процедура для запуска
+хранителя на полном экране - приблизительно такова:
+
+    Procedure RunFullScreen;
+    Var
+      R                  : TRect;
+      Msg                : TMsg;
+      Dummy          : Integer;
+      Foreground : hWnd;
+    Begin
+      IsPreview := False;  MoveCounter := 3;  
+      Foreground := GetForegroundWindow;
+      While (ShowCursor(False) > 0) do ;
+      GetWindowRect(GetDesktopWindow,R);
+      CreateScreenSaverWindow(R.Right-R.Left,R.Bottom-R.Top,0);
+      CreateThread(nil,0,@PreviewThreadProc,nil,0,Dummy);
+      SystemParametersInfo(spi_ScreenSaverRunning,1,@Dummy,0);
+      While GetMessage(Msg,0,0,0) do Begin
+            TranslateMessage(Msg);
+            DispatchMessage(Msg);
+      End;
+      SystemParametersInfo(spi_ScreenSaverRunning,0,@Dummy,0);
+      ShowCursor(True);
+      SetForegroundWindow(Foreground);
+    End;
+
+Во-первых, мы проинициализировали некоторые глобальные переменные
+(описанные далее), затем прячем курсор мыши и создаем окно хранителя
+экрана. Имейте в виду, что важно уведомлять Windows, что это - хранителя
+экрана через SystemParametersInfo (это выводит из строя Ctrl-Alt-Del
+чтобы нельзя было вернуться в Windows не введя пароль). Создание окна
+хранителя:
+
+    Function CreateScreenSaverWindow(Width,Height : Integer;  
+      ParentWindow : hWnd) : hWnd;
+    Var WC : TWndClass;
+    Begin
+      With WC do Begin
+            Style := cs_ParentDC;
+            lpfnWndProc := @PreviewWndProc;
+            cbClsExtra := 0;  cbWndExtra := 0; hIcon := 0; hCursor := 0;
+            hbrBackground := 0; lpszMenuName := nil; 
+            lpszClassName := 'MyDelphiScreenSaverClass';
+            hInstance := System.hInstance;
+      end;
+      RegisterClass(WC);
+      If (ParentWindow  0) Then
+            Result := CreateWindow('MyDelphiScreenSaverClass','MySaver', 
+              ws_Child Or ws_Visible or ws_Disabled,0,0, 
+              Width,Height,ParentWindow,0,hInstance,nil)
+      Else Begin
+            Result := CreateWindow('MyDelphiScreenSaverClass','MySaver', 
+              ws_Visible or ws_Popup,0,0,Width,Height, 0,0,hInstance,nil);
+            SetWindowPos(Result,hwnd_TopMost,0,0,0,0,swp_NoMove or swp_NoSize 
+    or swp_NoRedraw);
+      End;
+      PreviewWindow := Result;
+    End;
+
+Теперь окна созданы используя вызовы API. Я удалил проверку ошибки, но
+обычно все проходит хорошо, особенно в этом типе приложения. Теперь Вы
+можете погадать, как мы получим handle родительского окна
+предварительного просмотра ? В действительности, это совсем просто:
+Windows просто передает handle в командной строке, когда это нужно.
+Таким образом:
+
+    Procedure RunPreview;
+    Var
+      R                         : TRect;
+      PreviewWindow : hWnd;
+      Msg                   : TMsg;
+      Dummy                 : Integer;
+    Begin
+      IsPreview := True;
+      PreviewWindow := StrToInt(ParamStr(2));
+      GetWindowRect(PreviewWindow,R);
+      CreateScreenSaverWindow(R.Right-R.Left,R.Bottom-
+    R.Top,PreviewWindow);
+      CreateThread(nil,0,@PreviewThreadProc,nil,0,Dummy);
+      While GetMessage(Msg,0,0,0) do Begin
+            TranslateMessage(Msg); DispatchMessage(Msg);
+      End;
+    End;
+
+Как Вы видите, window handle является вторым параметром (после \"-p\").
+Чтобы \"выполнять\" хранителя экрана - нам нужна нить. Это создается с
+вышеуказанным CreateThread. Процедура нити выглядит примерно так:
+
+    Function PreviewThreadProc(Data : Integer) : Integer; StdCall;
+    Var R : TRect;
+    Begin
+      Result := 0; Randomize;
+      GetWindowRect(PreviewWindow,R);
+      MaxX := R.Right-R.Left;  MaxY := R.Bottom-R.Top;
+      ShowWindow(PreviewWindow,sw_Show); UpdateWindow(PreviewWindow);
+      Repeat
+            InvalidateRect(PreviewWindow,nil,False);
+            Sleep(30);
+      Until QuitSaver;
+      PostMessage(PreviewWindow,wm_Destroy,0,0);
+    End;
+
+Нить просто заставляет обновляться изображения в нашем окне, спит на
+некоторое время, и обновляет изображения снова. А Windows будет посылать
+сообщение WM\_PAINT на наше окно (не в нить !). Для того, чтобы
+оперировать этим сообщением, нам нужна процедура:
+
+    Function PreviewWndProc(Window : hWnd; Msg,WParam,
+      LParam : Integer): Integer; StdCall;
+    Begin
+      Result := 0;
+      Case Msg of
+            wm_NCCreate  : Result := 1;
+            wm_Destroy   : PostQuitMessage(0);
+            wm_Paint         : DrawSingleBox; { paint something }
+            wm_KeyDown   : QuitSaver := AskPassword;
+            wm_LButtonDown, wm_MButtonDown, wm_RButtonDown, wm_MouseMove : 
+                                       Begin
+                                             If (Not IsPreview) Then Begin
+                                               Dec(MoveCounter);
+                                               If (MoveCounter <= 0) Then QuitSaver := 
+    AskPassword;
+                                             End;
+                                       End;
+             Else Result := DefWindowProc(Window,Msg,WParam,LParam);
+      End;
+    End;
+
+Если мышь перемещается, кнопка нажала, мы спрашиваем у пользователя
+пароль:
+
+    Function AskPassword : Boolean;
+    Var
+      Key   : hKey;
+      D1,D2 : Integer; { two dummies }
+      Value : Integer;
+      Lib   : THandle;
+      F         : TVSSPFunc;
+    Begin
+      Result := True;
+      If (RegOpenKeyEx(hKey_Current_User,'Control Panel\Desktop',0, 
+              Key_Read,Key) = Error_Success) Then 
+      Begin
+            D2 := SizeOf(Value);
+            If (RegQueryValueEx(Key,'ScreenSaveUsePassword',nil,@D1, 
+                    @Value,@D2) = Error_Success) Then 
+            Begin
+              If (Value  0) Then Begin
+                    Lib := LoadLibrary('PASSWORD.CPL');
+                    If (Lib > 32) Then Begin
+                      @F := GetProcAddress(Lib,'VerifyScreenSavePwd');
+                      ShowCursor(True);
+                      If (@F  nil) Then Result := F(PreviewWindow);
+                      ShowCursor(False);
+                      MoveCounter := 3; { reset again if password was wrong }
+                      FreeLibrary(Lib);
+                    End;
+              End;
+            End;
+            RegCloseKey(Key);
+      End;
+    End;
+
+Это также демонстрирует использование registry на уровне API. Также
+имейте в виду как мы динамически загружаем функции пароля, используюя
+LoadLibrary. Запомните тип функции? TVSSFunc ОПРЕДЕЛЕН как:
+
+Type TVSSPFunc = Function(Parent : hWnd) : Bool; StdCall;
+
+Теперь почти все готово, кроме диалога конфигурации. Это
+
+запросто:
+
+    Procedure RunSettings;
+    Var Result : Integer;
+    Begin
+      Result := 
+    DialogBox(hInstance,'SaverSettingsDlg',0,@SettingsDlgProc);
+      If (Result = idOK) Then SaveSettings;
+    End;
+
+Трудная часть -это создать диалоговый сценарий (запомните: мы не
+используем здесь Delphi формы!). Я сделал это, используя 16-битовую
+Resource Workshop (остался еще от Turbo Pascal для Windows). Я сохранил
+файл как сценарий (текст), и скомпилированный это с BRCC32:
+
+    SaverSettingsDlg DIALOG 70, 130, 166, 75
+    STYLE WS_POPUP | WS_DLGFRAME | WS_SYSMENU
+    CAPTION "Settings for Boxes"
+    FONT 8, "MS Sans Serif"
+    BEGIN
+            DEFPUSHBUTTON "OK", 5, 115, 6, 46, 16
+            PUSHBUTTON "Cancel", 6, 115, 28, 46, 16
+                    CTEXT "Box &Color:", 3, 2, 30, 39, 9
+            COMBOBOX 4, 4, 40, 104, 50, CBS_DROPDOWNLIST | CBS_HASSTRINGS
+            CTEXT "Box &Type:", 1, 4, 3, 36, 9
+            COMBOBOX 2, 5, 12, 103, 50, CBS_DROPDOWNLIST | CBS_HASSTRINGS
+            LTEXT "Boxes Screen Saver for Win32 Copyright (c) 1996 Jani
+                       Jдrvinen.", 7, 4, 57, 103, 16,
+                       WS_CHILD | WS_VISIBLE | WS_GROUP
+    End
+
+Почти также легко сделать диалоговое меню:
+
+    Function SettingsDlgProc(Window : hWnd; Msg,WParam,LParam : Integer): 
+    Integer; StdCall;
+    Var S : String;
+    Begin
+      Result := 0;
+      Case Msg of
+            wm_InitDialog : Begin
+                            { initialize the dialog box }
+                                    Result := 0;
+                                End;
+            wm_Command        : Begin
+                                If (LoWord(WParam) = 5) Then EndDialog(Window,idOK)
+                                 Else If (LoWord(WParam) = 6) Then EndDialog(Window,idCancel);
+                                       End;
+            wm_Close        : DestroyWindow(Window);
+            wm_Destroy        : PostQuitMessage(0);
+            Else Result := 0;
+      End;
+    End;
+
+После того, как пользователь выбрал некоторые установочные параметры,
+нам нужно сохранить их.
+
+    Procedure SaveSettings;
+    Var
+      Key   : hKey;
+      Dummy : Integer;
+    Begin
+      If (RegCreateKeyEx(hKey_Current_User,
+                                             'Software\SilverStream\SSBoxes',
+                                             0,nil,Reg_Option_Non_Volatile,
+                                             Key_All_Access,nil,Key,
+                                             @Dummy) = Error_Success) Then Begin
+            RegSetValueEx(Key,'RoundedRectangles',0,Reg_Binary, 
+             @RoundedRectangles,SizeOf(Boolean));
+            RegSetValueEx(Key,'SolidColors',0,Reg_Binary, 
+    @SolidColors,SizeOf(Boolean));
+            RegCloseKey(Key);
+      End;
+    End;
+
+Загружаем параметры так:
+
+    Procedure LoadSettings;
+    Var
+      Key   : hKey;
+      D1,D2 : Integer; { two dummies }
+      Value : Boolean;
+    Begin
+      If (RegOpenKeyEx(hKey_Current_User,
+                                       'Software\SilverStream\SSBoxes',0,
+                                       Key_Read,
+                                       Key) = Error_Success) Then Begin
+            D2 := SizeOf(Value);
+            If (RegQueryValueEx(Key,'RoundedRectangles',nil,@D1,
+                    @Value, @D2) = Error_Success) Then 
+            Begin   
+              RoundedRectangles := Value;
+            End;
+            If (RegQueryValueEx(Key,'SolidColors',nil,@D1,
+                    @Value,@D2) = Error_Success) Then 
+            Begin
+              SolidColors := Value;
+            End;
+            RegCloseKey(Key);
+      End;
+    End;
+
+Легко? Нам также нужно позволить пользователю, установить пароль. Я
+честно не знаю почему это оставлено разработчику приложений ? Тем не
+менее:
+
+    Procedure RunSetPassword;
+    Var
+      Lib : THandle;
+      F   : TPCPAFunc;
+    Begin
+      Lib := LoadLibrary('MPR.DLL');
+      If (Lib > 32) Then Begin
+            @F := GetProcAddress(Lib,'PwdChangePasswordA');
+            If (@F  nil) Then F('SCRSAVE',StrToInt(ParamStr(2)),0,0);
+            FreeLibrary(Lib);
+      End;
+    End;
+
+Мы динамически загружаем (недокументированную) библиотеку MPR.DLL,
+которая имеет функцию, чтобы установить пароль хранителя экрана, так что
+нам не нужно беспокоиться об этом. TPCPAFund ОПРЕДЕЛЕН как:
+
+    Type
+    TPCPAFunc = Function(A : PChar; Parent : hWnd; B,C : Integer) :
+    Integer; StdCall;
+
+(Не спрашивайте меня что за параметры B и C) Теперь единственная вещь,
+которую нам нужно рассмотреть, - самая странная часть: создание графики.
+Я не великий ГУРУ графики, так что Вы не увидите затеняющие
+многоугольники, вращающиеся в реальном времени. Я только сделал
+некоторые ящики.
+
+    Procedure DrawSingleBox;
+    Var
+      PaintDC  : hDC;
+      Info         : TPaintStruct;
+      OldBrush : hBrush;
+      X,Y          : Integer;
+      Color        : LongInt;
+    Begin
+      PaintDC := BeginPaint(PreviewWindow,Info);
+      X := Random(MaxX); Y := Random(MaxY);
+      If SolidColors Then
+            Color := 
+    GetNearestColor(PaintDC,RGB(Random(255),Random(255),Random(255)))
+      Else Color := RGB(Random(255),Random(255),Random(255));
+      OldBrush := SelectObject(PaintDC,CreateSolidBrush(Color));
+      If RoundedRectangles Then
+            RoundRect(PaintDC,X,Y,X+Random(MaxX-X),Y+Random(MaxY-Y),20,20)
+      Else Rectangle(PaintDC,X,Y,X+Random(MaxX-X),Y+Random(MaxY-Y));
+      DeleteObject(SelectObject(PaintDC,OldBrush));
+      EndPaint(PreviewWindow,Info);
+    End;
+
+Чтобы закончить создание хранителя, я даю Вам некоторые детали. Первые,
+глобальные переменные:
+
+    Var
+      IsPreview                 : Boolean;
+      MoveCounter           : Integer;
+      QuitSaver                 : Boolean;
+      PreviewWindow         : hWnd;
+      MaxX,MaxY                 : Integer;
+      RoundedRectangles : Boolean;
+      SolidColors           : Boolean;
+
+Затем исходная программа проекта (.dpr). Красива, а!?
+
+    program MySaverIsGreat;
+    uses
+       windows, messages, Utility; { defines all routines }
+    {$R SETTINGS.RES}
+    begin
+      RunScreenSaver; 
+    end.
+
+Ох, чуть не забыл: Если, Вы используете SysUtils в вашем проекте
+(StrToInt определен там) Вы получаете большой EXE чем обещанный 20k.
+Если Вы хотите все же иметь20k, Вы не можете использовать SysUtils так,
+или Вам нужно написать вашу собственную StrToInt программу. Конец. Use
+Val\... ;-) перевод: Владимиров А.М. От переводчика. Если все же очень
+трудно обойтись без использования Delphi-форм, то можно поступить как в
+случае с вводом пароля: форму изменения параметров хранителя сохранить в
+виде DLL и динамически ее загружать при необходимости. Т.о. будет
+маленький и шустрый файл самого хранителя экрана и довеска DLL для
+конфигурирования и прочего (там объем и скорость уже не критичны).

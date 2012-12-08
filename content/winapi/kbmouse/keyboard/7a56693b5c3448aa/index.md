@@ -1,0 +1,24 @@
+---
+Title: Как запретить Ctrl-Alt-Del?
+Date: 01.01.2007
+---
+
+
+Как запретить Ctrl-Alt-Del?
+===========================
+
+::: {.date}
+01.01.2007
+:::
+
+    var 
+      i : integer; 
+    begin 
+    i := 0; 
+    {запрещаем Ctrl-Alt-Del} 
+    SystemParametersInfo( SPI_SCREENSAVERRUNNING, 1, @i, 0); 
+    end. 
+    // необходим unit WinProcs
+    // для Alt-Tab: SPI_SETFASTTASKSWITCH 
+
+Взято из <https://forum.sources.ru>

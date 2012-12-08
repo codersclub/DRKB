@@ -1,3 +1,9 @@
+---
+Title: Kylix Tutorial. Работа с DBExpress (статья)
+Date: 01.01.2007
+---
+
+
 Kylix Tutorial. Работа с DBExpress (статья)
 ===========================================
 

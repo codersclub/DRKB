@@ -1,0 +1,54 @@
+---
+Title: Создание UDF для InterBase
+Date: 01.01.2007
+---
+
+
+Создание UDF для InterBase
+==========================
+
+::: {.date}
+01.01.2007
+:::
+
+    library nikelutils
+
+    uses SysUtils, Classes;
+
+    function MaxInt(var Int1, Int2: Integer): Integer;
+      far cdecl export;
+    begin
+      if (Int1 > Int2) then
+        Result := Int1
+      else
+        Result := Int2;
+    end;
+
+    function MinInt(var Int1, Int2: Integer): Integer;
+      far cdecl export;
+    begin
+      if (Int1 < Int2) then
+        Result := Int1
+      else
+        Result := Int2;
+    end;
+
+    exports
+      MaxInt;
+    MinInt;
+
+    begin
+    end.
+
+А это пишим в базе:
+
+    DECLARE EXTERNAL FUNCTION MAXINT INTEGER, INTEGER
+    RETURNS INTEGER BY VALUE
+    ENTRY_POINT "MaxInt" MODULE_NAME "nikelutils.dll";
+
+    DECLARE EXTERNAL FUNCTION MININT INTEGER, INTEGER
+    RETURNS INTEGER BY VALUE
+    ENTRY_POINT "MinInt" MODULE_NAME "nikelutils.dll";
+     
+
+Взято с <https://delphiworld.narod.ru>

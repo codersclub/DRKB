@@ -1,0 +1,131 @@
+---
+Title: Как создать каретку свой собственной формы?
+Date: 01.01.2007
+---
+
+
+Как создать каретку свой собственной формы?
+===========================================
+
+::: {.date}
+01.01.2007
+:::
+
+    { 
+      The example below demonstrates creating custom caret: 
+    } 
+     
+    unit Unit1; 
+     
+    interface 
+     
+    uses 
+      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, 
+      ExtCtrls, StdCtrls; 
+     
+    type 
+      TForm1 = class(TForm) 
+        Memo1: TMemo; 
+        Image1: TImage; 
+        Edit1: TEdit; 
+        procedure Memo1MouseDown(Sender: TObject; Button: TMouseButton; 
+          Shift: TShiftState; X, Y: Integer); 
+        procedure Edit1MouseDown(Sender: TObject; Button: TMouseButton; 
+          Shift: TShiftState; X, Y: Integer); 
+      private 
+        { Private declarations } 
+      public 
+        { Public declarations } 
+      end; 
+     
+    var 
+      Form1: TForm1; 
+     
+    implementation 
+     
+    {$R *.DFM} 
+     
+    procedure TForm1.Memo1MouseDown(Sender: TObject; Button: TMouseButton; 
+      Shift: TShiftState; X, Y: Integer); 
+    begin 
+      CreateCaret(Memo1.Handle, Image1.Picture.Bitmap.Handle, 0, 0); 
+      ShowCaret(Memo1.Handle); 
+    end; 
+     
+    procedure TForm1.Edit1MouseDown(Sender: TObject; Button: TMouseButton; 
+      Shift: TShiftState; X, Y: Integer); 
+    begin 
+      CreateCaret(Edit1.Handle, 0, 10, 4); 
+      ShowCaret(Edit1.Handle); 
+    end; 
+     
+    end. 
+     
+     
+    {The form file source (*.dfm) } 
+     
+    object Form1: TForm1 
+      Left = 192 
+      Top = 107 
+      Width = 544 
+      Height = 375 
+      Caption = 'Form1' 
+      Color = clBtnFace 
+      Font.Charset = DEFAULT_CHARSET 
+      Font.Color = clWindowText 
+      Font.Height = -11 
+      Font.Name = 'MS Sans Serif' 
+      Font.Style = [] 
+      OldCreateOrder = False 
+      PixelsPerInch = 96 
+      TextHeight = 13 
+      object Image1: TImage 
+        Left = 12 
+        Top = 4 
+        Width = 16 
+        Height = 16 
+        AutoSize = True 
+        Picture.Data = { 
+          07544269746D6170B6020000424DB602000000000000B6000000280000001000 
+          0000100000000100100000000000000200000000000000000000100000000000 
+          000000000000000080000080000000808000800000008000800080800000C0C0 
+          C000808080000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFF 
+          FF00000000000000000000000000000000000000000000000000000000000000 
+          0000000000000000000000000000000000000000000000000000000000000000 
+          000000000000FF7FFF7FFF7FFF7F000000000000FF7FFF7FFF7FFF7FFF7FFF7F 
+          00000000FF7FFF7FFF7FFF7F000000000000FF7FFF7FFF7FFF7FFF7FFF7F0000 
+          0000FF7FFF7FFF7FFF7FFF7F00000000FF7FFF7FFF7FFF7FFF7FFF7FFF7F0000 
+          000000000000FF7FFF7FFF7F0000000000000000FF7FFF7FFF7FFF7F00000000 
+          0000000000000000FF7FFF7FFF7FFF7FFF7FFF7FFF7FFF7FFF7FFF7F00000000 
+          0000000000000000FF7FFF7FFF7FFF7FFF7FFF7FFF7FFF7FFF7F000000000000 
+          0000000000000000FF7FFF7FFF7F00000000FF7FFF7FFF7FFF7F000000000000 
+          00000000000000000000FF7FFF7FFF7FFF7FFF7FFF7FFF7F0000000000000000 
+          00000000000000000000FF7FFF7FFF7FFF7FFF7FFF7FFF7F0000000000000000 
+          000000000000000000000000FF7FFF7FFF7FFF7FFF7FFF7F0000000000000000 
+          000000000000000000000000FF7FFF7FFF7FFF7FFF7F00000000000000000000 
+          0000000000000000000000000000FF7FFF7FFF7FFF7F00000000000000000000 
+          0000000000000000000000000000FF7FFF7FFF7F000000000000000000000000 
+          00000000000000000000000000000000FF7F0000000000000000000000000000 
+          0000} 
+      end 
+      object Memo1: TMemo 
+        Left = 12 
+        Top = 36 
+        Width = 149 
+        Height = 149 
+        Lines.Strings = ('Memo1') 
+        TabOrder = 0 
+        OnMouseDown = Memo1MouseDown 
+      end 
+      object Edit1: TEdit 
+        Left = 220 
+        Top = 60 
+        Width = 121 
+        Height = 21 
+        TabOrder = 1 
+        Text = 'Edit1' 
+        OnMouseDown = Edit1MouseDown 
+      end 
+    end 
+
+Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

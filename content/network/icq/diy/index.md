@@ -1,3 +1,10 @@
+---
+Title: ICQ2000 -- сделай сам (статья)
+Author: Alexander Vaga
+Date: 01.01.2007
+---
+
+
 ICQ2000 -- сделай сам (статья)
 ==============================
 
@@ -948,42 +955,42 @@ SNAC 15,02
 
 TLV(1)
 
-  WORD   (LE) bytes remaining, useless
+  WORD   (LE) bytes remaining, useless
 
-  UIN    my uin
+  UIN    my uin
 
-  WORD   type
+  WORD   type
 
-  WORD   cookie
+  WORD   cookie
 
-  type = 3C00       // ask for offlines messages
+  type = 3C00       // ask for offlines messages
 
-    nothing
+    nothing
 
-  type = 3E00       // ack to offline messages,
+  type = 3E00       // ack to offline messages,
 
-    nothing   type=D007
+    nothing   type=D007
 
-    WORD  subtype
+    WORD  subtype
 
-    subtype=9808 xml-stype in an LNTS
+    subtype=9808 xml-stype in an LNTS
 
-      LNTS  \'\' name of required data \'\'
+      LNTS  \'\' name of required data \'\'
 
-    subtype=1F05       // simple query info
+    subtype=1F05       // simple query info
 
-      UIN   user to request info     subtype=B204       // query info
+      UIN   user to request info     subtype=B204       // query info
 about user
 
-      UIN   user to request info     subtype=D004       // query my info
+      UIN   user to request info     subtype=D004       // query my info
 
-      UIN   my uin
+      UIN   my uin
 
-    \...\...\...\.....
+    \...\...\...\.....
 
-    \...\...\...\.....
+    \...\...\...\.....
 
-    \...\...\...\.....
+    \...\...\...\.....
 
 В исходном коде это выглядит так:
 
@@ -1044,7 +1051,7 @@ Length 00 0A
 
 Value 08 00
 
-XX XX XX XX наш UIN 
+XX XX XX XX наш UIN 
 
 3C 00 запрос на оффлайновые сообщения
 
@@ -1106,29 +1113,29 @@ Length 00 3F
 
 Value 3D 00
 
-XX XX XX XX наш UIN 
+XX XX XX XX наш UIN 
 
 41 00 тип: оффлайновое сообщение
 
-02 00 cookie (как и в запросе) 
+02 00 cookie (как и в запросе) 
 
-тело сообщения 
+тело сообщения 
 
-XX XX XX XX его UIN 
+XX XX XX XX его UIN 
 
-D2 07 год (2002) 
+D2 07 год (2002) 
 
-02 месяц (февраль) 
+02 месяц (февраль) 
 
-0C день (12) 
+0C день (12) 
 
 10 час (16)
 
-12 минуты (18) 
+12 минуты (18) 
 
 01 под-тип сообщения
 
-(обычное) 
+(обычное) 
 
 00 флаги сообщения (?)
 
@@ -1141,7 +1148,7 @@ E1 F9 E5 ED E8 E5 20 21 21 21 0D 0A 00 текст сообщения:
 
 это тестовое сообщение !!!\"
 
-00 00 присутствют, если сообщение единственное 
+00 00 присутствют, если сообщение единственное 
 
 В протокольных заметках я выделю ту часть описания SNAC(15,3), которая
 соответствует таблице:
@@ -1158,65 +1165,65 @@ WORD message-type
 
 WORD cookie
 
-   message-type = 4100 // offline message
+   message-type = 4100 // offline message
 
-     UIN his uin
+     UIN his uin
 
-     WORD year (LE)
+     WORD year (LE)
 
-     BYTE month (1=jan)
+     BYTE month (1=jan)
 
-     BYTE day
+     BYTE day
 
-     BYTE hour (GMT time)
+     BYTE hour (GMT time)
 
-     BYTE minutes
+     BYTE minutes
 
-     BYTE msg-subtype
+     BYTE msg-subtype
 
-     BYTE msg-flags
+     BYTE msg-flags
 
-     LNTS msg
+     LNTS msg
 
-     WORD 0000, present only in single messages
+     WORD 0000, present only in single messages
 
-   message-type = 4200 // end of offline messages
+   message-type = 4200 // end of offline messages
 
-     BYTE unknown, usually 0
+     BYTE unknown, usually 0
 
-   message-type = D007
+   message-type = D007
 
-     2 BYTE unknown, usually 98 08
+     2 BYTE unknown, usually 98 08
 
-     WORD length of the following NTS
+     WORD length of the following NTS
 
-     NTS \"\"field-type\"\"
+     NTS \"\"field-type\"\"
 
-     field-type = DataFilesIP
+     field-type = DataFilesIP
 
-       6 BYTE unk, usually 2A 02 44 25 00 31
+       6 BYTE unk, usually 2A 02 44 25 00 31
 
-   message-type = DA07
+   message-type = DA07
 
-     3 BYTE subtype
+     3 BYTE subtype
 
-       subtype=A4010A // wp-full-request result
+       subtype=A4010A // wp-full-request result
 
-         wp-result-info
+         wp-result-info
 
-       \...\...\...\.....
+       \...\...\...\.....
 
-       \...\...\...\.....
+       \...\...\...\.....
 
-       \...\...\...\.....
+       \...\...\...\.....
 
-       subtype=B4000A // ack to remove user
+       subtype=B4000A // ack to remove user
 
-         empty
+         empty
 
-       subtype=AA000A // ack to change password
+       subtype=AA000A // ack to change password
 
-         empty
+         empty
 
 И \"нарешти\" - код для приема SNAC(15,3). Множественные комментарии,
 кажется тут уже излишни.
@@ -1315,7 +1322,7 @@ advanced.
 
 Начнем с более простого формата - Simple Message:
 
-FLAP 
+FLAP 
 
 Command Start 2A
 
@@ -1325,11 +1332,11 @@ Sequence Number 34 3B
 
 Data Field Length 00 3D
 
-SNAC (4, 06) - Send Message (Simple) 
+SNAC (4, 06) - Send Message (Simple) 
 
-Family ID 00 04 
+Family ID 00 04 
 
-SubType ID 00 06 
+SubType ID 00 06 
 
 Flags\[0\] 00
 
@@ -1341,9 +1348,9 @@ Request ID 00 AD 00 06
 
 Cookie 1
 
-16 14 BB 50 Cookie 2 
+16 14 BB 50 Cookie 2 
 
-00 01  msg-format: Simple Message 
+00 01  msg-format: Simple Message 
 
 09
 
@@ -1359,11 +1366,11 @@ PascalStr
 
 (например: \'199777666\')
 
-TLV (2) - сообщение здесь 
+TLV (2) - сообщение здесь 
 
-T ype 00 02 
+T ype 00 02 
 
-L ength 00 17 
+L ength 00 17 
 
 V alue 05 01 00 01 01 01 01 (unk) ???
 
@@ -1371,20 +1378,20 @@ V alue 05 01 00 01 01 01 01 (unk) ???
 
 \+ 4
 
-00 00 00 00 (unk) ??? 
+00 00 00 00 (unk) ??? 
 
-D1 EE EE E1 F9 E5 ED E8 E5 21  \'Сообщение!\' 
+D1 EE EE E1 F9 E5 ED E8 E5 21  \'Сообщение!\' 
 
-TLV (6) - пустой 
+TLV (6) - пустой 
 
-T ype 00 06 
+T ype 00 06 
 
 L ength 00 00
 
 Продолжим более сложным форматом - Advanced Message. А он действительно
 по-сложнее будет.
 
-FLAP 
+FLAP 
 
 Command Start 2A
 
@@ -1394,11 +1401,11 @@ Sequence Number 0C A3
 
 Data Field Length 00 99
 
-SNAC (4, 06) - Send Message (Advanced) 
+SNAC (4, 06) - Send Message (Advanced) 
 
-Family ID 00 04 
+Family ID 00 04 
 
-SubType ID 00 06 
+SubType ID 00 06 
 
 Flags\[0\] 00
 
@@ -1410,9 +1417,9 @@ Request ID 00 C3 00 06
 
 Cookie 1
 
-23 4D 75 95 Cookie 2 
+23 4D 75 95 Cookie 2 
 
-00 02  msg-format: Advanced Message 
+00 02  msg-format: Advanced Message 
 
 09
 
@@ -1428,11 +1435,11 @@ PascalStr
 
 (например: \'199777666\')
 
-TLV (5) 
+TLV (5) 
 
-T ype 00 05 
+T ype 00 05 
 
-L ength 00 73 
+L ength 00 73 
 
 V alue 00 00 00 00 - для посылки сообщения
 
@@ -1450,25 +1457,25 @@ V alue 00 00 00 00 - для посылки сообщения
 
 наши возможности ???
 
-(capability) 
+(capability) 
 
-TLV (A) 
+TLV (A) 
 
-T ype 00 0A 
+T ype 00 0A 
 
 L ength 00 02
 
-V alue 00 01  00 01 - для посылки сообщения
+V alue 00 01  00 01 - для посылки сообщения
 
-TLV (F) - пустой (???) 
+TLV (F) - пустой (???) 
 
-T ype 00 0F 
+T ype 00 0F 
 
 L ength 00 00
 
-TLV (2711) - сообщение здесь 
+TLV (2711) - сообщение здесь 
 
-T ype 27 11 
+T ype 27 11 
 
 L ength 00 4B
 
@@ -1484,13 +1491,13 @@ V alue 1B 00 07 00 00
 
 00 26 байт (unk)
 
-00  
+00  
 
-FF FF  
+FF FF  
 
-0E 00  
+0E 00  
 
-FF FF   
+FF FF   
 
 00 00 00 00 00
 
@@ -1498,27 +1505,27 @@ FF FF   
 
 00 00 12 байт (unk)
 
-01  msg-subtype ( 01-обычное ) 
+01  msg-subtype ( 01-обычное ) 
 
-00  
+00  
 
-00 00  
+00 00  
 
-01 00  
+01 00  
 
-0E 00  длина сообщения  тело
+0E 00  длина сообщения  тело
 
-сообщения 
+сообщения 
 
-D1 EE EE E1 F9 E5 ED E8 E5 20 B9 32 2E (00)  \'Сообщение №2.\' 
+D1 EE EE E1 F9 E5 ED E8 E5 20 B9 32 2E (00)  \'Сообщение №2.\' 
 
-80 00 80 00 foreground color 
+80 00 80 00 foreground color 
 
-FF FF 00 00 background color 
+FF FF 00 00 background color 
 
-TLV (3) - пустой 
+TLV (3) - пустой 
 
-T ype 00 03 
+T ype 00 03 
 
 L ength 00 00 TLV(3) посылается, как запрос подтверждения
 
@@ -1941,19 +1948,19 @@ Flags\[0\] 00
 
 Flags\[1\] 00
 
-Request ID 00 XX 00 02 (по ним можно опознать ответ) 
+Request ID 00 XX 00 02 (по ним можно опознать ответ) 
 
 TLV (1)
 
 Type 00 01
 
-Length XX XX 
+Length XX XX 
 
 Value Length-2
 
 (и что оно тут делает ?)
 
-XX XX XX XX наш UIN 
+XX XX XX XX наш UIN 
 
 D0 07 тип запроса
 
@@ -1965,7 +1972,7 @@ XX 00 cookie
 
 B2 04 подтип запроса
 
-(B204 - запрос инфо клиента) 
+(B204 - запрос инфо клиента) 
 
 Это переменная часть зпроса.
 

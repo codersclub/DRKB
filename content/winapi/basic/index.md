@@ -1,3 +1,9 @@
+---
+Title: Основы работы с WinAPI
+Date: 01.01.2007
+---
+
+
 Основы работы с WinAPI
 ======================
 
@@ -155,7 +161,7 @@ LPPOINT = TPoint;
 
 RECT = TRect;
 
-LPRECT =  PRect;
+LPRECT =  PRect;
 
 LPSIZE = PSize;
 
@@ -190,7 +196,7 @@ HDC, hdc, hDC и т. д. - разные идентификаторы (автор
 имеют лишь их типы и порядок следования. С учётом всего этого функция,
 описанная в справке как
 
-HMETAFILE CopyMetaFile(HMETAFILE  hmfSrc, LPCTSTR  lpszFile);
+HMETAFILE CopyMetaFile(HMETAFILE  hmfSrc, LPCTSTR  lpszFile);
 
 в Delphi имеет вид
 
@@ -224,7 +230,7 @@ procedure CloseLogFile;
 пользоваться параметром-переменной, так как в этом случае функции
 передаётся указатель. Например, функция
 
-int GetRgnBox(HRGN  hrgn, LPRECT  lprc);
+int GetRgnBox(HRGN  hrgn, LPRECT  lprc);
 
 в файле Windows.pas описана
 
@@ -464,7 +470,7 @@ stdcall. Справочная система предлагает использ
 некоторых объектов. В качестве примера рассмотрим перечисление окон с
 помощью функции EnumWindows. В справке она описана так:
 
-BOOL EnumWindows(WNDENUMPROC  lpEnumFunc, LPARAM  lParam);
+BOOL EnumWindows(WNDENUMPROC  lpEnumFunc, LPARAM  lParam);
 
 Соответственно, в Windows.pas она имеет вид
 
@@ -474,7 +480,7 @@ stdcall;
 тип TFNWndEnumProc совпадает с типом Pointer. Здесь должен стоять
 указатель на callback функцию. Синтаксис этой функции описан так:
 
-BOOL CALLBACK EnumWindowsProc(HWND  hwnd, LPARAM  lParam);
+BOOL CALLBACK EnumWindowsProc(HWND  hwnd, LPARAM  lParam);
 
 Функции с таким именем не существует в Win API. Это так называемый
 прототип функции, согласно которому следует описывать callback функцию.
