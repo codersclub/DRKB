@@ -24,3 +24,6 @@ children: auto
 Автор: Fantasist
 
 Взято с Vingrad.ru <https://forum.vingrad.ru>
+
+TEMPORARILY AUTO TOC!!!
+<!-- TOC -->

@@ -5,3 +5,5 @@ Title: TGroupBox
 
 TGroupBox
 =========
+
+<!-- TOC -->

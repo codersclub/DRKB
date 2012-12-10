@@ -5,3 +5,5 @@ Title: XML
 
 XML
 ===
+
+<!-- TOC -->

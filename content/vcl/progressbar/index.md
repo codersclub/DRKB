@@ -5,3 +5,5 @@ Title: TProgressBar
 
 TProgressBar
 ============
+
+<!-- TOC -->

@@ -5,3 +5,5 @@ Title: Paradox
 
 Paradox
 =======
+
+<!-- TOC -->

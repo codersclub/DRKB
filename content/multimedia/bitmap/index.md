@@ -5,3 +5,5 @@ Title: Bitmap
 
 Bitmap
 ======
+
+<!-- TOC -->

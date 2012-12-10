@@ -37,7 +37,7 @@ Range\[\'A1\'\]:=123.25; или Range\[\'A1\'\]:=\'ячейка\';. Для за�
 соответствуют одной ячейке (например \'A1\') или группе ячеек (например
 \'A1:D5\').
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
+    {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SetRange (sheet:variant;range:string;
       value_:variant):boolean;
     begin
@@ -69,4 +69,5 @@ Range\[\'A1\'\]:=123.25; или Range\[\'A1\'\]:=\'ячейка\';. Для за�
 
 Доступ к ячейкам Excel
 ======================
-:::
+
+<!-- TOC -->

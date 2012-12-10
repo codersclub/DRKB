@@ -5,3 +5,5 @@ Title: TStringGrid
 
 TStringGrid
 ===========
+
+<!-- TOC -->

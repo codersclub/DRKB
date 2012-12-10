@@ -5,3 +5,5 @@ Title: TRichEdit
 
 TRichEdit
 =========
+
+<!-- TOC -->

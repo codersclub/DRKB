@@ -33,8 +33,7 @@ Cущствуют следующие возможности:
 можно использовать для любых версий Delphi/Kylix компоненты из пакета
 ICS - Internet component suite.
 
-Вот ещё вариант: [Send e-mails via WinSock
-API?](sendemailsviawinsockapi.htm)
+Вот ещё вариант: [Send e-mails via WinSock API?](sendemailsviawinsockapi.htm)
 
 Автор: Vit
 
@@ -42,3 +41,5 @@ API?](sendemailsviawinsockapi.htm)
 
 Как отправить Email?
 ====================
+
+<!-- TOC -->

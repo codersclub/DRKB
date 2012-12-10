@@ -5,3 +5,5 @@ Title: TScrollBox
 
 TScrollBox
 ==========
+
+<!-- TOC -->

@@ -6,3 +6,5 @@ children: auto
 
 Microsoft Script Control
 ========================
+
+<!-- TOC -->

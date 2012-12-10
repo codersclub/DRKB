@@ -6,3 +6,5 @@ children: auto
 
 Lotus Notes
 ===========
+
+<!-- TOC -->

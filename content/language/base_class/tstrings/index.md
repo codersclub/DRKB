@@ -182,3 +182,5 @@ property OnChange: TNotifyEvent; property OnChanging: TNotifyEvent;
 
 TStrings и TStringList
 ======================
+
+<!-- TOC -->

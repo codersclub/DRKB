@@ -85,3 +85,5 @@ procedure ReadResHeader;
 
 TStream
 =======
+
+<!-- TOC -->
