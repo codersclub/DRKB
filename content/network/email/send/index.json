@@ -4,5 +4,5 @@
       {"name":"Использование SMTP Relay Server", "page":"248a6244e013454d.html"},
       {"name":"Пример работы с SMTP", "page":"b5ec082759bb45ec.html"},
       {"name":"Работа через MAPI", "page":"3710bd4fabe1498c.html"},
-      {"name":"Send e-mails via WinSock API?", "page":"f5c693614e524f0f.html"}
+      {"name":"Send e-mails via WinSock API?", "page":"sendemailsviawinsockapi.html"}
 ]

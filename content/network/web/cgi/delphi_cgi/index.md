@@ -28,43 +28,43 @@ Date: 01.01.2007
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- -------------------------------
-  ·   [Передача параметров](x1.htm)
+  ·   [Передача параметров](fa34e5a1d42d4e89/)
   --- -------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- -------------------------
-  ·   [Переадресация](x2.htm)
+  ·   [Переадресация](dfe9e8d6080c41c0/)
   --- -------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- -----------------------------
-  ·   [Вывод изображений](x3.htm)
+  ·   [Вывод изображений](2ea56b2e17144075/)
   --- -----------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- --------------------------
-  ·   [Защита паролем](x4.htm)
+  ·   [Защита паролем](8dae470d71764e6b/)
   --- --------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- --------------------------
-  ·   [Куки (Cookies)](x5.htm)
+  ·   [Куки (Cookies)](80ec2bcbb677469a/)
   --- --------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- ----------------------------------
-  ·   [Работа с Базами Данных](x6.htm)
+  ·   [Работа с Базами Данных](9634848675b54bab/)
   --- ----------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- -----------------------------------
-  ·   [Частые Вопросы и Ответы](x7.htm)
+  ·   [Частые Вопросы и Ответы](9a8d5e74c4804a69/)
   --- -----------------------------------
 :::
 
@@ -100,9 +100,9 @@ CGI.
 На HTML-странице (или непосредственно в строке URL браузера) вы
 помещаете ссылку на вашу программу. Вот несколько примеров ссылок:
 
-Простая ссылка:        \<a href=\"/cgi-bin/program.exe\"\>        
+Простая ссылка:        \<a href=\"/cgi-bin/program.exe\"\>
 
-Запрос вывода изображения:        \<img src=\"/cgi-bin/program.exe\"\>  
+Запрос вывода изображения:        \<img src=\"/cgi-bin/program.exe\"\>
      
 
 Форма с запросом типа GET:        \<form method=GET

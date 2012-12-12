@@ -1,32 +1,29 @@
 ---
 Title: AWE
-Date: 01.01.2007
+Date: 01.01.2002
+Author: Mystic (mailto:mystic2000@newmail.ru)
 ---
 
 AWE
 ===
 
 ::: {.date}
-01.01.2007
+01.01.2002
 :::
 
-Расширение адресной облочки Windows
+Расширение адресной оболочки Windows
 
-[Описание работы с AWE](77701.htm)
+[Описание работы с AWE](awe_basics/)
 
 Функции для работы с AWE:
 
-[MapUserPhysicalPages](mapuserphysicalpages.htm)
+[MapUserPhysicalPages](mapuserphysicalpages/)
 
-[AllocateUserPhysicalPages](allocateuserphysicalpages.htm)
+[AllocateUserPhysicalPages](allocateuserphysicalpages/)
 
-[MapUserPhysicalPagesScatter](mapuserphysicalpagesscatter.htm)
+[MapUserPhysicalPagesScatter](mapuserphysicalpagesscatter/)
 
-[FreeUserPhysicalPages](freeuserphysicalpages.htm)
+[FreeUserPhysicalPages](freeuserphysicalpages/)
+
 
 © [Mystic](mailto:mystic2000@newmail.ru), 2002
-
-AWE
-===
-
-<!-- TOC -->
