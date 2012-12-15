@@ -16,15 +16,16 @@ Date: 01.01.2007
 © 2006 Андрей Садовой
 
 Метод позволяет решать системы обыкновенных дифференциальных уравнений
-(ОДУ) первого порядка следующего вида:\
-      ![clip0307](/pic/clip0307.gif){width="104" height="22"},\
-      ![clip0308](/pic/clip0308.gif){width="98" height="22"},\
-      и т.д.,\
- \
-которые имеют решение:\
- \
-      ![clip0309](/pic/clip0309.gif){width="59" height="19"},\
-      ![clip0310](/pic/clip0310.gif){width="53" height="19"},\
+(ОДУ) первого порядка следующего вида:
+
+      ![clip0307](clip0307.gif){width="104" height="22"},  
+      ![clip0308](clip0308.gif){width="98" height="22"},  
+      и т.д.,  
+
+которые имеют решение:
+
+      ![clip0309](clip0309.gif){width="59" height="19"},  
+      ![clip0310](clip0310.gif){width="53" height="19"},  
       и т.д.,\
  \
 
@@ -42,23 +43,32 @@ Date: 01.01.2007
 системой дифференциальных уравнений первого порядка.
 
 Метод Рунге-Кутта заключается в рекурентном применении следующих
-формул:\
-      ![clip0311](/pic/clip0311.gif){width="210" height="37"}\
-      ![clip0312](/pic/clip0312.gif){width="214" height="37"}\
-      \...\
-где\
-      ![clip0313](/pic/clip0313.gif){width="134" height="22"},\
-      ![clip0314](/pic/clip0314.gif){width="136" height="22"},\
-      ![clip0315](/pic/clip0315.png){width="230" height="39"},\
-      ![clip0001](/pic/clip0001.png){width="232" height="39"},\
-      ![clip0002](/pic/clip0002.png){width="234" height="39"},\
-      ![clip0003](/pic/clip0003.png){width="235" height="39"},\
-      ![clip0004](/pic/clip0004.png){width="220" height="22"},\
+формул:
 
-      ![clip0005](/pic/clip0005.png){width="223" height="22"}
+      ![clip0311](clip0311.gif){width="210" height="37"}
 
-Реализация Метода Рунге-Кутта на Delphi может выглядеть так (привожу
-полностью модуль):
+      ![clip0312](clip0312.gif){width="214" height="37"}
+      ...
+где
+
+      ![clip0313](clip0313.gif){width="134" height="22"},
+
+      ![clip0314](clip0314.gif){width="136" height="22"},
+
+      ![clip0315](clip0315.png){width="230" height="39"},
+
+      ![clip0001](clip0001.png){width="232" height="39"},
+
+      ![clip0002](clip0002.png){width="234" height="39"},
+
+      ![clip0003](clip0003.png){width="235" height="39"},
+
+      ![clip0004](clip0004.png){width="220" height="22"},
+
+      ![clip0005](clip0005.png){width="223" height="22"}
+
+Реализация Метода Рунге-Кутта на Delphi может выглядеть так
+(привожу полностью модуль):
 
     unit RK_Method;
      

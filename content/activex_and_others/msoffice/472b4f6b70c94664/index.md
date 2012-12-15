@@ -457,7 +457,7 @@ HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\\<Имя
 остальные (Word\_TLB,Excel\_TLB и т.п.) понадобятся в зависимости от
 того, к какому приложению будет писаться модуль расширения.
 
-![clip0242](/pic/clip0242.gif){width="477" height="579"}
+![clip0242](clip0242.gif){width="477" height="579"}
 
 Для импорта воспользуемся меню Import TypeLibrary.
 

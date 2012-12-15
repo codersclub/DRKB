@@ -304,7 +304,7 @@ THTTPSoapDispatcher автоматически регистрирует себя
 избавляет Вас от необходимости создавать обработчики запросов Web
 модуля.
 
-![clip0077](/pic/clip0077.gif){width="181" height="220"}
+![clip0077](clip0077.gif){width="181" height="220"}
 
  \
  \
@@ -349,7 +349,7 @@ Apache, строка адреса в этом случае
 http://localhost/cgi-bin/Server.exe/wsdl . При этом на экран будет
 выведена таблица с описанием интерфейсов сервера.
 
-![clip0078](/pic/clip0078.gif){width="593" height="248"}
+![clip0078](clip0078.gif){width="593" height="248"}
 
 Необходимо выбрать в таблице интересующий нас интерфейс IEncodeDecode
 при этом будет сгенерировано описание интерфейса в формате xml.\
@@ -427,7 +427,7 @@ Delphi с описанием интерфейса на языке Object Pascal.
 File/New/Other, перейдем на закладку WebServices и выберем иконку Web
 Services Importer. При этом на экране появится диалог импорта описания.
 
-![clip0079](/pic/clip0079.gif){width="419" height="337"}
+![clip0079](clip0079.gif){width="419" height="337"}
 
 Используя кнопку Browse диалога, укажем полученный ранее файл
 Client.xml, и нажмем кнопку Generate. Опа и модуль Delphi с описанием
@@ -436,7 +436,7 @@ Client.xml, и нажмем кнопку Generate. Опа и модуль Delphi
 File/New/Application. На главной форме разместим строку ввода, две
 кнопки и компонент HTTPRIO с закладки WebServices.
 
-![clip0080](/pic/clip0080.gif){width="226" height="134"}
+![clip0080](clip0080.gif){width="226" height="134"}
 
 Компонент HTTPRIO предназначен для вызова серверов через SOAP. Укажем в
 свойстве URL значение

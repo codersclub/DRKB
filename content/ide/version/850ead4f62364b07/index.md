@@ -67,199 +67,187 @@ VS.Net 2005
 TActionList
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TButton
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TCheckBox
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TComboBox
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TEdit
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
-:::
-
-::: {style="text-align: center;"}
-\*
-:::
-
-::: {style="text-align: center;"}
-![](/pic/cross.gif)
-:::
-
-::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -267,7 +255,19 @@ TEdit
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
+:::
+
+::: {style="text-align: center;"}
+![](cross.gif)
+:::
+
+::: {style="text-align: center;"}
+\*
+:::
+
+::: {style="text-align: center;"}
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -283,123 +283,123 @@ TEdit
 TFrames
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TGroupBox
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TLabel
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TLinkLabel
@@ -409,7 +409,7 @@ TLinkLabel
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -417,15 +417,15 @@ TLinkLabel
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 <https://www.dragonsoftru.com?go=vcl/>
@@ -433,89 +433,89 @@ TLinkLabel
 TListBox
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TMainMenu
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -527,31 +527,19 @@ MenuStrip
 TMemo
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
-:::
-
-::: {style="text-align: center;"}
-\*
-:::
-
-::: {style="text-align: center;"}
-![](/pic/cross.gif)
-:::
-
-::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -559,7 +547,19 @@ TMemo
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
+:::
+
+::: {style="text-align: center;"}
+![](cross.gif)
+:::
+
+::: {style="text-align: center;"}
+\*
+:::
+
+::: {style="text-align: center;"}
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -575,89 +575,89 @@ TMemo
 TPanel
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TPopupMenu
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -669,141 +669,141 @@ TPopupMenu
 TPropertyGrid
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TRadioButton
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TRadioGroup
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TScrollBar
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 **Additional**
@@ -811,239 +811,235 @@ TScrollBar
 TActionManager
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TActionMainMenuBar
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TActionToolBar
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TApplicationEvents
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TBevel
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TBitBtn
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TButtonGroup
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TCategoryButtons
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TChart
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
-:::
-
-::: {style="text-align: center;"}
-\*
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -1067,7 +1063,11 @@ TChart
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+\*
+:::
+
+::: {style="text-align: center;"}
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
@@ -1083,219 +1083,219 @@ TChart
 TCheckListBox
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TColorBox
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TColorListBox
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TControlBar
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TCustomizeDlg
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TDockTabSet
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TDrawGrid
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 ::: {style="text-align: center;"}
-![](/pic/cross.gif)
+![](cross.gif)
 :::
 
 TFlowPanel

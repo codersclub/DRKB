@@ -84,7 +84,7 @@ of Tokyo, 1991), заставляющий переопределять мето�
 TRESE Project, University of Twente; H. Lieberman, Using Prototypical
 Objects to implement shared behavior, OOPSLA \'86).
 
-![clip0133](/pic/clip0133.gif){width="400" height="258"}
+![clip0133](clip0133.gif){width="400" height="258"}
 
 Илл. 1
 
@@ -152,7 +152,7 @@ self - означает то же самое, что и self в Samlltalk или
 он получает сообщение. Например, public и private, реализованные в C++,
 легко воспроизводятся с использованием server.
 
-![clip0134](/pic/clip0134.gif){width="400" height="224"}
+![clip0134](clip0134.gif){width="400" height="224"}
 
 Илл. 2
 

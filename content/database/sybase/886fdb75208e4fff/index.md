@@ -104,7 +104,7 @@ Administrator.)
 
 Figure 2
 
-![clip0134](/pic/clip0134.png){width="1024" height="768"}
+![clip0134](clip0134.png){width="1024" height="768"}
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ---------------------------------------------------------------------------------------------------------------------------
@@ -116,7 +116,7 @@ Figure 2
 
 Figure 3
 
-![clip0136](/pic/clip0136.png){width="347" height="435"}
+![clip0136](clip0136.png){width="347" height="435"}
 
  
 
@@ -254,7 +254,7 @@ to use Titan SQL Anywhere with ASA 7.0, follow these steps:
 
 Figure 4
 
-![clip0137](/pic/clip0137.png){width="1024" height="768"}
+![clip0137](clip0137.png){width="1024" height="768"}
 
  
 
@@ -468,7 +468,7 @@ accesses the database through the 'DataSource' property.
 
 Figure 5
 
-![clip0138](/pic/clip0138.png){width="1024" height="768"}
+![clip0138](clip0138.png){width="1024" height="768"}
 
  
 
@@ -690,7 +690,7 @@ and the database engine will start.
 
 Figure 6
 
-![clip0139](/pic/clip0139.png){width="421" height="489"}
+![clip0139](clip0139.png){width="421" height="489"}
 
  
 
@@ -844,7 +844,7 @@ button 'Load Blob into table'.
 
 Figure 7
 
-![clip0140](/pic/clip0140.png){width="761" height="357"}
+![clip0140](clip0140.png){width="761" height="357"}
 
  
 
@@ -984,7 +984,7 @@ displayed using the BDE because it is larger then 1.4 megabytes in size.
 
 Figure 8
 
-![clip0142](/pic/clip0142.png){width="700" height="432"}
+![clip0142](clip0142.png){width="700" height="432"}
 
  
 
@@ -1285,7 +1285,7 @@ having its 'Active' property set to true.
 
 Figure 9
 
-![clip0143](/pic/clip0143.png){width="1024" height="768"}
+![clip0143](clip0143.png){width="1024" height="768"}
 
  
 
@@ -1395,7 +1395,7 @@ Figure 10 depicts the 'IndexFieldName' property being set to the column
 
 Figure 10
 
-![clip0144](/pic/clip0144.png){width="1024" height="768"}
+![clip0144](clip0144.png){width="1024" height="768"}
 
  
 
@@ -1552,7 +1552,7 @@ the SQL statement just has to be rerun.
 
 Figure 11
 
-![clip0145](/pic/clip0145.png){width="1024" height="768"}
+![clip0145](clip0145.png){width="1024" height="768"}
 
  
 
@@ -1985,7 +1985,7 @@ To install ODBCExpress:
 
 Figure 12
 
-![clip0146](/pic/clip0146.png){width="1024" height="768"}
+![clip0146](clip0146.png){width="1024" height="768"}
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -----------------------------------
@@ -2048,7 +2048,7 @@ information you are looking for.
 
 Figure 13
 
-![clip0147](/pic/clip0147.png){width="1019" height="107"}
+![clip0147](clip0147.png){width="1019" height="107"}
 
  
 
@@ -2130,7 +2130,7 @@ The simplest way to modify the database is to do the following:
 
 Figure 14
 
-![clip0148](/pic/clip0148.png){width="1024" height="768"}
+![clip0148](clip0148.png){width="1024" height="768"}
 
  
 
@@ -2157,7 +2157,7 @@ is selected on the 'department' table.
 
 Figure 15
 
-![clip0149](/pic/clip0149.png){width="925" height="670"}
+![clip0149](clip0149.png){width="925" height="670"}
 
  
 

@@ -1,6 +1,7 @@
 ---
 Title: Inprise Midas
 Date: 01.01.2007
+Author: Serge Bodrov
 ---
 
 
@@ -15,7 +16,7 @@ Inprise MIDAS
 
 Multi Tier Distributed Application Services
 
-![clip0150](/pic/clip0150.png){width="460" height="512"}
+![clip0150](clip0150.png)
 
 © 1999 Marotz, Inc. All rights reserved.
 
@@ -263,7 +264,7 @@ changes to it.
 
  
 
-![clip0151](/pic/clip0151.png){width="403" height="339"}
+![clip0151](clip0151.png){width="403" height="339"}
 
 "Hello World" with MIDAS
 
@@ -295,7 +296,7 @@ At this point we have the following structure for our sample:
 | Form1                             | Unit1.pas / Unit1.dfm             |
 +-----------------------------------+-----------------------------------+
 
-![clip0152](/pic/clip0152.png){width="474" height="491"}
+![clip0152](clip0152.png)
 
 +-----------------------------------+-----------------------------------+
 | DataModule2                       | Unit2.pas / Unit2.dfm             |
@@ -313,7 +314,7 @@ At this point we have the following structure for our sample:
   6.   
   ---- --
 
-![clip0153](/pic/clip0153.png){width="479" height="318"}
+![clip0153](clip0153.png){width="479" height="318"}
 
   ---- -----------------------------------------------------------------------------------------
   1.   Set the Connected property of the TDatabase component to True to verify the connection.
@@ -345,7 +346,7 @@ At this point we have the following structure for our sample:
 
  
 
-![clip0154](/pic/clip0154.png){width="477" height="297"}
+![clip0154](clip0154.png){width="477" height="297"}
 
   ---- ------------------------------------------------
   8.   event handlers as shown in the following code.
@@ -363,7 +364,7 @@ At this point we have the following structure for our sample:
   11.   
   ----- --
 
-![clip0155](/pic/clip0155.png){width="355" height="174"}
+![clip0155](clip0155.png){width="355" height="174"}
 
   ----- -----------------------------------------------------------------------------------------------------------------------
   12.   Save all changes to the project. At this point we have finished the data module.  It should look something like this:
@@ -398,7 +399,7 @@ lines of code.
 
  
 
-![clip0156](/pic/clip0156.png){width="419" height="272"}
+![clip0156](clip0156.png){width="419" height="272"}
 
 OnUpdate Event Handler (Client Dataset State)
 
@@ -489,11 +490,11 @@ records were fetched.  When more records are needed it will ask the
 provider to get the next packet of records until all records are
 transmitted to the client dataset cache.
 
-![clip0157](/pic/clip0157.png){width="419" height="198"}
+![clip0157](clip0157.png){width="419" height="198"}
 
  
 
-![clip0158](/pic/clip0158.png){width="420" height="199"}
+![clip0158](clip0158.png){width="420" height="199"}
 
  
 
@@ -507,7 +508,7 @@ dataset and apply the updates.
 
 UpdateStatus Property
 
-![clip0159](/pic/clip0159.png){width="525" height="138"}
+![clip0159](clip0159.png){width="525" height="138"}
 
 It's possible to check whether the current record of the client dataset
 is modified or not. The UpdateStatus property provides this opportunity
@@ -521,7 +522,7 @@ the modified records in bold. The "Apply" and "Cancel" buttons visual
 appearance of data will change again. This simple code may bring more
 confidence to the end user of your application.
 
-![clip0160](/pic/clip0160.png){width="421" height="234"}
+![clip0160](clip0160.png){width="421" height="234"}
 
 Nothing is perfect in this world: By adding this nice feature we have
 added a little inconsistency to our application. When you press the
@@ -531,7 +532,7 @@ continue to display as if updates are still in the change log of the
 client dataset. To eliminate this behavior we must modify the code of
 the Action1Execute method with two extra lines of code as shown below.
 
-![clip0161](/pic/clip0161.png){width="443" height="121"}
+![clip0161](clip0161.png){width="443" height="121"}
 
 With this code added, everything should work as expected.
 
@@ -548,9 +549,9 @@ will immediately be sorted in ascending order according to the values of
 the specified fields.  Add the following event handler to the
 OnTitleClick event of DbGrid1.
 
-![clip0162](/pic/clip0162.png){width="523" height="68"}
+![clip0162](clip0162.png){width="523" height="68"}
 
-![clip0163](/pic/clip0163.png){width="419" height="236"}
+![clip0163](clip0163.png){width="419" height="236"}
 
 Clicking the title of a column will cause this event to fire and the
 records of the client dataset will be ordered based upon the values in
@@ -569,7 +570,7 @@ order, similar to the abilities of modern text processors. Using this
 feature, the client dataset can automatically place itself on the
 record, which was just restored.
 
-![clip0164](/pic/clip0164.png){width="443" height="81"}
+![clip0164](clip0164.png){width="443" height="81"}
 
 Let's add this undo capability to our application. Select DataModule2
 and double click the ActionList1 component.  Add a new action (Action3)
@@ -590,7 +591,7 @@ PopupMenu property to PopupMenu1. Run your application and when you
 right-click on the grid, you will see something very close to this
 picture
 
-![clip0165](/pic/clip0165.png){width="419" height="215"}
+![clip0165](clip0165.png){width="419" height="215"}
 
 .
 
@@ -643,7 +644,7 @@ do with the error.  If the error is not handled then the record update
 will fail and the user will be left the responsibility of resolving this
 issue.
 
-![clip0166](/pic/clip0166.png){width="441" height="364"}
+![clip0166](clip0166.png){width="441" height="364"}
 
 Delphi provides a very convenient method for the client application to
 handle concurrency errors. A pre-built Reconcile Error Dialog greatly
@@ -674,7 +675,7 @@ and perform the following steps.
   3.   Select DataModule2's ClientDataSet1 component and, using the Object Inspector, add an OnReconcileError event with the following code
   ---- --------------------------------------------------------------------------------------------------------------------------------------
 
-![clip0167](/pic/clip0167.png){width="459" height="119"}
+![clip0167](clip0167.png){width="459" height="119"}
 
 To test the new dialog, compile the application and launch two instances
 of it. Go to the first record in the grid of one instance and type in
@@ -684,7 +685,7 @@ the same field of the same record, type in 'Corporate Headquarters 3'
 and also press "Apply". You should see the Reconcile Error dialog in
 action:
 
-![clip0168](/pic/clip0168.png){width="532" height="335"}
+![clip0168](clip0168.png){width="532" height="335"}
 
 TProvider and The UpdateMode Property
 
@@ -788,7 +789,7 @@ Go to DataModule2, double click Query1, right-click the field editor and
 choose Add all fields. Persistent field components will be created.
 Select DEPT\_NO field and look at the Object Inspector.
 
-![clip0169](/pic/clip0169.png){width="247" height="205"}
+![clip0169](clip0169.png){width="247" height="205"}
 
 Behind the scenes the Field Editor has set the Origin property of this
 field to the name of the table field DEPARTMENT.DEPT\_NO.  The provider
@@ -867,9 +868,9 @@ uses this property.
 |                                   | to be seen by the client.         |
 +-----------------------------------+-----------------------------------+
 
-![clip0170](/pic/clip0170.png){width="516" height="355"}
+![clip0170](clip0170.png){width="516" height="355"}
 
-![clip0171](/pic/clip0171.png){width="284" height="390"}
+![clip0171](clip0171.png){width="284" height="390"}
 
 For our sample the best approach is to set \[pfInUpdate, pfInWhere,
 pfInKey\] to the ProviderFlags of DEPT\_NO and \[pfInUpdate\] to the
@@ -903,9 +904,9 @@ Suppose we want to extend our query with some extra data, supplying the
 name of the head department for each department record. To do this we
 need to change Query1's SQL statement as shown here:
 
-![clip0172](/pic/clip0172.png){width="128" height="238"}
+![clip0172](clip0172.png){width="128" height="238"}
 
-![clip0173](/pic/clip0173.png){width="330" height="53"}
+![clip0173](clip0173.png){width="330" height="53"}
 
 Then we must add the HEAD\_DEPATMENT field in the Field Editor.
 
@@ -915,7 +916,7 @@ to "\[ \]".  To prohibit updates of this field when it becomes available
 in the client dataset, it's a good idea to turn its ReadOnly property to
 True.
 
-![clip0174](/pic/clip0174.png){width="420" height="272"}
+![clip0174](clip0174.png){width="420" height="272"}
 
 Update ClientDataset1's data by setting its Active property to False and
 then back to True.  The new data packet will be created by the provider
@@ -927,7 +928,7 @@ If you are not sure whether the provider can recognize which table it
 must update and you are getting errors when applying updates, add an
 OnGetDataSetPoperties similar to following:
 
-![clip0175](/pic/clip0175.png){width="553" height="118"}
+![clip0175](clip0175.png){width="553" height="118"}
 
 Once again, regardless of which SQL statement produces the dataset for
 provider, you can make it updateable using the combination of the Origin
@@ -1003,7 +1004,7 @@ component includes poIncFieldProps.  Set Provider1.Options to
 of Query1.  Run the application and view the results of your
 modifications.
 
-![clip0176](/pic/clip0176.png){width="419" height="272"}
+![clip0176](clip0176.png){width="419" height="272"}
 
 Notice that no changes at the client dataset level are required.
 
@@ -1051,9 +1052,9 @@ these properties:
 
 If the field level constraint isn't met, an exception is raised:
 
-![clip0177](/pic/clip0177.png){width="358" height="266"}
+![clip0177](clip0177.png){width="358" height="266"}
 
-![clip0178](/pic/clip0178.png){width="419" height="273"}
+![clip0178](clip0178.png){width="419" height="273"}
 
 All field-level constraints are validated immediately before the value
 is posted to the field.
@@ -1091,7 +1092,7 @@ Let's make it work.
   2.   
   ---- --
 
-![](/pic/embim1879.png){width="195" height="33"}
+![](embim1879.png){width="195" height="33"}
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   1.   Drop a TQuery component on DataModule2. Set its DatabaseName property to 'internalIBLocal' and its DataSource property to DataSource2. Then type in the SQL statement in SQL property:
@@ -1101,7 +1102,7 @@ Let's make it work.
   2.   Rename Query2 to Employee.
   ---- ----------------------------
 
-![clip0179](/pic/clip0179.png){width="355" height="174"}
+![clip0179](clip0179.png){width="355" height="174"}
 
 The DataModule2 will look like this:
 
@@ -1154,7 +1155,7 @@ Let's explore another one of them.
   4.   
   ---- --
 
-![clip0180](/pic/clip0180.png){width="164" height="237"}
+![clip0180](clip0180.png){width="164" height="237"}
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   1.   Double-click ClientDataSet1, right-click the Field Editor and choose Add all fields. Persistent fields will be created as shown in the picture. Notice there is an Employee field at the bottom of the field list. This field provides control on the corresponding nested dataset. Were there more detail datasets, we would have had more persistent TDataSetField components.
@@ -1176,7 +1177,7 @@ Let's explore another one of them.
   5.   
   ---- --
 
-![clip0181](/pic/clip0181.png){width="528" height="63"}
+![clip0181](clip0181.png){width="528" height="63"}
 
   ---- -------------------------------------------------------------------------------------------------------------------------------------------
   6.   Add the following AfterOpen event handler to the ClientDataSet1 to guarantee that ClientDataSet2 is active when ClientDataSet1 is active.
@@ -1190,13 +1191,13 @@ Let's explore another one of them.
 
  
 
-![clip0182](/pic/clip0182.png){width="349" height="199"}
+![clip0182](clip0182.png){width="349" height="199"}
 
 When all steps are completed DataModule2 may look like this:
 
  
 
-![clip0183](/pic/clip0183.png){width="420" height="328"}
+![clip0183](clip0183.png){width="420" height="328"}
 
 It's up to you to extend Form1 with new data aware components linked to
 the ClientDataSet2. Our version has a second TDBGrid occupying the
@@ -1230,7 +1231,7 @@ manually.
   3.   
   ---- --
 
-![clip0184](/pic/clip0184.png){width="465" height="66"}
+![clip0184](clip0184.png){width="465" height="66"}
 
   ---- --------------------------------------------------------------
   4.   Add an OnCreate event handler to DataModule2 as shown below.
@@ -1246,7 +1247,7 @@ manually.
   6.   
   ---- --
 
-![clip0185](/pic/clip0185.png){width="537" height="236"}
+![clip0185](clip0185.png){width="537" height="236"}
 
   ---- -----------------------------------------------------------------------------------
   1.   Now you can run the application. It will work as it did before the modifications.
@@ -1314,7 +1315,7 @@ Session1's AutoSessionName property to ensure thread-safe database
 access.  The parameters set for ServerSocket1 guarantee that a separate
 thread will service each client request to the port 8888.
 
-![clip0186](/pic/clip0186.png){width="221" height="50"}
+![clip0186](clip0186.png){width="221" height="50"}
 
 Now we need to add a critical section to DataModule2 to block other
 threads when one of them is working with the data access components on
@@ -1323,41 +1324,41 @@ clause of Unit2.  We will also add the FCSect variable to the private
 section of TDataModule2 and an OnCreate and an OnDestroy event handler
 to DataModule2.
 
-![clip0187](/pic/clip0187.png){width="472" height="150"}
+![clip0187](clip0187.png){width="472" height="150"}
 
 Now we'll add the declaration of a new server thread to the interface
 section of Unit2 and override one inherited method - the ClientExecute
 procedure.
 
-![clip0188](/pic/clip0188.png){width="360" height="54"}
+![clip0188](clip0188.png){width="360" height="54"}
 
 The new thread of this type should be created each time a new client
 request reaches the server application. To make it work we must add an
 OnGetThread event handler to ServerSocket1.
 
-![clip0189](/pic/clip0189.gif){width="500" height="98"}
+![clip0189](clip0189.gif){width="500" height="98"}
 
 At this point, we're ready to write the ClientExecute method for
 TMyServerThread for our server application.  The application should look
 something like this:
 
-![clip0001](/pic/clip0001.gif){width="456" height="345"}
+![clip0001](clip0001.gif){width="456" height="345"}
 
 The next two pages will show you the whole implementation of
 ClientExecute. There is a lot of code here. Read comments in the code
 and you should be OK.
 
-![clip0002](/pic/clip0002.gif){width="323" height="111"}
+![clip0002](clip0002.gif){width="323" height="111"}
 
-![clip0003](/pic/clip0003.gif){width="517" height="273"}
+![clip0003](clip0003.gif){width="517" height="273"}
 
-![clip0004](/pic/clip0004.gif){width="594" height="116"}
+![clip0004](clip0004.gif){width="594" height="116"}
 
-![clip0005](/pic/clip0005.gif){width="522" height="273"}
+![clip0005](clip0005.gif){width="522" height="273"}
 
-![clip0006](/pic/clip0006.gif){width="558" height="188"}
+![clip0006](clip0006.gif){width="558" height="188"}
 
-![clip0007](/pic/clip0007.gif){width="485" height="390"}
+![clip0007](clip0007.gif){width="485" height="390"}
 
 This complex code was written to replace the simple assignment of the
 Data property of the provider component to Data property of the client
@@ -1390,7 +1391,7 @@ stream. Let\'s do it.
   6.   
   ---- --
 
-![clip0008](/pic/clip0008.gif){width="260" height="149"}
+![clip0008](clip0008.gif){width="260" height="149"}
 
   ---- -----------------------------------------------------------------------------------
   1.   Drop a TClientSocket component on the DataModule2. Set its Port property to 8888.
@@ -1399,21 +1400,21 @@ stream. Let\'s do it.
 Now we must design the user interface for the client application. It may
 look like this:
 
-![clip0009](/pic/clip0009.gif){width="347" height="274"}
+![clip0009](clip0009.gif){width="347" height="274"}
 
 The edit box in the bottom left corner of the form stores the IP Address
 of the server application. When the user presses the Load button, the
 LoadDepartments method of the DataModule2 should be called.
 
-![clip0010](/pic/clip0010.gif){width="541" height="492"}
+![clip0010](clip0010.gif){width="541" height="492"}
 
-![clip0011](/pic/clip0011.gif){width="487" height="356"}
+![clip0011](clip0011.gif){width="487" height="356"}
 
 Both server and client applications are complete now. Launch
 TCP\_IP\_Server.exe, then load Project1.exe and press the Load button.
 The data will appear in the grid.
 
-![clip0012](/pic/clip0012.gif){width="449" height="329"}
+![clip0012](clip0012.gif){width="449" height="329"}
 
 Congratulations, you just have created an Internet--enabled thin client
 application! Neither the BDE nor the InterBase client libraries are
@@ -1424,7 +1425,7 @@ required on the client machine.
 The enormous amount of code written in the previous chapter was
 necessary to replace this simple line of code:
 
-![](/pic/embim1880.png){width="319" height="19"}
+![](embim1880.png){width="319" height="19"}
 
 We did not implement the ApplyUpdates method because it would be just as
 boring as what we completed a couple of minutes ago.  Nevertheless the
@@ -1460,7 +1461,7 @@ a single database connection as well.
   2.   
   ---- --
 
-![clip0013](/pic/clip0013.gif){width="371" height="184"}
+![clip0013](clip0013.gif){width="371" height="184"}
 
   ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   3.   Choose File \| New... \| Multi-tier \| Remote Data Module and the Remote Data Module Wizard will appear on the screen.  Enter the Class Name in the dialog box as shown below and press the OK button:
@@ -1486,7 +1487,7 @@ a single database connection as well.
   8.   
   ---- --
 
-![clip0014](/pic/clip0014.gif){width="144" height="24"}
+![clip0014](clip0014.gif){width="144" height="24"}
 
   ---- -------------------------------------------------------------
   1.   Click MyServer and choose Edit \| Add to interface command.
@@ -1496,7 +1497,7 @@ a single database connection as well.
   2.   In the Add to interface dialog box, type the declaration of the GetDepartments method. This method will implement the same function as in the TCP/IP sample -- delivery of the data packet from Proiver1 in the
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![clip0015](/pic/clip0015.gif){width="438" height="156"}
+![clip0015](clip0015.gif){width="438" height="156"}
 
   ---- -------------------------------------------------------------------------------------------------------------------------------
   3.   server application to the ClientDataSet1 in the client application. Press the OK button when you've finished the declaration.
@@ -1521,28 +1522,28 @@ be returned into the client process memory.
   4.   
   ---- --
 
-![clip0017](/pic/clip0017.gif){width="18" height="20"}
+![clip0017](clip0017.gif){width="18" height="20"}
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   5.   Select View \| Type Library, expand IMyServer in the tree view at the left of the Type Library Editor, click IMyServer then the New Method button on the editor tool bar. Rename the new method to ApplyDepartmentUpdates and click the Parameters tab at the right of the editor window. Complete the parameters as show below:
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![clip0016](/pic/clip0016.gif){width="588" height="340"}
+![clip0016](clip0016.gif){width="588" height="340"}
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   6.   Choose File \| Save all.  The new unit DCOMServer\_TLB.pas was added to the project. It contains Pascal declarations describing the binary content of the type library. If you spend some time looking at this file you will find the declarations of IMyServer and IMyServerDisp. Each interface must be implemented in one or another coclass. One coclass can implement several interfaces in DCOM. In our case, TMyServer plays the role of the coclass implementation. Delphi generates DCOMServer\_TLB.pas each time you change the type library content.  Never try to modify this file because your code may be overwritten without you even being aware of it. This file may be used in other Delphi applications to access the functionality of your server. The Implementation of the type library interfaces of TMyServer in Unit2 reference this file in its interface section.
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![clip0018](/pic/clip0018.gif){width="600" height="93"}
+![clip0018](clip0018.gif){width="600" height="93"}
 
 Here is an excerpt from the type library file, declaring the interface
 IMyServer.
 
-![clip0019](/pic/clip0019.gif){width="400" height="242"}
+![clip0019](clip0019.gif){width="400" height="242"}
 
 This is the interface section of our coclass.
 
-![clip0020](/pic/clip0020.gif){width="587" height="303"}
+![clip0020](clip0020.gif){width="587" height="303"}
 
 Following is the implementation section of Unit2 as created by the
 Delphi IDE.  Two methods of our interface look like other regular class
@@ -1553,14 +1554,14 @@ world.
 
  
 
-![clip0021](/pic/clip0021.gif){width="536" height="299"}
+![clip0021](clip0021.gif){width="536" height="299"}
 
 The last step is to complete two empty interface method stubs. The
 remote data module MyServer may look this way at design-time:
 
 Let's add the remaining lines of code to Unit2:
 
-![clip0022](/pic/clip0022.gif){width="586" height="187"}
+![clip0022](clip0022.gif){width="586" height="187"}
 
 Pretty simple, isn't it?  During the development of this application we
 heavily used visual tools which generated a majority of the code
@@ -1612,7 +1613,7 @@ have created for the TCP/IP sample.
 
  
 
-![clip0023](/pic/clip0023.gif){width="586" height="456"}
+![clip0023](clip0023.gif){width="586" height="456"}
 
  
 
@@ -1624,7 +1625,7 @@ have created for the TCP/IP sample.
   10.   
   ----- --
 
-![clip0024](/pic/clip0024.gif){width="586" height="200"}
+![clip0024](clip0024.gif){width="586" height="200"}
 
   ----- --------------------------------------------------------------------------------------------------------------------------------
   11.   Select Action1, choose the Events tab of the Object Inspector and create OnExecute and OnUpdate event handlers as shown below:
@@ -1636,13 +1637,13 @@ have created for the TCP/IP sample.
   12.   Create an OnExecute event handler for Action2 to cancel updates and assign the Action1Update event handler to its OnUpdate event.
   ----- -----------------------------------------------------------------------------------------------------------------------------------
 
-![clip0025](/pic/clip0025.gif){width="442" height="64"}
+![clip0025](clip0025.gif){width="442" height="64"}
 
   ----- --------------------------------------------------------------------------------------------------------------------------------------------
   13.   Create a third action named Action3.  Set its Caption to 'Refresh' and write event handlers for its OnUpdate and OnExecute events as well.
   ----- --------------------------------------------------------------------------------------------------------------------------------------------
 
-![clip0026](/pic/clip0026.gif){width="439" height="183"}
+![clip0026](clip0026.gif){width="439" height="183"}
 
   ----- -------------------------------------------------------------------------
   14.   Specify Unit2 as being used by the main form of the client application.
@@ -1652,13 +1653,13 @@ have created for the TCP/IP sample.
   15.   Drop a TDBGrid component, a TDBNavigator, three TButton components and one TEdit component on Form1, align them and link the buttons to actions, as shown below.  Link DBGrid1 and DBNavigator1 to DataModule2.DataSource1.
   ----- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![clip0027](/pic/clip0027.gif){width="427" height="301"}
+![clip0027](clip0027.gif){width="427" height="301"}
 
   ----- --
   16.   
   ----- --
 
-![clip0028](/pic/clip0028.gif){width="426" height="65"}
+![clip0028](clip0028.gif){width="426" height="65"}
 
   ---- --------------------------------------------
   1.   Write an OnChange event handler for Edit1.
@@ -1666,7 +1667,7 @@ have created for the TCP/IP sample.
 
 The client application is completed. Run and play with it for a while.
 
-![clip0029](/pic/clip0029.gif){width="479" height="388"}
+![clip0029](clip0029.gif){width="479" height="388"}
 
 When you type something in the edit box at the bottom of the form its
 contents are assigned to the DataModule2.ComputerName property. When you
@@ -1725,7 +1726,7 @@ interfaces.
   3.   
   ---- --
 
-![clip0030](/pic/clip0030.gif){width="230" height="340"}
+![clip0030](clip0030.gif){width="230" height="340"}
 
   ---- -------------------------------------------------------------------
   4.   Go to the source code of Unit2 and right-click the editor window.
@@ -1739,7 +1740,7 @@ interfaces.
   6.   
   ---- --
 
-![clip0031](/pic/clip0031.gif){width="521" height="124"}
+![clip0031](clip0031.gif){width="521" height="124"}
 
   ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   7.   The TCorbaVclComponentFactory.Create constructor call was added to it by the Delphi IDE.  Remove the call to TComponentFactory.Create from Unit2.  If you don't, your server application will have simultaneous DCOM and CORBA support and will be able to serve DCOM and CORBA clients at the same time.  This may be a nice feature for some projects, but for the sake of purity we will build the CORBA-only server.
@@ -1749,19 +1750,19 @@ interfaces.
   8.   
   ---- --
 
-![clip0032](/pic/clip0032.gif){width="599" height="82"}
+![clip0032](clip0032.gif){width="599" height="82"}
 
   ---- ----------------------------------------------------------------------------------------
   9.   The client stub and server skeleton were appended to the type library definition also.
   ---- ----------------------------------------------------------------------------------------
 
-![clip0033](/pic/clip0033.gif){width="600" height="204"}
+![clip0033](clip0033.gif){width="600" height="204"}
 
   ----- ------------------------------------------------------------------------------------------------------------------------------------------------------
   10.   To make it easier to connect to CORBA servers written in Delphi from client applications written in Delphi a special wrapper class was also created:
   ----- ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](/pic/embim1881.png){width="569" height="51"}
+![](embim1881.png){width="569" height="51"}
 
   ----- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   11.   Go to the MyServer remote data module and drop a TSession component on it. Set its AutoSesionName property to True.  All CORBA servers are multi-threaded by nature and in order to be thread safe when they work with the BDE, a separate session must be used in each thread. Now you may set Database1.HandleShared property to False or leave as True because it doesn't matter in the context of separate sessions.
@@ -1771,7 +1772,7 @@ interfaces.
   12.   Add CorbaRDM to the interface section of Unit2 and replace the TRemoteDataModule with the TCorbaDataModule, as shown below:
   ----- -----------------------------------------------------------------------------------------------------------------------------
 
-![](/pic/embim1882.png){width="386" height="35"}
+![](embim1882.png){width="386" height="35"}
 
   ----- --------------------------------------------------------------------------------
   13.   Compile the CORBAServer application to make sure that everything is all right.
@@ -1793,7 +1794,7 @@ Let's change the client application.
   2.   
   ---- --
 
-![](/pic/embim1883.png){width="588" height="94"}
+![](embim1883.png){width="588" height="94"}
 
   ---- ----------------------------------------------------------------------------------------------------
   1.   Delete Edit1 from the main form and the ComputerName property from Unit2. Compile the application.
@@ -1810,11 +1811,11 @@ service Smart Agent must be loaded on this machine. If you are not on a
 network you are still required to load Smart Agent on your local
 machine.  Go to Windows Start menu and choose the Smart Agent shortcut:
 
-![](/pic/embim1884.png){width="302" height="246"}
+![](embim1884.png){width="302" height="246"}
 
 Load the client and server modules of the CORBA sample:
 
-![](/pic/embim1885.png){width="468" height="414"}
+![](embim1885.png){width="468" height="414"}
 
 Statefull and Stateless Servers
 
@@ -1878,7 +1879,7 @@ The following steps are required to create a statefull MIDAS server:
   5.   
   ---- --
 
-![](/pic/embim1886.png){width="358" height="208"}
+![](embim1886.png){width="358" height="208"}
 
   ---- ----------------------------------------------------------------------------------------------------------------
   1.   Drop a TProvider component onto HR and link its DataSet property to Table1. Rename the TProvider to Employees.
@@ -1891,12 +1892,12 @@ The following steps are required to create a statefull MIDAS server:
 The property Employee: IProvider will be added to the interface IHR in
 the type library of the server.
 
-![](/pic/embim1887.png){width="408" height="81"}
+![](embim1887.png){width="408" height="81"}
 
 Delphi's IDE has also created the implementation of the Get\_Employees
 method in the Unit2 (HR).
 
-![](/pic/embim1888.png){width="308" height="67"}
+![](embim1888.png){width="308" height="67"}
 
   ---- ------------------------------------------------------------------------------------------------------------------------
   3.   This is the end of the server construction.  Run the server once to register the new COM component StatefullServer.HR.
@@ -1923,7 +1924,7 @@ is very simple too.
   4.   Double-click the down arrow at the right of the ServerName property in the Object Inspector and choose the name of the server object as shown on the picture:
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](/pic/embim1889.png){width="450" height="292"}
+![](embim1889.png){width="450" height="292"}
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   5.   Set DCOMConnection1.Connected property to True. The DCOM run-time library will load the server application, because DCOMConnection1 has tried to establish a persistent connection to the selected server component.
@@ -1933,7 +1934,7 @@ is very simple too.
   6.   Drop a TClientDataSet component on to DataModule2, set its RemoteServer property to DCOMConnection1 and choose a provider name from the drop down combo box of the ProviderName property. There is only one available option -- Employees. That is the name of the HR property Employees. DCOMConnection1 has asked HR to give it a list of all its properties of the type IProvider and displayed them for you. IProvider is a COM interface, designed specifically for MIDAS TProvider components to enable remote manipulations with it.
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](/pic/embim1890.png){width="514" height="288"}
+![](embim1890.png){width="514" height="288"}
 
 Calling methods of this interface you can interact with the TProvider
 component, which may reside in the server application. If you flip
@@ -1941,7 +1942,7 @@ through the Delphi Help System topics for TProvider, you will find that
 all IProvider interface methods have their corresponding TProvider
 methods.
 
-![](/pic/embim1891.png){width="220" height="82"}
+![](embim1891.png){width="220" height="82"}
 
 The TClientDataSet component is aware of how to use the IProvider
 interface if it has a reference to it. We just created this reference.
@@ -2052,15 +2053,15 @@ pooling.  The connection pooling will become a side effect of data
 module pooling. Read the comments in the following code snippets, to
 understand what it is all about.
 
-![](/pic/embim1892.png){width="576" height="185"}
+![](embim1892.png){width="576" height="185"}
 
-![](/pic/embim1893.png){width="578" height="520"}
+![](embim1893.png){width="578" height="520"}
 
-![](/pic/embim1894.png){width="575" height="106"}
+![](embim1894.png){width="575" height="106"}
 
-![](/pic/embim1895.png){width="574" height="472"}
+![](embim1895.png){width="574" height="472"}
 
-![](/pic/embim1896.png){width="576" height="217"}
+![](embim1896.png){width="576" height="217"}
 
 That's it.  To demonstrate how to use TModulePooler we need a
 multi-threaded server application. Due to the availability of CORBA on
@@ -2104,7 +2105,7 @@ To create a CORBA server with connection pooling:
   7.   
   ---- --
 
-![](/pic/embim1897.png){width="359" height="65"}
+![](embim1897.png){width="359" height="65"}
 
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   1.   Choose Form1, double-click it and enter an OnCreate event handler. This event handler will give to the ModulePooler a hint about what kind of data modules the pool must contain.
@@ -2118,7 +2119,7 @@ To create a CORBA server with connection pooling:
   3.   
   ---- --
 
-![](/pic/embim1898.png){width="121" height="27"}
+![](embim1898.png){width="121" height="27"}
 
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   1.   Drop a TDatabase component on DataModule2 and set it up to connect to the IBLocal InterBase database: set its DatabaseName property to 'internalIBLocal', Alias to 'НBLOCAL' , LoginPrompt to False and Params as
@@ -2140,7 +2141,7 @@ To create a CORBA server with connection pooling:
   5.   Go to the implementation of the newly created CORBA server in Unit3. Choose Edit \| Add to interface, type in the GetCustomers method declaration specified below, and press OK.
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](/pic/embim1899.png){width="438" height="153"}
+![](embim1899.png){width="438" height="153"}
 
   ---- ---------------------------------------------------------------------------------------------
   6.   Add Unit2, DMPooler and ActiveX units in uses clause of the interface section in the Unit3.
@@ -2170,7 +2171,7 @@ To create a CORBA server with connection pooling:
 
  
 
-![](/pic/embim1900.png){width="400" height="269"}
+![](embim1900.png){width="400" height="269"}
 
  
 
@@ -2210,7 +2211,7 @@ To create the client application fulfill the following steps:
   7.   
   ---- --
 
-![](/pic/embim1901.png){width="536" height="117"}
+![](embim1901.png){width="536" height="117"}
 
   ---- ---------------------------------------------------------------------
   1.   Drop a TButton on Form1 and create an OnClick event handler for it.
@@ -2224,7 +2225,7 @@ To create the client application fulfill the following steps:
   3.   
   ---- --
 
-![](/pic/embim1902.png){width="369" height="63"}
+![](embim1902.png){width="369" height="63"}
 
   ---- -----------------------------------------------------------------------
   1.   Drop a TTimer component on Form1 and create an OnTimer event handler.
@@ -2234,7 +2235,7 @@ To create the client application fulfill the following steps:
   2.   Compile the application, make sure that the VisiBroker Smart Agent is still available on the network, the ConnPooler server is loaded, and run the client application.
   ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-![](/pic/embim1903.png){width="266" height="61"}
+![](embim1903.png){width="266" height="61"}
 
 To test how scalable you server is try to load up to 9 -- 12 instances
 of the client app and click CheckBox1 on each of them. Each client will
@@ -2247,7 +2248,7 @@ will show you that 3 connections are established
 
 The screen of your computer may look like this:
 
-![](/pic/embim1904.png){width="572" height="478"}
+![](embim1904.png){width="572" height="478"}
 
 If there are too many clients then the application server performance
 may degrade significantly. In this situation you may increase the power
@@ -2336,7 +2337,7 @@ MyServer.GetDepartments method for this purpose.
   8.   
   ---- --
 
-![](/pic/embim1905.png){width="578" height="327"}
+![](embim1905.png){width="578" height="327"}
 
   ---- ---------------------------------------------------------------------------------------------------------------------
   9.   Double-click WebModule1 and create a new WebActionItem1 in the collection editor, set its Default property to True.
@@ -2348,7 +2349,7 @@ MyServer.GetDepartments method for this purpose.
 
  
 
-![](/pic/embim1906.png){width="563" height="370"}
+![](embim1906.png){width="563" height="370"}
 
  
 
@@ -2360,7 +2361,7 @@ MyServer.GetDepartments method for this purpose.
   12.   
   ----- --
 
-![](/pic/embim1907.png){width="551" height="380"}
+![](embim1907.png){width="551" height="380"}
 
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------
   1.   Make sure that your web server is up and running. Run the web browser and enter the URL 'http://127.0.0.1/scripts/dept.dll' as shown on the screen short:

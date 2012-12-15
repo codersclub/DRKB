@@ -160,7 +160,7 @@ http://www.qbss.com или у вашего локального продавца
 
 Figure 1 -- Setting up a basic report
 
-![clip0187](/pic/clip0187.gif){width="217" height="146"}
+![clip0187](clip0187.gif){width="217" height="146"}
 
 Для проверки, что вы все выполнили правильно, просмотрите отчет, для
 этого в любом месте TQuickRep щелкните правой кнопкой мышки и выберите

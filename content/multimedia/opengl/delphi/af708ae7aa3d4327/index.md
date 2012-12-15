@@ -33,8 +33,8 @@ glShadeModel
 
 невооружонным глазом:
 
-![clip0125](/pic/clip0125.png){width="298" height="297"}
-![clip0126](/pic/clip0126.png){width="298" height="297"}
+![clip0125](clip0125.png){width="298" height="297"}
+![clip0126](clip0126.png){width="298" height="297"}
 
 Вот и всё!
 

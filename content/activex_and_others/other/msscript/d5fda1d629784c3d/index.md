@@ -101,7 +101,7 @@ ActiveX-компонент и файл помощи с описанием его
 необходимо импортировать компонент ActiveX под названием Microsoft
 ScriptControl.
 
-![clip0076](/pic/clip0076.gif){width="477" height="544"}
+![clip0076](clip0076.gif){width="477" height="544"}
 
 После этого на закладке ActiveX появится невизуальный компонент
 TScriptControl, который можно разместить на форме.

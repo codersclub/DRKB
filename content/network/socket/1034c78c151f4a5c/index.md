@@ -39,15 +39,15 @@ Borland Delphi на основе сокетов (\"sockets\" - гнезда). В
 Ниже следует примерная схема работы сокетного сервера в
 Дельфи-приложениях:
 
-![clip0002](/pic/clip0002.png){width="162"
-height="50"}![clip0003](/pic/clip0003.png){width="50"
-height="50"}![clip0007](/pic/clip0007.png){width="162"
-height="50"}![clip0006](/pic/clip0006.png){width="50"
-height="50"}![clip0008](/pic/clip0008.png){width="162"
-height="50"}![clip0009](/pic/clip0009.png){width="50"
-height="50"}![clip0010](/pic/clip0010.png){width="162"
-height="50"}![clip0005](/pic/clip0005.png){width="50"
-height="50"}![clip0011](/pic/clip0011.png){width="162" height="50"}
+![clip0002](clip0002.gif){width="162" height="50"}
+![clip0003](clip0003.gif){width="50" height="50"}
+![clip0007](clip0007.png){width="162" height="50"}
+![clip0006](clip0006.png){width="50" height="50"}
+![clip0008](clip0008.png){width="162" height="50"}
+![clip0009](clip0009.png){width="50" height="50"}
+![clip0010](clip0010.png){width="162" height="50"}
+![clip0005](clip0005.gif){width="50" height="50"}
+![clip0011](clip0011.png){width="162" height="50"}
 
 Разберем схему подробнее:
 

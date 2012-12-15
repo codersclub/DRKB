@@ -56,7 +56,7 @@ Delphi 6 решает эти проблемы, позволяя клиентск
 применяется dbExpress. На рис. 1 показан законченный модуль данных. Он
 содержит компоненты SQLConnection, SQLDataSet и DataSetProvider.
 
-![clip0300](/pic/clip0300.gif){width="221" height="190"}
+![clip0300](clip0300.gif){width="221" height="190"}
 
 Рисунок 1. Удаленный модуль данных employee
 
@@ -80,7 +80,7 @@ EmpDs.
 свойства CommandText. Модуль данных также содержит DataSetProvider
 (CustProv), связанный с SQLDataSet.
 
-![clip0301](/pic/clip0301.gif){width="177" height="194"}
+![clip0301](clip0301.gif){width="177" height="194"}
 
 Рисунок 2. Удаленный модуль данных customer
 
@@ -100,7 +100,7 @@ EmpDs.
 раскрывающемся списке типов, так что вам остается лишь выбрать его из
 списка.
 
-![clip0302](/pic/clip0302.gif){width="617" height="424"}
+![clip0302](clip0302.gif){width="617" height="424"}
 
 Рисунок 3. Свойство дочернего удаленного модуля данных, добавленное к
 интерфейсу главного модуля данных
@@ -125,7 +125,7 @@ IEmployeeDM. Затем свойство Parent Interface интерфейса I
 IChildDm. Такую же замену свойства Parent Interface следует сделать в
 каждом дочернем удаленном модуле данных.
 
-![clip0303](/pic/clip0303.gif){width="617" height="424"}
+![clip0303](clip0303.gif){width="617" height="424"}
 
 Рисунок 4. Интерфейс IChildDm со свойством EmployeeRdm
 
@@ -193,11 +193,11 @@ DCOMConnection, свойству ServerName которого присвоено 
 EmpSrvr.EmployeeDm, чтобы соединить его с главным удаленным модулем
 данных сервера приложений.
 
-![clip0304](/pic/clip0304.gif){width="333" height="155"}
+![clip0304](clip0304.gif){width="333" height="155"}
 
 Рисунок 5. Модуль данных клиентского приложения
 
-![clip0305](/pic/clip0305.gif){width="619" height="427"}
+![clip0305](clip0305.gif){width="619" height="427"}
 
  \
 

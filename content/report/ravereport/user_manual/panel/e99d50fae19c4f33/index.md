@@ -19,34 +19,34 @@ Date: 01.01.2007
 
 Первые три иконки управления проектами:
 
-![](/pic/embim1761.png){width="34" height="37"}        New Project      
+![](embim1761.png){width="34" height="37"}        New Project      
  Создает новый проект        
 
-![](/pic/embim1762.png){width="36" height="35"}        Open Project    
+![](embim1762.png){width="36" height="35"}        Open Project    
    Открывает предыдущий сохраненный проект        
 
-![](/pic/embim1763.png){width="36" height="36"}        Save Project    
+![](embim1763.png){width="36" height="36"}        Save Project    
    Сохраняет текущий проект        
 
 Следующие три иконки управляют специфическими аспектами текущего
 проекта:
 
-![](/pic/embim1764.png){width="35" height="34"}        New Report      
+![](embim1764.png){width="35" height="34"}        New Report      
  Создает новый отчет, который будет в том же самом файле проекта (.rav
 file). Может иметь более одного отчета на проект в файле проекта        
 
-![](/pic/embim1765.png){width="37" height="37"}        New Global Page  
+![](embim1765.png){width="37" height="37"}        New Global Page  
      Создает новую глобальную страницу        
 
-![](/pic/embim1766.png){width="35" height="36"}        New Data View    
+![](embim1766.png){width="35" height="36"}        New Data View    
    Позволяет создать новый просмотр данных DataViews, который
 ассоциирован с текущим проектом. Смотрите главу «Подключение данных» для
 получения более подробной информации о DataViews.        
 
 Две последние иконки управляют текущим выбранным отчетом:
 
-![](/pic/embim1767.png){width="36" height="35"}        New Page      
+![](embim1767.png){width="36" height="35"}        New Page      
  Создает новую страницу в текущем отчете        
 
-![](/pic/embim1768.png){width="36" height="37"}        Execute Report  
+![](embim1768.png){width="36" height="37"}        Execute Report  
      Выполняет или печатает текущий отчет        
