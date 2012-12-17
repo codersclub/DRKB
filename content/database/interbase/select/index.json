@@ -1,7 +1,0 @@
-[
-      {"name":"Можно-ли в запросах делать поиск по BLOB?", "page":"8d4244879e164360.html"},
-      {"name":"Как избавиться от ошибки multiple rows in singleton select?", "page":"38d2f85e2e6f46ad.html"},
-      {"name":"Как оптимизировать запросы?", "page":"da8d8e3a183d46d6.html"},
-      {"name":"Почему в операторе SELECT для VIEW нельзя использовать ORDER BY?", "page":"c24fdaff813346fb.html"},
-      {"name":"Почему таблица или select показывается в Grid быстро, а перемещение в конец таблицы происходит долго?", "page":"157f93b2d03b4edd.html"}
-]

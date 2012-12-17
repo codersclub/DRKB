@@ -1,5 +1,0 @@
-[
-    {"name":"Временные зоны", "page":"timezone/"},
-    {"name":"Системное время", "page":"systime/"},
-    {"name":"Системный таймер", "page":"systimer/"}
-]

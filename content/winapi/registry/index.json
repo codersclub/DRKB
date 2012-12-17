@@ -1,6 +1,0 @@
-[
-    {"name":"Общие принципы работы с реестром", "page":"common/"},
-    {"name":"Использование частных ключей реестра", "page":"private/"},
-    {"name":"Работа с Microsoft Registry Editor", "page":"regedit/"},
-    {"name":"INI-файлы", "page":"ini/"}
-]

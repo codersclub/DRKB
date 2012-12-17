@@ -1,7 +1,0 @@
-[
-    {"name":"Общие вопросы и теория технологии Drag & Drop", "page":"common/"},
-    {"name":"Drag & Drop внутри своего приложения", "page":"inside/"},
-    {"name":"Drag & Drop с другого приложения, Drag & Drop файлов", "page":"outside/"},
-    {"name":"Docking", "page":"docking/"},
-    {"name":"Перемещение объектов мышкой", "page":"mousemove/"}
-]

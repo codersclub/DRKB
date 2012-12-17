@@ -1,7 +1,0 @@
-[
-    {"name":"Кодирование", "page":"coding/"},
-    {"name":"Пароли", "page":"password/"},
-    {"name":"Хэширование", "page":"hash/"},
-    {"name":"Шифрование", "page":"cypher/"},
-    {"name":"Разные вопросы", "page":"misc/"}
-]

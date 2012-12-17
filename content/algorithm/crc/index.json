@@ -1,8 +1,0 @@
-[
-    {"name":"Работа с документами", "page":"document/"},
-    {"name":"CRC", "page":"d8d15c6cca9745d5.html"},
-    {"name":"CRC-32", "page":"25270ced4b9e48a8.html"},
-    {"name":"CRC-64", "page":"9828491805d04792.html"},
-    {"name":"Вычисление CRC-32 для файла", "page":"b96158f5e47b4b06.html"},
-    {"name":"Как вычислить CRC (контрольную сумму) для файла?", "page":"452c815673e94088.html"}
-]

@@ -1,9 +1,0 @@
-[
-    {"name":"CryptoAPI", "page":"cryptoapi/"},
-    {"name":"Как прочитать владельца файла?", "page":"7cf6ccc14a884633.html"},
-    {"name":"Как определить, является ли диск NTFS?", "page":"7978addcae9e4011.html"},
-    {"name":"Права доступа NTFS", "page":"5e1cedbee16a417f.html"},
-    {"name":"Создание hardlink и symbolic link", "page":"d554165b32be4082.html"},
-    {"name":"Учимся работать с многопоточными файлами в NT", "page":"c1a29b3f33a14052.html"},
-    {"name":"Файловая система NTFS (статья)", "page":"fce4d220c3ff4ea2.html"}
-]

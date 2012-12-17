@@ -1,8 +1,0 @@
-[
-    {"name":"Rave Report −  руководство разработчика", "page":"dev_manual/"},
-    {"name":"Rave Report − руководство пользователя", "page":"user_manual/"},
-    {"name":"Пример разработки простых отчетов в Rave Reports", "page":"7405b8780914473d.html"},
-    {"name":"Пример использования настраиваемого соединения TRvCustomConnection", "page":"bb4f9a2f2a254dee.html"},
-    {"name":"Пример отчетов Rave Reports для приложений баз данных", "page":"e2e513d0d9c74c7f.html"},
-    {"name":"Работа с отчетами Rave Report в режиме Runtime", "page":"f7a5f5f9fc664148.html"}
-]
