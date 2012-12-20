@@ -465,12 +465,6 @@ By Cary Jensen, Ph.D.
 
 Перевел Мотов Олег mailto:olegm\@tebuk.parma.ru http://olegmotov.h1.ru
 
-![](/pic/embim1908.png){width="29"
-height="29"}![](/pic/embim1909.png){width="29"
-height="29"}![](/pic/embim1910.png){width="29" height="29"}
-
-![](/pic/embim1911.png){width="29"
-height="29"}![](/pic/embim1912.png){width="29" height="29"}
 
 Ревизия интерфейсов
 
@@ -1076,5 +1070,3 @@ By Cary Jensen, Ph.D.
 
 Перевел Мотов Олег mailto:olegm\@tebuk.parma.ru http://olegmotov.h1.ru
 
-![](/pic/embim1913.png){width="29"
-height="29"}![](/pic/embim1914.png){width="29" height="29"}

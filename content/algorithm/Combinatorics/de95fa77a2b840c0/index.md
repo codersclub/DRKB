@@ -58,9 +58,8 @@ Next(1,1,1,1) -\> (1,1,1,2) Next(1,1,1,3) -\> (1,1,2,1) Next(3,1,3,3)
           until not Yes
         end.
 
- \
-Решение через рекурисю. ![](/pic/embim1845.gif){width="1" height="1"}\
-![](/pic/embim1846.png){width="160" height="1"}\
+
+Решение через рекурисю.
 
  
 

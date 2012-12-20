@@ -371,8 +371,6 @@ Date: 01.01.2007
      
     end.
 
- \
- \
 
 Проект также доступен по адресу: http://rouse.front.ru/tcpstat.zip
 

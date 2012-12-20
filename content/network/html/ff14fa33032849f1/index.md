@@ -1,6 +1,7 @@
 ---
 Title: HTMLEditor -- Краткий обзор
-Author: [Алексей Румянцев](mailto:skitl@mail.ru)
+Author: Алексей Румянцев (mailto:skitl@mail.ru)
+source: https://delphisources.ru/pages/faq/base/html_editor.html
 Date: 01.01.2007
 ---
 
@@ -59,7 +60,7 @@ Rich\'формату есть это Html, теперь давайте попр�
 
 Результат должен быть примерно следующий:
 
-![](/pic/clip0315.gif)
+![](importactivexcontrol.gif)
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 13px;"}
   ---- ------------------------------

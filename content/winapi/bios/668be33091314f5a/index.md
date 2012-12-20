@@ -1,6 +1,7 @@
 ---
 Title: Как прочитать ROM-BIOS?
-Date: 01.01.2007
+Date: 2003-02-15
+author: Nico Bendlin <nicode@gmx.net>
 ---
 
 
@@ -8,7 +9,7 @@ Date: 01.01.2007
 =======================
 
 ::: {.date}
-01.01.2007
+2003-02-15
 :::
 
 An Example of this unit is availabe as Demo Download.
