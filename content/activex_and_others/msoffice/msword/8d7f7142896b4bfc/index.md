@@ -14,7 +14,7 @@ Date: 01.01.2007
 
 Примеры для работы с MS Word
 
-[Примеры для работы с MS Word](/zip/wordapp.zip)
+[Примеры для работы с MS Word](wordapp.zip)
 
 Автор: Akella
 

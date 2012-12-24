@@ -14,7 +14,7 @@ Date: 01.01.2007
 
 Пример реализации Drag-and-Dock
 
-[Пример реализации Drag-and-Dock](/zip/27_2.zip)
+[Пример реализации Drag-and-Dock](27_2.zip)
 
 Автор: Akella
 

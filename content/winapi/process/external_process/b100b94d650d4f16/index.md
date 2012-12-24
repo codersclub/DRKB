@@ -13,8 +13,7 @@ Date: 01.01.2007
 
 Примеры для обмена данными через File Mapping
 
-[Примеры для обмена данными через File
-Mapping](/zip/filemapping_exchangedata.zip)
+[Примеры для обмена данными через File Mapping](filemapping_exchangedata.zip)
 
 Автор: Akella
 

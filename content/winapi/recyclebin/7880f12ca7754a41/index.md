@@ -1,6 +1,6 @@
 ---
 Title: Просмотр состояния корзины
-Author: Rouse\_
+Author: Rouse_
 Date: 01.01.2007
 ---
 
@@ -80,7 +80,7 @@ Date: 01.01.2007
 
  
 
-[rbin.zip](/zip/rbin.zip)
+[rbin.zip](../rbin.zip)
 
 Автор: Rouse\_
 

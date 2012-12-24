@@ -1,6 +1,7 @@
 ---
 Title: Просто и ясно о PageMaker и Delphi
 Date: 01.01.2007
+Author: Дмитрий Кузан
 ---
 
 

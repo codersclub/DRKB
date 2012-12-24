@@ -284,7 +284,7 @@ SocketConnection, WebConnection или CorbaConnection, чтобы соедин�
 ConnectionBroker состоит в том, что к нему невозможно подключать
 SharedConnection.
 
-[Скачать демонстрационный пример](/zip/many_dm_one_connection.zip)
+[Скачать демонстрационный пример](many_dm_one_connection.zip)
 
 <https://delphiworld.narod.ru/>
 

@@ -14,7 +14,7 @@ Date: 01.01.2007
 
 Примеры для работы с socket
 
-[Примеры для работы с socket](/zip/socketclient.zip)
+[Примеры для работы с socket](socketclient.zip)
 
 Автор: Akella
 

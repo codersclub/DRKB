@@ -1,7 +1,7 @@
 ---
 Title: Пример получения TCP и UDP статистики
 Date: 01.01.2007
-Author: Rouse\_
+Author: Rouse_
 ---
 
 
@@ -23,7 +23,7 @@ AllocateAndGetTcpExTableFromStack (XP only).
 Исправлена ошибка при которой неверно показывались открытые порты
 (htons забыл :)
 
-[Скачать демонстрационный пример](/zip/tcpstat.zip)
+[Скачать демонстрационный пример](tcpstat.zip)
 
 Александр (Rouse\_) Багель
 
