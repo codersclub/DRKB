@@ -2,7 +2,6 @@
 Title: Общие сведения о COM (статья)
 Author: Fantasist
 Date: 01.01.2007
-children: auto
 ---
 
 
@@ -13,6 +12,8 @@ children: auto
 01.01.2007
 :::
 
+Автор: Fantasist
+
 Эта статья целиком и полностью написана Fantasist\'ом, за что ему огромное спасибо.
 
 Хотел я в общих словах расказать основную идею СOM. Когда я понял, что
@@ -21,9 +22,16 @@ children: auto
 
 Что ж, будет немного подлиннее.
 
-Автор: Fantasist
+1. [Введение](./)
+2. [Простой пример](simple_sample/)
+3. [DLL!](dll/)
+4. [Еще шаг в направлении COM](com_step/)
+5. [Понятие интерфейса](interface/)
+6. [Понятие интерфейса − 2](interface2/)
+7. [Собираем тестовый пример](testsample/)
+8. [Стандарт СОМ](comstandard/)
+9. [Как система создает объект СОМ](com_create/)
+10. [IClassFactory](iclassfactory/)
 
 Взято с Vingrad.ru <https://forum.vingrad.ru>
 
-TEMPORARILY AUTO TOC!!!
-<!-- TOC -->

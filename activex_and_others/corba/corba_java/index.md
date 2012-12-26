@@ -1,10 +1,10 @@
 ---
-Title: CORBA клиент -- Java Server
+Title: CORBA клиент - Java Server
 Date: 01.01.2007
 ---
 
 
-CORBA клиент -- Java Server
+CORBA клиент - Java Server
 ===========================
 
 ::: {.date}
