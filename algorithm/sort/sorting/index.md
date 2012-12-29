@@ -19,6 +19,6 @@ Date: 01.01.2007
 
 См. также статьи в других разделах:
 
-[Сортировка столбцов в StringGrid](/vcl/stringgrid/misc/6d16657cebc74063/)
+[Сортировка столбцов в StringGrid](/vcl/stringgrid/misc/sort/)
 
 <!-- TOC -->

@@ -1,7 +1,7 @@
 ---
 Title: Быстрая сортировка
-Author: www.structur.h1.ru
-Date: 01.01.2007
+Author: iZEN, izen@mail.ru
+Date: 14.09.2004
 ---
 
 
