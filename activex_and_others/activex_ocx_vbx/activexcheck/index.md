@@ -1,8 +1,10 @@
 ---
 Title: Как узнать, установлен ли ActiveX на машине?
+Author: 
 Date: 01.01.2007
+Keywords: 
+Description: 
 ---
-
 
 Как узнать, установлен ли ActiveX на машине?
 ============================================
@@ -11,6 +13,8 @@ Date: 01.01.2007
 01.01.2007
 :::
 
+Вариант 1:
+
     { ... }
     var
       strOLE: string;
@@ -18,11 +22,12 @@ Date: 01.01.2007
       strOLE = "YourCOMServer.Application" {your ProgID}
       if (CLSIDFromProgID(PWideChar(WideString(strOLE), ClassID) = S_OK) then
         begin
-          { ... }
+          { //ActiveX установлен ... }
         end;
     end;
 
 ------------------------------------------------------------------------
+Вариант 2:
 
     { ... }
     const
@@ -42,7 +47,7 @@ Date: 01.01.2007
           sComServer := Reg.ReadString('');
           if FileExists(sComServer) then
           begin
-            { ... }
+            { //ActiveX установлен ... }
           end;
         end;
       finally

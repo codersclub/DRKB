@@ -38,7 +38,7 @@ Parameter Descriptions
     //DBName : String;            //Name of the SQL Server DB
     //ArTables : array of String; //An array of table names
     //StatMsg : TStatusMsg);      //A status message callback
-                                 //procedure
+                                  //procedure
      
 
 TStatusMsg is a procedural type used as a callback procedure
@@ -87,15 +87,15 @@ TStatusMsg is a procedural type used as a callback procedure
 
 The pseudo-code for this is pretty easy.
 
-1\.        1.        Get a listing of all tables in the SQL Server
+1.        Get a listing of all tables in the SQL Server
 database passed to the procedure.
 
-2\.        2.        Get a table name from the table name array.
+2.        Get a table name from the table name array.
 
-3\.        3.        If a passed table name happens to be in the list of
+3.        If a passed table name happens to be in the list of
 table retrieved from the database, DROP it.
 
-4\.        4.        Repeat 2. and 3. until all table names have been
+4.        Repeat 2. and 3. until all table names have been
 exhausted.
 
 The reason why I do the comparison in step 3 is because if you issue a
@@ -129,7 +129,7 @@ Primary table maker program, I define an array as follows:
     arPat[9] := 'dbo.' + FDisease + 'CrossTbl_' + FQtrYr;
     arPat[10] := 'dbo.' + FDisease + 'Primary_' + FQtrYr;
 
-and pass it into the procedure.      
+and pass it into the procedure.
 
 StatMsg        TStatusMsg        This is a procedural type of :
 procedure(Msg : String). You can\'t use a class method for this
@@ -147,7 +147,7 @@ as follows:
 The trick here is that \"thr\" is the instance variable used to
 instantiate my thread class. The instance variable resides in the main
 form of my application. This means that it too must be declared as an
-interface variable.      
+interface variable.
 
 I\'m usually averse to using global variables and procedures. It\'s
 against structured programming conventions. However, what this procedure

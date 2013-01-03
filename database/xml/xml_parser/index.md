@@ -1,6 +1,6 @@
 ---
 Title: Парсер подавляющего большинства нотаций XML
-Author: Delirium\
+Author: Delirium
 Date: 01.01.2007
 ---
 
@@ -12,7 +12,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Автор: Delirium\
+Автор: Delirium
 
 Сайт: http://delphibase.endimus.com
 

@@ -14,13 +14,13 @@ Date:
 <table width="100%">
 <tr>
 <td>
-<a href="https://forum.sources.ru/index.php?showuser=4453">
+<a href="https://forum.sources.ru/index.php?showuser=4453" target="_blank">
 <img src="Vit_src.jpg" alt="Виталий Невзоров" style="float:left; padding-right:1em;"/>
 Виталий Невзоров на sources.ru
 </a>
 </td>
 <td>
-<a href="https://forum.vingrad.ru/index.php?showuser=10">
+<a href="https://forum.vingrad.ru/index.php?showuser=10" target="_blank">
 <img src="vit.jpg" alt="Виталий Невзоров" style="float:left; padding-right:1em;"/>
 Виталий Невзоров на vingrad.ru
 </a>

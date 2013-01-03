@@ -56,6 +56,10 @@ These are the elements outlined in John Gruber’s original design document. All
 
 [title](https://www.example.com)
 
+### Link target=_blank
+
+[open in new window](https://www.example.com){:target="_blank"}
+
 ### Image
 
 ![alt text](image.jpg)
@@ -80,6 +84,17 @@ These elements extend the basic syntax by adding additional features. Not all Ma
   "age": 25
 }
 ```
+### Fenced Code Block (3 backticks + PHP language specified {.php})
+**ToDo:** Need to simplify to **\`\`\`php\\n**
+
+``` {.php}
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
 ### Fenced Code Block (4 spaces)
 
     {

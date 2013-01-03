@@ -1,5 +1,6 @@
 ---
 Title: Как получить обновление данных по событию, а не таймером
+author: Delirium, VideoDVD@hotmail.com
 Date: 01.01.2007
 ---
 
