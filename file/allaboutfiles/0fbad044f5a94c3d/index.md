@@ -29,7 +29,7 @@ TextFile. До сих пор не совсем понимаю что это та
 
 2) Ассоциируем ее:
 
-    AssignFile(F, 'c:\\MyFile.txt&apos;);        
+    AssignFile(F, 'c:\MyFile.txt&apos;);        
 
 3) Теперь надо этот файл открыть, есть 3 варианта:
 
@@ -81,38 +81,38 @@ ReadLn(f, s) - будет прочитанна текущая строка и п
     Function GetFileSize(FIleName:String):integer;
     var f: File of Byte;
     begin
-    try
-    AssignFile(f, FileName);
-    Reset(f);
-    result:=filesize(F);
-    CloseFile(f);
-    except
-    result:=-1;
-    end;
+      try
+        AssignFile(f, FileName);
+        Reset(f);
+        result:=filesize(F);
+        CloseFile(f);
+      except
+        result:=-1;
+      end;
     end;
     Procedure ReadMyFile;
     Var i,j:integer;
     Begin
-    ProgressBar1.Max:=GetFileSize('c:\MyFile.txt');
-    ProgressBar1.position:=0;
-    assignfile(f,'c:\MyFile.txt');
-    Canceled:=False;
-    reset(f);
-    i:=0;j:=0;
-    while not eof(f) do
-    begin
-    inc(j);
-    readln(f,s);
-    i:=i+length(s)+2;
-    if (j mod 1000)=0 then
-    begin
-    ProgressBar1.position:=i;
-    Application.ProcessMessages;
-    if canceled then break;
-    end;
-    {здесь мы что-то делаем с прочитанной строкой}
-    end;
-    CloseFile(f);
+      ProgressBar1.Max:=GetFileSize('c:\MyFile.txt');
+      ProgressBar1.position:=0;
+      assignfile(f,'c:\MyFile.txt');
+      Canceled:=False;
+      reset(f);
+      i:=0;j:=0;
+      while not eof(f) do
+      begin
+        inc(j);
+        readln(f,s);
+        i:=i+length(s)+2;
+        if (j mod 1000)=0 then
+        begin
+          ProgressBar1.position:=i;
+          Application.ProcessMessages;
+          if canceled then break;
+        end;
+        {здесь мы что-то делаем с прочитанной строкой}
+      end;
+      CloseFile(f);
     End;
 
 Теперь комментарии к коду.
@@ -151,5 +151,4 @@ ReadLn(f, s) - будет прочитанна текущая строка и п
 попадут 4 байта указателя на нее. Надо делать так:
 
     Writeln(f,pointer(s)^);        
-
 
