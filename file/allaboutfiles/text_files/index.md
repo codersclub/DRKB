@@ -24,16 +24,17 @@ Date: 01.01.2007
 
 Примеры.
 
-1\) Загрузка текста из файла в Memo:
+1. Загрузка текста из файла в Memo:
 
-Memo1.lines.loadfromfile(\'c:\\MyFile.txt\');          
+    `Memo1.lines.loadfromfile('c:\MyFile.txt');`
 
-2\) Сохранение в файл:
+2. Сохранение в файл:
 
-Memo1.lines.savetoFile(\'c:\\MyFile.txt\');          
+    `Memo1.lines.savetoFile('c:\MyFile.txt');`
 
-3\) А вот так можно прочитать весь файл в строку:
+3. А вот так можно прочитать весь файл в строку:
 
+```
     function ReadFromFile(FileName: string): string; 
     begin 
       with TStringList.Create do 
@@ -44,5 +45,5 @@ Memo1.lines.savetoFile(\'c:\\MyFile.txt\');
         Free; 
       end; 
     end;
-
+```
          

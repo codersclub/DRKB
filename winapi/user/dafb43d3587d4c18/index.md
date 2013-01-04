@@ -2,6 +2,8 @@
 Title: Создание нового пользователя NetUserAdd
 Author: Rouse\_
 Date: 01.01.2007
+Keywords: 
+Description: 
 ---
 
 Создание нового пользователя NetUserAdd
@@ -12,7 +14,6 @@ Date: 01.01.2007
 :::
 
     unit Unit1;
-
      
     interface
      
@@ -103,3 +104,4 @@ Date: 01.01.2007
 Взято из <https://forum.sources.ru>
 
 Автор: Rouse\_
+

@@ -25,27 +25,27 @@ Date: 01.01.2007
 этими функциями из справки по Дельфи:
 
     var
-    FromF, ToF: file;
-    NumRead, NumWritten: Integer;
-    Buf: array[1..2048] of Char;
+      FromF, ToF: file;
+      NumRead, NumWritten: Integer;
+      Buf: array[1..2048] of Char;
     begin
-    if OpenDialog1.Execute then { Display Open dialog box }
-    begin
-    AssignFile(FromF, OpenDialog1.FileName);
-    Reset(FromF, 1); { Record size = 1 }
-    if SaveDialog1.Execute then { Display Save dialog box}
-    begin
-    AssignFile(ToF, SaveDialog1.FileName); { Open output file }
-    Rewrite(ToF, 1); { Record size = 1 }
-    Canvas.TextOut(10, 10, 'Copying ' + IntToStr(FileSize(FromF))+ ' bytes...');
-    repeat
-    BlockRead(FromF, Buf, SizeOf(Buf), NumRead);
-    BlockWrite(ToF, Buf, NumRead, NumWritten);
-    until (NumRead = 0) or (NumWritten <> NumRead);
-    CloseFile(FromF);
-    CloseFile(ToF);
-    end;
-    end;
+      if OpenDialog1.Execute then { Display Open dialog box }
+      begin
+        AssignFile(FromF, OpenDialog1.FileName);
+        Reset(FromF, 1); { Record size = 1 }
+        if SaveDialog1.Execute then { Display Save dialog box}
+        begin
+          AssignFile(ToF, SaveDialog1.FileName); { Open output file }
+          Rewrite(ToF, 1); { Record size = 1 }
+          Canvas.TextOut(10, 10, 'Copying ' + IntToStr(FileSize(FromF))+ ' bytes...');
+          repeat
+            BlockRead(FromF, Buf, SizeOf(Buf), NumRead);
+            BlockWrite(ToF, Buf, NumRead, NumWritten);
+          until (NumRead = 0) or (NumWritten <> NumRead);
+          CloseFile(FromF);
+          CloseFile(ToF);
+        end;
+      end;
     end;
      
 
@@ -61,12 +61,8 @@ Date: 01.01.2007
 средствами Паскаля и файловых переменных, но заглянув в Help Дельфей я
 обнаружил еще несколько функций достойных упоминания.
 
-Erase(f) - удаляет файл
-
-FilePos(f) - возвращает текущую позицию чтения/записи в файл
-
-Flush(f) - сбрасывает кэшированные файловые операции на диск
-
-Rename(f, \'MyNewFileName.txt\') - переименование файлов
-
-Truncate(f) - файл обрезается до текущей позиции чтения/записи
+- Erase(f) - удаляет файл
+- FilePos(f) - возвращает текущую позицию чтения/записи в файл
+- Flush(f) - сбрасывает кэшированные файловые операции на диск
+- Rename(f, \'MyNewFileName.txt\') - переименование файлов
+- Truncate(f) - файл обрезается до текущей позиции чтения/записи
