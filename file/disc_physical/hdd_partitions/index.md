@@ -41,15 +41,15 @@ Date: 01.01.2007
     TYPE
     {---------------------- Структура описателя раздела -------------------------}
      PPartition   =  ^TPartition;
-     TPartition    {                                                             }=packed Record
-      Boot         { Флаг активности $80=YES, $00=NO                             }: BYTE;
-      BegHead      { Головка                                                     }: BYTE;
-      BegCylSec    { Цылиндер и сектор                                           }: WORD;
-      PartType     { Код типа раздела (Смотрите ниже)                            }: BYTE;
-      EndHead      { Головка                                                     }: BYTE;
-      EndCylSec    { Цылиндер и сектор                                           }: WORD;
-      Sector       { Номер начального сектора раздела                            }: LongInt;
-      PartSize     { Размер раздела в секторах                                   }: LongInt;
+     TPartition    {                                    }=packed Record
+      Boot         { Флаг активности $80=YES, $00=NO    }: BYTE;
+      BegHead      { Головка                            }: BYTE;
+      BegCylSec    { Цылиндер и сектор                  }: WORD;
+      PartType     { Код типа раздела (Смотрите ниже)   }: BYTE;
+      EndHead      { Головка                            }: BYTE;
+      EndCylSec    { Цылиндер и сектор                  }: WORD;
+      Sector       { Номер начального сектора раздела   }: LongInt;
+      PartSize     { Размер раздела в секторах          }: LongInt;
       end;
      
     const
@@ -76,18 +76,16 @@ Date: 01.01.2007
     {--------- Структура главной загрузочной записи и таблицы разделов ----------}
     TYPE
      PPartitionTable  = ^TPartitionTable;
-     TPartitionTable {                                                           }=packed Record
-      Boot           { Загрузочная запись (MSB)                                    }:array[1..446] of Byte;
-      Partition      { Описатель радела 1                                          }:array[1..4]   of TPartition;
-      TrailSig       { Сигнатура AA55h                                             }:array[1..2]   of byte;
+     TPartitionTable {                                  }=packed Record
+      Boot           { Загрузочная запись (MSB)         }:array[1..446] of Byte;
+      Partition      { Описатель радела 1               }:array[1..4]   of TPartition;
+      TrailSig       { Сигнатура AA55h                  }:array[1..2]   of byte;
       end;
      
      
     Var
       MNode,ExtNode,Node:TTreeNode;
       HddNumber:Byte;
-     
-     
      
      
     function ReadSector (Sector:Int64; Count:word;  Var Buffer): DWORD;
@@ -236,40 +234,40 @@ Date: 01.01.2007
          SearchEnd;
      TYPE
       TData = record
-      // Номер раздела
+       // Номер раздела
        PartitionNumber     : Byte;
-      // Начальный номер основного раздела DOS
+       // Начальный номер основного раздела DOS
        PriDOS_StartSector  : Int64;
-      // Начальный номер расширенного раздела DOS
+       // Начальный номер расширенного раздела DOS
        ExtDOS_StartSector  : Int64;
-      // Нчальный сектор текущего логического диска
+       // Нчальный сектор текущего логического диска
        CurrentDrive_StartSector : Int64;
-      // Номер логического диска
+       // Номер логического диска
        LogicalDriveNumber  : Byte;
-      // Флаг присутствияв системе следующего диска
+       // Флаг присутствияв системе следующего диска
        NextDrivePresent    : Boolean;
       end;
       PData = ^TData;
      
      Var
-      // Таблица разделов
+       // Таблица разделов
        Partition   : PPartitionTable;
-      // Переменные...
+       // Переменные...
        Data        : PData;
        I         : Integer;
      
      Begin
      MNode:=TreeView1.Items.Add(nil,'HDD Driver');
      Result:=0;
-      // Выделяем память для наших переменных
+       // Выделяем память для наших переменных
        New(Data);
        // Онулируем все переменные
        FillMemory(Data,SizeOf(TData),0);
-      // Выделяем память для таблиц разделов
-         New(Partition);
-         GetPartitionTable(Data.CurrentDrive_StartSector,Partition);
-         Data.NextDrivePresent:=False;
-         // Проверить код основного раздела
+       // Выделяем память для таблиц разделов
+       New(Partition);
+       GetPartitionTable(Data.CurrentDrive_StartSector,Partition);
+       Data.NextDrivePresent:=False;
+       // Проверить код основного раздела
        For i:=0 to 3 do
        IF (Partition.Partition[1].PartType  <> $00) or
           ((Partition.Partition[1].PartType <> $05) and
@@ -284,19 +282,19 @@ Date: 01.01.2007
         if Partition.Partition[1].Sector = 0 Then
         Begin
            Break;
-    //----- Result:=1; -----\\ // Диск не размечен
+           //----- Result:=1; -----\\ // Диск не размечен
            goto SearchEnd;
        end else
        IF (Partition.Partition[1].PartType <> $05) or
           (Partition.Partition[1].PartType <> $0F) Then
        Begin
          Break;
-    //----- Result:=2; -----\\  // Основной раздел определен как расширеный
+         //----- Result:=2; -----\\  // Основной раздел определен как расширеный
          goto SearchEnd;
        end else
        Begin
          Break;
-    //----- Result:=3; -----\\ // Не определенный раздел
+         //----- Result:=3; -----\\ // Не определенный раздел
         goto SearchEnd;
        end;
        PrimPartFound:
@@ -345,28 +343,28 @@ Date: 01.01.2007
       {- ЦИКЛ  ОПРОСА ЛОГИЧЕСКИХ ДИСКОВ РАСШИРЕННОГО РАЗДЕЛА -}
       ReadSMBR:
       Begin
-        Inc(Data.LogicalDriveNumber);
-        Node:=ExtNode;
-         ExtNode:=TreeView1.Items.AddChild(ExtNode,
+       Inc(Data.LogicalDriveNumber);
+       Node:=ExtNode;
+       ExtNode:=TreeView1.Items.AddChild(ExtNode,
          '1st partition ('+PartitionTypeToString(Partition.Partition[1].PartType)+') ');
-         ExtNode:=TreeView1.Items.AddChild(Node,
+       ExtNode:=TreeView1.Items.AddChild(Node,
          '2st partition ('+PartitionTypeToString(Partition.Partition[2].PartType)+') ');
-         // Прочитать очередной SMBR
-         GetPartitionTable(Data^.CurrentDrive_StartSector,Partition);
-         Data.NextDrivePresent:=False;
+       // Прочитать очередной SMBR
+       GetPartitionTable(Data^.CurrentDrive_StartSector,Partition);
+       Data.NextDrivePresent:=False;
        // Смещение второй записи
        If Partition.Partition[2].Sector = 0 Then
-       goto NextDriveNotPresent1;
-        Data.CurrentDrive_StartSector:=
-        Partition.Partition[2].Sector+
+        goto NextDriveNotPresent1;
+       Data.CurrentDrive_StartSector:= Partition.Partition[2].Sector+
         Data.ExtDOS_StartSector;
-        Data.NextDrivePresent:=True;
+       Data.NextDrivePresent:=True;
        NextDriveNotPresent1:
        Begin
-       // Имеется следующий диск?
+         // Имеется следующий диск?
          if not Data.NextDrivePresent then
-         goto SearchEnd else
-         goto ReadSMBR;
+           goto SearchEnd
+         else
+           goto ReadSMBR;
        end;
       end;
      
@@ -374,17 +372,17 @@ Date: 01.01.2007
        Result:=DATA.LogicalDriveNumber;
        // Освобождаем память
        if Assigned(Partition) Then
-       Dispose(Partition);
+         Dispose(Partition);
        // Освобождаем память
        if Assigned(Data) Then
-       Dispose(Data);
+         Dispose(Data);
        Exit;
      end;
      
-    procedure TForm1.FormCreate(Sender: TObject);
-    begin
-     HddNumber:=0;
-      SearchLogicalDisks;
-    end;
+     procedure TForm1.FormCreate(Sender: TObject);
+     begin
+      HddNumber:=0;
+       SearchLogicalDisks;
+     end;
      
     end.

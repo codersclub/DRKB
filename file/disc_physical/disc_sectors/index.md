@@ -33,7 +33,6 @@ Date: 01.01.2007
     Implementation
      
      
-     
       TYPE
        PDIOC_Registers = ^TDIOC_Registers;
        TDIOC_Registers = record

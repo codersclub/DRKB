@@ -12,23 +12,24 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Используйте Win32\_Find\_Data поле TSearchRec.\
+Вариант 1:
 
- 
+Используйте поле **Win32\_Find\_Data** в структуре TSearchRec.
 
-                 procedure TForm1.Button1Click(Sender: TObject); 
-                 var 
-                   SearchRec : TSearchRec; 
-                   Success : integer; 
-                 begin 
-                   Success := SysUtils.FindFirst('C:\DownLoad\dial-u~1.htm', 
-                                                 faAnyFile, 
-                                                 SearchRec); 
-                   if Success = 0 then begin 
-                     ShowMessage(SearchRec.FindData.CFileName); 
-                   end; 
-                   SysUtils.FindClose(SearchRec); 
-                 end; 
+
+    procedure TForm1.Button1Click(Sender: TObject); 
+    var 
+      SearchRec : TSearchRec; 
+      Success : integer; 
+    begin 
+      Success := SysUtils.FindFirst('C:\DownLoad\dial-u~1.htm', 
+                                    faAnyFile, 
+                                    SearchRec); 
+      if Success = 0 then begin 
+        ShowMessage(SearchRec.FindData.CFileName); 
+      end; 
+      SysUtils.FindClose(SearchRec); 
+    end; 
 
 Взято из <https://forum.sources.ru>
 
@@ -36,9 +37,9 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-    unit Unit1;
-     
+Вариант 2:
 
+    unit Unit1;
      
     interface
      
@@ -84,7 +85,7 @@ Date: 01.01.2007
      
     end.
 
-©Drkb::03166  
+©Drkb::03166
 
 Взято из <https://forum.sources.ru>
 

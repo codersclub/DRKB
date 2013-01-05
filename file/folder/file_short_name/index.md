@@ -12,19 +12,18 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-    // Короткий
+Получить короткий путь по значению длинного:
+
     GetShortPathName(LongPath) 
      
-    // Наоборот длинный
+Получить длинный путь по значению короткого:
+
     GetFullPathName(ShortPath)
 
-------------------------------------------------------------------------
 
     function sfn(const LongName: String): String;
-     
-
-     
     // Возвращает LongFileName преобразованное в соответствующее короткое имя
+
     var i :Integer;
     begin
       SetLength(Result,Length(LongName));
@@ -38,6 +37,7 @@ Date: 01.01.2007
      
     function ShortToLongFileName(FileName: string): string;
     // Возвращает FileName преобразованное в соответствующее длинное имя
+
     var
       KernelHandle: THandle;
       FindData: TWin32FindData;

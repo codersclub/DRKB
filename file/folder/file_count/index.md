@@ -19,8 +19,6 @@ Cколько файлов есть в определенной папке?
 
     Function GetFileCount(Dir:string):integer;
      
-
-     
     var fs:TSearchRec;
     begin
       Result:=0;

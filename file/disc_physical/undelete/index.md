@@ -15,18 +15,13 @@ Date: 01.01.2007
      
     {Avtor: NikNet@yandex.ru}
      
-     
     unit uMain;
+
     interface
     uses
       Windows, Messages, SysUtils, Classes, Graphics, Controls,
       Forms, Dialogs, tlHelp32,  ExtCtrls, FileCtrl, ComCtrls,
       StdCtrls, Grids, Menus, shellApi,UFAT, ToolWin;
-     
-     
-     
-     
-     
      
     type
       TForm1 = class(TForm)
@@ -54,16 +49,12 @@ Date: 01.01.2007
         Procedure DirView(Cluster:Int64);
       end;
      
-     
     var
       Form1  : TForm1;
-     
      
     implementation
      
     {$R *.DFM}
-     
-     
      
     VAR
       entres : Integer;
@@ -101,11 +92,13 @@ Date: 01.01.2007
         StringGrid1.Cells[02,i]:=DosToWin(Dir.Name);
         StringGrid1.Cells[03,i]:=DosToWin(Dir.Ext);
         if dir.Erased then
-        StringGrid1.Cells[04,i]:='deleted' else
-        StringGrid1.Cells[04,i]:='';
+          StringGrid1.Cells[04,i]:='deleted'
+        else
+          StringGrid1.Cells[04,i]:='';
         if (dir.Attr and ATTR_DIRECTORY) <> 0 Then
-        StringGrid1.Cells[05,i]:='Dir' else
-        StringGrid1.Cells[05,i]:='File';
+          StringGrid1.Cells[05,i]:='Dir'
+        else
+          StringGrid1.Cells[05,i]:='File';
         If dir.Attr and ATTR_READONLY  <> 0 Then  attr[5]:='r' else attr[5]:='_';
         If dir.Attr and ATTR_HIDDEN    <> 0 Then  attr[4]:='h' else attr[4]:='_';
         If dir.Attr and ATTR_SYSTEM    <> 0 Then  attr[3]:='s' else attr[3]:='_';
@@ -157,10 +150,10 @@ Date: 01.01.2007
     procedure TForm1.StringGrid1DrawCell(Sender: TObject; ACol, ARow: Integer;
       R: TRect; State: TGridDrawState);
     var
-    s:string;
-    cw:integer;
+      s:string;
+      cw:integer;
+
     begin
-     
      with StringGrid1.Canvas do
      begin
       pen.color:=$C0C0CC;
@@ -172,8 +165,8 @@ Date: 01.01.2007
      
       if aRow=0 then
       begin
-    {   if (aCol=0) or (aCol=1) then
-        brush.color:=$B0C0D0 else}
+      {   if (aCol=0) or (aCol=1) then
+            brush.color:=$B0C0D0 else}
      
       brush.color:=$B0C2E0;
       pen.color:=$A0A0AA;
@@ -204,7 +197,7 @@ Date: 01.01.2007
      
        if aRow<=qp then
        begin
-         // текст
+        // текст
         case aCol of
           00: s:= StringGrid1.Cols[00].Strings[aRow];
           01: s:= StringGrid1.Cols[01].Strings[aRow];
@@ -221,7 +214,7 @@ Date: 01.01.2007
           12: s:= StringGrid1.Cols[12].Strings[aRow];
        end;
      
-        if aCol=4 then
+       if aCol=4 then
        begin
         kc(80,-10,-20);
         font.color:=$8888DD
@@ -278,24 +271,25 @@ Date: 01.01.2007
     end;
      
      
-     
-     
     procedure TForm1.FormDestroy(Sender: TObject);
     begin
      Done;
     end;
      
+
     procedure TForm1.FormShow(Sender: TObject);
     begin
       DirView(0);
     end;
      
+
     procedure TForm1.StringGrid1DblClick(Sender: TObject);
     begin
        if (StringGrid1.Cells[5,StringGrid1.Row][1] <> 'F')    then
           DirView(StrToInt('$'+StringGrid1.Cells[11,StringGrid1.Row]));
     end;
      
+
     procedure TForm1.ToolButton1Click(Sender: TObject);
     Var
      Buf:Pointer;
@@ -338,6 +332,4 @@ Date: 01.01.2007
     end;
      
     end.
-     
-     
-     
+

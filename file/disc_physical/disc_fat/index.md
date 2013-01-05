@@ -11,59 +11,26 @@ Date: 01.01.2007
 01.01.2007
 :::
 
+
+Архитектура файловой системы FAT фирмы Microsoft
+
+![](fat.gif)
+
+ 
+    {
                        FAT/FAT16/FAT32
 
             Модуль для работы с дисковыми драйверами
-
- 
-
+    
                      Автор  : NikNet
-
                      E-MAIL : NikNet\@Yandex.ru
-
                      Сайт   : NikNet.narod.ru \[Скоро будет :)\]
-
                             2006г
-
                    Версия 4.00 (Win9x/NT)
-
- 
-
-                  Файловая система FAT фирмы Microsoft
-
- 
-
-                  FAT12/FAT16                 FAT32
-
- 
-
-              Загрузочный сектор        Загрузочный сектор
-
- 
-
-                    FAT 1                Структура FSInfo
-
- 
-
-                    FAT 2                     FAT 1
-
-                                                                  
-Системная
-
-               Корнивой каталог               FAT 2               
-область
-
- 
-
-                Область данных            Область данных
-
- 
-
+    }
     unit uFAT;
-    erface
      
-     
-     
+    Interface
      
     Uses Windows,SysUtils,DISK,CLASSES;
     TYPE
@@ -924,18 +891,5 @@ Date: 01.01.2007
      
      
     end.
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
      
      
