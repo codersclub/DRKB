@@ -42,16 +42,15 @@ runtime.
 
 11\) Use the TStringList replacement by \~LOM\~
 
-Use the Minireg - TRegistry replacement by Ben Hochstrasser
+12\) Use the Minireg - TRegistry replacement by Ben Hochstrasser
+
+
 
 01)
 
 UPX is a free, portable, extendable, high-performance executable
-
 packer for several different executable formats. It achieves an
-excellent
-
-compression ratio and offers very fast decompression.
+excellent compression ratio and offers very fast decompression.
 
 Your executables suffer no memory overhead or other drawbacks.
 
@@ -100,12 +99,8 @@ It is distributed free of charge, with source code.
 
 nonVCL
 
-Delphi lets you have it both ways. If you want tiny EXE\'s, then don\'t
-use
-
-the VCL. Its entirely possible to use all the rich features of Delphi
-IDE
-
+Delphi lets you have it both ways. If you want tiny EXE\'s, then don\'t use
+the VCL. Its entirely possible to use all the rich features of Delphi IDE
 using 100% WinAPI calls, standard resources, etc.
 
 <https://nonvcl.luckie-online.de>
@@ -215,10 +210,10 @@ How To Make Your EXE\'s Lighter:
 
 11)
 
-[TStringList replacement by
-\~LOM\~](https://www.virustrading.com/positron/delphi/tstrlist.rar)
+[TStringList replacement by \~LOM\~](https://www.virustrading.com/positron/delphi/tstrlist.rar)
 
-[Minireg - TRegistry
-replacement](https://www.virustrading.com/positron/delphi/minireg.zip)
+12)
+
+[Minireg - TRegistry replacement](https://www.virustrading.com/positron/delphi/minireg.zip)
 
 Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

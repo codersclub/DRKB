@@ -1,10 +1,10 @@
 ---
-Title: Програмно меняем Delphi\'s Tool List
+Title: Програмно меняем Delphi Tool List
 Date: 01.01.2007
 ---
 
 
-Програмно меняем Delphi\'s Tool List
+Програмно меняем Delphi Tool List
 ====================================
 
 ::: {.date}

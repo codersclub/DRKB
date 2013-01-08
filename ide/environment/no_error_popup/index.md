@@ -11,7 +11,11 @@ Date: 01.01.2007
 01.01.2007
 :::
 
+Зайти в реестр:
+
 HKEY\_CURRENT\_USER\\Software\\Borland\\Delphi\\4.0\\Debugging
+
+Поменять значение:
 
 ViewCPUOnException=0
 

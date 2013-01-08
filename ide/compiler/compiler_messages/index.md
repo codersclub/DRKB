@@ -13,8 +13,7 @@ Date: 01.01.2007
 
 Формат команды:
 
-[{\$MESSAGE HINT\|WARN\|ERROR\|FATAL \'text string\'
-}]{style="color: teal;"}
+    [{$MESSAGE HINT|WARN|ERROR|FATAL 'text string'}]
 
 Например, добавление следующих строк приведёт  к появлению:
 
