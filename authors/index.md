@@ -40,14 +40,22 @@ Sourсes.ru: <https://forum.sources.ru/index.php?act=Members>
 
 &nbsp;
 
+Другие проекты Виталия Невзорова:
+
+- [www.nevzorov.org](https://www.nevzorov.org/) - домашняя страничка.
+- [wallpapers.nevzorov.org](https://wallpapers.nevzorov.org/) - огромная
+  коллекция обоев в высоком разрешении.
+- [verticalwallpapers.nevzorov.org](https://verticalwallpapers.nevzorov.org/) -
+  огромная коллекция обоев для вертикально ориентированных экранов.
+
+
 ---
 
-Онлайн-версия сайта: [Valery Votintsev
-(vot)](https://forum.sources.ru/index.php?showuser=2 "Valery Votintsev (vot)").
+Онлайн-версия сайта:
+[Valery Votintsev (vot)](https://forum.sources.ru/index.php?showuser=2 "Valery Votintsev (vot)").
 
 Модульная сетка и начальный дизайн сайта разработан:
-[Sofiyan](https://www.colorcat.ru/ "Sofiyan (Caramel)")
-(Caramel).
+[Sofiyan](https://www.colorcat.ru/ "Sofiyan (Caramel)") (Caramel).
 
 Поддержка проекта:
 [Исходники.ru](https://forum.sources.ru/ "Исходники.Ru").
