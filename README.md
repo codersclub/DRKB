@@ -24,7 +24,7 @@ DRKB
 
 DRKB распространяется в двух форматах:
 
-- В формате **Online**.
+- В формате **Online** на сайте <https://drkb.ru/>.
 - В формате **CHM** (Windows Help).
   ![скриншот](/about/screen5.png "Скриншот #5: DRKB, CHM-формат")
 
