@@ -16,9 +16,9 @@ Unresolved external malloc referenced, Ошибка линкера Kylix 3
 Linux.
 
 Требуется установить специальный Патч
-
-<https://forum.sources.ru/index.php?act=Attach&type=post&id=262358>
+[k3fix.zip](k3fix.zip)
 
 Автор: Vit
 
 Взято из <https://forum.sources.ru>
+<https://forum.sources.ru/index.php?act=Attach&type=post&id=262358>
