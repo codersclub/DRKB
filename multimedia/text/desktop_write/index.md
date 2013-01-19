@@ -14,7 +14,7 @@ Date: 01.01.2007
 
 На рабочий стол можно вывести строку используя
 
-TextOut(GetWindowDC(GetDesktopWindow),100,100,\'Thom\',4);         
+    TextOut(GetWindowDC(GetDesktopWindow),100,100,'Thom',4);
 
 Автор: Fantasist
 

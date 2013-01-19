@@ -34,8 +34,8 @@ Date: 01.01.2007
       else Result := NoImage;
     end;
 
- \
- \
+
+
 
 Пользоваться можно так:
 
@@ -63,5 +63,3 @@ Date: 01.01.2007
 Автор: Smike
 
 Взято из <https://forum.sources.ru>
-
- \
