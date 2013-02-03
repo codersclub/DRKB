@@ -24,13 +24,13 @@ WM\_RBUTTONDOWN
 
 Я решил проверить точку нажатия мышки таким вот образом:
 
-\...
-
-SetForegroundWindow(WindowUO);
-
-mouse\_event(MOUSEEVENTF\_MOVE,400,400,0,0);
-
-\...
+    ...
+    
+    SetForegroundWindow(WindowUO);
+    
+    mouse_event(MOUSEEVENTF_MOVE,400,400,0,0);
+    
+    ...
 
 и получилось, что мышка перемещалась не в те координаты(относительно
 разрешения монитора (800 на 600)) которые я задумал(в не зависимости от
