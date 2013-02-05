@@ -88,7 +88,6 @@ cursor-name  - курсор                  screen-field
 
                                       screen-array
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
 +-----------------------------------+-----------------------------------+
 | 1.                                | Идентификаторы INFORMIX.\         |
 |                                   |                                   |
@@ -102,7 +101,6 @@ cursor-name  - курсор                  screen-field
 |                                   | Поэтому i\_Un103Tt и I\_UN103TT - |
 |                                   | одно и тоже имя.                  |
 +-----------------------------------+-----------------------------------+
-:::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- -----------------------------------

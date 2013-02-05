@@ -22,7 +22,6 @@ NumberFormat объекта Range, имеет тип строка и может 
 знаками после запятой. Опытным путем можно получить значения всех
 форматов, для этого в Delphi используем функцию GetFormatRange.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function GetFormatRange (sheet:variant;
       range:string):string;
     begin
@@ -40,7 +39,6 @@ NumberFormat объекта Range, имеет тип строка и может 
 SetFormatRange, которая записывает значение числового формата в свойстве
 NumberFormat объекта Range.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SetFormatRange(sheet:variant;range:string;
       format:string):boolean;
     begin

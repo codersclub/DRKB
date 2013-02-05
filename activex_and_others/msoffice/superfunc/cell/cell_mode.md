@@ -18,7 +18,6 @@ Orientation объекта Range. Значение Orientation может нах
 пределах от -90 до 90. Функция SetOrientation реализует эту возможность
 в приложениях Delphi.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SetOrientation (sheet:variant;range:string;
       orientation:integer):boolean;
     begin
@@ -38,7 +37,6 @@ Orientation объекта Range. Значение Orientation может нах
 свойство ячейки содержится в поле WrapText объекта Range. Функция
 SetWrapText изменяет это поле и режим отображения текста большой длины.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SetWrapText(sheet:variant;range:string;
       WrapText:boolean):boolean;
     begin

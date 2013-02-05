@@ -22,7 +22,6 @@ Date: 01.01.2007
 столбца или назначить ее. Определенная ниже функция, реализованная на
 Delphi, устанавливает ширину столбца.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SetColumnWidth (sheet:variant;
       column:variant;width:real):boolean;
     begin
@@ -36,15 +35,14 @@ Delphi, устанавливает ширину столбца.
     End;
 
 Для определения ширины столбца используйте следующий оператор:
-width:=E.ActiveWorkbook
-.Sheets.Item\[sheet\].Columns\[column\].ColumnWidth;
+
+    width:=E.ActiveWorkbook.Sheets.Item[sheet].Columns[column].ColumnWidth;
 
 Доступ к высоте строк можно получить, используя коллекцию Rows. Назначая
 номер строки и свойство коллекции RowHeight, можно изменить высоту
 строки или назначить ее. Определенная ниже функция, реализованная на
 Delphi, устанавливает высоту строки.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SetRowHeight (sheet:variant;row:variant;
       height:real):boolean;
     begin
@@ -59,6 +57,5 @@ Delphi, устанавливает высоту строки.
  
 
 Для определения высоты строки используйте следующий оператор:
-height:=E.ActiveWorkbook.Sheets.Item\[sheet\].Rows\[row\].RowHeight;
-:::
-:::
+
+    height:=E.ActiveWorkbook.Sheets.Item[sheet].Rows[row].RowHeight;

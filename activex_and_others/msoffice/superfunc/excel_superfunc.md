@@ -83,7 +83,6 @@ ComObj.
 
 Рассмотрим следующий фрагмент кода:
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     uses ComObj, Classes;
     var E:variant;
     Function CreateExcel:boolean;
@@ -141,10 +140,12 @@ Add, коллекции Workbooks объекта E. См. нижеописанн
 Чтобы открыть ранее созданную рабочую книгу, используем ту же коллекцию
 Workbooks объекта E и метод Open. Смотрите нижеописанный оператор, с
 помощью которого мы открываем рабочую книгу и получаем на нее ссылку:
-book\_:= Workbooks. Open(file\_). Функция OpenWorkBook открывает книгу и
+
+    book_:= Workbooks. Open(file_)
+
+Функция OpenWorkBook открывает книгу и
 возвращает True в случае успешного выполнения.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function OpenWorkBook(file_: string):boolean;
     begin
      OpenWorkBook:=true;
@@ -163,7 +164,6 @@ book\_:= Workbooks. Open(file\_). Функция OpenWorkBook открывает
 метод Add этой коллекции. Функция AddSheet реализует эту возможность и
 присваивает новому листу выбранное пользователем имя.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function AddSheet(newsheet:string):boolean;
     begin
      AddSheet:=true;
@@ -181,9 +181,8 @@ book\_:= Workbooks. Open(file\_). Функция OpenWorkBook открывает
 Delete, коллекции Sheets дает такую возможность. При удалении возможно
 появление диалогового окна Excel, которое потребует подтверждения
 операции. Чтобы отключить диалоговое окно Excel, необходимо использовать
-оператор E.DisplayAlerts:=False.
+оператор `E.DisplayAlerts:=False`.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function DeleteSheet(sheet:variant):boolean;
     begin
      DeleteSheet:=true;
@@ -202,21 +201,18 @@ Delete, коллекции Sheets дает такую возможность. П
 в свойстве Count коллекции Sheets. Для того, чтобы в Visual Basic
 получить имена листов текущей книги, используйте следующий оператор:
 
-For a\_ = 1 To Sheets.Count
-
-MsgBox (Sheets.Item(a\_).Name)
-
-Next a\_
+    For a_ = 1 To Sheets.Count
+      MsgBox (Sheets.Item(a_).Name)
+      Next a_
 
 Для активации любого листа книги необходимо использовать процедуру
 Select. Смотрите пример:
 
-Sheets.Item(a\_).Select
+    Sheets.Item(a_).Select
 
 Все описанные выше возможности можно легко реализовать в Delphi как
 набор отдельных функций. Смотрите примеры:
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function CountSheets:integer; // получаем количество листов книги
     begin
     try
@@ -255,10 +251,9 @@ Sheets.Item(a\_).Select
 После внесения изменений необходимо сохранить рабочую книгу. Для этого
 используем метод SaveAs коллекции Workbooks или объекта ActiveWorkbook.
 Функция SaveWorkBookAs реализует эту возможность на Delphi. Используем
-E.DisplayAlerts:=False(True) для отключения (включения) диалогового окна
+`E.DisplayAlerts:=False(True)` для отключения (включения) диалогового окна
 подтверждения записи.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SaveWorkBookAs(file_:string): boolean;
     begin
     SaveWorkBookAs:=true;
@@ -278,16 +273,14 @@ E.DisplayAlerts:=False(True) для отключения (включения) д
 Count коллекции WorkBooks. Используя следующий оператор на Visual Basic,
 можем получить их имена.
 
-For a\_ = 1 To Application.Workbooks.Count
-
-MsgBox (Application.Workbooks.Item(a\_).Name)
-
-Next a\_
+    For a_ = 1 To Application.Workbooks.Count
+      MsgBox (Application.Workbooks.Item(a_).Name)
+      Next a_
 
 Для активации любой книги из списка используем процедуру Activate.
 Смотрите пример:
 
-Windows(\"Книга1\").Activate
+    Windows("Книга1").Activate
 
 Эти возможности можно реализовать в Delphi как набор отдельных функций.
 
@@ -295,7 +288,6 @@ Windows(\"Книга1\").Activate
 объекта ActiveWorkbook. Функция CloseWorkBook закрывает активный
 документ.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function CloseWorkBook:boolean;
     begin
      CloseWorkBook:=true;
@@ -310,7 +302,6 @@ Windows(\"Книга1\").Activate
 
 Excel закрывается методом Quit объекта Application.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function CloseExcel:boolean;
     begin
      CloseExcel:=true;
@@ -329,7 +320,6 @@ Excel закрывается методом Quit объекта Application.
 используемую библиотеку MyExcel, в процедуре отклика на нажатие запишем
 следующий программный текст:
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     procedure TForm1.Button1Click (Sender: TObject);
      var a_:integer;
     begin

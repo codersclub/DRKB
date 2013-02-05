@@ -28,7 +28,6 @@ RGB(200,100,125). Стиль границы (LineStyle) имеет тип intege
 (Weight) имеет тип integer и одно из 4 значений. Исходный текст функции
 для установки параметров границы ячейки смотрите ниже.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SetBorderRange(sheet:variant;range:string;
       Edge,LineStyle,Weight,ColorIndex,Color:integer):boolean;
     begin

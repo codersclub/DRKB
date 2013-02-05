@@ -509,11 +509,8 @@ WordApplication, WordDocument и кнопку Button. Для события OnCl
 переменная EmptyParam, которую необходимо использовать для передачи
 \"пустышек\" в качестве параметров.
 
-var
-
-EmptyParam: OleVariant; { \"Пустой параметр\" который
-
-должен опционально использоваться в DUAL интерфейсе. }
+    var
+      EmptyParam: OleVariant; { "Пустой параметр" который должен опционально использоваться в DUAL интерфейсе. }
 
 Описание методов в библиотеке типов заставляет нас очень аккуратно
 соблюдать порядок передачи параметром, это несколько затрудняет процесс
@@ -548,9 +545,13 @@ onDoubleClick для кнопки следующим образом:
 
 Переменная word имеет тип ApplicatiwonDisp = dispinterface
 \[\'{00020970-0000-0000-C000-000000000046}\'\], который описан в
-библиотеки типов Word97\_TLB.Pas. Строка word:=CoWordapplicaTion.Create
-as \_ApplicationDisp; создает экземпляр сервера и возвращает
-DispInterface. Благодаря наличию библиотеки и жесткому приведению типов
+библиотеке типов Word97\_TLB.Pas.
+
+Строка word:=CoWordapplicaTion.Create as \_ApplicationDisp;
+создает экземпляр сервера и возвращает
+DispInterface.
+
+Благодаря наличию библиотеки и жесткому приведению типов
 разработчик имеет возможность делать меньше ошибок, так как компилятор
 имеет определенную информацию о типах данных. В сравнении с
 использованием метода позднего связывания через функцию CreateOleObject
@@ -602,11 +603,10 @@ Application сервера Excel. Следующий пример демонст
 папок пользователя. Получив доступ к Outlook через компоненту
 OutLookApplication, извлекается объект доступа к MAPI папкам.
 
-mapi:=OutlookApplication1.GetNamespace(\'MAPI\');
-
-  for i:=1 to mapi.Folders.Count do
-
-  ListBox1.Items.Add(mapi.Folders.Item(i).Name);
+    mapi:=OutlookApplication1.GetNamespace('MAPI');
+    
+    for i:=1 to mapi.Folders.Count do
+      ListBox1.Items.Add(mapi.Folders.Item(i).Name);
 
 Добраться до соответствующей папки теперь, нет проблем, так как мы имеем
 дело с вложенными объектами. В приложении к статье имеется пример

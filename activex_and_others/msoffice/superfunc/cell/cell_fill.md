@@ -29,7 +29,6 @@ SetPatternRange реализует в среде Delphi управление ф�
 выполняться как над одной ячейкой так и над множеством, все определяется
 форматом аргумента функции range:string.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function SetPatternRange(sheet:variant;range:string;
       Pattern,ColorIndex,PatternColorIndex,Color,PatternColor:integer):boolean;
     begin

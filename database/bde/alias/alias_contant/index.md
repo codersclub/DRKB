@@ -86,17 +86,14 @@ little adjustments, this function can be used to create any kind of
 aliases, and, instead of passing the path info in this argument, pass
 all the parameters needed by the driver to create the alias.
 
-sDriver: Name of an existing BDE driver, such as PARADOX, DBASE,
-STANDARD
+sDriver: Name of an existing BDE driver, such as PARADOX, DBASE, STANDARD
 
 PersistentAlias: Determines whether the new alias will be for future use
 (persistent) or just for the actual session.
 
 Example of usage:
 
-CreateAlias(\'DBTEST\',
-\'c:\\progra\~1\\borland\\delphi\~1\\projects\\cd3\\data\', \'PARADOX\',
-
-true);
+    CreateAlias('DBTEST', 'c:\progra~1\borland\delphi~1\projects\cd3\data',
+                'PARADOX', true);
 
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

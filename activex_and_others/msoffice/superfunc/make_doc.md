@@ -108,7 +108,6 @@ Documents объекта W. Этот объект имеет метод Add, и�
 двух операторов Doc\_:=W.Documents; Doc\_.Add; можем использовать один
 W.Documents.Add;.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     Function AddDoc:boolean;
     Var Doc_:variant;
     begin
@@ -207,7 +206,6 @@ ActiveDocument.
 скопируем исходные тексты функций в модуль формы. В процедуру обработки
 нажатия кнопки разместим следующий программный текст.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     procedure TForm1.Button1Click(Sender: TObject);
     begin
      if CreateWord

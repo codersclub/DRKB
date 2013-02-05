@@ -22,7 +22,6 @@ Excel рассмотрим выравнивание текста по гориз
 горизонтали. Смотрите список констант и функцию, реализующую
 выравнивание текста по горизонтали.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     const
      xlHAlignCenter=-4108;
      xlHAlignDistributed=-4117;
@@ -49,7 +48,6 @@ Excel рассмотрим выравнивание текста по гориз
 Для выравнивания по вертикали используем свойство VerticalAlignment
 объекта Range. Смотрите набор констант и функцию SetVerticalAlignment.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
     const
      xlVAlignBottom=-4107;
      xlVAlignCenter=-4108;
