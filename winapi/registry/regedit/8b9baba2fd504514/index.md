@@ -17,7 +17,7 @@ Date: 01.01.2007
 
 Что нужно для осуществления этой задачи? Нужно воспользоваться ключом
 
-HKEY\_CURRENT\_USER\\Software\\Microsoft\\
+HKEY\_CURRENT\_USER\\Software\\Microsoft\
 Windows\\CurrentVersion\\Policies\\System
 
 создать в нём параметр:

@@ -14,7 +14,7 @@ Date: 01.01.2007
 Используйту WinAPI функцию GetKeyState() для определения нажатия клавиши
 в тексте проекта. Для того чтобы увидеть текст файла проекта в главном
 меню Delphi 3 выберите \"View\"\>\>\"ProjectSource\" в Delphi 4
-\"Project\"\>\>\"View Source\".\
+\"Project\"\>\>\"View Source\".
 
  
 

@@ -74,27 +74,27 @@ ScreenSaver- компонент для создания экранных зас�
 GLSDLViewer-компонент для отображения SDL-информации
 
 GLPolygonPFXManager, GLPointLightPFXManager, GLFireFXManager,
-GLThorFXManager\
+GLThorFXManager
 
 компоненты для управления визуальными эффектами
 
-GLBitmapFont, GLWindowsBitmapFont\
+GLBitmapFont, GLWindowsBitmapFont
 
 компоненты для описания растрового или Windows-шрифта
 
-GLBitmapHDS, GLCustomHDS, GLHeightTileFileHDS\
+GLBitmapHDS, GLCustomHDS, GLHeightTileFileHDS
 
 служебные компоненты для рендеринга ландшафтов
 
-GLCollision\
+GLCollision
 
 компонент для обработки столкновений
 
-GLSoundLibrary, GLSMWaveOut, GLSMFMMod, GLSMBass\
+GLSoundLibrary, GLSMWaveOut, GLSMFMMod, GLSMBass
 
 компоненты для работы со звуком
 
-GLNavigator, GLUserInterface\
+GLNavigator, GLUserInterface
 
 компоненты управление сценой и GUI-программы
 

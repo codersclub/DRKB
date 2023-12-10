@@ -1,6 +1,6 @@
 ---
 Title: Проверить видимость курсора
-Author: s-mike\
+Author: s-mike
 Date: 01.01.2007
 ---
 
@@ -17,7 +17,7 @@ Date: 01.01.2007
       ShowCursor(False);
     end;
 
- \
-Автор: s-mike\
+
+Автор: s-mike
 
 Взято из <https://forum.sources.ru>

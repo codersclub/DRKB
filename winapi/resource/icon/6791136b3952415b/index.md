@@ -11,13 +11,13 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-в .RC - файле подключаемом к проекту пишешь\
+в .RC - файле подключаемом к проекту пишешь
 
  
 
     100 ICON "100.ico"
 
- \
+
 
 для загрузки икоки:
 
@@ -50,7 +50,7 @@ Date: 01.01.2007
      
       SendMessage(Handle, WM_SETICON, 1, LoadIcon(HInstance, MAKEINTRESOURCE(100)));
 
- \
+
 
 Взято из <https://forum.sources.ru>
 

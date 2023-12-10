@@ -170,7 +170,7 @@ Date: 01.01.2007
      MsgLoop
     end.
 
- \
+
 
 но правильнее было бы внедриться в Explorer и сабклассировать
 TrayClockWClass

@@ -129,7 +129,7 @@ VisualBasic возможна такая схема:
 Управляющее слово представляет собой последовательность символов с
 разделителем в конце. Например, фрагмент:
 
-...\\bkmkstart ndoc...\
+...\\bkmkstart ndoc...
 
  
 
@@ -164,7 +164,7 @@ VisualBasic возможна такая схема:
 каждым управляющим символом вводится обратная косая черта (\\).
 Например, фрагмент:
 
-...\\f1\\fs20...\
+...\\f1\\fs20...
 
  
 
@@ -173,10 +173,10 @@ VisualBasic возможна такая схема:
 Фрагмент RTF-файла приведен ниже. Структура его, как можно видеть,
 напоминает структуру HTML-документа:
 
-\\intbl\\phmrg\\posy371\\dxfrtext180\\dfrmtxtx180\\dfrmtxty0\\nowrap\\aspalpha\\aspnum\
-\\faauto\\adjustright\\rin0\\lin0\\f1\\fs20\\lang1049\\langfe1049\\cgrid\\langnp1049\\langfenp1049\
+\\intbl\\phmrg\\posy371\\dxfrtext180\\dfrmtxtx180\\dfrmtxty0\\nowrap\\aspalpha\\aspnum
+\\faauto\\adjustright\\rin0\\lin0\\f1\\fs20\\lang1049\\langfe1049\\cgrid\\langnp1049\\langfenp1049
 {\\lang1033\\langfe1049\\langnp1033 11\\cell 12\\cell 13\\cell} \\pard
-\\ql \\li0\\ri0\\widctlpar\
+\\ql \\li0\\ri0\\widctlpar
 
 \\intbl \\aspalpha\\aspnum\\faauto\\adjustright\\rin0\\lin0
 
@@ -246,7 +246,7 @@ VisualBasic возможна такая схема:
 
 Пример такой закладки:
 
-...{\\\*\\bkmkstart ndoc}\<значение закладки\>{\\\*\\bkmkend ndoc}...\
+...{\\\*\\bkmkstart ndoc}\<значение закладки\>{\\\*\\bkmkend ndoc}...
 
  
 
@@ -334,7 +334,7 @@ Integer, irow As Integer, kol As Integer), где pth - имя RTF-файла, i
 вставить в нее текстовую строку данных. Пример таких ячеек:
 
 \...{\\lang1033\\cgrid0\<содержимое 1-й ячейки\>\\cell\<содержимое 2-й
-ячейки\>\\cell}...\
+ячейки\>\\cell}...
 
  
 
@@ -425,6 +425,6 @@ RTF-файла в виде последовательности шестнадц
 Впрочем, эти проблемы решаются - стоит только приложить некоторые
 усилия.
 
- \
-2004.05.14 Автор: Александр Харьков\
+
+2004.05.14 Автор: Александр Харьков
 <https://www.cpp.com.ua>

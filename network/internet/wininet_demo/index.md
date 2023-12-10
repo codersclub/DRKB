@@ -139,9 +139,9 @@ Date: 01.01.2007
      
     end.
 
- \
- \
-Проект также доступен по адресу: http://rouse.front.ru/loadhtml.zip\
+
+
+Проект также доступен по адресу: http://rouse.front.ru/loadhtml.zip
 
 Взято из <https://forum.sources.ru>
 

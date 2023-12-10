@@ -243,7 +243,7 @@ TRichEdit:
      
     end.
 
-Примеры использования:\
+Примеры использования:
 
  
 
@@ -270,10 +270,10 @@ TRichEdit:
      end
     end;
 
-\
+
 Таким же образом можно вставлять картинки не только в TRichEdit, но и в
-RxRichEdit, стандартный виндовый RichEdit, etc.\
- \
+RxRichEdit, стандартный виндовый RichEdit, etc.
+
  
 
 Взято из <https://forum.sources.ru>

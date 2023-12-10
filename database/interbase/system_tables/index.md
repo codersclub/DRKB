@@ -13,8 +13,8 @@ Date: 01.01.2007
 
 О системных таблицах InterBase
 
-Смирнов Александр\
-www.idbsoft.nnov.ru\
+Смирнов Александр
+www.idbsoft.nnov.ru
 
 idbsoft\@online.ru
 

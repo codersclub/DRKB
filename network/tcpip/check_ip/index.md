@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\Class\\NetTrans\\
+HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\Class\\NetTrans\
 (для 98-винды)
 
   Ищем параметр IPAddress

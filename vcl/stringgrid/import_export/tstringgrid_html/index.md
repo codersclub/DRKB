@@ -104,18 +104,18 @@ TStringGrid -> HTML
      end;
     end;
 
- \
+
 
 Пример вызова:
 
     ToHtml(StringGrid1, 'C:\123.html');
 
- \
+
 
 Автор: Kostas
 
 Взято из <https://forum.sources.ru>
 
- \
+
 
  

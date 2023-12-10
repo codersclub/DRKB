@@ -28,6 +28,6 @@ Date: 01.01.2007
     else result:=false;
     end;
 
- \
+
 
 Источник: vlata.com

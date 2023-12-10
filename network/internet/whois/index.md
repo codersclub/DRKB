@@ -15,6 +15,6 @@ Date: 01.01.2007
 
 Александр (Rouse\_) Багель
 
-<https://rouse.drkb.ru>\
+<https://rouse.drkb.ru>
 
  

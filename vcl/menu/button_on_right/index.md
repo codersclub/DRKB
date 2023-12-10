@@ -17,7 +17,7 @@ Date: 01.01.2007
         mf_ByPosition or mf_Popup or mf_Help, mnuHelp.Handle, 
         PChar('Help'));
 
- \
+
 
 Автор: Smike
 

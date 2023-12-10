@@ -37,16 +37,16 @@ Date: 01.01.2007
       Image1.Canvas.Draw(0, 0, MyJpeg);
     end;
 
- \
-Для JPEG, загнанного в ресурсы таким образом:\
- \
+
+Для JPEG, загнанного в ресурсы таким образом:
+
 
  
 
     MYJPEG RCDATA "Test.jpg" 
 
- \
- \
+
+
 
 Автор: Smike
 

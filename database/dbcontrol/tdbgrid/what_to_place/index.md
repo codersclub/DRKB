@@ -13,8 +13,8 @@ Date: 01.01.2007
 
 Что можно поместить в DBGrid
 
-Наталия Елманова\
-Компьютер Пресс - CD, 1999, N 5\
+Наталия Елманова
+Компьютер Пресс - CD, 1999, N 5
 
 © Copyright N.Elmanova & ComputerPress Magazine.
 

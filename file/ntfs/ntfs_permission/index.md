@@ -53,16 +53,16 @@ Date: 01.01.2007
       end;
     end;
 
- \
- \
- \
+
+
+
 Параметры: путь к объекту, имя пользователя, маска доступа, ее
-расчитываешь вот так:\
-http://msdn.microsoft.com/library/default\....access\_mask.asp\
- \
+расчитываешь вот так:
+http://msdn.microsoft.com/library/default\....access\_mask.asp
+
 
  
 
 Автор: Александр (Rouse\_) Багель
 
-Взято из <https://forum.sources.ru>\
+Взято из <https://forum.sources.ru>

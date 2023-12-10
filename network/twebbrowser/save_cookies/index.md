@@ -70,7 +70,7 @@ Date: 01.01.2007
      
     end.
 
- \
+
 
 А вот пример странички:
 
@@ -90,7 +90,7 @@ Date: 01.01.2007
     </BODY>
     </HTML>
 
- \
+
 
 © Delphi 4 Developer\'s Guide
 

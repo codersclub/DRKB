@@ -53,7 +53,7 @@ WM\_DROPFILES, которое оповещает о произошедшем с�
 перетаскивать можно несколько файлов, папок...), которые были
 передвинуты на наш компонент:
 
-function DragQueryFile (Drop: HDROP; FileIndex: UINT; FileName: PChar;\
+function DragQueryFile (Drop: HDROP; FileIndex: UINT; FileName: PChar;
 
 cb: UINT): UINT; stdcall;
 
@@ -192,7 +192,7 @@ TmyListBox (см. листинг 1):
 готовых компонент, но теперь мы покажем, как можно проделать такое
 \"нестандартное\" действие под Linux.
 
- \
+
 
 Определения
 
@@ -241,7 +241,7 @@ procedure QEvent\_hook\_destroy (handle: QEvent\_hookH); cdecl;
 Теперь нам нужно создать собственно реакцию на событие, которое должно
 иметь следующий вид:
 
-TEventFilterMethod = function (Sender: QObjectH; Event: QEventH):\
+TEventFilterMethod = function (Sender: QObjectH; Event: QEventH):
 
 Boolean of object cdecl;
 
@@ -259,7 +259,7 @@ Boolean of object cdecl;
 
 После этого нам необходимо инициализировать ее:
 
-procedure Qt\_hook\_hook\_events (handle: QObject\_hookH;\
+procedure Qt\_hook\_hook\_events (handle: QObject\_hookH;
 
 hook: QHookH); cdecl;
 
@@ -284,7 +284,7 @@ hook: QHookH); cdecl;
 Поскольку мы пишем реакцию, которая должна незаметно влиять на работу
 нашего компонента, то результат всегда должен быть равен False.
 
- \
+
 
 В самом методе Hook нам необходимо разобрать, на какие события следует
 реагировать, так как ему передаются все без исключения события,
@@ -312,19 +312,19 @@ function QEvent\_isQDropEventEvent (e: QEventH): Boolean; cdecl;
 После того как QEvent\_isQDropEventEvent вернул true, нам следует
 перекодировать событие в QMimeSourceH посредством метода:
 
-function QDropEvent\_to\_QMimeSource (handle: QDropEventH):\
+function QDropEvent\_to\_QMimeSource (handle: QDropEventH):
 
 QMimeSourceH; cdecl;
 
 далее принять на обработку это событие:
 
-procedure QDropEvent\_acceptAction (handle: QDropEventH;\
+procedure QDropEvent\_acceptAction (handle: QDropEventH;
 
 y: Boolean); cdecl;
 
 и, наконец, декодировать событие в приятный нашему взгляду вид:
 
-function QTextDrag\_decode (e: QMimeSourceH; s: PWideString):\
+function QTextDrag\_decode (e: QMimeSourceH; s: PWideString):
 
 Boolean; overload; cdecl;
 
@@ -378,7 +378,7 @@ TListBox на обработку событий Drag&Drop:
 
 Код:
 
-if QEvent\_isQCloseEvent (Event) then\
+if QEvent\_isQCloseEvent (Event) then
 
 QEvent\_hook\_destroy (Evt);
 
@@ -542,6 +542,6 @@ QEvent\_isQDropEvent.
     end; 
     end. 
 
- \
-2004.05.14 Автор: Михаил Продан\
+
+2004.05.14 Автор: Михаил Продан
 <https://www.cpp.com.ua>

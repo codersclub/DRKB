@@ -170,6 +170,6 @@ GDIDemo) , в обработчик события OnPaint объекта PaintBo
 
 С уважением к коллегам, Дмитрий Кузан.
 
- \
+
 
 <https://www.delphikingdom.com>

@@ -65,10 +65,10 @@ Date: 01.01.2007
      
     end.
 
- \
+
 
 Автор: Krid
 
 Взято из <https://forum.sources.ru>
 
- \
+

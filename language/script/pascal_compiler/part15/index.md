@@ -222,7 +222,7 @@ C/Unix, использующим getchar и unget, и я думаю вы сог�
      GetChar; 
     end.
 
- \
+
 
  
 
@@ -251,7 +251,7 @@ C/Unix, использующим getchar и unget, и я думаю вы сог�
      WriteLn(Look); 
     end.
 
- \
+
 
  
 
@@ -933,7 +933,7 @@ CodeGen не будет ни одной строчки кода, которая 
      Factor; 
     end.
 
- \
+
 
  
 
@@ -977,7 +977,7 @@ LoadVariable:
 
  
 
- \
+
 
  
 
@@ -995,7 +995,7 @@ LoadVariable:
       Error('Unrecognized character ' + Look); 
     end;
 
- \
+
 
  
 

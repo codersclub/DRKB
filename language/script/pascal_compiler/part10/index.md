@@ -151,7 +151,7 @@ Pascal.
        Epilog; 
     end;
 
- \
+
 
  
 
@@ -164,7 +164,7 @@ Pascal.
        WriteLn('WARMST', TAB, 'EQU $A01E'); 
     end;
 
- \
+
 
  
 
@@ -195,10 +195,10 @@ Pascal.
 
 { Main Program }
 
-begin\
-   Init;\
-   Prog;\
-   if Look \<\> CR then Abort(\'Unexpected data after \'\'.\'\'\');\
+begin
+   Init;
+   Prog;
+   if Look \<\> CR then Abort(\'Unexpected data after \'\'.\'\'\');
 
 end.
 
@@ -343,7 +343,7 @@ end.
           end; 
     end;
 
- \
+
 
  
 
@@ -375,7 +375,7 @@ end.
        Alloc(GetName); 
     end;
 
- \
+
 
  
 
@@ -390,7 +390,7 @@ end.
        WriteLn(N, ':', TAB, 'DC 0'); 
     end;
 
- \
+
 
  
 
@@ -434,7 +434,7 @@ end.
        end; 
     end;
 
- \
+
 
  
 
@@ -593,12 +593,12 @@ end.
 
 var i: char;
 
-begin\
-   for i := \'A\' to \'Z\' do\
+begin
+   for i := \'A\' to \'Z\' do
 
       ST\[i\] := \' \';
 
- \
+
 
    \...
 
@@ -664,7 +664,7 @@ ST\[N\] := \'v\';
        Epilog; 
     end;
 
- \
+
 
  
 
@@ -1413,7 +1413,7 @@ Match. Вызов SkipWhite в Init запускает помпу в случа�
        end; 
     end;
 
- \
+
 
  
 
@@ -1523,7 +1523,7 @@ Match. Вызов SkipWhite в Init запускает помпу в случа�
        SkipWhite; 
     end;
 
- \
+
 
  
 
@@ -1771,7 +1771,7 @@ var ST   : array\[1..MaxEntry\] of Symbol;
        SType[NEntry] := T; 
     end;
 
- \
+
 
  
 
@@ -1788,7 +1788,7 @@ var ST   : array\[1..MaxEntry\] of Symbol;
     . 
     .
 
- \
+
 
  
 
@@ -1993,7 +1993,7 @@ Modula-2, состоит в том, чтобы вывести I/O операто
        EmitLn('LIB TINYLIB'); 
     end; 
 
- \
+
 
  
 

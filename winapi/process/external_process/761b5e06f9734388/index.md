@@ -82,8 +82,8 @@ PID и SID процесса
      
     end.
 
- \
- \
+
+
 
 В данном примере GetCurrentProcess можно заменить (если имеешь PID) на
 
@@ -95,7 +95,7 @@ PID и SID процесса
                     CloseHandle(hProcess);
                   end;
 
- \
+
 
 Взято из <https://forum.sources.ru>
 

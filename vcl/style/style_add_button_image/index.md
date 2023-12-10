@@ -76,7 +76,7 @@ Date: 01.01.2007
         end;
     end;
 
- \
+
 
 Пример использования:
 
@@ -88,7 +88,7 @@ Date: 01.01.2007
      Button_SetImageEx(hwndButton,LoadIcon(hInstance,'IDI_ICON1'),IMAGE_ICON);
      
 
- \
+
 
 Автор: Krid
 

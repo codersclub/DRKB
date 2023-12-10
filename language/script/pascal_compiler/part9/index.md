@@ -122,7 +122,7 @@ PDL) этот верхний уровень походит на что-нибу�
        Epilog(Name); 
     end;
 
- \
+
 
  
 
@@ -152,7 +152,7 @@ PDL) этот верхний уровень походит на что-нибу�
        EmitLn('END ' + Name); 
     end;
 
- \
+
 
  
 
@@ -217,7 +217,7 @@ DoBlock. Это получается прямо из его БНФ опреде�
        Statements; 
     end;
 
- \
+
 
  
 
@@ -247,9 +247,9 @@ DoBlock. Это получается прямо из его БНФ опреде�
 
      \<declarations\> ::= ( \<label list\>    \|
 
-                          \<constant list\> \|\
-                          \<type list\>     \|\
-                          \<variable list\> \|\
+                          \<constant list\> \|
+                          \<type list\>     \|
+                          \<variable list\> \|
 
                           \<procedure\>     \|
 
@@ -358,7 +358,7 @@ END
        Match('e'); 
     end;
 
- \
+
 
  
 
@@ -402,11 +402,11 @@ Statements.
      \<simple statement\> ::= \<assignment\> \| \<procedure call\> \|
 null
 
-     \<structured statement\> ::= \<compound statement\> \|\
-                               \<if statement\>       \|\
-                               \<case statement\>     \|\
-                               \<while statement\>    \|\
-                               \<repeat statement\>   \|\
+     \<structured statement\> ::= \<compound statement\> \|
+                               \<if statement\>       \|
+                               \<case statement\>     \|
+                               \<while statement\>    \|
+                               \<repeat statement\>   \|
 
                                \<for statement\>      \|
 
@@ -479,7 +479,7 @@ null
 
      \<global declaration\> ::= \'\#\' \<preprocessor command\>  \|
 
-                         \'int\' \<data list\>           \|\
+                         \'int\' \<data list\>           \|
 
                          \'char\' \<data list\>          \|
 
@@ -557,7 +557,7 @@ null
        end; 
     end.
 
- \
+
 
  
 
@@ -590,7 +590,7 @@ null
        else Class := 'a'; 
     end;
 
- \
+
 
  
 
@@ -620,7 +620,7 @@ null
        end; 
     end;
 
- \
+
 
  
 
@@ -655,7 +655,7 @@ Sign и Typ.
           DoData(Name); 
     end;
 
- \
+
 
  
 
@@ -690,7 +690,7 @@ Sign и Typ.
        Match(';'); 
     end;
 
- \
+
 
  
 

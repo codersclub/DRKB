@@ -35,7 +35,7 @@ Date: 01.01.2007
      SetWindowLong(Edit1.Handle,GWL_USERDATA,SetWindowLong(Edit1.Handle, GWL_WNDPROC, LPARAM(@NewEditProc)))
     end;
 
- \
+
 
 Автор: Krid
 

@@ -202,7 +202,7 @@ Error).
 
 Исправление проблемы с TPageControl
 
-Решение проблемы с установкой цвета фона clBtnFace для TTabSheet.\
+Решение проблемы с установкой цвета фона clBtnFace для TTabSheet.
 
 Как вы знаете TPageControl является контейнером TTabSheet: TPageControl
 нормально воспринимается Windows XP манифестом, но это остается

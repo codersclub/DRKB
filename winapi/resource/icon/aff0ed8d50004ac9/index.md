@@ -48,7 +48,7 @@ TImageList, дважды щёлкаем на нём и с помощью кно�
     iconindex := 0;
     ImageList1.GetIcon(iconindex, Application.Icon);
 
- \
+
 
  
 

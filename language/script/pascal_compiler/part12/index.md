@@ -259,7 +259,7 @@ null
        MatchString(';'); 
     end;
 
- \
+
 
  
 
@@ -313,7 +313,7 @@ Semi в процедуру TopDecl:
        end; 
     end;
 
- \
+
 
  
 
@@ -335,7 +335,7 @@ Semi в процедуру TopDecl:
        Epilog; 
     end.
 
- \
+
 
  
 
@@ -376,7 +376,7 @@ Semi в процедуру TopDecl:
        end; 
     end;
 
- \
+
 
  
 
@@ -401,9 +401,9 @@ Semi в процедуру TopDecl:
 
 { Match a Semicolon }
 
-procedure Semi;\
-begin\
-   if Token = \';\' then Next;\
+procedure Semi;
+begin
+   if Token = \';\' then Next;
 
 end;
 
@@ -458,7 +458,7 @@ GetCharX. (На всякий случай запомните, это будет 
        GetCharX; 
     end;
 
- \
+
 
  
 
@@ -479,7 +479,7 @@ SkipComment для удаления комментариев:
        if Look = '{' then SkipComment; 
     end;
 
- \
+
 
  
 
@@ -542,7 +542,7 @@ SkipComment для удаления комментариев:
        end; 
     end;
 
- \
+
 
  
 
@@ -575,7 +575,7 @@ SkipComment рекурсивной:
        GetChar; 
     end;
 
- \
+
 
  
 
@@ -620,7 +620,7 @@ SkipComment рекурсивной:
        end; 
     end;
 
- \
+
 
  
 
@@ -658,7 +658,7 @@ SkipComment рекурсивной:
        GetChar; 
     end;
 
- \
+
 
  
 

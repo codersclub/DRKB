@@ -256,7 +256,7 @@ GetNum в функции Expression на вызов Term и затем набе�
        Term := Value; 
     end;
 
- \
+
 
  
 
@@ -284,7 +284,7 @@ GetNum в функции Expression на вызов Term и затем набе�
        GetNum := Value; 
     end;
 
- \
+
 
  
 

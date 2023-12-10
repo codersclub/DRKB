@@ -1,6 +1,6 @@
 ---
 Title: VirtualTreeView, FAQ по компоненту
-Author: Smike and Jack128\
+Author: Smike and Jack128
 Date: 01.01.2007
 ---
 
@@ -12,28 +12,28 @@ VirtualTreeView, FAQ по компоненту
 01.01.2007
 :::
 
-Что такое VirtualTreeView?\
+Что такое VirtualTreeView?
 Это компонент, заменяющий стандартные TTreeView, TStringGrid, TListView,
 отличается высокой скоростью и удобством работы, а также имеет много
-расширений.\
- \
-Найти сам компонент можно на сайте:\
-http://delphi-gems.com/VirtualTreeview/\
- \
+расширений.
+
+Найти сам компонент можно на сайте:
+http://delphi-gems.com/VirtualTreeview/
+
 Существует хорошее расширение компонента для работы отображения файлов,
-аналогично Windows Explorer:\
+аналогично Windows Explorer:
 
 https://www.mustangpeak.net/
 
-Основы работы с компонентом\
+Основы работы с компонентом
 Рассмотрим пример простейшего приложения с использованием этого
 компонента, где он будет использоваться только для отображения данных.
-Думаю, он будет полезен тем, кто начинает работу с этим компонентом.\
- \
+Думаю, он будет полезен тем, кто начинает работу с этим компонентом.
+
 Если компоненты правильно установлены в среде Дельфи, то для начала
 нужно найти в палитре компонентов найти вкладку VirtualControls, а в ней
-компонент VirtualStringTree и положить его на форму. Назовем его VST.\
- \
+компонент VirtualStringTree и положить его на форму. Назовем его VST.
+
 
 Компонент не хранит названий элементов дерева. Но зато каждому элементу
 можно сопоставить указатель на любую структуру данных, где можно хранить
@@ -47,7 +47,7 @@ https://www.mustangpeak.net/
         ElementNumber: Integer;
       end;
 
- \
+
 
 Теперь укажем компоненту, с каким размером данных он будет работать:
 
@@ -56,7 +56,7 @@ https://www.mustangpeak.net/
       VST.NodeDataSize := SizeOf(TVSTRecord);
     end;
 
- \
+
 
 И, наконец, займемся самым главным - заполним дерево:
 
@@ -84,7 +84,7 @@ https://www.mustangpeak.net/
       end;
     end;
 
- \
+
 
 Естественно названия элементов отображаться не будут. Для отображения
 названий элементов нужно создать обработчик события OnGetText:
@@ -100,7 +100,7 @@ https://www.mustangpeak.net/
         CellText := Data.ElementName;
     end;
 
- \
+
 
 А теперь немного расширим функциональность нашего приложения: добавим
 возможность отображения порядковых номеров элементов, которые хранятся в
@@ -117,7 +117,7 @@ TVSTRecord.ElementNumber:
         CellText := Data.ElementName + #32 + IntToStr(Data.ElementNumber);
     end;
 
- \
+
 
 И в завершение необходимо создать обработчик события OnFreeNode, где
 должна освобождаться память, выделенная под TVSTRecord или любые другие
@@ -133,12 +133,12 @@ TVSTRecord.ElementNumber:
         Finalize(Data^);
     end;
 
- \
+
 
 Освобождение элементов особенно актуально, если в дереве будут
 динамически создаваться и удаляться элементы.
 
-Создание многострочного дерева\
+Создание многострочного дерева
 
 Одним из преимуществ компонента является возможность создавать деревья с
 многострочными элементами. Теперь рассмотрим, как можно создать такое
@@ -171,9 +171,9 @@ TVSTRecord.ElementNumber:
       end;
     end;
 
- \
+
 Следующим шагом нужно добавить хотя бы одну колонку в дерево, причем
-желательно выставить опцию hoAutoResize в True в VST.Header.Options.\
+желательно выставить опцию hoAutoResize в True в VST.Header.Options.
 
 И наконец создаем обработчики двух событий - OnInitNode и OnMeasureItem:
 
@@ -195,11 +195,11 @@ TVSTRecord.ElementNumber:
       end;
     end;
 
- \
+
 
 Что приведет к отображению дерева с многострочными элементами.
 
-Многострочные деревья в Win9x\
+Многострочные деревья в Win9x
 
 В AdvancedDemo компонента на странице демонстрации многострочных
 элементов встречаем следующую огорчающую надпись:
@@ -212,7 +212,7 @@ provide multiline support on Windows 9x/Me systems. Under Windows NT
 word breaking is possible there. Otherwise you have to insert line
 breaks manually to have multiline captions. Of course there is no
 difference in handling between multiline and single line nodes (except
-for the vertical alignment of the latter).\
+for the vertical alignment of the latter).
 
 Но не все так страшно, если не рассчитывать на отображение юникода, а
 только, скажем, английского или русского текста. Для этого достаточно
@@ -226,12 +226,12 @@ for the vertical alignment of the latter).\
       Windows.DrawText(DC, PChar(String(lpString)), nCount, lpRect, uFormat);
     end;
 
- \
+
 
 После этого VirtualTreeView будет нормально переносить текст под Win9x,
 а не только под 2000/XP.
 
-Сортировка VirtualStringTree\
+Сортировка VirtualStringTree
 
 Нужно написать обработчики событий OnCompareNodes и OnHeaderClick:
 
@@ -278,7 +278,7 @@ for the vertical alignment of the latter).\
         Result := AnsiCompareText(Text[Node1, Column], Text[Node2, Column]);
     end;
 
- \
+
 
 Перемещение узлов в VirtualTree с помощью Drag&Drop
 
@@ -320,11 +320,11 @@ for the vertical alignment of the latter).\
       CellText := 'Node# ' + IntToStr(PInteger(Sender.GetNodeData(Node))^)
     end;
 
- \
- \
+
+
 Также нужно отметить событие OnDragAllowed, в котором можно указать
 какие узлы можно перемещать, а какие нет. Это событие вызывается только
-при ручном режиме Drag&Drop\'а\
+при ручном режиме Drag&Drop\'а
 
  
 
@@ -345,9 +345,9 @@ for the vertical alignment of the latter).\
     end;
 
 Предыдущий пример был для случая TreeOptions.SelectionOptions :=
-TreeOptions.SelectionOptions - \[toMultiSelect\]\
- \
-В случае мультивыделения код изменяется следующим образом\
+TreeOptions.SelectionOptions - \[toMultiSelect\]
+
+В случае мультивыделения код изменяется следующим образом
 
  
 
@@ -401,18 +401,18 @@ TreeOptions.SelectionOptions - \[toMultiSelect\]\
       end;
     end;
 
-Запретить скроллинг, когда строка шире, чем дерево\
+Запретить скроллинг, когда строка шире, чем дерево
 Если название узла очень длинное и не влезает по ширине в дерево, то
 появляется горизонтальный скроллбар. И когда выделяешь такой узел то он
-центруется по горизонтали.\
- \
+центруется по горизонтали.
+
 В стандартном дереве с этим сталкиваться не приходилось никому.
 Поскольку это поведение является достаточно необычным, то возникает
-вопрос, как это побороть.\
- \
+вопрос, как это побороть.
+
 Отключить это можно опцией TreeOptions.AutoOptions -\>
-toDisableAutoscrollOnFocus = True (см. скриншот)\
- \
+toDisableAutoscrollOnFocus = True (см. скриншот)
+
 
 Сохранение и загрузка
 
@@ -449,7 +449,7 @@ toDisableAutoscrollOnFocus = True (см. скриншот)\
       end;
     end;
 
-Глюк при отображении многострочного текста\
+Глюк при отображении многострочного текста
 
 В VirtualTreeView 4.3.1 допущена досадная ошибка при вычислении высоты
 многострочного текста, что приводит к тому, что текст отображается
@@ -515,12 +515,12 @@ toDisableAutoscrollOnFocus = True (см. скриншот)\
       Result := PaintInfo.CellRect.Bottom - PaintInfo.CellRect.Top;
     end;
 
- \
+
 
  
 
 Взято из <https://forum.sources.ru>
 
-Автор: Smike and Jack128\
+Автор: Smike and Jack128
 
  

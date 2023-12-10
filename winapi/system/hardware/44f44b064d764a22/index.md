@@ -100,7 +100,7 @@ name
 ------------------------------------------------------------------------
 
 Почти все о железе можно прочитать из регистра по
-HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\Class\\
+HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\Class\
 
 Автор: Diamond cat
 

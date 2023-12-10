@@ -62,6 +62,6 @@ Date: 01.01.2007
       if V <> 0 then Result := IntToStr(V) + Result;
     end;
 
-©Drkb::04060\
+©Drkb::04060
 
 Автор: s-mike

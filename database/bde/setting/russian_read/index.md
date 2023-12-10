@@ -14,7 +14,7 @@ Date: 01.01.2007
 
 Для DBD 7.0 нужно исправить реестр: ключ
 
-HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\\
+HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
 SystemFont=\"Fixedsys\"
 
@@ -49,7 +49,7 @@ SystemFont=Arial Cyr
 
 Для DBD 7.0 нужно исправить реестр: ключ
 
-HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\\
+HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
 SystemFont=\"Fixedsys\"
 
@@ -101,7 +101,7 @@ SystemFont=Arial Cyr
 
 Для DBD 7.0 нужно исправить реестр: ключ
 
-HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\\
+HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
 SystemFont=\"Fixedsys\"
 

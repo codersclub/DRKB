@@ -42,7 +42,7 @@ lpszSlotName := \'\\\\\\\\.\\\\mailslot\\\\sample\_mailslot\';
 
 lpszSlotName := \'\\\\.\\mailslot\\sample\_mailslot\';
 
-т.е. вместо \\\\ надо просто \\
+т.е. вместо \\\\ надо просто \
 
 Автор: p0s0l
 

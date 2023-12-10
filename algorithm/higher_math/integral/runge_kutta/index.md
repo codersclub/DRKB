@@ -24,7 +24,7 @@ author: Андрей Садовой
 
       ![clip0309](clip0309.gif){width="59" height="19"},  
       ![clip0310](clip0310.gif){width="53" height="19"},  
-      и т.д.,\
+      и т.д.,
 
 
 где t -- независимая переменная (например, время); X, Y и т.д. --
@@ -174,30 +174,30 @@ author: Андрей Садовой
 
 Function Runge\_Kutt (FunArray: TFunArray; First: Extended; Last:
 Extended; Steps: Integer; InitArray: TInitArray; var Res:
-TResArray):Word;\
- \
-Здесь:\
-   FunArray - вектор функций (правых частей уравнений системы);\
-   First, Last - начальная и конечная точки расчетного интервала;\
-   Steps - число шагов по расчетному интервалу;\
-   InitArray - вектор начальных значений\
+TResArray):Word;
+
+Здесь:
+   FunArray - вектор функций (правых частей уравнений системы);
+   First, Last - начальная и конечная точки расчетного интервала;
+   Steps - число шагов по расчетному интервалу;
+   InitArray - вектор начальных значений
 
    Res - матрица результатов включая независимую переменную.
 
 В модуле описаны типы:
 
-type\
+type
    TVarsArray = array of Extended; // вектор переменных включая
-независимую\
-   TInitArray = array of Extended; // вектор начальных значений\
+независимую
+   TInitArray = array of Extended; // вектор начальных значений
    TFunArray = array of function(VarsArray: TVarsArray ):Extended; //
-вектор функций\
-   TResArray = array of array of Extended; // матрица результатов\
+вектор функций
+   TResArray = array of array of Extended; // матрица результатов
 
    TCoefsArray = array of Extended; // вектор коэффициетов метода
 
-Функция возвращает коды ошибок:\
-  0 -- нет ошибок;\
+Функция возвращает коды ошибок:
+  0 -- нет ошибок;
 
   100 - число уравнений не равно числу начальных условий.
 

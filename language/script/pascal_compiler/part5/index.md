@@ -238,9 +238,9 @@ NewLabel генерирует уникальные метки. Это сдела
 
      IF
 
-    \<condition\> { Condition;\
-                            L = NewLabel;\
-                            Emit(Branch False to L); }\
+    \<condition\> { Condition;
+                            L = NewLabel;
+                            Emit(Branch False to L); }
 
      \<block\>
 
@@ -364,9 +364,9 @@ BEQ\...  мы будем обходить вокруг кода, который 
 
           \<condition\>
 
-          BEQ L1\
-          \<block\>\
-          BRA L2\
+          BEQ L1
+          \<block\>
+          BRA L2
 
      L1:  \<block\>
 
@@ -377,12 +377,12 @@ BEQ\...  мы будем обходить вокруг кода, который 
 
      IF
 
-     \<condition\>    { L1 = NewLabel;\
-                      L2 = NewLabel;\
-                      Emit(BEQ L1) }\
-     \<block\>\
-     ELSE           { Emit(BRA L2);\
-                      PostLabel(L1) }\
+     \<condition\>    { L1 = NewLabel;
+                      L2 = NewLabel;
+                      Emit(BEQ L1) }
+     \<block\>
+     ELSE           { Emit(BRA L2);
+                      PostLabel(L1) }
 
      \<block\>
 
@@ -463,9 +463,9 @@ BEQ\...  мы будем обходить вокруг кода, который 
 
      WHILE          { L1 = NewLabel;
 
-                      PostLabel(L1) }\
-     \<condition\>    { Emit(BEQ L2) }\
-     \<block\>\
+                      PostLabel(L1) }
+     \<condition\>    { Emit(BEQ L2) }
+     \<block\>
 
      ENDWHILE       { Emit(BRA L1);
 
@@ -549,7 +549,7 @@ WHILE достаточно для написания структурного к
 
      LOOP           { L = NewLabel;
 
-                      PostLabel(L) }\
+                      PostLabel(L) }
 
      \<block\>
 
@@ -586,8 +586,8 @@ REPEAT-UNTIL
 
      REPEAT         { L = NewLabel;
 
-                      PostLabel(L) }\
-     \<block\>\
+                      PostLabel(L) }
+     \<block\>
 
      UNTIL
 
@@ -635,7 +635,7 @@ while. Это символы, которые сигнализируют о вы�
        end; 
     end;
 
- \
+
 
  
 
@@ -664,8 +664,8 @@ while. Это символы, которые сигнализируют о вы�
 
      \<ident\> = \<expr1\>
 
-     TEMP = \<expr2\>\
-     WHILE \<ident\> \<= TEMP\
+     TEMP = \<expr2\>
+     WHILE \<ident\> \<= TEMP
 
      \<block\>
 
@@ -751,13 +751,13 @@ while. Это символы, которые сигнализируют о вы�
 
  
 
-{ Parse and Translate an Expression }\
+{ Parse and Translate an Expression }
 
 { This version is a dummy }
 
-Procedure Expression;\
-begin\
-   EmitLn(\'\<expr\>\');\
+Procedure Expression;
+begin
+   EmitLn(\'\<expr\>\');
 
 end;
 

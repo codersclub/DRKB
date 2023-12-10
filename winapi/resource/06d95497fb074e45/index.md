@@ -13,7 +13,7 @@ Date: 01.01.2007
 
 FindResource + LoadResource + LockResource
 
- \
+
 
 Определяем размеры картинки хранящейся в ресурсах:
 
@@ -46,8 +46,8 @@ FindResource + LoadResource + LockResource
       end;
     end;
 
- \
- \
+
+
 
 Получаем список всех ресурсов
 
@@ -87,7 +87,7 @@ FindResource + LoadResource + LockResource
       end;
     end;
 
- \
+
 
 Извлекаем ресурс в файл
 
@@ -176,7 +176,7 @@ FindResource + LoadResource + LockResource
       end;
     end;
 
- \
+
 
 Отрисовываем картинку из ресурса на форме:
 
@@ -262,7 +262,7 @@ FindResource + LoadResource + LockResource
       end;
     end;
 
- \
+
 
 Взято из <https://forum.sources.ru>
 

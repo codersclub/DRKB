@@ -1,6 +1,6 @@
 ---
 Title: Поиск в памяти процесса
-Author: Rouse\_\
+Author: Rouse\_
 Date: 01.01.2007
 ---
 
@@ -110,7 +110,7 @@ Date: 01.01.2007
       WriteLn('Failed to open process');
     end.
 
- \
+
 
 а вот программа, в которой ведем поиск для примера:
 
@@ -131,7 +131,7 @@ Date: 01.01.2007
 
 Взято из <https://forum.sources.ru>
 
-Автор: Rouse\_\
- \
+Автор: Rouse\_
+
 
  

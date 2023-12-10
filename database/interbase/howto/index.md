@@ -1354,7 +1354,7 @@ isc\_tpb\_read\_committed). Если определено больше одно�
                                     isc\_tpb\_read\_committed          
      isc\_tpb\_consistency
 
-\
+
 :::
 
 isc\_tpb\_write
@@ -4571,7 +4571,7 @@ BLOB столбец.
 Создание SELECT инструкции
 
     char *str =
-    "SELECT PROJ_NAME, PROJ_DESC, PRODUCT FROM PROJECT WHERE \
+    "SELECT PROJ_NAME, PROJ_DESC, PRODUCT FROM PROJECT WHERE 
     PRODUCT IN ("software", "hardware", "other") ORDER BY PROJ_NAME";
 
 Подготовка структуры вывода XSQLDA
@@ -6269,7 +6269,7 @@ DSQL, программные методы, нужные для выполнен�
 
 char \*sel\_str =
 
-\"SELECT DEPT\_NO, QUART\_HEAD\_CNT FROM PROJ\_DEPT\_BUDGET \\
+\"SELECT DEPT\_NO, QUART\_HEAD\_CNT FROM PROJ\_DEPT\_BUDGET \
 
 WHERE year = 1994 AND PROJ\_ID = 'VBASE'\";
 
@@ -6589,7 +6589,7 @@ hcnt\[3\] = 6;
 
 char \*upd\_str =
 
-\"UPDATE PROJ\_DEPT\_BUDGET SET QUART\_HEAD\_CNT = ? WHERE \\
+\"UPDATE PROJ\_DEPT\_BUDGET SET QUART\_HEAD\_CNT = ? WHERE \
 
 YEAR = 1994 AND PROJ\_ID = \"MKTPR\" AND DEPT\_NO = ?\";
 
@@ -6691,7 +6691,7 @@ in\_sqlda /\* XSQLDA supplying parameters to UPDATE statement \*/
   ---- -------------------------------------------------------------------------------------
 :::
 
-\"UPDATE JOB SET LANGUAGE\_REQ = NULL \\
+\"UPDATE JOB SET LANGUAGE\_REQ = NULL \
 
 WHERE JOB\_CODE = \"SA12\" AND JOB\_GRADE = 10\"
 

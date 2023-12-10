@@ -1666,7 +1666,7 @@ Your\_answer     Right\_answer
 
 (1 row affected)
 
-Wrong, wrong, wrong!\
+Wrong, wrong, wrong!
 
  
 

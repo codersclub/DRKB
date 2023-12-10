@@ -65,12 +65,12 @@ Date: 01.01.2007
 
 ©Drkb::02133
 
- \
-PS только для NT4 и выше. Для Win9x юзать GetWindowModuleFileName.\
- \
+
+PS только для NT4 и выше. Для Win9x юзать GetWindowModuleFileName.
+
 
 Автор: Krid
 
-Взято из <https://forum.sources.ru>\
+Взято из <https://forum.sources.ru>
 
  

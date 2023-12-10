@@ -23,7 +23,7 @@ author: Александр Шабля
 через COM интерфейс (библиотеку типов, TLB) из Delphi. Почему возникли
 расхождения? Ответа на эти вопросы у Microsoft я не нашел...
 
-Примечание:\
+Примечание:
 
 сравнивались только русская и английская (American English) версии Excel
 с номером версии 9.0 (MS Office 2000) и выше. Другие версии не
@@ -36,11 +36,11 @@ author: Александр Шабля
     ASheet: TExcelWorksheet;
     R: Range; // ExcelRange - для Delphi7
 
- \
+
 
  
 
-Используемые в примерах \"дополнительные\" модули:\
+Используемые в примерах \"дополнительные\" модули:
 
 OleServer, Excel2000, Office2000 из стандартной поставки Delphi
 Enterprise версии 6 и выше.
@@ -63,7 +63,7 @@ Office2000.pas и описана так:
     const
       msoLanguageIDUI = $00000002;
 
-Примечание:\
+Примечание:
 
 в Office97 свойство LanguageSettings отсутствует
 
@@ -165,7 +165,7 @@ ExcelApplication.ThousandsSeparator, ExcelApplication.International
     R.NumberFormat := '# ##0,00'; //
      работает для стандартных настроек
 
-Примечание:\
+Примечание:
 
 в примерах значения записываются в Value2 для предотвращения
 форматирования \"на лету\" самим Excel\'ем. Так число 123.45, записанное
@@ -262,7 +262,7 @@ R.NumberFormat := \'Основной;\[красный\]-Основной\';
 Здесь приятней и проще пользоваться английскими формулами. Но, иногда,
 существует необходимость писать формулы из вариантного массива...
 
-Примечание:\
+Примечание:
 
 системные переменные ListSeparator, DateSeparator описаны в модуле
 System.
@@ -356,7 +356,7 @@ System.
       end;
     ...
 
-Примечание:\
+Примечание:
 
 из примера видно, что при записи из Variant-ного массива в Formula,
 FormulaLocal, Value, Value2 не имеет значения, какой стиль ссылок
@@ -388,7 +388,7 @@ End Sub
 Т.е. при выводе на печать мы хотим, чтоб в нижний колонтитул по центру
 выводился текст, к примеру \"Лист 1 из 5\".
 
-Примечание:\
+Примечание:
 
 если вы хотите увидеть работу вашего макроса в действии (чтоб работал
 PrintPreview), обязательно внесите на лист хоть какие-нибудь данные.
@@ -411,11 +411,11 @@ PrintPreview), обязательно внесите на лист хоть ка
 
 ASheet.PageSetup.CenterFooter :=
 
-   \'&\"Arial\"&8Лист &\"Arial,полужирный\"&С\' + //\
+   \'&\"Arial\"&8Лист &\"Arial,полужирный\"&С\' + //
 
 Страница - Page
 
-  \'&\"Arial,обычный\" из &\"Arial,полужирный\"&К\'; //\
+  \'&\"Arial,обычный\" из &\"Arial,полужирный\"&К\'; //
 
 Количество - Number
 
@@ -423,7 +423,7 @@ ASheet.PageSetup.CenterFooter :=
 
 if XL.LanguageSettings.LanguageID\[msoLanguageIDUI\] = \$0419
 
-then ASheet.PageSetup.CenterFooter := //\
+then ASheet.PageSetup.CenterFooter := //
 
 русские коды форматирования
 
@@ -431,7 +431,7 @@ then ASheet.PageSetup.CenterFooter := //\
 
    \'&\"Arial,обычный\" из &\"Arial,полужирный\"&К\'
 
-else ASheet.PageSetup.CenterFooter := //\
+else ASheet.PageSetup.CenterFooter := //
 
 английские коды форматирования
 
@@ -514,7 +514,7 @@ else ASheet.PageSetup.CenterFooter := //\
 |                       |                       | страниц.              |
 +-----------------------+-----------------------+-----------------------+
 
- \
+
 
  
 
@@ -522,28 +522,28 @@ else ASheet.PageSetup.CenterFooter := //\
 
 ASheet.PageSetup.CenterFooter :=
 
-     \'&\"Arial\"&8Лист &\"Arial,bold\"&С&\"Arial,normal\"\
+     \'&\"Arial\"&8Лист &\"Arial,bold\"&С&\"Arial,normal\"
 
 из &\"Arial,bold\"&К\';
 
 Работает! Т.е. начертания (Style у класса TFont в Delphi) шрифтов можно
 уверенно писать по-английски. Или заменить на коды форматирования:
 
-ASheet.PageSetup.CenterFooter :=\
+ASheet.PageSetup.CenterFooter :=
 
 \'&\"Arial\"&8Лист &Ж&С&Ж из &Ж&К\';
 
-Примечание:\
+Примечание:
 для перевода строки в колонтитуле или ячейке используйте симол LF, ASCI
-код 10 (\
+код 10 (
 
 \#10):
 
-ASheet.PageSetup.CenterFooter := \'Первая строка\'\
+ASheet.PageSetup.CenterFooter := \'Первая строка\'
 
 \#10\'Вторая строка\';
 
-ASheet.Range\[\'A1\', EmptyParam\].Value := \'Первая строка\'\
+ASheet.Range\[\'A1\', EmptyParam\].Value := \'Первая строка\'
 
 \#10\'Вторая строка\';
 

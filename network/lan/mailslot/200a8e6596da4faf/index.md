@@ -15,13 +15,13 @@ Date: 01.01.2007
 
 Как реализовать обмен информацией между Вашими приложениями в сети? ОС
 Windows предлагает несколько технологий. Эта статья опишет один очень
-простой и надежный способ для Win9x/NT - MailSlots.\
+простой и надежный способ для Win9x/NT - MailSlots.
 The CreateMailslot function creates a mailslot with the specified name
 and returns a handle that a mailslot server can use to perform
 operations on the mailslot. The mailslot is local to the computer that
 creates it. An error occurs if a mailslot with the specified name
-already exists.\
- \
+already exists.
+
 
 Обмен текстовыми данными в локальной сети очень прост. Для этого
 необходимы три функции:
@@ -51,8 +51,8 @@ already exists.\
 :::
 
 Функции работы с почтовыми каналами присутствуют как в Windows 9x, так и
-в Windows NT.\
- \
+в Windows NT.
+
 
 Рассмотрим создание почтового канала (сервер).
 
@@ -63,7 +63,7 @@ already exists.\
       if h = INVALID_HANDLE_VALUE then begin
         raise Exception.Create('MailSlotServer: Ошибка создания канала !');
 
- \
+
 
 Отправка сообщений по почтовомуо каналу (клиенты).
 
@@ -277,11 +277,11 @@ already exists.\
      
     end. 
 
- \
+
 Компонент TglMailSlotServer создает почтовый канал с именем MailSlotName
 и принимает входящие ссобщения. Компонент TglMailSlotClient отправляет
-сообщения в канал с именем MailSlotName на машине ServerName.\
- \
+сообщения в канал с именем MailSlotName на машине ServerName.
+
 
 Эти компонеты входят в состав библиотеки GlobusLib, распространяемой с
 исходными текстами. Вы можете скачать ее на тут.

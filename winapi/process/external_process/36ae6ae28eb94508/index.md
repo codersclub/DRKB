@@ -1,6 +1,6 @@
 ---
 Title: Внедрение библиотеки через CreateRemoteThread
-Author: Rouse\_\
+Author: Rouse\_
 Date: 01.01.2007
 ---
 
@@ -48,8 +48,8 @@ Date: 01.01.2007
       DLLEntryPoint(DLL_PROCESS_ATTACH);
     end.
 
- \
- \
+
+
 
 Приложение:
 
@@ -303,11 +303,11 @@ Date: 01.01.2007
      
     end.
 
- \
+
 
 Взято из <https://forum.sources.ru>
 
-Автор: Rouse\_\
- \
+Автор: Rouse\_
+
 
 Проект также доступен по адресу: http://rouse.front.ru/injectlib.zip

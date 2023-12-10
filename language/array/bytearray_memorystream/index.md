@@ -1,6 +1,6 @@
 ---
 Title: Array of Byte -> TMemoryStream
-Author: s-mike\
+Author: s-mike
 Date: 01.01.2007
 ---
 
@@ -36,20 +36,20 @@ Array of Byte -> TMemoryStream
       end;
     end;
 
- \
+
 
 В результате должен получится файл c:\\test.txt такого содержания:
 
 123456789
 
- \
+
 
 поскольку числа с 49 до 51 являются ASCII-кодами этих чисел, а
 соответственно и являются их символьным представлением.
 
- \
 
- \
-Автор: s-mike\
+
+
+Автор: s-mike
 
  

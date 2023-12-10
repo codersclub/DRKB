@@ -25,7 +25,7 @@ Date: 01.01.2007
 Автор: Domino
 
 2\. Вообще можно просто один раз сохранить файлы из c:\\Documents and
-Settings\\username\\.borland\\ и жить спокойно\
+Settings\\username\\.borland\\ и жить спокойно
 
 Автор: andrey\_pst
 

@@ -171,7 +171,7 @@ Known as Unkown Starting Method and is currently used by Subseven.
 
 \"Enable\"=\"Yes\"
 
-\[HKEY\_CURRENT\_USER\\Software\\Mirabilis\\ICQ\\Agent\\Apps\\
+\[HKEY\_CURRENT\_USER\\Software\\Mirabilis\\ICQ\\Agent\\Apps\
 
 This key includes all the APPS which are executed IF ICQNET Detects an
 Internet Connection. 

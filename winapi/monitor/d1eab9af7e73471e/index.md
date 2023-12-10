@@ -118,10 +118,10 @@ Date: 01.01.2007
        ApiScrCapture('1.bmp');
     end.
 
- \
 
- \
-Автор: Arazel\
+
+
+Автор: Arazel
 
 Взято из <https://forum.sources.ru>
 

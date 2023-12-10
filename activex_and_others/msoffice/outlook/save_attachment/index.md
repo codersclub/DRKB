@@ -1,5 +1,6 @@
 ---
 Title: Сохранить вложения OutLook
+autor: patrick cleys
 Date: 01.01.2007
 ---
 
@@ -11,7 +12,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-autor: patrick cleys\
+autor: patrick cleys
 
 homepage: http://www.dcmedical.org
 
@@ -110,5 +111,5 @@ homepage: http://www.dcmedical.org
 
  
 
- \
+
 <https://www.swissdelphicenter.ch/>

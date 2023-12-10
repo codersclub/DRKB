@@ -103,7 +103,7 @@ Date: 01.01.2007
        end; 
     end;
 
- \
+
 
  
 
@@ -193,7 +193,7 @@ Look на следующий символ во входном потоке.
        until not IsDigit(Look); 
     end;
 
- \
+
 
  
 
@@ -280,7 +280,7 @@ NewLine. Вы можете сделать это просто изменив ф�
        IsWhite := c in [' ', TAB, CR, LF]; 
     end;
 
- \
+
 
  
 
@@ -339,7 +339,7 @@ NewLine. Вы можете сделать это просто изменив ф�
        GetChar; 
     end;
 
- \
+
 
  
 
@@ -398,10 +398,10 @@ NewLine. Вы можете сделать это просто изменив ф�
 
 { Match a Specific Input String }
 
-procedure MatchString(x: string);\
-begin\
-   if Value \<\> x then Expected(\'\'\'\' + x + \'\'\'\');\
-   Next;\
+procedure MatchString(x: string);
+begin
+   if Value \<\> x then Expected(\'\'\'\' + x + \'\'\'\');
+   Next;
 
 end;
 
@@ -1395,6 +1395,6 @@ TINY VERSION 1.1
        Epilog; 
     end. 
 
- \
+
 
  

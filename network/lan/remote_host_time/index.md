@@ -1,6 +1,6 @@
 ---
 Title: Получение времени удаленного компьютера, Пример использования NetRemoteTOD
-Author: Rouse\_\
+Author: Rouse\_
 Date: 01.01.2007
 ---
 
@@ -74,12 +74,12 @@ Date: 01.01.2007
     end.
      
 
- \
+
 
 Взято из <https://forum.sources.ru>
 
-Автор: Rouse\_\
+Автор: Rouse\_
 
  
 
- \
+

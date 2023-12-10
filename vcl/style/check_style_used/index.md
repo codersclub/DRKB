@@ -61,7 +61,7 @@ Date: 01.01.2007
     ...
     if ThemeServices.ThemesEnabled then // Тема использется
 
- \
+
 
 Автор: Alex
 

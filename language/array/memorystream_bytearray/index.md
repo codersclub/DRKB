@@ -13,7 +13,7 @@ TMemoryStream -> Array of Byte
 :::
 
 Для преобразования TMemoryStream в array of Byte можно использовать
-следующий код:\
+следующий код:
 
  
 
@@ -34,8 +34,8 @@ TMemoryStream -> Array of Byte
       end;
     end;
 
- \
 
- \
+
+
 
 Автор: Rouse\_

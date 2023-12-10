@@ -26,8 +26,8 @@ Date: 01.01.2007
     function PtInTriang(const P, A, B, C: TPoint): Boolean;
     {Внимание!! Вершины должны быть заданы против часовой стрелки!
             A
-           / \
-          / \
+           / 
+          / 
          B----C }
     begin
       Result := False;

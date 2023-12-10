@@ -74,7 +74,7 @@ HookAgnt.dpr
       hFileMappingObject: THandle;
       fInit: Boolean;
      
-    {----------------------------\
+    {----------------------------
     | |
     | DLL_PROCESS_DETACH |
     | |
@@ -89,7 +89,7 @@ HookAgnt.dpr
       end;
     end;
      
-    {----------------------------\
+    {----------------------------
     | |
     | DLL_PROCESS_ATTACH |
     | |

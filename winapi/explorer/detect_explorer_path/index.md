@@ -25,10 +25,10 @@ Date: 01.01.2007
         Listbox1.Items.Add((Explorer.Item(I) as IWebbrowser2).LocationUrl);
     end;
 
- \
+
 
 Автор: Александр (Rouse\_) Багель
 
 Взято из <https://forum.sources.ru>
 
- \
+

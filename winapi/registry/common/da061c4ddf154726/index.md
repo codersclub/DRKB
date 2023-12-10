@@ -274,7 +274,7 @@ Date: 01.01.2007
         raise Exception.Create ('Unable read MULTI_SZ value');
     end;
 
- \
+
 
 Автор: Александр (Rouse\_) Багель
 

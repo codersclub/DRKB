@@ -222,11 +222,11 @@ Installer
 всего лишь два подходящих места,
 содержащих эту информацию.
 
-HKEY\_LOCAL\_MACHINE\\Software\\Microsoft NT\\Windows\\CurrentVersion\\
+HKEY\_LOCAL\_MACHINE\\Software\\Microsoft NT\\Windows\\CurrentVersion\
 
-HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\
+HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\
 
-HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\
+HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\
 
 RegisteredOwner = \'Имя\'
 
@@ -250,7 +250,7 @@ Program Files?
 он может находиться на другом диске, поэтому мы попробуем поискать его
 по другому\... в реестре.
 
-HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\
+HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\
 ProgramFilesDir = \'D:\\Program Files\'
 
 Можно воспользоваться функцией SHGetSpecialFolderLocation (это даже

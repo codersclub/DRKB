@@ -12,13 +12,13 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Маленький коментарий:\
+Маленький коментарий:
 При открытии сидирома срабатывает DBT\_DEVICEREMOVECOMPLETE, при
-закрытии DBT\_DEVICEARRIVAL\
+закрытии DBT\_DEVICEARRIVAL
 При подключении сетевого диска также приходит DBT\_DEVICEARRIVAL а при
-отключении DBT\_DEVICEREMOVECOMPLETE\
+отключении DBT\_DEVICEREMOVECOMPLETE
 При подключении или отключении флэшки срабатывает
-DBT\_DEVNODES\_CHANGED\...\
+DBT\_DEVNODES\_CHANGED\...
 
  
 

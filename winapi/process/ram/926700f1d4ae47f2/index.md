@@ -56,14 +56,14 @@ native kernel32 функции ядра.
 Используем объект \'\\Device\\PhysicalMemory\' и преобразовав его в тип
 TNtUnicodeString;
 
-RtlInitAnsiString(\@AnsiPhysicalMemory, \'\\Device\\PhysicalMemory\');\
+RtlInitAnsiString(\@AnsiPhysicalMemory, \'\\Device\\PhysicalMemory\');
 RtlAnsiStringToUnicodeString(\@UniPhysicalMemory, \@AnsiPhysicalMemory,
-true);\
+true);
 
 InitializeObjectAttributes(\@NtObjectAttributes, \@UniPhysicalMemory,
 OBJ\_KERNEL\_HANDLE, 0, nil);
 
-Получаем дескриптор секции вызывая функцию ядра\
+Получаем дескриптор секции вызывая функцию ядра
 
  
 

@@ -172,8 +172,8 @@ WhoIs, демо получения информации с WhoIs сервера
     end.
      
 
- \
-Проект также доступен по адресу: http://rouse.front.ru/whois.zip\
+
+Проект также доступен по адресу: http://rouse.front.ru/whois.zip
 
 Взято из <https://forum.sources.ru>
 

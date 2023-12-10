@@ -1,6 +1,6 @@
 ---
 Title: Алгоритм качественного уменьшения
-Author: s-mike\
+Author: s-mike
 Date: 01.01.2007
 ---
 
@@ -161,15 +161,15 @@ Date: 01.01.2007
       end;
     end;
 
- \
-Можно еще через StretchBlt, только перед ним надо задать\
+
+Можно еще через StretchBlt, только перед ним надо задать
 
  
 
     SetStretchBltMode(Canvas.Handle, HALFTONE);
 
- \
- \
-Автор: s-mike\
+
+
+Автор: s-mike
 
 Взято из <https://forum.sources.ru>

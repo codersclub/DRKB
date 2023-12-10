@@ -2292,7 +2292,7 @@ ECO/BOLD
 
 \...
 
-ECO заменило BOLD в D2005\
+ECO заменило BOLD в D2005
 
 Bold для Win32/VCL и ECO для .Net/.Net+Winforms
 

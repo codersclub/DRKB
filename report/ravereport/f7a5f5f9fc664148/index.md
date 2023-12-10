@@ -148,9 +148,9 @@ Report о них нет ни слова. Для этого необходимо 
       end;
     end;
 
-Пример вызова процедуры GetListParentClassName:\
-GetListParentClassName(MemoInfo.Lines, RvProjectRTR.ClassType);\
-или\
+Пример вызова процедуры GetListParentClassName:
+GetListParentClassName(MemoInfo.Lines, RvProjectRTR.ClassType);
+или
 
 GetListParentClassName(MemoInfo.Lines, TRvProject);
 
@@ -2039,6 +2039,6 @@ P.S. Ну, вот вроде и все о чем хотелось поведат
 дополнения к данной статье, то все ваши отзывы будут приятны здесь:
 Sun-bittern\@mail.ru
 
-Турушев Виталий (Sun bittern ©)\
+Турушев Виталий (Sun bittern ©)
 
 Нижний Тагил 2004г.
