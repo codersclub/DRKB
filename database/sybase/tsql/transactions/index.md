@@ -253,24 +253,24 @@ master, чтобы выполнить команду sp\_dboption. Любой п
 
  
 
-+-----------------+-----------------+-----------------+-----------------+
-| alter table     | create default  | drop default    | grant           |
-| (допускаются    |                 |                 |                 |
-| все предложения | create index    | drop index      | revoke          |
-| кроме partion и |                 |                 |                 |
-| unpartion)      | create          | drop procedure  |                 |
-|                 | procedure       |                 |                 |
-|                 |                 | drop rule       |                 |
-|                 | create rule     |                 |                 |
-|                 |                 | drop table      |                 |
-|                 | create schema   |                 |                 |
-|                 |                 | drop trigger    |                 |
-|                 | create table    |                 |                 |
-|                 |                 | drop view       |                 |
-|                 | create trigger  |                 |                 |
-|                 |                 |                 |                 |
-|                 | create view     |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
+    +-----------------+-----------------+-----------------+-----------------+
+    | alter table     | create default  | drop default    | grant           |
+    | (допускаются    |                 |                 |                 |
+    | все предложения | create index    | drop index      | revoke          |
+    | кроме partion и |                 |                 |                 |
+    | unpartion)      | create          | drop procedure  |                 |
+    |                 | procedure       |                 |                 |
+    |                 |                 | drop rule       |                 |
+    |                 | create rule     |                 |                 |
+    |                 |                 | drop table      |                 |
+    |                 | create schema   |                 |                 |
+    |                 |                 | drop trigger    |                 |
+    |                 | create table    |                 |                 |
+    |                 |                 | drop view       |                 |
+    |                 | create trigger  |                 |                 |
+    |                 |                 |                 |                 |
+    |                 | create view     |                 |                 |
+    +-----------------+-----------------+-----------------+-----------------+
 
  
 
@@ -285,18 +285,18 @@ master, чтобы выполнить команду sp\_dboption. Любой п
 
  
 
-+-----------------+-----------------+-----------------+-----------------+
-| alter database  | disk init       | load            | select into     |
-|                 |                 | transaction     |                 |
-| alter           | dump database   |                 | update          |
-| table\...partit |                 | load database   | statistics      |
-| ion             | dump            |                 |                 |
-|                 | transaction     | reconfigure     | truncate table  |
-| alter table     |                 |                 |                 |
-| unpartition     | drop database   |                 |                 |
-|                 |                 |                 |                 |
-| create database |                 |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
+    +-----------------+-----------------+-----------------+-----------------+
+    | alter database  | disk init       | load            | select into     |
+    |                 |                 | transaction     |                 |
+    | alter           | dump database   |                 | update          |
+    | table\...partit |                 | load database   | statistics      |
+    | ion             | dump            |                 |                 |
+    |                 | transaction     | reconfigure     | truncate table  |
+    | alter table     |                 |                 |                 |
+    | unpartition     | drop database   |                 |                 |
+    |                 |                 |                 |                 |
+    | create database |                 |                 |                 |
+    +-----------------+-----------------+-----------------+-----------------+
 
  
 
@@ -1060,15 +1060,15 @@ committed и serializable предложения at isolation соответст
 
  
 
-+-----------------------------------+-----------------------------------+
-| Опции                             | Уровень изоляции                  |
-+-----------------------------------+-----------------------------------+
-| read uncommitted                  | 0                                 |
-+-----------------------------------+-----------------------------------+
-| read committed                    | 1                                 |
-+-----------------------------------+-----------------------------------+
-| serializable                      | 3                                 |
-+-----------------------------------+-----------------------------------+
+    +-----------------------------------+-----------------------------------+
+    | Опции                             | Уровень изоляции                  |
+    +-----------------------------------+-----------------------------------+
+    | read uncommitted                  | 0                                 |
+    +-----------------------------------+-----------------------------------+
+    | read committed                    | 1                                 |
+    +-----------------------------------+-----------------------------------+
+    | serializable                      | 3                                 |
+    +-----------------------------------+-----------------------------------+
 
  
 

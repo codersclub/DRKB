@@ -2320,23 +2320,23 @@ discover the problems and solutions discussed in this paper.  It should
 be noted that the ebf for ASA discussed in the section DBGrid Examples
 on page 25 has the build number 2934
 
-+-----------+-----------+-----------+-----------+-----------+-----------+
-|           | ASA       | BDE       | ODBCExpre | Titan     | NativeDB  |
-|           |           |           | ss        |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Delphi 3  | 6.0.3.274 | 4.0       | 4.53      | 3.02p     | 1.84      |
-| Client/Se | 7         |           |           |           |           |
-| rver      |           |           |           |           |           |
-| Suite     | 7.0.0.313 |           |           |           |           |
-| Versions  |           |           |           |           |           |
-| used      |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Delphi 5  | 6.0.3.274 | 5.1.0.4   | 5.05      | 5         | 1.84      |
-| Enterpris | 7         |           |           |           |           |
-| e         |           |           |           |           |           |
-| Versions  | 7.0.0.313 |           |           |           |           |
-| used      |           |           |           |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    |           | ASA       | BDE       | ODBCExpre | Titan     | NativeDB  |
+    |           |           |           | ss        |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | Delphi 3  | 6.0.3.274 | 4.0       | 4.53      | 3.02p     | 1.84      |
+    | Client/Se | 7         |           |           |           |           |
+    | rver      |           |           |           |           |           |
+    | Suite     | 7.0.0.313 |           |           |           |           |
+    | Versions  |           |           |           |           |           |
+    | used      |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
+    | Delphi 5  | 6.0.3.274 | 5.1.0.4   | 5.05      | 5         | 1.84      |
+    | Enterpris | 7         |           |           |           |           |
+    | e         |           |           |           |           |           |
+    | Versions  | 7.0.0.313 |           |           |           |           |
+    | used      |           |           |           |           |           |
+    +-----------+-----------+-----------+-----------+-----------+-----------+
 
 More information about the interfaces discussed in this document can be
 found on their respective web pages:

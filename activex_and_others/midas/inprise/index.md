@@ -170,42 +170,42 @@ Now we know that three different kinds of data packets may flow between
 the provider and the client dataset. The following table summarizes
 every possible data flow.
 
-+-----------------+-----------------+-----------------+-----------------+
-| No              | From            | To              | Purpose         |
-+-----------------+-----------------+-----------------+-----------------+
-| 1.              | Provider        | Client Dataset  | Data is         |
-|                 |                 |                 | packaged in the |
-|                 |                 |                 | data packet and |
-|                 |                 |                 | placed in the   |
-|                 |                 |                 | client          |
-|                 |                 |                 | dataset's       |
-|                 |                 |                 | internal cache. |
-+-----------------+-----------------+-----------------+-----------------+
-| 2.              | Client Dataset  | Provider        | The content of  |
-|                 |                 |                 | the client      |
-|                 |                 |                 | dataset's       |
-|                 |                 |                 | change log is   |
-|                 |                 |                 | sent back to    |
-|                 |                 |                 | provider to be  |
-|                 |                 |                 | resolved with   |
-|                 |                 |                 | original source |
-|                 |                 |                 | of information. |
-+-----------------+-----------------+-----------------+-----------------+
-| 3.              | Provider        | Client Dataset  | The error log   |
-|                 |                 |                 | produced in the |
-|                 |                 |                 | process of      |
-|                 |                 |                 | resolving       |
-|                 |                 |                 | changes by the  |
-|                 |                 |                 | provider is     |
-|                 |                 |                 | sent back to    |
-|                 |                 |                 | the client      |
-|                 |                 |                 | dataset to      |
-|                 |                 |                 | reconcile       |
-|                 |                 |                 | errors with the |
-|                 |                 |                 | client          |
-|                 |                 |                 | dataset's       |
-|                 |                 |                 | change log.     |
-+-----------------+-----------------+-----------------+-----------------+
+    +-----------------+-----------------+-----------------+-----------------+
+    | No              | From            | To              | Purpose         |
+    +-----------------+-----------------+-----------------+-----------------+
+    | 1.              | Provider        | Client Dataset  | Data is         |
+    |                 |                 |                 | packaged in the |
+    |                 |                 |                 | data packet and |
+    |                 |                 |                 | placed in the   |
+    |                 |                 |                 | client          |
+    |                 |                 |                 | dataset's       |
+    |                 |                 |                 | internal cache. |
+    +-----------------+-----------------+-----------------+-----------------+
+    | 2.              | Client Dataset  | Provider        | The content of  |
+    |                 |                 |                 | the client      |
+    |                 |                 |                 | dataset's       |
+    |                 |                 |                 | change log is   |
+    |                 |                 |                 | sent back to    |
+    |                 |                 |                 | provider to be  |
+    |                 |                 |                 | resolved with   |
+    |                 |                 |                 | original source |
+    |                 |                 |                 | of information. |
+    +-----------------+-----------------+-----------------+-----------------+
+    | 3.              | Provider        | Client Dataset  | The error log   |
+    |                 |                 |                 | produced in the |
+    |                 |                 |                 | process of      |
+    |                 |                 |                 | resolving       |
+    |                 |                 |                 | changes by the  |
+    |                 |                 |                 | provider is     |
+    |                 |                 |                 | sent back to    |
+    |                 |                 |                 | the client      |
+    |                 |                 |                 | dataset to      |
+    |                 |                 |                 | reconcile       |
+    |                 |                 |                 | errors with the |
+    |                 |                 |                 | client          |
+    |                 |                 |                 | dataset's       |
+    |                 |                 |                 | change log.     |
+    +-----------------+-----------------+-----------------+-----------------+
 
 There are two possible architectures of MIDAS-based applications. The
 first architecture consists of a monolithic application that hosts both
@@ -288,19 +288,19 @@ In Delphi, perform the following steps:
 
 At this point we have the following structure for our sample:
 
-+-----------------------------------+-----------------------------------+
-| Project Element                   | File(s)                           |
-+-----------------------------------+-----------------------------------+
-| Project1                          | Project1.dpr                      |
-+-----------------------------------+-----------------------------------+
-| Form1                             | Unit1.pas / Unit1.dfm             |
-+-----------------------------------+-----------------------------------+
+    +-----------------------------------+-----------------------------------+
+    | Project Element                   | File(s)                           |
+    +-----------------------------------+-----------------------------------+
+    | Project1                          | Project1.dpr                      |
+    +-----------------------------------+-----------------------------------+
+    | Form1                             | Unit1.pas / Unit1.dfm             |
+    +-----------------------------------+-----------------------------------+
 
 ![clip0152](clip0152.png)
 
-+-----------------------------------+-----------------------------------+
-| DataModule2                       | Unit2.pas / Unit2.dfm             |
-+-----------------------------------+-----------------------------------+
+    +-----------------------------------+-----------------------------------+
+    | DataModule2                       | Unit2.pas / Unit2.dfm             |
+    +-----------------------------------+-----------------------------------+
 
   ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   4.   Select the Data Access page on the component palette. Drop a TDatabase component on the DataModule2. Double click it and set its properties as shown in the picture below. Then click the "OK" button.
@@ -706,72 +706,71 @@ performance. The UpdateMode property of the TProvider component controls
 how the where clause is constructed. The following table summarizes
 possible generation options for the query 'SELECT \* FROM department'
 from our sample application:
-
  
 
-+-----------------------------------+-----------------------------------+
-| UpdateMode                        |                                   |
-+-----------------------------------+-----------------------------------+
-| upWhereAll                        | All fields of the dataset will be |
-|                                   | added to the WHERE clause of the  |
-|                                   | UPDATE or DELETE statement. If    |
-|                                   | the field is empty then provider  |
-|                                   | will generate for this field      |
-|                                   | something like 'HEAD\_DEPT IS     |
-|                                   | NULL', otherwise it will produce  |
-|                                   | 'HEAD\_DEPT = 120', where '120'   |
-|                                   | is the original value of the      |
-|                                   | field HEAD\_DEPT.  This approach  |
-|                                   | guarantees that if another user   |
-|                                   | has changed the record, the       |
-|                                   | database server will not find the |
-|                                   | original values and the record    |
-|                                   | will be added to the provider\'s  |
-|                                   | error log indicating 'Record was  |
-|                                   | changed by another user.'         |
-+-----------------------------------+-----------------------------------+
-| upWhereChanged                    | This mode of the provider         |
-|                                   | produces a less complex UPDATE    |
-|                                   | and DELETE WHERE clause, putting  |
-|                                   | only key fields and those fields  |
-|                                   | which are marked as changed.  You |
-|                                   | still have the ability to detect  |
-|                                   | concurrency problems. If somebody |
-|                                   | else has updated the same field   |
-|                                   | as you before the query was       |
-|                                   | executed, the generated SQL       |
-|                                   | statement will change no records  |
-|                                   | because the record will not       |
-|                                   | satisfy the query's WHERE clause  |
-|                                   | and the provider will log the     |
-|                                   | error as 'Record was changed by   |
-|                                   | another user.'                    |
-+-----------------------------------+-----------------------------------+
-| upWhereKeyOnly                    | The fastest way to update data    |
-|                                   | without concurrency error         |
-|                                   | checking presumes that only key   |
-|                                   | fields, which are the part a      |
-|                                   | tables primary key, will be       |
-|                                   | included in the WHERE clause. In  |
-|                                   | our sample the provider will      |
-|                                   | generate 'UPDATE DEPARTMENT SET   |
-|                                   | ... WHERE DEPT\_NO = 100' if the  |
-|                                   | record was modified and 'DELETE   |
-|                                   | FROM DEPARTMENT WHERE DEPT\_NO =  |
-|                                   | 100' if the record was deleted.   |
-|                                   | Values of primary key fields are  |
-|                                   | rarely changed and you are almost |
-|                                   | guaranteed that if your data does |
-|                                   | not violate database constraints  |
-|                                   | the update will be successful. If |
-|                                   | User A has modified a database    |
-|                                   | record and User B made changes to |
-|                                   | the same record, then all updates |
-|                                   | will be successful regardless of  |
-|                                   | the order in which updates will   |
-|                                   | be applied to the database.  The  |
-|                                   | last update in wins.              |
-+-----------------------------------+-----------------------------------+
+    +-----------------------------------+-----------------------------------+
+    | UpdateMode                        |                                   |
+    +-----------------------------------+-----------------------------------+
+    | upWhereAll                        | All fields of the dataset will be |
+    |                                   | added to the WHERE clause of the  |
+    |                                   | UPDATE or DELETE statement. If    |
+    |                                   | the field is empty then provider  |
+    |                                   | will generate for this field      |
+    |                                   | something like 'HEAD\_DEPT IS     |
+    |                                   | NULL', otherwise it will produce  |
+    |                                   | 'HEAD\_DEPT = 120', where '120'   |
+    |                                   | is the original value of the      |
+    |                                   | field HEAD\_DEPT.  This approach  |
+    |                                   | guarantees that if another user   |
+    |                                   | has changed the record, the       |
+    |                                   | database server will not find the |
+    |                                   | original values and the record    |
+    |                                   | will be added to the provider\'s  |
+    |                                   | error log indicating 'Record was  |
+    |                                   | changed by another user.'         |
+    +-----------------------------------+-----------------------------------+
+    | upWhereChanged                    | This mode of the provider         |
+    |                                   | produces a less complex UPDATE    |
+    |                                   | and DELETE WHERE clause, putting  |
+    |                                   | only key fields and those fields  |
+    |                                   | which are marked as changed.  You |
+    |                                   | still have the ability to detect  |
+    |                                   | concurrency problems. If somebody |
+    |                                   | else has updated the same field   |
+    |                                   | as you before the query was       |
+    |                                   | executed, the generated SQL       |
+    |                                   | statement will change no records  |
+    |                                   | because the record will not       |
+    |                                   | satisfy the query's WHERE clause  |
+    |                                   | and the provider will log the     |
+    |                                   | error as 'Record was changed by   |
+    |                                   | another user.'                    |
+    +-----------------------------------+-----------------------------------+
+    | upWhereKeyOnly                    | The fastest way to update data    |
+    |                                   | without concurrency error         |
+    |                                   | checking presumes that only key   |
+    |                                   | fields, which are the part a      |
+    |                                   | tables primary key, will be       |
+    |                                   | included in the WHERE clause. In  |
+    |                                   | our sample the provider will      |
+    |                                   | generate 'UPDATE DEPARTMENT SET   |
+    |                                   | ... WHERE DEPT\_NO = 100' if the  |
+    |                                   | record was modified and 'DELETE   |
+    |                                   | FROM DEPARTMENT WHERE DEPT\_NO =  |
+    |                                   | 100' if the record was deleted.   |
+    |                                   | Values of primary key fields are  |
+    |                                   | rarely changed and you are almost |
+    |                                   | guaranteed that if your data does |
+    |                                   | not violate database constraints  |
+    |                                   | the update will be successful. If |
+    |                                   | User A has modified a database    |
+    |                                   | record and User B made changes to |
+    |                                   | the same record, then all updates |
+    |                                   | will be successful regardless of  |
+    |                                   | the order in which updates will   |
+    |                                   | be applied to the database.  The  |
+    |                                   | last update in wins.              |
+    +-----------------------------------+-----------------------------------+
 
  
 
@@ -813,60 +812,60 @@ any updates or deletes.
 The following table describes in more detail how the TProvider component
 uses this property.
 
-+-----------------------------------+-----------------------------------+
-| ProviderFlags                     | Description                       |
-+-----------------------------------+-----------------------------------+
-| pfInUpdate                        | All fields with this flag set to  |
-|                                   | True will be added to the list of |
-|                                   | fields in the VALUES clause of an |
-|                                   | INSERT statement and in the SET   |
-|                                   | clause of the UPDATE statement.   |
-|                                   | Setting this flag to False you    |
-|                                   | effectively prevent all updates   |
-|                                   | of a field to be sent to the      |
-|                                   | database server, regardless of    |
-|                                   | any changes made to the data in   |
-|                                   | the client dataset.               |
-+-----------------------------------+-----------------------------------+
-| pfInWhere                         | Each field having pfInWhere set   |
-|                                   | to True will be included in the   |
-|                                   | WHERE clause of the UPDATE and    |
-|                                   | DELETE statements, generated by   |
-|                                   | provider when the providers       |
-|                                   | UpdateMode property is set to     |
-|                                   | either upWhereAll or              |
-|                                   | upWhereChanged.  If the           |
-|                                   | provider's UpdateMode property is |
-|                                   | set to upWhereAll it will always  |
-|                                   | be included.  If the provider's   |
-|                                   | UpdateMode property is set to     |
-|                                   | upWhereChanged, it will be added  |
-|                                   | only if it's value has changed.   |
-+-----------------------------------+-----------------------------------+
-| pfInKey                           | Setting this value to true        |
-|                                   | overrides what the provider       |
-|                                   | retrieves from the database as    |
-|                                   | the key fields for the record.    |
-|                                   | Key fields are included in all    |
-|                                   | updates performed by the provider |
-|                                   | (regardless of the UpdateMode     |
-|                                   | property).  Also, each time an    |
-|                                   | update error occurs during the    |
-|                                   | execution of an UPDATE or DELETE  |
-|                                   | statement, the provider will try  |
-|                                   | to locate the record's original   |
-|                                   | field values using all fields     |
-|                                   | with pfInKey set.                 |
-+-----------------------------------+-----------------------------------+
-| pfHidden                          | Fields with this flag set will be |
-|                                   | included in the data packet, but  |
-|                                   | will be invisible to the client   |
-|                                   | dataset. Usually such fields      |
-|                                   | contain information required to   |
-|                                   | make the record unique but which  |
-|                                   | can't be changed and do not need  |
-|                                   | to be seen by the client.         |
-+-----------------------------------+-----------------------------------+
+    +-----------------------------------+-----------------------------------+
+    | ProviderFlags                     | Description                       |
+    +-----------------------------------+-----------------------------------+
+    | pfInUpdate                        | All fields with this flag set to  |
+    |                                   | True will be added to the list of |
+    |                                   | fields in the VALUES clause of an |
+    |                                   | INSERT statement and in the SET   |
+    |                                   | clause of the UPDATE statement.   |
+    |                                   | Setting this flag to False you    |
+    |                                   | effectively prevent all updates   |
+    |                                   | of a field to be sent to the      |
+    |                                   | database server, regardless of    |
+    |                                   | any changes made to the data in   |
+    |                                   | the client dataset.               |
+    +-----------------------------------+-----------------------------------+
+    | pfInWhere                         | Each field having pfInWhere set   |
+    |                                   | to True will be included in the   |
+    |                                   | WHERE clause of the UPDATE and    |
+    |                                   | DELETE statements, generated by   |
+    |                                   | provider when the providers       |
+    |                                   | UpdateMode property is set to     |
+    |                                   | either upWhereAll or              |
+    |                                   | upWhereChanged.  If the           |
+    |                                   | provider's UpdateMode property is |
+    |                                   | set to upWhereAll it will always  |
+    |                                   | be included.  If the provider's   |
+    |                                   | UpdateMode property is set to     |
+    |                                   | upWhereChanged, it will be added  |
+    |                                   | only if it's value has changed.   |
+    +-----------------------------------+-----------------------------------+
+    | pfInKey                           | Setting this value to true        |
+    |                                   | overrides what the provider       |
+    |                                   | retrieves from the database as    |
+    |                                   | the key fields for the record.    |
+    |                                   | Key fields are included in all    |
+    |                                   | updates performed by the provider |
+    |                                   | (regardless of the UpdateMode     |
+    |                                   | property).  Also, each time an    |
+    |                                   | update error occurs during the    |
+    |                                   | execution of an UPDATE or DELETE  |
+    |                                   | statement, the provider will try  |
+    |                                   | to locate the record's original   |
+    |                                   | field values using all fields     |
+    |                                   | with pfInKey set.                 |
+    +-----------------------------------+-----------------------------------+
+    | pfHidden                          | Fields with this flag set will be |
+    |                                   | included in the data packet, but  |
+    |                                   | will be invisible to the client   |
+    |                                   | dataset. Usually such fields      |
+    |                                   | contain information required to   |
+    |                                   | make the record unique but which  |
+    |                                   | can't be changed and do not need  |
+    |                                   | to be seen by the client.         |
+    +-----------------------------------+-----------------------------------+
 
 ![clip0170](clip0170.png){width="516" height="355"}
 
@@ -948,53 +947,53 @@ packet along with ProviderFlags and Origin but their values are assigned
 to corresponding properties of the client dataset fields. The following
 table lists them all.
 
-+-----------------------------------+-----------------------------------+
-| Property                          | Description                       |
-+-----------------------------------+-----------------------------------+
-| Alignment                         | Alignment of the text,            |
-|                                   | representing the field value in   |
-|                                   | data aware controls.              |
-+-----------------------------------+-----------------------------------+
-| Currency                          | The numeric value represents the  |
-|                                   | currency and will be displayed as |
-|                                   | it is defined by Windows settings |
-|                                   | for local currency.               |
-+-----------------------------------+-----------------------------------+
-| DisplayFormat                     | Specifies display format for      |
-|                                   | numeric and date values.          |
-+-----------------------------------+-----------------------------------+
-| DisplayLabel                      | Defines the text, which will      |
-|                                   | appear in the title caption of    |
-|                                   | TDBGrid and in field-related      |
-|                                   | error messages.                   |
-+-----------------------------------+-----------------------------------+
-| DisplayValues                     | Specifies display values for      |
-|                                   | Boolean fields.                   |
-+-----------------------------------+-----------------------------------+
-| DisplayWidth                      | Defines how many characters will  |
-|                                   | be reserved in the TDBGrid        |
-|                                   | control for this field.           |
-+-----------------------------------+-----------------------------------+
-| EditFormat                        | Provides the edit format for      |
-|                                   | displaying numeric fields when it |
-|                                   | is edited in the data aware       |
-|                                   | control.                          |
-+-----------------------------------+-----------------------------------+
-| EditMask                          | Provides the edit mask for a      |
-|                                   | field when it is edited in a data |
-|                                   | aware control.                    |
-+-----------------------------------+-----------------------------------+
-| MaxValue                          | Defines the maximum value for a   |
-|                                   | numeric field.                    |
-+-----------------------------------+-----------------------------------+
-| MinValue                          | Defines the minimum value for a   |
-|                                   | numeric field.                    |
-+-----------------------------------+-----------------------------------+
-| Visible                           | Provides the information for a    |
-|                                   | TDBGrid control, whether it is    |
-|                                   | necessary to display the column   |
-|                                   | for this field or not.            |
-+-----------------------------------+-----------------------------------+
+    +-----------------------------------+-----------------------------------+
+    | Property                          | Description                       |
+    +-----------------------------------+-----------------------------------+
+    | Alignment                         | Alignment of the text,            |
+    |                                   | representing the field value in   |
+    |                                   | data aware controls.              |
+    +-----------------------------------+-----------------------------------+
+    | Currency                          | The numeric value represents the  |
+    |                                   | currency and will be displayed as |
+    |                                   | it is defined by Windows settings |
+    |                                   | for local currency.               |
+    +-----------------------------------+-----------------------------------+
+    | DisplayFormat                     | Specifies display format for      |
+    |                                   | numeric and date values.          |
+    +-----------------------------------+-----------------------------------+
+    | DisplayLabel                      | Defines the text, which will      |
+    |                                   | appear in the title caption of    |
+    |                                   | TDBGrid and in field-related      |
+    |                                   | error messages.                   |
+    +-----------------------------------+-----------------------------------+
+    | DisplayValues                     | Specifies display values for      |
+    |                                   | Boolean fields.                   |
+    +-----------------------------------+-----------------------------------+
+    | DisplayWidth                      | Defines how many characters will  |
+    |                                   | be reserved in the TDBGrid        |
+    |                                   | control for this field.           |
+    +-----------------------------------+-----------------------------------+
+    | EditFormat                        | Provides the edit format for      |
+    |                                   | displaying numeric fields when it |
+    |                                   | is edited in the data aware       |
+    |                                   | control.                          |
+    +-----------------------------------+-----------------------------------+
+    | EditMask                          | Provides the edit mask for a      |
+    |                                   | field when it is edited in a data |
+    |                                   | aware control.                    |
+    +-----------------------------------+-----------------------------------+
+    | MaxValue                          | Defines the maximum value for a   |
+    |                                   | numeric field.                    |
+    +-----------------------------------+-----------------------------------+
+    | MinValue                          | Defines the minimum value for a   |
+    |                                   | numeric field.                    |
+    +-----------------------------------+-----------------------------------+
+    | Visible                           | Provides the information for a    |
+    |                                   | TDBGrid control, whether it is    |
+    |                                   | necessary to display the column   |
+    |                                   | for this field or not.            |
+    +-----------------------------------+-----------------------------------+
 
 Unlike the Origin and ProviderFlags properties, which become part of the
 data packet unconditionally, all properties from the table are included
@@ -1033,22 +1032,22 @@ necessary, the SQL expression may reference the field using any valid
 SQL name.  The following table provides examples of what may be set for
 these properties:
 
-+-----------------------+-----------------------+-----------------------+
-| Field                 | CustomConstraint      | ConstraintErrorMessag |
-|                       |                       | e                     |
-+-----------------------+-----------------------+-----------------------+
-| DEPT\_NO              | X is null or (x in    | Dept\# value is not   |
-|                       | ('111', '222',        | valid                 |
-|                       | '333'))               |                       |
-+-----------------------+-----------------------+-----------------------+
-| DEPARTMENT            | LOWER(zzz) LIKE       | Department field must |
-|                       | '%abc%'               | have 'abc' inside of  |
-|                       |                       | it                    |
-+-----------------------+-----------------------+-----------------------+
-| HEAD\_DEPT            | head\_dept is null or | HeadDept may be NULL  |
-|                       | (head\_dept \<\>      | or not equal to '000' |
-|                       | \'000\')              |                       |
-+-----------------------+-----------------------+-----------------------+
+    +-----------------------+-----------------------+-----------------------+
+    | Field                 | CustomConstraint      | ConstraintErrorMessag |
+    |                       |                       | e                     |
+    +-----------------------+-----------------------+-----------------------+
+    | DEPT\_NO              | X is null or (x in    | Dept\# value is not   |
+    |                       | ('111', '222',        | valid                 |
+    |                       | '333'))               |                       |
+    +-----------------------+-----------------------+-----------------------+
+    | DEPARTMENT            | LOWER(zzz) LIKE       | Department field must |
+    |                       | '%abc%'               | have 'abc' inside of  |
+    |                       |                       | it                    |
+    +-----------------------+-----------------------+-----------------------+
+    | HEAD\_DEPT            | head\_dept is null or | HeadDept may be NULL  |
+    |                       | (head\_dept \<\>      | or not equal to '000' |
+    |                       | \'000\')              |                       |
+    +-----------------------+-----------------------+-----------------------+
 
 If the field level constraint isn't met, an exception is raised:
 
@@ -1986,40 +1985,40 @@ and limiting their total number.
 The table below provides the summary of features effecting scalability
 for the application servers we have created:
 
-+-----------------------+-----------------------+-----------------------+
-| Server Application    | Threading             | Database connections  |
-|                       |                       | usage                 |
-+-----------------------+-----------------------+-----------------------+
-| TCP/IP Server         | Handles client        | Reuse a single        |
-|                       | requests in separate  | database connection.  |
-|                       | threads, due to the   | When one thread uses  |
-|                       | multi-threaded nature | this connection all   |
-|                       | of Windows Sockets    | other threads must    |
-|                       | library.              | wait until the        |
-|                       |                       | working thread        |
-|                       |                       | completes its         |
-|                       |                       | processing.           |
-+-----------------------+-----------------------+-----------------------+
-| DCOM Components       | Handles client        | Reuse a single        |
-|                       | requests in a single  | database connection   |
-|                       | thread one by one.    | between all server    |
-|                       | DCOM does support     | object instances.     |
-|                       | automatic             |                       |
-|                       | multi-threading for   |                       |
-|                       | out-of-process        |                       |
-|                       | servers in free       |                       |
-|                       | threading model, but  |                       |
-|                       | TClientDataSet cannot |                       |
-|                       | work in this model.   |                       |
-+-----------------------+-----------------------+-----------------------+
-| CORBA Server          | Handles client        | Sets up a new         |
-|                       | requests in multiple  | connection to handle  |
-|                       | threads with thread   | each data access      |
-|                       | pooling provided by   | request and release   |
-|                       | the VisiBroker        | connection to the     |
-|                       | architecture.         | database when request |
-|                       |                       | is processed.         |
-+-----------------------+-----------------------+-----------------------+
+    +-----------------------+-----------------------+-----------------------+
+    | Server Application    | Threading             | Database connections  |
+    |                       |                       | usage                 |
+    +-----------------------+-----------------------+-----------------------+
+    | TCP/IP Server         | Handles client        | Reuse a single        |
+    |                       | requests in separate  | database connection.  |
+    |                       | threads, due to the   | When one thread uses  |
+    |                       | multi-threaded nature | this connection all   |
+    |                       | of Windows Sockets    | other threads must    |
+    |                       | library.              | wait until the        |
+    |                       |                       | working thread        |
+    |                       |                       | completes its         |
+    |                       |                       | processing.           |
+    +-----------------------+-----------------------+-----------------------+
+    | DCOM Components       | Handles client        | Reuse a single        |
+    |                       | requests in a single  | database connection   |
+    |                       | thread one by one.    | between all server    |
+    |                       | DCOM does support     | object instances.     |
+    |                       | automatic             |                       |
+    |                       | multi-threading for   |                       |
+    |                       | out-of-process        |                       |
+    |                       | servers in free       |                       |
+    |                       | threading model, but  |                       |
+    |                       | TClientDataSet cannot |                       |
+    |                       | work in this model.   |                       |
+    +-----------------------+-----------------------+-----------------------+
+    | CORBA Server          | Handles client        | Sets up a new         |
+    |                       | requests in multiple  | connection to handle  |
+    |                       | threads with thread   | each data access      |
+    |                       | pooling provided by   | request and release   |
+    |                       | the VisiBroker        | connection to the     |
+    |                       | architecture.         | database when request |
+    |                       |                       | is processed.         |
+    +-----------------------+-----------------------+-----------------------+
 
 As you can see not one of the solutions is perfect.
 
