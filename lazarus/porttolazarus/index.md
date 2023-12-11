@@ -237,11 +237,11 @@ CodeTyphonIns\\installbin\\ScriptsLin\\ln_All_Functions.sh вписав в не�
 определяется установка для Ubuntu:
 
 ```
-#\-\-\-\-\-\-\-\-\-\-\-- 100 Alt (apt-get compitible)\-\-\-\-\-\-\-\-\--
-elif \[ -f /etc/altlinux-release \] ; then
-vOSVerNum=100
-vOSDistribution=\"Alt Linux (apt-get compatible)\"
-vMultiArchDirPlan=200
+#------------ 100 Alt (apt-get compitible)----------
+ elif [ -f /etc/altlinux-release ] ; then
+   vOSVerNum=100
+   vOSDistribution="Alt Linux (apt-get compatible)"
+   vMultiArchDirPlan=200
 ``` 
 
 В AstraLinux среда разработки ставится без лишних телодвижений на данный
@@ -280,101 +280,70 @@ Synopse mORMot framework 2. Но он был не распределённый, 
 промежуточный модуль simmm.pas следующего содержания:
 
 ```
- unit simmm;
+unit simmm;
+  //  Прокладка для использования общего менеджера памяти
+{$IFNDEF DCAD}
+{$DEFINE IS_DLL_UNIT}
+{$ENDIF}
 
- // Прокладка для использования общего менеджера памяти
+{$IFDEF FPC}
+ {$MODE Delphi}{$H+} 
+{$ENDIF} 
 
- {\$IFNDEF DCAD}
- {\$DEFINE IS_DLL_UNIT}
- {\$ENDIF}
- 
- {\$IFDEF FPC}
- {\$MODE Delphi}{\$H+}
- {\$ENDIF}
+interface
 
- interface
+{$IFDEF UNIX}
 
- {\$IFDEF UNIX}
+  {$IFDEF IS_DLL_UNIT}
+  uses cthreads, dl;
+  {$ELSE}
+  uses cthreads, fpcx64mm;
+  {$ENDIF}
 
- {\$IFDEF IS_DLL_UNIT}
- uses **cthreads**, dl;
- {\$ELSE}
+{$ELSE}
+uses  FastMM5;
+{$ENDIF}
 
- uses **cthreads**, fpcx64mm;
+implementation
 
- {\$ENDIF}
+{$IFDEF UNIX}
+{$IFDEF IS_DLL_UNIT}
+  var
+     NewMM,
+     OldMM:      TMemoryManager;
+     MainHandle: Pointer;
+     GetCommonMemoryManager: procedure(var aMemMgr: TMemoryManager);
+{$ENDIF}
+{$ENDIF}
 
- {\$ELSE}
+initialization
 
- uses FastMM5;
+  {$IFDEF UNIX}
+  {$IFDEF IS_DLL_UNIT}
 
- {\$ENDIF}
+    MainHandle:=dlopen(nil, RTLD_LAZY);
+    GetCommonMemoryManager:=dlsym(MainHandle,'GetMemoryManager');
+    GetCommonMemoryManager(NewMM);
+    GetMemoryManager(OldMM);
+    SetMemoryManager(NewMM);
 
- implementation
+  {$ENDIF}
+  {$ELSE}
 
- {\$IFDEF UNIX}
+  //Расшариваем менеджер памяти
+  if IsLibrary then
+     FastMM_AttemptToUseSharedMemoryManager
+  else
+     FastMM_ShareMemoryManager;
+  {$ENDIF}
 
- {\$IFDEF IS_DLL_UNIT}
-
- var
-
- NewMM,
-
- OldMM: TMemoryManager;
-
- MainHandle: Pointer;
-
- GetCommonMemoryManager: procedure(var aMemMgr: TMemoryManager);
-
- {\$ENDIF}
-
- {\$ENDIF}
-
- initialization
-
- {\$IFDEF UNIX}
-
- {\$IFDEF IS_DLL_UNIT}
-
- **MainHandle:=dlopen(nil, RTLD_LAZY);**
-
- **GetCommonMemoryManager:=dlsym(MainHandle,\'GetMemoryManager\');**
-
- **GetCommonMemoryManager(NewMM);**
-
- **GetMemoryManager(OldMM);**
-
- **SetMemoryManager(NewMM);**
-
- {\$ENDIF}
-
- {\$ELSE}
-
- //Расшариваем менеджер памяти
-
- if IsLibrary then
-
- FastMM_AttemptToUseSharedMemoryManager
-
- else
-
- FastMM_ShareMemoryManager;
-
- {\$ENDIF}
-
- {\$IFDEF UNIX}
-
- {\$IFDEF IS_DLL_UNIT}
-
- finalization
-
- SetMemoryManager(OldMM);
-
- {\$ENDIF}
-
- {\$ENDIF}
-
- end.
+  {$IFDEF UNIX}
+  {$IFDEF IS_DLL_UNIT}
+finalization
+    SetMemoryManager(OldMM);
+  {$ENDIF}
+  {$ENDIF}
+end.
 ```
 
 Как видно из данного кода ключ DCAD определяется только в головном
@@ -394,35 +363,27 @@ TForm.Create, то форма создается нормально. В Lazarus 
 создалась, необходимо в so-библиотеке прописать в списке модулей:
 
 ```
- .....
+  …..
+  Classes,
+  {$IFDEF FPC}
+  Interfaces,
+  {$ENDIF}
+  Forms,  
 
- Classes,
-
- **{\$IFDEF FPC}**
-
- **Interfaces,**
-
- **{\$ENDIF}**
-
- Forms,
 ```
 
 и определить инициализацию Application в секции initialization и
 завершение в finalization:
 
-> **{\$IFDEF FPC}**
->
-> **initialization**
->
-> **Application.Initialize;**
->
-> **finalization**
->
-> **Application.Terminate;**
->
-> **end.**
->
-> **{\$ENDIF}**
+```
+{$IFDEF FPC}
+initialization
+  Application.Initialize;
+finalization
+  Application.Terminate;
+end.
+{$ENDIF}
+```
 
 Выполнив такие операции, мы в дальнейшем можем спокойно создавать формы
 внутри so.
@@ -433,101 +394,66 @@ TForm.Create, то форма создается нормально. В Lazarus 
 внутри программы или so создавать поток, в списке модулей проекта должен
 быть прописать модуль cthreads:
 
-{\$IFDEF UNIX}
-
-cthreads,
-
-{\$ENDIF}
+```
+  {$IFDEF UNIX}
+  cthreads,
+  {$ENDIF}
+```
 
 Таким образом все dpr-файлы были модифицированы типовым образом для
 того, чтобы в них заработал нужный нам функционал, в качестве примера
 привожу исходник dpr‑файла для плагина расчёта систем управления:
 
-> **{\$IFDEF FPC}**
->
-> **{\$MODE Delphi} //Это определение нужно, чтобы компилятор Free
-> Pascal включил режим**
->
-> **{\$ENDIF} //совместимости с Delphi.**
->
-> library mbtylib;
->
-> uses
->
-> **simmm,**
->
-> **{\$IFDEF UNIX}**
->
-> **cthreads, //сейчас этот модуль включен в simm.pas чтобы он был
-> подключен для всех библотек сразу**
->
-> **{\$ENDIF}**
->
-> Classes,
->
-> **{\$IFDEF FPC}**
->
-> **Interfaces,**
->
-> **{\$ENDIF}**
->
-> **Forms,**
->
-> MBTYTools in \'MBTYTools.pas\',
->
-> MBTYObjts in \'MBTYObjts.pas\',
->
-> uMBTYThread in \'uMBTYThread.pas\',
->
-> SpecBlocks in \'SpecBlocks.pas\',
->
-> InfoUnit in \'InfoUnit.pas\' {MBTYInfoForm},
->
-> MBTYtranslate in \'MBTYtranslate.pas\',
->
-> uDebugBlockForm in \'uDebugBlockForm.pas\' {DebugBlockForm};
->
-> {\$R \*.res}
->
-> //Тут мы храним картинки, которые у нас пойдут во вспомогательные
-> кнопку на тулбарах
->
-> {\$R mbtybuttons.res}
->
-> //Эта функция возвращает адрес структуры DllInfo
->
-> function GetEntry:Pointer;
->
-> begin
->
-> Result:=@DllInfo;
->
-> end;
->
-> exports
->
-> GetEntry name \'GetEntry\', //Функция получения адреса структуры
-> DllInfo
->
-> CreateObject name \'CreateObject\'; //Функция создания объекта
->
-> **{\$IFDEF FPC}**
->
-> **initialization**
->
-> **Application.Initialize;**
->
-> **finalization**
->
-> **Application.Terminate;**
->
-> **end.**
->
-> **{\$ENDIF}**
->
-> begin
->
-> end.
+```
+{$IFDEF FPC}
+  {$MODE Delphi}   //Это определение нужно, чтобы компилятор Free Pascal включил режим
+{$ENDIF}                  //совместимости с Delphi.
+                               
+library mbtylib;
+uses
+  simmm,
+  {$IFDEF UNIX}
+  cthreads, //сейчас этот модуль включен в simm.pas чтобы он был подключен для всех библотек сразу
+  {$ENDIF}  
+  Classes,
+  {$IFDEF FPC}
+  Interfaces,
+  {$ENDIF}
+  Forms,  
+  MBTYTools in 'MBTYTools.pas',
+  MBTYObjts in 'MBTYObjts.pas',
+  uMBTYThread in 'uMBTYThread.pas',
+  SpecBlocks in 'SpecBlocks.pas',
+  InfoUnit in 'InfoUnit.pas' {MBTYInfoForm},
+  MBTYtranslate in 'MBTYtranslate.pas',
+  uDebugBlockForm in 'uDebugBlockForm.pas' {DebugBlockForm};
+
+{$R *.res}
+
+//Тут мы храним картинки, которые у нас пойдут во вспомогательные кнопку на тулбарах
+{$R mbtybuttons.res}
+
+  //Эта функция возвращает адрес структуры DllInfo
+function  GetEntry:Pointer;
+begin
+  Result:=@DllInfo;
+end;
+
+exports
+  GetEntry name 'GetEntry',         //Функция получения адреса структуры DllInfo
+  CreateObject name 'CreateObject'; //Функция создания объекта
+
+{$IFDEF FPC}
+initialization
+  Application.Initialize;
+finalization
+  Application.Terminate;
+end.
+{$ENDIF}
+begin
+end.
+```
+
 
 Таким образом 2 базовые для текущей архитектуры программного комплекса
 проблемы получили своё решение и на Linux. Дальше оставалось
@@ -542,47 +468,30 @@ cthreads,
 
 Вариант для Windows - INTEL FORTRAN, конвенция stdcall:
 
-> TSbros = procedure(
->
-> **Nuzl,Nu,Ngran,Nmat,Nko,idmdt0,iadiab0: integer;** // +++ 31.03.2014
-> (iadiab0)
->
-> var El,Iel,Uzel,Iuzel,
->
-> NYZL,G,Nnas,Nzad,Nelu,
->
-> Gran,Granu,Ngu,Ngut,Propm,Nelm,
->
-> Zadv,Pump,Nzadp;
->
-> Dtau,DtauG,Htau,TauE: TPPRealType;
->
-> .......................
->
-> );stdcall;
->
-> Вариант для Linux gfortran с конвенцией cdecl:
->
-> //Версия для стыковки с версией для под GFortran
->
-> TSbros = procedure(
->
-> **var Nuzl,Nu,Ngran,Nmat,Nko,idmdt0,iadiab0: integer;** // +++
-> 31.03.2014 (iadiab0)
->
-> var El,Iel,Uzel,Iuzel,
->
-> NYZL,G,Nnas,Nzad,Nelu,
->
-> Gran,Granu,Ngu,Ngut,Propm,Nelm,
->
-> Zadv,Pump,Nzadp;
->
-> var Dtau,DtauG,Htau,TauE: TPPRealType;
->
-> ......................
->
-> );cdecl;
+```
+  TSbros = procedure(
+    Nuzl,Nu,Ngran,Nmat,Nko,idmdt0,iadiab0: integer;       // +++ 31.03.2014 (iadiab0)
+    var El,Iel,Uzel,Iuzel,
+      NYZL,G,Nnas,Nzad,Nelu,
+      Gran,Granu,Ngu,Ngut,Propm,Nelm,
+      Zadv,Pump,Nzadp;
+    Dtau,DtauG,Htau,TauE: TPPRealType;
+…………………..
+    );stdcall;
+
+Вариант  для Linux gfortran с конвенцией cdecl:
+
+   //Версия для стыковки с версией для под GFortran	
+  TSbros = procedure(
+    var Nuzl,Nu,Ngran,Nmat,Nko,idmdt0,iadiab0: integer;       // +++ 31.03.2014 (iadiab0)
+    var El,Iel,Uzel,Iuzel,
+      NYZL,G,Nnas,Nzad,Nelu,
+      Gran,Granu,Ngu,Ngut,Propm,Nelm,
+      Zadv,Pump,Nzadp;
+    var Dtau,DtauG,Htau,TauE: TPPRealType;
+………………….
+    );cdecl;
+```
 
 Из приведённого кода видно, что в Intel FORTRAN целочисленные параметры
 функции по умолчанию передаются в стек напрямую, а массивы и
@@ -613,80 +522,41 @@ r_keygen.c rc4c.c rsa.c md5c.c **-fpack-struct=1** -Wconversion
 в CodeTyphon Studio, чтобы понять, насколько будет модифицироваться код
 программы. Ниже приведена таблица, показывающая что где есть.
 
-+-----------------------+-----------------------+-----------------------+
 | Компонент             | Delphi                | CodeTyphon Studio     |
-+=======================+=======================+=======================+
+| ----------- | ----------- | ----------- |
 | TButton               | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | Tedit                 | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TjvComponentPanel     | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TactionList           | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TjvFormMagnet         | \+                    | \-                    |
-+-----------------------+-----------------------+-----------------------+
 | TcontrolBar           | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TtoolBar              | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
-| TjvOfficeColorPanel   | \+                    | \- есть аналог        |
-|                       |                       | ThexaColorPicker      |
-+-----------------------+-----------------------+-----------------------+
+| TjvOfficeColorPanel   | \+                    | \- есть аналог ThexaColorPicker       |
 | TcheckBox             | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TcomboBox             | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
-| TjvListBox            | \+                    | \- заменяем на        |
-|                       |                       | TListBox              |
-+-----------------------+-----------------------+-----------------------+
+| TjvListBox            | \+                    | \- заменяем на  TListBox      |
 | TeeChart Pro          | \+                    | \- штатно нет         |
-+-----------------------+-----------------------+-----------------------+
-| TjvSpinEdit           | \+                    | \- заменяем на        |
-|                       |                       | TspinEdit             |
-+-----------------------+-----------------------+-----------------------+
-| TjvFontComboBox       | \+                    | \- заменяем на        |
-|                       |                       | TplFontComboBox       |
-+-----------------------+-----------------------+-----------------------+
+| TjvSpinEdit           | \+                    | \- заменяем на  TspinEdit      |
+| TjvFontComboBox       | \+                    | \- заменяем на  TplFontComboBox      |
 | TBCEditor             | \+                    | -заменяем на TsynEdit |
-+-----------------------+-----------------------+-----------------------+
 | TvirtualStringTree    | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TPageControl          | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TTabControl           | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TPanel                | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TBitBtn               | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TJvButton             | \+                    | -   заменяем на       |
 |                       |                       |     TBitBtn           |
-+-----------------------+-----------------------+-----------------------+
 | TScrollBar            | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TFrame                | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
 | TJvListView           | \+                    | -   заменяем на       |
 |                       |                       |     TListView         |
-+-----------------------+-----------------------+-----------------------+
 | TSpeedButton          | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
-| Компоненты системных  | \+                    | \+                    |
-| диалогов              |                       |                       |
-+-----------------------+-----------------------+-----------------------+
+| Компоненты системных диалогов  | \+                    | \+                    |
 | GLScenes              | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
-| DSPack                | \+                    | -   есть другие       |
-|                       |                       |     компоненты для    |
-|                       |                       |     звука             |
-+-----------------------+-----------------------+-----------------------+
+| DSPack                | \+                    | -   есть другие компоненты для звука UOS       |
 | Indy                  | \+                    | \+                    |
-+-----------------------+-----------------------+-----------------------+
-| TPngImage             | \+                    | \+ заменяем на        |
-|                       |                       | TP                    |
-|                       |                       | ortableNetworkGraphic |
-+-----------------------+-----------------------+-----------------------+
+| TPngImage             | \+                    | \+ заменяем на  TPortableNetworkGraphic      |
+
 
 Вообще на текущий момент компоненты JVCL в этой сборке портированы
 практически все, поэтому часть замен можно и не делать. Анализ показал,
