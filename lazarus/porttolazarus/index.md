@@ -236,11 +236,13 @@ CodeTyphonIns\\installbin\\ScriptsLin\\ln_All_Functions.sh вписав в не�
 Для Alt Linux туда была добавлен текст, рядом с тем местом, где
 определяется установка для Ubuntu:
 
+```
 #\-\-\-\-\-\-\-\-\-\-\-- 100 Alt (apt-get compitible)\-\-\-\-\-\-\-\-\--
- elif \[ -f /etc/altlinux-release \] ; then
- vOSVerNum=100
- vOSDistribution=\"Alt Linux (apt-get compatible)\"
- vMultiArchDirPlan=200
+elif \[ -f /etc/altlinux-release \] ; then
+vOSVerNum=100
+vOSDistribution=\"Alt Linux (apt-get compatible)\"
+vMultiArchDirPlan=200
+``` 
 
 В AstraLinux среда разработки ставится без лишних телодвижений на данный
 момент (с sudo). Бинарные файлы скомпилированные под AltLinux 9
