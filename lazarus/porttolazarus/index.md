@@ -279,107 +279,103 @@ Synopse mORMot framework 2. Но он был не распределённый, 
 того, чтобы его использовать он был подключен через небольшой
 промежуточный модуль simmm.pas следующего содержания:
 
-> unit simmm;
->
-> // Прокладка для использования общего менеджера памяти
->
-> {\$IFNDEF DCAD}
->
-> {\$DEFINE IS_DLL_UNIT}
->
-> {\$ENDIF}
->
-> {\$IFDEF FPC}
->
-> {\$MODE Delphi}{\$H+}
->
-> {\$ENDIF}
->
-> interface
->
-> {\$IFDEF UNIX}
->
-> {\$IFDEF IS_DLL_UNIT}
->
-> uses **cthreads**, dl;
->
-> {\$ELSE}
->
-> uses **cthreads**, fpcx64mm;
->
-> {\$ENDIF}
->
-> {\$ELSE}
->
-> uses FastMM5;
->
-> {\$ENDIF}
->
-> implementation
->
-> {\$IFDEF UNIX}
->
-> {\$IFDEF IS_DLL_UNIT}
->
-> var
->
-> NewMM,
->
-> OldMM: TMemoryManager;
->
-> MainHandle: Pointer;
->
-> GetCommonMemoryManager: procedure(var aMemMgr: TMemoryManager);
->
-> {\$ENDIF}
->
-> {\$ENDIF}
->
-> initialization
->
-> {\$IFDEF UNIX}
->
-> {\$IFDEF IS_DLL_UNIT}
->
-> **MainHandle:=dlopen(nil, RTLD_LAZY);**
->
-> **GetCommonMemoryManager:=dlsym(MainHandle,\'GetMemoryManager\');**
->
-> **GetCommonMemoryManager(NewMM);**
->
-> **GetMemoryManager(OldMM);**
->
-> **SetMemoryManager(NewMM);**
->
-> {\$ENDIF}
->
-> {\$ELSE}
->
-> //Расшариваем менеджер памяти
->
-> if IsLibrary then
->
-> FastMM_AttemptToUseSharedMemoryManager
->
-> else
->
-> FastMM_ShareMemoryManager;
->
-> {\$ENDIF}
->
-> {\$IFDEF UNIX}
->
-> {\$IFDEF IS_DLL_UNIT}
->
-> finalization
->
-> SetMemoryManager(OldMM);
->
-> {\$ENDIF}
->
-> {\$ENDIF}
->
-> end.
+```
+ unit simmm;
+
+ // Прокладка для использования общего менеджера памяти
+
+ {\$IFNDEF DCAD}
+ {\$DEFINE IS_DLL_UNIT}
+ {\$ENDIF}
+ 
+ {\$IFDEF FPC}
+ {\$MODE Delphi}{\$H+}
+ {\$ENDIF}
+
+ interface
+
+ {\$IFDEF UNIX}
+
+ {\$IFDEF IS_DLL_UNIT}
+ uses **cthreads**, dl;
+ {\$ELSE}
+
+ uses **cthreads**, fpcx64mm;
+
+ {\$ENDIF}
+
+ {\$ELSE}
+
+ uses FastMM5;
+
+ {\$ENDIF}
+
+ implementation
+
+ {\$IFDEF UNIX}
+
+ {\$IFDEF IS_DLL_UNIT}
+
+ var
+
+ NewMM,
+
+ OldMM: TMemoryManager;
+
+ MainHandle: Pointer;
+
+ GetCommonMemoryManager: procedure(var aMemMgr: TMemoryManager);
+
+ {\$ENDIF}
+
+ {\$ENDIF}
+
+ initialization
+
+ {\$IFDEF UNIX}
+
+ {\$IFDEF IS_DLL_UNIT}
+
+ **MainHandle:=dlopen(nil, RTLD_LAZY);**
+
+ **GetCommonMemoryManager:=dlsym(MainHandle,\'GetMemoryManager\');**
+
+ **GetCommonMemoryManager(NewMM);**
+
+ **GetMemoryManager(OldMM);**
+
+ **SetMemoryManager(NewMM);**
+
+ {\$ENDIF}
+
+ {\$ELSE}
+
+ //Расшариваем менеджер памяти
+
+ if IsLibrary then
+
+ FastMM_AttemptToUseSharedMemoryManager
+
+ else
+
+ FastMM_ShareMemoryManager;
+
+ {\$ENDIF}
+
+ {\$IFDEF UNIX}
+
+ {\$IFDEF IS_DLL_UNIT}
+
+ finalization
+
+ SetMemoryManager(OldMM);
+
+ {\$ENDIF}
+
+ {\$ENDIF}
+
+ end.
+```
 
 Как видно из данного кода ключ DCAD определяется только в головном
 модуле, при этом мы в нём определяем как экспортируемую функцию
@@ -397,17 +393,19 @@ TForm.Create, то форма создается нормально. В Lazarus 
 оказалось всё несколько интереснее, т.к. для того, чтобы форма
 создалась, необходимо в so-библиотеке прописать в списке модулей:
 
-> .....
->
-> Classes,
->
-> **{\$IFDEF FPC}**
->
-> **Interfaces,**
->
-> **{\$ENDIF}**
->
-> Forms,
+```
+ .....
+
+ Classes,
+
+ **{\$IFDEF FPC}**
+
+ **Interfaces,**
+
+ **{\$ENDIF}**
+
+ Forms,
+```
 
 и определить инициализацию Application в секции initialization и
 завершение в finalization:
