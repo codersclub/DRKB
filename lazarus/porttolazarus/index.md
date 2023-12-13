@@ -1,7 +1,6 @@
 
 
-**Глава 1: Что мы имеем -- архитектура и особенности программного
-комплекса.**
+**Глава 1: Что мы имеем -- архитектура и особенности программного комплекса.**
 
 Данный пример портирования рассматривается на примере программного комплекса SimInTech.
 Главной составной частью программного комплекса является графическая оболочка.
@@ -531,29 +530,27 @@ r_keygen.c rc4c.c rsa.c md5c.c **-fpack-struct=1** -Wconversion
 | TjvFormMagnet         | \+                    | \-                    |
 | TcontrolBar           | \+                    | \+                    |
 | TtoolBar              | \+                    | \+                    |
-| TjvOfficeColorPanel   | \+                    | \- есть аналог ThexaColorPicker       |
+| TjvOfficeColorPanel   | \+                    | \+                    |
 | TcheckBox             | \+                    | \+                    |
 | TcomboBox             | \+                    | \+                    |
 | TjvListBox            | \+                    | \- заменяем на  TListBox      |
 | TeeChart Pro          | \+                    | \- штатно нет         |
-| TjvSpinEdit           | \+                    | \- заменяем на  TspinEdit      |
+| TjvSpinEdit           | \+                    | \- заменяем на  TSpinEdit      |
 | TjvFontComboBox       | \+                    | \- заменяем на  TplFontComboBox      |
-| TBCEditor             | \+                    | -заменяем на TsynEdit |
+| TBCEditor             | \+                    | -заменяем на TSynEdit |
 | TvirtualStringTree    | \+                    | \+                    |
 | TPageControl          | \+                    | \+                    |
 | TTabControl           | \+                    | \+                    |
 | TPanel                | \+                    | \+                    |
 | TBitBtn               | \+                    | \+                    |
-| TJvButton             | \+                    | -   заменяем на       |
-|                       |                       |     TBitBtn           |
+| TJvButton             | \+                    | -   заменяем на TBitBtn      |
 | TScrollBar            | \+                    | \+                    |
 | TFrame                | \+                    | \+                    |
-| TJvListView           | \+                    | -   заменяем на       |
-|                       |                       |     TListView         |
+| TJvListView           | \+                    | -   заменяем на TListView      |
 | TSpeedButton          | \+                    | \+                    |
 | Компоненты системных диалогов  | \+                    | \+                    |
 | GLScenes              | \+                    | \+                    |
-| DSPack                | \+                    | -   есть другие компоненты для звука UOS       |
+| DSPack                | \+                    | -   UOS       |
 | Indy                  | \+                    | \+                    |
 | TPngImage             | \+                    | \+ заменяем на  TPortableNetworkGraphic      |
 
@@ -583,8 +580,7 @@ dpr и разные include-ы) в формат UTF8 BOM ! Это строго �
 Второе -- это с формирования файлов проектов (ctpr) под данную среду
 разработки. Первоначально это было сделано при помощи функции
 
-![](media/image2.png){width="5.160416666666666in"
-height="2.634027777777778in"}
+![](image3.png)
 
 В дальнейшем ctpr-файлы, проектов для CodeTyphon Studio просто
 копировались для разных модулей с изменением внутри этого xml-файла
@@ -600,30 +596,24 @@ height="2.634027777777778in"}
 первым делом вносим модификации в dpr-файл проекта графической оболочки
 -- добавляем с условной компиляцией модули:
 
-> **simmm,**
->
-> **{\$IFDEF UNIX}**
->
-> **cthreads,**
->
-> **{\$ENDIF }**
->
-> **{\$IFDEF FPC}**
->
-> **Interfaces,**
->
-> **{\$ENDIF}**
+```
+  simmm,
+  {$IFDEF UNIX}
+  cthreads,
+  {$ENDIF }
+  {$IFDEF FPC}
+  Interfaces,
+  {$ENDIF}
+```
 
 Делаем экспорт функции получения менеджера памяти головного модуля:
 
-> **{\$IFDEF FPC}**
->
-> **exports**
->
-> **GetMemoryManager; // это надо чтобы общий менеджер памяти увидели
-> SO-шки**
->
-> **{\$ENDIF}**
+```
+{$IFDEF FPC}
+exports
+  GetMemoryManager;  // это надо чтобы общий менеджер памяти увидели SO-шки
+{$ENDIF}
+```
 
 и убираем в условную компиляцию модуль подключения COM-сервера и функций
 для работы с Excel и если есть что-то ещё системно-зависимое.
@@ -633,34 +623,30 @@ height="2.634027777777778in"}
 проделать во всех модулях -- это добавить в заголовок юнита вот такое
 определение, чтобы включался режим совместимости:
 
-> **{\$IFDEF FPC}**
->
-> **{\$MODE Delphi}{\$H+}**
->
-> **{\$ELSE}**
->
-> **{\$DEFINE Windows}**
->
-> **{\$ENDIF}**
+```
+{$IFDEF FPC}
+ {$MODE Delphi}{$H+}
+{$ELSE}
+ {$DEFINE Windows}
+{$ENDIF}
+```
 
-Я в курсе что это также включается в настройках проекте в CodeTyphon
-Studio, но некоторые модули в такой режим не переводились.
-
+Также эти дефайны можно включить и в настройказ проекта.
 Потом были обвязаны условной компиляцией все системно-зависимые модули в
 uses -- в первую очередь Windows и Messages:
 
-> {\$IFDEF FPC} FileUtil,{\$ELSE} Windows,{\$ENDIF}
+```
+{\$IFDEF FPC} FileUtil,{\$ELSE} Windows,{\$ENDIF}
+```
 
 и введены в базовые модули программы недостающие элементарные типы:
 
-> **{\$IFDEF FPC}**
->
-> **PRect = \^TRect;**
->
-> **{\$ENDIF}**
->
-> **TWindowsPointArray = array of {\$IFNDEF
-> FPC}Windows.{\$ENDIF}TPoint;**
+```
+  {$IFDEF FPC}
+  PRect = ^TRect;
+  {$ENDIF}
+  TWindowsPointArray = array of {$IFNDEF FPC}Windows.{$ENDIF}TPoint;
+```
 
 Дальше оказалось, что для обеспечения бинарной совместимости при
 сохранении и чтении файлов необходимо учитывать то, что **размеры
@@ -670,16 +656,13 @@ uses -- в первую очередь Windows и Messages:
 **В Delphi -- 1 байт**, в **FreePascal -- 4**, что касалось
 перечисление, например, стилей линий или заливок:
 
-> //Размеры некоторых типов данных
->
-> SizeOfTColor = 4;
->
-> SizeOfTPenStyle = 1; //SizeOf(TPenStyle); //В FPC размеры enum 4 байта
-> !
->
-> SizeOfTBrushStyle = 1; //SizeOf(TBrushStyle);
->
-> SizeOfTDataMode = 1; //SizeOf(TDataMode);
+```
+ //Размеры некоторых типов данных
+ SizeOfTColor      = 4;
+ SizeOfTPenStyle   = 1;    //SizeOf(TPenStyle);     //В FPC размеры enum 4 байта !
+ SizeOfTBrushStyle = 1;    //SizeOf(TBrushStyle);
+ SizeOfTDataMode   = 1;    //SizeOf(TDataMode);
+```
 
 Поэтому везде в коде там где размеры типов в компиляторах различались
 было закомментировано использование SizeOf и размер задан числом
@@ -688,84 +671,57 @@ uses -- в первую очередь Windows и Messages:
 Также были определены недостающие функции, которые присутствовали в
 модуле Windows:
 
-> {\$IfDef FPC}
->
-> procedure ZeroMemory(const Data: pointer; Size: integer); inline;
->
-> begin
->
-> FillChar(Data\^,Size,0);
->
-> end;
->
-> {\$EndIf}
+```
+{$IfDef FPC}
+procedure ZeroMemory(const Data: pointer; Size: integer); inline;
+begin
+  FillChar(Data^,Size,0);
+end;
+{$EndIf}
+```
 
 Ну и соответственно, те места, которые вызывали функции из Windows были
 заменены эквивалентами из кросс-платформенных модулей:
 
-{\$IfDef fpc}CreateDir(newdir){\$else}CreateDirectory(PChar(newdir),nil)
-and (GetLastError \<\> ERROR_ALREADY_EXISTS){\$endif}
+```
+{$IfDef fpc}CreateDir(newdir){$else}CreateDirectory(PChar(newdir),nil) and (GetLastError <> ERROR_ALREADY_EXISTS){$endif}
+```
 
 Также были переделаны функции сохранения и считывания строк из потока
 для обеспечения возможности загрузки данных из Windows версии, т.к.
 формат строк в Lazarus\\CodeTyphon -- UTF8 по умолчанию, а в современном
 Delphi -- UTF16:
 
-> procedure LoadStr(var S:string;Stream:TStream);
->
-> var N: cardinal;
->
-> **UniString: UnicodeString;**
->
-> procedure DoLoadAsAnsi;
->
-> var tmps: ansistring;
->
-> begin
->
-> //старая версия - ansi
->
-> SetLength(tmps,N);
->
-> if N\>0 then Stream.Read(Pointer(tmps)\^, N);
->
-> S:=tmps;
->
-> end;
->
-> begin
->
-> with Stream do begin
->
-> Read(N,SizeOfInt);
->
-> if (N and \$80000000) \<\> 0 then begin
->
-> **//юникод**
->
-> **N:=N and (not \$80000000);**
->
-> **SetLength(S,N);**
->
-> **SetLength(UniString,N);**
->
-> **if N \> 0 then begin**
->
-> **Stream.Read(Pointer(UniString)\^, N\*2);**
->
-> **S:=UTF8Encode(UniString);**
->
-> **end;**
->
-> end
->
-> else
->
-> DoLoadAsAnsi;
->
-> end
->
-> end;
+```
+procedure   LoadStr(var   S:string;Stream:TStream);
+  var N: cardinal;
+      UniString: UnicodeString;
+  procedure DoLoadAsAnsi;
+   var tmps: ansistring;
+  begin
+     //старая версия - ansi
+     SetLength(tmps,N);
+     if N>0 then Stream.Read(Pointer(tmps)^, N);
+     S:=tmps;
+  end;
+begin
+ with Stream do begin
+   Read(N,SizeOfInt);
+   if (N and $80000000) <> 0 then begin
+     //юникод
+     N:=N and (not $80000000);
+     SetLength(S,N);
+     SetLength(UniString,N);
+     if N > 0 then begin
+        Stream.Read(Pointer(UniString)^, N*2);
+        S:=UTF8Encode(UniString);
+     end;
+   end
+   else
+     DoLoadAsAnsi;
+ end
+end;
+```
 
 При этом надо обратить внимание, что эта функция эволюционировала ещё с
 не-юникодной версии Delphi, и соответственно, когда программа была
@@ -783,20 +739,23 @@ Delphi -- UTF16:
 
 В самый верх модуля, как и у всех вставляем:
 
-> {\$IFDEF FPC}
->
-> **{\$MODE Delphi}{\$H+}**
->
-> {\$ENDIF}
+```
+{$IFDEF FPC}
+ {$MODE Delphi}{$H+}
+{$ENDIF}
+```
 
 В uses обвязываем системно-зависимые модули условной компиляцией:
 
-> **{\$IFDEF FPC} LCLType, LCLIntf, LMessages,
-> GraphType,{\$ELSE}**Windows, Messages,{\$ENDIF}
+```
+{$IFDEF FPC} LCLType, LCLIntf, LMessages, GraphType,{$ELSE}Windows, Messages,{$ENDIF}
+```
 
 Модули:
 
+```
 SysUtils, Classes, Graphics, Controls, Forms, Dialogs, и другие свои
+```
 
 оставляем как есть, но если там префикс VCL. -- то его надо убрать !
 
@@ -805,31 +764,21 @@ SysUtils, Classes, Graphics, Controls, Forms, Dialogs, и другие свои
 формы с расширением frm (в данном случае там сделан также выбор и по
 языку интерфейса):
 
-> {\$IFDEF ENG}
->
-> {\$IFnDEF FPC}
->
-> {\$R \*.eng.dfm}
->
-> {\$ELSE}
->
-> {\$R \*.eng.frm}
->
-> {\$ENDIF}
->
-> {\$ELSE}
->
-> {\$IFnDEF FPC}
->
-> {\$R \*.dfm}
->
-> {\$ELSE}
->
-> {\$R \*.frm}
->
-> {\$ENDIF}
->
-> {\$ENDIF}
+```
+{$IFDEF ENG}
+{$IFnDEF FPC}
+{$R *.eng.dfm}
+{$ELSE}
+{$R *.eng.frm}
+{$ENDIF}
+{$ELSE}
+{$IFnDEF FPC}
+  {$R *.dfm}
+{$ELSE}
+  {$R *.frm}
+{$ENDIF}
+{$ENDIF}
+```
 
 Дальше необходимо перенести файл конфигурации формы из Delphi (dfm) в
 другой формат CodeTyphon (frm). Для этого в Lazarus\\Code Typhon
@@ -840,8 +789,7 @@ SysUtils, Classes, Graphics, Controls, Forms, Dialogs, и другие свои
 слово двоичный -- с текстовым форматом dfm-файлов эта утилита также
 прекрасно работает:
 
-![](media/image3.png){width="5.157638888888889in"
-height="2.6840277777777777in"}
+![](image4.png)
 
 и выбираем dfm файл конвертируемого модуля. После этого получаем
 сообщением об «ошибке» и не обращаем на него никакого внимания.
@@ -856,8 +804,7 @@ height="2.6840277777777777in"}
 пробуем сделать «Переключить форму\\модуль (F12)» ещё раз пока всё не
 станет хорошо и не появится дизайн формы:
 
-![](media/image4.png){width="5.019389763779528in"
-height="3.437115048118985in"}
+![](image5.png)
 
 В некоторых случаях, чтобы упростить задачу и не искать аналог описание
 компонента просто вырезалось из frm-файла в текстовом редакторе и
@@ -871,10 +818,10 @@ height="3.437115048118985in"}
 Там где имена классов компонентов не совпадают -- в исходном тексте
 класса формы делаем условную компиляцию, например так:
 
-> cProgressBar: **{\$IFDEF
-> FPC}TProgressBar{\$ELSE}**TJvGradientProgressBar{\$ENDIF};
->
-> cMsgView: **{\$IFDEF FPC}TListBox{\$ELSE}**TJvListBox{\$ENDIF};
+```
+    cProgressBar: {$IFDEF FPC}TProgressBar{$ELSE}TJvGradientProgressBar{$ENDIF};
+    cMsgView:  {$IFDEF FPC}TListBox{$ELSE}TJvListBox{$ENDIF};
+```
 
 Сконвертировав подобным образом модуль с формой жмём дальше на
 компиляцию и смотрим, что интересного нам напишет компилятор ещё.
@@ -896,14 +843,16 @@ height="3.437115048118985in"}
 то при загрузке библиотеки к имени файла следует обязательно добавить
 путь к главному исполняемому файлу если модули лежат рядом в ним:
 
-fLibHandle:=LoadLibrary(**{\$IFNDEF
-FPC}PChar{\$ENDIF}(ExtractFilePath({\$IFDEF FPC} ParamStr(0) {\$ELSE}
-GetModuleName(HInstance) {\$ENDIF})**+rsalib_name));
+```
+fLibHandle:=LoadLibrary({$IFNDEF FPC}PChar{$ENDIF}(ExtractFilePath({$IFDEF FPC} ParamStr(0) {$ELSE} GetModuleName(HInstance) {$ENDIF})+rsalib_name));
+```
 
 Кроме этого если хендл SO был декларирован как THandle необходимо
 вставить условную компиляцию:
 
-Var fLibHandle: {\$IFDEF FPR}TLibHandle{\$ELSE}THandle{\$ENDIF};
+```
+Var fLibHandle: {$IFDEF FPR}TLibHandle{$ELSE}THandle{$ENDIF};
+```
 
 Так как оказалось что в Linux типы этих хендлов не совпадают.
 
@@ -912,31 +861,19 @@ Var fLibHandle: {\$IFDEF FPR}TLibHandle{\$ELSE}THandle{\$ENDIF};
 прокладками из модуля syncobjs, который присутствует как в Free Pascal
 так и в Delphi (классы TCriticalSection и TEvent соотвественно):
 
-  -----------------------------------------------------------------------
-  WinAPI функция                      Класс и метод
-  ----------------------------------- -----------------------------------
-  RTL_CRITICAL_SECTION                TCriticalSection
-
-  InitializeCriticalSection           TCriticalSection.Create
-
-  DeleteCriticalSection               TCriticalSection.Free
-
-  EnterCriticalSection                TCriticalSection.Enter
-
-  LeaveCriticalSection                TCriticalSection.Leave
-
-  hEvent                              TEvent
-
-  CreateEvent                         TEvent.Create
-
-  CloseHandle(hEvent)                 TEvent.Free
-
-  SetEvent                            TEvent.SetEvent
-
-  ResetEvent                          TEvent.ResetEvent
-
-  WaitForSingleObjects                TEvent.WaitFor
-  -----------------------------------------------------------------------
+| WinAPI функция              | Класс и метод       |
+| ----------- | ----------- |
+| RTL_CRITICAL_SECTION   |             TCriticalSection     |
+|  InitializeCriticalSection  |         TCriticalSection.Create |
+|  DeleteCriticalSection   |            TCriticalSection.Free  |
+|  EnterCriticalSection    |            TCriticalSection.Enter  |
+|  LeaveCriticalSection    |            TCriticalSection.Leave  |
+|  hEvent                  |            TEvent       |
+|  CreateEvent             |            TEvent.Create  | 
+|  CloseHandle(hEvent)     |            TEvent.Free   |
+|  SetEvent                |            TEvent.SetEvent  |
+|  ResetEvent              |           TEvent.ResetEvent  |
+|  WaitForSingleObjects    |            TEvent.WaitFor   |
 
 Замену функций EnterCriticalSection... на класс TCriticalSection и т.п.
 категорически **рекомендуется** произвести ! И крайне не желательно при
@@ -947,58 +884,32 @@ Var fLibHandle: {\$IFDEF FPR}TLibHandle{\$ELSE}THandle{\$ENDIF};
 условной компиляцией. Запуск процессов сделан через вызов system,
 использовать exec тут нежелательно:
 
-> **uses {\$IFDEF Windows} Windows, {\$ELSE} LCLType, unix,
-> Baseunix,{\$ENDIF} Classes, SysUtils;**
->
-> **.........**
->
-> **//Юниксовые варианты порождения процессов**
->
-> **function WinExecAndWait32(const FileName:string; Visibility :
-> integer = 0;**
->
-> **TimeOut: cardinal = {\$IFDEF
-> Windows}INFINITE{\$ELSE}maxLongInt{\$ENDIF}):longword; var ss:
-> AnsiString;**
->
-> **begin**
->
-> **ss := FileName;**
->
-> **Result:=fpSystem( ss );**
->
-> **end;**
->
-> **function MyWinExec(const S: string;aShowMode: cardinal):cardinal;**
->
-> **var ss : ansistring;**
->
-> **begin**
->
-> **{\$IFDEF Windows}**
->
-> **ss:=S;**
->
-> **Result:=Windows.WinExec(PAnsiChar(ss),aShowMode);**
->
-> **{\$ELSE}**
->
-> **// Делаем выполнение системной команды БЕЗ ожидания - для этого в
-> конце добавляем &**
->
-> **// Рекомендация: для порождения внешних вызовов пользовать fpSystem
-> и не форкать процесс ибо**
->
-> **// это ведёт к проблемам с отладчиком и последующим закрытием
-> программы.**
->
-> **ss := S + \' &\';**
->
-> **Result:=fpSystem( ss );**
->
-> **{\$ENDIF}**
->
-> **end;**
+```
+uses {$IFDEF Windows} Windows, {$ELSE} LCLType, unix, Baseunix,{$ENDIF} Classes, SysUtils;
+………
+  //Юниксовые варианты порождения процессов
+function  WinExecAndWait32(const FileName:string; Visibility : integer = 0;
+                          TimeOut: cardinal = {$IFDEF Windows}INFINITE{$ELSE}maxLongInt{$ENDIF}):longword; var ss: AnsiString;
+begin
+  ss := FileName;
+  Result:=fpSystem( ss );
+end;
+
+function  MyWinExec(const S: string;aShowMode: cardinal):cardinal;
+ var ss : ansistring;
+begin
+  {$IFDEF Windows}
+     ss:=S;
+     Result:=Windows.WinExec(PAnsiChar(ss),aShowMode);
+  {$ELSE}
+     // Делаем выполнение системной команды БЕЗ ожидания - для этого в конце добавляем &
+     // Рекомендация: для порождения внешних вызовов пользовать fpSystem и не форкать процесс ибо
+     // это ведёт к проблемам с отладчиком и последующим закрытием программы.
+     ss := S + ' &';
+     Result:=fpSystem( ss );
+  {$ENDIF}
+end;
+```
 
 \- движок двумерной графики Direct2D.
 
@@ -1028,28 +939,23 @@ TCanvas -- они идентичны или же попробовать сдел
 
 В декларации класса формы:
 
-**ShemePanel: {\$IFDEF FPC}TD2Scene{\$ELSE}TPanel{\$ENDIF};**
-
-**PaintBox: {\$IFDEF FPC}TD2Image{\$ELSE}TPaintBox{\$ENDIF};
-//Отрисовочная поверхность**
+```
+ShemePanel: {$IFDEF FPC}TD2Scene{$ELSE}TPanel{$ENDIF};
+PaintBox: {$IFDEF FPC}TD2Image{$ELSE}TPaintBox{$ENDIF};                          //Отрисовочная поверхность
+```
 
 При выделении канвы для отрисовки
 
-**{\$IFDEF FPC}**
-
-**PaintBox.Bitmap.SetSize(ShemePanel.Width,ShemePanel.Height);**
-
-**PaintBox.OnPaint:=DoPaintPB;**
-
-**Canvas:=TDirect2DCanvas.Create(PaintBox.Bitmap.Canvas);**
-
-**Canvas.FBaseImageObject:=PaintBox;**
-
-**{\$ELSE}**
-
-Canvas:=TMyD2Canvas.Create(ShemePanel.Handle);
-
-{\$ENDIF}
+```
+    {$IFDEF FPC}
+    PaintBox.Bitmap.SetSize(ShemePanel.Width,ShemePanel.Height);
+    PaintBox.OnPaint:=DoPaintPB;
+    Canvas:=TDirect2DCanvas.Create(PaintBox.Bitmap.Canvas);
+    Canvas.FBaseImageObject:=PaintBox;
+    {$ELSE}
+    Canvas:=TMyD2Canvas.Create(ShemePanel.Handle);
+    {$ENDIF}
+```
 
 Были также переопределены перехватчики событий мыши, поскольку ORCA2D
 координаты возвращало в single.
@@ -1063,10 +969,9 @@ Canvas:=TMyD2Canvas.Create(ShemePanel.Handle);
 **сделать вызов отрисовки через вызов ShemePanel.Repaint** вместо
 прямого вызова рисования как для Direct2D варианта.
 
-**Глава 4: Загадочный пиздец с обработкой исключений в Linux внутри
-динамически загружаемых библиотек.**
+**Глава 4: Загадки с обработкой исключений в Linux внутри динамически загружаемых библиотек.**
 
-Всё было хорошо, но однажды мне захотелось добавить в линуксовой
+Всё было хорошо, но однажды захотелось добавить в линуксовой
 виртуалке ядер программы, чтобы она шевелилась пошустрее и тут началось
 нечто загадочное -- стали заваливаться пакеты проектов (т.е. когда
 внутри программы параллельно на разных потоках считают несколько задач с
@@ -1080,7 +985,7 @@ Canvas:=TMyD2Canvas.Create(ShemePanel.Handle);
 проекта common в загрузке. Запустил - заваливается через 15 сек. **Начал
 смотреть что не так и обнаружил что если в DLL присутсвует код обработки
 исключений try except finally то когда в такую функцию входят
-одновременно 2 потока то происходит пиздец.** Начал смотреть
+одновременно 2 потока то происходит исключение.** Начал смотреть
 ассемблерный код обработки исключений в Linux (в винде он совсем другой)
 и оказалось, что try except при входе в секцию вызывает функцию записи
 указателя в связанный список состоящий из стековых переменных но при
@@ -1095,66 +1000,43 @@ Canvas:=TMyD2Canvas.Create(ShemePanel.Handle);
 существовать в одном экземпляре внутри процесса. Соотвественно при
 многопоточном режиме будет оно глючить не пойми где и молча. После того
 как я во ВСЕХ модулях на паскале подключил первым модулем cthreads всё
-чудесным образом заработало без сбоев.** От така хуйня малята ! Для
+чудесным образом заработало без сбоев. Для
 упрощения задачи я включил cthreads сразу в модуль simm который
 предоставляет модулям общий менеджер памяти.
 
 Вот этот код виноват был в модуле except.inc в RTL Free Pascal:
 
-**{\$ifdef FPC_HAS_FEATURE_THREADING}**
-
-**ThreadVar**
-
-**{\$else FPC_HAS_FEATURE_THREADING}**
-
-**Var**
-
-**{\$endif FPC_HAS_FEATURE_THREADING}**
-
-**ExceptAddrStack : PExceptAddr;**
-
-**ExceptObjectStack : PExceptObject;**
-
-**ExceptTryLevel : ObjpasInt;**
-
-**\[16:52, 08.12.2020\] Константин: Function fpc_PushExceptAddr (Ft:
-{\$ifdef CPU16}SmallInt{\$else}Longint{\$endif};\_buf,\_newaddr :
-pointer): PJmp_buf ;**
-
-**\[Public, Alias : \'FPC_PUSHEXCEPTADDR\'\];compilerproc;**
-
-**var**
-
-**\_ExceptAddrstack : \^PExceptAddr;**
-
-**begin**
-
-**{\$ifdef excdebug}**
-
-**writeln (\'In PushExceptAddr\');**
-
-**{\$endif}**
-
-**\_ExceptAddrstack:=@ExceptAddrstack;**
-
-**PExceptAddr(\_newaddr)\^.Next:=\_ExceptAddrstack\^;**
-
-**\_ExceptAddrStack\^:=PExceptAddr(\_newaddr);**
-
-**PExceptAddr(\_newaddr)\^.Buf:=PJmp_Buf(\_buf);**
-
-**PExceptAddr(\_newaddr)\^.FrameType:=ft;**
-
-**result:=PJmp_Buf(\_buf);**
-
-**end;**
+```
+{$ifdef FPC_HAS_FEATURE_THREADING}
+ThreadVar
+{$else FPC_HAS_FEATURE_THREADING}
+Var
+{$endif FPC_HAS_FEATURE_THREADING}
+  ExceptAddrStack   : PExceptAddr;
+  ExceptObjectStack : PExceptObject;
+  ExceptTryLevel    : ObjpasInt;
+[16:52, 08.12.2020] Константин: Function fpc_PushExceptAddr (Ft: {$ifdef CPU16}SmallInt{$else}Longint{$endif};_buf,_newaddr : pointer): PJmp_buf ;
+  [Public, Alias : 'FPC_PUSHEXCEPTADDR'];compilerproc;
+var
+  _ExceptAddrstack : ^PExceptAddr;
+begin
+{$ifdef excdebug}
+  writeln ('In PushExceptAddr');
+{$endif}
+  _ExceptAddrstack:=@ExceptAddrstack;
+  PExceptAddr(_newaddr)^.Next:=_ExceptAddrstack^;
+  _ExceptAddrStack^:=PExceptAddr(_newaddr);
+  PExceptAddr(_newaddr)^.Buf:=PJmp_Buf(_buf);
+  PExceptAddr(_newaddr)^.FrameType:=ft;
+  result:=PJmp_Buf(_buf);
+end;
+```
 
 Естественно информации о том, что без cthreads под линуксом threadvar-ы
 не работают, нету нихрена нигде вообще, ни в интернете, ни в
 документации. Поэтому возможно кому-то пригодится этот документ.
 
-**Глава 5. Странности при завершении работы программы или пиздец со
-строками.**
+**Глава 5. Странности при завершении работы программы и проблемы со строками.**
 
 После того, как была прояснена особенность с обработкой исключений в
 многопоточном режиме в компиляторе FreePascal программа в общем и целом
@@ -1178,12 +1060,15 @@ InterfaceUnit.pas).
 
 Данная функция была задекларирована следующим образом:
 
-AddMenuItem:function(Parent: Pointer;**const Caption:string**;OnClick:
-TNotifyEvent;Tag:NativeInt):Pointer;
+```
+AddMenuItem:function(Parent: Pointer;const Caption:string;OnClick: TNotifyEvent;Tag:NativeInt):Pointer;
+```
 
 И вызывалась в коде плагина как
 
-DllInfo.Main.AddMenuItem(DllInfo.Main.Menu,**txtTppTools**,nil,0);
+```
+DllInfo.Main.AddMenuItem(DllInfo.Main.Menu,txtTppTools,nil,0);
+```
 
 где txtTppTools -- это строковая константа
 
@@ -1214,30 +1099,27 @@ FreePascal при присвоении строк может делать это
 Соответственно, интерфейсные функции со строковыми аргументами были
 переделаны на использование PChar в качестве входного параметра:
 
-AddMenuItem:function(Parent: Pointer;Caption:**PChar**;OnClick:
-TNotifyEvent;Tag:NativeInt):Pointer;
+```
+AddMenuItem:function(Parent: Pointer;Caption:PChar;OnClick: TNotifyEvent;Tag:NativeInt):Pointer;
+InsertMenuItem:function(Parent: Pointer;Caption:PChar;OnClick: TNotifyEvent;Tag,AIndex:integer):Pointer;
+InsertMenuItem:function(Parent: Pointer;Caption:PChar;OnClick: TNotifyEvent;Tag,AIndex:integer):Pointer;
+SetAlias: function(aAlias,aAliasValue: PChar;fReplace: boolean):boolean;
 
-InsertMenuItem:function(Parent: Pointer;Caption:**PChar**;OnClick:
-TNotifyEvent;Tag,AIndex:integer):Pointer;
-
-InsertMenuItem:function(Parent: Pointer;Caption:**PChar**;OnClick:
-TNotifyEvent;Tag,AIndex:integer):Pointer;
-
-SetAlias: function(aAlias,aAliasValue: **PChar**;fReplace:
-boolean):boolean;
+```
 
 Также была добавлена интерфейсная функция для безопасного присвоения
 имени компонента внутри головного модуля:
 
-SetComponentName: procedure(aComponentPtr: Pointer;aName: **PChar**);
+```
+SetComponentName:  procedure(aComponentPtr: Pointer;aName: PChar);
+```
 
 На замену конструкции TComponent(aComponentPtr).Name := aName
 
 **После замены в плагинах типа строкового аргумента с const ... : string
 на PChar проблемы связанные с выгрузкой плагинов были устранены.**
 
-**Глава 6. Особенности некоторых компонентов под Linux в библиотеке
-LCL**
+**Глава 6. Особенности некоторых компонентов под Linux в библиотеке LCL**
 
 У стандартных компонентов LCL существует разница в реализации по
 сравнению с компонентами VCL, связанная с применением некоторых
@@ -1252,20 +1134,14 @@ LCL**
     список, фрагмент кода как надо делать для FPC и как было для Delphi
     приведён ниже:
 
-{\$IFDEF FPC}
-
-**TCComps.Tabs.Add( TranslationEngine.TranslateWordFunc(
-MainLibrary.Tabs\[i\], TID_PANELBUTTONS) );**
-
-**TShowedTabList.Add(Tab);**
-
-{\$ELSE}
-
-TCComps.Tabs.AddObject(
-TranslationEngine.TranslateWordFunc(MainLibrary.Tabs\[i\],TID_PANELBUTTONS
-),Tab);
-
-{\$ENDIF}
+```
+{$IFDEF FPC}
+  TCComps.Tabs.Add( TranslationEngine.TranslateWordFunc(  MainLibrary.Tabs[i], TID_PANELBUTTONS) );
+  TShowedTabList.Add(Tab);
+{$ELSE}
+  TCComps.Tabs.AddObject( TranslationEngine.TranslateWordFunc(MainLibrary.Tabs[i],TID_PANELBUTTONS ),Tab);
+{$ENDIF}
+```
 
 2.  От TControlBar лучше отказаться и заменить его на TToolBar -- это
     может быть сделано условной компиляцией и заменой имени класса в
@@ -1275,22 +1151,18 @@ TranslationEngine.TranslateWordFunc(MainLibrary.Tabs\[i\],TID_PANELBUTTONS
     (используется при переключении с режима редактора в режим
     видеокадра) следует пересоздать окно:
 
-**{\$IFDEF FPC}**
+```
+        {$IFDEF FPC}
+        ActiveEditor.DefRect:=ActiveEditor.BoundsRect;
+        ActiveEditor.PaintTimer.Enabled:=False;
+        {$ENDIF}
 
-**ActiveEditor.DefRect:=ActiveEditor.BoundsRect;**
+        ActiveEditor.BorderStyle:=bsNone;
 
-**ActiveEditor.PaintTimer.Enabled:=False;**
-
-**{\$ENDIF}**
-
-ActiveEditor.BorderStyle:=bsNone;
-
-**{\$IFDEF FPC}**
-
-**RecreateWnd(ActiveEditor); //Вот без этого в линуксе бордюры
-динамически не скрываются**
-
-**{\$ENDIF}**
+        {$IFDEF FPC}
+        RecreateWnd(ActiveEditor);   //Вот без этого в линуксе бордюры динамически не скрываются
+        {$ENDIF}
+```
 
 4.  **Динамическая смена бордюра окон на безрамочные может вызывать сбои
     LCL и графической системы (в случае когда было окно bsSizeable а
@@ -1300,93 +1172,60 @@ ActiveEditor.BorderStyle:=bsNone;
     стиль окна можно путём override для функции CreateParams оконного
     класса:
 
-**procedure TEditForm.CreateParams(var Params :TCreateParams);**
-
-**begin**
-
-**// Тут мы проверяем и если надо применяем флаг для того, чтобы
-инициализировать окно редактора без бордюров !**
-
-**if global_projects_window_no_border then begin**
-
-**{\$IFDEF FPC}**
-
-**FFormBorderStyle:=bsNone;**
-
-**{\$ELSE}**
-
-**//Такой фокус позволяем присвоить FBorderStyle напрямую без
-RecreateWindow на этапе создания окна**
-
-**TFormBorderStyle((@BorderStyle)\^):=bsNone;**
-
-**{\$ENDIF}**
-
-**end;**
+```
+procedure TEditForm.CreateParams(var Params :TCreateParams);
+begin
+  // Тут мы проверяем и если надо применяем флаг для того, чтобы инициализировать окно редактора без бордюров !
+  if global_projects_window_no_border then begin
+     {$IFDEF FPC}
+     FFormBorderStyle:=bsNone;
+     {$ELSE}
+     //Такой фокус позволяем присвоить FBorderStyle напрямую без RecreateWindow на этапе создания окна
+     TFormBorderStyle((@BorderStyle)^):=bsNone;
+     {$ENDIF}
+  end;
+```
 
 5.  При изменении размера буфера отрисовки ссылку на канву следует
     обновить:
 
+```
 procedure TEditForm.SetBufferSize;
-
-{\$IFNDEF FPC}
-
-var NewSize: D2D_SIZE_U;
-
-{\$ENDIF}
-
+ {$IFNDEF FPC}
+ var NewSize: D2D_SIZE_U;
+ {$ENDIF}
 begin
-
-GInfo.Rect:=ShemePanel.ClientRect;
-
-**{\$IFDEF FPC}**
-
-**DoLockDraw;**
-
-**PaintBox.Bitmap.SetSize(W,H);**
-
-**GInfo.Canvas.Render:=PaintBox.Bitmap.Canvas;**
-
-**DoUnLockDraw;**
-
-**{\$ELSE}**
-
-if (GInfo.Canvas \<\> nil) and (not GInfo.DevHandle) then begin
-
-NewSize.width:=W;
-
-NewSize.height:=H;
-
-DoLockDraw;
-
-ID2D1HwndRenderTarget(GInfo.Canvas.RenderTarget).Resize(NewSize);
-
-DoUnLockDraw;
-
+  GInfo.Rect:=ShemePanel.ClientRect;
+  {$IFDEF FPC}
+  DoLockDraw;
+  PaintBox.Bitmap.SetSize(W,H);
+  GInfo.Canvas.Render:=PaintBox.Bitmap.Canvas;
+  DoUnLockDraw;
+  {$ELSE}
+  if (GInfo.Canvas <> nil) and (not GInfo.DevHandle) then begin
+     NewSize.width:=W;
+     NewSize.height:=H;
+     DoLockDraw;
+     ID2D1HwndRenderTarget(GInfo.Canvas.RenderTarget).Resize(NewSize);
+     DoUnLockDraw;
+  end;
+  {$ENDIF}
 end;
-
-{\$ENDIF}
-
-end;
+```
 
 6.  **Перерисовку канвы после изменения размеров компонента\\окна лучше
     выполнять через отдельное оконное сообщение,** т.к. при
     инициировании прямой перерисовки из обработчика события мыши могут
     быть проблемы.
 
-> **{\$IFDEF FPC}**
->
-> **//В Linux перерисовку через сообщение, т.к. иначе не
-> инициализируется контекст отрисовки**
->
-> **PostMessage(Handle,WM_PaintSheme,0,0) ;**
->
-> **{\$ELSE}**
->
-> RepaintFormAll; //Здесь делаем полную перерисовку, т.к. иначе
-> изображение может не обновиться !!!
->
-> {\$ENDIF}
+```
+  {$IFDEF FPC}
+  //В Linux перерисовку через сообщение, т.к. иначе не инициализируется контекст отрисовки
+  PostMessage(Handle,WM_PaintSheme,0,0) ;
+  {$ELSE}
+  RepaintFormAll;    //Здесь делаем полную перерисовку, т.к. иначе изображение может не обновиться !!!
+  {$ENDIF}
+```
 
 7.  **Если внутри SO (DLL) есть форма, которая должна самоуничтожаться,
     то есть особенность -- присвоение Action:=caFree внутри таких форм
@@ -1420,13 +1259,11 @@ Windows используем версию от 2017 года которая на
 При внимательном рассмотрении исходников компонента TeeChart Pro
 обнаружились забавные артефакты:
 
-![](media/image5.png){width="5.783145231846019in"
-height="5.888888888888889in"}
+![](image6.png)
 
 А в коде обнаружилось следующее:
 
-![](media/image6.png){width="6.496527777777778in"
-height="4.064583333333333in"}
+![](image7.png)
 
 Ой что же это такое ! Это вжжж неспроста подумал я почесав опилки в
 голове ! Оказывается кто-то этот компонент начинал портировать под LCL и
@@ -1447,8 +1284,7 @@ height="4.064583333333333in"}
 -   Во всех файлах где были ссылки на lfm-файлы тоже был автоматом
     заменён IFDEF:
 
-![](media/image7.png){width="3.825054680664917in"
-height="3.3785597112860892in"}
+![](image8.png)
 
 В результате проведённых корректировок был получен пакет который был
 успешно откомпилирован в Windows-версии среды разработки Code Typhon. И
@@ -1467,8 +1303,7 @@ my_TeeChartPro.
 это то, что модуль OpenGLLinux был неполным и его пришлось дополнить
 определениями типов:
 
-![](media/image8.png){width="6.479166666666667in"
-height="1.1034722222222222in"}
+![](image9.png)
 
 и некоторых функций, которых в этом файле не было (но в библиотеке
 OpenGL они точно есть). В принципе этот заголовочный файл есть в других
@@ -1479,13 +1314,11 @@ OpenGL они точно есть). В принципе этот заголов�
 Далее были устранены ошибки компиляции в TeCanvas.pas путём добавления
 недостающих определений, которые были в модуле Windows:
 
-![](media/image9.png){width="6.496527777777778in"
-height="2.772222222222222in"}
+![](image10.png)
 
 Также была сделана небольшое исправление при загрузке ресурсов.
 
-![](media/image10.png){width="6.496527777777778in"
-height="2.0569444444444445in"}
+![](image11.png)
 
 После исправления этих ошибок компонент собрался. В коде моей программы
 были выключены старые IFDEF-ы и для Linux также был подключен TeeChart
@@ -1498,8 +1331,7 @@ Pro для Linux который был мною модифицирован.
 Разбирательство с кодом привело к тому, что был поправлен один небольшой
 фрагмент кода:
 
-![](media/image11.png){width="6.496527777777778in"
-height="2.3402777777777777in"}
+![](image12.png)
 
 То есть флаг **IsWindowsNT был сделан True** по умолчанию. **После
 включения этого флага компонент начал рисовывать графики на Linux**
@@ -1516,10 +1348,10 @@ height="2.3402777777777777in"}
 > всё заработало пришлось внести очень небольшие исправления в исходный
 > код модуля TeCanvas.pas (желтым выделены доработки).
 >
-> ![](media/image12.png){width="6.496527777777778in"
-> height="2.716666666666667in"}
->
-> ![](media/image13.png){width="6.496527777777778in" height="3.89375in"}
+
+![](image13.png)
+![](image14.png)
+
 >
 > После внесения данных исправлений графики с применением TeeChart Pro
 > завелись под LCL в том объёме, который требовался для функционирования
@@ -1572,3 +1404,7 @@ height="2.3402777777777777in"}
     Free Pascal очень хорошо запускается на разных версиях Linux, чего
     нельзя сказать о некоторых модулях на FORTRAN -- модуль
     скомпилированный с одной версией RTL может не работать на другой.
+
+Вид программы на ОС Alt Linux
+
+![](image15.png)
