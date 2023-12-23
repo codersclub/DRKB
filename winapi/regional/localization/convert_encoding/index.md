@@ -21,7 +21,7 @@ simply convert any text from code page interpretation into another one.
 Following I will shortly discuss the code and give you a sample of how
 to use it.
 
-uCodePageConverter
+**uCodePageConverter**
 
     {* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     *
@@ -138,7 +138,7 @@ To test the unit simple create a form with a memo and a button. Add the
 following code to the buttons OnClick event. (Do not forget to add the
 conversion unit to the uses clause!)
 
-SAMPLE
+**SAMPLE**
 
     procedure TForm1.Button1Click(Sender: TObject);
     var

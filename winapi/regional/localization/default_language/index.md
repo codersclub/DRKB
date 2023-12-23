@@ -10,11 +10,11 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-GetSystemDefaultLangID
+- GetSystemDefaultLangID
 
-GetSystemDefaultLCID
+- GetSystemDefaultLCID
 
-GetLocaleInfo
+- GetLocaleInfo
 
 <https://delphiworld.narod.ru/>
 

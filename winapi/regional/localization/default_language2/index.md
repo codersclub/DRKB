@@ -10,6 +10,6 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-GetSystemDefaultLangID
+    GetSystemDefaultLangID
 
 Взято с сайта <https://blackman.wp-club.net/>

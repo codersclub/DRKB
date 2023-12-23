@@ -13,13 +13,14 @@ Date: 01.01.2007
 
 Зарегистрировать шрифт:
 
-AddFontResource(\'путь к фонту\\\\Algerian.ttf\');
+    AddFontResource('путь к фонту\\Algerian.ttf');
+    
+    Объект.Font.Name:="Algerian";
 
-Объект.Font.Name:=\"Algerian\";
+Удалить шрифт:
 
-Удалить -
+    RemoveFontResource('путь к фонту\\Algerian.ttf');
 
-RemoveFontResource(\'путь к фонту\\\\Algerian.ttf\');
 
 Автор: Alex101
 
