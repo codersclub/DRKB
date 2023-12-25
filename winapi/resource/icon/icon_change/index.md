@@ -14,7 +14,7 @@ Date: 01.01.2007
 
     InvalidateRect(Application.Handle, NIL, True); 
 
-\... для немедленной перерисовки.
+... для немедленной перерисовки.
 
 <https://delphiworld.narod.ru/>
 

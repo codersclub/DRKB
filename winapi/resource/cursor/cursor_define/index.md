@@ -17,8 +17,7 @@ Date: 01.01.2007
 создать отдельный .RES-файл с другим именем (например, MyApp01.RES) и
 включить его в ваш проект, например так:
 
-implementation {\$R MyApp01.Res}
-
+    implementation {$R MyApp01.Res}
  
 
 Вы не можете назначить курсор свойству компонента Cursor или DragCursor
@@ -36,19 +35,18 @@ Cursor/DragCursor в Инспекторе объектов, выпадающий
 
 Для начала определите константу, допустим так:
 
-Const
-
-MyCursor = 1;
+    Const
+      MyCursor = 1;
 
 Далее необходимо загрузить курсор. Сделать это можно в обработчике
 события формы OnCreate:
 
-Screen.Cursors\[MyCursor\] := LoadCursor(HInstance, \'MYCURSOR\');
+    Screen.Cursors[MyCursor] := LoadCursor(HInstance, 'MYCURSOR');
 
 Затем просто установите в свойстве DragCursor любого элемента
 управления:
 
-MyListbox.DragCursor := MyCursor;
+    MyListbox.DragCursor := MyCursor;
 
 Примечание: имя вашего курсора всегда должно писаться в ВЕРХНЕМ
 регистре, как при вызове LoadCursor, так и в его названии в .RES-файле.

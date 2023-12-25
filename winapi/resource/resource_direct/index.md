@@ -1,10 +1,10 @@
 ---
-Title: Работа с ресурсами без TResourceSteram
+Title: Работа с ресурсами без TResourceStream
 Author: Rouse\_
 Date: 01.01.2007
 ---
 
-Работа с ресурсами без TResourceSteram
+Работа с ресурсами без TResourceStream
 ======================================
 
 ::: {.date}
