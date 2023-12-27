@@ -11,6 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
+
     procedure TForm1.button1click(Sender: TObject); 
     var 
       lpDisplayDevice: TDisplayDevice; 
@@ -29,5 +30,6 @@ Date: 01.01.2007
         form2.show; 
       end; 
     end;
+
 
 Взято из <https://forum.sources.ru>

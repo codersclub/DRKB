@@ -17,7 +17,7 @@ Date: 01.01.2007
      
      { Const for the function Format(...) }
      const
-       fsGUID: string = 'D1: $%s'#13#10'D2: $%s'#13#10'D3: $%s'#13#10     +
+       fsGUID: string = 'D1: $%s'#13#10'D2: $%s'#13#10'D3: $%s'#13#10 +
          'D4: $%s $%s $%s $%s $%s $%s $%s $%s';
        fsGUIDParts: string = 'D%d:%s';
      
