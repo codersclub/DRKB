@@ -39,7 +39,7 @@ Date: 01.01.2007
 необходимо импортировать ActiveX компонент, под названием Microsoft
 Script Control
 
-![](embim1699.png){width="458" height="528"}
+![](embim1699.png){.center}
 
 После этого на закладке ActiveX появится не визуальный компонент
 TScriptControl, который можно разместить на форме.

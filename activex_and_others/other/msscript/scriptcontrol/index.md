@@ -101,7 +101,7 @@ ActiveX-компонент и файл помощи с описанием его
 необходимо импортировать компонент ActiveX под названием Microsoft
 ScriptControl.
 
-![clip0076](clip0076.gif){width="477" height="544"}
+![clip0076](clip0076.gif){.center}
 
 После этого на закладке ActiveX появится невизуальный компонент
 TScriptControl, который можно разместить на форме.
@@ -114,43 +114,43 @@ TScriptControl, который можно разместить на форме.
 
 Рассмотрим ключевые свойства и методы TScriptControl.
 
-property Language: String
+    property Language: String
 
 Задает язык, интерпретатор которого будет реализовывать компонент. В
 стандартной поставке доступны VBScript и JScript, однако, если в вашей
 системе установлены расширения Windows Scripting, возможно использование
 других языков, таких как Perl или Rexx.
 
-property Timeout: Integer
+    property Timeout: Integer
 
 Задает интервал исполнения скрипта, по истечении которого генерируется
 ошибка. Значение --1 позволяет отключить ошибки, связанные с истечением
 отведенного времени (timeout), что позволит скрипту исполняться
 неограниченное время.
 
-property UseSafeSubset: Boolean
+    property UseSafeSubset: Boolean
 
 При установке этого свойства в TRUE компонент может выполнять
 ограниченный набор действий, заданный текущими установками безопасности
 в системе. Это свойство полезно, если вы запускаете скрипты, полученные,
 например, через Интернет.
 
-procedure AddCode(const Code: WideString);
+    procedure AddCode(const Code: WideString);
 
 Добавляет код, заданный параметром к списку процедур компонента. В
 дальнейшем эти процедуры могут быть вызваны при помощи метода Run либо
 из других процедур скрипта.
 
-ScriptControl1.AddCode(Memo1.Text); 
-
-function Eval(const Expression: WideString): OleVariant
+    ScriptControl1.AddCode(Memo1.Text); 
+    
+    function Eval(const Expression: WideString): OleVariant
 
 Выполняет код, заданный в параметре Expression, и возвращает результат
 исполнения. Позволяет выполнить код без добавления его к списку процедур
 компонента.
 
-procedure AddObject(const Name: WideString; Object\_: IDispatch;
-AddMembers: WordBool);
+    procedure AddObject(const Name: WideString; Object\_: IDispatch;
+    AddMembers: WordBool);
 
 Добавляет объект к пространству имен компонента. Объект должен быть
 сервером автоматизации. Добавленный объект доступен как объект в коде
@@ -158,21 +158,20 @@ AddMembers: WordBool);
 External, реализующий метод DoSomething(Value: Integer), то, добавив
 объект
 
-ScriptControl1.AddObject('External', TExternal as IDispatch, FALSE); 
+    ScriptControl1.AddObject('External', TExternal as IDispatch, FALSE); 
 
 мы можем в коде скрипта использовать его следующим образом:
 
-Dim I
-
-I = 8 + External.DoSomething(8) 
-
-function Run(const ProcedureName: WideString; var Parameters:
-PSafeArray): OleVariant;
+    Dim I
+    I = 8 + External.DoSomething(8) 
+    
+    function Run(const ProcedureName: WideString; var Parameters:
+      PSafeArray): OleVariant;
 
 Выполняет именованную процедуру из числа ранее добавленных при помощи
 метода AddCode. В массиве Parameters могут быть переданы параметры.
 
-procedure Reset;
+    procedure Reset;
 
 Сбрасывает компонент в начальное состояние, удаляя все добавленные ранее
 объекты и код.

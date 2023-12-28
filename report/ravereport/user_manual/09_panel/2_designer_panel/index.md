@@ -19,24 +19,24 @@ Date: 01.01.2007
 на кнопку еще раз. Отжатая кнопка показывает состояние выключено, а
 нажатая состояние включено.
 
-![](embim1754.png){width="49" height="48"}        Activate Grid    
-   Делает сетку страницы видимой/невидимой        
+![](embim1754.png)        Activate Grid    
+   Делает сетку страницы видимой/невидимой
 
-![](embim1755.png){width="48" height="48"}        Snap To Grid    
-   Привязка объектов к узлам сетки        
+![](embim1755.png)        Snap To Grid    
+   Привязка объектов к узлам сетки
 
-![](embim1756.png){width="41" height="41"}        Grid On Top      
- Определяет, что сетка находится над компонентами или под ними        
+![](embim1756.png)        Grid On Top      
+ Определяет, что сетка находится над компонентами или под ними
 
-![](embim1757.png){width="41" height="40"}        Always Show Band
-Headers        Управляет показом заголовков групп (band)        
+![](embim1757.png)        Always Show Band  
+Headers        Управляет показом заголовков групп (band)
 
-![](embim1758.png){width="41" height="41"}        Show Rulers      
- Показывает, убирает измерительные линейки        
+![](embim1758.png)        Show Rulers      
+ Показывает, убирает измерительные линейки
 
-![](embim1759.png){width="41" height="40"}        Show Waste Area  
+![](embim1759.png)        Show Waste Area  
      Управляет показом пространства между границами страницы и концом
-настройки границ        
+настройки границ
 
-![](embim1760.png){width="41" height="39"}        Edit Preferences
-       Вызывает диалог предпочтений        
+![](embim1760.png)        Edit Preferences  
+       Вызывает диалог предпочтений

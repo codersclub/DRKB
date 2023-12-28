@@ -12,7 +12,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-![clip0034](clip0034.png){width="218" height="204"}
+![clip0034](clip0034.png){.center}
 
     procedure DrawMandelbrot(ACanvas: TCanvas; X, Y, au, bu: Double; X2, Y2: Integer); 
     var 

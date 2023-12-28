@@ -172,7 +172,7 @@ OpenGL ...
 
 А теперь запускаем!!!!
 
-![clip0124](clip0124.png){width="198" height="197"}
+![clip0124](clip0124.png){.center}
 
 Вот и всё!
 

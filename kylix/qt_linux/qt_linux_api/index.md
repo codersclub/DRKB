@@ -131,7 +131,7 @@ Kylix и Qt library
 VisualCLX можно рассматривать как \"Object Pascal оболочки\"
 соответствующих объектов Qt library.
 
-![clip0033](clip0033.png){width="179" height="207"}
+![clip0033](clip0033.png){.center}
 
 Однако механизм взаимодействия между VisualCLX и Qt library сложнее, чем
 механизм взаимодействия между VCL и Windows GUI API. На рисунке справа

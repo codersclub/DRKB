@@ -18,56 +18,55 @@ Date: 01.01.2007
 отчета на различные устройства вывода, а классы отчета, которые не
 являются компонентными классами, отвечают за все остальные задачи.
 
-![](embim1741.png){width="56" height="55"}        TrvSystem      
+![](embim1741.png)        TrvSystem      
  Включает в себя стандартный принтер и предварительный просмотр и
-является одним из самых простых в использовании компонент.        
+является одним из самых простых в использовании компонент.
 
-![](embim1742.png){width="56" height="55"}        TRvNDRWriter    
+![](embim1742.png)        TRvNDRWriter    
    Создает NDR поток или файл (в должном формате) при выполнении отчета.
-       
 
-![](embim1743.png){width="56" height="55"}        TrvRenderPreview
+![](embim1743.png)        TrvRenderPreview  
        Показывает диалог предварительного просмотра для NDR потока или
-файла.        
+файла.
 
-![](embim1744.png){width="56" height="55"}        TrvRenderPrinter
-       Посылает NDR поток или файл на принтер.        
+![](embim1744.png)        TrvRenderPrinter  
+       Посылает NDR поток или файл на принтер.
 
-![](embim1745.png){width="56" height="55"}        TRvRenderPDF    
-   Преобразовывает NDR поток или файл в PDF формат.        
+![](embim1745.png)        TRvRenderPDF    
+   Преобразовывает NDR поток или файл в PDF формат.
 
-![](embim1746.png){width="56" height="55"}        TRvRenderHTML    
-   Преобразовывает NDR поток или файл в HTML формат.        
+![](embim1746.png)        TRvRenderHTML    
+   Преобразовывает NDR поток или файл в HTML формат.
 
-![](embim1747.png){width="56" height="55"}        TRvRenderRTF    
-   Преобразовывает NDR поток или файл в RTF формат.        
+![](embim1747.png)        TRvRenderRTF    
+   Преобразовывает NDR поток или файл в RTF формат.
 
-![](embim1748.png){width="56" height="55"}        TRvRenderText    
-   Преобразовывает NDR поток или файл в Text формат.        
+![](embim1748.png)        TRvRenderText    
+   Преобразовывает NDR поток или файл в Text формат.
 
 Классы Rave
 
-![](embim1749.png){width="56" height="55"}        TrvProject      
+![](embim1749.png)        TrvProject      
  Производит соединение к проекту отчета, который был создан с помощью
 визуального редактора Rave. Используйте данный компонент для получения
-списка всех доступных отчетов или для выполнения конкретного отчета.    
+списка всех доступных отчетов или для выполнения конкретного отчета.
    
 
-![](embim1750.png){width="56" height="55"}      
- TrvCustomConnection        Подсоединяет пользовательские данные
+![](embim1750.png) TrvCustomConnection  
+      Подсоединяет пользовательские данные
 (сгенерированные через события) к DirectDataViews, созданные с помощью
-визуального редактора Rave.        
+визуального редактора Rave.
 
-![](embim1751.png){width="56" height="55"}      
- TrvDataSetConnection        Подсоединяет TDataSet данные (например,
+![](embim1751.png)       TrvDataSetConnection  
+      Подсоединяет TDataSet данные (например,
 TClientDataSet, или компоненты третьих сторон, наследники  от TDataSet)
-к DirectDataViews, созданные с помощью визуального редактора Rave.      
+к DirectDataViews, созданные с помощью визуального редактора Rave.
  
 
-![](embim1752.png){width="56" height="55"}      
- TrvTableConnection        Подсоединяет TTable компоненты к
-DirectDataViews, созданные с помощью визуального редактора Rave.        
+![](embim1752.png)       TrvTableConnection  
+      Подсоединяет TTable компоненты к
+DirectDataViews, созданные с помощью визуального редактора Rave.
 
-![](embim1753.png){width="56" height="55"}      
- TrvQueryConnection        Подсоединяет TQuery компоненты к
-DirectDataViews, созданные с помощью визуального редактора Rave.        
+![](embim1753.png)       TrvQueryConnection  
+      Подсоединяет TQuery компоненты к
+DirectDataViews, созданные с помощью визуального редактора Rave.

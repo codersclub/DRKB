@@ -1,6 +1,6 @@
 ---
 Title: Метод Рунге-Кутта решения дифференциальных уравнений и их систем
-Date: 01.01.2007
+Date: 01.01.2006
 author: Андрей Садовой
 ---
 
@@ -16,14 +16,14 @@ author: Андрей Садовой
 Метод позволяет решать системы обыкновенных дифференциальных уравнений
 (ОДУ) первого порядка следующего вида:
 
-      ![clip0307](clip0307.gif){width="104" height="22"},  
-      ![clip0308](clip0308.gif){width="98" height="22"},  
+      ![clip0307](clip0307.gif),  
+      ![clip0308](clip0308.gif),  
       и т.д.,  
 
 которые имеют решение:
 
-      ![clip0309](clip0309.gif){width="59" height="19"},  
-      ![clip0310](clip0310.gif){width="53" height="19"},  
+      ![clip0309](clip0309.gif),  
+      ![clip0310](clip0310.gif),  
       и т.д.,
 
 
@@ -43,27 +43,27 @@ author: Андрей Садовой
 Метод Рунге-Кутта заключается в рекурентном применении следующих
 формул:
 
-      ![clip0311](clip0311.gif){width="210" height="37"}
+      ![clip0311](clip0311.gif){.center}
 
-      ![clip0312](clip0312.gif){width="214" height="37"}
+      ![clip0312](clip0312.gif){.center}
       ...
 где
 
-      ![clip0313](clip0313.gif){width="134" height="22"},
+      ![clip0313](clip0313.gif){.center}
 
-      ![clip0314](clip0314.gif){width="136" height="22"},
+      ![clip0314](clip0314.gif){.center}
 
-      ![clip0315](clip0315.png){width="230" height="39"},
+      ![clip0315](clip0315.png){.center}
 
-      ![clip0001](clip0001.png){width="232" height="39"},
+      ![clip0001](clip0001.png){.center}
 
-      ![clip0002](clip0002.png){width="234" height="39"},
+      ![clip0002](clip0002.png){.center}
 
-      ![clip0003](clip0003.png){width="235" height="39"},
+      ![clip0003](clip0003.png){.center}
 
-      ![clip0004](clip0004.png){width="220" height="22"},
+      ![clip0004](clip0004.png){.center}
 
-      ![clip0005](clip0005.png){width="223" height="22"}
+      ![clip0005](clip0005.png){.center}
 
 Реализация Метода Рунге-Кутта на Delphi может выглядеть так
 (привожу полностью модуль):
@@ -256,4 +256,5 @@ type
 Нажатие кнопки приведет к расчету точек системы, которые будут выведены
 в текстовую область.
 
-Copyright© 2006 Андрей Садовой  Специально для Delphi Plus
+Copyright© 2006 Андрей Садовой  
+Специально для Delphi Plus
