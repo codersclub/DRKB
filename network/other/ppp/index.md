@@ -13,9 +13,9 @@ PPP
 
 Author:      John Wobus, jmwobus\@syr.edu (corrections welcome)
 
-Оpигинал \#1: http://cs.uni-bonn.de/ppp/part1.html
+Оpигинал #1: http://cs.uni-bonn.de/ppp/part1.html
 
-Оpигинал \#2: http://www.cisco.com/univercd/cc/td/doc/cisintwk/
+Оpигинал #2: http://www.cisco.com/univercd/cc/td/doc/cisintwk/
 
             /ito\_doc/55168.htm
 

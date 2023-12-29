@@ -304,7 +304,7 @@ TWebSerever создается в начале работы демона и ун
 Теперь можно проверить работу демона. Скомпилировав проект даем в режиме
 root команду:
 
-\# dhttpd
+# dhttpd
 
 Командная строка тут же снова появляется на экране. Так и должно быть,
 ведь демон сразу переходит в фоновый режим. Для того, чтобы убедиться в
@@ -544,19 +544,19 @@ SXXname, где XX двузначное число, указывающее оч�
 
 Скрипт dhttpd
 
-\#!/bin/sh
+#!/bin/sh
 
-\#
+#
 
-\# SysV Init script for DAEMONstration Web server (dhttpd)
+# SysV Init script for DAEMONstration Web server (dhttpd)
 
-\#
+#
 
-\# pidfile: /var/run/dhttpd.pid
+# pidfile: /var/run/dhttpd.pid
 
-\#
+#
 
-\# Source function library.
+# Source function library.
 
 . /etc/rc.d/init.d/functions
 
@@ -619,10 +619,10 @@ exit 0
 Литература
 
 1\. Griffin I, Nelson J (1998). Linux Network Programming, Part 1, Linux
-Journal, \#46 February 1998
+Journal, #46 February 1998
 
 2\. Griffin I, Nelson J (1998). Linux Network Programming, Part 2, Linux
-Journal, \#47 March 1998
+Journal, #47 March 1998
 
 3\. GLIBC Manual
 

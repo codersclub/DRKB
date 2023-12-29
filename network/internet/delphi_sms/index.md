@@ -156,10 +156,10 @@ stpostdata:=\'to=\'+combobox1.text+\'&msg=\'+text+\'&dcs=0\';
 \< option value=0\>Обычный sms
 
 vheaders:= \'content-type:application/x-www-form-urlencoded\'+
-\#10\#13\#0;
+#10#13#0;
 
 здесь создаем http заголовок в виде нуль-терминальной строки(
-оканчивающейся на \#0 );
+оканчивающейся на #0 );
 
 vpostdata:= vararraycreate([0, length(stpostdata)], varbyte);
 

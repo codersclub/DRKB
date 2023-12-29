@@ -134,7 +134,7 @@ SDR-окне !)
 
 Вы должны увидеть следующую строку:
 
-Name: DialogID\_0075, \# of Controls=003, Caption: "Registration
+Name: DialogID\_0075, # of Controls=003, Caption: "Registration
 Unsucce..
 
 001-ControlID:FFFF, Control Class:""Control Text:"You have entered

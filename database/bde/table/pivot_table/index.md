@@ -28,13 +28,13 @@ Product, Month, Sales, и вам необходимо отображать да�
 
 Store         Product    Month   Sales
 
-   \#1            Toys       1      100
+   #1            Toys       1      100
 
-   \#2            Toys       1       68
+   #2            Toys       1       68
 
-   \#1            Toys       2      150
+   #1            Toys       2      150
 
-   \#1            Books      1       75
+   #1            Books      1       75
 
    ...
 

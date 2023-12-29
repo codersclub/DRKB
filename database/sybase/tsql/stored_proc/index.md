@@ -295,7 +295,7 @@ sp\_helptext showall
 
  
 
-\# Lines of Text
+# Lines of Text
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\--
 
@@ -1099,7 +1099,7 @@ drop proc orders;2
 
  
 
-create table \#tempstores
+create table #tempstores
 
 (stor\_id char(4), amount money)
 
@@ -1119,7 +1119,7 @@ create procedure inv\_amounts
 
    select stor\_id, "Total Due" =sum(amount)
 
-   from \#tempstores
+   from #tempstores
 
    group by stor\_id
 
@@ -1133,7 +1133,7 @@ create procedure inv\_amounts
 
  
 
-drop table \# tempstores
+drop table # tempstores
 
  
 
@@ -1149,13 +1149,13 @@ create procedure inv\_proc
 
 as
 
-create table \#tempstores
+create table #tempstores
 
 (stor\_id char(4), amount money)
 
  
 
-insert \#tempstores
+insert #tempstores
 
 select stor\_id, sum(qty*(100-discount)/100* rice)
 
@@ -1171,7 +1171,7 @@ exec inv\_amounts
 
  
 
-Можно создавать временные таблицы без префикса \#, используя оператор
+Можно создавать временные таблицы без префикса #, используя оператор
 create table tempdb..tablename.. в самой сохраненной процедуре. Эти
 таблицы не удаляются после завершения выполнения процедуры, поэтому на
 них могут ссылаться независимые процедуры. Для создания таких таблиц
@@ -2546,7 +2546,7 @@ sp\_helptext byroyalty
 
  
 
-\# Lines of Text
+# Lines of Text
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\--
 

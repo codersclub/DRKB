@@ -67,7 +67,7 @@ Content-Type: text/html
 
 \<a href="/bin/top3"\>
 
-\<img width=460 height=59 border=0 usemap="\#top3" ismap
+\<img width=460 height=59 border=0 usemap="#top3" ismap
 
    src="http://us.yimg.com/i/main32.gif" alt="Yahoo!"\>\</a\>
 

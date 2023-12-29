@@ -651,7 +651,7 @@ Microsoft Exchange client     yes+            no           yes&
 
 Microsoft Outlook 97          yes             no           yes
 
-Microsoft Outlook 98\#         yes            yes           yes
+Microsoft Outlook 98#         yes            yes           yes
 
 Netscape Navigator            yes             no           yes
 
@@ -685,7 +685,7 @@ Notes:
 
 (\^) Due 3rd quarter 1997.
 
-(\#) In beta as of November 1997.
+(#) In beta as of November 1997.
 
    
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_

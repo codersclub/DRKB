@@ -88,7 +88,7 @@ AAh. Значит, либо нет звуковой платы, или зада�
 
 Пример:
 
-\#define MAX\_BASE\_SB 5
+#define MAX\_BASE\_SB 5
 
 int bases[MAX\_BASE\_SB]={ 0x220, 0x230, 0x240, 0x250, 0x260 };
 
@@ -575,9 +575,9 @@ outp(ModePort, Mode + ( DMAChannel % 4 ));
 
 два перед вычислением смещения.
 
-\#define lo(value) (unsigned char)((value) & 0x00FF)
+#define lo(value) (unsigned char)((value) & 0x00FF)
 
-\#define hi(value) (unsigned char)((value) \>\> 8)
+#define hi(value) (unsigned char)((value) \>\> 8)
 
 if ( SixteenBit==1 )
 
@@ -1103,13 +1103,13 @@ WriteMixerSB(0,0); // RESET
 
 11 - Линейный вход
 
-\#define SOURCE\_MIC1 0
+#define SOURCE\_MIC1 0
 
-\#define SOURCE\_CD 1
+#define SOURCE\_CD 1
 
-\#define SOURCE\_MIC2 2
+#define SOURCE\_MIC2 2
 
-\#define SOURCE\_LINE 3
+#define SOURCE\_LINE 3
 
 void pascal InputMixerSB
 
@@ -1143,13 +1143,13 @@ WriteMixerSB(0xC,val);
 
 1 - Без фильтра 1 - Stereo
 
-\#define MONO 0
+#define MONO 0
 
-\#define STEREO 1
+#define STEREO 1
 
-\#define USE\_FILTER 0
+#define USE\_FILTER 0
 
-\#define BYPASS\_FILTER 1
+#define BYPASS\_FILTER 1
 
 void pascal OutputMixerSB
 

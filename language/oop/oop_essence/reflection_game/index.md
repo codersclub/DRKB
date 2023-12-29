@@ -862,13 +862,13 @@ long FileSize = 256 * 1024;
 
 А как "эстетичны" в каждом header\'е С++ конструкции типа:
 
-\#ifndef \_MYHEADER\_H
+#ifndef \_MYHEADER\_H
 
-\#define \_MYHEADER\_H
+#define \_MYHEADER\_H
 
 ... body of the header ...
 
-\#endif
+#endif
 
 Получается, я вместо компилятора должен следить, чтобы в проекте
 оказалась только одна копия каждого файла.

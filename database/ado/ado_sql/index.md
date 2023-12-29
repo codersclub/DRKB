@@ -426,9 +426,9 @@ go
 
 create proc myADOProc As
 
-create table \#tmpADO (id int Not Null, name char(10) Not Null)
+create table #tmpADO (id int Not Null, name char(10) Not Null)
 
-insert into \#tmpADO values(1, \'test\')
+insert into #tmpADO values(1, \'test\')
 
 Хранимая процедура myADOProc создает временную таблицу tmpADO и
 вставляет строку в эту таблицу. Операторы CREATE и INSERT не генерируют

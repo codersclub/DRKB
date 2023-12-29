@@ -197,7 +197,7 @@ dbo
                                                                текущего клиентского
                                                                процесса на сервере.
 
-  index\_col              (object\_name, index\_id, key\_\#    Возвращает название
+  index\_col              (object\_name, index\_id, key\_#    Возвращает название
                           [, user\_id]                      индексированного
                                                                столбца; если аргумент
                                                                object\_name не

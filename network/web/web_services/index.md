@@ -385,7 +385,7 @@ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"\>
 \<soap:binding
 style="rpc"transport="http://schemas.xmlsoap.org/soap/http" /\>
 \<operationname="US2RUS"\>
-\<soap:operation soapAction="urn:u\_Intrf-IEncodeDecode\#US2RUS" /\>
+\<soap:operation soapAction="urn:u\_Intrf-IEncodeDecode#US2RUS" /\>
 \<input\>
 \<soap:body
 use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
@@ -398,7 +398,7 @@ use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace=
 \</output\>
 \</operation\>
 \<operationname="RUS2US"\>
-\<soap:operation soapAction="urn:u\_Intrf-IEncodeDecode\#RUS2US" /\>
+\<soap:operation soapAction="urn:u\_Intrf-IEncodeDecode#RUS2US" /\>
 \<input\>
 \<soap:body
 use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"

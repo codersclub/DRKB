@@ -103,18 +103,18 @@ Btrieve сам их как-то заполняет и потом с ними р�
 очередь подконнектиться к базе. Чтобы подключиться, нужно выполнить
 следующий фрагмент кода:
 
-fillchar(keyBuf, sizeof(keyBuf), \#0);
+fillchar(keyBuf, sizeof(keyBuf), #0);
 
 keybuf := \'\<Полный путь к любому из *.btr файлов в директории, где
-лежит БД\>\' + \#0;
+лежит БД\>\' + #0;
 
-fillchar(client.networkAndNode, sizeof(client.networkAndNode), \#0);
+fillchar(client.networkAndNode, sizeof(client.networkAndNode), #0);
 
-client.applicationID := \'MT\' + \#0; {так надо}
+client.applicationID := \'MT\' + #0; {так надо}
 
 сlient.threadID := 50; {так надо}
 
-fillchar(versionBuffer, sizeof(versionBuffer), \#0);
+fillchar(versionBuffer, sizeof(versionBuffer), #0);
 
 dataLen := sizeof(versionBuffer);
 
@@ -162,11 +162,11 @@ status := BTRVID( B\_STOP, {системная константа}
 с таблицей (select/insert/update/delete) необходимо сначала ее открыть.
 Следующий фрагмент открывает одну отдельно взятую таблицу:
 
-fillchar(keyBuf, sizeof(keyBuf), \#0);
+fillchar(keyBuf, sizeof(keyBuf), #0);
 
-keybuf := \'\<Полный путь к *.btr файлу, где лежит таблица\>\' + \#0;
+keybuf := \'\<Полный путь к *.btr файлу, где лежит таблица\>\' + #0;
 
-fillchar(dataBuffer, sizeof(dataBuffer), \#0);
+fillchar(dataBuffer, sizeof(dataBuffer), #0);
 
 dataLen := 0;
 
@@ -287,7 +287,7 @@ FLOAT и размером 8 байт. Этим размером и свойст�
 
 а) Текстовые поля:
 
-StrPCopy(OperheadRecord.agnto, AsString со значением + \#0);
+StrPCopy(OperheadRecord.agnto, AsString со значением + #0);
 
   { собственно присвоение значения }
 
@@ -305,7 +305,7 @@ OperheadRecord.resmsum := AsFloat со значением;
 
 в) Автоинкременты:
 
-fillchar(OperheadRecord.isn, SizeOf(OperheadRecord.isn), \#0);
+fillchar(OperheadRecord.isn, SizeOf(OperheadRecord.isn), #0);
 
 Независимо от типа. Просто заполняем их нулевыми байтами, Btrieve сам
 присвоит нужное значене.
@@ -386,7 +386,7 @@ OperHeadIndex7 : OPERHEAD\_INDEX7; {индекс номер 7}
 
 OperheadIndex0.isn := значение AsInteger; {присвоение параметров поиска}
 
-fillchar(OperheadRecord, SizeOf(OperheadRecord), \#0);
+fillchar(OperheadRecord, SizeOf(OperheadRecord), #0);
 
 dataLen := sizeof(OPERHEAD\_STRUCT);
 
@@ -451,7 +451,7 @@ B\_UPDATE. В смысле, сначала должен быть B\_GET\_EQUAL �
 DataBuffer вместо OperheadRecord - какой смысл передавать данные, если
 запись сейчас будет удалена?
 
-fillchar(dataBuffer, sizeof(dataBuffer), \#0);
+fillchar(dataBuffer, sizeof(dataBuffer), #0);
 
 dataLen := SizeOf(OPERHEAD\_STRUCT);
 

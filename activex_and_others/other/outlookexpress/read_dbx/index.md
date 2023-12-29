@@ -151,7 +151,7 @@ DataLength-SizeOfTable.
 
     41 20 23 38 00 60 E2 F2 9C 90 35 C0 01 3C 4F 46
 
-     A     \#  8     \`  a  o  ?  ?  5  A  \_  \<  O  F
+     A     #  8     \`  a  o  ?  ?  5  A  \_  \<  O  F
 
  
 
@@ -187,7 +187,7 @@ DataLength-SizeOfTable.
 
     72 20 65 58 54 52 41 20 23 38 00 41 63 74 69 76
 
-     r     e  X  T  R  A     \#  8     A  c  t  i  v
+     r     e  X  T  R  A     #  8     A  c  t  i  v
 
  
 
@@ -217,7 +217,7 @@ DataLength-SizeOfTable.
 
     63 6F 6D 00 00 23 5E 0F 8B 22 C0 01 41 63 74 69
 
-     c  o  m        \#  \^  \_  ‹ "  A  \_  A  c  t  i
+     c  o  m        #  \^  \_  ‹ "  A  \_  A  c  t  i
 
  
 

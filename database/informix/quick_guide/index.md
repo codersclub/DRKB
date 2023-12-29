@@ -40,7 +40,7 @@ form2.per).
 
 { комментарий },
 
-или знаком \# - до конца строки,
+или знаком # - до конца строки,
 
 или знаком \-- (два знака минус) до конца строки.
 
@@ -240,41 +240,41 @@ END RECORD или конструкции LIKE имя\_таблицы.*
 
 DEFINE  simw char (200), j,i,k INTEGER, ff FLOAT
 
-\# Здесь объявлены символьная переменная simw длиной 200 байт,
+# Здесь объявлены символьная переменная simw длиной 200 байт,
 
-\# целые i,j,k, и ff - восьмибайтовое с плавающей точкой
+# целые i,j,k, и ff - восьмибайтовое с плавающей точкой
 
 DATABASE zawod
 
 DEFINE doljno   RECORD
 
-\# объявляется запись doljno, состоящая из 4 простых переменных
+# объявляется запись doljno, состоящая из 4 простых переменных
 
-                dolzn CHAR(20),         \# должность
+                dolzn CHAR(20),         # должность
 
                 zarplmin  LIKE kadry.zarplata,
 
-                zarplmax  money(16,2),  \# зарплата
+                zarplmax  money(16,2),  # зарплата
 
-                vakansii int            \# вакансии
+                vakansii int            # вакансии
 
-END RECORD      \# Здесь заканчивается объявление записи doljno
+END RECORD      # Здесь заканчивается объявление записи doljno
 
-\# Переменную можно оъявить с ключевым словом LIKE column\_name.
+# Переменную можно оъявить с ключевым словом LIKE column\_name.
 
-\# переменная zarplmin получает такой же тип,  что и столбец
+# переменная zarplmin получает такой же тип,  что и столбец
 
-\# zarplata таблицы kadry из базы данных zawod
+# zarplata таблицы kadry из базы данных zawod
 
 DEFINE rrr RECORD LIKE kadry.*
 
-\#  Переменную типа запись тоже можно объявить с ключевым словом
+#  Переменную типа запись тоже можно объявить с ключевым словом
 
-\#  LIKE. Здесь объявлена запись rrr, содержащая элементы, имею-
+#  LIKE. Здесь объявлена запись rrr, содержащая элементы, имею-
 
-\#  щие те же самые названия и те же самые типы что и столбцы
+#  щие те же самые названия и те же самые типы что и столбцы
 
-\#  таблицы kadry
+#  таблицы kadry
 
 
 
@@ -297,9 +297,9 @@ massiw ARRAY[2,15] OF RECORD
 
       END RECORD
 
-\#    massiw  объявлен как массив записей. Каждая запись состоит
+#    massiw  объявлен как массив записей. Каждая запись состоит
 
-\#  из двух простых элементов - kolwo и tip
+#  из двух простых элементов - kolwo и tip
 
 
 
@@ -308,7 +308,7 @@ massiw ARRAY[2,15] OF RECORD
 необходимо уточнять именем записи, отделяя его точкой (.) от простого
 имени.
 
-\#  присвоить значение элементу массива можно так:
+#  присвоить значение элементу массива можно так:
 
 LET   massiw[1,i+2].kolwo = zap.a + LENGTH(massiw[1,i+2].tip)
 
@@ -382,9 +382,9 @@ MAIN
 
   LET simw=stroka(7,"Привет участникам ")
 
-\#    Если функция возвращает одно значение, то ее имя мож-
+#    Если функция возвращает одно значение, то ее имя мож-
 
-\#         но использовать в выражениях.
+#         но использовать в выражениях.
 
   MESSAGE simw
 
@@ -440,7 +440,7 @@ CASE
 
 END CASE
 
-CASE   (a+b)                  \#    Другой формат оператора CASE
+CASE   (a+b)                  #    Другой формат оператора CASE
 
       WHEN  1
 
@@ -456,8 +456,8 @@ END CASE
 
 Условный оператор.
 
-IF str = "завершить" OR y\<0 THEN exit program \# Не забывайте в конце
-каждого условного \# оператора ставить END IF. END IF
+IF str = "завершить" OR y\<0 THEN exit program # Не забывайте в конце
+каждого условного # оператора ставить END IF. END IF
 
 Оператор цикла.
 
@@ -511,21 +511,21 @@ MAIN
 
   LABEL METK2:PROMPT "введите оператор языка SQL: " FOR stroka
 
-   WHENEVER ERROR CONTINUE     \# Включить режим   "В   случае
+   WHENEVER ERROR CONTINUE     # Включить режим   "В   случае
 
-                               \# ошибки продолжить выполнение
+                               # ошибки продолжить выполнение
 
-                               \# программы"
+                               # программы"
 
-   PREPARE st1 FROM stroka     \# Изготовить оператор из
+   PREPARE st1 FROM stroka     # Изготовить оператор из
 
-                               \# символьной строки
+                               # символьной строки
 
-   EXECUTE st1         \#   Выполнить изготовленный оператор
+   EXECUTE st1         #   Выполнить изготовленный оператор
 
    IF status\<0 THEN ERROR "ошибка номер ", status, " в вашем
-операторе" GOTO metk2 END IF WHENEVER ERROR STOP \# Восстановить режим
-\# "В случае ошибки прервать \# выполнение программы" . . . END MAIN
+операторе" GOTO metk2 END IF WHENEVER ERROR STOP # Восстановить режим
+# "В случае ошибки прервать # выполнение программы" . . . END MAIN
 
 В системную переменную status помещается код выполнения каждого
 оператора 4GL (status=0 если все нормально, status\<0 если произошла
@@ -556,21 +556,21 @@ DECLARE curs1 CURSOR FOR
 
     select * from kadry where datarovd\>"9/25/1973"
 
-\#  в цикле FOREACH выводим на экран все строки таблицы kadry,
+#  в цикле FOREACH выводим на экран все строки таблицы kadry,
 
-\#  в которых столбец datarovd содержит дату после 25 сентября
+#  в которых столбец datarovd содержит дату после 25 сентября
 
-\#  1973 года.
+#  1973 года.
 
-FOREACH curs1 INTO zap.*      \# Берем очередную строку и по-
+FOREACH curs1 INTO zap.*      # Берем очередную строку и по-
 
-                               \# мещаем ее в запись zap
+                               # мещаем ее в запись zap
 
-MESSAGE zap.*                 \#  Выводим запись zap на экран
+MESSAGE zap.*                 #  Выводим запись zap на экран
 
 PROMPT "Еще ?" FOR CHAR c
 
-END FOREACH                   \#  Конец цикла FOREACH
+END FOREACH                   #  Конец цикла FOREACH
 
 В следующем примере строки выбираемые из таблицы kadry  через курсор
 curs2 помещаются в массив z1 (но не более 100 строк).
@@ -582,8 +582,8 @@ DEFINE z1 ARRAY[100] OF RECORD LIKE kadry.*, counter int
 DECLARE curs2 CURSOR FOR SELECT * FROM kadry
 
        WHERE datarovd\<"9/26/1973" OPEN curs2 FOR counter="1" TO 100
-FETCH curs2 INTO z1[counter].* \# взять очередную строку и поместить
-ее в следующий элемент \# массива z1 IF status="NOTFOUND" THEN \# если
+FETCH curs2 INTO z1[counter].* # взять очередную строку и поместить
+ее в следующий элемент # массива z1 IF status="NOTFOUND" THEN # если
 выбранные сроки кончились, закончить цикл EXIT FOR END IF END FOR LET
 counter="counter-1" MESSAGE "В массив z1 прочитано ",counter, "
 записей"
@@ -660,7 +660,7 @@ OPEN WINDOW wind1 AT 2,30 WITH 10 ROWS, 40 COLUMNS
 
     ATTRIBUTE(BORDER, REVERSE, MESSAGE LINE FIRST)
 
-       \# текущим окном является wind1
+       # текущим окном является wind1
 
        . . .
 
@@ -670,7 +670,7 @@ ATTRIBUTE(GREEN,PROMPT LINE LAST,
 
 MESSAGE LINE LAST, FORM LINE FIRST)
 
-       \# текущим окном является wind2
+       # текущим окном является wind2
 
 CLEAR  WINDOW wind1
 
@@ -678,17 +678,17 @@ CLEAR  WINDOW wind1
 
 CURRENT WINDOW IS wind1
 
-       \# текущим окном является wind1
+       # текущим окном является wind1
 
-OPEN FORM form1 from "schoolp"  \# Инициализировать форму form1
+OPEN FORM form1 from "schoolp"  # Инициализировать форму form1
 
-                               \# Взяв ее описание из файла
+                               # Взяв ее описание из файла
 
-                               \# schoolp.frm
+                               # schoolp.frm
 
-DISPLAY FORM form1      \# Вывести форму form1 в текущее окно
+DISPLAY FORM form1      # Вывести форму form1 в текущее окно
 
-                       \# т.е. в wind1
+                       # т.е. в wind1
 
 В результате работы этих операторов на экране терминала появится
 приблизительно такая картинка:
@@ -902,33 +902,33 @@ let nc= wyborceh()
 
 . . .
 
-FUNCTION wyborceh()     \#  Выбор цеха, для внесения изменений
+FUNCTION wyborceh()     #  Выбор цеха, для внесения изменений
 
 DEFINE counter  int
 
-DEFINE ceharr ARRAY[25] OF RECORD       \# массив для хранения
+DEFINE ceharr ARRAY[25] OF RECORD       # массив для хранения
 
-        nomerceh  int,      \# номерцеха    данных из таблицы
+        nomerceh  int,      # номерцеха    данных из таблицы
 
-        nameceh char(20)    \# название цеха              ceh
+        nameceh char(20)    # название цеха              ceh
 
         END RECORD
 
-\# Открыть окно с рамкой и вывести в него экранную форму cehform
+# Открыть окно с рамкой и вывести в него экранную форму cehform
 
    OPEN WINDOW cehwind AT 4,6 WITH FORM "cehform"
 
         ATTRIBUTE(BORDER)
 
-\# Объявить курсор для выбора содержимого из таблицы ceh
+# Объявить курсор для выбора содержимого из таблицы ceh
 
        DECLARE cehcurs CURSOR FOR
 
          SELECT * FROM ceh ORDER BY nomerceh
 
-\#  Выполнить запрос и все выбранные строки поместить в програм-
+#  Выполнить запрос и все выбранные строки поместить в програм-
 
-\#  ный массив ceharr
+#  ный массив ceharr
 
        LET counter = 0
 
@@ -940,15 +940,15 @@ DEFINE ceharr ARRAY[25] OF RECORD       \# массив для хранения
 
        END FOREACH
 
-\# счетчик counter равен фактическому числу строк выданных в
+# счетчик counter равен фактическому числу строк выданных в
 
-\#  курсор
+#  курсор
 
        MESSAGE "Выберите цех и нажмите CR"
 
-\#  Вывести в экранный массив cehscreen в экранной форме cehform
+#  Вывести в экранный массив cehscreen в экранной форме cehform
 
-\#  counter первых строк из программного массива ceharr
+#  counter первых строк из программного массива ceharr
 
        call set\_count(counter)
 
@@ -958,19 +958,19 @@ DEFINE ceharr ARRAY[25] OF RECORD       \# массив для хранения
 
        END DISPLAY
 
-\# Прервать показ экранного массива при нажатии клавиши CR
+# Прервать показ экранного массива при нажатии клавиши CR
 
-\# закрыть окно с экранной формой cehform
+# закрыть окно с экранной формой cehform
 
 CLOSE WINDOW cehwind
 
-let counter=arr\_curr()             \#номер строки массива,
+let counter=arr\_curr()             #номер строки массива,
 
-                                  \#на котором нажато CR
+                                  #на котором нажато CR
 
-RETURN ceharr[counter].nomerceh  \#номер цеха,
+RETURN ceharr[counter].nomerceh  #номер цеха,
 
-                                \#на котором нажато CR
+                                #на котором нажато CR
 
 END FUNCTION
 
@@ -1049,7 +1049,7 @@ ATRIBUTES указываются имена экранных полей, (и, в
 калькулятор. Возвращает значение вычисленного выражения. Скомпилируйте
 ее самостоятельно и посмотрите отладчиком, как она работает.
 
-function kalkulator()           \#       Калькулятор
+function kalkulator()           #       Калькулятор
 
 define wyravenie, kalkulator char(64), kolichestwo int
 
@@ -1121,11 +1121,11 @@ DEFINE  simw char (200), zapr char (300),fn  char (18)
 
 OPEN form maxprim from "maxprim"
 
-DISPLAY form maxprim            \# вывести экранную форму
+DISPLAY form maxprim            # вывести экранную форму
 
-CONSTRUCT BY NAME simw ON kadry.* \# Введение критериев выбора
+CONSTRUCT BY NAME simw ON kadry.* # Введение критериев выбора
 
-                                 \# с экрана
+                                 # с экрана
 
 LET zapr="select * from kadry  where ",
 
@@ -1133,9 +1133,9 @@ simw clipped," order by tabnom "
 
 MESSAGE simw
 
-PREPARE selpr FROM zapr           \# Изготовление запроса
+PREPARE selpr FROM zapr           # Изготовление запроса
 
-DECLARE qquer CURSOR FOR selpr    \# Объявление курсора для него
+DECLARE qquer CURSOR FOR selpr    # Объявление курсора для него
 
 DISPLAY "Не забудьте нажать CTRL-O" AT 2,40
 
@@ -1143,21 +1143,21 @@ PROMPT "Файл, куда выводить отчет? или CR, если на
 
                         FOR fn
 
-IF length(fn)=0 then START REPORT kadryrep       \# на экран
+IF length(fn)=0 then START REPORT kadryrep       # на экран
 
-else                 START REPORT kadryrep TO fn \# в файл
+else                 START REPORT kadryrep TO fn # в файл
 
 END IF
 
-  \# выполнить запрос и сбросить выбранные строки в отчет
+  # выполнить запрос и сбросить выбранные строки в отчет
 
-  FOREACH qquer  into zapisx.*   \# Очередную строку из курсора
+  FOREACH qquer  into zapisx.*   # Очередную строку из курсора
 
-  OUTPUT TO REPORT kadryrep(zapisx.*)  \# поместить в отчет
+  OUTPUT TO REPORT kadryrep(zapisx.*)  # поместить в отчет
 
   END FOREACH
 
-FINISH REPORT kadryrep          \# Вывести результаты отчета
+FINISH REPORT kadryrep          # Вывести результаты отчета
 
 END MAIN
 
@@ -1167,17 +1167,17 @@ DEFINE nameceh like ceh.nameceh
 
 DEFINE z record like kadry.*
 
-  \# nomerceh  int,          \# номер цеха
+  # nomerceh  int,          # номер цеха
 
-  \# tabnom    serial,       \# табельн. номер
+  # tabnom    serial,       # табельн. номер
 
-  \# fio       char(20),     \# фамилия
+  # fio       char(20),     # фамилия
 
-  \# dolvn     char(20),     \# должность
+  # dolvn     char(20),     # должность
 
-  \# zarplata  money(16,2),  \# зарплата
+  # zarplata  money(16,2),  # зарплата
 
-  \# datarovd  date          \# дата рожд.
+  # datarovd  date          # дата рожд.
 
        OUTPUT
 
@@ -1191,7 +1191,7 @@ bottom margin 0
 
 page  length 23
 
-      ORDER BY z.nomerceh, z.tabnom   \# Упорядочить
+      ORDER BY z.nomerceh, z.tabnom   # Упорядочить
 
                    FORMAT
 
@@ -1207,14 +1207,14 @@ print
 
 ON EVERY ROW
 
-print  z.nomerceh using "\#\#", column 4,z.tabnom using
-"\#\#\#\#\#",
+print  z.nomerceh using "##", column 4,z.tabnom using
+"#####",
 
 column 13,z.fio clipped,
 
 column 28,z.dolvn clipped,
 
-column 43,z.zarplata using "$\#\#\#\#.\#\#",
+column 43,z.zarplata using "$####.##",
 
 column 53,z.datarovd using "dd-mm-yyyy"
 
@@ -1236,11 +1236,11 @@ need 2 lines
 
 print " В цехе ",nameceh clipped,2 spaces,
 
-      group count(*) using "\#\#\#\#\#"," человек, "
+      group count(*) using "#####"," человек, "
 
 print " Средняя зарплата ",
 
-      group avg(z.zarplata) using "\#\#\#\#\# руб.\#\# коп"
+      group avg(z.zarplata) using "##### руб.## коп"
 
 PAGE TRAILER
 
@@ -1356,15 +1356,15 @@ nomerceh between 1 and 4 and fio matches "*о*" and zarplata\>500
 Описание состоит из 5 разделов: DATABASE, SCREEN, TABLES, ATTRIBUTES,
 INSTRUCTIONS
 
-\#  база данных, с которой ведется работа
+#  база данных, с которой ведется работа
 
 DATABASE zawod
 
-\#  Картинка, которая выводится на экран.
+#  Картинка, которая выводится на экран.
 
-\#  экранные поля обозначены так:    [метка поля ]
+#  экранные поля обозначены так:    [метка поля ]
 
-\#  метка поля используется в разделе ATTRIBUТЕ
+#  метка поля используется в разделе ATTRIBUТЕ
 
 SCREEN
 
@@ -1402,29 +1402,29 @@ SCREEN
 
 }
 
-TABLES          \#  имена таблиц, с которыми ассоциированна форма
+TABLES          #  имена таблиц, с которыми ассоциированна форма
 
 kadry
 
 ceh
 
-ATTRIBUTES      \# Имена экранных полей в форме и их атрибуты.
+ATTRIBUTES      # Имена экранных полей в форме и их атрибуты.
 
-\# слева от знака (=) пишется метка поля (которая фигурирует в
+# слева от знака (=) пишется метка поля (которая фигурирует в
 
-\# разделе SCREEN), справа - имя экранного поля, которое обычно,
+# разделе SCREEN), справа - имя экранного поля, которое обычно,
 
-\# для удобства, должно совпадать с именем какого-нибудь столбца
+# для удобства, должно совпадать с именем какого-нибудь столбца
 
-\# из таблиц, перечисленных в разделе TABLES
+# из таблиц, перечисленных в разделе TABLES
 
 nceh     = kadry.nomerceh;
 
 f002     = zarplata, COLOR=REVERSE WHERE f002 \>500;
 
-\#  если в поле выведено значение больше 500, то оно будет
+#  если в поле выведено значение больше 500, то оно будет
 
-\#  выделено с атрибутом  REVERSЕ (негатив)
+#  выделено с атрибутом  REVERSЕ (негатив)
 
 fio  = fio;
 
@@ -1434,13 +1434,13 @@ s1      = ceh.nomerceh;
 
 s2      = ceh.nameceh;
 
-                           \#  здесь экранные поля можно
+                           #  здесь экранные поля можно
 
-INSTRUCTIONS                \#  объединить в экранные записи
+INSTRUCTIONS                #  объединить в экранные записи
 
    screen record   kad (kadry.nomerceh, dolvn, zarplata)
 
-               \#  и описать экранные массивы
+               #  и описать экранные массивы
 
    screen record   scr[3] (ceh.nomerceh, nameceh)
 

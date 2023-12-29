@@ -105,31 +105,31 @@ DBPATH указывает список директорий где (помимо
 
 INFORMIXDIR=/usr/informix export INFORMIXDIR
 
-DBPRINT=pp export DBPRINT       \# программа печати - pp
+DBPRINT=pp export DBPRINT       # программа печати - pp
 
-DBEDIT=\'rk -E\' export DBEDIT    \# пользовательский редактор
+DBEDIT=\'rk -E\' export DBEDIT    # пользовательский редактор
 
-\# DBDATE=DMY4. export DBDATE    \# формат даты 24.09.1991
+# DBDATE=DMY4. export DBDATE    # формат даты 24.09.1991
 
-\# DBMONEY=\'. руб\' export DBMONEY\# совковый стандарт денег
+# DBMONEY=\'. руб\' export DBMONEY# совковый стандарт денег
 
-PATH=$PATH:$INFORMIXDIR/bin export PATH \# выполняемые модули
+PATH=$PATH:$INFORMIXDIR/bin export PATH # выполняемые модули
 
-SQLEXEC=$INFORMIXDIR/lib/sqlexec export SQLEXEC \# сервер - SE
+SQLEXEC=$INFORMIXDIR/lib/sqlexec export SQLEXEC # сервер - SE
 
 TERMCAP=$INFORMIXDIR/etc/termcap export TERMCAP
 
-case $TERM in                 \# таблица русификации клавиатуры
+case $TERM in                 # таблица русификации клавиатуры
 
 d460* \| d211* \| cham \| vt* )
 
-  KEYBMAP=$INFORMIXDIR/keybmap/dasher  \# яверты/qwerty
+  KEYBMAP=$INFORMIXDIR/keybmap/dasher  # яверты/qwerty
 
-\# KEYBMAP=$INFORMIXDIR/keybmap/dasherE \# qwerty/яверты
+# KEYBMAP=$INFORMIXDIR/keybmap/dasherE # qwerty/яверты
 
-\# KEYBMAP=$INFORMIXDIR/keybmap/dasherD \# йцукен/qwerty IBM PC
+# KEYBMAP=$INFORMIXDIR/keybmap/dasherD # йцукен/qwerty IBM PC
 
-\# KEYBMAP=$INFORMIXDIR/keybmap/dasherP \# йцукен/qwerty пишмаш
+# KEYBMAP=$INFORMIXDIR/keybmap/dasherP # йцукен/qwerty пишмаш
 
 export KEYBMAP
 

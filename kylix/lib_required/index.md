@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-[root\@snoppy hello]\# ldd helloworld
+[root\@snoppy hello]# ldd helloworld
 
   /lib/libNoVersion.so.1 =\> /lib/libNoVersion.so.1 (0x40018000)
 

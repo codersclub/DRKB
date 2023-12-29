@@ -103,9 +103,9 @@ LOCALE\_SMONTHOUSANDSEP      { monetary thousand separator }
 
 LOCALE\_SMONGROUPING         { monetary grouping }
 
-LOCALE\_ICURRDIGITS          { \# local monetary digits }
+LOCALE\_ICURRDIGITS          { # local monetary digits }
 
-LOCALE\_IINTLCURRDIGITS      { \# intl monetary digits }
+LOCALE\_IINTLCURRDIGITS      { # intl monetary digits }
 
 LOCALE\_ICURRENCY            { positive currency mode }
 

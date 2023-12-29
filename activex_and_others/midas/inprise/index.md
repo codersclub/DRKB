@@ -1035,7 +1035,7 @@ these properties:
     | Field                 | CustomConstraint      | ConstraintErrorMessag |
     |                       |                       | e                     |
     +-----------------------+-----------------------+-----------------------+
-    | DEPT\_NO              | X is null or (x in    | Dept\# value is not   |
+    | DEPT\_NO              | X is null or (x in    | Dept# value is not   |
     |                       | ('111', '222',        | valid                 |
     |                       | '333'))               |                       |
     +-----------------------+-----------------------+-----------------------+

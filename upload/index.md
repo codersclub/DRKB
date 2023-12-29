@@ -4,7 +4,7 @@ Title: Добавить материал
 
 
 -   [C++](javascript:%20voidPutATag('%5Bcode=cpp%5D','%5B/code%5D','content'))
--   [C\#](javascript:%20voidPutATag('%5Bcode=csharp%5D','%5B/code%5D','content'))
+-   [C#](javascript:%20voidPutATag('%5Bcode=csharp%5D','%5B/code%5D','content'))
 -   [CSS](javascript:%20voidPutATag('%5Bcode=css%5D','%5B/code%5D','content'))
 -   [Delphi](javascript:%20voidPutATag('%5Bcode=delphi%5D','%5B/code%5D','content'))
 -   [Java](javascript:%20voidPutATag('%5Bcode=java%5D','%5B/code%5D','content'))

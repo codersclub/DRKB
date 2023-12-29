@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Перехватите событие KeyPress и установите key = \#0 для недопустимых
+Перехватите событие KeyPress и установите key = #0 для недопустимых
 клавиш.
 
     procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);

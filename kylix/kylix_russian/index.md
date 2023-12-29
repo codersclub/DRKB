@@ -24,7 +24,7 @@ Kylix мог понимать русские шрифты, нужно сдела
 
 LANG=ru
 
-LANGUAGE=ru\_RU.KOI8-R:ru \#опционально
+LANGUAGE=ru\_RU.KOI8-R:ru #опционально
 
 LC\_CTYPE=ru\_RU.KOI8-R
 

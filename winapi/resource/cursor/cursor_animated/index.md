@@ -66,7 +66,7 @@ resource file with the cursor to be loaded.
 
 To do this create a file myResources.rc where you\'ll put the following
 
-\#define ANICURSOR 21
+#define ANICURSOR 21
 
 myCursor ANICURSOR "path\_to\_my\_cursor"
 

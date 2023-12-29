@@ -1993,7 +1993,7 @@ sp\_helptext deltitle
 
  
 
-\# Lines of Text
+# Lines of Text
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\--
 

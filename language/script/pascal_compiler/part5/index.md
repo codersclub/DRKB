@@ -785,7 +785,7 @@ end;
 
      DO
 
-     \<expr\>         { Emit(SUBQ \#1,D0);
+     \<expr\>         { Emit(SUBQ #1,D0);
 
                       L = NewLabel;
 

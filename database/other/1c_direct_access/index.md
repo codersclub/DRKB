@@ -70,43 +70,43 @@ https://rudjuk.kiev.ua/
 Информацию о любом файле базы данных и любом поле Вы можете почерпнуть
 из текстового файла 1Сv7.DD.
 
-\#AccWare Data Dictionary
+#AccWare Data Dictionary
 
 D=DDV7120\|AccWare Data Dictionary (DDCP=1251UKR)\|
 
-\#
+#
 
-\#
+#
 
-\#===================================
+#===================================
 
-\#==TABLE no 0 : Соединений
+#==TABLE no 0 : Соединений
 
-\# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
+# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
 
 T=1SUSERS \|Соединений \|A \|1SUSERS \|1
 
-\#\-\-\-\--Fields\-\-\-\-\-\--
+#\-\-\-\--Fields\-\-\-\-\-\--
 
-\# Name \|Descr \|Type\|Length\|Precision
+# Name \|Descr \|Type\|Length\|Precision
 
 F=USRSCNT \|Number of users \|N \|4 \|0
 
 F=NETCHGCN \|Count of changes \|N \|10 \|0
 
-\#
+#
 
-\#====================================
+#====================================
 
-\#==TABLE no 1 : Системная
+#==TABLE no 1 : Системная
 
-\# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
+# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
 
 T=1SSYSTEM\|Системная \|A \|1SSYSTEM \|1
 
-\#\-\-\-\--Fields\-\-\-\-\-\--
+#\-\-\-\--Fields\-\-\-\-\-\--
 
-\# Name \|Descr \|Type\|Length\|Precision
+# Name \|Descr \|Type\|Length\|Precision
 
 F=CURDATE \|Date of TM \|D \|8 \|0
 
@@ -124,19 +124,19 @@ F=ACCDATE \|Date of Account Tota\|D \|8 \|0
 
 F=FLAGS \|FLAGS \|N \|10 \|0
 
-\#
+#
 
-\#====================================
+#====================================
 
-\#==TABLE no 2 : Константы
+#==TABLE no 2 : Константы
 
-\# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
+# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
 
 T=1SCONST \|Константы \|A \|1SCONST \|1
 
-\#\-\-\-\--Fields\-\-\-\-\-\--
+#\-\-\-\--Fields\-\-\-\-\-\--
 
-\# Name \|Descr \|Type\|Length\|Precision
+# Name \|Descr \|Type\|Length\|Precision
 
 F=OBJID \|ID obj(0-cons ) \|C \|9 \|0
 

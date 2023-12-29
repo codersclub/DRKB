@@ -749,8 +749,8 @@ IModule.Name :=\'MyModule1\';
 
 ,поместить в него новую процедуру VBA:
 
-IModule.CodeModule.AddFromString(\'PUBLIC SUB MySub1()\'\#13\'Msgbox
-"Hello, World!"\'\#13\'End sub\'\#13);
+IModule.CodeModule.AddFromString(\'PUBLIC SUB MySub1()\'#13\'Msgbox
+"Hello, World!"\'#13\'End sub\'#13);
 
 и запустить эту процедуру
 

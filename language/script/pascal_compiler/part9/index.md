@@ -475,7 +475,7 @@ null
 В Small C команды препроцессора также обрабатываются компилятором
 соответствующе, так что синтаксис становится:
 
-     \<global declaration\> ::= \'\#\' \<preprocessor command\>  \|
+     \<global declaration\> ::= \'#\' \<preprocessor command\>  \|
 
                          \'int\' \<data list\>           \|
 

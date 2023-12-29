@@ -153,7 +153,7 @@ Access. Среди прочего, мне необходимо узнать...
 Драйвер ODBC, предусмотренный для доступа к Access 2.0, разработан
 только для работы в пределах среды Microsoft Office. Для работы со
 связкой ODBC/Access в Delphi, вам необходим Microsoft ODBC Desktop
-Driver kit, part\# 273-054-030, доступный через Microsoft Direct за
+Driver kit, part# 273-054-030, доступный через Microsoft Direct за
 $10.25US (если вы живете не в США, воспользуйтесь службой WINEXT). Он
 также доступен в январском выпуске MSDN, Level 2 (Development Platform)
 CD4 \\ODBC\\X86 как часть ODBC 2.1 SDK. Имейте в виду, что смена

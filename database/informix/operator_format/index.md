@@ -80,7 +80,7 @@ Date: 01.01.2007
 
 status            { 0 \| NOTFOUND \| \<0 } код завершения оператора
 quit\_flag ( не 0 если было нажато QUIT ) int\_flag ( не 0 если было
-нажато \^C ) define SQLCA record \# системная запись с кодами завершения
+нажато \^C ) define SQLCA record # системная запись с кодами завершения
 SQLCODE integer,="status" SQLERRM char(71), ­- SQLERRP char(8), ­-
 SQLERRD array[8] of int,...„см. SQLAWARN char(8) warning или пробел
 end record SQLERRD[1] зарезервирован SQLERRD[2] serial значение или
@@ -282,7 +282,7 @@ MENU  "Название меню"
 
              .  .  .
 
-             [NEXT OPTION "kоманда меню"           \#  Перейти к
+             [NEXT OPTION "kоманда меню"           #  Перейти к
 
     [COMMAND  .  .  .        ]
 
@@ -374,9 +374,9 @@ PROMPT список переменных и констатнт
 
 [ATTRIBUTE(аттрибуты вывода)] FOR [CHAR] variable
 
-[HELP help-number]             \# Ввести значение в variable
+[HELP help-number]             # Ввести значение в variable
 
-[ATTRIBUTE(аттрибуты ввода)]   \# FOR CHAR - ввести один символ
+[ATTRIBUTE(аттрибуты ввода)]   # FOR CHAR - ввести один символ
 
 [ON KEY (key-list)
 
@@ -648,7 +648,7 @@ CREATE [TEMP] TABLE table-name( column-name datatype [NOT NULL]
 
 qualifier \\in {YEAR,MONTH,DAY,HOUR,MINUTE,SECOND,FRACTION(n)}
 
-ALTER TABLE table-name       \# Недопустим для временых таблиц
+ALTER TABLE table-name       # Недопустим для временых таблиц
 
     {  ADD ( new-column-name datatype [NOT NULL]
 

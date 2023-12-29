@@ -263,15 +263,15 @@ PING, TRACEROUTE и других подобных.
 
 Это пример файла HOSTS:
 
-\# This is a sample HOSTS file
+# This is a sample HOSTS file
 
-Caesar   192.168.0.4  \# Server computer
+Caesar   192.168.0.4  # Server computer
 
-augustus 192.168.0.5  \# Firewall computer
+augustus 192.168.0.5  # Firewall computer
 
 Имя узла и IP адрес должны быть разделены с помощью пробела или
 табуляции. Комментарии также могут быть вставлены в файл, для этого
-должен быть использован символ \#.
+должен быть использован символ #.
 
 Файл HOSTS может быть использован для ввода ложных значений или для
 замены значений DNS. Файл HOSTS часто используется в малых сетях,
@@ -296,33 +296,33 @@ Discard        9/tcp        sink null
 
 Discard        9/udp        sink null
 
-Systat        11/tcp        users        \#Active users
+Systat        11/tcp        users        #Active users
 
-Systat        11/tcp        users        \#Active users
+Systat        11/tcp        users        #Active users
 
 Daytime        13/tcp
 
 Daytime        13/udp
 
-Qotd        17/tcp        quote        \#Quote of the day
+Qotd        17/tcp        quote        #Quote of the day
 
-qotd        17/udp        quote        \#Quote of the day
+qotd        17/udp        quote        #Quote of the day
 
-chargen        19/tcp        ttytst source        \#Character generator
+chargen        19/tcp        ttytst source        #Character generator
 
-chargen 19/udp                ttytst source        \#Character generator
+chargen 19/udp                ttytst source        #Character generator
 
-ftp-data        20/tcp                \#FTP data
+ftp-data        20/tcp                #FTP data
 
-ftp        21/tcp                \#FTP control
+ftp        21/tcp                #FTP control
 
 telnet        23/tcp
 
-smtp        25/tcp        mail        \#Simple Mail Transfer Protocol
+smtp        25/tcp        mail        #Simple Mail Transfer Protocol
 
 Формат файла следующий:
 
-\<service name\> \<port number\>/\<protocol\> [aliases...] [\#\<comment\>]
+\<service name\> \<port number\>/\<protocol\> [aliases...] [#\<comment\>]
 
 Вам не требуется читать данный файл, поскольку стек протоколов делает
 это самостоятельно и прозрачно для вас. Файл SERVICES может быть

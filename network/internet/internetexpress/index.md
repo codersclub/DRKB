@@ -157,7 +157,7 @@ crushing
 them with powerful teeth. They are voracious eaters, and divers report
 seeing
 
-the clown triggerfish devour beds of pearl oysters.&\#010;&\#010;Do not
+the clown triggerfish devour beds of pearl oysters.&#010;&#010;Do not
 eat
 
 this fish. According to an 1878 account, &quot;the poisonous flesh acts
@@ -173,9 +173,9 @@ breathing
 
 laborious, and the patient expires in a paroxysm of extreme suffering.
 
-&quot;&\#010;&\#010;Not edible.&\#010;&\#010;Range is Indo-Pacific
+&quot;&#010;&#010;Not edible.&#010;&#010;Range is Indo-Pacific
 
-and East Africa to Somoa.&\#010;"/\>
+and East Africa to Somoa.&#010;"/\>
 
 \<ROW Species\_No="90030" Category="Snapper" Common\_Name="Red
 Emperor"
@@ -186,7 +186,7 @@ Length\_In="23.62204724409449"
 Notes="Called seaperch in Australia. Inhabits the areas around lagoon
 coral
 
-reefs and sandy bottoms.&\#010;&\#010;The red emperor is a valuable food
+reefs and sandy bottoms.&#010;&#010;The red emperor is a valuable food
 
 fish and considered a great sporting fish that fights with fury when
 hooked.
@@ -194,7 +194,7 @@ hooked.
 The flesh of an old fish is just as tender to eat as that of the very
 young.
 
-&\#010;&\#010;Range is from the Indo-Pacific to East Africa.&\#010;"/\>
+&#010;&#010;Range is from the Indo-Pacific to East Africa.&#010;"/\>
 
 \</ROWDATA\>
 

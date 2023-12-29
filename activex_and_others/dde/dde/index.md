@@ -253,6 +253,6 @@ ServiceApplication путь к run-time версии ReportSmith и в текс�
 программы в строке
 
 Cmd:=\'LoadReport
-"c:\\d\\r\\video\\summary.rpt","\@Repvar1=\<40\>,\@Repvar2=\<\'\#39\'Smith\'\#39\'\>"\'\#0;
+"c:\\d\\r\\video\\summary.rpt","\@Repvar1=\<40\>,\@Repvar2=\<\'#39\'Smith\'#39\'\>"\'#0;
 
 правильно указать путь к отчету.

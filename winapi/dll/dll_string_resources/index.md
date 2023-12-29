@@ -19,9 +19,9 @@ STRINGTABLE
 
 {
 
-00001, "My String \#1"
+00001, "My String #1"
 
-00002, "My String \#2"
+00002, "My String #2"
 
 }
 

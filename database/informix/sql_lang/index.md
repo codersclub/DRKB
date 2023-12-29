@@ -1877,7 +1877,7 @@ COMMIT WORK
 соответствующий фрагмент программы будет выглядеть примерно так (пример
 на Informix ESQL/C):
 
-\#define NOTFOUND 100
+#define NOTFOUND 100
 ........
 $declare x scroll cursor for select name, address from companies;
 $open x;
