@@ -12,11 +12,11 @@ Date: 01.01.2007
 :::
 
 It is possible to use regular expressions in Delphi thanks to their
-implementation inside \"Microsoft(r) Windows(r) Script\".First of all I
+implementation inside "Microsoft(r) Windows(r) Script".First of all I
 want to say that this article isn\'t a theoretical analisys of the
 regular expressions but an explanation of how to use them in Delphi.
 First of all I suggest you to download the latest version of
-\"Microsoft(r) Windows(r) Script\" at the following url:
+"Microsoft(r) Windows(r) Script" at the following url:
 
 <https://msdn.microsoft.com/downloads/default.asp?URL=/downloads/sample.asp?url=/msdn-files/027/001/733/msdncompositedoc.xml>
 
@@ -33,10 +33,10 @@ It will be installed Microsoft(r) Windows(r) Script wich containes:
    Windows Script Runtime Version 5.6.
 
 We are interested in the implementation of regular expressions, which is
-in the file \"vbscript.dll\". Every time you will want to run a program,
-wich exploits regular expressions by using \"Microsoft(r) Windows(r)
-Script\", on a given computer, it will be needed to copy the file
-\"vbscript.dll\" on the target computer and register it with the
+in the file "vbscript.dll". Every time you will want to run a program,
+wich exploits regular expressions by using "Microsoft(r) Windows(r)
+Script", on a given computer, it will be needed to copy the file
+"vbscript.dll" on the target computer and register it with the
 following command line:
 
     regsvr32 vbscript.dll
@@ -46,18 +46,18 @@ internet, automatically do it.
 
 Now let\'s go to import the type library in Delphi:
 
-In the delphi menu, select \"Project\" then \"Import type library\": it
-shows a mask containing a list. Inside the list select \"Microsoft
-VBScript Regular Expressions\" (followed by a version number). It is
+In the delphi menu, select "Project" then "Import type library": it
+shows a mask containing a list. Inside the list select "Microsoft
+VBScript Regular Expressions" (followed by a version number). It is
 possible that there are more then one item with this name (it only
 changes the version number): in this situation select the item with the
 higher version number. In date September the 23th 2002, the package that
 can be downloaded from Microsoft\'s internet site returns the following
 value:
 
-   \"Microsoft VBScript Regular Expressions 5.5 (Version 5.5)\"
+   "Microsoft VBScript Regular Expressions 5.5 (Version 5.5)"
 
-This version supplies the following \"Class Names\"
+This version supplies the following "Class Names"
 
 }
 

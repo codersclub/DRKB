@@ -79,7 +79,7 @@ Date: 01.01.2007
 
 Всё, что нужно сделать - это вызвать :
 
-LoadFileIntoList(\"filename.txt\",Webpage, True);
+LoadFileIntoList("filename.txt",Webpage, True);
 
 Где:
 
@@ -95,7 +95,7 @@ WebPage
 
 указывает, применять или нет HTML-фильтр.
 
-PS: В этом примере объект TMemo (который вызывается из \"FilterMemo\")
+PS: В этом примере объект TMemo (который вызывается из "FilterMemo")
 лежит на форме и поэтому не видим.
 
 Пример:

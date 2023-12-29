@@ -86,7 +86,7 @@ documentation for further understanding.
 The above provide iterations thru object such as Inbox,Contacts etc. The
 AsString returns a fields value from the object such as Email
 Address,Name,Company Name etc. (There are miriads of these defined in
-the CONST section \"Field Tags\").
+the CONST section "Field Tags").
 
 Properties
 

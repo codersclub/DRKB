@@ -14,11 +14,11 @@ Database index out of date error
 
 This is a BDE/Paradox error message. For newbies, BDE error messages are
 daunting, cryptic messages. Actually, even for seasoned veterans, they
-can sometimes be real \"stumpers.\" Unfortunately, there\'s no real good
+can sometimes be real "stumpers." Unfortunately, there\'s no real good
 reference available that I know of, so all I can offer with respect to
 this error message is my experience.
 
-The \"Index out of date\" message can mean a couple of things:
+The "Index out of date" message can mean a couple of things:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- --------------------------------------------------------------------------

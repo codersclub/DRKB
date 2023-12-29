@@ -18,7 +18,7 @@ Delphi 4 виснут при запуске. Видеокарта S3 Virge?
 
 Если не помогает, то попробуйте добавить в system.ini:
 
-\[Display\] \"BusThrottle\"=\"On\"
+\[Display\] "BusThrottle"="On"
 
 Эта проблема устранена в Delphi 4sp3.
 

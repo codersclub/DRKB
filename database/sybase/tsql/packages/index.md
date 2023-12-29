@@ -190,7 +190,7 @@ create table test
 
 insert test
 
-values (\"hello\", 598)
+values ("hello", 598)
 
 select * from test
 
@@ -318,7 +318,7 @@ create table test
 
 insert test
 
-   values (\"hello\", 598)
+   values ("hello", 598)
 
 select * from test
 
@@ -342,7 +342,7 @@ batch.                                                     (Команда
 
 create view testview as select column1 from test
 
-insert testview values (\"goodbye\")
+insert testview values ("goodbye")
 
 go
 
@@ -433,7 +433,7 @@ create table test
 
 insert test
 
-  values (\"hello\", 598)
+  values ("hello", 598)
 
 select * from test
 
@@ -569,7 +569,7 @@ if exists (select postalcode from authors
 
         where postalcode = \'94705\')
 
-print \"Berkeley author\"
+print "Berkeley author"
 
  
 
@@ -591,13 +591,13 @@ exists (существует). Ключевое слово exists действу
 
 if (select max(id) from sysobjects) \< 50
 
-  print \"There are no user-created objects in this database.\"
+  print "There are no user-created objects in this database."
 
 else
 
   select name, type, id from sysobjects
 
-  where id \> 50 and type = \"U\"
+  where id \> 50 and type = "U"
 
  
 
@@ -853,7 +853,7 @@ $20, все цены уменьшаются наполовину. Затем в�
 противном случае цикл выполняется снова. Команда continue не допустит
 выполнение оператора вывода (печати) print, если средняя цена меньше
 $20. После окончания цикла while в этом примере выводится список самых
-дорогих книг и информационное сообщение \"Not Too Expensive\" (Не очень
+дорогих книг и информационное сообщение "Not Too Expensive" (Не очень
 дорого).
 
  
@@ -876,7 +876,7 @@ begin
 
            continue
 
-   print \"Average price still over $20\"
+   print "Average price still over $20"
 
 end
 
@@ -886,7 +886,7 @@ select title\_id, price from titles
 
  
 
-print \"Not Too Expensive\"
+print "Not Too Expensive"
 
  
 
@@ -997,23 +997,23 @@ select \@veryhigh = max(price)
 
 if \@veryhigh \> $20
 
-  print \"Ouch!\"
+  print "Ouch!"
 
  
 
 declare \@one varchar(18), \@two varchar(18)
 
-select \@one = \"this is one\", \@two = \"this is two\"
+select \@one = "this is one", \@two = "this is two"
 
-if \@one = \"this is one\"
+if \@one = "this is one"
 
-  print \"you got one\"
+  print "you got one"
 
-if \@two = \"this is two\"
+if \@two = "this is two"
 
-  print \"you got two\"
+  print "you got two"
 
-else print \"nope\"
+else print "nope"
 
  
 
@@ -1180,9 +1180,9 @@ select \@m
 
 declare \@v int, \@i int
 
-if \@v = \@i select \"null = null, true\"
+if \@v = \@i select "null = null, true"
 
-if \@v \> \@i select \"null \> null, true\"
+if \@v \> \@i select "null \> null, true"
 
  
 
@@ -1547,7 +1547,7 @@ select \@count = 1
 
 restart:
 
-print \"yes\"
+print "yes"
 
 select \@count = \@count + 1
 
@@ -1596,7 +1596,7 @@ if \@nm is null
 
 begin
 
-print \"You must give a user name\"
+print "You must give a user name"
 
 return
 
@@ -1614,7 +1614,7 @@ begin
 
   and sysobjects.uid = master..syslogins.suid
 
-  and sysobjects.type = \"R\"
+  and sysobjects.type = "R"
 
 end
 
@@ -1666,7 +1666,7 @@ if exists (select postalcode from authors
 
   where postalcode = \'94705\')
 
-print \"Berkeley author\"
+print "Berkeley author"
 
  
 
@@ -1677,7 +1677,7 @@ print \"Berkeley author\"
 
 declare \@msg char(50)
 
-select \@msg = \"What\'s up doc?\"
+select \@msg = "What\'s up doc?"
 
 print \@msg
 
@@ -1802,7 +1802,7 @@ SQL Сервера.
 
  
 
-raiserror 99999 \"You must give a user name\"   (Нужно указать имя
+raiserror 99999 "You must give a user name"   (Нужно указать имя
 пользователя).
 
  
@@ -1849,8 +1849,8 @@ go
 
 sp\_addmessage 25001,
 
-\"There is already a remote user named \'%1!\' for remote server
-\'%2!\'.\"
+"There is already a remote user named \'%1!\' for remote server
+\'%2!\'."
 
 go
 
@@ -1858,8 +1858,8 @@ go
 
 sp\_addmessage 25001,
 
-  \"Remotebenutzername \'%1!\' existiert bereits auf dem Remoteserver
-\'%2!\'.\",\"german\"
+  "Remotebenutzername \'%1!\' existiert bereits auf dem Remoteserver
+\'%2!\'.","german"
 
 go
 
@@ -1899,7 +1899,7 @@ as
 
            exec sp\_getmessage 25001, \@msg output
 
-           select \@arg1=isnull(\@remotename,\"null\")
+           select \@arg1=isnull(\@remotename,"null")
 
            print \@msg, \@arg1, \@remoteserver
 
@@ -1930,7 +1930,7 @@ go
 
  
 
-waitfor {delay \"время\" \| time \"время\" \| errorexit \|  processexit
+waitfor {delay "время" \| time "время" \| errorexit \|  processexit
 \| mirrorexit}
 
  
@@ -1974,7 +1974,7 @@ sysprocesses (системные процессы) с помощью систе�
 
 begin
 
-waitfor time \"14:20\"
+waitfor time "14:20"
 
 insert chess(next\_move)
 
@@ -1991,7 +1991,7 @@ end
 
  
 
-waitfor delay \"0:00:10\"
+waitfor delay "0:00:10"
 
  
 
@@ -2057,7 +2057,7 @@ create procedure findrules2 \@nm varchar(30) = null
 
 as if \@nm is null /*if no parameter is given*/
 
-print \"You must give a user name\"
+print "You must give a user name"
 
 else
 
@@ -2073,7 +2073,7 @@ begin
 
   and sysobjects.uid = master..syslogins.suid
 
-  and sysobjects.type = \"R\"
+  and sysobjects.type = "R"
 
 end
 

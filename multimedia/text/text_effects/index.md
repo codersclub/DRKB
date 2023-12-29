@@ -18,7 +18,7 @@ Answer:
 Make a new Application and take this Proc bellow for the OnPaint-Event
 of the Form. The TextOutput will look like written with a kaligraf.If
 You replace the for loop in the proc with a single call of textout you
-can use this code to write \"hollow\" text. Try it with different
+can use this code to write "hollow" text. Try it with different
 Pen-Styles too!
 
     procedure TForm1.FormPaint(Sender: TObject);

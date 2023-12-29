@@ -612,8 +612,8 @@ select pub\_name, publishers.state, au\_lname, au\_fname, authors.state
 
 from publishers, authors
 
-where authors.state \> publishers.state and pub\_name = \"New Age
-Books\"
+where authors.state \> publishers.state and pub\_name = "New Age
+Books"
 
  
 
@@ -731,9 +731,9 @@ select au1.au\_fname, au1.au\_lname, au2.au\_fname, au2.au\_lname
 
 from authors au1, authors au2
 
-where au1.city = \"Oakland\" and au2.city = \"Oakland\"
+where au1.city = "Oakland" and au2.city = "Oakland"
 
-and au1.state = \"CA\" and au2.state = \"CA\"
+and au1.state = "CA" and au2.state = "CA"
 
 and au1.postalcode = au2.postalcode
 
@@ -783,9 +783,9 @@ select au1.au\_fname, au1.au\_lname, au2.au\_fname, au2.au\_lname
 
 from authors au1, authors au2
 
-where au1.city = \"Oakland\" and au2.city = \"Oakland\"
+where au1.city = "Oakland" and au2.city = "Oakland"
 
-and au1.state = \"CA\" and au2.state = \"CA\"
+and au1.state = "CA" and au2.state = "CA"
 
 and au1.postalcode = au2.postalcode
 
@@ -949,7 +949,7 @@ select distinct au\_lname, authors.city
 
 from publishers, authors
 
-where au\_lname like \"\[ABC\]%\" and publishers.city != authors.city
+where au\_lname like "\[ABC\]%" and publishers.city != authors.city
 
  
 
@@ -990,7 +990,7 @@ select distinct au\_lname, city
 
 from authors
 
-where au\_lname like \"\[ABC\]%\" and city not in
+where au\_lname like "\[ABC\]%" and city not in
 
 (select city from publishers
 
@@ -1040,7 +1040,7 @@ where authors.au\_id = titleauthor.au\_id
 
 and titles.title\_id = titleauthor.title\_id
 
-and titles.type = \"trad\_cook\"
+and titles.type = "trad\_cook"
 
  
 

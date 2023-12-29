@@ -72,8 +72,8 @@ GetFontResourceInfoW особым случаем является когда dwF
 GetFontName(\'C:\\MyFonts\\FUTURA.TTF\') - возвратит \'FuturaEugenia\'.
 
 PS: Всё бы хорошо, но эта функция хоть и есть в Win9x, только её там
-вызывать нельзя - пишет \"This function is only valid in Windows NT
-mode.\"...
+вызывать нельзя - пишет "This function is only valid in Windows NT
+mode."...
 
 FontView в Win9x использует EnumFontFamiliesEx (видимо по предложенному
 Vit\'ом и x77 способу)...

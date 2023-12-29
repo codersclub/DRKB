@@ -54,9 +54,9 @@ SYSFONTACM=koi8-r
 И последнее, что надо сделать - настрокить переключение клавиатуры в
 файле /etc/X11/XF86Config. Там нужно отредактировать следующие строки:
 
-Option \"XkbLayout\" \"ru(winkeys)\"
+Option "XkbLayout" "ru(winkeys)"
 
-Option \"XkbOptions\" \"grp:ctrl\_shift\_toggle\"
+Option "XkbOptions" "grp:ctrl\_shift\_toggle"
 
 Последняя строка показывает как будет переключатся раскладка. В данном
 случае будет использоваться сочетание клавишь Ctrl+Shift.

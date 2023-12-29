@@ -22,7 +22,7 @@ Date: 01.01.2007
 
 \<H2\>Dr.Bob\'s Guestbook\</H2\>
 
-\<FORM ACTION=\"http://www.drbob42.com/cgi-bin/guest.exe\" METHOD=POST
+\<FORM ACTION="http://www.drbob42.com/cgi-bin/guest.exe" METHOD=POST
 
 Name: \<INPUT TYPE=text NAME=name\<BR\>
 
@@ -30,7 +30,7 @@ Comments: \<TEXTAREA COLS=42 LINES=4 NAME=comments\>
 
 \<P\>
 
-\<INPUT TYPE=SUBMIT VALUE=\"Send Comments to Dr.Bob\"\>
+\<INPUT TYPE=SUBMIT VALUE="Send Comments to Dr.Bob"\>
 
 \</FORM\>
 

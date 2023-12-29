@@ -1142,8 +1142,8 @@ TPB константы, описывает их назначение, показ
 isc\_tpb\_version3                                Версия 3 буфера
 транзакций
 
-isc\_tpb\_consistency                  Модель транзакции \"блокировка
-таблицы\"
+isc\_tpb\_consistency                  Модель транзакции "блокировка
+таблицы"
 
   ---------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   isc\_tpb\_concurrency              Производительная, параллельная транзакция с приемлемой последовательностью; использование этого параметра дает все преимущества InterBase модели многорождаемых транзакций  \[Значение по умолчанию\]?????
@@ -1516,7 +1516,7 @@ isc\_tpb\_concurrency,
 
 isc\_tpb\_nowait,
 
-isc\_tpb\_protected, isc\_tpb\_lock\_read, \"EMPLOYEE\"};
+isc\_tpb\_protected, isc\_tpb\_lock\_read, "EMPLOYEE"};
 
 Несколько таблиц могут быть зарезервированы одновременно. Следующее
 объявление иллюстрирует, как две таблицы зарезервированы, один для
@@ -1530,9 +1530,9 @@ isc\_tpb\_concurrency,
 
 isc\_tpb\_nowait,
 
-isc\_tpb\_protected, isc\_tpb\_lock\_read, \"COUNTRY\",
+isc\_tpb\_protected, isc\_tpb\_lock\_read, "COUNTRY",
 
-isc\_tpb\_protected, isc\_tpb\_lock\_write, \"EMPLOYEE\"};
+isc\_tpb\_protected, isc\_tpb\_lock\_write, "EMPLOYEE"};
 
  
 
@@ -1927,7 +1927,7 @@ isc\_dsql\_execute\_immediate () если:
 создают новую БД. Любой дескриптор существующей БД устанавливается в
 NULL, и может быть использован в будущем для подключения к новым БД.
 
-    char *str = "CREATE DATABASE \"new_emp.gdb\"";
+    char *str = "CREATE DATABASE "new_emp.gdb"";
     . . .
     isc_detach_database(status_vector, &db1);
     isc_dsql_execute_immediate(status_vector, &db1, &trans, 0, str, 1,NULL);
@@ -2037,7 +2037,7 @@ OPEN                                                PREPARE
 приложениях встроенного SQL. Например, следующее объявление переменной
 базового языка -- связывается со строкой инструкции SQL:
 
-char *str = \"DELETE FROM CUSTOMER WHERE CUST\_NO = 256\";
+char *str = "DELETE FROM CUSTOMER WHERE CUST\_NO = 256";
 
 Примечание: Точка с запятой, которая появляется в конце этого объявления
 символа - терминатор строки в С, а не часть строки инструкции SQL.
@@ -2050,7 +2050,7 @@ char *str = \"DELETE FROM CUSTOMER WHERE CUST\_NO = 256\";
 передано как константа, или как метка - заполнитель во время выполнения.
 Например, следующая строка инструкции передает 256 как константу:
 
-char *str = \"DELETE FROM CUSTOMER WHERE CUST\_NO = 256\";
+char *str = "DELETE FROM CUSTOMER WHERE CUST\_NO = 256";
 
 Также можно формировать строки во время выполнения c комбинацией
 констант. Этот метод полезен для инструкций, где переменная не истинная
@@ -2060,7 +2060,7 @@ char *str = \"DELETE FROM CUSTOMER WHERE CUST\_NO = 256\";
 Чтобы передавать параметр как метку - заполнитель, значение передают как
 вопросительный знак (?) вставленный внутрь инструкции строки:
 
-char *str = \"DELETE FROM CUSTOMER WHERE CUST\_NO = ?\";
+char *str = "DELETE FROM CUSTOMER WHERE CUST\_NO = ?";
 
 Когда функция DSQL обрабатывает инструкцию, содержащую метку -
 заполнитель, то она заменяет вопросительный знак значением, находящимся
@@ -2274,7 +2274,7 @@ short aliasname\_length                Определяет длину, в ба�
 следующая  строка - инструкция содержит два параметра, поэтому
 приложение должно установить sqld в 2, и описать каждый параметр:
 
-char *str = \"UPDATE DEPARTMENT SET BUDGET = ? WHERE LOCATION = ?\";
+char *str = "UPDATE DEPARTMENT SET BUDGET = ? WHERE LOCATION = ?";
 
 Когда инструкция выполняется, в первом XSQLVAR находится информации
 относительно значения BUDGET, а во втором XSQLVAR информация о LOCATION.
@@ -2287,7 +2287,7 @@ char *str = \"UPDATE DEPARTMENT SET BUDGET = ? WHERE LOCATION = ?\";
 sqlvar указывает на первую  из XSQLVAR структур . Следующая строка -
 инструкция требует дескриптора вывода:
 
-char *str = \"SELECT * FROM CUSTOMER WHERE CUST\_NO \> 100\";
+char *str = "SELECT * FROM CUSTOMER WHERE CUST\_NO \> 100";
 
 Использование макроса XSQLDA\_LENGTH
 
@@ -2497,7 +2497,7 @@ NULL, и 1, если параметр или элемент списка выб�
 Приложения могут, вместо этого, обнаруживать и обрабатывать данные
 переменной длины напрямую. Чтобы  так делать, они должны извлечь первые
 два байта из строки, чтобы определить длину  строки, затем прочитать
-строку, \" байт за байтом \", в буфер с нулевым символом в конце.
+строку, " байт за байтом ", в буфер с нулевым символом в конце.
 
 Обработка типов данных NUMERIC и DECIMAL
 
@@ -2653,7 +2653,7 @@ isc\_dsql\_execute\_immediate():
 
  
 
-char *str = \"UPDATE DEPARTMENT SET BUDGET = BUDGET * 1.05\";
+char *str = "UPDATE DEPARTMENT SET BUDGET = BUDGET * 1.05";
 
   2. Проведите синтаксический анализ и выполните инструкцию, используя
 isc\_dsql\_execute\_immediate ():
@@ -2666,7 +2666,7 @@ NULL);
 
 isc\_dsql\_execute\_immediate(status\_vector, &db1, &trans, 0,
 
-\"UPDATE DEPARTMENT SET BUDGET = BUDGET * 1.05\", 1, NULL);
+"UPDATE DEPARTMENT SET BUDGET = BUDGET * 1.05", 1, NULL);
 
 Использование isc\_dsql\_prepare( ) и isc\_dsql\_execute( )
 
@@ -2677,7 +2677,7 @@ isc\_dsql\_prepare(), и isc\_dsql\_execute():
 
 1\. Создаем строку инструкции SQL:
 
-char *str = \"UPDATE DEPARTMENT SET BUDGET = BUDGET * 1.05\";
+char *str = "UPDATE DEPARTMENT SET BUDGET = BUDGET * 1.05";
 
 2\. Объявляем и инициализируем дескриптор SQL инструкции, который
 выделяется с помощью isc\_dsql\_allocate\_statement():
@@ -2700,7 +2700,7 @@ isc\_dsql\_prepare(status\_vector, &trans, &stmt, 0, str, 1, NULL);
 
 isc\_dsql\_prepare(status\_vector, &trans, &stmt, 0,
 
-\"UPDATE DEPARTMENT SET BUDGET = BUDGET * 1.05\", 1, NULL);
+"UPDATE DEPARTMENT SET BUDGET = BUDGET * 1.05", 1, NULL);
 
 4\. Выполняем инструкцию используя isc\_dsql\_execute().
 
@@ -2784,8 +2784,8 @@ XSQLDA хранить до 10 параметров.
 
  
 
-           char *str = \"UPDATE DEPARTMENT SET BUDGET = ?, LOCATION =
-?\";
+           char *str = "UPDATE DEPARTMENT SET BUDGET = ?, LOCATION =
+?";
 
            Эта инструкция содержит два параметра BUDGET и LOCATION.
 
@@ -3003,7 +3003,7 @@ out\_sqlda-\>sqln = 10;
 
 1\. Создайте саму строку:
 
-char *str = \"SELECT * FROM CUSTOMER\";
+char *str = "SELECT * FROM CUSTOMER";
 
 Инструкция, кажется,  имеет только один элемент списка выбора (*).
 Звездочка - символ подстановочных знаков, который замещает все столбцы в
@@ -3138,7 +3138,7 @@ isc\_dsql\_execute(status\_vector, &trans, &stmt, 1, NULL);
 isc\_dsql\_set\_cursor\_name(). К примеру, следующая инструкция
 объявляет курсор с именем «dyn\_cursor», для SQL инструкции stmt:
 
-isc\_dsql\_set\_cursor\_name(status\_vector, &stmt,\"dyn\_cursor\",
+isc\_dsql\_set\_cursor\_name(status\_vector, &stmt,"dyn\_cursor",
 NULL);
 
 Открытие курсора выполняет инструкцию, и нужный набор строк будет найден
@@ -3310,8 +3310,8 @@ InterBase сохраняет элементы списка выбора в ст�
 
 1.  Создайте саму строку с SQL инструкцией.
 
-char *str = \"SELECT * FROM DEPARTMENT WHERE BUDGET = ?,LOCATION =
-?\";
+char *str = "SELECT * FROM DEPARTMENT WHERE BUDGET = ?,LOCATION =
+?";
 
 Эта инструкция содержит два параметра: значение связанное со столбцом
 BUDGET и значение связанное со столбцом LOCATION.
@@ -3534,7 +3534,7 @@ isc\_dsql\_set\_cursor\_name(). К примеру, следующая инстр
 объявляет курсор dyn\_cursor, и для подготовки строки SQL инструкции
 stmt:
 
-isc\_dsql\_set\_cursor\_name(status\_vector, &stmt, \"dyn\_cursor\",
+isc\_dsql\_set\_cursor\_name(status\_vector, &stmt, "dyn\_cursor",
 NULL);
 
 Открытие курсора дает инструкции возможность выполнится, и отыскать
@@ -3621,7 +3621,7 @@ type\_item\[\] = {isc\_info\_sql\_stmt\_type};
 
 Обратите внимание, что дополнительная информация о макросах для
 требуемых элементов может быть найдена в ibase.h по комментарию, " SQL
-information items.\"
+information items."
 
 Буфер результатов должен быть достаточно большим, чтобы содержать любые
 данные, возвращенные запросом. Надлежащий размер для этого буфера
@@ -4278,7 +4278,7 @@ isc\_interprete () могут форматировать и отображать
 
 Пример анализа статус-вектора
 
-Следующий пример C иллюстрирует простой пример, анализ  \"в лоб\"
+Следующий пример C иллюстрирует простой пример, анализ  "в лоб"
 вектора состояния. При возникновении ошибки блок обработки ошибок
 анализирует кластер массива вектора состояния, печатая содержание
 каждого кластера и интерпретируя его для Вас.
@@ -4834,7 +4834,7 @@ Blob ID ссылающийся на данные, которыe сохранен
 сбросить) Blob ID, сохраненный в нем. Если столбец Blob содержит Blob
 ID, и Вы изменяете столбцы относящиеся к различным  Blob (или содержащим
 NULL), Blob на который ссылается предварительно сохраненный Blob ID
-будет удален в течение следующей сборки \"мусора\".(????)
+будет удален в течение следующей сборки "мусора".(????)
 
 Все эти операции требуют следующих шагов:
 
@@ -5050,7 +5050,7 @@ Cуществуют четыре способа удаления BLOB.
   ---- -----------------------------------------------------------------------------------------------------
 :::
 
-UPDATE PROJECT SET PROJ\_DESC = NULL WHERE PROJ\_ID = \"VBASE\"
+UPDATE PROJECT SET PROJ\_DESC = NULL WHERE PROJ\_ID = "VBASE"
 
 Blob на который указывал удаленный blob\_id будет удален следующей
 сборкой «мусора»
@@ -5316,9 +5316,9 @@ status\_vector,
 
 &tr\_handle, /* Set by previous isc\_start\_transaction() call. */
 
-\"PROJECT\", /* имя таблицы */
+"PROJECT", /* имя таблицы */
 
-\"PROJ\_DESC\", /* название столбца */
+"PROJ\_DESC", /* название столбца */
 
 &from\_desc, /* Blob дескриптор заполняется этой функцией. */
 
@@ -5384,9 +5384,9 @@ DECLARE FILTER SAMPLE
 
 INPUT TYPE --1 OUTPUT\_TYPE --2
 
-ENTRY POINT \"FilterFunction\"
+ENTRY POINT "FilterFunction"
 
-MODULE\_NAME \"filter.dll\";
+MODULE\_NAME "filter.dll";
 
 В примере, входной подтип фильтра определен как -1 и его выходной
 подтип  как -2. Если подтип -1 определяет текст нижнего регистра, а
@@ -5825,7 +5825,7 @@ isc\_blob\_gen\_bpb () чтобы генерировать BPB из то инф�
 
 Например,
 
-\#include \"Ibase.h\"
+\#include "Ibase.h"
 
 ISC\_Blob\_DESC from\_desc, to\_desc;
 
@@ -6113,9 +6113,9 @@ status\_vector,
 
 &tr\_handle, /* Set by isc\_start\_transaction() */
 
-\"PROJ\_DEPT\_BUDGET\",/* table name */
+"PROJ\_DEPT\_BUDGET",/* table name */
 
-\"QUART\_HEAD\_CNT\",/* array column name */
+"QUART\_HEAD\_CNT",/* array column name */
 
 &desc /* Инициализируемый дескриптор */
 
@@ -6140,9 +6140,9 @@ isc\_array\_set\_desc(
 
 status\_vector,
 
-\"TABLE1\", /* table name */
+"TABLE1", /* table name */
 
-\"CHAR\_ARRAY\", /* array column name */
+"CHAR\_ARRAY", /* array column name */
 
 &dtype, /* datatype of elements */
 
@@ -6266,9 +6266,9 @@ DSQL, программные методы, нужные для выполнен�
 
 char *sel\_str =
 
-\"SELECT DEPT\_NO, QUART\_HEAD\_CNT FROM PROJ\_DEPT\_BUDGET \
+"SELECT DEPT\_NO, QUART\_HEAD\_CNT FROM PROJ\_DEPT\_BUDGET \
 
-WHERE year = 1994 AND PROJ\_ID = 'VBASE'\";
+WHERE year = 1994 AND PROJ\_ID = 'VBASE'";
 
 Подготовка XSQLDA ля вывода
 
@@ -6395,9 +6395,9 @@ status\_vector,
 
 &trans,
 
-\"PROJ\_DEPT\_BUDGET\",/* table name */
+"PROJ\_DEPT\_BUDGET",/* table name */
 
-\"QUART\_HEAD\_CNT\",/* array column name */
+"QUART\_HEAD\_CNT",/* array column name */
 
 &desc);
 
@@ -6493,9 +6493,9 @@ return(1);
 
 dept\_no\[out\_sqlda-\>sqlvar\[0\].sqllen\] = '\\0';
 
-printf(\"Department \#: %s\\n\\n\", dept\_no);
+printf("Department \#: %s\\n\\n", dept\_no);
 
-printf(\"\\tCurrent head counts: %ld %ld %ld %ld\\n\",
+printf("\\tCurrent head counts: %ld %ld %ld %ld\\n",
 
 hcnt\[0\], hcnt\[1\], hcnt\[2\], hcnt\[3\]);
 
@@ -6558,9 +6558,9 @@ db\_handle,
 
 &trans,
 
-\"PROJ\_DEPT\_BUDGET\",/* table name */
+"PROJ\_DEPT\_BUDGET",/* table name */
 
-\"QUART\_HEAD\_CNT\",/* array column name */
+"QUART\_HEAD\_CNT",/* array column name */
 
 &desc);
 
@@ -6586,9 +6586,9 @@ hcnt\[3\] = 6;
 
 char *upd\_str =
 
-\"UPDATE PROJ\_DEPT\_BUDGET SET QUART\_HEAD\_CNT = ? WHERE \
+"UPDATE PROJ\_DEPT\_BUDGET SET QUART\_HEAD\_CNT = ? WHERE \
 
-YEAR = 1994 AND PROJ\_ID = \"MKTPR\" AND DEPT\_NO = ?\";
+YEAR = 1994 AND PROJ\_ID = "MKTPR" AND DEPT\_NO = ?";
 
 XSQLDA *in\_sqlda;
 
@@ -6688,9 +6688,9 @@ in\_sqlda /* XSQLDA supplying parameters to UPDATE statement */
   ---- -------------------------------------------------------------------------------------
 :::
 
-\"UPDATE JOB SET LANGUAGE\_REQ = NULL \
+"UPDATE JOB SET LANGUAGE\_REQ = NULL \
 
-WHERE JOB\_CODE = \"SA12\" AND JOB\_GRADE = 10\"
+WHERE JOB\_CODE = "SA12" AND JOB\_GRADE = 10"
 
 И массив, ссылка на который стала NULL, будет удален при следующей
 сборке "мусора"
@@ -6871,9 +6871,9 @@ long blength;
 . . .
 
 blength = isc\_event\_block(&event\_buffer, &result\_buffer, 3,
-\"BORL\",
+"BORL",
 
-\"INTEL\", \"SUN\");
+"INTEL", "SUN");
 
 . . .
 
@@ -6930,9 +6930,9 @@ isc\_db\_handle db1;
 /* Assume database db1 is attached here and a transaction started. */
 
 blength = isc\_event\_block(&event\_buffer, &result\_buffer, 3,
-\"BORL\",
+"BORL",
 
-\"INTEL\", \"SUN\");
+"INTEL", "SUN");
 
 isc\_wait\_for\_event(status\_vector, &db1, (short)blength,
 
@@ -7064,7 +7064,7 @@ isc\_que\_events () чтобы инициализировать другое а�
 
 \#define MAX\_LOOP 10
 
-char *event\_names\[\] = {\"DEC\", \"HP\", \"SUN\"};
+char *event\_names\[\] = {"DEC", "HP", "SUN"};
 
 char *event\_buffer, *result\_buffer;
 
@@ -7086,7 +7086,7 @@ length = (short)isc\_event\_block(
 
 number\_of\_stocks,
 
-\"DEC\", \"HP\", \"SUN\");
+"DEC", "HP", "SUN");
 
 isc\_que\_events(
 
@@ -7295,9 +7295,9 @@ int i;
 /* Assume database db1 is attached here and a transaction started. */
 
 blength = isc\_event\_block(&event\_buffer, &result\_buffer, 3,
-\"BORL\",
+"BORL",
 
-\"INTEL\", \"SUN\");
+"INTEL", "SUN");
 
 isc\_wait\_for\_event(status\_vector, &db1, (short)blength,
 
@@ -7350,7 +7350,7 @@ include \<ibase.h\>;
 
 /* For example code leading up to this call, see the code example
 
-in \"Continuous Processing with isc\_event\_que(), earlier in this
+in "Continuous Processing with isc\_event\_que(), earlier in this
 
 chapter. */
 
@@ -7366,7 +7366,7 @@ isc\_cancel\_events(status\_vector, &db\_handle, &event\_id);
 с этими API, включают:
 
 \- Выполнение задачи обслуживания базы данных типа резервного
-копирования и восстановление, остановка и перезапуск, сборка \"мусора\",
+копирования и восстановление, остановка и перезапуск, сборка "мусора",
 и сканирование на предмет испорченных структур данных
 
 \- Создание, изменение, и удаление пользователе в базе данных защиты
@@ -7458,11 +7458,11 @@ isc\_spb\_version.
 
 4 *spb++ = isc\_spb\_user\_name;
 
-5 *spb++ = strlen(\"SYSDBA\");
+5 *spb++ = strlen("SYSDBA");
 
-6 strcpy(spb, \"SYSDBA\");
+6 strcpy(spb, "SYSDBA");
 
-7 spb += strlen(\"SYSDBA\");
+7 spb += strlen("SYSDBA");
 
 Все числа представлены в нашем любимом универсальном формате.
 
@@ -7476,11 +7476,11 @@ Services Manager
 
 Пример:
 
-char *user = \"SYSDBA\",
+char *user = "SYSDBA",
 
-*password = \"masterkey\", /* see security tip below */
+*password = "masterkey", /* see security tip below */
 
-*service\_name = \"jupiter:service\_mgr\";
+*service\_name = "jupiter:service\_mgr";
 
 ISC\_STATUS status\[20\];
 
@@ -7688,7 +7688,7 @@ isc\_dsql\_execute2,
   employee.gdb поставляемой с дистрибутивом ib6 и выполняет запрос
 следующего типа
 
-  \"select currency from country where country=?\", где вместо маркера ?
+  "select currency from country where country=?", где вместо маркера ?
 можно ставить
 
    любое название страны, в данном случае выбрана Australia.
@@ -7755,9 +7755,9 @@ long fetch\_stat,SQLCODE;
 
 short dtype;
 
-char str\[\]=\"d:\\\\Interbase\\\\Examples\\\\V5\\\\Employee.gdb\";
+char str\[\]="d:\\\\Interbase\\\\Examples\\\\V5\\\\Employee.gdb";
 
-char *query = \"SELECT CURRENCY FROM COUNTRY WHERE COUNTRY=?\";
+char *query = "SELECT CURRENCY FROM COUNTRY WHERE COUNTRY=?";
 
 char currency\[20\];
 
@@ -7846,7 +7846,7 @@ switch(dtype)
 
   in\_var-\>sqldata = (char *)malloc(sizeof(char)*in\_var-\>sqllen);
 
-  strcpy(in\_var-\>sqldata,\"Australia\");
+  strcpy(in\_var-\>sqldata,"Australia");
 
   in\_var-\>sqllen=9;
 
@@ -7937,7 +7937,7 @@ for(i=0;i\<out\_sqlda-\>sqlvar-\>sqllen;++i
 
 currency\[i\]=0;
 
-printf(\"\\nCurrency=%s\\n\",currency);
+printf("\\nCurrency=%s\\n",currency);
 
 isc\_commit\_transaction(status\_vector,&tr);
 
@@ -7987,12 +7987,12 @@ long fetch\_stat,SQLCODE;
 
 short dtype;
 
-char str\[\]=\"d:\\\\Interbase\\\\Examples\\\\V5\\\\Employee.gdb\";
+char str\[\]="d:\\\\Interbase\\\\Examples\\\\V5\\\\Employee.gdb";
 
-//char *query = \"SELECT CURRENCY FROM COUNTRY\";
+//char *query = "SELECT CURRENCY FROM COUNTRY";
 
-char *query = \"select currency from country where country =\'USA\' or
-country = \'Australia\'\";
+char *query = "select currency from country where country =\'USA\' or
+country = \'Australia\'";
 
 char currency\[20\];
 
@@ -8119,7 +8119,7 @@ isc\_print\_status(status\_vector);goto ex;
 
  
 
-isc\_dsql\_set\_cursor\_name(status\_vector, &stmt, \"dyn\_cursor\",
+isc\_dsql\_set\_cursor\_name(status\_vector, &stmt, "dyn\_cursor",
 NULL);
 
  
@@ -8138,7 +8138,7 @@ for (i = 0; i \< out\_sqlda-\>sqld; i++)
 
   currency\[j\]=0;
 
-  printf(\"Currency=%s\\n\",currency);
+  printf("Currency=%s\\n",currency);
 
 }
 

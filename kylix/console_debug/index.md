@@ -19,7 +19,7 @@ people think that\'s not important. ;-)
 When you start a console program in the Delphi Debugger it automatically
 opens
 
-a console window (\"DOS command prompt\") where you can see the output
+a console window ("DOS command prompt") where you can see the output
 of e.g.
 
 the writeln command.
@@ -32,7 +32,7 @@ think it is impossible to debug console applications with it.
 But if you open the run / parameters dialog you will find an entry
 called
 
-\"Use Launcher Application\" that is prefilled with xconsole. Just tick
+"Use Launcher Application" that is prefilled with xconsole. Just tick
 this
 
 option and there you go.

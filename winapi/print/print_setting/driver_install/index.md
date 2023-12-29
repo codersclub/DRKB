@@ -18,7 +18,7 @@ Date: 01.01.2007
 
 DriverName = Имя драйвера;
 
-DRVFILE - имя файла с драйвером без расширения (\".drv\" - по
+DRVFILE - имя файла с драйвером без расширения (".drv" - по
 умолчанию).
 
     procedure TForm1.Button1Click(Sender: TObject);

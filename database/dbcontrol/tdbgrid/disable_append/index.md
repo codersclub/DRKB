@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Добавьте в обработчик события вашего TTable \"BeforeInsert\" следующую
+Добавьте в обработчик события вашего TTable "BeforeInsert" следующую
 строку:
 
     procedure TForm1.Tbable1BeforeInsert(DataSet: TDataset);

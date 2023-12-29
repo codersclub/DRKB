@@ -67,10 +67,10 @@ IDispatch.Invoke то это превращается в головную бол
 сделан...
 
 Ну и еще можно использовать для доступа к данным всяких там
-\"нестандартных\" баз типа MS Index Server или MS Active Directory
+"нестандартных" баз типа MS Index Server или MS Active Directory
 Services.
 
-В Delphi (как минимум в 4 версии) существует \"константа\" EmptyParam,
+В Delphi (как минимум в 4 версии) существует "константа" EmptyParam,
 которую можно подставлять в качестве пустого параметра.
 
 Взято с <https://delphiworld.narod.ru>

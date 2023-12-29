@@ -144,7 +144,7 @@ as follows:
     thr.Synchronize(thr.UpdateStatus); 
     end;  
 
-The trick here is that \"thr\" is the instance variable used to
+The trick here is that "thr" is the instance variable used to
 instantiate my thread class. The instance variable resides in the main
 form of my application. This means that it too must be declared as an
 interface variable.

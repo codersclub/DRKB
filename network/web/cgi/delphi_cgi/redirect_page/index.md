@@ -59,17 +59,17 @@ Content-Type: text/html
 
 \<html\>\<head\>\<title\>Yahoo!\</title\>
 
-\<base href=\"https://www.yahoo.com/\"\>\</head\>
+\<base href="https://www.yahoo.com/"\>\</head\>
 
 \<body\>\<center\>
 
-\<form action=\"http://search.yahoo.com/bin/search\"\>
+\<form action="http://search.yahoo.com/bin/search"\>
 
-\<a href=\"/bin/top3\"\>
+\<a href="/bin/top3"\>
 
-\<img width=460 height=59 border=0 usemap=\"\#top3\" ismap
+\<img width=460 height=59 border=0 usemap="\#top3" ismap
 
-   src=\"http://us.yimg.com/i/main32.gif\" alt=\"Yahoo!\"\>\</a\>
+   src="http://us.yimg.com/i/main32.gif" alt="Yahoo!"\>\</a\>
 
 \<br\>
 
@@ -86,5 +86,5 @@ Content-Type: text/html
  
 
 И последнее замечание: вам не нужно заботиться самим о выводе строк типа
-\"HTTP/1.0...\", и \"Content-Length: ...\", поскольку это делает
+"HTTP/1.0...", и "Content-Length: ...", поскольку это делает
 автоматически сам сервер.

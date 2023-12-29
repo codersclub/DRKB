@@ -30,17 +30,17 @@ http://homepages.borland.com/aohlsson/Articles/CounterCGI.html)
 Вызывается счётчик тэгом IMG примерно так:
 
 \<img
-src=\"http://ww5.borland.com/scripts/CounterCGI.exe?FileName=Article\"\>
+src="http://ww5.borland.com/scripts/CounterCGI.exe?FileName=Article"\>
 
 CGI скрипт так же может получать определённый набор параметров:
 
-    Txt              e.g. \"You are visitor %d today, and %d ever.\"
+    Txt              e.g. "You are visitor %d today, and %d ever."
 
-    FontName         e.g. \"Courier\"
+    FontName         e.g. "Courier"
 
-    FontColor        e.g. \"clGreen\"  or \"$404040\"
+    FontColor        e.g. "clGreen"  or "$404040"
 
-    BackgroundColor  e.g. \"clYellow\" or \"$808080\"
+    BackgroundColor  e.g. "clYellow" or "$808080"
 
 А вот так выглядит вызов скрипта с несколькими параметрами:
 
@@ -68,9 +68,9 @@ Web Server Application \| CGI stand-alone executable. После этого Вы
 использоваться в коде. GetPaths будет обеспечивать нас двумя жизненно
 важными путями. Первый путь будет указывать где хранится сам скрипт по
 отношению к корневой директории web сервера (т.е. относительный путь).
-Скорее всего это будет \"scripts\" или \"cgi-bin\" в зависимости от
+Скорее всего это будет "scripts" или "cgi-bin" в зависимости от
 того, куда Вы его положите. Второй - это локальный путь в Windows. Он
-может выглядеть как \"C:\\InetPub\". Для нас важны оба пути, чтобы
+может выглядеть как "C:\\InetPub". Для нас важны оба пути, чтобы
 обеспечить переносимость CGI скрипта из директории в директорию и с
 одного сервера на другой.
 
@@ -131,8 +131,8 @@ Boolean);
 
 Теперь вызовем GetPaths, чтобы выяснить путь к скрипту, а так же
 локальный путь. В данном примере мы будем помещать наши счётчики в
-директорию \"counters\". Физический путь будет выглядеть примерно так
-\"C:\\InetPub\\counters\".
+директорию "counters". Физический путь будет выглядеть примерно так
+"C:\\InetPub\\counters".
 
          begin
            GetPaths(Request,ScriptPath,LocalPath);

@@ -48,7 +48,7 @@ StrField: string(20)
     </ROWDATA></DATAPACKET>
 
 Ошибочным явлается наличие тэга \</PARAMS\>, т.к. открывающий тэг
-\<PARAMS.../\> уже содержит ограничитель \"/\"
+\<PARAMS.../\> уже содержит ограничитель "/"
 
 После вызова MergeChangeLog, CancelUpdates или ApplyUpdates сохраняется
 корректный XML.

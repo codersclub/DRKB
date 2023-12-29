@@ -81,7 +81,7 @@ First, by way of synopsis, the roll-up/down occurs in response to a
 WM\_NCRBUTTONDOWN message firing off and the WMNCRButtonDown procedure
 handling the message, telling the window to roll up/down depending upon
 the height of the client area. WM\_NCRBUTTONDOWN fires whenever the
-right mouse button is clicked in a \"non-client\" area, such as a
+right mouse button is clicked in a "non-client" area, such as a
 border, menu or, for our purposes, the caption bar of a form. (The
 client area of a window is the area within the border where most of the
 interesting activity usually occurs. In general, the Windows API
@@ -121,6 +121,6 @@ Having the capability to roll a form up to its title bar makes it a lot
 easier to see underneath a window without iconizing it, then having to
 Alt-tab back to it. (If you are familiar with the Macintosh platform,
 the System 7.5 environment offers a very similar facility called a
-\"window shade,\" and makes a roll-up sound when the shade goes up.)
+"window shade," and makes a roll-up sound when the shade goes up.)
 
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

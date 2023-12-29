@@ -208,7 +208,7 @@ C\) In Delphi, select from main menu Run -\> Run Parameters.
 In the Host Application field, specify a pathname to your SQL Server
 executable (sqlservr.exe). For SQL 7.0, this is enough. For SQL 2000, in
 the Parameters field specify a command line parameter
-\"-sYOUR\_SQL\_NAME\", where YOUR\_SQL\_NAME is the name assigned to
+"-sYOUR\_SQL\_NAME", where YOUR\_SQL\_NAME is the name assigned to
 your SQL Server during the installation.
 
 Set breakpoints in your Delphi code and run project. SQL Server will

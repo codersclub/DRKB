@@ -51,7 +51,7 @@ parameters:
       TExpertRegisterProc; var Terminate: TExpertTerminateProc): Boolean; export;
       stdcall;
 
-The first parameter ToolServices offers all \"documented\" interfaces to
+The first parameter ToolServices offers all "documented" interfaces to
 the Delphi-IDE. The second parameter RegisterProc is used to load the
 expert into the Delphi-IDE. The last parameter Teminate is used to
 notify the Expert-DLL when it is about to be unloaded by the Delphi-IDE.

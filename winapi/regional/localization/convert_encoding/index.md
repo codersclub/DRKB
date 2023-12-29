@@ -13,7 +13,7 @@ Date: 01.01.2007
 All Systems (Win 95+ and WinNT4+) with MS Internet Explorer 4 and newer
 have a library named mlang.dll in the Winnt\\System32 directory. Usually
 you can tell Delphi to simply import these COM Libraries. This one
-however, Delphi did not. I started to convert the \"most wanted\"
+however, Delphi did not. I started to convert the "most wanted"
 interface for myself. The results I present you here.
 
 First I give you the code for the conversion unit, that allows you

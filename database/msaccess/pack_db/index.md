@@ -86,7 +86,7 @@ Important Notes:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
   --- ------------------------------------------------------------------------------------
-  ·   Scroll down until you reach \"Microsoft Jet and Replication Objects 2.1 Library\".
+  ·   Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
   --- ------------------------------------------------------------------------------------
 :::
 
@@ -172,7 +172,7 @@ Important Notes:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
   --- ------------------------------------------------------------------------------------
-  ·   Scroll down until you reach \"Microsoft Jet and Replication Objects 2.1 Library\".
+  ·   Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
   --- ------------------------------------------------------------------------------------
 :::
 

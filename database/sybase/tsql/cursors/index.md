@@ -891,8 +891,8 @@ au\_id           au\_lname            au\_fname
 курсор, чтобы выяснить можно ли обновлять через этот курсор. Можно также
 явно указать на обновляющий курсор с помощью предложения for update в
 операторе объявления курсора declare cursor. Дополнительную информацию
-по этому поводу можно посмотреть в разделе \"Создание обновляемых
-курсоров\".
+по этому поводу можно посмотреть в разделе "Создание обновляемых
+курсоров".
 
  
 
@@ -1019,9 +1019,9 @@ update \[\[база\_данных.\]владелец.\]{название\_таб
 
 update publishers
 
-set city = \"Pasadena\",
+set city = "Pasadena",
 
-   state = \"CA\"
+   state = "CA"
 
 where current of pubs\_crsr
 
@@ -1122,7 +1122,7 @@ deallocate cursor название\_курсора
 
  
 
-select author = au\_fname + \" \" + au\_lname, au\_id
+select author = au\_fname + " " + au\_lname, au\_id
 
 from authors
 
@@ -1201,7 +1201,7 @@ Innes del Castillo             712-45-1867
 
 declare newauthors\_crsr cursor for
 
-select author = au\_fname + \" \" + au\_lname, au\_id
+select author = au\_fname + " " + au\_lname, au\_id
 
 from authors
 
@@ -1393,7 +1393,7 @@ if (@\@sqlstatus = 2)
 
 begin
 
-   print \"We do not sell books by this author.\"
+   print "We do not sell books by this author."
 
    close author\_sales
 
@@ -1416,7 +1416,7 @@ begin
 
        select \@msg = \@title +
 
-          \" had no sales this year.\"
+          " had no sales this year."
 
        print \@msg
 
@@ -1428,7 +1428,7 @@ begin
 
        select \@msg = \@title +
 
-           \" had poor sales this year.\"
+           " had poor sales this year."
 
        print \@msg
 
@@ -1440,7 +1440,7 @@ begin
 
        select \@msg = \@title +
 
-           \" had mediocre sales this year.\"
+           " had mediocre sales this year."
 
        print \@msg
 
@@ -1452,7 +1452,7 @@ begin
 
        select \@msg = \@title +
 
-           \" had good sales this year.\"
+           " had good sales this year."
 
        print \@msg
 
@@ -1479,7 +1479,7 @@ return
  
 
 Дополнительную информацию о сохраненных процедурах можно получить в
-главе 14 \"Использование сохраненных процедур\".
+главе 14 "Использование сохраненных процедур".
 
  
 

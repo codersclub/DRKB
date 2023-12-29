@@ -91,13 +91,13 @@ ADOX - это расширения ADO для Data Definition Language а так
 
 1\. Select Project \| Import Type Library
 
-3\. Выберите \"Microsoft ADO Ext 2.x for DDL and Security (Version 2.x)\"
+3\. Выберите "Microsoft ADO Ext 2.x for DDL and Security (Version 2.x)"
 
-4\. Измените \"TTable\" на \"TADOXTable\"
+4\. Измените "TTable" на "TADOXTable"
 
-5\. Измените \"TColumn\" на \"TADOXColumn\"
+5\. Измените "TColumn" на "TADOXColumn"
 
-6 .Измените \"TIndex\" на \"TADOXIndex\"
+6 .Измените "TIndex" на "TADOXIndex"
 
 7\. Нажмите кнопку Install (перекомпиляция пакетов (packages))
 

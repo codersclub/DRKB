@@ -614,7 +614,7 @@ fNull
 
 fRtsControl
 
-RTS управление потоком \" запрос пересылки \" .
+RTS управление потоком " запрос пересылки " .
 
 Если это значение нулевое, то по умолчанию устанавливается
 RTS\_CONTROL\_HANDSHAKE.
@@ -633,7 +633,7 @@ RTS\_CONTROL\_HANDSHAKE
 
 Enables RTS handshaking. The driver raises the RTS line
 
-when the \" type-ahead\" (input)
+when the " type-ahead" (input)
 
 buffer is less than one-half full and lowers
 

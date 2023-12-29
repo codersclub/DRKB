@@ -121,8 +121,8 @@ if you donґt have it you can download it from Adobeґs site:
 www.adobe.comhttp://www.adobe.com
 
 After that you have to install the type library for Acrobat (Project -\>
-Import Type Library from Delphiґs menu) select \"Acrobat Control for
-ActiveX (version x)\". Where x stands for the current version of the
+Import Type Library from Delphiґs menu) select "Acrobat Control for
+ActiveX (version x)". Where x stands for the current version of the
 type library. Click the install button to install it into the IDE.
 
 Now, Start a new Application, drop from whatever page of the component

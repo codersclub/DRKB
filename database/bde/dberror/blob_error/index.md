@@ -84,8 +84,8 @@ VREDIR.VXD may need to be updated.
 
 Reports have shown that using the original release of VREDIR.VXD
 (4.00.950) and a new release (4.00.1116) do not result in the errors
-\"Blob has been modified\" and/or \"Index is out of date.\" If any one
-of the clients has a \"bad\" version of this device driver, the error
+"Blob has been modified" and/or "Index is out of date." If any one
+of the clients has a "bad" version of this device driver, the error
 can occur on any machine, not just the machine with the bad driver.
 
 This error most likely occurs in 16Bit versions of the Borland Database
@@ -134,7 +134,7 @@ Unverified solutions
 
 1\. Windows 95 Only: Bring up the network properties screen on all
 Workstations and enter the netBEUI properties screen. On the advanced
-tab, make sure that \"Set this protocol to be the default protocol\" is
+tab, make sure that "Set this protocol to be the default protocol" is
 checked.
 
 2\. Windows 95 Only: If the previous suggestion did not work, try

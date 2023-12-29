@@ -26,7 +26,7 @@ Date: 01.01.2007
      
     //-------------------------------------------- 
 
-You can replace \"OLECMDID\_PRINT\" by other possibilities :
+You can replace "OLECMDID\_PRINT" by other possibilities :
 
 OLECMDID\_OPEN OLECMDID\_NEW OLECMDID\_SAVE
 

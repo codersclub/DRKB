@@ -14,7 +14,7 @@ ENoResultSet Error creating cursor handle
 
 Почему не работает Query.Open(Query.ExecSQL)?
 
-Что значит \"ENoResultSet Error creating cursor handle\"?
+Что значит "ENoResultSet Error creating cursor handle"?
 
 1.Query.Open возвращает результат запроса в виде курсора(Cursor).
 

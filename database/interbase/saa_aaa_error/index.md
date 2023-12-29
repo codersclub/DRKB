@@ -32,9 +32,9 @@ System (см. My Computer/Properties/Environment). Для IB 5.x и 6.0 (в
 файлов в файле конфигурации IBCONFIG, или в переменной окружения
 INTERBASE\_TMP (см. Operations Guide, стр92). Например:
 
-TMP\_DIRECTORY \"c:\\\" 10000000
+TMP\_DIRECTORY "c:\\" 10000000
 
-TMP\_DIRECTORY \"e:\\temp\\\" 100000000
+TMP\_DIRECTORY "e:\\temp\\" 100000000
 
 Может быть указано несколько дисков или каталогов, которые будут
 использоваться последовательно. Размер должен быть указан в байтах.

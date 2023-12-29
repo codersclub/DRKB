@@ -250,6 +250,6 @@ Selection:
       Excel.ActiveSheet.PageSetup.RightHeader:='Правый верхний колонтитул';
 
 Для изменения размера шрифта добавьте к колонтитулу управляющий символ
-\"&\" и размер шрифта:
+"&" и размер шрифта:
 
       Excel.ActiveSheet.PageSetup.LeftFooter:='&7Левый нижний колонтитул';

@@ -233,7 +233,7 @@ ddl in tran установлена в базе данных model, то указ
 
  
 
-sp\_dboption mydb, \"ddl in tran\", true
+sp\_dboption mydb, "ddl in tran", true
 
  
 
@@ -686,7 +686,7 @@ where royaltyper = 75
 
 and titleauthor.title\_id = titles.title\_id
 
-and title = \"The Gourmet Microwave\"
+and title = "The Gourmet Microwave"
 
  
 
@@ -700,7 +700,7 @@ where royaltyper = 25
 
 and titleauthor.title\_id = titles.title\_id
 
-and title = \"The Gourmet Microwave\"
+and title = "The Gourmet Microwave"
 
  
 
@@ -712,7 +712,7 @@ save transaction percent\_changed
 
 /* the two authors, the user inserts the */
 
-/* savepoint \"percent\_changed,\" and then checks */
+/* savepoint "percent\_changed," and then checks */
 
 /* to see how a 10 percent increase in the
 
@@ -726,7 +726,7 @@ update titles
 
 set price = price * 1.1
 
-where title = \"The Gourmet Microwave\"
+where title = "The Gourmet Microwave"
 
  
 
@@ -734,7 +734,7 @@ select (price * royalty * total\_sales) * royaltyper
 
 from titles, titleauthor, roysched
 
-where title = \"The Gourmet Microwave\"
+where title = "The Gourmet Microwave"
 
 and titles.title\_id = titleauthor.title\_id
 
@@ -1386,11 +1386,11 @@ commit work
 время выполнения этой процедуры. Перед выходом из процедуры он
 восстанавливает тот режим, который был установлен до входа в процедуру.
 
-SQL Сервер помечает (tags) все процедуры (\"связанная\" или
-\"несвязанная\") в зависимости от режима транзакций сеанса, в котором
+SQL Сервер помечает (tags) все процедуры ("связанная" или
+"несвязанная") в зависимости от режима транзакций сеанса, в котором
 они были созданы. Это помогает избежать проблем, связанных с
 несоответствием режимов транзакций. Сохраненную процедуру, помеченную
-как \"связанная\", нельзя выполнять в рабочем сеансе, использующим
+как "связанная", нельзя выполнять в рабочем сеансе, использующим
 несвязанный режим транзакций, и наоборот.
 
  
@@ -1411,11 +1411,11 @@ SQL Сервер помечает (tags) все процедуры (\"связа
 С помощью системной процедуры sp\_procxmode можно изменить пометку (tag
 value), связанную с сохраненной процедурой. Чтобы указать, что данная
 процедура может исполняться в любом режиме, ей можно присвоить  пометку
-\"anymode\" (любой режим) с помощью процедуры sp\_procxmode. Например:
+"anymode" (любой режим) с помощью процедуры sp\_procxmode. Например:
 
  
 
-sp\_procxmode byroyalty, \"anymode\"
+sp\_procxmode byroyalty, "anymode"
 
  
 

@@ -21,10 +21,10 @@ select Properties:
 
 \[IIS Manager Screen Shot\]
 
-Select the \"Home Directory\" tab, and click on Configuration...:
+Select the "Home Directory" tab, and click on Configuration...:
 
 \[Configuration\]
 
-Uncheck \"Cache ISAPI applications\":
+Uncheck "Cache ISAPI applications":
 
 \[uncheck cache extensions\]

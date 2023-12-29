@@ -2723,7 +2723,7 @@ select type, pub\_id, price
 
 from titles
 
-where type = \"psychology\"
+where type = "psychology"
 
 order by type, pub\_id, price
 
@@ -2791,7 +2791,7 @@ select type, pub\_id, price
 
 from titles
 
-where type = \"psychology\"
+where type = "psychology"
 
 order by type, pub\_id, price
 
@@ -2865,7 +2865,7 @@ select type, price, advance
 
 from titles
 
-where type like \"%cook\"
+where type like "%cook"
 
 order by type
 
@@ -2935,7 +2935,7 @@ select type, pub\_id, price
 
 from titles
 
-where type like \"%cook\"
+where type like "%cook"
 
 order by type, pub\_id
 
@@ -3056,7 +3056,7 @@ select type, price, advance
 
 from titles
 
-where type like \"%cook\"
+where type like "%cook"
 
 order by type
 

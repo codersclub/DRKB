@@ -159,8 +159,8 @@ Delphi/C++Builder, VB, VC++ и т.д. Для обращения в таблиц�
 
 ////////////////////////////////////////////////////////////////////////////
 
-// \#\# Назначение: Точка входа хранимой процедуры \"Обновление
-справочника серий\"
+// \#\# Назначение: Точка входа хранимой процедуры "Обновление
+справочника серий"
 
 // \#\# Описание:
 
@@ -184,7 +184,7 @@ Delphi/C++Builder, VB, VC++ и т.д. Для обращения в таблиц�
 
 // \#\# Исключения: нет
 
-extern \"C\" UNSIGNED32 \_\_declspec(dllexport) WINAPI RefreshSeries
+extern "C" UNSIGNED32 \_\_declspec(dllexport) WINAPI RefreshSeries
 
 (
 
@@ -263,7 +263,7 @@ try
 
       NewSeries\_-\>AdsCopyTableContents(Series\_);
 
-      Series\_-\>Filter = Format(\"ID \> %d\",ARRAYOFCONST((LastID)));
+      Series\_-\>Filter = Format("ID \> %d",ARRAYOFCONST((LastID)));
 
       Series\_-\>Filtered = true;
 
@@ -295,7 +295,7 @@ catch(Exception& Exc)
 
   Output\_-\>Append();
 
-  Output\_-\>FieldByName(\"Name\")-\>AsString = Exc.Message;
+  Output\_-\>FieldByName("Name")-\>AsString = Exc.Message;
 
   Output\_-\>Post();
 

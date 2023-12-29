@@ -604,7 +604,7 @@ as select type, avg(price)
 
 from titles
 
-where type = \"business\"
+where type = "business"
 
  
 
@@ -828,7 +828,7 @@ create view stores\_cal
 
 as select * from stores
 
-where state = \"CA\"
+where state = "CA"
 
 with check option
 
@@ -843,8 +843,8 @@ with check option
 
 insert stores\_cal
 
-values (\"7100\", \"Castle Books\", \"351 West 24 St.\", \"New York\",
-\"NY\", \"USA\",        \"10011\",        \"Net 30\")
+values ("7100", "Castle Books", "351 West 24 St.", "New York",
+"NY", "USA",        "10011",        "Net 30")
 
  
 
@@ -858,9 +858,9 @@ values (\"7100\", \"Castle Books\", \"351 West 24 St.\", \"New York\",
 
 update stores\_cal
 
-set state = \"MA\"
+set state = "MA"
 
-where stor\_id = \"7066\"
+where stor\_id = "7066"
 
  
 
@@ -887,7 +887,7 @@ create view stores\_cal30
 
 as select * from stores\_cal
 
-where payterms = \"Net 30\"
+where payterms = "Net 30"
 
  
 
@@ -898,7 +898,7 @@ where payterms = \"Net 30\"
 
 Заметим, что сам вторичный вьювер stores\_cal30 был определен без опции
 with check. Отсюда следует, что через этот вьювер возможна вставка или
-обновление строк, у которых поле payterms не равно \"Net 30\". Следующий
+обновление строк, у которых поле payterms не равно "Net 30". Следующий
 оператор обновления будет успешно выполнен, несмотря на то, что
 обновляемая строка не будет больше видна во вьювере stores\_cal30:
 
@@ -906,9 +906,9 @@ with check. Отсюда следует, что через этот вьювер
 
 update stores\_cal30
 
-set payterms = \"Net 60\"
+set payterms = "Net 60"
 
-where stor\_id = \"7067\"
+where stor\_id = "7067"
 
  
 
@@ -1161,7 +1161,7 @@ create view view1 as
 
 select au\_lname, phone from authors
 
-where postalcode like \"94%\"
+where postalcode like "94%"
 
  
 
@@ -1171,7 +1171,7 @@ create view view2 as
 
 select au\_lname, phone from view1
 
-where au\_lname like \"\[M-Z\]%\"
+where au\_lname like "\[M-Z\]%"
 
  
 
@@ -1181,7 +1181,7 @@ create view view3 as
 
 select au\_lname, phone from view2
 
-where au\_lname = \"MacFeather\"
+where au\_lname = "MacFeather"
 
  
 
@@ -1648,9 +1648,9 @@ where titles.pub\_id = publishers.pub\_id
 
 update multitable\_view
 
-set type = \"user\_friendly\"
+set type = "user\_friendly"
 
-where type = \"popular\_comp\"
+where type = "popular\_comp"
 
  
 
@@ -1661,11 +1661,11 @@ where type = \"popular\_comp\"
 
 update multitable\_view
 
-set type = \"cooking\_trad\",
+set type = "cooking\_trad",
 
-state = \"WA\"
+state = "WA"
 
-where type = \"trad\_cook\"
+where type = "trad\_cook"
 
  
 

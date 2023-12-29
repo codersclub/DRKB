@@ -14,8 +14,8 @@ My Kylix application won\'t run outside the IDE
 Why is it when I try to run my Kylix App outside the IDE I get this
 message:
 
-\"error loading shared libraries: libqtintf.so: cannot open shared file:
-No such file or directory\"?
+"error loading shared libraries: libqtintf.so: cannot open shared file:
+No such file or directory"?
 
 This message and similar ones occur when ../kylix/bin is not included in
 your path when trying to use CLX components. Running

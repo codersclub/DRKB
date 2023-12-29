@@ -11,8 +11,8 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Более подробно ищите в хелпе Delphi по словам \"Variant\" и
-\"TVarData\"...
+Более подробно ищите в хелпе Delphi по словам "Variant" и
+"TVarData"...
 
      
     function ToString(Value: Variant): String;

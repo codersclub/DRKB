@@ -22,7 +22,7 @@ BDE, или тот же ODBC), и заточены соответственно 
 
 Но если все же решил использовать ADO вот тебе строка:
 
-1\) способ если использовать \"MS OLE DB Provaider for Oracle\" - это
+1\) способ если использовать "MS OLE DB Provaider for Oracle" - это
 провайдер мелкомягких
 
 Provider=MSDAORA.1;Password=USER123;User ID=USER;Data
@@ -30,7 +30,7 @@ Source=MyDataSourse;
 
 Persist Security Info=False
 
-2\) способ если использовать \"Oracle Provaider for Ole DB\" - это
+2\) способ если использовать "Oracle Provaider for Ole DB" - это
 провайдер от Oracle
 
 Provider=OraOLEDB.Oracle.1;Persist Security Info=False;User ID=USER;Data

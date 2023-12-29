@@ -22,8 +22,8 @@ Date: 01.01.2007
 1. Воспользоваться утилитой H2Reg.exe, поставляемой вместе с
 BDS (../Help/Thirdparty) для каждого ini файла в поставке.
 Команда для регистрации будет выглядеть так
-\"c:\\Program Files\\Borland\\BDS\\4.0\\Help\\Thirdparty\\H2Reg.exe\" -r
--m \"CmdFile=\<path\>HelpFile.ini\" \"UserDir1=\<path\>
+"c:\\Program Files\\Borland\\BDS\\4.0\\Help\\Thirdparty\\H2Reg.exe" -r
+-m "CmdFile=\<path\>HelpFile.ini" "UserDir1=\<path\>
 2. Перезапустить BDS. (Вещь, в общем-то не обязательная, но
 желательная)
 

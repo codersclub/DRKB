@@ -69,18 +69,18 @@ User-Agent: Radio UserLand/7.0 (WinNT)
 Host: localhost:81
 Content-Type: text/xml; charset=utf-8
 Content-length: 474
-SOAPAction: \"/examples\"
+SOAPAction: "/examples"
 
-\<?xml version=\"1.0\"?\>
+\<?xml version="1.0"?\>
 \<SOAP-ENV:Envelope
-SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"
-xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"
+SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
 xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"
-xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\"\>
+xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"\>
 \<SOAP-ENV:Body\>
-\<m:getStateName xmlns:m=\"http://www.soapware.org/\"\>
-\<statenum xsi:type=\"xsd:int\"\>41\</statenum\>
+\<m:getStateName xmlns:m="http://www.soapware.org/"\>
+\<statenum xsi:type="xsd:int"\>41\</statenum\>
 \</m:getStateName\>
 \</SOAP-ENV:Body\>
 
@@ -108,16 +108,16 @@ Content-Type: text/xml; charset=utf-8
 Date: Wed, 28 Mar 2001 05:05:04 GMT
 Server: UserLand Frontier/7.0-WinNT
 
-\<?xml version=\"1.0\"?\>
+\<?xml version="1.0"?\>
 \<SOAP-ENV:Envelope
-SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"
-xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"
+SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
 xmlns:SOAP-ENV=http://schemas.xmlsoap.org/soap/envelope/
 xmlns:xsd=http://www.w3.org/1999/XMLSchema
-xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\"\>
+xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"\>
 \<SOAP-ENV:Body\>
-\<m:getStateNameResponse xmlns:m=\"http://www.soapware.org/\"\>
-\<Result xsi:type=\"xsd:string\"\>South Dakota\</Result\>
+\<m:getStateNameResponse xmlns:m="http://www.soapware.org/"\>
+\<Result xsi:type="xsd:string"\>South Dakota\</Result\>
 \</m:getStateNameResponse\>
 \</SOAP-ENV:Body\>
 
@@ -353,68 +353,68 @@ http://localhost/cgi-bin/Server.exe/wsdl . При этом на экран бу�
 
 Необходимо выбрать в таблице интересующий нас интерфейс IEncodeDecode
 при этом будет сгенерировано описание интерфейса в формате xml.
-\<?xml version=\"1.0\" ?\>
-\<definitions xmlns=\"http://schemas.xmlsoap.org/wsdl/\"
-xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"name=\"IEncodeDecodeservice\"targetNamespace=\"http://www.borland.com/soapServices/\"
-xmlns:tns=\"http://www.borland.com/soapServices/\"
-xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
-xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"\>
-\<messagename=\"US2RUSRequest\"\>
-\<part name=\"Value\"type=\"xs:double\" /\>
+\<?xml version="1.0" ?\>
+\<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"name="IEncodeDecodeservice"targetNamespace="http://www.borland.com/soapServices/"
+xmlns:tns="http://www.borland.com/soapServices/"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"\>
+\<messagename="US2RUSRequest"\>
+\<part name="Value"type="xs:double" /\>
 \</message\>
-\<messagename=\"US2RUSResponse\"\>
-\<part name=\"return\"type=\"xs:double\" /\>
+\<messagename="US2RUSResponse"\>
+\<part name="return"type="xs:double" /\>
 \</message\>
-\<messagename=\"RUS2USRequest\"\>
-\<part name=\"Value\"type=\"xs:double\" /\>
+\<messagename="RUS2USRequest"\>
+\<part name="Value"type="xs:double" /\>
 \</message\>
-\<messagename=\"RUS2USResponse\"\>
-\<part name=\"return\"type=\"xs:double\" /\>
+\<messagename="RUS2USResponse"\>
+\<part name="return"type="xs:double" /\>
 \</message\>
-\<portTypename=\"IEncodeDecode\"\>
-\<operationname=\"US2RUS\"\>
-\<input message=\"tns:US2RUSRequest\" /\>
-\<output message=\"tns:US2RUSResponse\" /\>
+\<portTypename="IEncodeDecode"\>
+\<operationname="US2RUS"\>
+\<input message="tns:US2RUSRequest" /\>
+\<output message="tns:US2RUSResponse" /\>
 \</operation\>
-\<operationname=\"RUS2US\"\>
-\<input message=\"tns:RUS2USRequest\" /\>
-\<output message=\"tns:RUS2USResponse\" /\>
+\<operationname="RUS2US"\>
+\<input message="tns:RUS2USRequest" /\>
+\<output message="tns:RUS2USResponse" /\>
 \</operation\>
 \</portType\>
-\<bindingname=\"IEncodeDecodebinding\"type=\"tns:IEncodeDecode\"\>
+\<bindingname="IEncodeDecodebinding"type="tns:IEncodeDecode"\>
 \<soap:binding
-style=\"rpc\"transport=\"http://schemas.xmlsoap.org/soap/http\" /\>
-\<operationname=\"US2RUS\"\>
-\<soap:operation soapAction=\"urn:u\_Intrf-IEncodeDecode\#US2RUS\" /\>
+style="rpc"transport="http://schemas.xmlsoap.org/soap/http" /\>
+\<operationname="US2RUS"\>
+\<soap:operation soapAction="urn:u\_Intrf-IEncodeDecode\#US2RUS" /\>
 \<input\>
 \<soap:body
-use=\"encoded\"encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"namespace=\"urn:u\_Intrf-IEncodeDecode\"
+use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
 /\>
 \</input\>
 \<output\>
 \<soap:body
-use=\"encoded\"encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"namespace=\"urn:u\_Intrf-IEncodeDecode\"
+use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
 /\>
 \</output\>
 \</operation\>
-\<operationname=\"RUS2US\"\>
-\<soap:operation soapAction=\"urn:u\_Intrf-IEncodeDecode\#RUS2US\" /\>
+\<operationname="RUS2US"\>
+\<soap:operation soapAction="urn:u\_Intrf-IEncodeDecode\#RUS2US" /\>
 \<input\>
 \<soap:body
-use=\"encoded\"encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"namespace=\"urn:u\_Intrf-IEncodeDecode\"
+use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
 /\>
 \</input\>
 \<output\>
 \<soap:body
-use=\"encoded\"encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"namespace=\"urn:u\_Intrf-IEncodeDecode\"
+use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
 /\>
 \</output\>
 \</operation\>
 \</binding\>
-\<servicename=\"IEncodeDecodeservice\"\>
-\<portname=\"IEncodeDecodePort\"binding=\"tns:IEncodeDecodebinding\"\>
+\<servicename="IEncodeDecodeservice"\>
+\<portname="IEncodeDecodePort"binding="tns:IEncodeDecodebinding"\>
 \<soap:address
-location=\"http://localhost/cgi-bin/Server.exe/soap/IEncodeDecode\" /\>
+location="http://localhost/cgi-bin/Server.exe/soap/IEncodeDecode" /\>
 \</port\>
 \</service\>
 \</definitions\>

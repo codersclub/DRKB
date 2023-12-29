@@ -14,7 +14,7 @@ Date: 01.01.2007
 Solve 1:
 
 I want to publish a code for checksum calculation by modulus 10 which is
-used in the barcodes. I must say that this \"mod10\" is specifical so
+used in the barcodes. I must say that this "mod10" is specifical so
 readf an article if you\'re interested.
 
 This algorithm is very popular for UPC barcodes (Universal Product

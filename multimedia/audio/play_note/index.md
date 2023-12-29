@@ -16,7 +16,7 @@ reminiscent of the old GWBASIC days whereby one could play a string of
 notes via the PC speaker. I know that WAV and MIDI files are available
 in todays technology, but sometimes one does not need all that overhead.
 The class is useful for certain types of alarms (specially if the user
-has his sound card volume muted) or simple \"Cell Phone\" like jingles.
+has his sound card volume muted) or simple "Cell Phone" like jingles.
 The trick of the matter in Delphi is that the standard DELPHI
 implementation of BEEP takes no arguments and has only one sound.
 However the WIN API BEEP() takes two arguments.
@@ -62,7 +62,7 @@ It is easily called by prefixing the unit
 
 ie. Windows.Beep(Freq,Duration)
 
-The format of the \"Music String\" is a comma delimited (\",\<\"
+The format of the "Music String" is a comma delimited (",\<"
 terminated) string in the following formats. (The string is
 CASE-INSENSITIVE and \[\] means optional with defaults).
 

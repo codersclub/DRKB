@@ -41,7 +41,7 @@ System unit), and are used within the procedures that do the real work
 (RangeToMatrix, RangeToVector,VectorToMatrix and VectortoRange).
 
 All these functions (along with some others that you might find useful)
-are put together in a unit called \"\_Variants\" whose source code is
+are put together in a unit called "\_Variants" whose source code is
 copied here (with some slight modifications).
 
 In the real unit you will find that there fucntions that provide
@@ -59,14 +59,14 @@ distribution.
 In Excel\'s VBA it is declared as
 
 Declare Function gamma\_alfa Lib
-\"c:\\archivos\\del\_files\\f\_auxiliares\_delphi\" Alias
-\"gamma\_alfa\_XL\" (ByVal media As Double, ByVal varianza As Double) As
+"c:\\archivos\\del\_files\\f\_auxiliares\_delphi" Alias
+"gamma\_alfa\_XL" (ByVal media As Double, ByVal varianza As Double) As
 Double
 
 note the lib statement that refers to name that the DLL actually has.
 
 note also the ByVal modifiers used for declaring the variables as well
-as the \"as double\" statements.
+as the "as double" statements.
 
 These mean that both the input and the output will be simple types of
 type double.
@@ -79,7 +79,7 @@ Note the stdcall at the end of the declaration. This is to ensure that
 Delphi will use the Microsoft calling convention
 
 Also note the inconsistency between the delphi function\'s name and the
-\"alias\" statement in VBA.
+"alias" statement in VBA.
 
 This is set in the export clause of the DLL:
 
@@ -106,11 +106,11 @@ histogram (with frequencies and class markers) and returns the alfa and
 beta parameters for a gamma. Here is its VBA declaration:
 
 Declare Function gamma\_parametros Lib
-\"c:\\archivos\\del\_files\\f\_auxiliares\_delphi\" Alias
-\"gamma\_parametros\_XL\" (ByRef marcas\_de\_clase As Variant, ByRef
+"c:\\archivos\\del\_files\\f\_auxiliares\_delphi" Alias
+"gamma\_parametros\_XL" (ByRef marcas\_de\_clase As Variant, ByRef
 frecuencias As Variant) As Variant
 
-Now note hte \"Byref\" and the as \"Variant\" types.
+Now note hte "Byref" and the as "Variant" types.
 
 In Delphi, the function is declared as follows:
 

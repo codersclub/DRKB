@@ -41,7 +41,7 @@ Interbase, и др., вы должны указать на этот линк. О
 Выберите New ODBC Driver.
 
 Задайте имя вашему драйверу (к имени автоматически добавится
-\"ODBC\_\".)
+"ODBC\_".)
 
 Выберите ваш ODBC Driver из списка Default ODBC Driver List.
 
@@ -61,15 +61,15 @@ Interbase, и др., вы должны указать на этот линк. О
 эквивалентно цене носителя и пересылки.
 
 Для работы с Access 2.0 вам необходимо использовать источник данных с
-именем \"Microsoft Access Driver\" или \"Microsoft Access 2.0
-Databases\".
+именем "Microsoft Access Driver" или "Microsoft Access 2.0
+Databases".
 
-Имейте в виду, что \"Access Data\" и \"Access Files\" по умолчанию
+Имейте в виду, что "Access Data" и "Access Files" по умолчанию
 являются источниками данных только для Access 1.0. Поэтому для получения
-доступа к MDB-файлам Access 1.0 пользуйтесь \"Access Data\".
+доступа к MDB-файлам Access 1.0 пользуйтесь "Access Data".
 
-Btrieve также создает источник данных по умолчанию \"Btrieve Data\" и
-\"Btrieve Files\". Используйте \"Btrieve Data\" как ваш источник данных
+Btrieve также создает источник данных по умолчанию "Btrieve Data" и
+"Btrieve Files". Используйте "Btrieve Data" как ваш источник данных
 по умолчанию. Драйверы Btrieve позволяют использовать данные btrieve
 вплоть до версии 5.0. Для работы с Btrive данными более новой версии,
 необходим новый набор драйверов Microsoft или Intersolve Q+E.

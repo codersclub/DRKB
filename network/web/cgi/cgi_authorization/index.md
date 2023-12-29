@@ -26,7 +26,7 @@ ISAPI приложение.
 
 Response.StatusCode := 401; // Запрос логина и пароля
 
-Response.WWWAuthenticate := \'Basic realm=\"Delphi\"\'; // Заголовок
+Response.WWWAuthenticate := \'Basic realm="Delphi"\'; // Заголовок
 
 \- Браузер посылает имя пользователя и пароль и мы получаем их:
 

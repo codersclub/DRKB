@@ -14,8 +14,8 @@ Date: 01.01.2007
 
 Автор: M K
 
-На вопрос \"Как я могу отправлять файлы через TClientSocket &
-TServerSocket?\" даём наш ответ :)
+На вопрос "Как я могу отправлять файлы через TClientSocket &
+TServerSocket?" даём наш ответ :)
 
     unit Unit1; 
      

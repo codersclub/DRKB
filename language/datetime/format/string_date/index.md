@@ -167,20 +167,20 @@ When extracting data from text or other operating systems the format of
 date strings can vary dramatically. Borland function StrToDateTime()
 converts a string to a TDateTime value, but it is limited to the fact
 that the string parameter must be in the format of the current locale\'s
-date/time format. eg. \"MM/DD/YY HH:MM:SS\"
+date/time format. eg. "MM/DD/YY HH:MM:SS"
 
 Answer:
 
 This is of little use when extracting dates such as ..
 
-       1) \"Friday 18 October 2002 08:34am (45 secs)\"  or \"Wednesday
-15 May 2002 06:12 (22 secs)\"
+       1) "Friday 18 October 2002 08:34am (45 secs)"  or "Wednesday
+15 May 2002 06:12 (22 secs)"
 
-       2) \"20020431\"
+       2) "20020431"
 
-       3) \"12.Nov.03\"
+       3) "12.Nov.03"
 
-       4) \"14 Hour 31 Minute 25 Second 321 MSecs\"
+       4) "14 Hour 31 Minute 25 Second 321 MSecs"
 
 This function will evaluate a DateTime string in accordance to the
 DateTime specifier format string supplied. The following specifiers are

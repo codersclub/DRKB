@@ -15,7 +15,7 @@ Paradox и неверные индексы Win95
 Автор: David W. Husch
 
 Сообщение об ошибке: В файловой системе win95 существует ошибка,
-\"микширующая\" блокировку записи Paradox и механизм обновления. В
+"микширующая" блокировку записи Paradox и механизм обновления. В
 хост-файлах Paradox в Windows 95 для работы нескольких пользователей
 измените следующие значения:
 
@@ -29,7 +29,7 @@ File System (Button)
 
 Troubleshooting (Tab)
 
-\"Disable New File Sharing and Locking Semantics\" (щелкните) (нажмите
+"Disable New File Sharing and Locking Semantics" (щелкните) (нажмите
 OK)
 
 (Выключить общий доступ к новым файлам и семантику блокировки)

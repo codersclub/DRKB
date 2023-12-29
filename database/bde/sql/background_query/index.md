@@ -40,27 +40,27 @@ Session1
 
        Active        True;
 
-       SessionName        \"Ses1\"
+       SessionName        "Ses1"
 
 DataBase1
 
-       AliasName        \"IBLOCAL\"
+       AliasName        "IBLOCAL"
 
-       DatabaseName        \"DB1\"
+       DatabaseName        "DB1"
 
-       SessionName        \"Ses1\"
+       SessionName        "Ses1"
 
 Query1
 
-       DataBaseName        \"DB1\"
+       DataBaseName        "DB1"
 
-       SessionName        \"Ses1\"
+       SessionName        "Ses1"
 
-       SQL.Strings        \"Select * from employee\"
+       SQL.Strings        "Select * from employee"
 
 DataSource1
 
-       DataSet        \"\"
+       DataSet        ""
 
 DBGrid1
 
@@ -70,27 +70,27 @@ Session2
 
        Active        True;
 
-       SessionName        \"Ses2\"
+       SessionName        "Ses2"
 
 DataBase2
 
-       AliasName        \"IBLOCAL\"
+       AliasName        "IBLOCAL"
 
-       DatabaseName        \"DB2\"
+       DatabaseName        "DB2"
 
-       SessionName        \"Ses2\"
+       SessionName        "Ses2"
 
 Query2
 
-       DataBaseName        \"DB2\"
+       DataBaseName        "DB2"
 
-       SessionName        \"Ses2\"
+       SessionName        "Ses2"
 
-       SQL.Strings        \"Select * from customer\"
+       SQL.Strings        "Select * from customer"
 
 DataSource2
 
-       DataSet        \"\"
+       DataSet        ""
 
 DBGrid1
 

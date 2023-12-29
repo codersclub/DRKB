@@ -31,7 +31,7 @@ Date: 01.01.2007
 Внимание: -7 mod 3 = -1
 Внимание: mod и ** нельзя использовать в операторе SELECT
 
-Можно пользоваться встроенными функциями 4GL (см. \"Функции 4GL\") и
+Можно пользоваться встроенными функциями 4GL (см. "Функции 4GL") и
 функциями на языке Си.
 
 Операции над строками:
@@ -42,7 +42,7 @@ Date: 01.01.2007
 
                string   CLIPPED           усечь пробелы справа
 
-               string   USING \"формат\"    форматировать
+               string   USING "формат"    форматировать
 
                string   WORDWRAP     переносить длинную строку
 
@@ -60,17 +60,17 @@ Date: 01.01.2007
 
              выражение IS \[NOT\] NULL
 
-                                  по умолчанию \"\\\"
+                                  по умолчанию "\\"
 
-       string \[NOT\] LIKE \"шаблон\" \[ESCAPE \"escape-char\"\]
+       string \[NOT\] LIKE "шаблон" \[ESCAPE "escape-char"\]
 
         спецсимволы шаблона % \_  означают ¦ §!
 
-       string \[NOT\] MATCHES \"шаблон\" \[ESCAPE \"esc-char\"\]
+       string \[NOT\] MATCHES "шаблон" \[ESCAPE "esc-char"\]
 
         спецсимволы шаблона *  ? \[  abH  \]  \[\^  d  -  z  \]
 
-        означают \"много\", \"один\", \"любой из\", \"ни один из\"
+        означают "много", "один", "любой из", "ни один из"
 
 Системные переменные:
 
@@ -81,7 +81,7 @@ Date: 01.01.2007
 status            { 0 \| NOTFOUND \| \<0 } код завершения оператора
 quit\_flag ( не 0 если было нажато QUIT ) int\_flag ( не 0 если было
 нажато \^C ) define SQLCA record \# системная запись с кодами завершения
-SQLCODE integer,=\"status\" SQLERRM char(71), ­- SQLERRP char(8), ­-
+SQLCODE integer,="status" SQLERRM char(71), ­- SQLERRP char(8), ­-
 SQLERRD array\[8\] of int,...„см. SQLAWARN char(8) warning или пробел
 end record SQLERRD\[1\] зарезервирован SQLERRD\[2\] serial значение или
 ISAM error cod SQLERRD\[3\] число обработанных строк SQLERRD\[4\] CPU
@@ -143,7 +143,7 @@ DEFINE  список переменных { type \| LIKE table.column
 
   где qualif Ё {YEAR,MONTH,DAY,HOUR,MINUTE,SECOND,FRACTION(n)}
 
-GLOBALS   { \"файл с GLOBALS объявлениями\" \|
+GLOBALS   { "файл с GLOBALS объявлениями" \|
 
        DEFINE-st    Должен лежать вне любого блока во всех
 
@@ -252,7 +252,7 @@ GOTO \[:\] метка          Двоеточие \':\' для совмести�
 
 LABEL метка:      Действует только внутри блока
 
-RUN {\"командная строка UNIX\"\|char-variable} \[RETURNING int-variable
+RUN {"командная строка UNIX"\|char-variable} \[RETURNING int-variable
 
                                             \| WITHOUT WAITING\]
 
@@ -260,13 +260,13 @@ SLEEP   целое-выраж.    Подождать n  секунд
 
 Меню, окна.
 
-MENU  \"Название меню\"
+MENU  "Название меню"
 
    COMMAND { KEY (key-list) \|
 
-   \[KEY (key-list)\] \"kоманда меню\"
+   \[KEY (key-list)\] "kоманда меню"
 
-                       \[\" подсказка help\"\] \[HELP help-number\] }
+                       \[" подсказка help"\] \[HELP help-number\] }
 
            Либо key, либо первая буква, обязаны быть латинскими.
 
@@ -282,7 +282,7 @@ MENU  \"Название меню\"
 
              .  .  .
 
-             \[NEXT OPTION \"kоманда меню\"           \#  Перейти к
+             \[NEXT OPTION "kоманда меню"           \#  Перейти к
 
     \[COMMAND  .  .  .        \]
 
@@ -314,7 +314,7 @@ OPTIONS   {                        По умолчанию:
 
     ACCEPT    KEY   key-name \|           ESC
 
-    HELP    FILE \"help-file\" \| Предварительно откомпилированный
+    HELP    FILE "help-file" \| Предварительно откомпилированный
 
     HELP      KEY   key-name \|   CONTROL-W   утилитой mkmessage
 
@@ -332,7 +332,7 @@ OPTIONS   {                        По умолчанию:
 
 OPEN WINDOW window-name AT row, column
 
-  WITH { integer ROWS, integer COLUMNS \| FORM \"form-file\" }
+  WITH { integer ROWS, integer COLUMNS \| FORM "form-file" }
 
     \[ATTRIBUTE(список аттрибутов)\]
 
@@ -356,7 +356,7 @@ CLEAR  {SCREEN \| WINDOW window-name \| FORM \| список полей}
 
 CLOSE WINDOW window-name
 
-OPEN FORM form-name FROM \"form-file\"    Без расширения .frm
+OPEN FORM form-name FROM "form-file"    Без расширения .frm
 
 DISPLAY FORM form-name \[ATTRIBUTE(список аттрибутов)\]
 
@@ -521,7 +521,7 @@ END INPUT \]
 
 Динамическое создание операторов.
 
-PREPARE statement-id FROM {char-variable \| \"SQL-оператор \[ы\] \"}
+PREPARE statement-id FROM {char-variable \| "SQL-оператор \[ы\] "}
 
 Изготовить SQL - statement из символьной строки
 
@@ -541,7 +541,7 @@ EXECUTE statment-id \[USING input-list\]
 
 FREE   { statment-id \| cursor-name }
 
-Манипуляция \"курсором\".
+Манипуляция "курсором".
 
 DECLARE cursor-name \[SCROLL\] CURSOR \[WITH HOLD\] FOR
 
@@ -616,7 +616,7 @@ WORK, START DATABASE, ...
 
 Операторы описания данных не откатываются !
 
-CREATE DATABASE db-name \[WITH LOG IN \"pathname\" \[MODE ANSI\]\]
+CREATE DATABASE db-name \[WITH LOG IN "pathname" \[MODE ANSI\]\]
 
 Стандарт ansi требует имя владельца, транзакция по умолчанию
 
@@ -634,7 +634,7 @@ CREATE \[TEMP\] TABLE table-name( column-name datatype \[NOT NULL\]
 
        \[WITH NO LOG\]
 
-       \[IN \"pathname-directory\"\]
+       \[IN "pathname-directory"\]
 
 где datatype может быть:
 
@@ -727,11 +727,11 @@ UPDATE table-name SET {column-name ={ expression \| (SELECT-st) }
 
                            !* Только в 4GL *!
 
-LOAD FROM \"file-name\" \[DELIMITER \"?\"\] { INSERT INTO table
+LOAD FROM "file-name" \[DELIMITER "?"\] { INSERT INTO table
 
            \[(col-list)\] \| char-variable with INSERT-st }
 
-UNLOAD TO \"file\" \[DELIMITER \"?\"\] SELECT-statement
+UNLOAD TO "file" \[DELIMITER "?"\] SELECT-statement
 
        формат файла по умолчанию:
 
@@ -779,17 +779,17 @@ SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,...\]
 
        выраж \[NOT\] IN (выраж1, ...  \[, ...\] )
 
-                                  по умолчанию \"\\\"
+                                  по умолчанию "\\"
 
-       строка \[NOT\] LIKE \"шаблон\" \[ESCAPE \"escape-char\"\]
+       строка \[NOT\] LIKE "шаблон" \[ESCAPE "escape-char"\]
 
-        спецсимволы шаблона %  \_  означают \"много\" \"один\"
+        спецсимволы шаблона %  \_  означают "много" "один"
 
-       строка \[NOT\] MATCHES \"шаблон\" \[ESCAPE \"esc-char\"\]
+       строка \[NOT\] MATCHES "шаблон" \[ESCAPE "esc-char"\]
 
-        спецсимволы шаблона *  ?   означают \"много\" \"один\"
+        спецсимволы шаблона *  ?   означают "много" "один"
 
-        \[abH\]  \[\^d-z\]  \"один из\" \"ни один из\"
+        \[abH\]  \[\^d-z\]  "один из" "ни один из"
 
        выраж сравнение {ALL \| \[ANY \| SOME\]} (SELECT-оператор)
 
@@ -835,9 +835,9 @@ UNLOCK TABLE table-name
 
 Операторы транзакций, восстановления данных.
 
-CREATE DATABASE db-name  WITH LOG IN \"/pathname\" \[MODE ANSI\]\]
+CREATE DATABASE db-name  WITH LOG IN "/pathname" \[MODE ANSI\]\]
 
-START  DATABASE db-name  WITH LOG IN \"/pathname\" \[MODE ANSI\]
+START  DATABASE db-name  WITH LOG IN "/pathname" \[MODE ANSI\]
 
    стартовать новый системный журнал (log-файл)
 
@@ -855,7 +855,7 @@ COMMIT WORK     Kонец транзакции
 
 ROLLBACK WORK   Откатить изменения к предыдущему COMMIT
 
-CREATE AUDIT FOR table-name IN \"pathname\"
+CREATE AUDIT FOR table-name IN "pathname"
 
   . . .
 

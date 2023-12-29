@@ -37,7 +37,7 @@ There are several ways to reduce a EXE\'s size:
 
 10\) Store less properties in DFM files
 
-(See Link below \"How To Make Your EXE\'s Lighter\")
+(See Link below "How To Make Your EXE\'s Lighter")
 
 11\) Use the TStringList replacement by \~LOM\~
 
@@ -139,7 +139,7 @@ Windows controls classes, derived from it has appeared.
 StripReloc is a free (GPL license) command line utility that removes the
 relocation
 
-(\".reloc\") section from Win32 PE EXE files, reducing their size.
+(".reloc") section from Win32 PE EXE files, reducing their size.
 
 Most compilers/linkers (including Delphi) put a relocation section in
 EXE files,
@@ -170,7 +170,7 @@ Debugging can take up until half of the size.
 
 The options that are going to singificantly reduce your file size are
 
-\"Include TD32 debug info\" and \"Build with runtime packages\". If you
+"Include TD32 debug info" and "Build with runtime packages". If you
 are
 
 shipping commercial applications, you usually don\'t need the debug info

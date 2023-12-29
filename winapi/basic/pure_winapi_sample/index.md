@@ -169,7 +169,7 @@ DelphiWorld 6.0
     Halt 
     end.
 
-М. Краснов. \"OpenGL и графика в проектах Delphi\".
+М. Краснов. "OpenGL и графика в проектах Delphi".
 
 Пример прислан Spawn
 

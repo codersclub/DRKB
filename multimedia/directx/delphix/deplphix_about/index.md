@@ -21,7 +21,7 @@ DXImagelist, DX3D, DXSound, DXWave, DXWaveList, DXInput, DXPlay,
 DXSpriteEngine, DXTimer, DXPaintBox. Теперь расскажу о каждом понемногу:
 
 DXDraw
-: основной компонент ДельфИкса, это его \"рабочий стол\", на котором
+: основной компонент ДельфИкса, это его "рабочий стол", на котором
 отображается все остальное.
 
 DXDib

@@ -16,7 +16,7 @@ Date: 01.01.2007
 
 HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
-SystemFont=\"Fixedsys\"
+SystemFont="Fixedsys"
 
 Если такой ключ не существует, его следует создать.
 
@@ -24,7 +24,7 @@ SystemFont=\"Fixedsys\"
 
 \[HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CodePage\]
 
-\"1252\"=\"c\_1251.nls\"
+"1252"="c\_1251.nls"
 
 Автор: Pegas
 
@@ -51,7 +51,7 @@ SystemFont=Arial Cyr
 
 HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
-SystemFont=\"Fixedsys\"
+SystemFont="Fixedsys"
 
 Если такой ключ не существует, его следует создать. Впрочем, для
 просмотра таблиц
@@ -103,7 +103,7 @@ SystemFont=Arial Cyr
 
 HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
-SystemFont=\"Fixedsys\"
+SystemFont="Fixedsys"
 
 Если такой ключ не существует, его следует создать. Впрочем, для
 просмотра таблиц все равно можно порекомендовать rx Database

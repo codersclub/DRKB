@@ -34,7 +34,7 @@ Project1 как WordWriter.
 делается так:
 
 Project, Import Type Library, Add, далее переходим в папку, где стоит
-Word ( у меня это - \"c:\\program files\\microsoft office), заходим в
+Word ( у меня это - "c:\\program files\\microsoft office), заходим в
 папку Office и выбираем файл - msword8.olb (цифра -? версии Word-а - у
 Вас может отличаться ) или excel8.olb (для Excel).Нажимаем Оk. Delphi
 создаст 2 файла - Word\_tlb.pas и Office\_tlb.pas, их надо включить в

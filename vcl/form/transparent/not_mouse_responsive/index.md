@@ -123,7 +123,7 @@ Date: 01.01.2007
 
 Вместо перекрытия CreateParams():
 
-Сделать \"прозрачным\" для мышки:
+Сделать "прозрачным" для мышки:
 
     setWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) or WS_EX_TRANSPARENT);
 

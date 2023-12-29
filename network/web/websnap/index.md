@@ -243,7 +243,7 @@ if (e.item().Published)
 {
 if (c\>0) s += \' \| \'
 if (Page.Name != e.item().Name)
-s += \'\<a href=\"\' + e.item().HREF + \'\"\>\' + e.item().Title +
+s += \'\<a href="\' + e.item().HREF + \'"\>\' + e.item().Title +
 \'\</a\>\'
 else
 s += e.item().Title
@@ -333,16 +333,16 @@ FValue:=AdapterField1.ActionValue.Values\[0\];
 Чтобы дать пользователю возможность вводить свое имя в текст Unit2.html
 (после строки "Добрый день ......") добавим определение формы ввода:
 
-\<FORM NAME=\"INPUT\_NAME\_FORM\" METHOD=POST\>
-\<INPUT TYPE=HIDDEN NAME=\"\_\_action\" VALUE =
-\"\<%=Adapter1.GetNameAction1.AsFieldValue%\>\"\>
+\<FORM NAME="INPUT\_NAME\_FORM" METHOD=POST\>
+\<INPUT TYPE=HIDDEN NAME="\_\_action" VALUE =
+"\<%=Adapter1.GetNameAction1.AsFieldValue%\>"\>
 Ваше имя:
-\<INPUT TYPE=INPUT VALUE=\"\<%=Adapter1.AdapterField1.EditText%\>\"
-NAME= \"\<%=Adapter1.AdapterField1.InputName%\>\"\>
+\<INPUT TYPE=INPUT VALUE="\<%=Adapter1.AdapterField1.EditText%\>"
+NAME= "\<%=Adapter1.AdapterField1.InputName%\>"\>
 
 \<INPUT TYPE=SUBMIT
-VALUE=\"\<%=Adapter1.GetNameAction1.DisplayLabel%\>\"
-onclick=\"\'INPUT\_NAME\_FORM.\_\_action.value=\<%=Adapter1.GetNameAction1.AsFieldValue%\>\'\"\>
+VALUE="\<%=Adapter1.GetNameAction1.DisplayLabel%\>"
+onclick="\'INPUT\_NAME\_FORM.\_\_action.value=\<%=Adapter1.GetNameAction1.AsFieldValue%\>\'"\>
 \</FORM\>
 
 Скомпилируем проект, перенесем его на Web сервер -- поприветствуем себя

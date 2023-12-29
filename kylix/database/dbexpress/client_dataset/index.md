@@ -29,7 +29,7 @@ TSQLClientDataSet характерны для клиентского датас�
 MIDAS. На самом деле TSQLClientDataSet - это гибрид, содержащий в себе
 объекты однонаправленного набора данных, клиентский набор данных и
 объект провайдера для применения внесенных изменений на сервере БД.
-\"Запихивание под капот\" этих объектов позволило существенно упростить
+"Запихивание под капот" этих объектов позволило существенно упростить
 разработку двухзвенных приложений баз данных в dbExpress.
 
 Простейший проект
@@ -71,7 +71,7 @@ Insert into Employeers (Name) values \'Сидоров\';
 установим для них нижеуказанные свойства
 
 sc\_conn:TDBConnection - настроить для соединения с созданной БД. (как
-это сделать см. \"Коннект - есть коннект\"). Св-во Connected -
+это сделать см. "Коннект - есть коннект"). Св-во Connected -
 установить true.
 
 scd\_emp:TSQLClientDataSet
@@ -102,7 +102,7 @@ Panel1:TPanel
 
                Align - alBottom
 
-               Caption - \"\"(пустая строка)
+               Caption - ""(пустая строка)
 
 DBGrid1:TDBGrid
 
@@ -134,7 +134,7 @@ Sc\_conn - соединение с базой данных
 Sc\_emp - набор данных для работы с таблицей БД employers
 
 Ds\_src - представление данных sc\_emp для компонентов пользовательского
-интерфейса \"чувствительных\" к данным.
+интерфейса "чувствительных" к данным.
 
 Запустим на выполнение наш проект, при этом предполагается, что сервер
 interbase уже запущен. При нажатии кнопки b\_connect в сетке данных
@@ -463,22 +463,22 @@ Add all fields. Затем DataSource - ds\_Clients, разместим в мо�
 Посмотрим, как внутри устроен xml файл базы данных. После создания
 датасета типичный файл БД выглядит так:
 
-\<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?\>
+\<?xml version="1.0" encoding="UTF-8" standalone="yes" ?\>
 
-\<DATAPACKET Version=\"2.0\"\>
+\<DATAPACKET Version="2.0"\>
 
 \<METADATA\>
 
 \<FIELDS\>
 
-\<FIELD attrname=\"ID\" fieldtype=\"i4\" readonly=\"true\"
-SUBTYPE=\"Autoinc\" /\>
+\<FIELD attrname="ID" fieldtype="i4" readonly="true"
+SUBTYPE="Autoinc" /\>
 
-\<FIELD attrname=\"Name\" fieldtype=\"string\" WIDTH=\"50\" /\>
+\<FIELD attrname="Name" fieldtype="string" WIDTH="50" /\>
 
 \</FIELDS\>
 
-\<PARAMS DEFAULT\_ORDER=\"\" AUTOINCVALUE=\"1\" /\>
+\<PARAMS DEFAULT\_ORDER="" AUTOINCVALUE="1" /\>
 
 \</METADATA\>
 
@@ -486,12 +486,12 @@ SUBTYPE=\"Autoinc\" /\>
 
 \</DATAPACKET\>
 
-Строка 1 \<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"
+Строка 1 \<?xml version="1.0" encoding="UTF-8" standalone="yes"
 ?\>
 
 В строке 1 расположен заголовочный тэг
 
-Строка 2 \<DATAPACKET Version=\"2.0\"\>
+Строка 2 \<DATAPACKET Version="2.0"\>
 
 Корневой тэг документа, а вот дальше и начинаются теги, на которые стоит
 обратить внимание, в частности на строки 3 и 10.
@@ -515,14 +515,14 @@ ROWDATA, естественно что при создании новой таб
 
 Изменился тег PARAMS, теперь он выглядит так:
 
-lt;PARAMS CHANGE\_LOG=\"1 0 4\" AUTOINCVALUE=\"2\" DEFAULT\_ORDER=\"\"
+lt;PARAMS CHANGE\_LOG="1 0 4" AUTOINCVALUE="2" DEFAULT\_ORDER=""
 /\>
 
 и тег ROWDATA стал непустым:
 
 \<ROWDATA\>
 
-\<ROW RowState=\"4\" ID=\"1\" Name=\"e?AI?\" /\>
+\<ROW RowState="4" ID="1" Name="e?AI?" /\>
 
 \</ROWDATA\>
 
@@ -589,38 +589,38 @@ to MyBase xml table) и на основе этих определений явн
 (двойной клик на Clients, правая кнопка мыши - add all fields). Открыв
 созданный xml файл мы увидим следующее
 
-lt;?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?\>
+lt;?xml version="1.0" encoding="UTF-8" standalone="yes" ?\>
 
-\- \<DATAPACKET Version=\"2.0\"\>
+\- \<DATAPACKET Version="2.0"\>
 
 \- \<METADATA\>
 
 \- \<FIELDS\>
 
-\<FIELD attrname=\"ID\" fieldtype=\"i4\" readonly=\"true\"
-SUBTYPE=\"Autoinc\" /\>
+\<FIELD attrname="ID" fieldtype="i4" readonly="true"
+SUBTYPE="Autoinc" /\>
 
-\<FIELD attrname=\"Name\" fieldtype=\"string\" WIDTH=\"50\" /\>
+\<FIELD attrname="Name" fieldtype="string" WIDTH="50" /\>
 
-\- \<FIELD attrname=\"Orders\" fieldtype=\"nested\"\>
+\- \<FIELD attrname="Orders" fieldtype="nested"\>
 
 \- \<FIELDS\>
 
-\<FIELD attrname=\"ID\" fieldtype=\"i4\" SUBTYPE=\"Autoinc\" /\>
+\<FIELD attrname="ID" fieldtype="i4" SUBTYPE="Autoinc" /\>
 
-\<FIELD attrname=\"OrderName\" fieldtype=\"string\" WIDTH=\"20\" /\>
+\<FIELD attrname="OrderName" fieldtype="string" WIDTH="20" /\>
 
-\<FIELD attrname=\"Price\" fieldtype=\"r8\" SUBTYPE=\"Money\" /\>
+\<FIELD attrname="Price" fieldtype="r8" SUBTYPE="Money" /\>
 
 \</FIELDS\>
 
-\<PARAMS AUTOINCVALUE=\"1\" /\>
+\<PARAMS AUTOINCVALUE="1" /\>
 
 \</FIELD\>
 
 \</FIELDS\>
 
-\<PARAMS DEFAULT\_ORDER=\"\" AUTOINCVALUE=\"1\" /\>
+\<PARAMS DEFAULT\_ORDER="" AUTOINCVALUE="1" /\>
 
 \</METADATA\>
 

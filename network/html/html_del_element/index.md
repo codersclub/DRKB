@@ -68,15 +68,15 @@ Date: 01.01.2007
 
 Всё, что нужно сделать - это вызвать :
 
-LoadFileIntoList(\"filename.txt\",Webpage, True);
+LoadFileIntoList("filename.txt",Webpage, True);
 
 Где filename - это имя файла, который вы хотите обработать.
 
-\"WebPage\" - это TStringList
+"WebPage" - это TStringList
 
 последний параметр в функции указывает, применять или нет HTML-фильтр.
 
-PS: В этом примере объект TMemo (который вызывается из \"FilterMemo\")
+PS: В этом примере объект TMemo (который вызывается из "FilterMemo")
 лежит на форме и поэтому не видим.
 
     WebPage := TStringList.Create; 

@@ -53,8 +53,8 @@ array of TBasicActionClass;Resource: TcomponentClass );
 Процедура регистрирует множество Action так, чтобы ими можно было
 оперировать с помощью редактора списка Action (Action list editor).
 
-Зарегистрированный класс будет отображаться в \"Action list editor\" при
-выборе команды редактора \"New Action\".
+Зарегистрированный класс будет отображаться в "Action list editor" при
+выборе команды редактора "New Action".
 
 Процедура UnRegisterActions (const AClasses: array of TBasicActionClass
 );

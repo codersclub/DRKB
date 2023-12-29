@@ -899,7 +899,7 @@ select title, total\_sales
 
 from titles
 
-where convert (char(20), total\_sales) like \"2%\"
+where convert (char(20), total\_sales) like "2%"
 
  
 
@@ -1141,7 +1141,7 @@ sp\_addtype название\_типа\_данных,
 
 ситемный\_тип\_данных  \[(длина) \| (точность \[, шкала\])\]
 
-\[, \"identity\" \| вид\_неопределенности\]
+\[, "identity" \| вид\_неопределенности\]
 
  
 
@@ -1149,7 +1149,7 @@ sp\_addtype название\_типа\_данных,
 
  
 
-sp\_addtype tid, \"char(6)\", \"not null\"
+sp\_addtype tid, "char(6)", "not null"
 
  
 

@@ -16,7 +16,7 @@ documentation, but they are defined as requiring LongInts.
 
 Is this a bug?
 
-No, this is where \"typecasting\" is used. Typecasting allows you to
+No, this is where "typecasting" is used. Typecasting allows you to
 fool the compiler into thinking that one type of variable is of another
 type for the ultimate in flexibility. The last parameter of  the Windows
 API function SendMessage() is a good example. It is

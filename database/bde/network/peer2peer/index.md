@@ -28,7 +28,7 @@ BDE автоматически обнаруживает таблицы на се
 уведомляют приложение клиента о том, что файл был изменен или
 заблокирован. Данная функциональность отсутствует в Peer-To-Peer
 (не-dedicated) сетях. Для ее включения в сетях Peer-To-Peer, установите
-\"LOCAL SHARE\" в TRUE в BDE Configuration Utility на странице System.
+"LOCAL SHARE" в TRUE в BDE Configuration Utility на странице System.
 Это должно быть сделано на всех клиентах BDE, которые имеют доступ к
 таблицам в сетях, указанных выше. В случае файловых серверов Novell
 данное требование не является необходимым.
@@ -142,11 +142,11 @@ UNC:
 
 Клиент2:  
 
-   Путь: X:\\Таблицы (Где \"X:\\Таблицы\" реально -
+   Путь: X:\\Таблицы (Где "X:\\Таблицы" реально -
 
-\"X:\\Каталог общего доступа\\Таблицы\", но имеющий
+"X:\\Каталог общего доступа\\Таблицы", но имеющий
 
-общий доступ в \"Каталог общего доступа\")
+общий доступ в "Каталог общего доступа")
 
 Неработоспособно. BDE должен иметь возможность
 
@@ -158,7 +158,7 @@ UNC:
 
 16- и/или 32-битные приложения:
 
-В BDE Configuration Utility установите \"LOCAL SHARE\" в TRUE.
+В BDE Configuration Utility установите "LOCAL SHARE" в TRUE.
 
 Не используйте UNC-имена.
 
@@ -169,7 +169,7 @@ UNC:
 
 Только 32-битные приложения:
 
-В BDE Configuration Utility установите \"LOCAL SHARE\" в TRUE.
+В BDE Configuration Utility установите "LOCAL SHARE" в TRUE.
 
 Для получения доступа к сетевому каталогу и каталогу с таблицами
 используйте UNC-имена.
@@ -177,21 +177,21 @@ UNC:
 При невыполнении описанных выше шагов пользователи могут блокировать
 таблицы с получением следующей ошибки:
 
-\"Directory is controlled by other .NET file.\"
+"Directory is controlled by other .NET file."
 
 (Каталог управляется другим .NET-файлом)
 
-\"File:  PDOXUSRS.LCK\" (\"Файл:  PDOXUSRS.LCK\")
+"File:  PDOXUSRS.LCK" ("Файл:  PDOXUSRS.LCK")
 
-\"Directory: \" (Каталог: )
+"Directory: " (Каталог: )
 
 ИЛИ
 
-\"Multiple .NET files in use.\"
+"Multiple .NET files in use."
 
 (Используются несколько .NET-файлов.)
 
-\"File:  PDOXUSRS.LCK\"
+"File:  PDOXUSRS.LCK"
 
 (Файл:  PDOXUSRS.LCK)
 

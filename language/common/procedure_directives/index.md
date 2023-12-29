@@ -62,7 +62,7 @@ sdecl - вызовы в стиле С (для обращения к DLL испо
 созданных другим компилятором (в другом формате), то тебе, в принципе,
 все равно, какая реализация используется - компилятор сам примет верное
 решение и согласует вызовы подпрограмм в своем стиле. Исключение,
-пожалуй, составляет лишь опция \"registers\" - по смыслу это означает
+пожалуй, составляет лишь опция "registers" - по смыслу это означает
 приоритетное использование регистров процессора для передачи(получения)
 данных процедуре. Как правило, это ускоряет вызов процедуры и возврат из
 нее: может быть использования для повышения быстродействия. Однако это
@@ -230,7 +230,7 @@ decorate names. Unless told to do otherwise a C compiler will prefix all
 cdecl functions with an underbar and will decorate stdcall functions in
 the format \_name\@x, where x is the total parameter size, e.g.
 \_Test3\@16. C++ is even worse, unless functions are declared as extern
-\"C\" it will export names in a decorated format that encodes parameter
+"C" it will export names in a decorated format that encodes parameter
 size and type, in a compiler-specific fashion. For routines exported
 with Pascal calling convention the names may be all uppercase,
 

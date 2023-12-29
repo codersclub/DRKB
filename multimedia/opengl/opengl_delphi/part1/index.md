@@ -29,7 +29,7 @@ OpenGL ...
 Откройте новый проект: File -\> New -\> Application; У Вас успехи
 (шутка).
 
-Теперь в директиву \"uses\" добавьте \"OpenGL\" вот так:
+Теперь в директиву "uses" добавьте "OpenGL" вот так:
 
        uses
           Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,

@@ -19,7 +19,7 @@ this.
 While browsing the web for information on AVI file formats I came upon a
 site www.shrinkwrapvb.com/avihelp/avihelp.htm that is maintained by Ray
 Mercer. In this tutorial he explains how to manipulate,read and write
-AVI files. I was particularly interested in \"Step 5\" in which he shows
+AVI files. I was particularly interested in "Step 5" in which he shows
 a utility that takes a list of BMP files that creates an AVI file which
 can be used by the TAnimate component. The only problem was that the
 examples are in Visual Basic, thus a conversion to Delphi was required.
@@ -32,7 +32,7 @@ CreateAVI(const FileName : string; BMPFileList : TStrings; FramesPerSec
 To keep the text of the example simple and readable I have left out most
 to the error checking (try except etc.). You can also play with the
 AVISaveOptions dialog box, but I can only seem to get it to work with
-\"Full Frames Uncompressed\" with BMP files. Can anyone shed some light
+"Full Frames Uncompressed" with BMP files. Can anyone shed some light
 on this ?
 
 Errors you should check for are ..

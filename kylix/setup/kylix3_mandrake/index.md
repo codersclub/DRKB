@@ -13,10 +13,10 @@ Installing Kylix 3 Open Edition on Mandrake 9
 
 How can I get Kylix 3 Open Edition installed and running on Mandrake 9?
 
-Open a Super User Terminal, select \"Sessions/New Root Midnight
-Commander\" and in \"/\", create a directory \"temp\"
+Open a Super User Terminal, select "Sessions/New Root Midnight
+Commander" and in "/", create a directory "temp"
 
-Download or copy the file kylix3\_open.tar.gz into the \"temp\"
+Download or copy the file kylix3\_open.tar.gz into the "temp"
 directory you just created.
 
 Check that all necessary programs are installed on your system:
@@ -52,18 +52,18 @@ cd /temp/kylix3\_open
 
 ./setup.sh
 
-In Gui select \"I Agree\"
+In Gui select "I Agree"
 
-Now select \"install\"
+Now select "install"
 
 Logout and log back in as same user to get the Borland Kylix entry in
 the KDE menu
 
-In Borland Kylix 3 menu, select \"register now\"
+In Borland Kylix 3 menu, select "register now"
 
-In the Gui select \"next\"
+In the Gui select "next"
 
-In the Gui select \'Finish\"
+In the Gui select \'Finish"
 
 The Gui disappears and the registration process has completed.
 

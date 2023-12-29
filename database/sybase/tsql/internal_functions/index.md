@@ -217,9 +217,9 @@ dbo
                                                                использовать функцию
                                                                convert.
 
-  lct\_admin              ({{ \"lastchance\" \| \"logfull\" \| Эта функция управляет
-                          \"unsuspend\" }, database\_id} \|   пороговым значением для
-                          \"reserve\", log\_pages})            числа повторных
+  lct\_admin              ({{ "lastchance" \| "logfull" \| Эта функция управляет
+                          "unsuspend" }, database\_id} \|   пороговым значением для
+                          "reserve", log\_pages})            числа повторных
                                                                обращений к сегментам
                                                                журнала транзакций
                                                                (last-chance thresold).
@@ -261,8 +261,8 @@ dbo
   object\_name            (object\_id\[, database\_id\])       Возвращает название
                                                                объекта.
 
-  proc\_role              (\"sa\_role\" \| \"sso\_role\" \|    Проверяет, имеет ли
-                          \"oper\_role\")                      пользователь,
+  proc\_role              ("sa\_role" \| "sso\_role" \|    Проверяет, имеет ли
+                          "oper\_role")                      пользователь,
                                                                вызывающий процедуру,
                                                                право на выполнение
                                                                этой процедуры. Если
@@ -418,7 +418,7 @@ dbo
 
  
 
-select x = col\_length(\"titles\", \"title\")
+select x = col\_length("titles", "title")
 
  
 
@@ -581,7 +581,7 @@ select (выражение + выражение + \[выражение\]...)
 
  
 
-select \"The price is \" + convert(varchar(12),price)
+select "The price is " + convert(varchar(12),price)
 
 from titles
 
@@ -718,7 +718,7 @@ varchar, nvarchar.
                                                    специальных символов
                                                    SQL Сервера.
 
-  patindex                 (\"%pattern%\",         Возвращает номер
+  patindex                 ("%pattern%",         Возвращает номер
                            char\_expr \[using      позиции, с которой 
                            {bytes \| chars \|      начинается первое
                            characters}\] )         вхождение строки
@@ -907,11 +907,11 @@ notes таблицы titles:
 
  
 
-select charindex(\"wonderful\", notes), patindex(\"%wonderful%\", notes)
+select charindex("wonderful", notes), patindex("%wonderful%", notes)
 
 from titles
 
-where title\_id = \"TC3218\"
+where title\_id = "TC3218"
 
  
 
@@ -940,7 +940,7 @@ select name
 
 from sysobjects
 
-where patindex(\"sys\[a-d\]%\", name) \> 0
+where patindex("sys\[a-d\]%", name) \> 0
 
  
 
@@ -1047,7 +1047,7 @@ select str(123.456, 2, 4)
 
  
 
-select stuff(\"abc\", 2, 3, \"xyz\")
+select stuff("abc", 2, 3, "xyz")
 
  
 
@@ -1068,7 +1068,7 @@ axyz
 
  
 
-select stuff(\"abcdef\", 2, 3, null)
+select stuff("abcdef", 2, 3, null)
 
 \-\--
 
@@ -1080,7 +1080,7 @@ aef
 
  
 
-select stuff(\"abcdef\", 2, 3, \" \")
+select stuff("abcdef", 2, 3, " ")
 
 \-\-\--
 
@@ -1112,7 +1112,7 @@ a ef
 
  
 
-select soundex(\"smith\"), soundex(\"smythe\")
+select soundex("smith"), soundex("smythe")
 
  
 
@@ -1128,7 +1128,7 @@ S530  S530
 
  
 
-select difference(\"smithers\", \"smothers\")
+select difference("smithers", "smothers")
 
 \-\-\-\-\-\-\-\--
 
@@ -1136,7 +1136,7 @@ select difference(\"smithers\", \"smothers\")
 
  
 
-select difference(\"smothers\", \"brothers\")
+select difference("smothers", "brothers")
 
 \-\-\-\-\-\-\-\--
 
@@ -1205,7 +1205,7 @@ substring(выражение, начальная позиция, длина)
 
  
 
-select x = substring(\"abcdef\", 2, 3)
+select x = substring("abcdef", 2, 3)
 
  
 
@@ -1243,7 +1243,7 @@ select (выражение + выражение \[+ выражение\]...)
 
  
 
-select (\"abc\" + \"def\")
+select ("abc" + "def")
 
 \-\-\-\-\-\--
 
@@ -1260,11 +1260,11 @@ abcdef
 
  
 
-select Moniker = (au\_lname + \", \" + au\_fname)
+select Moniker = (au\_lname + ", " + au\_fname)
 
 from authors
 
-where state = \"CA\"
+where state = "CA"
 
  
 
@@ -1313,11 +1313,11 @@ McBadden, Heather
 
  
 
-select \"The due date is \" + convert(varchar(30), pubdate) 
+select "The due date is " + convert(varchar(30), pubdate) 
 
 from titles
 
-where title\_id = \"BU1032\"
+where title\_id = "BU1032"
 
  
 
@@ -1342,7 +1342,7 @@ The due date is Jun 12 1985 12:00AM
 
  
 
-select \"abc\" + \"\" + \"def\"
+select "abc" + "" + "def"
 
  
 
@@ -1369,11 +1369,11 @@ abc def
 
  
 
-select (au\_lname + \",\" + \" \" + substring(au\_fname, 1, 1) + \".\")
+select (au\_lname + "," + " " + substring(au\_fname, 1, 1) + ".")
 
 from authors
 
-where city = \"Oakland\"
+where city = "Oakland"
 
  
 
@@ -1440,7 +1440,7 @@ where price \> $20
  
 
   -------------- ----------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  patindex       (\"%pattern%\", char\_expr \[using {bytes \| chars \| characters}\] )   Возвращает номер позиции, с которой  начинается первое вхождение строки pattern (образца) в указанное символьное выражение char\_expr, и 0, если образец pattern не входит в нее. По умолчанию, функция patindex возвращает номер символа. Чтобы получить смещение в байтах для строк в многобайтовых алфавитах, необходимо указать опцию using bytes. Символ '%' должен находиться до и после образца pattern, за исключением  случаев, когда поиск происходит с начала или с конца строки. Об использовании символов замены в этой функции подробнее можно посмотреть в разделе "Символы замены" Справочного Руководства по SQL Серверу.
+  patindex       ("%pattern%", char\_expr \[using {bytes \| chars \| characters}\] )   Возвращает номер позиции, с которой  начинается первое вхождение строки pattern (образца) в указанное символьное выражение char\_expr, и 0, если образец pattern не входит в нее. По умолчанию, функция patindex возвращает номер символа. Чтобы получить смещение в байтах для строк в многобайтовых алфавитах, необходимо указать опцию using bytes. Символ '%' должен находиться до и после образца pattern, за исключением  случаев, когда поиск происходит с начала или с конца строки. Об использовании символов замены в этой функции подробнее можно посмотреть в разделе "Символы замены" Справочного Руководства по SQL Серверу.
   textptr        (название\_столбца)                                                     Возвращает текстовый указатель, который является 16-ти байтовым адресом. Указатель должен указывать на первую текстовую страницу.
   textvalid      ("название\_таблицы.. название\_столбца", текстовый\_указатель)         Проводится проверка правильности тектового указателя. Отметим, что название столбца должно быть расширено названием таблицы. Возвращает 1, если указатель правильный, и 0, в противном случае.
   set textsize   { n \| 0}                                                               Указывает ограничение на объем текстовых или графических данных в  байтах, которые можно возвратить оператором select. Текущая установка хранится в глобальной переменной @\@textsize. Параметр n определяет число возвращаемых байтов, а 0 устанавливает значение по умолчанию, равное 32К.
@@ -1479,19 +1479,19 @@ create table texttest
 
  
 
-insert texttest values (\"BU7832\", \"Straight Talk About Computers is
+insert texttest values ("BU7832", "Straight Talk About Computers is
 an annotated
 
      analysis of what computers can do for you: a no-hype guide for the
-critical user\",
+critical user",
 
-     \"1389\")
+     "1389")
 
  
 
 declare \@val varbinary(16)
 
-select \@val = textptr(blurb) from texttest where title\_id = \"BU7832\"
+select \@val = textptr(blurb) from texttest where title\_id = "BU7832"
 
 readtext texttest.blurb \@val 1 5
 
@@ -1512,13 +1512,13 @@ create table texttest
 
  
 
-insert texttest values (\"BU7832\", \"Straight Talk About Computers is
+insert texttest values ("BU7832", "Straight Talk About Computers is
 an annotated
 
      analysis of what computers can do for you: a no-hype guide for the
-critical user\",
+critical user",
 
-     \"1389\")
+     "1389")
 
  
 
@@ -1913,7 +1913,7 @@ July
 
  
 
-select newdate = datediff(day, pubdate, \"Nov 30 1985\")
+select newdate = datediff(day, pubdate, "Nov 30 1985")
 
 from titles
 
@@ -1925,7 +1925,7 @@ from titles
 
  
 
-select interval = datediff(month, pubdate,  \"Nov 30 1985\")
+select interval = datediff(month, pubdate,  "Nov 30 1985")
 
 from titles
 
@@ -2127,7 +2127,7 @@ select title, convert(char(5), total\_sales)
 
 from titles
 
-where type = \"trad\_cook\"
+where type = "trad\_cook"
 
  
 
@@ -2164,8 +2164,8 @@ select title, total\_sales
 
 from titles
 
-where convert(char(5), total\_sales) like \"15%\"  and type =
-\"trad\_cook\"
+where convert(char(5), total\_sales) like "15%"  and type =
+"trad\_cook"
 
  
 
@@ -2430,11 +2430,11 @@ hextoint:
 
  
 
-hextoint(\"0x00000100FFFFF\")
+hextoint("0x00000100FFFFF")
 
-hextoint(\"0x00000100\")
+hextoint("0x00000100")
 
-hextoint(\"100\")
+hextoint("100")
 
  
 

@@ -1159,7 +1159,7 @@ IDENTITY:
 
  
 
-sp\_addtype ident, \"numeric(5)\", \"identity\"
+sp\_addtype ident, "numeric(5)", "identity"
 
  
 
@@ -1495,8 +1495,8 @@ pub\_name     varchar(40),
 
 constraint my\_chk\_constraint
 
-   check(pub\_id in (\"1389\", \"0736\", \"0877\") or pub\_name not like
-\"Bad News Books\"))
+   check(pub\_id in ("1389", "0736", "0877") or pub\_name not like
+"Bad News Books"))
 
  
 
@@ -1511,7 +1511,7 @@ create table my\_publishers
 
 (pub\_id        char(4) constraint my\_chk\_constraint
 
-                  check(pub\_id in (\"1389\", \"0736\", \"0877\")),
+                  check(pub\_id in ("1389", "0736", "0877")),
 
 pub\_name   varchar(40))
 
@@ -1825,10 +1825,10 @@ create table my\_new\_publishers
 
 (pub\_id        char(4)
 
-       check (pub\_id in (\"1389\", \"0736\", \"0877\", \"1622\",
-\"1756\")
+       check (pub\_id in ("1389", "0736", "0877", "1622",
+"1756")
 
-       or pub\_id like \"99\[0-9\]\[0-9\]\"),
+       or pub\_id like "99\[0-9\]\[0-9\]"),
 
 pub\_name    varchar(40),
 
@@ -2039,9 +2039,9 @@ friends\_etc самостоятельно, то он должен предупр
 
  
 
-execute sp\_addtype nm, \"varchar(30)\"
+execute sp\_addtype nm, "varchar(30)"
 
-execute sp\_addtype p\#, \"char(10)\"
+execute sp\_addtype p\#, "char(10)"
 
  
 
@@ -2229,7 +2229,7 @@ from publishers
 
  
 
-Сообщение SQL Сервера \"3 rows affected\" указывает на то, что в новую
+Сообщение SQL Сервера "3 rows affected" указывает на то, что в новую
 таблицу было включено три строки. Новая таблица выглядит следующим
 образом:
 
@@ -2305,7 +2305,7 @@ pub\_id    pub\_name          city      state
 
  
 
-select type, \"Total\_amount\" = sum(advance)
+select type, "Total\_amount" = sum(advance)
 
 into \#whatspent
 
@@ -2356,13 +2356,13 @@ SQL Сервера (lower(lname)). Далее приводится пример,
 
 select au\_id,
 
-   \"Full\_Name\" = au\_fname + \' \' + au\_lname
+   "Full\_Name" = au\_fname + \' \' + au\_lname
 
 into \#g\_authortemp
 
 from authors
 
-where au\_lname like \"G%\"
+where au\_lname like "G%"
 
  
 
@@ -2671,8 +2671,8 @@ alter table friends\_etc
 
    add constraint no\_old\_country
 
-       check (country not in (\"GDR\", \"E. Germany\", \"East
-Germany\"))
+       check (country not in ("GDR", "E. Germany", "East
+Germany"))
 
  
 
@@ -2699,7 +2699,7 @@ alter table friends\_etc
 
 alter table friends\_etc
 
-   replace country default \"USA\"
+   replace country default "USA"
 
  
 
@@ -2750,7 +2750,7 @@ sp\_rename friends\_etc,  infotable
 
  
 
-sp\_rename \"таблица.столбец\", новое\_название\_столбца
+sp\_rename "таблица.столбец", новое\_название\_столбца
 
  
 
@@ -2760,7 +2760,7 @@ sp\_rename \"таблица.столбец\", новое\_название\_ст
 
  
 
-sp\_rename \"таблица.индекс\", новое\_название\_индекса
+sp\_rename "таблица.индекс", новое\_название\_индекса
 
  
 
@@ -2772,7 +2772,7 @@ tid на t\_id:
 
  
 
-exec sp\_rename tid, \"t\_id\"
+exec sp\_rename tid, "t\_id"
 
  
 

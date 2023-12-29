@@ -601,7 +601,7 @@ procedure. Если хотя бы один параметр был задан в
 
 create proc pub\_info
 
-\@pubname varchar(40) = \"Algodata Infosystems\" as
+\@pubname varchar(40) = "Algodata Infosystems" as
 
 select au\_lname, au\_fname, pub\_name
 
@@ -763,7 +763,7 @@ as
 
 if \@table is null
 
-   print \"Please give a table name\"
+   print "Please give a table name"
 
 else
 
@@ -806,7 +806,7 @@ sp\_helptext.
 
  
 
-create procedure showind4 \@table varchar(30)=\"sys%\"
+create procedure showind4 \@table varchar(30)="sys%"
 
 as
 
@@ -835,9 +835,9 @@ and sysobjects.id = sysindexes.id
 
  
 
-create proc au\_info2 \@lastname varchar(30) = \"D%\",
+create proc au\_info2 \@lastname varchar(30) = "D%",
 
-\@firstname varchar(18) = \"%\" as
+\@firstname varchar(18) = "%" as
 
 select au\_lname, au\_fname, title, pub\_name
 
@@ -1117,7 +1117,7 @@ create procedure inv\_amounts
 
    as
 
-   select stor\_id, \"Total Due\" =sum(amount)
+   select stor\_id, "Total Due" =sum(amount)
 
    from \#tempstores
 
@@ -1408,11 +1408,11 @@ execute \@retvalue = checkcontract \@titleid
 
 if (\@retvalue = 1)
 
-  print \"Contract is valid\"
+  print "Contract is valid"
 
 else
 
-   print \"There is not a valid contract\"
+   print "There is not a valid contract"
 
  
 
@@ -1456,11 +1456,11 @@ create proc test\_proc
 
 as
 
-if (proc\_role(\"sa\_role\") = 0)
+if (proc\_role("sa\_role") = 0)
 
 begin
 
-   print \"You don\'t have the right role\"
+   print "You don\'t have the right role"
 
    return -1
 
@@ -1468,7 +1468,7 @@ end
 
 else
 
-   print \"You have SA role\"
+   print "You have SA role"
 
    return 0
 
@@ -1628,11 +1628,11 @@ select Your\_answer = \@store, Right\_answer = \@guess
 
 if \@guess = \@store
 
-   print \"Right-o\"
+   print "Right-o"
 
 else
 
-   print \"Wrong, wrong, wrong!\"
+   print "Wrong, wrong, wrong!"
 
  
 
@@ -1708,7 +1708,7 @@ declare \@percent int
 
 select \@percent = 10
 
-execute roy\_check \"BU1032\", 1050, \@pc = \@percent output
+execute roy\_check "BU1032", 1050, \@pc = \@percent output
 
 select Percent = \@percent
 
@@ -1782,7 +1782,7 @@ if
 
 begin
 
-print \"Royalty is changed\"
+print "Royalty is changed"
 
 select Percent = \@percent
 
@@ -1790,7 +1790,7 @@ end
 
 else
 
-print \"Royalty is the same\"
+print "Royalty is the same"
 
  
 
@@ -1799,7 +1799,7 @@ print \"Royalty is the same\"
 
  
 
-execute newsales \"BU1032\", 1050
+execute newsales "BU1032", 1050
 
  
 

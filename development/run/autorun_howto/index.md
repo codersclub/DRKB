@@ -21,19 +21,19 @@ This Autostart Directory is saved in :
 
 \[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders\]
 
-Startup=\"C:\\windows\\start menu\\programs\\startup\"
+Startup="C:\\windows\\start menu\\programs\\startup"
 
 \[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\]
 
-Startup=\"C:\\windows\\start menu\\programs\\startup\"
+Startup="C:\\windows\\start menu\\programs\\startup"
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\explorer\\User Shell Folders\]
 
-\"Common Startup\"=\"C:\\windows\\start menu\\programs\\startup\"
+"Common Startup"="C:\\windows\\start menu\\programs\\startup"
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\explorer\\Shell Folders\]
 
-\"Common Startup\"=\"C:\\windows\\start menu\\programs\\startup\"
+"Common Startup"="C:\\windows\\start menu\\programs\\startup"
 
 By setting it to anything other then C:\\windows\\start menu\\programs\\startup
 will lead to execution of ALL and EVERY executable inside set directory.
@@ -63,27 +63,27 @@ Autostarts everytime.
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices\]
 
-   \"Whatever\"=\"c:\\runfolder\\program.exe\"
+   "Whatever"="c:\\runfolder\\program.exe"
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce\]
 
-   \"Whatever\"=\"c:\\runfolder\\program.exe\"
+   "Whatever"="c:\\runfolder\\program.exe"
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\]
 
-   \"Whatever\"=\"c:\\runfolder\\program.exe\"
+   "Whatever"="c:\\runfolder\\program.exe"
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\]
 
-   \"Whatever\"=\"c:\\runfolder\\program.exe\"
+   "Whatever"="c:\\runfolder\\program.exe"
 
 \[HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx\\000x\]
 
-   \"RunMyApp\"=\"\|\|notepad.exe\"
+   "RunMyApp"="\|\|notepad.exe"
 
-The format is: \"DllFileName\|FunctionName\|CommandLineArguements\"
+The format is: "DllFileName\|FunctionName\|CommandLineArguements"
 -or-
-\"\|\|command parameters\"
+"\|\|command parameters"
 
     Microsoft Windows 98 Microsoft
     Windows 2000 Professional
@@ -95,11 +95,11 @@ The format is: \"DllFileName\|FunctionName\|CommandLineArguements\"
 
 \[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\]
 
-   \"Whatever\"=\"c:\\runfolder\\program.exe\"
+   "Whatever"="c:\\runfolder\\program.exe"
 
 \[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\]
 
-   \"Whatever\"=\"c:\\runfolder\\program.exe\"
+   "Whatever"="c:\\runfolder\\program.exe"
 
 ### 6. c:\\windows\\wininit.ini 
 
@@ -123,38 +123,38 @@ Starts everytime at Dos Level.
 
 ###8. Registry Shell Spawning
 
-\[HKEY\_CLASSES\_ROOT\\exefile\\shell\\open\\command\] @=\"%1\" %*
+\[HKEY\_CLASSES\_ROOT\\exefile\\shell\\open\\command\] @="%1" %*
 
-\[HKEY\_CLASSES\_ROOT\\comfile\\shell\\open\\command\] @=\"%1\" %*
+\[HKEY\_CLASSES\_ROOT\\comfile\\shell\\open\\command\] @="%1" %*
 
-\[HKEY\_CLASSES\_ROOT\\batfile\\shell\\open\\command\] @=\"%1\" %*
+\[HKEY\_CLASSES\_ROOT\\batfile\\shell\\open\\command\] @="%1" %*
 
-\[HKEY\_CLASSES\_ROOT\\htafile\\Shell\\Open\\Command\] @=\"%1\" %*
+\[HKEY\_CLASSES\_ROOT\\htafile\\Shell\\Open\\Command\] @="%1" %*
 
-\[HKEY\_CLASSES\_ROOT\\piffile\\shell\\open\\command\] @=\"%1\" %*
+\[HKEY\_CLASSES\_ROOT\\piffile\\shell\\open\\command\] @="%1" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\batfile\\shell\\open\\command\]
 
-@=\"%1\" %*
+@="%1" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\comfile\\shell\\open\\command\]
 
-@=\"%1\" %*
+@="%1" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\exefile\\shell\\open\\command\]
 
-@=\"%1\" %*
+@="%1" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\htafile\\Shell\\Open\\Command\]
 
-@= \"%1\" %*
+@= "%1" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\piffile\\shell\\open\\command\]
 
-@=\"%1\" %*
+@="%1" %*
 
-The key should have a value of Value \<\"%1\" %*\>, if this is changed
-to \<server.exe \"%1 %*\"\>, the server.exe is executed EVERYTIME an
+The key should have a value of Value \<"%1" %*\>, if this is changed
+to \<server.exe "%1 %*"\>, the server.exe is executed EVERYTIME an
 exe/pif/com/bat/hta is executed.
 
 Known as Unkown Starting Method and is currently used by Subseven.
@@ -163,13 +163,13 @@ Known as Unkown Starting Method and is currently used by Subseven.
 
 \[HKEY\_CURRENT\_USER\\Software\\Mirabilis\\ICQ\\Agent\\Apps\\test\]
 
-\"Path\"=\"test.exe\"
+"Path"="test.exe"
 
-\"Startup\"=\"c:\\\\test\"
+"Startup"="c:\\\\test"
 
-\"Parameters\"=\"\"
+"Parameters"=""
 
-\"Enable\"=\"Yes\"
+"Enable"="Yes"
 
 \[HKEY\_CURRENT\_USER\\Software\\Mirabilis\\ICQ\\Agent\\Apps\
 
@@ -188,7 +188,7 @@ Windows NT/2000
 
 The Windows Shell is the familiar desktop that\'s used for interacting
 with Windows. During system startup, Windows NT 4.0 and Windows 2000
-consult the \"Shell\" registry entry,
+consult the "Shell" registry entry,
 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\Shell, to determine the name of the
 executable that should be loaded as the Shell.
 
@@ -233,13 +233,13 @@ other Program normaly started over the Run Keys.
 
 Misc Information
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\ShellScrap\] @=\"Scrap object\"
+\[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\ShellScrap\] @="Scrap object"
 
-\"NeverShowExt\"=\"\"
+"NeverShowExt"=""
 
 The NeverShowExt key has the function to HIDE the real extension of the
-file (here) SHS. This means if you rename a file as \"Girl.jpg.shs\" it
-displays as \"Girl.jpg\" in all programs including Explorer.
+file (here) SHS. This means if you rename a file as "Girl.jpg.shs" it
+displays as "Girl.jpg" in all programs including Explorer.
 
 Your registry should be full of NeverShowExt keys, simply delete the key
 to get the real extension to show up.

@@ -43,7 +43,7 @@ DbiOpenTable или TTable.Open.
 3\. Открытая в TTable таблица Paradox участвует в запросах TQuery.
 
 4\. Параметр LOCAL SHARE установлен в True (BDE Administrator, закладка
-\"System\")
+"System")
 
 Для решения проблемы необходимо выполнить следующие шаги:
 
@@ -57,9 +57,9 @@ Session.PrivateDir := ExtractFilePath(ParamStr(0)) + \'PRIV\';
 Session.NetFileDir := ExtractFilePath(ParamStr(0)) + \'NET\';
 
 3\. Убедитесь, что значение LOCAL SHARE установлено в False (BDE
-Administrator, закладка \"System\")
+Administrator, закладка "System")
 
-Эти рекомендации позволяют избежать ошибки \"Lock File Too Large\".
+Эти рекомендации позволяют избежать ошибки "Lock File Too Large".
 
 Источник
 

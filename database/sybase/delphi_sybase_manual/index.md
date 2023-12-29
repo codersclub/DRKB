@@ -1778,7 +1778,7 @@ the behavior of ASA 6.0.3 the following can be done:
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-dbisql -c \"uid=dba;pwd=sql;dsn=DelphiDemo\"
+dbisql -c "uid=dba;pwd=sql;dsn=DelphiDemo"
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------------------------------------------------
@@ -2131,7 +2131,7 @@ Figure 14
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT * FROM \"DBA\".\"department\"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
+  9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT * FROM "DBA"."department"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 

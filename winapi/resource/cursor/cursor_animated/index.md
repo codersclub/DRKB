@@ -68,12 +68,12 @@ To do this create a file myResources.rc where you\'ll put the following
 
 \#define ANICURSOR 21
 
-myCursor ANICURSOR \"path\_to\_my\_cursor\"
+myCursor ANICURSOR "path\_to\_my\_cursor"
 
 Because Borland\'s resource compiler does not understand the ANICURSOR
 resource type, so you have to use the numeric id (21).
 
-Compile your resource file using \"brcc32 myResources.rc\" and include
+Compile your resource file using "brcc32 myResources.rc" and include
 in the unit where you\'ll be loading the cursor, using {$R
 myResources.res}
 

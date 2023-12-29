@@ -15,8 +15,8 @@ Access to table disabled because of previous error. Read failure
 индексированную таблицу FoxPro через какое-то время (то есть при
 одновременном добавлении большого количества записей) возникает ошибка:
 
-\"Access to table disabled because of previous error. Read failure. File
-\<имя\_файла.cdx\>\".
+"Access to table disabled because of previous error. Read failure. File
+\<имя\_файла.cdx\>".
 
 Возможно, причина заключается в том, что операции чтения-записи в файл,
 содержащий таблицу FoxPro, особенно при использовании кэширования,

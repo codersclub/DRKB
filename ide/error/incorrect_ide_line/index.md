@@ -19,7 +19,7 @@ highlighted, the line above the error is highlighted or when I set
 
 breakpoints by choosing a blue dot in the gutter, it does not
 
-\"line up\" with the text line. How can I fix this?
+"line up" with the text line. How can I fix this?
 
 This condition is usually caused by opening the file in a different
 

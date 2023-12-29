@@ -1510,7 +1510,7 @@ Date: 01.01.2007
       GetWindowsDirectory(WD, MAX_PATH);
       Result := StrPas(WD);
       L := Length(Result);
-      // Remove the "\" if any
+      // Remove the "" if any
       if L > 0 then
         if Result[L] = '\' then
           Result := Copy(Result, 1, L - 1);
@@ -2275,11 +2275,11 @@ Scan control (OCX) and the 32-bit TWAIN DLLs.
 All you have to do is to import this ActiveX control in Delphi and
 generate a component wrapper:
 
-Import the ActiveX Control \"Kodak Image Scan Control\"
+Import the ActiveX Control "Kodak Image Scan Control"
 
 (Select Component\|Import ActiveX Control...)
 
-Now add a TImgScan Component from the Register \"ActiveX\" to your form.
+Now add a TImgScan Component from the Register "ActiveX" to your form.
 
 Change the following Properties in the Object Inspector:
 

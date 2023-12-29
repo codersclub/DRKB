@@ -75,7 +75,7 @@ project options by adding
 
 as the very first include paths to that your include paths..
 
-this will fix the error so that the correct \"time.h\" be included.
+this will fix the error so that the correct "time.h" be included.
 
 Step 7
 

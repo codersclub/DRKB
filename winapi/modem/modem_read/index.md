@@ -63,7 +63,7 @@ Date: 01.01.2007
       end; 
     end; 
 
-Переменная \"com\" типа dword.
+Переменная "com" типа dword.
 
 Вы так же можете очистить буфер COM порта PurgeComm(Com,PURGE\_RXCLEAR
 or PURGE\_TXCLEAR); И прочитать из него

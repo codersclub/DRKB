@@ -22,7 +22,7 @@ Date: 01.01.2007
 
     DbiInsertRecord(Table2.Handle,dbiNOLOCK,Table1.ActiveBuffer);
 
-...конечно, это \"обходит\" VCL, т.к., чтобы увидеть потом новую
+...конечно, это "обходит" VCL, т.к., чтобы увидеть потом новую
 запись, необходимо сделать TTable.Refresh.
 
 Взято с <https://delphiworld.narod.ru>

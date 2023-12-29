@@ -90,7 +90,7 @@ True.E.Charts.Item\[name\].HasLegend:=True. Затем можно установ
 которой можно получить доступ к шрифту элемента легенды. Например:
 E.Charts.Item\[name\].Legend.LegendEntries.Item\[LegendEntries\].Font,
 где LegendEntries - индекс элемента. Чтобы согласовать поля объектов
-\"Шрифт\" в Excel и Delphi, напишем функцию FontToEFont, которая
+"Шрифт" в Excel и Delphi, напишем функцию FontToEFont, которая
 преобразует шрифт объекта Delphi в шрифт объекта Excel. Эту функцию
 можно будет использовать везде, где необходимо установить шрифт.
 

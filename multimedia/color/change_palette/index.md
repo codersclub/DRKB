@@ -15,7 +15,7 @@ Date: 01.01.2007
 нервов не одному мне.
 
 В обработчике сообщения WM\_PaletteChanged вы можете убедиться, что
-видимая TImage.Picture.Bitmap.Palette всегда \"реализована\". Так..
+видимая TImage.Picture.Bitmap.Palette всегда "реализована". Так..
 
     private
      

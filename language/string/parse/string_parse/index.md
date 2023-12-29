@@ -87,7 +87,7 @@ Date: 01.01.2007
       data:= TStringList.Create;
       splited:=TStringList.Create;
       data.LoadFromFile(s);
-      Split(data.Text,[',',' ',#10,#13,';','\"','.','!','-','+','*','/','\',
+      Split(data.Text,[',',' ',#10,#13,';','"','.','!','-','+','*','/','\',
       '(',')','[',']','{','}','<','>','''','"','?','"','#',#0],splited);
       for i:= 0 to splited.Count-1 do
       begin

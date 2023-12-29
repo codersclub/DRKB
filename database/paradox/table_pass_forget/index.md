@@ -25,10 +25,10 @@ Date: 01.01.2007
 If you forget your paradox table password, try out
 on of these passwords, it works well.
 
-for PARADOX 7.0 use this password: \"jIGGAe\" or \"cupcdvum\"
+for PARADOX 7.0 use this password: "jIGGAe" or "cupcdvum"
 
 for PARADOX 5.0 use this password: same thing
 
-for PARADOX 4.x (DOS) use this password: \"nx66ppx\"
+for PARADOX 4.x (DOS) use this password: "nx66ppx"
 
 Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

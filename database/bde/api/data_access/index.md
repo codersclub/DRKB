@@ -103,7 +103,7 @@ from the record, by shortening it to zero.
 
 DbiUndeleteRecord:
 
-Undeletes a dBASE record that has been marked for deletion (a \"soft\"
+Undeletes a dBASE record that has been marked for deletion (a "soft"
 delete).
 
 DbiVerifyField:

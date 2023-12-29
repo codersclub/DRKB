@@ -100,7 +100,7 @@ function ExecuteMacro(Data: HDDeData): Longint;
 
 Компонент TDDeServerltem
 
-TObject---\"TPersistent---\>TConiponent-\"TDDeServerI tern
+TObject---"TPersistent---\>TConiponent-"TDDeServerI tern
 
 Модуль DDEMAN
 
@@ -205,7 +205,7 @@ function OpenLink: Boolean;
 (Pb) property ServiceApplication: String;
 
 и установить контакт с ней. Если оно не определено (ServiceApplication =
-\"), то в качестве последней попытки для контакта пробуется имя,
+"), то в качестве последней попытки для контакта пробуется имя,
 представляющее собой конкатенацию имен сервера и темы, разделенных
 пробелом. В случае неудачи метод OpenLink возвращает False.
 
@@ -300,7 +300,7 @@ property DataMode: TDataMode;
 
 Компонент TDDECIientltem
 
-TObject---\>TPersistent---\"TComponent---\>TDDEClientItem
+TObject---\>TPersistent---"TComponent---\>TDDEClientItem
 
 Модуль DDEMAN
 

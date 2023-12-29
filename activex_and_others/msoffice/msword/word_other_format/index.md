@@ -66,14 +66,14 @@ The sollution is to add the folowing query before openning the document:
 
 if WordApp.ActiveDocument.HasPassword = True then
 
-MsgBox(\"Password Protected\");
+MsgBox("Password Protected");
 
 You can even preset the password propery as:
 
-WordApp.Password := \'mypassword\";
+WordApp.Password := \'mypassword";
 
-NOTE: If the above code generates an \"Undefined property:
-ActiveDocument\" change the:
+NOTE: If the above code generates an "Undefined property:
+ActiveDocument" change the:
 
 CreateOleObject(\'Word.Basic\');
 

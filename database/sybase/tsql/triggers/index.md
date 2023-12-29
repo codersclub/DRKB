@@ -219,7 +219,7 @@ for insert, update, delete
 
 as
 
-print \"Now modify the titleauthor table the same way.\"
+print "Now modify the titleauthor table the same way."
 
  
 
@@ -603,7 +603,7 @@ begin
 
    rollback transaction
 
-   print \"No, a title\_id does not exist in titles\"
+   print "No, a title\_id does not exist in titles"
 
 end 
 
@@ -611,7 +611,7 @@ end
 
 else
 
-print \"Added! All title\_id\'s exist in titles.\"
+print "Added! All title\_id\'s exist in titles."
 
  
 
@@ -729,7 +729,7 @@ begin
 
    rollback transaction
 
-   print \"You can\'t delete a title with sales.\"
+   print "You can\'t delete a title with sales."
 
 end
 
@@ -789,15 +789,15 @@ if update (title\_id)
 
    and datename(dw, getdate())
 
-   in (\"Saturday\", \"Sunday\")
+   in ("Saturday", "Sunday")
 
 begin
 
    rollback transaction
 
-   print \"We don\'t allow changes to\"
+   print "We don\'t allow changes to"
 
-   print \"primary keys on the weekend!\"
+   print "primary keys on the weekend!"
 
 end
 
@@ -827,15 +827,15 @@ if update (title\_id)
 
 and datename(dw, getdate())
 
-in (\"Saturday\", \"Sunday\")
+in ("Saturday", "Sunday")
 
 begin
 
    rollback transaction
 
-   print \"We don\'t allow changes to\"
+   print "We don\'t allow changes to"
 
-   print \"primary keys on the weekend!\"
+   print "primary keys on the weekend!"
 
 end
 
@@ -851,11 +851,11 @@ if (select count(*) from inserted
 
      rollback transaction
 
-     print \"We don\'t allow changes to price or\"
+     print "We don\'t allow changes to price or"
 
-     print \"advance for a title until its total\"
+     print "advance for a title until its total"
 
-     print \"revenue exceeds its latest advance.\"
+     print "revenue exceeds its latest advance."
 
    end
 
@@ -923,9 +923,9 @@ begin
 
        rollback transaction
 
-       print \"No!  Old title\_id must be in
+       print "No!  Old title\_id must be in
 
-             salesdetail\"
+             salesdetail"
 
      end
 
@@ -943,13 +943,13 @@ begin
 
          rollback transaction
 
-         print \"No! New title\_id not in titles\"
+         print "No! New title\_id not in titles"
 
        end
 
      else
 
-       print \"salesdetail table updated\"
+       print "salesdetail table updated"
 
 end
 
@@ -1266,9 +1266,9 @@ delete salesdetail from salesdetail, inserted
 
    (select title\_id from titles)
 
-print \"Only records with matching title\_ids
+print "Only records with matching title\_ids
 
-   added.\"
+   added."
 
 end
 
@@ -1340,7 +1340,7 @@ rollback trigger
 
 rollback trigger with raiserror 25002
 
-   \"title\_id does not exist in titles table.\"
+   "title\_id does not exist in titles table."
 
  
 
@@ -1378,9 +1378,9 @@ if (select count(*) from titles, inserted
 
   rollback trigger with raiserror 25003
 
-    \"Trigger rollback: salesdetail row not added
+    "Trigger rollback: salesdetail row not added
 
-    because a title\_id does not exist in titles.\"
+    because a title\_id does not exist in titles."
 
  
 
@@ -1393,11 +1393,11 @@ rollback transaction (как и триггер forinsertrig1), поэтому в
 
  
 
-insert salesdetail values (\"7777\", \"JR123\",
+insert salesdetail values ("7777", "JR123",
 
-   \"PS9999\", 75, 40)
+   "PS9999", 75, 40)
 
-delete salesdetail where stor\_id = \"7067\"
+delete salesdetail where stor\_id = "7067"
 
  
 
@@ -1412,13 +1412,13 @@ rollback transaction, поэтому результаты работы опер�
 
 begin tran
 
-update stores set payterms = \"Net 30\"
+update stores set payterms = "Net 30"
 
-   where stor\_id = \"8042\"
+   where stor\_id = "8042"
 
-insert salesdetail values (\"7777\", \"JR123\",
+insert salesdetail values ("7777", "JR123",
 
-   \"PS9999\", 75, 40)
+   "PS9999", 75, 40)
 
  
 
@@ -1792,15 +1792,15 @@ as
 
 if update(a) and update(b)
 
-       print \"FIRING\"
+       print "FIRING"
 
-   /*\"if update\" is true for both columns.
+   /*"if update" is true for both columns.
 
      The trigger is activated.*/
 
 insert junk (a, b) values (1, 2)
 
-   /*\"if update\" is true for both columns.
+   /*"if update" is true for both columns.
 
      The trigger is activated.*/
 
@@ -1808,7 +1808,7 @@ insert junk values (1, 2)
 
    /*Explicit NULL:
 
-     \"if update\" is true for both columns.
+     "if update" is true for both columns.
 
      The trigger is activated.*/
 
@@ -1816,7 +1816,7 @@ insert junk values (NULL, 2)
 
    /* If default exists on column a,  
 
-     \"if update\" is true for either column.  
+     "if update" is true for either column.  
 
      The trigger is activated.*/
 
@@ -1824,7 +1824,7 @@ insert junk (b) values (2)
 
    /* If no default exists on column a,  
 
-     \"if update\" is not true for column a.  
+     "if update" is not true for column a.  
 
      The trigger is not activated.*/
 
@@ -2025,7 +2025,7 @@ begin
 
 rollback transaction
 
-print \"You can\'t delete a title with sales.\"
+print "You can\'t delete a title with sales."
 
 end
 

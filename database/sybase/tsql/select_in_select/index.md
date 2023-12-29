@@ -108,7 +108,7 @@ select price
 
 from titles
 
-where title = \"Straight Talk About Computers\"
+where title = "Straight Talk About Computers"
 
  
 
@@ -171,7 +171,7 @@ where price =
 
    from titles
 
-   where title = \"Straight Talk About Computers\")
+   where title = "Straight Talk About Computers")
 
  
 
@@ -328,7 +328,7 @@ where pub\_id in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
@@ -350,7 +350,7 @@ where publishers.pub\_id in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
@@ -368,8 +368,8 @@ where publishers.pub\_id in
 
  
 
-Как отмечалось в главе 5, \"Соединения: Выбор данных из нескольких
-таблиц\", коррелирующиеся (согласующиеся) названия таблиц необходимы в
+Как отмечалось в главе 5, "Соединения: Выбор данных из нескольких
+таблиц", коррелирующиеся (согласующиеся) названия таблиц необходимы в
 самосоединениях, поскольку таблица, присоединенная сама к себе,
 выступает в двух различных ролях. Коррелирующиеся названия могут также
 использоваться во вложенных запросах, которые ссылаются на одну и ту же 
@@ -390,9 +390,9 @@ where au1.city in
 
    from authors au2
 
-   where au2.au\_fname = \"Livia\"
+   where au2.au\_fname = "Livia"
 
-   and au2.au\_lname = \"Karsen\")
+   and au2.au\_lname = "Karsen")
 
  
 
@@ -435,9 +435,9 @@ where city in
 
    from authors
 
-   where au\_fname = \"Livia\"
+   where au\_fname = "Livia"
 
-   and au\_lname = \"Karsen\")
+   and au\_lname = "Karsen")
 
  
 
@@ -453,9 +453,9 @@ from authors au1, authors au2
 
 where au1.city = au2.city
 
-and au2.au\_lname = \"Karsen\"
+and au2.au\_lname = "Karsen"
 
-and au2.au\_fname = \"Livia\"
+and au2.au\_fname = "Livia"
 
  
 
@@ -478,9 +478,9 @@ and au2.au\_fname = \"Livia\"
 вложенности.
 
 Рассмотрим следующую задачу, которая может быть решена с помощью
-оператора с подзапросами нескольких уровней: \"Найти имена писателей,
+оператора с подзапросами нескольких уровней: "Найти имена писателей,
 которые принимали участие в написании, по крайней мере, одной популярной
-компьютерной книги\".
+компьютерной книги".
 
  
 
@@ -500,7 +500,7 @@ where au\_id in
 
        from titles
 
-       where type = \"popular\_comp\") )
+       where type = "popular\_comp") )
 
  
 
@@ -540,7 +540,7 @@ where authors.au\_id = titleauthor.au\_id
 
 and titles.title\_id = titleauthor.title\_id
 
-and type = \"popular\_comp\"
+and type = "popular\_comp"
 
  
 
@@ -579,7 +579,7 @@ where pub\_id in
 
    from publishers
 
-   where pub\_name = \"New Age Books\")
+   where pub\_name = "New Age Books")
 
  
 
@@ -596,7 +596,7 @@ from titles, publishers
 
 where titles.pub\_id = publishers.pub\_id
 
-and pub\_name = \"New Age Books\"
+and pub\_name = "New Age Books"
 
  
 
@@ -613,7 +613,7 @@ where title\_id in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
@@ -628,7 +628,7 @@ from salesdetail, titles
 
 where salesdetail.title\_id = titles.title\_id
 
-and type = \"business\"
+and type = "business"
 
  
 
@@ -651,7 +651,7 @@ if exists (select title\_id
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
 begin
 
@@ -663,7 +663,7 @@ begin
 
       from titles
 
-      where type = \"business\")
+      where type = "business")
 
 end
 
@@ -703,7 +703,7 @@ where title in
 
    and titleauthor.au\_id = authors.au\_id
 
-   and authors.state = \"CA\")
+   and authors.state = "CA")
 
 and title in
 
@@ -713,7 +713,7 @@ and title in
 
    where titles.pub\_id = publishers.pub\_id
 
-   and publishers.state = \"CA\")
+   and publishers.state = "CA")
 
  
 
@@ -874,7 +874,7 @@ where city =
 
    from publishers
 
-   where pub\_name = \"Algodata Infosystems\")
+   where pub\_name = "Algodata Infosystems")
 
  
 
@@ -989,7 +989,7 @@ where price \>
 
    group by type
 
-   having type = \"trad\_cook\")
+   having type = "trad\_cook")
 
  
 
@@ -1197,7 +1197,7 @@ where advance \> all
 
    where titles.pub\_id = publishers.pub\_id
 
-   and pub\_name = \"New Age Books\")
+   and pub\_name = "New Age Books")
 
  
 
@@ -1243,7 +1243,7 @@ select title from titles where price \> all
 
    (select price from titles
 
-   where type =  \"mod\_cook\")
+   where type =  "mod\_cook")
 
  
 
@@ -1279,7 +1279,7 @@ select title from titles where price \> all
 
    (select price from titles
 
-   where title\_id = \"popular\_comp\")
+   where title\_id = "popular\_comp")
 
  
 
@@ -1324,7 +1324,7 @@ where city = all
 
      from authors
 
-     where postalcode like \"946%\")
+     where postalcode like "946%")
 
  
 
@@ -1360,7 +1360,7 @@ where advance \> any
 
    where titles.pub\_id = publishers.pub\_id
 
-   and pub\_name = \"New Age Books\")
+   and pub\_name = "New Age Books")
 
  
 
@@ -1611,7 +1611,7 @@ where pub\_id in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
@@ -1641,7 +1641,7 @@ select pub\_name
 
 from publishers
 
-where pub\_id in (\"1389\", \"0736\")
+where pub\_id in ("1389", "0736")
 
  
 
@@ -1654,7 +1654,7 @@ select pub\_name
 
 from publishers
 
-where \"business\" in
+where "business" in
 
   (select type
 
@@ -1677,7 +1677,7 @@ from publishers, titles
 
 where publishers.pub\_id = titles.pub\_id
 
-and type = \"business\"
+and type = "business"
 
  
 
@@ -1700,7 +1700,7 @@ from publishers, titles
 
 where publishers.pub\_id = titles.pub\_id
 
-and type = \"business\"
+and type = "business"
 
  
 
@@ -1736,7 +1736,7 @@ select au\_lname, au\_fname
 
 from authors
 
-where state = \"CA\"
+where state = "CA"
 
 and au\_id in
 
@@ -1778,7 +1778,7 @@ select au\_lname, au\_fname
 
 from authors, titleauthor
 
-where state = \"CA\"
+where state = "CA"
 
 and authors.au\_id = titleauthor.au\_id
 
@@ -1819,7 +1819,7 @@ where pub\_id not in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
@@ -1937,7 +1937,7 @@ where exists
 
    where pub\_id = publishers.pub\_id
 
-   and type = \"business\")
+   and type = "business")
 
  
 
@@ -2067,7 +2067,7 @@ where exists
 
    where pub\_id = titles.pub\_id
 
-   and city like \"B%\")
+   and city like "B%")
 
  
 
@@ -2081,7 +2081,7 @@ where pub\_id in
 
    from publishers
 
-   where city like \"B%\")
+   where city like "B%")
 
  
 
@@ -2147,7 +2147,7 @@ where not exists
 
    where pub\_id = publishers.pub\_id
 
-   and type = \"business\")
+   and type = "business")
 
  
 
@@ -2381,7 +2381,7 @@ select royaltyper
 
 from titleauthor
 
-where au\_id = \"238-95-7766\"
+where au\_id = "238-95-7766"
 
  
 
@@ -2480,7 +2480,7 @@ select s1.ord\_num, s1.title\_id, s1.qty
 
 from salesdetail s1
 
-where title\_id like \"PS%\"
+where title\_id like "PS%"
 
 and s1.qty \<
 

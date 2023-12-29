@@ -22,7 +22,7 @@ they do not show the true icon of the application to which they relate.
 
 However, there is a a very useful feature of SHGetFileInfo,
 
-which is SHGFI\_LINKOVERLAY. This adds the shortcut \"arrow\",
+which is SHGFI\_LINKOVERLAY. This adds the shortcut "arrow",
 
 which is shown in the bottom left corner of any shortcut icon.
 
@@ -32,7 +32,7 @@ feature.
 I have added code to this demo, to distingiush between shortcut and
 non-shortcut files -
 
-without this code, it will overlay the shortcut \"arrow\" irrespective
+without this code, it will overlay the shortcut "arrow" irrespective
 of the file type.
 
 To show the icon of a shortcut, the following code can be used as a

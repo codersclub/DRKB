@@ -39,7 +39,7 @@ HINSTANCE
 
 rundll32 test.dll,\_Test\@16 this is a command line
 
-выдаст message box со строкой \"this is a command line\".
+выдаст message box со строкой "this is a command line".
 
 Oleg Moroz
 

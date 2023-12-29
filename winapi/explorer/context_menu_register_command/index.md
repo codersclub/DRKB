@@ -24,7 +24,7 @@ Date: 01.01.2007
 
 В реестре вот по этому пути
 HKEY\_LOCAL\_MASHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer
-устанавливаем строковое значение AlwaysUnloadDLL равным \"1\" (если
+устанавливаем строковое значение AlwaysUnloadDLL равным "1" (если
 такого значения нет, тогда нужно его создать).
 
 Далее пишем код:

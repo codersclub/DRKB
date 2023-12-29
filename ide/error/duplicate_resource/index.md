@@ -12,7 +12,7 @@ Duplicate resource error
 :::
 
 When I try to add a resource to my project\'s .res file, I get a
-\"Duplicate Resource\" error when linking. The resource I have added is
+"Duplicate Resource" error when linking. The resource I have added is
 a unique resource. How can I successfully add the resource to my
 project?
 

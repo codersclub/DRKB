@@ -14,8 +14,8 @@ Date: 01.01.2007
 В файле asciidrv.txt насчет последнего числа в строке схемы поля
 говорится:
 
-\"* Offset - Number of characters from the beginning of the line that
-the field begins. Used for FIXED format only.\" (Offset - количество
+"* Offset - Number of characters from the beginning of the line that
+the field begins. Used for FIXED format only." (Offset - количество
 символов он начала линии до начала поля. Используется только для
 фиксированного формата.).
 
@@ -29,7 +29,7 @@ filetype = varying
 
 charset = ascii
 
-delimiter = \"
+delimiter = "
 
 separator =,
 
@@ -51,7 +51,7 @@ filetype = varying
 
 charset = ascii
 
-delimiter = \"
+delimiter = "
 
 separator =,
 
@@ -66,7 +66,7 @@ field3 = artist,char,30,0,30
 field36 = song30,char,50,0,360
 
 и внезапно все заработало! Для поля, которое игнорируется форматом
-файла, \"Offset\" несомненно дало огромный эффект.
+файла, "Offset" несомненно дало огромный эффект.
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

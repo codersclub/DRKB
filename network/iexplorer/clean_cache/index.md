@@ -12,7 +12,7 @@ Date: 01.01.2007
 :::
 
 В примере описывается как программно в Internet Explorer нажать кнопку
-\"Clear cache\".
+"Clear cache".
 
 Вам нужно будет использовать WinINet в Вашей TfrmMain:
 

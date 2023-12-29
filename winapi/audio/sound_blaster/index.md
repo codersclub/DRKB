@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Статья взята с \" target=\_blankhttp://www.programmist.info\[/i\]
+Статья взята с " target=\_blankhttp://www.programmist.info\[/i\]
 
 Программирование Sound Blaster
 
@@ -770,7 +770,7 @@ if ( data==NULL )
 
 {
 
-printf(\"Нет места под буфер DMA\\n\");
+printf("Нет места под буфер DMA\\n");
 
 return 0;
 
@@ -968,7 +968,7 @@ enable();
 
 Воспроизведение файла выборки:
 
-f = fopen(argv\[1\],\"rb\");
+f = fopen(argv\[1\],"rb");
 
 raw = ( char far * ) farmalloc(32000L);
 
@@ -976,9 +976,9 @@ if ( f == 0 \|\| raw==0 )
 
 {
 
-printf(\"Не могу открыть файл выборки - %s\\n\",argv\[1\]);
+printf("Не могу открыть файл выборки - %s\\n",argv\[1\]);
 
-printf(\"Нет памяти\\n\",argv\[1\]);
+printf("Нет памяти\\n",argv\[1\]);
 
 ResetSB();
 
@@ -986,7 +986,7 @@ return;
 
 }
 
-printf(\"Воспроизведение выборки ...\\n\");
+printf("Воспроизведение выборки ...\\n");
 
 WriteSB(ON\_SOUND\_SB);
 

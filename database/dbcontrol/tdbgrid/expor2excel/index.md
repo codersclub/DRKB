@@ -12,7 +12,7 @@ Date: 01.01.2007
 :::
 
 Пример dbgrid (DBGrid1) имеет всплывающее меню, которое позволяет две
-опции \"Send to Excel\" и \"Copy\"
+опции "Send to Excel" и "Copy"
 
 // ЗАМЕЧАНИЕ: этот метод должен включать COMObj, Excel97 units
 

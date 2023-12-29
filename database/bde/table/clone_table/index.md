@@ -71,8 +71,8 @@ Destination.IndexDefs.Assign(Source.IndexDefs);
 вызывается метод FieldDefs Assign.
 
 Также можно проверить, определен ли реально индекс, и, если нет, то при
-вызове IndexDefs.Assign вы можете получить исключение типа \"List Index
-Out Of Bounds\" (или что-то типа этого). Например, так:
+вызове IndexDefs.Assign вы можете получить исключение типа "List Index
+Out Of Bounds" (или что-то типа этого). Например, так:
 
 if Source.IndexDefs.Count \> 0 then...
 

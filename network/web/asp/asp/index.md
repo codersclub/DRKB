@@ -36,7 +36,7 @@ WINNT\\SYSTEM32\\INETSRV\\IISADMIN и INETPUB\\IISAMPLES\\EXAIR если был
 
 \<%
 
-Set FileSystem=Server.CreateObject(\"Scripting.FileSystemObject\")
+Set FileSystem=Server.CreateObject("Scripting.FileSystemObject")
 
 FileSystem.FindAllFiles
 
@@ -208,7 +208,7 @@ IResponse. Проверка Assigned(Response) гарантирует, что в
 тестирования сервера, который хранится в файле Test.asp. В этом
 документе имеется VB скрипт следующего содержания:
 
-\<% Set DelphiASPObj = Server.CreateObject(\"ASP01.Test\")
+\<% Set DelphiASPObj = Server.CreateObject("ASP01.Test")
 
 DelphiASPObj.{Insert Method name here}
 
@@ -219,7 +219,7 @@ DelphiASPObj.{Insert Method name here}
 который генерирует отклик. В данном примере это имя ScriptContent.
 Финальные исправления выглядят следующим образом:
 
-\<% Set DelphiASPObj = Server.CreateObject(\"ASP01.Test\")
+\<% Set DelphiASPObj = Server.CreateObject("ASP01.Test")
 
 DelphiASPObj.ScriptContent
 
@@ -593,9 +593,9 @@ FCopyrightYear:string; Определим в библиотеке типов (р
 
 В созданном ранее файле Test.asp изменим VB скрипты:
 
-\<% Set DelphiASPObj = Server.CreateObject(\"ASP01.Test\")
+\<% Set DelphiASPObj = Server.CreateObject("ASP01.Test")
 
-DelphiASPObj.CompanyName = \"My Company\"
+DelphiASPObj.CompanyName = "My Company"
 
 DelphiASPObj.CopyrightYear = 1999
 
@@ -630,8 +630,8 @@ out-of-process сервер. По умолчанию параметры IIS ус
 разрешить или запретить использование приложения, как ASP сервера. Для
 того, чтобы разрешить запуск исполняемого файла, как ASP сервера,
 необходимо выполнить следующий VB скрипт: Set oWebService =
-GetObject(\"IIS://LocalHost/W3svc\") oWebService.Put
-\"AspAllowOutOfProcComponents\", True oWebService.SetInfo Для того,
+GetObject("IIS://LocalHost/W3svc") oWebService.Put
+"AspAllowOutOfProcComponents", True oWebService.SetInfo Для того,
 чтобы он был выполнен, необходимо, чтобы текущий пользователь имел
 статус администратора. По этой причине данный скрипт бесполезно
 определять в HTML документе и запускать его, используя IE: любой

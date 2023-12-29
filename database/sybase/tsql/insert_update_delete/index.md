@@ -1026,7 +1026,7 @@ row\_id:
 
 insert sales\_daily (stor\_id)
 
-values (\"7896\")
+values ("7896")
 
  
 
@@ -1038,7 +1038,7 @@ sales\_daily. SQL Сервер автоматически записал сле�
 
 select * from sales\_daily
 
-where stor\_id = \"7896\"
+where stor\_id = "7896"
 
  
 
@@ -1207,8 +1207,8 @@ text
 
 create rule pub\_idrule
 
-as \@pub\_id in (\"1389\", \"0736\", \"0877\", \"1622\", \"1756\") or
-\@pub\_id like \"99\[0-9\]\[0-9\]\"
+as \@pub\_id in ("1389", "0736", "0877", "1622", "1756") or
+\@pub\_id like "99\[0-9\]\[0-9\]"
 
  
 
@@ -1390,7 +1390,7 @@ select au\_id
 
 insert titleauthor (au\_id, title\_id)
 
-select au\_id, \"xx1111\"
+select au\_id, "xx1111"
 
    from authors
 
@@ -1426,11 +1426,11 @@ select au\_id, \"xx1111\"
 
 insert publishers
 
-select \"9999\", \"test\", city, state
+select "9999", "test", city, state
 
    from publishers
 
-   where pub\_name = \"New Age Books\"
+   where pub\_name = "New Age Books"
 
  
 
@@ -1542,9 +1542,9 @@ where условия\_отбора
 
 update authors
 
-set au\_lname = \"Health\", au\_fname = \"Goodbody\"
+set au\_lname = "Health", au\_fname = "Goodbody"
 
-where au\_lname = \"Blotchet-Halls\"
+where au\_lname = "Blotchet-Halls"
 
  
 
@@ -1644,7 +1644,7 @@ set    \[\[\[база\_данных.\]владелец.\]{ название\_т�
 
 update publishers
 
-set city = \"Atlanta\", state = \"GA\"
+set city = "Atlanta", state = "GA"
 
  
 
@@ -1694,9 +1694,9 @@ set price = price * 2
 
 update authors
 
-set state = \"PC\", city = \"Big Bad Bay City\"
+set state = "PC", city = "Big Bad Bay City"
 
-where state = \"CA\" and city = \"Oakland\"
+where state = "CA" and city = "Oakland"
 
  
 
@@ -1736,11 +1736,11 @@ from titleauthor, titles, authors
 
    where titles.title =
 
-   \"The Psychology of Computer Cooking\"
+   "The Psychology of Computer Cooking"
 
    and authors.au\_id = titleauthor.au\_id
 
-   and au\_lname = \"Stringer\"
+   and au\_lname = "Stringer"
 
  
 
@@ -1819,7 +1819,7 @@ database. Сброс журнала транзакций (transaction dump) не
 
 insert blurbs 
 
-values (\"172-32-1176\", NULL)
+values ("172-32-1176", NULL)
 
  
 
@@ -1832,7 +1832,7 @@ update blurbs
 
 set copy=NULL
 
-where au\_id=\"172-32-1176\"
+where au\_id="172-32-1176"
 
  
 
@@ -1846,10 +1846,10 @@ declare \@val varbinary(16)
 
 select \@val = textptr(copy) from blurbs
 
-where  au\_id=\"172-32-1176\"
+where  au\_id="172-32-1176"
 
-writetext blurbs.copy \@val  \"This book is a must for true data
-junkies.\"
+writetext blurbs.copy \@val  "This book is a must for true data
+junkies."
 
  
 
@@ -1881,7 +1881,7 @@ publishers, которая относится к издательству Jardin
 
 delete publishers
 
-where pub\_name = \"Jardin, Inc.\"
+where pub\_name = "Jardin, Inc."
 
  
 
@@ -1987,7 +1987,7 @@ where titles.title\_id = titleauthor.title\_id
 
 and authors.au\_id = titleauthor.au\_id
 
-and city = \"Big Bad Bay City\"
+and city = "Big Bad Bay City"
 
  
 

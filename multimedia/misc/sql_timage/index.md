@@ -19,7 +19,7 @@ Date: 01.01.2007
 
 3\) запрос открывается
 
-4\) делается \"присваивание\":
+4\) делается "присваивание":
 
 Image1.Picture.Assing(TBlobField(Query.FieldByName(\'Pict\'))
 
