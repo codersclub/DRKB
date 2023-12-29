@@ -1040,7 +1040,7 @@ smallint(qty) * int(royalty) = int
 
  
 
-select moneycol * \$2.5 from mytable
+select moneycol * $2.5 from mytable
 
  
 

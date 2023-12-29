@@ -12,7 +12,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Смотри пример \$Delphi\\Demos\\Docking\
+Смотри пример $Delphi\\Demos\\Docking\
 
 Автор: SmaLL
 

@@ -159,7 +159,7 @@ Excel.ActiveSheet.PageSetup.Orientation:= 2;
 количеством строк размещается на нескольких страницах в таких случаях
 очень удобны сквозные строки, они печатаются на каждой странице отчета:
 
-Excel.ActiveSheet.PageSetup.PrintTitleRows:=\'\$2:\$3\';
+Excel.ActiveSheet.PageSetup.PrintTitleRows:=\'$2:$3\';
 
 Здесь мы указываем вторую и третью строки для печати на каждой странице.
 

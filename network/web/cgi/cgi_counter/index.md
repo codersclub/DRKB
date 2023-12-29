@@ -38,13 +38,13 @@ CGI скрипт так же может получать определённы�
 
     FontName         e.g. \"Courier\"
 
-    FontColor        e.g. \"clGreen\"  or \"\$404040\"
+    FontColor        e.g. \"clGreen\"  or \"$404040\"
 
-    BackgroundColor  e.g. \"clYellow\" or \"\$808080\"
+    BackgroundColor  e.g. \"clYellow\" or \"$808080\"
 
 А вот так выглядит вызов скрипта с несколькими параметрами:
 
-http://ww5.borland.com/scripts/CounterCGI.exe?FileName=Article&BackgroundColor=\$808080&FontColor=\$404040&FontName=Courier
+http://ww5.borland.com/scripts/CounterCGI.exe?FileName=Article&BackgroundColor=$808080&FontColor=$404040&FontName=Courier
 
 Итак, давайте разбираться с кодом.
 

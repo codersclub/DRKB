@@ -12,7 +12,7 @@ Date: 01.01.2007
 :::
 
 A list of user tables can be retrieved by querying system table
-rdb\$relations.
+rdb$relations.
 
 The example below shows how to do this - it inserts the table names
 sorted alphabetically into a ListBox (lbSourceTables).

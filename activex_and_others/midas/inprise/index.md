@@ -2411,11 +2411,11 @@ license. General rules to determine when you need a MIDAS license are:
 There are two types of MIDAS license:
 
   ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Unlimited. You pay \$5,000 per machine for each CPU.  You may run as many MIDAS servers on this machine as you want. The number of clients is unlimited. If you are using VisiBroker for your MIDAS servers and clients, you do not need to buy a separate VisiBroker license, as MIDAS license covers it.
+  1.   Unlimited. You pay $5,000 per machine for each CPU.  You may run as many MIDAS servers on this machine as you want. The number of clients is unlimited. If you are using VisiBroker for your MIDAS servers and clients, you do not need to buy a separate VisiBroker license, as MIDAS license covers it.
   ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Per seat. You pay \$250 per application server machine for each CPU. That includes one client seat. Seats from 2 through 25 are \$125 each. Seats starting from 26 will coast you \$80 each. This type of license does not cover VisiBroker.
+  2.   Per seat. You pay $250 per application server machine for each CPU. That includes one client seat. Seats from 2 through 25 are $125 each. Seats starting from 26 will coast you $80 each. This type of license does not cover VisiBroker.
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Serge Bodrov, Senior Analyst

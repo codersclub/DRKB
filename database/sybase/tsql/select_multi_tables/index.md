@@ -547,7 +547,7 @@ select title, pub\_name, advance
 
 from titles, publishers
 
-where titles.pub\_id = publishers.pub\_id and advance \> \$7500
+where titles.pub\_id = publishers.pub\_id and advance \> $7500
 
  
 
@@ -836,7 +836,7 @@ select distinct t1.type, t1.price
 
 from titles t1, titles t2
 
-where t1.price \<\$15 and t2.price \<\$15
+where t1.price \<$15 and t2.price \<$15
 
 and t1.type = t2.type
 

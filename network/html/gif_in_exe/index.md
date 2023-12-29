@@ -28,7 +28,7 @@ Project Resources. Hужно выбрать Project Resources-\>New-\>User Data 
     === End dots.rc ===
 
 Потом скомпилировать его командой brcc32 gifs.rc и получить gifs.res В
-начало модуля добавь строчку {\$R gifs.res}
+начало модуля добавь строчку {$R gifs.res}
 
 В своей программе необходимо написать:
 

@@ -182,7 +182,7 @@ Windows 95,98,ME
 
 Explorer.exe ist started through a system.ini entry, the entry itself
 contains no path information so if c:\\explorer.exe exist it will be
-started instead of c:\\\$winpath\\explorer.exe.
+started instead of c:\\$winpath\\explorer.exe.
 
 Windows NT/2000
 

@@ -135,7 +135,7 @@ ebp + 04 return address, 4 bytes
 ebp + 00 old ebp value
 
 The parameters are cleared off the stack by the called function using a
-ret \$10 instruction (\$10 = 16 is the total size of the parameters on
+ret $10 instruction ($10 = 16 is the total size of the parameters on
 stack).
 
 2\. Register calling convention
@@ -155,8 +155,8 @@ ebp + 04 return address, 4 bytes
 ebp + 00 old ebp value
 
 The value of i is passed in eax, the value of b in edx. The parameters
-are cleared off the stack by the called function using a ret \$8
-instruction (\$8 = 8 is the total size of the parameters on stack).
+are cleared off the stack by the called function using a ret $8
+instruction ($8 = 8 is the total size of the parameters on stack).
 
 3\. cdecl calling convention
 
@@ -178,7 +178,7 @@ ebp + 00 old ebp value
 
 The parameters are cleared off the stack by the calling function, so the
 function ends with a ret 0 and after the call instruction we find a add
-esp, \$10 instruction (\$10 = 16 is the total size of the parameters on
+esp, $10 instruction ($10 = 16 is the total size of the parameters on
 stack).
 
 4\. Stdcall calling convention
@@ -200,7 +200,7 @@ ebp + 04 return address, 4 bytes
 ebp + 00 old ebp value
 
 The parameters are cleared off the stack by the called function using a
-ret \$10 instruction (\$10 = 16 is the total size of the parameters on
+ret $10 instruction ($10 = 16 is the total size of the parameters on
 stack).
 
 When writing DLLs that are only be meant to be used from Delphi programs

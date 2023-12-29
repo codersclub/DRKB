@@ -676,7 +676,7 @@ end
 
  
 
-if (select avg(price) from titles) \< \$15
+if (select avg(price) from titles) \< $15
 
 begin
 
@@ -688,7 +688,7 @@ begin
 
   from titles
 
-  where price \> \$28
+  where price \> $28
 
 end
 
@@ -726,11 +726,11 @@ while булевское\_выражение
  
 
 В следующем примере операторы select и update будут выполняться в цикле,
-пока средняя цена книги будет меньше \$30:
+пока средняя цена книги будет меньше $30:
 
  
 
-while (select avg(price) from titles) \< \$30
+while (select avg(price) from titles) \< $30
 
 begin
 
@@ -738,7 +738,7 @@ begin
 
   from titles
 
-  where price \> \$20
+  where price \> $20
 
   update titles
 
@@ -848,17 +848,17 @@ while булевское\_выражение
 Далее приводится пример использования команд while, break, continue и
 if, в котором производится действие, обратное инфляционному действию
 предыдущего примера. До тех пор пока средняя цена книги остается большей
-\$20, все цены уменьшаются наполовину. Затем выбирается максимальная
+$20, все цены уменьшаются наполовину. Затем выбирается максимальная
 цена. Если она меньше 40 долларов, то происходит выход из цикла, в
 противном случае цикл выполняется снова. Команда continue не допустит
 выполнение оператора вывода (печати) print, если средняя цена меньше
-\$20. После окончания цикла while в этом примере выводится список самых
+$20. После окончания цикла while в этом примере выводится список самых
 дорогих книг и информационное сообщение \"Not Too Expensive\" (Не очень
 дорого).
 
  
 
-while (select avg(price) from titles) \> \$20
+while (select avg(price) from titles) \> $20
 
 begin
 
@@ -866,23 +866,23 @@ begin
 
        set price = price / 2
 
-   if (select max(price) from titles) \< \$40
+   if (select max(price) from titles) \< $40
 
        break
 
    else
 
-       if (select avg(price) from titles) \< \$20
+       if (select avg(price) from titles) \< $20
 
            continue
 
-   print \"Average price still over \$20\"
+   print \"Average price still over $20\"
 
 end
 
 select title\_id, price from titles
 
-   where price \> \$20
+   where price \> $20
 
  
 
@@ -890,7 +890,7 @@ print \"Not Too Expensive\"
 
  
 
-Average price still over \$20
+Average price still over $20
 
  
 
@@ -995,7 +995,7 @@ select \@veryhigh = max(price)
 
   from titles
 
-if \@veryhigh \> \$20
+if \@veryhigh \> $20
 
   print \"Ouch!\"
 
@@ -2042,7 +2042,7 @@ select * from titles
 
 ** shorthand in the select list.*/
 
-where price \> \$5
+where price \> $5
 
  
 

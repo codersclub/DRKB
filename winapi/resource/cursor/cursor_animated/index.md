@@ -74,7 +74,7 @@ Because Borland\'s resource compiler does not understand the ANICURSOR
 resource type, so you have to use the numeric id (21).
 
 Compile your resource file using \"brcc32 myResources.rc\" and include
-in the unit where you\'ll be loading the cursor, using {\$R
+in the unit where you\'ll be loading the cursor, using {$R
 myResources.res}
 
 Now, you just have to load the cursor from the resource instead of

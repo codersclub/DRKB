@@ -257,9 +257,9 @@ select *
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -276,9 +276,9 @@ as select *
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -311,9 +311,9 @@ update titles
 
 set price = price * 2
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -548,9 +548,9 @@ total\_sales
 
 from titles, roysched
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
 and titles.title\_id = roysched.title\_id
 
@@ -1038,9 +1038,9 @@ as select *
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -1061,9 +1061,9 @@ select title, type
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
 and type = \'popular\_comp\'
 
@@ -1421,9 +1421,9 @@ total\_sales
 
 from titles, roysched
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
 and titles.title\_id = roysched.title\_id
 
@@ -1899,9 +1899,9 @@ as select *
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 

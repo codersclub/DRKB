@@ -320,17 +320,17 @@ FUNCTION MyFunction IN ASSEMBLY MyAssembly.MyClass PRIORITY 2
 
 library AutoGUID;
 
-{\$INCLUDE versions.inc}
+{$INCLUDE versions.inc}
 
-{\$IFDEF ADSDELPHI7\_OR\_NEWER}
+{$IFDEF ADSDELPHI7\_OR\_NEWER}
 
-{\$WARN UNSAFE\_TYPE OFF}
+{$WARN UNSAFE\_TYPE OFF}
 
-{\$WARN UNSAFE\_CODE OFF}
+{$WARN UNSAFE\_CODE OFF}
 
-{\$WARN UNSAFE\_CAST OFF}
+{$WARN UNSAFE\_CAST OFF}
 
-{\$ENDIF}
+{$ENDIF}
 
 uses
 
@@ -391,7 +391,7 @@ modified
 
 ) : UNSIGNED32;
 
-{\$IFDEF WIN32}stdcall;{\$ENDIF}{\$IFDEF LINUX}cdecl;{\$ENDIF} // Do not
+{$IFDEF WIN32}stdcall;{$ENDIF}{$IFDEF LINUX}cdecl;{$ENDIF} // Do not
 change the prototype.
 
 const

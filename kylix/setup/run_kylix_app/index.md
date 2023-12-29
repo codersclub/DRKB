@@ -31,7 +31,7 @@ linux ln -s )
 4\) Отредактирвоать файл в папке /home/\[ваш логин\] по имени
 .bash\_profile (внимение файл скрытый!)
 
-PATH=\$PATH:\$HOME/bin:.
+PATH=$PATH:$HOME/bin:.
 
 export LD\_LIBRARY\_PATH=/usr/lib/borland
 

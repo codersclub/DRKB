@@ -1080,7 +1080,7 @@ ARPANET NCP (Obsolete predecessor of TCP/IP)
 492, 467 - Proposed Change to Host-Host Protocol Resynchronization of
 Connection Status
 489 - Comment on Resynchronization of Connection Status Proposal
-425 - \"But my NCP Costs \$500 a day...\"
+425 - \"But my NCP Costs $500 a day...\"
 210 - Improvement of Flow Control
 197 - Initial Connection Protocol - Revised
 176 - Comments on Byte Size for Connections

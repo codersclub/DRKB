@@ -431,7 +431,7 @@ Shift: TShiftState; X, Y: Integer);
 
 const
 
-SC\_DragMove = \$F012;
+SC\_DragMove = $F012;
 
 begin
 

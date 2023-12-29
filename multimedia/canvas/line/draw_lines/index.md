@@ -101,7 +101,7 @@ Date: 01.01.2007
 
 
 Более развернутую демку можно найти в папке
-{\$DELPHI7}/Demos/Doc/Graphex
+{$DELPHI7}/Demos/Doc/Graphex
 
 
 Автор: Mischka

@@ -77,7 +77,7 @@ init=1, то сначала устанавливается русский алф
 INFORMIX.
 
 Например сделать так, чтобы переменные типа MONEY изображались не в
-формате \$149.50, а в формате руб 149.50 коп можно командой
+формате $149.50, а в формате руб 149.50 коп можно командой
 
        DBMONEY=\'руб . коп\' export DBMONEY
 
@@ -113,23 +113,23 @@ DBEDIT=\'rk -E\' export DBEDIT    \# пользовательский редак
 
 \# DBMONEY=\'. руб\' export DBMONEY\# совковый стандарт денег
 
-PATH=\$PATH:\$INFORMIXDIR/bin export PATH \# выполняемые модули
+PATH=$PATH:$INFORMIXDIR/bin export PATH \# выполняемые модули
 
-SQLEXEC=\$INFORMIXDIR/lib/sqlexec export SQLEXEC \# сервер - SE
+SQLEXEC=$INFORMIXDIR/lib/sqlexec export SQLEXEC \# сервер - SE
 
-TERMCAP=\$INFORMIXDIR/etc/termcap export TERMCAP
+TERMCAP=$INFORMIXDIR/etc/termcap export TERMCAP
 
-case \$TERM in                 \# таблица русификации клавиатуры
+case $TERM in                 \# таблица русификации клавиатуры
 
 d460* \| d211* \| cham \| vt* )
 
-  KEYBMAP=\$INFORMIXDIR/keybmap/dasher  \# яверты/qwerty
+  KEYBMAP=$INFORMIXDIR/keybmap/dasher  \# яверты/qwerty
 
-\# KEYBMAP=\$INFORMIXDIR/keybmap/dasherE \# qwerty/яверты
+\# KEYBMAP=$INFORMIXDIR/keybmap/dasherE \# qwerty/яверты
 
-\# KEYBMAP=\$INFORMIXDIR/keybmap/dasherD \# йцукен/qwerty IBM PC
+\# KEYBMAP=$INFORMIXDIR/keybmap/dasherD \# йцукен/qwerty IBM PC
 
-\# KEYBMAP=\$INFORMIXDIR/keybmap/dasherP \# йцукен/qwerty пишмаш
+\# KEYBMAP=$INFORMIXDIR/keybmap/dasherP \# йцукен/qwerty пишмаш
 
 export KEYBMAP
 
@@ -188,7 +188,7 @@ TERM=d211-tansi или TERM=d460-tansi соответственно. Сдела�
 
 или только на время работы INFORMIX, стартовав его так:
 
-       TERM=\$TERM-tansi     r4gl
+       TERM=$TERM-tansi     r4gl
 
 
 Решать, какой режим - Стандартный с неработающими \^W и \^X, или ANSI со

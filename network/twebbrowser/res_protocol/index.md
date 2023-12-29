@@ -32,6 +32,6 @@ Date: 01.01.2007
 
 его при помощи brcc32.exe: MYHTML 23 \" .\\html\\myhtml.htm\" MOREHTML
 23 \" .\\html\\morehtml.htm\" Отредактируйте файл проекта, чтобы он
-выглядел примерно так: {\$R *.RES}
+выглядел примерно так: {$R *.RES}
 
-{\$R HTML.RES} //где html.rc будет скомпилирован в html.res
+{$R HTML.RES} //где html.rc будет скомпилирован в html.res

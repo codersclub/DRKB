@@ -20,4 +20,4 @@ How to check for unread email
         if NewMail then
           ShowMessage(Format('Unread items in Inbox: %d', [Inbox.UnreadItemCount]));
 
-The constant olFolderInbox is defined in Outlook\_TLB as \$00000006.
+The constant olFolderInbox is defined in Outlook\_TLB as $00000006.

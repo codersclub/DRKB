@@ -189,7 +189,7 @@ SELECT, INSERT, DELETE, UPDATE, CREATE и DROP на изменяемую таб�
     ALTER IGNORE TABLE hr ADD UNIQUE id_idx ( id )
 
 Изменить значение по умолчанию для поля \'price\' в таблице\'sprockets\'
-на \$19.95.
+на $19.95.
 
     ALTER TABLE sprockets ALTER price SET DEFAULT '$19.95'
 

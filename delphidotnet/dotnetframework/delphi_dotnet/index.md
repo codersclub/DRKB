@@ -167,7 +167,7 @@ dccil -CC -NSC:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727
 Делается это следующим образом.
 
 dccil -CC -NSC:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727
-\--clrversion:v2.0.50727 \--no-config -Q -M -y -Z -\$D-
+\--clrversion:v2.0.50727 \--no-config -Q -M -y -Z -$D-
 Borland.Delphi.System.pas
 pause
 
@@ -219,7 +219,7 @@ BDS.
 консольного проекта, создайте файл Borland.Delphi.System.dcuil
 командой:
 dccil -CG -NSC:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727
-\--clrversion:v2.0.50727 \--no-config -Q -M -y -Z -\$D-
+\--clrversion:v2.0.50727 \--no-config -Q -M -y -Z -$D-
 Borland.Delphi.System.pas
 pause Скопируйте файл make.bat из консольного проекта в текущий и
 измените его содержание на следующее:
@@ -349,7 +349,7 @@ Borland.Delphi.System.dcuil для WinForms приложения нам пона
     Editor.Clear;
     end;
 
-В регион {\$REGION \'Designer Managed Code\'} класса формы помимо
+В регион {$REGION \'Designer Managed Code\'} класса формы помимо
 процедуры InitializeComponent добавьте две строки:
 
 procedure InitializeComponent;

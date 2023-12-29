@@ -54,7 +54,7 @@ Enterprise версии 6 и выше.
       then { Excel имеет русский интерфейс пользователя };
 
 Английская версия Excel (English United States) вернет 1033 (или
-\$0409), немецкая (German Standard) - \$0407. Значения соответствуют
+$0409), немецкая (German Standard) - $0407. Значения соответствуют
 LCID, описанным в MS SDK Help \"Language Identifiers\". LCID интерфейса
 пользователя и файла Excel.exe файла может быть неодинаковым (например,
 после установки MUI). Константа msoLanguageIDUI находится в модуле
@@ -421,7 +421,7 @@ ASheet.PageSetup.CenterFooter :=
 
 Сработало! Ну, и теперь добавим распознавание русской версии:
 
-if XL.LanguageSettings.LanguageID\[msoLanguageIDUI\] = \$0419
+if XL.LanguageSettings.LanguageID\[msoLanguageIDUI\] = $0419
 
 then ASheet.PageSetup.CenterFooter := //
 

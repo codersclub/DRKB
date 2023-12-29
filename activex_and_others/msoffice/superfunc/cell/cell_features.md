@@ -23,7 +23,7 @@ E.ActiveWorkbook.Sheets.Item\[sheet\].Range\[\'A5:B10\'\].Cells.Item\[1,1\]:=234
 
 Для записи формул можно использовать следующий оператор
 E.ActiveWorkbook.Sheets.Item\[sheet\].Range\[\'A1\'\].Formula:
-=\'=\$A\$4+\$A\$10\'.
+=\'=$A$4+$A$10\'.
 
 Для выделения области листа, заполненного информацией, используйте
 оператор E.ActiveWorkbook.Sheets.Item\[sheet\].UsedRange.Select;

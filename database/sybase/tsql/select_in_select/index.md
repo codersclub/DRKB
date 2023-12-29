@@ -116,7 +116,7 @@ price
 
 \-\-\-\-\-\-\-\-\-\-\-\--
 
-      \$19.99
+      $19.99
 
  
 
@@ -133,7 +133,7 @@ select title, price
 
 from titles
 
-where price = \$19.99
+where price = $19.99
 
  
 
@@ -1876,7 +1876,7 @@ select pub\_name
 
    from publishers
 
-   where \$100.00 not in
+   where $100.00 not in
 
        (select price
 

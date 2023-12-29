@@ -560,7 +560,7 @@ SXXname, где XX двузначное число, указывающее оч�
 
 . /etc/rc.d/init.d/functions
 
-case \$1 in
+case $1 in
 
    start)
 
@@ -590,9 +590,9 @@ case \$1 in
 
    restart)
 
-   \$0 stop
+   $0 stop
 
-   \$0 start
+   $0 start
 
    ;;
 
@@ -608,7 +608,7 @@ case \$1 in
 
    *)
 
-   echo \"Usage: \$(basename \$0) start\|stop\|restart\|reload\"
+   echo \"Usage: $(basename $0) start\|stop\|restart\|reload\"
 
    exit 1
 

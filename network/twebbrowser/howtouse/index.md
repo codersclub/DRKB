@@ -193,7 +193,7 @@ OLECMDF\_NINCHED        Зарезервировано
 выполнении любой команды при помощи ExecWB генерирует исключение
 EOleException с кодом:
 
--2147221248 (\$80040100) Trying to revoke a drop target that has not
+-2147221248 ($80040100) Trying to revoke a drop target that has not
 been registered.
 
 Начиная с Internet Explorer 5 документированы дополнительные команды,

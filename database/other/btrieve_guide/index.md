@@ -5131,9 +5131,9 @@ OPEN \"NUL\" AS \# 1
 Например, если Вы задаете файл адресов, Ваша прикладная программа должна
 включать следующий оператор:
 
-         FIELD \#1, 30 AS NAM\$, 30 AS STREETS\$, 30 AS CITY\$,
+         FIELD \#1, 30 AS NAM$, 30 AS STREETS$, 30 AS CITY$,
 
-                   2 AS STATE\$, 5 AS ZIP\$
+                   2 AS STATE$, 5 AS ZIP$
 
 Этот оператор показывает, что буфер полей, предварительно распределенный
 для файла \#1, содержит записи, в которых первые 30 символов содержат
@@ -5153,7 +5153,7 @@ BASIC ограничивает весь оператор длиной 255 сим
 номер телефона после почтового индекса, Вы можете определить поле номера
 телефона в следующем операторе:
 
-FIELD \#1, 97 AS DUMMY\$, 7 AS PHONE\$
+FIELD \#1, 97 AS DUMMY$, 7 AS PHONE$
 
 Так как Btrieve использует буфер в FCB для передачи записей, прикладная
 программа должна включать оператор FIELD для того, чтобы иметь доступ к
@@ -5239,7 +5239,7 @@ FCB для файла, открытого как \#1, в целую переме
 При каждом Btrieve-обращении Ваша BASIC- программа должна передать
 строковую переменную, содержащую значение ключа. Если значение ключа -
 целое число, Ваша прграмма должна перевести ее в строковую, используя
-оператор MKI\$ до обращения к Btrieve. Если ключ состоит из двух или
+оператор MKI$ до обращения к Btrieve. Если ключ состоит из двух или
 более разрывных сегментов, вы должны объединить их в одну строковую
 переменную и передать эту переменную как буфер ключа. В зависимости от
 операции ваша программа может устанавливать переменные или Record
@@ -5278,26 +5278,26 @@ BASIC-программа, показанная ниже на Рисунке 4.2,
 
 30 OPEN \"NUL\" AS \#2
 
-40 FIELD \#2, 30 AS NAME\$, 30 AS STREETS\$,
+40 FIELD \#2, 30 AS NAME$, 30 AS STREETS$,
 
-30 AS CITY\$, 2 AS STATE\$, 6 AS ZIP\$ 50 OP% = 0 : STATUS% = 0
+30 AS CITY$, 2 AS STATE$, 6 AS ZIP$ 50 OP% = 0 : STATUS% = 0
 
-70 FCB.ADDR% = VARPTR(\#2) : BUF.LEN% = 98 80 KEY.BUF\$ = \"ADDRESS.BTR
+70 FCB.ADDR% = VARPTR(\#2) : BUF.LEN% = 98 80 KEY.BUF$ = \"ADDRESS.BTR
 
 90 KEY.NUM% = 0
 
-100 CALL BTRV(OP%,STATUS%,FCB.ADDR%,BUF.LEN%,KEY.BUF\$,KEY.NUM%) 110 IF
+100 CALL BTRV(OP%,STATUS%,FCB.ADDR%,BUF.LEN%,KEY.BUF$,KEY.NUM%) 110 IF
 STATUS% \<\> O THEN
 
 PRINT \"Ошибка открытия файла. Статус =\", STATUS% : END 120 OP% = 12
 
-125 KEY.BUF\$ = SPACEUNDEF
+125 KEY.BUF$ = SPACEUNDEF
 
-130 CALL BTRV(OP%,STATUS%,FCB.ADDR%,BUF.LEN%,KEY.BUF\$,KEY.NUM%) 140 IF
+130 CALL BTRV(OP%,STATUS%,FCB.ADDR%,BUF.LEN%,KEY.BUF$,KEY.NUM%) 140 IF
 STATUS% \<\> O THEN
 
 PRINT \"Ошибка открытия файла. Статус =\", STATUS% : END 150 PRINT
-\"Первая запись файла\",NAM\$,STREET\$,CITY\$,STATE\$,ZIP\$
+\"Первая запись файла\",NAM$,STREET$,CITY$,STATE$,ZIP$
 
                     Рисунок 5.2
 
@@ -5327,7 +5327,7 @@ Btrieve-интерфейса.
 Ваша прикладная программа получает доступ ко всем Btrieve-файлам,
 вызывая функцию BTRV. Это -целая функция, возвращающая статус операции.
 Если вы используете IBM (или Microsoft) Pascal, используйте метакоманду
-\$INCLUDE для подключения файла BEXTERN114S. пример ниже показывает как
+$INCLUDE для подключения файла BEXTERN114S. пример ниже показывает как
 определена внешняя функция BTRV:
 
         function BTRV (     OP           : integer;
@@ -5342,7 +5342,7 @@ Btrieve-интерфейса.
 
                    KEY\_NUMBER   : integer ) :integer; extern;
 
-Если вы используете Turbo Pascal, применяйте команду \$I для подключения
+Если вы используете Turbo Pascal, применяйте команду $I для подключения
 файла TURXBTRV114S. Btrieve-функция определяется следующим образом:
 
         function BTRV (     OP           : integer;
@@ -5660,7 +5660,7 @@ Pascal. Это единственный пример для Turbo Pascal в эт
 
           I                : integer;
 
-        {\$I TURXBTRV119S}
+        {$I TURXBTRV119S}
 
         begin
 

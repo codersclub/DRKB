@@ -18,10 +18,10 @@ EmptyParam);
 
 const
 
-   acViewNormal = \$00000000;
+   acViewNormal = $00000000;
 
-   acViewDesign = \$00000001;
+   acViewDesign = $00000001;
 
-   acViewPreview = \$00000002;
+   acViewPreview = $00000002;
 
 }

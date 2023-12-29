@@ -23,7 +23,7 @@ conflict with either the project or any of  the unit names. Then to add
 the resource file to Delphi, simply add the following line to any unit
 file in the project:
 
-[{\$R MyRes.Res}]{style="color: teal;"}
+[{$R MyRes.Res}]{style="color: teal;"}
 
 (where MyRes.Res is the name of the resource file).
 

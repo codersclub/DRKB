@@ -39,7 +39,7 @@ function ColorToString(Color: TColor): string;
 
 function StringToColor(S: string): TColor;
 
-Данная функция преобразует \"clRed\" или \"\$0000FF\" во внутреннее
+Данная функция преобразует \"clRed\" или \"$0000FF\" во внутреннее
 значение цвета.
 
 Автор: Pegas

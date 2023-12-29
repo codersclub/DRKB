@@ -212,7 +212,7 @@ VSN (\<Microsoft Visual Studio .NET\>\\Common7\\Tools\\Bin), при
 исследовании соответствующего BPL-файла можно даже увидеть имена
 экспортируемых функций в стиле C++, например:
 
-@\$xp\$14Class1\@TClass1
+@$xp$14Class1\@TClass1
 
 \@Class1\@TClass1@
 

@@ -78,7 +78,7 @@ BRCC32 AHTMLDelphi.RC
 unit Вашего проекта. Следующая строка заставляет компилятор включить в
 проект файл RES:
 
-{\$R AHTMLDelphi.RES}
+{$R AHTMLDelphi.RES}
 
 Отображение внутри Web браузера
 

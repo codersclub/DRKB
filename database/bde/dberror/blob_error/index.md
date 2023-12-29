@@ -13,7 +13,7 @@ BLOB has been modified. Index is out of date
 
 Объяснение от Борланд:
 
-Index out Date (\$2F02) is an error that occurs while using Paradox
+Index out Date ($2F02) is an error that occurs while using Paradox
 tables when the data in a table and a corresponding index is not
 consistent. In most cases (see below for the one exception), short of
 malicious behavior such as renaming an index, adding some data to the
@@ -21,7 +21,7 @@ table, then renaming the index back, there is no programmatic way to
 cause this error to occur. There is no way to determine which index is
 out of date. All indexes must be recreated.
 
-Blob has been modified (\$3302) is an error that occurs when the Blob
+Blob has been modified ($3302) is an error that occurs when the Blob
 portion of the record contained in the .DB file has become inconsistent
 with the Blob portion in the .MB file. This could occur when the write
 to the .DB file was successful but the .MB file did not get updated, or
@@ -41,7 +41,7 @@ original documentation for more information.
 utility available for download from the Borland web site in the
 {Utilities, programs and updates section}.
 
-4\. Delete all indexes and recreate them (Index out Date (\$2F02) error
+4\. Delete all indexes and recreate them (Index out Date ($2F02) error
 only). To do this you\'ll need to know the structure of all your indexes
 (including primary) before recreating them, which means you need to know
 the structure of all indexes before the error occurs.

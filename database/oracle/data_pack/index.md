@@ -135,7 +135,7 @@ create table ... as select
 Метод непосредственной загрузки sql*loader - наиболее удобный способ
 загрузки данных в таблицу, если данные доступны в текстовом файле.
 Пример представлен ниже:
-\$sqlldr sanjay/sanjay\@proddb control=sales\_history.ctl direct=true
+$sqlldr sanjay/sanjay\@proddb control=sales\_history.ctl direct=true
 
 Если данные доступны в промежуточной (staging) таблице, можно
 использовать последовательные операторы insert с подсказкой append или
