@@ -1170,7 +1170,7 @@ RegisterPreviewClass(TQRCustomPreviewInterface);
 генерирует предупредительное сообщение, что новый конструктор скрывает
 оригинал. В данном случае это правильно и написал в классе
 
-{\$WARNINGS ON} \... {\$WARNINGS OFF}
+{\$WARNINGS ON} ... {\$WARNINGS OFF}
 
 для подавления предупреждений компилятора.
 

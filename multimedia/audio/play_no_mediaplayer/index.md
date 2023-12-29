@@ -11,6 +11,6 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-PlaySound(\'c:\\\....\\\*.wav\',0,SND\_FILENAME)
+    PlaySound('c:\....\*.wav', 0, SND_FILENAME)
 
 Взято с сайта <https://blackman.wp-club.net/>

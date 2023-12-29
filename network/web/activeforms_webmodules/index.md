@@ -16,7 +16,7 @@ Delphi ActiveForms (intranet)
 С помощью JBuilder возможно разрабатывать 100% pure Java апплеты,
 приложения., но мы не должны забывать и о том, что с помощью Дельфи так
 же можно создавать интересные Интранет решения используя такие вещи как
-ActiveForms и Web Modules\...
+ActiveForms и Web Modules...
 
 4.1. ActiveForms
 
@@ -112,7 +112,7 @@ Aware.\"
 С помощью JBuilder возможно разрабатывать 100% pure Java апплеты,
 приложения., но мы не должны забывать и о том, что с помощью Дельфи так
 же можно создавать интересные Интранет решения используя такие вещи как
-ActiveForms и Web Modules\...
+ActiveForms и Web Modules...
 
 5.1. Web Modules
 

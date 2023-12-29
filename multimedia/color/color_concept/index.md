@@ -49,16 +49,16 @@ Edit1.font.color:=123456
 ------------------------------------------------------------------------
 **Вариант 2:**
 
-Можно использовать константы типа clred, clblack, cllime, clgreen\...
+Можно использовать константы типа clred, clblack, cllime, clgreen...
 
 Для работы с цветом можно использовать следующие функции
 
     RGB(r,g,b:byte):tcolor //получаешь цвет по 3 составляющим
-
+    
     GetRValue(color:tcolor)
-
+    
     GetGValue(color:tcolor)//получаешь значение интенсивности цвета.
-
+    
     GetBValue(color:tcolor)
 
 Автор: Mikel

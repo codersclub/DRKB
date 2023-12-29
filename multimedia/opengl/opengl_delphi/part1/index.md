@@ -56,7 +56,7 @@ OpenGL ...
 
 В разделе private
 
-обьявим\...:
+обьявим...:
 
          DC:HDC; //   переменные для получения контекста воспроизведения
          hrc:HGLRC; //
@@ -64,9 +64,7 @@ OpenGL ...
          procedure initsvet;
          procedure SetPixFormat;
 
-В разделе protected
-
-обьявим\...:
+В разделе protected обьявим:
 
      procedure WMPaint(var Msg: TWMPaint); message WM_PAINT;
 

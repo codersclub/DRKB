@@ -322,8 +322,7 @@ smtp        25/tcp        mail        \#Simple Mail Transfer Protocol
 
 Формат файла следующий:
 
-\<service name\> \<port number\>/\<protocol\> \[aliases\...\]
-\[\#\<comment\>\]
+\<service name\> \<port number\>/\<protocol\> \[aliases...\] \[\#\<comment\>\]
 
 Вам не требуется читать данный файл, поскольку стек протоколов делает
 это самостоятельно и прозрачно для вас. Файл SERVICES может быть

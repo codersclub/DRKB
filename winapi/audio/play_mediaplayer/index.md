@@ -12,7 +12,7 @@ Date: 01.01.2007
 :::
 
 пример взят из рассылки \"Мастера DELPHI. Новости мира компонент, FAQ,
-статьи\...\"
+статьи...\"
 
     procedure TForm1.btRecordClick(Sender: TObject);
     begin

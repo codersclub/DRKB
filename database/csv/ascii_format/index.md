@@ -39,7 +39,7 @@ field2 = title,char,30,0,2
 
 field3 = artist,char,30,0,3
 
-\...
+...
 
 field36 = song30,char,50,0,36
 
@@ -61,14 +61,13 @@ field2 = title,char,30,0,20
 
 field3 = artist,char,30,0,30
 
-\...
+...
 
 field36 = song30,char,50,0,360
 
 и внезапно все заработало! Для поля, которое игнорируется форматом
 файла, \"Offset\" несомненно дало огромный эффект.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

@@ -41,11 +41,11 @@ procedure Form1.DSrc1DataChange(Sender: TObject; Field: TField);
 полей (ключ) с вашими требованиями. С той же целью может быть
 использовано и свойство TDBGrid Fields. Для примера:
 
-if tbl1.Fields\[0\].AsString = \'BlaBlaBla\' then \...
+if tbl1.Fields\[0\].AsString = \'BlaBlaBla\' then ...
 
 или
 
-if dbGrid1.Fields\[I\].IsNull then \...
+if dbGrid1.Fields\[I\].IsNull then ...
 
 Для отслеживания изменения колонки, используйте события TDBGrid
 OnColExit & OnColEnter. Для определения выбранной к настоящему времени
@@ -95,7 +95,7 @@ Field: TField; State: TGridDrawState);
 несколько свойств, содержащих координаты сетки, но это не опубликовано в
 TDBGrid.
 
-\...из чего я могу заключить, что вы должны это сделать программным
+...из чего я могу заключить, что вы должны это сделать программным
 путем. Подразумеваем, что сетка уже существует, и у вас есть доступ к
 основной таблице TTable:
 

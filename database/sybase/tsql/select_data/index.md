@@ -183,13 +183,13 @@ select \[all \| distinct\] список\_выбора
 
     \[(index название\_индекса \[prefetch размер\] \[lru \| mru\] ) \] }
 
-             \[ holdlock \| noholdlock \] \[shared\] \] \... \]
+             \[ holdlock \| noholdlock \] \[shared\] \] ... \]
 
 \[where условия\_выбора \]
 
 \[group by \[all\] итоговое\_выражение
 
-        \[, итоговое\_выражение \] \... \]
+        \[, итоговое\_выражение \] ... \]
 
 \[having условия\_поиска \]
 
@@ -207,13 +207,13 @@ select \[all \| distinct\] список\_выбора
 
       название\_столбца \| номер\_списка\_выбора \| выражение }
 
-                 \[ask \| desc\] \... \]
+                 \[ask \| desc\] ... \]
 
 \[compute row\_agregate (название\_столбца)
 
-               \[, row\_agregate (название\_столбца) \] \...
+               \[, row\_agregate (название\_столбца) \] ...
 
-          \[by название\_столбца \[, название\_столбца\] \... \]\]
+          \[by название\_столбца \[, название\_столбца\] ... \]\]
 
 \[for {read only \| update \[of список\_названий\_столбцов\] } \]
 
@@ -296,7 +296,7 @@ Reference Manual.
 
  
 
-select expression \[, expression\]\...
+select expression \[, expression\]...
 
 from table\_list
 
@@ -417,7 +417,7 @@ from publishers
 
  
 
-select column\_ name\[, column\_name\]\...
+select column\_ name\[, column\_name\]...
 
 from table\_name
 
@@ -1624,7 +1624,7 @@ select select \_list
 
          \[,\[\[database.\]owner.\]{table\_name I view\_name}
 
-               \[holdlock I noholdlock\] \[shared\]\]\... \]
+               \[holdlock I noholdlock\] \[shared\]\]... \]
 
  
 

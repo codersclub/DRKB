@@ -31,7 +31,7 @@ P.S.
 DBFLocate - модифицированная из faq фунция fieldname
 
 DBFSeek - функция, найденная методом проб и ошибок! - значительно лучшая
-(IMHO) чем setkey\...fieldbyname1\...fieldbyname2\...gotokey,
+(IMHO) чем setkey... fieldbyname1... fieldbyname2... gotokey,
 используемые для выражений индексов dBase за первым полем. Вы можете
 использовать FindKey для dBase индексов, состоящих из одного поля,
 вопреки мнению других участников форума.

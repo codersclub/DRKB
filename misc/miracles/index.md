@@ -99,9 +99,9 @@ or real-type expression.
 - константа
 
 Читаем Help по теме \"Constant expressions\":
-\...Constant expressions cannot include variables, pointers, or function
+...Constant expressions cannot include variables, pointers, or function
 calls, except calls to the following predefined functions:
-Abs\...Low\...
+Abs...Low...
 
 попробуем описать константу со значением равным этому выражению:
 
@@ -407,7 +407,7 @@ U.
 
 Можете ли вы предсказать результат выражения \'1\'+ \'2\'+3? Если вы
 сказали \'6\', то вы тоже попались. Посмотрим повнимательнее, \'1\'+
-\'2\' будет\... конечно \'12\', 12+3=15. Это и есть правильный ответ.
+\'2\' будет... конечно \'12\', 12+3=15. Это и есть правильный ответ.
 
 Итак, мы увидели семь чудес Delphi, семь - из многих. Это не значит, что
 они - самые яркие или самые чудесные. Но на них можно многому научиться.
@@ -418,12 +418,12 @@ Delphi удается сводить в одном выражении значе
 Фокус первый (Variant trick)
 
 Читаем Help в разделе \"Variants in expressions\":
-\...In a binary operation, if only one operand is a variant, the other
+...In a binary operation, if only one operand is a variant, the other
 is converted to a variant..
 
 Не кажется ли вам это удивительным - variant можно складывать с чем
 угодно. Например, integer плюс variant - будет variant, а variant можно
-опять складывать с чем угодно\...
+опять складывать с чем угодно...
 
 
 Новая кнопка на форме будет выполнять следующие действия:
@@ -455,7 +455,7 @@ is converted to a variant..
 
 Однажды ко мне обратился один мой знакомый с вопросом нет ли в Delphi
 чего-то подобного скрытому параметру Self, но для оператора with. Нет -
-ответил я ему сперва, а потом задумался\...
+ответил я ему сперва, а потом задумался...
 
 Фокус второй (With-trick)
 
@@ -496,8 +496,8 @@ is converted to a variant..
 его потомков.
 
 Давайте почитаем Help, раздел \"TMethod type\":
-\...This type can be used in a type cast of a method pointer to access
-the code and data parts of the method pointer\...
+...This type can be used in a type cast of a method pointer to access
+the code and data parts of the method pointer...
 
 Не это ли то, что мы ищем?
 Определим тип и функцию:

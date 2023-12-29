@@ -576,7 +576,7 @@ enter.
 
 ::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
   --- -------------------------------------------------------------------------
-  ·   Lookup \<почтовый код 1\> \< почтовый код 2\> \... -- запрос информации
+  ·   Lookup \<почтовый код 1\> \< почтовый код 2\> ... -- запрос информации
   --- -------------------------------------------------------------------------
 :::
 
@@ -658,7 +658,7 @@ xhdr header \[range\|MessageID\]
 
 xover \[range\]
 
-xpat header range\|MessageID pat \[morepat\...\]
+xpat header range\|MessageID pat \[morepat...\]
 
 .
 

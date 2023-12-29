@@ -167,14 +167,14 @@ TRaveProjectManager.
 объектов из отчета. Для использования процедуры можно использовать, к
 примеру, такие строки кода:
 
-\...
+...
 
 ListObjects.Clear;
 
 GetListObjects(ListObjects.Items, RvProjectRTR.ProjMan.ActiveReport,
 \'\', True);
 
-\...
+...
 
 Посмотрите на результат работы процедуры GetListObjects. Вы наверняка
 сразу заметили одну особенность, что все имена классов представленных

@@ -20,7 +20,7 @@ CreateFileMapping
 
 идея простая открываешь файл .. (или создаешь)
 
-создаешь Mapping \... CreateFileMapping
+создаешь Mapping ... CreateFileMapping
 
 отображаешь Mapping в свой процесс MapViewOfFile
 

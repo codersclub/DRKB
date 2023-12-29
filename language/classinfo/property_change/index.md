@@ -84,7 +84,7 @@ Tip by Jeff Overcash
 I am building a routine that checks our forms for validity before
 deploying them. I would like to use some kind of structure that tests if
 a component type has access to a certain property, something like: \" if
-(self.Controls\[b\] has Tag) then \...\". Can anyone offer suggestions?
+(self.Controls\[b\] has Tag) then ...\". Can anyone offer suggestions?
 
 Here\'s an example of setting a string property for a component if it
 exists and another for an integer property:

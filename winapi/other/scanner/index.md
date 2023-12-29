@@ -2277,7 +2277,7 @@ generate a component wrapper:
 
 Import the ActiveX Control \"Kodak Image Scan Control\"
 
-(Select Component\|Import ActiveX Control\...)
+(Select Component\|Import ActiveX Control...)
 
 Now add a TImgScan Component from the Register \"ActiveX\" to your form.
 

@@ -60,7 +60,7 @@ TASM и TLINK 3.0
 Закройте SDR окно. Вы должны увидеть сообщение:
 
 \* Possible reference to String Resource ID=00041: \"You have
-entered\...
+entered...
 
 :004049F8 6A29 push 00000029
 
@@ -72,13 +72,13 @@ entered\...
 
 :004049CD 755A jne 00404A29
 
-\* Possible reference to String Resource ID=00032: \"You must select\...
+\* Possible reference to String Resource ID=00032: \"You must select...
 
 :004049CF 6A20 push 00000020
 
-\...
+...
 
-\...
+...
 
 \* Possible reference to String Resource ID=00040: \"Unlock Error\"
 
@@ -188,7 +188,7 @@ you..
 HIEW.
 
 Запустите HWORKS32.EXE и введите любой код, работает ? НЕТ !?!??!?!
-Хе-хе-хе\... Не волнуйтесь ! Снова перейдите в Нортон. Скопируйте
+Хе-хе-хе... Не волнуйтесь ! Снова перейдите в Нортон. Скопируйте
 HWORKS32.EXX в HWORKS32.EXE (теперь вы видите, почему я делаю копию
 файла с расширением ЕХХ для сохранности). Теперь перейдите в W32Dasm, вы
 должны перейти туда, где только что были (на 0041У145).

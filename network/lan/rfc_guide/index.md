@@ -115,7 +115,7 @@ Network Working Group Meetings
 212 - NWG Meeting on Network Usage
 157 - Invitation to the Second Symposium on Problems in the Optimization
 of Data Communication Systems
-149 - The Best Laid Plans\...
+149 - The Best Laid Plans...
 147 - The Definition of a Socket
 111 - Pressure from the Chairman
 048 - A Possible Protocol Plateau
@@ -1080,7 +1080,7 @@ ARPANET NCP (Obsolete predecessor of TCP/IP)
 492, 467 - Proposed Change to Host-Host Protocol Resynchronization of
 Connection Status
 489 - Comment on Resynchronization of Connection Status Proposal
-425 - \"But my NCP Costs \$500 a day\...\"
+425 - \"But my NCP Costs \$500 a day...\"
 210 - Improvement of Flow Control
 197 - Initial Connection Protocol - Revised
 176 - Comments on Byte Size for Connections

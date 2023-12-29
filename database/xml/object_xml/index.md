@@ -353,9 +353,9 @@ DeSerializeInternal(). При этом передаем ей в качестве
 списков мы загружаем из значения Value как CommaText. Тут все понятно. В
 сллучае же коллеций данные о элементах коллекции в XML документе
 содержаться в виде последовательных контейнерных тегов с именем типа
-элемента коллекци. Т.е., к примеру, \<TMyCollection\> \...
-\</TMyCollection\> \<TMyCollection\> \... \</TMyCollection\>
-\<TMyCollection\> \... \</TMyCollection\> и так далее. Внутри каждой
+элемента коллекци. Т.е., к примеру, \<TMyCollection\> ...
+\</TMyCollection\> \<TMyCollection\> ... \</TMyCollection\>
+\<TMyCollection\> ... \</TMyCollection\> и так далее. Внутри каждой
 пары тегов \<TMyCollection\> содержатся свойства объекта TMyCollection.
 
     procedure SetPropertyValue(Component: TObject; PropInfo: PPropInfo; Value: PChar); 

@@ -218,13 +218,13 @@ Prolonged Data Deprivation: Four Case Studies        19.99
 
 \[({index название\_индекса \| prefetch size \|\[lru\|mru\]})\]}
 
-       \[holdlock \| noholdlock\] \[shared\]\]\... \]
+       \[holdlock \| noholdlock\] \[shared\]\]... \]
 
 \[where условия\_отбора\]
 
 \[group by выражение\_без\_агрегации \[,
 
-            выражение\_без\_агрегации\]\... \]
+            выражение\_без\_агрегации\]... \]
 
 \[having условия\_отбора\])
 

@@ -30,7 +30,7 @@ intuitive. Luckily, however, it doesn\'t involve low-level BDE API
 calls.
 
 Below is a procedure listing that drops tables from any SQL Server
-database. After the listing I\'ll discuss particulars\...
+database. After the listing I\'ll discuss particulars...
 
 Parameter Descriptions
 

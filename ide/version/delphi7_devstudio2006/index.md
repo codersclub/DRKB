@@ -2290,7 +2290,7 @@ VS.Net 2005
 
 ECO/BOLD
 
-\...
+...
 
 ECO заменило BOLD в D2005
 
@@ -2298,11 +2298,11 @@ Bold для Win32/VCL и ECO для .Net/.Net+Winforms
 
 DECISION CUBE
 
-\...
+...
 
 SAMPLES
 
-\...
+...
 
 ColorGrid
 
@@ -2316,19 +2316,19 @@ CollapsePanel
 
 FASTNET
 
-\...
+...
 
 ACTIVEX
 
-\...
+...
 
 RAVE REPORTS
 
-\...
+...
 
 INDY
 
-\...
+...
 
 \*
 
@@ -2340,16 +2340,16 @@ www.indyproject.org
 
 COM+
 
-\...
+...
 
 IntraWeb
 
-\...
+...
 
 \*
 
 SERVERS
 
-\...
+...
 
 © 2005, Сергей Досюков, Dragon Soft

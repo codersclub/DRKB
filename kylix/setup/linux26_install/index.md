@@ -52,7 +52,7 @@ Install by runing from the shell
 
 rpm -i /tmp/compat-glibc-6.2-2.1.3.2.i386.rpm
 
-Now the patching is complete\.... now to run kylix do the following
+Now the patching is complete.... now to run kylix do the following
 
 Step 4
 
@@ -89,8 +89,8 @@ Finally:
 
 Open the ThrdDemo (the c++ demo included with Kylix in the examples
 directory) This sample demonstrates the use of threads and different
-sort algorithms\... (remember step 6+7 for this project).
+sort algorithms... (remember step 6+7 for this project).
 
-Compile and run/debug\....
+Compile and run/debug....
 
 Congatulations!!! your have done it!!!

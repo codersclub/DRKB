@@ -12,7 +12,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Придётся сделать Inner Join на самого себя\....
+Придётся сделать Inner Join на самого себя...
 
     select count(*) as ID,  c1.sys_id
     from MyTable c1 

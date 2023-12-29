@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Если вы рисуете на TImage\....
+Если вы рисуете на TImage....
 
 Во-первых, вам нужно использовать Image1.Picture.bitmap, а не
 Image.Canvas. Причина кроется в том, что Image1.Picture.Bitmap имеет
@@ -35,7 +35,7 @@ Image.Canvas. Причина кроется в том, что Image1.Picture.Bit
       end;
     end;
 
-Если вы рисуете на канве формы\...
+Если вы рисуете на канве формы...
 
     Canvas.Draw(0,0,Bitmap);
     SelectPalette(Form1.Canvas.handle,Bitmap.Palette,True);

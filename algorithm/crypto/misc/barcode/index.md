@@ -18,14 +18,13 @@ used in the barcodes. I must say that this \"mod10\" is specifical so
 readf an article if you\'re interested.
 
 This algorithm is very popular for UPC barcodes (Universal Product
-Code), hash code or serial number generation for applications etc\...
+Code), hash code or serial number generation for applications etc...
 
 The basic algorithm:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ---------------------------------------------------------------------
-  1.   1\.        add the values of the digits in the odd positions (1, 3,
-       5\...)
+  1.   1\.        add the values of the digits in the odd positions (1, 3, 5...)
   ---- ---------------------------------------------------------------------
 :::
 
@@ -37,8 +36,7 @@ The basic algorithm:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ----------------------------------------------------------------------
-  3.   3\.        add the values of the digits in the even positions (2, 4,
-       6\...)
+  3.   3\.        add the values of the digits in the even positions (2, 4, 6...)
   ---- ----------------------------------------------------------------------
 :::
 

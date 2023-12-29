@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Из рассылки \"Мастера DELPHI. Новости мира компонент,\...\"
+Из рассылки \"Мастера DELPHI. Новости мира компонент, ...\"
 
     var FS:TFileStream;
     procedure TForm1.bClearClick(Sender: TObject);

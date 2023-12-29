@@ -18,7 +18,7 @@ but in your Delphi project? Microsoft provides ODS (Open Data Services)
 which is an API to help you create such  functionality by adding DLL\'s
 to your SQL Server that contain Extended Stored Procedures.
 
-This is how you do it\....
+This is how you do it....
 
 Answer:
 

@@ -38,7 +38,7 @@ Surprise: the host application is Delphi itself! So, next to the field
 \"host app\", enter something like
 e:\\Programs\\delphi3\\bin\\delphi32.exe (with path)
 
-Second trick: now we install the expert\... If you have \"expert.xxx\"
+Second trick: now we install the expert... If you have \"expert.xxx\"
 installed, rename that to \"expert.dll\". This will be used by any
 Delphi instance started from now on.
 

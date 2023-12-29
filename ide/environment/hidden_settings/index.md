@@ -20,7 +20,7 @@ Most values are stored as strings, and boolean values are represented as
 
 HKEY\_CURRENT\_USER
 
-As always, use of this information is at your own risk\... ;-)
+As always, use of this information is at your own risk... ;-)
 
 Software\\Borland\\Delphi\\5.0\\Extras\\AutoPaletteSelect
 

@@ -82,7 +82,7 @@ status            { 0 \| NOTFOUND \| \<0 } код завершения опер�
 quit\_flag ( не 0 если было нажато QUIT ) int\_flag ( не 0 если было
 нажато \^C ) define SQLCA record \# системная запись с кодами завершения
 SQLCODE integer,=\"status\" SQLERRM char(71), ­- SQLERRP char(8), ­-
-SQLERRD array\[8\] of int,\...„см. SQLAWARN char(8) warning или пробел
+SQLERRD array\[8\] of int,...„см. SQLAWARN char(8) warning или пробел
 end record SQLERRD\[1\] зарезервирован SQLERRD\[2\] serial значение или
 ISAM error cod SQLERRD\[3\] число обработанных строк SQLERRD\[4\] CPU
 cost запроса SQLERRD\[5\] offset of error into SQL-st SQLERRD\[6\] ROWID
@@ -119,7 +119,7 @@ START  REPORT report-name
 
      \[TO {file-name \| PRINTER \| PIPE program}\]
 
-OUTPUT TO  REPORT  report-name (выражение, выражение \[, \...\])
+OUTPUT TO  REPORT  report-name (выражение, выражение \[, ...\])
 
 FINISH REPORT report-name
 
@@ -129,7 +129,7 @@ DEFINE  список переменных { type \| LIKE table.column
 
               \| RECORD {LIKE table.\* \| список переменных \[,..\]
 
-                                       END RECORD} } \[,\...\]
+                                       END RECORD} } \[,...\]
 
        где type может быть следующим:
 
@@ -322,7 +322,7 @@ OPTIONS   {                        По умолчанию:
 
     DISPLAY ATTRIBUTE(список атрибутов)
 
-          } \[,\...\]      атрибуты:
+          } \[,...\]      атрибуты:
 
       NORMAL     REVERSE        FORM    использовать атрибуты
 
@@ -410,7 +410,7 @@ INPUT { BY NAME список переменных \[WITHOUT DEFAULTS\] \|
 
        список переменных \[WITHOUT DEFAULTS\] FROM
 
-        {список полей \| screen-record\[\[n\]\].\*}\[,\...\]}
+        {список полей \| screen-record\[\[n\]\].\*}\[,...\]}
 
 \[ATTRIBUTE(список атрибутов)\]
 
@@ -440,7 +440,7 @@ CONSTRUCT {BY NAME char-variable ON column-list \|
 
           char-variable ON column-list FROM
 
-           {список полей \| screen-record\[\[n\]\].\*}\[,\...\]}
+           {список полей \| screen-record\[\[n\]\].\*}\[,...\]}
 
        \[ATTRIBUTE(список атрибутов)\]
 
@@ -479,7 +479,7 @@ DISPLAY ARRAY record-array TO screen-array.\*
 
 END DISPLAY \] \| \[END DISPLAY\]
 
-SCROLL {field-list \| screen-record.\*} \[,\...} Прокрутить строки
+SCROLL {field-list \| screen-record.\*} \[,...} Прокрутить строки
 
        {UP \| DOWN} \[BY int\]                 в экранном массиве
 
@@ -489,17 +489,17 @@ INPUT ARRAY record-array \[WITHOUT DEFAULTS\]
 
 FROM   screen-array.\*  \[HELP help-number\] \[ATTRIBUTE(атр.)\]
 
-\[{BEFORE {ROW \| INSERT \| DELETE \| FIELD подсписок полей}\[,\...\]
+\[{BEFORE {ROW \| INSERT \| DELETE \| FIELD подсписок полей}\[,...\]
 
-\| AFTER {ROW\|INSERT\|DELETE\|FIELD подсписок полей \|INPUT}\[,\...\]
+\| AFTER {ROW\|INSERT\|DELETE\|FIELD подсписок полей \|INPUT}\[,...\]
 
 \| ON KEY (key-list) }
 
-         statement  \...
+         statement  ...
 
         \[NEXT FIELD field-name\]
 
-         statement\...
+         statement...
 
         \[EXIT INPUT\]
 
@@ -610,7 +610,7 @@ FLUSH cursor-name   вытолкнуть буфер
 Права доступа GRANT/REVOKE, LOCK/UNLOCK TABLE, SET LOCK MODE
 
 Операторы транзакции и восстановления BEGIN WORK, COMMIT WORK, ROLLBACK
-WORK, START DATABASE, \...
+WORK, START DATABASE, ...
 
 Операторы описания данных.
 
@@ -628,7 +628,7 @@ CLOSE DATABASE
 
 CREATE \[TEMP\] TABLE table-name( column-name datatype \[NOT NULL\]
 
-                    \[UNIQUE \[CONSTRAINT constr-name\]\] \[,\...\] )
+                    \[UNIQUE \[CONSTRAINT constr-name\]\] \[,...\] )
 
        \[UNIQUE(uniq-col-list) \[CONSTRAINT constr-name\] \] \[,..\]
 
@@ -652,29 +652,29 @@ ALTER TABLE table-name       \# Недопустим для временых т�
 
     {  ADD ( new-column-name datatype \[NOT NULL\]
 
-               \[UNIQUE \[CONSTRAINT constr-name\]\]\[,\...\] )
+               \[UNIQUE \[CONSTRAINT constr-name\]\]\[,...\] )
 
                    \[BEFORE old-column-name\]
 
        \|
 
-       DROP (old-column-name\[,\...\])
+       DROP (old-column-name\[,...\])
 
        \|
 
-       MODIFY (old-column-name new-datatype \[NOT NULL\]\[,\...\])
+       MODIFY (old-column-name new-datatype \[NOT NULL\]\[,...\])
 
        \|
 
-       ADD CONSTRAINT UNIQUE (old-column-name\[,\...\])
+       ADD CONSTRAINT UNIQUE (old-column-name\[,...\])
 
                                   \[CONSTRAINT constr-name\]
 
        \|
 
-       DROP CONSTRAINT (constr-name\[,\...\])
+       DROP CONSTRAINT (constr-name\[,...\])
 
-     } \[,\...\]
+     } \[,...\]
 
 RENAME TABLE old-table-name TO new-table-name
 
@@ -686,7 +686,7 @@ CREATE VIEW view-name \[(column-list)\]
 
 CREATE \[UNIQUE\|DISTINCT\] \[CLUSTER\] INDEX index-name
 
-       ON table-name (column-name \[DESC\], \...)
+       ON table-name (column-name \[DESC\], ...)
 
 ALTER INDEX index-name TO \[NOT\] CLUSTER  Упорядочить таблицу
 
@@ -717,11 +717,11 @@ INSERT INTO table-name \[(column-list)\]
      { VALUES (value-list) \| SELECT-statement }
 
 UPDATE table-name SET {column-name ={ expression \| (SELECT-st) }
-\[,\...\]
+\[,...\]
 
 \| {(col-list) \| \[table.\]\*} =
 
-{ ({ expr-list \| (SELECT-st) } \[,\...\]) \| record-name.\* }
+{ ({ expr-list \| (SELECT-st) } \[,...\]) \| record-name.\* }
 
     \[WHERE {condition \| CURRENT OF cursor-name}\]
 
@@ -735,11 +735,11 @@ UNLOAD TO \"file\" \[DELIMITER \"?\"\] SELECT-statement
 
        формат файла по умолчанию:
 
-столбец1\|столбец2\| \... \|\|столбецn\|
+столбец1\|столбец2\| ... \|\|столбецn\|
 
-                  \...
+                  ...
 
-значение\|значение\| \... значение\|
+значение\|значение\| ... значение\|
 
 OUTPUT TO {FILENAME \| PIPE program} \[WITHOUT HEADINGS\] SELECT-st
 
@@ -747,13 +747,13 @@ OUTPUT TO {FILENAME \| PIPE program} \[WITHOUT HEADINGS\] SELECT-st
 
 Оператор SELECT.
 
-SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,\...\]
+SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,...\]
 
        \[INTO список переменных\]            !\* Только в 4GL \*!
 
        FROM { \[OUTER\] table-name \[tab-alias\] \|
 
-          OUTER  (table-expr) } \[,\...\] -проверять      условие
+          OUTER  (table-expr) } \[,...\] -проверять      условие
 
                                        только для этой (менее
 
@@ -761,7 +761,7 @@ SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,\...\]
 
        \[GROUP BY column-list  \[HAVING condition\] \]
 
-       \[ORDER BY column-name \[DESC\],\...\]
+       \[ORDER BY column-name \[DESC\],...\]
 
        \[INTO TEMP table-name\]
 
@@ -777,7 +777,7 @@ SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,\...\]
 
        выраж \[NOT\] BETWEEN выраж1 AND выраж2
 
-       выраж \[NOT\] IN (выраж1 , \...  \[, \...\] )
+       выраж \[NOT\] IN (выраж1 , ...  \[, ...\] )
 
                                   по умолчанию \"\\\"
 

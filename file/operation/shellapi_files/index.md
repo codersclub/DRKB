@@ -103,7 +103,7 @@ FOF\_NOCONFIRMMKDIR Не подтверждает создание нового 
 
 FOF\_RENAMEONCOLLISION В случае, если уже существует файл
 
-с данным именем, создается файл с именем \"Copy \#N of\...\"
+с данным именем, создается файл с именем \"Copy \#N of...\"
 
 FOF\_SILENT Не показывать диалог с индикатором прогресса.
 
@@ -353,7 +353,7 @@ Dest.
       Result := SHFileOperation( SHFileOpStruct );
     end;
 
-И проверка \...
+И проверка ...
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin

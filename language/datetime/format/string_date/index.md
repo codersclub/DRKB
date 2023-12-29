@@ -184,7 +184,7 @@ This is of little use when extracting dates such as ..
 
 This function will evaluate a DateTime string in accordance to the
 DateTime specifier format string supplied. The following specifiers are
-supported \...
+supported ...
 
 dd                        the day as a number with a leading zero or
 space (01-31).  
@@ -230,7 +230,7 @@ Using function
 
     DateTimeStrEval(const DateTimeFormat : string; const DateTimeStr : string) : TDateTime; 
 
-The above Examples (1..4) can be evaluated as \... (Assume DT1 to DT4
+The above Examples (1..4) can be evaluated as ... (Assume DT1 to DT4
 equals example strings 1..4)
 
             MyDate := DateTimeStrEval('dddd dd mmmm yyyy hh:nnampm (ss xxxx)', DT1);

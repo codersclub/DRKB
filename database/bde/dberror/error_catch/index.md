@@ -16,7 +16,7 @@ Date: 01.01.2007
 
 Ошибки общего характера, типа Key Violation или конфликты блокировки
 лучше всего обрабатывать в обработчике события Application.OnException
-\...например:
+...например:
 
     {Секция Interface}
     procedure HandleException(Sender: TObject; E: Exception);

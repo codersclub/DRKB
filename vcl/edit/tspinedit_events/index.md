@@ -13,11 +13,10 @@ Date: 01.01.2007
 :::
 
 У TSpinEdit.Button есть дополнительные события, которые не показаны в
-инспекторе объектов, например, OnUpClick и OnDownClick\...
+инспекторе объектов, например, OnUpClick и OnDownClick...
 
     unit Unit1;
-
-     
+    
     interface
     uses
      Windows, Messages, SysUtils, Classes, Graphics, 

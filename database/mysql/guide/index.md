@@ -150,7 +150,7 @@ DOUBLE).
 Удаляет индекс из таблицы. Это предложение полностью сотрет индеке из
 таблицы. Предложение не затронет данные самой таблицы, только данные
 индекса. Поэтому индекс, удаленный таким способом, может быть воссоздан
-с помощью оператора ALTER TABLE \... ADD INDEX.
+с помощью оператора ALTER TABLE ... ADD INDEX.
 
     DROP PRIMARY KEY
 
@@ -1206,7 +1206,7 @@ EXPLAIN SELECT statement
 
 FLUSH
 
-FLUSH option\[, option\...\]
+FLUSH option\[, option...\]
 
 Перезапускает различные внутренние процессы или сбрасывает данные на
 диск, в зависимости от указанного параметра. Для выполнения этой
@@ -1511,7 +1511,7 @@ INSERT.
 LOCK
 
 LOCK TABLES name \[AS alias\] READ\|WRITE \[, name2 \[AS alias\]
-READ\|WRITE, \...\]
+READ\|WRITE, ...\]
 
 Блокирует таблицу для ее использования отдельным потоком. В основном эта
 команда используется для эмуляции транзакций, как это описано в главе 7
@@ -1555,9 +1555,9 @@ OPTIMIZE TABLE name
 
 REPLACE
 
-REPLACE INTO table \[(column, \...)\] VALUES (value, \....)
+REPLACE INTO table \[(column, ...)\] VALUES (value, ....)
 
-REPLACE INTO table \[(column, \...)\] SELECT select\_clause
+REPLACE INTO table \[(column, ...)\] SELECT select\_clause
 
 Вводит данные в таблицу, заменяя при этом все записи, вызывающие
 конфликт. Этот оператор аналогичен INSERT за исключением того, что при
@@ -1585,7 +1585,7 @@ REPLACE INTO table \[(column, \...)\] SELECT select\_clause
 
 REVOKE
 
-REVOKE privilege \[(column, \...)\] \[, privilege \[(column, \...) ,..\]
+REVOKE privilege \[(column, ...)\] \[, privilege \[(column, ...) ,..\]
 ON table FROM user
 
 Отзывает права у пользователя. Значения privilege, table и user те же,
@@ -1594,9 +1594,9 @@ ON table FROM user
 
 SELECT
 
-SELECT \[STRAIGHTJOIN\] \[DISTINCT\|ALL\] value\[, value2\...\]
+SELECT \[STRAIGHTJOIN\] \[DISTINCT\|ALL\] value\[, value2...\]
 
-\[INTO OUTFILE \'filename\' delimiters\] FROM table\[, table2\...\]
+\[INTO OUTFILE \'filename\' delimiters\] FROM table\[, table2...\]
 \[clause\]
 
 Выбирает данные из таблицы. Оператор SELECT является основным методом
@@ -1668,7 +1668,7 @@ Table1, Таblе2, Таblе3, . . .
 
 Это самый простой метод. Таблицы соединяются так, как MySQL сочтет
 наиболее эффективным. Этот способ может быть также записан в виде:
-Table1 JOIN Table2 JOIN Таblе3\..... , можно использовать ключевое слово
+Table1 JOIN Table2 JOIN Таblе3..... , можно использовать ключевое слово
 CROSS, но оно не имеет эффекта (например, Table1 CROSS JOIN Table2 ). В
 объединенную таблицу войдут только те записи, которые отвечают условиям
 обоих столбцов. Например, запрос SELECT \* FROM people, homes WHERE
@@ -1818,7 +1818,7 @@ value BETWEEN value1 AND value2
 Выбирает записи, если value находится в диапазоне между valuel и value2
 или равно одному из них.
 
-value IN (valuel,value2,\... )
+value IN (valuel,value2,... )
 
 Выбирает записи, если value находится среди указанных значений.
 
@@ -1858,7 +1858,7 @@ NOT (valuel REXEXP value2).
 Поэтому SELECT age FROM people WHERE age\>10 вернет только те записи,
 где возраст больше 10.
 
-GROUP BY column\[, column2,\...\]
+GROUP BY column\[, column2,...\]
 
 Группирует вместе записи по значению данных в определенных столбцах, что
 позволяет выполнять агрегатные функции над столбцами columns (например,
@@ -2833,11 +2833,11 @@ mSQLSQL
 
 CREATE
 
-CREATE TABLE name field\_name field\_type, \[field2 type2, \...\]
+CREATE TABLE name field\_name field\_type, \[field2 type2, ...\]
 
 CREATE SEQUENCE ON table \[STEP value\] \[VALUE value\]
 
-CREATE INDEX name ON table ( column, \...)
+CREATE INDEX name ON table ( column, ...)
 
 Создает новые элементы базы данных (или полностью новые базы).
 Предложение используется для создания БД, таблиц, индексов и счетчиков.
@@ -2992,7 +2992,7 @@ DROP SEQUENCE FROM counter
 
 INSERT
 
-INSERT INTO table \[ (column, \...) \] VALUES ( values )
+INSERT INTO table \[ (column, ...) \] VALUES ( values )
 
 Записывает данные в таблицу. Этот оператор вставит указанные значения в
 заданные столбцы. Поля, значения которых не указаны, получат значение
@@ -3028,7 +3028,7 @@ SELECT \[DISTINCT\] columns FROM table \[clause\]
 SELECT name FROM people; SELECT people, name FROM people ).
 
 Список таблиц для соединения указывается как Table1, Table2, Tab-1еЗ,
-\.... Таблицы будут соединены таким образом, как mSQL сочтет наиболее
+.... Таблицы будут соединены таким образом, как mSQL сочтет наиболее
 эффективным. Именам таблиц могут быть присвоены псевдонимы (например,
 SELECT t1.name, t2.address FROM Iong\_table\_name=t1,
 Ionger\_table\_name=t2 ). Если не указано выражение clause, SELECT
@@ -3086,7 +3086,7 @@ OR
 
 Возвращает 1, если левое значение больше правого, иначе возвращает 0.
 
-ORDER BY column \[DESC\]\[, column2 \[DESC\],\...\]
+ORDER BY column \[DESC\]\[, column2 \[DESC\],...\]
 
 Сортирует возвращаемые данные по заданному столбцу (или столбцам). Если
 указать DESC, данные будут отсортированы в порядке убывания, иначе будет

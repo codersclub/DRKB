@@ -42,7 +42,7 @@ All files are valid BMP files and are of the same size.
 All Blockreads are valid with no read errors.
 
 Ray has a downloadable EXE that works quite nicely, however I am about
-to write my own utility that incorporates the following \...
+to write my own utility that incorporates the following ...
 
 Multiline file selection.
 

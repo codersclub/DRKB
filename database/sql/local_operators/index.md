@@ -86,7 +86,7 @@ Date: 01.01.2007
 
     SELECT * FROM animals order by Weight desc
 
-\...наоборот - по убыванию
+...наоборот - по убыванию
 
     SELECT * FROM animals order by 3
 

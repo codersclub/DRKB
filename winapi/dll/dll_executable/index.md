@@ -72,14 +72,14 @@ DWORD
 
 dummy )
 
-\...\...
+......
 
 int WINAPI RunDllW( HWND hWnd, HINSTANCE hInstance, LPCWSTR lpszCmdLine,
 DWORD
 
 dummy )
 
-\...\...
+......
 
    и .def-файл пpимеpно такого вида:
 

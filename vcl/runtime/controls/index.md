@@ -27,11 +27,11 @@ Date: 01.01.2007
 
 Проверить тип контрола надо оператором is:
 
-if edit1 is TEdit then\....
+    if edit1 is TEdit then....
 
 Затем доступ ко всем свойствам путем приведения класса:
 
-(edit1 as TEdit).text:=\'\';
+    (edit1 as TEdit).text:='';
 
 Автор: Kiber\_rat
 

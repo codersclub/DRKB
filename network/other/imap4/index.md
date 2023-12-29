@@ -299,7 +299,7 @@ OK \[READ-WRITE\] SELECT completed\").
 
 S: \* 17 EXISTS
 
-\...
+...
 
 Команда EXAMINE возвращает те же параметры, что и команда SELECT, а
 отличается от команды SELECT только тем, что открывает заданный почтовый
@@ -374,9 +374,9 @@ S:
 
 S: )
 
-S: \*11 FETCH \....
+S: \*11 FETCH ....
 
-S: \*12 FETCH \....
+S: \*12 FETCH ....
 
 S: A654 OK FETCH completed
 

@@ -587,7 +587,7 @@ var
 
 Document: IHtmlDocument2;
 
-\...
+...
 
 Document := WebBrowser.Document as IHtmlDocument2;
 

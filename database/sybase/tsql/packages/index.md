@@ -1764,7 +1764,7 @@ raiserror номер\_ошибки
 \[,список\_аргументов\]
 
 \[extended\_value = extended\_value \[{, extended\_value =
-extended\_value }\...\]\]
+extended\_value }...\]\]
 
  
 

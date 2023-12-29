@@ -25,25 +25,25 @@ DelphiX - библиотека для Delphi основанная на Microsoft
 
 1.1 Наиболее частая конфигурация
 
-Align\...\...\...\...\...\....allClient        
+Align...................allClient        
 
-AutoSize\...\...\...\...\....True
+AutoSize................True
 
 Display
 
-  FixedBitCount\...\.....True
+  FixedBitCount........True
 
-  Fixedratio\...\...\.....True        
+  Fixedratio...........True        
 
-  Fixedsize\...\...\...\...False
+  Fixedsize............False
 
 Options
 
-  DoFullScreen\...\...\...True
+  DoFullScreen.........True
 
-  doFlip\...\...\...\...\...True
+  doFlip...............True
 
-  Rest\...\...\...\...\.....False
+  Rest.................False
 
 Если одновременно значения DoFullScreen и DoFlip сделать равными True,
 то кнопки управления окном не появятся (GDI=off). Если Вы хотите

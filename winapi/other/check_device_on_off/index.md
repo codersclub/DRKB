@@ -18,7 +18,7 @@ Date: 01.01.2007
 При подключении сетевого диска также приходит DBT\_DEVICEARRIVAL а при
 отключении DBT\_DEVICEREMOVECOMPLETE
 При подключении или отключении флэшки срабатывает
-DBT\_DEVNODES\_CHANGED\...
+DBT\_DEVNODES\_CHANGED...
 
  
 

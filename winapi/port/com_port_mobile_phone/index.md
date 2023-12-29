@@ -197,7 +197,7 @@ AT\^SPIC -- попыток до блокировки SIM-карты
 
 Более подробно о командах вы сможете узнать из pdf-инструкции
 s35i\_c35i\_m35i\_atc\_commandset\_v01.pdf (можно утащить по адресу:
-http://www.like.e-technik.uni-erlangen.de/\...andset\_v01.pdf)
+http://www.like.e-technik.uni-erlangen.de/...andset\_v01.pdf)
 
 Автор: Лазуткин Алексей (alessio19\@mail.ru),  
 помощь в написании: av3nger (av3nger\@hakep.com)

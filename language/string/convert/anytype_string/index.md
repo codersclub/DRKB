@@ -12,7 +12,7 @@ Date: 01.01.2007
 :::
 
 Более подробно ищите в хелпе Delphi по словам \"Variant\" и
-\"TVarData\"\...
+\"TVarData\"...
 
      
     function ToString(Value: Variant): String;

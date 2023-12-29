@@ -97,7 +97,7 @@ C: USER MonstrVB
 
 S: +OK MonstrVB is a real hoopy frood
 
-\...
+...
 
 C: USER MonstrVB
 
@@ -139,7 +139,7 @@ C: PASS mymail
 
 S: +OK MonstrVB\'s maildrop has 2 messages (320 octets)
 
-\...
+...
 
 C: USER MonstrVB
 
@@ -234,13 +234,13 @@ S: 2 200
 
 S: .
 
-\...
+...
 
 C: LIST 2
 
 S: +OK 2 200
 
-\...
+...
 
 C: LIST 3
 
@@ -304,7 +304,7 @@ C: DELE 1
 
 S: +OK message 1 deleted
 
-\...
+...
 
 C: DELE 2
 
@@ -366,7 +366,7 @@ S: +OK maildrop has 2 messages (320 octets)
 заголовки сообщения и указанное кол - во строк из тела сообщения.
 Возможные ответы: +OK top of message follows -ERR no such message
 Примеры: C: TOP 1 10 S: +OK S: \<здесь POP3 сервер передаёт заголовки
-первого сообщения и первые 10-ть строк из тела сообщения.\> S: . \... C:
+первого сообщения и первые 10-ть строк из тела сообщения.\> S: . ... C:
 TOP 100 3 S: -ERR no such message Команда: UIDL \[сообщение\] Аргументы:
 \[сообщение\] - номер сообщения (необязательный аргумент). Описание:
 Если был указан номер сообщения, то сервер выдаёт уникальный
@@ -374,7 +374,7 @@ TOP 100 3 S: -ERR no such message Команда: UIDL \[сообщение\] А
 идентификаторы перечисляются для всех сообщений, кроме помеченных для
 удаления. Возможные ответы: +OK unique-id listing follows -ERR no such
 message Примеры: C: UIDL S: +OK S: 1 whqtswO00WBw418f9t5JxYwZ S: 2
-QhdPYR:00WBw1Ph7x7 S: . \... C: UIDL 2 S: +OK 2 QhdPYR:00WBw1Ph7x7 \...
+QhdPYR:00WBw1Ph7x7 S: . ... C: UIDL 2 S: +OK 2 QhdPYR:00WBw1Ph7x7 ...
 C: UIDL 3 S: -ERR no such message, only 2 messages in maildrop
 
 Заключение

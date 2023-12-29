@@ -29,7 +29,7 @@ over the size of results sets (this may mean using TQueries),
 
 minimize the length of transactions (usually not an issue if the
 
-SQLPASSTHRU MODE is set to \...AUTOCOMMIT), and only open dbaware
+SQLPASSTHRU MODE is set to ...AUTOCOMMIT), and only open dbaware
 
 controls when necessary to help minimize resource drain on the
 

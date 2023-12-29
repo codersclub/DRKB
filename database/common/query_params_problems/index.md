@@ -43,7 +43,7 @@ Date: 01.01.2007
 с другими значениями. Параметры здесь работают немного быстрее и с ними
 удобнее работать чем с динамическим посторением SQL каждый раз:
 
-\...подготавливаем запрос один раз\...
+...подготавливаем запрос один раз...
 
 
      
@@ -51,7 +51,7 @@ Date: 01.01.2007
     ADOQuery1.SQL.text:='Select * From MyTable Where MyField=:prm';
     ADOQuery1.Parameters.ParseSQL(ADOQuery1.SQL.text, true);
 
-\... всё запрос готов \...
+... всё запрос готов ...
 
     procedure TForm1.Button1Click(Sender: TObject);
 

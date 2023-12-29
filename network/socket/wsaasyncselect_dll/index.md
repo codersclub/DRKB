@@ -54,7 +54,7 @@ Hо pекомендую посмотpеть WinSock2, в котоpом можн�
 
 WSAEventSelect( FSocket, FEventHandle, FD\_READ or FD\_CLOSE );
 
-WSAWaitForMultipleEvents( \... );
+WSAWaitForMultipleEvents( ... );
 
 WSAEnumNetworkEvents( FSocket, FEventHandle, lpNetWorkEvents );
 

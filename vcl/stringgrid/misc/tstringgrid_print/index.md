@@ -161,7 +161,7 @@ Date: 01.01.2007
 комменты, разобрался бы куда легче чем пришлось).
 
 
-Надеюсь кому нибудь пригодится\...
+Надеюсь кому нибудь пригодится...
 
     procedure PrintGrid(sGrid: TStringGrid;
     left_StandOff,top_StandOff:integer; sTitle: string);

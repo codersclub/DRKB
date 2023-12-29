@@ -74,7 +74,7 @@ Destination.IndexDefs.Assign(Source.IndexDefs);
 вызове IndexDefs.Assign вы можете получить исключение типа \"List Index
 Out Of Bounds\" (или что-то типа этого). Например, так:
 
-if Source.IndexDefs.Count \> 0 then\...
+if Source.IndexDefs.Count \> 0 then...
 
 Вам нужно будет это сделать, поскольку метод TIndexDefs.Assign не
 проверяет это перед копированием индекс-информации. Также вам нет

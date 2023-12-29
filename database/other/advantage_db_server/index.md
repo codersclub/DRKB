@@ -78,47 +78,39 @@ Windows NT/2000 with FAT32 4 gigabytes (4,294,967,296 bytes)
 
 NetWare 4 gigabytes (4,294,967,296 bytes)
 
-Linux pre-2.1.2 - 11 glibc and pre-2.4 kernel 2 gigabytes (2,147,483,648
-bytes)
+Linux pre-2.1.2 - 11 glibc and pre-2.4 kernel 2 gigabytes (2,147,483,648 bytes)
 
-Linux glibc 2.1.2 - 11+ with kernel 2.4+ 8 exabytes
-(9,223,372,036,854,775,807 bytes)
+Linux glibc 2.1.2 - 11+ with kernel 2.4+ 8 exabytes (9,223,372,036,854,775,807 bytes)
 
 Максимальный размер индексного файлa
 
 Windows 95/98/ME 4 gigabytes (4,294,967,296 bytes)
 
-Windows NT/2000 with NTFS 4 gigabytes \* (Index Page Size) : Max 35
-terabytes
+Windows NT/2000 with NTFS 4 gigabytes \* (Index Page Size) : Max 35 terabytes
 
 Windows NT/2000 with FAT32 4 gigabytes (4,294,967,296 bytes)
 
 NetWare 4 gigabytes (4,294,967,296 bytes)
 
-Linux pre-2.1.2 - 11 glibc and pre-2.4 kernel 2 gigabytes (2,147,483,648
-bytes)
+Linux pre-2.1.2 - 11 glibc and pre-2.4 kernel 2 gigabytes (2,147,483,648 bytes)
 
-Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes \* (Index Page
-Size) : Max 35 terabytes
+Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes \* (Index Page Size) : Max 35 terabytes
 
 Максимальный размер memo файла
 
 Windows 95/98/ME 4 gigabytes (4,294,967,296 bytes)
 
-Windows NT/2000 with NTFS 4 gigabytes \* (Memo Page Size) : Max 4
-terabytes
+Windows NT/2000 with NTFS 4 gigabytes \* (Memo Page Size) : Max 4 terabytes
 
 Windows NT/2000 with FAT32 4 gigabytes (4,294,967,296 bytes)
 
 NetWare 4 gigabytes (4,294,967,296 bytes)
 
-Linux pre-2.1.2 - 11 glibc and pre-2.4 kernel 2 gigabytes (2,147,483,648
-bytes)
+Linux pre-2.1.2 - 11 glibc and pre-2.4 kernel 2 gigabytes (2,147,483,648 bytes)
 
-Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes \* (Memo Page Size)
-: Max 4 terabytes
+Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes \* (Memo Page Size): Max 4 terabytes
 
-Максимальное число записей 2 миллиард .
+Максимальное число записей 2 миллиарда.
 
 Максимальная длина записи 65530 bytes
 
@@ -128,11 +120,10 @@ Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes \* (Memo Page Size)
 
 Максимальный размер binary/image/BLOB поля 4 Гб
 
-Максимальное число полей в таблице зависит от длинны имени полей , и
-может быть вычислено: 65135 / ( 10 + AverageFieldNameLength ).
+Максимальное число полей в таблице зависит от длинны имени полей,
+и может быть вычислено: 65135 / ( 10 + AverageFieldNameLength ).
 
-Например, если средняя длина имен полей 10, то максимальное число полей
-- 3256
+Например, если средняя длина имен полей 10, то максимальное число полей - 3256
 
 Для обоих форматов
 
@@ -140,8 +131,7 @@ Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes \* (Memo Page Size)
 
 Максимальное число соеединений ограничено размером памяти
 
-Максимальное число одновременно открытых файлов ограничено размером
-памяти
+Максимальное число одновременно открытых файлов ограничено размером памяти
 
 Максимальное число блокировок ограничено размером памяти
 
@@ -591,11 +581,11 @@ credit\_limit \> 50000
 Можно, например, организовать цепочку вызовов процедур на удаленных
 серверах, например :
 
-Клиент - \> AEP(Server1)
+Клиент -\> AEP(Server1)
 
-AEP(Server1)-\>AEP(Server2) -\>AEP(Server4)-\>\...
+AEP(Server1) -\> AEP(Server2) -\> AEP(Server4) -\>...
 
-AEP(SErver1)-\>AEP(Server4)
+AEP(SErver1) -\> AEP(Server4)
 
 и т.д
 

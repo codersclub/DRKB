@@ -19,7 +19,7 @@ Here\'s How:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   --- -----------------------------------------------------------------
-  ·   Start Delphi and select Component \| Import ActiveX Control\...
+  ·   Start Delphi and select Component \| Import ActiveX Control...
   --- -----------------------------------------------------------------
 :::
 

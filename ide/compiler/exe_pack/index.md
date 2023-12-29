@@ -13,11 +13,11 @@ Date: 01.01.2007
 
 Generally, EXE files created with Delphi are larger than EXE files
 created with another programming language. The reason is the VCL. (Sure,
-VCL has many advantages\...)
+VCL has many advantages...)
 
 There are several ways to reduce a EXE\'s size:
 
-01\) Use a EXE-Packer (UPX, ASPack,\...)
+01\) Use a EXE-Packer (UPX, ASPack,...)
 
 02\) Use KOL.
 
@@ -31,8 +31,7 @@ There are several ways to reduce a EXE\'s size:
 
 07\) You might want to put code in a dll.
 
-08\) Don\'t put the same images several times on a form. Load them at
-runtime.
+08\) Don\'t put the same images several times on a form. Load them at runtime.
 
 09\) Use compressed images (JPG and not BMP)
 
