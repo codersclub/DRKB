@@ -707,7 +707,7 @@ text := stringreplaceall(text, \'Joeey\', \'Joey\');
         start := pos ('\f',text);
         Delete(text,start,3);
       end;
-      text := stringreplaceall (text,'\pard\li200-200{\*\pn\pnlvlblt\pnf1\pnindent200{\pntxtb\'+chr(39)+'b7}}\plain ',' < /P >  < UL > ');
+      text := stringreplaceall (text,'\pard\li200-200{*\pn\pnlvlblt\pnf1\pnindent200{\pntxtb\'+chr(39)+'b7}}\plain ',' < /P >  < UL > ');
       text := stringreplaceall (text,'{\pntext\'+chr(39)+'b7\tab}',' < LI > ');
       text := stringreplaceall (text, '\par  < LI > ',' < LI > ');
       text := stringreplaceall (text, '\par  < UL > ',' < UL > ');

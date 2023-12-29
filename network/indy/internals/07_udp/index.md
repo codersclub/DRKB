@@ -286,7 +286,7 @@ Ugly brown suit error. I cannot continue in such company. (Очень
 7.8.1.5. Show Trademark
 
 Если данный параметр используется, то в нижнем углу экрана будет мелкая,
-но читаемая  надпись: \* The BSOD is a trademark of the Microsoft
+но читаемая  надпись: * The BSOD is a trademark of the Microsoft
 Corporation.
 
 7.8.1.6. Клавиша Show

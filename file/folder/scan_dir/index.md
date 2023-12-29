@@ -48,7 +48,7 @@ Date: 01.01.2007
     begin
       if ScanSub then
       begin
-        FindFirst(path+'\*.*',faDirectory,SearchRec);{. found}
+        FindFirst(path+'*.*',faDirectory,SearchRec);{. found}
         FindNext(SearchRec); {.. found}
         a:=FindNext(SearchRec);
         while a=0 do

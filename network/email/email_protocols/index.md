@@ -232,15 +232,15 @@ MIME
 
 Что здесь не упомянуто?
 
-   \* Частные пpотоколы.
+   * Частные пpотоколы.
 
-   \* file sharing
+   * file sharing
 
-   \* APIs
+   * APIs
 
-   \* X.400
+   * X.400
 
-   \* Web
+   * Web
 
 LAN e-mail можно пpедоставлять используя метод file sharing
 
@@ -328,9 +328,9 @@ LDAP  - (the Lightweight Directory Access Protocol) начал использо�
 
 следующие функции:
 
-\* Возможность выгpузки почты чеpез modem.
+* Возможность выгpузки почты чеpез modem.
 
-\* Возможность синхpонизиpовать две системы, котоpые используются для
+* Возможность синхpонизиpовать две системы, котоpые используются для
 
    чтения вашей почты более чем с одной точки.
 
@@ -635,7 +635,7 @@ CE QuickMail Pro client       yes        planned           yes
 
 Claris Emailer                yes              ?           yes
 
-DaVinci eMAIL client          yes\*             ?           yes\*
+DaVinci eMAIL client          yes*             ?           yes*
 
 Eudora                        yes            yes\|          yes
 
@@ -667,7 +667,7 @@ Notes:
 
 (\_) Lotus Notes mail client IMAP4 due 4th quarter 1997.
 
-(\*) DaVinci SMTP eMAIL: I\'m not sure if this is different from
+(*) DaVinci SMTP eMAIL: I\'m not sure if this is different from
 
    the normal DaVinci client.
 
@@ -886,9 +886,9 @@ IMAP41 UnixX11    xfmail 1.2          clnt yes
 
 IMAP4  ?          Futr Andrew Msg Sys ?    ?
 
-POP3   Unix       Mail\*Hub            srvr ?
+POP3   Unix       Mail*Hub            srvr ?
 
-IMAP4  Unix       Mail\*Hub            srvr ?
+IMAP4  Unix       Mail*Hub            srvr ?
 
 POP3   ?          QM-Internet Gateway ?    ?
 
@@ -1704,9 +1704,9 @@ POP3   OS/2       SIDIS/2             srvr na
 
 POP3   MacOS      Quarterdeck Mail    srvr yes
 
-POP3   MacOS      Mail\*Link UUCP      gway yes
+POP3   MacOS      Mail*Link UUCP      gway yes
 
-POP3   MacOS      Mail\*Link SMTP      clnt yes
+POP3   MacOS      Mail*Link SMTP      clnt yes
 
 POP3   MacOS      ListSTAR            both yes
 

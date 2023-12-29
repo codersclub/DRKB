@@ -14,7 +14,7 @@ Date: 01.01.2007
 В файле asciidrv.txt насчет последнего числа в строке схемы поля
 говорится:
 
-\"\* Offset - Number of characters from the beginning of the line that
+\"* Offset - Number of characters from the beginning of the line that
 the field begins. Used for FIXED format only.\" (Offset - количество
 символов он начала линии до начала поля. Используется только для
 фиксированного формата.).

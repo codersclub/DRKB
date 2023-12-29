@@ -16,7 +16,7 @@ Date: 01.01.2007
 2\. MenuText = Текст, который будет использован для пункта в меню
 \"Сервис\"
 
-3\. MenuStatusbar = \*Ignore\*
+3\. MenuStatusbar = *Ignore*
 
 4\. CLSID = Ваш уникальный classID. Для создания нового CLSID (для каждой
 кнопки) можно использовать GUIDTOSTRING.

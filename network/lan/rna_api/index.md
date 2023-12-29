@@ -104,7 +104,7 @@ access control". При этом проверяется только парол�
 имнена не декорированы. Все они используют стандартное (или
 «паскалевское») соглашение о вызовах.
 
-int \_\_stdcall SuprvInitialize( HWND\* \_phWnd );
+int \_\_stdcall SuprvInitialize( HWND* \_phWnd );
 Описание. Должна быть вызвана в первую очередь, перед тем, как вызывать
 какие-либо другие функции RNA API. Используется также для того, чтобы
 изменения конфигурации RNA сервера, внесённые с помощью
@@ -124,7 +124,7 @@ void \_\_stdcall SuprvDeInitialize( void );
 
 Возвращаемое значение. Нет.
 
-int \_\_stdcall SuprvSetAccessInfo( ACCESSINFO\* \_pAccessInfoStruct );
+int \_\_stdcall SuprvSetAccessInfo( ACCESSINFO* \_pAccessInfoStruct );
 Описание. Самая интересная функция. Именно с помощью неё можно управлять
 сервером, в частности включить и выключить его. Состояние
 включён/выключен определяется младшим битом в поле m\_flags структуры
@@ -139,8 +139,8 @@ ACCESSINFO. RNASERV.DLL сразу после этой функции после
 
 Возвращаемое значение. ???
 
-void \_\_stdcall SuprvEnumAccessInfo( char\* \_pStringsBuffer, int\*
-\_pStringsBufferSize, unsigned int\* \_pnStrings );
+void \_\_stdcall SuprvEnumAccessInfo( char* \_pStringsBuffer, int*
+\_pStringsBufferSize, unsigned int* \_pnStrings );
 Описание. Позволяет извлечь список устройств (модемов и COM/LPT
 портов).
 
@@ -161,8 +161,8 @@ void \_\_stdcall SuprvEnumAccessInfo( char\* \_pStringsBuffer, int\*
 
 Возвращаемое значение. Нет.
 
-int \_\_stdcall SuprvGetAccessInfo( char\* \_pAccessInfoString,
-ACCESSINFO\* \_pBuffer, unsigned int\* \_pnBufferSize );
+int \_\_stdcall SuprvGetAccessInfo( char* \_pAccessInfoString,
+ACCESSINFO* \_pBuffer, unsigned int* \_pnBufferSize );
 Описание. Извлекает всю информацию об устройстве. Заполняет структуру
 ACCESSINFO, которую потом можно использовать в функции
 SuprvSetAccessInfo.
@@ -183,7 +183,7 @@ SuprvSetAccessInfo.
 успешное завершение функции.
 
 int \_\_stdcall RnaSMMInfoDialog( HWND \_hwnd, DWORD \_dwUnused,
-ACCESSINFO\* \_pAccInfo, char\* \_pszProtocol );
+ACCESSINFO* \_pAccInfo, char* \_pszProtocol );
 Описание. Вызывает диалог \"Server Type\"
 
 Параметры:
@@ -202,7 +202,7 @@ ACCESSINFO\* \_pAccInfo, char\* \_pszProtocol );
 Возвращаемое значение. А хрен его знает :-) Похоже на индикатор
 успешного завершения или ошибки.
 
-void \_\_stdcall SuprvRequest( int \_command, void\* \_arg2, DWORD
+void \_\_stdcall SuprvRequest( int \_command, void* \_arg2, DWORD
 \_arg3 );
 Описание. Весьма интересная функция. Судя по всему, многоцелевая. Однако
 я разобрался лишь с одной её возможностью: разорвать соединение с

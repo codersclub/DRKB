@@ -28,8 +28,8 @@ handle can be used with the DeviceIOControl function.
 
 ------------------------------------------------------------------------
 
-{ \*\*\*\* UBPFD \*\*\*\*\*\*\*\*\*\*\* by delphibase.endimus.com
-\*\*\*\*
+{ **** UBPFD *********** by delphibase.endimus.com
+****
 
 \>\> Получение серийного номера IDE диска.
 

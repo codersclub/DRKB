@@ -118,7 +118,7 @@ Browse....................................255
 
 Общие сведения.
 
-FoxPro работает с таблицами формата \*.dbf
+FoxPro работает с таблицами формата *.dbf
 
 Visual FoxPro 7.0 снабжено мощным набором мастеров, которые позволяют
 новичку достаточно быстро создать мощное работоспособное приложение,
@@ -271,7 +271,7 @@ conado.open(\`ora\_ado\`)
 
 rd=CREATEOBJECT(\`adodb.recordset\`)
 
-rd.Open(\`select \* from prof\`,conado)
+rd.Open(\`select * from prof\`,conado)
 
 TYPE(\`rd.Fields\`)
 
@@ -285,7 +285,7 @@ rd.Fields(1).Type
 
 con=sqlconnect(\'oradsn\',\'scott\',\'tiger\')
 
-if con\>0 and sqlexec(con,\'select \* from scott.dept\')\>0
+if con\>0 and sqlexec(con,\'select * from scott.dept\')\>0
 
 copy to dept
 
@@ -297,7 +297,7 @@ m.depno=10
 
 con=sqlconnect(\'oradsn\',\'scott\',\'tiger\')
 
-if con\>0 and sqlexec(con,\'select \* from scott.dept where depno=?
+if con\>0 and sqlexec(con,\'select * from scott.dept where depno=?
 m.depno\')\>0
 
 copy to dept

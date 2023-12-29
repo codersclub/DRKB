@@ -42,7 +42,7 @@ Date: 01.01.2007
     begin
       // Очистка
       ListBox1.Clear;
-      S := 'C:\Windows\*.bmp';
+      S := 'C:\Windows*.bmp';
       // Даем команду листбоксу чтобы он нашел все картинки в папке Windows
       // и занес их имена к себе
       ListBox1.Perform(LB_DIR, DDL_READWRITE, Longint(@S[1]));

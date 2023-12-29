@@ -111,7 +111,7 @@ Name - \<любое имя\>
 
 Protocol - IPX/SPX
 
-File server - \*
+File server - *
 
 Object name - \<адрес полученный от DB2IPXAD.EXE\>
 

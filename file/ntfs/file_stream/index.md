@@ -33,7 +33,7 @@ Date: 01.01.2007
 
 2\. Определяем инфу о файле/директории - читаем инфу о потоках:
 
-\*\*\* Не забудьте включить SE\_BACKUP\_NAME привелегию \*\*\*
+*** Не забудьте включить SE\_BACKUP\_NAME привелегию ***
 
     function InfoFileStreams(const FileName:String; Delete:Boolean; out RStreams:String):Boolean;
     {Входные данные:

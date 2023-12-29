@@ -1526,7 +1526,7 @@ Date: 01.01.2007
       sr: TSearchRec;
      
     begin
-      if FindFirst(ffsPath + '\*.*', faAnyFile, sr) = 0 then
+      if FindFirst(ffsPath + '*.*', faAnyFile, sr) = 0 then
         repeat
           if sr.Name <> '.' then
             if sr.Name <> '..' then
@@ -1556,7 +1556,7 @@ Date: 01.01.2007
     begin
       // This routine might not be failsafe!
       // Under circumstances the twain drivers found in the directory
-      // %WINDOWS%\TWAIN_32\*.ds and below could be not properly installed!
+      // %WINDOWS%\TWAIN_32*.ds and below could be not properly installed!
       Bo := False;
       s := GetWinDir + '\TWAIN_32';
       FileFindSubDir(s, Bo);

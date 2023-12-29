@@ -24,7 +24,7 @@ Date: 01.01.2007
       retcode: Integer;
     begin
       oldMode: = SetErrorMode(SEM_FAILCRITICALERRORS);
-      mask := '?:\*.*';
+      mask := '?:*.*';
       mask[1] := driveletter;
     {$I-} { не возбуждаем исключение при неудаче }
       retcode := FindFirst(mask, faAnyfile, SRec);

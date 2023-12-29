@@ -73,7 +73,7 @@ typedef struct {
 
    LPCTSTR lpszProxyBypass;
 
-} INTERNET\_PROXY\_INFO, \* LPINTERNET\_PROXY\_INFO;
+} INTERNET\_PROXY\_INFO, * LPINTERNET\_PROXY\_INFO;
 
 Members
 

@@ -234,11 +234,11 @@ exec gateway...namelist
 
 create procedure showall as
 
-select count(\*) from sysusers
+select count(*) from sysusers
 
-select count(\*) from sysobjects
+select count(*) from sysobjects
 
-select count(\*) from syscolumns
+select count(*) from syscolumns
 
  
 
@@ -314,11 +314,11 @@ text
 
 create procedure showall as
 
-select count(\*) from sysusers
+select count(*) from sysusers
 
-select count(\*) from sysobjects
+select count(*) from sysobjects
 
-select count(\*) from syscolumns
+select count(*) from syscolumns
 
  
 
@@ -1018,7 +1018,7 @@ drop proc orders;2
 
  
 
-Замечание: Если в определении процедуры используется команда select \*,
+Замечание: Если в определении процедуры используется команда select *,
 то процедура не распознает новые столбцы, добавленные в таблицу, даже
 если в операторе execute используется опция with recompile. Такая
 процедура должна быть удалена и создана заново.
@@ -1157,7 +1157,7 @@ create table \#tempstores
 
 insert \#tempstores
 
-select stor\_id, sum(qty\*(100-discount)/100\* rice)
+select stor\_id, sum(qty*(100-discount)/100* rice)
 
 from salesdetail, titles
 
@@ -1503,7 +1503,7 @@ create procedure mathtutor \@mult1 int, \@mult2 int,
 
 as
 
-select \@result = \@mult1 \* \@mult2
+select \@result = \@mult1 * \@mult2
 
  
 

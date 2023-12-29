@@ -481,7 +481,7 @@ DMAC1 DMAC2 \| \|
 
 11 \| Запрещенный
 
-\*\* \| Игнорируется если биты 7:6 = 11
+** \| Игнорируется если биты 7:6 = 11
 
 \-\-\-\-\-\-\-\--+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
 
@@ -529,7 +529,7 @@ DMAC2 используется для работы с 16 битами и DMAC1 �
 
 1\) Вычислите абсолютный линейный адрес вашего буфера
 
-LinearAddr = MK\_SEG( Buf ) \* 16L + MK\_OFF ( Buf );
+LinearAddr = MK\_SEG( Buf ) * 16L + MK\_OFF ( Buf );
 
 2\) Отключите канал DMA звуковой платы установкой бита маски
 
@@ -625,9 +625,9 @@ MaskPort=0x0A; ClrPort=0xC; ModePort=0xB;
 
 ModeDMA=0x48+DMAChannel;
 
-CountPort=1+DMAChannel\*2;
+CountPort=1+DMAChannel*2;
 
-BaseAddrPort=DMAChannel\*2;
+BaseAddrPort=DMAChannel*2;
 
 PagePort=pageports\[DMAChannel\];
 
@@ -764,7 +764,7 @@ WriteSB ( lo( frequency ) );
 
 Выделение памяти под буфер DMA:
 
-data=(char far \*)farmalloc(131000L);
+data=(char far *)farmalloc(131000L);
 
 if ( data==NULL )
 
@@ -970,7 +970,7 @@ enable();
 
 f = fopen(argv\[1\],\"rb\");
 
-raw = ( char far \* ) farmalloc(32000L);
+raw = ( char far * ) farmalloc(32000L);
 
 if ( f == 0 \|\| raw==0 )
 

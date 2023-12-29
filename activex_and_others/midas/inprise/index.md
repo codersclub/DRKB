@@ -320,7 +320,7 @@ At this point we have the following structure for our sample:
   ---- -----------------------------------------------------------------------------------------
 
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Drop a TQuery component on your form and set its DatabaseName property to 'internalIBLocal' and SQL property to 'SELECT \* FROM department'. Verify the query, setting Active to True and then back to False.
+  2.   Drop a TQuery component on your form and set its DatabaseName property to 'internalIBLocal' and SQL property to 'SELECT * FROM department'. Verify the query, setting Active to True and then back to False.
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- ---------------------------------------------------------------------------------------------------------------------------------------
@@ -703,7 +703,7 @@ If the provider is performing the updates, you can adjust what's
 included in the where clause of the generated SQL for optimum
 performance. The UpdateMode property of the TProvider component controls
 how the where clause is constructed. The following table summarizes
-possible generation options for the query 'SELECT \* FROM department'
+possible generation options for the query 'SELECT * FROM department'
 from our sample application:
  
 
@@ -1182,7 +1182,7 @@ Let's explore another one of them.
   ---- -------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- --------------------------------------------------------------------------------------------------------------------------------------------------------
-  7.   Right-click ClientDataSet1 and select Clear Data to kill the data packet. Otherwise the data packet will become part of the data module's \*.DFM file.
+  7.   Right-click ClientDataSet1 and select Clear Data to kill the data packet. Otherwise the data packet will become part of the data module's *.DFM file.
   ---- --------------------------------------------------------------------------------------------------------------------------------------------------------
 
  
@@ -1293,7 +1293,7 @@ create is the server application.
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- -----------------------------------------------------------------------------------------------------------------------
-  6.   Drop a TQuery component on DataModule2 and link it to Database1. Set its SQL property to 'SELECT \* FROM department'.
+  6.   Drop a TQuery component on DataModule2 and link it to Database1. Set its SQL property to 'SELECT * FROM department'.
   ---- -----------------------------------------------------------------------------------------------------------------------
 
   ---- -------------------------------------------------------------------------
@@ -1474,7 +1474,7 @@ a single database connection as well.
   ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- ----------------------------------------------------------------------------------------------------------
-  6.   Drop a TQuery on MyServer and link it to Database1. Set its SQL property to 'SELECT \* FROM department'.
+  6.   Drop a TQuery on MyServer and link it to Database1. Set its SQL property to 'SELECT * FROM department'.
   ---- ----------------------------------------------------------------------------------------------------------
 
   ---- ----------------------------------------------------------------------
@@ -2424,4 +2424,4 @@ Jessie Potts, Senior Analyst
 
 Marotz, Inc.
 
-\*\*\* Promise PM, deliver AM \*\*\*
+*** Promise PM, deliver AM ***

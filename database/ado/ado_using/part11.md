@@ -193,7 +193,7 @@ property CacheSize: Integer;
 доступную компоненту память. Это можно сделать путем несложных
 вычислений:
 
-CacheSizelnMem := ADODataSet.CacheSize \* ADODataSet.RecordSize;
+CacheSizelnMem := ADODataSet.CacheSize * ADODataSet.RecordSize;
 
 где RecordSize --- свойство
 

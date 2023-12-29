@@ -232,7 +232,7 @@ FINISH REPORT
 
 где FLOAT = DOUBLE PRECISSION
 Переменная типа запись описывается при помощи конструкции RECORD ...
-END RECORD или конструкции LIKE имя\_таблицы.\*
+END RECORD или конструкции LIKE имя\_таблицы.*
 Переменная типа массив имеет описатель ARRAY \[i,j,k\] OF type, где type
 - тип простой переменной, конструкция RECORD, или конструкция ARRAY.
 
@@ -266,7 +266,7 @@ END RECORD      \# Здесь заканчивается объявление з
 
 \# zarplata таблицы kadry из базы данных zawod
 
-DEFINE rrr RECORD LIKE kadry.\*
+DEFINE rrr RECORD LIKE kadry.*
 
 \#  Переменную типа запись тоже можно объявить с ключевым словом
 
@@ -315,12 +315,12 @@ LET   massiw\[1,i+2\].kolwo = zap.a + LENGTH(massiw\[1,i+2\].tip)
 
 
 Для сокращения перечисления элементов в списках можно пользоваться
-нотацией (\*). Например, strkt.\* означает все элементы записи strkt. А
+нотацией (*). Например, strkt.* означает все элементы записи strkt. А
 так же нотацией THRU: (элементы записи от и до)
 
-SELECT kadry.\* INTO strkt.\* FROM kadry WHERE kadry.tabnom=i+j
+SELECT kadry.* INTO strkt.* FROM kadry WHERE kadry.tabnom=i+j
 
-SELECT \* INTO strukt.b THRU strkt.e FROM kadry
+SELECT * INTO strukt.b THRU strkt.e FROM kadry
 
 
 
@@ -335,7 +335,7 @@ DATABASE zawod
 
 GLOBALS
 
-DEFINE zap RECORD LIKE kadry.\*
+DEFINE zap RECORD LIKE kadry.*
 
 DEFINE ext\_count INT
 
@@ -376,7 +376,7 @@ MAIN
 
 . . .
 
-  CALL stroka(rec1.\*) RETURNING simw
+  CALL stroka(rec1.*) RETURNING simw
 
 . . .
 
@@ -485,7 +485,7 @@ WHILE      ff \> 3 or nn=\"проба\"
 
   SLEEP  5
 
-  RUN \"rm \*\" WITHOUT WAITING
+  RUN \"rm *\" WITHOUT WAITING
 
 END WHILE
 
@@ -550,11 +550,11 @@ MAIN
 
 DATABASE zawod
 
-DEFINE zap RECORD LIKE kadry.\*
+DEFINE zap RECORD LIKE kadry.*
 
 DECLARE curs1 CURSOR FOR
 
-    select \* from kadry where datarovd\>\"9/25/1973\"
+    select * from kadry where datarovd\>\"9/25/1973\"
 
 \#  в цикле FOREACH выводим на экран все строки таблицы kadry,
 
@@ -562,11 +562,11 @@ DECLARE curs1 CURSOR FOR
 
 \#  1973 года.
 
-FOREACH curs1 INTO zap.\*      \# Берем очередную строку и по-
+FOREACH curs1 INTO zap.*      \# Берем очередную строку и по-
 
                                \# мещаем ее в запись zap
 
-MESSAGE zap.\*                 \#  Выводим запись zap на экран
+MESSAGE zap.*                 \#  Выводим запись zap на экран
 
 PROMPT \"Еще ?\" FOR CHAR c
 
@@ -577,12 +577,12 @@ curs2 помещаются в массив z1 (но не более 100 стро
 
 DATABASE zawod
 
-DEFINE z1 ARRAY\[100\] OF RECORD LIKE kadry.\*, counter int
+DEFINE z1 ARRAY\[100\] OF RECORD LIKE kadry.*, counter int
 
-DECLARE curs2 CURSOR FOR SELECT \* FROM kadry
+DECLARE curs2 CURSOR FOR SELECT * FROM kadry
 
        WHERE datarovd\<\"9/26/1973\" OPEN curs2 FOR counter=\"1\" TO 100
-FETCH curs2 INTO z1\[counter\].\* \# взять очередную строку и поместить
+FETCH curs2 INTO z1\[counter\].* \# взять очередную строку и поместить
 ее в следующий элемент \# массива z1 IF status=\"NOTFOUND\" THEN \# если
 выбранные сроки кончились, закончить цикл EXIT FOR END IF END FOR LET
 counter=\"counter-1\" MESSAGE \"В массив z1 прочитано \",counter, \"
@@ -597,16 +597,16 @@ counter=\"counter-1\" MESSAGE \"В массив z1 прочитано \",counter
 пользователь сам должен ввести условия, по которым будут найдены строки
 в таблице ceh. Он, например, может ввести: \"nomerceh\>15 and
 nomerceh\<23\". Программа прицепит это условие к строке, в которой
-записан SELECT оператор, получит строчку \"SELECT \* FROM ceh WHERE
+записан SELECT оператор, получит строчку \"SELECT * FROM ceh WHERE
 nomerceh\>15 and nomerceh\<23\", изготовит из нее оператор, и для этого
 изготовленного оператора SELECT объявит курсор. Дальше действия
 аналогичны предыдущему примеру.
 
-DEFINE z2 ARRAY\[100\] OF RECORD LIKE ceh.\*,
+DEFINE z2 ARRAY\[100\] OF RECORD LIKE ceh.*,
 
         counter int, simw char(200)
 
-PROMPT \"допишите оператор SELECT \* FROM ceh WHERE \" FOR simw
+PROMPT \"допишите оператор SELECT * FROM ceh WHERE \" FOR simw
 
 IF LENGTH(simw)=0 THEN
 
@@ -614,7 +614,7 @@ IF LENGTH(simw)=0 THEN
 
    END IF
 
-LET simw=\"SELECT \* FROM ceh WHERE \", simw CLIPPED
+LET simw=\"SELECT * FROM ceh WHERE \", simw CLIPPED
 
 PREPARE st2 FROM simw
 
@@ -622,7 +622,7 @@ DECLARE cs2 FOR st2
 
 let counter=1
 
-FOREACH cs2 INTO z2\[counter\].\*
+FOREACH cs2 INTO z2\[counter\].*
 
 LET counter=counter+1
 
@@ -851,7 +851,7 @@ DISPLAY и INPUT
 
 Оператор DISPLAY выводит данные в поля экранной формы.
 
-DISPLAY a,b,zap\[i\].nomerceh TO pole1,fscr.\* ATTRIBUTE(BOLD)
+DISPLAY a,b,zap\[i\].nomerceh TO pole1,fscr.* ATTRIBUTE(BOLD)
 
 Если имена выводимых переменных совпадают с именами экранных полей в
 текущей экранной форме, то можно применить ключевое слово BY NAME.
@@ -862,7 +862,7 @@ DISPLAY BY NAME fio, dolvnostx
 формы. Можно предусмотреть дополнительные действия при вводе.  Для этого
 в оператор можно включить контрольные блоки AFTER, BEFORE, ON KEY.
 
-INPUT  kadr.\* FROM fio, dolvnostx, nomerceh
+INPUT  kadr.* FROM fio, dolvnostx, nomerceh
 
     BEFORE FIELD nomerceh
 
@@ -924,7 +924,7 @@ DEFINE ceharr ARRAY\[25\] OF RECORD       \# массив для хранени�
 
        DECLARE cehcurs CURSOR FOR
 
-         SELECT \* FROM ceh ORDER BY nomerceh
+         SELECT * FROM ceh ORDER BY nomerceh
 
 \#  Выполнить запрос и все выбранные строки поместить в програм-
 
@@ -932,7 +932,7 @@ DEFINE ceharr ARRAY\[25\] OF RECORD       \# массив для хранени�
 
        LET counter = 0
 
-       FOREACH cehcurs INTO ceharr\[counter+1\].\*
+       FOREACH cehcurs INTO ceharr\[counter+1\].*
 
                LET counter = counter + 1
 
@@ -952,7 +952,7 @@ DEFINE ceharr ARRAY\[25\] OF RECORD       \# массив для хранени�
 
        call set\_count(counter)
 
-       DISPLAY ARRAY ceharr TO cehscreen.\*
+       DISPLAY ARRAY ceharr TO cehscreen.*
 
        ON KEY (CONTROL-M) EXIT DISPLAY
 
@@ -1035,7 +1035,7 @@ f001 = ceh.nameceh;
 
 INSTRUCTIONS
 
-screen record cehscreen\[5\] (ceh.\*)
+screen record cehscreen\[5\] (ceh.*)
 
 END
 
@@ -1069,7 +1069,7 @@ before field kalkulator
 
   let stroka\_kalkulatora=
 
-  \"select  count(\*),\",wyravenie,\" from systables\"
+  \"select  count(*),\",wyravenie,\" from systables\"
 
   whenever error continue
 
@@ -1115,7 +1115,7 @@ DATABASE zawod
 
 MAIN
 
-DEFINE zapisx record like kadry.\*
+DEFINE zapisx record like kadry.*
 
 DEFINE  simw char (200), zapr char (300),fn  char (18)
 
@@ -1123,11 +1123,11 @@ OPEN form maxprim from \"maxprim\"
 
 DISPLAY form maxprim            \# вывести экранную форму
 
-CONSTRUCT BY NAME simw ON kadry.\* \# Введение критериев выбора
+CONSTRUCT BY NAME simw ON kadry.* \# Введение критериев выбора
 
                                  \# с экрана
 
-LET zapr=\"select \* from kadry  where \",
+LET zapr=\"select * from kadry  where \",
 
 simw clipped,\" order by tabnom \"
 
@@ -1151,9 +1151,9 @@ END IF
 
   \# выполнить запрос и сбросить выбранные строки в отчет
 
-  FOREACH qquer  into zapisx.\*   \# Очередную строку из курсора
+  FOREACH qquer  into zapisx.*   \# Очередную строку из курсора
 
-  OUTPUT TO REPORT kadryrep(zapisx.\*)  \# поместить в отчет
+  OUTPUT TO REPORT kadryrep(zapisx.*)  \# поместить в отчет
 
   END FOREACH
 
@@ -1165,7 +1165,7 @@ REPORT kadryrep(z)
 
 DEFINE nameceh like ceh.nameceh
 
-DEFINE z record like kadry.\*
+DEFINE z record like kadry.*
 
   \# nomerceh  int,          \# номер цеха
 
@@ -1236,7 +1236,7 @@ need 2 lines
 
 print \" В цехе \",nameceh clipped,2 spaces,
 
-      group count(\*) using \"\#\#\#\#\#\" ,\" человек, \"
+      group count(*) using \"\#\#\#\#\#\" ,\" человек, \"
 
 print \" Средняя зарплата \",
 
@@ -1267,7 +1267,7 @@ END REPORT
 
 \| таб.номер \[           \]                                     \|
 
-\| фамилия   \[\*ов                 \]                            \|
+\| фамилия   \[*ов                 \]                            \|
 
 \| должность \[                    \]                            \|
 
@@ -1279,7 +1279,7 @@ END REPORT
 
 \|                                                             \|
 
-nomerceh between 1 and 4 and fio matches \"\*о\*\" and zarplata\>500
+nomerceh between 1 and 4 and fio matches \"*о*\" and zarplata\>500
 
 \|                                                             \|
 

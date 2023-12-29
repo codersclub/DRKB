@@ -1,11 +1,11 @@
 ---
-Title: Сохранение данных из ListView в \*.xls
+Title: Сохранение данных из ListView в *.xls
 Date: 01.01.2007
 author: dDan (ddan2002@mail.ru)
 ---
 
 
-Сохранение данных из ListView в \*.xls
+Сохранение данных из ListView в *.xls
 ======================================
 
 ::: {.date}

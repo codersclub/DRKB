@@ -19,7 +19,7 @@ a RitchText object named WordEditor
 
 and an OpenDialog component.
 
-From now on, you can browse for any \*.doc file and load it into the
+From now on, you can browse for any *.doc file and load it into the
 RitchText object.
 
 NOTE: Format:=6 instructs Word to save the file as RTF. Extension is not

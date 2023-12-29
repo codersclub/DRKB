@@ -18,12 +18,12 @@ would do the next:
 1\.        Create database TrasportDB.mdb - use ADOX.
 
 2\.        Copy table from source table into TransportDB.mdb with Select
-\* Into \[TransportTable\] in \"FullPath\\TransportDB.mdb\" From
+* Into \[TransportTable\] in \"FullPath\\TransportDB.mdb\" From
 SourceTable.
 
 3\.        Deliver TransportDB.mdb on destination computer.
 
-4\.        Copy table from TransportTable into DestTable with Select \*
+4\.        Copy table from TransportTable into DestTable with Select *
 Into \[DestTable\] From \[TransportTable\] in
 \"FullPath\\TransportDB.mdb\".
 

@@ -1353,7 +1353,7 @@ create procedure au\_sales (\@author\_id id)
 
 as
 
-/\* declare local variables used for fetch \*/
+/* declare local variables used for fetch */
 
 declare \@title\_id tid
 
@@ -1365,7 +1365,7 @@ declare \@msg varchar(120)
 
  
 
-/\* declare the cursor to get each book written by given author \*/
+/* declare the cursor to get each book written by given author */
 
 declare author\_sales cursor for
 
@@ -1403,8 +1403,8 @@ end
 
  
 
-/\* if cursor result set is not empty, then process each row of
-information \*/
+/* if cursor result set is not empty, then process each row of
+information */
 
 while (@\@sqlstatus = 0)
 
@@ -1466,7 +1466,7 @@ end
 
  
 
-/\* if error occurred, call a designated handler \*/
+/* if error occurred, call a designated handler */
 
 if (@\@sqlstatus = 1) exec error\_handle
 

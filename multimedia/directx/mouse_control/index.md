@@ -1092,4 +1092,4 @@ Date: 21.03.2002
 
 Взято с сайта Анатолия Подгорецкого  <https://podgoretsky.com>
 
-по материалам fido7.ru.delphi.\*
+по материалам fido7.ru.delphi.*

@@ -18,7 +18,7 @@ Date: 01.01.2007
       frombuf, tobuf: Array [0..128] of Char;
     begin  FillChar( frombuf, Sizeof(frombuf), 0 );
       FillChar( tobuf, Sizeof(tobuf), 0 );
-      StrPCopy( frombuf, 'd:\brief\*.*' );
+      StrPCopy( frombuf, 'd:\brief*.*' );
       StrPCopy( tobuf, 'd:\temp\brief' );
       with OpStruc do begin
         Wnd := Handle;

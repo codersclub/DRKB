@@ -99,7 +99,7 @@ ODBC Data Sources в панели управления).
 
 Кликните по кнопке \"Add...\"
 
-Выберите \"Microsoft Access Driver (\*.mdb)\" и нажмите ENTER. Появится
+Выберите \"Microsoft Access Driver (*.mdb)\" и нажмите ENTER. Появится
 диалоговое окошко \"ODBC Microsoft Access Setup\".
 
 Задайте имя в текстовом окошке Data Source Name (без пробелов и без

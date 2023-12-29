@@ -21,7 +21,7 @@ TSearchRec которая хранит информацию о текущем с
 
     Var SearchRec:TSearchRec;
     ...
-    If FindFirst('c:\Windows\*.*', faAnyFile, SearchRec)=0 then
+    If FindFirst('c:\Windows*.*', faAnyFile, SearchRec)=0 then
     repeat
     {Вот здесь мы можем делать с найденным файлом что угодно
     SearchRec.name - имя файла

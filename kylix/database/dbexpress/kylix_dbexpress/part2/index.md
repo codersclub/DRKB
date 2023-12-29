@@ -496,7 +496,7 @@ ServerCharSet - win1251
 
 Свойство DBConnection компонента SQLClientDataSet1 установим равным
 SQLConnection1. Введем запрос на выборку данных из таблицы users -
-select \* from users - в св-во CommandText, либо воспользуемся диалогом
+select * from users - в св-во CommandText, либо воспользуемся диалогом
 для данного св-ва. Активизируем запрос, установив св-во Active в True.
 
 Далее с закладки Data Access на форму положим компонент TDataSource.

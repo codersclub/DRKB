@@ -363,22 +363,22 @@ Kernel32!ORD\_0001, эта затычка эмулирует VxDCall, она н�
 
 Отсюда способ устранения:
 
-BPX CreateFileA if \*(esp-\>4+4)==\'SICE\' \|\| \*(esp-\>4+4)==\'SIWV\'
-\|\| \*(esp-\>4+4)==\'NTIC\'
+BPX CreateFileA if *(esp-\>4+4)==\'SICE\' \|\| *(esp-\>4+4)==\'SIWV\'
+\|\| *(esp-\>4+4)==\'NTIC\'
 
 или            
 
-  BPINT 30 if eax==002A001F && (\*edi==\'SICE\' \|\| \*edi==\'SIWV\') 
+  BPINT 30 if eax==002A001F && (*edi==\'SICE\' \|\| *edi==\'SIWV\') 
 
 ; очень медленно т.к. обращение к INT 30 и INT 20 происходит очень часто
 
 или
 
-  BPINT 30 if (\*edi==\'SICE\' \|\| \*edi==\'SIWV\')
+  BPINT 30 if (*edi==\'SICE\' \|\| *edi==\'SIWV\')
 
 или
 
-  BPX KERNEL32!ORD\_0001 if \*edi==\'SICE\' \|\| \*edi==\'SIWV\'      
+  BPX KERNEL32!ORD\_0001 if *edi==\'SICE\' \|\| *edi==\'SIWV\'      
 
 или
 
@@ -511,62 +511,62 @@ int 42H, и танцуем джигу на костях защиты.
 
    struct VxD\_Desc\_Block {
 
-   ULONG DDB\_Next;         /\* VMM RESERVED FIELD \*/
+   ULONG DDB\_Next;         /* VMM RESERVED FIELD */
 
-   USHORT DDB\_SDK\_Version;     /\* INIT  RESERVED FIELD \*/
+   USHORT DDB\_SDK\_Version;     /* INIT  RESERVED FIELD */
 
-   USHORT DDB\_Req\_Device\_Number;   /\* INIT  \*/
+   USHORT DDB\_Req\_Device\_Number;   /* INIT  */
 
-   UCHAR DDB\_Dev\_Major\_Version;    /\* INIT \<0\> Major device number
-\*/
+   UCHAR DDB\_Dev\_Major\_Version;    /* INIT \<0\> Major device number
+*/
 
-   UCHAR DDB\_Dev\_Minor\_Version;    /\* INIT \<0\> Minor device number
-\*/
+   UCHAR DDB\_Dev\_Minor\_Version;    /* INIT \<0\> Minor device number
+*/
 
-   USHORT DDB\_Flags;           /\* INIT \<0\> for init calls complete
-\*/
+   USHORT DDB\_Flags;           /* INIT \<0\> for init calls complete
+*/
 
-   UCHAR DDB\_Name\[8\];          /\* AINIT \<\"        \"\> Device name
-\*/
+   UCHAR DDB\_Name\[8\];          /* AINIT \<\"        \"\> Device name
+*/
 
-   ULONG DDB\_Init\_Order;       /\* INIT  \*/
+   ULONG DDB\_Init\_Order;       /* INIT  */
 
-   ULONG DDB\_Control\_Proc;     /\* Offset of control procedure \*/
+   ULONG DDB\_Control\_Proc;     /* Offset of control procedure */
 
-   ULONG DDB\_V86\_API\_Proc;     /\* INIT \<0\> Offset of API procedure
-\*/
+   ULONG DDB\_V86\_API\_Proc;     /* INIT \<0\> Offset of API procedure
+*/
 
-   ULONG DDB\_PM\_API\_Proc;      /\* INIT \<0\> Offset of API procedure
-\*/
+   ULONG DDB\_PM\_API\_Proc;      /* INIT \<0\> Offset of API procedure
+*/
 
-   ULONG DDB\_V86\_API\_CSIP;     /\* INIT \<0\> CS:IP of API entry
-point \*/
+   ULONG DDB\_V86\_API\_CSIP;     /* INIT \<0\> CS:IP of API entry
+point */
 
-   ULONG DDB\_PM\_API\_CSIP;      /\* INIT \<0\> CS:IP of API entry
-point \*/
+   ULONG DDB\_PM\_API\_CSIP;      /* INIT \<0\> CS:IP of API entry
+point */
 
-   ULONG DDB\_Reference\_Data;       /\* Reference data from real mode
-\*/
+   ULONG DDB\_Reference\_Data;       /* Reference data from real mode
+*/
 
-   ULONG DDB\_Service\_Table\_Ptr;    /\* INIT \<0\> Pointer to service
-table \*/
+   ULONG DDB\_Service\_Table\_Ptr;    /* INIT \<0\> Pointer to service
+table */
 
-   ULONG DDB\_Service\_Table\_Size;   /\* INIT \<0\> Number of services
-\*/
+   ULONG DDB\_Service\_Table\_Size;   /* INIT \<0\> Number of services
+*/
 
-   ULONG DDB\_Win32\_Service\_Table;  /\* INIT \<0\> Pointer to Win32
-services \*/
+   ULONG DDB\_Win32\_Service\_Table;  /* INIT \<0\> Pointer to Win32
+services */
 
-   ULONG DDB\_Prev;         /\* INIT \<\'Prev\'\> Ptr to prev 4.0 DDB
-\*/
+   ULONG DDB\_Prev;         /* INIT \<\'Prev\'\> Ptr to prev 4.0 DDB
+*/
 
-   ULONG DDB\_Size;     /\* INIT  Reserved \*/
+   ULONG DDB\_Size;     /* INIT  Reserved */
 
-   ULONG DDB\_Reserved1;        /\* INIT \<\'Rsv1\'\> Reserved \*/
+   ULONG DDB\_Reserved1;        /* INIT \<\'Rsv1\'\> Reserved */
 
-   ULONG DDB\_Reserved2;        /\* INIT \<\'Rsv2\'\> Reserved \*/
+   ULONG DDB\_Reserved2;        /* INIT \<\'Rsv2\'\> Reserved */
 
-   ULONG DDB\_Reserved3;        /\* INIT \<\'Rsv3\'\> Reserved \*/
+   ULONG DDB\_Reserved3;        /* INIT \<\'Rsv3\'\> Reserved */
 
   };
 

@@ -63,7 +63,7 @@ Small example. Assume the source data is 08137919805
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ---------------------
-  2.   2\.        22\*3=66
+  2.   2\.        22*3=66
   ---- ---------------------
 :::
 

@@ -81,7 +81,7 @@ video/quicktime
 
 audio/x-wav
 
-audio/basic (Sun \*.au audio files)
+audio/basic (Sun *.au audio files)
 
 audio/mp3
 

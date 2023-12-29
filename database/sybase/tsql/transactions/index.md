@@ -614,19 +614,19 @@ begin tran
 
    select @\@trancount
 
-   /\* @\@trancount = 1 \*/
+   /* @\@trancount = 1 */
 
    begin tran
 
        select @\@trancount
 
-       /\* @\@trancount = 2 \*/
+       /* @\@trancount = 2 */
 
        begin tran
 
            select @\@trancount
 
-           /\* @\@trancount = 3 \*/
+           /* @\@trancount = 3 */
 
        commit tran
 
@@ -636,7 +636,7 @@ commit tran
 
 select @\@trancount
 
-/\* @@ trancount = 0 \*/
+/* @@ trancount = 0 */
 
  
 
@@ -664,15 +664,15 @@ begin transaction royalty\_change
 
  
 
-/\* A user sets out to change the royalty split \*/
+/* A user sets out to change the royalty split */
 
-/\* for the two authors of The Gourmet Microwave. \*/
+/* for the two authors of The Gourmet Microwave. */
 
-/\* Since the database would be inconsistent \*/
+/* Since the database would be inconsistent */
 
-/\* between the two updates, they must be grouped \*/
+/* between the two updates, they must be grouped */
 
-/\* into a transaction. \*/
+/* into a transaction. */
 
  
 
@@ -708,29 +708,29 @@ save transaction percent\_changed
 
  
 
-/\* After updating the royaltyper entries for \*/
+/* After updating the royaltyper entries for */
 
-/\* the two authors, the user inserts the \*/
+/* the two authors, the user inserts the */
 
-/\* savepoint \"percent\_changed,\" and then checks \*/
+/* savepoint \"percent\_changed,\" and then checks */
 
-/\* to see how a 10 percent increase in the
+/* to see how a 10 percent increase in the
 
-/\* price would affect the authors\' royalty \*/
+/* price would affect the authors\' royalty */
 
-/\* earnings. \*/
+/* earnings. */
 
  
 
 update titles
 
-set price = price \* 1.1
+set price = price * 1.1
 
 where title = \"The Gourmet Microwave\"
 
  
 
-select (price \* royalty \* total\_sales) \* royaltyper
+select (price * royalty * total\_sales) * royaltyper
 
 from titles, titleauthor, roysched
 
@@ -746,13 +746,13 @@ rollback transaction percent\_changed
 
  
 
-/\* The transaction rolls back to the savepoint \*/
+/* The transaction rolls back to the savepoint */
 
-/\* with the rollback transaction command. \*/
+/* with the rollback transaction command. */
 
-/\* Without a savepoint, it would roll back to \*/
+/* Without a savepoint, it would roll back to */
 
-/\* the begin transaction. \*/
+/* the begin transaction. */
 
  
 
@@ -1077,13 +1077,13 @@ committed и serializable предложения at isolation соответст
 
  
 
-select \*
+select *
 
 from titles
 
 at isolation read uncommitted
 
-select \*
+select *
 
 from titles
 
@@ -1164,7 +1164,7 @@ level, действующей для рабочего сеанса.
 
 declare commit\_crsr cursor
 
-for select \*
+for select *
 
 from titles
 

@@ -849,7 +849,7 @@ FORWARD, которое мы предоставим позже. Фактичес
     \<procedure\> ::= PROCEDURE \<ident\> \'(\' \<param-list\> \')\'
 \<begin-block\>
 
-    \<param\_list\> ::= \<parameter\> ( \',\' \<parameter\> )\* \| null
+    \<param\_list\> ::= \<parameter\> ( \',\' \<parameter\> )* \| null
 
 Аналогично, вызов процедуры выглядит так:
 
@@ -1853,7 +1853,7 @@ end;
 procedure LoadParam(N: integer);
 var Offset: integer;
 begin
-     Offset := 8 + 4 \* (NumParams - N);
+     Offset := 8 + 4 * (NumParams - N);
      Emit(\'MOVE.L \');
      WriteLn(Offset, \'(A6),A0\');
      EmitLn(\'MOVE (A0),D0\');
@@ -1867,7 +1867,7 @@ end;
 procedure StoreParam(N: integer);
 var Offset: integer;
 begin
-     Offset := 8 + 4 \* (NumParams - N);
+     Offset := 8 + 4 * (NumParams - N);
      Emit(\'MOVE.L \');
      WriteLn(Offset, \'(A6),A0\');
      EmitLn(\'MOVE D0,(A0)\');
@@ -1879,7 +1879,7 @@ end;
 Для правильного расчета,  мы также должны изменить одну строку в
 ParamList:
 
-    ParamList := 4 \* N;
+    ParamList := 4 * N;
 
 Теперь должно работать. Испытайте компилятор и посмотрите, генерирует ли
 он приемлемый код. Как вы увидите, код вряд ли оптимален, так как мы

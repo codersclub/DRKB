@@ -190,13 +190,13 @@ Kylix и документация к Qt library.
 Из файла qpushbutton.h, входящего в Qt library, явствует, что у класса
 QPushButton три конструктора:
 
-QPushButton( QWidget \*parent, const char \*name=0 );
+QPushButton( QWidget *parent, const char *name=0 );
 
-QPushButton( const QString &text, QWidget \*parent, const char\* name=0
+QPushButton( const QString &text, QWidget *parent, const char* name=0
 );
 
 QPushButton( const QIconSet& icon, const QString &text, QWidget
-\*parent, const char\* name=0 );
+*parent, const char* name=0 );
 
 Каждому из этих конструкторов соответствует своя функция в модуле Qt:
 

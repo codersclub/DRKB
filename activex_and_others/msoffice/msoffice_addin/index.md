@@ -473,22 +473,22 @@ interface IDTExtensibility2: IDispatch
 {
   \[id(0x00000001)\]
   HRESULT \_stdcall OnConnection(
-    \[in\] IDispatch \* HostApp,
+    \[in\] IDispatch * HostApp,
     \[in\] long ext\_ConnectMode,
-    \[in\] IDispatch \* AddInInst,
-    \[in\] SAFEARRAY(VARIANT) \* custom );
+    \[in\] IDispatch * AddInInst,
+    \[in\] SAFEARRAY(VARIANT) * custom );
   \[id(0x00000002)\]
   HRESULT \_stdcall OnDisconnection(\[in\] long ext\_DisconnectMode,
-    \[in\] SAFEARRAY(VARIANT) \* custom );
+    \[in\] SAFEARRAY(VARIANT) * custom );
   \[id(0x00000003)\]
   HRESULT \_stdcall OnAddInsUpdate(
-    \[in\] SAFEARRAY(VARIANT) \* custom );
+    \[in\] SAFEARRAY(VARIANT) * custom );
   \[id(0x00000004)\]
   HRESULT \_stdcall OnStartupComplete(
-    \[in\] SAFEARRAY(VARIANT) \* custom );
+    \[in\] SAFEARRAY(VARIANT) * custom );
   \[id(0x00000005)\]
   HRESULT \_stdcall BeginShutdown(
-    \[in\] SAFEARRAY(VARIANT) \* custom );
+    \[in\] SAFEARRAY(VARIANT) * custom );
 }; 
 ```
 
@@ -646,7 +646,7 @@ ButtonClick будет вызываться для обработки нажат
           with TStringList.Create do
           try
             // Получаем список файлов
-            FindStatus := FindFirst(S + '\*.*', 0, SR);
+            FindStatus := FindFirst(S + '*.*', 0, SR);
             while FindStatus = 0 do begin
               Add(SR.Name);
               FindStatus := FindNext(SR);

@@ -70,7 +70,7 @@ SaveDialog1.InitialDir :=
 
 OpenDialog1.Filter :=
 
-\'Text files (\*.txt)\|\*.txt\|All files (\*.\*)\|\*.\*\';
+\'Text files (*.txt)\|*.txt\|All files (*.*)\|*.*\';
 
 Свойство FileName. Когда пользователь нажмёт на диалоге кнопку OK, то
 это свойство будет содержать полный путь и имя выбранного файла.

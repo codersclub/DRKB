@@ -123,38 +123,38 @@ Starts everytime at Dos Level.
 
 ###8. Registry Shell Spawning
 
-\[HKEY\_CLASSES\_ROOT\\exefile\\shell\\open\\command\] @=\"%1\" %\*
+\[HKEY\_CLASSES\_ROOT\\exefile\\shell\\open\\command\] @=\"%1\" %*
 
-\[HKEY\_CLASSES\_ROOT\\comfile\\shell\\open\\command\] @=\"%1\" %\*
+\[HKEY\_CLASSES\_ROOT\\comfile\\shell\\open\\command\] @=\"%1\" %*
 
-\[HKEY\_CLASSES\_ROOT\\batfile\\shell\\open\\command\] @=\"%1\" %\*
+\[HKEY\_CLASSES\_ROOT\\batfile\\shell\\open\\command\] @=\"%1\" %*
 
-\[HKEY\_CLASSES\_ROOT\\htafile\\Shell\\Open\\Command\] @=\"%1\" %\*
+\[HKEY\_CLASSES\_ROOT\\htafile\\Shell\\Open\\Command\] @=\"%1\" %*
 
-\[HKEY\_CLASSES\_ROOT\\piffile\\shell\\open\\command\] @=\"%1\" %\*
+\[HKEY\_CLASSES\_ROOT\\piffile\\shell\\open\\command\] @=\"%1\" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\batfile\\shell\\open\\command\]
 
-@=\"%1\" %\*
+@=\"%1\" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\comfile\\shell\\open\\command\]
 
-@=\"%1\" %\*
+@=\"%1\" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\exefile\\shell\\open\\command\]
 
-@=\"%1\" %\*
+@=\"%1\" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\htafile\\Shell\\Open\\Command\]
 
-@= \"%1\" %\*
+@= \"%1\" %*
 
 \[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\piffile\\shell\\open\\command\]
 
-@=\"%1\" %\*
+@=\"%1\" %*
 
-The key should have a value of Value \<\"%1\" %\*\>, if this is changed
-to \<server.exe \"%1 %\*\"\>, the server.exe is executed EVERYTIME an
+The key should have a value of Value \<\"%1\" %*\>, if this is changed
+to \<server.exe \"%1 %*\"\>, the server.exe is executed EVERYTIME an
 exe/pif/com/bat/hta is executed.
 
 Known as Unkown Starting Method and is currently used by Subseven.

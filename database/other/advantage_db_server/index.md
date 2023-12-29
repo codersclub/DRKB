@@ -86,7 +86,7 @@ Linux glibc 2.1.2 - 11+ with kernel 2.4+ 8 exabytes (9,223,372,036,854,775,807 b
 
 Windows 95/98/ME 4 gigabytes (4,294,967,296 bytes)
 
-Windows NT/2000 with NTFS 4 gigabytes \* (Index Page Size) : Max 35 terabytes
+Windows NT/2000 with NTFS 4 gigabytes * (Index Page Size) : Max 35 terabytes
 
 Windows NT/2000 with FAT32 4 gigabytes (4,294,967,296 bytes)
 
@@ -94,13 +94,13 @@ NetWare 4 gigabytes (4,294,967,296 bytes)
 
 Linux pre-2.1.2 - 11 glibc and pre-2.4 kernel 2 gigabytes (2,147,483,648 bytes)
 
-Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes \* (Index Page Size) : Max 35 terabytes
+Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes * (Index Page Size) : Max 35 terabytes
 
 Максимальный размер memo файла
 
 Windows 95/98/ME 4 gigabytes (4,294,967,296 bytes)
 
-Windows NT/2000 with NTFS 4 gigabytes \* (Memo Page Size) : Max 4 terabytes
+Windows NT/2000 with NTFS 4 gigabytes * (Memo Page Size) : Max 4 terabytes
 
 Windows NT/2000 with FAT32 4 gigabytes (4,294,967,296 bytes)
 
@@ -108,7 +108,7 @@ NetWare 4 gigabytes (4,294,967,296 bytes)
 
 Linux pre-2.1.2 - 11 glibc and pre-2.4 kernel 2 gigabytes (2,147,483,648 bytes)
 
-Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes \* (Memo Page Size): Max 4 terabytes
+Linux glibc 2.1.2 - 11+ with kernel 2.4+ 4 gigabytes * (Memo Page Size): Max 4 terabytes
 
 Максимальное число записей 2 миллиарда.
 
@@ -190,21 +190,21 @@ extern \"C\" UNSIGNED32 \_\_declspec(dllexport) WINAPI RefreshSeries
 
   UNSIGNED32   a\_ConnectionID, // Идентификатор сессии
 
-  UNSIGNED8   \*a\_UserName,     // Имя пользователя (логин)
+  UNSIGNED8   *a\_UserName,     // Имя пользователя (логин)
 
-  UNSIGNED8   \*a\_Password,     // Пароль пользователя
+  UNSIGNED8   *a\_Password,     // Пароль пользователя
 
-  UNSIGNED8   \*a\_ProcName,     // Имя хранимой процедуры(не
+  UNSIGNED8   *a\_ProcName,     // Имя хранимой процедуры(не
 пользоваться:
 
                               // будет исключено в следующей версии
 
   UNSIGNED32   a\_RecNum,       // Аргумент зарезервирован для тригера
 
-  UNSIGNED8   \*a\_InpName,      // Имя таблицы входных аргументов
+  UNSIGNED8   *a\_InpName,      // Имя таблицы входных аргументов
 хранимой процедуры
 
-  UNSIGNED8   \*a\_OutName       // Имя таблицы  выходных аргументов
+  UNSIGNED8   *a\_OutName       // Имя таблицы  выходных аргументов
 хранимой процедуры
 
                               // или возращаемого курсора данных
@@ -217,17 +217,17 @@ extern \"C\" UNSIGNED32 \_\_declspec(dllexport) WINAPI RefreshSeries
 
   {
 
-      TModuleAEP\* ModuleAEP =
-(TModuleAEP\*)gAEPSessionMgr-\>GetDM(a\_ConnectionID);
+      TModuleAEP* ModuleAEP =
+(TModuleAEP*)gAEPSessionMgr-\>GetDM(a\_ConnectionID);
 
-      ModuleAEP-\>ParamsReconnect((char\*)a\_InpName,
-(char\*)a\_OutName);
+      ModuleAEP-\>ParamsReconnect((char*)a\_InpName,
+(char*)a\_OutName);
 
       ModuleAEP-\>RefreshSeries();
 
   }
 
-  catch( EADSDatabaseError \*E )
+  catch( EADSDatabaseError *E )
 
   {
 
@@ -309,7 +309,7 @@ catch(Exception& Exc)
 предствалять из себя SQL-выражение
 
 CREATE TRIGGER mytrigger ON orders AFTER DELETE BEGIN INSERT INTO
-backup\_orders SELECT \* FROM \_\_old; END
+backup\_orders SELECT * FROM \_\_old; END
 
 CREATE TRIGGER mytrigger ON orders INSTEAD OF UPDATE
 
@@ -720,7 +720,7 @@ UPDATE
 
 QUOTE        
 
-SELECT \* FROM system.objects        
+SELECT * FROM system.objects        
 
 system.dictinary - информация об базе данных :версия (не путать с
 версией сервера, имеется в виду именно версия БД), путь, ключ

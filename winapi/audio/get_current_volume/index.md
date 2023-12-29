@@ -31,12 +31,12 @@ Date: 01.01.2007
 Затем считал заголовок Wav- SampleCount, SamplesPerSec, BitsPerSample,
 Channeles.
 
-Затем считал данные- GetMem(buf, SampleCount \* Channeles \*
+Затем считал данные- GetMem(buf, SampleCount * Channeles *
 BitsPerSample);
 
 Описал массив Volume- SetLength(Volume, SampleCount);
 
-Затем - F.Read(buf\^, SampleCount\*2); F.Free;
+Затем - F.Read(buf\^, SampleCount*2); F.Free;
 
 Затем заполнил массив -
 

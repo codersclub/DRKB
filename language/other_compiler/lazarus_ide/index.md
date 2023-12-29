@@ -125,7 +125,7 @@ Linux, но и под Free/Net/Open-BSD и MacOS X. А если полноцен
 больше: DOS, OS/2-i386 (OS/2 Warp v3.0, 4.0, WarpServer for e-Business
 and eComStation), Mac OS X/Darwin for PowerPC, Mac OS (classic) for
 PowerPC, Netware-i386, NetwLibc-i386 и другие, менее распространенные.
-Причем для многих систем (Linux, MacOS, \*BSD) доступен как 32-битный,
+Причем для многих систем (Linux, MacOS, *BSD) доступен как 32-битный,
 так и 64-битный компилятор. Что это за компилятор? Это Free Pascal.
 
 Проект был основан в июне 1993 года, еще до появления первой версии

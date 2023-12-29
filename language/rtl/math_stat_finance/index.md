@@ -81,7 +81,7 @@ procedure Frexp(X: Extended; var Mantissa: Extended; var Exponent:
 Integer) register; - возвращает мантису и экспоненту
 
 function Ldexp(X: Extended; P: Integer): Extended register; - возвращает
-X\*2\*\*P
+X*2**P
 
 function Ceil(X: Extended):Integer; - округляет до ближайшего большего
 целого

@@ -396,7 +396,7 @@ make-ssh-known-hosts some.domain \> /etc/ssh\_known\_hosts
 наличия ssh, то можно сразу отобрать только хосты, поддерживающие ssh.
 Аналогично можно отобрать хосты, поддерживающие telnet:
 
-make-ssh-known-hosts some.domain Ё\^wks=.\*telnetё \> our\_hosts
+make-ssh-known-hosts some.domain Ё\^wks=.*telnetё \> our\_hosts
 
 Утилита может работать аналогичным образом с записями hinfo. Механизм ее
 работы следующий.

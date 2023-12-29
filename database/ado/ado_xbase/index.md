@@ -428,7 +428,7 @@ FROM источник
 хотим сохранить данные из таблицы SourceTable в таблицу формата Paradox
 7.0 TestTable.db, расположенную в корне диска D:. Казалось бы:
 
-SELECT \* INTO\[TestTable.DB\] in \'D:\\\' FROM SourceTable
+SELECT * INTO\[TestTable.DB\] in \'D:\\\' FROM SourceTable
 
 Нет, очередная ошибка. Вот, что мы видим.
 
@@ -437,7 +437,7 @@ SELECT \* INTO\[TestTable.DB\] in \'D:\\\' FROM SourceTable
 Ага, хорошо,
 давайте попробуем указать таблицу в пути:
 
-SELECT \* INTO\[TestTable\] in \'D:\\ TestTable.DB\' FROM SourceTable
+SELECT * INTO\[TestTable\] in \'D:\\ TestTable.DB\' FROM SourceTable
 
 Получим очередное сообщение об ошибке.
 

@@ -365,7 +365,7 @@ important, so following these steps carefully.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Click the 'Add' button and select the package 'NdbPack\*.dpl' from the directory where you downloaded NativeDB\\NativeDB\\Delphi\*, where '\*' should be replaced by the version of Delphi being used
+  2.   Click the 'Add' button and select the package 'NdbPack*.dpl' from the directory where you downloaded NativeDB\\NativeDB\\Delphi*, where '*' should be replaced by the version of Delphi being used
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -377,7 +377,7 @@ important, so following these steps carefully.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Click the 'Add' button again and this time select the package 'NdbSa\*.dpl where '\*' should be replaced by the version of Delphi being used
+  4.   Click the 'Add' button again and this time select the package 'NdbSa*.dpl where '*' should be replaced by the version of Delphi being used
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -401,7 +401,7 @@ important, so following these steps carefully.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  8.   In the 'Library Path' edit box, add the path to the folder named Delphi\* where '\*' is the version of Delphi being used.  An example path would be 'C:\\NativeDB\\Delphi3'
+  8.   In the 'Library Path' edit box, add the path to the folder named Delphi* where '*' is the version of Delphi being used.  An example path would be 'C:\\NativeDB\\Delphi3'
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -1181,7 +1181,7 @@ Some things to note are the following:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   It is not obvious which table is being accessed in this example.  The 'SQL' property for the 'TAsaDataset' component is set to 'Select \* from blob' meaning that the table 'blob' is being accessed. Recall that table 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and default 'autoincrement'.  The column 'imagefld' has the data type 'long binary'
+  1.   It is not obvious which table is being accessed in this example.  The 'SQL' property for the 'TAsaDataset' component is set to 'Select * from blob' meaning that the table 'blob' is being accessed. Recall that table 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and default 'autoincrement'.  The column 'imagefld' has the data type 'long binary'
   ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -1523,7 +1523,7 @@ When the 'Order By' clause is included and the 'Display Table' button is
 clicked, the entire table is displayed in a specific order.  An example
 of a SQL statement with an 'Order By' clause is:
 
-SELECT \* FROM Grid ORDER BY id
+SELECT * FROM Grid ORDER BY id
 
 This statement selects all rows and columns in the table 'Grid' and
 orders the rows according to the value in the 'id' column. 
@@ -1535,7 +1535,7 @@ clicked, a select group of rows and columns are displayed in a certain
 order.  An example of an SQL statement where both clauses are included
 is:
 
-SELECT \* FROM Grid WHERE name = 'your name' ORDER BY id
+SELECT * FROM Grid WHERE name = 'your name' ORDER BY id
 
 This statement selects all the columns in the table Grid where the value
 in the 'name' column is 'your name' and displays them in order of the
@@ -2144,7 +2144,7 @@ Figure 14
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT \* FROM \"DBA\".\"department\"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
+  9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT * FROM \"DBA\".\"department\"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 

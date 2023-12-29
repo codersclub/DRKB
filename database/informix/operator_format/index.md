@@ -26,10 +26,10 @@ Date: 01.01.2007
 где qualif \\in {YEAR,MONTH,DAY,HOUR,MINUTE,SECOND,FRACTION(n)}
 
 
-Операции числовые: \*\* \* / mod + - ( )
+Операции числовые: ** * / mod + - ( )
 Все аргументы, в том числе CHAR, преобразуются к типу DECIMAL
 Внимание: -7 mod 3 = -1
-Внимание: mod и \*\* нельзя использовать в операторе SELECT
+Внимание: mod и ** нельзя использовать в операторе SELECT
 
 Можно пользоваться встроенными функциями 4GL (см. \"Функции 4GL\") и
 функциями на языке Си.
@@ -68,7 +68,7 @@ Date: 01.01.2007
 
        string \[NOT\] MATCHES \"шаблон\" \[ESCAPE \"esc-char\"\]
 
-        спецсимволы шаблона \*  ? \[  abH  \]  \[\^  d  -  z  \]
+        спецсимволы шаблона *  ? \[  abH  \]  \[\^  d  -  z  \]
 
         означают \"много\", \"один\", \"любой из\", \"ни один из\"
 
@@ -127,7 +127,7 @@ FINISH REPORT report-name
 
 DEFINE  список переменных { type \| LIKE table.column
 
-              \| RECORD {LIKE table.\* \| список переменных \[,..\]
+              \| RECORD {LIKE table.* \| список переменных \[,..\]
 
                                        END RECORD} } \[,...\]
 
@@ -398,7 +398,7 @@ PROMPT, INPUT.Для их вызова применяйте функции.
 
 DISPLAY { BY NAME список переменных \|
 
-список переменных TO {список полей\|screen-record\[\[n\]\].\*}\[,..\] \|
+список переменных TO {список полей\|screen-record\[\[n\]\].*}\[,..\] \|
 
 список переменных AT row, column }
 
@@ -410,7 +410,7 @@ INPUT { BY NAME список переменных \[WITHOUT DEFAULTS\] \|
 
        список переменных \[WITHOUT DEFAULTS\] FROM
 
-        {список полей \| screen-record\[\[n\]\].\*}\[,...\]}
+        {список полей \| screen-record\[\[n\]\].*}\[,...\]}
 
 \[ATTRIBUTE(список атрибутов)\]
 
@@ -440,7 +440,7 @@ CONSTRUCT {BY NAME char-variable ON column-list \|
 
           char-variable ON column-list FROM
 
-           {список полей \| screen-record\[\[n\]\].\*}\[,...\]}
+           {список полей \| screen-record\[\[n\]\].*}\[,...\]}
 
        \[ATTRIBUTE(список атрибутов)\]
 
@@ -449,7 +449,7 @@ CONSTRUCT {BY NAME char-variable ON column-list \|
     +-----------------------+-----------------------+-----------------------+
     | символ:               | пример:               | назначение:           |
     +-----------------------+-----------------------+-----------------------+
-    | \*                    | \*X                   | произвольная строка   |
+    | *                    | *X                   | произвольная строка   |
     +-----------------------+-----------------------+-----------------------+
     | ?                     | X?                    | произвольный символ   |
     +-----------------------+-----------------------+-----------------------+
@@ -465,7 +465,7 @@ CONSTRUCT {BY NAME char-variable ON column-list \|
 
 call set\_count(кол-во выводимых строк) в программном массиве
 
-DISPLAY ARRAY record-array TO screen-array.\*
+DISPLAY ARRAY record-array TO screen-array.*
 
 \[ATTRIBUTE(список атрибутов)\]
 
@@ -479,7 +479,7 @@ DISPLAY ARRAY record-array TO screen-array.\*
 
 END DISPLAY \] \| \[END DISPLAY\]
 
-SCROLL {field-list \| screen-record.\*} \[,...} Прокрутить строки
+SCROLL {field-list \| screen-record.*} \[,...} Прокрутить строки
 
        {UP \| DOWN} \[BY int\]                 в экранном массиве
 
@@ -487,7 +487,7 @@ call set\_count(кол-во выводимых строк) в программн
 
 INPUT ARRAY record-array \[WITHOUT DEFAULTS\]
 
-FROM   screen-array.\*  \[HELP help-number\] \[ATTRIBUTE(атр.)\]
+FROM   screen-array.*  \[HELP help-number\] \[ATTRIBUTE(атр.)\]
 
 \[{BEFORE {ROW \| INSERT \| DELETE \| FIELD подсписок полей}\[,...\]
 
@@ -710,7 +710,7 @@ SET EXPLAIN {ON \| OFF}
 
 DELETE FROM table-name \[WHERE {condition \| CURRENT OF cursor-name}\]
 
-                                          !\* Только в 4GL \*!
+                                          !* Только в 4GL *!
 
 INSERT INTO table-name \[(column-list)\]
 
@@ -719,13 +719,13 @@ INSERT INTO table-name \[(column-list)\]
 UPDATE table-name SET {column-name ={ expression \| (SELECT-st) }
 \[,...\]
 
-\| {(col-list) \| \[table.\]\*} =
+\| {(col-list) \| \[table.\]*} =
 
-{ ({ expr-list \| (SELECT-st) } \[,...\]) \| record-name.\* }
+{ ({ expr-list \| (SELECT-st) } \[,...\]) \| record-name.* }
 
     \[WHERE {condition \| CURRENT OF cursor-name}\]
 
-                           !\* Только в 4GL \*!
+                           !* Только в 4GL *!
 
 LOAD FROM \"file-name\" \[DELIMITER \"?\"\] { INSERT INTO table
 
@@ -749,7 +749,7 @@ OUTPUT TO {FILENAME \| PIPE program} \[WITHOUT HEADINGS\] SELECT-st
 
 SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,...\]
 
-       \[INTO список переменных\]            !\* Только в 4GL \*!
+       \[INTO список переменных\]            !* Только в 4GL *!
 
        FROM { \[OUTER\] table-name \[tab-alias\] \|
 
@@ -787,15 +787,15 @@ SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,...\]
 
        строка \[NOT\] MATCHES \"шаблон\" \[ESCAPE \"esc-char\"\]
 
-        спецсимволы шаблона \*  ?   означают \"много\" \"один\"
+        спецсимволы шаблона *  ?   означают \"много\" \"один\"
 
         \[abH\]  \[\^d-z\]  \"один из\" \"ни один из\"
 
        выраж сравнение {ALL \| \[ANY \| SOME\]} (SELECT-оператор)
 
-       выраж \[NOT\] IN (SELECT-оператор)     !\* Обыкновенный \*!
+       выраж \[NOT\] IN (SELECT-оператор)     !* Обыкновенный *!
 
-       \[NOT\] EXISTS  (SELECT-оператор)      !\*  SQLевский   \*!
+       \[NOT\] EXISTS  (SELECT-оператор)      !*  SQLевский   *!
 
 Операторы задания прав доступа (не откатываются).
 

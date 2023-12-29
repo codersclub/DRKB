@@ -158,9 +158,9 @@ isql.
 
  
 
-select count(\*) from titles
+select count(*) from titles
 
-select count(\*) from authors
+select count(*) from authors
 
 go
 
@@ -192,7 +192,7 @@ insert test
 
 values (\"hello\", 598)
 
-select \* from test
+select * from test
 
 go
 
@@ -238,7 +238,7 @@ pubs2.
 
  
 
-select count(\*) from sysdatabase
+select count(*) from sysdatabase
 
 use pubs2
 
@@ -265,7 +265,7 @@ go
 
 drop table test
 
-select count(\*) from titles
+select count(*) from titles
 
 go
 
@@ -288,11 +288,11 @@ go
 
  
 
-select count(\*) from titles
+select count(*) from titles
 
-select count(\*) from authors
+select count(*) from authors
 
-slect count(\*) from publishers
+slect count(*) from publishers
 
 go
 
@@ -320,7 +320,7 @@ insert test
 
    values (\"hello\", 598)
 
-select \* from test
+select * from test
 
 create view testview as select column1 from test
 
@@ -366,7 +366,7 @@ This CREATE may only contain 1 statement. (Команда создания вь�
 
 use pubs2
 
-select \* from titles
+select * from titles
 
 go
 
@@ -421,9 +421,9 @@ use pubs2
 
 go
 
-select count(\*) from titles
+select count(*) from titles
 
-select count(\*) from authors
+select count(*) from authors
 
 go
 
@@ -435,7 +435,7 @@ insert test
 
   values (\"hello\", 598)
 
-select \* from test
+select * from test
 
 go
 
@@ -516,7 +516,7 @@ isql приводится информация о зависимости вып�
   Waitfor           Установить задержку на выполнение команды.
   Print             Вывести на экран сообщение, которое указано пользователем или хранится в локальной переменной.
   Raiserror         Вывести на экран сообщение об ошибке, указанное пользователем или хранящееся в локальной переменной, и установить глобальную переменную @\@error (ошибка).
-  /\* comment \*/   Внести комментарий (комментарий можно указать в любом месте SQL оператора).
+  /* comment */   Внести комментарий (комментарий можно указать в любом месте SQL оператора).
   ----------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
  
@@ -682,7 +682,7 @@ begin
 
   update titles
 
-  set price = price \* 2
+  set price = price * 2
 
   select title, price
 
@@ -742,7 +742,7 @@ begin
 
   update titles
 
-  set price = price \* 2
+  set price = price * 2
 
 end
 
@@ -1019,9 +1019,9 @@ else print \"nope\"
 
 declare \@tcount int, \@pcount int
 
-select \@tcount = (select count(\*) from titles),
+select \@tcount = (select count(*) from titles),
 
-  \@pcount = (select count(\*) from publishers)
+  \@pcount = (select count(*) from publishers)
 
 select \@tcount, \@pcount
 
@@ -1835,13 +1835,13 @@ sp\_getmassage, sp\_addmassage и команды print для записи со�
 
  
 
-/\*
+/*
 
-\*\* Install messages
+** Install messages
 
-\*\* First, the English (langid = NULL)
+** First, the English (langid = NULL)
 
-\*/
+*/
 
 set language us\_english
 
@@ -1854,7 +1854,7 @@ sp\_addmessage 25001,
 
 go
 
-/\* Then German\*/
+/* Then German*/
 
 sp\_addmessage 25001,
 
@@ -1875,15 +1875,15 @@ as
 
        declare \@arg1 varchar(40)
 
-       /\*
+       /*
 
-       \*\* check to make sure that there is not
+       ** check to make sure that there is not
 
-       \*\* a \@remotename for the \@remoteserver.
+       ** a \@remotename for the \@remoteserver.
 
-       \*/
+       */
 
-       if exists (select \*
+       if exists (select *
 
            from master.dbo.sysremotelogins l,
 
@@ -2014,7 +2014,7 @@ waitfor delay \"0:00:10\"
 
  
 
-/\* Текст комментария \*/
+/* Текст комментария */
 
  
 
@@ -2023,24 +2023,24 @@ waitfor delay \"0:00:10\"
 строки. Допускаются также комментарии, занимающие несколько строк, но
 при этом каждая строка должна начинаться с наклонной черты (слеша) и
 звездочки и заканчиваться звездочкой и слешем. Все, что находиться между
-символами "/\*" и "\*/", рассматривается как комментарий. Комментарии
+символами "/*" и "*/", рассматривается как комментарий. Комментарии
 могут быть вложенными друг в друга.
 
 Для длинных комментариев, занимающих несколько строк, вводится также
 следующее стилистическое соглашение. Комментарий должен начинаться
-символами "/\*", а все последующие строки двумя звездочками "\*\*".
-Такой комментарий, как обычно, должен заканчиваться символами "\*/". В
+символами "/*", а все последующие строки двумя звездочками "**".
+Такой комментарий, как обычно, должен заканчиваться символами "*/". В
 следующем примере можно увидеть подобный комментарий:
 
  
 
-select \* from titles
+select * from titles
 
-/\* A comment here might explain the rules
+/* A comment here might explain the rules
 
-\*\* associated with using an asterisk as
+** associated with using an asterisk as
 
-\*\* shorthand in the select list.\*/
+** shorthand in the select list.*/
 
 where price \> \$5
 
@@ -2051,11 +2051,11 @@ where price \> \$5
 
  
 
-/\* this procedure finds rules by user name\*/
+/* this procedure finds rules by user name*/
 
 create procedure findrules2 \@nm varchar(30) = null
 
-as if \@nm is null /\*if no parameter is given\*/
+as if \@nm is null /*if no parameter is given*/
 
 print \"You must give a user name\"
 

@@ -47,7 +47,7 @@ Date: 01.01.2007
 Так же не забудьте изменить высоту строки так, чтобы переносы строки
 поместились в ячейку:
 
-StringGrid1.RowHeights\[0\] := StringGrid1.DefaultRowHeight \* 2 ;
+StringGrid1.RowHeights\[0\] := StringGrid1.DefaultRowHeight * 2 ;
 
 Взято из <https://forum.sources.ru>
 

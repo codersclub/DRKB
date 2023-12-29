@@ -13,7 +13,7 @@ Date: 01.01.2007
 
 КАК ЧИТАТЬ ФАЙЛЫ OUTLOOK EXPRESS (.DBX)
 
-(формат файла \*.DBX)
+(формат файла *.DBX)
 
 1)Структура файла.
 
@@ -78,7 +78,7 @@ FlagCount: WORD; {количество элементов в таблице}
 end ;
 
 Чтобы получить размер таблицы флагов, можно написать
-SizeOfTable:=FlagCount\*SizeOf(DWord), a размер блока данных используйте
+SizeOfTable:=FlagCount*SizeOf(DWord), a размер блока данных используйте
 DataLength-SizeOfTable.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}

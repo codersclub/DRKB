@@ -40,9 +40,9 @@ root. Заплатки (patches) сложены в директории /patches
 Redhat 7.0 необходимо перейти в директорию \<путь к
 CD\>/patches/glibc\_redhat/7.0. Установка патчей выполняется командами
 
-   rpm -Uvh glibc-\[2c\]\*
+   rpm -Uvh glibc-\[2c\]*
 
-   rpm -Fvh glibc-\[dp\]\* nscd-\*
+   rpm -Fvh glibc-\[dp\]* nscd-*
 
 Возможно также Вам придется установить пакет libjpeg либо из
 дистрибутива RedHat либо из папки \<путь к CD\>/patches/jpeg6.2.0

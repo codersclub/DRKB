@@ -26,7 +26,7 @@ Date: 01.01.2007
 зависит от типа почтовой системы, но в любой системе у клиента есть
 специальный каталог INBOX, куда попадают поступающие клиенту сообщения.
 
-Принципы работы
+#### Принципы работы
 
 Протокол IMAP4 работает поверх транспортного протокола, который
 обеспечивает надежный и достоверный канал передачи данных между
@@ -123,7 +123,7 @@ Date: 01.01.2007
 аутентификации), она может занимать несколько строк.
 
 Строки данных, передаваемые с сервера в ответ на команду клиента, могут
-не содержать тег, а содержать символ \"\*\". Это означает, что они
+не содержать тег, а содержать символ \"*\". Это означает, что они
 являются промежуточными строками потока данных ответа, а идентификатор
 их команды содержится в последней строке потока. В такой поток данных не
 может вклиниться другая команда.
@@ -214,7 +214,7 @@ TCP), было установлено соединение, и от сервер
 всего используется команда LOGIN. Аргументом команды является строка с
 идентификатором и паролем клиента:
 
-S: \* OK IMAP4 revl Service Ready
+S: * OK IMAP4 revl Service Ready
 
 С: aOOl login ali sesam
 
@@ -229,7 +229,7 @@ S; aOOl OK LOGIN completed
 Например, при использовании механизма шифрования KERBEROS,
 аутентификация выглядит следующим образом:
 
-S: \* OK KerberosV4 IMAP4revl Server
+S: * OK KerberosV4 IMAP4revl Server
 
 С: АО 01 AUTHENTICATE KERBEROS\_V4
 
@@ -253,39 +253,39 @@ S: A001 OK Kerberos V4 authentication successful
 
 С А142 SELECT INBOX
 
-S \* 172 EXISTS
+S * 172 EXISTS
 
-S \* 1 RECENT
+S * 1 RECENT
 
-S \* OK \[UNSEEN 12) Message 12 is first unseen
+S * OK \[UNSEEN 12) Message 12 is first unseen
 
-S \* OK \[UIDVALIDITY 3857529045\] UIDs valid
+S * OK \[UIDVALIDITY 3857529045\] UIDs valid
 
-S \* FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)
+S * FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)
 
-S \* OK \[PERMANENTFLAGS (\\Deleted \\Seen \\\*)\] Limited
+S * OK \[PERMANENTFLAGS (\\Deleted \\Seen \\*)\] Limited
 
 S A142 OK \[READ-WRITE\] SELECT completed
 
 Сервер 1МАР4, прежде чем подтвердить завершение обработки команды,
 передает клиенту атрибуты данного каталога. В показанном выше примере:
 
-В папке \"INBOX\" - 172 сообщения (строка \"\* 172 EXISTS\")
+В папке \"INBOX\" - 172 сообщения (строка \"* 172 EXISTS\")
 
-Из них одно только что поступившее (строка \"\* 1 RECENT\").
+Из них одно только что поступившее (строка \"* 1 RECENT\").
 
 В папке есть непрочитанные сообщения, минимальный порядковый номер
-непрочитанного сообщения - 12 (строка \"\* OK \[UNSEEN 12\] Message 12
+непрочитанного сообщения - 12 (строка \"* OK \[UNSEEN 12\] Message 12
 is first unseen\"),
 
 Уникальный временный идентификатор папки INBOX в данной сессии -
-3857529045 (строка \"\* OK \[UIDVAL1DITY 3857529045\] UIDs valid\").
+3857529045 (строка \"* OK \[UIDVAL1DITY 3857529045\] UIDs valid\").
 
 Сообщения в данной папке могут иметь флаги, указанные в строке FLAGS
-(строка \"\* FLAGS (\\Answered \\Flageed VDeleted N\^\" \\Draft)\").
+(строка \"* FLAGS (\\Answered \\Flageed VDeleted N\^\" \\Draft)\").
 
 Клиент может менять у сообщений флаги \"\\Deleted\" и \"\\Seen\" (строка
-\"\* OK \[PERMANENTFLAGS (\\Deleted \\Seen \\\*)\] Limited \").
+\"* OK \[PERMANENTFLAGS (\\Deleted \\Seen \\*)\] Limited \").
 
 Клиент имеет права на запись и чтение сообщений из INBOX (строка \"А142
 OK \[READ-WRITE\] SELECT completed\").
@@ -297,7 +297,7 @@ OK \[READ-WRITE\] SELECT completed\").
 
 С: А932 EXAMINE bloop
 
-S: \* 17 EXISTS
+S: * 17 EXISTS
 
 ...
 
@@ -315,7 +315,7 @@ S: \* 17 EXISTS
 
 \<\>ttС: Д042 STATUS blob (MESSAGES UNSEEN)
 
-S: \* STATUS blob (MESSAGES 231 UNSEEN 12)
+S: * STATUS blob (MESSAGES 231 UNSEEN 12)
 
 S: A042 OK STATUS completed
 
@@ -328,13 +328,13 @@ S: A042 OK STATUS completed
 системы и структуры описания иерархии папок. Например, список папок,
 находящихся в корне, можно получить так:
 
-С: А004 LIST \"/\" \*
+С: А004 LIST \"/\" *
 
-S: \* LIST (\\Noinferiors ) \"/\" INBOX
+S: * LIST (\\Noinferiors ) \"/\" INBOX
 
-S: \* LIST (\\Noinferiors ) \"/\"•• OUTBOX
+S: * LIST (\\Noinferiors ) \"/\"•• OUTBOX
 
-S: \* LIST (\\Noinferiors ) \"/\".. WasteBox
+S: * LIST (\\Noinferiors ) \"/\".. WasteBox
 
 S: A004 OK LIST completed
 
@@ -354,7 +354,7 @@ S: A004 OK LIST completed
 
 С: А654 FETCH 10:12 BODY \[HEADER\]
 
-S: \* 10 FETCH (BODY \[HEADER\] {350}
+S: * 10 FETCH (BODY \[HEADER\] {350}
 
 S: Date: Wed, 17 Jul 1996 02:23:25 -0700 (PDTl
 
@@ -374,9 +374,9 @@ S:
 
 S: )
 
-S: \*11 FETCH ....
+S: *11 FETCH ....
 
-S: \*12 FETCH ....
+S: *12 FETCH ....
 
 S: A654 OK FETCH completed
 
@@ -389,11 +389,11 @@ S: A654 OK FETCH completed
 
 С: АОО3 SТОRЕ 2:4 +FLAGS (\\DELETED)
 
-S: \*2 FETCH FLAGS (\\Deleted \\ Seen)
+S: *2 FETCH FLAGS (\\Deleted \\ Seen)
 
-S: \*3 FETCH FLAGS (\\Deleted )
+S: *3 FETCH FLAGS (\\Deleted )
 
-S: \*4 FETCH FLAGS (\\Deleted \\Flagged \\Seen)
+S: *4 FETCH FLAGS (\\Deleted \\Flagged \\Seen)
 
 S: A003 OK STORE completed
 
@@ -413,12 +413,12 @@ S: A003 OK STORE completed
 
 C: A282 SEARCH UNSEEN FROM \'Smith\" SINCE 1-Mar-1996
 
-S: \* SEARCH 2 84 882
+S: * SEARCH 2 84 882
 
 S: A282 OK SEARCH completed
 
 Результатом поиска будут сообщения с последовательными номерами 2, 84 и
-882. \* IMAP4 позволяет не только искать и читать сообщения в каталогах,
+882. * IMAP4 позволяет не только искать и читать сообщения в каталогах,
 этот протокол позволяет добавлять, копировать и перемещать сообщения в
 каталоги. Добавление сообщения в папку можно осуществить командой
 APPEND:

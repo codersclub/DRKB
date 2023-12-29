@@ -438,11 +438,11 @@ SaveDialog1 Filter
 
 ClientDataSet
 
-Files\|\*.cds\|All files\|\*.\*
+Files\|*.cds\|All files\|*.*
 
 DefaultExt
 
-\*.cds
+*.cds
 
 Создадим обработчики событий, связанные с нажатиями на кнопки, выбором
 из списков и созданием формы приложения:

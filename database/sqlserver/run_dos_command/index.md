@@ -12,6 +12,6 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-    Exec master..xp_cmdshell 'Dir c:\*.*'
+    Exec master..xp_cmdshell 'Dir c:*.*'
 
 Автор: Vit

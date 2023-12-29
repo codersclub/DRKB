@@ -606,7 +606,7 @@ case \$1 in
 
    ;;
 
-   \*)
+   *)
 
    echo \"Usage: \$(basename \$0) start\|stop\|restart\|reload\"
 

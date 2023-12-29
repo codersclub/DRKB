@@ -93,7 +93,7 @@ DBPATH указывает список директорий где (помимо
 Заставит искать базы данных не только в текущей директории, но и в
 директориях Петрова и Иванова
 
-       DBPATH=//hostname                               \*OnL\*
+       DBPATH=//hostname                               *OnL*
 
 
 Заставит искать базы данных OnLine на удаленном компьютере.
@@ -121,7 +121,7 @@ TERMCAP=\$INFORMIXDIR/etc/termcap export TERMCAP
 
 case \$TERM in                 \# таблица русификации клавиатуры
 
-d460\* \| d211\* \| cham \| vt\* )
+d460* \| d211* \| cham \| vt* )
 
   KEYBMAP=\$INFORMIXDIR/keybmap/dasher  \# яверты/qwerty
 

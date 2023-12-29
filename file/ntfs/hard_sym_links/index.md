@@ -67,7 +67,7 @@ Date: 01.01.2007
     begin
       len := Length(ADirectoryName);
       if (PChar(ADirectoryName)+len-1)^='\' then sSeachMask := ADirectoryName+'*'
-      else sSeachMask := ADirectoryName+'\*';
+      else sSeachMask := ADirectoryName+'*';
       h := Windows.FindFirstFile( PChar(sSeachMask), rFindData );
       Result := (h=INVALID_HANDLE_VALUE);
       Windows.FindClose(h);
@@ -186,7 +186,7 @@ Date: 01.01.2007
       else if (dwAttributes and FILE_ATTRIBUTE_DIRECTORY)=0 then 
         raise Exception.Create('File "'+ADirName
           +'" already exists and it is not a directory.');
-      h := Windows.FindFirstFile( PChar(ADirName+'\*'), rFindData );
+      h := Windows.FindFirstFile( PChar(ADirName+'*'), rFindData );
       if h=INVALID_HANDLE_VALUE then Exit;
       try
         repeat
@@ -330,7 +330,7 @@ Date: 01.01.2007
     begin
       pSubDirs := nil;
       ppLast := @pSubDirs;
-      h := Windows.FindFirstFile( PChar(ADirName+'\*'), rFindData );
+      h := Windows.FindFirstFile( PChar(ADirName+'*'), rFindData );
       if h=INVALID_HANDLE_VALUE then Exit;
       try
         try

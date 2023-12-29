@@ -91,9 +91,9 @@ COBOL, лишь бы он мог выводить текстовые файлы.
 Что же мы увидим? Хех, нечто вроде показанного ниже:
 
     {\rtf1\ansi\deflang1049{\fonttbl {\f4\fnil\fcharset204\fprq0 Arial;}
-    {\f35\fnil\fcharset204\fprq0 Times New Roman;}}{\stylesheet {\s0{\*
+    {\f35\fnil\fcharset204\fprq0 Times New Roman;}}{\stylesheet {\s0{*
     \keycode \shift\ctrl N}\snext0\f4\fs20\sl240\slmult1\ql\nowidctlpar
-    \widctlpar Normal;}}{\info {\*\company Comizdat}{\creatim\yr2004\mo3
+    \widctlpar Normal;}}{\info {*\company Comizdat}{\creatim\yr2004\mo3
     \dy19\hr13\min39\sec0}{\author ac2k1}}\viewscale150\margl1701
     \margr850\margt1134\margb1134\widowctrl\plain\f35\fs24\pard\f4\fs18
     \lang1033 Hello World\par}
@@ -118,13 +118,13 @@ Atlantis, а если посмотреть, что делает MS Word (ну, �
     {\f35\fnil\fcharset204\fprq0 Times New Roman;}
     {\stylesheet
     {\s0
-    {\*\keycode \shift\ctrl N}
+    {*\keycode \shift\ctrl N}
     \snext0\f4\fs20\sl240\slmult1
     \ql\nowidctlpar\widctlpar Normal;
     }
     }
     {\info
-    {\*\company Comizdat}
+    {*\company Comizdat}
     {\creatim\yr2004\mo3\dy19\hr13\min39\sec0}
     {\author ac2k1}}
     \viewscale150\margl1701\margr850\margt1134\margb1134
@@ -336,8 +336,8 @@ Word, поймут это как пробелы в тексте, и резуль
     <fonttbl>
     <colortbl>
     <stylesheet>
-    {\*\rsidtbl \rsid5533391}
-    {\*\generator %Application=RTFgen 1.0%;}
+    {*\rsidtbl \rsid5533391}
+    {*\generator %Application=RTFgen 1.0%;}
     <info>
     <pnsec>
     <pageset>

@@ -463,7 +463,7 @@ SQL, вызывать хранимые процедуры, или выбират
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   -------------------------
-  select \* from employee
+  select * from employee
   -------------------------
 :::
 
@@ -487,7 +487,7 @@ SQL, вызывать хранимые процедуры, или выбират
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --------------------------------
-  select \* from salary\_history
+  select * from salary\_history
   --------------------------------
 :::
 

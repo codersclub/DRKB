@@ -280,7 +280,7 @@ FindByCustNo | CustNo | long
 OpenOrdersForm | | 
 CloseOrders | | 
 FindCustomer | | 
-GetCustNo | CustNo | Variant \* 
+GetCustNo | CustNo | Variant * 
 
      
     procedure TOrderServer.FindByOrderNo(OrderNo: Integer);

@@ -31,7 +31,7 @@ Windows NT, Windows 2000, Linux, Win95/98 PE
 
 Как клиент добавляются IRIX, SINIX, MacOS, WinCE, PalmOS, Neutrino,
 
-и для версии 1.\* есть клиент для DOS.
+и для версии 1.* есть клиент для DOS.
 
 DB2 server поддерживает следующие сетевые протоколы
 

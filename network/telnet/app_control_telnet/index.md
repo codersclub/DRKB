@@ -98,7 +98,7 @@ try ... except
 клиента. Для этого следует создать обработчики OnClientConnect и
 OnClientDisconnect. Сразу отмечу, что при подключении клиента обычно
 принято выдывать ему заголовок, ообщающий о том, что он соединился с
-программой \*\*\* версии NN. С учетом этого обработчик OnClientConnect
+программой *** версии NN. С учетом этого обработчик OnClientConnect
 будет иметь вид:
 
     procedure TMain.ServerSocket1ClientConnect(Sender: TObject; Socket: TCustomWinSocket);

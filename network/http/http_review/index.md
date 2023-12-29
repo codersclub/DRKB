@@ -51,7 +51,7 @@ GET /index.html HTTP/1.0
 
 User-Agent: Mozilla/4.05 (WinNT; 1)
 
-Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, \*/\*
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
 
 Завершается заголовок пустой строкой.
 
@@ -179,7 +179,7 @@ User-Agent: Mozilla/4.05 (WinNT; 1)
 
 Host: www.ora.com
 
-Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, \*/\*
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
 
 Сервер отвечает:
 
@@ -272,7 +272,7 @@ User-Agent: Mozilla/4.05 (WinNT; 1)
 
 Host: www.ora.com
 
-Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, \*/\*
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
 
 Сервер отвечает:
 
@@ -339,7 +339,7 @@ POST /cgi-bin/birthday.pl HTTP/1.0
 
 User-Agent; Mozilla/4.05 (WinNT; 1)
 
-Accept: image/gif, iinage/x-xbj.tmap, image/jpeg, J.mage/pjpeg, \*/\*
+Accept: image/gif, iinage/x-xbj.tmap, image/jpeg, J.mage/pjpeg, */*
 
 Host: www.ora.com
 
@@ -367,7 +367,7 @@ DELETE Удаляет данные, находящиеся на сервере �
 
 OPTIONS Запрашивает информацию о коммуникационных параметрах сервера.
 Чтобы запросить данные обо всем сервере в целом, вместо URI запроса
-следует использовать символ \*.
+следует использовать символ *.
 
 TRACE Требует, чтобы тело содержимого запроса было возвращено без
 изменений. Используется для отладки.

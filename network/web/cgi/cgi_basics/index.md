@@ -919,7 +919,7 @@ HTML-синтаксис карты образа, the image map выглядит 
 
 \<HTML\>
 
-\<FRAMESET COLS=\"32%,\*\"\>
+\<FRAMESET COLS=\"32%,*\"\>
 
 \<FRAME  SRC=\"pag00000.htm\" NAME=\"Menu\"\>
 

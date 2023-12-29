@@ -56,7 +56,7 @@ Query1
 
        SessionName        \"Ses1\"
 
-       SQL.Strings        \"Select \* from employee\"
+       SQL.Strings        \"Select * from employee\"
 
 DataSource1
 
@@ -86,7 +86,7 @@ Query2
 
        SessionName        \"Ses2\"
 
-       SQL.Strings        \"Select \* from customer\"
+       SQL.Strings        \"Select * from customer\"
 
 DataSource2
 

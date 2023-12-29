@@ -78,7 +78,7 @@ AWARD BIOS v2.51G
 
    Wodj
 
-   bios\*
+   bios*
 
    biosstar
 

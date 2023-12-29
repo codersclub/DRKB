@@ -134,7 +134,7 @@ Date: 01.01.2007
       P: Byte;
     begin
      
-      SearchString := Drive + ':\*.*';
+      SearchString := Drive + ':*.*';
       { ищем метку тома }
       if FindFirst(SearchString, faVolumeID, SR) = 0 then
       begin

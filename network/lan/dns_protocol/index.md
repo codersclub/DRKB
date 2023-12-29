@@ -319,7 +319,7 @@ relay
 
 Mail Exchanger
 
-\*proxy
+*proxy
 
 соответствующий Proxy сервер
 

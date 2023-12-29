@@ -217,7 +217,7 @@ IconIndex
 TFilterComboBox, который позволит в списке файлов отображать только те
 файлы, которые соответствуют маске, указанной в свойстве Filter. Здесь в
 качестве значения укажите следующее:
-ico\|\*.ico\|dll\|\*.dll\|exe\|\*.exe\|all\|\*.ico; \*.dll; \*.exe ..а в
+ico\|*.ico\|dll\|*.dll\|exe\|*.exe\|all\|*.ico; *.dll; *.exe ..а в
 свойстве FileList задайте список файлов \[TFileListBox\]. В обработчике
 OnClick компонента TFileListBox напишите такой код:
 

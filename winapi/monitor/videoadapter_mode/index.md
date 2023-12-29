@@ -238,7 +238,7 @@ DM\_POSITION - Windows 98, Windows 2000: изменить номер монит�
 получать и другими способами.Получить количество битов цвета текущего
 видеорежима можно и другим способом:
 
-GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) \*
+GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) *
 
 GetDeviceCaps(Form1.Canvas.Handle, PLANES)
 
@@ -263,7 +263,7 @@ GetDeviceCaps(Form1.Canvas.Handle, PLANES)
 
 NumberOfColors := (1 shl
 
-(GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) \*
+(GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) *
 
 GetDeviceCaps(Form1.Canvas.Handle, PLANES));
 

@@ -216,7 +216,7 @@ DelphiWorld 6.0
     var
       ss: string;
     begin
-      result := MatchStrings(memo1.Lines.Text, '*c:\*');
+      result := MatchStrings(memo1.Lines.Text, '*c:*');
       if result = true then
       begin
         messagebox(0, '', '', MB_OK);

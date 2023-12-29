@@ -55,7 +55,7 @@ implementation
             node.ImageIndex := 0;
             node.SelectedIndex := 1;
             node.HasChildren := false;
-            if FindFirst(path + sr.Name + '\*.*', faDirectory, srChild) = 0 then begin
+            if FindFirst(path + sr.Name + '*.*', faDirectory, srChild) = 0 then begin
               repeat
                 if (srChild.Attr and faDirectory <> 0) and DirectoryName(srChild.Name)
                   then node.HasChildren := true;

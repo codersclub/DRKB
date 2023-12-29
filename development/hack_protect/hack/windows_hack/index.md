@@ -59,7 +59,7 @@ TASM и TLINK 3.0
 
 Закройте SDR окно. Вы должны увидеть сообщение:
 
-\* Possible reference to String Resource ID=00041: \"You have
+* Possible reference to String Resource ID=00041: \"You have
 entered...
 
 :004049F8 6A29 push 00000029
@@ -72,7 +72,7 @@ entered...
 
 :004049CD 755A jne 00404A29
 
-\* Possible reference to String Resource ID=00032: \"You must select...
+* Possible reference to String Resource ID=00032: \"You must select...
 
 :004049CF 6A20 push 00000020
 
@@ -80,7 +80,7 @@ entered...
 
 ...
 
-\* Possible reference to String Resource ID=00040: \"Unlock Error\"
+* Possible reference to String Resource ID=00040: \"Unlock Error\"
 
 Теперь вы знаете, куда идет скачок при введении неправильного кода.
 Теперь можно посмотреть, что произойдет, если \"jne\" на \"je\".
@@ -147,7 +147,7 @@ you..
 введете неверный код. Кликните FIND TEXT, введите \"dialogid\_0075\" и
 вы найдете:
 
-\* Possible reference to DialogID\_0075
+* Possible reference to DialogID\_0075
 
 :0041E233 6A75 push 00000075
 
@@ -195,7 +195,7 @@ HWORKS32.EXX в HWORKS32.EXE (теперь вы видите, почему я д
 
 Нажмите F3 для очередного поиска \"DialogID\_0075\", вы должны найти:
 
-\* Possible reference to DialogID\_0075
+* Possible reference to DialogID\_0075
 
 :00430ADD 6A75 push 00000075
 

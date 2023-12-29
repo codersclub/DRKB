@@ -592,13 +592,13 @@ for insert
 
 as
 
-if (select count(\*)
+if (select count(*)
 
    from titles, inserted
 
    where titles.title\_id = inserted.title\_id) != @\@rowcount
 
-/\* cancel the insert and print a message.\*/
+/* cancel the insert and print a message.*/
 
 begin
 
@@ -608,7 +608,7 @@ begin
 
 end 
 
-/\* Otherwise, allow it. \*/   
+/* Otherwise, allow it. */   
 
 else
 
@@ -622,7 +622,7 @@ print \"Added! All title\_id\'s exist in titles.\"
 значений ключа из столбца title\_id, добавленных в таблицу salesdetail,
 в таблице titles осуществляется путем соединения таблицы titles и
 таблицы добавления. Если число соединенных строк, которые подсчитываются
-в операторе select count(\*), отличается от значения переменной
+в операторе select count(*), отличается от значения переменной
 @\@rowcount, то некоторые из добавленных строк были неправильными и
 поэтому все изменения, произведенные этой транзакцией, будут отменены.
 
@@ -669,9 +669,9 @@ from titleauthor, deleted
 
 where titleauthor.title\_id = deleted.title\_id
 
-       /\* Remove titleauthor rows
+       /* Remove titleauthor rows
 
-       \*\* that match deleted (titles) rows.\*/
+       ** that match deleted (titles) rows.*/
 
 delete salesdetail
 
@@ -679,9 +679,9 @@ from salesdetail, deleted
 
 where salesdetail.title\_id = deleted.title\_id
 
-       /\* Remove salesdetail rows
+       /* Remove salesdetail rows
 
-       \*\* that match deleted (titles) rows.\*/
+       ** that match deleted (titles) rows.*/
 
 delete roysched
 
@@ -689,9 +689,9 @@ from roysched, deleted
 
 where roysched.title\_id = deleted.title\_id
 
-       /\* Remove roysched rows
+       /* Remove roysched rows
 
-       \*\* that match deleted (titles) rows.\*/
+       ** that match deleted (titles) rows.*/
 
  
 
@@ -718,7 +718,7 @@ for delete
 
 as
 
-if (select count(\*)
+if (select count(*)
 
    from deleted, salesdetail
 
@@ -780,11 +780,11 @@ for update
 
 as
 
-/\* If an attempt is made to change titles.title\_id
+/* If an attempt is made to change titles.title\_id
 
-\*\* on Saturday or Sunday, cancel the update.
+** on Saturday or Sunday, cancel the update.
 
-\*/
+*/
 
 if update (title\_id)
 
@@ -842,9 +842,9 @@ end
 
 if update (price) or update (advance)
 
-if (select count(\*) from inserted
+if (select count(*) from inserted
 
-   where (inserted.price \* inserted.total\_sales)
+   where (inserted.price * inserted.total\_sales)
 
    \< inserted.advance) \> 0
 
@@ -908,7 +908,7 @@ as
 
 declare \@row int
 
-/\* save value of rowcount \*/
+/* save value of rowcount */
 
 select \@row = @\@rowcount 
 
@@ -932,7 +932,7 @@ begin
 
    else
 
-     if (select count(\*)
+     if (select count(*)
 
          from titles, inserted
 
@@ -994,7 +994,7 @@ on salesdetail
 
 for insert as
 
-   /\* check value of @\@rowcount \*/
+   /* check value of @\@rowcount */
 
 if @\@rowcount = 1
 
@@ -1008,9 +1008,9 @@ if @\@rowcount = 1
 
 else
 
-   /\* when rowcount is greater than 1,
+   /* when rowcount is greater than 1,
 
-      use a group by clause \*/
+      use a group by clause */
 
    update titles
 
@@ -1042,7 +1042,7 @@ for delete
 
 as
 
-   /\* check value of @\@rowcount \*/
+   /* check value of @\@rowcount */
 
 if @\@rowcount = 1
 
@@ -1056,9 +1056,9 @@ if @\@rowcount = 1
 
 else
 
-   /\* when rowcount is greater than 1,
+   /* when rowcount is greater than 1,
 
-      use a group by clause \*/
+      use a group by clause */
 
    update titles
 
@@ -1101,7 +1101,7 @@ if update (qty)
 
 begin
 
-   /\* check value of @\@rowcount \*/
+   /* check value of @\@rowcount */
 
    if @\@rowcount = 1
 
@@ -1119,9 +1119,9 @@ begin
 
    else
 
-   /\* when rowcount is greater than 1,
+   /* when rowcount is greater than 1,
 
-      use a group by clause \*/
+      use a group by clause */
 
    begin
 
@@ -1231,7 +1231,7 @@ stor\_id  ord\_num    title\_id        qty     discount
 
 insert salesdetail
 
-select \* from newsales
+select * from newsales
 
  
 
@@ -1251,7 +1251,7 @@ for insert as
 
 if
 
-(select count(\*) from titles, inserted
+(select count(*) from titles, inserted
 
 where titles.title\_id = inserted.title\_id)
 
@@ -1371,7 +1371,7 @@ for insert
 
 as
 
-if (select count(\*) from titles, inserted
+if (select count(*) from titles, inserted
 
    where titles.title\_id = inserted.title\_id) !=
 
@@ -1484,7 +1484,7 @@ as
 
 insert del\_save
 
-select \* from deleted
+select * from deleted
 
  
 
@@ -1545,7 +1545,7 @@ triggers (допустить многоуровневые триггера).
 
  
 
-select \* from new\_budget
+select * from new\_budget
 
 unit                  parent\_unit       budget
 
@@ -1577,7 +1577,7 @@ on new\_budget
 
 for update as
 
-if exists (select \* from inserted
+if exists (select * from inserted
 
            where parent\_unit is not null)
 
@@ -1634,7 +1634,7 @@ end
 
  
 
-select \* from new\_budget
+select * from new\_budget
 
 unit                   parent\_unit     budget
 
@@ -1795,39 +1795,39 @@ if update(a) and update(b)
 
        print \"FIRING\"
 
-   /\*\"if update\" is true for both columns.
+   /*\"if update\" is true for both columns.
 
-     The trigger is activated.\*/
+     The trigger is activated.*/
 
 insert junk (a, b) values (1, 2)
 
-   /\*\"if update\" is true for both columns.
+   /*\"if update\" is true for both columns.
 
-     The trigger is activated.\*/
+     The trigger is activated.*/
 
 insert junk values (1, 2)
 
-   /\*Explicit NULL:
+   /*Explicit NULL:
 
      \"if update\" is true for both columns.
 
-     The trigger is activated.\*/
+     The trigger is activated.*/
 
 insert junk values (NULL, 2)
 
-   /\* If default exists on column a,  
+   /* If default exists on column a,  
 
      \"if update\" is true for either column.  
 
-     The trigger is activated.\*/
+     The trigger is activated.*/
 
 insert junk (b) values (2)
 
-   /\* If no default exists on column a,  
+   /* If no default exists on column a,  
 
      \"if update\" is not true for column a.  
 
-     The trigger is not activated.\*/
+     The trigger is not activated.*/
 
 insert junk (b)values (2)
 
@@ -1920,7 +1920,7 @@ if update(a) or update(b)
 
  
 
-select \*
+select *
 
 from sysobjects
 
@@ -2018,7 +2018,7 @@ for delete
 
 as
 
-if (select count(\*) from deleted, salesdetail
+if (select count(*) from deleted, salesdetail
 
 where salesdetail.title\_id = deleted.title\_id) \>0
 

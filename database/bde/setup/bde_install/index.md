@@ -244,7 +244,7 @@ Date: 01.01.2007
 На клиентской машине появятся два новых каталога - \\IDAPI и
 \\IDAPI\\LANGDRV. Обратите внимание на то, что утилита BDE Configuration
 Utility, BDECFG.EXE, располагается в каталоге \\IDAPI. Языковые драйвера
-располагаются в каталоге \\IDAPI\\LANGDRV как файлы \*.LD. AUTOEXEC.BAT,
+располагаются в каталоге \\IDAPI\\LANGDRV как файлы *.LD. AUTOEXEC.BAT,
 CONFIG.SYS и SYSTEM.INI при инсталляции не изменяются.
 
 WIN.INI в каталоге \\WINDOWS\\SYSTEM будет иметь новые секции:
