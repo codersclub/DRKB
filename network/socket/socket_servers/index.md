@@ -204,7 +204,7 @@ TServerSocket.Socket (TServerWinSocket)
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- -------------------------------------------------------------
-  ·   ServerSocket1.Socket.Connections\[0\].SendText(\'Hello!\');
+  ·   ServerSocket1.Socket.Connections[0].SendText(\'Hello!\');
   --- -------------------------------------------------------------
 :::
 
@@ -406,13 +406,13 @@ TServerSocket.
 файлового (TFileStream), он передает данные медленнее (сами понимаете -
 сеть, ограниченный трафик, и т.д.). Именно поэтому две команды:
 
-ServerSocket1.Socket.Connections\[0\].SendText(\'Hello, \');
+ServerSocket1.Socket.Connections[0].SendText(\'Hello, \');
 
-ServerSocket1.Socket.Connections\[0\].SendText(\'world!\');
+ServerSocket1.Socket.Connections[0].SendText(\'world!\');
 
 совершенно идентичны одной команде:
 
-ServerSocket1.Socket.Connections\[0\].SendText(\'Hello, world!\');
+ServerSocket1.Socket.Connections[0].SendText(\'Hello, world!\');
 
 И именно поэтому, если Вы отправите через сокет файл, скажем, в 100 Кб,
 то тому, кому Вы посылали этот блок, придет несколько блоков с

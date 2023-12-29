@@ -92,8 +92,8 @@ Date: 01.01.2007
       hStdOutput := hOutDup; // присваиваем рукоятку на свой файл
     end;
 
-Для примера будем запускать \[c:\\program
-files\\Borland\\Delphi5\\Bin\]grep.exe с ключом \'?\' Вызов
+Для примера будем запускать [c:\\program
+files\\Borland\\Delphi5\\Bin]grep.exe с ключом \'?\' Вызов
 CreateProcess с флагом bInheritHandles = TRUE !!!
 
     Win32Check(CreateProcess(nil, 'grep.exe ?', nil, nil, TRUE,

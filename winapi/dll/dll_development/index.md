@@ -40,7 +40,7 @@ Windows, то вы не можете не знать о существовани
 разделить на два типа: те, которые могут быть вызваны из других
 приложений. Рассмотрим следующий пример:
 
-Screen.Cursors\[myCursor\] := LoadCursor(HInstance, MYCURSOR\');
+Screen.Cursors[myCursor] := LoadCursor(HInstance, MYCURSOR\');
 
 LoadCursor - функция Windows API, которая вызывается приложением из
 динамической библиотеки User 32.dll. Кстати, примером хранимых в

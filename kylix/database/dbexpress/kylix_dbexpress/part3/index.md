@@ -54,7 +54,7 @@ SQLConnection1.Connected:=true;
 квадратные скобки и параметров в формате Имя параметра=значение
 параметра. Вот кускок этого файла:
 
-\[DB2Connection\]
+[DB2Connection]
 
 DriverName=DB2
 
@@ -72,9 +72,9 @@ Database=DBNAME
 
 Пример - установка имени и пароля пользователя:
 
-SQLConection1.Params.Values\[\'User\_Name\'\]:=\'SYSDBA\';
+SQLConection1.Params.Values[\'User\_Name\']:=\'SYSDBA\';
 
-SQLConection1.Params.Values\[\'Password\'\]:=\'masterkey\';
+SQLConection1.Params.Values[\'Password\']:=\'masterkey\';
 
 Свойство LoadParamsOnConnect типа Boolean позволяет управлять
 автоматической установкой св-в DriverName и Params в значения по

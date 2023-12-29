@@ -55,9 +55,9 @@ BtrConst и BtrApi32. Если кому интересно назначение 
 
 CLIENT\_ID = packed record
 
-  networkandnode : array\[1..12\] of char;
+  networkandnode : array[1..12] of char;
 
-  applicationID : array\[1..3\] of char;
+  applicationID : array[1..3] of char;
 
   threadID : smallint;
 
@@ -77,16 +77,16 @@ end;
 
 client : CLIENT\_ID; {вручную не переинициализировать!}
 
-versionBuffer : array\[1..3\] of VERSION\_STRUCT; {вручную не
+versionBuffer : array[1..3] of VERSION\_STRUCT; {вручную не
 переинициализировать!}
 
 status : smallint; {вручную не переинициализировать!}
 
-posBlock : string\[128\]; {вручную не переинициализировать!}
+posBlock : string[128]; {вручную не переинициализировать!}
 
-dataBuffer : array\[0..255\] of char;
+dataBuffer : array[0..255] of char;
 
-keyBuf : string\[255\];
+keyBuf : string[255];
 
 keyNum : smallint;
 
@@ -126,7 +126,7 @@ status := BTRVID(B\_VERSION, {системная константа}
 
   dataLen, {см.выше}
 
-  keyBuf\[1\], {см.выше}
+  keyBuf[1], {см.выше}
 
   0,
 
@@ -150,7 +150,7 @@ status := BTRVID( B\_STOP, {системная константа}
 
   dataLen, {см.выше}
 
-  keyBuf\[1\], {см.выше - предыдущий раздел}
+  keyBuf[1], {см.выше - предыдущий раздел}
 
   0, {}
 
@@ -178,7 +178,7 @@ status := BTRVID(B\_OPEN, {системная константа}
 
   dataLen, {см.выше}
 
-  keyBuf\[1\], {см.выше}
+  keyBuf[1], {см.выше}
 
   0,
 
@@ -223,45 +223,45 @@ OPERHEAD\_STRUCT = packed record
 
 ISN : integer;
 
-opDate : array\[0..8\] of char;
+opDate : array[0..8] of char;
 
-agnFrom : array\[0..15\] of char;
+agnFrom : array[0..15] of char;
 
-agnTo : array\[0..15\] of char;
+agnTo : array[0..15] of char;
 
-docType : array\[0..5\] of char;
+docType : array[0..5] of char;
 
-docNumb : array\[0..12\] of char;
+docNumb : array[0..12] of char;
 
-docDate : array\[0..8\] of char;
+docDate : array[0..8] of char;
 
-basType : array\[0..5\] of char;
+basType : array[0..5] of char;
 
-basNumb : array\[0..12\] of char;
+basNumb : array[0..12] of char;
 
-basDate : array\[0..8\] of char; {см. ссылку в тексте}
+basDate : array[0..8] of char; {см. ссылку в тексте}
 
 resSum : double;
 
-spMark : array\[0..5\] of char;
+spMark : array[0..5] of char;
 
-opCont : array\[0..80\] of char;
+opCont : array[0..80] of char;
 
 invSign : smallint;
 
-subAgn : array\[0..15\] of char;
+subAgn : array[0..15] of char;
 
-appName : array\[0..8\] of char;
+appName : array[0..8] of char;
 
 appIsn : longint;
 
 resMSum : double; {см. ссылку в тексте}
 
-sysNumb : array\[0..3\] of char;
+sysNumb : array[0..3] of char;
 
 regNumb : longint;
 
-opMngCnt : array\[0..80\] of char;
+opMngCnt : array[0..80] of char;
 
 end;
 
@@ -364,7 +364,7 @@ OPERHEAD\_INDEX7 = packed record
 
   appIsn : longint;
 
-  appName : array\[0..8\] of char;
+  appName : array[0..8] of char;
 
 end;
 

@@ -112,7 +112,7 @@ Image, присвоим их свойству Tag значения от 1 до n
 по форме мерцания не избежать. Буду благодарен тому, кто покажет
 обратное. Ну в общем применение известных способов, например
 
-MainForm.ControlStyle := MainForm.ControlStyle + \[csOpaque\];
+MainForm.ControlStyle := MainForm.ControlStyle + [csOpaque];
 
 или процедуры Invalidate мне не помогло.
 

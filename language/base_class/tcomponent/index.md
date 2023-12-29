@@ -48,7 +48,7 @@ property Tag: Longint;
 
 Описание
 
-property Components \[Index: Integer\]: TComponent ;
+property Components [Index: Integer]: TComponent ;
 
 Содержит индексированный список указателей всех компонентов, для которых
 данный компонент является владельцем (owner)

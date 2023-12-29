@@ -53,7 +53,7 @@ Link File).
 указывается название параметра и через знак равенства его значение.
 Параметры разделяются точкой с запятой.
 
-\[oledb\]
+[oledb]
 
 Everything after this line is an OLE DB initstring
 
@@ -352,7 +352,7 @@ cmshareDenyNone --- открытие других соединений с раз
 которые используют его для доступа к хранилищу данных ADO. Все открытые
 таким образом наборы данных доступны через индексированное свойство
 
-property DataSets\[Index: Integer\]: TCustomADODataSet;
+property DataSets[Index: Integer]: TCustomADODataSet;
 
 Каждый элемент этого списка содержит дескриптор компонента доступа к
 данным ADO (тип TCustomADODataSet). Общее число связанных компонентов с
@@ -380,10 +380,10 @@ for i := 0 to ADOConnection.DataSetCount --- 1 do
 
 begin
 
-   if ADOConnection.DataSets\[i\].Active = True then     
-ADOConnection.DataSets\[i\].Close;
+   if ADOConnection.DataSets[i].Active = True then     
+ADOConnection.DataSets[i].Close;
 
-   ADOConnection.DataSets\[i\].CursorLocation := clUseClient;
+   ADOConnection.DataSets[i].CursorLocation := clUseClient;
 
 end;
 
@@ -393,7 +393,7 @@ end;
 данных через это соединение, доступны для управления через
 индексированное свойство
 
-property Commands\[Index: Integer\]: TADOCommand
+property Commands[Index: Integer]: TADOCommand
 
 Каждый элемент этого списка представляет собой экземпляр класса
 TADOCommand.
@@ -420,8 +420,8 @@ if EventStatus = esOK then
 
     try
 
-       if ADOConnection.Commands\[i\].CommandText \<\> then
-                           ADOConnection.Commands\[i\].Execute;
+       if ADOConnection.Commands[i].CommandText \<\> then
+                           ADOConnection.Commands[i].Execute;
 
      except
 
@@ -436,12 +436,12 @@ end;
 перегружаемый метод
 
 function Execute(const CommandText: WideString; ExecuteOptions:
-TExecuteOptions = \[\]): \_RecordSet; overload;
+TExecuteOptions = []: \_RecordSet; overload;
 
 procedure Execute(const CommandText: WideString; var RecordsAffected:
 
 Integer; ExecuteOptions: TExecuteOptions =
-\[eoExecuteNoRecords\]);overload;
+[eoExecuteNoRecords];overload;
 
 Выполнение команды осуществляется процедурой Execute (если команда не
 возвращает набор записей) или одноименной функцией Execute (если команда

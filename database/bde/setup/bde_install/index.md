@@ -249,13 +249,13 @@ CONFIG.SYS и SYSTEM.INI при инсталляции не изменяются
 
 WIN.INI в каталоге \\WINDOWS\\SYSTEM будет иметь новые секции:
 
-\[IDAPI\]
+[IDAPI]
 
 DLLPATH=C:\\IDAPI
 
 CONFIGFILE01=C:\\IDAPI\\IDAPI.CFG
 
-\[Borland Language Drivers\]
+[Borland Language Drivers]
 
 LDPath=C:\\IDAPI\\LANGDRV
 

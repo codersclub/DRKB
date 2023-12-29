@@ -143,7 +143,7 @@ bAlertable: BOOL           // задает, должна ли функция в�
 
 type
 
-TWOHandleArray = array\[0..MAXIMUM\_WAIT\_OBJECTS - 1\] of THandle;
+TWOHandleArray = array[0..MAXIMUM\_WAIT\_OBJECTS - 1] of THandle;
 
 PWOHandleArray = \^TWOHandleArray;
 

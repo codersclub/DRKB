@@ -77,7 +77,7 @@ way of getting the job done. It will show an entry in the Help menu
 Execute from the Expert will be called. The following points must be
 respected in order to get the expert working:
 
-· The method GetState must return \[esEnabled\]
+· The method GetState must return [esEnabled]
 · The method GetStyle must return esStandard
 · The method GetMenuText returns the text to be shown in the Help menu
 · The method Execute defines the expert action upon activation

@@ -852,7 +852,7 @@ project".)
 форму, измените свойства Form1 (создается автоматически при создании
 нового проекта) как показано ниже:
 
-BorderIcons     \[biSystemMenu\]
+BorderIcons     [biSystemMenu]
 
 biSystemMenu  True
 
@@ -1092,7 +1092,7 @@ TCfgFrm:
 представление. Для того, чтобы создать вторую форму, выберите пункт New
 Form в меню File или "Blank form" в репозитарии.
 
-BorderIcons     \[\]
+BorderIcons     []
 
 biSystemMenu  False
 

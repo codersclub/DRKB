@@ -522,9 +522,9 @@ null
 
      \<top-level decl\> ::= \<function def\> \| \<data decl\>
 
-     \<data decl\> ::= \[\<class\>\] \<type\> \<decl-list\>
+     \<data decl\> ::= [\<class\>] \<type\> \<decl-list\>
 
-     \<function def\> ::= \[\<class\>\] \[\<type\>\] \<function decl\>
+     \<function def\> ::= [\<class\>] [\<type\>] \<function decl\>
 
 Теперь вы можете увидеть проблему: первые две части объявлений для
 данных и функций могут быть одинаковыми. Из-за неоднозначности в этой
@@ -533,7 +533,7 @@ null
 подходящих? Да, с небольшой работой. Предположим мы запишем ее таким
 образом:
 
-     \<top-level decl\> ::= \[\<class\>\] \<decl\>
+     \<top-level decl\> ::= [\<class\>] \<decl\>
 
      \<decl\> ::= \<type\> \<typed decl\> \| \<function decl\>
 

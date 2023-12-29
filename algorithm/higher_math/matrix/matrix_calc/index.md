@@ -56,7 +56,7 @@ Matrix.Multiple( X, Y : Vector )
 
 Matrix.Invert( A : Matrix )
 
--- если A\[N,M\], и N \<\> M то результат -- матрица размера \[M,N\] --
+-- если A[N,M], и N \<\> M то результат -- матрица размера [M,N] --
 псевдообратная = A+.
 
 Matrix.Addition( A : Matrix; B : Real )

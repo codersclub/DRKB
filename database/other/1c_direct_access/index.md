@@ -82,7 +82,7 @@ D=DDV7120\|AccWare Data Dictionary (DDCP=1251UKR)\|
 
 \#==TABLE no 0 : Соединений
 
-\# Name \|Descr \|Type\[A/S/U\]\|DBTableName\|ReUsable
+\# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
 
 T=1SUSERS \|Соединений \|A \|1SUSERS \|1
 
@@ -100,7 +100,7 @@ F=NETCHGCN \|Count of changes \|N \|10 \|0
 
 \#==TABLE no 1 : Системная
 
-\# Name \|Descr \|Type\[A/S/U\]\|DBTableName\|ReUsable
+\# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
 
 T=1SSYSTEM\|Системная \|A \|1SSYSTEM \|1
 
@@ -130,7 +130,7 @@ F=FLAGS \|FLAGS \|N \|10 \|0
 
 \#==TABLE no 2 : Константы
 
-\# Name \|Descr \|Type\[A/S/U\]\|DBTableName\|ReUsable
+\# Name \|Descr \|Type[A/S/U]\|DBTableName\|ReUsable
 
 T=1SCONST \|Константы \|A \|1SCONST \|1
 

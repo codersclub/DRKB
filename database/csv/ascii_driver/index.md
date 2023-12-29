@@ -174,7 +174,7 @@ Field1=Text,Char,3,00,00
 именем DATES.SCH и обеспечивать определения полей для файла данных ASCII
 с именем DATES.TXT.
 
-\[DATES\]
+[DATES]
 
 Filetype=VARYING
 

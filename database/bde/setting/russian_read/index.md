@@ -22,7 +22,7 @@ SystemFont="Fixedsys"
 
 или
 
-\[HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CodePage\]
+[HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CodePage]
 
 "1252"="c\_1251.nls"
 
@@ -43,7 +43,7 @@ SystemFont="Fixedsys"
 
 Для DBD 5.0 в файл c:\\windows\\pdoxwin.ini вставить в секцию
 
-\[Properties\]
+[Properties]
 
 SystemFont=Arial Cyr
 
@@ -95,7 +95,7 @@ cp866.
 
 вставить в секцию
 
-\[Properties\]
+[Properties]
 
 SystemFont=Arial Cyr
 

@@ -1232,11 +1232,11 @@ Privacy And Security
 
 1135 - Helminthiasis of the Internet
 1115 - Privacy enhancement for Internet electronic mail: Part III -
-algorithms, modes, and identifiers \[Draft\]
+algorithms, modes, and identifiers [Draft]
 1114 - Privacy enhancement for Internet electronic mail: Part II -
-certificate-based key management \[Draft\]
+certificate-based key management [Draft]
 1113 - Privacy enhancement for Internet electronic mail: Part I -
-message encipherment and authentication procedures \[Draft\]
+message encipherment and authentication procedures [Draft]
 1040 - Privacy enhancement for Internet electronic mail: Part I: Message
 encipherment and authentication procedures
 1038 - Draft revised IP security option

@@ -612,9 +612,9 @@ help
 
 authinfo user Name\|pass Password
 
-article \[MessageID\|Number\]
+article [MessageID\|Number]
 
-body \[MessageID\|Number\]
+body [MessageID\|Number]
 
 check MessageID
 
@@ -622,7 +622,7 @@ date
 
 group newsgroup
 
-head \[MessageID\|Number\]
+head [MessageID\|Number]
 
 help
 
@@ -630,7 +630,7 @@ ihave
 
 last
 
-list \[active\|active.times\|newsgroups\|subscriptions\]
+list [active\|active.times\|newsgroups\|subscriptions]
 
 listgroup newsgroup
 
@@ -638,9 +638,9 @@ mode stream
 
 mode reader
 
-newgroups yymmdd hhmmss \[GMT\] \[\<distributions\>\]
+newgroups yymmdd hhmmss [GMT] [\<distributions\>]
 
-newnews newsgroups yymmdd hhmmss \[GMT\] \[\<distributions\>\]
+newnews newsgroups yymmdd hhmmss [GMT] [\<distributions\>]
 
 next
 
@@ -648,17 +648,17 @@ post
 
 slave
 
-stat \[MessageID\|Number\]
+stat [MessageID\|Number]
 
 takethis MessageID
 
-xgtitle \[group\_pattern\]
+xgtitle [group\_pattern]
 
-xhdr header \[range\|MessageID\]
+xhdr header [range\|MessageID]
 
-xover \[range\]
+xover [range]
 
-xpat header range\|MessageID pat \[morepat...\]
+xpat header range\|MessageID pat [morepat...]
 
 .
 

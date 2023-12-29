@@ -526,7 +526,7 @@ int 42H, и танцуем джигу на костях защиты.
    USHORT DDB\_Flags;           /* INIT \<0\> for init calls complete
 */
 
-   UCHAR DDB\_Name\[8\];          /* AINIT \<"        "\> Device name
+   UCHAR DDB\_Name[8];          /* AINIT \<"        "\> Device name
 */
 
    ULONG DDB\_Init\_Order;       /* INIT  */

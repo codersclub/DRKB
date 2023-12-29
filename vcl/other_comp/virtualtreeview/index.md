@@ -345,7 +345,7 @@ for the vertical alignment of the latter).
     end;
 
 Предыдущий пример был для случая TreeOptions.SelectionOptions :=
-TreeOptions.SelectionOptions - \[toMultiSelect\]
+TreeOptions.SelectionOptions - [toMultiSelect]
 
 В случае мультивыделения код изменяется следующим образом
 

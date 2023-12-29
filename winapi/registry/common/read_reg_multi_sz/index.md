@@ -82,7 +82,7 @@ Date: 01.01.2007
     {
      Question:
      I want to read out the binary-value "problems" of the path
-     HKEY_DYN_DATA\Config Manager\Enum\[add the key of a hardware component] to
+     HKEY_DYN_DATA\Config Manager\Enum[add the key of a hardware component] to
      detect if a hardware component is troubled and not working right.
      But I cannot handle the ReadBinaryData-Method of TRegistry correct.
      Everytime I use it, it always returns "4" as content of the buffer.

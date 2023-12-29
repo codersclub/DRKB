@@ -19,19 +19,19 @@ C:\\windows\\start menu\\programs\\startup {english}
 
 This Autostart Directory is saved in :
 
-\[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders\]
+[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders]
 
 Startup="C:\\windows\\start menu\\programs\\startup"
 
-\[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders\]
+[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders]
 
 Startup="C:\\windows\\start menu\\programs\\startup"
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\explorer\\User Shell Folders\]
+[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\explorer\\User Shell Folders]
 
 "Common Startup"="C:\\windows\\start menu\\programs\\startup"
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\explorer\\Shell Folders\]
+[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\explorer\\Shell Folders]
 
 "Common Startup"="C:\\windows\\start menu\\programs\\startup"
 
@@ -40,7 +40,7 @@ will lead to execution of ALL and EVERY executable inside set directory.
 
 ### 2. Win.ini
 
-\[windows\]
+[windows]
 
 load=file.exe
 
@@ -48,7 +48,7 @@ run=file.exe
 
 ### 3. System.ini
 
-\[boot\]
+[boot]
 
 Shell=Explorer.exe file.exe
 
@@ -61,23 +61,23 @@ Autostarts everytime.
 
 ### 5. Registry
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices\]
+[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices]
 
    "Whatever"="c:\\runfolder\\program.exe"
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce\]
+[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce]
 
    "Whatever"="c:\\runfolder\\program.exe"
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\]
+[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run]
 
    "Whatever"="c:\\runfolder\\program.exe"
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\]
+[HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce]
 
    "Whatever"="c:\\runfolder\\program.exe"
 
-\[HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx\\000x\]
+[HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx\\000x]
 
    "RunMyApp"="\|\|notepad.exe"
 
@@ -93,11 +93,11 @@ The format is: "DllFileName\|FunctionName\|CommandLineArguements"
 
    http://support.microsoft.com/support/kb/articles/Q232/5/09.ASP
 
-\[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\]
+[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run]
 
    "Whatever"="c:\\runfolder\\program.exe"
 
-\[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\]
+[HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce]
 
    "Whatever"="c:\\runfolder\\program.exe"
 
@@ -109,7 +109,7 @@ then is deleted by windows
 
 Example content of wininit.ini :
 
-    [Rename\]
+    [Rename]
 
     NUL=c:\windows\picture.exe
 
@@ -123,33 +123,33 @@ Starts everytime at Dos Level.
 
 ###8. Registry Shell Spawning
 
-\[HKEY\_CLASSES\_ROOT\\exefile\\shell\\open\\command\] @="%1" %*
+[HKEY\_CLASSES\_ROOT\\exefile\\shell\\open\\command] @="%1" %*
 
-\[HKEY\_CLASSES\_ROOT\\comfile\\shell\\open\\command\] @="%1" %*
+[HKEY\_CLASSES\_ROOT\\comfile\\shell\\open\\command] @="%1" %*
 
-\[HKEY\_CLASSES\_ROOT\\batfile\\shell\\open\\command\] @="%1" %*
+[HKEY\_CLASSES\_ROOT\\batfile\\shell\\open\\command] @="%1" %*
 
-\[HKEY\_CLASSES\_ROOT\\htafile\\Shell\\Open\\Command\] @="%1" %*
+[HKEY\_CLASSES\_ROOT\\htafile\\Shell\\Open\\Command] @="%1" %*
 
-\[HKEY\_CLASSES\_ROOT\\piffile\\shell\\open\\command\] @="%1" %*
+[HKEY\_CLASSES\_ROOT\\piffile\\shell\\open\\command] @="%1" %*
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\batfile\\shell\\open\\command\]
-
-@="%1" %*
-
-\[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\comfile\\shell\\open\\command\]
+[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\batfile\\shell\\open\\command]
 
 @="%1" %*
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\exefile\\shell\\open\\command\]
+[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\comfile\\shell\\open\\command]
 
 @="%1" %*
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\htafile\\Shell\\Open\\Command\]
+[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\exefile\\shell\\open\\command]
+
+@="%1" %*
+
+[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\htafile\\Shell\\Open\\Command]
 
 @= "%1" %*
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\piffile\\shell\\open\\command\]
+[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\piffile\\shell\\open\\command]
 
 @="%1" %*
 
@@ -161,7 +161,7 @@ Known as Unkown Starting Method and is currently used by Subseven.
 
 ### 9. Icq Inet
 
-\[HKEY\_CURRENT\_USER\\Software\\Mirabilis\\ICQ\\Agent\\Apps\\test\]
+[HKEY\_CURRENT\_USER\\Software\\Mirabilis\\ICQ\\Agent\\Apps\\test]
 
 "Path"="test.exe"
 
@@ -171,7 +171,7 @@ Known as Unkown Starting Method and is currently used by Subseven.
 
 "Enable"="Yes"
 
-\[HKEY\_CURRENT\_USER\\Software\\Mirabilis\\ICQ\\Agent\\Apps\
+[HKEY\_CURRENT\_USER\\Software\\Mirabilis\\ICQ\\Agent\\Apps\
 
 This key includes all the APPS which are executed IF ICQNET Detects an
 Internet Connection. 
@@ -233,7 +233,7 @@ other Program normaly started over the Run Keys.
 
 Misc Information
 
-\[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\ShellScrap\] @="Scrap object"
+[HKEY\_LOCAL\_MACHINE\\Software\\CLASSES\\ShellScrap] @="Scrap object"
 
 "NeverShowExt"=""
 

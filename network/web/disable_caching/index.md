@@ -19,12 +19,12 @@ Click on Start-\>Settings-\>Control Panel-\>Administrative
 Tools-\>Internet Services Manager. Right click on your website and
 select Properties:
 
-\[IIS Manager Screen Shot\]
+[IIS Manager Screen Shot]
 
 Select the "Home Directory" tab, and click on Configuration...:
 
-\[Configuration\]
+[Configuration]
 
 Uncheck "Cache ISAPI applications":
 
-\[uncheck cache extensions\]
+[uncheck cache extensions]

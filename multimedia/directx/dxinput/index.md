@@ -90,7 +90,7 @@ WEB-сайт: http://daddy.mirgames.ru
     //действие
     end
 
-Чтобы определить "тикер": DXInput.Keyboard.KeyAssigns\[\<тикер\>,X\]:=
+Чтобы определить "тикер": DXInput.Keyboard.KeyAssigns[\<тикер\>,X]:=
 \<кнопка\>,где:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
@@ -107,7 +107,7 @@ WEB-сайт: http://daddy.mirgames.ru
 
 Примечание: буквенные клавиши указываются в верхнем регистре, т.е.
 
-DXInput.Keyboard.KeyAssigns\[isButton10,X\]:=ord(\'q\')
+DXInput.Keyboard.KeyAssigns[isButton10,X]:=ord(\'q\')
 
 не будет реагировать на нажатие клавиши \'q\' .
 

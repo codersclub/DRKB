@@ -249,21 +249,21 @@ on authors (au\_id)
 
  
 
-create \[unique\] \[clustered \| nonclustered\]
+create [unique] [clustered \| nonclustered]
 
    index название\_индекса
 
-on \[\[база\_данных.\]владелец.\]название\_таблицы (название\_столбца
+on [[база\_данных.]владелец.]название\_таблицы (название\_столбца
 
-   \[,название\_столбца\]...)
+   [,название\_столбца]...)
 
-\[with {{fillfactor \| max\_rows\_per\_page}= x,
+[with {{fillfactor \| max\_rows\_per\_page}= x,
 
     ignore\_dup\_key, sorted\_data,
 
-   \[ignore\_dup\_row \| allow\_dup\_row\]}\]
+   [ignore\_dup\_row \| allow\_dup\_row]}]
 
-\[on название\_сегмента\]
+[on название\_сегмента]
 
  
 
@@ -868,7 +868,7 @@ on seg1
 
 drop index название\_таблицы.название\_индекса
 
-            \[,название\_таблицы.название\_индекса\]...
+            [,название\_таблицы.название\_индекса]...
 
  
 
@@ -952,7 +952,7 @@ postalcodeind    nonclustered located on default  postalcode
 
  
 
-update statistics название\_таблицы \[название\_индекса\]
+update statistics название\_таблицы [название\_индекса]
 
  
 

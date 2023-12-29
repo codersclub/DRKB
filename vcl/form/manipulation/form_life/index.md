@@ -93,8 +93,8 @@ procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 
 begin
 
-if MessageDlg(\'Really close this window?\', mtConfirmation, \[mbOk,
-mbCancel\], 0) = mrCancel then
+if MessageDlg(\'Really close this window?\', mtConfirmation, [mbOk,
+mbCancel], 0) = mrCancel then
 
   CanClose := False;
 

@@ -546,7 +546,7 @@ Date: 01.01.2007
      
     end.
 
-Denis Furman \[000705
+Denis Furman [000705
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
@@ -597,9 +597,9 @@ if Depth \< 2 then
 FFT(d, Src, Dest)
 
 , далее заполняем Dest с применением \'комплексного FT\' после того, как
-результат вызова Dest\^\[j\] будет равен
+результат вызова Dest\^[j] будет равен
 
-1/sqrt(N) * Sum(k=0.. N - 1 ; EiT(2*Pi(j*k/N)) * Src\^\[k\])
+1/sqrt(N) * Sum(k=0.. N - 1 ; EiT(2*Pi(j*k/N)) * Src\^[k]
 
 , где EiT(t) = cos(t) + i sin(t) . То есть, стандартное преобразование
 Фурье.

@@ -64,11 +64,11 @@ ie. Windows.Beep(Freq,Duration)
 
 The format of the "Music String" is a comma delimited (",\<"
 terminated) string in the following formats. (The string is
-CASE-INSENSITIVE and \[\] means optional with defaults).
+CASE-INSENSITIVE and [] means optional with defaults).
 
-A..G\[+ or -\]\[0..5\]\[/BEATS\] and
+A..G[+ or -][0..5][/BEATS] and
 
-@\[/BEATS\]
+@[/BEATS]
 
 Where A..G   is the Note to be played.
 

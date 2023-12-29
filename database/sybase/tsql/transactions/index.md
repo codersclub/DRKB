@@ -320,9 +320,9 @@ ddl in tran.
 
  
 
-begin {transaction \| tran} \[название\_транзакции\]
+begin {transaction \| tran} [название\_транзакции]
 
-commit {transaction \| tran \| work} \[название\_транзакции\]
+commit {transaction \| tran \| work} [название\_транзакции]
 
  
 
@@ -378,8 +378,8 @@ commit tran
 
  
 
-rollback {transaction \| tran \| work} \[название\_транзакции \|
-название\_точки\]
+rollback {transaction \| tran \| work} [название\_транзакции \|
+название\_точки]
 
  
 

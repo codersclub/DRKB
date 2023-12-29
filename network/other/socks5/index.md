@@ -31,7 +31,7 @@ Date: 01.01.2007
 
  Этот документ описывает протокол, который является развитием предыдущей
 
- версии протокола 4 \[1\]. Этот новый протокол основывается на бурных
+ версии протокола 4 [1]. Этот новый протокол основывается на бурных
 
  дискуссиях и прототипах реализаций. Основной вклад внесли:
 
@@ -64,8 +64,8 @@ Machines.
 
  работы через файрволл для этих протоколов.
 
-Leech, et al                Standards Track                 \[Страница
-1\]
+Leech, et al                Standards Track                 [Страница
+1]
 
 RFC 1928                    Протокол SOCKS 5                   Март 1996
 
@@ -144,8 +144,8 @@ RFC 1928                    Протокол SOCKS 5                   Март 
 
  начинает переговоры о методе аутентификации, который будет
 
-Leech, et al                Standards Track                 \[Страница
-2\]
+Leech, et al                Standards Track                 [Страница
+2]
 
 RFC 1928                    Протокол SOCKS 5                   Март 1996
 
@@ -210,8 +210,8 @@ RFC 1928                    Протокол SOCKS 5                   Март 
  Затем клиент и сервер начинают аутентификацию согласно выбранному
 методу.
 
-Leech, et al                Standards Track                 \[Страница
-3\]
+Leech, et al                Standards Track                 [Страница
+3]
 
 RFC 1928                    Протокол SOCKS 5                   Март 1996
 
@@ -290,8 +290,8 @@ RFC 1928                    Протокол SOCKS 5                   Март 
 
  с типом запроса.
 
-Leech, et al                Standards Track                 \[Страница
-4\]
+Leech, et al                Standards Track                 [Страница
+4]
 
 RFC 1928                    Протокол SOCKS 5                   Март 1996
 
@@ -368,8 +368,8 @@ RFC 1928                    Протокол SOCKS 5                   Март 
 
         o  ATYP   тип последующего адреса
 
-Leech, et al                Standards Track                 \[Страница
-5\]
+Leech, et al                Standards Track                 [Страница
+5]
 
 RFC 1928                    Протокол SOCKS 5                   Март 1996
 
@@ -450,8 +450,8 @@ PUT).
 
  входящего соединения или неудачной попытке входящего соединения.
 
-Leech, et al                Standards Track                 \[Страница
-6\]
+Leech, et al                Standards Track                 [Страница
+6]
 
 RFC 1928                    Протокол SOCKS 5                   Март 1996
 
@@ -527,8 +527,8 @@ X\'00\'),
 
  содержит в себе заголовок UDP-запроса:
 
-Leech, et al                Standards Track                 \[Страница
-7\]
+Leech, et al                Standards Track                 [Страница
+7]
 
 RFC 1928                    Протокол SOCKS 5                   Март 1996
 
@@ -625,8 +625,8 @@ RFC 1928                    Протокол SOCKS 5                   Март 
 
  поле FRAG отлично от X\'00\'.
 
-Leech, et al                Standards Track                 \[Страница
-8\]
+Leech, et al                Standards Track                 [Страница
+8]
 
 RFC 1928                    Протокол SOCKS 5                   Март 1996
 
@@ -676,7 +676,7 @@ RFC 1928                    Протокол SOCKS 5                   Март 
 
 9\.  Ссылки
 
- \[1\] Koblas, D., "SOCKS", Proceedings: 1992 Usenix Security
+ [1] Koblas, D., "SOCKS", Proceedings: 1992 Usenix Security
 Symposium.
 
 Адрес автора

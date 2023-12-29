@@ -58,7 +58,7 @@ The Customiser - Recommended
 
 W32Dasm -- optional
 
-Brains: Среднее количество\[x\]
+Brains: Среднее количество[x]
 
 Исследование
 

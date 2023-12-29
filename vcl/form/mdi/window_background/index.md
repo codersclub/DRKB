@@ -283,7 +283,7 @@ Declarations } в обьявлении формы и добаьте следую
         end;
     end;
 
-По созданию окна \[событие OnCreate()\] напишите такой код:
+По созданию окна [событие OnCreate()] напишите такой код:
 
     FClientInstance := MakeObjectInstance(ClientWndProc);
     FPrevClientProc := Pointer(GetWindowLong(ClientHandle, GWL_WNDPROC));

@@ -231,8 +231,8 @@ FLinkClipFmt := RegisterClipboardFormat (\'Link Source\');
 
 RegisterFormAsOLEDropTarget (Self,
 
-\[OLEFormat (PEmbedClipFmt, \'%s\', \'%s\', FALSE), OLEFormat
-(PLinkClipFmt, \'%s\', \'%s\', TRUE)\]) ;
+[OLEFormat (PEmbedClipFmt, \'%s\', \'%s\', FALSE), OLEFormat
+(PLinkClipFmt, \'%s\', \'%s\', TRUE)] ;
 
 Для тех случаев, когда регистрацию формы и установку списка возможных
 форматов нужно произвести раздельно, предусмотрены процедуры:

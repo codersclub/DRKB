@@ -1,6 +1,6 @@
 ---
 Title: TDXSound. AudioStream, стерео эффекты
-Author: 3d\[Power\]
+Author: 3d[Power]
 Date: 01.01.2007
 ---
 
@@ -22,7 +22,7 @@ DXWaveList. Последний является "коллекцией wav фай
 будете заносить wav файлы. Установите DxWaveList1.DXSound := DXSound1. В
 этот DXSound будет воспроизводиться звук.
 Чтобы проиграть звук вам надо в DxWaveList1 добавить какой нибудь wav
-файл. После чего вызвать dxwavelist1.items\[0\].play(false); Будет
+файл. После чего вызвать dxwavelist1.items[0].play(false); Будет
 проигран звук, который находится в списке нулевым. Можно и так:
 dxwavelist1.Items.Find(\'somewave1\').Play(False);
 
@@ -138,6 +138,6 @@ playsound(\'somesound1\',0); - слева. etc.
     end;
     end;
 
-Автор: 3d\[Power\]
+Автор: 3d[Power]
 
 <https://www.mirgames.ru>

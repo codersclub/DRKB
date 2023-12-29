@@ -235,7 +235,7 @@ EXISTS
     Query1.Params[0].AsString:=Edit1.Text;
     Query1.Active:=true;
 
-Вывод дополнительного текста\[использование выражений\]
+Вывод дополнительного текста[использование выражений]
 
     SELECT LastName, Salary/100, '$' FROM employee
 

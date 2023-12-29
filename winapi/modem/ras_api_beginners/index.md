@@ -87,7 +87,7 @@ Entries: Integer;
 
 количество зарегистрированных "удаленных соединений"
 
-Entry : Array\[1..MaxEntries\] of TRasEntryName;
+Entry : Array[1..MaxEntries] of TRasEntryName;
 
 массив состоящий из переменных, в которые будут помещены сведения об
 "удаленных соединениях", где константа MaxEntries - количество
@@ -118,7 +118,7 @@ AllEntries: TStrings;
 3\. Вызовем функцию RasEnumEntries в результате чего получим искомые
 результаты:
 
-Result\_:=RasEnumEntries(nil, nil, \@Entry\[1\], BuffSize, Entries), где
+Result\_:=RasEnumEntries(nil, nil, \@Entry[1], BuffSize, Entries), где
 
 Result\_- в случае успешного выполнения возвращает 0, в противном случае
 получим ERROR\_BUFFER\_TOO\_SMALL (буфер слишком маленький) или
@@ -126,7 +126,7 @@ ERROR\_NOT\_ENOUGH\_MEMORY(не хватает памяти).
 
 BuffSize - указанный нами размер AnsiChar-массива.
 
-\@Entry\[1\]- получим указатель на первый элемент массива, в который
+\@Entry[1]- получим указатель на первый элемент массива, в который
 поместились необходимые нам сведения.
 
 Entries - получим количество зарегистрированных в системе "удаленных
@@ -206,7 +206,7 @@ R: Integer
 
 результат выполнения библиотечных функций
 
-C : Array\[0..100\] of Char
+C : Array[0..100] of Char
 
 переменная, в которую записывается текст сообщения об ошибке
 
@@ -243,7 +243,7 @@ C : Array\[0..100\] of Char
 
 Получим название выбранного нами "удаленного соединения"
 
-AEntryDial:=ListBox1.Items.Strings\[ListBox1.ItemIndex\];
+AEntryDial:=ListBox1.Items.Strings[ListBox1.ItemIndex];
 
 Заполним все поля переменной DialParams нолями.
 

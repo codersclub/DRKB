@@ -357,21 +357,21 @@ Windows Management API
 
 objwbemServices = ConnectServer(
 
-\[strServer = ""\],
+[strServer = ""],
 
-\[strNameSpace = ""\],
+[strNameSpace = ""],
 
-\[strUser = ""\],
+[strUser = ""],
 
-\[strPassword = ""\],
+[strPassword = ""],
 
-\[strLocale = ""\],
+[strLocale = ""],
 
-\[strAuthority = ""\],
+[strAuthority = ""],
 
-\[iSecurityFlags = 0\],
+[iSecurityFlags = 0],
 
-\[objwbemNamedValueSet = null\]
+[objwbemNamedValueSet = null]
 
 )
 
@@ -439,11 +439,11 @@ Win32\_Processor.
 
 objWbemObject = Get(
 
-\[strObjectPath = ""\],
+[strObjectPath = ""],
 
-\[iFlags = 0\],
+[iFlags = 0],
 
-\[objWbemNamedValueSet = null\]
+[objWbemNamedValueSet = null]
 
 )
 
@@ -480,9 +480,9 @@ objWbemObject = Get(
 
 objWbemObjectSet = Instances\_(
 
-\[iFlags = wbemFlagReturnImmediately\],
+[iFlags = wbemFlagReturnImmediately],
 
-\[objwbemNamedValueSet = null\]
+[objwbemNamedValueSet = null]
 
 )
 
@@ -776,7 +776,7 @@ objMethod = Item(
 
 strName,
 
-\[iFlags = 0\]
+[iFlags = 0]
 
 )
 
@@ -797,7 +797,7 @@ strName - необходимый параметр. Имя метода, указ
 
 objNewInstance = SpawnInstance\_(
 
-\[iFlags = 0\]
+[iFlags = 0]
 
 )
 
@@ -824,9 +824,9 @@ strName,
 
 iCIMType,
 
-\[bIsArray = FALSE\],
+[bIsArray = FALSE],
 
-\[iFlags = 0\]
+[iFlags = 0]
 
 )
 

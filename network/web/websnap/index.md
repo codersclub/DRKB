@@ -327,7 +327,7 @@ AdapterAction. Будет создана новая процедура - Adapter
 
 
 Осталось написать код обработчика события OnExecute нашей процедуры:
-FValue:=AdapterField1.ActionValue.Values\[0\];
+FValue:=AdapterField1.ActionValue.Values[0];
 
 Данная строка сохраняет значение поля AdapterField1 в переменную FValue.
 Чтобы дать пользователю возможность вводить свое имя в текст Unit2.html
@@ -401,7 +401,7 @@ Unit2.pas, содержащим описание PageProducerPage2, найдем
 initialization
 if WebRequestHandler \<\> nil then
 WebRequestHandler.AddWebModuleFactory(TWebPageModuleFactory.Create(TPageProducerPage2,
-TWebPageInfo.Create(\[wpPublished {, wpLoginRequired}\], \'.html\'),
+TWebPageInfo.Create([wpPublished {, wpLoginRequired}], \'.html\'),
 crOnDemand, caCache));
 и раскомментируем фрагмент ",wpLoginRequierd". Кроме того, здесь можно
 исправить еще одну вещь, правда не относящуюся к парольной защите, а
@@ -413,7 +413,7 @@ crOnDemand, caCache));
 initialization
 if WebRequestHandler \<\> nil then
 WebRequestHandler.AddWebModuleFactory(TWebPageModuleFactory.Create(TPageProducerPage2,
-TWebPageInfo.Create(\[wpPublished, wpLoginRequired\],
+TWebPageInfo.Create([wpPublished, wpLoginRequired],
 \'.html\',\'PageProducerPage2\',\'Страница с паролем\'), crOnDemand,
 caCache));
 

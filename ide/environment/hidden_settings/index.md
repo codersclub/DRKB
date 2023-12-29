@@ -70,7 +70,7 @@ Software\\Borland\\Delphi\\5.0\\Component Templates\\CCLibDir
 Alternative component templates directory (shared/network)
 
 Software\\Borland\\Delphi\\5.0\\FormDesign\\DefaultFont="Arial,8"
-\[D4\] or "Arial,8,Bold" \[D5\]
+[D4] or "Arial,8,Bold" [D5]
 
 The default for new forms (you might prefer using the repository\'s
 default form checkbox instead)

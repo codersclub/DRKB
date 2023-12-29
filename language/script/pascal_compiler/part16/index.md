@@ -712,7 +712,7 @@ Expression мы можем уменьшить необходимый код пр
     \<factor\>      ::= \<variable\> \| \<constant\> \| \'(\'
 \<expression\> \')\'
 
-    \<signed\_term\> ::= \[\<addop\>\] \<term\>
+    \<signed\_term\> ::= [\<addop\>] \<term\>
     \<term\>        ::= \<factor\> (\<mulop\> \<factor\>)*
 
     \<expression\>  ::= \<signed\_term\> (\<addop\> \<term\>)*
@@ -758,7 +758,7 @@ Expression мы можем уменьшить необходимый код пр
 
 function IsAddop(c: char): boolean;
 begin
- IsAddop := c in \[\'+\',\'-\', \'\|\', \'\~\'\];
+ IsAddop := c in [\'+\',\'-\', \'\|\', \'\~\'];
 
 end;
 
@@ -1168,11 +1168,11 @@ end;
 Когда мы взглянем на созданные нами БНФ, мы обнаружим, что наша булева
 алгебра добавляет теперь только одну дополнительную строку:
 
-    \<not\_factor\>   ::= \[!\] \<factor\>
+    \<not\_factor\>   ::= [!] \<factor\>
 
     \<factor\>       ::= \<variable\> \| \<constant\> \| \'(\'
 \<expression\> \')\'
-    \<signed\_term\>  ::= \[\<addop\>\] \<term\>
+    \<signed\_term\>  ::= [\<addop\>] \<term\>
     \<term\>         ::= \<not\_factor\> (\<mulop\> \<not\_factor\>)*
 
     \<expression\>   ::= \<signed\_term\> (\<addop\> \<term\>)*

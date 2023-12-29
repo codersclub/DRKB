@@ -665,7 +665,7 @@ Button1Click.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 48px;"}
   ---- ---------------------------------------------------------------------------
-  1.   Посылка запроса на сервер (WriteLn(\'ZipCode \' + memoInput.Lines\[i\]);)
+  1.   Посылка запроса на сервер (WriteLn(\'ZipCode \' + memoInput.Lines[i];)
   ---- ---------------------------------------------------------------------------
 :::
 

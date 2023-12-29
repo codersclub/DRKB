@@ -37,7 +37,7 @@ MapInfo, используйте метод MapInfo Run Menu Command.
 
 Например в обработчике OnClick пропишите следующею команду
 
-KDMapInfoServer1.ExecuteCommandMapBasic(\'Run Menu Command 1702\',\[\]);
+KDMapInfoServer1.ExecuteCommandMapBasic(\'Run Menu Command 1702\',[];
 
 Когда пользователь нажмет на эту кнопку, программа вызывовет метод
 MapInfo - Run Menu Command, который активизирует инструмент под номером
@@ -52,7 +52,7 @@ MapInfo - Run Menu Command, который активизирует инстру
 1702. Таким образом, этот пример можно записать так:
 
 KDMapInfoServer1.ExecuteCommandMapBasic(\'Run Menu Command %S\',
-\[M\_TOOLS\_RECENTER\]);
+[M\_TOOLS\_RECENTER];
 
 Использование идентификаторов (типа M\_TOOLS\_RECENTER) делает Вашу
 программу более читательной, но перед использование вы должны включить в
@@ -150,7 +150,7 @@ Create Menu и управляющий код "(-" как новое опреде
 Например, следующий оператор разрушает "быстрое" меню для окон Карты:
 
 KDMapInfoServer1.ExecuteCommandMapBasic(\' "Create Menu
-""MapperShortcut"" ID 17 As ""(-"" " \', \[\]);
+""MapperShortcut"" ID 17 As ""(-"" " \', [];
 
 Создание собственных уведомляющих вызовов (Callbacks).
 
@@ -171,7 +171,7 @@ MyEnvent в OLE объекте)
 KDMapInfoServer1.ExecuteCommandMapBasic(\'Alter ButtonPad ID 1 Add
 ToolButton calling ole
 
-"MyEvent" ID 1 Icon 0 Cursor 0 DrawMode 34 uncheck\',\[\]);
+"MyEvent" ID 1 Icon 0 Cursor 0 DrawMode 34 uncheck\',[];
 
 Заметьте, что инструментальные панели MapInfo скрыты, подобно остальной
 части интерфейса пользователя MapInfo. Пользователь не будет видеть
@@ -181,7 +181,7 @@ ToolButton calling ole
 Menu Command ID, c индентификатором созданной кнопки чтобы
 активизировать этот инструмент.
 
-KDMapInfoServer1.ExecuteCommandMapBasic(\'Run Menu Command ID 1\',\[\]);
+KDMapInfoServer1.ExecuteCommandMapBasic(\'Run Menu Command ID 1\',[];
 
 Примечание:
 

@@ -1180,7 +1180,7 @@ Some things to note are the following:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Unlike BDE, ODBCExpress, and Titan, NativeDB deals with the default 'autoincrement' automatically.  It does this by setting AsaDataset.Fields\[0\].Required to false initially.  Please refer to Appendix C: Primary Key Issues, for more information
+  2.   Unlike BDE, ODBCExpress, and Titan, NativeDB deals with the default 'autoincrement' automatically.  It does this by setting AsaDataset.Fields[0].Required to false initially.  Please refer to Appendix C: Primary Key Issues, for more information
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -1444,7 +1444,7 @@ error 'List index out of bounds (0)' will occur because the form shows
 no columns in 'DBGrid' when the 'Active' property is false.  To get
 around this error, the line of code,  
 
-                              Table1.Fields\[0\].Required := False;
+                              Table1.Fields[0].Required := False;
 
 should be placed in another event, such as a button click event
 discussed above.
@@ -2216,7 +2216,7 @@ For Example 3 they are:
 
        OEDataSet1.Last;
 
-nextnum := OEDataSet1.FieldValues\['keyfld'\] + 1;
+nextnum := OEDataSet1.FieldValues['keyfld'] + 1;
 
 These lines of code are jumping to the last row in the table, and
 assigning nextnum the value that is in the 'keyfld' column currently
@@ -2279,15 +2279,15 @@ The method that is recommended for providing a value for the column
 the ASA end where the default is autoincrement.  The line of code that
 can accomplish this for BDE is:
 
-       Table1.Fields\[0\].Required := False;
+       Table1.Fields[0].Required := False;
 
 For ODBCExpress the line of code would be:
 
-       OEDataSet1.Fields\[0\].Required := False;
+       OEDataSet1.Fields[0].Required := False;
 
 For Titan SQLAnywhere Developer the line of code would be:
 
-       tsTable1.Fields\[0\].Required := False;
+       tsTable1.Fields[0].Required := False;
 
 It should be noted that Delphi represents columns in a table through
 numbers starting at 0.  In the lines of code above, it is assumed that

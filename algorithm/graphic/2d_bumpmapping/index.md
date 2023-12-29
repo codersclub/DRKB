@@ -32,16 +32,16 @@ Date: 01.01.2007
 таблички будет для удобства 256x256.
 
 2\. Подбирая из lightmap интенсивность по формуле: outvalue =
-lightmap\[n\_x+128\]\[n\_y+128\] (если использовать нормали в диапазоне
+lightmap[n\_x+128][n\_y+128] (если использовать нормали в диапазоне
 -128...+127) мы получим корректную картину освещения для бесконечно
 близкого источника.
 
 
-n\_x = bumpmap\[x+1\]\[y\] - bumpmap\[x-1\]\[y\]
-n\_y = bumpmap\[x\]\[y+1\] - bumpmap\[x\]\[y-1\]
+n\_x = bumpmap[x+1][y] - bumpmap[x-1][y]
+n\_y = bumpmap[x][y+1] - bumpmap[x][y-1]
 
 Конечный цвет определяется так:
-outvalue:=lightmap\[(n\_x-(lightx-currentx))\]\[(n\_y-(lighty-currenty))\].
+outvalue:=lightmap[(n\_x-(lightx-currentx))][(n\_y-(lighty-currenty))].
 Также нужно проверить, находимся ли мы внутри диапазона lightmap.
 
 Вот пример:

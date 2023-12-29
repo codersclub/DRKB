@@ -54,12 +54,12 @@ SuprvRequest
 ACCESSINFO
 Структура ACCESSINFO
 struct ACCESSINFO {
-char m\_szName\[148\];
+char m\_szName[148];
 unsigned int m\_flags; // bit 0 - "allow caller access"
 unsigned int m\_field\_98;
-char m\_szProtocol\[4\];
-unsigned int m\_field\_A0\[11\];
-char m\_szComment\[256\];
+char m\_szProtocol[4];
+unsigned int m\_field\_A0[11];
+char m\_szComment[256];
 unsigned int m\_field\_1CC;
 unsigned short m\_accessNumber; // 0 - share level access
 unsigned short m\_field\_1D2;

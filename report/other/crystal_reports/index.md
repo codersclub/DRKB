@@ -60,18 +60,18 @@ Automation Server
 
 Необходимые файлы
 
-Библиотека \[crpe32.dll\] содержит интерфейс вызовов API функций.
+Библиотека [crpe32.dll] содержит интерфейс вызовов API функций.
 
-Модуль \[uCrystalApi.pas\] с описаниями API функций. Он был подправлен
+Модуль [uCrystalApi.pas] с описаниями API функций. Он был подправлен
 мной, так как было несколько синтаксических ошибок.
 
 Для работы примера необходим источник данных, в качестве которого
-используется демонстрационная БД MS Access 2000 \[source\_db.mdb\]. В
+используется демонстрационная БД MS Access 2000 [source\_db.mdb]. В
 качестве драйвера связи используется OLE DB для MS Jet 4.0. БД должна
 находиться в той же папке, где и пример отчета.
 
 Если вы хотите распространять ваше приложение с отчетами, тогда
-ознакомьтесь с содержимым файла \[crpe32.dep\], который содержит список
+ознакомьтесь с содержимым файла [crpe32.dep], который содержит список
 необходимых файлов для работы RE.
 
 Пример реализован на Delphi 6.0.
@@ -327,13 +327,13 @@ PEGetNthTableLogOnInfo(FHandleJob, 0, lt);
 
 type
 
-PELogonServerType = array\[0..PE\_SERVERNAME\_LEN - 1\] of Сhar;
+PELogonServerType = array[0..PE\_SERVERNAME\_LEN - 1] of Сhar;
 
-PELogonDBType = array\[0..PE\_DATABASENAME\_LEN - 1\] of Сhar;
+PELogonDBType = array[0..PE\_DATABASENAME\_LEN - 1] of Сhar;
 
-PELogonUserType = array\[0..PE\_USERID\_LEN - 1\] of Сhar;
+PELogonUserType = array[0..PE\_USERID\_LEN - 1] of Сhar;
 
-PELogonPassType = array\[0..PE\_PASSWORD\_LEN - 1\] of Сhar;
+PELogonPassType = array[0..PE\_PASSWORD\_LEN - 1] of Сhar;
 
 PELogOnInfo = record
 

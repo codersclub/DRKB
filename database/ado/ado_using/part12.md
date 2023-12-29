@@ -38,15 +38,15 @@ Date: 01.01.2007
 
 Главное, для чего предназначен класс TParameters, --- содержать список
 параметров. Индексированный список параметров представлен свойством
-property Items\[Index: Integer\]: TParameter; Текущие значения
+property Items[Index: Integer]: TParameter; Текущие значения
 параметров можно получить из индексированного свойства
 
-property ParamValues\[const ParamName: String\]: Variant;
+property ParamValues[const ParamName: String]: Variant;
 
 При этом доступ к конкретному значению осуществляется по имени
 параметра:
 
-Editl.Text := ADODataSet.Parameters.ParamValues\[\'ParamOne\'\];
+Editl.Text := ADODataSet.Parameters.ParamValues[\'ParamOne\'];
 
 Список параметров можно обновлять при помощи методов
 

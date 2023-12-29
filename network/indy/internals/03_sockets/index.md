@@ -322,7 +322,7 @@ smtp        25/tcp        mail        \#Simple Mail Transfer Protocol
 
 Формат файла следующий:
 
-\<service name\> \<port number\>/\<protocol\> \[aliases...\] \[\#\<comment\>\]
+\<service name\> \<port number\>/\<protocol\> [aliases...] [\#\<comment\>]
 
 Вам не требуется читать данный файл, поскольку стек протоколов делает
 это самостоятельно и прозрачно для вас. Файл SERVICES может быть
@@ -382,7 +382,7 @@ C:\\ping localhost
 
  
 
-Обмен пакетами с xp.host.ru \[127.0.0.1\] по 32 байт:
+Обмен пакетами с xp.host.ru [127.0.0.1] по 32 байт:
 
  
 
@@ -445,11 +445,11 @@ Traceroute работает из командной строки, Traceroute п�
 
 C:\\\>tracert www.atozedsoftware.com
 
-Tracing route to www.atozedsoftware.com \[213.239.44.103\]
+Tracing route to www.atozedsoftware.com [213.239.44.103]
 
 over a maximum of 30 hops:
 
-1 \<1 ms \<1 ms \<1 ms server.mshome.NET \[192.168.0.1\]
+1 \<1 ms \<1 ms \<1 ms server.mshome.NET [192.168.0.1]
 
 2 54 ms 54 ms 50 ms 102.111.0.13
 
@@ -459,17 +459,17 @@ over a maximum of 30 hops:
 
 5 55 ms 232 ms 53 ms 195.14.128.42
 
-6 56 ms 55 ms 54 ms cosmos-e.cytanet.NET \[195.14.157.1\]
+6 56 ms 55 ms 54 ms cosmos-e.cytanet.NET [195.14.157.1]
 
-7 239 ms 237 ms 237 ms ds3-6-0-cr02.nyc01.pccwbtn.NET \[63.218.9.1\]
+7 239 ms 237 ms 237 ms ds3-6-0-cr02.nyc01.pccwbtn.NET [63.218.9.1]
 
-8 304 ms 304 ms 303 ms ge-4-2-cr02.ldn01.pccwbtn.NET \[63.218.12.66\]
+8 304 ms 304 ms 303 ms ge-4-2-cr02.ldn01.pccwbtn.NET [63.218.12.66]
 
-9 304 ms 307 ms 307 ms linx.uk2net.com \[195.66.224.19\]
+9 304 ms 307 ms 307 ms linx.uk2net.com [195.66.224.19]
 
-10 309 ms 302 ms 306 ms gw12k-hex.uk2net.com \[213.239.57.1\]
+10 309 ms 302 ms 306 ms gw12k-hex.uk2net.com [213.239.57.1]
 
-11 307 ms 306 ms 305 ms pop3 \[213.239.44.103\]
+11 307 ms 306 ms 305 ms pop3 [213.239.44.103]
 
 Trace complete.
 

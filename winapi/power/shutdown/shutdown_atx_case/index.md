@@ -25,7 +25,7 @@ Date: 01.01.2007
     int 15h
     stop: int 20h
 
-Код прислал Колесников Сергей Александрович \[mailto:rovd\@inbox.ru\]
+Код прислал Колесников Сергей Александрович [mailto:rovd\@inbox.ru]
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

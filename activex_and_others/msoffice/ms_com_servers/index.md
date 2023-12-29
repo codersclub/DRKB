@@ -544,7 +544,7 @@ onDoubleClick для кнопки следующим образом:
     end;
 
 Переменная word имеет тип ApplicatiwonDisp = dispinterface
-\[\'{00020970-0000-0000-C000-000000000046}\'\], который описан в
+[\'{00020970-0000-0000-C000-000000000046}\'], который описан в
 библиотеке типов Word97\_TLB.Pas.
 
 Строка word:=CoWordapplicaTion.Create as \_ApplicationDisp;

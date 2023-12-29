@@ -59,7 +59,7 @@ TAA........\<Fourth record type, четвертый тип записи\>
       end;
 
 IndexFromDataTag должен искать передаваемый тэг поля в массиве DataTags.
-Определите все поля в TDataRec как Array \[1..someUpperBound\] of Char.
+Определите все поля в TDataRec как Array [1..someUpperBound] of Char.
 
 <https://delphiworld.narod.ru/>
 

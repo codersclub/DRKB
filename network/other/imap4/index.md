@@ -257,15 +257,15 @@ S * 172 EXISTS
 
 S * 1 RECENT
 
-S * OK \[UNSEEN 12) Message 12 is first unseen
+S * OK [UNSEEN 12) Message 12 is first unseen
 
-S * OK \[UIDVALIDITY 3857529045\] UIDs valid
+S * OK [UIDVALIDITY 3857529045] UIDs valid
 
 S * FLAGS (\\Answered \\Flagged \\Deleted \\Seen \\Draft)
 
-S * OK \[PERMANENTFLAGS (\\Deleted \\Seen \\*)\] Limited
+S * OK [PERMANENTFLAGS (\\Deleted \\Seen \\*)] Limited
 
-S A142 OK \[READ-WRITE\] SELECT completed
+S A142 OK [READ-WRITE] SELECT completed
 
 Сервер 1МАР4, прежде чем подтвердить завершение обработки команды,
 передает клиенту атрибуты данного каталога. В показанном выше примере:
@@ -275,20 +275,20 @@ S A142 OK \[READ-WRITE\] SELECT completed
 Из них одно только что поступившее (строка "* 1 RECENT").
 
 В папке есть непрочитанные сообщения, минимальный порядковый номер
-непрочитанного сообщения - 12 (строка "* OK \[UNSEEN 12\] Message 12
+непрочитанного сообщения - 12 (строка "* OK [UNSEEN 12] Message 12
 is first unseen"),
 
 Уникальный временный идентификатор папки INBOX в данной сессии -
-3857529045 (строка "* OK \[UIDVAL1DITY 3857529045\] UIDs valid").
+3857529045 (строка "* OK [UIDVAL1DITY 3857529045] UIDs valid").
 
 Сообщения в данной папке могут иметь флаги, указанные в строке FLAGS
 (строка "* FLAGS (\\Answered \\Flageed VDeleted N\^" \\Draft)").
 
 Клиент может менять у сообщений флаги "\\Deleted" и "\\Seen" (строка
-"* OK \[PERMANENTFLAGS (\\Deleted \\Seen \\*)\] Limited ").
+"* OK [PERMANENTFLAGS (\\Deleted \\Seen \\*)] Limited ").
 
 Клиент имеет права на запись и чтение сообщений из INBOX (строка "А142
-OK \[READ-WRITE\] SELECT completed").
+OK [READ-WRITE] SELECT completed").
 
 Команда SELECT устанавливает текущий каталог для работы клиента. Если
 пользователю необходимо получить информацию о состоянии какого-либо
@@ -352,9 +352,9 @@ S: A004 OK LIST completed
 запрос заголовков сообщений, находящихся в INBOX с порядковыми номерами
 от 10 до 12, будет выглядеть так:
 
-С: А654 FETCH 10:12 BODY \[HEADER\]
+С: А654 FETCH 10:12 BODY [HEADER]
 
-S: * 10 FETCH (BODY \[HEADER\] {350}
+S: * 10 FETCH (BODY [HEADER] {350}
 
 S: Date: Wed, 17 Jul 1996 02:23:25 -0700 (PDTl
 

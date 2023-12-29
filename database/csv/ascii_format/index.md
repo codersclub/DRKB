@@ -23,7 +23,7 @@ the field begins. Used for FIXED format only." (Offset - количество
 каждой строке смещение, равное нулю. После некоторых попыток, чтобы
 заставить это работать, я следал следующие изменения:
 
-\[discs\]
+[discs]
 
 filetype = varying
 
@@ -45,7 +45,7 @@ field36 = song30,char,50,0,36
 
 После более произвольных изменений это стало таким:
 
-\[discs\]
+[discs]
 
 filetype = varying
 

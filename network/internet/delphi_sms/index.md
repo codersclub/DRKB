@@ -41,7 +41,7 @@ to=78422973421&msg=sms&dcs=0 (1)
 рассмотреть html код страницы, то видим следующую картину:
 
 \< form method=post action="http://sms.smarts-gsm.ru/sms.cgi"\>
-\< input type=text name=to value="" size=15\>\[номер абонента\]
+\< input type=text name=to value="" size=15\>[номер абонента]
 \< textarea name=msg cols=30 rows=5\> \< /textarea\>
 \< select name=dcs\>
 \< option value=0\>Обычный sms
@@ -161,7 +161,7 @@ vheaders:= \'content-type:application/x-www-form-urlencoded\'+
 здесь создаем http заголовок в виде нуль-терминальной строки(
 оканчивающейся на \#0 );
 
-vpostdata:= vararraycreate(\[0, length(stpostdata)\], varbyte);
+vpostdata:= vararraycreate([0, length(stpostdata)], varbyte);
 
 здесь, для заполнения передаваемых данных создаем вариантный массив с
 минимальным пределом равным 0 и максимальным, равного длине строки
@@ -170,13 +170,13 @@ length(stpostdata) типа varbyte ( 8-ми битовое беззнаково
 
 for iloop := 0 to length(stpostdata)- 1 do
 begin
-vpostdata\[iloop\]:= ord(stpostdata\[iloop+1\]);
+vpostdata[iloop]:= ord(stpostdata[iloop+1];
 
 end;
 
 здесь посимвольно заполняем вариантный массив значениями нашей строки
 
-vpostdata\[length(stpostdata)\]:= 0;
+vpostdata[length(stpostdata)]:= 0;
 
 обнуляем последний элемент
 

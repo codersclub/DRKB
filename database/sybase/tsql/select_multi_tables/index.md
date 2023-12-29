@@ -949,7 +949,7 @@ select distinct au\_lname, authors.city
 
 from publishers, authors
 
-where au\_lname like "\[ABC\]%" and publishers.city != authors.city
+where au\_lname like "[ABC]%" and publishers.city != authors.city
 
  
 
@@ -990,7 +990,7 @@ select distinct au\_lname, city
 
 from authors
 
-where au\_lname like "\[ABC\]%" and city not in
+where au\_lname like "[ABC]%" and city not in
 
 (select city from publishers
 

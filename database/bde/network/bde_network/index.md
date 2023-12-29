@@ -35,13 +35,13 @@ DIR\' файла IDAPI.CFG. Директория должна быть одна 
 Да. Установите BDE в сети и затем добавьте следующие секции в файл
 WIN.INI каждой рабочей станции:
 
-\[IDAPI\]
+[IDAPI]
 
 CONFIGFILE01=F:\\IDAPI\\IDAPI.CFG
 
 DLLPATH=F:\\IDAPI
 
-\[Borland Language Drivers\]
+[Borland Language Drivers]
 
 LDPath=F:\\IDAPI\\LANGDRV
 

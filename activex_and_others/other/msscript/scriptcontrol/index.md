@@ -1416,9 +1416,9 @@ S\_OK, если это удалось, и S\_FALSE, если элементов 
 
        (FEnumPosition \< ControlCount)  (I \< celt)
 
-        TVariantList(rgvar)\[I\] :=
+        TVariantList(rgvar)[I] :=
 
-          FScriptControl.GetProxy(Controls\[FEnumPosition\]);
+          FScriptControl.GetProxy(Controls[FEnumPosition];
 
         Inc(I);
 
@@ -1436,9 +1436,9 @@ S\_OK, если это удалось, и S\_FALSE, если элементов 
 
       (FEnumPosition \< Count) (I \< celt)
 
-        TVariantList(rgvar)\[I\] :=
+        TVariantList(rgvar)[I] :=
 
-          FScriptControl.GetProxy(Items\[FEnumPosition\]);
+          FScriptControl.GetProxy(Items[FEnumPosition];
 
         Inc(I);
 
@@ -1456,7 +1456,7 @@ S\_OK, если это удалось, и S\_FALSE, если элементов 
 
       (FEnumPosition \< Count) (I \< celt)
 
-        TVariantList(rgvar)\[I\] := TStrings(FOwner)\[FEnumPosition\];
+        TVariantList(rgvar)[I] := TStrings(FOwner)[FEnumPosition];
 
         Inc(I);
 

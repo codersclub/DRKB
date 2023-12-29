@@ -23,7 +23,7 @@ Date: 01.01.2007
     - Extents Scanned..............................: 2810
     - Extent Switches..............................: 2830
     - Avg. Pages per Extent........................: 7.9
-    - Scan Density \[Best Count:Actual Count\].......: 98.59% \[2791:2831\]
+    - Scan Density [Best Count:Actual Count].......: 98.59% [2791:2831]
     - Logical Scan Fragmentation ..................: 0.40%
     - Extent Scan Fragmentation ...................: 83.45%
     - Avg. Bytes Free per Page.....................: 575.1
@@ -37,7 +37,7 @@ Date: 01.01.2007
 
 Один из самых информативных показателей здесь:
 
-\- Scan Density \[Best Count:Actual Count\].......: 98.59% \[2791:2831\]
+\- Scan Density [Best Count:Actual Count].......: 98.59% [2791:2831]
 
 Чем выше плотность, чем она ближе к 100% тем быстрее будет работать
 индекс при поиске. Если плотность маленькая возможно следует

@@ -60,7 +60,7 @@ xlCenter = -4108;
 
 Теперь до любой ячейки мы можем добраться следующим образом:
 
-Excel.ActiveWorkBook.WorkSheets\[1\].Cells\[1, 2\]:=\'Текст ячейки
+Excel.ActiveWorkBook.WorkSheets[1].Cells[1, 2]:=\'Текст ячейки
 (1,2)\';
 
 Объект Range, выделение диапазона, объединение ячеек, выравнивание.
@@ -70,11 +70,11 @@ Excel.ActiveWorkBook.WorkSheets\[1\].Cells\[1, 2\]:=\'Текст ячейки
 
 Выделяем:
 
-Excel.ActiveWorkBook.WorkSheets\[1\].Range\[\'A1:G1\'\].Select;
+Excel.ActiveWorkBook.WorkSheets[1].Range[\'A1:G1\'].Select;
 
 Объединяем:
 
-Excel.ActiveWorkBook.WorkSheets\[1\].Range\[\'A1:G1\'\].Merge;
+Excel.ActiveWorkBook.WorkSheets[1].Range[\'A1:G1\'].Merge;
 
 И выравниваем:
 

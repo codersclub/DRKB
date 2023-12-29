@@ -146,6 +146,6 @@ Date: 01.01.2007
 
 И массив так же можно объявить следующим образом:
 
-aJobs: array\[0..99\] of JOB\_INFO\_1;
+aJobs: array[0..99] of JOB\_INFO\_1;
 
 Взято с <https://delphiworld.narod.ru>

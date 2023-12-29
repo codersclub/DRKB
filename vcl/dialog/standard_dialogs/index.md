@@ -44,7 +44,7 @@ with OpenDialog1 do
 
 Options := Options +
 
-  \[ofAllowMultiSelect, ofFileMustExist\];
+  [ofAllowMultiSelect, ofFileMustExist];
 
 мы позволим пользователю выбирать несколько файлов, а так же заставим
 генерироваться сообщение об ошибке, если пользователь выберет

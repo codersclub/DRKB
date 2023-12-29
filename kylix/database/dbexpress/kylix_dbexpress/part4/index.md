@@ -241,14 +241,14 @@ SQLDataSet1.ParamByName(\'Country\').AsString:=\'Russia\';
 
 Например:
 
-SQLDataSet1.Params\[0\].AsString:=\'Russia\';
+SQLDataSet1.Params[0].AsString:=\'Russia\';
 
 · ParamValues - установка значений нескольких параметров.
 
 Например:
 
-SQLDataSet1.ParamValues\[\'Name;Country\'\]:=VarArrayOf(\[Edit1.Text,
-Edit2.Text\]);
+SQLDataSet1.ParamValues[\'Name;Country\']:=VarArrayOf([Edit1.Text,
+Edit2.Text];
 
 Подготовка запроса подразумевает анализ и разбор текста запроса SQL
 сервером, подстановку параметров и подготовку к выполнению. После

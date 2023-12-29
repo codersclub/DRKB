@@ -103,7 +103,7 @@ XML-тег. Значение загружается через ф-ию TypInfo.G
 CommaText, а в случае коллекции после обработки всех ее свойств сохраним
 в XML каждый элемент TCollectionItem отдельно. При этом в качестве
 контейнерного тега будем использовать имя класса
-TCollection(PropObject).Items\[j\].ClassName.
+TCollection(PropObject).Items[j].ClassName.
 
  
 

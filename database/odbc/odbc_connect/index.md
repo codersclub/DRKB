@@ -68,7 +68,7 @@ DriverName не используется совсем, т.к. во время в
 
 Вот секции Interbase и Watcom моего файла ODBC.INI:
 
-\[DCAC\_IB\]
+[DCAC\_IB]
 
 Driver=C:\\WIN\\SYSTEM\\BLINT04.DLL
 
@@ -76,7 +76,7 @@ Description=DC Aquatics (Interbase)
 
 Database=D:\\DCAC\_IB\\DCAC.GDB
 
-\[DCAC\_WSQL\]
+[DCAC\_WSQL]
 
 Driver=D:\\WSQL\\wsqlodbc.dll
 

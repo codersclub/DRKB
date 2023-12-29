@@ -18,7 +18,7 @@ Date: 01.01.2007
 
 воспользуйтесь методом AddIndex. Для примера:
 
-   Table1.AddIndex(\'Articles\',\'Title\', \[\]) ;
+   Table1.AddIndex(\'Articles\',\'Title\', [] ;
 
 создаст индексный файл с именем ARTICLES с использованием поля TITLE в
 качестве индексного ключа.

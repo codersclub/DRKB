@@ -122,7 +122,7 @@ Source (объект-источник) и X и Y координаты курсо
     end;
 
 В этом обработчике сторка, выделенная в списке-источнике (Source as
-TListBox).Items\[(Source as TListBox).ItemIndex\], добавляется в
+TListBox).Items[(Source as TListBox).ItemIndex], добавляется в
 список-приемник методом (Sender as TListBox).Items.Add. Используется
 операция AS, позволяющая расссматривать параметры Sender и Source как
 указатели на объект класса TListBox. Это делается потому, что эти

@@ -465,30 +465,26 @@ Library.
 ```
 [
   uuid(B65AD801-ABAF-11D0-BB8B-00A0C90F2744), version(1.0),
-  helpstring("Dispatch interface for Office2000ComAddIn Object"), dual,
-  oleautomation
+    helpstring("Dispatch interface for Office2000ComAddIn Object"), dual,
+    oleautomation
 ]
 
 interface IDTExtensibility2: IDispatch
 {
-  \[id(0x00000001)\]
-  HRESULT \_stdcall OnConnection(
-    \[in\] IDispatch * HostApp,
-    \[in\] long ext\_ConnectMode,
-    \[in\] IDispatch * AddInInst,
-    \[in\] SAFEARRAY(VARIANT) * custom );
-  \[id(0x00000002)\]
-  HRESULT \_stdcall OnDisconnection(\[in\] long ext\_DisconnectMode,
-    \[in\] SAFEARRAY(VARIANT) * custom );
-  \[id(0x00000003)\]
-  HRESULT \_stdcall OnAddInsUpdate(
-    \[in\] SAFEARRAY(VARIANT) * custom );
-  \[id(0x00000004)\]
-  HRESULT \_stdcall OnStartupComplete(
-    \[in\] SAFEARRAY(VARIANT) * custom );
-  \[id(0x00000005)\]
-  HRESULT \_stdcall BeginShutdown(
-    \[in\] SAFEARRAY(VARIANT) * custom );
+  [id(0x00000001)]
+  HRESULT _stdcall OnConnection(
+    [in] IDispatch * HostApp,
+    [in] long ext_ConnectMode,
+    [in] IDispatch * AddInInst,
+    [in] SAFEARRAY(VARIANT) * custom );
+  [id(0x00000002)]
+  HRESULT _stdcall OnDisconnection( [in] long ext_DisconnectMode, [in] SAFEARRAY(VARIANT) * custom );
+  [id(0x00000003)]
+  HRESULT _stdcall OnAddInsUpdate( [in] SAFEARRAY(VARIANT) * custom );
+  [id(0x00000004)]
+  HRESULT _stdcall OnStartupComplete( [in] SAFEARRAY(VARIANT) * custom );
+  [id(0x00000005)]
+  HRESULT _stdcall BeginShutdown( [in] SAFEARRAY(VARIANT) * custom );
 }; 
 ```
 
@@ -528,8 +524,8 @@ Word):
 загружать его при следующем запуске приложения автоматически. Чтобы
 надстройка снова начала загружаться --- загрузите ее через диспетчер.
 
-Для отладки Com Add-Ins установите в качестве Host Application (меню Run
-- \> Parameters) приложение Office, к которому подключена надстройка,
+Для отладки Com Add-Ins установите в качестве Host Application
+(меню Run -\> Parameters) приложение Office, к которому подключена надстройка,
 например WinWord.exe. После этого установите точку прерывания в одном из
 методов своего объекта и запустите приложение. Загрузится Word, и при
 попадании на точку прерывания вы окажетесь в отладчике Delphi.

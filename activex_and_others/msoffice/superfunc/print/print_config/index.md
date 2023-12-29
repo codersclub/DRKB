@@ -58,4 +58,4 @@ Application.Dialogs.Item (xlDialogPrint).Show. Константа xlDialogPrint
 
 В Delphi это выглядит так:
 
-    ShowPrintDialog:=E.Dialogs.Item\[xlDialogPrint\].Show(arg2:=1, arg3:=2, arg4:=3).
+    ShowPrintDialog:=E.Dialogs.Item[xlDialogPrint].Show(arg2:=1, arg3:=2, arg4:=3).

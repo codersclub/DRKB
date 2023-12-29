@@ -14,6 +14,6 @@ Date: 01.01.2007
 
 Автор: Nomadic
 
-Resync( \[rmExact, rmCenter\] );
+Resync( [rmExact, rmCenter] );
 
 Взято с <https://delphiworld.narod.ru>

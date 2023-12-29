@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Статья взята с " target=\_blankhttp://www.programmist.info\[/i\]
+Статья взята с " target=\_blankhttp://www.programmist.info[/i]
 
 Программирование Sound Blaster
 
@@ -90,7 +90,7 @@ AAh. Значит, либо нет звуковой платы, или зада�
 
 \#define MAX\_BASE\_SB 5
 
-int bases\[MAX\_BASE\_SB\]={ 0x220, 0x230, 0x240, 0x250, 0x260 };
+int bases[MAX\_BASE\_SB]={ 0x220, 0x230, 0x240, 0x250, 0x260 };
 
 int baseAddrSB=0x220;
 
@@ -619,7 +619,7 @@ int MaskPort, ClrPort, ModePort, ModeDMA, CountPort, PagePort,
 
 BaseAddrPort;
 
-int pageports\[4\]={ 0x87, 0x83, 0x81, 0x82 };
+int pageports[4]={ 0x87, 0x83, 0x81, 0x82 };
 
 MaskPort=0x0A; ClrPort=0xC; ModePort=0xB;
 
@@ -629,7 +629,7 @@ CountPort=1+DMAChannel*2;
 
 BaseAddrPort=DMAChannel*2;
 
-PagePort=pageports\[DMAChannel\];
+PagePort=pageports[DMAChannel];
 
 outportb(MaskPort, 4 + DMAChannel);
 
@@ -968,7 +968,7 @@ enable();
 
 Воспроизведение файла выборки:
 
-f = fopen(argv\[1\],"rb");
+f = fopen(argv[1],"rb");
 
 raw = ( char far * ) farmalloc(32000L);
 
@@ -976,9 +976,9 @@ if ( f == 0 \|\| raw==0 )
 
 {
 
-printf("Не могу открыть файл выборки - %s\\n",argv\[1\]);
+printf("Не могу открыть файл выборки - %s\\n",argv[1];
 
-printf("Нет памяти\\n",argv\[1\]);
+printf("Нет памяти\\n",argv[1];
 
 ResetSB();
 

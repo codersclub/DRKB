@@ -36,7 +36,7 @@ the original locale. This problem can occur for any locale which does
 not use a period as the decimal separator. 
 
 It\'s possible that a previous version of Kylix was not uninstalled
-completely or that there is a problem with the RPM. \[{more info}\].
+completely or that there is a problem with the RPM. [{more info}].
 There are a couple ways to work around this. The first is to install as
 a user other than root. If you would rather not do this you can use the
 "-m" option on the setup script. So you would enter: ./setup.sh -m 

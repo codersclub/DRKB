@@ -635,7 +635,7 @@ sf\_Memo    = 2;
 
 var
 
-FieldTypes: Array\[0..Pred(MaxField)\] of Byte; { default unknowns }
+FieldTypes: Array[0..Pred(MaxField)] of Byte; { default unknowns }
 
 Мы должны просмотреть структуру таблицы для получения информации об
 типах полей:
@@ -1399,7 +1399,7 @@ String). А как начет Blob? Для данного типа полей я
 
   ------------------------------------------- ------------------------------
   Paradox field type                          ObjectPascal conversion type
-  TStringField (size)                         String\[length\]
+  TStringField (size)                         String[length]
   TIntegerField, TWordField, TSmallIntField   Integer
   Currency                                    Double
   Memo, Blob                                  n/a (ignored)

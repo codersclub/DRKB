@@ -453,9 +453,9 @@ ShowMessage экземпляра TMessageObject, с использованием
 
 Cary Jensen is President of Jensen Data Systems, Inc., a Houston-based
 database development company. He is co-author of 17 books, including
-Oracle JDeveloper \[Oracle Press, 1998\], JBuilder Essentials
-\[Osborne/McGraw-Hill, 1998\], and Delphi in Depth
-\[Osborne/McGraw-Hill, 1996\]. He is a Contributing Editor of Delphi
+Oracle JDeveloper [Oracle Press, 1998], JBuilder Essentials
+[Osborne/McGraw-Hill, 1998], and Delphi in Depth
+[Osborne/McGraw-Hill, 1996]. He is a Contributing Editor of Delphi
 Informant Magazine, and an internationally respected trainer of Delphi
 and Java. For more information, visit
 http://www.delphizine.com/include/Click\_Redir.asp?Url=http://www.jensendatasystems.com/,
@@ -639,7 +639,7 @@ Object Pascal не требует, чтобы Вы генерировали и �
 решите использовать интерфейс как интерфейс COM когда-нибудь в будущем,
 не повредит назначить интерфейсу GUID. И редактор Delphi делает
 генерацию GUID очень легким. Чтобы вставить GUID в исходный код, просто
-нажмите \[Ctrl\]\[Shift\]\[G\].
+нажмите [Ctrl][Shift][G].
 
 Остальная часть декларации интерфейса довольно проста. В ней объявляется
 одно свойство, названное MessageText, и три метода. Два из этих методов
@@ -1059,9 +1059,9 @@ IOTAKeyboardBinding (OTA сокращение от Open Tools API).
 
 Cary Jensen is president of Jensen Data Systems, Inc., a Houston-based
 database development company. He is co-author of 17 books, including
-Oracle JDeveloper \[Oracle Press, 1998\], JBuilder Essentials
-\[Osborne/McGraw-Hill, 1998\], and Delphi in Depth
-\[Osborne/McGraw-Hill, 1996\]. He is a Contributing Editor of Delphi
+Oracle JDeveloper [Oracle Press, 1998], JBuilder Essentials
+[Osborne/McGraw-Hill, 1998], and Delphi in Depth
+[Osborne/McGraw-Hill, 1996]. He is a Contributing Editor of Delphi
 Informant Magazine, and an internationally respected trainer of Delphi
 and Java. For more information, visit http://www.jensendatasystems.com,
 or e-mail Cary at mailto:cjensen\@compuserve.com

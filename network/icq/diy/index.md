@@ -468,9 +468,9 @@ Family ID word
 
 SubType ID word
 
-Flags\[0\] byte
+Flags[0] byte
 
-Flags\[1\] byte
+Flags[1] byte
 
 Request ID dword
 
@@ -1038,9 +1038,9 @@ Family ID 00 15
 
 SubType ID 00 02
 
-Flags\[0\] 00
+Flags[0] 00
 
-Flags\[1\] 00
+Flags[1] 00
 
 Request ID 00 87 00 02
 
@@ -1100,9 +1100,9 @@ Family ID 00 15
 
 SubType ID 00 03
 
-Flags\[0\] 00
+Flags[0] 00
 
-Flags\[1\] 01
+Flags[1] 01
 
 Request ID 00 87 00 02 (такой же как и в запросе)
 
@@ -1284,7 +1284,7 @@ WORD cookie
 будет пока только вручную. При его заполнении вполне можно пренебречь
 процедурой авторизации.
 
-\[ContactList\]
+[ContactList]
 
 199111222=1st\_User
 
@@ -1301,7 +1301,7 @@ WORD cookie
 Вписывайте UINов столько, сколько нужно. Только не забудьте увеличить
 массив TContactList, если UINов планируете больше сотни:
 
-type TContactList = array\[0..100\] of TListRecord;
+type TContactList = array[0..100] of TListRecord;
 
 И еще пару слов относительно интерфейса: те кому надоели зелененькие
 цветочки - могут нарисовать свои значки для контактного списка. Bitmapы
@@ -1339,9 +1339,9 @@ Family ID 00 04
 
 SubType ID 00 06 
 
-Flags\[0\] 00
+Flags[0] 00
 
-Flags\[1\] 00
+Flags[1] 00
 
 Request ID 00 AD 00 06
 
@@ -1408,9 +1408,9 @@ Family ID 00 04
 
 SubType ID 00 06 
 
-Flags\[0\] 00
+Flags[0] 00
 
-Flags\[1\] 00
+Flags[1] 00
 
 Request ID 00 C3 00 06
 
@@ -1945,9 +1945,9 @@ Family ID 00 15
 
 SubType ID 00 02
 
-Flags\[0\] 00
+Flags[0] 00
 
-Flags\[1\] 00
+Flags[1] 00
 
 Request ID 00 XX 00 02 (по ним можно опознать ответ) 
 
@@ -2088,7 +2088,7 @@ PostMessage для передачи ответа окну, которое выд
 сервера. Следует упомянуть, что на один (единственный) наш запрос сервер
 присылает сразу целый массив из SNAC-ответов. Это типичная ситуация.
 
-Например: запрашиваем Инфо о клиенте SNAC(15,2) \[подтип запроса B204\].
+Например: запрашиваем Инфо о клиенте SNAC(15,2) [подтип запроса B204].
 
 В ответ получим сразу восемь SNAC-ответов.
 

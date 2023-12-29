@@ -204,7 +204,7 @@ NIF\_ICON,
 
        hIcon            - дескриптор иконки, помещаемой на Tray.
 
-       szTip            - текст для ToolTip\'а, если szTip\[0\] = 0x00,
+       szTip            - текст для ToolTip\'а, если szTip[0] = 0x00,
 то
 
                           ToolTip\'а не будет.

@@ -17,7 +17,7 @@ Date: 01.01.2007
 обладает типичными свойствами, присущими им. Есть одно отличие - шрифт
 элемента легенды. Чтобы легенда была видима на диаграмме, установите
 поле HasLegend объекта Chart в
-True.E.Charts.Item\[name\].HasLegend:=True. Затем можно установить
+True.E.Charts.Item[name].HasLegend:=True. Затем можно установить
 координаты и размеры легенды, параметры границы (рамки) и области. Для
 этого используем следующие функции:
 
@@ -88,7 +88,7 @@ True.E.Charts.Item\[name\].HasLegend:=True. Затем можно установ
 
 Объект Legend имеет доступ к коллекции LegendEntries, посредством
 которой можно получить доступ к шрифту элемента легенды. Например:
-E.Charts.Item\[name\].Legend.LegendEntries.Item\[LegendEntries\].Font,
+E.Charts.Item[name].Legend.LegendEntries.Item[LegendEntries].Font,
 где LegendEntries - индекс элемента. Чтобы согласовать поля объектов
 "Шрифт" в Excel и Delphi, напишем функцию FontToEFont, которая
 преобразует шрифт объекта Delphi в шрифт объекта Excel. Эту функцию

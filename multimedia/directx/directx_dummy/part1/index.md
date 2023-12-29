@@ -335,13 +335,13 @@ IDirectDrawSurface7.BltFast() будет происходить очень бы�
 
 Например:
 
-g\_pBackBuffer.BltFast( x, y, g\_pMovie\[ frame \], nil, DDBLTFAST\_WAIT
+g\_pBackBuffer.BltFast( x, y, g\_pMovie[ frame ], nil, DDBLTFAST\_WAIT
 );
 
 Однако можно третьим параметром указать общую data-поверхность, а
 четвертым - не nil, а область на этой поверхности:
 
-g\_pBackBuffer.BltFast( x, y, g\_pDataSurface, arrayRect\[ FRAME\_01 \],
+g\_pBackBuffer.BltFast( x, y, g\_pDataSurface, arrayRect[ FRAME\_01 ],
 DDBLTFAST\_WAIT );
 
 Тогда можно не создавать отдельные поверхности и не заниматься

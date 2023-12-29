@@ -243,7 +243,7 @@ DelphiWorld 6.0
 
 Или с помощью обертки TCanvas -
 
-Объект Screen\[.width,height\] - размеры
+Объект Screen[.width,height] - размеры
 
     Var
       Desktop: TCanvas ;

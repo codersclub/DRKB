@@ -518,7 +518,7 @@ RegisterPackageWizard (const Wizard: IOTAWizard);
 
 Метод GetName должен возвращать название эксперта
 
-Метод GetState должен возвращать \[wsEnabled\], если эксперт
+Метод GetState должен возвращать [wsEnabled], если эксперт
 функционирует, wsChecked если выбран.
 
 Метод Execute вызывается при запуске эксперта из среды IDE.

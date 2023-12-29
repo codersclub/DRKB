@@ -67,7 +67,7 @@ Date: 01.01.2007
      
     result := pointer + row + col*rows 
 
-и затем вместо myarray\[2,3\] напишите
+и затем вместо myarray[2,3] напишите
 
     myarray.fetch_num(2,3)  
 

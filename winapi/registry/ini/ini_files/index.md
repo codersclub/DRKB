@@ -80,7 +80,7 @@ Free;
 Закрыть и освободить ресурс. Необходимо вызвать при завершении работы с
 INI файлом
 
-Property Values\[const Name: string\]: string;
+Property Values[const Name: string]: string;
 
 Доступ к существующему параметру по имени Name
 

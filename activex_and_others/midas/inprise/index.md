@@ -382,7 +382,7 @@ At this point we have the following structure for our sample:
   ----- --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ----- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  16.   Drop TDBGrid component on the main form and resize it to occupy the rest of the Form1. Set DbGrid1's Anchors property to \[akLeft, akTop, akRight, akBottom\]. Set the DataSource property of DBGrid1 to DataModule2.DataSource1.
+  16.   Drop TDBGrid component on the main form and resize it to occupy the rest of the Form1. Set DbGrid1's Anchors property to [akLeft, akTop, akRight, akBottom]. Set the DataSource property of DBGrid1 to DataModule2.DataSource1.
   ----- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Choose File \| Save All.  Compile the application and run it. This is
@@ -799,13 +799,13 @@ additional queries to the database.
 
 The ProviderFlags control precisely when the provider will use the
 Origin property while generating modifying SQL statements. By default,
-this property is set to \[pfInUpdate, pfInWhere\]. If all fields have
+this property is set to [pfInUpdate, pfInWhere]. If all fields have
 ProviderFlags equal to this set of values, the provider will work as its
 own UpdateMode property indicates (described in the previous
 paragraph).   Changing these flags override certain aspects of the
 default functionality.  For example, if you removed pfInWhere from the
 provider flags of DEPT\_NO so its ProviderFlags property was equal to
-\[pfInUpdate\], that column would be excluded from the where clause of
+[pfInUpdate], that column would be excluded from the where clause of
 any updates or deletes. 
 
 The following table describes in more detail how the TProvider component
@@ -870,8 +870,8 @@ uses this property.
 
 ![clip0171](clip0171.png){.center}
 
-For our sample the best approach is to set \[pfInUpdate, pfInWhere,
-pfInKey\] to the ProviderFlags of DEPT\_NO and \[pfInUpdate\] to the
+For our sample the best approach is to set [pfInUpdate, pfInWhere,
+pfInKey] to the ProviderFlags of DEPT\_NO and [pfInUpdate] to the
 ProviderFlags of the remaining fields. This will produce the most
 compact SQL statements and will eliminate the necessity for the provider
 to get the list of key fields at runtime.  To get more of a sense of how
@@ -910,7 +910,7 @@ Then we must add the HEAD\_DEPATMENT field in the Field Editor.
 
 To complete the changes, exclude this field from the generated SQL by
 selecting it in the Field Editor and setting its ProviderFlags property
-to "\[ \]".  To prohibit updates of this field when it becomes available
+to "[ ]".  To prohibit updates of this field when it becomes available
 in the client dataset, it's a good idea to turn its ReadOnly property to
 True.
 
@@ -998,7 +998,7 @@ Unlike the Origin and ProviderFlags properties, which become part of the
 data packet unconditionally, all properties from the table are included
 in the data packet only when the Options property of the TProvider
 component includes poIncFieldProps.  Set Provider1.Options to
-\[poIncFieldProps\], change several properties of the persistent fields
+[poIncFieldProps], change several properties of the persistent fields
 of Query1.  Run the application and view the results of your
 modifications.
 

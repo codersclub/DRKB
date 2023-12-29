@@ -161,7 +161,7 @@ Email: <delphi4all@narod.ru>
 
 Подключаем модуль ShellAPI в области uses
 
-По созданию окна \[событие OnCreate\] пишем такой код:
+По созданию окна [событие OnCreate] пишем такой код:
 
     DragAcceptFiles(Handle, true);
 

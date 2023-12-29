@@ -14,8 +14,8 @@ Date: 01.01.2007
 Что-то аналогичное я делал раньше, тем не менее, вместо Listbox я
 использовал dbGrid со следующими опциями:
 
-\[dgAlwaysShowEditor,dgTabs,dgRowSelect,dgAlwaysShowSelection,dgConfirmDelete,
-dgCancelOnExit\]
+[dgAlwaysShowEditor,dgTabs,dgRowSelect,dgAlwaysShowSelection,dgConfirmDelete,
+dgCancelOnExit]
 
 Кроме того, я привел код, который я использовал в ответ на щелчок на
 закладке, таким образом изменяя запись в dbgrid.

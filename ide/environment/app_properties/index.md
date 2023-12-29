@@ -18,7 +18,7 @@ bin\\delphi32.dro. Т.о:
 
 1\. Добавляем в "delphi32.dro" строки:
 
-\[C:\\Program Files\\Lang\\Delphi7\\ObjRepos\\MyApp\\MyApp\]
+[C:\\Program Files\\Lang\\Delphi7\\ObjRepos\\MyApp\\MyApp]
 
 Type=ProjectTemplate
 

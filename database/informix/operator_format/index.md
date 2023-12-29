@@ -15,13 +15,13 @@ Date: 01.01.2007
 
 Типы данных и выражения над переменными.
 
-   INTEGER       SERIAL\[(n0)\]   CHAR(n)        DATE
+   INTEGER       SERIAL[(n0)]   CHAR(n)        DATE
 
    SMALLINT      DECIMAL(m,n)   DATETIME qualif1 TO qualif2
 
    REAL          MONEY(m,n)     INTERVAL qualif1 TO qualif2
 
-   FLOAT         RECORD         ARRAY \[i,j,k\] OF  datatype
+   FLOAT         RECORD         ARRAY [i,j,k] OF  datatype
 
 где qualif \\in {YEAR,MONTH,DAY,HOUR,MINUTE,SECOND,FRACTION(n)}
 
@@ -38,7 +38,7 @@ Date: 01.01.2007
 
                string1,string2            сцепить
 
-               string   \[m,n\]             подстрока
+               string   [m,n]             подстрока
 
                string   CLIPPED           усечь пробелы справа
 
@@ -58,17 +58,17 @@ Date: 01.01.2007
 
               NOT,  OR,  AND
 
-             выражение IS \[NOT\] NULL
+             выражение IS [NOT] NULL
 
                                   по умолчанию "\\"
 
-       string \[NOT\] LIKE "шаблон" \[ESCAPE "escape-char"\]
+       string [NOT] LIKE "шаблон" [ESCAPE "escape-char"]
 
         спецсимволы шаблона % \_  означают ¦ §!
 
-       string \[NOT\] MATCHES "шаблон" \[ESCAPE "esc-char"\]
+       string [NOT] MATCHES "шаблон" [ESCAPE "esc-char"]
 
-        спецсимволы шаблона *  ? \[  abH  \]  \[\^  d  -  z  \]
+        спецсимволы шаблона *  ? [  abH  ]  [\^  d  -  z  ]
 
         означают "много", "один", "любой из", "ни один из"
 
@@ -82,11 +82,11 @@ status            { 0 \| NOTFOUND \| \<0 } код завершения опер�
 quit\_flag ( не 0 если было нажато QUIT ) int\_flag ( не 0 если было
 нажато \^C ) define SQLCA record \# системная запись с кодами завершения
 SQLCODE integer,="status" SQLERRM char(71), ­- SQLERRP char(8), ­-
-SQLERRD array\[8\] of int,...„см. SQLAWARN char(8) warning или пробел
-end record SQLERRD\[1\] зарезервирован SQLERRD\[2\] serial значение или
-ISAM error cod SQLERRD\[3\] число обработанных строк SQLERRD\[4\] CPU
-cost запроса SQLERRD\[5\] offset of error into SQL-st SQLERRD\[6\] ROWID
-of last row SQLERRD\[7\] зарезервирован SQLERRD\[8\] зарезервирован
+SQLERRD array[8] of int,...„см. SQLAWARN char(8) warning или пробел
+end record SQLERRD[1] зарезервирован SQLERRD[2] serial значение или
+ISAM error cod SQLERRD[3] число обработанных строк SQLERRD[4] CPU
+cost запроса SQLERRD[5] offset of error into SQL-st SQLERRD[6] ROWID
+of last row SQLERRD[7] зарезервирован SQLERRD[8] зарезервирован
 
 Операторы организации программы.
 
@@ -117,9 +117,9 @@ of last row SQLERRD\[7\] зарезервирован SQLERRD\[8\] зарезе�
 
 START  REPORT report-name
 
-     \[TO {file-name \| PRINTER \| PIPE program}\]
+     [TO {file-name \| PRINTER \| PIPE program}]
 
-OUTPUT TO  REPORT  report-name (выражение, выражение \[, ...\])
+OUTPUT TO  REPORT  report-name (выражение, выражение [, ...]
 
 FINISH REPORT report-name
 
@@ -127,9 +127,9 @@ FINISH REPORT report-name
 
 DEFINE  список переменных { type \| LIKE table.column
 
-              \| RECORD {LIKE table.* \| список переменных \[,..\]
+              \| RECORD {LIKE table.* \| список переменных [,..]
 
-                                       END RECORD} } \[,...\]
+                                       END RECORD} } [,...]
 
        где type может быть следующим:
 
@@ -139,7 +139,7 @@ DEFINE  список переменных { type \| LIKE table.column
 
        REAL          MONEY(m,n)    INTERVAL qualif1 TO qualif2
 
-       FLOAT         RECORD        ARRAY \[i,j,k\] OF  datatype
+       FLOAT         RECORD        ARRAY [i,j,k] OF  datatype
 
   где qualif Ё {YEAR,MONTH,DAY,HOUR,MINUTE,SECOND,FRACTION(n)}
 
@@ -163,7 +163,7 @@ LET  переменная = выражение
 
 WHENEVER { ERROR \| WARNING \| NOT FOUND }
 
-      { GOTO \[:\]label \| CALL function-name \| CONTINUE \| STOP }
+      { GOTO [:]label \| CALL function-name \| CONTINUE \| STOP }
 
                        !!!    function-name без () !!!
 
@@ -175,7 +175,7 @@ DEFER  QUIT        Запретить прерывание программы к
 
 Программные операторы.
 
-CALL function(\[список аргументов\]) \[RETURNING список переменных\]
+CALL function([список аргументов] [RETURNING список переменных]
 
              ! ! ! передача по значению
 
@@ -185,7 +185,7 @@ CASE                               CASE   (выражение)
 
      .  .  .            или              .  .  .
 
-     \[EXIT CASE\]                         \[EXIT CASE\]
+     [EXIT CASE]                         [EXIT CASE]
 
      .  .  .                             .  .  .
 
@@ -193,7 +193,7 @@ CASE                               CASE   (выражение)
 
      .  .  .                             .  .  .
 
-\[OTHERWISE\]                         \[OTHERWISE\]
+[OTHERWISE]                         [OTHERWISE]
 
      .  .  .                             .  .  .
 
@@ -203,23 +203,23 @@ IF  логическое выражение THEN
 
        .  .  .
 
-      \[ELSE
+      [ELSE
 
-       .  .  . \]
+       .  .  . ]
 
 END IF    не забывайте закрывать все операторы IF !!!
 
-FOR     I= i1 TO i2  \[STEP i3\]
+FOR     I= i1 TO i2  [STEP i3]
 
        statement
 
          .  .  .
 
-       \[CONTINUE FOR\]
+       [CONTINUE FOR]
 
          .  .  .
 
-       \[EXIT FOR\]
+       [EXIT FOR]
 
          .  .  .
 
@@ -229,7 +229,7 @@ CONTINUE { FOR \| FOREACH \| MENU \| WHILE }
 
 EXIT  { CASE \| WHILE \| FOR \| FOREACH \| MENU \| INPUT \| DISPLAY
 
-\| PROGRAM\[(status code for UNIX)\] }
+\| PROGRAM[(status code for UNIX)] }
 
 WHILE  логическое выражение
 
@@ -237,24 +237,24 @@ WHILE  логическое выражение
 
          .  .  .
 
-       \[CONTINUE WHILE\]
+       [CONTINUE WHILE]
 
          .  .  .
 
-       \[EXIT WHILE\]
+       [EXIT WHILE]
 
          .  .  .
 
 END WHILE
 
-GOTO \[:\] метка          Двоеточие \':\' для совместимости с ANSI
+GOTO [:] метка          Двоеточие \':\' для совместимости с ANSI
 стандартом
 
 LABEL метка:      Действует только внутри блока
 
-RUN {"командная строка UNIX"\|char-variable} \[RETURNING int-variable
+RUN {"командная строка UNIX"\|char-variable} [RETURNING int-variable
 
-                                            \| WITHOUT WAITING\]
+                                            \| WITHOUT WAITING]
 
 SLEEP   целое-выраж.    Подождать n  секунд
 
@@ -264,9 +264,9 @@ MENU  "Название меню"
 
    COMMAND { KEY (key-list) \|
 
-   \[KEY (key-list)\] "kоманда меню"
+   [KEY (key-list)] "kоманда меню"
 
-                       \[" подсказка help"\] \[HELP help-number\] }
+                       [" подсказка help"] [HELP help-number] }
 
            Либо key, либо первая буква, обязаны быть латинскими.
 
@@ -274,17 +274,17 @@ MENU  "Название меню"
 
              .  .  .
 
-             \[CONTINUE MENU\]
+             [CONTINUE MENU]
 
              .  .  .
 
-             \[EXIT MENU\]
+             [EXIT MENU]
 
              .  .  .
 
-             \[NEXT OPTION "kоманда меню"           \#  Перейти к
+             [NEXT OPTION "kоманда меню"           \#  Перейти к
 
-    \[COMMAND  .  .  .        \]
+    [COMMAND  .  .  .        ]
 
      . . .
 
@@ -298,7 +298,7 @@ OPTIONS   {                        По умолчанию:
 
     FORM    LINE  f \|                  FIRST + 2
 
-    COMMENT LINE  c \|                  LAST \[-1\]
+    COMMENT LINE  c \|                  LAST [-1]
 
     ERROR   LINE  e \|                  LAST
 
@@ -322,7 +322,7 @@ OPTIONS   {                        По умолчанию:
 
     DISPLAY ATTRIBUTE(список атрибутов)
 
-          } \[,...\]      атрибуты:
+          } [,...]      атрибуты:
 
       NORMAL     REVERSE        FORM    использовать атрибуты
 
@@ -334,7 +334,7 @@ OPEN WINDOW window-name AT row, column
 
   WITH { integer ROWS, integer COLUMNS \| FORM "form-file" }
 
-    \[ATTRIBUTE(список аттрибутов)\]
+    [ATTRIBUTE(список аттрибутов)]
 
        Атрибуты:  BORDER     По умолчанию: нет
 
@@ -358,27 +358,27 @@ CLOSE WINDOW window-name
 
 OPEN FORM form-name FROM "form-file"    Без расширения .frm
 
-DISPLAY FORM form-name \[ATTRIBUTE(список аттрибутов)\]
+DISPLAY FORM form-name [ATTRIBUTE(список аттрибутов)]
 
 CLOSE FORM form-name
 
 Простые операторы вывода на экран.
 
-MESSAGE список переменных, констант \[ATTRIBUTE(список атрибутов)\]
+MESSAGE список переменных, констант [ATTRIBUTE(список атрибутов)]
 
-ERROR список переменных, констант \[ATTRIBUTE(список атрибутов)\]
+ERROR список переменных, констант [ATTRIBUTE(список атрибутов)]
 
                                по умолчанию REVERSE
 
 PROMPT список переменных и констатнт
 
-\[ATTRIBUTE(аттрибуты вывода)\] FOR \[CHAR\] variable
+[ATTRIBUTE(аттрибуты вывода)] FOR [CHAR] variable
 
-\[HELP help-number\]             \# Ввести значение в variable
+[HELP help-number]             \# Ввести значение в variable
 
-\[ATTRIBUTE(аттрибуты ввода)\]   \# FOR CHAR - ввести один символ
+[ATTRIBUTE(аттрибуты ввода)]   \# FOR CHAR - ввести один символ
 
-\[ON KEY (key-list)
+[ON KEY (key-list)
 
    statement               атрибуты: NORMAL     REVERSE
 
@@ -386,7 +386,7 @@ PROMPT список переменных и констатнт
 
 .  .  .                              DIM        BLINK
 
-END PROMPT\]                           INVISIBLE
+END PROMPT]                           INVISIBLE
 
 в ON  KEY  пункте нельзя напрямую пользоваться операторами
 
@@ -398,25 +398,25 @@ PROMPT, INPUT.Для их вызова применяйте функции.
 
 DISPLAY { BY NAME список переменных \|
 
-список переменных TO {список полей\|screen-record\[\[n\]\].*}\[,..\] \|
+список переменных TO {список полей\|screen-record[[n]].*}[,..] \|
 
 список переменных AT row, column }
 
-\[ATTRIBUTE(список атрибутов)\]
+[ATTRIBUTE(список атрибутов)]
 
-                   \[Не стирать значений из формы перед вводом\]
+                   [Не стирать значений из формы перед вводом]
 
-INPUT { BY NAME список переменных \[WITHOUT DEFAULTS\] \|
+INPUT { BY NAME список переменных [WITHOUT DEFAULTS] \|
 
-       список переменных \[WITHOUT DEFAULTS\] FROM
+       список переменных [WITHOUT DEFAULTS] FROM
 
-        {список полей \| screen-record\[\[n\]\].*}\[,...\]}
+        {список полей \| screen-record[[n]].*}[,...]}
 
-\[ATTRIBUTE(список атрибутов)\]
+[ATTRIBUTE(список атрибутов)]
 
-\[HELP help-number\]
+[HELP help-number]
 
-      \[ { BEFORE FIELD подсписок полей     по клавише ESC
+      [ { BEFORE FIELD подсписок полей     по клавише ESC
 
         \| AFTER  { FIELD подсписок полей \| INPUT }
 
@@ -424,15 +424,15 @@ INPUT { BY NAME список переменных \[WITHOUT DEFAULTS\] \|
 
                statement . . .
 
-              \[NEXT FIELD field-name\]
+              [NEXT FIELD field-name]
 
-              \[EXIT INPUT\]
+              [EXIT INPUT]
 
                statement . . .
 
          .  .  .
 
-END INPUT  \]
+END INPUT  ]
 
 конструирует WHERE условие для QUERY BY EXAMPLE
 
@@ -440,9 +440,9 @@ CONSTRUCT {BY NAME char-variable ON column-list \|
 
           char-variable ON column-list FROM
 
-           {список полей \| screen-record\[\[n\]\].*}\[,...\]}
+           {список полей \| screen-record[[n]].*}[,...]}
 
-       \[ATTRIBUTE(список атрибутов)\]
+       [ATTRIBUTE(список атрибутов)]
 
 В полях могут использоваться служебные символы:
 
@@ -467,47 +467,47 @@ call set\_count(кол-во выводимых строк) в программн
 
 DISPLAY ARRAY record-array TO screen-array.*
 
-\[ATTRIBUTE(список атрибутов)\]
+[ATTRIBUTE(список атрибутов)]
 
-     \[  ON KEY (key-list)
-
-               .  .  .
-
-        \[EXIT DISPLAY\]
+     [  ON KEY (key-list)
 
                .  .  .
 
-END DISPLAY \] \| \[END DISPLAY\]
+        [EXIT DISPLAY]
 
-SCROLL {field-list \| screen-record.*} \[,...} Прокрутить строки
+               .  .  .
 
-       {UP \| DOWN} \[BY int\]                 в экранном массиве
+END DISPLAY ] \| [END DISPLAY]
+
+SCROLL {field-list \| screen-record.*} [,...} Прокрутить строки
+
+       {UP \| DOWN} [BY int]                 в экранном массиве
 
 call set\_count(кол-во выводимых строк) в программном массиве
 
-INPUT ARRAY record-array \[WITHOUT DEFAULTS\]
+INPUT ARRAY record-array [WITHOUT DEFAULTS]
 
-FROM   screen-array.*  \[HELP help-number\] \[ATTRIBUTE(атр.)\]
+FROM   screen-array.*  [HELP help-number] [ATTRIBUTE(атр.)]
 
-\[{BEFORE {ROW \| INSERT \| DELETE \| FIELD подсписок полей}\[,...\]
+[{BEFORE {ROW \| INSERT \| DELETE \| FIELD подсписок полей}[,...]
 
-\| AFTER {ROW\|INSERT\|DELETE\|FIELD подсписок полей \|INPUT}\[,...\]
+\| AFTER {ROW\|INSERT\|DELETE\|FIELD подсписок полей \|INPUT}[,...]
 
 \| ON KEY (key-list) }
 
          statement  ...
 
-        \[NEXT FIELD field-name\]
+        [NEXT FIELD field-name]
 
          statement...
 
-        \[EXIT INPUT\]
+        [EXIT INPUT]
 
           .  .  .
 
      .  .  .
 
-END INPUT \]
+END INPUT ]
 
   Внутри оператора DISPLAY ARRAY можно пользоваться функциями:
 
@@ -521,7 +521,7 @@ END INPUT \]
 
 Динамическое создание операторов.
 
-PREPARE statement-id FROM {char-variable \| "SQL-оператор \[ы\] "}
+PREPARE statement-id FROM {char-variable \| "SQL-оператор [ы] "}
 
 Изготовить SQL - statement из символьной строки
 
@@ -535,7 +535,7 @@ OPEN            EXECUTE         UNLOAD
 
 CLOSE           FETCH        SELECT INTO variables
 
-EXECUTE statment-id \[USING input-list\]
+EXECUTE statment-id [USING input-list]
 
   Выполняет, заменив знаки ? на input-list
 
@@ -543,9 +543,9 @@ FREE   { statment-id \| cursor-name }
 
 Манипуляция "курсором".
 
-DECLARE cursor-name \[SCROLL\] CURSOR \[WITH HOLD\] FOR
+DECLARE cursor-name [SCROLL] CURSOR [WITH HOLD] FOR
 
-       { SELECT-st \[FOR UPDATE \[OF column-list\]\] \|
+       { SELECT-st [FOR UPDATE [OF column-list]] \|
 
          INSERT-st   \|  statment-id }
 
@@ -561,21 +561,21 @@ cursora можно использовать
 Внимание: оператор DECLARE cursor-name должен располагаться в тексте
 программы выше любого использования этого курсора.
 
-OPEN  cursor-name \[USING список переменных\]
+OPEN  cursor-name [USING список переменных]
 
 CLOSE cursor-name
 
                для SELECT-курсора:
 
-FOREACH cursor-name \[INTO список переменных\]
+FOREACH cursor-name [INTO список переменных]
 
          .  .  .
 
-       \[CONTINUE FOREACH\]
+       [CONTINUE FOREACH]
 
          .  .  .
 
-       \[EXIT FOREACH\]
+       [EXIT FOREACH]
 
          .  .  .
 
@@ -583,9 +583,9 @@ END FOREACH
 
 FETCH { NEXT \| PREVIOUS \| FIRST \| LAST \| CURRRENT \|
 
-       RELATIVE m \| ABSOLUTE n \] cursor-name
+       RELATIVE m \| ABSOLUTE n ] cursor-name
 
-       \[INTO список переменных\]
+       [INTO список переменных]
 
     если cursor not  SCROLL то можно только NEXT
 
@@ -593,9 +593,9 @@ FETCH { NEXT \| PREVIOUS \| FIRST \| LAST \| CURRRENT \|
 
                для INSERT-курсора:
 
-PUT cursor-name \[FROM список переменных\] ввести строку в буфер,
+PUT cursor-name [FROM список переменных] ввести строку в буфер,
 
-\[заменив знаки ? для DECLAREd INSERT-st на список переменных\]
+[заменив знаки ? для DECLAREd INSERT-st на список переменных]
 
 FLUSH cursor-name   вытолкнуть буфер
 
@@ -616,29 +616,29 @@ WORK, START DATABASE, ...
 
 Операторы описания данных не откатываются !
 
-CREATE DATABASE db-name \[WITH LOG IN "pathname" \[MODE ANSI\]\]
+CREATE DATABASE db-name [WITH LOG IN "pathname" [MODE ANSI]]
 
 Стандарт ansi требует имя владельца, транзакция по умолчанию
 
 DROP DATABASE { database-name \| char-variable }
 
-DATABASE database-name \[EXCLUSIVE\]        Сделать текущей
+DATABASE database-name [EXCLUSIVE]        Сделать текущей
 
 CLOSE DATABASE
 
-CREATE \[TEMP\] TABLE table-name( column-name datatype \[NOT NULL\]
+CREATE [TEMP] TABLE table-name( column-name datatype [NOT NULL]
 
-                    \[UNIQUE \[CONSTRAINT constr-name\]\] \[,...\] )
+                    [UNIQUE [CONSTRAINT constr-name]] [,...] )
 
-       \[UNIQUE(uniq-col-list) \[CONSTRAINT constr-name\] \] \[,..\]
+       [UNIQUE(uniq-col-list) [CONSTRAINT constr-name] ] [,..]
 
-       \[WITH NO LOG\]
+       [WITH NO LOG]
 
-       \[IN "pathname-directory"\]
+       [IN "pathname-directory"]
 
 где datatype может быть:
 
-   INTEGER        SERIAL\[(n0)\]   DATE
+   INTEGER        SERIAL[(n0)]   DATE
 
    SMALLINT      DECIMAL(m,n)   DATETIME qualif1 TO qualif2
 
@@ -650,45 +650,45 @@ qualifier \\in {YEAR,MONTH,DAY,HOUR,MINUTE,SECOND,FRACTION(n)}
 
 ALTER TABLE table-name       \# Недопустим для временых таблиц
 
-    {  ADD ( new-column-name datatype \[NOT NULL\]
+    {  ADD ( new-column-name datatype [NOT NULL]
 
-               \[UNIQUE \[CONSTRAINT constr-name\]\]\[,...\] )
+               [UNIQUE [CONSTRAINT constr-name]][,...] )
 
-                   \[BEFORE old-column-name\]
-
-       \|
-
-       DROP (old-column-name\[,...\])
+                   [BEFORE old-column-name]
 
        \|
 
-       MODIFY (old-column-name new-datatype \[NOT NULL\]\[,...\])
+       DROP (old-column-name[,...]
 
        \|
 
-       ADD CONSTRAINT UNIQUE (old-column-name\[,...\])
-
-                                  \[CONSTRAINT constr-name\]
+       MODIFY (old-column-name new-datatype [NOT NULL][,...]
 
        \|
 
-       DROP CONSTRAINT (constr-name\[,...\])
+       ADD CONSTRAINT UNIQUE (old-column-name[,...]
 
-     } \[,...\]
+                                  [CONSTRAINT constr-name]
+
+       \|
+
+       DROP CONSTRAINT (constr-name[,...]
+
+     } [,...]
 
 RENAME TABLE old-table-name TO new-table-name
 
 RENAME COLUMN table.old-column-name TO new-column-name
 
-CREATE VIEW view-name \[(column-list)\]
+CREATE VIEW view-name [(column-list)]
 
-       AS SELECT-statement \[WITH CHECK OPTION\]
+       AS SELECT-statement [WITH CHECK OPTION]
 
-CREATE \[UNIQUE\|DISTINCT\] \[CLUSTER\] INDEX index-name
+CREATE [UNIQUE\|DISTINCT] [CLUSTER] INDEX index-name
 
-       ON table-name (column-name \[DESC\], ...)
+       ON table-name (column-name [DESC], ...)
 
-ALTER INDEX index-name TO \[NOT\] CLUSTER  Упорядочить таблицу
+ALTER INDEX index-name TO [NOT] CLUSTER  Упорядочить таблицу
 
 CREATE SYNONYM synonym-name FOR table-name
 
@@ -700,7 +700,7 @@ DROP INDEX   index-name
 
 DROP SYNONYM synonym-name
 
-UPDATE STATISTICS \[FOR TABLE table-name\] В системном каталоге
+UPDATE STATISTICS [FOR TABLE table-name] В системном каталоге
 
 SET EXPLAIN {ON \| OFF}
 
@@ -708,30 +708,30 @@ SET EXPLAIN {ON \| OFF}
 
 Операторы манипуляции данными.
 
-DELETE FROM table-name \[WHERE {condition \| CURRENT OF cursor-name}\]
+DELETE FROM table-name [WHERE {condition \| CURRENT OF cursor-name}]
 
                                           !* Только в 4GL *!
 
-INSERT INTO table-name \[(column-list)\]
+INSERT INTO table-name [(column-list)]
 
      { VALUES (value-list) \| SELECT-statement }
 
 UPDATE table-name SET {column-name ={ expression \| (SELECT-st) }
-\[,...\]
+[,...]
 
-\| {(col-list) \| \[table.\]*} =
+\| {(col-list) \| [table.]*} =
 
-{ ({ expr-list \| (SELECT-st) } \[,...\]) \| record-name.* }
+{ ({ expr-list \| (SELECT-st) } [,...] \| record-name.* }
 
-    \[WHERE {condition \| CURRENT OF cursor-name}\]
+    [WHERE {condition \| CURRENT OF cursor-name}]
 
                            !* Только в 4GL *!
 
-LOAD FROM "file-name" \[DELIMITER "?"\] { INSERT INTO table
+LOAD FROM "file-name" [DELIMITER "?"] { INSERT INTO table
 
-           \[(col-list)\] \| char-variable with INSERT-st }
+           [(col-list)] \| char-variable with INSERT-st }
 
-UNLOAD TO "file" \[DELIMITER "?"\] SELECT-statement
+UNLOAD TO "file" [DELIMITER "?"] SELECT-statement
 
        формат файла по умолчанию:
 
@@ -741,29 +741,29 @@ UNLOAD TO "file" \[DELIMITER "?"\] SELECT-statement
 
 значение\|значение\| ... значение\|
 
-OUTPUT TO {FILENAME \| PIPE program} \[WITHOUT HEADINGS\] SELECT-st
+OUTPUT TO {FILENAME \| PIPE program} [WITHOUT HEADINGS] SELECT-st
 
                только в INFORMIX-SQL
 
 Оператор SELECT.
 
-SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,...\]
+SELECT [ALL \| UNIQUE] column-expr [col-lable] [,...]
 
-       \[INTO список переменных\]            !* Только в 4GL *!
+       [INTO список переменных]            !* Только в 4GL *!
 
-       FROM { \[OUTER\] table-name \[tab-alias\] \|
+       FROM { [OUTER] table-name [tab-alias] \|
 
-          OUTER  (table-expr) } \[,...\] -проверять      условие
+          OUTER  (table-expr) } [,...] -проверять      условие
 
                                        только для этой (менее
 
-       \[WHERE condition\]               надежной) таблицы
+       [WHERE condition]               надежной) таблицы
 
-       \[GROUP BY column-list  \[HAVING condition\] \]
+       [GROUP BY column-list  [HAVING condition] ]
 
-       \[ORDER BY column-name \[DESC\],...\]
+       [ORDER BY column-name [DESC],...]
 
-       \[INTO TEMP table-name\]
+       [INTO TEMP table-name]
 
     WHERE conditions:
 
@@ -773,43 +773,43 @@ SELECT \[ALL \| UNIQUE\] column-expr \[col-lable\] \[,...\]
 
     где сравнение =,\>,\<,\>=,\<=,\<\>,!=
 
-       column-name IS \[NOT\] NULL
+       column-name IS [NOT] NULL
 
-       выраж \[NOT\] BETWEEN выраж1 AND выраж2
+       выраж [NOT] BETWEEN выраж1 AND выраж2
 
-       выраж \[NOT\] IN (выраж1, ...  \[, ...\] )
+       выраж [NOT] IN (выраж1, ...  [, ...] )
 
                                   по умолчанию "\\"
 
-       строка \[NOT\] LIKE "шаблон" \[ESCAPE "escape-char"\]
+       строка [NOT] LIKE "шаблон" [ESCAPE "escape-char"]
 
         спецсимволы шаблона %  \_  означают "много" "один"
 
-       строка \[NOT\] MATCHES "шаблон" \[ESCAPE "esc-char"\]
+       строка [NOT] MATCHES "шаблон" [ESCAPE "esc-char"]
 
         спецсимволы шаблона *  ?   означают "много" "один"
 
-        \[abH\]  \[\^d-z\]  "один из" "ни один из"
+        [abH]  [\^d-z]  "один из" "ни один из"
 
-       выраж сравнение {ALL \| \[ANY \| SOME\]} (SELECT-оператор)
+       выраж сравнение {ALL \| [ANY \| SOME]} (SELECT-оператор)
 
-       выраж \[NOT\] IN (SELECT-оператор)     !* Обыкновенный *!
+       выраж [NOT] IN (SELECT-оператор)     !* Обыкновенный *!
 
-       \[NOT\] EXISTS  (SELECT-оператор)      !*  SQLевский   *!
+       [NOT] EXISTS  (SELECT-оператор)      !*  SQLевский   *!
 
 Операторы задания прав доступа (не откатываются).
 
     {DBpriv             {PUBLIC  право давать права
 
-GRANT   \|           TO   \|     \[WITH GRANT OPTION\] \[AS grantor\]
+GRANT   \|           TO   \|     [WITH GRANT OPTION] [AS grantor]
 
-TBpriv \[,..\] ON table}  user-list}            от имени grantor
+TBpriv [,..] ON table}  user-list}            от имени grantor
 
        {DBpriv
 
 REVOKE   \|                FROM { PUBLIC \| user-list }
 
-  TBpriv \[,..\] ON table}
+  TBpriv [,..] ON table}
 
                                            TABLE PRIVILEGES:
 
@@ -817,13 +817,13 @@ REVOKE   \|                FROM { PUBLIC \| user-list }
 
                                          INDEX          INSERT
 
-       CONNECT   работать                     SELECT\[(cols)\]
+       CONNECT   работать                     SELECT[(cols)]
 
-       RESOURCE  создавать объекты           UPDATE \[(cols)\]
+       RESOURCE  создавать объекты           UPDATE [(cols)]
 
-       DBA       все                         ALL \[PRIVILEGES\]
+       DBA       все                         ALL [PRIVILEGES]
 
-SET LOCK MODE TO \[NOT\] WAIT     ждать \[не ждать\] освобождения
+SET LOCK MODE TO [NOT] WAIT     ждать [не ждать] освобождения
 
                                                блокир. строк
 
@@ -835,13 +835,13 @@ UNLOCK TABLE table-name
 
 Операторы транзакций, восстановления данных.
 
-CREATE DATABASE db-name  WITH LOG IN "/pathname" \[MODE ANSI\]\]
+CREATE DATABASE db-name  WITH LOG IN "/pathname" [MODE ANSI]]
 
-START  DATABASE db-name  WITH LOG IN "/pathname" \[MODE ANSI\]
+START  DATABASE db-name  WITH LOG IN "/pathname" [MODE ANSI]
 
    стартовать новый системный журнал (log-файл)
 
-DATABASE database-name \[EXCLUSIVE\]  Сделать текущей
+DATABASE database-name [EXCLUSIVE]  Сделать текущей
 
 ROLLFORWARD DATABASE database-name  Накатить базу из копии
 

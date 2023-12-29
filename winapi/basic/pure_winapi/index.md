@@ -258,7 +258,7 @@ GetNextWindow и GetWindowText), однако несмотря на это бы�
 
 var
 
-s1 : array\[0..254\] of Char;
+s1 : array[0..254] of Char;
 
 ...
 

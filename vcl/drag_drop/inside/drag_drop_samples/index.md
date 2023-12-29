@@ -375,7 +375,7 @@ else
 
      for c := 0 to FieldCount - 1 do
 
-       s := s + Fields\[c\].AsString + \' \| \';
+       s := s + Fields[c].AsString + \' \| \';
 
      memo2.lines.add(s);
 
@@ -471,7 +471,7 @@ h: THandle;
 
 //i,num:integer;
 
-pchr: array\[0..maxlen\] of char;
+pchr: array[0..maxlen] of char;
 
 fname: string;
 

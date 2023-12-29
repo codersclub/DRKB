@@ -549,7 +549,7 @@ property IndexFieldCount: Integer;
 
 свойство
 
-property IndexFields: \[Index: Integer\]: TField;
+property IndexFields: [Index: Integer]: TField;
 
 представляет собой индексированный список полей, входящих в текущий
 индекс.
@@ -755,7 +755,7 @@ property Expression: String;
 можно вычислять общую площадь государств Северной и Южной Америки
 (площадь государства содержится в поле Area):
 
-ClientDataSet.Aggregates\[Somelndex\].Expression := \'SUM(Area)\';
+ClientDataSet.Aggregates[Somelndex].Expression := \'SUM(Area)\';
 
 Вычислением агрегата управляет свойство
 
@@ -772,9 +772,9 @@ function Value: Variant;
 Например, после сохранения изменений в наборе данных можно
 визуализировать новое значение агрегата:
 
-SomeLabel.Caption := ClientDataSet.Aggregates\[0\].AggregateName; 
+SomeLabel.Caption := ClientDataSet.Aggregates[0].AggregateName; 
 
-SomeEdit.Text := ClientDataSet.Aggregates\[0\].Value;
+SomeEdit.Text := ClientDataSet.Aggregates[0].Value;
 
 Для проверки активности агрегата, помимо проверки значения свойства
 Active, можно также использовать свойство
@@ -802,7 +802,7 @@ property AggregatesActive: Boolean;
 последовательного перебора с проверкой свойства Active можно
 использовать свойство
 
-property ActiveAggs\[Index: Integer\] : TList;
+property ActiveAggs[Index: Integer] : TList;
 
 компонента TClientDataSet, которое представляет собой список активных
 агрегатов.

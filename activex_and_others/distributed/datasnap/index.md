@@ -786,7 +786,7 @@ property LoadBalanced: Boolean; управляет выбором сервера
 Компонент TLocalConnection используется локально для получения доступа к
 существующим компонентам-провайдерам.
 
-property Providers\[const ProviderName: string\]: TCustomProvider;
+property Providers[const ProviderName: string]: TCustomProvider;
 содержит ссылки на все компоненты-провайдеры, размещенные с компонентом
 TLocalConnection на одной форме. Индексация в списке осуществляется по
 имени компонента-провайдера.

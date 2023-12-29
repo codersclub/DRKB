@@ -176,7 +176,7 @@ scd\_emp.Post;
 
 // Использование AppendRecord
 
-scd\_emp.AppendRecord(\[1,\'Петров\'\]);
+scd\_emp.AppendRecord([1,\'Петров\'];
 
 Определены несколько событий, связанных с вставкой новой записи
 

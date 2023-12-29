@@ -453,19 +453,19 @@ try
 
     for iFieldNum := 0 to Pred(oSourceTable.FieldCount) do
 
-      if not oNewTable.Fields\[iFieldNum\].IsNull then
+      if not oNewTable.Fields[iFieldNum].IsNull then
 
-          oSourceTable.Fields\[iFieldNum\].Value :=
+          oSourceTable.Fields[iFieldNum].Value :=
 
-          oNewTable.Fields\[iFieldNum\].Value
+          oNewTable.Fields[iFieldNum].Value
 
          else
 
-          oSourceTable.Fields\[iFieldNum\].Clear;
+          oSourceTable.Fields[iFieldNum].Clear;
 
     //  Now set the GUID field value to a GUID value.
 
-    oSourceTable.Fields\[iGUIDfieldNum\].AsString := CreateClassID;
+    oSourceTable.Fields[iGUIDfieldNum].AsString := CreateClassID;
 
     oSourceTable.Post;
 

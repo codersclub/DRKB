@@ -379,7 +379,7 @@ ZEOS BIOS
 
    zeosx
 
-\[C\] Faraon
+[C] Faraon
 
 Источник: <https://wasm.ru>
 

@@ -68,7 +68,7 @@ function Execute: \_RecordSet; overload;
 function Execute(const Parameters: OleVariant): \_Recordset;overload;
 
 function Execute(var RecordsAffected: Integer; var Parameters:
-OleVariant;    ExecuteOptions: TExecuteOptions = \[\]): \_RecordSet;
+OleVariant;    ExecuteOptions: TExecuteOptions = []: \_RecordSet;
 overload;
 
 Разработчик может использовать любую из представленных нотаций

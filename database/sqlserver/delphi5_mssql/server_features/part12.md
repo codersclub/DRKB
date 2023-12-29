@@ -17,7 +17,7 @@ Date: 01.01.2007
 тип данных UNIQUEIDENTIFIER
 
 Для получения целочисленного уникального идентификатора записи в MSSQL
-используется ключевое слово IDENTITY \[(seed, increment)\].
+используется ключевое слово IDENTITY [(seed, increment)].
 
 Здесь:
 
@@ -89,7 +89,7 @@ INSERT MainTable (Name) VALUES (\'Петров\')
 По умолчанию в поле с IDENTITY не может быть вставлено явное значение.
 Однако MS SQL Server позволяет разрешить такую вставку путем установки
 
-SET IDENTITY\_INSERT \[database.\[owner.\]\]{table} {ON\|OFF}
+SET IDENTITY\_INSERT [database.[owner.]]{table} {ON\|OFF}
 
 Вставка может быть разрешена только для одной таблицы в сессии. Если в
 таблицу вставляется число, большее максимального значения сервер
