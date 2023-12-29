@@ -102,8 +102,7 @@ Administrator.)
 
  
 :::{.center}
-Figure 2
-
+Figure 2  
 ![clip0134](clip0134.png)
 :::
 
@@ -115,8 +114,7 @@ Figure 2
 
  
 :::{.center}
-Figure 3
-
+Figure 3  
 ![clip0136](clip0136.png)
 :::
  
@@ -253,8 +251,7 @@ to use Titan SQL Anywhere with ASA 7.0, follow these steps:
 
  
 :::{.center}
-Figure 4
-
+Figure 4  
 ![clip0137](clip0137.png)
 :::
  
@@ -467,8 +464,7 @@ accesses the database through the 'DataSource' property.
 
  
 :::{.center}
-Figure 5
-
+Figure 5  
 ![clip0138](clip0138.png)
 :::
  
@@ -689,8 +685,7 @@ and the database engine will start.
 
  
 :::{.center}
-Figure 6
-
+Figure 6  
 ![clip0139](clip0139.png)
 :::
  
@@ -843,8 +838,7 @@ button 'Load Blob into table'.
 
  
 :::{.center}
-Figure 7
-
+Figure 7  
 ![clip0140](clip0140.png)
 :::
  
@@ -983,8 +977,7 @@ displayed using the BDE because it is larger then 1.4 megabytes in size.
 
  
 :::{.center}
-Figure 8
-
+Figure 8  
 ![clip0142](clip0142.png)
 :::
  
@@ -1284,8 +1277,7 @@ having its 'Active' property set to true.
 
  
 :::{.center}
-Figure 9
-
+Figure 9  
 ![clip0143](clip0143.png){width="1024" height="768"}
 :::
  
@@ -1394,8 +1386,7 @@ Figure 10 depicts the 'IndexFieldName' property being set to the column
 
  
 :::{.center}
-Figure 10
-
+Figure 10  
 ![clip0144](clip0144.png)
 :::
  
@@ -1551,8 +1542,7 @@ the SQL statement just has to be rerun.
 
  
 :::{.center}
-Figure 11
-
+Figure 11  
 ![clip0145](clip0145.png)
 :::
  
@@ -1984,8 +1974,7 @@ To install ODBCExpress:
 
  
 :::{.center}
-Figure 12
-
+Figure 12  
 ![clip0146](clip0146.png)
 :::
 
@@ -2048,8 +2037,7 @@ information you are looking for.
 
  
 :::{.center}
-Figure 13
-
+Figure 13  
 ![clip0147](clip0147.png)
 :::
  
@@ -2130,8 +2118,7 @@ The simplest way to modify the database is to do the following:
 
  
 :::{.center}
-Figure 14
-
+Figure 14  
 ![clip0148](clip0148.png)
 :::
  
@@ -2157,8 +2144,7 @@ is selected on the 'department' table.
 
  
 :::{.center}
-Figure 15
-
+Figure 15  
 ![clip0149](clip0149.png)
 :::
  

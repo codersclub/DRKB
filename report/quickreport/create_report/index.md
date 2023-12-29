@@ -159,8 +159,7 @@ http://www.qbss.com или у вашего локального продавца
 рисунке Figure 1.
 
 :::{.center}
-Figure 1 - Setting up a basic report
-
+Figure 1 - Setting up a basic report  
 ![clip0187](clip0187.gif)
 :::
 

@@ -85,8 +85,7 @@ TRESE Project, University of Twente; H. Lieberman, Using Prototypical
 Objects to implement shared behavior, OOPSLA \'86).
 
 :::{.center}
-![clip0133](clip0133.gif)
-
+![clip0133](clip0133.gif)  
 Илл. 1
 :::
 
@@ -155,8 +154,7 @@ self - означает то же самое, что и self в Samlltalk или
 легко воспроизводятся с использованием server.
 
 :::{.center}
-![clip0134](clip0134.gif)
-
+![clip0134](clip0134.gif)  
 Илл. 2
 :::
 
