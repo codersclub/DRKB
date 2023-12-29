@@ -14,7 +14,7 @@ Date: 01.01.2007
 Решение в случае ошибок компиляции пакетов типа: Missing unit
 \'Proxies.pas\' и Missing DsgnIntf.pas
 
-1\) Сначала заменить
+1) Сначала заменить
 
 uses DsgnIntf;
 
@@ -22,7 +22,7 @@ uses DsgnIntf;
 
 uses DesignIntf, DesignEditors;
 
-2\) Затем
+2) Затем
 
 Добавить DesignIde.dcp в лист требуемых модулей
 

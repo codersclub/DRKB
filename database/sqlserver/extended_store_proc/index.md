@@ -158,10 +158,10 @@ example for Delphi. You can read the ODS help in MSDN and do even more.
 
 6\. Testing and Debugging:
 
-A\) Install SQL 7.0/2000 on your workstation (or install Delphi on
+A) Install SQL 7.0/2000 on your workstation (or install Delphi on
 workstation where SQL Server is installed).
 
-B\) Register your Xp on SQL Server.
+B) Register your Xp on SQL Server.
 
   NOTES:
 
@@ -203,7 +203,7 @@ B\) Register your Xp on SQL Server.
 
     go
 
-C\) In Delphi, select from main menu Run -\> Run Parameters.
+C) In Delphi, select from main menu Run -\> Run Parameters.
 
 In the Host Application field, specify a pathname to your SQL Server
 executable (sqlservr.exe). For SQL 7.0, this is enough. For SQL 2000, in
@@ -214,7 +214,7 @@ your SQL Server during the installation.
 Set breakpoints in your Delphi code and run project. SQL Server will
 start as a console application.
 
-D\) You can execute your Xp from Query Analyzer and trace code in Delphi.
+D) You can execute your Xp from Query Analyzer and trace code in Delphi.
 
   NOTE:
 
@@ -224,7 +224,7 @@ D\) You can execute your Xp from Query Analyzer and trace code in Delphi.
 
   go
 
-E\) To exit application, press Ctrl+Pause in the SQL Server console
+E) To exit application, press Ctrl+Pause in the SQL Server console
 window.
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--

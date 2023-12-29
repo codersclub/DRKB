@@ -23,13 +23,13 @@ TIF -> PDF
 
 Сперва Вам необходимо импортировать элементы управления Acrobat AxtiveX.
 
-1\) Выберите Component -\> Import ActiveX Control
+1) Выберите Component -\> Import ActiveX Control
 
-2\) Выберите Acrobat Control for ActiveX и нажмите install
+2) Выберите Acrobat Control for ActiveX и нажмите install
 
-3\) Выберите пакет ActiveX control для инсталяции
+3) Выберите пакет ActiveX control для инсталяции
 
-4\) Добавьте PDFlib\_tlb в Ваш проект. Этот файл находится в директории
+4) Добавьте PDFlib\_tlb в Ваш проект. Этот файл находится в директории
 Borland\\Delphi5\\Imports.
 
 Как использовать функцию

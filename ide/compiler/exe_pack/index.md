@@ -17,31 +17,31 @@ VCL has many advantages...)
 
 There are several ways to reduce a EXE\'s size:
 
-01\) Use a EXE-Packer (UPX, ASPack,...)
+01) Use a EXE-Packer (UPX, ASPack,...)
 
-02\) Use KOL.
+02) Use KOL.
 
-03\) Write your application without VCL
+03) Write your application without VCL
 
-04\) Use the ACL (API Controls Library)
+04) Use the ACL (API Controls Library)
 
-05\) Use StripReloc.
+05) Use StripReloc.
 
-06\) Deactivate remote debugging information and TD32.
+06) Deactivate remote debugging information and TD32.
 
-07\) You might want to put code in a dll.
+07) You might want to put code in a dll.
 
-08\) Don\'t put the same images several times on a form. Load them at runtime.
+08) Don\'t put the same images several times on a form. Load them at runtime.
 
-09\) Use compressed images (JPG and not BMP)
+09) Use compressed images (JPG and not BMP)
 
-10\) Store less properties in DFM files
+10) Store less properties in DFM files
 
 (See Link below "How To Make Your EXE\'s Lighter")
 
-11\) Use the TStringList replacement by \~LOM\~
+11) Use the TStringList replacement by \~LOM\~
 
-12\) Use the Minireg - TRegistry replacement by Ben Hochstrasser
+12) Use the Minireg - TRegistry replacement by Ben Hochstrasser
 
 
 
