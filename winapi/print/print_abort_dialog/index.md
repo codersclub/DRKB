@@ -34,7 +34,6 @@ Date: 01.01.2007
 исправляя ошибку Borland, вы должны это делать сами в ответ на нажатие
 кнопки Abort (в обработчике события onClick)
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

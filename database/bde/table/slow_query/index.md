@@ -26,7 +26,6 @@ Date: 01.01.2007
 Имя файла, в котором хранится кэш, Вы можете узнать, посмотрев в любом
 текстовом редакторе файл SCache.INI.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

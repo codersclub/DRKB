@@ -18,7 +18,6 @@ Date: 01.01.2007
 
 Вызывайте это сами каждый раз при использовании Printer.Abort.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

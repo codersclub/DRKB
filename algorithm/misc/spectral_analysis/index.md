@@ -548,8 +548,7 @@ Date: 01.01.2007
 
 Denis Furman \[000705
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba
 

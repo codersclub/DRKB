@@ -108,7 +108,6 @@ S142 Онлайновый формат символов (Online Character Format
 
 S144 Выбор скорости автобода (Autobaud Speed Group Selection)
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

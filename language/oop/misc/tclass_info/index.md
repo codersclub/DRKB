@@ -68,7 +68,6 @@ TWinControl.
       MyObj1 := MakeAnother(MyObj2.ClassType);
     end.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

@@ -400,6 +400,6 @@ AddIndex компонента TTable. Кроме того, флажки инде
 обратитесь к руководству \"dBASE Language Reference\" или книгам и
 справочникам по dBASE третьих фирм.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

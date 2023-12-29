@@ -46,6 +46,6 @@ SQL\*Net V.2.x: Здесь все сводится к (Oracle) псевдони�
 
 Knud Andersen
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

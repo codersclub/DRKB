@@ -27,7 +27,6 @@ Date: 01.01.2007
 
 Код прислал Колесников Сергей Александрович \[mailto:rovd\@inbox.ru\]
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

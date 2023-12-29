@@ -29,7 +29,6 @@ LOCALSHARE=False говорит BDE о том, что он должен сам �
 
 \- Eryk Bottomley
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

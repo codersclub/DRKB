@@ -58,7 +58,6 @@ Date: 01.01.2007
 так далее. Для моно или 8-битных файлов сделайте соответствующие
 изменения.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

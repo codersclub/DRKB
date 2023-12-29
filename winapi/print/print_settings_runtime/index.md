@@ -128,6 +128,6 @@ Interface модуля NewPrint.pas:
 Правда я еще не поробовал его под Delphi 4... Если вы имеете любые
 комментарии или улучшения, не постесняйтесь отправить их мне...
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

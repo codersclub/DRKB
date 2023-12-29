@@ -114,7 +114,6 @@ InterBase BLOB-поля и Database Desktop
 BLOB-поля, то при просмотре таблицы утилитой WISQL, обозначение его
 подтипа может отличаться от действительного.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

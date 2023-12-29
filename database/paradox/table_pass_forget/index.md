@@ -16,7 +16,7 @@ Date: 01.01.2007
 забываем. Что теперь делать? Да ничего, просто открываем нашу табличку с
 одним из паролей: jIGGAe, nx66ppx, cupcdvum. Один, да подойдет.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba
 

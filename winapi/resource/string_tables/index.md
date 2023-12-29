@@ -215,6 +215,6 @@ Windows.pas, применяемого в
         Button2.Caption := StrPas(a);
     end; 
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

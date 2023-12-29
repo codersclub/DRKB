@@ -26,7 +26,6 @@ Destination.
 идентично утверждению \"Destination.Assign(Source)\". Это объясняет,
 почему LB.Items := MemStr работает, когда MemStr := LB.Items нет.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

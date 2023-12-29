@@ -68,6 +68,6 @@ field36 = song30,char,50,0,360
 и внезапно все заработало! Для поля, которое игнорируется форматом
 файла, \"Offset\" несомненно дало огромный эффект.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba
