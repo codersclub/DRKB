@@ -63,7 +63,7 @@ SystemFont=\"Fixedsys\"
 
 Это - проблема русских .dbf и Desktop\'а . Надо установить шрифт
 
-по умолчанию не Arial Cyr , а Fixedsys или System. копать примерно так:
+по умолчанию не Arial Cyr, а Fixedsys или System. копать примерно так:
 
 1.находишь производителя Desktop :
 
@@ -76,7 +76,7 @@ HKEY\_CURRENT\_USER\\SOFTWARE\\BORLAND\\DBD\\7.0\\Preferences\\Properties\\Syste
 
 (писать название шрифта с большой буквы).
 
-2\. И в стандартном драйвере BDE ,например DBASE, ставишь русский драйвер
+2\. И в стандартном драйвере BDE,например DBASE, ставишь русский драйвер
 dBASE RUS cp866.
 
 Открываешь BDE configurator(administrator), ярлык на 32-BDE находится в

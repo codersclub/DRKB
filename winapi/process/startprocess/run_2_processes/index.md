@@ -17,7 +17,7 @@ Date: 01.01.2007
     struc1 : PSTARTUPINFO;
     struc2 : PROCESS_INFORMATION;
     begin
-      if not CreateProcess ( PChar('c:\PSTOLD.EXE') ,
+      if not CreateProcess ( PChar('c:\PSTOLD.EXE'),
         nil,
         nil,
         nil,
@@ -29,7 +29,7 @@ Date: 01.01.2007
         struc2 )
       then ShowMessage ( 'Zhopa kakaya-to');
       hProcess[0] := struc2.hProcess;
-      if not CreateProcess ( PChar('c:\PSTOLD1.EXE') ,
+      if not CreateProcess ( PChar('c:\PSTOLD1.EXE'),
         nil,
         nil,
         nil,

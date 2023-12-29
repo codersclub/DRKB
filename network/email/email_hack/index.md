@@ -358,7 +358,7 @@ POP3. 110 порт. Интересующие нас команды - \"user\" и
         I1: integer;
       begin
         for I1:=1 to Length(str) do
-          if send(sock2, str[I1] , 1, 0) = SOCKET_ERROR then
+          if send(sock2, str[I1], 1, 0) = SOCKET_ERROR then
             exit;
       end;
      

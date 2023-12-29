@@ -52,7 +52,7 @@ Unit с полезными функциями для работы с проце�
       WH:THandle;
     begin
       result := 0;
-      WH := FindWindow (nil , pchar(WindowTitle));
+      WH := FindWindow (nil, pchar(WindowTitle));
       IF WH <> 0 then
         GetWindowThreadProcessID(WH, @Result);
     end;

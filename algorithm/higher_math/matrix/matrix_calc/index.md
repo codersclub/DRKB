@@ -337,7 +337,7 @@ Matrix.Diag( r : Real )
     C        REMARKS
     C           (1)   IF IER = -1,2,3, THEN THERE IS NO COMPUTATION.
     C           (2)   IF IER =  4,...,N, THEN THE DERIVATIVE VALUES Z(1)
-    C                 ,..., Z(IER-1) HAVE BEEN COMPUTED.
+    C                ,..., Z(IER-1) HAVE BEEN COMPUTED.
     C           (3)   Z CAN HAVE THE SAME STORAGE ALLOCATION AS X OR Y.  IF
     C                 X OR Y IS DISTINCT FROM Z, THEN IT IS NOT DESTROYED.
     C

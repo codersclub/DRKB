@@ -140,7 +140,7 @@ just with a DecryptString(s) call.
      
       // Describe columns
       // (Actually, you are doing that for every datatype and every column you want to return).
-      srv_describe(pSrvProc,1 , 'Value', SRV_NULLTERM,
+      srv_describe(pSrvProc,1, 'Value', SRV_NULLTERM,
                    SRVVARCHAR, sz,
                    SRVVARCHAR, sz, nil);
         // Begin output...

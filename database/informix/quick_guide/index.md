@@ -746,7 +746,7 @@ let sta\_return=podtwervdenie(\" В самом деле решили закон�
 
 function podtwervdenie(stroka)
 
-define stroka char(38) , kod\_wozwr  int
+define stroka char(38), kod\_wozwr  int
 
 open window podtwervdenie AT 11,10 WITH 4 rows, 39 columns
 ATTRIBUTE(border)
@@ -916,7 +916,7 @@ DEFINE ceharr ARRAY\[25\] OF RECORD       \# массив для хранени�
 
 \# Открыть окно с рамкой и вывести в него экранную форму cehform
 
-   OPEN WINDOW cehwind AT 4 ,6 WITH FORM \"cehform\"
+   OPEN WINDOW cehwind AT 4,6 WITH FORM \"cehform\"
 
         ATTRIBUTE(BORDER)
 
@@ -1236,7 +1236,7 @@ need 2 lines
 
 print \" В цехе \",nameceh clipped,2 spaces,
 
-      group count(*) using \"\#\#\#\#\#\" ,\" человек, \"
+      group count(*) using \"\#\#\#\#\#\",\" человек, \"
 
 print \" Средняя зарплата \",
 

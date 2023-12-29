@@ -85,7 +85,7 @@ OpenGL ...
       hrc := wglCreateContext(DC);
       wglMakeCurrent(DC, hrc); // сделаем "текущим контекст воспроизведения
       Initsvet; // включим свет
-      glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE , @MaterialColor);
+      glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, @MaterialColor);
       glMatrixMode(GL_MODELVIEW);
       Timer1.Enabled := True; // включим таймер
       GLShadeModel(GL_SMOOTH);
@@ -135,7 +135,7 @@ OpenGL ...
      glLoadIdentity; // загрузить матрицу
       glTranslatef(0.0, 0.0, -9.0);
        glRotatef(Angle / (random (1) + 1), 1.0, 0.0, 0.0);
-       glRotatef(Angle , 0.0, 0.0, 1.0); //
+       glRotatef(Angle, 0.0, 0.0, 1.0); //
          glpushmatrix; // сохраним текущу систему координат
            glutsolidcube(2); // нарисуем куб с ребром 2
          glpopmatrix; // восстановим систему координат

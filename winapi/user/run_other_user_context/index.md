@@ -32,7 +32,7 @@ Date: 01.01.2007
       // run CreateProcessWithLogonW...
       res := CreateProcessWithLogonW('Security', 'ArViCor', 'test', LOGON_WITH_PROFILE,
         'c:\win2kas\system32\regedt32.exe', nil
-        , CREATE_DEFAULT_ERROR_MODE, nil, nil, si, pif);
+       , CREATE_DEFAULT_ERROR_MODE, nil, nil, si, pif);
       if booltostr(res) = '0' then 
       begin
      

@@ -187,7 +187,7 @@ MailList содержит уже объект класса TMailList.
       end; 
     begin 
       if not DirectoryExists(FilePath) then exit; 
-      if FindFirst(FilePath + '\' + '*.*', faAnyFile , sr) = 0 then ProcessFile; 
+      if FindFirst(FilePath + '\' + '*.*', faAnyFile, sr) = 0 then ProcessFile; 
       while FindNext(sr) = 0 do ProcessFile; 
       FindClose(sr); 
     end; 

@@ -413,7 +413,7 @@ crOnDemand, caCache));
 initialization
 if WebRequestHandler \<\> nil then
 WebRequestHandler.AddWebModuleFactory(TWebPageModuleFactory.Create(TPageProducerPage2,
-TWebPageInfo.Create(\[wpPublished , wpLoginRequired\],
+TWebPageInfo.Create(\[wpPublished, wpLoginRequired\],
 \'.html\',\'PageProducerPage2\',\'Страница с паролем\'), crOnDemand,
 caCache));
 

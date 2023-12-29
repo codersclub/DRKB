@@ -322,7 +322,7 @@ CRT для консольного приложения
             For I:=1 To WidthHeight.Y Do Begin
               Coord.Y:=I-0;
               FillConsoleOutputAttribute(hTempConsoleOutput,TextAttr,WidthHeight.X,Coord,dwCount);
-              FillConsoleOutputCharacter(hTempConsoleOutput,' '     ,WidthHeight.X,Coord,dwCount);
+              FillConsoleOutputCharacter(hTempConsoleOutput,' '    ,WidthHeight.X,Coord,dwCount);
             End;
             WriteConsole(hTempConsoleOutput,Str,dwSize,dwCount,NIL);
             {  }

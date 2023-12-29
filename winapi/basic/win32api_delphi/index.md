@@ -34,7 +34,7 @@ Workshop 4.5 все почти аналогично. Создаем главно
     CAPTION "Главное окно приложения"
     MENU 300
     FONT 8, "MS Sans Serif", 400, 0
-    LANGUAGE LANG_RUSSIAN , 0
+    LANGUAGE LANG_RUSSIAN, 0
     {
     CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 
     19, 94, 50, 14, WS_EX_CLIENTEDGE

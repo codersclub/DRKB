@@ -92,7 +92,7 @@ for Windows SDK\". Пример показывает, как открыть ви
     procedure TForm1.OpenVideoClick(Sender: TObject);
     begin
       hWndC := capCreateCaptureWindowA('My Own Capture Window',
-                                       WS_CHILD or WS_VISIBLE ,
+                                       WS_CHILD or WS_VISIBLE,
                                        Panel1.Left,
                                        Panel1.Top,
                                        Panel1.Width,

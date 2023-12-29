@@ -107,7 +107,7 @@ Date: 01.01.2007
     if Result then
     begin
     ShGetPathFromIDList(ItemIDList!
-    , Buffer);
+   , Buffer);
     ShellMalloc.Free(ItemIDList);
     Directory := Buffer;
     end;

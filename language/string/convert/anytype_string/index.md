@@ -55,7 +55,7 @@ Date: 01.01.2007
 
 Так же можно пользоваться другими вариантами, например:
 
-varCurrency  : Result := CurrToStrF(Value ,ffFixed,CurrencyDecimals);
+varCurrency  : Result := CurrToStrF(Value,ffFixed,CurrencyDecimals);
 
 и
 

@@ -108,5 +108,5 @@ DB2 Extended Enterprise Edition (eee)- Версия DB2 для кластеро�
 
 А9: На каких пратформах доступны Extenders
 
-DB2 Extenders для os/2, nt, win95, win98, aix, hp-ux , solaris (sparc),
+DB2 Extenders для os/2, nt, win95, win98, aix, hp-ux, solaris (sparc),
 для linux.

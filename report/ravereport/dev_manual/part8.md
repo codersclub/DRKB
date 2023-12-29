@@ -65,7 +65,7 @@ TRvNDRWriter и посылает его на текущий принтер. TRvR
 FileName это имя файла отчета созданного компонентом TRvNDRWriter, если
 StreamMode равен smMemory или smFile. Потоковый режим smUser
 используется, когда программист хочет предоставить свой собственный
-потоковый объект (любой наследник от TStream) , назначив свойство Stream
+потоковый объект (любой наследник от TStream), назначив свойство Stream
 компоненту TRvNDRWriter, TRvRenderPrinter и/или TRvRenderPreview. У
 компоненты TrvRenderPrinter отсутствую свои события. Для посылки отчета
 на принтер сделайте вызов Execute или ExecuteCustom.

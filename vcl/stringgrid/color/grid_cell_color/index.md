@@ -19,7 +19,7 @@ Date: 01.01.2007
       CurrentColor: TColor;
     begin
       // Определяем цвет строки в зависимости типа Imcoming
-      if (Sender as TStrinGgrid).Cells[COLUMN_INCOMING , Row ] = '1' then
+      if (Sender as TStrinGgrid).Cells[COLUMN_INCOMING, Row ] = '1' then
         CurrentColor:=clBlue
       else
         CurrentColor:=clMaroon;
@@ -49,7 +49,7 @@ Date: 01.01.2007
       end
       else
         if Row <> ROW_HEADER then
-          (Sender as TStrinGgrid).Canvas.Textout(rect.left+3, rect.top+3 , S );
+          (Sender as TStrinGgrid).Canvas.Textout(rect.left+3, rect.top+3, S );
     end;
      
 

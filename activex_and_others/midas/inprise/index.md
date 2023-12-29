@@ -2120,7 +2120,7 @@ To create a CORBA server with connection pooling:
 ![](embim1898.png){.center}
 
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Drop a TDatabase component on DataModule2 and set it up to connect to the IBLocal InterBase database: set its DatabaseName property to 'internalIBLocal', Alias to 'НBLOCAL' , LoginPrompt to False and Params as
+  1.   Drop a TDatabase component on DataModule2 and set it up to connect to the IBLocal InterBase database: set its DatabaseName property to 'internalIBLocal', Alias to 'НBLOCAL', LoginPrompt to False and Params as
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- -----------------------------------------------------------------------------------------------------------------------------

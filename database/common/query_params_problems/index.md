@@ -167,7 +167,7 @@ Date: 01.01.2007
 Например, если усложнить предыдущий запрос:
 
     with  ADOQuery1  do begin
-      SQL.text:='UPDATE Customers SET Addr1=:p , Addr2=:p WHERE CustNo=:c';
+      SQL.text:='UPDATE Customers SET Addr1=:p, Addr2=:p WHERE CustNo=:c';
       Parameters[0].Value := 'г.Арбатов';
       Parameters[1].Value := 753;
       ExecSQL;
@@ -176,7 +176,7 @@ Date: 01.01.2007
 то результат выполнения будет отличаться от варианта:
 
     with  ADOQuery1  do begin
-      SQL.text:='UPDATE Customers SET Addr1=:p , Addr2=:p  WHERE CustNo=:c';
+      SQL.text:='UPDATE Customers SET Addr1=:p, Addr2=:p  WHERE CustNo=:c';
       Parameters.ParamValues['p'] := 'г.Арбатов';
       Parameters.ParamValues['c'] := 753;
       ExecSQL;
@@ -390,7 +390,7 @@ ExecSQL ошибки возникнуть не должно, но результ
         with  MyDB.CreateSelect('SELECT Name, Population FROM Country'
                                +' WHERE (Continent = :Continent)'
                                +  ' AND (Population < :Population)'
-                               ,[],['South America',10000000])  do try
+                              ,[],['South America',10000000])  do try
           while  not Eof  do begin
             Add(Fields[0].AsString+' '+Fields[1].AsString);
             Next;
@@ -464,7 +464,7 @@ ExecSQL ошибки возникнуть не должно, но результ
           s2 := ^M^J^I'  Message = "'+Exception(o).Message+'"';
         end;
         raise EInvalidCast.CreateFmt('Ошибка LastExcept: %s'^M^J^I'  ExceptObject = %s at %s%s'
-                                       ,[s1,o.ClassName,LocationInfoStr(ExceptAddr),s2]);
+                                      ,[s1,o.ClassName,LocationInfoStr(ExceptAddr),s2]);
       end;
     end;
      

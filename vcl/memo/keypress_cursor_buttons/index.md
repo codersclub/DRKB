@@ -99,7 +99,7 @@ Date: 01.01.2007
       if Memo1.seltext > '' then
         Caption := 'Выбранный текст'
       else
-        Caption := 'Колонка ' + inttostr(LineChar + 1) + ' , ' +
+        Caption := 'Колонка ' + inttostr(LineChar + 1) + ', ' +
      
         'Строка ' + inttostr(Lineindex + 1);
     end;

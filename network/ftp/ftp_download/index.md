@@ -156,7 +156,7 @@ Date: 01.01.2007
      
         { Show Progress } 
         ProgressBar.Position := Round(dwBytesRead * 100 / fileSize); 
-        Form1.Label1.Caption := Format('%s of %s / %d %%',[FmtFileSize(dwBytesRead),FmtFileSize(fileSize) ,ProgressBar.Position]); 
+        Form1.Label1.Caption := Format('%s of %s / %d %%',[FmtFileSize(dwBytesRead),FmtFileSize(fileSize),ProgressBar.Position]); 
       end; 
      
       CloseFile(LocalFile); 

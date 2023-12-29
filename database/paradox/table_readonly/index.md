@@ -71,7 +71,7 @@ TButton и TDatabase.
 
 Delphi 1.0: FileCtrl, DbiProcs, DbiTypes, DbiErrs.
 
-Delphi 2.0: FileCtrl , BDE
+Delphi 2.0: FileCtrl, BDE
 
 После компиляции и выполнения, программа создаст два файла в
 определенном вами каталоге. Создаваемые два файла: PDOXUSRS.LCK и

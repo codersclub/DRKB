@@ -237,7 +237,7 @@ Date: 30.04.2002
           end;
           S := S + RecordSet.Fields.Item[i].Name + ' ' + L;
           if i < RecordSet.Fields.Count - 1 then
-            S := S + ' ,' + #13
+            S := S + ',' + #13
           else
             S := S + ' )' + #13;
         end;

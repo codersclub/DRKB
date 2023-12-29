@@ -48,8 +48,8 @@ Date: 01.01.2007
     дополнительную информацию для настройки клиента
        -- Properties -- динамические свойства TADOStoredProc, список формируется
     таким образом. В большинстве случаев изменять его не приходится.
-       SELECT 'Property'='Unique Table' , 'Value'='TheTable' UNION
-       SELECT 'Property'='Resync Command' , 'Value'='EXEC upTemplateProcedure ?' --
+       SELECT 'Property'='Unique Table', 'Value'='TheTable' UNION
+       SELECT 'Property'='Resync Command', 'Value'='EXEC upTemplateProcedure ?' --
      !!! команда обновления измененной записи !!!
        -- Table Operations
           -- Здесь формируется набор данных, возвращающий какие операции может

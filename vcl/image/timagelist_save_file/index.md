@@ -12,12 +12,12 @@ Date: 01.01.2007
 :::
 
     // There are ready-made methods for saving any component including all its children to a file.
-    // For writing components use WriteComponentResFile(path + source filename , component name source)
+    // For writing components use WriteComponentResFile(path + source filename, component name source)
      
     WriteComponentResFile('C:\imagelist1.bin',imagelist1);
      
     // For reading the data back to a component:
-    // component := ReadComponentResFile(path + source filename , component name traget)
+    // component := ReadComponentResFile(path + source filename, component name traget)
      
     imagelist1 := ReadComponentResFile('c:\imagelist1.bin', nil) as TImagelist;
      

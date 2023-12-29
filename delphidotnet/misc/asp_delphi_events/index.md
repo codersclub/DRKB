@@ -16,7 +16,7 @@ Date: 01.01.2007
     read an ACCESS database. Obviously the source=c:\mydb.mdb declaration should
     be changed to point to your own database. The sql commands will also need to
     be ammended to point to the correct tables and values. This souce code is a
-    translation from native c#. Any problems with the code or , thanks, comments
+    translation from native c#. Any problems with the code or, thanks, comments
     or general abuse over codeing standrds should be sent to andychap@hotmail.com,
     Please put "delphi" in the subject line so I can junk filter.
 

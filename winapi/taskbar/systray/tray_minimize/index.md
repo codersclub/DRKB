@@ -145,7 +145,7 @@ onClick() для его пунктов.
                                    DWORD dwMessage,      // message identifier
                                    PNOTIFYICONDATA pnid  // pointer to structure);
 
-Эта  функция описана в заголовочном файле Win32-SDK \" shellapi.h\" ,
+Эта  функция описана в заголовочном файле Win32-SDK \" shellapi.h\",
 
 включаемом   в  программу  при  включении  \" windows.h\" .  Параметр
 

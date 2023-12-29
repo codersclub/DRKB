@@ -67,7 +67,7 @@ Date: 01.01.2007
     end;
     RegisterClass( WndClass );
     handleWnd:= CreateWindow(myClassName, 'Hажми кнопку', ws_OverlappedWindow,
-    400, 300, 200, 100, 0, 0, hInstance , NIL);
+    400, 300, 200, 100, 0, 0, hInstance, NIL);
     if handleWnd = 0 then
     begin
     MessageBox( 0, 'Error', NIL, MB_OK );

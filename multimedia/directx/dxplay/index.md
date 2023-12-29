@@ -72,8 +72,8 @@ begin:
     try
        Msg.MessageType := DXMESE; //Указываем тип сообщения
        Msg.Mes:=random(100); {Само сообщения, может быть что угодно, вплоть до нахождения курсора мышки}
-       DXPlay1.SendMessage(DPID_ALLPLAYERS ,msg,msgsize); //Отправлем мессагу всем игрокам
-       DXPlay1.SendMessage(DXPlay1.LocalPlayer.ID ,msg,msgsize); //Отпраляем себе
+       DXPlay1.SendMessage(DPID_ALLPLAYERS,msg,msgsize); //Отправлем мессагу всем игрокам
+       DXPlay1.SendMessage(DXPlay1.LocalPlayer.ID,msg,msgsize); //Отпраляем себе
     finally
        FreeMem(Msg); //Освобождаем память сообщения Msg
     end;

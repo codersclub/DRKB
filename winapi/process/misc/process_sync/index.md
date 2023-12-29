@@ -407,7 +407,7 @@ dwFlags: DWORD     // Дополнительные флаги
 ): DWORD; stdcall;
 
 Если параметр bAlertable равен TRUE (либо dwFlags в функции
-MsgWaitForMultipleObjectsEx содержит MWMO\_ALERTABLE) , то при появлении
+MsgWaitForMultipleObjectsEx содержит MWMO\_ALERTABLE), то при появлении
 в очереди APC запроса на асинхронный вызов процедуры операционная
 система выполняет вызовы всех имеющихся в очереди процедур, после чего
 функция возвращает значение WAIT\_IO\_COMPLETION.

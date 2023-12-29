@@ -31,7 +31,7 @@ charset = ascii
 
 delimiter = \"
 
-separator = ,
+separator =,
 
 field1 = id,char,10,0,1
 
@@ -53,7 +53,7 @@ charset = ascii
 
 delimiter = \"
 
-separator = ,
+separator =,
 
 field1 = id,char,10,0,10
 

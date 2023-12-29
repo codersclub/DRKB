@@ -61,11 +61,11 @@ Date: 01.01.2007
       
       
             // SE_SHUTDOWN_NAME
-            if not LookupPrivilegeValue( nil, 'SeShutdownPrivilege' , tkp.Privileges[ 0 ].Luid ) then 
+            if not LookupPrivilegeValue( nil, 'SeShutdownPrivilege', tkp.Privileges[ 0 ].Luid ) then 
                begin 
                   MessageBox( 0, 'Exit Error', 'LookupPrivilegeValue() Failed', MB_OK );
                   Exit;
-               end; // if not LookupPrivilegeValue( nil, 'SeShutdownPrivilege' , tkp.Privileges[0].Luid )
+               end; // if not LookupPrivilegeValue( nil, 'SeShutdownPrivilege', tkp.Privileges[0].Luid )
             tkp.PrivilegeCount := 1;
             tkp.Privileges[ 0 ].Attributes := SE_PRIVILEGE_ENABLED;
       

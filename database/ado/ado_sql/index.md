@@ -780,7 +780,7 @@ TRUE.
 может также использоваться для сокрытия из приложения сложных SQL
 операторов.
 
-Когда в объекте Command выполняется хранимая процедура , свойство
+Когда в объекте Command выполняется хранимая процедура, свойство
 CommandType должно быть определено как adCmdStoredProc. При таком
 определениии свойства CommandType генерируется соответствующий оператор
 SQL для основного провайдера. Для ODBC провайдера генерируются ODBC
@@ -832,9 +832,9 @@ ADO следующий:
     Cmd.CommandText = "myproc"
     Cmd.CommandType = adCmdStoredProc
     ' Set up parameters.
-    Set param = Cmd.CreateParameter("Return", adInteger, adParamReturnValue, , 0)
+    Set param = Cmd.CreateParameter("Return", adInteger, adParamReturnValue,, 0)
     Cmd.Parameters.Append param
-    Set param = Cmd.CreateParameter("Output", adInteger, adParamOutput, , 0)
+    Set param = Cmd.CreateParameter("Output", adInteger, adParamOutput,, 0)
     Cmd.Parameters.Append param
     Set rs = Cmd.Execute
     If Not rs.EOF And Not rs.BOF Then

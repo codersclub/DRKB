@@ -291,7 +291,7 @@ DelphiWorld 6.0
       FMouseState := msNormal;
       Screen.Cursor := crDefault;
       with Sender as TImage do
-        Label1.Caption := Format('(%d , %d)', [-Left, -Top]); // отображение координат
+        Label1.Caption := Format('(%d, %d)', [-Left, -Top]); // отображение координат
     end;
 
 <https://delphiworld.narod.ru/>

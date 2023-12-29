@@ -33,7 +33,7 @@ Date: 01.01.2007
       Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
       Dialogs, StdCtrls, ExtCtrls, ComCtrls
       {$IFDEF VER150}
-        , XPMan
+       , XPMan
       {$ENDIF};
      
     const

@@ -36,7 +36,7 @@ Date: 01.01.2007
      
      
       Set @ServerName=CONVERT(char(20), SERVERPROPERTY('servername'))
-      Set @LoadString='LoadFromSQLServer("'+@ServerName+'", "'+@ServerLogin+'", "'+@ServerPassword+'", 256, , , ,"'+@DTSPackageName+'")'
+      Set @LoadString='LoadFromSQLServer("'+@ServerName+'", "'+@ServerLogin+'", "'+@ServerPassword+'", 256,,,,"'+@DTSPackageName+'")'
      
       EXEC @retval = sp_OACreate 'DTS.Package', @package OUTPUT
       EXEC @retval = sp_OAMethod @package,@LoadString,NULL

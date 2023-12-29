@@ -192,7 +192,7 @@ Draw Screen
       r1,r2:TRect;
       Direction:integer;
     begin
-      r1:=Rect(rW * gx , rH * gy,  rW * gx + rW  , rH * gy + rH);
+      r1:=Rect(rW * gx, rH * gy,  rW * gx + rW , rH * gy + rH);
      
       Direction := Trunc(Random*4);
       case Direction of
@@ -202,7 +202,7 @@ Draw Screen
        3: gy := Abs((gy - 1) MOD DELTA);    //верх
       end; //case
      
-      r2 := Rect(rW * gx , rH * gy,  rW * gx + rW  , rH * gy + rH);
+      r2 := Rect(rW * gx, rH * gy,  rW * gx + rW , rH * gy + rH);
      
       with Shuffler.Image1.Canvas do begin
         CopyRect(r1, Shuffler.Image1.Canvas, r2);

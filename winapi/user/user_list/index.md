@@ -127,9 +127,9 @@ GetLocalUserList - возвращает список пользователей 
      
      uses
        Windows
-         , Messages
-         , SysUtils
-         , Dialogs;
+        , Messages
+        , SysUtils
+        , Dialogs;
      
      type
        TServerBrowseDialogA0 = function(hwnd: HWND; pchBuffer: Pointer;

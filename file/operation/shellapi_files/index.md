@@ -357,7 +357,7 @@ Dest.
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin
-      RenameFiles( Handle, 'C:\Test1' , 'C:\Test3' , False );
+      RenameFiles( Handle, 'C:\Test1', 'C:\Test3', False );
     end;
 
 Взято с сайта <https://blackman.wp-club.net/>

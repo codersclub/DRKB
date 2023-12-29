@@ -83,7 +83,7 @@ where @      is a musical pause
 
      /BEATS is the number of beats to pause for (default = 1)
 
-where ,\<     is the END OF STRING terminator.
+where,\<     is the END OF STRING terminator.
 
 Properties:
 

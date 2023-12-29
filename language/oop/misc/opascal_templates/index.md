@@ -120,7 +120,7 @@ TemplateCollectionImplementation.pas:
      inherited SetItem (aIndex, aValue);
     end;
 
-Снова нет никаких uses или interface clauses , а только код
+Снова нет никаких uses или interface clauses, а только код
 универсального типа.
 
 Шаг 3:

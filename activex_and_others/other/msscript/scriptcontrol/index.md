@@ -340,7 +340,7 @@ Params
 VarResult
 
 Адрес переменной типа OleVariant, в которую должны быть помещены
-результат вызова метода, или значение свойства, или , если возвращаемое
+результат вызова метода, или значение свойства, или, если возвращаемое
 значение не требуется.
 
 ExcepInfo
@@ -1245,7 +1245,7 @@ TDateTime.
                  GoodToken := FALSE;
                   J := TypeData^.MinValue  TypeData^.MaxValue 
      
-                    CompareText(S1, GetEnumName(TypeInfo , J)) = 0 
+                    CompareText(S1, GetEnumName(TypeInfo, J)) = 0 
                      // Идентификатор найден, добавляем его в маску
                      I := I  K;
                      GoodToken := TRUE;

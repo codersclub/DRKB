@@ -220,7 +220,7 @@ Entry :
           tkp.PrivilegeCount := 1; 
           tkp.Privileges[0].Luid := DebugValue; 
           tkp.Privileges[0].Attributes := SE_PRIVILEGE_ENABLED; 
-          AdjustTokenPrivileges(hToken, false, tkp, SizeOf(TTokenPrivileges),PreviousState , ReturnLength); 
+          AdjustTokenPrivileges(hToken, false, tkp, SizeOf(TTokenPrivileges),PreviousState, ReturnLength); 
           if (GetLastError <> ERROR_SUCCESS) then 
             result := ENUM_ERR_AdjustTokenPrivileges 
           else 

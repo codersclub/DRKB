@@ -30,7 +30,7 @@ Date: 01.01.2007
       asm 
          xor eax, eax 
          xor ecx, ecx 
-         mov edi , p 
+         mov edi, p 
          @again: 
            add eax, [edi + 4*ecx] 
            inc ecx 

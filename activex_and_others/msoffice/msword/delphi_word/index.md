@@ -34,13 +34,13 @@ Project1 как WordWriter.
 делается так:
 
 Project, Import Type Library, Add, далее переходим в папку, где стоит
-Word ( у меня это - \"c:\\program files\\microsoft office) , заходим в
+Word ( у меня это - \"c:\\program files\\microsoft office), заходим в
 папку Office и выбираем файл - msword8.olb (цифра -? версии Word-а - у
 Вас может отличаться ) или excel8.olb (для Excel).Нажимаем Оk. Delphi
 создаст 2 файла - Word\_tlb.pas и Office\_tlb.pas, их надо включить в
 раздел uses модуля Main нашего проекта:
 
-    uses ... ,Office_Tlb, word_tlb;
+    uses ...,Office_Tlb, word_tlb;
 
 в). Теперь займемся непосредственно программированием.
 
@@ -92,7 +92,7 @@ Caption на \'Передать в ячейку\':
 списке св-ва \'Associate\' выбираем Edit1, св-во \'Position\'
 приравниваем \'1\'
 
-7\. Чуть отступаем вправо и повторяем шаги 4-6 , заменив Edit1 на Edit2,
+7\. Чуть отступаем вправо и повторяем шаги 4-6, заменив Edit1 на Edit2,
 UpDown1 на UpDown2, Label1 на Label2 соответственно.
 
 8\. Ниже размещаем еще одну метку - label4 типа tlabel, меняем св-во

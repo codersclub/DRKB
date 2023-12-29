@@ -15,9 +15,9 @@ Date: 01.01.2007
      
     Функции позволяют разбить файл на блоки 16к и затем поместить бинарные
     данные в реестр, а так же собрать эти данные обратно в файл при необходимости.
-    Не знаю зачем этот код нужен , но возможно он пригодится для скрытого
+    Не знаю зачем этот код нужен, но возможно он пригодится для скрытого
     хранения данных . Не рекомендуется (!) сохранять слишком большие файлы
-    в реестре , потому что размеры реестра ограничены .
+    в реестре, потому что размеры реестра ограничены .
      
     Зависимости: Registry,SysUtils
     Автор:       Sergey, gloom@imail.ru, Koenigsberg
@@ -30,7 +30,7 @@ Date: 01.01.2007
      
     function SaveToRegistry(RootKey: HKEY; FileName, KeyName: string): Bool;
     //где RootKey-раздел реестра,
-    //FileName-путь к файлу ,
+    //FileName-путь к файлу,
     //KeyName-ключ реестра в который будем сохранять
     var
       FromF: file;
@@ -45,7 +45,7 @@ Date: 01.01.2007
         reg.RootKey := rootkey;
         if reg.OpenKey(keyName, true) = false then //если невозможно
           //открыть ключ с правами
-          //записи , то что то не так
+          //записи, то что то не так
         begin
           result := false;
           reg.Free;
@@ -76,7 +76,7 @@ Date: 01.01.2007
      
     function BuildFromRegistry(RootKey: HKEY; KeyName, ToFileName: string): Bool;
     //где RootKey-раздел реестра,
-    //KeyName -ключ реестра ,
+    //KeyName -ключ реестра,
     //ToFileName-имя выходного файла .
     var
       numwritten, i: integer;
@@ -99,7 +99,7 @@ Date: 01.01.2007
         i := 0;
         repeat
           //в цикле находим значения
-          //начиная с "0" , читаем их
+          //начиная с "0", читаем их
           //и добавляем блоки к файлу
           if reg.ValueExists(inttostr(i)) = true then
           begin

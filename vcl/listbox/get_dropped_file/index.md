@@ -47,9 +47,9 @@ Date: 01.01.2007
       Amount := DragQueryFile(Msg.WParam, $FFFFFFFF, Filename, 255); 
       for i := 0 to (Amount - 1) do 
       begin 
-        size := DragQueryFile(Msg.WParam, i , nil, 0) + 1; 
+        size := DragQueryFile(Msg.WParam, i, nil, 0) + 1; 
         Filename:= StrAlloc(size); 
-        DragQueryFile(Msg.WParam,i , Filename, size); 
+        DragQueryFile(Msg.WParam,i, Filename, size); 
         listbox1.items.add(StrPas(Filename)); 
         StrDispose(Filename); 
       end; 

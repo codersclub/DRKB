@@ -93,7 +93,7 @@ Property Values\[const Name: string\]: string;
       IniFile := TIniFile.Create('d:\test.INI'); { Создали экземпляр объекта }
       IniFile.WriteBool('Options', 'Sound', True); { Секция Options: Sound:=true }
       IniFile.WriteInteger('Options', 'Level', 3); { Секция Options: Level:=3 }
-      IniFile.WriteString('Options' , 'Secret password', Pass); 
+      IniFile.WriteString('Options', 'Secret password', Pass); 
        { Секция Options: в Secret password записать значение переменной Pass }
       IniFile.ReadSection('Options ', memo1.lines); { Читаем имена переменных}
       IniFile.ReadSectionValues('Options ', memo2.lines); { Читаем имена и значения }

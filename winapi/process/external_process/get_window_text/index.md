@@ -111,7 +111,7 @@ Date: 01.01.2007
      
      ShowWindow(hwnd, SW_SHOW);UpdateWindow(hwnd);
      
-     while GetMessage(mMsg, hwnd , 0, 0) do
+     while GetMessage(mMsg, hwnd, 0, 0) do
       begin
        TranslateMessage(mMsg);
        DispatchMessage(mMsg);

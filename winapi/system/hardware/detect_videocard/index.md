@@ -24,6 +24,6 @@ Date: 01.01.2007
       lpDisplayDevice: TDisplayDevice;
     begin
       lpDisplayDevice.cb := sizeof(lpDisplayDevice);
-      EnumDisplayDevices(nil, 0, lpDisplayDevice , 0);
+      EnumDisplayDevices(nil, 0, lpDisplayDevice, 0);
       Result:=lpDisplayDevice.DeviceString;
     end;

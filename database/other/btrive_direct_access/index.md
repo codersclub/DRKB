@@ -305,7 +305,7 @@ OperheadRecord.resmsum := AsFloat со значением;
 
 в) Автоинкременты:
 
-fillchar(OperheadRecord.isn , SizeOf(OperheadRecord.isn), \#0);
+fillchar(OperheadRecord.isn, SizeOf(OperheadRecord.isn), \#0);
 
 Независимо от типа. Просто заполняем их нулевыми байтами, Btrieve сам
 присвоит нужное значене.
@@ -386,7 +386,7 @@ OperHeadIndex7 : OPERHEAD\_INDEX7; {индекс номер 7}
 
 OperheadIndex0.isn := значение AsInteger; {присвоение параметров поиска}
 
-fillchar(OperheadRecord , SizeOf(OperheadRecord), \#0);
+fillchar(OperheadRecord, SizeOf(OperheadRecord), \#0);
 
 dataLen := sizeof(OPERHEAD\_STRUCT);
 

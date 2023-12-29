@@ -1175,7 +1175,7 @@ TDateTime
                 GoodToken := FALSE;
                 for J := TypeData^.MinValue to TypeData^.MaxValue do
                 begin
-                  if CompareText(S1, GetEnumName(TypeInfo , J)) = 0 then
+                  if CompareText(S1, GetEnumName(TypeInfo, J)) = 0 then
                   begin
                     // Идентификатор найден, добавляем его в маску
                     I := I or K;

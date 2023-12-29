@@ -109,7 +109,7 @@ DelphiWorld 6.0
       hProcess: THandle;
     begin
       Result := False;
-      r := StartWithShell('rar.exe', , 'c:\windows\system',
+      r := StartWithShell('rar.exe',, 'c:\windows\system',
       hProcess);
       if r = ERROR_SUCCESS then
       begin

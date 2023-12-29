@@ -627,7 +627,7 @@ OutLookApplication, извлекается объект доступа к MAPI �
       while not Table1.Eof do
       begin
     //Подключаем объект класса TMailItem к
-    // новому елементу исходящих писем , 
+    // новому елементу исходящих писем, 
     //для работы через Vtable интерфейс
         MailItem1.ConnectTo(_DMailItem(mapi.Folders.Item
     (olPersonal). Folders.Item(olFolderOutbox). Items.Add(olPostItem) as  

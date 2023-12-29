@@ -252,7 +252,7 @@ Obb:=W.ActiveDocument.Shapes.AddOLEObject(\"MSGraph.Chart.8\");
        Messagebox(0,'Документ создан.','',0);
        CreateTextBox(1,1,100,50,BoxName_);
        Messagebox(0,'Создали форму - надпись.','',0);
-       Messagebox(0,pchar(GetNameIndexShape(1)) ,
+       Messagebox(0,pchar(GetNameIndexShape(1)),
         'Считали имя формы',0);
        BoxName_:=SetNewNameShape(BoxName_,'Новое имя');
        Messagebox(0,pchar(GetNameIndexShape (1)),

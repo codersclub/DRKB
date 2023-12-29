@@ -12,8 +12,8 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-    winexec(Pchar('rundll32 keyboard,disable' ) ,sw_Show); Клава OFF 
-    winexec(Pchar('rundll32 mouse,disable' ) ,sw_Show); Маус OFF 
+    winexec(Pchar('rundll32 keyboard,disable' ),sw_Show); Клава OFF 
+    winexec(Pchar('rundll32 mouse,disable' ),sw_Show); Маус OFF 
 
 кстати а вот так клава врубается
 

@@ -492,7 +492,7 @@ Date: 01.01.2007
         DataInBuffer(FComPortHandle, InQueue, OutQueue);
         // data in inQueue
         if InQueue > 0 then
-          if Assigned(FComPortReceiveData) then FComPortReceiveData(Self , 0, 0, 0);
+          if Assigned(FComPortReceiveData) then FComPortReceiveData(Self, 0, 0, 0);
       end;
     end;
      

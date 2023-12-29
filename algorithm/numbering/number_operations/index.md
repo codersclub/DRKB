@@ -77,7 +77,7 @@ Date: 01.01.2007
     function MySum (Num1, Num2, CharSet: String): String;
     var
       i, Pos, Add, L, L_CharSet: Integer;
-      N1 , N2 , O, Res: String;
+      N1, N2, O, Res: String;
     begin
      
       // Далее потребуется что бы первое число по длине было не менее второго,

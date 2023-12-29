@@ -106,7 +106,7 @@ DelphiWorld 6.0
           Format('uKeMaximumIncrement: %d'#13'uPageSize: %d'#13   +
           'uMmNumberOfPhysicalPages: %d' + #13 + 'uMmLowestPhysicalPage: %d' + #13 +
           'uMmHighestPhysicalPage: %d' + #13 + 'uAllocationGranularity: %d'#13 +
-          'uKeActiveProcessors: %d'#13'bKeNumberProcessors: %d'  ,
+          'uKeActiveProcessors: %d'#13'bKeNumberProcessors: %d' ,
           [uKeMaximumIncrement, uPageSize, uMmNumberOfPhysicalPages,
           uMmLowestPhysicalPage, uMmHighestPhysicalPage, uAllocationGranularity,
             uKeActiveProcessors, bKeNumberProcessors]));

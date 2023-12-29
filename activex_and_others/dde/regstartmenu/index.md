@@ -33,7 +33,7 @@ Date: 01.01.2007
     ProgmanCommand('CreateGroup(Комплекс программ для
       каталогизации литературы, )');
     ProgmanCommand('AddItem(' + path + 'vbase.hlp, Справка по VBase,
-      '+ path +' vbase.hlp, 0, , , '+ path + ', , )');
+      '+ path +' vbase.hlp, 0,,, '+ path + ',, )');
     // где path - строка типа String, содержащая
     // полный путь к каталогу ('C:\Catalog\');
 

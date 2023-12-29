@@ -44,7 +44,7 @@ TheWindow := FindWindow(ClassName, WindowTitle)
 
 на
 
-TheWindow := FindWindow(PChar(ClassName), PChar(WindowTitle)) ,
+TheWindow := FindWindow(PChar(ClassName), PChar(WindowTitle)),
 
 Нормально откомпилировалось.
 

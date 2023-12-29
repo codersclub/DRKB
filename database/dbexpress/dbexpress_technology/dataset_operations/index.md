@@ -37,7 +37,7 @@ Date: 01.01.2007
     if MyQuery.SQLConnection.ActiveStatements <= MyQuery.SQLConnection.MaxStmtsPerConn then
       MyQuery.Open
     else
-      MessageDlg ('Database connection is busy', mtWarning, [mbOK] , 0) ;
+      MessageDlg ('Database connection is busy', mtWarning, [mbOK], 0) ;
 
 В случае возникновения непредвиденной ситуации все открытые через данное
 соединение наборы данных можно быстро закрыть методом

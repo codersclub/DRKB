@@ -31,7 +31,7 @@ Date: 01.01.2007
     jpeg := TJPEGImage.Create ;
     try
     try
-    sourceDrawRect := Rect(0,0, srcWidth , srcHeight );
+    sourceDrawRect := Rect(0,0, srcWidth, srcHeight );
     sourceBitmap.Width := srcWidth ;
     sourceBitmap.Height := srcHeight ; viewObject := browser as IViewObject; if viewObject = nil then
     Exit; OleCheck(viewObject.Draw(DVASPECT_CONTENT, 1, nil, nil, self.Handle,

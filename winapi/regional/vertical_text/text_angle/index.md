@@ -35,7 +35,7 @@ Fonts (например \"Arial\"). Например:
       LogRec: TLOGFONT; { Информация о шрифте }
     begin
       {Читаем текущюю инф. о шрифте }
-      GetObject(c.Font.Handle,SizeOf(LogRec) ,Addr(LogRec) );
+      GetObject(c.Font.Handle,SizeOf(LogRec),Addr(LogRec) );
       { Изменяем угол }
       LogRec.lfEscapement := round(d*10);
       { Устанавливаем новые параметры }

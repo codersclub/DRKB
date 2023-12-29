@@ -113,7 +113,7 @@ Date: 01.01.2007
       hStat : DWord; 
     begin 
       hStat := 1; 
-      h_manager := OpenSCManager(PChar(sMachine) ,Nil, 
+      h_manager := OpenSCManager(PChar(sMachine),Nil, 
                                  SC_MANAGER_CONNECT); 
      
       if h_manager > 0 then 

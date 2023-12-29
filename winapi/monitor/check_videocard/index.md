@@ -22,7 +22,7 @@ Date: 01.01.2007
     lpDisplayDevice.cb := sizeof(lpDisplayDevice); 
     dwFlags := 0; 
     cc:= 0; 
-    while EnumDisplayDevices(nil, cc, lpDisplayDevice , dwFlags) do 
+    while EnumDisplayDevices(nil, cc, lpDisplayDevice, dwFlags) do 
       begin 
         Inc(cc); 
         form2.memo1.lines.add(lpDisplayDevice.DeviceString);

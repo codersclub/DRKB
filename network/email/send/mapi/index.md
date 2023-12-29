@@ -309,7 +309,7 @@ Date: 01.01.2007
                 email adress to keep it short: } 
               PRecip^.lpszName := PChar(FTOAdr.Strings[i - 1]); 
               { Если Вы используете этот компонент совместно с Outlook97 или 2000 
-                (не Express версии) , то Вам прийдётся добавить 
+                (не Express версии), то Вам прийдётся добавить 
                 'SMTP:' в начало каждого (email-) адреса.
               } 
               PRecip^.lpszAddress := PChar('SMTP:' + FTOAdr.Strings[i - 1]); 

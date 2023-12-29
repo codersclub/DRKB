@@ -59,7 +59,7 @@ Date: 04.12.2006.
     procedure TForm1.ImagesWindowRgn;
     var
      FullRgn, Rgn: THandle;
-     ClientX, ClientY, i , k: integer;
+     ClientX, ClientY, i, k: integer;
      
      x, y, firstx, cl : integer;
      last : boolean;

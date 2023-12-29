@@ -218,7 +218,7 @@ dbo
                                                                convert.
 
   lct\_admin              ({{ \"lastchance\" \| \"logfull\" \| Эта функция управляет
-                          \"unsuspend\" } , database\_id} \|   пороговым значением для
+                          \"unsuspend\" }, database\_id} \|   пороговым значением для
                           \"reserve\", log\_pages})            числа повторных
                                                                обращений к сегментам
                                                                журнала транзакций

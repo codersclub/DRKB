@@ -46,7 +46,7 @@ Date: 01.01.2007
          {dbText} 10 {ftCursor}
      
         {$IFDEF VER120}
-         ,
+        ,
          {dbText} 10 {ftFixedChar},
          {dbText} 10 {ftWideString},
          {dbBigInt} 16 {ftLargeint},
@@ -57,7 +57,7 @@ Date: 01.01.2007
         {$ELSE}
      
         {$IFDEF VER125}
-         ,
+        ,
          {dbText} 10 {ftFixedChar},
          {dbText} 10 {ftWideString},
          {dbBigInt} 16 {ftLargeint},
@@ -69,7 +69,7 @@ Date: 01.01.2007
         {$ELSE}
      
         {$IFDEF VER130}
-         ,
+        ,
          {dbText} 10 {ftFixedChar},
          {dbText} 10 {ftWideString},
          {dbBigInt} 16 {ftLargeint},

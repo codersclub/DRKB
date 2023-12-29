@@ -101,7 +101,7 @@ Date: 01.01.2007
 
     USES ..., ..., ..., HDDInfo; {Добавляем наш модуль}
      
-    {Нужно создать на форме компонент TLabel , Name которого ставим в Disks}
+    {Нужно создать на форме компонент TLabel, Name которого ставим в Disks}
     {И в событии главной формы OnActicate написать это:}
      
     procedure TMyForm.FormActivate(Sender: TObject);

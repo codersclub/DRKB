@@ -57,7 +57,7 @@ TMySQLClien & TMySQLResult.
        connect;
       Except On Exception Do
        begin
-         Application.MessageBox( 'К сожалению, соединиться с MySQL-сервером не удалось. Проверьте правильность ввода всех параметров.' , 'Ошибка соединения' , 0 );
+         Application.MessageBox( 'К сожалению, соединиться с MySQL-сервером не удалось. Проверьте правильность ввода всех параметров.', 'Ошибка соединения', 0 );
         exit;
        end;
       end;
@@ -68,16 +68,16 @@ TMySQLClien & TMySQLResult.
     procedure TMainForm.QueryData( Query : string );
     var
     mysql_result : TMySQLResult;
-    i , j : integer;
+    i, j : integer;
     OK : boolean;
     begin
     OK := true;
      
     try
-     mysql_result := SQLConnection.query( Query , true , OK );
+     mysql_result := SQLConnection.query( Query, true, OK );
     Except On Exception Do
      begin
-      Application.MessageBox( 'Запрос не выполнилс.' , 'Ошибка соединения' , 0 );
+      Application.MessageBox( 'Запрос не выполнилс.', 'Ошибка соединения', 0 );
       exit;
      end;
     end;
@@ -95,7 +95,7 @@ TMySQLClien & TMySQLResult.
       for i := 0 to mysql_result.RowsCount - 1 do
         begin
           for j := 0 to mysql_result.FieldsCount do
-            Cells[ j , i + 1 ] := mysql_result.FieldValue( j );
+            Cells[ j, i + 1 ] := mysql_result.FieldValue( j );
           mysql_result.Next;
         end;
      end;

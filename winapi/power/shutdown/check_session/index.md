@@ -20,7 +20,7 @@ Date: 01.01.2007
     }
      
       function WTSRegisterSessionNotification(
-          hWnd: HWND ,    // Window handle
+          hWnd: HWND,    // Window handle
           dwFlags: DWORD  // Flags
           ): Bool; // Return value
      

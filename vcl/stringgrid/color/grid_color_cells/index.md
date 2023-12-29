@@ -47,7 +47,7 @@ DBGrids. Итак сперва рассмотрим как это сделать
     end 
     else  //Если же ячейка теряет фокус, то закрашиваем её красным и зелёным 
      
-       if ACol = 2   //Вторая колонка будет зелёной , другие - ячейки красными 
+       if ACol = 2   //Вторая колонка будет зелёной, другие - ячейки красными 
         then StringGrid1.Canvas.Brush.color := clPaleGreen 
         else StringGrid1.canvas.brush.Color := clPaleRed; 
      

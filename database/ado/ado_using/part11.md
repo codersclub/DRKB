@@ -327,7 +327,7 @@ property OnRecordChangeComplete: TrecordChangeCompleteEvent;
 
 Фильтрация
 
-Помимо обычной фильтрации , основанной на свойствах Filter, Filtered и
+Помимо обычной фильтрации, основанной на свойствах Filter, Filtered и
 методе-обработчике onFilterRecord, класс TCustomADODataSet предоставляет
 разработчику дополнительные возможности.
 
@@ -368,7 +368,7 @@ fgConfiictingRecords --- отображаются модифицированны
 дополнительных условия. Во-первых, фильтрация должна быть включена ---
 свойство Filtered должно иметь Значение True. 
 
-Во- вторых , свойство LockType должно иметь значение ItBatchOptimistic.
+Во- вторых, свойство LockType должно иметь значение ItBatchOptimistic.
 
 with ADODataSet do
 

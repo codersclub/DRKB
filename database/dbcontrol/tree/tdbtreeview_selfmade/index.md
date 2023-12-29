@@ -80,9 +80,9 @@ OnExpanding, раскрывая новую ветвь.
 Второй: при попытке \"раскрыть\" ветку проводить аналогичные действия.
 
 Основное отличие этих подходов: в первом случае пользователю необходимо
-сделать явно лишнее и не очень естественное для дерева движение , то
+сделать явно лишнее и не очень естественное для дерева движение, то
 есть двойной клик. А во втором случае мы должны обеспечить возможность
-раскрытия для каждой ветки дерева, ведь если у ветви нет значка \[+\] ,
+раскрытия для каждой ветки дерева, ведь если у ветви нет значка \[+\],
 то и попытаться раскрыть ее будет невозможно. А значит для всех новых,
 свеже сформированных ветвей, принудительно нужно обеспечить
 существования фиктивной дочерней ветви.
@@ -149,7 +149,7 @@ ParentID равно 0.
 реализована следующим образом:
 
     Procedure TFormTree.ExpandLevel( Node : TTreeNode);
-    Var ID , i   : Integer;
+    Var ID, i   : Integer;
         TreeNode : TTreeNode;
     Begin
      
@@ -171,8 +171,8 @@ ParentID равно 0.
         Begin
      
            // Запишем в поле Data ветки ее идентификационный номер(ID) в таблице
-           TreeNode:=TreeCompanies.Items.AddChildObject(Node ,
-                                      qTreeCompanies.FieldByName('Name').AsString ,
+           TreeNode:=TreeCompanies.Items.AddChildObject(Node,
+                                      qTreeCompanies.FieldByName('Name').AsString,
                                       Pointer(qTreeCompanies.FieldByName('ID').AsInteger));
      
            TreeNode.ImageIndex:=1;
@@ -180,7 +180,7 @@ ParentID равно 0.
      
            // Добавим фиктивную (пустую) дочернюю ветвь только для того,
            // чтобы был отрисован [+] на ветке и ее можно было бы раскрыть
-           TreeCompanies.Items.AddChildObject(TreeNode , '' , nil);
+           TreeCompanies.Items.AddChildObject(TreeNode, '', nil);
      
            qTreeCompanies.Next;
         End;   
@@ -208,7 +208,7 @@ ParentID равно 0.
 
     IF TreeCompanies.Selected <> nil Then
     Begin
-      // ID родительской ветки , для нее и ищем все дочерние
+      // ID родительской ветки, для нее и ищем все дочерние
       ID:=Integer(TreeCompanies.Selected.Data);
      
       qCompanies.Close;
@@ -229,7 +229,7 @@ ParentID равно 0.
     ID:=qCompanies.FieldByName('ID').AsInteger;
      
     // принудительное "невидимое" раскрытие той ветки, на которой стоим
-    TreeCompanies.OnExpanding(TreeCompanies ,TreeCompanies.Selected , Allow);
+    TreeCompanies.OnExpanding(TreeCompanies,TreeCompanies.Selected, Allow);
      
     // Перебираем все получившиеся дочерние ветки и ищем ту, ID которой
     // совпадает с ID строки в правой таблице. То есть ищем ветку в дереве,
@@ -289,7 +289,7 @@ ParentID равно 0.
 
 Используемые таблицы:
 
-Таблица документов DOCUMENTS.DB , где каждый документ определен полями:
+Таблица документов DOCUMENTS.DB, где каждый документ определен полями:
 
 DocumentID : номер документа
 
@@ -302,7 +302,7 @@ ClientID : ID клиента
 GoodsID : ID товара
 
 Таблицы аналитики, соответственно CITIES.DB, CLIENTS.DB и GOODS.DB,
-содержат поля названия Name и номера (CityID , ClientID , GoodID).
+содержат поля названия Name и номера (CityID, ClientID, GoodID).
 
 Так как порядок следования аналитики произвольный, зараннее невозможно
 написать текст SQL-запроса, который будет возвращать данные для
@@ -377,8 +377,8 @@ EntityID Name TableName KeyColumn ...
 
     Procedure TFormTree.ExpandLevelAnalytic(Node : TTreeNode );
     Var NewItem    : TListsItem;
-        ImageIndex ,
-        Level , i  : Integer;
+        ImageIndex,
+        Level, i  : Integer;
         TreeNode   : TTreeNode;
         Sql,Name   : String;
     Begin
@@ -401,7 +401,7 @@ EntityID Name TableName KeyColumn ...
               End
          Else Begin // Очередной уровень аналитики
                 Sql:='SELECT DISTINCT '+ ListEntities[Level-1].AsString + '.* ' +
-                     ' FROM Documents , ' +  ListEntities[Level-1].AsString + ' WHERE ' +
+                     ' FROM Documents, ' +  ListEntities[Level-1].AsString + ' WHERE ' +
                      ListEntities[Level-1].AsString + '.' +ListEntities[Level-1].Name + '=' +
                      'Documents.'+ListEntities[Level-1].Name + ' AND ' + GetSqlPath(Node) ;
                 Name:=ListEntities[Level-1].Name;
@@ -414,9 +414,9 @@ EntityID Name TableName KeyColumn ...
       // Получен очередной уровень ветвей дерева
          For i:=1 To qTreeAnalytic.RecordCount Do
          Begin
-             NewItem:=List.AddItem(qTreeAnalytic.FieldByName(Name).AsInteger , Name);
+             NewItem:=List.AddItem(qTreeAnalytic.FieldByName(Name).AsInteger, Name);
      
-             TreeNode:=TreeAnalytic.Items.AddChildObject( Node ,
+             TreeNode:=TreeAnalytic.Items.AddChildObject( Node,
                                   qTreeAnalytic.FieldByName('Name').AsString, NewItem );
              TreeNode.ImageIndex:=ImageIndex;
              TreeNode.SelectedIndex:=TreeNode.ImageIndex;
@@ -424,7 +424,7 @@ EntityID Name TableName KeyColumn ...
              // Фиктивная дочерняя ветка ТОЛЬКО для уровней аналитики,
              // так как документы - последний уровень, за которым ничего и не может быть
              IF Level <= ListEntities.Count
-             Then TreeAnalytic.Items.AddChild(TreeNode , '' );
+             Then TreeAnalytic.Items.AddChild(TreeNode, '' );
              qTreeAnalytic.Next;
          End;
          TreeAnalytic.Items.EndUpdate;
@@ -465,7 +465,7 @@ EntityID Name TableName KeyColumn ...
 Уровень \"товары\" --- Все товары, которые встречаются в документах,
 созданных в городе номер 6 и для клиента номер 3
 
-    SELECT DISTINCT Goods.*  FROM Documents , Goods 
+    SELECT DISTINCT Goods.*  FROM Documents, Goods 
     WHERE Goods.GoodsID=Documents.GoodsID AND  0=0  
     AND Documents.CityID=6 AND Documents.ClientID=3
 

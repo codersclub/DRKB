@@ -127,7 +127,7 @@ CopyTo...` а если так, то почему бы не перевести и
         OS:TOleStream;
         S:String;
     begin
-     OleCheck(StgCreateDocfile('Testing.stg',STGM_READWRITE or STGM_SHARE_EXCLUSIVE ,0,Stg));
+     OleCheck(StgCreateDocfile('Testing.stg',STGM_READWRITE or STGM_SHARE_EXCLUSIVE,0,Stg));
      OleCheck(Stg.CreateStream('Testing',STGM_READWRITE or STGM_SHARE_EXCLUSIVE,0,0,Strm));
      OS:=TOleStream.Create(Strm);
      try
@@ -463,7 +463,7 @@ STGM_TRANSACTED при открытии или создании хранилищ
 `STGM_CREATE` - Стирает существующий файл с тем же именем
 
 `STGM_CONVERT` - Создает новый файл в поток CONTENTS которого заносит данные из
-существующего файла с тем же именем , если такой существует
+существующего файла с тем же именем, если такой существует
 
 `STGM_FAILSAFE` - Если существует файл с таким же именем - возвращает значение
 `STG_E_FILEALREADYEXISTS`

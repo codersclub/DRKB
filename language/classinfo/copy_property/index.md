@@ -25,8 +25,8 @@ Date: 01.01.2007
     var
       I, Index: Integer;
       PropName: string;
-      Source_PropList  , Target_PropList  : PPropList;
-      Source_NumProps  , Target_NumProps  : Word;
+      Source_PropList , Target_PropList  : PPropList;
+      Source_NumProps , Target_NumProps  : Word;
       Source_PropObject, Target_PropObject: TObject;
      
       // Поиск в списке свойства с заданным именем
@@ -59,7 +59,7 @@ Date: 01.01.2007
         for I:= 0 to Source_NumProps - 1 do begin
           PropName:= Source_PropList^[I]^.Name;
      
-          if  (AnsiIndexText('None'  , aExcept                ) =  -1) and
+          if  (AnsiIndexText('None' , aExcept                ) =  -1) and
              ((AnsiIndexText(PropName, ['Name', 'Left', 'Top']) <> -1) or
               (AnsiIndexText(PropName, aExcept                ) <> -1)) then Continue;
      
@@ -97,8 +97,8 @@ Date: 01.01.2007
     var
       I, Index: Integer;
       PropName: string;
-      Source_PropList  , Target_PropList  : PPropList;
-      Source_NumProps  , Target_NumProps  : Word;
+      Source_PropList , Target_PropList  : PPropList;
+      Source_NumProps , Target_NumProps  : Word;
       Source_PropObject, Target_PropObject: TObject;
      
       // Поиск в списке свойства с заданным именем
@@ -131,7 +131,7 @@ Date: 01.01.2007
         for I:= 0 to Source_NumProps - 1 do begin
           PropName:= Source_PropList^[I]^.Name;
      
-          if (AnsiIndexText('None'  , aProp   ) = -1) and
+          if (AnsiIndexText('None' , aProp   ) = -1) and
              (AnsiIndexText(PropName, aProp   ) = -1) then Continue;
      
           Index:= FindProperty(PropName, Target_PropList, Target_NumProps);

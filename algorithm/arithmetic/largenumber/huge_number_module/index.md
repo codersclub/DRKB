@@ -63,8 +63,8 @@ Date: 01.01.2007
     begin
       if s='' then
         begin
-          setlength(n.int , 0);
-          setlength(n.frac , 0);
+          setlength(n.int, 0);
+          setlength(n.frac, 0);
           exit;
         end;
       l:=length(s);
@@ -79,9 +79,9 @@ Date: 01.01.2007
       j:=pos('.', s);
       if j>0 then
         begin
-          setlength(n.int , j-1);
+          setlength(n.int, j-1);
           for i:=1 to j-1 do n.int[i-1]:=strtoint(s[j-i]);
-          setlength(n.frac , l-j);
+          setlength(n.frac, l-j);
           for i:=1 to l-j do n.frac[i-1]:=strtoint(s[l-i+1]);
         end
       else
