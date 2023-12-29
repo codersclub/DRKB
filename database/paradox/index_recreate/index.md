@@ -36,8 +36,8 @@ in the Uses section of the unit from which the call is to be made. The
 BDE API function DbiSaveChanges, used here, forces any data changes in
 memory buffer to be written to disk at that point.
 
-Another way to handle this situation \-- if you know at design-time all
-the indexes that will exist for the table \-- would be to iterate
+Another way to handle this situation -- if you know at design-time all
+the indexes that will exist for the table -- would be to iterate
 through the items in the TIndexDefs object of the TTable component,
 delete each index (DeleteIndex method), and then add all needed indexes
 back (AddIndex method).

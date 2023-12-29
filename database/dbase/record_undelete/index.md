@@ -37,7 +37,7 @@ Table1 и имя текущей формы - Form1):
         ShowMessage('Не могу восстановить запись!');
     end;
 
-\- Loren Scott
+- Loren Scott
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

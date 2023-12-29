@@ -124,9 +124,9 @@ BDE при этом не нужна совсем.
 Установку Interbase 6.0 я пробовал делать двумя системами создания
 инсталляций:
 
-\- InstallShield
+- InstallShield
 
-\- Wise Install Builder.
+- Wise Install Builder.
 
 Для обоих использовал готовые скрипты с сайта
 http://ibinstall.defined.net/. По результатам могу сказать, что Wise

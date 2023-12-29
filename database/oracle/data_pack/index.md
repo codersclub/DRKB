@@ -85,7 +85,7 @@ oracle, по возможности, хранить строки таблицы 
 
 
 table\_name compression
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- \-\-\-\-\-\-\-\-\-\--
+------------------ -----------
 sales\_history disabled
 sales\_history\_comp enabled
 
@@ -107,7 +107,7 @@ def\_tab\_compression, как в следующем примере:
 
 
 tablespace\_name def\_tab\_compression
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------- -------------------
 data\_ts\_01 disabled
 index\_ts\_01 disabled
 
@@ -335,8 +335,8 @@ sales\_q1\_03 и sales\_q2\_03. Данные о продажах за трети
 
 
 table\_name partition\_name compression
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-\-\-\-\-\-\-\-\-\-\--
+----------------------------
+-----------
 sales\_part\_comp sales\_q4\_03 disabled
 sales\_part\_comp sales\_q1\_03 enabled
 sales\_part\_comp sales\_q2\_03 enabled

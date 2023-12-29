@@ -114,7 +114,7 @@ The TMediaPlayer может открыть звуковой файл, если �
      
     end.
 
-\- Nick Hodges
+- Nick Hodges
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

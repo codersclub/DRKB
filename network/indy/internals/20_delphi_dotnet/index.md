@@ -251,19 +251,19 @@ Visual CLX.
 
 ::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
   --- ---------------
-  ·   VCL \--\> CLX
+  ·   VCL --\> CLX
   --- ---------------
 :::
 
 ::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
   --- ----------------------
-  ·   CLX \--\> Visual CLX
+  ·   CLX --\> Visual CLX
   --- ----------------------
 :::
 
 ::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
   --- -------------------------------
-  ·   Visual Parts of VCL \--\> VCL
+  ·   Visual Parts of VCL --\> VCL
   --- -------------------------------
 :::
 

@@ -104,7 +104,7 @@ Date: 01.01.2007
      
     end.
 
-\- Ed Jordan
+- Ed Jordan
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

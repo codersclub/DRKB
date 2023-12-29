@@ -362,13 +362,13 @@ Request
 
 Да
 
-\-
+-
 
 1
 
 Reply
 
-\-
+-
 
 Да
 
@@ -378,7 +378,7 @@ CancelRequest
 
 Да
 
-\-
+-
 
 3
 
@@ -386,13 +386,13 @@ LocateRequest
 
 Да
 
-\-
+-
 
 4
 
 LocateReply
 
-\-
+-
 
 Да
 
@@ -400,7 +400,7 @@ LocateReply
 
 CloseConnection
 
-\-
+-
 
 Да
 

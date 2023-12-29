@@ -591,20 +591,20 @@ to MyBase xml table) и на основе этих определений явн
 
 lt;?xml version="1.0" encoding="UTF-8" standalone="yes" ?\>
 
-\- \<DATAPACKET Version="2.0"\>
+- \<DATAPACKET Version="2.0"\>
 
-\- \<METADATA\>
+- \<METADATA\>
 
-\- \<FIELDS\>
+- \<FIELDS\>
 
 \<FIELD attrname="ID" fieldtype="i4" readonly="true"
 SUBTYPE="Autoinc" /\>
 
 \<FIELD attrname="Name" fieldtype="string" WIDTH="50" /\>
 
-\- \<FIELD attrname="Orders" fieldtype="nested"\>
+- \<FIELD attrname="Orders" fieldtype="nested"\>
 
-\- \<FIELDS\>
+- \<FIELDS\>
 
 \<FIELD attrname="ID" fieldtype="i4" SUBTYPE="Autoinc" /\>
 

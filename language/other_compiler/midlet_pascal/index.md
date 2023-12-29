@@ -373,10 +373,10 @@ MIDletPascal будет ограничивать Вас везде, куда б�
 
 Ссылки по теме
 
-\- http://mobilebasic.com
+- http://mobilebasic.com
 - http://midletpascal.com
 
-\- <https://www.j2meforums.com/yabbse/index.php?board=4>
+- <https://www.j2meforums.com/yabbse/index.php?board=4>
 
 <https://www.mirgames.ru>
 

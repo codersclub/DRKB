@@ -56,7 +56,7 @@ Date: 01.01.2007
 505 HTTP Version Not Supported
 
 
-Дополнительная информация здесь: Hypertext Transfer Protocol \--
+Дополнительная информация здесь: Hypertext Transfer Protocol --
 HTTP/1.0
 
 

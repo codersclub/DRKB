@@ -178,18 +178,18 @@ SSL перехватчике.
 С помощью блокнота создайте файл key.pem и скопируйте все между двумя,
 ниже указанными строками:
 
-\-\-\-\--BEGIN RSA PRIVATE KEY\-\-\-\--
+-----BEGIN RSA PRIVATE KEY-----
 
-\-\-\-\--END RSA PRIVATE KEY\-\-\-\--
+-----END RSA PRIVATE KEY-----
 
 18.4.5. Файл Cert.pem
 
 С помощью блокнота создайте файл cert.pem и скопируйте все между двумя,
 ниже указанными строками:
 
-\-\-\-\--BEGIN CERTIFICATE\-\-\-\--
+-----BEGIN CERTIFICATE-----
 
-\-\-\-\--END CERTIFICATE\-\-\-\--
+-----END CERTIFICATE-----
 
 18.4.6. Файл Root.pem
 

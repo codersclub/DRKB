@@ -498,7 +498,7 @@ select @\@transtate
 
  
 
-\-\-\-\-\-\-\-\-\--
+----------
 
        0
 
@@ -514,7 +514,7 @@ commit transaction
 
 select @\@transtate
 
-\-\-\-\-\-\-\-\-\--
+----------
 
         1
 
@@ -546,7 +546,7 @@ command is aborted. The conflict occured in database \'pubs2\', table
 
 select @\@transtate
 
-\-\-\-\-\-\-\-\-\--
+----------
 
        2
 
@@ -560,7 +560,7 @@ rollback transaction
 
 select @\@transtate
 
-\-\-\-\-\-\-\-\-\--
+----------
 
        3
 
@@ -1030,7 +1030,7 @@ select @\@isolation
 
  
 
-\-\-\-\-\-\-\--
+--------
 
       1
 
@@ -1430,8 +1430,8 @@ sp\_procxmode
 
 procedure name               transaction mode
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--      
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------      
+--------------------
 
 byroyalty                        Unchained
 

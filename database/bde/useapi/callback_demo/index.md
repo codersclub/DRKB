@@ -172,7 +172,7 @@ TCMAIN.TXT:
       end
     end
 
-\- Mark Edington
+- Mark Edington
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

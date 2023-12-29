@@ -241,13 +241,13 @@ This version supplies the following "Class Names"
     ....
     For example: let's consider the following pattern
      
-    (FTP|HTTP)://([_a-z\d\-]+(\.[_a-z\d\-]+)+)((/[ _a-z\d\-\\\.]+)+)*
+    (FTP|HTTP)://([_a-z\d-]+(\.[_a-z\d-]+)+)((/[ _a-z\d-\\\.]+)+)*
      
     $1 = FTP|HTTP
-    $2 = [_a-z\d\-]+(\.[_a-z\d\-]+)+
-    $3 = \.[_a-z\d\-]+
-    $4 = (/[ _a-z\d\-\\\.]+)+
-    $5 = /[ _a-z\d\-\\\.]+
+    $2 = [_a-z\d-]+(\.[_a-z\d-]+)+
+    $3 = \.[_a-z\d-]+
+    $4 = (/[ _a-z\d-\\\.]+)+
+    $5 = /[ _a-z\d-\\\.]+
      
      
     Finally a couple of examples:
@@ -285,8 +285,8 @@ This version supplies the following "Class Names"
       with RegExp1 do
         begin
           //I want to search all links
-          Pattern := '(FTP|HTTP)://([_a-z\d\-]+(\.[_a-z\d\-]+)+)' +
-                     '((/[ _a-z\d\-\\\.]+)+)*';
+          Pattern := '(FTP|HTTP)://([_a-z\d-]+(\.[_a-z\d-]+)+)' +
+                     '((/[ _a-z\d-\\\.]+)+)*';
           IgnoreCase := True; //"case insensitive" search
           Global := True; //I want to search all the matches
           MatchCollection1 := Execute(InputStr) as MatchCollection;
@@ -332,8 +332,8 @@ This version supplies the following "Class Names"
       RegExp1 := CoRegExp.Create;
       with RegExp1 do
         begin
-          Pattern := '(FTP|HTTP)://([_a-z\d\-]+(\.[_a-z\d\-]+)+)' +
-                     '((/[ _a-z\d\-\\\.]+)+)*';
+          Pattern := '(FTP|HTTP)://([_a-z\d-]+(\.[_a-z\d-]+)+)' +
+                     '((/[ _a-z\d-\\\.]+)+)*';
           IgnoreCase := True;
           Global := True;
           OutputStr := Replace(InputStr, '$2');

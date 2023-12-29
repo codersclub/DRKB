@@ -912,9 +912,9 @@ sp\_helpindex friends\_etc
 
 index\_name      index\_description                     index\_keys
 
-\-\-\-\-\-\-\-\-\-\-\-\-\--       
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--        
-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------       
+--------------------------------        
+-------------
 
 nmind                clustered located on default       pname, sname
 
@@ -975,8 +975,8 @@ sp\_helpindex authors
 
 index\_name  index\_description     index\_keys          
 
-\-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------     ------------------   
+---------------------
 
 auidind        clustered, unique        au\_id             
 

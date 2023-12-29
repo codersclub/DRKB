@@ -227,11 +227,11 @@ D) You can execute your Xp from Query Analyzer and trace code in Delphi.
 E) To exit application, press Ctrl+Pause in the SQL Server console
 window.
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------------------------------------------
 
 End of article. Bellow follows a unit required for ODS.
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------------------------------------------
 
 MsOdsApi.pas (Copy from line below)
 

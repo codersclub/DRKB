@@ -170,7 +170,7 @@ property OnWillMove: TRecordsetReasonEvent;
 и
 
 TPRecordsetErrorEvent = procedure(DataSet: TCustomADODataSet; const
-\--eason: TEventReason; const Error: Error; var EventStatus:
+--eason: TEventReason; const Error: Error; var EventStatus:
 TEventStatus) if object; 
 
 property OnMoveComplete: TRecordsetErrorEvent;

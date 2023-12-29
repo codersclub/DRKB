@@ -24,7 +24,7 @@ DbiOpenTable или TTable.Open.
 
 Установите Local Share в FALSE
 
-\- Scott Frolich
+- Scott Frolich
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

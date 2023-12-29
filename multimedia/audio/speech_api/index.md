@@ -148,13 +148,13 @@ http://activex.microsoft.com/activex/controls/sapi/spchapi.exe.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"}
   --- -------------------------------------------
-  ·   \- Подключение пользовательских словарей;
+  ·   - Подключение пользовательских словарей;
   --- -------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 24px 7px 48px;"}
   --- ---------------------------------
-  ·   \- Создание своих обработчиков;
+  ·   - Создание своих обработчиков;
   --- ---------------------------------
 :::
 

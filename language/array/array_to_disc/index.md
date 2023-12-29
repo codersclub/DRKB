@@ -42,7 +42,7 @@ Date: 01.01.2007
       Stream.Free;
     end;
 
-\- Steve Schafer
+- Steve Schafer
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

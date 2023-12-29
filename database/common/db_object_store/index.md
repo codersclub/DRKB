@@ -727,9 +727,9 @@ Objects.ItemName краткого описания объекта, необхо�
 
 TBaseDBObject
 
-+\--TInvoice
++--TInvoice
 
-+\--TEmployee
++--TEmployee
 
 ...
 

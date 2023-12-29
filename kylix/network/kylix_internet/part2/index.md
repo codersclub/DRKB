@@ -370,11 +370,11 @@ LIBS="/usr/lib/libpthread.so" \
 
 ./configure \
 
-"\--with-layout=Apache" \
+"--with-layout=Apache" \
 
-"\--enable-module=so" \
+"--enable-module=so" \
 
-"\--enable-rule=SHARED\_CORE" \
+"--enable-rule=SHARED\_CORE" \
 
 "$@"
 

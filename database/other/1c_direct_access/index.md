@@ -86,7 +86,7 @@ D=DDV7120\|AccWare Data Dictionary (DDCP=1251UKR)\|
 
 T=1SUSERS \|Соединений \|A \|1SUSERS \|1
 
-#\-\-\-\--Fields\-\-\-\-\-\--
+#-----Fields-------
 
 # Name \|Descr \|Type\|Length\|Precision
 
@@ -104,7 +104,7 @@ F=NETCHGCN \|Count of changes \|N \|10 \|0
 
 T=1SSYSTEM\|Системная \|A \|1SSYSTEM \|1
 
-#\-\-\-\--Fields\-\-\-\-\-\--
+#-----Fields-------
 
 # Name \|Descr \|Type\|Length\|Precision
 
@@ -134,7 +134,7 @@ F=FLAGS \|FLAGS \|N \|10 \|0
 
 T=1SCONST \|Константы \|A \|1SCONST \|1
 
-#\-\-\-\--Fields\-\-\-\-\-\--
+#-----Fields-------
 
 # Name \|Descr \|Type\|Length\|Precision
 

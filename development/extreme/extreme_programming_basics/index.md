@@ -17,7 +17,7 @@ Date: 21.11.2001
 Original text at www.xprogramming.com
 
 "Outside of a dog, a book is man\'s best friend. Inside of a dog, it\'s
-too dark to read." \--Groucho Marx
+too dark to read." --Groucho Marx
 ("Вычтем собаку, и лучшим другом человека окажется книга. Впрочем, в
 собаке много не вычитаешь - слишком темно". Гручо Маркс)
 
