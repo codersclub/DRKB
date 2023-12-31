@@ -15,19 +15,15 @@ DLL со строковыми ресурсами
 
 --my.rc--
 
-STRINGTABLE
-
-{
-
-00001, "My String #1"
-
-00002, "My String #2"
-
-}
+    STRINGTABLE
+    {
+    00001, "My String #1"
+    00002, "My String #2"
+    }
 
 Далее компилируешь его:
 
-brcc32 my.rc
+    brcc32 my.rc
 
 У тебя получится my.res.
 
@@ -45,7 +41,7 @@ brcc32 my.rc
 
 Компилируешь Дельфиским компилятором:
 
-dcc32 my.dpr
+    dcc32 my.dpr
 
 Получаешь, наконец-то свою my.dll
 

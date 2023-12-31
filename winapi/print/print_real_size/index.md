@@ -244,7 +244,7 @@ GetDeviceCaps для получения исчерпывающей информ�
      
         TargetRectangle := Rect(4 * iPixelsPerInch, {4"}
         jPixelsPerInch, {1"}
-        6 * iPixelsPerInch, {6" -- 2" ширина}
+        6 * iPixelsPerInch, {6" - 2" ширина}
         jPixelsPerInch +
         TRUNC(2 * iPixelsPerInch * GraphicAspectRatio *
         PixelAspectRatio));

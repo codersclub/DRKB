@@ -2606,7 +2606,7 @@ vfw.pas
      
         IDS_CAP_INFO                    = 401;  // "%s" 
         IDS_CAP_OUTOFMEM                = 402;  // "Out of memory" 
-        IDS_CAP_FILEEXISTS              = 403;  // "File '%s' exists -- overwrite it?" 
+        IDS_CAP_FILEEXISTS              = 403;  // "File '%s' exists - overwrite it?" 
         IDS_CAP_ERRORPALOPEN            = 404;  // "Error opening palette '%s'" 
         IDS_CAP_ERRORPALSAVE            = 405;  // "Error saving palette '%s'" 
         IDS_CAP_ERRORDIBSAVE            = 406;  // "Error saving frame '%s'" 

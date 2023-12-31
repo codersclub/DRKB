@@ -11,13 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Использование встроенных функций
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Системные функции
-  -- -------------------
-:::
+## Системные функции
 
  
 
@@ -27,10 +21,7 @@ Date: 01.01.2007
 
 Общий синтаксис вызова системных функций выглядит следующим образом:
 
- 
-
-select название\_функции(аргумент[ы]
-
+    select название_функции(аргумент[ы])
  
 
 Системные функции могут использоваться в списке выбора оператора select,
@@ -40,25 +31,15 @@ select название\_функции(аргумент[ы]
 Например, чтобы найти идентификационный номер коллеги,
 зарегистрированного в системе как "harold", следует выполнить оператор:
 
- 
-
-select user\_id("harold")
-
- 
+    select user_id("harold")
 
 Если предположить, что идентификационный номер пользователя, работающего
 под именем "harold", равен 13, то результат этого запроса будет
 выглядеть так:
 
- 
-
-          ---------------------
-
-                       13
-
- 
-
-(Выбрана 1 строка)
+    ---------------------
+             13
+    (Выбрана 1 строка)
 
  
 
@@ -69,34 +50,24 @@ select user\_id("harold")
 аргумента идентификационный номер (ID) пользователя и возвращает имя
 пользователя:
 
- 
-
-select user\_name(13)
-
---------
-
-harold
-
- 
-
-(Выбрана 1 строка)
+    select user_name(13)
+    
+    --------
+    harold
+    
+    (Выбрана 1 строка)
 
  
 
 Для нахождения имени текущего пользователя, т.е. пользователя
 выполняющего запрос, аргумент этой функции можно опустить:
 
- 
-
-select user\_name()
-
-------------------
-
-dbo
-
- 
-
-(Выбрана 1 строка)
+    select user_name()
+    
+    ------------------
+    dbo
+    
+    (Выбрана 1 строка)
 
  
 
@@ -111,9 +82,6 @@ dbo
 Ниже приведен список названий системных функций, а также их аргументов и
 возвращаемых результатов:
 
- 
-
- 
 
 Таблица 10-1: Системные функции, аргументы и результаты
 
@@ -396,19 +364,11 @@ dbo
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Примеры использования системных функций
-  -- -----------------------------------------
-:::
+## Примеры использования системных функций
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------
-     Функция col\_length
-  -- ---------------------
-:::
+## Функция col\_length
 
  
 
@@ -416,31 +376,16 @@ dbo
 (выражение "х=" указывается для того, чтобы результат запроса имел
 заголовок):
 
- 
+    select x = col_length("titles", "title")
+    
+       x
+    --------
+       80
+    
+    (Выбрана 1 строка)
 
-select x = col\_length("titles", "title")
 
- 
-
-x
-
---------
-
-   80
-
- 
-
-(Выбрана 1 строка)
-
- 
-
- 
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------
-     Функция datalength
-  -- --------------------
-:::
+## Функция datalength
 
 В отличие от функции col\_length, которая находит длину столбца,
 определенную при создании таблицы, функция datalength показывает
@@ -455,65 +400,35 @@ pub\_name таблицы publishers:
 
  
 
-select Length=datalength(pub\_name), pub\_name
+    select Length=datalength(pub_name), pub_name
+    from publishers
 
-from publishers
+    Length   pub_name
+    -------   ------------------------
+    13         New Age Books
+    16         Binnet & Hardley
+    20         Algodata Infosystems
 
- 
+    (Выбрано 3 строки)
 
-Length   pub\_name
 
--------   ------------------------
-
-13         New Age Books
-
-16         Binnet & Hardley
-
-20         Algodata Infosystems
-
- 
-
-(Выбрано 3 строки)
-
- 
-
- 
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------
-     Функция isnull
-  -- ----------------
-:::
+## Функция isnull
 
  
 
 Следующий запрос находит среднюю цену всех книг из таблицы titles, при
 этом заменяя неопределенные значения NULL в столбце price значением
-"$10.00":   
+"$10.00":
+
+    select avg(isnull(price,$10.00))
+    from titles
+    ------------
+          14.24
+    (Выбрана 1 строка)
 
  
 
-select avg(isnull(price,$10.00))
-
-from titles
-
-------------
-
-      14.24
-
- 
-
-(Выбрана 1 строка)
-
- 
-
- 
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------
-     Функция user\_name
-  -- --------------------
-:::
+## Функция user\_name
 
 В следующем запросе ищется строка из таблицы sysusers, в которой имя
 пользователя совпадает с результатом применения системной функции
@@ -521,31 +436,19 @@ user\_name к идентификатору пользователя, равно�
 
  
 
-select name
-
-from sysusers
-
-where name = user\_name(1)
-
- 
-
-name
-
-------------------------
-
-dbo
+    select name
+    from sysusers
+    where name = user_name(1)
+     
+    name
+    ------------------------
+    dbo
+     
+    (Выбрана 1 строка)
 
  
 
-(Выбрана 1 строка)
-
- 
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Строковые функции
-  -- -------------------
-:::
+## Строковые функции
 
  
 
@@ -561,29 +464,22 @@ dbo
 
 Синтаксис строковых функций имеет следующий общий вид:
 
- 
 
-select название\_функции(аргументы)
-
+    select название_функции(аргументы)
  
 
 Можно выполнить конкатенацию (приписывание) двоичных или символьных
 выражений следующим образом:
 
- 
-
-select (выражение + выражение + [выражение]...)
+    select (выражение + выражение + [выражение]...)
 
  
 
 При конкатенации несимвольных или недвоичных выражений нужно
 использовать функцию преобразования данных convert, как показано ниже:
 
- 
-
-select "The price is " + convert(varchar(12),price)
-
-from titles
+    select "The price is " + convert(varchar(12),price)
+    from titles
 
 Большинство строковых функций выполняются только над данными типа char,
 nchar, varchar и nvarchar и над данными, которые неявно можно
@@ -608,8 +504,6 @@ varchar, nvarchar.
 
 Таблица 10-2: Аргументы строковых функций
 
- 
-
   ----------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Тип аргумента     Может быть заменен
   char\_expr        Названием столбца, содержащим символьные данные, переменной или выражением типа char, varchar, nchar и nvarchar. Особо отмечается случай, когда в качестве выражения можно задавать текст (text). Символические константы должны быть заключены в кавычки.
@@ -630,8 +524,6 @@ varchar, nvarchar.
  
 
 Таблица 10-3: Строковые функции, аргументы и результаты
-
- 
 
   ------------------------ ----------------------- -----------------------
   Функция                  Аргумент                Результат
@@ -869,19 +761,11 @@ varchar, nvarchar.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Примеры использования строковых функций
-  -- -----------------------------------------
-:::
+## Примеры использования строковых функций
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------
-     Функции charindex и patindex
-  -- ------------------------------
-:::
+## Функции charindex и patindex
 
 Функции charindex и patindex возвращают начальную позицию строки-образца
 (pattern), которая задается пользователем. Обе функции имеют по два
@@ -907,21 +791,14 @@ notes таблицы titles:
 
  
 
-select charindex("wonderful", notes), patindex("%wonderful%", notes)
-
-from titles
-
-where title\_id = "TC3218"
-
- 
-
-------------    -------------
-
-         46            46
-
- 
-
-(Выбрана 1 строка)
+    select charindex("wonderful", notes), patindex("%wonderful%", notes)
+    from titles
+    where title_id = "TC3218"
+     
+    ------------    -------------
+             46            46
+     
+    (Выбрана 1 строка)
 
  
 
@@ -932,57 +809,28 @@ where title\_id = "TC3218"
 таблице sysobject, которые начинаются с символов "sys" и в которых
 четвертым символом является любой из символов a,b,c, или d:
 
- 
+    select name
+    from sysobjects
+    where patindex("sys[a-d]%", name) \> 0
+     
+    name
+    ------------------------------ 
+    sysalternates
+    sysattributes
+    syscharsets
+    syscolumns
+    syscomments
+    sysconfigures
+    sysconstraints
+    syscurconfigs
+    sysdatabases
+    sysdepends
+    sysdevices
+     
+    (Выбрано 11 строк)
 
- 
 
-select name
-
-from sysobjects
-
-where patindex("sys[a-d]%", name) \> 0
-
- 
-
-name                           
-
------------------------------- 
-
-sysalternates
-
-sysattributes
-
-syscharsets
-
-syscolumns
-
-syscomments
-
-sysconfigures
-
-sysconstraints
-
-syscurconfigs
-
-sysdatabases
-
-sysdepends
-
-sysdevices
-
- 
-
-(Выбрано 11 строк)
-
- 
-
- 
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------
-     Функция str
-  -- -------------
-:::
+## Функция str
 
  
 
@@ -1002,19 +850,12 @@ sysdevices
 
 Например:
 
- 
-
-select str(123.456, 2, 4)
-
- 
-
---
-
-**
-
- 
-
-(Выбрана 1 строка)
+    select str(123.456, 2, 4)
+     
+    --
+    **
+     
+    (Выбрана 1 строка)
 
  
 
@@ -1026,11 +867,7 @@ select str(123.456, 2, 4)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------
-     Функция stuff
-  -- ---------------
-:::
+## Функция stuff
 
  
 
@@ -1047,17 +884,12 @@ select str(123.456, 2, 4)
 
  
 
-select stuff("abc", 2, 3, "xyz")
-
- 
-
-----
-
-axyz
-
- 
-
-(Выбрана 1 строка)
+    select stuff("abc", 2, 3, "xyz")
+     
+    ----
+    axyz
+     
+    (Выбрана 1 строка)
 
  
 
@@ -1066,43 +898,24 @@ axyz
 символ пробела в кавычках. Использование символа " " приведет к вставке
 пробела вместо удаленных символов. Например:
 
- 
-
-select stuff("abcdef", 2, 3, null)
-
----
-
-aef
+    select stuff("abcdef", 2, 3, null)
+    ---
+    aef
+     
+    (Выбрана 1 строка)
 
  
 
-(Выбрана 1 строка)
+    select stuff("abcdef", 2, 3, " ")
+    ----
+    a ef
+     
+    (Выбрана 1 строка)
 
  
 
-select stuff("abcdef", 2, 3, " ")
+## Функции soundex и difference
 
-----
-
-a ef
-
- 
-
-(Выбрана 1 строка)
-
- 
-
- 
-
- 
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------
-     Функции soundex и difference
-  -- ------------------------------
-:::
-
- 
 
 Функция soundex преобразует символьную строку в четырехразрядный код,
 используемый при сравнении строк. Гласные буквы игнорируются при
@@ -1110,48 +923,33 @@ a ef
 при вычислении функции soundex. Эта функция всегда возвращает некоторое
 значение. Следующие два имени имеют одинаковый код soundex:
 
- 
-
-select soundex("smith"), soundex("smythe")
-
- 
-
------ ----- 
-
-S530  S530
-
+    select soundex("smith"), soundex("smythe")
+     
+    ----- ----- 
+    S530  S530
  
 
 Функция difference (различие) производит сравнение кодов soundex двух
 строк и оценивает числом от 0 до 4 степень их сходства друг с другом.
 Значение 4 означает максимальное сходство. Например:
 
- 
 
-select difference("smithers", "smothers")
+    select difference("smithers", "smothers")
+    ---------
+          4
 
----------
 
-      4
 
- 
-
-select difference("smothers", "brothers")
-
----------
-
-       2
-
+    select difference("smothers", "brothers")
+    ---------
+           2
  
 
 Большинство оставшихся строковых функций легки для понимания и
 использования. Например:
 
- 
 
 Таблица 10-4: Примеры строковых функций
-
- 
 
   -------------------------- -----------
   Оператор                   Результат
@@ -1165,21 +963,15 @@ select difference("smothers", "brothers")
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------
-     Функция substring
-  -- -------------------
-:::
+## Функция substring
 
 В следующем примере демонстируется применение функции substring.  Здесь
 выбираются фамилии и инициалы каждого автора из таблицы authors,
 например, "Bennet A".
 
- 
 
-select au\_lname, substring (au\_f name, 1, 1)
-
-from authors
+    select au_lname, substring (au_f name, 1, 1)
+    from authors
 
  
 
@@ -1217,11 +1009,7 @@ bcd
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------
-     Конкатенация
-  -- --------------
-:::
+## Конкатенация
 
  
 
@@ -1331,11 +1119,7 @@ The due date is Jun 12 1985 12:00AM
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------
-     Конкатенация и пустая строка
-  -- ------------------------------
-:::
+## Конкатенация и пустая строка
 
 При конкатенации пустая строка ("" или ") заменяется одним пробелом,
 например следующий оператор:
@@ -1354,11 +1138,7 @@ abc def
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Композиция строковых функций
-  -- ------------------------------
-:::
+## Композиция строковых функций
 
  
 
@@ -1421,11 +1201,7 @@ where price \> $20
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Текстовые функции
-  -- -------------------
-:::
+## Текстовые функции
 
  
 
@@ -1456,11 +1232,7 @@ datalength, которая была описана в разделе о сист
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Примеры использования текстовых функций
-  -- -----------------------------------------
-:::
+## Примеры использования текстовых функций
 
  
 
@@ -1541,11 +1313,7 @@ convert, но при этом текстовые или графические �
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------
-     Математические функции
-  -- ------------------------
-:::
+## Математические функции
 
  
 
@@ -1649,11 +1417,7 @@ convert, но при этом текстовые или графические �
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------
-     Примеры использования математических функций
-  -- ----------------------------------------------
-:::
+## Примеры использования математических функций
 
  
 
@@ -1712,11 +1476,7 @@ select round(55.55, -3)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Календарные функции
-  -- ---------------------
-:::
+## Календарные функции
 
  
 
@@ -1812,11 +1572,7 @@ smalldatetime можно посмотреть в главе 7 "Создание 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------
-     Получение текущей даты: getdate
-  -- ---------------------------------
-:::
+## Получение текущей даты: getdate
 
  
 
@@ -1850,11 +1606,7 @@ Jul 29 1991  2:50  PM
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------
-     Получение частей даты в виде числа или строки
-  -- -----------------------------------------------
-:::
+## Получение частей даты в виде числа или строки
 
  
 
@@ -1894,11 +1646,7 @@ July
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Вычисленные календарных интервалов
-  -- ------------------------------------
-:::
+## Вычисленные календарных интервалов
 
  
 
@@ -1948,11 +1696,7 @@ getdate, то для них в этом столбце будет указана
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Добавление календарного интервала: dateadd
-  -- --------------------------------------------
-:::
+## Добавление календарного интервала: dateadd
 
  
 
@@ -2020,11 +1764,7 @@ smalldatetime, но результат будет иметь смысл толь
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------
-     Функции преобразования типов данных
-  -- -------------------------------------
-:::
+## Функции преобразования типов данных
 
  
 
@@ -2053,11 +1793,7 @@ SQL Сервер не допускает некоторых преобразов
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Допустимые преобразования
-  -- ---------------------------
-:::
+## Допустимые преобразования
 
  
 
@@ -2101,11 +1837,7 @@ SQL Сервер не допускает некоторых преобразов
 :::
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Использование функции convert
-  -- -------------------------------
-:::
+## Использование функции convert
 
  
 
@@ -2193,11 +1925,7 @@ Kitchens
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Правила преобразования
-  -- ------------------------
-:::
+## Правила преобразования
 
  
 
@@ -2206,11 +1934,7 @@ Kitchens
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------------------
-     Преобразование строковых данных к нестроковому типу
-  -- -----------------------------------------------------
-:::
+## Преобразование строковых данных к нестроковому типу
 
  
 
@@ -2247,11 +1971,7 @@ Kitchens
   --- --------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------------
-     Преобразование одного строкового типа к другому
-  -- -------------------------------------------------
-:::
+## Преобразование одного строкового типа к другому
 
  
 
@@ -2268,11 +1988,7 @@ varchar и nvarchar. Максимальная длина строковых ти
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------
-     Преобразование чисел к строковому типу
-  -- ----------------------------------------
-:::
+## Преобразование чисел к строковому типу
 
  
 
@@ -2300,11 +2016,7 @@ of NUMERIC value \'12.34\' to a CHAR field.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------------------
-     Округление при преобразовании к денежному типу
-  -- ------------------------------------------------
-:::
+## Округление при преобразовании к денежному типу
 
  
 
@@ -2337,11 +2049,7 @@ select convert(int, $4.50)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------------
-     Преобразование дат и моментов времени
-  -- ---------------------------------------
-:::
+## Преобразование дат и моментов времени
 
  
 
@@ -2356,11 +2064,7 @@ datetime и smalldatetime. Неправильно указанное назва�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------
-     Преобразование числовых типов
-  -- -------------------------------
-:::
+## Преобразование числовых типов
 
  
 
@@ -2380,11 +2084,7 @@ datetime и smalldatetime. Неправильно указанное назва�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Преобразование двоичных типов
-  -- -------------------------------
-:::
+## Преобразование двоичных типов
 
  
 
@@ -2412,11 +2112,7 @@ convert, результат будет равен 1 или 256.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------
-     Преобразование шестнадцатиричных данных
-  -- -----------------------------------------
-:::
+## Преобразование шестнадцатиричных данных
 
  
 
@@ -2451,11 +2147,7 @@ hextoint("100")
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------------------------------
-     Преобразование графических данных в тип binary и varbinary
-  -- ------------------------------------------------------------
-:::
+## Преобразование графических данных в тип binary и varbinary
 
  
 
@@ -2467,11 +2159,7 @@ hextoint("100")
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Ошибки преобразования
-  -- -----------------------
-:::
+## Ошибки преобразования
 
  
 
@@ -2480,11 +2168,7 @@ hextoint("100")
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------------
-     Арифметическое переполнение и деление на ноль
-  -- -----------------------------------------------
-:::
+## Арифметическое переполнение и деление на ноль
 
  
 
@@ -2537,11 +2221,7 @@ arith\_overflow, чтобы указать SQL Серверу как обраб�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------
-     Ошибки при выборе шкалы
-  -- -------------------------
-:::
+## Ошибки при выборе шкалы
 
  
 
@@ -2561,11 +2241,7 @@ arithabort numeric\_truncation, включена, что вызывает пре
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------
-     Ошибки при выборе диапазона
-  -- -----------------------------
-:::
+## Ошибки при выборе диапазона
 
  
 

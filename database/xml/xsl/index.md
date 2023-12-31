@@ -636,16 +636,21 @@ getAttribute(), описанным в объектной модели XML (мы 
  
 
 Другим способом помещения в выходной HTML- документ информации,
-являющейся результатом выполнения каких-либо операций JavaScript --
+являющейся результатом выполнения каких-либо операций JavaScript -
 сценариев является использовнаие инструкции \<eval\>;:
 
     <rule>
-    <element type="articles">
-    <target-element type="article">
-    </element>
-    <tr><td><eval>childNumber(this)</eval></td><td>
-    <children/>
-    </td><tr>
+     <element type="articles">
+      <target-element type="article">
+     </element>
+     <tr>
+      <td>
+       <eval>childNumber(this)</eval>
+      </td>
+      <td>
+       <children/>
+      </td>
+     </tr>
     </rule>
 
 Метод childNumber в данном случае возвращает текущий номер дочернего
@@ -686,7 +691,7 @@ getAttribute(), описанным в объектной модели XML (мы 
     <color>red</color>
     </flower>
 
-, то на выходе HTML -документ будет содержать следующие элементы:
+, то на выходе HTML-документ будет содержать следующие элементы:
 
     <div background-color="red"; font-size="12">
 
@@ -844,4 +849,4 @@ msxsl:
     |                                   | чисел                             |
     +-----------------------------------+-----------------------------------+
 
-Источник: [https://helper10.narod.ru/](https://helper10.narod.ru/%20)
+Источник: <https://helper10.narod.ru/>

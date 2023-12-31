@@ -435,7 +435,7 @@ Applications
 Specification
 908 - Reliable Data Protocol
 722 - Thoughts on Interactions in Distributed Services
-713 - MSDTP -- Message Services Data Transmission Protocol
+713 - MSDTP - Message Services Data Transmission Protocol
 712 - A Distributed Capability Computing System DCCS
 708 - Elements of a Distributed Programming System
 707 - A High-Level Framework for Network-Based Resource Sharing
@@ -621,7 +621,7 @@ File Transfer and Access Protocols
 697 - CWD Command of FTP
 691 - One More Try on the FTP
 686 - Leaving Well Enough Alone
-683 - FTPSRV -- Tenex Extension for Paged Files
+683 - FTPSRV - Tenex Extension for Paged Files
 678 - Document File Format Standards
 662 - Performance Improvement in ARPANET File Transfers from Multics
 640 - Revised FTP Reply Codes
@@ -690,7 +690,7 @@ Domain Name System
 830 - A Distributed System for Internet Name Service
 819 - The Domain Naming Convention for Internet User Applications
 799 - Internet Name Domains
-756 - The NIC Name Server -- A Datagram-Based Information Utility
+756 - The NIC Name Server - A Datagram-Based Information Utility
 
 752 - A Universal Host Table
 

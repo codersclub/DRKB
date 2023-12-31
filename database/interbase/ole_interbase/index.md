@@ -1,11 +1,11 @@
 ---
-Title: OLE и Interbase -- прочесть и записать
+Title: OLE и Interbase - прочесть и записать
 Author: Rob Minte
 Date: 01.01.2007
 ---
 
 
-OLE и Interbase -- прочесть и записать
+OLE и Interbase - прочесть и записать
 ======================================
 
 ::: {.date}

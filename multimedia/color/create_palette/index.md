@@ -76,7 +76,7 @@ PaletteRGB function in its place.
               { Mark any unused entries with PalFlag }
               for i := nColors to 255 do
                 palPalEntry[i].peFlags := PC_NOCOLLAPSE;
-              { Make sure the last entry is white -- This may replace an entry in the array!}
+              { Make sure the last entry is white - This may replace an entry in the array!}
               I := 255;
               with palPalEntry[i] do
               begin
@@ -85,7 +85,7 @@ PaletteRGB function in its place.
                 peBlue := 255;
                 peFlags := 0;
               end;
-              { And the first is black -- This may replace an entry in the array!}
+              { And the first is black - This may replace an entry in the array!}
               with palPalEntry[0] do
               begin
                 peRed := 0;

@@ -74,11 +74,7 @@ group by.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------------------------
-     Вычисление итоговых значений с помощью агрегирующих функций
-  -- -------------------------------------------------------------
-:::
+## Вычисление итоговых значений с помощью агрегирующих функций
 
  
 
@@ -250,11 +246,7 @@ where type = "business"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Агрегирующие функции и типы данных
-  -- ------------------------------------
-:::
+## Агрегирующие функции и типы данных
 
  
 
@@ -297,11 +289,7 @@ from authors
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------
-     Использование функции count(*)
-  -- ---------------------------------
-:::
+## Использование функции count(*)
 
  
 
@@ -357,11 +345,7 @@ where advance \> 1000
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------------------
-     Использование агрегирующих функций с опцией distinct
-  -- ------------------------------------------------------
-:::
+## Использование агрегирующих функций с опцией distinct
 
  
 
@@ -441,11 +425,7 @@ where type = "business"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------------
-     Неопределенные значения и агрегирующие функции
-  -- ------------------------------------------------
-:::
+## Неопределенные значения и агрегирующие функции
 
  
 
@@ -538,11 +518,7 @@ where type = "poetry"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------------------
-     Группировка результатов запроса: Конструкция group by
-  -- -------------------------------------------------------
-:::
+## Группировка результатов запроса: Конструкция group by
 
  
 
@@ -695,11 +671,7 @@ trad\_cook         8,000.00
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Синтаксис конструкции group by
-  -- --------------------------------
-:::
+## Синтаксис конструкции group by
 
  
 
@@ -860,11 +832,7 @@ pub\_id  type
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------------------
-     Ссылка на другие столбцы в запросах с использованием group by
-  -- ---------------------------------------------------------------
-:::
+## Ссылка на другие столбцы в запросах с использованием group by
 
  
 
@@ -1065,11 +1033,7 @@ authors, в которой встречается данный город, вм�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Выражения и конструкция group by
-  -- ----------------------------------
-:::
+## Выражения и конструкция group by
 
  
 
@@ -1146,11 +1110,7 @@ group by Category /* Неправильное использование заг�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------
-     Вложенное агрегирование с группировкой
-  -- ----------------------------------------
-:::
+## Вложенное агрегирование с группировкой
 
  
 
@@ -1217,11 +1177,7 @@ group by type
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------------
-     Неопределенные значения и конструкция group by
-  -- ------------------------------------------------
-:::
+## Неопределенные значения и конструкция group by
 
  
 
@@ -1335,11 +1291,7 @@ price
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Конструкции where и group by
-  -- ------------------------------
-:::
+## Конструкции where и group by
 
  
 
@@ -1461,11 +1413,7 @@ where, но в результат выводятся все значения а�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Конструкция group by и опция all
-  -- ----------------------------------
-:::
+## Конструкция group by и опция all
 
  
 
@@ -1566,11 +1514,7 @@ $10000. Поскольку ни одна книга по современной 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Использование агрегации без группировки
-  -- -----------------------------------------
-:::
+## Использование агрегации без группировки
 
  
 
@@ -1650,11 +1594,7 @@ pub\_id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------------
-     Выбор Групп Данных: Конструкция having
-  -- ----------------------------------------
-:::
+## Выбор Групп Данных: Конструкция having
 
  
 
@@ -1773,11 +1713,7 @@ pub\_id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------------
-     Взимосвязи между конструкциями having, group by и where
-  -- ---------------------------------------------------------
-:::
+## Взимосвязи между конструкциями having, group by и where
 
  
 
@@ -2010,11 +1946,7 @@ trad\_cook                 8,000.00                17.97
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------
-     Использование конструкции having без группировки
-  -- --------------------------------------------------
-:::
+## Использование конструкции having без группировки
 
  
 
@@ -2116,11 +2048,7 @@ pub\_id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------------------------
-     Сортировка результатов запроса: конструкция order by
-  -- ------------------------------------------------------
-:::
+## Сортировка результатов запроса: конструкция order by
 
  
 
@@ -2303,11 +2231,7 @@ image (графика).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------
-     Конструкции order by и group by
-  -- ---------------------------------
-:::
+## Конструкции order by и group by
 
  
 
@@ -2355,11 +2279,7 @@ popular\_comp                21.48
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------------------------
-     Вычисление итоговых значений по группам: конструкция compute
-  -- --------------------------------------------------------------
-:::
+## Вычисление итоговых значений по группам: конструкция compute
 
  
 
@@ -2591,11 +2511,7 @@ trad\_cook              20.95       7,000.00
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Агрегирующие функции и конструкция compute
-  -- --------------------------------------------
-:::
+## Агрегирующие функции и конструкция compute
 
  
 
@@ -2627,11 +2543,7 @@ trad\_cook              20.95       7,000.00
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------
-     Правила для конструкции compute
-  -- ---------------------------------
-:::
+## Правила для конструкции compute
 
  
 
@@ -2703,11 +2615,7 @@ trad\_cook              20.95       7,000.00
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Указание нескольких столбцов в конструкции compute by
-  -- -------------------------------------------------------
-:::
+## Указание нескольких столбцов в конструкции compute by
 
  
 
@@ -2771,11 +2679,7 @@ psychology    0877         21.59
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------
-     Использование нескольких конструкций compute
-  -- ----------------------------------------------
-:::
+## Использование нескольких конструкций compute
 
  
 
@@ -2847,11 +2751,7 @@ psychology    0877         21.59
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Подведение итогов по нескольким столбцам
-  -- ------------------------------------------
-:::
+## Подведение итогов по нескольким столбцам
 
  
 
@@ -2918,11 +2818,7 @@ trad\_cook             20.95         7,000.00
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------------------------------
-     Использование различных агрегирующих функций в одной конструкции compute
-  -- --------------------------------------------------------------------------
-:::
+## Использование различных агрегирующих функций в одной конструкции compute
 
  
 
@@ -2993,11 +2889,7 @@ trad\_cook   0877            20.95
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------------------
-     Общие итоговые значения: конструкция compute без приставки by
-  -- ---------------------------------------------------------------
-:::
+## Общие итоговые значения: конструкция compute без приставки by
 
  
 
@@ -3114,11 +3006,7 @@ trad\_cook                20.95        7,000.00
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------
-     Объединение запросов: Команда union
-  -- -------------------------------------
-:::
+## Объединение запросов: Команда union
 
  
 
@@ -3274,11 +3162,7 @@ y с сохранением дублирующихся строк, а затем
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Правила для запросов с командой union
-  -- ---------------------------------------
-:::
+## Правила для запросов с командой union
 
  
 
@@ -3400,11 +3284,7 @@ y с сохранением дублирующихся строк, а затем
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------------------------
-     Использование union с другими командами языка Transact-SQL
-  -- ------------------------------------------------------------
-:::
+## Использование union с другими командами языка Transact-SQL
 
  
 
@@ -3454,16 +3334,9 @@ y с сохранением дублирующихся строк, а затем
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 85px;"}
-  -- ------------------
-     insert into tour
-  -- ------------------
-:::
-
+    insert into tour
                select city, state from stores
-
                union
-
                select city, state from authors
 
  

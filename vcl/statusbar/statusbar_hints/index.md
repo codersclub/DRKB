@@ -93,10 +93,10 @@ TForm.FindComponent, существующий со времен Delphi I ? С е
     begin
       // ищем наш StatusBar1 на активной форме
       C := TStatusBar(Screen.ActiveForm.FindComponent('StatusBar1'));
-      // если не найден -- ищем на основной форме
+      // если не найден - ищем на основной форме
       if not Assigned(C) then
         C := TStatusBar(Application.MainForm.FindComponent('StatusBar1'));
-      // если что-то обнаружено -- рисуем на н?м наш текст
+      // если что-то обнаружено - рисуем на н?м наш текст
       if Assigned(C) then
         C.SimpleText := '  ' + Application.Hint;
     end;

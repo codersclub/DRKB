@@ -1,10 +1,10 @@
 ---
-Title: Связка ActiveX -- Internet Explorer
+Title: Связка ActiveX - Internet Explorer
 Date: 01.01.2007
 ---
 
 
-Связка ActiveX -- Internet Explorer
+Связка ActiveX - Internet Explorer
 ===================================
 
 ::: {.date}

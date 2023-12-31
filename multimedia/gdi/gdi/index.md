@@ -1,11 +1,11 @@
 ---
-Title: GDI -- графика в Delphi
+Title: GDI - графика в Delphi
 Author: Alistair Keys
 Date: 01.01.2007
 ---
 
 
-GDI -- графика в Delphi
+GDI - графика в Delphi
 =======================
 
 ::: {.date}

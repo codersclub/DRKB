@@ -1,12 +1,12 @@
 ---
-Title: HTMLEditor -- Краткий обзор
+Title: HTMLEditor - Краткий обзор
 Author: Алексей Румянцев (mailto:skitl@mail.ru)
 source: https://delphisources.ru/pages/faq/base/html_editor.html
 Date: 01.01.2007
 ---
 
 
-HTMLEditor -- Краткий обзор
+HTMLEditor - Краткий обзор
 ===========================
 
 ::: {.date}

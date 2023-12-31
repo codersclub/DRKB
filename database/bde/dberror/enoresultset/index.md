@@ -27,7 +27,7 @@ ENoResultSet Error creating cursor handle
 2.Query.ExecSQL выполняет инструкции запроса и курсор не создается.
 
 Если в запросах используются инструкции не создающие набор данных
-(курсор) -- СREATE TABLE, INSERT, DELETE, UPDATE, SELECT INTO и т.д. то
+(курсор) - СREATE TABLE, INSERT, DELETE, UPDATE, SELECT INTO и т.д. то
 нужно вызывать метод ExecSQL.
 
 Автор: BAS

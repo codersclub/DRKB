@@ -66,11 +66,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------
-     Что такое соединения ?
-  -- ------------------------
-:::
+## Что такое соединения ?
 
  
 
@@ -129,11 +125,7 @@ authors, то для ее выбора необходимо соединение
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------
-     Соединения и реляционная модель
-  -- ---------------------------------
-:::
+## Соединения и реляционная модель
 
  
 
@@ -170,11 +162,7 @@ authors, то для ее выбора необходимо соединение
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------
-     Соединение таблиц в запросах
-  -- ------------------------------
-:::
+## Соединение таблиц в запросах
 
  
 
@@ -270,11 +258,7 @@ from должны разделяться запятыми.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------
-     Предложение from
-  -- ------------------
-:::
+## Предложение from
 
  
 
@@ -331,11 +315,7 @@ SQL Серверу, что необходимо выполнить соедин�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------
-     Предложение where
-  -- -------------------
-:::
+## Предложение where
 
  
 
@@ -436,11 +416,7 @@ where datalength(textab\_1.textcol) \> datalength(textab\_2.textcol)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------
-     Как выполнются соединения
-  -- ---------------------------
-:::
+## Как выполнются соединения
 
  
 
@@ -481,11 +457,7 @@ publishers равно 69 ( 23 автора, умноженные на 3 изда
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Еквисоединения и естественные соединения
-  -- ------------------------------------------
-:::
+## Еквисоединения и естественные соединения
 
  
 
@@ -528,11 +500,7 @@ where publishers.city = authors.city
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------
-     Соединения с дополнительными условиями
-  -- ----------------------------------------
-:::
+## Соединения с дополнительными условиями
 
  
 
@@ -586,11 +554,7 @@ Sushi, Anyone?                        Binnet & Hardley
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------
-     Соединения, не основанные на равенстве
-  -- ----------------------------------------
-:::
+## Соединения, не основанные на равенстве
 
  
 
@@ -704,11 +668,7 @@ TC7777                 4095                10
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------
-     Самосоединения и корреляция названий
-  -- --------------------------------------
-:::
+## Самосоединения и корреляция названий
 
  
 
@@ -815,11 +775,7 @@ Dirk           Stringer       Livia          Karsen
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Соединения с условием "не равно"
-  -- ----------------------------------
-:::
+## Соединения с условием "не равно"
 
  
 
@@ -930,11 +886,7 @@ au\_id               title\_id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------------
-     Соединения с условием "не равно" и подзапросы
-  -- -----------------------------------------------
-:::
+## Соединения с условием "не равно" и подзапросы
 
 Иногда соединения с условием "не равно" бывает недостаточно и его
 необходимо заменить подзапросом. Например, предположим, что необходимо
@@ -1018,11 +970,7 @@ Blotchet-Halls       Corvallis
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Соединение более чем двух таблиц
-  -- ----------------------------------
-:::
+## Соединение более чем двух таблиц
 
  
 
@@ -1158,11 +1106,7 @@ TC7777         4095                      0                 5000
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------
-     Внешние соединения
-  -- --------------------
-:::
+## Внешние соединения
 
  
 
@@ -1447,11 +1391,7 @@ Mediterranean
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------
-     Ограничения на внешнее соединение
-  -- -----------------------------------
-:::
+## Ограничения на внешнее соединение
 
  
 
@@ -1501,11 +1441,7 @@ clause.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------------
-     Как неопределенные значения влияют на соединения
-  -- --------------------------------------------------
-:::
+## Как неопределенные значения влияют на соединения
 
  
 
@@ -1580,11 +1516,7 @@ NULL  three      NULL     NULL
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------------------
-     Как выбираются столбцы для соединения таблиц
-  -- ----------------------------------------------
-:::
+## Как выбираются столбцы для соединения таблиц
 
  
 

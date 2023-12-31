@@ -53,11 +53,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 18px;"}
-  -- -------------
-     Общий обзор
-  -- -------------
-:::
+## Общий обзор
 
  
 
@@ -82,11 +78,7 @@ SQL (Structured Query Languade Структурированный язык за�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- --------------------------------------
-     Запросы, Модификация данных, Команды
-  -- --------------------------------------
-:::
+## Запросы, Модификация данных, Команды
 
  
 
@@ -134,11 +126,7 @@ TRANSACT-SQL сообщает пользователю о том, какая к�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- --------------------------
-     Таблицы, столбцы, строки
-  -- --------------------------
-:::
+## Таблицы, столбцы, строки
 
  
 
@@ -163,11 +151,7 @@ TRANSACT-SQL сообщает пользователю о том, какая к�
 :::
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ----------------------
-     Реляционные операции
-  -- ----------------------
-:::
+## Реляционные операции
 
  
 
@@ -207,11 +191,7 @@ Join (соединение) соединяет строки из двух (ил�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 18px;"}
-  -- ----------------------------
-     Соглашения по терминологии
-  -- ----------------------------
-:::
+## Соглашения по терминологии
 
  
 
@@ -252,11 +232,7 @@ Join (соединение) соединяет строки из двух (ил�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ------------------------------------------------------
-     Символы, с помощью которых записываются данные в SQL
-  -- ------------------------------------------------------
-:::
+## Символы, с помощью которых записываются данные в SQL
 
  
 
@@ -268,11 +244,7 @@ Join (соединение) соединяет строки из двух (ил�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -------------------
-     Символы языка SQL
-  -- -------------------
-:::
+## Символы языка SQL
 
  
 
@@ -407,11 +379,7 @@ select valid name ( "string"),
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 54px;"}
-  -- ---------------------------------------
-     Ограниченные кавычками идентификаторы
-  -- ---------------------------------------
-:::
+## Ограниченные кавычками идентификаторы
 
  
 
@@ -456,11 +424,7 @@ set quoted \_identifier on
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 54px;"}
-  -- -------------------------
-     Соглашения по названиям
-  -- -------------------------
-:::
+## Соглашения по названиям
 
  
 
@@ -605,11 +569,7 @@ from pubs2..publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 54px;"}
-  -- --------------------------
-     Вызов удаленных серверов
-  -- --------------------------
-:::
+## Вызов удаленных серверов
 
  
 
@@ -669,11 +629,7 @@ SQL сервер ищет procedure\_name (название процедуры) 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 18px;"}
-  -- ---------------------------------
-     Расширения в языке Transact-SQL
-  -- ---------------------------------
-:::
+## Расширения в языке Transact-SQL
 
  
 
@@ -688,11 +644,7 @@ Transact-SQL шире стандарта ISO и многих других ком
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ---------------------
-     Конструкция compute
-  -- ---------------------
-:::
+## Конструкция compute
 
  
 
@@ -709,11 +661,7 @@ Transact-SQL шире стандарта ISO и многих других ком
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -----------------------
-     Управляющие Операторы
-  -- -----------------------
-:::
+## Управляющие Операторы
 
  
 
@@ -729,11 +677,7 @@ if...else (если...иначе), print (печать), raiserror (генера
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -----------------------
-     Сохраненные процедуры
-  -- -----------------------
-:::
+## Сохраненные процедуры
 
  
 
@@ -764,11 +708,7 @@ SQL-Сервер также содержит сохраненные процед
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ----------
-     Триггера
-  -- ----------
-:::
+## Триггера
 
  
 
@@ -794,11 +734,7 @@ SQL-Сервер также содержит сохраненные процед
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ---------------------------------
-     Правила и Значения по умолчанию
-  -- ---------------------------------
-:::
+## Правила и Значения по умолчанию
 
  
 
@@ -821,11 +757,7 @@ SQL-Сервер также содержит сохраненные процед
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ------------------------------------
-     Обработка ошибок и Установка Опций
-  -- ------------------------------------
-:::
+## Обработка ошибок и Установка Опций
 
  
 
@@ -847,11 +779,7 @@ SQL-Сервер также содержит сохраненные процед
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ----------------------------------------
-     Дополнительные возможности SQL-Сервера
-  -- ----------------------------------------
-:::
+## Дополнительные возможности SQL-Сервера
 
  
 
@@ -943,11 +871,7 @@ SQL-Сервер также содержит сохраненные процед
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 18px;"}
-  -- -------------------------
-     Соответствие Стандартам
-  -- -------------------------
-:::
+## Соответствие Стандартам
 
  
 
@@ -1011,11 +935,7 @@ SQL86. Он был заменен стандартом SQL89, который в 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -------------------
-     FIPS сигнализатор
-  -- -------------------
-:::
+## FIPS сигнализатор
 
  
 
@@ -1027,11 +947,7 @@ SQL86. Он был заменен стандартом SQL89, который в 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ------------------------------------
-     Режим транзакций и уровни изоляции
-  -- ------------------------------------
-:::
+## Режим транзакций и уровни изоляции
 
  
 
@@ -1051,11 +967,7 @@ chained. Новая опция set transaction isolation level управляе�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -----------------------
-     Использование кавычек
-  -- -----------------------
-:::
+## Использование кавычек
 
  
 
@@ -1074,11 +986,7 @@ quoted\_identifiers. После этого всепоследовательно�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -------------------
-     Комментарии в SQL
-  -- -------------------
-:::
+## Комментарии в SQL
 
  
 
@@ -1096,11 +1004,7 @@ select "hello" --- this is comment
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -------------------------------
-     Обрыв справа символьных строк
-  -- -------------------------------
-:::
+## Обрыв справа символьных строк
 
  
 
@@ -1111,11 +1015,7 @@ select "hello" --- this is comment
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- ---------------------------------------------------------
-     Ограничения на использования операторов update и delete
-  -- ---------------------------------------------------------
-:::
+## Ограничения на использования операторов update и delete
 
  
 
@@ -1128,11 +1028,7 @@ SQL92. Поскольку такое соглашение несовместим
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -----------------------
-     Арифметические ошибки
-  -- -----------------------
-:::
+## Арифметические ошибки
 
  
 
@@ -1161,11 +1057,7 @@ SQL92. Поскольку такое соглашение несовместим
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 36px;"}
-  -- ----------------------------
-     Синонимы в ключевых словах
-  -- ----------------------------
-:::
+## Синонимы в ключевых словах
 
  
 
@@ -1188,19 +1080,13 @@ Transact-SQL ключевых слов.
     +-----------------------------------+-----------------------------------+
     | revoke all                        | revoke all privileges             |
     +-----------------------------------+-----------------------------------+
-    | max (выражение)                   | max [all distinct] (выражение)  |
+    | max (выражение)                   | max [all distinct] (выражение)    |
     +-----------------------------------+-----------------------------------+
     | user\_name (встроенная функция)   | user (ключевое слово)             |
     +-----------------------------------+-----------------------------------+
+                Таблица 1-3: Синонимы для стандартных ключевых слов
 
-                               Таблица 1-3: Синонимы для стандартных
-ключевых слов
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 36px;"}
-  -- -----------------
-     Трактовка нулей
-  -- -----------------
-:::
+## Трактовка нулей
 
  
 

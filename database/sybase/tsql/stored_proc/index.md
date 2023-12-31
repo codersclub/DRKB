@@ -66,11 +66,7 @@ SQL операторы и команды языка управления зад�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Что такое сохраненные процедуры
-  -- ---------------------------------
-:::
+## Что такое сохраненные процедуры
 
  
 
@@ -142,11 +138,7 @@ execute (выполнить). Можно также просто указать 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Примеры создания и использования сохраненных процедур
-  -- -------------------------------------------------------
-:::
+## Примеры создания и использования сохраненных процедур
 
  
 
@@ -326,11 +318,7 @@ select count(*) from syscolumns
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Сохраненные процедуры и права доступа
-  -- ---------------------------------------
-:::
+## Сохраненные процедуры и права доступа
 
  
 
@@ -345,11 +333,7 @@ Guide).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Сохраненные процедуры и производительность
-  -- --------------------------------------------
-:::
+## Сохраненные процедуры и производительность
 
  
 
@@ -372,11 +356,7 @@ sp\_recompile titles
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------
-     Создание и выполнение сохраненных процедур
-  -- --------------------------------------------
-:::
+## Создание и выполнение сохраненных процедур
 
  
 
@@ -435,11 +415,7 @@ rollback transaction (откатить транзакцию), то любые и
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------
-     Параметры
-  -- -----------
-:::
+## Параметры
 
  
 
@@ -579,11 +555,7 @@ procedure. Если хотя бы один параметр был задан в
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------
-     Значения по умолчанию для параметров
-  -- --------------------------------------
-:::
+## Значения по умолчанию для параметров
 
  
 
@@ -738,11 +710,7 @@ create procedure для этого параметра не указано ник
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------
-     NULL как значения по умолчанию для параметра
-  -- ----------------------------------------------
-:::
+## NULL как значения по умолчанию для параметра
 
  
 
@@ -788,11 +756,7 @@ sp\_helptext.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------------
-     Символы замены в значениях по умолчанию параметров
-  -- ----------------------------------------------------
-:::
+## Символы замены в значениях по умолчанию параметров
 
  
 
@@ -822,11 +786,7 @@ and sysobjects.id = sysindexes.id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------
-     Использование нескольких параметров
-  -- -------------------------------------
-:::
+## Использование нескольких параметров
 
  
 
@@ -932,11 +892,7 @@ Ringer     Albert       Life Without Fear              New Age Books
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------
-     Группы процедур
-  -- -----------------
-:::
+## Группы процедур
 
  
 
@@ -966,11 +922,7 @@ drop proc orders;2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------
-     Конструкция recompile в операторе create procedure
-  -- ----------------------------------------------------
-:::
+## Конструкция recompile в операторе create procedure
 
  
 
@@ -998,11 +950,7 @@ drop proc orders;2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------
-     Конструкция recompile в операторе execute
-  -- -------------------------------------------
-:::
+## Конструкция recompile в операторе execute
 
  
 
@@ -1025,11 +973,7 @@ drop proc orders;2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------
-     Вложенные процедуры
-  -- ---------------------
-:::
+## Вложенные процедуры
 
  
 
@@ -1043,11 +987,7 @@ drop proc orders;2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Временные таблицы в сохраненных процедурах
-  -- --------------------------------------------
-:::
+## Временные таблицы в сохраненных процедурах
 
  
 
@@ -1179,11 +1119,7 @@ create table tempdb..tablename.. в самой сохраненной проце
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Выполнение удаленных процедур
-  -- -------------------------------
-:::
+## Выполнение удаленных процедур
 
  
 
@@ -1221,11 +1157,7 @@ exec gateway.remotedb.dbo.remoteproc
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------
-     Возврат информации из сохраненных процедур
-  -- --------------------------------------------
-:::
+## Возврат информации из сохраненных процедур
 
  
 
@@ -1262,11 +1194,7 @@ exec gateway.remotedb.dbo.remoteproc
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------
-     Коды возврата
-  -- ---------------
-:::
+## Коды возврата
 
  
 
@@ -1294,11 +1222,7 @@ select \@status
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------
-     Зарезервированные значения кодов возврата
-  -- -------------------------------------------
-:::
+## Зарезервированные значения кодов возврата
 
  
 
@@ -1359,11 +1283,7 @@ SQL Сервер резервирует код 0 для указания усп�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------
-     Коды возврата пользователя
-  -- ----------------------------
-:::
+## Коды возврата пользователя
 
  
 
@@ -1429,11 +1349,7 @@ get\_au\_stat «MC2222»
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Проверка прав доступа в процедурах
-  -- ------------------------------------
-:::
+## Проверка прав доступа в процедурах
 
  
 
@@ -1474,11 +1390,7 @@ else
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Возвращаемые параметры
-  -- ------------------------
-:::
+## Возвращаемые параметры
 
  
 
@@ -1829,11 +1741,7 @@ Percent
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------
-     Передача значений параметров
-  -- ------------------------------
-:::
+## Передача значений параметров
 
  
 
@@ -1859,11 +1767,7 @@ Percent
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------
-     Ключевое слово output
-  -- -----------------------
-:::
+## Ключевое слово output
 
  
 
@@ -1892,11 +1796,7 @@ exec myproc \@a = \@myvara out, \@b = \@myvarb out
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------------
-     Правила, связанные с сохраненными процедурами
-  -- -----------------------------------------------
-:::
+## Правила, связанные с сохраненными процедурами
 
  
 
@@ -1981,11 +1881,7 @@ create procedure
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------
-     Расширение названий объектов внутри процедур
-  -- ----------------------------------------------
-:::
+## Расширение названий объектов внутри процедур
 
  
 
@@ -2026,11 +1922,7 @@ on mary.marytab(col1)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------
-     Удаление сохраненных процедур
-  -- -------------------------------
-:::
+## Удаление сохраненных процедур
 
  
 
@@ -2057,11 +1949,7 @@ drop procedure [владелец.]название\_процедуры
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------
-     Изменение названий сохраненных процедур
-  -- -----------------------------------------
-:::
+## Изменение названий сохраненных процедур
 
  
 
@@ -2092,11 +1980,7 @@ sp\_rename showall, countall
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Переименование объектов внутри процедур
-  -- -----------------------------------------
-:::
+## Переименование объектов внутри процедур
 
  
 
@@ -2114,11 +1998,7 @@ sp\_rename showall, countall
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------
-     Процедуры как механизм безопасности
-  -- -------------------------------------
-:::
+## Процедуры как механизм безопасности
 
  
 
@@ -2142,11 +2022,7 @@ sp\_rename showall, countall
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Системные процедуры
-  -- ---------------------
-:::
+## Системные процедуры
 
  
 
@@ -2222,11 +2098,7 @@ sybsystemprocs, то и предоставления прав доступа к 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Администрирование доступа
-  -- ---------------------------
-:::
+## Администрирование доступа
 
  
 
@@ -2278,11 +2150,7 @@ sp\_changegroup, sp\_droplogin, sp\_dropalias, sp\_dropgroup,
 sp\_dropuser, sp\_helpgroup, sp\_helpprotect, sp\_helpuser,
 sp\_password.
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------
-     Удаленные серверы
-  -- -------------------
-:::
+## Удаленные серверы
 
  
 
@@ -2310,11 +2178,7 @@ sp\_helpserver, sp\_remoteoption, sp\_serveroption.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Определение данных и объекты базы данных
-  -- ------------------------------------------
-:::
+## Определение данных и объекты базы данных
 
  
 
@@ -2369,11 +2233,7 @@ sp\_indsuspect, sp\_recompile.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Сообщения пользователя
-  -- ------------------------
-:::
+## Сообщения пользователя
 
  
 
@@ -2406,11 +2266,7 @@ sp\_dropmessage sp\_getmessage.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------
-     Системное администрирование
-  -- -----------------------------
-:::
+## Системное администрирование
 
  
 
@@ -2458,11 +2314,7 @@ SQL Сервера. Полную информацию о системных пр
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------
-     Получение информации о процедурах
-  -- -----------------------------------
-:::
+## Получение информации о процедурах
 
  
 
@@ -2471,11 +2323,7 @@ SQL Сервера. Полную информацию о системных пр
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------
-     Процедура sp\_help
-  -- --------------------
-:::
+## Процедура sp\_help
 
  
 
@@ -2529,11 +2377,7 @@ sybsystemprocs.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Процедура sp\_helptext
-  -- ------------------------
-:::
+## Процедура sp\_helptext
 
  
 
@@ -2581,11 +2425,7 @@ sp\_helptext из базы данных sybsystemprocs.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Процедура sp\_depends
-  -- -----------------------
-:::
+## Процедура sp\_depends
 
  
 
@@ -2605,12 +2445,8 @@ Things the object references in the current database.
 
 object                type        updated      selected
 
----------------- -----------
----------   --------
-
+---------------- ----------- ---------   --------
 dbo.titleauthor   user table     no            no
-
- 
 
 (return status = 0)
 
@@ -2628,16 +2464,10 @@ sp\_depends titleauthor
 Things inside the current database that reference the object.
 
 object                 type
-
 --------------    ------------------
-
 dbo.titleview      view
-
 dbo.reptq2         stored procedure
-
 dbo.byroyalty      stored procedure
-
- 
 
 (return status = 0)
 

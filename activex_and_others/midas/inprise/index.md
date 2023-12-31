@@ -309,10 +309,6 @@ At this point we have the following structure for our sample:
   5.   Launch the Local InterBase Server from the Windows "Start" menu.
   ---- ------------------------------------------------------------------
 
-  ---- --
-  6.   
-  ---- --
-
 ![clip0153](clip0153.png){.center}
 
   ---- -----------------------------------------------------------------------------------------
@@ -343,7 +339,6 @@ At this point we have the following structure for our sample:
   7.   Select Action1 and choose the Events tab of the Object Inspector and create OnExecute and OnUpdate
   ---- ----------------------------------------------------------------------------------------------------
 
- 
 
 ![clip0154](clip0154.png){.center}
 
@@ -360,10 +355,8 @@ At this point we have the following structure for our sample:
   ----- ------------------------------------------------------------------
 
   ----- --
-  11.   
+  11.   ![clip0155](clip0155.png){.center}
   ----- --
-
-![clip0155](clip0155.png){.center}
 
   ----- -----------------------------------------------------------------------------------------------------------------------
   12.   Save all changes to the project. At this point we have finished the data module.  It should look something like this:
@@ -391,7 +384,7 @@ Notice that we have a fully functional data aware application with a
 modern user interface and standard Windows behavior. Whenever you begin
 to modify the data, the "Apply" and "Cancel" buttons become immediately
 enabled.  All changes to the data are transactional. You may modify
-several records in the grid and press "Cancel" -- all changes will be
+several records in the grid and press "Cancel" - all changes will be
 reverted. As soon as updates are applied or canceled, the "Apply" and
 "Cancel" buttons become disabled. All of this is done with very few
 lines of code.
@@ -938,7 +931,7 @@ As you can see, the provider component somehow incorporates the values
 of ProviderFlags and Origin properties into the data packet. If you
 activate the client dataset with this data packet, it will appear that
 these properties are not the same as they are defined at provider level.
-Don't try to set these properties within the client dataset fields -- it
+Don't try to set these properties within the client dataset fields - it
 will have no effect on the provider.
 
 There are several field-level properties, which are included in the data
@@ -1060,9 +1053,9 @@ is posted to the field.
 There are also row level constraints, which may be added to the
 Constraints collection of BDE-enabled data access components. They are
 validated just before the Post method call is completed.  Each
-collection item has two properties -- CustomConstraint and ErrorMessage,
+collection item has two properties - CustomConstraint and ErrorMessage,
 which are delivered to the client dataset inside of the data packet. 
-Two other properties -- FromDictionary and ImportedConstraint -- are
+Two other properties - FromDictionary and ImportedConstraint - are
 used to keep the design of your application in sync with the Data
 Dictionary.
 
@@ -1087,10 +1080,8 @@ Let's make it work.
   ---- ----------------------------------------------------------------------------------
 
   ---- --
-  2.   
+  2.   ![](embim1879.png){.center}
   ---- --
-
-![](embim1879.png){.center}
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   1.   Drop a TQuery component on DataModule2. Set its DatabaseName property to 'internalIBLocal' and its DataSource property to DataSource2. Then type in the SQL statement in SQL property:
@@ -1150,10 +1141,10 @@ Let's explore another one of them.
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- --
-  4.   
+  4.   ![clip0180](clip0180.png){.center}
   ---- --
 
-![clip0180](clip0180.png){.center}
+
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   1.   Double-click ClientDataSet1, right-click the Field Editor and choose Add all fields. Persistent fields will be created as shown in the picture. Notice there is an Employee field at the bottom of the field list. This field provides control on the corresponding nested dataset. Were there more detail datasets, we would have had more persistent TDataSetField components.
@@ -1172,10 +1163,10 @@ Let's explore another one of them.
   ---- --------------------------------------------------------------------------------
 
   ---- --
-  5.   
+  5.   ![clip0181](clip0181.png){.center}
   ---- --
 
-![clip0181](clip0181.png){.center}
+
 
   ---- -------------------------------------------------------------------------------------------------------------------------------------------
   6.   Add the following AfterOpen event handler to the ClientDataSet1 to guarantee that ClientDataSet2 is active when ClientDataSet1 is active.
@@ -1492,7 +1483,7 @@ a single database connection as well.
   ---- -------------------------------------------------------------
 
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   In the Add to interface dialog box, type the declaration of the GetDepartments method. This method will implement the same function as in the TCP/IP sample -- delivery of the data packet from Proiver1 in the
+  2.   In the Add to interface dialog box, type the declaration of the GetDepartments method. This method will implement the same function as in the TCP/IP sample - delivery of the data packet from Proiver1 in the
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![clip0015](clip0015.gif){.center}
@@ -1929,7 +1920,7 @@ is very simple too.
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  6.   Drop a TClientDataSet component on to DataModule2, set its RemoteServer property to DCOMConnection1 and choose a provider name from the drop down combo box of the ProviderName property. There is only one available option -- Employees. That is the name of the HR property Employees. DCOMConnection1 has asked HR to give it a list of all its properties of the type IProvider and displayed them for you. IProvider is a COM interface, designed specifically for MIDAS TProvider components to enable remote manipulations with it.
+  6.   Drop a TClientDataSet component on to DataModule2, set its RemoteServer property to DCOMConnection1 and choose a provider name from the drop down combo box of the ProviderName property. There is only one available option - Employees. That is the name of the HR property Employees. DCOMConnection1 has asked HR to give it a list of all its properties of the type IProvider and displayed them for you. IProvider is a COM interface, designed specifically for MIDAS TProvider components to enable remote manipulations with it.
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![](embim1890.png){.center}
@@ -1970,8 +1961,8 @@ minimal work using the statefull server approach.
 
 Database Connection Pooling, Multi-Threading and Load Balancing
 
-Two important issues may effect the scalability of server applications
--- support for multi-threading and reuse of database connections.
+Two important issues may effect the scalability of server applications -
+support for multi-threading and reuse of database connections.
 Obviously if a server application can accept client requests and process
 them using multiple threads simultaneously, then it is able to handle a
 higher user load.  If a server application creates a separate database
@@ -2235,7 +2226,7 @@ To create the client application fulfill the following steps:
 
 ![](embim1903.png){.center}
 
-To test how scalable you server is try to load up to 9 -- 12 instances
+To test how scalable you server is try to load up to 9 - 12 instances
 of the client app and click CheckBox1 on each of them. Each client will
 call GetCustomers method of the ScalableServer CORBA object once per
 second. Definitely, it will seriously load the server. If you look an
@@ -2289,7 +2280,7 @@ Delphi's help files.
 WebBroker and MIDAS
 
 A popular demand today is to disseminate database information to the
-thinnest clients available -- to Internet browsers. Delphi provides a
+thinnest clients available - to Internet browsers. Delphi provides a
 flexible and high performance solution for web server extensions. It is
 called a WebBroker. When the browser user enters the URL to retrieve an
 Internet resource, a web server loads a server extension, implemented as

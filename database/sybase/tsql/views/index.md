@@ -13,11 +13,7 @@ Views
 
 Вьюверы: ограниченый доступ к данным
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Что такое вьверы?
-  -- -------------------
-:::
+## Что такое вьверы?
 
  
 
@@ -50,11 +46,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Преимущества вьюверов
-  -- -----------------------
-:::
+## Преимущества вьюверов
 
  
 
@@ -67,11 +59,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------
-     Фокусировка
-  -- -------------
-:::
+## Фокусировка
 
 Вьюверы позволяют пользователю сосредоточиться на интересующих его
 данных и на задаче, которую ему надо решить. Данные, которые не имеют
@@ -80,11 +68,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------
-     Более простая работа с данными
-  -- --------------------------------
-:::
+## Более простая работа с данными
 
  
 
@@ -95,11 +79,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------
-     Гибкость
-  -- ----------
-:::
+## Гибкость
 
 Вьюверы позволяют различным пользователям иметь различные точки зрения
 на одни и те же данные. Это особенно важно, когда много различных
@@ -108,11 +88,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------
-     Безопасность
-  -- --------------
-:::
+## Безопасность
 
 Через вьювер пользователи могут запрашивать и модифицировать только те
 данные, которые они видят. Остальная часть базы данных остается для них
@@ -193,11 +169,7 @@ revoke дается в Руководстве по  администрирова
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------
-     Логическая независимость данных
-  -- ---------------------------------
-:::
+## Логическая независимость данных
 
  
 
@@ -235,11 +207,7 @@ select (выбор) у пользователей будут работать к
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------
-     Примеры вьюверов
-  -- ------------------
-:::
+## Примеры вьюверов
 
  
 
@@ -343,11 +311,7 @@ computer stress" до 25.95 долларов, то ее можно будет у
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Создание вьюверов
-  -- -------------------
-:::
+## Создание вьюверов
 
  
 
@@ -365,11 +329,7 @@ quoted\_identifier on, то можно заключать название вь�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------
-     Синтаксис команды создания вьюверов
-  -- -------------------------------------
-:::
+## Синтаксис команды создания вьюверов
 
  
 
@@ -462,11 +422,7 @@ from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------------------
-     Использование оператора выбора при создании вьюверов
-  -- ------------------------------------------------------
-:::
+## Использование оператора выбора при создании вьюверов
 
  
 
@@ -504,11 +460,7 @@ from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------
-     Определение вьювера в виде проекции
-  -- -------------------------------------
-:::
+## Определение вьювера в виде проекции
 
 Чтобы создать вьювер, в котором отображаются все строки таблицы titles,
 содержащие информацию только из части столбцов (проекция), можно
@@ -529,11 +481,7 @@ from titles
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------------
-     Определение вьювера с вычисляемым столбцом
-  -- --------------------------------------------
-:::
+## Определение вьювера с вычисляемым столбцом
 
 Далее приводится определение вьювера, значение в одном из столбцов
 которого вычисляется из величин, содержащихся в столбцах price, royalty
@@ -567,11 +515,7 @@ and total\_sales between lorange and hirange
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------------------------
-     Определение вьювера с агрегирующими и встроенными функциями
-  -- -------------------------------------------------------------
-:::
+## Определение вьювера с агрегирующими и встроенными функциями
 
 Если в определении вьювера используются агрегирующие или встроенные
 функции, то в предложении creat нужно указывать названия столбцов.
@@ -616,11 +560,7 @@ where type = "business"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------
-     Определение вьювера через соединение
-  -- --------------------------------------
-:::
+## Определение вьювера через соединение
 
 Пользователь может создать вьювер из нескольких базовых таблиц. Далее
 приводится пример вьювера, полученного из таблиц authors и publishers. В
@@ -639,11 +579,7 @@ where authors.city = publishers.city
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------------
-     Построение вьювера из других вьюверов
-  -- ---------------------------------------
-:::
+## Построение вьювера из других вьюверов
 
  
 
@@ -661,11 +597,7 @@ where type = \'popular\_comp\'
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------------
-     Построение вьювера с ключевым словом distinct
-  -- -----------------------------------------------
-:::
+## Построение вьювера с ключевым словом distinct
 
  
 
@@ -740,11 +672,7 @@ a         b
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------
-     Вьюверы со счетчиками
-  -- -----------------------
-:::
+## Вьюверы со счетчиками
 
 Пользователь может определить вьювер со столбцом счетчика, например:
 
@@ -796,11 +724,7 @@ sp\_help, то атрибут IDENTITY для этого столбца буде
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Использование опции with check в определении вьювера 
-  -- -------------------------------------------------------
-:::
+## Использование опции with check в определении вьювера 
 
  
 
@@ -866,11 +790,7 @@ where stor\_id = "7066"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------------------------------------
-     Построение вьювера на основе другого вьювера с опцией with check
-  -- ------------------------------------------------------------------
-:::
+## Построение вьювера на основе другого вьювера с опцией with check
 
 Если вьювер был опеределен с опцией with check, то все вьюверы
 определенные на его базе (вторичные вьюверы) также будут удовлетворять
@@ -912,11 +832,7 @@ where stor\_id = "7067"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Ограничения вьюверов основанных на внешнем соединении
-  -- -------------------------------------------------------
-:::
+## Ограничения вьюверов основанных на внешнем соединении
 
  
 
@@ -1011,11 +927,7 @@ a        с
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------
-     Выборка данных через вьювер
-  -- -----------------------------
-:::
+## Выборка данных через вьювер
 
  
 
@@ -1087,11 +999,7 @@ readtext (считать текст) и writetext (записать текст).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------
-     Раскрытие вьювера
-  -- -------------------
-:::
+## Раскрытие вьювера
 
  
 
@@ -1133,11 +1041,7 @@ readtext (считать текст) и writetext (записать текст).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Переопределение вьюверов
-  -- --------------------------
-:::
+## Переопределение вьюверов
 
  
 
@@ -1216,11 +1120,7 @@ phone объекта, от которого он зависит.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Переименование вьюверов
-  -- -------------------------
-:::
+## Переименование вьюверов
 
  
 
@@ -1251,11 +1151,7 @@ sp\_rename titles\_view, bookview
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Изменение и удаление базовых объектов
-  -- ---------------------------------------
-:::
+## Изменение и удаление базовых объектов
 
  
 
@@ -1291,11 +1187,7 @@ sp\_rename titles\_view, bookview
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------
-     Изменение данных через вьювер
-  -- -------------------------------
-:::
+## Изменение данных через вьювер
 
  
 
@@ -1391,19 +1283,11 @@ sp\_rename titles\_view, bookview
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Ограничения на обновление через вьюверы
-  -- -----------------------------------------
-:::
+## Ограничения на обновление через вьюверы
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------
-     Вычисляемые столбцы в определении вьювера
-  -- -------------------------------------------
-:::
+## Вычисляемые столбцы в определении вьювера
 
  
 
@@ -1465,11 +1349,7 @@ royalty, исходя из введенного в столбец amt\_due зн�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------------------------------
-     Предложения group by и compute by в определении вьювера
-  -- ---------------------------------------------------------
-:::
+## Предложения group by и compute by в определении вьювера
 
  
 
@@ -1528,11 +1408,7 @@ trad\_cook               15.96
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------------
-     Неопределенные значения в базовых объектах
-  -- --------------------------------------------
-:::
+## Неопределенные значения в базовых объектах
 
  
 
@@ -1574,11 +1450,7 @@ titles, поэтому и вставка через вьювер titleview не 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------------
-     Вьюверы, определенные с опцией with chek option
-  -- -------------------------------------------------
-:::
+## Вьюверы, определенные с опцией with chek option
 
  
 
@@ -1593,11 +1465,7 @@ titles, поэтому и вставка через вьювер titleview не 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------
-     Мультитабличные вьюверы
-  -- -------------------------
-:::
+## Мультитабличные вьюверы
 
 Пятое ограничение касается модификации данных проводящейся, через
 вьюверы, в которых соединяются данные из нескольких таблиц
@@ -1669,11 +1537,7 @@ where type = "trad\_cook"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------
-     Вьюверы со столбцами-счетчиками
-  -- ---------------------------------
-:::
+## Вьюверы со столбцами-счетчиками
 
  
 
@@ -1689,11 +1553,7 @@ where type = "trad\_cook"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Удаление вьюверов
-  -- -------------------
-:::
+## Удаление вьюверов
 
  
 
@@ -1734,11 +1594,7 @@ syscomments, sysprotects sysdepends. Все права на этот вьюве�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------------------
-     Использование вьюверов для обеспечения безопасности
-  -- -----------------------------------------------------
-:::
+## Использование вьюверов для обеспечения безопасности
 
  
 
@@ -1771,11 +1627,7 @@ grant all on titles to sales
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Получение информации о вьюверах
-  -- ---------------------------------
-:::
+## Получение информации о вьюверах
 
  
 

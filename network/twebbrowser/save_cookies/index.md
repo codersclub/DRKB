@@ -47,7 +47,7 @@ Date: 01.01.2007
       try
          List.Add('LastVisit=' + FormatDateTime('mm/dd/yyyy hh:mm:ss', Now));
          Response.SetCookieField(List, '', '', Now + 10, False);
-         Response.Content := 'Cookie set -- ' + Response.Cookies[0].Name;
+         Response.Content := 'Cookie set - ' + Response.Cookies[0].Name;
       finally
         List.Free;
       end;

@@ -1,11 +1,11 @@
 ---
-Title: EOleSysError -- как бороться?
+Title: EOleSysError - как бороться?
 Author: Vit
 Date: 01.01.2007
 ---
 
 
-EOleSysError -- как бороться?
+EOleSysError - как бороться?
 =============================
 
 ::: {.date}

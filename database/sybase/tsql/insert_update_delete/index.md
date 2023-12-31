@@ -13,11 +13,7 @@ Date: 01.01.2007
 
 Добавление, изменение и удаление данных
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------
-     Операторы модификации данных
-  -- ------------------------------
-:::
+## Операторы модификации данных
 
  
 
@@ -48,11 +44,7 @@ insert, update и delete только в одной таблице. Однако
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------
-     Права доступа
-  -- ---------------
-:::
+## Права доступа
 
  
 
@@ -68,11 +60,7 @@ insert, update и delete только в одной таблице. Однако
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Ссылочная целостность
-  -- -----------------------
-:::
+## Ссылочная целостность
 
  
 
@@ -102,11 +90,7 @@ insert, update и delete только в одной таблице. Однако
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------
-     Транзакции
-  -- ------------
-:::
+## Транзакции
 
  
 
@@ -138,11 +122,7 @@ insert, update и delete только в одной таблице. Однако
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Использование демонстрационной базы данных
-  -- --------------------------------------------
-:::
+## Использование демонстрационной базы данных
 
  
 
@@ -175,11 +155,7 @@ rollback tran modify\_pubs2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------
-     Правила ввода данных
-  -- ----------------------
-:::
+## Правила ввода данных
 
  
 
@@ -190,11 +166,7 @@ rollback tran modify\_pubs2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Типы данных char, nchar, varchar, nvarchar и text
-  -- ---------------------------------------------------
-:::
+## Типы данных char, nchar, varchar, nvarchar и text
 
  
 
@@ -238,11 +210,7 @@ character, text, datetime.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------
-     Типы данных datetime и smalldatetime
-  -- --------------------------------------
-:::
+## Типы данных datetime и smalldatetime
 
  
 
@@ -281,11 +249,7 @@ SQL Сервер отвергает любые значения типа дат�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------
-     Ввод значений времени
-  -- -----------------------
-:::
+## Ввод значений времени
 
  
 
@@ -327,11 +291,7 @@ AM/PM. Следует заметить, что тип данных smalldatetime
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------
-     Ввод даты
-  -- -----------
-:::
+## Ввод даты
 
  
 
@@ -542,11 +502,7 @@ SQL Сервер допускает три основных формата дл�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------
-     Поиск значений типа даты и времени
-  -- ------------------------------------
-:::
+## Поиск значений типа даты и времени
 
  
 
@@ -599,11 +555,7 @@ where arrival\_time like \'%9:20%\'
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Типы данных binary, varbinary и image   
-  -- ------------------------------------------
-:::
+## Типы данных binary, varbinary и image   
 
  
 
@@ -627,11 +579,7 @@ varbinary (двоичный с переменной длиной) и image (гр
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------
-     Типы данных money и  smallmoney
-  -- ---------------------------------
-:::
+## Типы данных money и  smallmoney
 
  
 
@@ -654,11 +602,7 @@ varbinary (двоичный с переменной длиной) и image (гр
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Типы данных float, real и double precision
-  -- --------------------------------------------
-:::
+## Типы данных float, real и double precision
 
  
 
@@ -706,11 +650,7 @@ precision.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Десятичные и числовые типы данных
-  -- -----------------------------------
-:::
+## Десятичные и числовые типы данных
 
  
 
@@ -786,11 +726,7 @@ numeric, следующим образом:
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------
-     Типы данных int, smallint и tinyint
-  -- -------------------------------------
-:::
+## Типы данных int, smallint и tinyint
 
  
 
@@ -800,11 +736,7 @@ tinyint (маленькое целое) могут вводиться в Е-фо
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------
-     Текущее время
-  -- ---------------
-:::
+## Текущее время
 
  
 
@@ -818,11 +750,7 @@ tinyint (маленькое целое) могут вводиться в Е-фо
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------
-     Добавление новых данных
-  -- -------------------------
-:::
+## Добавление новых данных
 
  
 
@@ -858,11 +786,7 @@ where условия\_отбора
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Синтаксис команды insert
-  -- --------------------------
-:::
+## Синтаксис команды insert
 
  
 
@@ -889,11 +813,7 @@ insert [into] [база данных.[владелец]] { название\_т�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------------
-     Добавление новых строк с помощью ключевого слова values
-  -- ---------------------------------------------------------
-:::
+## Добавление новых строк с помощью ключевого слова values
 
  
 
@@ -921,11 +841,7 @@ insert.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Вставка данных в столбцы специального типа
-  -- --------------------------------------------
-:::
+## Вставка данных в столбцы специального типа
 
  
 
@@ -1004,11 +920,7 @@ SQL Сервер записал неопределенное значение NU
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------------------------------
-     Значения, записываемые SQL сервером в  столбцы-счетчики
-  -- ---------------------------------------------------------
-:::
+## Значения, записываемые SQL сервером в  столбцы-счетчики
 
  
 
@@ -1050,11 +962,7 @@ row\_id    stor\_id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------------------------------------
-     Неопределенные значения, значения по умолчанию,  столбцы-счетчики и ошибки
-  -- ----------------------------------------------------------------------------
-:::
+## Неопределенные значения, значения по умолчанию,  столбцы-счетчики и ошибки
 
  
 
@@ -1121,11 +1029,7 @@ row\_id    stor\_id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------
-     Явная запись значений в столбец-счетчик
-  -- -----------------------------------------
-:::
+## Явная запись значений в столбец-счетчик
 
  
 
@@ -1175,11 +1079,7 @@ identity\_insert, то в каждом операторе insert, который
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------
-     Правила для ограничения данных в столбцах
-  -- -------------------------------------------
-:::
+## Правила для ограничения данных в столбцах
 
 Пользователь может определить правило и связать его со столбцом таблицы
 или своим типом данных. Правила определяют, какие виды данных могут быть
@@ -1220,11 +1120,7 @@ sp\_help c названием таблицы в качестве парамет�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------
-     Вставка новых строк с конструкцией select
-  -- -------------------------------------------
-:::
+## Вставка новых строк с конструкцией select
 
  
 
@@ -1311,11 +1207,7 @@ au\_lname, где должны находиться фамилии.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------
-     Вычисляемые столбцы
-  -- ---------------------
-:::
+## Вычисляемые столбцы
 
  
 
@@ -1346,11 +1238,7 @@ from tmp
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------
-     Вставка данных в некоторые столбцы
-  -- ------------------------------------
-:::
+## Вставка данных в некоторые столбцы
 
  
 
@@ -1407,11 +1295,7 @@ select au\_id, "xx1111"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------
-     Вставка данных из той же таблицы
-  -- ----------------------------------
-:::
+## Вставка данных из той же таблицы
 
 Вставлять данные можно в ту же таблицу, из которой они выбираются.
 Другими словами можно копировать всю строку или какую-то ее часть в ту
@@ -1460,11 +1344,7 @@ pub\_id   pub\_name                 city             state
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------
-     Изменение существующих данных
-  -- -------------------------------
-:::
+## Изменение существующих данных
 
  
 
@@ -1512,11 +1392,7 @@ writetext можно посмотреть в разделе "Изменение 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Синтаксис команды update
-  -- --------------------------
-:::
+## Синтаксис команды update
 
  
 
@@ -1613,11 +1489,7 @@ set    [[[база\_данных.]владелец.]{ название\_табл
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------
-     Использование конструкции set в операторе update
-  -- --------------------------------------------------
-:::
+## Использование конструкции set в операторе update
 
  
 
@@ -1674,11 +1546,7 @@ set price = price * 2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------
-     Использование конструкции where в операторе update
-  -- ----------------------------------------------------
-:::
+## Использование конструкции where в операторе update
 
  
 
@@ -1705,11 +1573,7 @@ where state = "CA" and city = "Oakland"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Использование конструкции from в операторе update
-  -- ---------------------------------------------------
-:::
+## Использование конструкции from в операторе update
 
  
 
@@ -1758,11 +1622,7 @@ from titleauthor, titles, authors
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------------
-     Изменение текстовых и графических данных
-  -- ------------------------------------------
-:::
+## Изменение текстовых и графических данных
 
  
 
@@ -1859,11 +1719,7 @@ junkies."
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------
-     Удаление данных
-  -- -----------------
-:::
+## Удаление данных
 
  
 
@@ -1885,11 +1741,7 @@ where pub\_name = "Jardin, Inc."
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Синтаксис команды delete
-  -- --------------------------
-:::
+## Синтаксис команды delete
 
  
 
@@ -1930,11 +1782,7 @@ delete [from][[база\_данных.]владелец.]{ название\_т�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------
-     Использование конструкции where в операторе delete
-  -- ----------------------------------------------------
-:::
+## Использование конструкции where в операторе delete
 
  
 
@@ -1944,11 +1792,7 @@ delete [from][[база\_данных.]владелец.]{ название\_т�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Использование конструкции from в операторе delete
-  -- ---------------------------------------------------
-:::
+## Использование конструкции from в операторе delete
 
  
 
@@ -1997,11 +1841,7 @@ and city = "Big Bad Bay City"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------
-     Удаление всех строк таблицы
-  -- -----------------------------
-:::
+## Удаление всех строк таблицы
 
  
 
@@ -2025,11 +1865,7 @@ drop table (удалить таблицу).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Синтаксис команды truncate table
-  -- ----------------------------------
-:::
+## Синтаксис команды truncate table
 
  
 

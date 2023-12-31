@@ -51,6 +51,6 @@ SetConsoleCtrlHandler( Ctrl\_Handler, TRUE );
 сообщений обработчик возвращает FALSE, то вызывается следующий
 обработчик. Можно настроить таких этажерок, что ого-го :-)))
 
-Короче, смотри описание SetConsoleCtrlHandler -- там всё есть.
+Короче, смотри описание SetConsoleCtrlHandler - там всё есть.
 
 Взято с <https://delphiworld.narod.ru>

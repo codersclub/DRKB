@@ -65,11 +65,7 @@ alter table (изменить таблицу), типа переменной в 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------------
-     Что такое типы данных в Transact-SQL ?
-  -- ----------------------------------------
-:::
+## Что такое типы данных в Transact-SQL ?
 
  
 
@@ -123,11 +119,7 @@ declare \@switch bit
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------
-     Использование системных типов данных
-  -- --------------------------------------
-:::
+## Использование системных типов данных
 
  
 
@@ -346,11 +338,7 @@ datetime
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------
-     Точные числовые типы: Целые
-  -- -----------------------------
-:::
+## Точные числовые типы: Целые
 
  
 
@@ -392,11 +380,7 @@ tinyint (маленькое целое), smallint (малое целое) и int
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------
-     Точные числовые типы: Десятичные числа
-  -- ----------------------------------------
-:::
+## Точные числовые типы: Десятичные числа
 
  
 
@@ -453,11 +437,7 @@ decimal, зависит от точности, указанной для это�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Приближенные числовые типы данных
-  -- -----------------------------------
-:::
+## Приближенные числовые типы данных
 
  
 
@@ -503,11 +483,7 @@ decimal, зависит от точности, указанной для это�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Символьные типы данных
-  -- ------------------------
-:::
+## Символьные типы данных
 
  
 
@@ -592,11 +568,7 @@ SQL Сервер укорачивает вводимые в столбец та�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------
-     Двоичные типы данных
-  -- ----------------------
-:::
+## Двоичные типы данных
 
  
 
@@ -681,11 +653,7 @@ writetext, чтобы при добавлении данных в столбец
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------
-     Денежные типы данных
-  -- ----------------------
-:::
+## Денежные типы данных
 
  
 
@@ -725,11 +693,7 @@ SQL Сервер не обеспечивает преобразования од
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Типы данных для даты и времени
-  -- --------------------------------
-:::
+## Типы данных для даты и времени
 
  
 
@@ -787,11 +751,7 @@ datetime можно выполнять некоторые арифметичес
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Битовые типы данных (bit)
-  -- ---------------------------
-:::
+## Битовые типы данных (bit)
 
  
 
@@ -809,11 +769,7 @@ datetime можно выполнять некоторые арифметичес
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------
-     Тип данных timestamp
-  -- ----------------------
-:::
+## Тип данных timestamp
 
  
 
@@ -833,11 +789,7 @@ timestamp автоматически присваивается системны
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------
-     Тип данных sysname
-  -- --------------------
-:::
+## Тип данных sysname
 
  
 
@@ -860,11 +812,7 @@ user-defined datatype (тип данных, определенный польз�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------
-     Преобразования типов данных
-  -- -----------------------------
-:::
+## Преобразования типов данных
 
  
 
@@ -912,11 +860,7 @@ hextoint.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------------
-     Смешанная  арифметика и иерархия типов данных
-  -- -----------------------------------------------
-:::
+## Смешанная  арифметика и иерархия типов данных
 
  
 
@@ -1025,11 +969,7 @@ smallint(qty) * int(royalty) = int
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Работа с денежными типами данных
-  -- ----------------------------------
-:::
+## Работа с денежными типами данных
 
  
 
@@ -1055,11 +995,7 @@ select convert (money, moneycol * percentcol)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Указание точности и шкалы значений
-  -- ------------------------------------
-:::
+## Указание точности и шкалы значений
 
  
 
@@ -1086,11 +1022,7 @@ decimal, одно из которых n1 имееет точность p1 и ш�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------
-     Создание типов данных пользователя
-  -- ------------------------------------
-:::
+## Создание типов данных пользователя
 
  
 
@@ -1162,11 +1094,7 @@ identity или sp\_helpgroup). В этом примере, из-за налич
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Указание длины, точности и шкалы
-  -- ----------------------------------
-:::
+## Указание длины, точности и шкалы
 
  
 
@@ -1201,11 +1129,7 @@ identity или sp\_helpgroup). В этом примере, из-за налич
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Указание параметра неопределенности (Null)
-  -- --------------------------------------------
-:::
+## Указание параметра неопределенности (Null)
 
  
 
@@ -1227,11 +1151,7 @@ create table.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------------------
-     Связывание правил и умолчаний с нестандартными типами данных
-  -- --------------------------------------------------------------
-:::
+## Связывание правил и умолчаний с нестандартными типами данных
 
  
 
@@ -1247,11 +1167,7 @@ create table.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------
-     Удаление нестандартных типов данных
-  -- -------------------------------------
-:::
+## Удаление нестандартных типов данных
 
  
 
@@ -1269,11 +1185,7 @@ sp\_droptype название\_типа\_данных
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------
-     Получение информации о типах данных
-  -- -------------------------------------
-:::
+## Получение информации о типах данных
 
  
 

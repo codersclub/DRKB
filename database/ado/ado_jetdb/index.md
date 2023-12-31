@@ -1,11 +1,11 @@
 ---
-Title: ADO.OLEDB.JET -- Access Violation при передаче неполного параметра
+Title: ADO.OLEDB.JET - Access Violation при передаче неполного параметра
 Author: Дмитрий Померанцев
 Date: 01.01.2007
 ---
 
 
-ADO.OLEDB.JET -- Access Violation при передаче неполного параметра
+ADO.OLEDB.JET - Access Violation при передаче неполного параметра
 ==================================================================
 
 ::: {.date}

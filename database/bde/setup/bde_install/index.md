@@ -19,16 +19,16 @@ Date: 01.01.2007
     Пример использования в качестве простейшего инсталлятора для программы
     C:\MyDir\MyProg.exe
     1.Создайте каталог C:\MyDir\BDE и скопируйте в него след. файлы:
-    CHARSET.BLL
-    OTHER.BLL
-    IDAPI32.CFG
-    BLW32.DLL
-    IDAPI32.DLL
-    IDBAT32.DLL
-    IDPDX32.DLL
-    IDR20009.DLL
-    IDSQL32.DLL
-    BDEADMIN.EXE - по вкусу, т.к. необходимым не является.
+      CHARSET.BLL
+      OTHER.BLL
+      IDAPI32.CFG
+      BLW32.DLL
+      IDAPI32.DLL
+      IDBAT32.DLL
+      IDPDX32.DLL
+      IDR20009.DLL
+      IDSQL32.DLL
+      BDEADMIN.EXE - по вкусу, т.к. необходимым не является.
     2.Измените значение константы AliasName на имя необходимого вам алиаса.
     3.Откомпиллируйте и запустите эту программу из каталога C:\MyDir.
     ВHИМАHИЕ!!! Если на машине уже установлено BDE, то перед экспериментами
@@ -238,7 +238,7 @@ Date: 01.01.2007
   11.   Завершите работу Windows, удалите дискету из дисковода и перегрузите клиентскую машину.
   ----- -----------------------------------------------------------------------------------------
 
-12\.        Если настройки по умолчанию уже где-то используются,
+12. Если настройки по умолчанию уже где-то используются,
 произойдут изменения, указанные ниже.
 
 На клиентской машине появятся два новых каталога - \\IDAPI и
@@ -249,15 +249,13 @@ CONFIG.SYS и SYSTEM.INI при инсталляции не изменяются
 
 WIN.INI в каталоге \\WINDOWS\\SYSTEM будет иметь новые секции:
 
-[IDAPI]
+    [IDAPI]
+    DLLPATH=C:\IDAPI
+    CONFIGFILE01=C:\IDAPI\IDAPI.CFG
 
-DLLPATH=C:\\IDAPI
+    [Borland Language Drivers]
+    LDPath=C:\IDAPI\LANGDRV
 
-CONFIGFILE01=C:\\IDAPI\\IDAPI.CFG
-
-[Borland Language Drivers]
-
-LDPath=C:\\IDAPI\\LANGDRV
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
@@ -312,21 +310,9 @@ BDEINST.CAB. There are several ways this can be done. Two of them are:
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- --
-  ·   
-  --- --
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   --- -----------------------------------------------------------------------
   ·   C:\\Program Files\\Borland\\Common Files\\BDE\>EXTRACT /E BDEINST.CAB
   --- -----------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- --
-  ·   
-  --- --
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
@@ -357,12 +343,12 @@ from the DLL.
 
 ------------------------------------------------------------------------
 
-Problem/Question/Abstract:
+**Problem/Question/Abstract:**
 
 What are the essential files to ship with an application that uses the
 BDE?
 
-Answer:
+**Answer:**
 
 Delphi allows you to generate a nice tight executable file (.EXE), but
 if you have created a database application you must include the files
@@ -370,37 +356,23 @@ that make up the Borland Database Engine as well. The table below shows
 the files that are mandatory when delivering a database application with
 Delphi.
 
-File Name        Description
-
-IDAPI01.DLL - BDE API DLL
-
-IDBAT01.DLL -  BDE Batch Utilities DLL
-
-IDQRY01.DLL -  BDE Query DLL
-
-IDASCI01.DLL - BDE ASCII Driver DLL
-
-IDPDX01.DLL - BDE Paradox Driver DLL
-
-IDDBAS01.DLL - BDE dBASE Driver DLL
-
-IDR10009.DLL - BDE Resources DLL
-
-ILD01.DLL  - Language Driver DLL
-
-IDODBC01.DLL - BDE ODBC Socket DLL
-
-ODBC.New  - Microsoft ODBC Driver Manager DLL V2.0
-
-ODBCINST.NEW - Microsoft ODBC Driver Installation DLL V2.0
-
-TUTILITY.DLL - BDE Table Repair Utility DLL 
-
-BDECFG.EXE  - BDE Configuration Utility DLL
-
-BDECFG.HLP  -  BDE Configuration Utility Help
-
-IDAPI.CFG -        BDE Configuation File (settings)
+File Name   |     Description
+----------- | ---------------
+IDAPI01.DLL | BDE API DLL
+IDBAT01.DLL |  BDE Batch Utilities DLL
+IDQRY01.DLL |  BDE Query DLL
+IDASCI01.DLL | BDE ASCII Driver DLL
+IDPDX01.DLL | BDE Paradox Driver DLL
+IDDBAS01.DLL | BDE dBASE Driver DLL
+IDR10009.DLL | BDE Resources DLL
+ILD01.DLL  | Language Driver DLL
+IDODBC01.DLL | BDE ODBC Socket DLL
+ODBC.New  | Microsoft ODBC Driver Manager DLL V2.0
+ODBCINST.NEW | Microsoft ODBC Driver Installation DLL V2.0
+TUTILITY.DLL | BDE Table Repair Utility DLL 
+BDECFG.EXE  | BDE Configuration Utility DLL
+BDECFG.HLP  | BDE Configuration Utility Help
+IDAPI.CFG   | BDE Configuation File (settings)
 
 To assist the user, Delphi ships with an install program for exporting
 the appropriate files that you want deliver to your clients. Also,
@@ -408,8 +380,8 @@ installation programs such as InnoSetup and InstallShield can
 automatically include the relevant files in their setup programs.
 
 InnoSetup is my program installation program of choice, and it is FREE!
-For more information or to download a copy visit Jordan Russ[https://
-www.jrsoftware.org](https://%20www.jrsoftware.org)ell\'s site at
+For more information or to download a copy visit Jordan Russell\'s site at
+[https://www.jrsoftware.org](https://www.jrsoftware.org)
 
 Finally a tip on using the setup CAB file that ships with the BDE to
 install the relevant files can be found in DKB, article title

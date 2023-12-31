@@ -247,7 +247,7 @@ dll
     begin
     color := 10;
     proz  :=0;
-    S:= 'hello всем это из плугина ля -- ля';
+    S:= 'hello всем это из плугина ля - ля';
     for Z:=0 to 200 do
     begin
      proz:=proz+2;

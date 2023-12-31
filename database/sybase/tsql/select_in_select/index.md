@@ -55,11 +55,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------
-     Что такое подзапросы
-  -- ----------------------
-:::
+## Что такое подзапросы
 
  
 
@@ -90,11 +86,7 @@ SQL оператор, который включает подзапросы, на
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Примеры использования подзапросов
-  -- -----------------------------------
-:::
+## Примеры использования подзапросов
 
  
 
@@ -241,11 +233,7 @@ having внешних операторов выбора (select), вставки
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Ограничения на подзапросы
-  -- ---------------------------
-:::
+## Ограничения на подзапросы
 
  
 
@@ -303,11 +291,7 @@ having внешних операторов выбора (select), вставки
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Расширенные названия столбцов
-  -- -------------------------------
-:::
+## Расширенные названия столбцов
 
  
 
@@ -360,11 +344,7 @@ where publishers.pub\_id in
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------
-     Подзапросы с коррелирующимися названиями 
-  -- -------------------------------------------
-:::
+## Подзапросы с коррелирующимися названиями 
 
  
 
@@ -465,11 +445,7 @@ and au2.au\_fname = "Livia"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Несколько уровней вложенности
-  -- -------------------------------
-:::
+## Несколько уровней вложенности
 
  
 
@@ -544,11 +520,7 @@ and type = "popular\_comp"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------------
-     Подзапросы в операторах модификации удаления и вставки 
-  -- ---------------------------------------------------------
-:::
+## Подзапросы в операторах модификации удаления и вставки 
 
  
 
@@ -632,11 +604,7 @@ and type = "business"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Подзапросы в условных операторах
-  -- ----------------------------------
-:::
+## Подзапросы в условных операторах
 
  
 
@@ -669,11 +637,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------
-     Использование подзапросов на месте выражений
-  -- ----------------------------------------------
-:::
+## Использование подзапросов на месте выражений
 
  
 
@@ -772,11 +736,7 @@ Fifty Years in Buckingham Palace        11.95    22.95
 
                   Kitchens
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------
-     Типы подзапросов
-  -- ------------------
-:::
+## Типы подзапросов
 
  
 
@@ -824,11 +784,7 @@ Fifty Years in Buckingham Palace        11.95    22.95
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------
-     Подзапросы-выражения
-  -- ----------------------
-:::
+## Подзапросы-выражения
 
  
 
@@ -892,11 +848,7 @@ Bennet         Abraham
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------------------------------------------
-     Использование скалярных аггрегирующих функций для достижения единственности результата
-  -- ----------------------------------------------------------------------------------------
-:::
+## Использование скалярных аггрегирующих функций для достижения единственности результата
 
  
 
@@ -959,11 +911,7 @@ Sushi, Anyone?
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------------
-     Предложения group by и having в подзапросах-выражениях
-  -- --------------------------------------------------------
-:::
+## Предложения group by и having в подзапросах-выражениях
 
  
 
@@ -993,11 +941,7 @@ where price \>
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------------
-     Использование опции distinct в подзапросе-выражении
-  -- -----------------------------------------------------
-:::
+## Использование опции distinct в подзапросе-выражении
 
  
 
@@ -1022,11 +966,7 @@ select pub\_name from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------
-     Квантифицированные предикатные подзапросы
-  -- -------------------------------------------
-:::
+## Квантифицированные предикатные подзапросы
 
  
 
@@ -1044,30 +984,9 @@ having, предшествует один из кванторов any (неко�
   --- -----------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  ---
-   
-  ---
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------------------------------------
      [ Начало оператора выбора, вставки, модификации, удаления или подзапроса]
-  -- -----------------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------------------------------
             where выражение операция\_сравнения [any \| all] (подзапрос)
-  -- -----------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- ----------------------------------------------------------------------------
      [ Конец оператора выбора, вставки, модификации, удаления или подзапроса]
-  -- ----------------------------------------------------------------------------
-:::
-
  
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
@@ -1076,29 +995,9 @@ having, предшествует один из кванторов any (неко�
   --- -----------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  ---
-   
-  ---
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------------------------------------
      [ Начало оператора выбора, вставки, модификации, удаления или подзапроса]
-  -- -----------------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------
             where выражение [not] in (подзапрос)
-  -- -----------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- ----------------------------------------------------------------------------
      [ Конец оператора выбора, вставки, модификации, удаления или подзапроса]
-  -- ----------------------------------------------------------------------------
-:::
 
  
 
@@ -1108,29 +1007,9 @@ having, предшествует один из кванторов any (неко�
   --- ----------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  ---
-   
-  ---
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------------------------------------
      [ Начало оператора выбора, вставки, модификации, удаления или подзапроса]
-  -- -----------------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------
             where [not] exists (подзапрос)
-  -- -----------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- ----------------------------------------------------------------------------
      [ Конец оператора выбора, вставки, модификации, удаления или подзапроса]
-  -- ----------------------------------------------------------------------------
-:::
 
  
 
@@ -1140,11 +1019,7 @@ having, предшествует один из кванторов any (неко�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Подзапросы с кванторами any и all
-  -- -----------------------------------
-:::
+## Подзапросы с кванторами any и all
 
  
 
@@ -1202,12 +1077,8 @@ where advance \> all
  
 
 title
-
 ----------------------------------------
-
 The Gourmet Microwave
-
- 
 
 (Выбрана одна строка)
 
@@ -1221,11 +1092,7 @@ New Age Books, которые возвращаются подзапросом. �
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------
-     \>all означает больше чем все значения
-  -- ----------------------------------------
-:::
+#### \>all означает больше чем все значения
 
  
 
@@ -1240,26 +1107,17 @@ New Age Books, которые возвращаются подзапросом. �
  
 
 select title from titles where price \> all
-
    (select price from titles
-
    where type =  "mod\_cook")
 
  
 
 title
-
 ---------------------------------------------------
-
 But Is It User Friendly?
-
 Secrets of Silicon Valley
-
 Computer Phobic and Non-Phobic Individuals: Behavior Variations
-
 Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean
-
- 
 
 (Выбрано 4 строки)
 
@@ -1276,17 +1134,13 @@ Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean
  
 
 select title from titles where price \> all
-
    (select price from titles
-
    where title\_id = "popular\_comp")
 
  
 
 title
-
 ---------------------------------------------------
-
 (0 rows affected)
 
  
@@ -1296,11 +1150,7 @@ title
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------
-     =all означает равно каждому значению
-  -- --------------------------------------
-:::
+#### =all означает равно каждому значению
 
  
 
@@ -1315,24 +1165,15 @@ title
  
 
 select au\_fname, au\_lname, city
-
 from authors
-
 where city = all
-
      (select city
-
      from authors
-
      where postalcode like "946%")
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------------------------------
-     \>any означает больше, по крайней мере, одного значения
-  -- ---------------------------------------------------------
-:::
+#### \>any означает больше, по крайней мере, одного значения
 
  
 
@@ -1349,54 +1190,31 @@ where city = all
  
 
 select title
-
 from titles
-
 where advance \> any
-
   (select advance
-
    from titles, publishers
-
    where titles.pub\_id = publishers.pub\_id
-
    and pub\_name = "New Age Books")
 
  
 
 title
-
 ---------------------------------------------------
-
 Sushi, Anyone?
-
 Life Without Fear
-
 Is Anger the Enemy?
-
 The Gourmet Microwave
-
 But Is It User Friendly?
-
 Secrets of Silicon Valley
-
 Straight Talk About Computers
-
 You Can Combat Computer Stress!
-
 Emotional Security: A New Algorithm
-
 The Busy Executive\'s Database Guide
-
 Fifty Years in Buckingham Palace Kitchens
-
 Cooking with Computers: Surreptitious Balance Sheets
-
 Computer Phobic and Non-Phobic Individuals: Behavior Variations
-
 Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean
-
- 
 
 (Выбрано 14 строк)
 
@@ -1414,11 +1232,7 @@ Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------
-     =any означает равно некоторому значению
-  -- -----------------------------------------
-:::
+#### =any означает равно некоторому значению
 
  
 
@@ -1430,38 +1244,25 @@ in:
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city = any
-
   (select city
-
    from publishers)
 
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city in
-
   (select city
-
    from publishers)
 
  
 
 au\_lname       au\_fname
-
 --------------     --------------
-
 Carson         Cheryl
-
 Bennet         Abraham
-
- 
 
 (Выбраны 2 строки)
 
@@ -1477,13 +1278,9 @@ Bennet         Abraham
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city != any
-
   (select city
-
    from publishers)
 
  
@@ -1502,65 +1299,36 @@ not in:
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city not in
-
   (select city
-
    from publishers)
 
  
 
 au\_lname                      au\_fname
-
---------------                          
-------------
-
+--------------                          ------------
 del Castillo                   Innes
-
 Blotchet-Halls                 Reginald
-
 Gringlesby                     Burt
-
 DeFrance                       Michel
-
 Smith                          Meander
-
 White                          Johnson
-
 Greene                         Morningstar
-
 Green                          Marjorie
-
 Straight                       Dick
-
 Stringer                       Dirk
-
 MacFeather                     Stearns
-
 Karsen                         Livia
-
 Dull                           Ann
-
 Hunter                         Sheryl
-
 Panteley                       Sylvia
-
 Ringer                         Anne
-
 Ringer                         Albert
-
 Locksley                       Chastity
-
 O\'Leary                        Michael
-
 McBadden                       Heather
-
 Yokomoto                       Akiko
-
- 
 
 (Выбрана 21 строка )
 
@@ -1576,22 +1344,14 @@ Yokomoto                       Akiko
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city != all
-
   (select city
-
    from publishers)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Подзапросы с условием in
-  -- --------------------------
-:::
+## Подзапросы с условием in
 
  
 
@@ -1793,11 +1553,7 @@ and au\_ord = 2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Подзапросы с условием not in
-  -- ------------------------------
-:::
+## Подзапросы с условием not in
 
  
 
@@ -1846,11 +1602,7 @@ Binnet & Hardley
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------
-     Подзапросы с условием not in, содержащие NULL
-  -- -----------------------------------------------
-:::
+## Подзапросы с условием not in, содержащие NULL
 
  
 
@@ -1905,11 +1657,7 @@ Algodata Infosystems не были включены в результат, по�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Подзапросы с квантором exists
-  -- -------------------------------
-:::
+## Подзапросы с квантором exists
 
  
 
@@ -2117,11 +1865,7 @@ Emotional Security: A New Algorithm
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Подзапросы с not exists
-  -- -------------------------
-:::
+## Подзапросы с not exists
 
  
 
@@ -2195,11 +1939,7 @@ Net Etiquette
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------------
-     Нахождение пересечения и разности множеств с помощью exists
-  -- -------------------------------------------------------------
-:::
+## Нахождение пересечения и разности множеств с помощью exists
 
  
 
@@ -2300,11 +2040,7 @@ Salt Lake City
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------
-     Использование коррелированных подзапросов
-  -- -------------------------------------------
-:::
+## Использование коррелированных подзапросов
 
  
 
@@ -2405,11 +2141,7 @@ Carson включается в результат. Если эту же проц
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------------
-     Коррелированные подзапросы с коррелирующимися названиями
-  -- ----------------------------------------------------------
-:::
+## Коррелированные подзапросы с коррелирующимися названиями
 
  
 
@@ -2462,11 +2194,7 @@ and t1.pub\_id != t2.pub\_id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Коррелированные подзапросы с операциями сравнения
-  -- ---------------------------------------------------
-:::
+## Коррелированные подзапросы с операциями сравнения
 
  
 
@@ -2590,11 +2318,7 @@ of            the Mediterranean
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------
-     Коррелированные подзапросы в предложении having
-  -- -------------------------------------------------
-:::
+## Коррелированные подзапросы в предложении having
 
  
 
@@ -2607,28 +2331,18 @@ of            the Mediterranean
  
 
 select t1.type
-
 from titles t1
-
 group by t1.type
-
 having max(t1.advance) \>=any
-
   (select 2 * avg(t2.advance)
-
   from titles t2
-
   where t1.type = t2.type)
 
  
 
 type
-
 -------------
-
 mod\_cook
-
- 
 
 (Выбрана 1 строка)
 

@@ -45,11 +45,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------------------
-     Что такое пакеты и язык управления заданиями ?
-  -- ------------------------------------------------
-:::
+## Что такое пакеты и язык управления заданиями ?
 
  
 
@@ -95,11 +91,7 @@ isql.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------
-     Правила составления пакетов
-  -- -----------------------------
-:::
+## Правила составления пакетов
 
  
 
@@ -144,11 +136,7 @@ isql.
   --- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Примеры использования пакетов
-  -- -------------------------------
-:::
+## Примеры использования пакетов
 
  
 
@@ -401,11 +389,7 @@ database.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------
-     Пакетные файлы
-  -- ----------------
-:::
+## Пакетные файлы
 
  
 
@@ -482,11 +466,7 @@ isql приводится информация о зависимости вып�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------
-     Язык управления заданиями
-  -- ---------------------------
-:::
+## Язык управления заданиями
 
  
 
@@ -521,11 +501,7 @@ isql приводится информация о зависимости вып�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------
-     Условный оператор if...else
-  -- -----------------------------
-:::
+## Условный оператор if...else
 
  
 
@@ -647,11 +623,7 @@ if либо в части else. Условие проверки должно и�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Операторные скобки begin...end
-  -- --------------------------------
-:::
+## Операторные скобки begin...end
 
  
 
@@ -703,11 +675,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Циклический оператор while и команды break...continue
-  -- -------------------------------------------------------
-:::
+## Циклический оператор while и команды break...continue
 
  
 
@@ -919,11 +887,7 @@ Not Too Expensive
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Оператор declare и локальные переменные
-  -- -----------------------------------------
-:::
+## Оператор declare и локальные переменные
 
  
 
@@ -1128,11 +1092,7 @@ select \@m
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------
-     Переменные и неопределенное значение
-  -- --------------------------------------
-:::
+## Переменные и неопределенное значение
 
  
 
@@ -1225,11 +1185,7 @@ PC9999              NULL
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------------
-     Оператор declare и глобальные переменные
-  -- ------------------------------------------
-:::
+## Оператор declare и глобальные переменные
 
  
 
@@ -1510,11 +1466,7 @@ PC9999              NULL
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Команда перехода goto
-  -- -----------------------
-:::
+## Команда перехода goto
 
  
 
@@ -1563,11 +1515,7 @@ while \@count \<=4
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Команда выхода return
-  -- -----------------------
-:::
+## Команда выхода return
 
  
 
@@ -1634,11 +1582,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------
-     Команда вывода print
-  -- ----------------------
-:::
+## Команда вывода print
 
  
 
@@ -1738,11 +1682,7 @@ char (символьный) перед тем, как помещается в о
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------
-     Команда raiserror
-  -- -------------------
-:::
+## Команда raiserror
 
  
 
@@ -1813,11 +1753,7 @@ raiserror 99999 "You must give a user name"   (Нужно указать имя
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------------
-     Сообщения пользователя в командах print и raiserror
-  -- -----------------------------------------------------
-:::
+## Сообщения пользователя в командах print и raiserror
 
  
 
@@ -1913,11 +1849,7 @@ go
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------
-     Команда waitfor
-  -- -----------------
-:::
+## Команда waitfor
 
  
 
@@ -2001,11 +1933,7 @@ waitfor delay "0:00:10"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------
-     Комментарии
-  -- -------------
-:::
+## Комментарии
 
  
 

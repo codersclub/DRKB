@@ -1,11 +1,11 @@
 ---
-Title: Borland Delphi 7 -- миграция в сторону .NET
+Title: Borland Delphi 7 - миграция в сторону .NET
 Author: Виталий Чужа
 Date: 01.01.2007
 ---
 
 
-Borland Delphi 7 -- миграция в сторону .NET
+Borland Delphi 7 - миграция в сторону .NET
 ===========================================
 
 ::: {.date}

@@ -58,11 +58,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Что такое триггер ?
-  -- ---------------------
-:::
+## Что такое триггер ?
 
  
 
@@ -138,11 +134,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------
-     Сравнение триггеров с ограничениями целостности
-  -- -------------------------------------------------
-:::
+## Сравнение триггеров с ограничениями целостности
 
  
 
@@ -192,11 +184,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------
-     Создание триггеров
-  -- --------------------
-:::
+## Создание триггеров
 
  
 
@@ -223,11 +211,7 @@ print "Now modify the titleauthor table the same way."
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Синтаксис команды создания триггера creat trigger
-  -- ---------------------------------------------------
-:::
+## Синтаксис команды создания триггера creat trigger
 
  
 
@@ -308,11 +292,7 @@ update не используется при удалении данных опе
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------------
-     Операторы, которые нельзя использовать в триггерах
-  -- ----------------------------------------------------
-:::
+## Операторы, которые нельзя использовать в триггерах
 
  
 
@@ -383,11 +363,7 @@ update не используется при удалении данных опе
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------
-     Удаление триггеров
-  -- --------------------
-:::
+## Удаление триггеров
 
  
 
@@ -411,11 +387,7 @@ drop trigger [владелец.]название\_триггера
 
  
 
-::: {style="text-align: center; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------------------------
-     Использование триггеров для сохранения ссылочной целостности
-  -- --------------------------------------------------------------
-:::
+## Использование триггеров для сохранения ссылочной целостности
 
  
 
@@ -470,11 +442,7 @@ roysched является внешним ключом, а сами эти таб
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Как работают триггера
-  -- -----------------------
-:::
+## Как работают триггера
 
  
 
@@ -488,11 +456,7 @@ roysched является внешним ключом, а сами эти таб
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------------------
-     Проверка модификации данных и триггерные тестовые таблицы
-  -- -----------------------------------------------------------
-:::
+## Проверка модификации данных и триггерные тестовые таблицы
 
  
 
@@ -552,11 +516,7 @@ delete, но в этих случаях эти таблицы будут пус�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Пример вставляющего триггера
-  -- ------------------------------
-:::
+## Пример вставляющего триггера
 
  
 
@@ -630,11 +590,7 @@ print "Added! All title\_id\'s exist in titles."
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------
-     Пример удаляющего триггера
-  -- ----------------------------
-:::
+## Пример удаляющего триггера
 
  
 
@@ -741,11 +697,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Примеры обновляющих триггеров
-  -- -------------------------------
-:::
+## Примеры обновляющих триггеров
 
  
 
@@ -861,11 +813,7 @@ if (select count(*) from inserted
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------
-     Обновление внешнего ключа
-  -- ---------------------------
-:::
+## Обновление внешнего ключа
 
  
 
@@ -955,11 +903,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------
-     Операции с группами строк
-  -- ---------------------------
-:::
+## Операции с группами строк
 
  
 
@@ -1158,11 +1102,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Условный вставляющий триггер
-  -- ------------------------------
-:::
+## Условный вставляющий триггер
 
  
 
@@ -1283,11 +1223,7 @@ intrig, но транзакция при этом не откатывается.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------
-     Откатывающие триггера
-  -- -----------------------
-:::
+## Откатывающие триггера
 
  
 
@@ -1434,11 +1370,7 @@ SQL Сервер игнорирует команду rollback trigger, если 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Многоуровневые вызовы триггеров
-  -- ---------------------------------
-:::
+## Многоуровневые вызовы триггеров
 
  
 
@@ -1511,11 +1443,7 @@ delcascadetrig.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Саморекурсивные триггера
-  -- --------------------------
-:::
+## Саморекурсивные триггера
 
  
 
@@ -1671,11 +1599,7 @@ company\_wide    NULL                 1003
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------
-     Правила связанные с триггерами
-  -- --------------------------------
-:::
+## Правила связанные с триггерами
 
  
 
@@ -1686,11 +1610,7 @@ company\_wide    NULL                 1003
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Триггера и права доступа
-  -- --------------------------
-:::
+## Триггера и права доступа
 
  
 
@@ -1718,11 +1638,7 @@ salesdetail.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Ограничения для триггеров
-  -- ---------------------------
-:::
+## Ограничения для триггеров
 
  
 
@@ -1754,11 +1670,7 @@ SQL Сервер накладывает на триггера следующие
   --- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Явные и неявные неопределенные значения
-  -- -----------------------------------------
-:::
+## Явные и неявные неопределенные значения
 
  
 
@@ -1855,11 +1767,7 @@ if update(a) or update(b)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Триггеры и производительность
-  -- -------------------------------
-:::
+## Триггеры и производительность
 
  
 
@@ -1874,11 +1782,7 @@ if update(a) or update(b)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Команда установки set в триггерах
-  -- -----------------------------------
-:::
+## Команда установки set в триггерах
 
  
 
@@ -1888,11 +1792,7 @@ if update(a) or update(b)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Переименование и триггера
-  -- ---------------------------
-:::
+## Переименование и триггера
 
  
 
@@ -1904,11 +1804,7 @@ if update(a) or update(b)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------
-     Получение информации о триггерах
-  -- ----------------------------------
-:::
+## Получение информации о триггерах
 
  
 
@@ -1937,11 +1833,7 @@ sysprocedures. Некоторые системные процедуры пред
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------
-     Процедура sp\_help
-  -- --------------------
-:::
+## Процедура sp\_help
 
  
 
@@ -1976,11 +1868,7 @@ not applicable                   Feb 9 1987  3:56PM
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Процедура sp\_helptext
-  -- ------------------------
-:::
+## Процедура sp\_helptext
 
  
 
@@ -2031,11 +1919,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Процедура sp\_depends
-  -- -----------------------
-:::
+## Процедура sp\_depends
 
  
 

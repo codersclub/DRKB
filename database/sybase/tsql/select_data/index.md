@@ -80,11 +80,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Что такое Запросы ?
-  -- ---------------------
-:::
+## Что такое Запросы ?
 
  
 
@@ -149,11 +145,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------
-     Синтаксис оператора select
-  -- ----------------------------
-:::
+## Синтаксис оператора select
 
  
 
@@ -274,11 +266,7 @@ Reference Manual.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------
-     Указание Столбцов в Запросе
-  -- -----------------------------
-:::
+## Указание Столбцов в Запросе
 
  
 
@@ -308,11 +296,7 @@ quoted\_identifier и заключить это название в двойны
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------
-     Выбор данных из всех столбцов: оператор seleс t *
-  -- ----------------------------------------------------
-:::
+## Выбор данных из всех столбцов: оператор seleс t *
 
  
 
@@ -404,11 +388,7 @@ from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Выбор данных из указанных столбцов
-  -- ------------------------------------
-:::
+## Выбор данных из указанных столбцов
 
  
 
@@ -427,11 +407,7 @@ from table\_name
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Изменение порядка следования столбцов
-  -- ---------------------------------------
-:::
+## Изменение порядка следования столбцов
 
  
 
@@ -492,11 +468,7 @@ from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Переименование столбцов в запросе
-  -- -----------------------------------
-:::
+## Переименование столбцов в запросе
 
  
 
@@ -562,11 +534,7 @@ from publishers
 
 (3 строки выведены)
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Заключенные в кавычки заголовки столбцов
-  -- ------------------------------------------
-:::
+## Заключенные в кавычки заголовки столбцов
 
  
 
@@ -626,11 +594,7 @@ into, create view необходимо включить опцию set quoted\_i
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Символьные строки в результатах запросов
-  -- ------------------------------------------
-:::
+## Символьные строки в результатах запросов
 
  
 
@@ -679,11 +643,7 @@ from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------
-     Вычисляемые значения в списке выбора
-  -- --------------------------------------
-:::
+## Вычисляемые значения в списке выбора
 
  
 
@@ -692,11 +652,7 @@ from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------
-     Арифметические операции
-  -- -------------------------
-:::
+## Арифметические операции
 
 В приведенной ниже таблице указаны арифметические операции, которые
 можно выполнять над данными. Информацию о логических операциях над
@@ -751,9 +707,6 @@ numeric, decimal, float, money. Операция взятия по модулю 
 
     +-----------------------+-----------------------+-----------------------+
     | title\_id             | total\_sales          |                       |
-    +-----------------------+-----------------------+-----------------------+
-    | ----------\ | ----------\ | ----------   |
-    | --                    | ----                |                       |
     +-----------------------+-----------------------+-----------------------+
     | BU1032                | 4095                  | 8190                  |
     +-----------------------+-----------------------+-----------------------+
@@ -1013,11 +966,7 @@ PS2106
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------
-     Старшинство Арифметических Операций
-  -- -------------------------------------
-:::
+## Старшинство Арифметических Операций
 
  
 
@@ -1208,11 +1157,7 @@ from titles
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------
-     Выбор текстовых и графических значений
-  -- ----------------------------------------
-:::
+## Выбор текстовых и графических значений
 
  
 
@@ -1258,11 +1203,7 @@ set textsize 0
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Использование оператора readtext
-  -- ----------------------------------
-:::
+## Использование оператора readtext
 
  
 
@@ -1351,11 +1292,7 @@ characters полезно только тогда, когда SQL-сервер �
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Резюме относительно списка выбора
-  -- -----------------------------------
-:::
+## Резюме относительно списка выбора
 
  
 
@@ -1419,11 +1356,7 @@ characters полезно только тогда, когда SQL-сервер �
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------------------------------------
-     Исключение дубликатов из результата запроса с помощью distinct
-  -- ----------------------------------------------------------------
-:::
+## Исключение дубликатов из результата запроса с помощью distinct
 
  
 
@@ -1588,11 +1521,7 @@ distinct, то возвращается всегда не более одног�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------
-     Указание таблиц: конструкция from
-  -- -----------------------------------
-:::
+## Указание таблиц: конструкция from
 
  
 
@@ -1669,11 +1598,7 @@ where, при обращениях к этой таблице должны ис�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------
-     Выбор строк: конструкция where
-  -- --------------------------------
-:::
+## Выбор строк: конструкция where
 
  
 
@@ -1775,11 +1700,7 @@ select select\_list
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------
-     Операции Сравнения
-  -- --------------------
-:::
+## Операции Сравнения
 
  
 
@@ -1923,11 +1844,7 @@ type                                        advance
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Интервалы (between и not between)
-  -- -----------------------------------
-:::
+## Интервалы (between и not between)
 
  
 
@@ -2047,11 +1964,7 @@ where total\_sales not between 4095 and 12000
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Вхождение в список ( in и not in)
-  -- -----------------------------------
-:::
+## Вхождение в список ( in и not in)
 
  
 
@@ -2156,9 +2069,6 @@ where au\_id in
     +-----------------------------------+-----------------------------------+
     | au\_lname                         | au\_fname                         |
     +-----------------------------------+-----------------------------------+
-    | ----------------\ | ----------------\ |
-    | --                                | --                                |
-    +-----------------------------------+-----------------------------------+
     | Green                             | Marjorie                          |
     +-----------------------------------+-----------------------------------+
     | O'Leary                           | Michael                           |
@@ -2173,7 +2083,6 @@ where au\_id in
     +-----------------------------------+-----------------------------------+
     | Ringer                            | Anne                              |
     +-----------------------------------+-----------------------------------+
-
                                  (Выбрано 7 строк)
 
  
@@ -2241,11 +2150,7 @@ where au\_id not in
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Операция сравнения строк: like
-  -- --------------------------------
-:::
+## Операция сравнения строк: like
 
  
 
@@ -2425,11 +2330,7 @@ where phone = "415%"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------
-     Использование маскирующих символов как литер
-  -- ----------------------------------------------
-:::
+## Использование маскирующих символов как литер
 
 Маскирующие символы можно использовать в строках как обычные символы
 (литеры), по которым происходит сравнение. Существуют два способа
@@ -2447,11 +2348,7 @@ where phone = "415%"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------------------------
-     Использование Квадратных Скобок (расширение Transact-SQL)
-  -- -----------------------------------------------------------
-:::
+## Использование Квадратных Скобок (расширение Transact-SQL)
 
 Маскирующие символы, к которым относятся символы процентов,
 подчеркивания и открывающая квадратная скобка, следует заключать в
@@ -2492,11 +2389,7 @@ where phone = "415%"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------
-     Конструкция escape (Стандарт SQL)
-  -- -----------------------------------
-:::
+## Конструкция escape (Стандарт SQL)
 
 Конструкция escape (отмена) позволяет пропускать некоторые символы в
 строке, задаваемой в операции like. При пропуске символов действуют
@@ -2557,11 +2450,7 @@ where phone = "415%"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------------
-     Чередование квадратных скобок и конструкции escape
-  -- ----------------------------------------------------
-:::
+## Чередование квадратных скобок и конструкции escape
 
  
 
@@ -2592,11 +2481,7 @@ where phone = "415%"
   --- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------
-     Концевые пробелы и %
-  -- ----------------------
-:::
+## Концевые пробелы и %
 
  
 
@@ -2608,11 +2493,7 @@ where phone = "415%"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------------
-     Использование в столбцах маскирующих символов
-  -- -----------------------------------------------
-:::
+## Использование в столбцах маскирующих символов
 
  
 
@@ -2691,11 +2572,7 @@ or (или) предложений.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------
-     Символьные строки и кавычки
-  -- -----------------------------
-:::
+## Символьные строки и кавычки
 
  
 
@@ -2754,11 +2631,7 @@ varchar, nvarchar, datetime и smalldatetime), их нужно заключат�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Неопределенное значение: NULL
-  -- -------------------------------
-:::
+## Неопределенное значение: NULL
 
  
 
@@ -3028,11 +2901,7 @@ create table (создание таблицы) и о соотношении ме
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------
-     Соединение условий через логические операции
-  -- ----------------------------------------------
-:::
+## Соединение условий через логические операции
 
  
 
@@ -3084,11 +2953,7 @@ where not state = 'CA'
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------
-     Старшинство логических операций
-  -- ---------------------------------
-:::
+## Старшинство логических операций
 
  
 

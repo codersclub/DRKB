@@ -61,11 +61,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------
-     Что такое транзакции
-  -- ----------------------
-:::
+## Что такое транзакции
 
  
 
@@ -109,11 +105,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Транзакции и достоверность данных
-  -- -----------------------------------
-:::
+## Транзакции и достоверность данных
 
  
 
@@ -134,11 +126,7 @@ SQL Сервер автоматически устанавливает соот�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Транзакции и восстановление данных
-  -- ------------------------------------
-:::
+## Транзакции и восстановление данных
 
  
 
@@ -155,11 +143,7 @@ SQL операторы, связанные с восстановлением и 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------
-     Использование транзакций
-  -- --------------------------
-:::
+## Использование транзакций
 
  
 
@@ -197,11 +181,7 @@ SQL операторы, связанные с восстановлением и 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Команды определения данных в транзакциях
-  -- ------------------------------------------
-:::
+## Команды определения данных в транзакциях
 
  
 
@@ -305,11 +285,7 @@ ddl in tran.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Начало и окончание транзакций
-  -- -------------------------------
-:::
+## Начало и окончание транзакций
 
  
 
@@ -355,11 +331,7 @@ commit tran
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Откат назад и точки сохранения
-  -- --------------------------------
-:::
+## Откат назад и точки сохранения
 
  
 
@@ -447,11 +419,7 @@ SQL Сервер не выполняет команды rollback transaction и 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Проверка состояния транзакций
-  -- -------------------------------
-:::
+## Проверка состояния транзакций
 
  
 
@@ -577,11 +545,7 @@ select @\@transtate
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------
-     Вложенные транзакции
-  -- ----------------------
-:::
+## Вложенные транзакции
 
  
 
@@ -647,11 +611,7 @@ select @\@trancount
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Пример транзакции пользователя
-  -- --------------------------------
-:::
+## Пример транзакции пользователя
 
  
 
@@ -760,11 +720,7 @@ commit transaction
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------
-     Выбор режима транзакции и уровня изоляции
-  -- -------------------------------------------
-:::
+## Выбор режима транзакции и уровня изоляции
 
  
 
@@ -832,11 +788,7 @@ SQL Сервер поддерживает следующие уровни изо
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Выбор режима транзакции
-  -- -------------------------
-:::
+## Выбор режима транзакции
 
  
 
@@ -925,11 +877,7 @@ commit transaction
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Выбор уровня изоляции
-  -- -----------------------
-:::
+## Выбор уровня изоляции
 
  
 
@@ -1045,11 +993,7 @@ select @\@isolation
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------
-     Изменение уровня изоляции запроса
-  -- -----------------------------------
-:::
+## Изменение уровня изоляции запроса
 
  
 
@@ -1151,11 +1095,7 @@ level, действующей для рабочего сеанса.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------
-     Курсоры и уровни изоляции
-  -- ---------------------------
-:::
+## Курсоры и уровни изоляции
 
 Оператор выбора, содержащий предложение at isolation, можно использовать
 для изменения уровня изоляции при определении курсора. Например:
@@ -1207,11 +1147,7 @@ SQL Сервер устанавливает уровень изоляции ку
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------
-     Сохраненные процедуры и уровни изоляции
-  -- -----------------------------------------
-:::
+## Сохраненные процедуры и уровни изоляции
 
 Все системные сохраненные процедуры всегда Sybase работают на 1 уровне
 изоляции, независимо от уровня изоляции транзакции или рабочего сеанса.
@@ -1222,11 +1158,7 @@ SQL Сервер устанавливает уровень изоляции ку
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------
-     Триггеры и уровни изоляции
-  -- ----------------------------
-:::
+## Триггеры и уровни изоляции
 
 Поскольку триггеры запускаются во время выполнения операторов
 модификации данных (таких как insert), то все триггеры выполняются либо
@@ -1238,11 +1170,7 @@ SQL Сервер устанавливает уровень изоляции ку
 
  
 
-::: {style="text-align: center; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------------
-     Транзакции в сохраненных процедурах и триггерах
-  -- -------------------------------------------------
-:::
+## Транзакции в сохраненных процедурах и триггерах
 
  
 
@@ -1327,11 +1255,7 @@ delete authors where ...
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Режимы транзакций в сохраненных процедурах
-  -- --------------------------------------------
-:::
+## Режимы транзакций в сохраненных процедурах
 
  
 
@@ -1400,11 +1324,7 @@ SQL Сервер помечает (tags) все процедуры ("связа�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------------------
-     Установка режимов транзакций в сохраненных процедурах
-  -- -------------------------------------------------------
-:::
+## Установка режимов транзакций в сохраненных процедурах
 
  
 
@@ -1464,11 +1384,7 @@ titleid\_proc                     Unchained
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------
-     Использование курсоров в транзакциях
-  -- --------------------------------------
-:::
+## Использование курсоров в транзакциях
 
  
 
@@ -1513,11 +1429,7 @@ isolation level 3. Однако, если опция close on endtran не ус�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------------
-     Резервирование и восстановление в транзакциях
-  -- -----------------------------------------------
-:::
+## Резервирование и восстановление в транзакциях
 
  
 

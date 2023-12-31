@@ -58,11 +58,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------
-     Что такое правила и умолчания?
-  -- --------------------------------
-:::
+## Что такое правила и умолчания?
 
  
 
@@ -117,11 +113,7 @@ sp\_unbindefault (отсоединить умолчание), sp\_unbindrule (о
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------------------
-     Сравнение правил и умолчаний с условиями целостности
-  -- ------------------------------------------------------
-:::
+## Сравнение правил и умолчаний с условиями целостности
 
  
 
@@ -136,11 +128,7 @@ check (проверка), которые выполняют аналогичну
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------
-     Создание умолчаний
-  -- --------------------
-:::
+## Создание умолчаний
 
  
 
@@ -187,11 +175,7 @@ sp\_bindefault (присоединить умолчание). Для отсое�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Синтаксис команды create default
-  -- ----------------------------------
-:::
+## Синтаксис команды create default
 
  
 
@@ -254,11 +238,7 @@ as "Oakland"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Присоединение умолчаний
-  -- -------------------------
-:::
+## Присоединение умолчаний
 
  
 
@@ -472,11 +452,7 @@ sp\_bindefault не должна быть в том же пакете, где р
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Отсоединение умолчаний
-  -- ------------------------
-:::
+## Отсоединение умолчаний
 
  
 
@@ -576,11 +552,7 @@ sp\_unbindefault название\_объекта [, futureonly]
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------
-     Удаление умолчаний
-  -- --------------------
-:::
+## Удаление умолчаний
 
  
 
@@ -615,11 +587,7 @@ drop default [владелец.]название \_умолчания
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------------
-     Воздействие умолчаний на значение NULL
-  -- ----------------------------------------
-:::
+## Воздействие умолчаний на значение NULL
 
  
 
@@ -658,11 +626,7 @@ drop default [владелец.]название \_умолчания
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------
-     Создание правил
-  -- -----------------
-:::
+## Создание правил
 
  
 
@@ -676,11 +640,7 @@ drop default [владелец.]название \_умолчания
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Синтаксис команды create rule
-  -- -------------------------------
-:::
+## Синтаксис команды create rule
 
  
 
@@ -760,11 +720,7 @@ as \@age between 1 and 120 and \@age !=17
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------
-     Присоединение правил
-  -- ----------------------
-:::
+## Присоединение правил
 
  
 
@@ -801,11 +757,7 @@ image, и timestamp.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------------
-     Связывание правил с табличными столбцами
-  -- ------------------------------------------
-:::
+## Связывание правил с табличными столбцами
 
  
 
@@ -846,11 +798,7 @@ sp\_binderule не должны быть в одном пакете вместе
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------------------
-     Связывание правил с пользовательскими типами данных
-  -- -----------------------------------------------------
-:::
+## Связывание правил с пользовательскими типами данных
 
  
 
@@ -865,11 +813,7 @@ sp\_binderule, "p#"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------
-     Старшинство правил
-  -- --------------------
-:::
+## Старшинство правил
 
  
 
@@ -955,11 +899,7 @@ sp\_bindrule debtrule, "friends\_etc.debt"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------
-     Отсоединение правил
-  -- ---------------------
-:::
+## Отсоединение правил
 
  
 
@@ -1036,11 +976,7 @@ sp\_unbindrule название\_объекта [, futureonly]
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------
-     Удаление правил
-  -- -----------------
-:::
+## Удаление правил
 
  
 
@@ -1078,11 +1014,7 @@ drop rule [владелец.]название\_правила
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------------------
-     Получение информации о правилах и умолчаниях
-  -- ----------------------------------------------
-:::
+## Получение информации о правилах и умолчаниях
 
  
 
