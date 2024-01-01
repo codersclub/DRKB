@@ -20,10 +20,10 @@ palette animation, work in a 256-color mode, and change all the
 PC\_NOCOLLAPSE entries below to PC\_RESERVED. Besides creating the
 palette, the other pieces to the puzzle are:
 
-1\. Override the form\'s GetPalette method, so that it returns the new
+1. Override the form\'s GetPalette method, so that it returns the new
 palette.
 
-2\. Select and realize the new palette just before you paint.
+2. Select and realize the new palette just before you paint.
 
 OldPal := SelectPalette(Canvas.Handle, NewPalette, False);
 
@@ -33,9 +33,9 @@ RealizePalette(Canvas.Handle);
 
 SelectPalette(Canvas.Handle, OldPal, False);
 
-3\. Remember to release the palette when you are done using DeleteObject
+3. Remember to release the palette when you are done using DeleteObject
 
-4\. If you are used using the RGB function to get color values, use the
+4. If you are used using the RGB function to get color values, use the
 PaletteRGB function in its place.
 
     function CreateIdentityPalette(const aRGB; nColors: Integer): HPALETTE;

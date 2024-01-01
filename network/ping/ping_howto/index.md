@@ -20,13 +20,13 @@ ICMP - Internet Control Message Protocol. ICMP служит для переда�
 показать насколько быстро проходит информация между двумя узлами в
 Интернете.
 
-1\. Запускаем Delphi;
+1. Запускаем Delphi;
 
-2\. В Новом проекте добавляем в форму Tbutton, Tedit и Tmemo;
+2. В Новом проекте добавляем в форму Tbutton, Tedit и Tmemo;
 
-3\. Вставляем "winsock";
+3. Вставляем "winsock";
 
-4\. объявляем структурку для IP-заголовка:
+4. объявляем структурку для IP-заголовка:
 
     type
       IPINFO = record
@@ -37,7 +37,7 @@ ICMP - Internet Control Message Protocol. ICMP служит для переда�
         Options: ^char;
       end;
 
-5\. объявляем структурку для хранения ICMP пакета:
+5. объявляем структурку для хранения ICMP пакета:
 
     type
       ICMPECHO = record
@@ -50,13 +50,13 @@ ICMP - Internet Control Message Protocol. ICMP служит для переда�
         i_ipinfo: IPINFO;
       end;
 
-6\. Объявляем функции и процедуры, которые мы будем вызывать из ICMP.DLL
+6. Объявляем функции и процедуры, которые мы будем вызывать из ICMP.DLL
 
     TIcmpCreateFile = function():integer; {$IFDEF WIN32} stdcall; {$ENDIF} 
     TIcmpCloseHandle = procedure(var handle:integer);{$IFDEF WIN32} stdcall; {$ENDIF} 
     TIcmpSendEcho = function(var handle:integer; endereco:DWORD; buffer:variant; tam:WORD; IP:IPINFO; ICMP:ICMPECHO; tamicmp:DWORD; tempo:DWORD):DWORD;{$IFDEF WIN32} stdcall; {$ENDIF} 
 
-7\. В Tbutton в событие Onclick вставляем следующий код:
+7. В Tbutton в событие Onclick вставляем следующий код:
 
     procedure TForm1.Button1Click(Sender: TObject);
     var

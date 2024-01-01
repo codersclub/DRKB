@@ -78,16 +78,16 @@ safecall. Дальнейшие тесты подтвердили это пред
 
 ТИПОВЫЕ РЕШЕНИЯ
 
-1\. Передавать запрос целиком --- одной строкой. Пример:
+1. Передавать запрос целиком --- одной строкой. Пример:
 
-    ADOQuery1.Active := false;
-    ADOQuery1.SQL.Text := 'SELECT max(id) AS idmax FROM main;';
-    ADOQuery1.Active := true;
+        ADOQuery1.Active := false;
+        ADOQuery1.SQL.Text := 'SELECT max(id) AS idmax FROM main;';
+        ADOQuery1.Active := true;
 
-2\. Отключить галочку Tools-\>Debugger Options-\>Language
+2. Отключить галочку Tools-\>Debugger Options-\>Language
 Exceptions-\>Stop on Delphi Exceptions
 
-3\. Просто игнорировать это исключение (в этом случае в процессе
+3. Просто игнорировать это исключение (в этом случае в процессе
 разработки придется периодически несколько раз нажимать OK, что,
 конечно, менее удобно)
 
@@ -96,7 +96,7 @@ dbExpress показало, что в них передача SQL-запроса
 промежуточное текстовое поле, что, на мой взгляд, исключает в них
 возможность появления аналогичной ошибки.
 
-КОММЕНТАРИЙ:
+**КОММЕНТАРИЙ:**
 
 Компонент TADOQuery от Delphi 5 содержит аналогичный код (метод
 QueryChanged), приводящий к ошибке.

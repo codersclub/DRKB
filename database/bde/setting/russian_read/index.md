@@ -76,7 +76,7 @@ HKEY\_CURRENT\_USER\\SOFTWARE\\BORLAND\\DBD\\7.0\\Preferences\\Properties\\Syste
 
 (писать название шрифта с большой буквы).
 
-2\. И в стандартном драйвере BDE,например DBASE, ставишь русский драйвер
+2. И в стандартном драйвере BDE,например DBASE, ставишь русский драйвер
 dBASE RUS cp866.
 
 Открываешь BDE configurator(administrator), ярлык на 32-BDE находится в

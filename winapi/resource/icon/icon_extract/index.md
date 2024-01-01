@@ -38,7 +38,7 @@ of the file type.
 To show the icon of a shortcut, the following code can be used as a
 demo:
 
-1\. Add the following components to a new project, and adjust their
+1. Add the following components to a new project, and adjust their
 
 properties according to the code below: }
 

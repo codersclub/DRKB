@@ -28,17 +28,15 @@ your data inside SQL Server using Extended Stored Procedures.
 What do we need?
 
   ---- ---------------------------------------------------------------------------
-  1.   1\.        opends60.dll (from a full installation with developer tools of
-       MSSQL or MSDE)
+  1.        opends60.dll (from a full installation with developer tools of MSSQL or MSDE)
   ---- ---------------------------------------------------------------------------
 
   ---- ------------------------------------------------------------------------
-  2.   2\.        MsOdsApi.pas (Header file to use opends60.dll) (included at
-       the end of the article)
+  2.        MsOdsApi.pas (Header file to use opends60.dll) (included at the end of the article)
   ---- ------------------------------------------------------------------------
 
   ---- ----------------------------------------------------------------
-  3.   3\.        A Local SQL Server for testing (MSDE will do fine).
+  3.        A Local SQL Server for testing (MSDE will do fine).
   ---- ----------------------------------------------------------------
 
 NOTE: For cryptography I used the components found under MIT license
@@ -49,159 +47,142 @@ https://www.cityinthesky.co.uk/cryptography.html
 Steps:
 
   ---- ------------------------------
-  1.   1\.        Create a new DLL.
+  1.        Create a new DLL.
   ---- ------------------------------
 
   ---- ------------------------------------------------------------------------
-  2.   2\.        Create a unit and in the uses clause add the MsOdsApi unit.
+  2.        Create a unit and in the uses clause add the MsOdsApi unit.
   ---- ------------------------------------------------------------------------
 
   ---- ------------------------------------------------------------------------
-  3.   3\.        In the Library file just under ther Uses clause add Exports
-       and the names of the functions to export:
+  3.        In the Library file just under ther Uses clause add Exports and the names of the functions to export:
   ---- ------------------------------------------------------------------------
 
-    library MyEncryptDll;
-     
-    uses
-      SysUtils,
-      Classes,
-      Unit1 in 'Unit1.pas';
-     
-    exports
-      xp_DoEncrypt,
-      xp_DoDecrypt;
-     
-    begin
-    end.
+        library MyEncryptDll;
+         
+        uses
+          SysUtils,
+          Classes,
+          Unit1 in 'Unit1.pas';
+         
+        exports
+          xp_DoEncrypt,
+          xp_DoDecrypt;
+         
+        begin
+        end.
 
-4\. In the Unit file just under the Uses clause add your function
-reference:
+4. In the Unit file just under the Uses clause add your function reference:
 
-function xp\_DoEncrypt(pSrvProc: SRV\_PROC): Integer; cdecl;
-
-function xp\_DoDecrypt(pSrvProc: SRV\_PROC): Integer; cdecl;
+        function xp_DoEncrypt(pSrvProc: SRV_PROC): Integer; cdecl;
+        function xp_DoDecrypt(pSrvProc: SRV_PROC): Integer; cdecl;
 
 NOTES: cdecl is required for ODS to be able to call your functions.  
 SRV\_PROC is a handle to the stored procedure information.
 
-5\. The code of the DoEncrypt is this: (DoDecrypt is exactly the same
-just with a DecryptString(s) call.
+5. The code of the DoEncrypt is this: (DoDecrypt is exactly the same just with a DecryptString(s) call.
 
-    function xp_Encrypt(pSrvProc: SRV_PROC): Integer;cdecl;
-    var
-      i, sz: Integer;
-      bType: Byte;
-      fNull: Bool;
-      cbMaxLen, cbActualLen: ULONG;
-      myData,myanswer,myKey:array [0..255] of char;
-      FDCP_3des: TDCP_3des;
-      s:string;
-      ps:pchar;
-    begin
-      for i:=0 to 255 do
+        function xp_Encrypt(pSrvProc: SRV_PROC): Integer;cdecl;
+        var
+          i, sz: Integer;
+          bType: Byte;
+          fNull: Bool;
+          cbMaxLen, cbActualLen: ULONG;
+          myData,myanswer,myKey:array [0..255] of char;
+          FDCP_3des: TDCP_3des;
+          s:string;
+          ps:pchar;
         begin
-          myData[i]:=#0;
-          myanswer[i]:=#0;
-          myKey[i]:=#0;
+          for i:=0 to 255 do
+            begin
+              myData[i]:=#0;
+              myanswer[i]:=#0;
+              myKey[i]:=#0;
+            end;
+          if srv_rpcparams(pSrvProc) = 2 then  // Check if input parameters are present...
+            begin
+            srv_paraminfo(pSrvProc, 1, @bType,  // Let's use 1st input parameter!
+               @cbMaxLen, @cbActualLen, // NOTE: We assume here what only 2 parameters
+               @myData[0], @fNull);         //of type String can be passed!!!
+            bType:=SRVVARCHAR;
+            srv_paraminfo(pSrvProc, 2, @bType,
+               @cbMaxLen, @cbActualLen,
+               @myKey[0], @fNull);
+            end
+          else
+            MyData := '';         // No input parameters? Use default value instead.
+         
+          //ENCRYPTION CODE BELOW YOU CAN DO WHATEVER YOU NEED HERE WITH THE PARAMETER VALUES 
+         
+          FDCP_3des:=TDCP_3des.Create(nil);
+          FDCP_3des.BlockSize:=64;
+          FDCP_3des.Algorithm:='3DES';
+          FDCP_3des.CipherMode:=cmCBC;
+          FDCP_3des.Id:=24;
+          FDCP_3des.MaxKeySize:=192;
+          FDCP_3des.InitStr(myKey,TDCP_sha1);
+          s:=string(mydata);
+          strpcopy(myAnswer,FDCP_3des.EncryptString(s));
+          FDCP_3des.Burn;
+         
+          // SETTING UP ANSWER VALUES TO PCHAR AND GETTING SIZE
+         
+          s:=string(myAnswer);
+          sz:=length(s);
+          ps:=allocmem(sz);
+          ps:=pchar(s);  
+         
+          // Describe columns
+          // (Actually, you are doing that for every datatype and every column you want to return).
+          srv_describe(pSrvProc,1, 'Value', SRV_NULLTERM,
+                       SRVVARCHAR, sz,
+                       SRVVARCHAR, sz, nil);
+            // Begin output...
+          srv_setcoldata(pSrvProc, 1, @ps[0]);
+          srv_sendrow(pSrvProc);        // Send the row.
+          srv_senddone(pSrvProc,         // Finally send data back to SQL Server:
+            (SRV_DONE_COUNT or SRV_DONE_MORE), 0, 1);        // send results completion message.
+          // FREEING ENCRYPTION COMPONENT
+          FreeAndNil(FDCP_3des);
+          result := 1;                                        // Report success (1 = SUCCEED, 0 = FAIL)
         end;
-      if srv_rpcparams(pSrvProc) = 2 then  // Check if input parameters are present...
-        begin
-        srv_paraminfo(pSrvProc, 1, @bType,  // Let's use 1st input parameter!
-           @cbMaxLen, @cbActualLen, // NOTE: We assume here what only 2 parameters
-           @myData[0], @fNull);         //of type String can be passed!!!
-        bType:=SRVVARCHAR;
-        srv_paraminfo(pSrvProc, 2, @bType,
-           @cbMaxLen, @cbActualLen,
-           @myKey[0], @fNull);
-        end
-      else
-        MyData := '';         // No input parameters? Use default value instead.
-     
-      //ENCRYPTION CODE BELOW YOU CAN DO WHATEVER YOU NEED HERE WITH THE PARAMETER VALUES 
-     
-      FDCP_3des:=TDCP_3des.Create(nil);
-      FDCP_3des.BlockSize:=64;
-      FDCP_3des.Algorithm:='3DES';
-      FDCP_3des.CipherMode:=cmCBC;
-      FDCP_3des.Id:=24;
-      FDCP_3des.MaxKeySize:=192;
-      FDCP_3des.InitStr(myKey,TDCP_sha1);
-      s:=string(mydata);
-      strpcopy(myAnswer,FDCP_3des.EncryptString(s));
-      FDCP_3des.Burn;
-     
-      // SETTING UP ANSWER VALUES TO PCHAR AND GETTING SIZE
-     
-      s:=string(myAnswer);
-      sz:=length(s);
-      ps:=allocmem(sz);
-      ps:=pchar(s);  
-     
-      // Describe columns
-      // (Actually, you are doing that for every datatype and every column you want to return).
-      srv_describe(pSrvProc,1, 'Value', SRV_NULLTERM,
-                   SRVVARCHAR, sz,
-                   SRVVARCHAR, sz, nil);
-        // Begin output...
-      srv_setcoldata(pSrvProc, 1, @ps[0]);
-      srv_sendrow(pSrvProc);        // Send the row.
-      srv_senddone(pSrvProc,         // Finally send data back to SQL Server:
-        (SRV_DONE_COUNT or SRV_DONE_MORE), 0, 1);        // send results completion message.
-      // FREEING ENCRYPTION COMPONENT
-      FreeAndNil(FDCP_3des);
-      result := 1;                                        // Report success (1 = SUCCEED, 0 = FAIL)
-    end;
 
 NOTE: There are a number of things you can do with ODS. This is just an
 example for Delphi. You can read the ODS help in MSDN and do even more.
 
-6\. Testing and Debugging:
+6. Testing and Debugging:
 
 A) Install SQL 7.0/2000 on your workstation (or install Delphi on
 workstation where SQL Server is installed).
 
 B) Register your Xp on SQL Server.
 
-  NOTES:
+    NOTES:
 
-  Register Xp like this:
+    Register Xp like this:
 
-    use master
+        use master
+        go
+        sp_addextendedproc 'xp_DoEncrypt', 'MyEncryptDll.dll'
+        go
+        sp_addextendedproc 'xp_DoDecrypt', 'MyEncryptDll.dll'
+        go
 
-    go
+    Unregister Xp like this:
 
-    sp\_addextendedproc \'xp\_DoEncrypt\', \'MyEncryptDll.dll\'
+        use master
+        go
+        sp_dropextendedproc 'xp_DoEncrypt'
+        go
+        sp_dropextendedproc 'xp_DoDecrypt'
+        go
 
-    go
+    Unlock DLL in case it still being used by SQL like this:
 
-    sp\_addextendedproc \'xp\_DoDecrypt\', \'MyEncryptDll.dll\'
-
-    go
-
-  Unregister Xp like this:
-
-    use master
-
-    go
-
-    sp\_dropextendedproc \'xp\_DoEncrypt\'
-
-    go
-
-    sp\_dropextendedproc \'xp\_DoDecrypt\'
-
-    go
-
-  Unlock DLL in case it still being used by SQL like this:
-
-    use master
-
-    go
-
-    DBCC MyEncryptDll(FREE)
-
-    go
+        use master
+        go
+        DBCC MyEncryptDll(FREE)
+        go
 
 C) In Delphi, select from main menu Run -\> Run Parameters.
 
@@ -216,13 +197,12 @@ start as a console application.
 
 D) You can execute your Xp from Query Analyzer and trace code in Delphi.
 
-  NOTE:
+    NOTE:
 
-  Executing an extended stored procedure is done like this:
+    Executing an extended stored procedure is done like this:
 
-  exec master..xp\_DoEncrypt \'ValueToEncrypt\',\'KeyValue\'
-
-  go
+        exec master..xp_DoEncrypt 'ValueToEncrypt','KeyValue'
+        go
 
 E) To exit application, press Ctrl+Pause in the SQL Server console
 window.

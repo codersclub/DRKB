@@ -13,7 +13,7 @@ Description:
 01.01.2007
 :::
 
-запустить "Regsvr32.exe имя\_файла" из каталога c:\windows\system(32)
+запустить "Regsvr32.exe имя\_файла" из каталога c:\\windows\\system(32)
 
 Автор: Vit
 
@@ -21,37 +21,37 @@ Description:
 
 ------------------------------------------------------------------------
 
-1\. Регистрация ActiveX:
+1. Регистрация ActiveX:
 
-    function RegActiveX(FileName:string):HRESULT;
-    var
-      hMod:Integer;
-      RegProc:function:HRESULT; //HRESULT = Longint
-    begin
-      hMod:=LoadLibrary(FileName);
-      if hMod=0 then
-        raise Exception.Create('Unable to load library"'+FileName+'". GetLastError = '+IntToStr(GetLastError));
-      RegProc:=GetProcAddress(hMod,'DllRegisterServer');
-      if RegProc=nil then
-        raise Exception.Create('Unable to load "DllRegisterServer" function from "'+FileName+'". GetLastError = '+IntToStr(GetLastError));
-      Result:=RegProc;
-    end;
+        function RegActiveX(FileName:string):HRESULT;
+        var
+          hMod:Integer;
+          RegProc:function:HRESULT; //HRESULT = Longint
+        begin
+          hMod:=LoadLibrary(FileName);
+          if hMod=0 then
+            raise Exception.Create('Unable to load library"'+FileName+'". GetLastError = '+IntToStr(GetLastError));
+          RegProc:=GetProcAddress(hMod,'DllRegisterServer');
+          if RegProc=nil then
+            raise Exception.Create('Unable to load "DllRegisterServer" function from "'+FileName+'". GetLastError = '+IntToStr(GetLastError));
+          Result:=RegProc;
+        end;
 
-2\. Регистрация Type Library:
+2. Регистрация Type Library:
 
-    procedure RegisterTypeLibrary(FileName:string);
-    var
-      Name: WideString;
-      HelpPath: WideString;
-      TypeLib: ITypeLib;
-    begin
-      if LoadTypeLib(PWideChar(WideString(FileName)), TypeLib)=S_OK then
-      begin
-        Name := FileName;
-        HelpPath := ExtractFilePath(ModuleName);
-        RegisterTypeLib(TypeLib, PWideChar(Name), PWideChar(HelpPath));
-      end;
-    end;
+        procedure RegisterTypeLibrary(FileName:string);
+        var
+          Name: WideString;
+          HelpPath: WideString;
+          TypeLib: ITypeLib;
+        begin
+          if LoadTypeLib(PWideChar(WideString(FileName)), TypeLib)=S_OK then
+          begin
+            Name := FileName;
+            HelpPath := ExtractFilePath(ModuleName);
+            RegisterTypeLib(TypeLib, PWideChar(Name), PWideChar(HelpPath));
+          end;
+        end;
 
 Здесь используется интерфейс ITypeLib и API функция RegisterTypeLib. И
 то и другое объявленно в модуле ActiveX, если я не ошибаюсь.
@@ -69,6 +69,3 @@ Hint: если вы регистрируете библиотеку типов �
 Автор: Fantasist
 
 Взято с Vingrad.ru <https://forum.vingrad.ru>
-
-
-

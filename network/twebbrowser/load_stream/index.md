@@ -26,9 +26,9 @@ Date: 01.01.2007
 
 Примечание от Vit
 
-1\. В Uses добавить ActiveX
+1. В Uses добавить ActiveX
 
-2\. Если в TWebBrowser ничего не загружено то код выдаёт Access Violation
+2. Если в TWebBrowser ничего не загружено то код выдаёт Access Violation
 
 Исправляется следующим образом:
 

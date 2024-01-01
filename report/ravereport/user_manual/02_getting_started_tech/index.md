@@ -20,7 +20,7 @@ you do not agree with the terms of this Agreement, promptly return the
 unopened disk package and accompanying items, (including written
 materials), to the place you obtained them for a full refund.
 
-1\. Grant of License - Nevrona Designs grants to you the right to use one
+1. Grant of License - Nevrona Designs grants to you the right to use one
 copy of the enclosed Nevrona Designs program, (the Software), on a
 single terminal connected to a single computer (i.e. CPU). You may make
 one copy of the Software for back-up purposes for use on your own
@@ -42,12 +42,12 @@ EXPRESS WRITTEN PERMISSION OF NEVRONA DESIGNS. This license does include
 the right to distribute applications using the enclosed software
 provided the above requirements are met.
 
-2\. Term - This Agreement is effective until you terminate it by
+2. Term - This Agreement is effective until you terminate it by
 destroying the Software, together with all copies. It will also
 terminate if you fail to follow this agreement. You agree upon
 termination to destroy the Software, together with all copies thereof.
 
-3\. Copyright - The software is owned by Nevrona Designs and is protected
+3. Copyright - The software is owned by Nevrona Designs and is protected
 by United States laws and international treaty provisions. Therefore,
 you must treat the Software like any other copyrighted material (e.g. a
 book or musical recording) EXCEPT that you may either (a) make one copy
@@ -58,7 +58,7 @@ accompanying the Software.
 
 Ограниченная гарантия - Limited Warranty
 
-1\. Limited Warranty - Nevrona Designs warrants that the disks on which
+1. Limited Warranty - Nevrona Designs warrants that the disks on which
 the Software is furnished to be free from defects in material and
 workmanship, under normal use, for a period of 90 days after the date of
 the original purchase. If, during this 90-day period, a defect in the
@@ -74,7 +74,7 @@ significant Software or documentation errors within a reasonable period
 of time, or refund all or a fair portion of the price you have paid for
 the Software at Nevrona Designs\' option.
 
-2\. Disclaimer of Warranties - Nevrona Designs disclaims all other
+2. Disclaimer of Warranties - Nevrona Designs disclaims all other
 warranties, either expressed or implied, including but not limited to
 implied warranties of merchantability of fitness from particular
 purpose, with respect to the Software and accompanying written
@@ -89,16 +89,16 @@ Designs has been advised of the possibility of such damages. Some states
 do not allow the exclusion of limitation of liability for consequential
 or incidental damages, and this limitation may not apply to you.
 
-3\. Sole Remedy - Nevrona Designs\' entire liability in your inclusive
+3. Sole Remedy - Nevrona Designs\' entire liability in your inclusive
 remedy shall be, at Nevrona Designs\' option, either: (1) The return of
 the purchase price paid; or (2) Repair or replacement of the Software
 that does not meet Nevrona Designs\' limited warranty, which is returned
 to Nevrona Designs with a copy of your receipt.
 
-4\. Governing Law - This Agreement will be consTRUEd and governed in
+4. Governing Law - This Agreement will be consTRUEd and governed in
 accordance with laws of the State of Arizona.
 
-5\. U.S. Government Restricted Rights - This Software and documentation
+5. U.S. Government Restricted Rights - This Software and documentation
 are provided with restrictive rights. Use, duplication or disclosure by
 the Government is subject to restrictions set forth in Section c(1)(ii)
 of the Rights and Technical Data in Computer Software clause at

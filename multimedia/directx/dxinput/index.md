@@ -146,7 +146,7 @@ DXInput.Keyboard.KeyAssigns[isButton10,X]:=ord(\'q\')
        DXInput.Keyboard.KeyAssigns[isUp,2]:=ord('I');
     end;
 
-2\. Мышь
+2. Мышь
 
 DXinput.Mouse.X - положение курсора по горизонтали
 DXinput.Mouse.Y - положение курсора по вертикали
@@ -202,7 +202,7 @@ DXinput.Mouse.Z - положение курсора по третьей оси
        LeftB:=false; RightB:=false;
     end;
 
-3\. Джойстик
+3. Джойстик
 
 Настроим джойстик:
 DXinput.Joystick.RangeX = 0 - 1000, устанавливает диапазон изменения

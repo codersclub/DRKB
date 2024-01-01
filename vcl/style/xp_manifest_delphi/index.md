@@ -71,13 +71,13 @@ Microsoft). Эта информация будет необходима когд
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ------------------
-  ·   1\. WindowsXP.RC
+  1.  WindowsXP.RC
   --- ------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ------------------------
-  ·   2\. WindowsXP.Manifest
+  2.  WindowsXP.Manifest
   --- ------------------------
 :::
 

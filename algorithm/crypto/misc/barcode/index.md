@@ -24,31 +24,31 @@ The basic algorithm:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ---------------------------------------------------------------------
-  1.   1\.        add the values of the digits in the odd positions (1, 3, 5...)
+  1.   add the values of the digits in the odd positions (1, 3, 5...)
   ---- ---------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- --------------------------------------
-  2.   2\.        multiply this result by 3
+  2.   multiply this result by 3
   ---- --------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ----------------------------------------------------------------------
-  3.   3\.        add the values of the digits in the even positions (2, 4, 6...)
+  3.   add the values of the digits in the even positions (2, 4, 6...)
   ---- ----------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ---------------------------------------------
-  4.   4\.        sum the results of steps 2 and 3
+  4.   sum the results of steps 2 and 3
   ---- ---------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ------------------------------------------------------------------------
-  5.   5\.        the check digit is the smallest number which, when added to
+  5.   the check digit is the smallest number which, when added to
        the result in step 4, produces a multiple of 10.
   ---- ------------------------------------------------------------------------
 :::
@@ -57,31 +57,31 @@ Small example. Assume the source data is 08137919805
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ---------------------------
-  1.   1\.        0+1+7+1+8+5=22
+  1.   0+1+7+1+8+5=22
   ---- ---------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ---------------------
-  2.   2\.        22*3=66
+  2.   22*3=66
   ---- ---------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- -------------------------
-  3.   3\.        8+3+9+9+0=29
+  3.   8+3+9+9+0=29
   ---- -------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- ---------------------
-  4.   4\.        66+29=95
+  4.   66+29=95
   ---- ---------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   ---- -----------------------------------------------------
-  5.   5\.        95+??=100 where ?? is a 5 (our checksum)
+  5.   95+??=100 where ?? is a 5 (our checksum)
   ---- -----------------------------------------------------
 :::
 

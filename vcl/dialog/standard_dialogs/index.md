@@ -133,7 +133,7 @@ ShowMessage(OpenDialog1.FileName);
 
   Код
 
-1\. Поместите в событие формы FormCreate следующий код:
+1. Поместите в событие формы FormCreate следующий код:
 
     procedure TForm1.FormCreate(Sender: TObject);
     begin
@@ -152,7 +152,7 @@ ShowMessage(OpenDialog1.FileName);
 Этот код устанавливает некоторые свойства диалога Open как было описано
 в начале статьи.
 
-2\. Добавьте следующий код в событие Onclick для кнопок btnOpen и
+2. Добавьте следующий код в событие Onclick для кнопок btnOpen и
 btnSave:
 
     procedure TForm1.btnOpenClick(Sender: TObject);

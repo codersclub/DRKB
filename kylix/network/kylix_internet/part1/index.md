@@ -618,13 +618,13 @@ exit 0
 
 Литература
 
-1\. Griffin I, Nelson J (1998). Linux Network Programming, Part 1, Linux
+1. Griffin I, Nelson J (1998). Linux Network Programming, Part 1, Linux
 Journal, #46 February 1998
 
-2\. Griffin I, Nelson J (1998). Linux Network Programming, Part 2, Linux
+2. Griffin I, Nelson J (1998). Linux Network Programming, Part 2, Linux
 Journal, #47 March 1998
 
-3\. GLIBC Manual
+3. GLIBC Manual
 
 Статья и примеры программ © 2001 Андрей Наумович Боровский.
 

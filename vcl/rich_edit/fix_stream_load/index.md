@@ -24,7 +24,7 @@ COMCTRLS.PAS (дата создания: 4 августа 1997 года, раз�
 "TRichEditStrings.LoadFromStream" (измененные строки отмечены символом
 "!"):
 
-1\. Исходный текст
+1. Исходный текст
 
     procedure TRichEditStrings.LoadFromStream(Stream: TStream);
     var
@@ -72,7 +72,7 @@ COMCTRLS.PAS (дата создания: 4 августа 1997 года, раз�
       end;
     end;
 
-2\. Текст с исправлением:
+2. Текст с исправлением:
 
      
     procedure TRichEditStrings.LoadFromStream(Stream: TStream);

@@ -89,21 +89,21 @@ ADOX - это расширения ADO для Data Definition Language а так
 Для использования ADOX в Delphi, Вам необходимы установить библиотеку
 типа ADOX.
 
-1\. Select Project \| Import Type Library
+1. Select Project \| Import Type Library
 
-3\. Выберите "Microsoft ADO Ext 2.x for DDL and Security (Version 2.x)"
+3. Выберите "Microsoft ADO Ext 2.x for DDL and Security (Version 2.x)"
 
-4\. Измените "TTable" на "TADOXTable"
+4. Измените "TTable" на "TADOXTable"
 
-5\. Измените "TColumn" на "TADOXColumn"
+5. Измените "TColumn" на "TADOXColumn"
 
 6 .Измените "TIndex" на "TADOXIndex"
 
-7\. Нажмите кнопку Install (перекомпиляция пакетов (packages))
+7. Нажмите кнопку Install (перекомпиляция пакетов (packages))
 
-8\. Нажмите один раз OK и дважды Yes
+8. Нажмите один раз OK и дважды Yes
 
-9\. File \| Close All \| Yes
+9. File \| Close All \| Yes
 
 На вершине объектной модели ADOX находится объект Catalog. Он
 обеспечивает доступ к набору Таблиц (Tables), Видов (Views) и Процедур,

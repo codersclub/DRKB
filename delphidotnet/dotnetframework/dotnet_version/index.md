@@ -35,7 +35,7 @@ Date: 01.01.2007
       Result := False;
       VersionName := '';
       if ERROR_SUCCESS = RegOpenKeyEx(HKEY_LOCAL_MACHINE,
-      PChar('SOFTWARE\Microsoft\.NETFramework\policy'), 0,
+      PChar('SOFTWARE\Microsoft.NETFramework\policy'), 0,
       KEY_ENUMERATE_SUB_KEYS, hkey) then
       try
         I := 0;

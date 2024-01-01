@@ -61,19 +61,19 @@ Important Notes:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -----------------------------------------------------------
-  1.   1\.        Include the JRO\_TLB unit in your uses clause.
+  1.        Include the JRO\_TLB unit in your uses clause.
   ---- -----------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------
-  2.   2\.        Nobody should use or open the database during compacting.
+  2.        Nobody should use or open the database during compacting.
   ---- ----------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ---------------------------------------------------------------------------
-  3.   3\.        If the compiler gives you an error on the JRO\_TLB unit follow
+  3.        If the compiler gives you an error on the JRO\_TLB unit follow
        these steps:
   ---- ---------------------------------------------------------------------------
 :::
@@ -147,20 +147,19 @@ Important Notes:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -----------------------------------------------------------
-  1.   1\.        Include the JRO\_TLB unit in your uses clause.
+  1.        Include the JRO\_TLB unit in your uses clause.
   ---- -----------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------
-  2.   2\.        Nobody should use or open the database during compacting.
+  2.        Nobody should use or open the database during compacting.
   ---- ----------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ---------------------------------------------------------------------------
-  3.   3\.        If the compiler gives you an error on the JRO\_TLB unit follow
-       these steps:
+  3.        If the compiler gives you an error on the JRO\_TLB unit follow these steps:
   ---- ---------------------------------------------------------------------------
 :::
 

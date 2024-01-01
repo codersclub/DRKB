@@ -11,12 +11,12 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-1\. Объявляем переменные:
+1. Объявляем переменные:
 
     var
       access, db, td, recordset: Variant;
 
-2\. объявляем массив констант соответствия типов данных
+2. объявляем массив констант соответствия типов данных
 
 (между полями в Delphi и типами полей DAO)
 
@@ -89,7 +89,7 @@ Date: 01.01.2007
      
         );
 
-3\. загружаем DAO:
+3. загружаем DAO:
 
         try
           access := GetActiveOleObject('DAO.DBEngine.35');
@@ -97,7 +97,7 @@ Date: 01.01.2007
           access := CreateOleObject('DAO.DBEngine.35');
         end;
 
-4\. открываем базу данных
+4. открываем базу данных
 
         try
           db := access.OpenDatabase(yourDatabaseName);
@@ -105,11 +105,11 @@ Date: 01.01.2007
           exit
         end;
 
-5\. создаём новую таблицу в открытой базе данных
+5. создаём новую таблицу в открытой базе данных
 
         td := db.CreateTableDef(yourTableName, 0, '', '');
 
-6\. добавляем в таблицу поле с описаниями
+6. добавляем в таблицу поле с описаниями
 
         td.Fields.Append(td.CreateField(strFieldName, arrMDBTypes[intDataType], Size));
 
@@ -118,25 +118,25 @@ Date: 01.01.2007
         td.Fields.Append(td.CreateField('ID', arrMDBTypes[intDataType], Size));
         td.Fields.Append(td.CreateField('NAME', arrMDBTypes[intDataType], Size));
 
-7\. добавляем таблицу в список таблиц
+7. добавляем таблицу в список таблиц
 
         db.TableDefs.Append(td);
 
-8\. открываем созданную таблицу
+8. открываем созданную таблицу
 
         recordset := db.OpenTable(yourTableName, 0);
 
-9\. добавляем новую запись в открытую таблицу
+9. добавляем новую запись в открытую таблицу
 
         recordset.AddNew;
 
-10\. изменяем значения поля
+10. изменяем значения поля
 
      
         curField := recordset.Fields[0].Value := 1;
         curField := recordset.Fields[1].Value := 'First record';
 
-11\. помещаем новую запись в базу
+11. помещаем новую запись в базу
 
          recordset.Update(dbUpdateRegular, False);
 
@@ -145,15 +145,15 @@ Date: 01.01.2007
     const
       dbUpdateRegular = 1;
 
-12\. закрываем recordset
+12. закрываем recordset
 
          recordset.Close;
 
-13\. закрываем базу данных
+13. закрываем базу данных
 
          db.Close;
 
-14\. освобождаем экземпляр DAO
+14. освобождаем экземпляр DAO
 
          access := UnAssigned;
 

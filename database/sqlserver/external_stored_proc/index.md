@@ -33,14 +33,14 @@ Extended Stored Procedures (called xp\'s afterwards) are part of
 Microsoft\'s Open Data Services (ODS) for SQL Server. With ODS you can
 do three things:
 
-1\.        Making routines in a DLL available as stored procedures to any
+1.        Making routines in a DLL available as stored procedures to any
 SQL Server user.
 
-2\.        Write procedure server applications. They are similar to
+2.        Write procedure server applications. They are similar to
 xp\'s, however they run as a separate network server application and
 could even be running on a different machine (3-tier).
 
-3\.        Writing gateways to non-SQL Server based environments.
+3.        Writing gateways to non-SQL Server based environments.
 
 In the following figure a graphical overview of the ODS architecture is
 given.
@@ -52,16 +52,16 @@ errors may corrupt your SQL Server, so it\'s not an art without danger.
 Making parts of your application available on the server has some
 advantages, for example:
 
-1\.        Some things are easy to write in Delphi, but difficult or
+1.        Some things are easy to write in Delphi, but difficult or
 impossible using Transact SQL. For example you might use some routines
 written in a language you don\'t understand or don\'t have the source
 code for, so you can\'t translate it to Transact SQL (with the
 possibility of errors creeping in during this translation).
 
-2\.        Delphi routines run much faster than Transact SQL. Take for
+2.        Delphi routines run much faster than Transact SQL. Take for
 example numerical calculations.
 
-3\.        You can interface with other programs, databases and such. For
+3.        You can interface with other programs, databases and such. For
 example you could write an xp that accepts the name of a paradox table
 and returns the contents of this table as a SQL Server result set.
 
@@ -106,21 +106,21 @@ procedures can return parameters and/or result sets.
 
 Each implementation of an xp needs to do the same things:
 
-1\.        Check that the caller of the procedure has provided all of the
+1.        Check that the caller of the procedure has provided all of the
 required parameters and that each parameter is of the appropriate data
 type. Return an appropriate message if not.
 
-2\.        Define the columns for returning a result set.
+2.        Define the columns for returning a result set.
 
-3\.        Create each record for returning to the caller.
+3.        Create each record for returning to the caller.
 
-4\.        Set up any output parameters and return statuses used by the
+4.        Set up any output parameters and return statuses used by the
 procedure.
 
-5\.        When finished returning results, send the results completion
+5.        When finished returning results, send the results completion
 message using srv\_senddone with the SRV\_DONE\_MORE status flag.
 
-6\.        Return from the procedure with the desired Transact-SQL return
+6.        Return from the procedure with the desired Transact-SQL return
 status.
 
 Step 1 is necessary because, unless normal stored procedures, it is up
@@ -152,10 +152,10 @@ care off step 5 and 6.
 
 You use this framework as follows:
 
-1\.        Create an object of class TSQLXProc and implement its Execute
+1.        Create an object of class TSQLXProc and implement its Execute
 method.
 
-2\.        Write a procedure that allocates this object, calls it\'s Run
+2.        Write a procedure that allocates this object, calls it\'s Run
 method and frees the object. The name of this procedure should be equal
 to the name of your extended stored procedure. It\'s calling method
 should be stdcall.
@@ -379,16 +379,16 @@ Installing xp\'s on SQL Server 7
 Installing an extended stored procedure on SQL Server 7 can be done
 using the SQL Enterprise manager:
 
-1\.        Open a server.
+1.        Open a server.
 
-2\.        Go to item \`Databases\'.
+2.        Go to item \`Databases\'.
 
-3\.        Select the master database.
+3.        Select the master database.
 
-4\.        Right click it and choose \`New Extended Stored Procedure\',
+4.        Right click it and choose \`New Extended Stored Procedure\',
 see figure below
 
-5\.        Give the name of a function in the DLL and the location and
+5.        Give the name of a function in the DLL and the location and
 name of the DLL itself.
 
 Installing xp\'s on SQL Server 6.5

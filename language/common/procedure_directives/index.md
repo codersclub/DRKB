@@ -116,7 +116,7 @@ with the same parameter values so one can
 
 use the CPU windows stack pane to study the resulting stack layout.
 
-1\. Pascal calling convention
+1. Pascal calling convention
 
     function Test1( i: Integer; b: Boolean; d: Double ): Integer; Pascal;
 
@@ -138,7 +138,7 @@ The parameters are cleared off the stack by the called function using a
 ret $10 instruction ($10 = 16 is the total size of the parameters on
 stack).
 
-2\. Register calling convention
+2. Register calling convention
 
     function Test2( i: Integer; b: Boolean; d: Double ): Integer; Register;
 
@@ -158,7 +158,7 @@ The value of i is passed in eax, the value of b in edx. The parameters
 are cleared off the stack by the called function using a ret $8
 instruction ($8 = 8 is the total size of the parameters on stack).
 
-3\. cdecl calling convention
+3. cdecl calling convention
 
     function Test3( i: Integer; b: Boolean; d: Double ): Integer; cdecl;
 
@@ -181,7 +181,7 @@ function ends with a ret 0 and after the call instruction we find a add
 esp, $10 instruction ($10 = 16 is the total size of the parameters on
 stack).
 
-4\. Stdcall calling convention
+4. Stdcall calling convention
 
     function Test4( i: Integer; b: Boolean; d: Double ): Integer; stdcall;
 

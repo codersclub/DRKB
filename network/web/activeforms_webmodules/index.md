@@ -107,7 +107,7 @@ Aware."
 В Delphi 4 эта проблема разрешена и ActiveForm сделанные в Delphi 4 (и
 выше) теперь поддерживаю Apartment threading model.
 
-5\. Delphi Web Modules (internet)
+5. Delphi Web Modules (internet)
 
 С помощью JBuilder возможно разрабатывать 100% pure Java апплеты,
 приложения., но мы не должны забывать и о том, что с помощью Дельфи так

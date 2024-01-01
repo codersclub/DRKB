@@ -1308,19 +1308,19 @@ characters полезно только тогда, когда SQL-сервер �
 
  
 
-1\. select titles.*
+1. select titles.*
 
   from titles
 
  
 
-2\. select Name = au\_fname, Surname = au\_lname
+2. select Name = au\_fname, Surname = au\_lname
 
   from authors
 
  
 
-3\. select Sales = total\_sales * price,
+3. select Sales = total\_sales * price,
 
   ToAuthor = advance,
 
@@ -1330,13 +1330,13 @@ characters полезно только тогда, когда SQL-сервер �
 
  
 
-4\. select \'Social security #\', au\_id
+4. select \'Social security #\', au\_id
 
   from authors
 
  
 
-5\. select this\_year = advance, next\_year = advance + advance/10,
+5. select this\_year = advance, next\_year = advance + advance/10,
 
           third\_year = advance/2,
 

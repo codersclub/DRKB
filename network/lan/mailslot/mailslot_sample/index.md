@@ -17,7 +17,7 @@ Date: 01.01.2007
      hSlot1      : THandle;
      lpszSlotName: LPSTR;
     begin
-     lpszSlotName := '\\\\.\\mailslot\\sample_mailslot';
+     lpszSlotName := '\\.\\mailslot\\sample_mailslot';
      hslot1 := CreateMailslot (lpszSlotName,
                                0,
                                MAILSLOT_WAIT_FOREVER,
@@ -38,13 +38,13 @@ WinAPI-\>Windows-\>Процессы...-\>Пример работы с MailSlot
 
 Тут Baa немного ошибся. Он написал открытие мэйлслота в C++ стиле:
 
-lpszSlotName := \'\\\\\\\\.\\\\mailslot\\\\sample\_mailslot\';
+    lpszSlotName := '\\.\\mailslot\\sample_mailslot\';
 
 а надо так:
 
-lpszSlotName := \'\\\\.\\mailslot\\sample\_mailslot\';
+    lpszSlotName := '\.\mailslot\sample_mailslot';
 
-т.е. вместо \\\\ надо просто \
+т.е. вместо `\\` надо просто `\`
 
 Автор: p0s0l
 
