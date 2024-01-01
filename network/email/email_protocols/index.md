@@ -2082,7 +2082,7 @@ PROP   ?          FreeMail            ?    ?
 
 Key and Other Issues
 
-\(a) What are the common extensions to POP3 and which clients/servers
+(a) What are the common extensions to POP3 and which clients/servers
 
 support them?
 
@@ -2151,7 +2151,7 @@ Java - written in Java programming language.
 
 JavaApp - written as a Java Applet.
 
-\(c) Other notes
+(c) Other notes
 
 IMAP1   - Original IMAP: I\'ve heard that MacMS actually uses a unique
 

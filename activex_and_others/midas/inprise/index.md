@@ -31,7 +31,7 @@ their respective owners.
 
 13518 Jamul Drive, Jamul, CA 91935-1635
 
-\(619) 669-3100 (voice)
+(619) 669-3100 (voice)
 
 [www.marotz.com](www.marotz.com)
 
