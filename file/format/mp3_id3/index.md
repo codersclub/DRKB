@@ -36,7 +36,7 @@ Date: 01.01.2007
     const 
      Genres : array[0..146] of string = 
         ('Blues','Classic Rock','Country','Dance','Disco','Funk','Grunge', 
-        'Hip- Hop','Jazz','Metal','New Age','Oldies','Other','Pop','R&B', 
+        'Hip-Hop','Jazz','Metal','New Age','Oldies','Other','Pop','R&B', 
         'Rap','Reggae','Rock','Techno','Industrial','Alternative','Ska', 
         'Death Metal','Pranks','Soundtrack','Euro-Techno','Ambient', 
         'Trip-Hop','Vocal','Jazz+Funk','Fusion','Trance','Classical', 

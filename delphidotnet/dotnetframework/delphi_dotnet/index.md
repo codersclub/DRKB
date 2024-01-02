@@ -167,7 +167,8 @@ BackgroundColor класса Console и класс ConsoleColor, позволя�
 
     dccil -CC -NSC:\WINDOWS\Microsoft.NET\Framework\v2.0.50727 --clrversion:v2.0.50727 --no-config -Q -M -y -Z -$D- Borland.Delphi.System.pas pause
 
-Эта команда приведёт к компиляции Borland.Delphi.System.pas и получению так необходимого нам файла Borland.Delphi.System.dcuil.
+Эта команда приведёт к компиляции Borland.Delphi.System.pas
+и получению так необходимого нам файла Borland.Delphi.System.dcuil.
 
 
 

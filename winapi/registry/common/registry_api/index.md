@@ -13,7 +13,7 @@ Date: 01.01.2007
 
 Создать подраздел в реестре:
 
-RegCreateKey (Key:HKey; SubKey: PChar; var Result: HKey): Longint;
+    RegCreateKey (Key:HKey; SubKey: PChar; var Result: HKey): Longint;
 
 Key - указывает на "корневой" раздел реестра, в Delphi1 доступен
 только один - HKEY\_CLASSES\_ROOT, а в Delphi3 - все.
@@ -29,7 +29,7 @@ ERROR\_SUCCESS, то успешно, если иное - ошибка.
 
 Открыть подраздел:
 
-RegOpenKey(Key: HKey; SubKey: PChar; var Result: HKey): Longint;
+    RegOpenKey(Key: HKey; SubKey: PChar; var Result: HKey): Longint;
 
 Раздел Key
 
@@ -42,7 +42,7 @@ RegOpenKey(Key: HKey; SubKey: PChar; var Result: HKey): Longint;
 
 Закрывает раздел:
 
-RegCloseKey(Key: HKey): Longint;
+    RegCloseKey(Key: HKey): Longint;
 
 Закрывает раздел, на который ссылается Key.
 
@@ -50,7 +50,7 @@ RegCloseKey(Key: HKey): Longint;
 
 Удалить подраздел:
 
-RegDeleteKey(Key: HKey; SubKey: PChar): Longint;
+    RegDeleteKey(Key: HKey; SubKey: PChar): Longint;
 
 Удалить подраздел Key\\SubKey.
 
@@ -58,8 +58,8 @@ RegDeleteKey(Key: HKey; SubKey: PChar): Longint;
 
 Получить имена всех подразделов раздела Key:
 
-RegEnumKey(Key:HKey; index: Longint; Buffer: PChar; cb: Longint):
-Longint;
+    RegEnumKey(Key:HKey; index: Longint; Buffer: PChar; cb: Longint):
+    Longint;
 
 Key - Handle на открытый или созданный раздел
 
@@ -73,8 +73,8 @@ index - индекс, должен быть равен 0 при первом в�
 
 Возвращает текстовую строку, связанную с ключом Key\\SubKey:
 
-RegQueryValue(Key: HKey; SubKey: PChar; Value: PChar; var cb: Longint):
-Longint;
+    RegQueryValue(Key: HKey; SubKey: PChar; Value: PChar; var cb: Longint):
+    Longint;
 
 Ключ\\подключ Key\\SubKey.
 
@@ -87,8 +87,8 @@ cb - размер, на входе - размер буфера, на выход�
 
 Задать новое значение ключу Key\\SubKey:
 
-RegSetValue(Key: HKey; SubKey: PChar; ValType: Longint; Value: PChar;
-cb: Longint): Longint;
+    RegSetValue(Key: HKey; SubKey: PChar; ValType: Longint; Value: PChar;
+    cb: Longint): Longint;
 
 Ключ\\подключ Key\\SubKey.
 
@@ -102,7 +102,7 @@ cb - размер буфера. В Windows 3.1 допустимо только V
 
 Удаляет значение lpValueName находящееся в ключе hKey:
 
-RegDeleteValue(HKEY hKey, LPCTSTR lpValueName);
+    RegDeleteValue(HKEY hKey, LPCTSTR lpValueName);
 
 hKey - ключ. hKey должен был быть открыт с доступом KEY\_SET\_VALUE
 процедурой RegOpenKey.
@@ -113,9 +113,9 @@ lpValueName - значение, находящееся в ключе hKey.
 
 Выдает список значений у ключа hKey:
 
-LONG RegEnumValue( HKEY hKey, DWORD dwIndex, LPTSTR lpValueName, LPDWORD
-lpcbValueName, LPDWORD lpReserved, LPDWORD lpType, LPBYTE lpData,
-LPDWORD lpcbData);
+    LONG RegEnumValue( HKEY hKey, DWORD dwIndex, LPTSTR lpValueName, LPDWORD
+    lpcbValueName, LPDWORD lpReserved, LPDWORD lpType, LPBYTE lpData,
+    LPDWORD lpcbData);
 
 hKey - ключ.
 
@@ -139,7 +139,7 @@ lpcbData-размер для lpData
 При каждой новом вызове функции после предыдущего нужно заново
 переназначить lpcbValueName.
 
-lpcbValueName = sizeof(lpValueName)
+    lpcbValueName = sizeof(lpValueName)
 
 Примеры:
 
@@ -184,7 +184,7 @@ lpcbValueName = sizeof(lpValueName)
 
 Для работы с реестром применяется ряд функций API :
 
-RegCreateKey (Key: HKey; SubKey: PChar; var Result: HKey): Longint;
+    RegCreateKey (Key: HKey; SubKey: PChar; var Result: HKey): Longint;
 
 Создать подраздел в реестре. Key указывает на "корневой" раздел
 реестра, в Delphi1 доступен только один - HKEY\_CLASSES\_ROOT, в в
@@ -194,24 +194,24 @@ Delphi3 - все. SubKey - имя раздела - строится по при�
 содержит Handle на раздел). Об успешности вызова судят по возвращаемому
 значению, если ERROR\_SUCCESS, то успешно, если иное - ошибка.
 
-RegOpenKey(Key: HKey; SubKey: PChar; var Result: HKey): Longint;
+    RegOpenKey(Key: HKey; SubKey: PChar; var Result: HKey): Longint;
 
 Открыть подраздел Key\\SubKey и возвращает Handle на него в переменной
 Result. Если раздела с таким именем нет, то он не создается. Возврат -
 код ошибки или ERROR\_SUCCESS, если успешно.
 
-RegCloseKey(Key: HKey): Longint;
+    RegCloseKey(Key: HKey): Longint;
 
 Закрывает раздел, на который ссылается Key. Возврат - код ошибки или
 ERROR\_SUCCESS, если успешно.
 
-RegDeleteKey(Key: HKey; SubKey: PChar): Longint;
+    RegDeleteKey(Key: HKey; SubKey: PChar): Longint;
 
 Удалить подраздел Key\\SubKey. Возврат - код ошибки или ERROR\_SUCCESS,
 если нет ошибок.
 
-RegEnumKey(Key: HKey; index: Longint; Buffer: PChar;cb: Longint):
-Longint;
+    RegEnumKey(Key: HKey; index: Longint; Buffer: PChar;cb: Longint):
+    Longint;
 
 Получить имена всех подразделов раздела Key, где Key - Handle на
 открытый или созданный раздел (см. RegCreateKey и RegOpenKey), Buffer -
@@ -220,15 +220,15 @@ Longint;
 While, где index увеличивается до тех пор, пока очередной вызов
 RegEnumKey не завершится ошибкой (см. пример).
 
-RegQueryValue(Key: HKey; SubKey: PChar; Value: PChar; var cb: Longint):
-Longint;
+    RegQueryValue(Key: HKey; SubKey: PChar; Value: PChar; var cb: Longint):
+    Longint;
 
 Возвращает текстовую строку, связанную с ключом Key\\SubKey.Value -
-буфер для строки; cb- размер, на входе - размер буфера, на выходе -
+буфер для строки; cb - размер, на входе - размер буфера, на выходе -
 длина возвращаемой строки. Возврат - код ошибки.
 
-RegSetValue(Key: HKey; SubKey: PChar; ValType: Longint; Value: PChar;
-cb: Longint): Longint;
+    RegSetValue(Key: HKey; SubKey: PChar; ValType: Longint; Value: PChar;
+    cb: Longint): Longint;
 
 Задать новое значение ключу Key\\SubKey, ValType - тип задаваемой
 переменной, Value - буфер для переменной, cb - размер буфера. В Windows

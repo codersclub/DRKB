@@ -36,7 +36,7 @@ GetDefaultSection - Функция возвращает строку для ук
 Component,
 
 GetUniqueFileNameInDir - Возвращает уникальное для заданного каталога
-имя файла, InstantiateForm- функция создает экземпляр формы типа
+имя файла, InstantiateForm - функция создает экземпляр формы типа
 FormClass
 
 ReadFormPlacement - Процедура ReadFormPlacement используется для
@@ -204,7 +204,7 @@ IncSecond
 IncTime - Увеличивает время на заданное количество часов, минут, секи
 мс, возвращая время IncYear
 
-IsLeapYear- Проверяет является ли заданный параметром AYear год
+IsLeapYear - Проверяет является ли заданный параметром AYear год
 високосным.
 
 LastDayOfPrevMonth

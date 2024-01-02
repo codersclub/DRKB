@@ -36,8 +36,9 @@ Status.dwAvailVirtual: Количество свободной виртуаль�
 Предваритель, желательно преобразовать эти значения в гига-, мега- или
 килобайты, например так:
 
-label14.Caption := \'Total Ram: \' + IntToStr(Status.dwTotalPhys div
-1024417) + \'meg\';
+    label14.Caption := 'Total Ram: '
+                     + IntToStr(Status.dwTotalPhys div 1024417)
+                     + ' meg';
 
 Взято из <https://forum.sources.ru>
 

@@ -809,7 +809,7 @@ TIModuleInterface), и нотификатор уничтожается.
       FileName:= ToolServices.GetCurrentFile;
       Result.Line:= 0;
       Result.Col:= 0;
-      { для простоты определяем позицию только в pas- файлах }
+      { для простоты определяем позицию только в pas-файлах }
       if ExtractFileExt( FileName) = '.pas' then
       begin
         { получаем интерфейс модуля }

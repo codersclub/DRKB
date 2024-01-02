@@ -98,7 +98,7 @@ VenueNo=1 на этапе выполнения.
     Font.Color:=clWhite;
     FillRect(Rect);
     if (Column.Alignment=taRightJustify) then
-     TextOut(Rect.Right-2-  TextWidth(Column.Field.Text),
+     TextOut(Rect.Right - 2 - TextWidth(Column.Field.Text),
       Rect.Top+2,Column.Field.Text)
     else
      TextOut(Rect.Left+2,Rect.Top+2,Column.Field.Text);
@@ -131,7 +131,7 @@ VenueNo=1 на этапе выполнения.
           Brush.Color:=clGreen;
           Font.Color:=clWhite;
           FillRect(Rect);
-          TextOut(Rect.Right-2-  TextWidth(Column.Field.Text),
+          TextOut(Rect.Right - 2 - TextWidth(Column.Field.Text),
             Rect.Top+2,Column.Field.Text)
         end;
       end;
@@ -162,10 +162,10 @@ TDBGrid:
           FillRect(Rect);
           if (Table1.FieldByName('VenueNo').Value=1) then begin
             Font.Color:=clRed;
-            TextOut(Rect.Right-2- DBGrid1.Canvas.TextWidth('our venue'),
+            TextOut(Rect.Right - 2 - DBGrid1.Canvas.TextWidth('our venue'),
               Rect.Top+2,'our venue');
           end else begin
-            TextOut(Rect.Right-2- DBGrid1.Canvas.TextWidth('other venue'),
+            TextOut(Rect.Right - 2 - DBGrid1.Canvas.TextWidth('other venue'),
               Rect.Top+2,'other venue');
           end;
         end;
@@ -196,7 +196,7 @@ TDBGrid:
               Rect.Top+1,'J');
           end else begin
             Font.Color:=clBlack;
-            TextOut(Rect.Right-2- DBGrid1.Canvas.TextWidth('F'),
+            TextOut(Rect.Right - 2 - DBGrid1.Canvas.TextWidth('F'),
               Rect.Top+1,'F');
           end;
         end;

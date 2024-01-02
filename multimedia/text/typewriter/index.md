@@ -13,7 +13,7 @@ Show text progressively as typed with a typewriter (horizontal/vertical)
 
     {
      To make this code to work you would need 2 images,
-     one for the horizontal- and another for the vertical text.
+     one for the horizontal, and another for the vertical text.
     }
      
     // VerticalTypewriter ( <Text>, <Image to write to>, <Time to delay between every chars> )

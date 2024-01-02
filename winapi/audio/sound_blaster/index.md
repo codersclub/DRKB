@@ -546,110 +546,72 @@ outp(ClrPort, DMAChannel );
 Бит автоинициализации должен устанавливаться соответственно.
 
 Биты пересылки должны устанавливаться в 10h для воспроизведения и
-
 01h для записи. Выбор канала должен устанавливаться так же как и на
-
 канал DMA звуковой платы.
 
 outp(ModePort, Mode + ( DMAChannel % 4 ));
 
 Некоторые часто используемые режимы:
 
-48h + Канал - одиночный цикл воспроизведение
-
-58h + Канал - автоинициализируемое воспроизведение
-
-44h + Канал - запись одиночного цикла
-
-54h + Канал - автоинициализируемая запись
+- 48h + Канал - одиночный цикл воспроизведение
+- 58h + Канал - автоинициализируемое воспроизведение
+- 44h + Канал - запись одиночного цикла
+- 54h + Канал - автоинициализируемая запись
 
 5) Запишите смещение буфера, младший байт затем старший байт. Для
-
 шестнадцати разрядных данных, смещение должно быть в словах от начала
-
 128k-байтной страницы, для 8-битных от 64K. Самый простой метод для
-
 вычисления смещения с 16 битами - это разделить линейный адрес на
-
 два перед вычислением смещения.
 
-#define lo(value) (unsigned char)((value) & 0x00FF)
-
-#define hi(value) (unsigned char)((value) \>\> 8)
-
-if ( SixteenBit==1 )
-
-BufOffset= ( LinearAddr / 2 ) % 65536;
-
-else BufOffset= LinearAddr % 65536;
-
-outp(BaseAddrPort, lo(BufOffset));
-
-outp(BaseAddrPort, hi(BufOffset));
+    #define lo(value) (unsigned char)((value) & 0x00FF)
+    #define hi(value) (unsigned char)((value) >> 8)
+    if ( SixteenBit==1 )
+      BufOffset= ( LinearAddr / 2 ) % 65536;
+    else BufOffset= LinearAddr % 65536;
+    outp(BaseAddrPort, lo(BufOffset));
+    outp(BaseAddrPort, hi(BufOffset));
 
 6) Запишите длину пересылки в соответствующий порт счета, младший
-
 байт затем старший байт. Для пересылки с 8 битами, запишите
-
 длину в байтах минус единица. Для пересылки с 16 битами, запишите
-
 номер длину в словах минус единица.
 
-if ( SixteenBit==1 )
-
-TransferLength/=2;
-
-outp(CountPort, lo(TransferLength-1));
-
-outp(CountPort, hi(TransferLength-1));
+    if ( SixteenBit==1 )
+      TransferLength/=2;
+    outp(CountPort, lo(TransferLength-1));
+    outp(CountPort, hi(TransferLength-1));
 
 7) Запишите страницу буфера в регистр страницы DMA.
 
-outp(PagePort, ( LinearAddr / 65536));
+    outp(PagePort, ( LinearAddr / 65536));
 
 8) Включите DMA звуковой платы очистив соответствующий бит маски
 
-outp(MaskPort, DMAChannel % 4);
+    outp(MaskPort, DMAChannel % 4);
 
 Пример :
 
-int MaskPort, ClrPort, ModePort, ModeDMA, CountPort, PagePort,
-
-BaseAddrPort;
-
+int MaskPort, ClrPort, ModePort, ModeDMA, CountPort, PagePort, BaseAddrPort;
 int pageports[4]={ 0x87, 0x83, 0x81, 0x82 };
-
 MaskPort=0x0A; ClrPort=0xC; ModePort=0xB;
-
 ModeDMA=0x48+DMAChannel;
-
 CountPort=1+DMAChannel*2;
-
 BaseAddrPort=DMAChannel*2;
-
 PagePort=pageports[DMAChannel];
-
 outportb(MaskPort, 4 + DMAChannel);
-
 outportb(ClrPort, DMAChannel );
-
 outportb(ModePort, ModeDMA );
-
-outportb(BaseAddrPort,lo(aligned\_physical));
-
-outportb(BaseAddrPort,hi(aligned\_physical));
-
-outportb(PagePort,(unsigned char)((aligned\_physical\>\>16)&0xFF));
-
+outportb(BaseAddrPort,lo(aligned_physical));
+outportb(BaseAddrPort,hi(aligned_physical));
+outportb(PagePort,(unsigned char)((aligned_physical>>16)&0xFF));
 outportb(CountPort,lo(len-1));
-
 outportb(CountPort,hi(len-1));
-
 outportb(MaskPort, DMAChannel );
 
 +---------------------------+------------------------------------------------
 
-\| Установка частоты выборки \|
+| Установка частоты выборки |
 
 +===========================+
 
@@ -692,9 +654,9 @@ if ( MaxFrequency==0 )
 
 {
 
-if ( rate\<5000 ) rate=5000;
+if ( rate<5000 ) rate=5000;
 
-if ( rate\>22528 ) rate=22528;
+if ( rate>22528 ) rate=22528;
 
 tc = (unsigned char)(256 - (1000000/rate));
 
@@ -704,15 +666,15 @@ else
 
 {
 
-if ( rate\<5000 ) rate=5000;
+if ( rate<5000 ) rate=5000;
 
-if ( rate\>45056 ) rate=45056;
+if ( rate>45056 ) rate=45056;
 
 tc = (unsigned char)(hi((unsigned int)(65536-(256000000L/rate))));
 
 }
 
-WriteSB(TIME\_CONSTANT);
+WriteSB(TIME_CONSTANT);
 
 WriteSB(tc);
 
@@ -735,7 +697,7 @@ WriteSB ( lo( frequency ) );
 
 +---------------------------------------+------------------------------------
 
-\| Алгоритм цифрового ввода/вывода звука \|
+| Алгоритм цифрового ввода/вывода звука |
 
 +=======================================+
 
@@ -768,20 +730,20 @@ if ( data==NULL )
 
 {
 
-printf("Нет места под буфер DMA\\n");
+printf("Нет места под буфер DMA\n");
 
 return 0;
 
 }
 
-physical=((unsigned long)FP\_OFF(data))+(((unsigned
-long)FP\_SEG(data))\<\<4);
+physical=((unsigned long)FP_OFF(data))+(((unsigned
+long)FP_SEG(data))<<4);
 
-aligned\_physical=physical+0x0FFFFL;
+aligned_physical=physical+0x0FFFFL;
 
-aligned\_physical&=0xF0000L;
+aligned_physical&=0xF0000L;
 
-aligned=MK\_FP((unsigned )((aligned\_physical \>\> 4) & 0xFFFF),0);
+aligned=MK_FP((unsigned )((aligned_physical >> 4) & 0xFFFF),0);
 
 Ниже приведены примеры последовательностей для программирования SB
 
@@ -878,7 +840,7 @@ aligned=MK\_FP((unsigned )((aligned\_physical \>\> 4) & 0xFFFF),0);
 
 +------------------------------------+--------------------------------------
 
-\| Конец цифрового ввода/вывода звука \|
+| Конец цифрового ввода/вывода звука |
 
 +====================================+
 
@@ -886,17 +848,17 @@ aligned=MK\_FP((unsigned )((aligned\_physical \>\> 4) & 0xFFFF),0);
 
 прерывания зависит от установки IRQ на плате Sound Blaster:
 
-IRQ \| Прерывание
+IRQ | Прерывание
 
 -----+------------
 
-2 \| 0Ah
+2 | 0Ah
 
-3 \| 0Bh
+3 | 0Bh
 
-5 \| 0Dh
+5 | 0Dh
 
-7 \| 0Fh
+7 | 0Fh
 
 Для обслуживания прерывания необходимо выполнить:
 
@@ -912,7 +874,7 @@ IRQ \| Прерывание
 
 Установка прерывания :
 
-DMA\_complete = 0;
+DMA_complete = 0;
 
 disable();
 
@@ -930,7 +892,7 @@ static void far interrupt SBHandler( void )
 
 enable();
 
-DMA\_complete = 1;
+DMA_complete = 1;
 
 // подтведить
 
@@ -942,11 +904,11 @@ outportb(0x20,0x20);
 
 Инициализация обработчика :
 
-DMA\_complete = 0;
+DMA_complete = 0;
 
 im = inportb(0x21);
 
-tm = \~(1 \<\< SbIRQ);
+tm = ~(1 << SbIRQ);
 
 outportb(0x21,im & tm);
 
@@ -960,7 +922,7 @@ setvect(0x08 + SbIRQ,OldIRQ);
 
 i = inportb(0x21);
 
-outportb(0x21, i \| (1 \<\< SbIRQ));
+outportb(0x21, i | (1 << SbIRQ));
 
 enable();
 
@@ -970,13 +932,13 @@ f = fopen(argv[1],"rb");
 
 raw = ( char far * ) farmalloc(32000L);
 
-if ( f == 0 \|\| raw==0 )
+if ( f == 0 || raw==0 )
 
 {
 
-printf("Не могу открыть файл выборки - %s\\n",argv[1];
+printf("Не могу открыть файл выборки - %s\n",argv[1];
 
-printf("Нет памяти\\n",argv[1];
+printf("Нет памяти\n",argv[1];
 
 ResetSB();
 
@@ -984,9 +946,9 @@ return;
 
 }
 
-printf("Воспроизведение выборки ...\\n");
+printf("Воспроизведение выборки ...\n");
 
-WriteSB(ON\_SOUND\_SB);
+WriteSB(ON_SOUND_SB);
 
 RateSB(22222);
 
@@ -1018,7 +980,7 @@ ResetSB();
 
 +-------------+-------------------------------------------------------------
 
-\| Стерео звук \|
+| Стерео звук |
 
 +=============+
 
@@ -1031,7 +993,7 @@ ResetSB();
 
 +----------------------+----------------------------------------------------
 
-\| Миксер Sound Blaster \|
+| Миксер Sound Blaster |
 
 +======================+
 
@@ -1087,9 +1049,9 @@ WriteMixerSB(0,0); // RESET
 
 +---+---+ +-+-+
 
-+---+ \|
++---+ |
 
-\| \|
+| |
 
 В Фильтре ADC Источник
 
@@ -1101,13 +1063,13 @@ WriteMixerSB(0,0); // RESET
 
 11 - Линейный вход
 
-#define SOURCE\_MIC1 0
+#define SOURCE_MIC1 0
 
-#define SOURCE\_CD 1
+#define SOURCE_CD 1
 
-#define SOURCE\_MIC2 2
+#define SOURCE_MIC2 2
 
-#define SOURCE\_LINE 3
+#define SOURCE_LINE 3
 
 void pascal InputMixerSB
 
@@ -1117,9 +1079,9 @@ void pascal InputMixerSB
 
 char val;
 
-val=(sou\<\<1)&0x6;
+val=(sou<<1)&0x6;
 
-val\|=(filtr\<\<3)&0x38;
+val|=(filtr<<3)&0x38;
 
 WriteMixerSB(0xC,val);
 
@@ -1133,9 +1095,9 @@ WriteMixerSB(0xC,val);
 
 --------+---------------+----
 
-\| \|
+| |
 
-\| \|
+| |
 
 0 - Использовать фильтр 0 - моно
 
@@ -1145,9 +1107,9 @@ WriteMixerSB(0xC,val);
 
 #define STEREO 1
 
-#define USE\_FILTER 0
+#define USE_FILTER 0
 
-#define BYPASS\_FILTER 1
+#define BYPASS_FILTER 1
 
 void pascal OutputMixerSB
 
@@ -1159,7 +1121,7 @@ char val;
 
 val=(st==1)?2:0;
 
-val\|=(filtr==1)?0x20:0;
+val|=(filtr==1)?0x20:0;
 
 WriteMixerSB(0xE,val);
 
@@ -1175,7 +1137,7 @@ WriteMixerSB(0xE,val);
 
 +-----+-----+ +-----+-----+
 
-\| \|
+| |
 
 Громкость Громкость
 
@@ -1191,7 +1153,7 @@ char val;
 
 val=right&0xf;
 
-val\|=(left\<\<4)&0xf0;
+val|=(left<<4)&0xf0;
 
 WriteMixerSB(0x22,val);
 
@@ -1207,7 +1169,7 @@ WriteMixerSB(0x22,val);
 
 +-----+-----+ +-----+-----+
 
-\| \|
+| |
 
 Громкость Громкость
 
@@ -1223,7 +1185,7 @@ char val;
 
 val=right&0xf;
 
-val\|=(left\<\<4)&0xf0;
+val|=(left<<4)&0xf0;
 
 WriteMixerSB(0x04,val);
 
@@ -1239,7 +1201,7 @@ WriteMixerSB(0x04,val);
 
 +-----+-----+ +-----+-----+
 
-\| \|
+| |
 
 Громкость Громкость
 
@@ -1255,7 +1217,7 @@ char val;
 
 val=right&0xf;
 
-val\|=(left\<\<4)&0xf0;
+val|=(left<<4)&0xf0;
 
 WriteMixerSB(0x26,val);
 
@@ -1271,7 +1233,7 @@ WriteMixerSB(0x26,val);
 
 +-----+-----+ +-----+-----+
 
-\| \|
+| |
 
 Громкость Громкость
 
@@ -1287,7 +1249,7 @@ char val;
 
 val=right&0xf;
 
-val\|=(left\<\<4)&0xf0;
+val|=(left<<4)&0xf0;
 
 WriteMixerSB(0x28,val);
 
@@ -1303,7 +1265,7 @@ WriteMixerSB(0x28,val);
 
 +-----+-----+ +-----+-----+
 
-\| \|
+| |
 
 Громкость Громкость
 
@@ -1319,7 +1281,7 @@ char val;
 
 val=right&0xf;
 
-val\|=(left\<\<4)&0xf0;
+val|=(left<<4)&0xf0;
 
 WriteMixerSB(0x2E,val);
 
@@ -1335,7 +1297,7 @@ WriteMixerSB(0x2E,val);
 
 +---+---+
 
-\|
+|
 
 Громкость микрофона.
 
@@ -1355,7 +1317,7 @@ WriteMixerSB(0xA,val);
 
 +------------+--------------------------------------------------------------
 
-\| Примечание:\|
+| Примечание:|
 
 +============+
 

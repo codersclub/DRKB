@@ -234,11 +234,11 @@ Row2,Column2.
         SetTextToTable(tablica_,2,2,'Стоимость');
         SetTextToTable(tablica_,2,3,'Гарантия');
         SetTextToTable(tablica_,3,1,
-         'ПРОЦЕССОР AMD K7- 1333 ATHLON 266MHz (Socket-A)');
+         'ПРОЦЕССОР AMD K7-1333 ATHLON 266MHz (Socket-A)');
         SetTextToTable(tablica_,3,2,'47.52 $');
         SetTextToTable(tablica_,3,3,'12 мес.');
         SetTextToTable(tablica_,4,1,
-         'ПРОЦЕССОР AMD K7- 800 DURON (Socket-A)');
+         'ПРОЦЕССОР AMD K7-800 DURON (Socket-A)');
         SetTextToTable(tablica_,4,2,'23.54 $');
         SetTextToTable(tablica_,4,3,'12 мес.');
     // объединяем необходимые ячейки таблицы

@@ -32,7 +32,7 @@ OpenGL в Delphi. Часть 3. Quadric-объекты
       glRotate(9.0, 0.0, 7.0, 0.0);
       glPushMatrix;
       glRotated(-270,1.0,0.0,0.0);
-      gluCylinder (quadObj, 0.5, 0.5, 2.9, 30, 30);//0.5- радиус, 0.5 - радиус, 2.9 - высота
+      gluCylinder (quadObj, 0.5, 0.5, 2.9, 30, 30);//0.5 - радиус, 0.5 - радиус, 2.9 - высота
       glPopMatrix;
       gluDeleteQuadric(quadObj);
 

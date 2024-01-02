@@ -108,9 +108,10 @@ Ses        var TSession        This is a session instance variable that
 you pass by reference into the procedure. Note: It MUST be instantiated
 prior to use. The procedure does not create an instance. It assumes it
 already exists. This is especially necessary when using this procedure
-within a thread. But if you\'re not creating a multi- threaded
-application, then you can use the default Session variable.       DBName
-       String        Name of the MS SQL Server client database      
+within a thread. But if you\'re not creating a multi-threaded
+application, then you can use the default Session variable.
+
+DBName       String        Name of the MS SQL Server client database
 
 ArTables        Array of String        This is an open array of string
 that you can pass into the procedure. This means that you can pass any

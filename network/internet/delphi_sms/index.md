@@ -19,8 +19,8 @@ Date: 01.01.2007
 номере, текст сообщения и некоторой служебной информации.
 
 Отправку sms сообщения рассмотрим на примере оператора сотовой связи
-"Ульяновск- gsm ", позволяющего производить отправку sms сообщений
-через web- страничку по адресу:
+"Ульяновск-gsm", позволяющего производить отправку sms сообщений
+через web-страничку по адресу:
 
 http://sms.smarts-gsm.ru/sms.cgi
 
@@ -130,7 +130,7 @@ var headers: olevariant - содержит НТТР заголовок пере�
     stpostdata:='to='+combobox1.text+'&msg='+text+'&dcs=0';
     vheaders:= 'content-type:application/x-www-form-urlencoded'+ #10#13#0;
     vpostdata:= vararraycreate([0, length(stpostdata)], varbyte);
-    for iloop := 0 to length(stpostdata)- 1 do
+    for iloop := 0 to length(stpostdata) - 1 do
     begin
     vpostdata[iloop]:= ord(stpostdata[iloop+1]); 
     end;
@@ -168,19 +168,18 @@ vpostdata:= vararraycreate([0, length(stpostdata)], varbyte);
 length(stpostdata) типа varbyte ( 8-ми битовое беззнаковое целочисленное
 значение (тип byte ) )
 
-for iloop := 0 to length(stpostdata)- 1 do
-begin
-vpostdata[iloop]:= ord(stpostdata[iloop+1];
-
-end;
+    for iloop := 0 to length(stpostdata) - 1 do
+    begin
+      vpostdata[iloop]:= ord(stpostdata[iloop+1];
+    end;
 
 здесь посимвольно заполняем вариантный массив значениями нашей строки
 
-vpostdata[length(stpostdata)]:= 0;
+    vpostdata[length(stpostdata)]:= 0;
 
 обнуляем последний элемент
 
-tvardata(vpostdata).vtype:= vararray;
+    tvardata(vpostdata).vtype:= vararray;
 
 В поле vtype помещается признак типа данных. Присваиваем вариантной
 структуре данных тип vararray, что означает "Вариантный массив".
@@ -188,7 +187,7 @@ tvardata(vpostdata).vtype:= vararray;
 типа. Если данную операцию не производить, то массив, хотя и будет
 состоять из значений типа variant, не будет вариантного типа. Далее
 
-vflags:=navnowritetocache;
+    vflags:=navnowritetocache;
 
 ставим флаг "не записывать в кэш".
 

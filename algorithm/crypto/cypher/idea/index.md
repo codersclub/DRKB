@@ -174,9 +174,9 @@ Privacy).
      // Генерация подключа зашифрование
      for i := 8 to KeyLength-1 do
        begin
-         if (((i+2) mod 8) = 0) then Z[i] := (Z[i- 7] shl 9) xor (Z[i-14] shr 7)
+         if (((i+2) mod 8) = 0) then Z[i] := (Z[i-7] shl 9) xor (Z[i-14] shr 7)
            else if (((i+1) mod 8) = 0) then Z[i] := (Z[i-15] shl 9) xor (Z[i-14] shr 7)
-             else Z[i] := (Z[i- 7] shl 9) xor (Z[i- 6] shr 7);
+             else Z[i] := (Z[i-7] shl 9) xor (Z[i-6] shr 7);
        end;
     end;
      

@@ -1671,7 +1671,7 @@ through result sets containing many rows that are displayed in
 data-aware controls.  An attempt to scroll through the result set will
 often result in the error 'Fetch type out of range'.  Attempts to
 insert, delete or edit rows in the result set produce the same error. 
-If the Forward- Only cursor is chosen, it will create the same error
+If the Forward-Only cursor is chosen, it will create the same error
 when attempting to scroll backward through the result set.  Again,
 inserting, deleting, and editing rows in the result set generate this
 error.  Therefore, when using a 'OEDataSet' component where bookmarks

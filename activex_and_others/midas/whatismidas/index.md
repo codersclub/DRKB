@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-MIDAS - multi-tired distributed application service suite- это
+MIDAS - multi-tired distributed application service suite - это
 технология Borland для создания многоуровневых приложений баз данных.
 Применение данной архитектуры позволяет быстро разрабатывать простые в
 сопровождении и установке, надежные, распределенные БД. Трехуровневое

@@ -43,10 +43,10 @@ Win32 API.
 функций более низкого порядка. А раз так, то можно сразу их
 использовать. Кроме полного контроля над реализацией сете вых функций вы
 будете иметь и более компактный и быстрый код, так как устраняется
-прослойка между программой и API. Так что же такое Internet- функции
+прослойка между программой и API. Так что же такое Internet-функции
 Win32 API?
 
-Все Internet- функции разбиты на категории:
+Все Internet-функции разбиты на категории:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
   --- ---------------------------------------------------
@@ -68,19 +68,19 @@ Win32 API?
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
   --- --------------------------------
-  ·   FTP Functions - FTP- функции.
+  ·   FTP Functions - FTP-функции.
   --- --------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
   --- -------------------------------------
-  ·   Gopher Functions - Gopher- функции.
+  ·   Gopher Functions - Gopher-функции.
   --- -------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
   --- ---------------------------------
-  ·   HTTP Functions - HTTP- функции.
+  ·   HTTP Functions - HTTP-функции.
   --- ---------------------------------
 :::
 
@@ -103,17 +103,12 @@ Win32 API?
 первой категории. Из всех функций наибольший практический интерес
 представляют следующие:
 
-// InternetCheckConnection
-
-// позволяет узнать, есть ли уже соединение с Internet.
-
-// Синтаксис:
-
-function InternetCheckConnection(lpszUrl: PAnsiChar;
-
-                                dwFlags: DWORD;
-
-                                dwReserved: DWORD): BOOL; stdcall;
+    // InternetCheckConnection
+    // позволяет узнать, есть ли уже соединение с Internet.
+    // Синтаксис:
+    function InternetCheckConnection(lpszUrl: PAnsiChar;
+                                    dwFlags: DWORD;
+                                    dwReserved: DWORD): BOOL; stdcall;
 
 Если нужно проверить, есть ли соединение по конкретному URL, то параметр
 lpszUrl должен содержать нужный URL; если интересует, есть ли соединение
@@ -128,13 +123,15 @@ lpszUrl установлен в nil и есть соединение с друг
 
 К сожалению, я не проверял эту функцию, когда писал статью... а
 жаль... вот что получаеться: константа FLAG\_ICC\_FORCE\_CONNECTION
-вообще не описана в Дельфи. более того - ее нет ни в Microsoft Visual
+вообще не описана в Дельфи. Более того - ее нет ни в Microsoft Visual
 C++ 5 (!!!!), VBasic 5 тоже! едва нашел в C++ Builder 5.
 
-Вот описание - const FLAG\_ICC\_FORCE\_CONNECTION $00000001
+Вот описание:
 
-Но! Даже с описанной константой ничего не работает так, как надо! Вот
-пример:
+    const FLAG_ICC_FORCE_CONNECTION $00000001
+
+Но! Даже с описанной константой ничего не работает так, как надо!
+Вот пример:
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -169,9 +166,7 @@ FALSE - в противном случае. Для получения более
     // Далее рассмотрим одну из самых важных функций. Ее вы будете
     // использовать всякий раз, когда нужно получить доступ к любому
     // из серверов – будь то HTTP, FTP или Gopher. Речь идет о InternetOpen .
-     
     //Синтаксис:
-     
     function InternetOpen(lpszAgent: PChar; 
                           dwAccessType: DWORD; 
                           lpszProxy, lpszProxyBypass: PChar; 
@@ -205,11 +200,11 @@ dwAccessType - задает необходимые параметры досту
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
   --- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ·   INTERNET\_OPEN\_TYPE\_PROXY - использование прокси-сервера. В случае неудачи использует INTERNET\_OPEN\_TYPE\_DIRECT. LpszProxy - адрес прокси-сервера. Игнорируется только если параметр dwAccessType отличается от INTERNET\_OPEN\_TYPE\_PROXY. LpszProxyBypass - спис ок имен или IP- адресов, соединяться с которыми нужно в обход прокси-сервера. В списке допускаются шаблоны. Так же, как и предыдущий параметр, не может содержать пустой строки. Если dwAccessType отличен от INTERNET\_OPEN\_TYPE\_PROXY, то значения игнорируютс я, и параметр можно установить в nil. DwFlags - задает параметры, влияющие на поведение Internet- функций . Возможно применение комбинации из следующих разрешенных значений: INTERNET\_FLAG\_ASYNC, INTERNET\_FLAG\_FROM\_CACHE, INTERNET\_FLAG\_OFFLINE.
+  ·   INTERNET\_OPEN\_TYPE\_PROXY - использование прокси-сервера. В случае неудачи использует INTERNET\_OPEN\_TYPE\_DIRECT. LpszProxy - адрес прокси-сервера. Игнорируется только если параметр dwAccessType отличается от INTERNET\_OPEN\_TYPE\_PROXY. LpszProxyBypass - список имен или IP-адресов, соединяться с которыми нужно в обход прокси-сервера. В списке допускаются шаблоны. Так же, как и предыдущий параметр, не может содержать пустой строки. Если dwAccessType отличен от INTERNET\_OPEN\_TYPE\_PROXY, то значения игнорируютс я, и параметр можно установить в nil. DwFlags - задает параметры, влияющие на поведение Internet-функций . Возможно применение комбинации из следующих разрешенных значений: INTERNET\_FLAG\_ASYNC, INTERNET\_FLAG\_FROM\_CACHE, INTERNET\_FLAG\_OFFLINE.
   --- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-Функция инициализирует использование Internet- функций Win32 API. В
+Функция инициализирует использование Internet-функций Win32 API. В
 принципе, ваше приложение может неоднократно вызывать эту функцию,
 например, для доступа к различным сервисам, но обычно ее достаточно
 вызвать один раз. При последующих вызовах других фун кций возвращаемый
@@ -221,11 +216,8 @@ dwAccessType - задает необходимые параметры досту
      
     // Непосредственно с этой функцией связанна и еще одна, не
     // менее важная: InternetCloseHandle.
-     
     // InternetCloseHandle
-     
     // Синтаксис: 
-     
     function InternetCloseHandle(hInet: HINTERNET): BOOL; stdcall; 
 
 Как единственный параметр, она принимает указатель, полученный функцией
@@ -235,45 +227,35 @@ InternetOpen, и закрывает указанное соединение. В 
 вызвать функцию с тем же указателем, чтобы отменить последнюю команду и
 разблокировать поток.
 
-// Мы уже установили соединение и знаем, как его закрыть. Теперь
-
-// нам нужно соединиться с конкретным сервером, используя нужный
-
-// протокол. В этом нам помогут следующие функции: InternetConnect
-
-function InternetConnect (hInet: HINTERNET;
-
-                         lpszServerName: PChar;
-
-                         nServerPort: INTERNET\_PORT;
-
-                         lpszUsername: PChar;
-
-                         lpszPassword: PChar;
-
-                         dwService: DWORD;
-
-                         dwFlags: DWORD;
-
-                         dwContext: DWORD): HINTERNET; stdcall;
+    // Мы уже установили соединение и знаем, как его закрыть. Теперь
+    // нам нужно соединиться с конкретным сервером, используя нужный
+    // протокол. В этом нам помогут следующие функции: InternetConnect
+    function InternetConnect (hInet: HINTERNET;
+                             lpszServerName: PChar;
+                             nServerPort: INTERNET\_PORT;
+                             lpszUsername: PChar;
+                             lpszPassword: PChar;
+                             dwService: DWORD;
+                             dwFlags: DWORD;
+                             dwContext: DWORD): HINTERNET; stdcall;
 
 Функция открывает сессию с указанным сервером, используя протокол FTP,
-HTTP, Gopher. Параметры:
+HTTP, Gopher.
 
-HInet - указатель, полученный после вызова InternetOpen.
+Параметры:
 
-LpszServerName - имя сервера, с которым нужно установить соединение.
+- HInet - указатель, полученный после вызова InternetOpen.
+- LpszServerName - имя сервера, с которым нужно установить соединение.
 Может быть как именем хоста - domain.com.ua, так и IP-адресом -
 134.123.44.66.
-
-NServerPort - указывает на TCP/IP порт, с которым нужно соединиться.
+- NServerPort - указывает на TCP/IP порт, с которым нужно соединиться.
 Для задания стандартных портов служат константы:
-NTERNET\_DEFAULT\_FTP\_PORT (port 21), INTERNET\_DEFAULT\_GOPHER\_PORT
-(port 70), INTERNET\_DEFAULT\_HTTP\_PORT (port 80),
-INTERNET\_DEFAULT\_HTTPS\_ PORT (port 443),
-INTERNET\_DEFAULT\_SOCKS\_PORT (port 1080),
-INTERNET\_INVALID\_PORT\_NUMBER - порт по умолчанию для сервиса,
-описанного в dwService.
+    NTERNET\_DEFAULT\_FTP\_PORT (port 21), INTERNET\_DEFAULT\_GOPHER\_PORT
+    (port 70), INTERNET\_DEFAULT\_HTTP\_PORT (port 80),
+    INTERNET\_DEFAULT\_HTTPS\_PORT (port 443),
+    INTERNET\_DEFAULT\_SOCKS\_PORT (port 1080),
+    INTERNET\_INVALID\_PORT\_NUMBER - порт по умолчанию для сервиса,
+    описанного в dwService.
 
 Стандартные порты для различных сервисов
 находятся в файле SERVICES в директории Windows.
@@ -306,17 +288,12 @@ InternetOpenUrl
 
 Синтаксис:
 
-function InternetOpenUrl(hInet: HINTERNET;
-
-                        lpszUrl: PChar;
-
-                        lpszHeaders: PChar;
-
-                        dwHeadersLength: DWORD;
-
-                        dwFlags: DWORD;
-
-                        dwContext: DWORD): HINTERNET; stdcall;
+    function InternetOpenUrl(hInet: HINTERNET;
+                            lpszUrl: PChar;
+                            lpszHeaders: PChar;
+                            dwHeadersLength: DWORD;
+                            dwFlags: DWORD;
+                            dwContext: DWORD): HINTERNET; stdcall;
 
 Параметры:
 
@@ -360,14 +337,10 @@ InternetReadFile
 
 Синтаксис:
 
-function InternetReadFile(hFile: HINTERNET;
-
-                         lpBuffer: Pointer;
-
-                         dwNumberOfBytesToRead: DWORD;
-
-                         var lpdwNumberOfBytesRead: DWORD): BOOL;
-stdcall;
+    function InternetReadFile(hFile: HINTERNET;
+                             lpBuffer: Pointer;
+                             dwNumberOfBytesToRead: DWORD;
+                             var lpdwNumberOfBytesRead: DWORD): BOOL; stdcall;
 
 Параметры:
 
@@ -405,7 +378,7 @@ Hfile, вызвав InternetCloseHandle(hUrlFile) .
 
 Вот, в принципе, и все об самых основных функциях. Для простейшего
 приложения можно определить примерно такой упрощенный алгоритм
-использования Internet- функций Win32 API взамен стандартным
+использования Internet-функций Win32 API взамен стандартным
 компонентов. HSession:= InternetOpen - открывает сессию.
 
 HConnect:= InternetConnect - устанавливает соединение.
@@ -413,49 +386,32 @@ HConnect:= InternetConnect - устанавливает соединение.
 hHttpFile:=httpOpenRequest
 
 HttpSendRequest - HttpOpenRequest и HttpSendRequest используются вместе
-для получения доступа к файлу по HTTP- протоколу. Вызов HttpOpenRequest
+для получения доступа к файлу по HTTP-протоколу. Вызов HttpOpenRequest
 создает указатель и определяет необходимые параметры, а HttpOpenRequest
 отсылает запрос HTTP серверу, используя эти параметры.
 
-function HttpOpenRequest(hConnect: HINTERNET;
+    function HttpOpenRequest(hConnect: HINTERNET;
+                            lpszVerb: PChar;
+                            lpszObjectName: PChar;
+                            lpszVersion: PChar;
+                            lpszReferrer: PChar;
+                            lplpszAcceptTypes: PLPSTR;
+                            dwFlags: DWORD;
+                            dwContext: DWORD): HINTERNET; stdcall;
 
-                        lpszVerb: PChar;
+    function HttpSendRequest(hRequest: HINTERNET;
+                            lpszHeaders: PChar;
+                            dwHeadersLength: DWORD;
+                            lpOptional: Pointer;
+                            dwOptionalLength: DWORD): BOOL; stdcall;
 
-                        lpszObjectName: PChar;
-
-                        lpszVersion: PChar;
-
-                        lpszReferrer: PChar;
-
-                        lplpszAcceptTypes: PLPSTR;
-
-                        dwFlags: DWORD;
-
-                        dwContext: DWORD): HINTERNET; stdcall;
-
-function HttpSendRequest(hRequest: HINTERNET;
-
-                        lpszHeaders: PChar;
-
-                        dwHeadersLength: DWORD;
-
-                        lpOptional: Pointer;
-
-                        dwOptionalLength: DWORD): BOOL; stdcall;
-
-// HttpQueryInfo - используется для получения информации о файле.
-
-// Вызывается после вызова HttpOpenRequest.
-
-function HttpQueryInfo(hRequest: HINTERNET;
-
-                      dwInfoLevel: DWORD;
-
-                      lpvBuffer: Pointer;
-
-                      var lpdwBufferLength: DWORD;
-
-                      var lpdwReserved: DWORD): BOOL; stdcall;
+    // HttpQueryInfo - используется для получения информации о файле.
+    // Вызывается после вызова HttpOpenRequest.
+    function HttpQueryInfo(hRequest: HINTERNET;
+                          dwInfoLevel: DWORD;
+                          lpvBuffer: Pointer;
+                          var lpdwBufferLength: DWORD;
+                          var lpdwReserved: DWORD): BOOL; stdcall;
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
   --- -------------------------------------------

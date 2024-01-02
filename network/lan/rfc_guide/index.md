@@ -1021,7 +1021,7 @@ Sequencing
 406 - Scheduled IMP Software Releases
 395 - Switch Settings on IMPs and TIPs
 394 - Two Proposed Changes to the IMP-HOST Protocol
-369- Evaluation of ARPANET Services (January through March, 1972)
+369 - Evaluation of ARPANET Services (January through March, 1972)
 335 - New Interface-IMP/360
 312 - Proposed Change in IMP-to-Host Protocol
 297 - TIP Message Buffers

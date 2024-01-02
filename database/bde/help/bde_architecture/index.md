@@ -165,7 +165,7 @@ IDAPTOR (соединитель с ODBC) и интерфейс к DAO работ
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- -----------------------------------------
-  •   BLW32.DLL, BANTAM.DLL- языковые функции
+  •   BLW32.DLL, BANTAM.DLL - языковые функции
   --- -----------------------------------------
 :::
 

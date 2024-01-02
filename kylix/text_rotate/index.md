@@ -20,7 +20,7 @@ Date: 01.01.2007
     begin 
       // Rotate Canvas 
       QPainter_rotate(Cnv.Handle, Wkl); 
-      // Convert Device Coord. to Modell- Coord. 
+      // Convert Device Coord. to Modell-Coord. 
       QPainter_xFormDev(Cnv.Handle, PPoint(@PrPoint), 
         PPoint(@Pxy)); 
       // Write text. 

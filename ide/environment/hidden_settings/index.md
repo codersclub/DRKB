@@ -11,8 +11,8 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Some undocumented registry settings of Delphi 5 (which -slightly
-adapted- might also work with Delphi 4 and below) modify the behavior of
+Some undocumented registry settings of Delphi 5 (which _slightly
+adapted_ might also work with Delphi 4 and below) modify the behavior of
 the Delphi component palette in a manner you may like!
 
 Most values are stored as strings, and boolean values are represented as

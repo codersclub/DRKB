@@ -236,7 +236,7 @@ Author: hex (https://gamedev.ru/users/?id=14)
 
 Я выбрал такой вариант для первого игрока:
 
-Up- Num 8
+Up - Num 8
 Down - Num 5
 Left - Num 4
 Right - Num 6

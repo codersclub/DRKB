@@ -100,7 +100,7 @@ function ExpandFileName(const FileName: string): string;
  Возвращает полное имя файла FileName, добавляя при необходимости путь к
 нему и переводя все символы в верхний регистр.        
 
-function FileSearch(const Name, DirList: string): strings-      
+function FileSearch(const Name, DirList: string): strings -      
  Производит поиск файла с именем Name в группе каталогов, заданных
 параметром DirList. Имена каталогов должны отделяться друг от друга
 точкой с запятой. Возвращает в случае успеха полное имя файла или пустую
