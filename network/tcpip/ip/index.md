@@ -26,23 +26,11 @@ Date: 01.09.1994
 
 Спецификации протоколов стека IP:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ------------------------------
-  ·   UDP - User Datagram Protocol
-  --- ------------------------------
-:::
+- UDP - User Datagram Protocol
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -------------------------------------
-  ·   TCP - Transmission Control Protocol
-  --- -------------------------------------
-:::
+- TCP - Transmission Control Protocol
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ------------------------------------------
-  ·   ICMP - Internet Control Message Protocol
-  --- ------------------------------------------
-:::
+- ICMP - Internet Control Message Protocol
 
 RFC 791
                            Internet протокол

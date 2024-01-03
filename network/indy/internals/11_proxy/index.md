@@ -39,17 +39,9 @@ and the Indy Pit Crew - <https://www.nevrona.com/Indy/>
 
 Прокси могут быть разделены на две категории:
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
-  --- ------------
-  ·   Прозрачные
-  --- ------------
-:::
+- Прозрачные
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
-  --- --------------
-  ·   Непрозрачные
-  --- --------------
-:::
+- Непрозрачные
 
 11.1. Прозрачные прокси
 

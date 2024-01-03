@@ -59,48 +59,20 @@ This does it:
 
 Important Notes:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------
-  1.        Include the JRO\_TLB unit in your uses clause.
-  ---- -----------------------------------------------------------
-:::
+1.        Include the JRO\_TLB unit in your uses clause.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------
-  2.        Nobody should use or open the database during compacting.
-  ---- ----------------------------------------------------------------------
-:::
+2.        Nobody should use or open the database during compacting.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------
-  3.        If the compiler gives you an error on the JRO\_TLB unit follow
+3.        If the compiler gives you an error on the JRO\_TLB unit follow
        these steps:
-  ---- ---------------------------------------------------------------------------
-:::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  --- ------------------------------------------------------------
-  ·   Using the Delphi IDE go to Project - Import Type Library.
-  --- ------------------------------------------------------------
-:::
+- Using the Delphi IDE go to Project - Import Type Library.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  --- ------------------------------------------------------------------------------------
-  ·   Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
-  --- ------------------------------------------------------------------------------------
-:::
+- Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  --- --------------------------
-  ·   Click on Install button.
-  --- --------------------------
-:::
+- Click on Install button.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  --- -------------------
-  ·   Recompile a gain.
-  --- -------------------
-:::
+- Recompile a gain.
 
 ------------------------------------------------------------------------
 
@@ -145,47 +117,19 @@ Example :
 
 Important Notes:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------
-  1.        Include the JRO\_TLB unit in your uses clause.
-  ---- -----------------------------------------------------------
-:::
+1.        Include the JRO\_TLB unit in your uses clause.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------
-  2.        Nobody should use or open the database during compacting.
-  ---- ----------------------------------------------------------------------
-:::
+2.        Nobody should use or open the database during compacting.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------
-  3.        If the compiler gives you an error on the JRO\_TLB unit follow these steps:
-  ---- ---------------------------------------------------------------------------
-:::
+3.        If the compiler gives you an error on the JRO\_TLB unit follow these steps:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  --- ------------------------------------------------------------
-  ·   Using the Delphi IDE go to Project - Import Type Library.
-  --- ------------------------------------------------------------
-:::
+- Using the Delphi IDE go to Project - Import Type Library.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  --- ------------------------------------------------------------------------------------
-  ·   Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
-  --- ------------------------------------------------------------------------------------
-:::
+- Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  --- --------------------------
-  ·   Click on Install button.
-  --- --------------------------
-:::
+- Click on Install button.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  --- -------------------
-  ·   Recompile a gain.
-  --- -------------------
-:::
+- Recompile a gain.
 
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 

@@ -69,17 +69,9 @@ Microsoft). Эта информация будет необходима когд
 группе и номеру ресурса. В zip-архиве включенном в этот документ вы
 увидите два файла:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ------------------
-  1.  WindowsXP.RC
-  --- ------------------
-:::
+1.  WindowsXP.RC
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ------------------------
-  2.  WindowsXP.Manifest
-  --- ------------------------
-:::
+2.  WindowsXP.Manifest
 
 Файл WindowsXP.RC содержит инструции для подключения WindowsXP.Manifest
 (XML-документа), а именно:
@@ -158,37 +150,21 @@ Error).
 Стал искать как исправить это упущение, так как и Delphi 6 с Update 1 не
 помогает справиться с этой проблемой. Решение заключается в следующем:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- -------------------------------------------------------------------
-  1.   Открыть "ComCtrls.pas" и найти "TCustomListView.UpdateColumn"
-  ---- -------------------------------------------------------------------
-:::
+1.   Открыть "ComCtrls.pas" и найти "TCustomListView.UpdateColumn"
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- --------------------------
-  2.   Найдем следующую строку.
-  ---- --------------------------
-:::
+2.   Найдем следующую строку.
 
         if FImageIndex \<\> -1 then
            fmt := fmt or LVCFMT\_IMAGE or LVCFMT\_COL\_HAS\_IMAGES;
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- -----------------
-  3.   Заменяем её на:
-  ---- -----------------
-:::
+3.   Заменяем её на:
 
         if FImageIndex \<\> -1 then
           fmt := fmt or LVCFMT\_IMAGE or LVCFMT\_COL\_HAS\_IMAGES
         else
           mask := mask and not (LVCF\_IMAGE);
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- -----------------------------------------------------------------------------------------------
-  4.   Сохраняем Comctrls.pas. Теперь TListView не вызывает ошибку в режиме vsReport под Windows XP.
-  ---- -----------------------------------------------------------------------------------------------
-:::
+4.   Сохраняем Comctrls.pas. Теперь TListView не вызывает ошибку в режиме vsReport под Windows XP.
 
 Автор поправки Matteo Riso.
 
@@ -202,36 +178,20 @@ Error).
 
 Решение заключается в следующем:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- -----------------------------------------------------------------------------------
-  1.   Откройте модуль "ComCtrls.pas" и найдите строчку "TTabSheet.UpdateTabShowing"
-  ---- -----------------------------------------------------------------------------------
-:::
+1.   Откройте модуль "ComCtrls.pas" и найдите строчку "TTabSheet.UpdateTabShowing"
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- -----------------------------
-  2.   Вы увидите следующий текст:
-  ---- -----------------------------
-:::
+2.   Вы увидите следующий текст:
 
         procedure TTabSheet.UpdateTabShowing;
         begin
         SetTabShowing((FPageControl \<\> nil) and FTabVisible);
         end;
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- ---------------------------------------------
-  3.   Добавьте следующую строчку в эту процедуру:
-  ---- ---------------------------------------------
-:::
+3.   Добавьте следующую строчку в эту процедуру:
 
 SetWindowLong(handle,GWL\_EXSTYLE,WS\_EX\_TRANSPARENT);
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Если в вашем TPageControl создано более одного TTabSheet, возможно при запуске вашего приложения вы увидите все компоненты отрисованные на первом листе (TTabSheet). Не надо впадать в панику... Найдите метод "TPageControl.Loaded" и измените его чтобы он был похож на следующий код:
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+4.   Если в вашем TPageControl создано более одного TTabSheet, возможно при запуске вашего приложения вы увидите все компоненты отрисованные на первом листе (TTabSheet). Не надо впадать в панику... Найдите метод "TPageControl.Loaded" и измените его чтобы он был похож на следующий код:
 
         procedure TPageControl.Loaded; 
         var 
@@ -257,17 +217,9 @@ TTrackBar - извините, а какая текущая позиция?
 ползунка удобна, то есть вам не будет необходимо добавлять TLabel для
 этого.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- -----------------------------------------------------------------
-  1.   Откройте "ComCtrls.pas" и найдите "TTrackBar.CreateParams".
-  ---- -----------------------------------------------------------------
-:::
+1.   Откройте "ComCtrls.pas" и найдите "TTrackBar.CreateParams".
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- ---------------------------
-  2.   Вы увидите следующий код:
-  ---- ---------------------------
-:::
+2.   Вы увидите следующий код:
 
         procedure TTrackBar.CreateParams(var Params: TCreateParams); 
         const 
@@ -285,20 +237,12 @@ TTrackBar - извините, а какая текущая позиция?
           end; 
         end; 
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- ------------------------------------------------------------------------------------------------
-  3.   Добавьте условие "or TBS\_TOOLTIPS" в линию "Style:=". В конечном итоге должно получиться:
-  ---- ------------------------------------------------------------------------------------------------
-:::
+3.   Добавьте условие "or TBS\_TOOLTIPS" в линию "Style:=". В конечном итоге должно получиться:
 
         Style := Style or OrientationStyle[FOrientation] or 
               TickStyles[FTickStyle] or ATickMarks[FTickMarks] or TBS_FIXEDLENGTH or 
               TBS_ENABLESELRANGE or TBS_TOOLTIPS; 
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- ----------------------------------------------------
-  4.   Сохраните ComCtrls.pas и наслаждайтесь подсказкой.
-  ---- ----------------------------------------------------
-:::
+4.   Сохраните ComCtrls.pas и наслаждайтесь подсказкой.
 
 Автор поправки Matteo Riso.

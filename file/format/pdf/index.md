@@ -17,83 +17,31 @@ and pdf.tlb), which you you can get for free from Adobe.
 
 Here\'s How:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- -----------------------------------------------------------------
-  ·   Start Delphi and select Component \| Import ActiveX Control...
-  --- -----------------------------------------------------------------
-:::
+- Start Delphi and select Component \| Import ActiveX Control...
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ------------------------------------------------------------------------------------------
-  ·   Look for the \'Acrobat Control for ActiveX (Version x.x)\'  and simply click on Install.
-  --- ------------------------------------------------------------------------------------------
-:::
+- Look for the \'Acrobat Control for ActiveX (Version x.x)\'  and simply click on Install.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ------------------------------------------------------------------------------------
-  ·   Select the Component palette location in which you want to place selected library.
-  --- ------------------------------------------------------------------------------------
-:::
+- Select the Component palette location in which you want to place selected library.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ---------------------------------------------------------
-  ·   Maybe the best is to leave the ActiveX option selected.
-  --- ---------------------------------------------------------
-:::
+- Maybe the best is to leave the ActiveX option selected.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- -------------------
-  ·   Click on Install.
-  --- -------------------
-:::
+- Click on Install.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ----------------------------------------------------------------------------------------------------------------------------
-  ·   Select a package where the new component must be installed or create a new package for the new TPdf control.  Click on OK.
-  --- ----------------------------------------------------------------------------------------------------------------------------
-:::
+- Select a package where the new component must be installed or create a new package for the new TPdf control.  Click on OK.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ----------------------------------------------------------------------------------------------------
-  ·   Delphi will prompt you whether you want to rebuild the modified/new package or not.  Click on Yes.
-  --- ----------------------------------------------------------------------------------------------------
-:::
+- Delphi will prompt you whether you want to rebuild the modified/new package or not.  Click on Yes.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- -----------------------------------------------------------------------------------------------------------------------------------------------------------
-  ·   After the package is compiled, Delphi will show you a message saying that the new TPdf component was registered and already available as part of the VCL.
-  --- -----------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+- After the package is compiled, Delphi will show you a message saying that the new TPdf component was registered and already available as part of the VCL.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- -----------------------------------------------------------------------------
-  ·   Close the package detail window, allowing Delphi to save the changes to it.
-  --- -----------------------------------------------------------------------------
-:::
+- Close the package detail window, allowing Delphi to save the changes to it.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ---------------------------------------------------------------------------------------------------
-  ·   The component is now available in the ActiveX tab (if you didn\'t change this setting in step 4) 
-  --- ---------------------------------------------------------------------------------------------------
-:::
+- The component is now available in the ActiveX tab (if you didn\'t change this setting in step 4)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- -------------------------------
-  ·   Drop the component on a form.
-  --- -------------------------------
-:::
+- Drop the component on a form.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- -------------------------------------------------------------
-  ·   Select the TPdf component you just dropped on a blank form.
-  --- -------------------------------------------------------------
-:::
+- Select the TPdf component you just dropped on a blank form.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ·   Using the object inspector, set the src property to the name of an existing PDF file on your system. Now all you have to do is resize the component and read the PDF file from your Delphi application.
-  --- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+- Using the object inspector, set the src property to the name of an existing PDF file on your system. Now all you have to do is resize the component and read the PDF file from your Delphi application.
 
 Tips:
 

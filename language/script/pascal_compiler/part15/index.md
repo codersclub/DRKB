@@ -1015,20 +1015,8 @@ LoadVariable:
 
     ССЫЛКИ
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Crenshaw, J.W., "Object-Oriented Design of Assemblers and Compilers," Proc. Software Development \'91 Conference, Miller Freeman, San Francisco, CA, February 1991, pp. 143-155.
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+1.   Crenshaw, J.W., "Object-Oriented Design of Assemblers and Compilers," Proc. Software Development \'91 Conference, Miller Freeman, San Francisco, CA, February 1991, pp. 143-155.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
-  ---- -------------------------------------------------------------------------------------------------
-  2.   Crenshaw, J.W., "A Perfect Marriage," Computer Language, Volume 8, #6, June 1991, pp. 44-55.
-  ---- -------------------------------------------------------------------------------------------------
-:::
+2.   Crenshaw, J.W., "A Perfect Marriage," Computer Language, Volume 8, #6, June 1991, pp. 44-55.
 
-::: {style="text-align: justify; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 8px 24px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   Crenshaw, J.W., "Syntax-Driven Object-Oriented Design," Proc. 1991 Embedded Systems Conference, Miller Freeman, San Francisco, CA, September 1991, pp. 45-60.
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+3.   Crenshaw, J.W., "Syntax-Driven Object-Oriented Design," Proc. 1991 Embedded Systems Conference, Miller Freeman, San Francisco, CA, September 1991, pp. 45-60.

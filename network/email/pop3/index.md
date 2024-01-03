@@ -79,17 +79,9 @@ QUIT. После успешной авторизации сервер откры
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----------------------------
-  ·   +OK name is a valid mailbox
-  --- -----------------------------
-:::
+- +OK name is a valid mailbox
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ----------------------------------
-  ·   -ERR never heard of mailbox name
-  --- ----------------------------------
-:::
+- -ERR never heard of mailbox name
 
 Примеры:
 
@@ -111,23 +103,11 @@ S: -ERR sorry, no mailbox for frated here
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -------------------------------
-  ·   +OK maildrop locked and ready
-  --- -------------------------------
-:::
+- +OK maildrop locked and ready
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----------------------
-  ·   -ERR invalid password
-  --- -----------------------
-:::
+- -ERR invalid password
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ------------------------------
-  ·   -ERR unable to lock maildrop
-  --- ------------------------------
-:::
+- -ERR unable to lock maildrop
 
 Примеры:
 
@@ -157,11 +137,7 @@ S: -ERR maildrop already locked
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----
-  ·   +OK
-  --- -----
-:::
+- +OK
 
 Примеры:
 
@@ -187,11 +163,7 @@ S: +OK dewey POP3 server signing off
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ---------
-  ·   +OK n s
-  --- ---------
-:::
+- +OK n s
 
 Примеры:
 
@@ -210,17 +182,9 @@ S: +OK 2 320
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- --------------------------
-  ·   +OK scan listing follows
-  --- --------------------------
-:::
+- +OK scan listing follows
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ----------------------
-  ·   -ERR no such message
-  --- ----------------------
-:::
+- -ERR no such message
 
 Примеры:
 
@@ -255,17 +219,9 @@ S: -ERR no such message, only 2 messages in maildrop
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ---------------------
-  ·   +OK message follows
-  --- ---------------------
-:::
+- +OK message follows
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ----------------------
-  ·   -ERR no such message
-  --- ----------------------
-:::
+- -ERR no such message
 
 Примеры:
 
@@ -286,17 +242,9 @@ S: .
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ---------------------
-  ·   +OK message deleted
-  --- ---------------------
-:::
+- +OK message deleted
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ----------------------
-  ·   -ERR no such message
-  --- ----------------------
-:::
+- -ERR no such message
 
 Примеры:
 
@@ -318,11 +266,7 @@ S: -ERR message 2 already deleted
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----
-  ·   +OK
-  --- -----
-:::
+- +OK
 
 Примеры:
 
@@ -339,11 +283,7 @@ S: +OK
 
 Возможные ответы:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----
-  ·   +OK
-  --- -----
-:::
+- +OK
 
 Примеры:
 

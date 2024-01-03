@@ -74,17 +74,9 @@ set up an ODBC data source for your database, following these steps:
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Invoke 'Sybase Central 4.0' (located in Start а Programs а Sybase SQL Anywhere 7 а Sybase Central 4.0, by default).  Double click the 'Utilities' folder located on the left-hand side of Sybase Central, under the title Adaptive Server Anywhere 7.  A list of tools appears on the right hand side of the screen
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+1.   Invoke 'Sybase Central 4.0' (located in Start а Programs а Sybase SQL Anywhere 7 а Sybase Central 4.0, by default).  Double click the 'Utilities' folder located on the left-hand side of Sybase Central, under the title Adaptive Server Anywhere 7.  A list of tools appears on the right hand side of the screen
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------
-  2.   Double click 'ODBC Administrator'
-  ---- -----------------------------------
-:::
+2.   Double click 'ODBC Administrator'
 
  
 
@@ -94,11 +86,7 @@ Administrator.)
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   If you want a source that is only visible to your login on that machine, make sure you are on the 'User DSN' tab and click on 'Add' (Figure 2).  If you want a source that is visible to all users on this machine, including NT Services, make sure you are on the 'System DSN' tab and click 'Add'
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+3.   If you want a source that is only visible to your login on that machine, make sure you are on the 'User DSN' tab and click on 'Add' (Figure 2).  If you want a source that is visible to all users on this machine, including NT Services, make sure you are on the 'System DSN' tab and click 'Add'
 
  
 :::{.center}
@@ -106,11 +94,7 @@ Figure 2
 ![clip0134](clip0134.png)
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------
-  4.   Select 'Adaptive Server Anywhere 7.0' and click 'Finish'.  This will bring up another window with several tabs (Figure 3)
-  ---- ---------------------------------------------------------------------------------------------------------------------------
-:::
+4.   Select 'Adaptive Server Anywhere 7.0' and click 'Finish'.  This will bring up another window with several tabs (Figure 3)
 
  
 :::{.center}
@@ -122,47 +106,19 @@ Figure 3
 5.   The following information must be provided to create an ODBC data
 source:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------
-  i.   Under the 'ODBC' tab, type in a 'Data Source Name' that pertains to your database.  This name will identify the ODBC data source that will be worked with
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+i.   Under the 'ODBC' tab, type in a 'Data Source Name' that pertains to your database.  This name will identify the ODBC data source that will be worked with
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  ----- -------------------------------------------------------------------------------------------------------------------------------------------------
-  ii.   Under the 'Login' tab, click the radio button, 'Supply user ID and password' and type in a user name and password in the appropriate text boxes
-  ----- -------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+ii.   Under the 'Login' tab, click the radio button, 'Supply user ID and password' and type in a user name and password in the appropriate text boxes
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  ------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  iii.   Under the 'Database' tab, it is important to supply a path to where your database is saved in the 'Database File' text box.  Type the path or click on the 'Browse' button, and go to the directory where the database is located and click 'OK'.
-  ------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+iii.   Under the 'Database' tab, it is important to supply a path to where your database is saved in the 'Database File' text box.  Type the path or click on the 'Browse' button, and go to the directory where the database is located and click 'OK'.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------
-  iv.   Click the check boxes, 'Automatically start the database if it isn't running' and 'Automatically shut down database after last disconnect'
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------
-:::
+iv.   Click the check boxes, 'Automatically start the database if it isn't running' and 'Automatically shut down database after last disconnect'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  v.   To make certain that everything is set properly, select the 'ODBC' tab and click on the button 'Test Connection'.  If everything is correct a window entitled 'Note' will pop up and let you know that your connection was successful
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+v.   To make certain that everything is set properly, select the 'ODBC' tab and click on the button 'Test Connection'.  If everything is correct a window entitled 'Note' will pop up and let you know that your connection was successful
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------------
-  vi.   Click 'OK' and you should see the Data Source Name you created in the ODBC Administrator window under the 'User DSN' tab or the 'System DSN' tab
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+vi.   Click 'OK' and you should see the Data Source Name you created in the ODBC Administrator window under the 'User DSN' tab or the 'System DSN' tab
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
-  ------ ----------------------------------------------------------------------------------------------------------------------
-  vii.   Click 'OK' again.  You have now created an ODBC data source for your database that is ready to be accessed in Delphi
-  ------ ----------------------------------------------------------------------------------------------------------------------
-:::
+vii.   Click 'OK' again.  You have now created an ODBC data source for your database that is ready to be accessed in Delphi
 
  
 
@@ -201,23 +157,11 @@ Installing Titan and Creating a Titan Alias
 To set up the Titan SQLAnywhere Developer interface you have to install
 a package in Delphi, following these steps.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------
-  1.   Select 'Component' from the tool bar and click 'Install Packages'
-  ---- -------------------------------------------------------------------
-:::
+1.   Select 'Component' from the tool bar and click 'Install Packages'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------------------
-  2.   Click the 'Add' button and select the package 'SQATITAN.DPL' from the directory where you downloaded Titan
-  ---- ------------------------------------------------------------------------------------------------------------
-:::
+2.   Click the 'Add' button and select the package 'SQATITAN.DPL' from the directory where you downloaded Titan
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------
-  3.   Click 'Open' and then 'OK' to install
-  ---- ---------------------------------------
-:::
+3.   Click 'Open' and then 'OK' to install
 
 You will notice that another tab named Titan SQL Anywhere appears on the
 Delphi component bar.
@@ -229,23 +173,11 @@ to use Titan SQL Anywhere with ASA 7.0, follow these steps:
 
 1.   Click 'Start' and select 'Run' from the menu
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------
-  2.   Type in 'regedit' and click 'OK'
-  ---- ----------------------------------
-:::
+2.   Type in 'regedit' and click 'OK'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------
-  3.   Open to 'HKEY\_LOCAL\_MACHINE а SOFTWARE а Titan а SqlAnywhere а Aliases' in the 'Registry Editor' window (Figure 4)
-  ---- ----------------------------------------------------------------------------------------------------------------------
-:::
+3.   Open to 'HKEY\_LOCAL\_MACHINE а SOFTWARE а Titan а SqlAnywhere а Aliases' in the 'Registry Editor' window (Figure 4)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------
-  4.   Right click 'Aliases' and select 'New' and then 'Key'
-  ---- -------------------------------------------------------
-:::
+4.   Right click 'Aliases' and select 'New' and then 'Key'
 
  
 
@@ -256,89 +188,33 @@ Figure 4
 :::
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------
-  5.   A folder will appear and you can rename the Alias to better describe your database.  This folder will be associated with the database
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------
-:::
+5.   A folder will appear and you can rename the Alias to better describe your database.  This folder will be associated with the database
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------------------------
-  6.   Right click the alias name you have just created and select 'New' and then 'String Value'
-  ---- -------------------------------------------------------------------------------------------
-:::
+6.   Right click the alias name you have just created and select 'New' and then 'String Value'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------
-  7.   Do the following:
-  ---- -------------------
-:::
+7.   Do the following:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------
-  8.   Type in 'Dynamic' and press 'Enter'
-  ---- -------------------------------------
-:::
+8.   Type in 'Dynamic' and press 'Enter'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------
-  9.   Double click the name 'Dynamic' and a box will appear.  Type in 'Yes' in the edit box labled 'Value data'
-  ---- -----------------------------------------------------------------------------------------------------------
-:::
+9.   Double click the name 'Dynamic' and a box will appear.  Type in 'Yes' in the edit box labled 'Value data'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- -----------------------------------------
-  10.   Repeat steps 6 and 7 for the following:
-  ----- -----------------------------------------
-:::
+10.   Repeat steps 6 and 7 for the following:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  11.   'DatabaseFile' (step 7, part i) and the directory where your database is stored, e.g. 'c:\\Program Files\\Sybase\\ SQL Anywhere 7\\asademo.db' (step 7, part ii)
-  ----- ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+11.   'DatabaseFile' (step 7, part i) and the directory where your database is stored, e.g. 'c:\\Program Files\\Sybase\\ SQL Anywhere 7\\asademo.db' (step 7, part ii)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- -----------------------------------------------------------------
-  12.   'DatabaseName' and the name of your database, e.g. 'asademo.db'
-  ----- -----------------------------------------------------------------
-:::
+12.   'DatabaseName' and the name of your database, e.g. 'asademo.db'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- ----------------------------------------------------------------------------------------------------------------------
-  13.   'EngineName' and the name of your engine (in most cases it is the same as the name of your database, e.g. 'asademo')
-  ----- ----------------------------------------------------------------------------------------------------------------------
-:::
+13.   'EngineName' and the name of your engine (in most cases it is the same as the name of your database, e.g. 'asademo')
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- ---------------------------------------------------------------------------
-  14.   'Password' and 'whatever you use for your database password' (e.g. 'sql')
-  ----- ---------------------------------------------------------------------------
-:::
+14.   'Password' and 'whatever you use for your database password' (e.g. 'sql')
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- ---------------------------------------------------------------------
-  15.   'User' and 'whatever you use for your database user id (e.g. 'dba')
-  ----- ---------------------------------------------------------------------
-:::
+15.   'User' and 'whatever you use for your database user id (e.g. 'dba')
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- --------------------------------------------------------------------------------------------------------------------------------
-  16.   'StartCommand' and the location of the dbeng6 executable (e.g. 'c:\\Program Files\\Sybase\\SQL Anywhere 7\\win32\\dbeng7.exe')
-  ----- --------------------------------------------------------------------------------------------------------------------------------
-:::
+16.   'StartCommand' and the location of the dbeng6 executable (e.g. 'c:\\Program Files\\Sybase\\SQL Anywhere 7\\win32\\dbeng7.exe')
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- ----------------------
-  17.   'AutoStop' and 'Yes'
-  ----- ----------------------
-:::
+17.   'AutoStop' and 'Yes'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- ------------------------------------
-  18.   Close the 'Registry Editor' window
-  ----- ------------------------------------
-:::
+18.   Close the 'Registry Editor' window
 
  
 
@@ -354,53 +230,21 @@ Similar to installing the Titan interface, you must install two packages
 in Delphi.  The order in which these packages are installed is
 important, so following these steps carefully.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------
-  1.   In Delphi select 'Component' from the tool bar and click 'Install Packages'
-  ---- -----------------------------------------------------------------------------
-:::
+1.   In Delphi select 'Component' from the tool bar and click 'Install Packages'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Click the 'Add' button and select the package 'NdbPack*.dpl' from the directory where you downloaded NativeDB\\NativeDB\\Delphi*, where '*' should be replaced by the version of Delphi being used
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Click the 'Add' button and select the package 'NdbPack*.dpl' from the directory where you downloaded NativeDB\\NativeDB\\Delphi*, where '*' should be replaced by the version of Delphi being used
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------
-  3.   Click 'Open'.  You will notice a new entry in the 'Design Packages' window.
-  ---- -----------------------------------------------------------------------------
-:::
+3.   Click 'Open'.  You will notice a new entry in the 'Design Packages' window.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Click the 'Add' button again and this time select the package 'NdbSa*.dpl where '*' should be replaced by the version of Delphi being used
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------
-:::
+4.   Click the 'Add' button again and this time select the package 'NdbSa*.dpl where '*' should be replaced by the version of Delphi being used
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------
-  5.   Click 'Open' and then 'OK' to install
-  ---- ---------------------------------------
-:::
+5.   Click 'Open' and then 'OK' to install
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------
-  6.   Now select 'Tools' from the tool bar and click 'Environment Options'
-  ---- ----------------------------------------------------------------------
-:::
+6.   Now select 'Tools' from the tool bar and click 'Environment Options'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------
-  7.   Select the 'Library' tab
-  ---- --------------------------
-:::
+7.   Select the 'Library' tab
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  8.   In the 'Library Path' edit box, add the path to the folder named Delphi* where '*' is the version of Delphi being used.  An example path would be 'C:\\NativeDB\\Delphi3'
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+8.   In the 'Library Path' edit box, add the path to the folder named Delphi* where '*' is the version of Delphi being used.  An example path would be 'C:\\NativeDB\\Delphi3'
 
 On the component bar in Delphi, you will notice another tab named
 NativeDB.
@@ -433,29 +277,13 @@ bound together.  On the form, 'Form1', there are three components from
 the BDE interface, which have been bound. To bind these three
 components, follow these steps:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------
-  1.   Place the components, 'TTable', 'TDataSource' and 'DBGrid' on your form
-  ---- -------------------------------------------------------------------------
-:::
+1.   Place the components, 'TTable', 'TDataSource' and 'DBGrid' on your form
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Bind the 'TTable' component to the ODBC data source 'ASA 7.0 Sample' by setting its 'DatabaseName' property in the 'Object Inspector' to that name using the drop down list
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Bind the 'TTable' component to the ODBC data source 'ASA 7.0 Sample' by setting its 'DatabaseName' property in the 'Object Inspector' to that name using the drop down list
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   The 'DataSource' component can be linked to the database through 'Table1' by selecting the 'DataSource' component and setting the property 'DataSet' on the 'Object Inspector' to 'Table1' from the drop down list
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+3.   The 'DataSource' component can be linked to the database through 'Table1' by selecting the 'DataSource' component and setting the property 'DataSet' on the 'Object Inspector' to 'Table1' from the drop down list
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   The 'DBGrid' component is bound to the database through the 'DataSource'.  This is done by selecting the 'DBGrid' component on 'Form1' and setting its 'DataSource' property, in the 'Object Inspector', to 'DataSource1'.  Now 'DBGrid' can display a table in the database
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+4.   The 'DBGrid' component is bound to the database through the 'DataSource'.  This is done by selecting the 'DBGrid' component on 'Form1' and setting its 'DataSource' property, in the 'Object Inspector', to 'DataSource1'.  Now 'DBGrid' can display a table in the database
 
 Setting up a data source is very powerful.  It enables many components
 to get access to the database through this data source without requiring
@@ -491,46 +319,22 @@ to the database that the source is associated with.  For the 'TTable'
 component the following steps need to be carried out to start an ASA
 database engine:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------
-  1.   Set the  'TableName' property, whether it be at design time or run time
-  ---- -------------------------------------------------------------------------
-:::
+1.   Set the  'TableName' property, whether it be at design time or run time
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------
-  2.   Set the 'Active' property to True.
-  ---- ------------------------------------
-:::
+2.   Set the 'Active' property to True.
 
  
 
 Another BDE component that can start an ASA database engine in Delphi is
 the 'TDatabase' component.  To do so:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------
-  1.   Select the component and place it on the form
-  ---- -----------------------------------------------
-:::
+1.   Select the component and place it on the form
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------------------
-  2.   In the 'Object Inspector' or when using code, set the 'AliasName' property.  This property is the ODBC data source
-  ---- --------------------------------------------------------------------------------------------------------------------
-:::
+2.   In the 'Object Inspector' or when using code, set the 'AliasName' property.  This property is the ODBC data source
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------
-  3.   Set the 'DatabaseName' property.  It is usually the same as the 'AliasName'
-  ---- -----------------------------------------------------------------------------
-:::
+3.   Set the 'DatabaseName' property.  It is usually the same as the 'AliasName'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------------
-  4.   Set the 'Connected' property to 'True' and the database engine will start up.
-  ---- -------------------------------------------------------------------------------
-:::
+4.   Set the 'Connected' property to 'True' and the database engine will start up.
 
  
 
@@ -540,23 +344,11 @@ Connecting to an ASA database engine using ODBCExpress is similar to
 using the 'TDatabase' component using the BDE.  To start a database
 engine follow these steps:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------
-  1.   On the ODBCExpress tab on the component palette, select the 'THdbc' component and place it on the form. 
-  ---- ----------------------------------------------------------------------------------------------------------
-:::
+1.   On the ODBCExpress tab on the component palette, select the 'THdbc' component and place it on the form.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------
-  2.   In the 'Object Inspector' or using code, set the 'DataSource' property to the ODBC data source required
-  ---- ---------------------------------------------------------------------------------------------------------
-:::
+2.   In the 'Object Inspector' or using code, set the 'DataSource' property to the ODBC data source required
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------
-  3.   Set the 'Connected' property to 'True'.
-  ---- -----------------------------------------
-:::
+3.   Set the 'Connected' property to 'True'.
 
  
 
@@ -567,39 +359,19 @@ Installing Titan and Creating a Titan Alias on page 4 for details), one
 is ready to work with Titan components. Place a 'TtsTable' component or
 a 'TtsDatabase' component on the form.  For the 'TtsTable' component:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------
-  1.   Set the 'DatabaseName' property to the Alias name created for the database that is being used
-  ---- -----------------------------------------------------------------------------------------------
-:::
+1.   Set the 'DatabaseName' property to the Alias name created for the database that is being used
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------
-  2.   Set the 'TableName' property to a table in the database
-  ---- ---------------------------------------------------------
-:::
+2.   Set the 'TableName' property to a table in the database
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------
-  3.   Set the 'Active' property is set to 'True'
-  ---- --------------------------------------------
-:::
+3.   Set the 'Active' property is set to 'True'
 
  
 
 For the 'TtsDatabase' component:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------------------
-  1.   Set the 'AliasName' property and 'DatabaseName' property to the Alias name created for the database being accessed
-  ---- --------------------------------------------------------------------------------------------------------------------
-:::
+1.   Set the 'AliasName' property and 'DatabaseName' property to the Alias name created for the database being accessed
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------
-  2.   Set the 'Connected' property to 'True'.
-  ---- -----------------------------------------
-:::
+2.   Set the 'Connected' property to 'True'.
 
 There may be a problem auto-starting an ASA database engine when using
 the Titan interface. One would like to be able to start the database
@@ -608,17 +380,9 @@ auto-start an ASA engine the error 'Database Name required to start
 server' is run into.  One way to get around this error is to follow
 these steps:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Start the database engine required using BDE or ODBCExpress components.  Make sure that the Alias names between Titan and BDE or ODBCExpress are the same if you choose this option.
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+1.   Start the database engine required using BDE or ODBCExpress components.  Make sure that the Alias names between Titan and BDE or ODBCExpress are the same if you choose this option.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------
-  2.   Connect to the already started engine using Titan components
-  ---- --------------------------------------------------------------
-:::
+2.   Connect to the already started engine using Titan components
 
  
 
@@ -632,53 +396,21 @@ NativeDB component 'TAsaSession' allows you to connect to any version of
 ASA from Watcom SQL 4 to ASA 7.  For example, to connect to an ASA 7
 engine, follow these steps and refer to figure 6:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------
-  1.   Place a 'TAsaSession' component on the form
-  ---- ---------------------------------------------
-:::
+1.   Place a 'TAsaSession' component on the form
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Set the 'LibraryFile' property to 'dblib7.dll' in the 'Object Inspector'.  Note that this dll will change depending on which version of ASA you are using.  For example, this property would be set to 'dblib6.dll' for ASA 6, 'dbl50t.dll' for SA5.x, etc.
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Set the 'LibraryFile' property to 'dblib7.dll' in the 'Object Inspector'.  Note that this dll will change depending on which version of ASA you are using.  For example, this property would be set to 'dblib6.dll' for ASA 6, 'dbl50t.dll' for SA5.x, etc.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   Set the 'LoginDatabase' property to the path and name of where your database is stored (e.g. 'C:\\Program Files\\Sybase\\SQL Anywhere 7\\asademo.db).  Note that if you are connecting to a running engine then it is enough to only supply the database name in the 'LoginDatabase' property
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+3.   Set the 'LoginDatabase' property to the path and name of where your database is stored (e.g. 'C:\\Program Files\\Sybase\\SQL Anywhere 7\\asademo.db).  Note that if you are connecting to a running engine then it is enough to only supply the database name in the 'LoginDatabase' property
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Assign a name to the 'LoginEngineName' property, which will represent the name of your engine.  Typically, this is the same name as your database.  If this property is left blank the name of the database supplied in the 'LoginDatabase' property is used for the engine name
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+4.   Assign a name to the 'LoginEngineName' property, which will represent the name of your engine.  Typically, this is the same name as your database.  If this property is left blank the name of the database supplied in the 'LoginDatabase' property is used for the engine name
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------
-  5.   Set the 'LoginUser' to the appropriate user id (e.g. 'dba')
-  ---- -------------------------------------------------------------
-:::
+5.   Set the 'LoginUser' to the appropriate user id (e.g. 'dba')
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------
-  6.   Set the 'LoginPassword' to the correct password for the user supplied by the 'LoginUser' property (e.g. 'sql')
-  ---- ----------------------------------------------------------------------------------------------------------------
-:::
+6.   Set the 'LoginPassword' to the correct password for the user supplied by the 'LoginUser' property (e.g. 'sql')
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------
-  7.   Set the 'ServerParams' property to the start line for dbeng7 (e.g. 'start=dbeng7.exe')
-  ---- ----------------------------------------------------------------------------------------
-:::
+7.   Set the 'ServerParams' property to the start line for dbeng7 (e.g. 'start=dbeng7.exe')
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------
-  8.   Set the 'ServerType' property to 'stServer'
-  ---- ---------------------------------------------
-:::
+8.   Set the 'ServerType' property to 'stServer'
 
 When all of these are set the 'Connected' property can be set to 'True'
 and the database engine will start.
@@ -694,29 +426,13 @@ Once the 'TAsaSession' component is set up, you are ready to work with
 the database access components.  To set up the database access component
 follow these steps:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------
-  1.   Place a 'TAsaDataset' component on the form
-  ---- ---------------------------------------------
-:::
+1.   Place a 'TAsaDataset' component on the form
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------
-  2.   Set the 'Session' property to the name of the TAsaSession component you set above using the drop down menu (e.g. 'AsaSession1')
-  ---- ---------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Set the 'Session' property to the name of the TAsaSession component you set above using the drop down menu (e.g. 'AsaSession1')
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------
-  3.   Set the 'SQL' property to access one or many tables in the database.  Note that if this property is not set an error will occur
-  ---- ---------------------------------------------------------------------------------------------------------------------------------
-:::
+3.   Set the 'SQL' property to access one or many tables in the database.  Note that if this property is not set an error will occur
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------
-  4.   Set the 'Active' property to 'True'
-  ---- -------------------------------------
-:::
+4.   Set the 'Active' property to 'True'
 
 Note that if you set the 'Active' property to true in the 'TAsaDataset'
 component then it is unnecessary to set the 'Connected' property to
@@ -795,17 +511,9 @@ Example 1: Inserting a BLOB into a database using BDE
 
 A few things to note are:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------
-  1.   In this example the BLOB is a bitmap file that is displayed using a 'TImage' box
-  ---- ----------------------------------------------------------------------------------
-:::
+1.   In this example the BLOB is a bitmap file that is displayed using a 'TImage' box
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   'keyfld' and 'imagefld' are columns in the table.  Keyfld accepts only integer values and is set to the default 'autoincrement' in ASA.  It is also set to be the 'Primary Key'.  This means that every number in the 'keyfld' column must be unique. Refer to Appendix C: Primary Key Issues on page 34, for more details.  'Imagefld' accepts only long binary values.  Long binary values are used to store BLOBs
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   'keyfld' and 'imagefld' are columns in the table.  Keyfld accepts only integer values and is set to the default 'autoincrement' in ASA.  It is also set to be the 'Primary Key'.  This means that every number in the 'keyfld' column must be unique. Refer to Appendix C: Primary Key Issues on page 34, for more details.  'Imagefld' accepts only long binary values.  Long binary values are used to store BLOBs
 
  
 
@@ -817,11 +525,7 @@ imagefld long binary)' )
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------
-  3.   If the bitmap is larger than 1.4 megabytes you will observe the error message,        
-  ---- ----------------------------------------------------------------------------------------
-:::
+3.   If the bitmap is larger than 1.4 megabytes you will observe the error message,
 
      'Invalid BLOB length'
 
@@ -1029,41 +733,17 @@ to note are listed below:
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------
-  1.   'blob' is the name of the table where the BLOB, which is a bitmap, will be stored.
-  ---- ------------------------------------------------------------------------------------
-:::
+1.   'blob' is the name of the table where the BLOB, which is a bitmap, will be stored.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Recall that 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and is set to 'autoincrement'.  The column 'imagefld' has the data type 'long binary'. 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Recall that 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and is set to 'autoincrement'.  The column 'imagefld' has the data type 'long binary'.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------
-  3.   The syntax for this example is almost identical to that of Example 1.  The differences are the following:
-  ---- -----------------------------------------------------------------------------------------------------------
-:::
+3.   The syntax for this example is almost identical to that of Example 1.  The differences are the following:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Since the 'tsTable' component is used instead of the 'TTable' component, the word 'Table1' in Example 1 is replaced with 'tsTable1' in this example.
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+4.   Since the 'tsTable' component is used instead of the 'TTable' component, the word 'Table1' in Example 1 is replaced with 'tsTable1' in this example.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  5.   This example does not insert a number into the column 'keyfld'.  Example 1 does this through the variable nextnum, which is assigned a value by going to the last row in the table and adding one to the value in the 'keyfld' column.  Appendix C: Primary Key Issues discusses different methods for assigning values to nextnum and why the method used in Example 5 is recommended over the method used in Example 1.
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+5.   This example does not insert a number into the column 'keyfld'.  Example 1 does this through the variable nextnum, which is assigned a value by going to the last row in the table and adding one to the value in the 'keyfld' column.  Appendix C: Primary Key Issues discusses different methods for assigning values to nextnum and why the method used in Example 5 is recommended over the method used in Example 1.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  6.   The line 'tsDatabase1.Commit'.  This is necessary when using Titan SQLAnywhere Developer because the default value for committing changes is set differently than the default for BDE or ODBCExpress.  If this line is not placed into the code, the image will be placed into the table initially but when the table is closed the change will be rolled back.
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+6.   The line 'tsDatabase1.Commit'.  This is necessary when using Titan SQLAnywhere Developer because the default value for committing changes is set differently than the default for BDE or ODBCExpress.  If this line is not placed into the code, the image will be placed into the table initially but when the table is closed the change will be rolled back.
 
  
 
@@ -1172,23 +852,11 @@ Example 7: Loading a BLOB into a database using NativeDB
 
 Some things to note are the following:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   It is not obvious which table is being accessed in this example.  The 'SQL' property for the 'TAsaDataset' component is set to 'Select * from blob' meaning that the table 'blob' is being accessed. Recall that table 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and default 'autoincrement'.  The column 'imagefld' has the data type 'long binary'
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+1.   It is not obvious which table is being accessed in this example.  The 'SQL' property for the 'TAsaDataset' component is set to 'Select * from blob' meaning that the table 'blob' is being accessed. Recall that table 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and default 'autoincrement'.  The column 'imagefld' has the data type 'long binary'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Unlike BDE, ODBCExpress, and Titan, NativeDB deals with the default 'autoincrement' automatically.  It does this by setting AsaDataset.Fields[0].Required to false initially.  Please refer to Appendix C: Primary Key Issues, for more information
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Unlike BDE, ODBCExpress, and Titan, NativeDB deals with the default 'autoincrement' automatically.  It does this by setting AsaDataset.Fields[0].Required to false initially.  Please refer to Appendix C: Primary Key Issues, for more information
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   It is also not obvious that the 'ReadOnly' property in the 'TAsaDataset' component is automatically set to 'False'.  This means that the BLOBs are not actually loaded into the table.  When this property is set to 'True' then the BLOBs will be inserted into the table
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+3.   It is also not obvious that the 'ReadOnly' property in the 'TAsaDataset' component is automatically set to 'False'.  This means that the BLOBs are not actually loaded into the table.  When this property is set to 'True' then the BLOBs will be inserted into the table
 
  
 
@@ -1256,17 +924,9 @@ things that must be set up.
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   The 'Table', 'DataSouce', and 'DBGrid' properties have been bound to each other. (Recall that binding components was talked about in the section Simple Case Setting Bound Control Properties on page 6)
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+1.   The 'Table', 'DataSouce', and 'DBGrid' properties have been bound to each other. (Recall that binding components was talked about in the section Simple Case Setting Bound Control Properties on page 6)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   To ensure that 'DBGrid' will display the information in your database the 'Active' property must be set to true. One way to set this property is to select your 'Table' component on your form, and in the 'Object Inspector' on the 'Properties' tab, the 'Active' property can be seen.  The 'Active' property must be set to True otherwise your data will not appear in the 'DBGrid' even when the application is running.  Note that the 'Active' property can only be set to true once a 'Table Name' has been supplied.
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   To ensure that 'DBGrid' will display the information in your database the 'Active' property must be set to true. One way to set this property is to select your 'Table' component on your form, and in the 'Object Inspector' on the 'Properties' tab, the 'Active' property can be seen.  The 'Active' property must be set to True otherwise your data will not appear in the 'DBGrid' even when the application is running.  Note that the 'Active' property can only be set to true once a 'Table Name' has been supplied.
 
  
 
@@ -1407,23 +1067,11 @@ sets the TField.Required property to True.  To fix this, so that
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Select the 'Form', making sure that a component on the form is not highlighted.  Make sure that the display on the top of the 'Object Inspector' says Form1 : TForm, or what you named your form : TForm
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+1.   Select the 'Form', making sure that a component on the form is not highlighted.  Make sure that the display on the top of the 'Object Inspector' says Form1 : TForm, or what you named your form : TForm
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Select the 'Events' tab on the 'Object Inspector' and make the row 'OnShow' the focus.  Double click the white space to the right of the name 'OnShow'.  This will create a procedure header named 'FormShow' where code is to be written.  (Note: creating this procedure in the 'OnShow' event ensures that the autoincrement feature will work as soon as the application is run)
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Select the 'Events' tab on the 'Object Inspector' and make the row 'OnShow' the focus.  Double click the white space to the right of the name 'OnShow'.  This will create a procedure header named 'FormShow' where code is to be written.  (Note: creating this procedure in the 'OnShow' event ensures that the autoincrement feature will work as soon as the application is run)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------
-  3.   Make your procedure 'FormShow' look like the following by adding lines of code
-  ---- --------------------------------------------------------------------------------
-:::
+3.   Make your procedure 'FormShow' look like the following by adding lines of code
 
     procedure TForm1.FormShow(Sender: TObject);
     begin
@@ -1460,23 +1108,11 @@ values for a particular column do the following:
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------
-  1.   Select the 'DBMemo' component on the form
-  ---- -------------------------------------------
-:::
+1.   Select the 'DBMemo' component on the form
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------
-  2.   Set the 'DataSource' property appropriately
-  ---- ---------------------------------------------
-:::
+2.   Set the 'DataSource' property appropriately
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------
-  3.   Set the 'DataField' property to the name of the column you wish to display.
-  ---- -----------------------------------------------------------------------------
-:::
+3.   Set the 'DataField' property to the name of the column you wish to display.
 
  
 
@@ -1606,29 +1242,13 @@ error:
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------
-  1.   Select the 'OEDataSet' component on your form
-  ---- -----------------------------------------------
-:::
+1.   Select the 'OEDataSet' component on your form
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------
-  2.   Double click '+' to the left of the 'hStmt' property in the 'Object Inspector'
-  ---- --------------------------------------------------------------------------------
-:::
+2.   Double click '+' to the left of the 'hStmt' property in the 'Object Inspector'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------
-  3.   Select the property 'Concurrency Type' and choose 'Values' or 'Row Versions' from the drop down list. 
-  ---- --------------------------------------------------------------------------------------------------------
-:::
+3.   Select the property 'Concurrency Type' and choose 'Values' or 'Row Versions' from the drop down list.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   The 'OEDataSet' component also has a property 'Editable' which is automatically set to 'False'.  If data is to be edited at run time, this property must be set to 'True'. 
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+4.   The 'OEDataSet' component also has a property 'Editable' which is automatically set to 'False'.  If data is to be edited at run time, this property must be set to 'True'.
 
  
 
@@ -1638,23 +1258,11 @@ the type of cursor:
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------
-  1.   Select the 'OEDataSet' component on the form
-  ---- ----------------------------------------------
-:::
+1.   Select the 'OEDataSet' component on the form
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------
-  2.   In the 'Object Inspector' double click on the '+' to the left of the 'hStmt' property.
-  ---- ----------------------------------------------------------------------------------------
-:::
+2.   In the 'Object Inspector' double click on the '+' to the left of the 'hStmt' property.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   In the expanded list, the property 'CursorType' can be seen and one of Forward-Only, Dynamic, Keyset-Driven, or Static can be chosen from a drop down list.
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+3.   In the expanded list, the property 'CursorType' can be seen and one of Forward-Only, Dynamic, Keyset-Driven, or Static can be chosen from a drop down list.
 
 For more information on these cursors, please refer to the whitepaper,
 OEWPaper.pdf, under the section 'Cursor Types', which is provided by
@@ -1682,29 +1290,13 @@ these options:
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------
-  1.   Select the 'OEDataSet' component on the form
-  ---- ----------------------------------------------
-:::
+1.   Select the 'OEDataSet' component on the form
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------
-  2.   In the 'Object Inspector' set the 'Cached' property to true
-  ---- -------------------------------------------------------------
-:::
+2.   In the 'Object Inspector' set the 'Cached' property to true
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------
-  3.   Click on the '+' beside the 'hStmt' property
-  ---- ----------------------------------------------
-:::
+3.   Click on the '+' beside the 'hStmt' property
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------
-  4.   Set the 'CursorType' property to either Dynamic or Forward-Only
-  ---- -----------------------------------------------------------------
-:::
+4.   Set the 'CursorType' property to either Dynamic or Forward-Only
 
  
 
@@ -1766,47 +1358,23 @@ the behavior of ASA 6.0.3 the following can be done:
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------
-  1.   From the Start Menu, click 'Run'.
-  ---- -----------------------------------
-:::
+1.   From the Start Menu, click 'Run'.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Type in 'dbisql -c "uid=dba;pwd=sql;dsn=the name of your ODBC source' and click 'OK'.  For example, for the DelphiDemo you would type:                                   
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Type in 'dbisql -c "uid=dba;pwd=sql;dsn=the name of your ODBC source' and click 'OK'.  For example, for the DelphiDemo you would type:
 
 dbisql -c "uid=dba;pwd=sql;dsn=DelphiDemo"
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------
-  3.   In the 'SQL Statements' window type,                                                                          
-  ---- ----------------------------------------------------------------------------------------------------------------
-:::
+3.   In the 'SQL Statements' window type,
 
 set option public.ansi\_update\_constraints='off'
 
       and click the play button.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------
-  4.   When dbisql is finished executing the statement just typed in will be highlighted in blue.  Exit dbisql.
-  ---- ----------------------------------------------------------------------------------------------------------
-:::
+4.   When dbisql is finished executing the statement just typed in will be highlighted in blue.  Exit dbisql.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------------------
-  5.   Close down your Delphi application and restart it.  Make sure the database engine shuts down and restarts.
-  ---- ------------------------------------------------------------------------------------------------------------
-:::
+5.   Close down your Delphi application and restart it.  Make sure the database engine shuts down and restarts.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------
-  6.   You should now be able to insert, delete and update rows without problems, using a Static or Keyset\_Driven cursor. 
-  ---- ----------------------------------------------------------------------------------------------------------------------
-:::
+6.   You should now be able to insert, delete and update rows without problems, using a Static or Keyset\_Driven cursor.
 
  
 
@@ -1926,51 +1494,23 @@ Anywhere, you have a few more steps to take before starting in Delphi.
 For ODBCExpress, the first step is to open Delphi and uninstall older
 versions of ODBCExpress.  To do this:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------
-  1.   Select 'Component' from the tool bar and click 'Install Packages'
-  ---- -------------------------------------------------------------------
-:::
+1.   Select 'Component' from the tool bar and click 'Install Packages'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------
-  2.   In the 'Design packages' list box select the ODBCExpress package and click the 'Remove' button
-  ---- ------------------------------------------------------------------------------------------------
-:::
+2.   In the 'Design packages' list box select the ODBCExpress package and click the 'Remove' button
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------
-  3.   Click 'OK' to remove the package
-  ---- ----------------------------------
-:::
+3.   Click 'OK' to remove the package
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------
-  4.   Select 'Tools' from the tool bar and click 'Environment Options'
-  ---- ------------------------------------------------------------------
-:::
+4.   Select 'Tools' from the tool bar and click 'Environment Options'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------
-  5.   Select the 'Library' tab and remove any references to directories that contain ODBCExpress components from the 'Library Path' edit box
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------
-:::
+5.   Select the 'Library' tab and remove any references to directories that contain ODBCExpress components from the 'Library Path' edit box
 
  
 
 To install ODBCExpress:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------------
-  1.   Select 'Component' from the tool bar and click 'Install Packages' (Figure 12)
-  ---- -------------------------------------------------------------------------------
-:::
+1.   Select 'Component' from the tool bar and click 'Install Packages' (Figure 12)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------
-  2.   Click on the 'Add' button and select the file OE.bpl from the 'Package' folder in the directory in which you unzipped ODBCExpress
-  ---- -----------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   Click on the 'Add' button and select the file OE.bpl from the 'Package' folder in the directory in which you unzipped ODBCExpress
 
  
 :::{.center}
@@ -1978,45 +1518,21 @@ Figure 12
 ![clip0146](clip0146.png)
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------
-  3.   Click 'OK' to install the package
-  ---- -----------------------------------
-:::
+3.   Click 'OK' to install the package
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------
-  4.   Select 'Tools' from the tool bar and click 'Environment Options'
-  ---- ------------------------------------------------------------------
-:::
+4.   Select 'Tools' from the tool bar and click 'Environment Options'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------
-  5.   Select the 'Library' tab
-  ---- --------------------------
-:::
+5.   Select the 'Library' tab
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------------------------
-  6.   In the 'Library Path' edit box, add the path to the folders 'Lib' and 'Package', which is where you unzipped ODBCExpress
-  ---- --------------------------------------------------------------------------------------------------------------------------
-:::
+6.   In the 'Library Path' edit box, add the path to the folders 'Lib' and 'Package', which is where you unzipped ODBCExpress
 
  
 
 To install the help files:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------------
-  1.   Copy the help files 'OE32.HLP' and 'OE32.CNT' into the 'Help' folder under the Delphi main directory
-  ---- ------------------------------------------------------------------------------------------------------
-:::
+1.   Copy the help files 'OE32.HLP' and 'OE32.CNT' into the 'Help' folder under the Delphi main directory
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------
-  2.   Open the DELPHI3.CNT file located in the Delphi Help directory and add the line,
-  ---- ----------------------------------------------------------------------------------
-:::
+2.   Open the DELPHI3.CNT file located in the Delphi Help directory and add the line,
 
        :Index ODBCExpress Reference=oe32.hlp,
 
@@ -2070,47 +1586,19 @@ of where the renamed database can be found.
 
 The simplest way to modify the database is to do the following:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Open 'Sybase Central 4.0' by clicking 'Start а Programs а Sybase SQL Anywhere 7 а Sybase Central 4.0'.  When the window appears, you will notice that asademo can be seen on the left-hand side of your screen under the title Adaptive Server Anywhere 7.  You should also notice a database engine icon in the bottom right-hand side of your screen on the Start bar
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+1.   Open 'Sybase Central 4.0' by clicking 'Start а Programs а Sybase SQL Anywhere 7 а Sybase Central 4.0'.  When the window appears, you will notice that asademo can be seen on the left-hand side of your screen under the title Adaptive Server Anywhere 7.  You should also notice a database engine icon in the bottom right-hand side of your screen on the Start bar
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   From the menu bar choose 'Tools' and select 'Connect'.  A window called 'New Connection' will appear.  Choose 'Adaptive Server Anywhere 7 from the drop down menu and click 'OK'
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+2.   From the menu bar choose 'Tools' and select 'Connect'.  A window called 'New Connection' will appear.  Choose 'Adaptive Server Anywhere 7 from the drop down menu and click 'OK'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------
-  3.   On the 'Identification' tab type in the 'User' as 'dba' in the appropriate edit box and the 'Password' as 'sql' in its edit box
-  ---- ---------------------------------------------------------------------------------------------------------------------------------
-:::
+3.   On the 'Identification' tab type in the 'User' as 'dba' in the appropriate edit box and the 'Password' as 'sql' in its edit box
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   On the 'Database' tab click on the 'Browse' button located by 'Database File'.  Find the path where you placed your copy of asademo.db and select your database (e.g.  C:\\asademoTest.db )
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+4.   On the 'Database' tab click on the 'Browse' button located by 'Database File'.  Find the path where you placed your copy of asademo.db and select your database (e.g.  C:\\asademoTest.db )
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  5.   Click 'OK'.   It will appear as if nothing happened but if you click on the '+' to the left of asademo, you should see the name of your database (in this case asademoTest) as well as asademo with a different icon
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+5.   Click 'OK'.   It will appear as if nothing happened but if you click on the '+' to the left of asademo, you should see the name of your database (in this case asademoTest) as well as asademo with a different icon
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ------------------------------------------------------------------------------------------------------------
-  6.   Click on the '+' to the left of asademoTest and you will see a list of folders, the top one being 'Tables'
-  ---- ------------------------------------------------------------------------------------------------------------
-:::
+6.   Click on the '+' to the left of asademoTest and you will see a list of folders, the top one being 'Tables'
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  7.   If you click on the '+' to the left of the 'Tables' folder you will see a list of all the names of the tables in the database.  Figure 14 on the following page depicts what you should see at this point
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+7.   If you click on the '+' to the left of the 'Tables' folder you will see a list of all the names of the tables in the database.  Figure 14 on the following page depicts what you should see at this point
 
  
 
@@ -2123,17 +1611,9 @@ Figure 14
 :::
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  8.   If you want to add a table, click on the 'Tables' folder and on the right hand side double click on 'Add Table'.  This will bring you to a form where you can name the table and add columns to it.  Note that this is not a way of putting information into the table.  It is just a way of creating the names of the columns
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+8.   If you want to add a table, click on the 'Tables' folder and on the right hand side double click on 'Add Table'.  This will bring you to a form where you can name the table and add columns to it.  Note that this is not a way of putting information into the table.  It is just a way of creating the names of the columns
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT * FROM "DBA"."department"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT * FROM "DBA"."department"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
 
  
 
@@ -2162,11 +1642,7 @@ only deletes every column in the row where dept\_id (a column in the
 table department) equals 600, but it also deletes every row in the table
 where dept\_id equals 600
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  ----- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  10.   When you are done modifying a table, close the 'Interactive SQL' window.  This will bring you back to 'Sybase Central' where you can modify more tables.  If you are finished modifying asademoTest, click on 'Tools' from the menu bar and select 'Disconnect'.  A window will pop up and you should select asademoTest and click 'Disconnect'.  Then you can close 'Sybase Central'
-  ----- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+10.   When you are done modifying a table, close the 'Interactive SQL' window.  This will bring you back to 'Sybase Central' where you can modify more tables.  If you are finished modifying asademoTest, click on 'Tools' from the menu bar and select 'Disconnect'.  A window will pop up and you should select asademoTest and click 'Disconnect'.  Then you can close 'Sybase Central'
 
  
 

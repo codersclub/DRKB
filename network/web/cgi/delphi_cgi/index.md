@@ -20,53 +20,21 @@ Date: 01.01.2007
 
 Содержание:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- ----------
-  ·   Введение
-  --- ----------
-:::
+- Введение
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- -------------------------------
-  ·   [Передача параметров](fa34e5a1d42d4e89/)
-  --- -------------------------------
-:::
+- [Передача параметров](fa34e5a1d42d4e89/)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- -------------------------
-  ·   [Переадресация](dfe9e8d6080c41c0/)
-  --- -------------------------
-:::
+- [Переадресация](dfe9e8d6080c41c0/)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- -----------------------------
-  ·   [Вывод изображений](2ea56b2e17144075/)
-  --- -----------------------------
-:::
+- [Вывод изображений](2ea56b2e17144075/)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- --------------------------
-  ·   [Защита паролем](8dae470d71764e6b/)
-  --- --------------------------
-:::
+- [Защита паролем](8dae470d71764e6b/)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- --------------------------
-  ·   [Куки (Cookies)](80ec2bcbb677469a/)
-  --- --------------------------
-:::
+- [Куки (Cookies)](80ec2bcbb677469a/)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- ----------------------------------
-  ·   [Работа с Базами Данных](9634848675b54bab/)
-  --- ----------------------------------
-:::
+- [Работа с Базами Данных](9634848675b54bab/)
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- -----------------------------------
-  ·   [Частые Вопросы и Ответы](9a8d5e74c4804a69/)
-  --- -----------------------------------
-:::
+- [Частые Вопросы и Ответы](9a8d5e74c4804a69/)
 
 Введение
 

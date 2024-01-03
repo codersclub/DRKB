@@ -138,38 +138,14 @@ Rave это делается с помощью свойства Anchor.
 Следующие комбинации не ограничительные, но обычно спариваются следующим
 образом:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- -----------------------
-  •   Выравнивание Left/Top
-  --- -----------------------
-:::
+- Выравнивание Left/Top
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- ---------------------------
-  •   Выравнивание Right/Bottom
-  --- ---------------------------
-:::
+- Выравнивание Right/Bottom
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- -------------------------------
-  •   Выравнивание по обоим центрам
-  --- -------------------------------
-:::
+- Выравнивание по обоим центрам
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- -------------
-  •   Оба Stretch
-  --- -------------
-:::
+- Оба Stretch
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- ------------
-  •   Оба Resize
-  --- ------------
-:::
+- Оба Resize
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
-  --- ------------
-  •   Оба Spread
-  --- ------------
-:::
+- Оба Spread

@@ -71,23 +71,11 @@ RegFile := TRegIniFile.Create(SubKey);
 WriteInteger, WriteBool и WriteString. В качестве параметров
 указываются:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ---------------------
-  ·   название подсекции;
-  --- ---------------------
-:::
+- название подсекции;
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- --------------------
-  ·   название элемента;
-  --- --------------------
-:::
+- название элемента;
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ----------------------
-  ·   записываемые данные.
-  --- ----------------------
-:::
+- записываемые данные.
 
 Так, чтобы записать значение элемента MyIntVal в подсекции IntKey,
 следует выполнить код

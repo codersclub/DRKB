@@ -105,29 +105,10 @@ Excel.Selection.WrapText:=true;
 мы и будем использовать. Для установки размеров полей необходимо
 изменить соответствующие свойства PageSetup, вот эти свойства:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -------------------------
-  ·   LeftMargin - Левое поле
-  --- -------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ---------------------------
-  ·   RightMargin - Правое поле
-  --- ---------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- --------------------------
-  ·   TopMargin - Верхнее поле
-  --- --------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ----------------------------
-  ·   BottomMargin - Нижнее поле
-  --- ----------------------------
-:::
+- LeftMargin - Левое поле
+- RightMargin - Правое поле
+- TopMargin - Верхнее поле
+- BottomMargin - Нижнее поле
 
 Значение размеров полей необходимо указывать в пикселях, к чему мы не
 очень привыкли, поэтому воспользуемся функцией InchesToPoints объекта
@@ -189,47 +170,14 @@ Excel.ActiveSheet.PageSetup.PrintTitleRows:=\'$2:$3\';
 
 Вот несколько индексов цветов:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ---------------
-  ·   Индекс - Цвет
-  --- ---------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ----------
-  ·   0 - Авто
-  --- ----------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----------
-  ·   2 - Белый
-  --- -----------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -------------
-  ·   3 - Красный
-  --- -------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----------
-  ·   5 - Синий
-  --- -----------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ------------
-  ·   6 - Желтый
-  --- ------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- --------------
-  ·   10 - Зеленый
-  --- --------------
-:::
+Индекс | Цвет
+------ | ----
+0 | Авто
+2 | Белый
+3 | Красный
+5 | Синий
+6 | Желтый
+10 | Зеленый
 
 Для изменения цвета фона ячейки используйте объект Interior свойства
 Selection:

@@ -3634,75 +3634,31 @@ Result := A*X*X*X + B*X*X + C*X + D;
 конвейер F\_MUL, с 7 состояниями 7, а правая конвейер F\_ADD на 5
 состояний.
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
-  A*X      
-
-            
-
-            
-
-            
-
-            
-
-           
-
-           
-  -------- --------
-:::
+  A*X
 
 Такт 1
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
-  A*X      
-
-            
-
-            
-
-            
-
-           
-
-           
-  -------- --------
-:::
+  A*X
 
 Такт 2
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
   B*X      
 
             
 
-  A*X      
-
-            
-
-            
-
-           
-
-           
-  -------- --------
-:::
+  A*X
 
 Такт 3
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
@@ -3710,21 +3666,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
             
 
-  A*X      
-
-            
-
-           
-
-           
-  -------- --------
-:::
+  A*X
 
 Такт 4
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
   C*X      
 
@@ -3734,19 +3680,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
             
 
-  A*X      
-
-           
-
-           
-  -------- --------
-:::
+  A*X
 
 Такт 5
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
@@ -3758,17 +3696,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
             
 
-  A*X     
-
-           
-  -------- --------
-:::
+  A*X
 
 Такт 6
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
@@ -3782,15 +3714,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
            
 
-  A*X     
-  -------- --------
-:::
+  A*X
 
 Такт 7
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  ----------- --------
-  F\_MUL      F\_ADD
+F\_MUL      F\_ADD
 
   (A*X)*X    
 
@@ -3802,17 +3730,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                
 
-  B*X        
-
-              
-  ----------- --------
-:::
+  B*X
 
 Такт 8
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  ----------- --------
-  F\_MUL      F\_ADD
+F\_MUL      F\_ADD
 
                
 
@@ -3826,15 +3748,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
               
 
-  B*X        
-  ----------- --------
-:::
+  B*X
 
 Такт 9
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  ----------- --------
-  F\_MUL      F\_ADD
+F\_MUL      F\_ADD
 
   (B*X)*X    
 
@@ -3846,17 +3764,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                
 
-  C*X        
-
-              
-  ----------- --------
-:::
+  C*X
 
 Такт 10
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  ----------- --------
-  F\_MUL      F\_ADD
+F\_MUL      F\_ADD
 
                
 
@@ -3870,15 +3782,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
               
 
-  C*X        
-  ----------- --------
-:::
+  C*X
 
 Такт 11
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  ----------- ----------
-  F\_MUL      F\_ADD
+F\_MUL      F\_ADD
 
               (C*X)+D
 
@@ -3888,19 +3796,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                
 
-  (A*X)*X    
-
-              
-
-              
-  ----------- ----------
-:::
+  (A*X)*X
 
 Такт 12
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  ----------- ----------
-  F\_MUL      F\_ADD
+F\_MUL      F\_ADD
 
                
 
@@ -3912,17 +3812,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                
 
-  (A*X)*X   
-
-              
-  ----------- ----------
-:::
+  (A*X)*X
 
 Такт 13
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  ----------- ----------
-  F\_MUL      F\_ADD
+F\_MUL      F\_ADD
 
                
 
@@ -3936,15 +3830,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
               
 
-  (A*X)*X   
-  ----------- ----------
-:::
+  (A*X)*X
 
 Такт 14
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------------- ----------
-  F\_MUL         F\_ADD
+F\_MUL         F\_ADD
 
   (A*X*X)*X    
 
@@ -3956,17 +3846,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                   
 
-  (B*X)*X      
-
-                 
-  -------------- ----------
-:::
+  (B*X)*X
 
 Такт 15
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------------- ----------
-  F\_MUL         F\_ADD
+F\_MUL         F\_ADD
 
                   
 
@@ -3980,37 +3864,21 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                  
 
-  (B*X)*X      
-  -------------- ----------
-:::
+  (B*X)*X
 
 Такт 16
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------------- --------------------
-  F\_MUL         F\_ADD
+F\_MUL         F\_ADD
 
                  (B*X*X)+(C*X+D)
 
                   
 
-  (A*X*X)*X    
-
-                  
-
-                  
-
-                 
-
-                 
-  -------------- --------------------
-:::
+  (A*X*X)*X
 
 Такт 17
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------------- --------------------
-  F\_MUL         F\_ADD
+F\_MUL         F\_ADD
 
                   
 
@@ -4018,21 +3886,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                   
 
-  (A*X*X)*X    
-
-                  
-
-                 
-
-                 
-  -------------- --------------------
-:::
+  (A*X*X)*X
 
 Такт 18
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------------- --------------------
-  F\_MUL         F\_ADD
+F\_MUL         F\_ADD
 
                   
 
@@ -4042,19 +3900,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                   
 
-  (A*X*X)*X    
-
-                 
-
-                 
-  -------------- --------------------
-:::
+  (A*X*X)*X
 
 Такт 19
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------------- --------------------
-  F\_MUL         F\_ADD
+F\_MUL         F\_ADD
 
                   
 
@@ -4066,17 +3916,11 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                   
 
-  (A*X*X)*X   
-
-                 
-  -------------- --------------------
-:::
+  (A*X*X)*X
 
 Такт 20
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------------- --------------------
-  F\_MUL         F\_ADD
+F\_MUL         F\_ADD
 
                   
 
@@ -4090,81 +3934,35 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
                  
 
-  (A*X*X)*X   
-  -------------- --------------------
-:::
+  (A*X*X)*X
 
 Такт 21
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------------------------------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
            (A*X*X*X)+ (B*X*X+C*X+D)
-
-            
-
-            
-
-            
-
-            
-
-           
-
-           
-  -------- --------------------------------
-:::
 
 Такт 22
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------------------------------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
            (A*X*X*X)+ (B*X*X+C*X+D)
-
-            
-
-            
-
-            
-
-           
-
-           
-  -------- --------------------------------
-:::
 
 Такт 23
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------------------------------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
             
 
            (A*X*X*X)+ (B*X*X+C*X+D)
-
-            
-
-            
-
-           
-
-           
-  -------- --------------------------------
-:::
 
 Такт 24
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------------------------------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
@@ -4173,20 +3971,10 @@ Result := A*X*X*X + B*X*X + C*X + D;
             
 
            (A*X*X*X)+ (B*X*X+C*X+D)
-
-            
-
-           
-
-           
-  -------- --------------------------------
-:::
 
 Такт 25
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- --------------------------------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
@@ -4198,17 +3986,9 @@ Result := A*X*X*X + B*X*X + C*X + D;
 
            (A*X*X*X)+ (B*X*X+C*X+D)
 
-           
-
-           
-  -------- --------------------------------
-:::
-
 Такт 26
 
-::: {style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"}
-  -------- ----------
-  F\_MUL   F\_ADD
+F\_MUL   F\_ADD
 
             
 
@@ -4219,12 +3999,6 @@ Result := A*X*X*X + B*X*X + C*X + D;
             
 
            Finished
-
-           
-
-           
-  -------- ----------
-:::
 
 Такт 27
 

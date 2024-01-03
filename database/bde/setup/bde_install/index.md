@@ -297,29 +297,13 @@ Using BDEINST.DLL
 In order to use BDEINST.DLL, all you have to do is to extract it from
 BDEINST.CAB. There are several ways this can be done. Two of them are:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ------------------------------------------------------------------------------------------------
-  ·   Using WinZip or another CAB-compatible archiver. Simply extract BDEINST.DLL from the CAB file.
-  --- ------------------------------------------------------------------------------------------------
-:::
+- Using WinZip or another CAB-compatible archiver. Simply extract BDEINST.DLL from the CAB file.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ----------------------------------------------------------------------------------------------------------------------------------------
-  ·   Using Microsoft\'s EXTRACT utility that comes with Windows 9x and NT. From a DOS window, issue the command below (path is also shown):
-  --- ----------------------------------------------------------------------------------------------------------------------------------------
-:::
+- Using Microsoft\'s EXTRACT utility that comes with Windows 9x and NT. From a DOS window, issue the command below (path is also shown):
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- -----------------------------------------------------------------------
-  ·   C:\\Program Files\\Borland\\Common Files\\BDE\>EXTRACT /E BDEINST.CAB
-  --- -----------------------------------------------------------------------
-:::
+- C:\\Program Files\\Borland\\Common Files\\BDE\>EXTRACT /E BDEINST.CAB
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- ---------------------------------------------------------------------------------------------------------------------
-  ·   This will extract BDEINST.DLL to the current directory, since no destination dir was specified in the command line.
-  --- ---------------------------------------------------------------------------------------------------------------------
-:::
+- This will extract BDEINST.DLL to the current directory, since no destination dir was specified in the command line.
 
 The task now is to use the DLL. This is as simple as issuing the command
 line below:
