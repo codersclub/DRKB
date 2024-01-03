@@ -148,7 +148,7 @@ CopyTo...` а если так, то почему бы не перевести и
 
     S:='This is the test';
 
-    OS.WriteBuffer(Pointer(S)\^,Length(S));
+    OS.WriteBuffer(Pointer(S)^,Length(S));
 
 Написать например:
 

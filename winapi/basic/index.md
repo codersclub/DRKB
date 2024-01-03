@@ -121,29 +121,29 @@ DWORD = Integer;
 
 BOOL = LongBool;
 
-PBOOL = \^BOOL;
+PBOOL = ^BOOL;
 
-PINT = \^Integer;
+PINT = ^Integer;
 
-PWORD = \^Word;
+PWORD = ^Word;
 
-PDWORD = \^DWORD;
+PDWORD = ^DWORD;
 
 LPDWORD = PDWORD;
 
 UCHAR = Byte;
 
-PUCHAR = \^Byte;
+PUCHAR = ^Byte;
 
 SHORT = Smallint;
 
 UINT = Integer;
 
-PUINT = \^UINT;
+PUINT = ^UINT;
 
 ULONG = Longint;
 
-PULONG = \^ULONG;
+PULONG = ^ULONG;
 
 LCID = DWORD;
 

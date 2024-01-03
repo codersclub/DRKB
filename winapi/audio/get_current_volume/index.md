@@ -42,7 +42,7 @@ Date: 01.01.2007
 
 Затем:
 
-    F.Read(buf\^, SampleCount*2); F.Free;
+    F.Read(buf^, SampleCount*2); F.Free;
 
 Затем заполнил массив:
 

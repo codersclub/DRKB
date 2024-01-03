@@ -149,7 +149,7 @@ RadixStr(\'FF\',
 
         Code);
 
-Should return the string \'255\' in lpbuffer\^.
+Should return the string \'255\' in lpbuffer^.
 
 {Convert Decimal to Binary}
 
@@ -163,7 +163,7 @@ RadixStr(\'255\',
 
         Code);
 
-Should return the string \'11111111\' in lpbuffer\^.
+Should return the string \'11111111\' in lpbuffer^.
 
 {Convert Hex to Octal}
 
@@ -177,7 +177,7 @@ RadixStr(\'FF\',
 
         Code);
 
-Should return the string \'377\' in lpbuffer\^.
+Should return the string \'377\' in lpbuffer^.
 
     {Function code}
      

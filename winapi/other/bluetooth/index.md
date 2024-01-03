@@ -1362,7 +1362,7 @@ BLUETOOTH\_DEVICE\_INFO. Заметьте, что это НЕ УКАЗАТЕЛЬ
 
 type
 
-\_\_PBLUETOOTH\_DEVICE\_INFO = \^PBLUETOOTH\_DEVICE\_INFO
+\_\_PBLUETOOTH\_DEVICE\_INFO = ^PBLUETOOTH\_DEVICE\_INFO
 
 Так что ИСПОЛЬЗУЙТЕ файл из примера, а не из исходной библиотеки. Иначе
 получите нарушение доступа к памяти.
@@ -1758,7 +1758,7 @@ pbtsdp : PBLUETOOTH\_SELECT\_DEVICE\_PARAMS): BOOL; stdcall;
 Возвращаемые значения:
 
 Если функция вернула TRUE, то пользователь выбрал устройства.
-Pbtsdp\^.pDevices будет указывать на корректные данные. После вызова
+Pbtsdp^.pDevices будет указывать на корректные данные. После вызова
 необходимо проверить флаги fAuthenticated и fRemembered, что бы
 удостовериться в корректности данных. Для освобождения памяти
 используйте функцию BluetoothSelectDevicesFree, только если функция

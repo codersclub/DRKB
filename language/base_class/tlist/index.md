@@ -75,7 +75,7 @@ procedure Pack; --- Упаковывает список, сдвигая элем
 
 property List: pPointerList;
 
-pPointerList = \^TPointerList;
+pPointerList = ^TPointerList;
 
 TPointerList = array[0..65520 div SizeOf(Pointer)] of Pointer;
 

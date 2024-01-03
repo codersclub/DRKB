@@ -33,7 +33,7 @@ stdcall;
 
 который возвращает заполненную структуру DBPROPINFO.
 
-PDBPropInfo = \^TDBPropInfo;
+PDBPropInfo = ^TDBPropInfo;
 
 DBPROPINFO = packed record
 

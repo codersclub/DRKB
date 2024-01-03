@@ -23,23 +23,23 @@ DWORD       Integer;    Whole numbers
 
 BOOL        LongBool;   Boolean values
 
-PBOOL       \^BOOL;      Pointer to a Boolean value
+PBOOL       ^BOOL;      Pointer to a Boolean value
 
-Pbyte       \^Byte;      Pointer to a byte value
+Pbyte       ^Byte;      Pointer to a byte value
 
-PINT        \^Integer;   Pointer to an integer value
+PINT        ^Integer;   Pointer to an integer value
 
-Psingle     \^Single;    Pointer to a single (floating point) value
+Psingle     ^Single;    Pointer to a single (floating point) value
 
-PWORD       \^Word;      Pointer to a 16-bit value
+PWORD       ^Word;      Pointer to a 16-bit value
 
-PDWORD      \^DWORD;     Pointer to a 32-bit value
+PDWORD      ^DWORD;     Pointer to a 32-bit value
 
 LPDWORD     PDWORD;     Pointer to a 32-bit value
 
 UCHAR       Byte;       8-bit values (can represent characters)
 
-PUCHAR      \^Byte;      Pointer to 8-bit values
+PUCHAR      ^Byte;      Pointer to 8-bit values
 
 SHORT       Smallint;   16-bit whole numbers
 
@@ -51,7 +51,7 @@ UINT        Integer;    32-bit whole numbers. Traditionally,
 
                        unsigned integer data type.
 
-PUINT       \^UINT;      Pointer to 32-bit whole numbers
+PUINT       ^UINT;      Pointer to 32-bit whole numbers
 
 ULONG       Longint;    32-bit whole numbers. Traditionally,
 
@@ -61,15 +61,15 @@ ULONG       Longint;    32-bit whole numbers. Traditionally,
 
                        unsigned integer data type.
 
-PULONG      \^ULONG;     Pointer to 32-bit whole numbers
+PULONG      ^ULONG;     Pointer to 32-bit whole numbers
 
-PLongint    \^Longint;   Pointer to 32-bit values
+PLongint    ^Longint;   Pointer to 32-bit values
 
-PInteger    \^Integer;   Pointer to 32-bit values
+PInteger    ^Integer;   Pointer to 32-bit values
 
-PSmallInt   \^Smallint;  Pointer to 16-bit values
+PSmallInt   ^Smallint;  Pointer to 16-bit values
 
-PDouble     \^Double;    Pointer to double (floating point) values
+PDouble     ^Double;    Pointer to double (floating point) values
 
 LCID        DWORD;      A local identifier
 
@@ -83,7 +83,7 @@ object within
 
                        Windows\'internal object tracking tables.
 
-PHandle     \^THandle;   A pointer to a handle
+PHandle     ^THandle;   A pointer to a handle
 
 WPARAM      Longint;    A 32-bit message parameter. Under earlier
 versions of Windows,

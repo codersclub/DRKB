@@ -282,7 +282,7 @@ is first unseen"),
 3857529045 (строка "* OK [UIDVAL1DITY 3857529045] UIDs valid").
 
 Сообщения в данной папке могут иметь флаги, указанные в строке FLAGS
-(строка "* FLAGS (\\Answered \\Flageed VDeleted N\^" \\Draft)").
+(строка "* FLAGS (\\Answered \\Flageed VDeleted N^" \\Draft)").
 
 Клиент может менять у сообщений флаги "\\Deleted" и "\\Seen" (строка
 "* OK [PERMANENTFLAGS (\\Deleted \\Seen \\*)] Limited ").
@@ -366,7 +366,7 @@ S: To: imap\@world.edu
 
 S: Message-Id:
 
-S\^ mime-Vresion: 1.0
+S^ mime-Vresion: 1.0
 
 S: Content-Type: TEXT/PLAIN; CHARSET=US-ASCII
 

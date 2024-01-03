@@ -462,7 +462,7 @@ YScale - масштаб по Y.
 FORMULA должна быть стокой, содержащей формулу. Допускаются переменные
 x, y и z, а также операторы, перечисленные ниже. Пример:
 
-sin(x)*cos(x\^y)+exp(cos(x))
+sin(x)*cos(x^y)+exp(cos(x))
 
 Использование:
 
@@ -491,20 +491,19 @@ sin(x)*cos(x\^y)+exp(cos(x))
 
 Допустимые операторы:
 
-x \<l;\> y ; // Логические операторы возвращают 1 в случае истины и 0
-если ложь. x \<l;= y x \>= y x \> y x \<l; y x = y x + y x - y x eor y
-//( исключающее или ) x or y x * y x / y x and y x mod y x div y x \^ y
-//( степень ) x shl y x shr y not (x) sinc (x) sinh (x) cosh (x) tanh
-(x) coth (x) sin (x) cos (x) tan (x) cot (x) sqrt (x) sqr (x) arcsinh
-(x) arccosh (x) arctanh (x) arccoth (x) arcsin (x) arccos (x) arctan (x)
-arccot (x) heavy (x) //; 1 для положительных чисел, 0 для остальных sgn
-(x) //; 1 для положительных чисел, -1 для отрицательных и 0 для нуля
+x \<l; x \> y ; // Логические операторы возвращают 1 в случае истины и 0 если ложь.
+x \<l;= y x \>= y x \> y x \<l; y x = y x + y x - y x eor y //( исключающее или )
+x or y x * y x / y x and y x mod y x div y x^y //( степень ) x shl y x shr y not (x)
+sinc (x) sinh (x) cosh (x) tanh (x) coth (x) sin (x) cos (x)
+tan (x) cot (x) sqrt (x) sqr (x) arcsinh (x) arccosh (x) arctanh (x) arccoth
+(x) arcsin (x) arccos (x) arctan (x) arccot (x)
+heavy (x) //; 1 для положительных чисел, 0 для остальных
+sgn (x) //; 1 для положительных чисел, -1 для отрицательных и 0 для нуля
 frac (x) exp (x) abs (x) trunc (x) ln (x) odd (x) pred (x) succ (x)
-round (x) int (x) fac (x) //; x*(x-1)*(x-2)*...*3*2*1 rnd //;
-Случайное число в диапазоне [0,1] rnd (x) //; Случайное число в
-диапазоне [0,x] pi
-
-e
+round (x) int (x) fac (x) //; x*(x-1)*(x-2)*...*3*2*1
+rnd // Случайное число в диапазоне [0,1]
+rnd (x) //; Случайное число в диапазоне [0,x]
+pi e
 
     unit evalcomp;
      

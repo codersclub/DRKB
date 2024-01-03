@@ -17,9 +17,9 @@ Date: 01.01.2007
 
 Существует по крайней мере два метода передачи параметров CGI-программе.
 
-\<form method=GET action="program.exe"\>
-
-\<form method=POST action="program.exe"\>
+    <form method=GET action="program.exe">
+     
+    <form method=POST action="program.exe">
 
 Чтобы определить, каким именно методом CGI-программе переданы параметры,
 достаточно в вашей программе проверить переменную среды REQUEST\_METHOD.
@@ -62,17 +62,16 @@ ECHO content-type: text/html
 
 ECHO.
 
-ECHO
-\^\<HTML\^\>\^\<HEAD\^\>\^\<TITLE\^\>\^\</TITLE\^\>\^\</HEAD\^\>\^\<BODY\^\>
+ECHO ^\<HTML^\>^\<HEAD^\>^\<TITLE^\>^\</TITLE^\>^\</HEAD^\>^\<BODY^\>
 
 ECHO REQUEST\_METHOD=%REQUEST\_METHOD%
 
-ECHO \^\</BODY\^\>\^\</HTML\^\>
+ECHO ^\</BODY^\>^\</HTML^\>
 
  
 
 Обратите внимание, что специальные символы, используемые в DOS (такие,
-как "\<", "\>", "&",...), необходимо предварять знаком "\^".
+как "\<", "\>", "&",...), необходимо предварять знаком "^".
 
  
 

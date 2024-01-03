@@ -53,11 +53,9 @@ GETSETPAPERBINS и GetDeviceCaps().
 Прежде чем поступит команда startpage()(см.модуль printers.pas в
 каталоге Source\\VCL), вы можете передать принтеру следующий код:
 
-   DevMode.dmPaperSize := DMPAPER\_LEGAL
-
-{сброс настроек}
-
-Windows.ResetDc(dc, Devmode\^);
+    DevMode.dmPaperSize := DMPAPER_LEGAL;
+    {сброс настроек}
+    Windows.ResetDc(dc, Devmode^);
 
 Это также сбросит настройки, связанные с размером бумаги.Вы можете
 обратиться к описанию DEVMODE, чтобы узнать все доступные размеры

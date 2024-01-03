@@ -1813,7 +1813,7 @@ valuel REGEXP/RLIKE value2
 Сравнивает valuel и value2, используя расширенный синтаксис регулярных
 выражений, и выбирает записи, если они совпадают. Значение справа может
 содержать полные подстановочные выражения и конструкции Unix (например,
-SELECT name FROM people WHERE name RLIKE \'\^B. *\').
+SELECT name FROM people WHERE name RLIKE \'^B. *\').
 
 valuel NOT REGEXP value2
 
@@ -3076,7 +3076,7 @@ value1 RLIKE value2
 Сравнивает valuel и value2, используя расширенный синтаксис регулярных
 выражений, и возвращает 1, если они совпадают. Значение справа может
 содержать полные подстановочные выражения и конструкции Unix (например,
-SELECT name FROM people WHERE name RLIKE \'\^В. *\').
+SELECT name FROM people WHERE name RLIKE \'^В. *\').
 
 value1 CLIKE value2
 

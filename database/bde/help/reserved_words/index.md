@@ -97,6 +97,6 @@ WAIT, WHEN, WHERE, WHILE, WITH, WORK, WRITE
 
 YEAR
 
-\|\|, -, *, /, \<\>, \<, \>,,(comma), =, \<=, \>=, \~=, !=, \^=, (, )
+\|\|, -, *, /, \<\>, \<, \>,,(comma), =, \<=, \>=, \~=, !=, ^=, (, )
 
 Взято с сайта <https://www.delphikingdom.ru/>

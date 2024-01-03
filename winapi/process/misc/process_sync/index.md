@@ -129,7 +129,7 @@ ObjectHandle в сигнальное состояние. Например, та�
 
     type
       TWOHandleArray = array[0..MAXIMUM\_WAIT\_OBJECTS - 1] of THandle;
-      PWOHandleArray = \^TWOHandleArray;
+      PWOHandleArray = ^TWOHandleArray;
     function WaitForMultipleObjects(
       nCount: DWORD;              // Задает количество объектов
       lpHandles: PWOHandleArray;  // Адрес массива объектов

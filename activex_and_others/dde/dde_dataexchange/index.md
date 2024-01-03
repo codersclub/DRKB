@@ -158,9 +158,7 @@ property OnChange: TNotifyEvent;
 
 возникает при любом изменении данных, как при присвоении значений
 свойствам Text или Lines, так и при вызове PokeData. Оно может также
-быть вызвано явно из метода:    \^
-
-procedure Change;
+быть вызвано явно из метода: `procedure Change;`
 
 Компонент TDDECIIentConv
 

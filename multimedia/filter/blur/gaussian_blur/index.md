@@ -19,11 +19,11 @@ Date: 01.01.2007
 множество фильтров, которые можно переделать или оптимизировать для
 быстроты обработки изображений.
 
-Ядро гауссовой функции exp(-(x\^2 + y\^2)) есть разновидность формулы
+Ядро гауссовой функции exp(-(x^2 + y^2)) есть разновидность формулы
 f(x)*g(y), которая означает, что мы можем выполнить двумерную свертку,
 делая последовательность одномерных сверток - сначала мы свертываем
 каждую строчку изображения, затем - каждую колонку. Хороший повод для
-ускорения (N\^2 становится N*2). Любая свертка требует некоторого место
+ускорения (N^2 становится N*2). Любая свертка требует некоторого место
 для временного хранения результатов - ниже в коде программа BlurRow как
 раз распределяет и освобождает память для каждой колонки. Вероятно это
 должно ускорить обработку изображения, правда не ясно насколько.
@@ -448,10 +448,10 @@ Blur.pas
 
 ------------------------------------------------------------------------
 
-The gaussian kernel exp(-(x\^2 + y\^2)) is of the form f(x)*g(y), which
+The gaussian kernel exp(-(x^2 + y^2)) is of the form f(x)*g(y), which
 means that you can perform a two-dimensional convolution by doing a
 sequence of one-dimensional convolutions - first you convolve each row
-and then each column. This is much faster (an N\^2 becomes an N*2). Any
+and then each column. This is much faster (an N^2 becomes an N*2). Any
 convolution requires some temporary storage - below the BlurRow routine
 allocates and frees the memory, meaning that it gets allocated and freed
 once for each row. Probably changing this would speed it up some, it\'s

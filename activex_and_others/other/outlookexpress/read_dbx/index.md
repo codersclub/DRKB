@@ -217,7 +217,7 @@ DataLength-SizeOfTable.
 
     63 6F 6D 00 00 23 5E 0F 8B 22 C0 01 41 63 74 69
 
-     c  o  m        #  \^  \_  ‹ "  A  \_  A  c  t  i
+     c  o  m        #  ^  _  ‹ "  A  _  A  c  t  i
 
  
 

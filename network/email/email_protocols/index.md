@@ -655,7 +655,7 @@ Netscape Navigator            yes             no           yes
 
 Netscape Communicator=        yes            yes           yes
 
-Novell Groupwise              yes        planned\^          yes
+Novell Groupwise              yes        planned^          yes
 
 Notes:
 
@@ -678,7 +678,7 @@ Notes:
 
 (=) Due 2nd quarter, 1997.
 
-(\^) Due 3rd quarter 1997.
+(^) Due 3rd quarter 1997.
 
 (#) In beta as of November 1997.
 
