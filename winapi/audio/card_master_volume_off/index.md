@@ -63,8 +63,7 @@ Date: 01.01.2007
           paDetails := @BoolDetails;
         end;
         LongBool(BoolDetails.fValue) := Value;
-        Code := mixerSetControlDetails(0, @Details,
-    MIXER_SETCONTROLDETAILSF_VALUE);
+        Code := mixerSetControlDetails(0, @Details, MIXER_SETCONTROLDETAILSF_VALUE);
       end;
       if Code <> MMSYSERR_NOERROR then
         raise Exception.CreateFmt('SetMasterMuteValue failure, '+
