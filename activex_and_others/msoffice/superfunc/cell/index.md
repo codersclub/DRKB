@@ -1,7 +1,6 @@
 ---
 Title: Доступ к ячейкам Excel
 Date: 01.01.2007
-children: auto
 ---
 
 

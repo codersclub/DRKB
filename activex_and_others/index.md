@@ -1,6 +1,5 @@
 ---
 Title: ActiveX, COM и Другие технологии
-children: auto
 ---
 
 

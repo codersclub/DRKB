@@ -2,7 +2,6 @@
 Title: Набор инструментов для оперирования с дисками на физическом уровне
 Author: NikNet (NikNet@Yandex.ru)
 Date: 01.01.2007
-children: auto
 ---
 
 

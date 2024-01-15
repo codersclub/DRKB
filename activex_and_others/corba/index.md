@@ -1,6 +1,5 @@
 ---
 Title: CORBA
-children: auto
 ---
 
 

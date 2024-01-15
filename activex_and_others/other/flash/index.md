@@ -1,6 +1,5 @@
 ---
 Title: Adobe Flash
-children: auto
 ---
 
 

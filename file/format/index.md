@@ -1,6 +1,5 @@
 ---
 Title: Форматы файлов
-children: auto
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 Title: Работа с Microsoft Power Point
-children: auto
 ---
 
 

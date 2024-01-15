@@ -1,6 +1,5 @@
 ---
 Title: Microsoft Script Control
-children: auto
 ---
 
 

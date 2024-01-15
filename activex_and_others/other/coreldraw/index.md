@@ -1,6 +1,5 @@
 ---
 Title: Corel Draw
-children: auto
 ---
 
 

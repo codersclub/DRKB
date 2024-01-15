@@ -1,6 +1,5 @@
 ---
 Title: Файловые операции
-children: auto
 ---
 
 

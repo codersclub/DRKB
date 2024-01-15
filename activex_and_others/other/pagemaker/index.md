@@ -1,6 +1,5 @@
 ---
 Title: Adobe PageMaker
-children: auto
 ---
 
 

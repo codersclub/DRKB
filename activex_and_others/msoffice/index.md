@@ -1,6 +1,5 @@
 ---
 Title: Работа с приложениями Microsoft Office
-children: auto
 ---
 
 

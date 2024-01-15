@@ -1,6 +1,5 @@
 ---
 Title: Lotus Notes
-children: auto
 ---
 
 

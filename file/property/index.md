@@ -1,6 +1,5 @@
 ---
 Title: Свойства файлов
-children: auto
 ---
 
 

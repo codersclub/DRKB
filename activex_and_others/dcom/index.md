@@ -1,6 +1,5 @@
 ---
 Title: DCOM
-children: auto
 ---
 
 

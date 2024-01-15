@@ -1,6 +1,5 @@
 ---
 Title: Работа с Microsoft Word
-children: auto
 ---
 
 

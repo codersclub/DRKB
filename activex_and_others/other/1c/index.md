@@ -1,6 +1,5 @@
 ---
 Title: 1C
-children: auto
 ---
 
 

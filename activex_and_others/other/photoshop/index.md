@@ -1,6 +1,5 @@
 ---
 Title: Adobe Photoshop
-children: auto
 ---
 
 

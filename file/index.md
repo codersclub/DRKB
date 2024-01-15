@@ -1,6 +1,5 @@
 ---
 Title: Файловая система
-children: auto
 ---
 
 

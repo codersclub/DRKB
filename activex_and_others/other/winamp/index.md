@@ -1,6 +1,5 @@
 ---
 Title: WinAMP
-children: auto
 ---
 
 

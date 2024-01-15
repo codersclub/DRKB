@@ -1,6 +1,5 @@
 ---
 Title: Разные вопросы
-children: auto
 ---
 
 

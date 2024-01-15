@@ -1,7 +1,6 @@
 ---
 Title: Суперфункции (FAQ)
 Date: 01.01.2007
-children: auto
 ---
 
 

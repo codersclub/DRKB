@@ -1,6 +1,5 @@
 ---
 Title: DDE
-children: auto
 ---
 
 

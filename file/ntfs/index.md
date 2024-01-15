@@ -1,6 +1,5 @@
 ---
 Title: NTFS
-children: auto
 ---
 
 

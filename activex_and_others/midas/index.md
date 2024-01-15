@@ -1,6 +1,5 @@
 ---
 Title: MIDAS
-children: auto
 ---
 
 

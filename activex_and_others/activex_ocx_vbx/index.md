@@ -1,6 +1,5 @@
 ---
 Title: ActiveX, OCX, VBX
-children: auto
 ---
 
 

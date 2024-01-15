@@ -1,6 +1,5 @@
 ---
 Title: AutoCAD
-children: auto
 ---
 
 

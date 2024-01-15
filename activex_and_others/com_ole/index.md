@@ -1,6 +1,5 @@
 ---
 Title: COM и OLE
-children: auto
 ---
 
 

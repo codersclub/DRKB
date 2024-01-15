@@ -1,6 +1,5 @@
 ---
 Title: MapInfo
-children: auto
 ---
 
 

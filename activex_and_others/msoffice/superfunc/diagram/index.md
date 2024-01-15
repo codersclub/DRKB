@@ -1,7 +1,6 @@
 ---
 Title: Диаграммы Excel
 Date: 01.01.2007
-children: auto
 ---
 
 

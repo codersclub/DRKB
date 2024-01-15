@@ -1,6 +1,5 @@
 ---
 Title: Интерфейсы
-children: auto
 ---
 
 
