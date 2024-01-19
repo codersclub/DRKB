@@ -34,12 +34,6 @@ Date:
 
 К несчастью, Виталий Невзоров погиб в автокатастрофе 07 июля 2009г...
 
-Найти информацию об авторах статей и ответов можно по адресу:  
-Vingrad.ru: <https://forum.vingrad.ru/index.php?act=Members>  
-Sourсes.ru: <https://forum.sources.ru/index.php?act=Members>
-
-&nbsp;
-
 Другие проекты Виталия Невзорова:
 
 - [www.nevzorov.org](https://www.nevzorov.org/) - домашняя страничка.
@@ -48,6 +42,11 @@ Sourсes.ru: <https://forum.sources.ru/index.php?act=Members>
 - [verticalwallpapers.nevzorov.org](https://verticalwallpapers.nevzorov.org/) -
   огромная коллекция обоев для вертикально ориентированных экранов.
 
+Найти информацию об авторах статей и ответов можно по адресу:  
+Vingrad.ru: <https://forum.vingrad.ru/index.php?act=Members>  
+Sourсes.ru: <https://forum.sources.ru/index.php?act=Members>
+
+&nbsp;
 
 ---
 
@@ -55,7 +54,7 @@ Sourсes.ru: <https://forum.sources.ru/index.php?act=Members>
 [Valery Votintsev (vot)](https://forum.sources.ru/index.php?showuser=2 "Valery Votintsev (vot)").
 
 Модульная сетка и начальный дизайн сайта разработан:
-[Sofiyan](https://www.colorcat.ru/ "Sofiyan (Caramel)") (Caramel).
+[Sofiyan (Caramel)](https://forum.vingrad.ru/users/Caramel "Sofiyan (Caramel)").
 
 Поддержка проекта:
 [Исходники.ru](https://forum.sources.ru/ "Исходники.Ru").

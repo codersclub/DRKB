@@ -1,7 +1,7 @@
 ---
 Title: Информация о проекте
-Description: 
-Keywords: 
+Description: DRKB - это база знаний по Дельфи, составленная Виталием Невзоровым.
+Keywords: drkb, delphi, kylix, lazarus, delphi russian knowledge base
 Author: 
 Date:
 ---
@@ -9,8 +9,7 @@ Date:
 Информация о проекте
 ====================
 
-**DRKB** (**D**elphi **R**ussian **K**nowledge **B**ase) - это самая
-большая и удобная в использовании база знаний по Дельфи в рунете,
+**DRKB** (**D**elphi **R**ussian **K**nowledge **B**ase) - это база знаний по Дельфи,
 составленная Виталием Невзоровым.
 
 **DRKB** является одним из самых известных и полных **Delphi FAQ** на
