@@ -7,10 +7,6 @@ Date: 01.01.2007
 Sending a file via DCOM
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
 I would like to send a file through DCOM however I can only send
 standard types.  How can I send bytes across to a client?
 

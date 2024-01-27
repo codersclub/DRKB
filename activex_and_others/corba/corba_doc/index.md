@@ -1,16 +1,12 @@
 ---
 Title: Документация по CORBA
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Документация по CORBA
 =====================
 
-::: {.date}
-01.01.2007
-:::
-
 <https://corba.kubsu.ru/>
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

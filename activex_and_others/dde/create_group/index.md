@@ -1,15 +1,12 @@
 ---
 Title: GROUPFILE и ADDITEM для групп
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 GROUPFILE и ADDITEM для групп
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот код для создания файла группы и добавления в группу файла-элемента.
 Чтобы использовать эту процедуру, определите DDE clientconv App как
@@ -40,6 +37,4 @@ ProgMan.
       DDEClient.CloseLink;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

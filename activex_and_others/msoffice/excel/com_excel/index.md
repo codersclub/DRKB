@@ -2,15 +2,14 @@
 Title: Работа с Excel через СОМ интерфейс
 Author: Fantasist
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Работа с Excel через СОМ интерфейс
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     var Excel, WorkBook, Sheet: Variant;
     begin
@@ -28,6 +27,7 @@ Date: 01.01.2007
 Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+Вариант 2:
 
 Ниже представлен пример создания новой таблицы в Excel 2000:
 
@@ -99,4 +99,3 @@ Date: 01.01.2007
      
     end;
 
-Взято из <https://forum.sources.ru>

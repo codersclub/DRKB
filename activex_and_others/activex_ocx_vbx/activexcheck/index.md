@@ -4,14 +4,11 @@ Author:
 Date: 01.01.2007
 Keywords: 
 Description: 
+Source: Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 Как узнать, установлен ли ActiveX на машине?
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
 Вариант 1:
 
@@ -55,4 +52,3 @@ Description:
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

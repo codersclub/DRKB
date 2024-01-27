@@ -1,15 +1,12 @@
 ---
 Title: Delphi IAutoComplete интерфейс
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Delphi IAutoComplete интерфейс
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     unit uAutoComplete;
      
@@ -299,4 +296,3 @@ Delphi IAutoComplete интерфейс
     finalization
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

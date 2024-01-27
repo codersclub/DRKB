@@ -1,15 +1,12 @@
 ---
 Title: Управление Program Manager в Win95 с помощью DDE
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Управление Program Manager в Win95 с помощью DDE
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для управления программными группами в Program Manager с помощью DDE
 мною был использован следующий модуль. За основу был взят код Steve
@@ -130,9 +127,3 @@ Texeira (sp) из руководства Dephi Developers Guide.
     end;
      
     end.
-     
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

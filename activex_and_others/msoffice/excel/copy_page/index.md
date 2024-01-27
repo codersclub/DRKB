@@ -1,15 +1,12 @@
 ---
 Title: Как скопировать страницу?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как скопировать страницу?
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     var
@@ -21,4 +18,3 @@ Date: 01.01.2007
       Sh.Copy(EmptyParam, After, lcid);
       { ... }
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -1,15 +1,12 @@
 ---
 Title: Работа с Netscape Navigator через DDE
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Работа с Netscape Navigator через DDE
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses DDEman;
     ...
@@ -38,6 +35,4 @@ Date: 01.01.2007
       GotoURL('http://www.site.ru');
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

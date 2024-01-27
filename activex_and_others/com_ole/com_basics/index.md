@@ -2,17 +2,12 @@
 Title: Общие сведения о COM (статья)
 Author: Fantasist
 Date: 01.01.2007
+Source: <https://forum.vingrad.ru>
 ---
 
 
 Общие сведения о COM (статья)
 =============================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Fantasist
 
 Эта статья целиком и полностью написана Fantasist\'ом, за что ему огромное спасибо.
 
@@ -33,5 +28,4 @@ Date: 01.01.2007
 9. [Как система создает объект СОМ](09_com_create/)
 10. [IClassFactory](10_iclassfactory/)
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 

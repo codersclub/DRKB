@@ -1,15 +1,12 @@
 ---
 Title: Pipeline Components
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Pipeline Components
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
 Эта область разработки возникла в моем текущем проекте. Pipeline
 components - это COM-объекты, которые выполняются в pipeline, который в
@@ -371,4 +368,3 @@ stage.
 dll. Это можно сделать через командную строку: regsvr32
 testpipelines.dll
 
-Взято из <https://forum.sources.ru>

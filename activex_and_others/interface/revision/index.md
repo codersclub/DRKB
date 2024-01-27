@@ -1,15 +1,12 @@
 ---
 Title: Ревизия интерфейсов (статья)
 Date: 01.01.2007
+Author: Cary Jensen, Ph.D.
 ---
 
 
 Ревизия интерфейсов (статья)
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
 ## Часть 1: Объявления, реализация и разрешение имен методов
 
@@ -1038,7 +1035,9 @@ IOTAKeyboardBinding (OTA сокращение от Open Tools API).
 
 Проект на который ссылается эта статья доступен для загрузки.
 
-Cary Jensen is president of Jensen Data Systems, Inc., a Houston-based
+By Cary Jensen, Ph.D.
+
+Cary Jensen is a president of Jensen Data Systems, Inc., a Houston-based
 database development company. He is co-author of 17 books, including
 Oracle JDeveloper [Oracle Press, 1998], JBuilder Essentials
 [Osborne/McGraw-Hill, 1998], and Delphi in Depth
@@ -1046,8 +1045,6 @@ Oracle JDeveloper [Oracle Press, 1998], JBuilder Essentials
 Informant Magazine, and an internationally respected trainer of Delphi
 and Java. For more information, visit http://www.jensendatasystems.com,
 or e-mail Cary at mailto:cjensen\@compuserve.com
-
-By Cary Jensen, Ph.D.
 
 Перевел Мотов Олег mailto:olegm\@tebuk.parma.ru http://olegmotov.h1.ru
 

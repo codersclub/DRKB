@@ -2,15 +2,12 @@
 Title: Пример использование методов интерфейса IShellDispatch
 Author: Rrader
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Пример использование методов интерфейса IShellDispatch
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     Unit UMain;
      
@@ -296,6 +293,3 @@ Date: 01.01.2007
      
     End.
 
-Автор: Rrader
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

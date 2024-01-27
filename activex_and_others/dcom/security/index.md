@@ -1,17 +1,13 @@
 ---
 Title: Настройка системы безопасности DCOM сервера
 Date: 01.01.2007
+Author: Алексей Вуколов
+Source: <https://www.delphikingdom.com>
 ---
 
 
 Настройка системы безопасности DCOM сервера
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
-
-Алексей Вуколов
 
 Как я понял, основная проблема в DCOM, с которой сталкиваются
 разработчики - настройка системы безопасности. Далее описано, как были
@@ -22,7 +18,7 @@ Date: 01.01.2007
 
 В DCOMCNFG : (это было добавлено и на сервере и на клиенте)
 
-DefaultSecurity -\> Default Access Permissions
+1. DefaultSecurity -\> Default Access Permissions
 
 DCOM\_DEBUG: Allow Access
 
@@ -30,7 +26,7 @@ SYSTEM: Allow Access
 
 Everyone: Allow Access
 
-2.DefaultSecurity -\> Default Launch Permissions
+2. DefaultSecurity -\> Default Launch Permissions
 
 DCOM\_DEBUG: Allow Launch
 
@@ -40,7 +36,7 @@ INTERACTIVE: Allow Launch
 
 Everyone: Allow Launch
 
-3.DefaultSecurity -\> Default Configuration Permissions
+3. DefaultSecurity -\> Default Configuration Permissions
 
 SYSTEM: Full Control
 
@@ -66,4 +62,3 @@ Interactive User, то сервер не запустится, в том слу�
 решаемой мной задачи - DCOM сервер с поддержкой множественных клиентских
 соединений).
 
-<https://www.delphikingdom.com>

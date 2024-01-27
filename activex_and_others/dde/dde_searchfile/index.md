@@ -1,15 +1,12 @@
 ---
 Title: DDE для вызова диалога поиска файлов и папок
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 DDE для вызова диалога поиска файлов и папок
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses DdeMan;
      
@@ -27,6 +24,4 @@ DDE для вызова диалога поиска файлов и папок
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

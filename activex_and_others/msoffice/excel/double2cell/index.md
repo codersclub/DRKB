@@ -1,15 +1,12 @@
 ---
 Title: Работа с ячейкой листа Microsoft Excel
-Date: 01.01.2007
+Date: 30.04.2002
+Author: lookin, lookin@mail.ru
 ---
 
 
 Работа с ячейкой листа Microsoft Excel
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Работа с ячейкой листа Microsoft Excel

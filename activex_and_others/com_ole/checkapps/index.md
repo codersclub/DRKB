@@ -2,17 +2,12 @@
 Title: Как можно определить доступные сервера приложений на этой машине через Registry
 Author: Nomadic
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как можно определить доступные сервера приложений на этой машине через Registry
 ===============================================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Nomadic
 
 Прочитайте ключ под HKEY_CLASSES_ROOT\\CLSID\\*, просматривая его
 насчёт ключей, которые имеют подключ "Borland DataBroker". Эти
@@ -53,6 +48,3 @@ Listbox:
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -1,15 +1,12 @@
 ---
 Title: Первый CORBA сервер
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Первый CORBA сервер
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     unit uMyFirstCorbaServer;
      
@@ -45,6 +42,4 @@ Date: 01.01.2007
         TMyFirstCorbaServer, iMultiInstance, tmSingleThread);
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

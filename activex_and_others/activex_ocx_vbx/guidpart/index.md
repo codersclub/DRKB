@@ -1,15 +1,12 @@
 ---
 Title: Как получить доступ к определенной части GUID?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Как получить доступ к определенной части GUID?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     { Manchmal wird nur ein Teil einer GUID benotigt.... }
      { You maybe have to access  just a part of a GUID. }
@@ -96,4 +93,3 @@ Date: 01.01.2007
          GUIDToStringEx(NewGUID, guidp_D3);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

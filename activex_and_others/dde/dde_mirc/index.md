@@ -1,15 +1,12 @@
 ---
 Title: Управление mIRC при помощи DDE
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Управление mIRC при помощи DDE
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
        DdeMan;
@@ -33,4 +30,3 @@ Date: 01.01.2007
        mIRCDDE('mIRC', 'COMMAND', '/say Hallo von SwissDelphiCenter.ch');
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

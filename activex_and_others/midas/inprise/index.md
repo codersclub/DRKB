@@ -8,12 +8,6 @@ Author: Serge Bodrov
 Inprise Midas
 =============
 
-::: {.date}
-01.01.2007
-:::
-
-Inprise MIDAS
-
 Multi Tier Distributed Application Services
 
 ![clip0150](clip0150.png)
@@ -22,12 +16,8 @@ Multi Tier Distributed Application Services
 
 Marotz is the nation's leading software project turnaround company.
 
- 
-
 All products or company names mentioned herein may be the trademarks of
 their respective owners.
-
- 
 
 13518 Jamul Drive, Jamul, CA 91935-1635
 
@@ -37,7 +27,7 @@ their respective owners.
 
  
 
-Inprise MIDAS Overview
+## Inprise MIDAS Overview
 
 In order to be successful in implementing modern distributed
 applications, developers need a reliable, easy to use, and highly
@@ -51,7 +41,7 @@ called a data packet. At a very low level the data packet is an array of
 bytes, but actually it contains a table of data with sophisticated
 support for data types, including BLOBs and nested tables.
 
-Client Dataset
+### Client Dataset
 
 The client dataset can obtain a data packet from a provider, store it in
 internal memory cache, and make it available for modification.  All
@@ -69,7 +59,7 @@ The client dataset knows nothing about the real source of data it owns.
 Once it has received an array of bytes from a provider, that data
 becomes eligible to do whatever you want with it.
 
-Provider
+### Provider
 
 The process of building the data packet is managed by the provider
 component. A developer has full control over how data is prepared and
@@ -105,7 +95,7 @@ provider packages it. Each property has it own name, a value and life
 time flag. The last one defines whether this custom property will become
 the part of the dataset Delta data packet or not.
 
-Working with a Data Packet
+### Working with a Data Packet
 
 As soon as the data packet is placed in the internal cache of the client
 dataset, you can manipulate its content. You can navigate between
@@ -131,7 +121,7 @@ when necessary, without loosing changes made to the data. The client
 dataset provides you this capability. This model of computing is called
 a briefcase.
 
-Applying Updates
+## Applying Updates
 
 As soon as data in the data packet is successfully modified, all changes
 may be applied to their original source. In order to accomplish this
@@ -150,7 +140,7 @@ rollback is dependent upon the number of errors that occurred and your
 directions of how many errors may occur.   The provider then sends all
 problems logged in the error log to the client dataset.
 
-Reconciling
+## Reconciling
 
 The client dataset checks the error log received from the provider and
 compares it to its change log. While iterating through the change log,
@@ -164,7 +154,7 @@ change log, their current values in the database, when possible, and the
 error returned from provider. The special pre build error reconciliation
 dialog may be used to handle update errors along with your own code.
 
-Data Packet Delivery
+## Data Packet Delivery
 
 Now we know that three different kinds of data packets may flow between
 the provider and the client dataset. The following table summarizes
@@ -227,7 +217,7 @@ applications.  Because all data packets are represented as array of
 bytes, you may easily send them across the wire using any of the above
 technologies.
 
-Summary
+## Summary
 
 Inprise MIDAS provides a high performance mechanism to communicate
 database information. Two MIDAS components, the client dataset and
@@ -240,7 +230,7 @@ Different techniques may be used to deliver the data packets from the
 provider to the client dataset and from the client dataset back to
 provider. They will be considered later.
 
-MIDAS Availability
+## MIDAS Availability
 
 MIDAS is implemented as a set of VCL components for Delphi and C++
 Builder. There are also several tools, which facilitate MIDAS
@@ -262,7 +252,7 @@ servers written in either Delphi or C++ Builder.  J/MIDAS is a set of
 java beans components which read the data packet content and post
 changes to it.
 
- 
+
 ![clip0151](clip0151.png){.center}
 
 "Hello World" with MIDAS
@@ -273,17 +263,11 @@ TProvider, and TClientDataSet.
 
 In Delphi, perform the following steps:
 
-  ---- ---------------------------------------------------------------------------------------------------
-  1.   Select File \| New Application.   The main form of our application and a project will be created.
-  ---- ---------------------------------------------------------------------------------------------------
+1. Select File \| New Application.   The main form of our application and a project will be created.
 
-  ---- -------------------------------------------------------------------------------------------------------------------
-  2.   Select File \| New...\| Data Module.  This will give us the data module that will host our non-visual components.
-  ---- -------------------------------------------------------------------------------------------------------------------
+2. Select File \| New...\| Data Module.  This will give us the data module that will host our non-visual components.
 
-  ---- -------------------------------------------------------------------------------------------------------
-  3.   Select File \| Save All.  For the purpose of this example, use the default names suggested by Delphi.
-  ---- -------------------------------------------------------------------------------------------------------
+3. Select File \| Save All.  For the purpose of this example, use the default names suggested by Delphi.
 
 At this point we have the following structure for our sample:
 
@@ -301,84 +285,46 @@ At this point we have the following structure for our sample:
     | DataModule2                       | Unit2.pas / Unit2.dfm             |
     +-----------------------------------+-----------------------------------+
 
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Select the Data Access page on the component palette. Drop a TDatabase component on the DataModule2. Double click it and set its properties as shown in the picture below. Then click the "OK" button.
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Select the Data Access page on the component palette. Drop a TDatabase component on the DataModule2. Double click it and set its properties as shown in the picture below. Then click the "OK" button.
 
-  ---- ------------------------------------------------------------------
-  5.   Launch the Local InterBase Server from the Windows "Start" menu.
-  ---- ------------------------------------------------------------------
+5. Launch the Local InterBase Server from the Windows "Start" menu.
 
 ![clip0153](clip0153.png){.center}
 
-  ---- -----------------------------------------------------------------------------------------
-  1.   Set the Connected property of the TDatabase component to True to verify the connection.
-  ---- -----------------------------------------------------------------------------------------
+6. Set the Connected property of the TDatabase component to True to verify the connection.
 
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Drop a TQuery component on your form and set its DatabaseName property to 'internalIBLocal' and SQL property to 'SELECT * FROM department'. Verify the query, setting Active to True and then back to False.
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. Drop a TQuery component on your form and set its DatabaseName property to 'internalIBLocal' and SQL property to 'SELECT * FROM department'. Verify the query, setting Active to True and then back to False.
 
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------
-  3.   Select the MIDAS page on the component palette. Drop a TProvider component on the data module and set the DataSet property to Query1.
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------
+8. Select the MIDAS page on the component palette. Drop a TProvider component on the data module and set the DataSet property to Query1.
 
-  ---- ----------------------------------------------------------------------------------------------------
-  4.   Drop a TClientDataSet component on the data module and set its ProviderName property to Provider1.
-  ---- ----------------------------------------------------------------------------------------------------
+9. Drop a TClientDataSet component on the data module and set its ProviderName property to Provider1.
 
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  5.   Go again to the Data Access page on the component palette, select a TDataSource component and drag it to the data module. Set its DataSet property to ClientDataSet1.
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10. Go again to the Data Access page on the component palette, select a TDataSource component and drag it to the data module. Set its DataSet property to ClientDataSet1.
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  6.   Drag a TActionList component from the Standard page of the component palette and drop it on the Data Module.  Double click the Action List component to bring up Action List Editor. Create two new actions. Those actions will get their names Action1 and Action2 by default.  Set their Caption properties to 'Apply' and 'Cancel' accordingly.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11. Drag a TActionList component from the Standard page of the component palette and drop it on the Data Module.  Double click the Action List component to bring up Action List Editor. Create two new actions. Those actions will get their names Action1 and Action2 by default.  Set their Caption properties to 'Apply' and 'Cancel' accordingly.
 
-  ---- ----------------------------------------------------------------------------------------------------
-  7.   Select Action1 and choose the Events tab of the Object Inspector and create OnExecute and OnUpdate
-  ---- ----------------------------------------------------------------------------------------------------
-
+12. Select Action1 and choose the Events tab of the Object Inspector and create OnExecute and OnUpdate
+    event handlers as shown in the following code.
 
 ![clip0154](clip0154.png){.center}
 
-  ---- ------------------------------------------------
-  8.   event handlers as shown in the following code.
-  ---- ------------------------------------------------
+13. Create an OnExecute event handler for Action2 as shown above, and assign the Action1Update event to its OnUpdate event.
 
-  ---- -------------------------------------------------------------------------------------------------------------------------
-  9.   Create an OnExecute event handler for Action2 as shown above, and assign the Action1Update event to its OnUpdate event.
-  ---- -------------------------------------------------------------------------------------------------------------------------
+14. Set the Active property of the ClientDataSet1 component to True.
 
-  ----- ------------------------------------------------------------------
-  10.   Set the Active property of the ClientDataSet1 component to True.
-  ----- ------------------------------------------------------------------
+![clip0155](clip0155.png){.center}
 
-  ----- --
-  11.   ![clip0155](clip0155.png){.center}
-  ----- --
+15. Save all changes to the project. At this point we have finished the data module.  It should look something like this:
 
-  ----- -----------------------------------------------------------------------------------------------------------------------
-  12.   Save all changes to the project. At this point we have finished the data module.  It should look something like this:
-  ----- -----------------------------------------------------------------------------------------------------------------------
+16. Choose the main form of your application and press Alt + F11 or select File \| Use Unit.  Pick Unit2 in the Use Unit dialog and click "OK". All components we have placed on the data module will become available to the form Form1.
 
-  ----- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  13.   Choose the main form of your application and press Alt + F11 or select File \| Use Unit.  Pick Unit2 in the Use Unit dialog and click "OK". All components we have placed on the data module will become available to the form Form1.
-  ----- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17. Drop a TDBNavigator component to the top area of Form1 and set its DataSource property to DataModule2.DataSource1. Also, set its Flat property to True.
 
-  ----- ---------------------------------------------------------------------------------------------------------------------------------------------------------
-  14.   Drop a TDBNavigator component to the top area of Form1 and set its DataSource property to DataModule2.DataSource1. Also, set its Flat property to True.
-  ----- ---------------------------------------------------------------------------------------------------------------------------------------------------------
+18. Drop two TButton components to the right of the DBNavigator1 and assign their Action properties to DataModule2.Action1 and DataModule2.Action2 respectively.
 
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------------------------
-  15.   Drop two TButton components to the right of the DBNavigator1 and assign their Action properties to DataModule2.Action1 and DataModule2.Action2 respectively.
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------------------------
+19. Drop TDBGrid component on the main form and resize it to occupy the rest of the Form1. Set DbGrid1's Anchors property to [akLeft, akTop, akRight, akBottom]. Set the DataSource property of DBGrid1 to DataModule2.DataSource1.
 
-  ----- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  16.   Drop TDBGrid component on the main form and resize it to occupy the rest of the Form1. Set DbGrid1's Anchors property to [akLeft, akTop, akRight, akBottom]. Set the DataSource property of DBGrid1 to DataModule2.DataSource1.
-  ----- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Choose File \| Save All.  Compile the application and run it. This is
+20. Choose File \| Save All.  Compile the application and run it. This is
 the final result of our exercise and you may play with it for a while.
 Notice that we have a fully functional data aware application with a
 modern user interface and standard Windows behavior. Whenever you begin
@@ -389,11 +335,9 @@ reverted. As soon as updates are applied or canceled, the "Apply" and
 "Cancel" buttons become disabled. All of this is done with very few
 lines of code.
 
- 
-
 ![clip0156](clip0156.png){.center}
 
-OnUpdate Event Handler (Client Dataset State)
+**OnUpdate Event Handler (Client Dataset State)**
 
 It is very important for all kinds of applications to make the end-user
 feel the application is manageable and under control. When changes are
@@ -418,7 +362,7 @@ The ChangeCount property is unique to TClientDataSet. It shows how many
 records were updated, deleted, or inserted since the time it had become
 active.
 
-OnExecute for Action2 (CancelUpdates)
+**OnExecute for Action2 (CancelUpdates)**
 
 Whenever it is necessary to return the client dataset to its initial
 state, before any edits were performed, just call the CancelUpdates
@@ -427,7 +371,7 @@ records, using the information from internal change log, and will remove
 all newly inserted records. No interaction with provider is required and
 that is why no extra traffic is generated.
 
-OnExecute for Action1 (ApplyUpdates)
+**OnExecute for Action1 (ApplyUpdates)**
 
 When its time to make data updates persistent, we must get the Delta
 property of the dataset and send it to provider in one way or another.
@@ -460,9 +404,9 @@ update.  If it is not exceeded then all changes will be committed. If
 you have even one more error than what's allowed all successful updates
 are rolled back.
 
-MIDAS Basics
+## MIDAS Basics
 
-PacketRecords Property
+**PacketRecords Property**
 
 You have a full control over how many records will be packaged by the
 provider in the data packet. When you rely on automatic packet delivery,
@@ -484,11 +428,8 @@ transmitted to the client dataset cache.
 
 ![clip0157](clip0157.png){.center}
 
- 
-
 ![clip0158](clip0158.png){.center}
 
- 
 
 Sometimes you may not need data at all. For example you may want just to
 add a dozen or so records to the database. In this case you can set the
@@ -581,11 +522,10 @@ and select the first menu item in the Menu Designer.  Select its Action
 property and set it to DataModule2.Action3.  Click DbGrid1 and set its
 PopupMenu property to PopupMenu1. Run your application and when you
 right-click on the grid, you will see something very close to this
-picture
+picture:
 
 ![clip0165](clip0165.png){.center}
 
-.
 
 Another way to restore the previous state of the data is to use the
 SavePoint property. At any time you can store the value returned by this
@@ -655,17 +595,9 @@ repository.
 The new dialog will be added to your application. Save it as Unit3.pas
 and perform the following steps. 
 
-  ---- ---------------------------------------------------------------------------------------
-  1.   Remove the dialog from the list of auto-created forms in the Project Options dialog. 
-  ---- ---------------------------------------------------------------------------------------
-
-  ---- ------------------------------------------------------------------------------------------
-  2.   Select Unit2, which implements DataModule2, Choose File \| Use Unit... and select Unit3.
-  ---- ------------------------------------------------------------------------------------------
-
-  ---- --------------------------------------------------------------------------------------------------------------------------------------
-  3.   Select DataModule2's ClientDataSet1 component and, using the Object Inspector, add an OnReconcileError event with the following code
-  ---- --------------------------------------------------------------------------------------------------------------------------------------
+1.   Remove the dialog from the list of auto-created forms in the Project Options dialog. 
+2.   Select Unit2, which implements DataModule2, Choose File \| Use Unit... and select Unit3.
+3.   Select DataModule2's ClientDataSet1 component and, using the Object Inspector, add an OnReconcileError event with the following code
 
 ![clip0167](clip0167.png){.center}
 
@@ -1075,21 +1007,13 @@ all the detail datasets.
 
 Let's make it work.
 
-  ---- ----------------------------------------------------------------------------------
-  1.   Drop a TDataSource component on DataModule2. Set its DataSet property to Query1.
-  ---- ----------------------------------------------------------------------------------
+1.   Drop a TDataSource component on DataModule2. Set its DataSet property to Query1.
 
-  ---- --
-  2.   ![](embim1879.png){.center}
-  ---- --
+![](embim1879.png){.center}
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Drop a TQuery component on DataModule2. Set its DatabaseName property to 'internalIBLocal' and its DataSource property to DataSource2. Then type in the SQL statement in SQL property:
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.   Drop a TQuery component on DataModule2. Set its DatabaseName property to 'internalIBLocal' and its DataSource property to DataSource2. Then type in the SQL statement in SQL property:
 
-  ---- ----------------------------
-  2.   Rename Query2 to Employee.
-  ---- ----------------------------
+3.   Rename Query2 to Employee.
 
 ![clip0179](clip0179.png){.center}
 
@@ -1128,63 +1052,31 @@ below to get some hands on experience doing it.
 We have plenty of ways to get data from the provider at design-time.
 Let's explore another one of them.
 
-  ---- --------------------------------------
-  1.   Click ClientDataSet1 on DataModule2.
-  ---- --------------------------------------
+1.   Click ClientDataSet1 on DataModule2.
 
-  ---- ------------------------------------------------------------------------------------
-  2.   Right-click ClientDataSet1 and select Assign Local Data. A dialog box will appear.
-  ---- ------------------------------------------------------------------------------------
+2.   Right-click ClientDataSet1 and select Assign Local Data. A dialog box will appear.
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   Pick Query1 in the list box of the dialog and press OK.  ClientDataSet1 becomes active because the data packet had been created and assigned to the Data property of the client dataset component.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.   Pick Query1 in the list box of the dialog and press OK.  ClientDataSet1 becomes active because the data packet had been created and assigned to the Data property of the client dataset component.
 
-  ---- --
-  4.   ![clip0180](clip0180.png){.center}
-  ---- --
+![clip0180](clip0180.png){.center}
 
+4.   Double-click ClientDataSet1, right-click the Field Editor and choose Add all fields. Persistent fields will be created as shown in the picture. Notice there is an Employee field at the bottom of the field list. This field provides control on the corresponding nested dataset. Were there more detail datasets, we would have had more persistent TDataSetField components.
 
+5.   Now drop the second client dataset component on DataModule2.
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Double-click ClientDataSet1, right-click the Field Editor and choose Add all fields. Persistent fields will be created as shown in the picture. Notice there is an Employee field at the bottom of the field list. This field provides control on the corresponding nested dataset. Were there more detail datasets, we would have had more persistent TDataSetField components.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.   Set the ClientDataSet1.DataSetField property to ClientDataSet1Employee.
 
-  ---- --------------------------------------------------------------
-  2.   Now drop the second client dataset component on DataModule2.
-  ---- --------------------------------------------------------------
+7.   Drop a data source component on DataModule2 and link it to the ClientDataSet2.
 
-  ---- -------------------------------------------------------------------------
-  3.   Set the ClientDataSet1.DataSetField property to ClientDataSet1Employee.
-  ---- -------------------------------------------------------------------------
+![clip0181](clip0181.png){.center}
 
-  ---- --------------------------------------------------------------------------------
-  4.   Drop a data source component on DataModule2 and link it to the ClientDataSet2.
-  ---- --------------------------------------------------------------------------------
+8.   Add the following AfterOpen event handler to the ClientDataSet1 to guarantee that ClientDataSet2 is active when ClientDataSet1 is active.
 
-  ---- --
-  5.   ![clip0181](clip0181.png){.center}
-  ---- --
-
-
-
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------
-  6.   Add the following AfterOpen event handler to the ClientDataSet1 to guarantee that ClientDataSet2 is active when ClientDataSet1 is active.
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------
-
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------
-  7.   Right-click ClientDataSet1 and select Clear Data to kill the data packet. Otherwise the data packet will become part of the data module's *.DFM file.
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------
-
- 
-
- 
+9.   Right-click ClientDataSet1 and select Clear Data to kill the data packet. Otherwise the data packet will become part of the data module's *.DFM file.
 
 ![clip0182](clip0182.png){.center}
 
 When all steps are completed DataModule2 may look like this:
-
- 
 
 ![clip0183](clip0183.png){.center}
 
@@ -1208,39 +1100,19 @@ the provider's properties and methods to handle data packet delivery.
 To better understand the data packet delivery process we will handle it
 manually.
 
-  ---- -------------------------------------
-  1.   Set ClientDataSet1.Active to False.
-  ---- -------------------------------------
+1.   Set ClientDataSet1.Active to False.
 
-  ---- -------------------------------------------------------------------------------------------------------------------------------
-  2.   Set ClientDataSet1.ProviderName to empty string.  No relationship between ClientDataSet1 and Provider1 exists from this time.
-  ---- -------------------------------------------------------------------------------------------------------------------------------
-
-  ---- --
-  3.   
-  ---- --
+2.   Set ClientDataSet1.ProviderName to empty string.  No relationship between ClientDataSet1 and Provider1 exists from this time.
 
 ![clip0184](clip0184.png){.center}
 
-  ---- --------------------------------------------------------------
-  4.   Add an OnCreate event handler to DataModule2 as shown below.
-  ---- --------------------------------------------------------------
+4.   Add an OnCreate event handler to DataModule2 as shown below.
 
- 
-
-  ---- ------------------------------------
-  5.   Change the Actiion2Execute method.
-  ---- ------------------------------------
-
-  ---- --
-  6.   
-  ---- --
+5.   Change the Actiion2Execute method.
 
 ![clip0185](clip0185.png){.center}
 
-  ---- -----------------------------------------------------------------------------------
-  1.   Now you can run the application. It will work as it did before the modifications.
-  ---- -----------------------------------------------------------------------------------
+6.   Now you can run the application. It will work as it did before the modifications.
 
 MIDAS Multi-Tier Development
 
@@ -1263,41 +1135,23 @@ embedded in the server application and TClientSocket will become a part
 of the client application. The first thing we're going to do is to
 create is the server application.
 
-  ---- --------------------------------------------------------------------------------------------
-  1.   Choose File \| New Application.  The new application template will appear in Delphi's IDE.
-  ---- --------------------------------------------------------------------------------------------
+1.   Choose File \| New Application.  The new application template will appear in Delphi's IDE.
 
-  ---- ------------------------------------------------------------------------------------------
-  2.   Choose File \| New... \| Data Module and a new data module will be added to the project.
-  ---- ------------------------------------------------------------------------------------------
+2.   Choose File \| New... \| Data Module and a new data module will be added to the project.
 
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   Save all files to the directory of your choice under names Unit1.pas (Form1), Unit2.pas (DataModule2) and TCP\_IP\_Server.dpr (TCP\_IP\_Server).
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------
+3.   Save all files to the directory of your choice under names Unit1.pas (Form1), Unit2.pas (DataModule2) and TCP\_IP\_Server.dpr (TCP\_IP\_Server).
 
-  ---- ----------------------------------------------------------------------------------------
-  4.   Drop a TSession component on DataModule2 and set its AutoSessionName property to True.
-  ---- ----------------------------------------------------------------------------------------
+4.   Drop a TSession component on DataModule2 and set its AutoSessionName property to True.
 
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------
-  5.   Drop a TDatabase on DataModule2 and set its properties in the same way as you did for the Hello World sample in the beginning of the article.
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------
+5.   Drop a TDatabase on DataModule2 and set its properties in the same way as you did for the Hello World sample in the beginning of the article.
 
-  ---- -----------------------------------------------------------------------------------------------------------------------
-  6.   Drop a TQuery component on DataModule2 and link it to Database1. Set its SQL property to 'SELECT * FROM department'.
-  ---- -----------------------------------------------------------------------------------------------------------------------
+6.   Drop a TQuery component on DataModule2 and link it to Database1. Set its SQL property to 'SELECT * FROM department'.
 
-  ---- -------------------------------------------------------------------------
-  7.   Drop a TProvider on DataModule2 and set its DataSet property to Query1.
-  ---- -------------------------------------------------------------------------
+7.   Drop a TProvider on DataModule2 and set its DataSet property to Query1.
 
-  ---- --------------------------------------------------------------------------------------------------
-  8.   Drop a TClientDataSet component on DataModule2 and set its ProviderName property to 'Provider1'.
-  ---- --------------------------------------------------------------------------------------------------
+8.   Drop a TClientDataSet component on DataModule2 and set its ProviderName property to 'Provider1'.
 
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------
-  9.   Drop a TServerSocket component on DataModule2 and set its properties: Port to 8888, ServerType to stThreadBlocking and Active property to True.
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------
+9.   Drop a TServerSocket component on DataModule2 and set its properties: Port to 8888, ServerType to stThreadBlocking and Active property to True.
 
 We are going to create a multi-threaded application. That is why we set
 Session1's AutoSessionName property to ensure thread-safe database
@@ -1356,35 +1210,19 @@ client application to connect to the server application, to send
 requests to the server, and to read the data packet from the socket
 stream. Let\'s do it.
 
-  ---- ---------------------------------------------------------------------------------------------
-  1.   Choose File \| New Application. The new application template will appear in the Delphi IDE.
-  ---- ---------------------------------------------------------------------------------------------
+1.   Choose File \| New Application. The new application template will appear in the Delphi IDE.
 
-  ---- ------------------------------------------------------------------------------------------
-  2.   Choose File \| New... \| Data Module and a new data module will be added to the project.
-  ---- ------------------------------------------------------------------------------------------
+2.   Choose File \| New... \| Data Module and a new data module will be added to the project.
 
-  ---- ------------------------------------------------------------------------------------------------------------------------------------
-  3.   Save all files to the directory of your choice under names Unit1.pas (Form1), Unit2.pas (DataModule2) and Project1.dpr (Project1).
-  ---- ------------------------------------------------------------------------------------------------------------------------------------
+3.   Save all files to the directory of your choice under names Unit1.pas (Form1), Unit2.pas (DataModule2) and Project1.dpr (Project1).
 
-  ---- -----------------------------------------------------
-  4.   Drop a TClientDataSet component on the DataModule2.
-  ---- -----------------------------------------------------
+4.   Drop a TClientDataSet component on the DataModule2.
 
-  ---- -------------------------------------------------------------------------------------------------
-  5.   Drop a TDataSource component on the DataModule2 and set its DataSet property to ClientDataSet1.
-  ---- -------------------------------------------------------------------------------------------------
-
-  ---- --
-  6.   
-  ---- --
+5.   Drop a TDataSource component on the DataModule2 and set its DataSet property to ClientDataSet1.
 
 ![clip0008](clip0008.gif){.center}
 
-  ---- -----------------------------------------------------------------------------------
-  1.   Drop a TClientSocket component on the DataModule2. Set its Port property to 8888.
-  ---- -----------------------------------------------------------------------------------
+6.   Drop a TClientSocket component on the DataModule2. Set its Port property to 8888.
 
 Now we must design the user interface for the client application. It may
 look like this:
@@ -1440,57 +1278,29 @@ simultaneous client request handling, but used a single database
 connection to produce a data packet. The DCOM server clients will share
 a single database connection as well.
 
- 
-
-  ---- -------------------------------------------------------------------------------------------
-  1.   Choose File \| New Application. The new application template will appear in Delphi's IDE.
-  ---- -------------------------------------------------------------------------------------------
-
-  ---- --
-  2.   
-  ---- --
+1.   Choose File \| New Application. The new application template will appear in Delphi's IDE.
 
 ![clip0013](clip0013.gif){.center}
 
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3.   Choose File \| New... \| Multi-tier \| Remote Data Module and the Remote Data Module Wizard will appear on the screen.  Enter the Class Name in the dialog box as shown below and press the OK button:
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.   Choose File \| New... \| Multi-tier \| Remote Data Module and the Remote Data Module Wizard will appear on the screen.  Enter the Class Name in the dialog box as shown below and press the OK button:
 
-  ---- -------------------------------------------------------------------------------------------------------------------------------------
-  4.   Save all files to the directory of your choice under names Unit1.pas (Form1), Unit2.pas (MyServer) and DCOMServer.dpr (DCOMServer).
-  ---- -------------------------------------------------------------------------------------------------------------------------------------
+4.   Save all files to the directory of your choice under names Unit1.pas (Form1), Unit2.pas (MyServer) and DCOMServer.dpr (DCOMServer).
 
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  5.   Drop a TDatabase on to MyServer and set its properties in the same way as you did for the Hello World sample in the beginning of the article. Set the Database1.HandleShared property to True.
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.   Drop a TDatabase on to MyServer and set its properties in the same way as you did for the Hello World sample in the beginning of the article. Set the Database1.HandleShared property to True.
 
-  ---- ----------------------------------------------------------------------------------------------------------
-  6.   Drop a TQuery on MyServer and link it to Database1. Set its SQL property to 'SELECT * FROM department'.
-  ---- ----------------------------------------------------------------------------------------------------------
+6.   Drop a TQuery on MyServer and link it to Database1. Set its SQL property to 'SELECT * FROM department'.
 
-  ---- ----------------------------------------------------------------------
-  7.   Drop a TProvider on MyServer and set its DataSet property to Query1.
-  ---- ----------------------------------------------------------------------
-
-  ---- --
-  8.   
-  ---- --
+7.   Drop a TProvider on MyServer and set its DataSet property to Query1.
 
 ![clip0014](clip0014.gif){.center}
 
-  ---- -------------------------------------------------------------
-  1.   Click MyServer and choose Edit \| Add to interface command.
-  ---- -------------------------------------------------------------
+8.   Click MyServer and choose Edit \| Add to interface command.
 
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   In the Add to interface dialog box, type the declaration of the GetDepartments method. This method will implement the same function as in the TCP/IP sample - delivery of the data packet from Proiver1 in the
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.   In the Add to interface dialog box, type the declaration of the GetDepartments method. This method will implement the same function as in the TCP/IP sample - delivery of the data packet from Proiver1 in the
+server application to the ClientDataSet1 in the client application. Press the OK button when you've finished the declaration.
 
 ![clip0015](clip0015.gif){.center}
 
-  ---- -------------------------------------------------------------------------------------------------------------------------------
-  3.   server application to the ClientDataSet1 in the client application. Press the OK button when you've finished the declaration.
-  ---- -------------------------------------------------------------------------------------------------------------------------------
 
 Behind the scenes, the Delphi IDE has created a fourth file,
 DCOMServer.tlb, and added it to the project. This is a binary file type
@@ -1507,21 +1317,13 @@ DCOMServer project and calls GetDepartments then the
 TMyServer.GetDepartments method will be executed and a data packet will
 be returned into the client process memory.
 
-  ---- --
-  4.   
-  ---- --
-
 ![clip0017](clip0017.gif){.center}
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  5.   Select View \| Type Library, expand IMyServer in the tree view at the left of the Type Library Editor, click IMyServer then the New Method button on the editor tool bar. Rename the new method to ApplyDepartmentUpdates and click the Parameters tab at the right of the editor window. Complete the parameters as show below:
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.   Select View \| Type Library, expand IMyServer in the tree view at the left of the Type Library Editor, click IMyServer then the New Method button on the editor tool bar. Rename the new method to ApplyDepartmentUpdates and click the Parameters tab at the right of the editor window. Complete the parameters as show below:
 
 ![clip0016](clip0016.gif){.center}
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  6.   Choose File \| Save all.  The new unit DCOMServer\_TLB.pas was added to the project. It contains Pascal declarations describing the binary content of the type library. If you spend some time looking at this file you will find the declarations of IMyServer and IMyServerDisp. Each interface must be implemented in one or another coclass. One coclass can implement several interfaces in DCOM. In our case, TMyServer plays the role of the coclass implementation. Delphi generates DCOMServer\_TLB.pas each time you change the type library content.  Never try to modify this file because your code may be overwritten without you even being aware of it. This file may be used in other Delphi applications to access the functionality of your server. The Implementation of the type library interfaces of TMyServer in Unit2 reference this file in its interface section.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11.   Choose File \| Save all.  The new unit DCOMServer\_TLB.pas was added to the project. It contains Pascal declarations describing the binary content of the type library. If you spend some time looking at this file you will find the declarations of IMyServer and IMyServerDisp. Each interface must be implemented in one or another coclass. One coclass can implement several interfaces in DCOM. In our case, TMyServer plays the role of the coclass implementation. Delphi generates DCOMServer\_TLB.pas each time you change the type library content.  Never try to modify this file because your code may be overwritten without you even being aware of it. This file may be used in other Delphi applications to access the functionality of your server. The Implementation of the type library interfaces of TMyServer in Unit2 reference this file in its interface section.
 
 ![clip0018](clip0018.gif){.center}
 
@@ -1540,8 +1342,6 @@ methods. At the bottom of this file is a statement which creates a
 component factory for coclass implementation.  Through this peace of
 code we expose the functionality of the server application to the outer
 world.
-
- 
 
 ![clip0021](clip0021.gif){.center}
 
@@ -1568,91 +1368,47 @@ Windows registry to make the server available to other applications.
 The client application for this server will be very close to what we
 have created for the TCP/IP sample.
 
-  ---- -----------------------------------------------------------------------------------------
-  1.   Choose File \| New Application. The new application template will appear in Delphi IDE.
-  ---- -----------------------------------------------------------------------------------------
+1.   Choose File \| New Application. The new application template will appear in Delphi IDE.
 
-  ---- ------------------------------------------------------------------------------------------
-  2.   Choose File \| New... \| Data Module and a new data module will be added to the project.
-  ---- ------------------------------------------------------------------------------------------
+2.   Choose File \| New... \| Data Module and a new data module will be added to the project.
 
-  ---- ------------------------------------------------------------------------------------------------------------------------------------
-  3.   Save all files to the directory of your choice under names Unit1.pas (Form1), Unit2.pas (DataModule2) and Project1.dpr (Project1).
-  ---- ------------------------------------------------------------------------------------------------------------------------------------
+3.   Save all files to the directory of your choice under names Unit1.pas (Form1), Unit2.pas (DataModule2) and Project1.dpr (Project1).
 
-  ---- -----------------------------------------------------
-  4.   Drop a TClientDataSet component on the DataModule2.
-  ---- -----------------------------------------------------
+4.   Drop a TClientDataSet component on the DataModule2.
 
-  ---- ---------------------------------------------------------------------------------------------
-  5.   Drop a TDataSource component on DataModule2 and set its DataSet property to ClientDataSet1.
-  ---- ---------------------------------------------------------------------------------------------
+5.   Drop a TDataSource component on DataModule2 and set its DataSet property to ClientDataSet1.
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------
-  6.   Add the reference to the server type library Delphi unit by selecting Project \| Add to project and finding DCOMServer\_TLB.pas in the server directory.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------
+6.   Add the reference to the server type library Delphi unit by selecting Project \| Add to project and finding DCOMServer\_TLB.pas in the server directory.
 
-  ---- -----------------------------------------------------------------------------------------------------
-  7.   Add DCOMServer\_TLB to the list of units in the uses clause of the interface section of unit Unit2.
-  ---- -----------------------------------------------------------------------------------------------------
+7.   Add DCOMServer\_TLB to the list of units in the uses clause of the interface section of unit Unit2.
 
-  ---- ---------------------------------------------------
-  8.   Create properties for DataModule2 as shown below:
-  ---- ---------------------------------------------------
-
- 
+8.   Create properties for DataModule2 as shown below:
 
 ![clip0023](clip0023.gif){.center}
 
- 
-
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  9.   Drag a TActionList component from the Standard page of the component palette and drop it onto DataModule1.  Double click ActionList1 to bring up the Action List Editor.  Create two new actions. Those actions will get their names Action1 and Action2 by default.  Set their Caption properties to '&Apply' and '&Cancel' accordingly.
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-  ----- --
-  10.   
-  ----- --
+9.   Drag a TActionList component from the Standard page of the component palette and drop it onto DataModule1.  Double click ActionList1 to bring up the Action List Editor.  Create two new actions. Those actions will get their names Action1 and Action2 by default.  Set their Caption properties to '&Apply' and '&Cancel' accordingly.
 
 ![clip0024](clip0024.gif){.center}
 
-  ----- --------------------------------------------------------------------------------------------------------------------------------
-  11.   Select Action1, choose the Events tab of the Object Inspector and create OnExecute and OnUpdate event handlers as shown below:
-  ----- --------------------------------------------------------------------------------------------------------------------------------
+10.   Select Action1, choose the Events tab of the Object Inspector and create OnExecute and OnUpdate event handlers as shown below:
 
- 
-
-  ----- -----------------------------------------------------------------------------------------------------------------------------------
-  12.   Create an OnExecute event handler for Action2 to cancel updates and assign the Action1Update event handler to its OnUpdate event.
-  ----- -----------------------------------------------------------------------------------------------------------------------------------
+11.   Create an OnExecute event handler for Action2 to cancel updates and assign the Action1Update event handler to its OnUpdate event.
 
 ![clip0025](clip0025.gif){.center}
 
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------
-  13.   Create a third action named Action3.  Set its Caption to 'Refresh' and write event handlers for its OnUpdate and OnExecute events as well.
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------
+12.   Create a third action named Action3.  Set its Caption to 'Refresh' and write event handlers for its OnUpdate and OnExecute events as well.
 
 ![clip0026](clip0026.gif){.center}
 
-  ----- -------------------------------------------------------------------------
-  14.   Specify Unit2 as being used by the main form of the client application.
-  ----- -------------------------------------------------------------------------
+13.   Specify Unit2 as being used by the main form of the client application.
 
-  ----- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  15.   Drop a TDBGrid component, a TDBNavigator, three TButton components and one TEdit component on Form1, align them and link the buttons to actions, as shown below.  Link DBGrid1 and DBNavigator1 to DataModule2.DataSource1.
-  ----- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14.   Drop a TDBGrid component, a TDBNavigator, three TButton components and one TEdit component on Form1, align them and link the buttons to actions, as shown below.  Link DBGrid1 and DBNavigator1 to DataModule2.DataSource1.
 
 ![clip0027](clip0027.gif){.center}
 
-  ----- --
-  16.   
-  ----- --
+15. ![clip0028](clip0028.gif){.center}
 
-![clip0028](clip0028.gif){.center}
-
-  ---- --------------------------------------------
-  1.   Write an OnChange event handler for Edit1.
-  ---- --------------------------------------------
+16.   Write an OnChange event handler for Edit1.
 
 The client application is completed. Run and play with it for a while.
 
@@ -1703,69 +1459,37 @@ VisiBroker for Delphi is on the way. Today the CORBA development in
 Delphi is implemented though a marrying of COM implementations and CORBA
 interfaces.
 
-  ---- ------------------------------------------------------------------------
-  1.   Copy the source code of the DCOM server and client in new directories.
-  ---- ------------------------------------------------------------------------
+1.   Copy the source code of the DCOM server and client in new directories.
 
-  ---- -------------------------------------------------------------------------------------------
-  2.   Open the DCOMServer.dpr in Delphi's IDE and save it as CORBAServer in the same directory.
-  ---- -------------------------------------------------------------------------------------------
-
-  ---- --
-  3.   
-  ---- --
+2.   Open the DCOMServer.dpr in Delphi's IDE and save it as CORBAServer in the same directory.
 
 ![clip0030](clip0030.gif){.center}
 
-  ---- -------------------------------------------------------------------
-  4.   Go to the source code of Unit2 and right-click the editor window.
-  ---- -------------------------------------------------------------------
+3.   Go to the source code of Unit2 and right-click the editor window.
 
-  ---- --------------------------------------------------------------------------------------
-  5.   Choose Expose as CORBA Object. Look at the initialization section  of the Unit2 now:
-  ---- --------------------------------------------------------------------------------------
+4.   Choose Expose as CORBA Object. Look at the initialization section  of the Unit2 now:
 
-  ---- --
-  6.   
-  ---- --
+5. ![clip0031](clip0031.gif){.center}
 
-![clip0031](clip0031.gif){.center}
+6.   The TCorbaVclComponentFactory.Create constructor call was added to it by the Delphi IDE.  Remove the call to TComponentFactory.Create from Unit2.  If you don't, your server application will have simultaneous DCOM and CORBA support and will be able to serve DCOM and CORBA clients at the same time.  This may be a nice feature for some projects, but for the sake of purity we will build the CORBA-only server.
 
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  7.   The TCorbaVclComponentFactory.Create constructor call was added to it by the Delphi IDE.  Remove the call to TComponentFactory.Create from Unit2.  If you don't, your server application will have simultaneous DCOM and CORBA support and will be able to serve DCOM and CORBA clients at the same time.  This may be a nice feature for some projects, but for the sake of purity we will build the CORBA-only server.
-  ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. ![clip0032](clip0032.gif){.center}
 
-  ---- --
-  8.   
-  ---- --
-
-![clip0032](clip0032.gif){.center}
-
-  ---- ----------------------------------------------------------------------------------------
-  9.   The client stub and server skeleton were appended to the type library definition also.
-  ---- ----------------------------------------------------------------------------------------
+8.   The client stub and server skeleton were appended to the type library definition also.
 
 ![clip0033](clip0033.gif){.center}
 
-  ----- ------------------------------------------------------------------------------------------------------------------------------------------------------
-  10.   To make it easier to connect to CORBA servers written in Delphi from client applications written in Delphi a special wrapper class was also created:
-  ----- ------------------------------------------------------------------------------------------------------------------------------------------------------
+9.   To make it easier to connect to CORBA servers written in Delphi from client applications written in Delphi a special wrapper class was also created:
 
 ![](embim1881.png){.center}
 
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  11.   Go to the MyServer remote data module and drop a TSession component on it. Set its AutoSesionName property to True.  All CORBA servers are multi-threaded by nature and in order to be thread safe when they work with the BDE, a separate session must be used in each thread. Now you may set Database1.HandleShared property to False or leave as True because it doesn't matter in the context of separate sessions.
-  ----- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.   Go to the MyServer remote data module and drop a TSession component on it. Set its AutoSesionName property to True.  All CORBA servers are multi-threaded by nature and in order to be thread safe when they work with the BDE, a separate session must be used in each thread. Now you may set Database1.HandleShared property to False or leave as True because it doesn't matter in the context of separate sessions.
 
-  ----- -----------------------------------------------------------------------------------------------------------------------------
-  12.   Add CorbaRDM to the interface section of Unit2 and replace the TRemoteDataModule with the TCorbaDataModule, as shown below:
-  ----- -----------------------------------------------------------------------------------------------------------------------------
+11.   Add CorbaRDM to the interface section of Unit2 and replace the TRemoteDataModule with the TCorbaDataModule, as shown below:
 
 ![](embim1882.png){.center}
 
-  ----- --------------------------------------------------------------------------------
-  13.   Compile the CORBAServer application to make sure that everything is all right.
-  ----- --------------------------------------------------------------------------------
+12.   Compile the CORBAServer application to make sure that everything is all right.
 
 The sequence, in which we turned the Remote Data Module into a Corba
 Data Module, is not mandatory. You can start from the standard Delphi
@@ -1775,19 +1499,11 @@ continue to work in a similar fashion as we are doing now.
 
 Let's change the client application.
 
-  ---- -------------------------------------------------------------------------------------------------
-  1.   Go to Unit2. Find implementation of the TDataModule2.GetMyServer method. Change it in this way:
-  ---- -------------------------------------------------------------------------------------------------
-
-  ---- --
-  2.   
-  ---- --
+1.   Go to Unit2. Find implementation of the TDataModule2.GetMyServer method. Change it in this way:
 
 ![](embim1883.png){.center}
 
-  ---- ----------------------------------------------------------------------------------------------------
-  1.   Delete Edit1 from the main form and the ComputerName property from Unit2. Compile the application.
-  ---- ----------------------------------------------------------------------------------------------------
+2.   Delete Edit1 from the main form and the ComputerName property from Unit2. Compile the application.
 
 That's it. You have completed changes in the client code to switch from
 DCOM to CORBA. The flexibility of multi-tier development, when related
@@ -1848,35 +1564,19 @@ code.  It can impress anybody!
 
 The following steps are required to create a statefull MIDAS server:
 
-  ---- ---------------------------------
-  1.   Select File \| New Application.
-  ---- ---------------------------------
+1.   Select File \| New Application.
 
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Select File \| New... \| Multi Tier \| Remote Data Module. In the New Remote Data Module dialog enter "HR" ---an abbreviation for Human Resources---in the edit box labeled Class Name and press OK.
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.   Select File \| New... \| Multi Tier \| Remote Data Module. In the New Remote Data Module dialog enter "HR" ---an abbreviation for Human Resources---in the edit box labeled Class Name and press OK.
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------
-  3.   Select File \| Save all and choose default file names for Unit1 (Form1), Unit2 (DataModule2) and StatefullServer for the project file.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------
+3.   Select File \| Save all and choose default file names for Unit1 (Form1), Unit2 (DataModule2) and StatefullServer for the project file.
 
-  ---- ---------------------------------------------------------------------------------------------------------------------------------
-  4.   Drop a TTable component on the HR remote data module and set its Database property to 'DBDEMOS' and TableName to 'employee.db'.
-  ---- ---------------------------------------------------------------------------------------------------------------------------------
-
-  ---- --
-  5.   
-  ---- --
+4.   Drop a TTable component on the HR remote data module and set its Database property to 'DBDEMOS' and TableName to 'employee.db'.
 
 ![](embim1886.png){.center}
 
-  ---- ----------------------------------------------------------------------------------------------------------------
-  1.   Drop a TProvider component onto HR and link its DataSet property to Table1. Rename the TProvider to Employees.
-  ---- ----------------------------------------------------------------------------------------------------------------
+5.   Drop a TProvider component onto HR and link its DataSet property to Table1. Rename the TProvider to Employees.
 
-  ---- ---------------------------------------------------------------------
-  2.   Right-click Employees and choose Export Employees from data module.
-  ---- ---------------------------------------------------------------------
+6.   Right-click Employees and choose Export Employees from data module.
 
 The property Employee: IProvider will be added to the interface IHR in
 the type library of the server.
@@ -1888,40 +1588,25 @@ method in the Unit2 (HR).
 
 ![](embim1888.png){.center}
 
-  ---- ------------------------------------------------------------------------------------------------------------------------
-  3.   This is the end of the server construction.  Run the server once to register the new COM component StatefullServer.HR.
-  ---- ------------------------------------------------------------------------------------------------------------------------
+7.   This is the end of the server construction.  Run the server once to register the new COM component StatefullServer.HR.
 
- 
 
 The process of designing the client application for the statefull server
-is very simple too.
+is very simple too:
 
-  ---- ---------------------------------
-  1.   Select File \| New Application.
-  ---- ---------------------------------
+1.   Select File \| New Application.
 
-  ---- ------------------------------------------------------------------------------------------------------
-  2.   Select File \| New... \| Data Module. Store all files with default names in the directory of choice.
-  ---- ------------------------------------------------------------------------------------------------------
+2.   Select File \| New... \| Data Module. Store all files with default names in the directory of choice.
 
-  ---- -------------------------------------------------------------------------------------------------------------
-  3.   Drop a TDCOMConnection connection component from the MIDAS page of the component palette on to DataModule2.
-  ---- -------------------------------------------------------------------------------------------------------------
+3.   Drop a TDCOMConnection connection component from the MIDAS page of the component palette on to DataModule2.
 
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Double-click the down arrow at the right of the ServerName property in the Object Inspector and choose the name of the server object as shown on the picture:
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.   Double-click the down arrow at the right of the ServerName property in the Object Inspector and choose the name of the server object as shown on the picture:
 
 ![](embim1889.png){.center}
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  5.   Set DCOMConnection1.Connected property to True. The DCOM run-time library will load the server application, because DCOMConnection1 has tried to establish a persistent connection to the selected server component.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.   Set DCOMConnection1.Connected property to True. The DCOM run-time library will load the server application, because DCOMConnection1 has tried to establish a persistent connection to the selected server component.
 
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  6.   Drop a TClientDataSet component on to DataModule2, set its RemoteServer property to DCOMConnection1 and choose a provider name from the drop down combo box of the ProviderName property. There is only one available option - Employees. That is the name of the HR property Employees. DCOMConnection1 has asked HR to give it a list of all its properties of the type IProvider and displayed them for you. IProvider is a COM interface, designed specifically for MIDAS TProvider components to enable remote manipulations with it.
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.   Drop a TClientDataSet component on to DataModule2, set its RemoteServer property to DCOMConnection1 and choose a provider name from the drop down combo box of the ProviderName property. There is only one available option - Employees. That is the name of the HR property Employees. DCOMConnection1 has asked HR to give it a list of all its properties of the type IProvider and displayed them for you. IProvider is a COM interface, designed specifically for MIDAS TProvider components to enable remote manipulations with it.
 
 ![](embim1890.png){.center}
 
@@ -1940,17 +1625,11 @@ set its Active property to True. You can control how much data should be
 transmitted from the provider using PacketRecords. This property was
 discussed earlier.
 
-  ---- ---------------------------------------------------------------------------------------------
-  7.   Drop a TDataSource component on DataModule2 and set its DataSet property to ClientDataSet1.
-  ---- ---------------------------------------------------------------------------------------------
+7.   Drop a TDataSource component on DataModule2 and set its DataSet property to ClientDataSet1.
 
-  ---- -------------------------------------------------------------------------------------------------
-  8.   Drop a TDBGrid on Form1 and link it to DataModule2.DataSource1 through the DataSource property.
-  ---- -------------------------------------------------------------------------------------------------
+8.   Drop a TDBGrid on Form1 and link it to DataModule2.DataSource1 through the DataSource property.
 
-  ---- -------------------------------------------------------------------------------------------
-  9.   Set the ClientDataSet1.Active property to True and you'll see server data at design-time.
-  ---- -------------------------------------------------------------------------------------------
+9.   Set the ClientDataSet1.Active property to True and you'll see server data at design-time.
 
 You know how to do the rest.
 
@@ -2066,163 +1745,72 @@ or DCOM, relying on the following description of the concept.
 
 To create a CORBA server with connection pooling:
 
-  ---- --------------------------------------------------------
-  1.   Choose File \| New Application to start a new project.
-  ---- --------------------------------------------------------
+1.   Choose File \| New Application to start a new project.
 
-  ---- ----------------------------------------------------------------
-  2.   Choose File \| New \| Data Module to create a new TDataModule.
-  ---- ----------------------------------------------------------------
+2.   Choose File \| New \| Data Module to create a new TDataModule.
 
-  ---- ----------------------------------------------------------------------------------------------
-  3.   Go to Project \| Options \| Forms and remove DataModule2 from the list of auto-create forms.
-  ---- ----------------------------------------------------------------------------------------------
+3.   Go to Project \| Options \| Forms and remove DataModule2 from the list of auto-create forms.
 
-  ---- ----------------------------------------------------------------------------------------------------------
-  4.   Save all files of the project as Unit1.pas (Form1), Unit2 (DataModule2) and ConnPooler.dpr (ConnPooler).
-  ---- ----------------------------------------------------------------------------------------------------------
+4.   Save all files of the project as Unit1.pas (Form1), Unit2 (DataModule2) and ConnPooler.dpr (ConnPooler).
 
-  ---- ----------------------------------------------------------------------------------------------------
-  5.   Select Project \| Add to project, find DMPooler.pas location and include this unit in the project.
-  ---- ----------------------------------------------------------------------------------------------------
+5.   Select Project \| Add to project, find DMPooler.pas location and include this unit in the project.
 
-  ---- ------------------------------------------------------------------------------------------------
-  6.   Go to the uses clause in the interface section of Unit1 and add both Unit2 and DMPooler to it.
-  ---- ------------------------------------------------------------------------------------------------
-
-  ---- --
-  7.   
-  ---- --
+6.   Go to the uses clause in the interface section of Unit1 and add both Unit2 and DMPooler to it.
 
 ![](embim1897.png){.center}
 
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Choose Form1, double-click it and enter an OnCreate event handler. This event handler will give to the ModulePooler a hint about what kind of data modules the pool must contain.
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7.   Choose Form1, double-click it and enter an OnCreate event handler. This event handler will give to the ModulePooler a hint about what kind of data modules the pool must contain.
 
-  ---- ----------------------------------------------------------------------------------------
-  2.   Drop a TSession component on DataModule2 and set its property AutoSessionName to True.
-  ---- ----------------------------------------------------------------------------------------
-
-  ---- --
-  3.   
-  ---- --
+8.   Drop a TSession component on DataModule2 and set its property AutoSessionName to True.
 
 ![](embim1898.png){.center}
 
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Drop a TDatabase component on DataModule2 and set it up to connect to the IBLocal InterBase database: set its DatabaseName property to 'internalIBLocal', Alias to 'НBLOCAL', LoginPrompt to False and Params as
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.   Drop a TDatabase component on DataModule2 and set it up to connect to the IBLocal InterBase database: set its DatabaseName property to 'internalIBLocal', Alias to 'НBLOCAL', LoginPrompt to False and Params as
 
-  ---- -----------------------------------------------------------------------------------------------------------------------------
-  2.   Drop a TTable component on the DataModule2, set its DatabaseName property to 'internalIBLocal' and TableName to 'CUSTOMER'.
-  ---- -----------------------------------------------------------------------------------------------------------------------------
+10.   Drop a TTable component on the DataModule2, set its DatabaseName property to 'internalIBLocal' and TableName to 'CUSTOMER'.
 
-  ---- ----------------------------------------------------------------------------
-  3.   Drop a TProvider on the DataModule2 and set it DataSet property to Table1.
-  ---- ----------------------------------------------------------------------------
+11.   Drop a TProvider on the DataModule2 and set it DataSet property to Table1.
 
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Select File \| New \| Multitier \| Corba Data Module. Enter 'ScalableServer' in the Class Name edit box and press OK. Save the newly created TCORBADataModule as Unit3.
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12.   Select File \| New \| Multitier \| Corba Data Module. Enter 'ScalableServer' in the Class Name edit box and press OK. Save the newly created TCORBADataModule as Unit3.
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  5.   Go to the implementation of the newly created CORBA server in Unit3. Choose Edit \| Add to interface, type in the GetCustomers method declaration specified below, and press OK.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13.   Go to the implementation of the newly created CORBA server in Unit3. Choose Edit \| Add to interface, type in the GetCustomers method declaration specified below, and press OK.
 
 ![](embim1899.png){.center}
 
-  ---- ---------------------------------------------------------------------------------------------
-  6.   Add Unit2, DMPooler and ActiveX units in uses clause of the interface section in the Unit3.
-  ---- ---------------------------------------------------------------------------------------------
+14.   Add Unit2, DMPooler and ActiveX units in uses clause of the interface section in the Unit3.
 
-  ---- -----------------------------------------------------------------------------------
-  7.   Enter code for of the GetCustomers method as shown in the following code snippet.
-  ---- -----------------------------------------------------------------------------------
-
+15.   Enter code for of the GetCustomers method as shown in the following code snippet.
  
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
 ![](embim1900.png){.center}
 
- 
+16.   Compile the application, make sure VisiBroker Smart Agent is available on the network, and run the server.
 
-  ---- ------------------------------------------------------------------------------------------------------------
-  8.   Compile the application, make sure VisiBroker Smart Agent is available on the network, and run the server.
-  ---- ------------------------------------------------------------------------------------------------------------
-
- 
 
 To create the client application fulfill the following steps:
 
-  ---- ------------------------------------------------------------------------------------------------------
-  1.   Select File \| New Application, save the main form and project file in the directory of your choice.
-  ---- ------------------------------------------------------------------------------------------------------
+1.   Select File \| New Application, save the main form and project file in the directory of your choice.
 
-  ---- ----------------------------------------------------------------------------------------
-  2.   Select Project \| Add to project and find ConnPooler\_TLB.pas in the server directory.
-  ---- ----------------------------------------------------------------------------------------
+2.   Select Project \| Add to project and find ConnPooler\_TLB.pas in the server directory.
 
-  ---- --------------------------------------------------------------
-  3.   Select File \| Use Unit, click ConnPooler\_TLB and press OK.
-  ---- --------------------------------------------------------------
+3.   Select File \| Use Unit, click ConnPooler\_TLB and press OK.
 
-  ---- -------------------------------------------
-  4.   Drop a TClientDataSet component on Form1.
-  ---- -------------------------------------------
+4.   Drop a TClientDataSet component on Form1.
 
-  ---- ---------------------------------------------------------------------------------------
-  5.   Drop a TDataSource component on Form1 and set its DataSet property to ClientDataSet1.
-  ---- ---------------------------------------------------------------------------------------
+5.   Drop a TDataSource component on Form1 and set its DataSet property to ClientDataSet1.
 
-  ---- ------------------------------------------------------------------------------
-  6.   Drop a TDBGrid and a TDBNavigator on Form1 and link them to the DataSource1.
-  ---- ------------------------------------------------------------------------------
-
-  ---- --
-  7.   
-  ---- --
+6.   Drop a TDBGrid and a TDBNavigator on Form1 and link them to the DataSource1.
 
 ![](embim1901.png){.center}
 
-  ---- ---------------------------------------------------------------------
-  1.   Drop a TButton on Form1 and create an OnClick event handler for it.
-  ---- ---------------------------------------------------------------------
+7.   Drop a TButton on Form1 and create an OnClick event handler for it.
 
-  ---- --------------------------------------------------------
-  2.   Drop a TCheckBox component on the free space of Form1.
-  ---- --------------------------------------------------------
-
-  ---- --
-  3.   
-  ---- --
+8.   Drop a TCheckBox component on the free space of Form1.
 
 ![](embim1902.png){.center}
 
-  ---- -----------------------------------------------------------------------
-  1.   Drop a TTimer component on Form1 and create an OnTimer event handler.
-  ---- -----------------------------------------------------------------------
+9.   Drop a TTimer component on Form1 and create an OnTimer event handler.
 
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Compile the application, make sure that the VisiBroker Smart Agent is still available on the network, the ConnPooler server is loaded, and run the client application.
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.   Compile the application, make sure that the VisiBroker Smart Agent is still available on the network, the ConnPooler server is loaded, and run the client application.
 
 ![](embim1903.png){.center}
 
@@ -2231,9 +1819,7 @@ of the client app and click CheckBox1 on each of them. Each client will
 call GetCustomers method of the ScalableServer CORBA object once per
 second. Definitely, it will seriously load the server. If you look an
 the number of connections in the InterBase Server Properties Dialog it
-will show you that 3 connections are established
-
-.
+will show you that 3 connections are established.
 
 The screen of your computer may look like this:
 
@@ -2247,15 +1833,9 @@ This process is called server replication. If you have replicated
 servers, you must teach your client applications to choose one of these
 servers.  It may be done in two ways:
 
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   You may embed the address of each replicated server into the client application. Each time, when the client needs to get a server interface one replica is selected randomly.
-  ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.   You may embed the address of each replicated server into the client application. Each time, when the client needs to get a server interface one replica is selected randomly.
 
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Another approach is to use a directory server.  A directory server maintains a list of available server replicas. The client application finds the directory server somewhere on the network and asks it to get the address of the required server object.
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
- 
+2.   Another approach is to use a directory server.  A directory server maintains a list of available server replicas. The client application finds the directory server somewhere on the network and asks it to get the address of the required server object.
 
 The first approach is the simplest, and there is a TSimpleObjectBroker
 component on the MIDAS page of the component palette to assist you in
@@ -2294,67 +1874,33 @@ Let's move department database information to the web.  Our DCOMServer
 can already produce this information, so we can use
 MyServer.GetDepartments method for this purpose.
 
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Select File \| New... \| Web Server Application and choose ISAPI/NSAPI extension in the web server application wizard dialog box. A new empty project for the ISAPI DLL will be created.
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.   Select File \| New... \| Web Server Application and choose ISAPI/NSAPI extension in the web server application wizard dialog box. A new empty project for the ISAPI DLL will be created.
 
-  ---- ------------------------------------------------------------------------------
-  2.   Select Project \| Add to project to add DCOMServer\_TLB unit to you project.
-  ---- ------------------------------------------------------------------------------
+2.   Select Project \| Add to project to add DCOMServer\_TLB unit to you project.
 
-  ---- -------------------------------------------------------------------
-  3.   Save WebModule1 into the Unit1.pas and a DLL project to dept.dpr.
-  ---- -------------------------------------------------------------------
+3.   Save WebModule1 into the Unit1.pas and a DLL project to dept.dpr.
 
-  ---- --------------------------------------------------------------------------------
-  4.   Add the ActiveX unit to the uses clause of the interface section of the Unit1.
-  ---- --------------------------------------------------------------------------------
+4.   Add the ActiveX unit to the uses clause of the interface section of the Unit1.
 
-  ---- ----------------------------------------------------------------------------
-  5.   Select File \| Use Unit and choose DCOMServer\_TLB in the Use Unit Dialog.
-  ---- ----------------------------------------------------------------------------
+5.   Select File \| Use Unit and choose DCOMServer\_TLB in the Use Unit Dialog.
 
-  ---- ----------------------------------------------------
-  6.   Drop a TClientDataSet component on the WebModule1.
-  ---- ----------------------------------------------------
+6.   Drop a TClientDataSet component on the WebModule1.
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  7.   Drop a TDataSetTableProducer from the Internet page of the component palette on the WebModule1. Set its DataSet property to ClientDataSet1, Caption to '\<H1\>Departments\</H1\>', TableAttributes.Color to White and TableAttributes.Border to 1.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-  ---- --
-  8.   
-  ---- --
+7.   Drop a TDataSetTableProducer from the Internet page of the component palette on the WebModule1. Set its DataSet property to ClientDataSet1, Caption to '\<H1\>Departments\</H1\>', TableAttributes.Color to White and TableAttributes.Border to 1.
 
 ![](embim1905.png){.center}
 
-  ---- ---------------------------------------------------------------------------------------------------------------------
-  9.   Double-click WebModule1 and create a new WebActionItem1 in the collection editor, set its Default property to True.
-  ---- ---------------------------------------------------------------------------------------------------------------------
+8.   Double-click WebModule1 and create a new WebActionItem1 in the collection editor, set its Default property to True.
 
-  ----- -------------------------------------------------------------------------------------------
-  10.   Select WebActionItem1 and create an OnAction event for it as shown in the following code.
-  ----- -------------------------------------------------------------------------------------------
-
- 
+9.   Select WebActionItem1 and create an OnAction event for it as shown in the following code.
 
 ![](embim1906.png){.center}
 
- 
-
-  ----- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  11.   Compile the server extension DLL and copy dept.dll to the InetPub/Scripts directory of your Internet Information Server 4 or Personal Web Server 4 installation. If you are compiling with packages, exclude INET40.BPL and INETDB40.BPL from the list of run-time packages in the Project Options Dialog.
-  ----- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-  ----- --
-  12.   
-  ----- --
+10.   Compile the server extension DLL and copy dept.dll to the InetPub/Scripts directory of your Internet Information Server 4 or Personal Web Server 4 installation. If you are compiling with packages, exclude INET40.BPL and INETDB40.BPL from the list of run-time packages in the Project Options Dialog.
 
 ![](embim1907.png){.center}
 
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Make sure that your web server is up and running. Run the web browser and enter the URL 'http://127.0.0.1/scripts/dept.dll' as shown on the screen short:
-  ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------
+11.   Make sure that your web server is up and running. Run the web browser and enter the URL 'http://127.0.0.1/scripts/dept.dll' as shown on the screen short:
 
 MIDAS and COM Relationships
 
@@ -2386,28 +1932,18 @@ MIDAS Deployment License
 You have the right to develop MIDAS based applications if you have
 purchased Delphi 4 Client Server/Suite.
 
- 
-
 Deployment of MIDAS server applications may require having a MIDAS
 license. General rules to determine when you need a MIDAS license are:
 
-  ---- ----------------------------------------------------------------------------------------------------------------
-  1.   If the data packet providers and consumers stay on the same machine, then you DO NOT have to pay license fees.
-  ---- ----------------------------------------------------------------------------------------------------------------
+1.   If the data packet providers and consumers stay on the same machine, then you DO NOT have to pay license fees.
 
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   As soon as you deliver the data packet from the provider on one machine to the client dataset on the other machine you MUST pay a license fee. The transport you have used doesn't play any role. You can send the data packet by e-mail. You can save it on diskette from a computer in San Diego, drive to Los Angeles and load the data packet in a client dataset on the other computer. You can transfer the data packet calling a method of a COM or CORBA object, or something similar.  All described situations require a MIDAS license.
-  ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.   As soon as you deliver the data packet from the provider on one machine to the client dataset on the other machine you MUST pay a license fee. The transport you have used doesn't play any role. You can send the data packet by e-mail. You can save it on diskette from a computer in San Diego, drive to Los Angeles and load the data packet in a client dataset on the other computer. You can transfer the data packet calling a method of a COM or CORBA object, or something similar.  All described situations require a MIDAS license.
 
 There are two types of MIDAS license:
 
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   Unlimited. You pay $5,000 per machine for each CPU.  You may run as many MIDAS servers on this machine as you want. The number of clients is unlimited. If you are using VisiBroker for your MIDAS servers and clients, you do not need to buy a separate VisiBroker license, as MIDAS license covers it.
-  ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.   Unlimited. You pay $5,000 per machine for each CPU.  You may run as many MIDAS servers on this machine as you want. The number of clients is unlimited. If you are using VisiBroker for your MIDAS servers and clients, you do not need to buy a separate VisiBroker license, as MIDAS license covers it.
 
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Per seat. You pay $250 per application server machine for each CPU. That includes one client seat. Seats from 2 through 25 are $125 each. Seats starting from 26 will coast you $80 each. This type of license does not cover VisiBroker.
-  ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.   Per seat. You pay $250 per application server machine for each CPU. That includes one client seat. Seats from 2 through 25 are $125 each. Seats starting from 26 will coast you $80 each. This type of license does not cover VisiBroker.
 
 Serge Bodrov, Senior Analyst
 

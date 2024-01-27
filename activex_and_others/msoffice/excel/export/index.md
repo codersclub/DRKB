@@ -1,6 +1,6 @@
 ---
 Title: Экспорт документов Excel
-Author: JB
+Author: JB <https://asportal.h16.ru>
 Date: 01.01.2007
 ---
 
@@ -8,17 +8,7 @@ Date: 01.01.2007
 Экспорт документов Excel
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
-Экспорт документов в Excel
-
-Автор: JB
-
-https://asportal.h16.ru
-
-Эта статья первая из цикла статей посвященных экспорту документов в MS
+Эта статья - первая из цикла статей, посвященных экспорту документов в MS
 Excel. В ней мы рассмотрим подключение к Excel, заполнению ячеек и
 простейшее оформление документа.
 
@@ -30,39 +20,44 @@ Excel. В ней мы рассмотрим подключение к Excel, за
 Для подключения к Excel и работы с ним нам понадобится переменная типа
 Variant:
 
+```
 Excel:Variant;
-
+```
 Далее создаем OLE объект:
 
-Excel:=CreateOleObject(\'Excel.Application\');
+```
+Excel:=CreateOleObject('Excel.Application');
+```
 
 Добавляем новую книгу:
 
+```
 Excel.Workbooks.Add;
+```
 
 Показываем Excel:
 
+```
 Excel.Visible:=true;
+```
 
 Так же нам понадобятся константы:
 
+```
 const
-
-xlContinuous=1;
-
-xlThin=2;
-
-xlTop = -4160;
-
-xlCenter = -4108;
+  xlContinuous=1;
+  xlThin=2;
+  xlTop = -4160;
+  xlCenter = -4108;
+```
 
 Текст ячеек.
 
 Теперь до любой ячейки мы можем добраться следующим образом:
 
-Excel.ActiveWorkBook.WorkSheets[1].Cells[1, 2]:=\'Текст ячейки
-(1,2)\';
-
+```
+Excel.ActiveWorkBook.WorkSheets[1].Cells[1, 2]:='Текст ячейки (1,2)';
+```
 Объект Range, выделение диапазона, объединение ячеек, выравнивание.
 
 Представьте такую ситуацию: необходимо объединить несколько ячеек и
@@ -70,15 +65,21 @@ Excel.ActiveWorkBook.WorkSheets[1].Cells[1, 2]:=\'Текст ячейки
 
 Выделяем:
 
-Excel.ActiveWorkBook.WorkSheets[1].Range[\'A1:G1\'].Select;
+```
+Excel.ActiveWorkBook.WorkSheets[1].Range['A1:G1'].Select;
+```
 
 Объединяем:
 
-Excel.ActiveWorkBook.WorkSheets[1].Range[\'A1:G1\'].Merge;
+```
+Excel.ActiveWorkBook.WorkSheets[1].Range['A1:G1'].Merge;
+```
 
 И выравниваем:
 
+```
 Excel.Selection.HorizontalAlignment:=xlCenter;
+```
 
 Границы и перенос по словам.
 
@@ -86,17 +87,21 @@ Excel.Selection.HorizontalAlignment:=xlCenter;
 
 Показываем границы:
 
+```
 Excel.Selection.Borders.LineStyle:=xlContinuous;
 
 Excel.Selection.Borders.Weight:=xlThin;
+```
 
 И включаем перенос по словам:
 
+```
 Excel.Selection.WrapText:=true;
+```
 
 Пример.
 
-Пример можно скачать здесь
+Пример можно скачать здесь: [excel_export.zip](excel_export.zip)
 
 Параметры страницы.
 
@@ -131,7 +136,9 @@ Application, которая переводит значение в дюймах 
 
 Иногда полезно уметь установить и ориентацию страницы:
 
+```
 Excel.ActiveSheet.PageSetup.Orientation:= 2;
+```
 
 Здесь значение ориентации = 2, означает альбомную, при книжной
 ориентации присвойте Orientation значение 1.
@@ -140,7 +147,9 @@ Excel.ActiveSheet.PageSetup.Orientation:= 2;
 количеством строк размещается на нескольких страницах в таких случаях
 очень удобны сквозные строки, они печатаются на каждой странице отчета:
 
-Excel.ActiveSheet.PageSetup.PrintTitleRows:=\'$2:$3\';
+```
+Excel.ActiveSheet.PageSetup.PrintTitleRows:='$2:$3';
+```
 
 Здесь мы указываем вторую и третью строки для печати на каждой странице.
 
@@ -149,8 +158,7 @@ Excel.ActiveSheet.PageSetup.PrintTitleRows:=\'$2:$3\';
 Для установки шрифта и размера текста выделите нужный диапазон и
 установите свойство Name объекта-свойства Font объекта Selection или
 свойство Size для изменения размера:
-
-     
+    
       Excel.ActiveWorkBook.WorkSheets[1].Range['F1'].Select;
       Excel.Selection.Font.Name:='Courier New';
       Excel.Selection.Font.Size:=18;

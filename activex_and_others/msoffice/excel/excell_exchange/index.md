@@ -2,17 +2,12 @@
 Title: Обмен данными с Excel
 Author: Fernando Silva
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Обмен данными с Excel
 =====================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Fernando Silva
 
 В Delphi 5, для обмена данными между Вашим приложением и Excel можно
 использовать компонент TExcelApplication, доступный на Servers Page в
@@ -134,4 +129,3 @@ WorkSheet.
       RangeMatrix := Unassigned;
     end;
 
-Взято из <https://forum.sources.ru>

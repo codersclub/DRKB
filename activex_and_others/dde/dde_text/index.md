@@ -1,17 +1,14 @@
 ---
 Title: DDE - передача текста
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 DDE - передача текста
 ======================
 
-::: {.date}
-01.01.2007
-:::
-
-Вот я как работаю с Excel:
+Вот как я работаю с Excel:
 
     type
       DDEClientConv1.SetLink('Excel', 'Sheet1');
@@ -30,6 +27,4 @@ DDE - передача текста
 Воспользуйтесь синхронизацией, позволяющей понять при отладке
 правильность действий
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

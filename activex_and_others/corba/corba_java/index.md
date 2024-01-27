@@ -1,15 +1,13 @@
 ---
 Title: CORBA клиент - Java Server
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 CORBA клиент - Java Server
 ===========================
 
-::: {.date}
-01.01.2007
-:::
 
     unit uDelphiClient;
      
@@ -88,6 +86,3 @@ CORBA клиент - Java Server
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

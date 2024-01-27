@@ -1,15 +1,12 @@
 ---
 Title: Как создать DLL для MS Excel?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как создать DLL для MS Excel?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
 Problem/Question/Abstract:
 
@@ -73,7 +70,9 @@ type double.
 
 In Delphi, the function is declared as
 
-function gamma\_alfa(media, varianza : double) : Double;stdcall;
+```
+function gamma_alfa(media, varianza : double) : Double;stdcall;
+```
 
 Note the stdcall at the end of the declaration. This is to ensure that
 Delphi will use the Microsoft calling convention
@@ -114,10 +113,11 @@ Now note hte "Byref" and the as "Variant" types.
 
 In Delphi, the function is declared as follows:
 
-function gamma\_parametros\_XL(const \_marcas\_de\_clase, \_frecuencias:
-Variant): Variant;
-
-stdcall;
+```
+function gamma_parametros_XL(const _marcas_de_clase,
+                             _frecuencias: Variant): Variant;
+                             stdcall;
+```
 
 and is implemented as:
 
@@ -371,4 +371,3 @@ VBA
 I will be more than glad to send you the full source code of the
 \_Variant unit
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

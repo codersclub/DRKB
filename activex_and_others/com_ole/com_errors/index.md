@@ -1,15 +1,12 @@
 ---
 Title: Как обрабатывать ошибки в COM-объектах
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как обрабатывать ошибки в COM-объектах
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     TCustomBasePlugObject = class(TAutoObject, IUnknown, IDispatch)
     ...
@@ -42,4 +39,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

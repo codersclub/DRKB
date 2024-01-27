@@ -4,14 +4,11 @@ Author:
 Date: 01.01.2007
 Keywords: 
 Description: 
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Управление свойством Font через сервер автоматизации
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Данный документ предназначен главным образом тем программистам, кто
 использует OLE/COM и хочет встроить объект Font (типа Delphi-го TFont) в
@@ -292,12 +289,6 @@ COM). Тот факт, что интерфейс определен, не озн
 
 **Примечание:**
 
-GetOleFont и SetOleFont определены в AxCtrls.pas. IFontDisp определен в
-ActiveX.pas
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
-
+GetOleFont и SetOleFont определены в AxCtrls.pas.  
+IFontDisp определен в ActiveX.pas
 

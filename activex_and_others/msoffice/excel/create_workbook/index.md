@@ -2,15 +2,12 @@
 Title: Создание или открытие книги
 Author: Евгений Старостин
 Date: 01.01.2007
+Source: <https://www.delphikingdom.ru/>
 ---
 
 
 Создание или открытие книги
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
 Повторюсь, несмотря на то, что я уже писал об этом в предыдущей статье.
 
@@ -18,15 +15,17 @@ Date: 01.01.2007
 содержать интерфейс книги, которую мы будем создавать и использовать.
 Естественно, в обработчике FormDestroy я его освобождаю.
 
-property IWorkbook: Excel8TLB.\_Workbook read FIWorkbook;
-
+```
+property IWorkbook: Excel8TLB._Workbook read FIWorkbook;
+```
 Книгу можно создать разными способами и с разными намерениями. Если
 необходимо создать абсолютно чистую книгу, достаточно выполнить
 следующий код:
 
+```
 if Assigned(IXLSApp) and (not Assigned(IWorkbook) ) then
-
   FIWorkbook := IXLSApp.Workbooks.Add(EmptyParam, 0);
+```
 
 Вопрос в том, зачем нам может понадобиться новая книга, с количеством
 пустых листов, выставленным по умолчанию. Сегодня, я не могу уже
@@ -65,15 +64,14 @@ if Assigned(IXLSApp) and (not Assigned(IWorkbook) ) then
 Если же необходимо просто открыть уже существующий файл, то используйте
 метод Open этой же коллекции:
 
+```
 if Assigned(IXLSApp) and (not Assigned(IWorkbook) ) then
-
-FIWorkbook := IXLSApp.Workbooks.Open(ExtractFilePath(ParamStr(0)) +
-"Test.xls\', EmptyParam,
-
-   EmptyParam, EmptyParam, EmptyParam, EmptyParam, EmptyParam,
-EmptyParam, EmptyParam,
-
-   EmptyParam, EmptyParam, EmptyParam, false, 0);
+  FIWorkbook := IXLSApp.Workbooks.Open(ExtractFilePath(ParamStr(0)) +
+                'Test.xls', EmptyParam,
+                 EmptyParam, EmptyParam, EmptyParam, EmptyParam, EmptyParam,
+                 EmptyParam, EmptyParam,
+                 EmptyParam, EmptyParam, EmptyParam, false, 0);
+```
 
 Понимаю, что в душе нормального программиста такой код вызовет
 отвращение. Как-то я даже получил гневное письмо о собственной
@@ -86,11 +84,11 @@ EmptyParam. Впрочем, я не сильно агрессивный чело
 вещь этот редактор. А чтобы не мучаться с написанием такого количества
 EmptyParam, можно написать и так (ответ на «гневное» письмо):
 
+```
 if Assigned(IXLSApp) and (not Assigned(IWorkbook) ) then
-
-IDispatch(FIWorkbook) := OLEVariant(IXLSApp.Workbooks).Open(
-
-   FileName := ExtractFilePath(ParamStr(0)) + \'Test.xls\');
+  IDispatch(FIWorkbook) := OLEVariant(IXLSApp.Workbooks).Open(
+    FileName := ExtractFilePath(ParamStr(0)) + 'Test.xls');
+```
 
 Но, мы отклонились. Что же стоит за таким количеством параметров по
 умолчанию в методе Open? Да, много чего. Из этого «громадья» я использую
@@ -98,19 +96,17 @@ IDispatch(FIWorkbook) := OLEVariant(IXLSApp.Workbooks).Open(
 отсылаю к справке по Excel VBA. Вот объявление этого метода в
 импортированной библиотеке типов:
 
+```
 function Open(const Filename: WideString; UpdateLinks: OleVariant;
-ReadOnly: OleVariant;
-
-             Format: OleVariant; Password: OleVariant; WriteResPassword:
-OleVariant;
-
-             IgnoreReadOnlyRecommended: OleVariant; Origin: OleVariant;
-
-             Delimiter: OleVariant; Editable: OleVariant; Notify:
-OleVariant;
-
-             Converter: OleVariant; AddToMru: OleVariant; lcid:
-Integer): Workbook; safecall;
+              ReadOnly: OleVariant;
+              Format: OleVariant; Password: OleVariant;
+              WriteResPassword: OleVariant;
+              IgnoreReadOnlyRecommended: OleVariant; Origin: OleVariant;
+              Delimiter: OleVariant; Editable: OleVariant;
+              Notify: OleVariant;
+              Converter: OleVariant; AddToMru: OleVariant;
+              lcid: Integer): Workbook; safecall;
+```
 
 В FileName необходимо передать имя открываемого файла, желательно указав
 путь его нахождения. Иначе, этот файл Excel будет искать в каталоге по
@@ -151,8 +147,5 @@ AddToMru можно передать true. Иногда я знаю, что фа
           raise Exception.Create('Не могу создать книгу!');
         end;
     end; 
-     
 
-Автор: Евгений Старостин
 
-Взято с сайта <https://www.delphikingdom.ru/>

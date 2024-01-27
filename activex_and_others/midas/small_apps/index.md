@@ -1,18 +1,13 @@
 ---
 Title: MIDAS и маленькие настольные приложения
 Date: 20.04.1999
-author: Наталия Елманова
+Author: Наталия Елманова
+Source: [http://delphi.chertenok.ru](https://delphi.chertenok.ru)
 ---
 
 
 MIDAS и маленькие настольные приложения
 =======================================
-
-::: {.date}
-20.04.1999
-:::
-
-Наталия Елманова
 
 Компьютер Пресс - CD, 1999, N 4
 
@@ -22,8 +17,7 @@ MIDAS и маленькие настольные приложения
 MIDAS при разработке систем, не имеющих прямого отношения к
 распределенным вычислениям и многозвенным системам.
 
-Совет 8. Создание "маленького" приложения с базой данных без
-использования BDE
+Совет 8. Создание "маленького" приложения с базой данных без использования BDE
 
 Нередко разработчики небольших приложений, использующих одну или
 несколько таблиц, испытывают некоторые удобства при их поставке. Эти
@@ -104,117 +98,30 @@ TDBNavigator (последние два компонента нужны толь
 просмотра данных и, по существу, совершенно не обязательны). Установим
 следующие свойства этих компонентов:
 
-Компонент
+Компонент | Свойство | Значение
+DBGrid1 | DataSource | DataSource3
+DBNavigator1 | DataSource | DataSource3
+Table1 | DatabaseName | BCDEMOS (или DBDEMOS)
+ | TableName | customer.db
+ | Active | true
+DataSource1 | DataSet | Table1
 
-Свойство
-
-Значение
-
-DBGrid1
-
-DataSource
-
-DataSource3
-
-DBNavigator1
-
-DataSource
-
-DataSource3
-
-Table1
-
-DatabaseName
-
-BCDEMOS (или DBDEMOS)
-
-TableName
-
-customer.db
-
-Active
-
-true
-
-DataSource1
-
-DataSet
-
-Table1
-
-Table2
-
-DatabaseName
-
-BCDEMOS (или DBDEMOS)
-
-TableName
-
-orders.db
-
-IndexFieldNames
-
-CustNo
-
-MasterFields
-
-CustNo
-
-MasterSource
-
-DataSource1
-
-Active
-
-true
-
-DataSource2
-
-DataSet
-
-Table2
-
-Table3
-
-DatabaseName
-
-BCDEMOS (или DBDEMOS)
-
-TableName
-
-items.db
-
-IndexFieldNames
-
-OrderNo
-
-MasterFields
-
-OrderNo
-
-MasterSource
-
-DataSource2
-
-Active
-
-true
-
-ClientDataSet1
-
-ProviderName
-
-Provider1
-
-Active
-
-true
-
-DataSource3
-
-DataSet
-
-ClientDataSet1
+Table2 | DatabaseName | BCDEMOS (или DBDEMOS)
+ | TableName | orders.db
+ | IndexFieldNames | CustNo
+ | MasterFields | CustNo
+ | MasterSource | DataSource1
+ | Active | true
+DataSource2 | DataSet | Table2
+Table3 | DatabaseName | BCDEMOS (или DBDEMOS)
+ | TableName | items.db
+ | IndexFieldNames | OrderNo
+ | MasterFields | OrderNo
+ | MasterSource | DataSource2
+ | Active | true
+ClientDataSet1 | ProviderName | Provider1
+ | Active | true
+DataSource3 | DataSet | ClientDataSet1
 
 Далее выберем из контекстного меню компонента ClientDataSet1 опцию
 Assign Local Data и в появившемся списке выберем Table1:
@@ -363,82 +270,21 @@ TClientDataSet, TDataSetProvider, два компонента TDataSource.
 Установим следующие значения свойств этих компонентов:
 
 Компонент | Свойство | Значение
-
-Session1
-
-SessionName
-
-MySession
-
-Database1
-
-SessionName
-
-MySession
-
-LoginPrompt
-
-false
-
-DatabaseName
-
-MyDB
-
-Table1
-
-SessionName
-
-MySession
-
-ClientDataSet1
-
-ProviderName
-
-DataSetProvider1
-
-Active
-
-false
-
-DataSource1
-
-DataSet
-
-Table1
-
-DataSource2
-
-DataSet
-
-ClientDataSet1
-
-DataSetProvider1
-
-DataSet
-
-Table1
-
-DBGrid1
-
-DataSource
-
-DataSource1
-
-DBGrid2
-
-DataSource
-
-DataSource2
-
-SaveDialog1 Filter
-
-ClientDataSet
-
-Files\|*.cds\|All files\|*.*
-
-DefaultExt
-
-*.cds
+--------- | -------- | --------
+Session1  | SessionName | MySession
+Database1 | SessionName | MySession
+          | LoginPrompt | false
+          | DatabaseName | MyDB
+Table1 | SessionName | MySession
+ClientDataSet1 | ProviderName | DataSetProvider1
+               | Active | false
+DataSource1 | DataSet | Table1
+DataSource2 | DataSet | ClientDataSet1
+DataSetProvider1 | DataSet | Table1
+DBGrid1 | DataSource | DataSource1
+DBGrid2 | DataSource | DataSource2
+SaveDialog1 Filter | ClientDataSet | Files\|*.cds\|All files\|*.*
+ | DefaultExt | *.cds
 
 Создадим обработчики событий, связанные с нажатиями на кнопки, выбором
 из списков и созданием формы приложения:
@@ -540,4 +386,3 @@ CLientDataSet хранит данные в оперативной памяти �
 Исходный текст этого же приложения на Object Pascal читатели могут
 создать самостоятельно.
 
-Взято из [http://delphi.chertenok.ru](https://delphi.chertenok.ru)

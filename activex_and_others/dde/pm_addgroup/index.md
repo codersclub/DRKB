@@ -1,15 +1,12 @@
 ---
 Title: Как добавить группу в Program Manager?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как добавить группу в Program Manager?
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     interface
      
@@ -55,6 +52,4 @@ Date: 01.01.2007
     end;
      
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

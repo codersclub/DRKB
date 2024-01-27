@@ -1,15 +1,12 @@
 ---
 Title: Как получить список всех зарегистрированных typelibs?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить список всех зарегистрированных typelibs?
 =====================================================
-
-::: {.date}
-01.01.2007
-:::
 
      uses
       Registry;
@@ -77,4 +74,3 @@ Date: 01.01.2007
       EnumTypeLibs(ListBox1.Items);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

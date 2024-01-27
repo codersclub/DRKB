@@ -1,16 +1,13 @@
 ---
-Title: Как зыкрыть Excel
+Title: Как закрыть Excel
 Author: Akella
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
-Как зыкрыть Excel
+Как закрыть Excel
 =================
-
-::: {.date}
-01.01.2007
-:::
 
     try
       Ex1.Workbooks.Close(LOCALE_USER_DEFAULT);
@@ -20,6 +17,3 @@ Date: 01.01.2007
      except
      end;
 
-Автор: Akella
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

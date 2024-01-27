@@ -1,15 +1,14 @@
 ---
 Title: Как узнать, доступен ли DCOM?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как узнать, доступен ли DCOM?
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     function IsDCOMEnabled: Boolean;
     var
@@ -24,9 +23,9 @@ Date: 01.01.2007
       Result := (Ts = 'Y');
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+Вариант 2:
 
     function IsDCOMInstalled: Boolean;
     var
@@ -45,4 +44,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

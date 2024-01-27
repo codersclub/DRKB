@@ -1,15 +1,12 @@
 ---
 Title: Как узнать существует ли страница (worksheet)?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как узнать существует ли страница (worksheet)?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     WB := Excel.Workbooks[1];
@@ -18,4 +15,3 @@ Date: 01.01.2007
         Showmessage('Found the worksheet');
     { ... }
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

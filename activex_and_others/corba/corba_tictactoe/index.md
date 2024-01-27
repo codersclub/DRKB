@@ -1,15 +1,12 @@
 ---
 Title: Крестики-нолики с CORBA
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Крестики-нолики с CORBA
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
 Известно расшифровывается как Common Object Request Broker Architecture,
 и представляет собой объектно-ориентированную архитектуру связи между
@@ -830,6 +827,4 @@ Action!
 CorbaInitialize для того чтобы Smart Agent был запущен до того как вы
 фактически создаете этот компонент.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

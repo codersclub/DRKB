@@ -2,15 +2,12 @@
 Title: Интерфейс OLE AutoServer
 Author: Anders Hejlsberg
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Интерфейс OLE AutoServer
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
 Это не улыбка, а дружественный интерфейс. 
 
@@ -28,6 +25,3 @@ Date: 01.01.2007
 Для получения доступа к типу IUnknown необходимо добавить "Ole2" к
 списку используемых модулей. Теперь измените вызов со стороны Delphi:
 
-Автор: Anders Hejlsberg
-
-Взято с <https://delphiworld.narod.ru>

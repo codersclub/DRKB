@@ -1,15 +1,12 @@
 ---
 Title: CORBA клиент-сервер
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 CORBA клиент-сервер
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     unit ufrmCorbaClient;
      
@@ -84,6 +81,4 @@ CORBA клиент-сервер
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

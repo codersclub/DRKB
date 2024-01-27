@@ -1,15 +1,12 @@
 ---
 Title: Как поменять border страницы?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как поменять border страницы?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     var
@@ -33,4 +30,3 @@ Date: 01.01.2007
     LeftEdge.Color := clLime;
     { ... }
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
