@@ -1,15 +1,12 @@
 ---
 Title: Как вставить RTF в Word?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как вставить RTF в Word?
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       Word_TLB, ActiveX, ComObj;
@@ -80,4 +77,3 @@ Date: 01.01.2007
       WriteToMSWord(Memo1.Text); // may be rtf-formatted text
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

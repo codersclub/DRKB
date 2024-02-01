@@ -1,15 +1,13 @@
 ---
 Title: Работа с Word через OLE
 Date: 01.01.2007
+Source: <https://blackman.wp-club.net/>
 ---
 
 
 Работа с Word через OLE
 =======================
 
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1; 
     interface
@@ -52,6 +50,8 @@ Date: 01.01.2007
     // Получаем объект, который воплощает в себе WordBasic интерфейс
       V := OleContainer1.OleObject.Application.WordBasic;
     // Командуем до одурения ....
-      V.FilePrint; end; end.
+      V.FilePrint;
+    end;
 
-Взято с сайта <https://blackman.wp-club.net/>
+    end.
+

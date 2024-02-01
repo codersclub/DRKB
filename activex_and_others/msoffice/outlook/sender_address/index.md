@@ -1,15 +1,13 @@
 ---
 Title: Как прочитать адрес отправителя?
 Date: 01.01.2007
+ID: 04443
 ---
 
 
 Как прочитать адрес отправителя?
 ================================
 
-::: {.date}
-01.01.2007
-:::
 
     {
       If you tried to work with messages from Delphi, you know that received message have the

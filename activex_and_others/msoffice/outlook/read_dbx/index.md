@@ -1,15 +1,14 @@
 ---
 Title: Чтение email адресов из Outlook .dbx файлов
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+ID: 04446
 ---
 
 
 Чтение email адресов из Outlook .dbx файлов
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
 
     unit ExtractEmailsFunc;
      
@@ -139,4 +138,3 @@ Date: 01.01.2007
       CheckEMail(ParamStr(1));
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,41 +1,27 @@
 ---
 Title: How to start Outlook
 Date: 01.01.2007
+ID: 04452
 ---
 
 
 How to start Outlook
 ====================
 
-::: {.date}
-01.01.2007
-:::
+{Как запустить Outlook}
 
 There are several different ways to start Outlook from your Delphi app.
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ------------------------
-  ·   Using D5\'s components
-  --- ------------------------
-:::
+* Using D5's components 
+* Using the type library (early binding) 
+* Without using the type library (late binding) You'll notice that just starting up the Outlook application is not enough to get going - you also have to get the namespace and call its Logon method, like this:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- ----------------------------------------
-  ·   Using the type library (early binding)
-  --- ----------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----------------------------------------------
-  ·   Without using the type library (late binding)
-  --- -----------------------------------------------
-:::
 
 You\'ll notice that just starting up the Outlook application is not
 enough to get going - you also have to get the namespace and call its
 Logon method, like this:
 
-   NmSpace.Logon(\'\', \'\', False, False);
+    NmSpace.Logon('', '', False, False);
 
 I\'ve used this line in the following code snippets, but note that you
 may have to supply different arguments to this method if you have user
@@ -53,15 +39,15 @@ Using Delphi 5\'s components
 Drop an OutlookApplication component on your form. When you want Outlook
 to start, use its Connect method:
 
-      var
-        NmSpace: NameSpace;
-        Folder: MAPIFolder;
-      ...
-        OutlookApplication1.Connect;
-        NmSpace := OutlookApplication1.GetNamespace('MAPI');
-        NmSpace.Logon('', '', False, False);
-        Folder := NmSpace.GetDefaultFolder(olFolderInbox);
-        Folder.Display;
+    var
+      NmSpace: NameSpace;
+      Folder: MAPIFolder;
+    ...
+      OutlookApplication1.Connect;
+      NmSpace := OutlookApplication1.GetNamespace('MAPI');
+      NmSpace.Logon('', '', False, False);
+      Folder := NmSpace.GetDefaultFolder(olFolderInbox);
+      Folder.Display;
 
 Because of the need to log on to the MAPI namespace when you start,
 there isn\'t much point in setting the OutlookApplication\'s AutoConnect
@@ -73,8 +59,9 @@ session, if there is one.
 Once Outlook has started, you can connect other components, such as a
 TMailItem, using the ConnectTo method. Here\'s an example:
 
-MailItem1.ConnectTo(OutlookApplication1.CreateItem(olMailItem) as
-MailItem);
+```
+MailItem1.ConnectTo(OutlookApplication1.CreateItem(olMailItem) as MailItem);
+```
 
 Opening Outlook (early binding)
 
@@ -132,7 +119,7 @@ if you really can\'t, here\'s how to get started:
 
 Back to \'HowDoI\'
 
-\>\>\>\>\>How to close Outlook\<\<\<\<\<
+>How to close Outlook
 
 Assuming your Outlook application variable is called Outlook, and the
 namespace variable you logged on with (see How to start Outlook) is
@@ -148,7 +135,7 @@ NmSpace:
 
 Back to \'HowDoI\'
 
-\>\>\>\>\>How to compose an email\<\<\<\<\<
+>How to compose an email
 
 In early binding:
 

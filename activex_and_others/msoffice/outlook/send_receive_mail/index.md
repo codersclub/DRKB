@@ -1,15 +1,12 @@
 ---
 Title: How to send and receive email
 Date: 01.01.2007
+ID: 04453
 ---
 
 
 How to send and receive email
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
 This code activates the Tools\|Send and Receive\|All accounts menu item:
 

@@ -1,15 +1,12 @@
 ---
 Title: Как добавить текст к закладке?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как добавить текст к закладке?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       ComObj;
@@ -56,4 +53,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

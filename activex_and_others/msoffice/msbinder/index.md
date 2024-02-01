@@ -7,10 +7,6 @@ Date: 01.01.2007
 Microsoft Binder
 ================
 
-::: {.date}
-01.01.2007
-:::
-
 Opening Binder (early binding)
 
 Before you can use this method, you must have imported the type library
@@ -64,7 +60,7 @@ if you really can\'t, here\'s how to get started:
 
  
 
-\>\>\>\>\>How to close Binder\<\<\<\<\<
+>How to close Binder
 
 Here\'s the quick version:
 

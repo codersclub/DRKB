@@ -1,15 +1,14 @@
 ---
-Title: How to check for unread email
+Title: Как проверить непрочитанную почту
 Date: 01.01.2007
+ID: 04454
 ---
 
 
-How to check for unread email
+Как проверить непрочитанную почту
 =============================
 
-::: {.date}
-01.01.2007
-:::
+How to check for unread email?
 
     var
         Inbox: MAPIFolder;

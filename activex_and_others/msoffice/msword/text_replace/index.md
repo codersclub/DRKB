@@ -1,15 +1,13 @@
 ---
 Title: Как заменить текст в документе MS Word?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как заменить текст в документе MS Word?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
 
     { 
       This function starts a hidden word instance, opens a specified document "ADocument" 
@@ -93,4 +91,3 @@ Date: 01.01.2007
       Word_StringReplace('C:\Test.doc','Old String','New String',[wrfReplaceAll]); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

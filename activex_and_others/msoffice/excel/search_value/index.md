@@ -1,15 +1,12 @@
 ---
 Title: Как осуществить поиск ячейки по её значению?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как осуществить поиск ячейки по её значению?
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     var
@@ -22,4 +19,3 @@ Date: 01.01.2007
       {The text was found somewhere, so colour it pink}
       Rnge.Interior.Color := clFuchsia;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -1,15 +1,14 @@
 ---
 Title: Создать новый Outlook Contact?
-Date: 01.01.2007
+Date: 19.09.2003
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Author: Michael Klemm
 ---
 
 
 Создать новый Outlook Contact?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
 
     uses
       ComObj, Variants, SysUtils;
@@ -23,14 +22,14 @@ Date: 01.01.2007
       end;
      
      
-      //------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------
     {:Add outlook contact
      
     @param ContactFolderPath The contact path. E.g.: '' for default contact folder,
       'SubFolder\Sub2\Test' for subfolders
     @param Contact The contact informations.
     @author 19.09.2003 Michael Klemm}
-      //------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------
     procedure OutlookAddContact(ContactFolderPath : string; Contact : TContact);
     const
       olFolderContacts = $0000000A;
@@ -101,4 +100,3 @@ Date: 01.01.2007
       Outlook := Unassigned;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

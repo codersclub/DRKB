@@ -1,15 +1,13 @@
 ---
 Title: Как распечатать Excel файл?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как распечатать Excel файл?
 ===========================
 
-::: {.date}
-01.01.2007
-:::
 
     { 
       This is a simple example how to print an Excel file using OLE. 
@@ -43,4 +41,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

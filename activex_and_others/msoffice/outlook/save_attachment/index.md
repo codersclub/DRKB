@@ -1,20 +1,15 @@
 ---
 Title: Сохранить вложения OutLook
-autor: patrick cleys
+autor: Patrick Cleys <http://www.dcmedical.org>
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/>
+ID: 04456
 ---
 
 
 Сохранить вложения OutLook
 ==========================
 
-::: {.date}
-01.01.2007
-:::
-
-autor: patrick cleys
-
-homepage: http://www.dcmedical.org
 
     { 
     won’t some backups of your outlook attachments are filtered 
@@ -109,7 +104,3 @@ homepage: http://www.dcmedical.org
     alle e-mails werden geloscht, wenn maildelete = true ist. 
     }
 
- 
-
-
-<https://www.swissdelphicenter.ch/>

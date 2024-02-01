@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как сделать поиск/замену в документе?
 =====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
 You should use a variant because the Find.Execute method is a bit buggy.
 Something like this, for example:
@@ -20,11 +18,12 @@ Something like this, for example:
     { ... }
      
     Rnge := Doc.Content;
-    Rnge.Find.Execute('old', Wrap := wdFindContinue, ReplaceWith := 'new', Replace :=
-      wdReplaceAll);
+    Rnge.Find.Execute('old', Wrap := wdFindContinue,
+      ReplaceWith := 'new', Replace := wdReplaceAll);
     { ... }
 
 ------------------------------------------------------------------------
+Вариант 2:
 
     { ... }
       { Create the OLE Object }
@@ -51,6 +50,7 @@ Something like this, for example:
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+Вариант 3:
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Заменить строки в файле Word

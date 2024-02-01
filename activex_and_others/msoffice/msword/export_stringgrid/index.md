@@ -1,15 +1,13 @@
 ---
 Title: Как экспортировать StringGrid в MS Word таблицу?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как экспортировать StringGrid в MS Word таблицу?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
 
     uses 
       ComObj; 
@@ -64,4 +62,3 @@ Date: 01.01.2007
       WordTable := Unassigned; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

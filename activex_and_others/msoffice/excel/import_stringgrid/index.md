@@ -1,15 +1,12 @@
 ---
 Title: Как импортировать данные из Excel в Stringgrid?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как импортировать данные из Excel в Stringgrid?
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       ComObj; 
@@ -83,4 +80,3 @@ Date: 01.01.2007
         ShowMessage('Table has been exported!'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

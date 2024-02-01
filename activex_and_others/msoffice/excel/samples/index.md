@@ -2,15 +2,12 @@
 Title: Примеры работы с MS Excel
 Author: Akella
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Примеры работы с MS Excel
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 в секции uses стоит так ExcelXP,{Excel2000, Excel97} крайней мере у
 меня, т.к. некоторые параметры при работе с разными версиями отличаются,
@@ -622,33 +619,28 @@ LOCALE\_USER\_DEFAULT.
 
 Вот как описан метод Open в импортированной библиотеке типов:
 
+```
 function Open(const Filename: WideString; UpdateLinks: OleVariant;
-ReadOnly: OleVariant;
-
-Format: OleVariant; Password: OleVariant; WriteResPassword: OleVariant;
-
-IgnoreReadOnlyRecommended: OleVariant; Origin: OleVariant;
-
-Delimiter: OleVariant; Editable: OleVariant; Notify: OleVariant;
-
-Converter: OleVariant; AddToMru: OleVariant; lcid: Integer): Workbook;
-safecall;
+              ReadOnly: OleVariant;
+              Format: OleVariant; Password: OleVariant; WriteResPassword: OleVariant;
+              IgnoreReadOnlyRecommended: OleVariant; Origin: OleVariant;
+              Delimiter: OleVariant; Editable: OleVariant; Notify: OleVariant;
+              Converter: OleVariant; AddToMru: OleVariant;
+              lcid: Integer): Workbook; safecall;
+```
 
 Что вам из всего этого может понадобиться:
 
-· FileName
-
-Имя открываемого файла, желательно с полным путем, иначе Excel будет
+FileName
+: Имя открываемого файла, желательно с полным путем, иначе Excel будет
 искать этот файл в каталоге по умолчанию;
 
-· AddToMru
-
-True - если необходимо запомнить файл в списке последних открытых
+AddToMru
+: True - если необходимо запомнить файл в списке последних открытых
 файлов;
 
-· IgnoreReadOnlyRecommended
-
-Если файл рекомендован только для чтения, то при открытии Excel выдает
+IgnoreReadOnlyRecommended
+: Если файл рекомендован только для чтения, то при открытии Excel выдает
 соответствующее предупреждение. Чтобы его игнорировать, передайте в
 качестве данного параметра True.
 
@@ -657,13 +649,10 @@ True - если необходимо запомнить файл в списке
 При позднем связывании не нужно указывать все дополнительные параметры
 или LCID, можно просто написать вот так:
 
-var
-
-Workbook: OLEVariant;
-
-...
-
-Workbook := Excel.WorkBooks.Open(\'C:\\Test.xls\');
+    var
+    Workbook: OLEVariant;
+    ...
+    Workbook := Excel.WorkBooks.Open('C:\Test.xls');
 
 Примечание:
 
@@ -676,13 +665,10 @@ Workbook := Excel.WorkBooks.Open(\'C:\\Test.xls\');
 
 Используя раннее связывание
 
-var
-
-IWorkbook: Excel8\_TLB.\_Workbook;
-
-...
-
-IWorkbook := IExcel.Workbooks.Add(EmptyParam, xlLCID);
+    var
+    IWorkbook: Excel8_TLB._Workbook;
+    ...
+    IWorkbook := IExcel.Workbooks.Add(EmptyParam, xlLCID);
 
 Передача в качестве первого параметра EmptyParam означает, что будет
 создана новая книга с количеством пустых листов, выставленным по
@@ -704,15 +690,12 @@ Excel не может держать открытыми несколько кн�
 
 Используя раннее связывание
 
-var
+    var
+    SaveChanges: boolean;
+    ...
+    SaveChanges := True;
 
-SaveChanges: boolean;
-
-...
-
-SaveChanges := True;
-
-IWorkbook.Close(SaveChanges, EmptyParam, EmptyParam, xlLCID);
+    IWorkbook.Close(SaveChanges, EmptyParam, EmptyParam, xlLCID);
 
 Если в качестве параметра SaveChanges вы передадите EmptyParam, Excel
 задаст вопрос, сохранять ли рабочую книгу. Второй параметр позволяет вам
@@ -724,37 +707,33 @@ IWorkbook.Close(SaveChanges, EmptyParam, EmptyParam, xlLCID);
 При позднем связывании нет необходимости указывать дополнительные
 параметры, поэтому вы можете просто написать:
 
-Workbook.Close(SaveChanges := True);
+    Workbook.Close(SaveChanges := True);
 
 или
 
-Workbook.Close;
+    Workbook.Close;
 
 Как передать абсолютный адрес ячейки?
 
-Нужно использовать символ $ - Лист1!$A$1:$D$3\'
+Нужно использовать символ $ - \'Лист1!$A$1:$D$3\'
 
 Так можно добавить новый модуль:
 
-var
+    var
+    IModule: VBIDE8_TLB.VBComponent; //с эти нужно поэксперементировать
+    ...
+    IModule := IWorkbook.VBProject.VBComponents.Add(
+    TOLEEnum(VBIDE8_TLB.vbext_ct_StdModule) );
 
-IModule: VBIDE8\_TLB.VBComponent; //с эти нужно поэксперементировать
+    IModule.Name :='MyModule1';
 
-...
+и поместить в него новую процедуру VBA:
 
-IModule := IWorkbook.VBProject.VBComponents.Add(
-TOLEEnum(VBIDE8\_TLB.vbext\_ct\_StdModule) );
-
-IModule.Name :=\'MyModule1\';
-
-,поместить в него новую процедуру VBA:
-
-IModule.CodeModule.AddFromString(\'PUBLIC SUB MySub1()\'#13\'Msgbox
-"Hello, World!"\'#13\'End sub\'#13);
+    IModule.CodeModule.AddFromString('PUBLIC SUB MySub1()'#13'Msgbox "Hello, World!"'#13'End sub'#13);
 
 и запустить эту процедуру
 
-OLEVariant(Excel).Run(\'MyModule1.MySub1\');
+    OLEVariant(Excel).Run('MyModule1.MySub1');
 
 Различные способы обращения к ячейкам
 
@@ -788,6 +767,3 @@ Range, совпадение размеров источника и получа�
 Использование метода Copy без указания параметра destination скопирует
 ячейки в буфер обмена.
 
-Автор: Akella
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

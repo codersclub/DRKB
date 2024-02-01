@@ -1,15 +1,13 @@
 ---
 Title: Как добавить текст в footer документа?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как добавить текст в footer документа?
 ======================================
 
-::: {.date}
-01.01.2007
-:::
 
 Footer:
 
@@ -19,4 +17,3 @@ Footer:
       'This is a footer';
     { ... }
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

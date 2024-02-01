@@ -1,15 +1,13 @@
 ---
 Title: Как создать таблицу в MS Word?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как создать таблицу в MS Word?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
 
 If Doc is a TWordDocument, for example:
 
@@ -57,4 +55,3 @@ step. Here\'s an example:
       EmptyParam, EmptyParam);
     { ... }
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

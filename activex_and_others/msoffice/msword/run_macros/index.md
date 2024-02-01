@@ -7,10 +7,6 @@ Date: 01.01.2007
 Пример запуска макроса в MS WinWord
 ===================================
 
-::: {.date}
-01.01.2007
-:::
-
     vvWord:= CreateOleObject('Word.Application.8');  
     vvWord.Application.Visible:=true;  
     vvWord.Documents.Open( TempFileName );  

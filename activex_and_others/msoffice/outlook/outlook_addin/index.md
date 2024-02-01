@@ -1,15 +1,14 @@
 ---
 Title: Как написать Outlook AddIn?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+ID: 04440
 ---
 
 
 Как написать Outlook AddIn?
 ===========================
 
-::: {.date}
-01.01.2007
-:::
 
     { 
       1.  Create an ActiveX-Library 
@@ -22,7 +21,7 @@ Date: 01.01.2007
       3.  Add to the uses clause 
       - AddInDesignerObjects_TLB 
       - Outlook_TLB 
-     
+    
     } 
      
     -     procedure OnConnection(const Application: IDispatch; ConnectMode: ext_ConnectMode; 
@@ -132,4 +131,3 @@ Date: 01.01.2007
         ciMultiInstance, tmApartment); 
     end. 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

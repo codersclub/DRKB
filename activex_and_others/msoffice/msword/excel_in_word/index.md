@@ -1,15 +1,13 @@
 ---
 Title: Как работать с объектом Excel, вставленным в Word документ?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как работать с объектом Excel вставленном в Word документ?
 ==========================================================
 
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     var
@@ -42,4 +40,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

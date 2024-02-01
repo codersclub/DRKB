@@ -1,15 +1,13 @@
 ---
 Title: Как снять пароль с Excel файла?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как снять пароль с Excel файла?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
 
     {
     Today I want to show how you may load some xls-file that is 
@@ -34,4 +32,3 @@ Date: 01.01.2007
     xls := UnAssigned;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

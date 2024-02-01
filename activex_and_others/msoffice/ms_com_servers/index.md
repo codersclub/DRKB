@@ -1,29 +1,20 @@
 ---
 Title: Доступ к COM-серверам Microsoft Office из Delphi 5 (Статья)
 Date: 01.01.2007
+Author: И. Мирончик, EKSKHQ@Elsite.ru
+Source: http://www.borland.ru/
 ---
 
 
 Доступ к COM-серверам Microsoft Office из Delphi 5 (Статья)
 ===========================================================
 
-::: {.date}
-01.01.2007
-:::
 
-Доступ к COM серверам Microsoft Office из Delphi 5
-
-(С) И. Мирончик,
-
-независимый разработчик и
-
-преподаватель курсов
-
-по Delphi, C++Builder, Oracle.
-
+(С) И. Мирончик,  
+независимый разработчик и преподаватель курсов по Delphi, C++Builder, Oracle.  
 E-maile EKSKHQ\@Elsite.ru
 
-Эта статья была опубликована на сайте http://www.borland.ru/
+>Эта статья была опубликована на сайте http://www.borland.ru/
 
 Введение
 
@@ -166,7 +157,7 @@ TOLEServer - ConnectKind - указывающее тип процесса, к к
 вызывается автоматически, если свойство AutoConnect истинно. Ниже
 описаны значения, которые может принимать ConnectKind:
 
-Значение свойства ConnectKind    |   Характеристика        
+Значение свойства ConnectKind    |   Характеристика
 -------------------------------- | -------------------
 CkRunningOrNew    | Контроллер производит подключение к уже существующему процессу, или запускает новый процесс, при отсутствии такового. Этот вид взаимодействия между COM сервером и контроллером наиболее часто применяется на практике. Такое значение свойства установлено по умолчанию.
 CkNewInstance     | При соединении с сервером каждый раз создается новый экземпляр
@@ -190,21 +181,23 @@ ckAttachToInterface | При установке этого значения ин
 - Свойство ConnectKind для WordDocument установите в ckAttachToInterface
 - Для события onDokumentChange и onFormCreate пропишите следующий код:
 
-    procedure TForm1.WordApplication1DocumentChange(Sender: TObject);
-    begin
-    //производим подключение к текущему документу
-         WordDocument1.ConnectTo( WordApplication1.ActiveDocument);
-    //Контроллер добавляет новую строку в текущий документ
-         WordDocument1.Range.InsertAfter(#13+'Переход к документу'+#13+
-           WordApplication1.ActiveDocument.Get_FullName+' произведен :'+
-           DateTimeToStr(Now));
-    end;
-     
-    procedure TForm1.FormCreate(Sender: TObject);
-    begin
-    //COM сервер отображает себя на экране
-    WordApplication1.Visible:=true;
-    end;
+```
+procedure TForm1.WordApplication1DocumentChange(Sender: TObject);
+begin
+  //производим подключение к текущему документу
+  WordDocument1.ConnectTo( WordApplication1.ActiveDocument);
+  //Контроллер добавляет новую строку в текущий документ
+  WordDocument1.Range.InsertAfter(#13+'Переход к документу'+#13+
+       WordApplication1.ActiveDocument.Get_FullName+' произведен :'+
+       DateTimeToStr(Now));
+end;
+ 
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  //COM сервер отображает себя на экране
+  WordApplication1.Visible:=true;
+end;
+```
 
 После запуска приложения будет автоматически загружен Word, создайте в
 нем несколько новых документов и переключайтесь между ними с помощью
@@ -219,9 +212,8 @@ ckAttachToInterface | При установке этого значения ин
 Теперь давайте заглянем во внутренний мир компонент закладки Servers.
 Как мы уже убедились, все классы унаследованы от ToleObject. Кроме того,
 еще наследуется и интерфейс из библиотеки TLB. Как это происходит?
-Проведем следующее упражнение:
 
- 
+Проведем следующее упражнение:
 
 - Из среды программирования Delphi удаляем пакет с компонентами COM серверов (Component \| Install Packages \| Borland Sample Automation Servers Component \| Remove). После этого закладка Servers удалилась.
 - Создаем новый пакет с использованием библиотеки типов

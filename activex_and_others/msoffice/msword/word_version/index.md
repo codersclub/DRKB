@@ -1,15 +1,13 @@
 ---
 Title: Как узнать версию MS Word?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как узнать версию MS Word?
 ==========================
 
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     MsWord := CreateOleObject('Word.Basic');
@@ -42,4 +40,3 @@ Date: 01.01.2007
     ShowMessage(Lang);
     { ... }
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

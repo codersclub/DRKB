@@ -1,15 +1,13 @@
 ---
 Title: Как работать с WordBasic?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как работать с WordBasic?
 =========================
 
-::: {.date}
-01.01.2007
-:::
 
     uses OleAuto;
      
@@ -22,4 +20,3 @@ Date: 01.01.2007
       MsWord.TogglePortrait;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

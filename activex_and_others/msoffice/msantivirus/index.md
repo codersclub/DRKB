@@ -2,15 +2,12 @@
 Title: Microsoft Antivirus API
 Author: p0s0l
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Microsoft Antivirus API
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
 Microsoft Antivirus API позволяет создавать приложения для сканирования
 документов MS Office перед их открытием (а также сканирование закачек
@@ -181,7 +178,7 @@ IE, содержащих код).
      begin 
        if Register then 
        begin 
-         CreateRegKey('Component Categories\' + GUIDToString(CATID_MSOfficeAntiVirus), '409', ''); 
+         CreateRegKey('Component Categories' + GUIDToString(CATID_MSOfficeAntiVirus), '409', ''); 
          CreateRegKey(Format(SCatImplKey, [ClassID, GUIDToString(CATID_MSOfficeAntiVirus)]), '', ''); 
        end else 
        begin 
@@ -191,11 +188,11 @@ IE, содержащих код).
      end; 
      if Register then 
      begin 
-       Description := GetRegStringValue('CLSID\' + ClassID, ''); 
-       CreateRegKey('AppID\' + ClassID, '', Description); 
-       CreateRegKey('CLSID\' + ClassID, 'AppID', ClassID); 
+       Description := GetRegStringValue('CLSID' + ClassID, ''); 
+       CreateRegKey('AppID' + ClassID, '', Description); 
+       CreateRegKey('CLSID' + ClassID, 'AppID', ClassID); 
      end else 
-       DeleteRegKey('AppID\' + ClassID); 
+       DeleteRegKey('AppID' + ClassID); 
     end; 
      
     { TMSOTest } 
@@ -262,6 +259,3 @@ IE, содержащих код).
        'MsoTest', '', ciMultiInstance, tmApartment); 
     end.
 
-Автор: p0s0l
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

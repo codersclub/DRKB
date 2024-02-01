@@ -1,15 +1,13 @@
 ---
 Title: Получить язык MS Word
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Получить язык MS Word
 =====================
 
-::: {.date}
-01.01.2007
-:::
 
 How can I read the default language of installed MS Word application?
 
@@ -50,4 +48,3 @@ How can I read the default language of installed MS Word application?
      wdFinland = $00000166;
      wdIceland = $00000162;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -1,15 +1,13 @@
 ---
 Title: Как прочитать/изменить свойства Word документа?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как прочитать/изменить свойства Word документа?
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
 
     { 1. Change MS Word properties via OLE } 
      
@@ -73,6 +71,7 @@ Date: 01.01.2007
         WordApp.Quit(SaveChanges, EmptyParam, EmptyParam); 
       end; 
     end; 
+
 
     { 
       2. Read MS Word properties via Structured Storage. 
@@ -172,4 +171,3 @@ Date: 01.01.2007
         ShowMessage(GetDocInfo(opendialog1.FileName)); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

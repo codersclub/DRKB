@@ -1,15 +1,12 @@
 ---
 Title: Создаем Excel файл без OLE
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Создаем Excel файл без OLE
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     const 
       CXlsBof: array[0..5] of Word = ($809, 8, 00, $10, 0, 0); 
@@ -85,4 +82,3 @@ Date: 01.01.2007
       end; 
     end;
 
-Взято с <https://delphiworld.narod.ru>

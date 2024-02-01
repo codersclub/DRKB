@@ -1,15 +1,12 @@
 ---
 Title: Как вставить картинку
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как вставить картинку
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
 Answer:
 
@@ -47,5 +44,3 @@ work:
 
 But you may have to use a TBitmap to find out how large the picture
 should be.
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

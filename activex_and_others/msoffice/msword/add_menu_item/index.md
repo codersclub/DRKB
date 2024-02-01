@@ -1,15 +1,13 @@
 ---
 Title: Как вставить свой пункт меню?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как вставить свой пункт меню?
 =============================
 
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     var
@@ -27,4 +25,3 @@ Date: 01.01.2007
       MenuItem.OnAction := 'VBMacroName';
     { ... }
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

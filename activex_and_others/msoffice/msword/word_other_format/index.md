@@ -1,84 +1,84 @@
 ---
 Title: Как сохранить текст MS Word в другом формате?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сохранить текст MS Word в другом формате?
 =============================================
 
-::: {.date}
-01.01.2007
-:::
 
-Open a new Application and place:
+Создайте новую форму и разместите на ней:
 
-a button named Button3,
+* кнопку Button3,
+* компонент RichText с названием WordEditor,
+* компонент OpenDialog.
 
-a RitchText object named WordEditor
+Теперь вы можете выбирать любой файл \*.doc и загружать его в объект RichText.
 
-and an OpenDialog component.
+**Примечание:** `Format:=6` заставит Word сохранять файл как RTF.
+Недостаточно указать только расширение файла!
 
-From now on, you can browse for any *.doc file and load it into the
-RitchText object.
+Другие форматы файлов:
 
-NOTE: Format:=6 instructs Word to save the file as RTF. Extension is not
-enough.
+* 0 - Обычный (Word format)
+* 1 - Шаблон документа
+* 2 - Только текст (в кодировке ANSI)
+* 3 - Текст с разделителями (текст с переносами строк; кодировка ANSI)
+* 4 - Только текст (PC-8) (кодировка IBM PC)
+* 5 - Текст с разделителями (PC-8) (текст с переносами строк; кодировка IBM PC)
+* 6 - Rich-text format (RTF)
 
-Other File Formats:
-
-Argument Format          File Format       0        Normal (Word format)
-      1        Document Template       2        Text Only (extended
-characters saved in ANSI character set)       3        Text+Breaks
-(plain text with line breaks; extended characters saved in ANSI
-character set)       4        Text Only (PC-8) (extended characters
-saved in IBM PC character set)       5        Text+Breaks (PC-8) (text
-with line breaks; extended characters saved in IBM PC character set)    
-  6        Rich-text format (RTF)      
-
-    procedure TImport_Form.ToolButton3Click(Sender: TObject);
-    var
-      WordApp: Variant;
+```
+procedure TImport_Form.ToolButton3Click(Sender: TObject);
+var
+  WordApp: Variant;
+begin
+  if OpenDialog1.Execute then
+  begin
+    Edit1.Text := ExtractFileName(OpenDialog1.FileName);
+    StatusBar1.SimpleText := OpenDialog1.FileName;
+    WordApp := CreateOleObject('Word.Basic');
+    if not VarIsEmpty(WordApp) then
     begin
-      if OpenDialog1.Execute then
-      begin
-        Edit1.Text := ExtractFileName(OpenDialog1.FileName);
-        StatusBar1.SimpleText := OpenDialog1.FileName;
-        WordApp := CreateOleObject('Word.Basic');
-        if not VarIsEmpty(WordApp) then
-        begin
-          WordApp.FileOpen(OpenDialog1.FileName);
-          WordApp.FileSaveAs(Name := 'c:\temp_bb.rtf', Format := 6);
-          WordApp.AppClose;
-          WordApp := Unassigned;
-          WordEditor.Lines.LoadFromFile('c:\temp_bb.rtf');
-        end
-        else
-          ShowMessage('Could not start MS Word');
-      end;
-     
-    end;
+      WordApp.FileOpen(OpenDialog1.FileName);
+      WordApp.FileSaveAs(Name := 'c:\temp_bb.rtf', Format := 6);
+      WordApp.AppClose;
+      WordApp := Unassigned;
+      WordEditor.Lines.LoadFromFile('c:\temp_bb.rtf');
+    end
+    else
+      ShowMessage('Could not start MS Word');
+  end;
+ 
+end;
+```
 
-How to prevent word from opening password-protected files or resume
-wizard files and sometimes causing application to hang ?
+Как сделать, чтобы Word не открывал файлы с паролем или файлы помощника, которые вызывают зависание?
 
-The sollution is to add the folowing query before openning the document:
+Перед открытием документа нужно добавить:
 
+```
 if WordApp.ActiveDocument.HasPassword = True then
+  MsgBox("Password Protected");
+```
 
-MsgBox("Password Protected");
+Можно даже задать пароль:
 
-You can even preset the password propery as:
+```
+WordApp.Password := 'mypassword';
+```
 
-WordApp.Password := \'mypassword";
+**Примечание:**
+Если вышеприведённый код выдает "Undefined property: ActiveDocument", то замените:
 
-NOTE: If the above code generates an "Undefined property:
-ActiveDocument" change the:
+```
+CreateOleObject('Word.Basic');
+```
 
-CreateOleObject(\'Word.Basic\');
+на
 
-with
-
-CreateOleObject(\'Word.Application\');
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+```
+CreateOleObject('Word.Application');
+```

@@ -1,17 +1,17 @@
 ---
 Title: Как экспортировать данные из StringGrid в Excel?
-Date: 01.01.2007
+Date: 05.10.2002
+Author: Daun, daun@mail.kz
+Source: kladovka.net.ru
 ---
 
 
 Как экспортировать данные из StringGrid в Excel?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-{1. With OLE Automation }
+With OLE Automation
 
     uses
       ComObj;
@@ -75,9 +75,11 @@ Date: 01.01.2007
         ShowMessage('StringGrid saved!');
     end;
 
-{**************************************************************}
+----------------------------
 
-{2. Without OLE }
+Вариант 2:
+
+Without OLE
 
     procedure XlsWriteCellLabel(XlsStream: TStream; const ACol, ARow: Word;
       const AValue: string);
@@ -129,9 +131,11 @@ Date: 01.01.2007
         ShowMessage('StringGrid saved!');
     end;
 
-{**************************************************************}
+----------------------------------------------
 
-{3. Code by Reinhard Schatzl }
+Вариант 3:
+
+Code by Reinhard Schatzl
 
     uses
       ComObj;
@@ -274,6 +278,7 @@ Date: 01.01.2007
 Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+Вариант 4:
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Работа с MS Excel

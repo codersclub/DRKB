@@ -5,12 +5,8 @@ author: dDan (ddan2002@mail.ru)
 ---
 
 
-Сохранение данных из ListView в *.xls
+Сохранение данных из ListView в \*.xls
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Сохранение данных из ListView в *.xls

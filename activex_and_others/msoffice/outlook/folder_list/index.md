@@ -1,15 +1,13 @@
 ---
 Title: Как получить список папок Outlook?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить список папок Outlook?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
 
     uses 
       ComObj; 
@@ -45,4 +43,3 @@ Date: 01.01.2007
       RetrieveOutlookFolders(TreeView1); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

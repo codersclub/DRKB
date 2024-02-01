@@ -1,15 +1,14 @@
 ---
 Title: Как сохранить Outlook календарь как website?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+ID: 04445
 ---
 
 
 Как сохранить Outlook календарь как website?
 ============================================
 
-::: {.date}
-01.01.2007
-:::
 
     { In Outlook lasst sich ein Kalender als WebSeite speichern. Dazu benotig man
     den "Web Publishing Wizard" download im Microsoft Download Center. }
@@ -58,4 +57,3 @@ Date: 01.01.2007
       Outlook := Unassigned;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
