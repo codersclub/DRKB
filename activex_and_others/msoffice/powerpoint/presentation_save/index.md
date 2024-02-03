@@ -1,15 +1,13 @@
 ---
 Title: How to save a presentation
 Date: 01.01.2007
+ID: 04459
 ---
 
 
 How to save a presentation
 ==========================
 
-::: {.date}
-01.01.2007
-:::
 
 ```
 PowerPoint.Save;

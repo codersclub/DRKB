@@ -1,15 +1,14 @@
 ---
 Title: Как работать с Powerpoint через OLE?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+ID: 04457
 ---
 
 
 Как работать с Powerpoint через OLE?
 ====================================
 
-::: {.date}
-01.01.2007
-:::
 
     uses 
       comobj; 
@@ -59,4 +58,3 @@ Date: 01.01.2007
       PowerPointApp := UnAssigned; 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

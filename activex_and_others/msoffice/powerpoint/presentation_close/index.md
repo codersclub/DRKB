@@ -1,15 +1,13 @@
 ---
-Title: How to close a presentation
+Title: How to close a PowerPoint presentation
 Date: 01.01.2007
+ID: 04458
 ---
 
 
-How to close a presentation
+How to close a PowerPoint presentation
 ===========================
 
-::: {.date}
-01.01.2007
-:::
 
 ```
 PowerPoint.ActivePresentation.Close;

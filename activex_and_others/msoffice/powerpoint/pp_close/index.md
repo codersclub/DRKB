@@ -1,15 +1,12 @@
 ---
 Title: How to close PowerPoint
 Date: 01.01.2007
+ID: 04462
 ---
 
 
 How to close PowerPoint
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
 Early binding:
 

@@ -1,18 +1,16 @@
 ---
 Title: How to start a new presentation
 Date: 01.01.2007
+ID: 04461
 ---
 
 
 How to start a new presentation
 ===============================
 
-::: {.date}
-01.01.2007
-:::
 
 ```
-PowerPoint.Presentations.Open(\'PresName.ppt\', msoFalse, msoFalse, msoTrue);
+PowerPoint.Presentations.Open('PresName.ppt', msoFalse, msoFalse, msoTrue);
 ```
  
 

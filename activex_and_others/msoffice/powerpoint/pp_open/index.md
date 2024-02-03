@@ -1,15 +1,13 @@
 ---
 Title: Opening PowerPoint
 Date: 01.01.2007
+ID: 04464
 ---
 
 
 Opening PowerPoint
 ==================
 
-::: {.date}
-01.01.2007
-:::
 
 ## Opening PowerPoint (early binding)
 

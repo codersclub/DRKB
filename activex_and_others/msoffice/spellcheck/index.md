@@ -1,15 +1,14 @@
 ---
 Title: Проверка правописания и синонимов при помощи компонентов Microsoft Office
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
+ID: 04465
 ---
 
 
 Проверка правописания и синонимов при помощи компонентов Microsoft Office
 =========================================================================
 
-::: {.date}
-01.01.2007
-:::
 
 This is the VCL for Spell Checking and Synonyms using MS Word COM
 interface. It can correct and replace words in a Text String,TMemo or
@@ -815,4 +814,3 @@ AfterCorrection - Supplies the mispelt word and what it has been changed to.
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
