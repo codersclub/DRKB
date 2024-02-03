@@ -16,7 +16,7 @@ Date: 01.01.2007
 
 
 Последний вид приложений для Web, о котором я хочу рассказать в данном
-цикле статей-- это Web Services. Web Service -- это приложение-сервер,
+цикле статей-- это Web Services. Web Service - это приложение-сервер,
 предоставляющее клиенту свои функции через протоколы Internet. В отличие
 CGI и других подобных internet приложений, Web Services ориентируются не
 на предоставление информации человеку в удобной для восприятия форме, а
@@ -40,7 +40,7 @@ service представляется «черным ящиком», с опре�
 
 Помимо транспортного протокола для вызова методов сервера необходим
 единый протокол, описывающий формат сообщений вызова методов сервера. В
-качестве такого протокола используется SOAP -- Simple Object Access
+качестве такого протокола используется SOAP - Simple Object Access
 Protocol. Спецификация SOAP 1.1 можно найти в Web по адресу
 www.w3.org/TR/SOAP. SOAP позволяет использовать вызов удаленных процедур
 (RPC) через HTTP.
@@ -69,18 +69,18 @@ User-Agent: Radio UserLand/7.0 (WinNT)
 Host: localhost:81
 Content-Type: text/xml; charset=utf-8
 Content-length: 474
-SOAPAction: \"/examples\"
+SOAPAction: "/examples"
 
-\<?xml version=\"1.0\"?\>
+\<?xml version="1.0"?\>
 \<SOAP-ENV:Envelope
-SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"
-xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"
+SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
 xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"
-xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\"\>
+xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"\>
 \<SOAP-ENV:Body\>
-\<m:getStateName xmlns:m=\"http://www.soapware.org/\"\>
-\<statenum xsi:type=\"xsd:int\"\>41\</statenum\>
+\<m:getStateName xmlns:m="http://www.soapware.org/"\>
+\<statenum xsi:type="xsd:int"\>41\</statenum\>
 \</m:getStateName\>
 \</SOAP-ENV:Body\>
 
@@ -91,7 +91,7 @@ xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\"\>
 примере /examples.
 User Agent и Host должны быть указаны. Content-Type, т.е тип содержимого
 запроса, естественно, text/xml. Content-Length - lлина запроса.
-SoapAction -- значение данного поля используется для передачи сообщения
+SoapAction - значение данного поля используется для передачи сообщения
 нужному обработчику сообщений сервера. Как правило, значение SoapAction
 совпадает с URI в первой строке запроса.
 Тело запроса представляет собой документ в формате XML. Корневой тег
@@ -108,16 +108,16 @@ Content-Type: text/xml; charset=utf-8
 Date: Wed, 28 Mar 2001 05:05:04 GMT
 Server: UserLand Frontier/7.0-WinNT
 
-\<?xml version=\"1.0\"?\>
+\<?xml version="1.0"?\>
 \<SOAP-ENV:Envelope
-SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"
-xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"
+SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
 xmlns:SOAP-ENV=http://schemas.xmlsoap.org/soap/envelope/
 xmlns:xsd=http://www.w3.org/1999/XMLSchema
-xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\"\>
+xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"\>
 \<SOAP-ENV:Body\>
-\<m:getStateNameResponse xmlns:m=\"http://www.soapware.org/\"\>
-\<Result xsi:type=\"xsd:string\"\>South Dakota\</Result\>
+\<m:getStateNameResponse xmlns:m="http://www.soapware.org/"\>
+\<Result xsi:type="xsd:string"\>South Dakota\</Result\>
 \</m:getStateNameResponse\>
 \</SOAP-ENV:Body\>
 
@@ -127,7 +127,7 @@ xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\"\>
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ·   Пространство имен в описании ответа (тег \< m:getStateNameResponse \>) должен совпадать с пространством имен в запросе. В нашем примере пространство имен -- m
+  ·   Пространство имен в описании ответа (тег \< m:getStateNameResponse \>) должен совпадать с пространством имен в запросе. В нашем примере пространство имен - m
   --- ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -168,10 +168,10 @@ Delphi 6 позволяет создавать как сервера, так и 
 
 
 В Delphi при создании сервера Web Services методы доступные для вызова
-клиенту описываются в виде invokable интерфейсов. Invokable интерфейс --
+клиенту описываются в виде invokable интерфейсов. Invokable интерфейс -
 это интерфейс для методов которого доступна RTTI (информация о типах на
 этапе выполнения). Для того чтобы из обычного интерфейса сделать
-invokable достаточно указать директиву компиляции {\$M+}. После этого
+invokable достаточно указать директиву компиляции {$M+}. После этого
 все потомки и сам интерфейс будут содержать RTTI. В иерархии VCL уже
 есть такой интерфейс IInvokable. Таким образом, при написании сервера
 проще всего унаследовать свой интерфейс от Iinvokable. Кроме того
@@ -208,7 +208,7 @@ File/New/Unit. В полученном пустом модуле определ�
     end.
 
 Обратите внимание, что строка
-\[\'{32B3312E-684C-444D-88DB-13DE6F535F6D}\'\] -- это GUID интерфейса,
+[\'{32B3312E-684C-444D-88DB-13DE6F535F6D}\'] - это GUID интерфейса,
 для корректной работы примера Вам необходимо сгенерировать его, а не
 вводить вручную или копировать из приведенного текста. Генерация GUID в
 IDE Delphi вызывается нажатием Ctrl+Shift+G.
@@ -285,7 +285,7 @@ InvRegistry.RegisterInvokableClass вторым параметром необх�
 
 Создание проекта приложения Web Services в Delphi
 
-Остался последний шаг -- создание проекта приложения. В IDE выберем
+Остался последний шаг - создание проекта приложения. В IDE выберем
 пункт меню File/New/Other и с закладки WebServices значок SOAP Server
 Application. Будет выведен диалог выбора формата приложения Web
 Services. Мы выберем CGI формат. При этом будет создан проект с Web
@@ -304,11 +304,11 @@ THTTPSoapDispatcher автоматически регистрирует себя
 избавляет Вас от необходимости создавать обработчики запросов Web
 модуля.
 
-![clip0077](clip0077.gif){width="181" height="220"}
+![clip0077](clip0077.gif){.center}
 
 
 
-WSDLHTMLPublish1 -- данный компонент генерирует и выдает по запросу
+WSDLHTMLPublish1 - данный компонент генерирует и выдает по запросу
 клиента описание интерфейса сервера.
 Далее в проект необходимо подключить файлы с описанием и реализацией
 интерфейса. Для этого в IDE выберем пункт меню Project/Add to project и
@@ -339,7 +339,7 @@ WSDLHTMLPublish1 -- данный компонент генерирует и вы
 пропущен. В случае если сервер был разработан с использованием других
 языков или модуль с описанием интерфейса не доступен, необходимо
 получить описание интерфейса в формате WSDL или XML.
-Первый вариант -- это попросить файл с описанием у разработчиков, второй
+Первый вариант - это попросить файл с описанием у разработчиков, второй
 сгенерировать описание самому.
 
 Для этого достаточно запустить Web браузер в строке адреса набрать:
@@ -349,72 +349,72 @@ Apache, строка адреса в этом случае
 http://localhost/cgi-bin/Server.exe/wsdl . При этом на экран будет
 выведена таблица с описанием интерфейсов сервера.
 
-![clip0078](clip0078.gif){width="593" height="248"}
+![clip0078](clip0078.gif){.center}
 
 Необходимо выбрать в таблице интересующий нас интерфейс IEncodeDecode
 при этом будет сгенерировано описание интерфейса в формате xml.
-\<?xml version=\"1.0\" ?\>
-\<definitions xmlns=\"http://schemas.xmlsoap.org/wsdl/\"
-xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"name=\"IEncodeDecodeservice\"targetNamespace=\"http://www.borland.com/soapServices/\"
-xmlns:tns=\"http://www.borland.com/soapServices/\"
-xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
-xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"\>
-\<messagename=\"US2RUSRequest\"\>
-\<part name=\"Value\"type=\"xs:double\" /\>
+\<?xml version="1.0" ?\>
+\<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"name="IEncodeDecodeservice"targetNamespace="http://www.borland.com/soapServices/"
+xmlns:tns="http://www.borland.com/soapServices/"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"\>
+\<messagename="US2RUSRequest"\>
+\<part name="Value"type="xs:double" /\>
 \</message\>
-\<messagename=\"US2RUSResponse\"\>
-\<part name=\"return\"type=\"xs:double\" /\>
+\<messagename="US2RUSResponse"\>
+\<part name="return"type="xs:double" /\>
 \</message\>
-\<messagename=\"RUS2USRequest\"\>
-\<part name=\"Value\"type=\"xs:double\" /\>
+\<messagename="RUS2USRequest"\>
+\<part name="Value"type="xs:double" /\>
 \</message\>
-\<messagename=\"RUS2USResponse\"\>
-\<part name=\"return\"type=\"xs:double\" /\>
+\<messagename="RUS2USResponse"\>
+\<part name="return"type="xs:double" /\>
 \</message\>
-\<portTypename=\"IEncodeDecode\"\>
-\<operationname=\"US2RUS\"\>
-\<input message=\"tns:US2RUSRequest\" /\>
-\<output message=\"tns:US2RUSResponse\" /\>
+\<portTypename="IEncodeDecode"\>
+\<operationname="US2RUS"\>
+\<input message="tns:US2RUSRequest" /\>
+\<output message="tns:US2RUSResponse" /\>
 \</operation\>
-\<operationname=\"RUS2US\"\>
-\<input message=\"tns:RUS2USRequest\" /\>
-\<output message=\"tns:RUS2USResponse\" /\>
+\<operationname="RUS2US"\>
+\<input message="tns:RUS2USRequest" /\>
+\<output message="tns:RUS2USResponse" /\>
 \</operation\>
 \</portType\>
-\<bindingname=\"IEncodeDecodebinding\"type=\"tns:IEncodeDecode\"\>
+\<bindingname="IEncodeDecodebinding"type="tns:IEncodeDecode"\>
 \<soap:binding
-style=\"rpc\"transport=\"http://schemas.xmlsoap.org/soap/http\" /\>
-\<operationname=\"US2RUS\"\>
-\<soap:operation soapAction=\"urn:u\_Intrf-IEncodeDecode\#US2RUS\" /\>
+style="rpc"transport="http://schemas.xmlsoap.org/soap/http" /\>
+\<operationname="US2RUS"\>
+\<soap:operation soapAction="urn:u\_Intrf-IEncodeDecode#US2RUS" /\>
 \<input\>
 \<soap:body
-use=\"encoded\"encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"namespace=\"urn:u\_Intrf-IEncodeDecode\"
+use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
 /\>
 \</input\>
 \<output\>
 \<soap:body
-use=\"encoded\"encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"namespace=\"urn:u\_Intrf-IEncodeDecode\"
+use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
 /\>
 \</output\>
 \</operation\>
-\<operationname=\"RUS2US\"\>
-\<soap:operation soapAction=\"urn:u\_Intrf-IEncodeDecode\#RUS2US\" /\>
+\<operationname="RUS2US"\>
+\<soap:operation soapAction="urn:u\_Intrf-IEncodeDecode#RUS2US" /\>
 \<input\>
 \<soap:body
-use=\"encoded\"encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"namespace=\"urn:u\_Intrf-IEncodeDecode\"
+use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
 /\>
 \</input\>
 \<output\>
 \<soap:body
-use=\"encoded\"encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"namespace=\"urn:u\_Intrf-IEncodeDecode\"
+use="encoded"encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"namespace="urn:u\_Intrf-IEncodeDecode"
 /\>
 \</output\>
 \</operation\>
 \</binding\>
-\<servicename=\"IEncodeDecodeservice\"\>
-\<portname=\"IEncodeDecodePort\"binding=\"tns:IEncodeDecodebinding\"\>
+\<servicename="IEncodeDecodeservice"\>
+\<portname="IEncodeDecodePort"binding="tns:IEncodeDecodebinding"\>
 \<soap:address
-location=\"http://localhost/cgi-bin/Server.exe/soap/IEncodeDecode\" /\>
+location="http://localhost/cgi-bin/Server.exe/soap/IEncodeDecode" /\>
 \</port\>
 \</service\>
 \</definitions\>
@@ -427,16 +427,16 @@ Delphi с описанием интерфейса на языке Object Pascal.
 File/New/Other, перейдем на закладку WebServices и выберем иконку Web
 Services Importer. При этом на экране появится диалог импорта описания.
 
-![clip0079](clip0079.gif){width="419" height="337"}
+![clip0079](clip0079.gif){.center}
 
 Используя кнопку Browse диалога, укажем полученный ранее файл
 Client.xml, и нажмем кнопку Generate. Опа и модуль Delphi с описанием
-интерфейса готов. Переходим ко второму этапу -- непосредственному
-созданию клиента. Создадим заготовку нового приложения --
+интерфейса готов. Переходим ко второму этапу - непосредственному
+созданию клиента. Создадим заготовку нового приложения -
 File/New/Application. На главной форме разместим строку ввода, две
 кнопки и компонент HTTPRIO с закладки WebServices.
 
-![clip0080](clip0080.gif){width="226" height="134"}
+![clip0080](clip0080.gif){.center}
 
 Компонент HTTPRIO предназначен для вызова серверов через SOAP. Укажем в
 свойстве URL значение
@@ -446,7 +446,7 @@ http://localhost/cgi-bin/Server.exe/soap/IEncodeDecode, т.е путь к
 Далее включим в проект модуль Delphi с описанием интерфейса сервера и
 укажем его в секции uses главной формы проекта. Теперь можно переходить
 к написанию кода вызова методов сервера. Обработчик события нажатия на
-кнопку с заголовком руб-\>\$ будет выглядеть так:
+кнопку с заголовком руб-\>$ будет выглядеть так:
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -458,7 +458,7 @@ http://localhost/cgi-bin/Server.exe/soap/IEncodeDecode, т.е путь к
       ShowMessage(CurrToStr(R)+'$');
     end;
 
-По аналогии код нажатия на кнопку с заголовком \$-\>руб:
+По аналогии код нажатия на кнопку с заголовком $-\>руб:
 
     procedure TForm1.Button2Click(Sender: TObject);
     var

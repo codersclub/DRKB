@@ -126,8 +126,8 @@ Date: 01.01.2007
       SetLength(bm, length(inputMass));
       for i := 0 to length(inputMass) - 1 do
       begin
-        inputMass[i] := Unic(bm, range) + 1; //для последовательности 1,2, ... , N
-        //inputMass[i]:=Unic(bm,range);//для последовательности 0,1, ... , N
+        inputMass[i] := Unic(bm, range) + 1; //для последовательности 1,2, ..., N
+        //inputMass[i]:=Unic(bm,range);//для последовательности 0,1, ..., N
       end;
     end;
      

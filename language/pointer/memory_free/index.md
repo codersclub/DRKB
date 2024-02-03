@@ -114,7 +114,7 @@ Date: 01.01.2007
     procedure TForm1.Refresh2;
     begin
       LblResult.Caption := Format(
-        'Allocated: %d'#13'Free: %d'#13'Existing: %d'#13'Re-allocated %d'      ,
+        'Allocated: %d'#13'Free: %d'#13'Existing: %d'#13'Re-allocated %d'     ,
         [GetMemCount, FreeMemCount,
         GetMemCount - FreeMemCount, ReallocMemCount]);
     end;
@@ -503,7 +503,7 @@ DelphiWorld 6.0
     procedure TForm1.Refresh2;
     begin
       LblResult.Caption := Format(
-        'Allocated: %d'#13'Free: %d'#13'Existing: %d'#13'Re-allocated %d'      ,
+        'Allocated: %d'#13'Free: %d'#13'Existing: %d'#13'Re-allocated %d'     ,
         [GetMemCount, FreeMemCount,
         GetMemCount - FreeMemCount, ReallocMemCount]);
     end;

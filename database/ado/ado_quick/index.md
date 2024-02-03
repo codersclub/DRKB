@@ -222,7 +222,7 @@ Date: 01.01.2007
             adors.CursorLocation := adUseServer
           else
             adors.CursorLocation := adUseClient;
-          adors.open(SQL, , adRSType, adLockType, adCmdType);
+          adors.open(SQL,, adRSType, adLockType, adCmdType);
         except
           if not (ADOReset) then
             exit;
@@ -231,7 +231,7 @@ Date: 01.01.2007
               adors.CursorLocation := adUseServer
             else
               adors.CursorLocation := adUseClient;
-            adors.open(SQL, , adRSType, adLockType, adCmdType);
+            adors.open(SQL,, adRSType, adLockType, adCmdType);
           except
             on E: Exception do
             begin

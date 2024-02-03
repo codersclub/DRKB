@@ -241,7 +241,7 @@ Hook на клавиатуру и мышку
      begin
        is_key_enabled:=true;
      
-       if mWinVer< $80000000 then //--NT ,2000 ..
+       if mWinVer< $80000000 then //--NT,2000 ..
         CurKeyHook:=SetWindowsHookEx(13{WH_KEYBOARD_LL 14-mouse},
          @CallBackKeyHook,hInstance,0)
        else
@@ -264,7 +264,7 @@ Hook на клавиатуру и мышку
      begin
        is_mouse_enabled:=true;
        CurMouseHook:=SetWindowsHookEx(WH_MOUSE, @CallBackMouseHook,
-        hInstance , 0);
+        hInstance, 0);
      
        if CurMouseHook<=0 then
         MessageBox(0,'Error!!! Could not set mouse hook!','',MB_OK);
@@ -295,19 +295,19 @@ Hook на клавиатуру и мышку
         CurMouseHook:=0;
        end;
      
-       if mWinVer< $80000000 then //--NT ,2000 ..
+       if mWinVer< $80000000 then //--NT,2000 ..
        begin
         CurKeyHook:=SetWindowsHookEx(13{WH_KEYBOARD_LL 14-mouse},
          @CallBackKeyHook,hinst,0);
         CurMouseHook:=SetWindowsHookEx(14{WH_MOUSE}, @CallBackMouseHook,
-         hinst , 0);
+         hinst, 0);
        end
        else
        begin
         CurKeyHook:=SetWindowsHookEx(WH_KEYBOARD,
          @CallBackKeyHook95,hinst,0);
         CurMouseHook:=SetWindowsHookEx(WH_MOUSE, @CallBackMouseHook,
-         hinst , 0);
+         hinst, 0);
        end;
      
        if CurKeyHook<=0 then

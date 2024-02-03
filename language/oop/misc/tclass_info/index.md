@@ -11,10 +11,10 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-TObject - \"корневой\" объект.
+TObject - "корневой" объект.
 
 TClass определен как Class of TObject. Переменная Class НЕ является
-указателем на экземпляр объекта. Это указатель на \*ТИП\* объекта Class.
+указателем на экземпляр объекта. Это указатель на *ТИП* объекта Class.
 
     var
       Obj1: TWinControl;
@@ -24,8 +24,8 @@ Class1 := TWinControl - правильное присваивание. Мы не
 память, у нас нет экземпляра TWinControl, мы не можем вызвать
 Class1.OnClick.
 
-Class1 - это \*тип\* TWinControl с тем же контекстом использования, что
-и \"TWinControl\".
+Class1 - это *тип* TWinControl с тем же контекстом использования, что
+и "TWinControl".
 
 Поскольку мы можем использовать TWinControl.Create, то также мы можем
 использовать и Class1.Create, при этом создавая новый экземпляр
@@ -68,7 +68,6 @@ TWinControl.
       MyObj1 := MakeAnother(MyObj2.ClassType);
     end.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

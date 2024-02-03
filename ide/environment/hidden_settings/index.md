@@ -11,16 +11,16 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Some undocumented registry settings of Delphi 5 (which -slightly
-adapted- might also work with Delphi 4 and below) modify the behavior of
+Some undocumented registry settings of Delphi 5 (which _slightly
+adapted_ might also work with Delphi 4 and below) modify the behavior of
 the Delphi component palette in a manner you may like!
 
 Most values are stored as strings, and boolean values are represented as
-\"1\" for true and \"0\" for false. All values are stored in
+"1" for true and "0" for false. All values are stored in
 
 HKEY\_CURRENT\_USER
 
-As always, use of this information is at your own risk\... ;-)
+As always, use of this information is at your own risk... ;-)
 
 Software\\Borland\\Delphi\\5.0\\Extras\\AutoPaletteSelect
 
@@ -54,7 +54,7 @@ Show compilation errors found by CodeInsite in the message view window
 
 Software\\Borland\\Delphi\\5.0\\Globals\\PropValueColor
 
-Fill in with a string like \"clGreen\" to change the color of the right
+Fill in with a string like "clGreen" to change the color of the right
 half (properties) of the Object Inspector.
 
 Software\\Borland\\Delphi\\5.0\\Disabled Packages
@@ -69,8 +69,8 @@ Software\\Borland\\Delphi\\5.0\\Component Templates\\CCLibDir
 
 Alternative component templates directory (shared/network)
 
-Software\\Borland\\Delphi\\5.0\\FormDesign\\DefaultFont=\"Arial,8\"
-\[D4\] or \"Arial,8,Bold\" \[D5\]
+Software\\Borland\\Delphi\\5.0\\FormDesign\\DefaultFont="Arial,8"
+[D4] or "Arial,8,Bold" [D5]
 
 The default for new forms (you might prefer using the repository\'s
 default form checkbox instead)

@@ -18,11 +18,11 @@ bitmaps, you must edit the palette. For 15 - 32 bit bitmaps, you must
 edit the pixel direct. For larger bitmaps you should precalulate a table
 and set the RGB values from this table.
 
-Red := BCTable\[Red\];
+Red := BCTable[Red];
 
-Green := BCTable\[Green\];
+Green := BCTable[Green];
 
-Blue := BCTable\[Blue\];
+Blue := BCTable[Blue];
 
 You can find the calculation of the table below. The rest is standard
 source code, look at EFG\'s Computer Lab for any solution.

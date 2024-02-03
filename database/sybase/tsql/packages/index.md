@@ -45,11 +45,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------------------
-     Что такое пакеты и язык управления заданиями ?
-  -- ------------------------------------------------
-:::
+## Что такое пакеты и язык управления заданиями ?
 
  
 
@@ -95,11 +91,7 @@ isql.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------
-     Правила составления пакетов
-  -- -----------------------------
-:::
+## Правила составления пакетов
 
  
 
@@ -144,11 +136,7 @@ isql.
   --- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Примеры использования пакетов
-  -- -------------------------------
-:::
+## Примеры использования пакетов
 
  
 
@@ -158,19 +146,19 @@ isql.
 
  
 
-select count(\*) from titles
+select count(*) from titles
 
-select count(\*) from authors
+select count(*) from authors
 
 go
 
  
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------------
 
        18
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------
 
        23
 
@@ -190,9 +178,9 @@ create table test
 
 insert test
 
-values (\"hello\", 598)
+values ("hello", 598)
 
-select \* from test
+select * from test
 
 go
 
@@ -202,7 +190,7 @@ go
 
 column1  column2
 
-\-\-\-\-\-\-\--   \-\-\-\-\-\-\-\--
+--------   ---------
 
  
 
@@ -238,7 +226,7 @@ pubs2.
 
  
 
-select count(\*) from sysdatabase
+select count(*) from sysdatabase
 
 use pubs2
 
@@ -246,7 +234,7 @@ go
 
  
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+------------------
 
             9
 
@@ -265,13 +253,13 @@ go
 
 drop table test
 
-select count(\*) from titles
+select count(*) from titles
 
 go
 
  
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------
 
    18
 
@@ -288,11 +276,11 @@ go
 
  
 
-select count(\*) from titles
+select count(*) from titles
 
-select count(\*) from authors
+select count(*) from authors
 
-slect count(\*) from publishers
+slect count(*) from publishers
 
 go
 
@@ -318,9 +306,9 @@ create table test
 
 insert test
 
-   values (\"hello\", 598)
+   values ("hello", 598)
 
-select \* from test
+select * from test
 
 create view testview as select column1 from test
 
@@ -342,7 +330,7 @@ batch.                                                     (Команда
 
 create view testview as select column1 from test
 
-insert testview values (\"goodbye\")
+insert testview values ("goodbye")
 
 go
 
@@ -366,7 +354,7 @@ This CREATE may only contain 1 statement. (Команда создания вь�
 
 use pubs2
 
-select \* from titles
+select * from titles
 
 go
 
@@ -401,11 +389,7 @@ database.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------
-     Пакетные файлы
-  -- ----------------
-:::
+## Пакетные файлы
 
  
 
@@ -421,9 +405,9 @@ use pubs2
 
 go
 
-select count(\*) from titles
+select count(*) from titles
 
-select count(\*) from authors
+select count(*) from authors
 
 go
 
@@ -433,9 +417,9 @@ create table test
 
 insert test
 
-  values (\"hello\", 598)
+  values ("hello", 598)
 
-select \* from test
+select * from test
 
 go
 
@@ -446,7 +430,7 @@ go
 
  
 
-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------
 
           18
 
@@ -454,7 +438,7 @@ go
 
 (Выбрана 1 строка)
 
-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------
 
           23
 
@@ -466,7 +450,7 @@ go
 
 column1      column2
 
-\-\-\-\-\-\-\-\--    \-\-\-\-\-\-\-\--
+---------    ---------
 
  
 
@@ -482,11 +466,7 @@ isql приводится информация о зависимости вып�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------
-     Язык управления заданиями
-  -- ---------------------------
-:::
+## Язык управления заданиями
 
  
 
@@ -516,16 +496,12 @@ isql приводится информация о зависимости вып�
   Waitfor           Установить задержку на выполнение команды.
   Print             Вывести на экран сообщение, которое указано пользователем или хранится в локальной переменной.
   Raiserror         Вывести на экран сообщение об ошибке, указанное пользователем или хранящееся в локальной переменной, и установить глобальную переменную @\@error (ошибка).
-  /\* comment \*/   Внести комментарий (комментарий можно указать в любом месте SQL оператора).
+  /* comment */   Внести комментарий (комментарий можно указать в любом месте SQL оператора).
   ----------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------
-     Условный оператор if...else
-  -- -----------------------------
-:::
+## Условный оператор if...else
 
  
 
@@ -546,9 +522,9 @@ if булевское\_выражение
 
        оператор
 
-\[else \[if булевское\_выражение\]
+[else [if булевское\_выражение]
 
-       оператор \]
+       оператор ]
 
  
 
@@ -569,7 +545,7 @@ if exists (select postalcode from authors
 
         where postalcode = \'94705\')
 
-print \"Berkeley author\"
+print "Berkeley author"
 
  
 
@@ -591,13 +567,13 @@ exists (существует). Ключевое слово exists действу
 
 if (select max(id) from sysobjects) \< 50
 
-  print \"There are no user-created objects in this database.\"
+  print "There are no user-created objects in this database."
 
 else
 
   select name, type, id from sysobjects
 
-  where id \> 50 and type = \"U\"
+  where id \> 50 and type = "U"
 
  
 
@@ -607,7 +583,7 @@ else
 
 name           type    id
 
-\-\-\-\-\-\-\-\-\-\-\--    \-\-\-\-\-\-\-\-\-\-\-\-\--
+------------    --------------
 
 authors        U 1088006907 
 
@@ -647,11 +623,7 @@ if либо в части else. Условие проверки должно и�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Операторные скобки begin...end
-  -- --------------------------------
-:::
+## Операторные скобки begin...end
 
  
 
@@ -676,19 +648,19 @@ end
 
  
 
-if (select avg(price) from titles) \< \$15
+if (select avg(price) from titles) \< $15
 
 begin
 
   update titles
 
-  set price = price \* 2
+  set price = price * 2
 
   select title, price
 
   from titles
 
-  where price \> \$28
+  where price \> $28
 
 end
 
@@ -703,11 +675,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Циклический оператор while и команды break...continue
-  -- -------------------------------------------------------
-:::
+## Циклический оператор while и команды break...continue
 
  
 
@@ -726,11 +694,11 @@ while булевское\_выражение
  
 
 В следующем примере операторы select и update будут выполняться в цикле,
-пока средняя цена книги будет меньше \$30:
+пока средняя цена книги будет меньше $30:
 
  
 
-while (select avg(price) from titles) \< \$30
+while (select avg(price) from titles) \< $30
 
 begin
 
@@ -738,11 +706,11 @@ begin
 
   from titles
 
-  where price \> \$20
+  where price \> $20
 
   update titles
 
-  set price = price \* 2
+  set price = price * 2
 
 end
 
@@ -752,7 +720,7 @@ end
 
 title\_id         price
 
-\-\-\-\-\--          \-\-\-\-\-\--
+------          -------
 
 PC1035        22.95
 
@@ -770,7 +738,7 @@ TC3218        20.95
 
 title\_id         price
 
-\-\-\-\-\--          \-\-\-\-\-\--
+------          -------
 
 BU1032        39.98
 
@@ -827,11 +795,11 @@ while булевское\_выражение
 
            ....
 
-       \[оператор\]
+       [оператор]
 
        break
 
-       \[оператор\]
+       [оператор]
 
            ....
 
@@ -839,7 +807,7 @@ while булевское\_выражение
 
            ....
 
-       \[оператор\]
+       [оператор]
 
   end
 
@@ -848,17 +816,17 @@ while булевское\_выражение
 Далее приводится пример использования команд while, break, continue и
 if, в котором производится действие, обратное инфляционному действию
 предыдущего примера. До тех пор пока средняя цена книги остается большей
-\$20, все цены уменьшаются наполовину. Затем выбирается максимальная
+$20, все цены уменьшаются наполовину. Затем выбирается максимальная
 цена. Если она меньше 40 долларов, то происходит выход из цикла, в
 противном случае цикл выполняется снова. Команда continue не допустит
 выполнение оператора вывода (печати) print, если средняя цена меньше
-\$20. После окончания цикла while в этом примере выводится список самых
-дорогих книг и информационное сообщение \"Not Too Expensive\" (Не очень
+$20. После окончания цикла while в этом примере выводится список самых
+дорогих книг и информационное сообщение "Not Too Expensive" (Не очень
 дорого).
 
  
 
-while (select avg(price) from titles) \> \$20
+while (select avg(price) from titles) \> $20
 
 begin
 
@@ -866,37 +834,37 @@ begin
 
        set price = price / 2
 
-   if (select max(price) from titles) \< \$40
+   if (select max(price) from titles) \< $40
 
        break
 
    else
 
-       if (select avg(price) from titles) \< \$20
+       if (select avg(price) from titles) \< $20
 
            continue
 
-   print \"Average price still over \$20\"
+   print "Average price still over $20"
 
 end
 
 select title\_id, price from titles
 
-   where price \> \$20
+   where price \> $20
 
  
 
-print \"Not Too Expensive\"
+print "Not Too Expensive"
 
  
 
-Average price still over \$20
+Average price still over $20
 
  
 
 title\_id          price 
 
-\-\-\-\-\-\-\--        \-\-\-\-\-\--
+--------        -------
 
 PC1035        22.95 
 
@@ -919,11 +887,7 @@ Not Too Expensive
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Оператор declare и локальные переменные
-  -- -----------------------------------------
-:::
+## Оператор declare и локальные переменные
 
  
 
@@ -958,7 +922,7 @@ text, image, sysname.
 
 declare \@название\_переменной   тип\_данных
 
-\[,\@название\_переменной  тип\_данных\] ...
+[,\@название\_переменной  тип\_данных] ...
 
  
 
@@ -970,12 +934,12 @@ declare \@название\_переменной   тип\_данных
 
 select \@название\_переменной = { выражение \| (оператор\_выбора) }
 
-    \[, \@название\_переменной = { выражение \| (оператор\_выбора) } ...
-\]
+    [, \@название\_переменной = { выражение \| (оператор\_выбора) } ...
+]
 
-\[from конструкция\] \[where конструкция\] \[group by конструкция\]
+[from конструкция] [where конструкция] [group by конструкция]
 
-\[having конструкция\] \[order by конструкция\] \[compute конструкция\]
+[having конструкция] [order by конструкция] [compute конструкция]
 
  
 
@@ -995,33 +959,33 @@ select \@veryhigh = max(price)
 
   from titles
 
-if \@veryhigh \> \$20
+if \@veryhigh \> $20
 
-  print \"Ouch!\"
+  print "Ouch!"
 
  
 
 declare \@one varchar(18), \@two varchar(18)
 
-select \@one = \"this is one\", \@two = \"this is two\"
+select \@one = "this is one", \@two = "this is two"
 
-if \@one = \"this is one\"
+if \@one = "this is one"
 
-  print \"you got one\"
+  print "you got one"
 
-if \@two = \"this is two\"
+if \@two = "this is two"
 
-  print \"you got two\"
+  print "you got two"
 
-else print \"nope\"
+else print "nope"
 
  
 
 declare \@tcount int, \@pcount int
 
-select \@tcount = (select count(\*) from titles),
+select \@tcount = (select count(*) from titles),
 
-  \@pcount = (select count(\*) from publishers)
+  \@pcount = (select count(*) from publishers)
 
 select \@tcount, \@pcount
 
@@ -1107,7 +1071,7 @@ select \@m
 
 (Выбрано 18 строк)
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+------------------------
 
               8,000.00
 
@@ -1128,11 +1092,7 @@ select \@m
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------
-     Переменные и неопределенное значение
-  -- --------------------------------------
-:::
+## Переменные и неопределенное значение
 
  
 
@@ -1180,13 +1140,13 @@ select \@m
 
 declare \@v int, \@i int
 
-if \@v = \@i select \"null = null, true\"
+if \@v = \@i select "null = null, true"
 
-if \@v \> \@i select \"null \> null, true\"
+if \@v \> \@i select "null \> null, true"
 
  
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-----------------
 
 null = null, true
 
@@ -1215,7 +1175,7 @@ where advance = \@m
 
 title\_id            advance       
 
-\-\-\-\-\-\-\--           \-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------           ----------------
 
  
 
@@ -1225,11 +1185,7 @@ PC9999              NULL
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------------
-     Оператор declare и глобальные переменные
-  -- ------------------------------------------
-:::
+## Оператор declare и глобальные переменные
 
  
 
@@ -1510,11 +1466,7 @@ PC9999              NULL
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Команда перехода goto
-  -- -----------------------
-:::
+## Команда перехода goto
 
  
 
@@ -1547,7 +1499,7 @@ select \@count = 1
 
 restart:
 
-print \"yes\"
+print "yes"
 
 select \@count = \@count + 1
 
@@ -1563,11 +1515,7 @@ while \@count \<=4
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Команда выхода return
-  -- -----------------------
-:::
+## Команда выхода return
 
  
 
@@ -1581,7 +1529,7 @@ while \@count \<=4
 
  
 
-return \[int\_выражение\]
+return [int\_выражение]
 
  
 
@@ -1596,7 +1544,7 @@ if \@nm is null
 
 begin
 
-print \"You must give a user name\"
+print "You must give a user name"
 
 return
 
@@ -1614,7 +1562,7 @@ begin
 
   and sysobjects.uid = master..syslogins.suid
 
-  and sysobjects.type = \"R\"
+  and sysobjects.type = "R"
 
 end
 
@@ -1634,11 +1582,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------
-     Команда вывода print
-  -- ----------------------
-:::
+## Команда вывода print
 
  
 
@@ -1654,7 +1598,7 @@ end
 
 print {форматированная\_строка\_вывода \| \@локальная\_переменная \|
 
-      @\@глобальная\_переменная} \[, список\_аргументов\]
+      @\@глобальная\_переменная} [, список\_аргументов]
 
  
 
@@ -1666,7 +1610,7 @@ if exists (select postalcode from authors
 
   where postalcode = \'94705\')
 
-print \"Berkeley author\"
+print "Berkeley author"
 
  
 
@@ -1677,7 +1621,7 @@ print \"Berkeley author\"
 
 declare \@msg char(50)
 
-select \@msg = \"What\'s up doc?\"
+select \@msg = "What\'s up doc?"
 
 print \@msg
 
@@ -1738,11 +1682,7 @@ char (символьный) перед тем, как помещается в о
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------
-     Команда raiserror
-  -- -------------------
-:::
+## Команда raiserror
 
  
 
@@ -1760,11 +1700,11 @@ char (символьный) перед тем, как помещается в о
 
 raiserror номер\_ошибки
 
-\[{форматированная\_строка\_вывода \| \@локальная\_переменная }\]
-\[,список\_аргументов\]
+[{форматированная\_строка\_вывода \| \@локальная\_переменная }]
+[,список\_аргументов]
 
-\[extended\_value = extended\_value \[{, extended\_value =
-extended\_value }\...\]\]
+[extended\_value = extended\_value [{, extended\_value =
+extended\_value }...]]
 
  
 
@@ -1802,7 +1742,7 @@ SQL Сервера.
 
  
 
-raiserror 99999 \"You must give a user name\"   (Нужно указать имя
+raiserror 99999 "You must give a user name"   (Нужно указать имя
 пользователя).
 
  
@@ -1813,11 +1753,7 @@ raiserror 99999 \"You must give a user name\"   (Нужно указать им�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------------
-     Сообщения пользователя в командах print и raiserror
-  -- -----------------------------------------------------
-:::
+## Сообщения пользователя в командах print и raiserror
 
  
 
@@ -1835,13 +1771,13 @@ sp\_getmassage, sp\_addmassage и команды print для записи со�
 
  
 
-/\*
+/*
 
-\*\* Install messages
+** Install messages
 
-\*\* First, the English (langid = NULL)
+** First, the English (langid = NULL)
 
-\*/
+*/
 
 set language us\_english
 
@@ -1849,17 +1785,17 @@ go
 
 sp\_addmessage 25001,
 
-\"There is already a remote user named \'%1!\' for remote server
-\'%2!\'.\"
+"There is already a remote user named \'%1!\' for remote server
+\'%2!\'."
 
 go
 
-/\* Then German\*/
+/* Then German*/
 
 sp\_addmessage 25001,
 
-  \"Remotebenutzername \'%1!\' existiert bereits auf dem Remoteserver
-\'%2!\'.\",\"german\"
+  "Remotebenutzername \'%1!\' existiert bereits auf dem Remoteserver
+\'%2!\'.","german"
 
 go
 
@@ -1875,15 +1811,15 @@ as
 
        declare \@arg1 varchar(40)
 
-       /\*
+       /*
 
-       \*\* check to make sure that there is not
+       ** check to make sure that there is not
 
-       \*\* a \@remotename for the \@remoteserver.
+       ** a \@remotename for the \@remoteserver.
 
-       \*/
+       */
 
-       if exists (select \*
+       if exists (select *
 
            from master.dbo.sysremotelogins l,
 
@@ -1899,7 +1835,7 @@ as
 
            exec sp\_getmessage 25001, \@msg output
 
-           select \@arg1=isnull(\@remotename,\"null\")
+           select \@arg1=isnull(\@remotename,"null")
 
            print \@msg, \@arg1, \@remoteserver
 
@@ -1913,11 +1849,7 @@ go
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------
-     Команда waitfor
-  -- -----------------
-:::
+## Команда waitfor
 
  
 
@@ -1930,7 +1862,7 @@ go
 
  
 
-waitfor {delay \"время\" \| time \"время\" \| errorexit \|  processexit
+waitfor {delay "время" \| time "время" \| errorexit \|  processexit
 \| mirrorexit}
 
  
@@ -1974,7 +1906,7 @@ sysprocesses (системные процессы) с помощью систе�
 
 begin
 
-waitfor time \"14:20\"
+waitfor time "14:20"
 
 insert chess(next\_move)
 
@@ -1991,7 +1923,7 @@ end
 
  
 
-waitfor delay \"0:00:10\"
+waitfor delay "0:00:10"
 
  
 
@@ -2001,11 +1933,7 @@ waitfor delay \"0:00:10\"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------
-     Комментарии
-  -- -------------
-:::
+## Комментарии
 
  
 
@@ -2014,7 +1942,7 @@ waitfor delay \"0:00:10\"
 
  
 
-/\* Текст комментария \*/
+/* Текст комментария */
 
  
 
@@ -2023,26 +1951,26 @@ waitfor delay \"0:00:10\"
 строки. Допускаются также комментарии, занимающие несколько строк, но
 при этом каждая строка должна начинаться с наклонной черты (слеша) и
 звездочки и заканчиваться звездочкой и слешем. Все, что находиться между
-символами "/\*" и "\*/", рассматривается как комментарий. Комментарии
+символами "/*" и "*/", рассматривается как комментарий. Комментарии
 могут быть вложенными друг в друга.
 
 Для длинных комментариев, занимающих несколько строк, вводится также
 следующее стилистическое соглашение. Комментарий должен начинаться
-символами "/\*", а все последующие строки двумя звездочками "\*\*".
-Такой комментарий, как обычно, должен заканчиваться символами "\*/". В
+символами "/*", а все последующие строки двумя звездочками "**".
+Такой комментарий, как обычно, должен заканчиваться символами "*/". В
 следующем примере можно увидеть подобный комментарий:
 
  
 
-select \* from titles
+select * from titles
 
-/\* A comment here might explain the rules
+/* A comment here might explain the rules
 
-\*\* associated with using an asterisk as
+** associated with using an asterisk as
 
-\*\* shorthand in the select list.\*/
+** shorthand in the select list.*/
 
-where price \> \$5
+where price \> $5
 
  
 
@@ -2051,13 +1979,13 @@ where price \> \$5
 
  
 
-/\* this procedure finds rules by user name\*/
+/* this procedure finds rules by user name*/
 
 create procedure findrules2 \@nm varchar(30) = null
 
-as if \@nm is null /\*if no parameter is given\*/
+as if \@nm is null /*if no parameter is given*/
 
-print \"You must give a user name\"
+print "You must give a user name"
 
 else
 
@@ -2073,7 +2001,7 @@ begin
 
   and sysobjects.uid = master..syslogins.suid
 
-  and sysobjects.type = \"R\"
+  and sysobjects.type = "R"
 
 end
 

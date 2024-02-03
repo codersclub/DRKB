@@ -11,13 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Создание индексов в таблицах
-
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Что такое индексы ?
-  -- ---------------------
-:::
+## Что такое индексы ?
 
  
 
@@ -61,11 +55,7 @@ SQL Сервер поддерживает следующие виды индек
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------
-     Сравнение двух способов создания индексов
-  -- -------------------------------------------
-:::
+## Сравнение двух способов создания индексов
 
  
 
@@ -105,11 +95,7 @@ index. В противном случае нужно использовать у
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------
-     Рекомендации по использованию индексов
-  -- ----------------------------------------
-:::
+## Рекомендации по использованию индексов
 
  
 
@@ -191,11 +177,7 @@ index. В противном случае нужно использовать у
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------------------
-     Создание индексов для ускорения выборки данных
-  -- ------------------------------------------------
-:::
+## Создание индексов для ускорения выборки данных
 
  
 
@@ -236,11 +218,7 @@ on authors (au\_id)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------
-     Синтаксис команды создания индексов
-  -- -------------------------------------
-:::
+## Синтаксис команды создания индексов
 
  
 
@@ -249,21 +227,21 @@ on authors (au\_id)
 
  
 
-create \[unique\] \[clustered \| nonclustered\]
+create [unique] [clustered \| nonclustered]
 
    index название\_индекса
 
-on \[\[база\_данных.\]владелец.\]название\_таблицы (название\_столбца
+on [[база\_данных.]владелец.]название\_таблицы (название\_столбца
 
-   \[,название\_столбца\]\...)
+   [,название\_столбца]...)
 
-\[with {{fillfactor \| max\_rows\_per\_page}= x,
+[with {{fillfactor \| max\_rows\_per\_page}= x,
 
     ignore\_dup\_key, sorted\_data,
 
-   \[ignore\_dup\_row \| allow\_dup\_row\]}\]
+   [ignore\_dup\_row \| allow\_dup\_row]}]
 
-\[on название\_сегмента\]
+[on название\_сегмента]
 
  
 
@@ -282,11 +260,7 @@ on \[\[база\_данных.\]владелец.\]название\_табли�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------------
-     Индексирование по нескольким столбцам: составные индексы
-  -- ----------------------------------------------------------
-:::
+## Индексирование по нескольким столбцам: составные индексы
 
  
 
@@ -348,11 +322,7 @@ table. Например, в предыдущем операторе столбц
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------
-     Использование опции unique
-  -- ----------------------------
-:::
+## Использование опции unique
 
  
 
@@ -397,11 +367,7 @@ table. Например, в предыдущем операторе столбц
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------
-     Использование счетчиков в неуникальных индексах
-  -- -------------------------------------------------
-:::
+## Использование счетчиков в неуникальных индексах
 
  
 
@@ -426,11 +392,7 @@ identity.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Использование опций fillfactor и max\_rows\_per\_page
-  -- -------------------------------------------------------
-:::
+## Использование опций fillfactor и max\_rows\_per\_page
 
  
 
@@ -443,11 +405,7 @@ identity.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------
-     fillfactor
-  -- ------------
-:::
+**fillfactor**
 
  
 
@@ -474,9 +432,7 @@ fillfactor:
  
 
 create index postalcode\_ind
-
 on friends\_etc(postalcode)
-
 with fillfactor = 100
 
  
@@ -488,11 +444,7 @@ with fillfactor = 100
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------
-     max\_rows\_per\_page
-  -- ----------------------
-:::
+max\_rows\_per\_page
 
  
 
@@ -523,11 +475,7 @@ with max\_rows\_per\_page = 10
 
  
 
-::: {style="text-align: center; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------------------------
-     Использование кластеризованных и некластеризованных индексов
-  -- --------------------------------------------------------------
-:::
+## Использование кластеризованных и некластеризованных индексов
 
  
 
@@ -654,11 +602,7 @@ on friends\_etc (pname, sname)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------
-     Использование индексных опций
-  -- -------------------------------
-:::
+## Использование индексных опций
 
  
 
@@ -686,11 +630,7 @@ ignore\_dup\_row (игнорировать повторяющиеся строк
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------
-     Использование опции ignore\_dup\_key
-  -- --------------------------------------
-:::
+## Использование опции ignore\_dup\_key
 
  
 
@@ -732,11 +672,7 @@ with ignore\_dup\_key
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------------
-     Использование опций ignore\_dup\_row и allow\_dup\_row
-  -- --------------------------------------------------------
-:::
+## Использование опций ignore\_dup\_row и allow\_dup\_row
 
  
 
@@ -802,11 +738,7 @@ allow\_dup\_row на создание неуникального кластер�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Использование опции sorted\_data
-  -- ----------------------------------
-:::
+## Использование опции sorted\_data
 
  
 
@@ -830,11 +762,7 @@ allow\_dup\_row на создание неуникального кластер�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------
-     Использование опции on segment\_name
-  -- --------------------------------------
-:::
+## Использование опции on segment\_name
 
  
 
@@ -853,11 +781,7 @@ on seg1
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Удаление индексов
-  -- -------------------
-:::
+## Удаление индексов
 
  
 
@@ -867,8 +791,7 @@ on seg1
  
 
 drop index название\_таблицы.название\_индекса
-
-            \[,название\_таблицы.название\_индекса\]\...
+            [,название\_таблицы.название\_индекса]...
 
  
 
@@ -892,11 +815,7 @@ drop index friends\_etc.phone\_ind
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Информация о табличных индексах
-  -- ---------------------------------
-:::
+## Информация о табличных индексах
 
  
 
@@ -911,18 +830,10 @@ sp\_helpindex friends\_etc
  
 
 index\_name      index\_description                     index\_keys
-
-\-\-\-\-\-\-\-\-\-\-\-\-\--       
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--        
-\-\-\-\-\-\-\-\-\-\-\-\--
-
+--------------       --------------------------------        -------------
 nmind                clustered located on default       pname, sname
-
 postalcode\_ind  nonclustered located on default  postalcode
-
 postalcodeind    nonclustered located on default  postalcode
-
- 
 
           (3 rows affected, return status = 0)
 
@@ -932,11 +843,7 @@ postalcodeind    nonclustered located on default  postalcode
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Обновление индексной статистики
-  -- ---------------------------------
-:::
+## Обновление индексной статистики
 
  
 
@@ -952,7 +859,7 @@ postalcodeind    nonclustered located on default  postalcode
 
  
 
-update statistics название\_таблицы \[название\_индекса\]
+update statistics название\_таблицы [название\_индекса]
 
  
 
@@ -973,13 +880,9 @@ sp\_helpindex authors
 
  
 
-index\_name  index\_description     index\_keys          
-
-\-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
-auidind        clustered, unique        au\_id             
-
+index\_name  index\_description     index\_keys
+----------     ------------------   ---------------------
+auidind        clustered, unique        au\_id
 aunmind        nonclustered                au\_lname, au\_fname
 
  

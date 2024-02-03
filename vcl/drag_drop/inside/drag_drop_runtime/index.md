@@ -22,6 +22,6 @@ Date: 01.01.2007
       Panel1.Perform(WM_SYSCOMMAND, $F012, 0);
     end;
 
-Теперь в run-time панель можно таскать как в дизайне\...
+Теперь в run-time панель можно таскать как в дизайне...
 
 Взято с Vingrad.ru <https://forum.vingrad.ru>

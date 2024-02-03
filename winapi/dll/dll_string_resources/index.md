@@ -13,27 +13,23 @@ DLL со строковыми ресурсами
 
 Делаешь текстовый файл с ресурсами, типа
 
-\--my.rc\--
+--my.rc--
 
-STRINGTABLE
-
-{
-
-00001, \"My String \#1\"
-
-00002, \"My String \#2\"
-
-}
+    STRINGTABLE
+    {
+    00001, "My String #1"
+    00002, "My String #2"
+    }
 
 Далее компилируешь его:
 
-brcc32 my.rc
+    brcc32 my.rc
 
 У тебя получится my.res.
 
 Делаешь DLL:
 
-\--my.dpr\--
+--my.dpr--
 
     library my;
      
@@ -45,7 +41,7 @@ brcc32 my.rc
 
 Компилируешь Дельфиским компилятором:
 
-dcc32 my.dpr
+    dcc32 my.dpr
 
 Получаешь, наконец-то свою my.dll
 

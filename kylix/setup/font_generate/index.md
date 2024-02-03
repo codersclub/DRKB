@@ -12,7 +12,7 @@ Problem generating font matrix in Kylix
 :::
 
 My install of Kylix was successfull but after startup with
-\"startkylix\" I see the message \"generating font matrix\" forever.
+"startkylix" I see the message "generating font matrix" forever.
 What should I do about this?
 
 If you installed as root the font matrix will be created for each user
@@ -30,8 +30,8 @@ tt-fontserver. Try to put the tt-fonts at the end of the list.
 
 Here is another suggestion from our newsgroups:
 
-Rename the file \"transdlg\" located in your Kylix bin directory to
-\"transdlg.renamed\" and then run Kylix.
+Rename the file "transdlg" located in your Kylix bin directory to
+"transdlg.renamed" and then run Kylix.
 
 This is an issue we are currently looking into. This document will be
 updated when more information is available.

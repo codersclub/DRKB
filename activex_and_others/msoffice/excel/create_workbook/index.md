@@ -58,7 +58,7 @@ if Assigned(IXLSApp) and (not Assigned(IWorkbook) ) then
     if Assigned(IXLSApp) and (not Assigned(IWorkbook) ) then
       FIWorkbook := IXLSApp.Workbooks.Add(ExtractFilePath(ParamStr(0)) + 'Test.xls', 0);
 
-вы получите книгу, идентичную файлу \"Test.xls\" с именем Test1.xls.
+вы получите книгу, идентичную файлу "Test.xls" с именем Test1.xls.
 Именно этим способом я создаю все свои отчеты, так как создаю их по
 заранее разработанным шаблонам. Естественно, что это шаблоны XL Report.
 
@@ -68,7 +68,7 @@ if Assigned(IXLSApp) and (not Assigned(IWorkbook) ) then
 if Assigned(IXLSApp) and (not Assigned(IWorkbook) ) then
 
 FIWorkbook := IXLSApp.Workbooks.Open(ExtractFilePath(ParamStr(0)) +
-\"Test.xls\', EmptyParam,
+"Test.xls\', EmptyParam,
 
    EmptyParam, EmptyParam, EmptyParam, EmptyParam, EmptyParam,
 EmptyParam, EmptyParam,

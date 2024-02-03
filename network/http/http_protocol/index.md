@@ -1,10 +1,10 @@
 ---
-Title: HyperText Transfer Protocol -- протокол обмена WWW-серверов
+Title: HyperText Transfer Protocol - протокол обмена WWW-серверов
 Date: 01.01.2007
 ---
 
 
-HyperText Transfer Protocol -- протокол обмена WWW-серверов
+HyperText Transfer Protocol - протокол обмена WWW-серверов
 ===========================================================
 
 ::: {.date}

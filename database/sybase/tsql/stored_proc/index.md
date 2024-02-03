@@ -66,11 +66,7 @@ SQL операторы и команды языка управления зад�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Что такое сохраненные процедуры
-  -- ---------------------------------
-:::
+## Что такое сохраненные процедуры
 
  
 
@@ -142,11 +138,7 @@ execute (выполнить). Можно также просто указать 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Примеры создания и использования сохраненных процедур
-  -- -------------------------------------------------------
-:::
+## Примеры создания и использования сохраненных процедур
 
  
 
@@ -201,7 +193,7 @@ exec namelist
  
 
 execute
-название\_сервера.\[название\_базы\_данных\].\[владелец\].название\_процедуры
+название\_сервера.[название\_базы\_данных].[владелец].название\_процедуры
 
  
 
@@ -214,7 +206,7 @@ execute gateway.pubs2..namelist
 
 gateway.pubs2.dbo.namelist
 
-exec gateway\...namelist
+exec gateway...namelist
 
  
 
@@ -234,11 +226,11 @@ exec gateway\...namelist
 
 create procedure showall as
 
-select count(\*) from sysusers
+select count(*) from sysusers
 
-select count(\*) from sysobjects
+select count(*) from sysobjects
 
-select count(\*) from syscolumns
+select count(*) from syscolumns
 
  
 
@@ -251,7 +243,7 @@ showall
 
  
 
-\-\-\-\-\-\-\-\-\-\-\--
+------------
 
           5
 
@@ -261,7 +253,7 @@ showall
 
  
 
-\-\-\-\-\-\-\-\-\-\-\--
+------------
 
          88
 
@@ -271,7 +263,7 @@ showall
 
  
 
-\-\-\-\-\-\-\-\-\-\-\--
+------------
 
  
 
@@ -295,9 +287,9 @@ sp\_helptext showall
 
  
 
-\# Lines of Text
+# Lines of Text
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------
 
              1
 
@@ -309,16 +301,16 @@ sp\_helptext showall
 
 text
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-\-\-\-\-\-\-\-\-\--
+-----------------------------
+----------
 
 create procedure showall as
 
-select count(\*) from sysusers
+select count(*) from sysusers
 
-select count(\*) from sysobjects
+select count(*) from sysobjects
 
-select count(\*) from syscolumns
+select count(*) from syscolumns
 
  
 
@@ -326,11 +318,7 @@ select count(\*) from syscolumns
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Сохраненные процедуры и права доступа
-  -- ---------------------------------------
-:::
+## Сохраненные процедуры и права доступа
 
  
 
@@ -345,11 +333,7 @@ Guide).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Сохраненные процедуры и производительность
-  -- --------------------------------------------
-:::
+## Сохраненные процедуры и производительность
 
  
 
@@ -372,11 +356,7 @@ sp\_recompile titles
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------
-     Создание и выполнение сохраненных процедур
-  -- --------------------------------------------
-:::
+## Создание и выполнение сохраненных процедур
 
  
 
@@ -384,14 +364,14 @@ sp\_recompile titles
 
  
 
-create procedure \[владелец.\]название\_процедуры\[;номер\] \[
+create procedure [владелец.]название\_процедуры[;номер] [
 
-\[(\] \@название\_параметра тип\_данных \[= default\] \[output\]
+[(] \@название\_параметра тип\_данных [= default] [output]
 
-\[,  \@название\_параметра тип\_данных \[= default\]
-\[output\]\]\...\[)\]\] \[with
+[,  \@название\_параметра тип\_данных [= default]
+[output]]...[]] [with
 
-recompile\]
+recompile]
 
 as sql\_операторы
 
@@ -406,20 +386,20 @@ as sql\_операторы
 
  
 
-\[execute\] \[\@return\_status =\]
+[execute] [\@return\_status =]
 
      
- \[\[\[сервер.\]база\_данных.\]владелец.\]название\_процедуры\[;номер\]
+ [[[сервер.]база\_данных.]владелец.]название\_процедуры[;номер]
 
-               \[\[\@название\_параметра = \] значение \|
+               [[\@название\_параметра = ] значение \|
 
-                \[\@название\_параметра = \] \@переменная \[output\]
+                [\@название\_параметра = ] \@переменная [output]
 
-\[,\[\@название\_параметра = \] значение \|
+[,[\@название\_параметра = ] значение \|
 
-        \[\@название\_параметра = \] \@переменная \[output\]\...\]\]
+        [\@название\_параметра = ] \@переменная [output]...]]
 
-\[with recompile\]
+[with recompile]
 
  
 
@@ -435,11 +415,7 @@ rollback transaction (откатить транзакцию), то любые и
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------
-     Параметры
-  -- -----------
-:::
+## Параметры
 
  
 
@@ -494,8 +470,8 @@ au\_info Ringer, Anne
 
 au\_lname au\_fname title                             pub\_name
 
-\-\-\-\-\-\-\-- \-\-\-\-\-\-\--
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--            \-\-\-\-\-\-\-\-\--
+-------- --------
+---------------------            ----------
 
 Ringer   Anne     The Gourmet Microwave    Binnet & Hardley
 
@@ -556,7 +532,7 @@ pubs2, когда параметром является название таб�
 
 table\_name  index\_name  index\_id
 
-\-\-\-\-\-\-\-\-\--    \-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\-\--
+----------    ----------     ----------
 
 titles                titleidind              1
 
@@ -579,11 +555,7 @@ procedure. Если хотя бы один параметр был задан в
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------
-     Значения по умолчанию для параметров
-  -- --------------------------------------
-:::
+## Значения по умолчанию для параметров
 
  
 
@@ -601,7 +573,7 @@ procedure. Если хотя бы один параметр был задан в
 
 create proc pub\_info
 
-\@pubname varchar(40) = \"Algodata Infosystems\" as
+\@pubname varchar(40) = "Algodata Infosystems" as
 
 select au\_lname, au\_fname, pub\_name
 
@@ -633,8 +605,8 @@ exec pub\_info
 
 au\_lname   au\_fname      pub\_name                                 
 
-\-\-\-\-\-\-\-\-\-\-\-\-\--  \-\-\-\-\-\-\-\-\-\-\--
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------  ------------
+--------------------
 
 Green         Marjorie       Algodata   Infosystems                     
 
@@ -696,7 +668,7 @@ showind2 authors
 
 table\_name  index\_name      index\_id
 
-\-\-\-\-\-\-\-\-\-\--  \-\-\-\-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\-\--
+-----------  -------------     ----------
 
 authors       auidind                 1
 
@@ -719,7 +691,7 @@ showind2
 
 table\_name  index\_name    index\_id
 
-\-\-\-\-\-\-\-\-\-\--  \-\-\-\-\-\-\-\-\-\--      \-\-\-\-\-\-\-\--
+-----------  -----------      ---------
 
 titles           titleidind          1
 
@@ -738,11 +710,7 @@ create procedure для этого параметра не указано ник
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------
-     NULL как значения по умолчанию для параметра
-  -- ----------------------------------------------
-:::
+## NULL как значения по умолчанию для параметра
 
  
 
@@ -763,7 +731,7 @@ as
 
 if \@table is null
 
-   print \"Please give a table name\"
+   print "Please give a table name"
 
 else
 
@@ -788,17 +756,13 @@ sp\_helptext.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------------
-     Символы замены в значениях по умолчанию параметров
-  -- ----------------------------------------------------
-:::
+## Символы замены в значениях по умолчанию параметров
 
  
 
 Если в процедуре используется параметр с ключевым словом like, то
-значение по умолчанию может содержать символы замены (%, \_, \[\] и
-\[\^\]).
+значение по умолчанию может содержать символы замены (%, \_, [] и
+[\^].
 
 В следующем примере процедура showind изменена таким образом, чтобы она
 выдавала информацию о системных таблицах, если пользователь не указал
@@ -806,7 +770,7 @@ sp\_helptext.
 
  
 
-create procedure showind4 \@table varchar(30)=\"sys%\"
+create procedure showind4 \@table varchar(30)="sys%"
 
 as
 
@@ -822,11 +786,7 @@ and sysobjects.id = sysindexes.id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------
-     Использование нескольких параметров
-  -- -------------------------------------
-:::
+## Использование нескольких параметров
 
  
 
@@ -835,9 +795,9 @@ and sysobjects.id = sysindexes.id
 
  
 
-create proc au\_info2 \@lastname varchar(30) = \"D%\",
+create proc au\_info2 \@lastname varchar(30) = "D%",
 
-\@firstname varchar(18) = \"%\" as
+\@firstname varchar(18) = "%" as
 
 select au\_lname, au\_fname, title, pub\_name
 
@@ -867,9 +827,9 @@ au\_info2
 au\_lname   au\_fname       title                              
 pub\_name
 
-\-\-\-\-\-\-\--     \-\-\-\-\-\--     
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--       
-\-\-\-\-\-\-\-\-\-\-\-\--
+--------     -------     
+-------------------------       
+-------------
 
 Dull          Ann          Secrets of Silicon Valley       Algodata
 Infosystems
@@ -912,9 +872,9 @@ au\_info2 Ringer
 
 au\_lname   au\_fname    title                              Pub\_name
 
-\-\-\-\-\-\-\--   \-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--           
-\-\-\-\-\-\-\-\-\-\-\--
+--------   --------   
+---------------------           
+------------
 
 Ringer     Anne        The Gourmet Microwave    Binnet & Hardley
 
@@ -932,11 +892,7 @@ Ringer     Albert       Life Without Fear              New Age Books
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------
-     Группы процедур
-  -- -----------------
-:::
+## Группы процедур
 
  
 
@@ -966,11 +922,7 @@ drop proc orders;2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------
-     Конструкция recompile в операторе create procedure
-  -- ----------------------------------------------------
-:::
+## Конструкция recompile в операторе create procedure
 
  
 
@@ -998,11 +950,7 @@ drop proc orders;2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------
-     Конструкция recompile в операторе execute
-  -- -------------------------------------------
-:::
+## Конструкция recompile в операторе execute
 
  
 
@@ -1018,18 +966,14 @@ drop proc orders;2
 
  
 
-Замечание: Если в определении процедуры используется команда select \*,
+Замечание: Если в определении процедуры используется команда select *,
 то процедура не распознает новые столбцы, добавленные в таблицу, даже
 если в операторе execute используется опция with recompile. Такая
 процедура должна быть удалена и создана заново.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------
-     Вложенные процедуры
-  -- ---------------------
-:::
+## Вложенные процедуры
 
  
 
@@ -1043,11 +987,7 @@ drop proc orders;2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Временные таблицы в сохраненных процедурах
-  -- --------------------------------------------
-:::
+## Временные таблицы в сохраненных процедурах
 
  
 
@@ -1099,7 +1039,7 @@ drop proc orders;2
 
  
 
-create table \#tempstores
+create table #tempstores
 
 (stor\_id char(4), amount money)
 
@@ -1117,9 +1057,9 @@ create procedure inv\_amounts
 
    as
 
-   select stor\_id, \"Total Due\" =sum(amount)
+   select stor\_id, "Total Due" =sum(amount)
 
-   from \#tempstores
+   from #tempstores
 
    group by stor\_id
 
@@ -1133,7 +1073,7 @@ create procedure inv\_amounts
 
  
 
-drop table \# tempstores
+drop table # tempstores
 
  
 
@@ -1149,15 +1089,15 @@ create procedure inv\_proc
 
 as
 
-create table \#tempstores
+create table #tempstores
 
 (stor\_id char(4), amount money)
 
  
 
-insert \#tempstores
+insert #tempstores
 
-select stor\_id, sum(qty\*(100-discount)/100\* rice)
+select stor\_id, sum(qty*(100-discount)/100* rice)
 
 from salesdetail, titles
 
@@ -1171,7 +1111,7 @@ exec inv\_amounts
 
  
 
-Можно создавать временные таблицы без префикса \#, используя оператор
+Можно создавать временные таблицы без префикса #, используя оператор
 create table tempdb..tablename.. в самой сохраненной процедуре. Эти
 таблицы не удаляются после завершения выполнения процедуры, поэтому на
 них могут ссылаться независимые процедуры. Для создания таких таблиц
@@ -1179,11 +1119,7 @@ create table tempdb..tablename.. в самой сохраненной проце
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Выполнение удаленных процедур
-  -- -------------------------------
-:::
+## Выполнение удаленных процедур
 
  
 
@@ -1221,11 +1157,7 @@ exec gateway.remotedb.dbo.remoteproc
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------
-     Возврат информации из сохраненных процедур
-  -- --------------------------------------------
-:::
+## Возврат информации из сохраненных процедур
 
  
 
@@ -1262,11 +1194,7 @@ exec gateway.remotedb.dbo.remoteproc
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------
-     Коды возврата
-  -- ---------------
-:::
+## Коды возврата
 
  
 
@@ -1294,11 +1222,7 @@ select \@status
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------
-     Зарезервированные значения кодов возврата
-  -- -------------------------------------------
-:::
+## Зарезервированные значения кодов возврата
 
  
 
@@ -1359,11 +1283,7 @@ SQL Сервер резервирует код 0 для указания усп�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------
-     Коды возврата пользователя
-  -- ----------------------------
-:::
+## Коды возврата пользователя
 
  
 
@@ -1408,11 +1328,11 @@ execute \@retvalue = checkcontract \@titleid
 
 if (\@retvalue = 1)
 
-  print \"Contract is valid\"
+  print "Contract is valid"
 
 else
 
-   print \"There is not a valid contract\"
+   print "There is not a valid contract"
 
  
 
@@ -1429,11 +1349,7 @@ get\_au\_stat «MC2222»
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Проверка прав доступа в процедурах
-  -- ------------------------------------
-:::
+## Проверка прав доступа в процедурах
 
  
 
@@ -1456,11 +1372,11 @@ create proc test\_proc
 
 as
 
-if (proc\_role(\"sa\_role\") = 0)
+if (proc\_role("sa\_role") = 0)
 
 begin
 
-   print \"You don\'t have the right role\"
+   print "You don\'t have the right role"
 
    return -1
 
@@ -1468,17 +1384,13 @@ end
 
 else
 
-   print \"You have SA role\"
+   print "You have SA role"
 
    return 0
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Возвращаемые параметры
-  -- ------------------------
-:::
+## Возвращаемые параметры
 
  
 
@@ -1503,7 +1415,7 @@ create procedure mathtutor \@mult1 int, \@mult2 int,
 
 as
 
-select \@result = \@mult1 \* \@mult2
+select \@result = \@mult1 * \@mult2
 
  
 
@@ -1528,7 +1440,7 @@ Return parameters:
 
  
 
-\-\-\-\-\-\-\-\-\-\--
+-----------
 
         30
 
@@ -1575,7 +1487,7 @@ Return parameters:
 
 \@result     
 
-\-\-\-\-\-\-\-\-\-\-- 
+----------- 
 
        30
 
@@ -1628,11 +1540,11 @@ select Your\_answer = \@store, Right\_answer = \@guess
 
 if \@guess = \@store
 
-   print \"Right-o\"
+   print "Right-o"
 
 else
 
-   print \"Wrong, wrong, wrong!\"
+   print "Wrong, wrong, wrong!"
 
  
 
@@ -1650,7 +1562,7 @@ Return parameters:
 
 \@result     
 
-\-\-\-\-\-\-\-\-\-\-- 
+----------- 
 
         30 
 
@@ -1658,7 +1570,7 @@ Return parameters:
 
 Your\_answer     Right\_answer 
 
-\-\-\-\-\-\-\-\-\-\--        \-\-\-\-\-\-\-\-\-\-\-- 
+-----------        ------------ 
 
          32                30 
 
@@ -1708,7 +1620,7 @@ declare \@percent int
 
 select \@percent = 10
 
-execute roy\_check \"BU1032\", 1050, \@pc = \@percent output
+execute roy\_check "BU1032", 1050, \@pc = \@percent output
 
 select Percent = \@percent
 
@@ -1728,7 +1640,7 @@ Return parameters:
 
 \@pc         
 
-\-\-\-\-\-\-\-\-\-\-- 
+----------- 
 
         12 
 
@@ -1736,7 +1648,7 @@ Return parameters:
 
 Percent     
 
-\-\-\-\-\-\-\-\-\-\-- 
+----------- 
 
          12
 
@@ -1782,7 +1694,7 @@ if
 
 begin
 
-print \"Royalty is changed\"
+print "Royalty is changed"
 
 select Percent = \@percent
 
@@ -1790,7 +1702,7 @@ end
 
 else
 
-print \"Royalty is the same\"
+print "Royalty is the same"
 
  
 
@@ -1799,7 +1711,7 @@ print \"Royalty is the same\"
 
  
 
-execute newsales \"BU1032\", 1050
+execute newsales "BU1032", 1050
 
  
 
@@ -1807,7 +1719,7 @@ Royalty is changed
 
 Percent     
 
-\-\-\-\-\-\-\-\-\-\-- 
+----------- 
 
         12
 
@@ -1829,11 +1741,7 @@ Percent
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------
-     Передача значений параметров
-  -- ------------------------------
-:::
+## Передача значений параметров
 
  
 
@@ -1859,15 +1767,11 @@ Percent
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------
-     Ключевое слово output
-  -- -----------------------
-:::
+## Ключевое слово output
 
  
 
-Ключевое слово output (выходной) можно сокращать до out , также как и
+Ключевое слово output (выходной) можно сокращать до out, также как и
 execute можно сокращать до exec.
 
 Сохраненные процедуры могут возвращать несколько значений, каждое из
@@ -1892,11 +1796,7 @@ exec myproc \@a = \@myvara out, \@b = \@myvarb out
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------------
-     Правила, связанные с сохраненными процедурами
-  -- -----------------------------------------------
-:::
+## Правила, связанные с сохраненными процедурами
 
  
 
@@ -1981,11 +1881,7 @@ create procedure
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------
-     Расширение названий объектов внутри процедур
-  -- ----------------------------------------------
-:::
+## Расширение названий объектов внутри процедур
 
  
 
@@ -2026,11 +1922,7 @@ on mary.marytab(col1)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------
-     Удаление сохраненных процедур
-  -- -------------------------------
-:::
+## Удаление сохраненных процедур
 
  
 
@@ -2039,9 +1931,9 @@ on mary.marytab(col1)
 
  
 
-drop procedure \[владелец.\]название\_процедуры
+drop procedure [владелец.]название\_процедуры
 
-\[, \[владелец.\]название\_процедуры\] \...
+[, [владелец.]название\_процедуры] ...
 
  
 
@@ -2057,11 +1949,7 @@ drop procedure \[владелец.\]название\_процедуры
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------
-     Изменение названий сохраненных процедур
-  -- -----------------------------------------
-:::
+## Изменение названий сохраненных процедур
 
  
 
@@ -2092,11 +1980,7 @@ sp\_rename showall, countall
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Переименование объектов внутри процедур
-  -- -----------------------------------------
-:::
+## Переименование объектов внутри процедур
 
  
 
@@ -2114,11 +1998,7 @@ sp\_rename showall, countall
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------
-     Процедуры как механизм безопасности
-  -- -------------------------------------
-:::
+## Процедуры как механизм безопасности
 
  
 
@@ -2142,11 +2022,7 @@ sp\_rename showall, countall
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Системные процедуры
-  -- ---------------------
-:::
+## Системные процедуры
 
  
 
@@ -2222,11 +2098,7 @@ sybsystemprocs, то и предоставления прав доступа к 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Администрирование доступа
-  -- ---------------------------
-:::
+## Администрирование доступа
 
  
 
@@ -2278,11 +2150,7 @@ sp\_changegroup, sp\_droplogin, sp\_dropalias, sp\_dropgroup,
 sp\_dropuser, sp\_helpgroup, sp\_helpprotect, sp\_helpuser,
 sp\_password.
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------
-     Удаленные серверы
-  -- -------------------
-:::
+## Удаленные серверы
 
  
 
@@ -2310,11 +2178,7 @@ sp\_helpserver, sp\_remoteoption, sp\_serveroption.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Определение данных и объекты базы данных
-  -- ------------------------------------------
-:::
+## Определение данных и объекты базы данных
 
  
 
@@ -2369,11 +2233,7 @@ sp\_indsuspect, sp\_recompile.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Сообщения пользователя
-  -- ------------------------
-:::
+## Сообщения пользователя
 
  
 
@@ -2406,11 +2266,7 @@ sp\_dropmessage sp\_getmessage.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------
-     Системное администрирование
-  -- -----------------------------
-:::
+## Системное администрирование
 
  
 
@@ -2458,11 +2314,7 @@ SQL Сервера. Полную информацию о системных пр
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------
-     Получение информации о процедурах
-  -- -----------------------------------
-:::
+## Получение информации о процедурах
 
  
 
@@ -2471,11 +2323,7 @@ SQL Сервера. Полную информацию о системных пр
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------
-     Процедура sp\_help
-  -- --------------------
-:::
+## Процедура sp\_help
 
  
 
@@ -2492,9 +2340,9 @@ sp\_help byroyalty
 
 Name              Owner   type                       Created\_on
 
-\-\-\-\-\-\-\--            \-\-\-\-\--         
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--          
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------            ------         
+----------------          
+-------------------
 
 byroyalty           dbo             stored procedure    Feb  9 1987 
 3:56PM
@@ -2503,15 +2351,15 @@ byroyalty           dbo             stored procedure    Feb  9 1987
 
 Data\_located\_on\_segment             When\_created         
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--                  
- \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------------------                  
+ --------------------
 
  
 
 Parameter\_name    Type           Length                 Param\_order
 
-\-\-\-\-\-\-\-\-\-\-\-\-\--               \-\-\-\-\--         
- \-\-\-\-\--                  \-\-\-\-\-\-\-\-\-\--
+--------------               ------         
+ ------                  -----------
 
 \@percentage            int                4                  1
 
@@ -2529,11 +2377,7 @@ sybsystemprocs.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Процедура sp\_helptext
-  -- ------------------------
-:::
+## Процедура sp\_helptext
 
  
 
@@ -2546,9 +2390,9 @@ sp\_helptext byroyalty
 
  
 
-\# Lines of Text
+# Lines of Text
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------
 
              1
 
@@ -2560,7 +2404,7 @@ sp\_helptext byroyalty
 
 text
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------------------------------------------
 
 create procedure byroyalty \@percentage int
 
@@ -2581,11 +2425,7 @@ sp\_helptext из базы данных sybsystemprocs.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Процедура sp\_depends
-  -- -----------------------
-:::
+## Процедура sp\_depends
 
  
 
@@ -2605,12 +2445,8 @@ Things the object references in the current database.
 
 object                type        updated      selected
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- \-\-\-\-\-\-\-\-\-\--
-\-\-\-\-\-\-\-\--   \-\-\-\-\-\-\--
-
+---------------- ----------- ---------   --------
 dbo.titleauthor   user table     no            no
-
- 
 
 (return status = 0)
 
@@ -2628,16 +2464,10 @@ sp\_depends titleauthor
 Things inside the current database that reference the object.
 
 object                 type
-
-\-\-\-\-\-\-\-\-\-\-\-\-\--    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+--------------    ------------------
 dbo.titleview      view
-
 dbo.reptq2         stored procedure
-
 dbo.byroyalty      stored procedure
-
- 
 
 (return status = 0)
 

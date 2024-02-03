@@ -47,8 +47,8 @@ PROCEDURE SETMinValue(nVal IN NUMBER);
 
 PROCEDURE SetStepValue(nValue IN NUMBER);
 
-Вышеприведенный кусок кода - клиентская часть, но есть и \"подводный
-камень\" - серверная часть\... Данный метотод подкодит только для
+Вышеприведенный кусок кода - клиентская часть, но есть и "подводный
+камень" - серверная часть... Данный метотод подкодит только для
 функций, процедур и пактеов, в которых вы можете написать вставить
 следущую строчку:
 
@@ -81,14 +81,14 @@ PROGRESS\_BAR.STEPIT;
     PROCEDURE SETMaxValue(nVal IN NUMBER) IS 
     BEGIN 
     if nVal<nMinValue THEN 
-    RAISE_APPLICATION_ERROR(-20001,'&Igrave;&egrave;&iacute;&egrave;&igrave;&agrave;&euml;&uuml;&iacute;&icirc;&aring; &ccedil;&iacute;&agrave;&divide;&aring;&iacute;&egrave;&aring; &iacute;&aring; &auml;&icirc;&euml;&aelig;&iacute;&icirc; &aacute;&ucirc;&ograve;&uuml; &aacute;&icirc;&euml;&uuml;&oslash;&aring; &igrave;&agrave;&ecirc;&ntilde;&egrave;&igrave;&agrave;&euml;&uuml;&iacute;&icirc;&atilde;&icirc; &igrave;&egrave;&iacute;:'||nMinValue||' ,&igrave;&agrave;&ecirc;&ntilde;:'||nVal); 
+    RAISE_APPLICATION_ERROR(-20001,'&Igrave;&egrave;&iacute;&egrave;&igrave;&agrave;&euml;&uuml;&iacute;&icirc;&aring; &ccedil;&iacute;&agrave;&divide;&aring;&iacute;&egrave;&aring; &iacute;&aring; &auml;&icirc;&euml;&aelig;&iacute;&icirc; &aacute;&ucirc;&ograve;&uuml; &aacute;&icirc;&euml;&uuml;&oslash;&aring; &igrave;&agrave;&ecirc;&ntilde;&egrave;&igrave;&agrave;&euml;&uuml;&iacute;&icirc;&atilde;&icirc; &igrave;&egrave;&iacute;:'||nMinValue||',&igrave;&agrave;&ecirc;&ntilde;:'||nVal); 
     END IF; 
     nMaxValue:=nVal; 
     END; 
     PROCEDURE SETMinValue(nVal IN NUMBER) IS 
     BEGIN 
     if nVal>nMaxValue THEN 
-    RAISE_APPLICATION_ERROR(-20001,'&Igrave;&egrave;&iacute;&egrave;&igrave;&agrave;&euml;&uuml;&iacute;&icirc;&aring; &ccedil;&iacute;&agrave;&divide;&aring;&iacute;&egrave;&aring; &iacute;&aring; &auml;&icirc;&euml;&aelig;&iacute;&icirc; &aacute;&ucirc;&ograve;&uuml; &aacute;&icirc;&euml;&uuml;&oslash;&aring; &igrave;&agrave;&ecirc;&ntilde;&egrave;&igrave;&agrave;&euml;&uuml;&iacute;&icirc;&atilde;&icirc; &igrave;&egrave;&iacute;:'||nVal||' ,&igrave;&agrave;&ecirc;&ntilde;:'||nMaxValue); 
+    RAISE_APPLICATION_ERROR(-20001,'&Igrave;&egrave;&iacute;&egrave;&igrave;&agrave;&euml;&uuml;&iacute;&icirc;&aring; &ccedil;&iacute;&agrave;&divide;&aring;&iacute;&egrave;&aring; &iacute;&aring; &auml;&icirc;&euml;&aelig;&iacute;&icirc; &aacute;&ucirc;&ograve;&uuml; &aacute;&icirc;&euml;&uuml;&oslash;&aring; &igrave;&agrave;&ecirc;&ntilde;&egrave;&igrave;&agrave;&euml;&uuml;&iacute;&icirc;&atilde;&icirc; &igrave;&egrave;&iacute;:'||nVal||',&igrave;&agrave;&ecirc;&ntilde;:'||nMaxValue); 
     END IF; 
     nMinValue:=nVal; 
     END; 

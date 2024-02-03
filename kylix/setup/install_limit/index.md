@@ -14,13 +14,13 @@ Limit reached for installs using Kylix serial number
 I am attempting to register Kylix, but cannot and get the following
 error:
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------------
 
 Error registering software. The limit has been reached for installs
 using this serial number, please contact customer service to increase
 the allowed install count.
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------------
 
 How do I get around this and register Kylix?     
 

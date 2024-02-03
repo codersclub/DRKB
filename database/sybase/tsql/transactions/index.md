@@ -61,11 +61,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------
-     Что такое транзакции
-  -- ----------------------
-:::
+## Что такое транзакции
 
  
 
@@ -109,11 +105,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Транзакции и достоверность данных
-  -- -----------------------------------
-:::
+## Транзакции и достоверность данных
 
  
 
@@ -134,11 +126,7 @@ SQL Сервер автоматически устанавливает соот�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Транзакции и восстановление данных
-  -- ------------------------------------
-:::
+## Транзакции и восстановление данных
 
  
 
@@ -155,11 +143,7 @@ SQL операторы, связанные с восстановлением и 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------
-     Использование транзакций
-  -- --------------------------
-:::
+## Использование транзакций
 
  
 
@@ -197,11 +181,7 @@ SQL операторы, связанные с восстановлением и 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Команды определения данных в транзакциях
-  -- ------------------------------------------
-:::
+## Команды определения данных в транзакциях
 
  
 
@@ -233,7 +213,7 @@ ddl in tran установлена в базе данных model, то указ
 
  
 
-sp\_dboption mydb, \"ddl in tran\", true
+sp\_dboption mydb, "ddl in tran", true
 
  
 
@@ -289,7 +269,7 @@ master, чтобы выполнить команду sp\_dboption. Любой п
     | alter database  | disk init       | load            | select into     |
     |                 |                 | transaction     |                 |
     | alter           | dump database   |                 | update          |
-    | table\...partit |                 | load database   | statistics      |
+    | table...partit |                 | load database   | statistics      |
     | ion             | dump            |                 |                 |
     |                 | transaction     | reconfigure     | truncate table  |
     | alter table     |                 |                 |                 |
@@ -305,11 +285,7 @@ ddl in tran.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Начало и окончание транзакций
-  -- -------------------------------
-:::
+## Начало и окончание транзакций
 
  
 
@@ -320,9 +296,9 @@ ddl in tran.
 
  
 
-begin {transaction \| tran} \[название\_транзакции\]
+begin {transaction \| tran} [название\_транзакции]
 
-commit {transaction \| tran \| work} \[название\_транзакции\]
+commit {transaction \| tran \| work} [название\_транзакции]
 
  
 
@@ -355,11 +331,7 @@ commit tran
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Откат назад и точки сохранения
-  -- --------------------------------
-:::
+## Откат назад и точки сохранения
 
  
 
@@ -378,8 +350,8 @@ commit tran
 
  
 
-rollback {transaction \| tran \| work} \[название\_транзакции \|
-название\_точки\]
+rollback {transaction \| tran \| work} [название\_транзакции \|
+название\_точки]
 
  
 
@@ -447,11 +419,7 @@ SQL Сервер не выполняет команды rollback transaction и 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Проверка состояния транзакций
-  -- -------------------------------
-:::
+## Проверка состояния транзакций
 
  
 
@@ -498,7 +466,7 @@ select @\@transtate
 
  
 
-\-\-\-\-\-\-\-\-\--
+----------
 
        0
 
@@ -514,7 +482,7 @@ commit transaction
 
 select @\@transtate
 
-\-\-\-\-\-\-\-\-\--
+----------
 
         1
 
@@ -546,7 +514,7 @@ command is aborted. The conflict occured in database \'pubs2\', table
 
 select @\@transtate
 
-\-\-\-\-\-\-\-\-\--
+----------
 
        2
 
@@ -560,7 +528,7 @@ rollback transaction
 
 select @\@transtate
 
-\-\-\-\-\-\-\-\-\--
+----------
 
        3
 
@@ -577,11 +545,7 @@ select @\@transtate
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------
-     Вложенные транзакции
-  -- ----------------------
-:::
+## Вложенные транзакции
 
  
 
@@ -614,19 +578,19 @@ begin tran
 
    select @\@trancount
 
-   /\* @\@trancount = 1 \*/
+   /* @\@trancount = 1 */
 
    begin tran
 
        select @\@trancount
 
-       /\* @\@trancount = 2 \*/
+       /* @\@trancount = 2 */
 
        begin tran
 
            select @\@trancount
 
-           /\* @\@trancount = 3 \*/
+           /* @\@trancount = 3 */
 
        commit tran
 
@@ -636,7 +600,7 @@ commit tran
 
 select @\@trancount
 
-/\* @@ trancount = 0 \*/
+/* @@ trancount = 0 */
 
  
 
@@ -647,11 +611,7 @@ select @\@trancount
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Пример транзакции пользователя
-  -- --------------------------------
-:::
+## Пример транзакции пользователя
 
  
 
@@ -664,15 +624,15 @@ begin transaction royalty\_change
 
  
 
-/\* A user sets out to change the royalty split \*/
+/* A user sets out to change the royalty split */
 
-/\* for the two authors of The Gourmet Microwave. \*/
+/* for the two authors of The Gourmet Microwave. */
 
-/\* Since the database would be inconsistent \*/
+/* Since the database would be inconsistent */
 
-/\* between the two updates, they must be grouped \*/
+/* between the two updates, they must be grouped */
 
-/\* into a transaction. \*/
+/* into a transaction. */
 
  
 
@@ -686,7 +646,7 @@ where royaltyper = 75
 
 and titleauthor.title\_id = titles.title\_id
 
-and title = \"The Gourmet Microwave\"
+and title = "The Gourmet Microwave"
 
  
 
@@ -700,7 +660,7 @@ where royaltyper = 25
 
 and titleauthor.title\_id = titles.title\_id
 
-and title = \"The Gourmet Microwave\"
+and title = "The Gourmet Microwave"
 
  
 
@@ -708,33 +668,33 @@ save transaction percent\_changed
 
  
 
-/\* After updating the royaltyper entries for \*/
+/* After updating the royaltyper entries for */
 
-/\* the two authors, the user inserts the \*/
+/* the two authors, the user inserts the */
 
-/\* savepoint \"percent\_changed,\" and then checks \*/
+/* savepoint "percent\_changed," and then checks */
 
-/\* to see how a 10 percent increase in the
+/* to see how a 10 percent increase in the
 
-/\* price would affect the authors\' royalty \*/
+/* price would affect the authors\' royalty */
 
-/\* earnings. \*/
+/* earnings. */
 
  
 
 update titles
 
-set price = price \* 1.1
+set price = price * 1.1
 
-where title = \"The Gourmet Microwave\"
+where title = "The Gourmet Microwave"
 
  
 
-select (price \* royalty \* total\_sales) \* royaltyper
+select (price * royalty * total\_sales) * royaltyper
 
 from titles, titleauthor, roysched
 
-where title = \"The Gourmet Microwave\"
+where title = "The Gourmet Microwave"
 
 and titles.title\_id = titleauthor.title\_id
 
@@ -746,13 +706,13 @@ rollback transaction percent\_changed
 
  
 
-/\* The transaction rolls back to the savepoint \*/
+/* The transaction rolls back to the savepoint */
 
-/\* with the rollback transaction command. \*/
+/* with the rollback transaction command. */
 
-/\* Without a savepoint, it would roll back to \*/
+/* Without a savepoint, it would roll back to */
 
-/\* the begin transaction. \*/
+/* the begin transaction. */
 
  
 
@@ -760,11 +720,7 @@ commit transaction
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------
-     Выбор режима транзакции и уровня изоляции
-  -- -------------------------------------------
-:::
+## Выбор режима транзакции и уровня изоляции
 
  
 
@@ -832,11 +788,7 @@ SQL Сервер поддерживает следующие уровни изо
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Выбор режима транзакции
-  -- -------------------------
-:::
+## Выбор режима транзакции
 
  
 
@@ -925,11 +877,7 @@ commit transaction
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Выбор уровня изоляции
-  -- -----------------------
-:::
+## Выбор уровня изоляции
 
  
 
@@ -1030,7 +978,7 @@ select @\@isolation
 
  
 
-\-\-\-\-\-\-\--
+--------
 
       1
 
@@ -1045,11 +993,7 @@ select @\@isolation
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------
-     Изменение уровня изоляции запроса
-  -- -----------------------------------
-:::
+## Изменение уровня изоляции запроса
 
  
 
@@ -1077,13 +1021,13 @@ committed и serializable предложения at isolation соответст
 
  
 
-select \*
+select *
 
 from titles
 
 at isolation read uncommitted
 
-select \*
+select *
 
 from titles
 
@@ -1151,11 +1095,7 @@ level, действующей для рабочего сеанса.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------
-     Курсоры и уровни изоляции
-  -- ---------------------------
-:::
+## Курсоры и уровни изоляции
 
 Оператор выбора, содержащий предложение at isolation, можно использовать
 для изменения уровня изоляции при определении курсора. Например:
@@ -1164,7 +1104,7 @@ level, действующей для рабочего сеанса.
 
 declare commit\_crsr cursor
 
-for select \*
+for select *
 
 from titles
 
@@ -1207,11 +1147,7 @@ SQL Сервер устанавливает уровень изоляции ку
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------
-     Сохраненные процедуры и уровни изоляции
-  -- -----------------------------------------
-:::
+## Сохраненные процедуры и уровни изоляции
 
 Все системные сохраненные процедуры всегда Sybase работают на 1 уровне
 изоляции, независимо от уровня изоляции транзакции или рабочего сеанса.
@@ -1222,11 +1158,7 @@ SQL Сервер устанавливает уровень изоляции ку
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------
-     Триггеры и уровни изоляции
-  -- ----------------------------
-:::
+## Триггеры и уровни изоляции
 
 Поскольку триггеры запускаются во время выполнения операторов
 модификации данных (таких как insert), то все триггеры выполняются либо
@@ -1238,11 +1170,7 @@ SQL Сервер устанавливает уровень изоляции ку
 
  
 
-::: {style="text-align: center; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------------
-     Транзакции в сохраненных процедурах и триггерах
-  -- -------------------------------------------------
-:::
+## Транзакции в сохраненных процедурах и триггерах
 
  
 
@@ -1270,10 +1198,10 @@ SQL Сервер устанавливает уровень изоляции ку
 Следующий рисунок иллюстрирует использование транзакций внутри вложенных
 процедур.
 
-![](embim1737.png){width="372" height="390"}
-
+:::{.center}
+![](embim1737.png)  
 Рисунок 17-1: Вложенные транзакции
-
+:::
  
 
 Команда rollback transaction в сохраненной процедуре не влияет на
@@ -1290,13 +1218,13 @@ transaction в триггере отменяет выполнение всего
 
 begin tran
 
-update titles set \...
+update titles set ...
 
-insert into titles \...
+insert into titles ...
 
 execute myproc
 
-delete titles where \...
+delete titles where ...
 
  
 
@@ -1312,11 +1240,11 @@ delete titles where \...
 
 begin tran
 
-update authors set \...
+update authors set ...
 
-insert into authors \...
+insert into authors ...
 
-delete authors where \...
+delete authors where ...
 
  
 
@@ -1327,11 +1255,7 @@ delete authors where \...
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Режимы транзакций в сохраненных процедурах
-  -- --------------------------------------------
-:::
+## Режимы транзакций в сохраненных процедурах
 
  
 
@@ -1386,11 +1310,11 @@ commit work
 время выполнения этой процедуры. Перед выходом из процедуры он
 восстанавливает тот режим, который был установлен до входа в процедуру.
 
-SQL Сервер помечает (tags) все процедуры (\"связанная\" или
-\"несвязанная\") в зависимости от режима транзакций сеанса, в котором
+SQL Сервер помечает (tags) все процедуры ("связанная" или
+"несвязанная") в зависимости от режима транзакций сеанса, в котором
 они были созданы. Это помогает избежать проблем, связанных с
 несоответствием режимов транзакций. Сохраненную процедуру, помеченную
-как \"связанная\", нельзя выполнять в рабочем сеансе, использующим
+как "связанная", нельзя выполнять в рабочем сеансе, использующим
 несвязанный режим транзакций, и наоборот.
 
  
@@ -1400,22 +1324,18 @@ SQL Сервер помечает (tags) все процедуры (\"связа
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------------------
-     Установка режимов транзакций в сохраненных процедурах
-  -- -------------------------------------------------------
-:::
+## Установка режимов транзакций в сохраненных процедурах
 
  
 
 С помощью системной процедуры sp\_procxmode можно изменить пометку (tag
 value), связанную с сохраненной процедурой. Чтобы указать, что данная
 процедура может исполняться в любом режиме, ей можно присвоить  пометку
-\"anymode\" (любой режим) с помощью процедуры sp\_procxmode. Например:
+"anymode" (любой режим) с помощью процедуры sp\_procxmode. Например:
 
  
 
-sp\_procxmode byroyalty, \"anymode\"
+sp\_procxmode byroyalty, "anymode"
 
  
 
@@ -1430,8 +1350,8 @@ sp\_procxmode
 
 procedure name               transaction mode
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--      
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------      
+--------------------
 
 byroyalty                        Unchained
 
@@ -1464,11 +1384,7 @@ titleid\_proc                     Unchained
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------
-     Использование курсоров в транзакциях
-  -- --------------------------------------
-:::
+## Использование курсоров в транзакциях
 
  
 
@@ -1513,11 +1429,7 @@ isolation level 3. Однако, если опция close on endtran не ус�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------------
-     Резервирование и восстановление в транзакциях
-  -- -----------------------------------------------
-:::
+## Резервирование и восстановление в транзакциях
 
  
 

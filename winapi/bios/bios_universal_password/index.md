@@ -78,7 +78,7 @@ AWARD BIOS v2.51G
 
    Wodj
 
-   bios\*
+   bios*
 
    biosstar
 
@@ -379,7 +379,7 @@ ZEOS BIOS
 
    zeosx
 
-\[C\] Faraon
+[C] Faraon
 
 Источник: <https://wasm.ru>
 

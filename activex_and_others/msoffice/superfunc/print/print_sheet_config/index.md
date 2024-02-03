@@ -34,7 +34,7 @@ Date: 01.01.2007
 Сетку активной страницы можно сделать видимой или невидимой, используя
 свойство DisplayGridlines объекта ActiveWindow. Если перед этим
 необходимо выбрать определенный лист, то используйте метод Select,
-например, Sheets(\"Лист1\").Select.
+например, Sheets("Лист1").Select.
 
     Function DisplayGridlines(display:boolean):boolean;
     begin

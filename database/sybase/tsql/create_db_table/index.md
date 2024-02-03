@@ -11,14 +11,10 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Создание баз данных и таблиц
-
 В этой главе описывается процесс создания баз данных и таблиц,
-
 который назывется также процессом определения данных. Здесь
 рассматриваются следующие темы:
 
- 
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 113px;"}
   --- -------------------------------------
@@ -65,11 +61,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------
-     Что такое базы данных и таблицы ?
-  -- -----------------------------------
-:::
+## Что такое базы данных и таблицы ?
 
  
 
@@ -152,11 +144,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------
-     Сохранение целостности данных в базе
-  -- --------------------------------------
-:::
+## Сохранение целостности данных в базе
 
  
 
@@ -212,11 +200,7 @@ Transact-SQL позволяет вводить серию ограничений
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Права доступа в базах данных
-  -- ------------------------------
-:::
+## Права доступа в базах данных
 
  
 
@@ -231,7 +215,7 @@ Transact-SQL позволяет вводить серию ограничений
 
  
 
-sp\_helprotect имя\_пользователя
+    sp_helprotect имя_пользователя
 
  
 
@@ -261,11 +245,7 @@ master..syslogin, и позволяет ему создавать и удаля�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------
-     Создание и использование баз данных
-  -- -------------------------------------
-:::
+## Создание и использование баз данных
 
  
 
@@ -321,11 +301,7 @@ sybsyntax с помощью процедуры isql и сценариев (scrip
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Выбор базы данных: команда use
-  -- --------------------------------
-:::
+## Выбор базы данных: команда use
 
  
 
@@ -335,7 +311,7 @@ sybsyntax с помощью процедуры isql и сценариев (scrip
 
  
 
-use название\_базы\_данных
+    use название_базы_данных
 
  
 
@@ -344,7 +320,7 @@ use название\_базы\_данных
 
  
 
-use pubs2
+    use pubs2
 
  
 
@@ -377,11 +353,7 @@ use для доступа к другой базе данных. Сам поль
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------
-     Создание базы данных: команда creat database
-  -- ----------------------------------------------
-:::
+## Создание базы данных: команда creat database
 
  
 
@@ -412,7 +384,7 @@ use для доступа к другой базе данных. Сам поль
 
  
 
-creat database название\_базы\_данных
+    creat database название_базы_данных
 
  
 
@@ -421,7 +393,7 @@ creat database название\_базы\_данных
 
  
 
-creat database newpubs
+    creat database newpubs
 
  
 
@@ -443,18 +415,12 @@ sysusages базы данных master.
  
 
 create database название\_базы\_данных
-
-\[on {default \| database\_device} \[= размер\] 
-
-   \[, database\_device \[= размер\]\]\...\]
-
-\[log on database\_device \[= размер\]
-
-   \[, database\_device \[= размер\]\]\...\]
-
-\[with override\]
-
-\[for load\]
+[on {default \| database\_device} [= размер] 
+   [, database\_device [= размер]]...]
+[log on database\_device [= размер]
+   [, database\_device [= размер]]...]
+[with override]
+[for load]
 
  
 
@@ -470,11 +436,7 @@ override. Информация об этой опции дается в Руко
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------
-     Предложение on
-  -- ----------------
-:::
+## Предложение on
 
 Необязательное предложение on позволяет пользователю указать, где
 сохранить базу данных и память какого размера под нее выделить. Если
@@ -499,9 +461,8 @@ sp\_helpdevice можно просмотреть список устройств
 
  
 
-create database newpubs
-
-on default = 5
+    create database newpubs
+    on default = 5
 
  
 
@@ -516,9 +477,8 @@ newdata:
 
  
 
-create database newpubs
-
-on pubsdata = 3, newdata = 2
+    create database newpubs
+    on pubsdata = 3, newdata = 2
 
  
 
@@ -535,12 +495,7 @@ sysdevices.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------
-     Предложение log on
-  -- --------------------
-:::
-
+## Предложение log on
  
 
 За исключением случаев, когда создаются очень маленькие, некритические
@@ -590,11 +545,9 @@ on. В этом случае создается журнал транзакци�
 
  
 
-create database newpubs
-
-on pubsdata = 3, newdata = 2
-
-log on pushlog = 1
+    create database newpubs
+    on pubsdata = 3, newdata = 2
+    log on pushlog = 1
 
  
 
@@ -616,11 +569,7 @@ sp\_extendsegment. Дальнейшие детали можно посмотре
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------
-     Опция for load
-  -- ----------------
-:::
+## Опция for load
 
 Необязательное предложение for load (для загрузки) вызывает создание
 базы данных, которая может использоваться только для хранения дампов
@@ -631,11 +580,7 @@ sp\_extendsegment. Дальнейшие детали можно посмотре
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Удаление баз данных
-  -- ---------------------
-:::
+## Удаление баз данных
 
  
 
@@ -645,9 +590,7 @@ sp\_extendsegment. Дальнейшие детали можно посмотре
 
 Эта команда имеет следующий вид:
 
- 
-
-drop database название\_базы\_данных \[,название\_базы\_данных\]\...
+drop database название\_базы\_данных [,название\_базы\_данных]...
 
  
 
@@ -659,7 +602,7 @@ drop database название\_базы\_данных \[,название\_ба
 
  
 
-drop database newpubs, newdb
+    drop database newpubs, newdb
 
  
 
@@ -668,11 +611,7 @@ drop database newpubs, newdb
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------
-     Изменение размеров баз данных
-  -- -------------------------------
-:::
+## Изменение размеров баз данных
 
  
 
@@ -691,7 +630,7 @@ newpub:
 
  
 
-alter database newpubs
+    alter database newpubs
 
  
 
@@ -703,18 +642,12 @@ alter database newpubs
  
 
 alter database название\_базы\_данных
-
-\[on {default \| database\_device} \[= размер\] 
-
-   \[, database\_device \[= размер\]\]\...\]
-
-\[log on database\_device \[= размер\]
-
-   \[, database\_device \[= размер\]\]\...\]
-
-\[with override\]
-
-\[for load\]
+[on {default \| database\_device} [= размер] 
+   [, database\_device [= размер]]...]
+[log on database\_device [= размер]
+   [, database\_device [= размер]]...]
+[with override]
+[for load]
 
  
 
@@ -728,9 +661,8 @@ newpubs на устройстве pubsdata и на 3 Мб на устройст�
 
  
 
-alter database newpubs
-
-on pubsdata = 2, newdata = 3
+    alter database newpubs
+    on pubsdata = 2, newdata = 3
 
  
 
@@ -762,11 +694,7 @@ logsegment и device\_name.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------
-     Создание таблиц
-  -- -----------------
-:::
+## Создание таблиц
 
  
 
@@ -780,11 +708,7 @@ logsegment и device\_name.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Пример создания таблицы
-  -- -------------------------
-:::
+## Пример создания таблицы
 
  
 
@@ -799,7 +723,6 @@ logsegment и device\_name.
  
 
 create table название\_таблицы
-
 (название\_столбца тип\_данных)
 
  
@@ -810,7 +733,6 @@ some\_name, имеющем фиксированную длину в 11 байт�
  
 
 create table names
-
 (some\_name char(11))
 
  
@@ -838,11 +760,7 @@ create table names
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------
-     Выбор названий для столбцов
-  -- -----------------------------
-:::
+## Выбор названий для столбцов
 
  
 
@@ -851,7 +769,7 @@ create table names
 пользователя.
 
 Пользователь может создавать временные таблицы путем добавления знака
-фунта (\#) или префикса "tempdb.." к названию таблицы в операторе creat
+фунта (#) или префикса "tempdb.." к названию таблицы в операторе creat
 table.
 
 Временные таблицы, названиям которых предшествует знак фунта, доступны
@@ -870,8 +788,7 @@ table.
 
  
 
-create table \#authors
-
+create table #authors
 (au\_id char (11))
 
  
@@ -881,7 +798,6 @@ create table \#authors
  
 
 create table tempdb..authors
-
 (au\_id char(11))
 
  
@@ -907,11 +823,7 @@ jonah.info и sally.info. Салли должна указывать расши�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------
-     Синтаксис команды создания таблицы
-  -- ------------------------------------
-:::
+## Синтаксис команды создания таблицы
 
  
 
@@ -919,54 +831,30 @@ jonah.info и sally.info. Салли должна указывать расши�
 
  
 
-create table \[база\_данных.\[владелец\].\]название\_таблицы
-(название\_столбца тип
-
-   \[default {константное\_выражение \| user \| null}\]
-
-   {\[{identity \| null \| not null}\]
-
-   \| \[\[constraint название\_ограничения\]
-
+create table [база\_данных.[владелец].]название\_таблицы (название\_столбца тип
+   [default {константное\_выражение \| user \| null}]
+   {[{identity \| null \| not null}]
+   \| [[constraint название\_ограничения]
        {{unique \| primary key}
-
-          \[clustered \| nonclustered\]
-
-        \[with {fillfactor \| max\_rows\_per\_page} = x\]
-
-        \[on название\_сегмента\]
-
-        \| references \[\[база\_данных.\]владелец.\]таблица\_ссылок
-
-            \[(столбец\_ссылок)\]
-
-        \| check (условие\_отбора)}\]}\...
-
-\| \[constraint название\_ограничения\]
-
+          [clustered \| nonclustered]
+        [with {fillfactor \| max\_rows\_per\_page} = x]
+        [on название\_сегмента]
+        \| references [[база\_данных.]владелец.]таблица\_ссылок
+            [(столбец\_ссылок)]
+        \| check (условие\_отбора)}]}...
+\| [constraint название\_ограничения]
    {{unique \| primary key}
-
-       \[clustered \| nonclustered\]
-
-        (название\_столбца \[{,название\_столбца}\...\])
-
-        \[with {fillfactor \| max\_rows\_per\_page} = x\]
-
-        \[on название\_сегмента\]
-
-   \| foreign key (название\_столбца \[{,название\_столбца}\...\])
-
-        references \[\[база\_данных.\]владелец.\]таблица\_ссылок
-
-          \[(столбец\_ссылок \[{,столбец\_ссылок}\...\])\]
-
+       [clustered \| nonclustered]
+        (название\_столбца [{,название\_столбца}...]
+        [with {fillfactor \| max\_rows\_per\_page} = x]
+        [on название\_сегмента]
+   \| foreign key (название\_столбца [{,название\_столбца}...]
+        references [[база\_данных.]владелец.]таблица\_ссылок
+          [(столбец\_ссылок [{,столбец\_ссылок}...]]
    \| check (условие\_отбора)}
-
-\[{, {следующий\_столбец \| следующее\_ограничение}}\...\])
-
+[{, {следующий\_столбец \| следующее\_ограничение}}...]
 \+
-
-\[with max\_rows\_per\_page = x\]\[on название\_сегмента\]
+[with max\_rows\_per\_page = x][on название\_сегмента]
 
  
 
@@ -985,27 +873,16 @@ create table \[база\_данных.\[владелец\].\]название\_�
  
 
 create table titles
-
 (title\_id tid,
-
 title      varchar(80) not null,
-
 type      char(12),
-
 pub\_id   char(4) null,
-
 price     money null,
-
 advance money null,
-
 royalty   int null,
-
 total\_sales int null,
-
 notes     varchar(200) null,
-
 pubdate  datetime
-
 contract bit not null)
 
  
@@ -1027,11 +904,7 @@ contract bit not null)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Возможность записи неопределенных значений
-  -- --------------------------------------------
-:::
+## Возможность записи неопределенных значений
 
  
 
@@ -1099,11 +972,7 @@ advance, royalty и total\_sales разрешено использовать з�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Использование счетчиков
-  -- -------------------------
-:::
+## Использование счетчиков
 
  
 
@@ -1125,9 +994,7 @@ identity (идентификация), которое указывается в�
  
 
 create table sales\_daily
-
    (row\_id numeric(5,0) identity,
-
     stor\_id char(4) not null)
 
  
@@ -1140,11 +1007,7 @@ nonique index.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------------------
-     Создание счетчиков с определяемыми типами данных
-  -- --------------------------------------------------
-:::
+## Создание счетчиков с определяемыми типами данных
 
  
 
@@ -1159,7 +1022,7 @@ IDENTITY:
 
  
 
-sp\_addtype ident, \"numeric(5)\", \"identity\"
+sp\_addtype ident, "numeric(5)", "identity"
 
  
 
@@ -1169,7 +1032,6 @@ sp\_addtype ident, \"numeric(5)\", \"identity\"
  
 
 create table sales\_monthly
-
    (row\_id ident, stor\_id char(4) not null)
 
  
@@ -1183,11 +1045,7 @@ create table sales\_monthly
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------------
-     Обращение к счетчику через syb\_identity
-  -- ------------------------------------------
-:::
+## Обращение к счетчику через syb\_identity
 
 Если пользователь определил столбец-счетчик, то он может не запоминать
 точное название этого столбца. В этом случае можно использовать ключевое
@@ -1198,17 +1056,12 @@ create table sales\_monthly
 
  
 
-select \* from sales\_daily
-
+select * from sales\_daily
    where syb\_identity = 30
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------
-     Генерация значений счетчика
-  -- -----------------------------
-:::
+## Генерация значений счетчика
 
  
 
@@ -1227,16 +1080,12 @@ select \* from sales\_daily
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------
-     Использование временных таблиц
-  -- --------------------------------
-:::
+## Использование временных таблиц
 
  
 
 Если перед названием таблицы в операторе creat table указывается знак
-фунта (\#) или префикс "tempdb..", то создается новая временная таблица.
+фунта (#) или префикс "tempdb..", то создается новая временная таблица.
 
 Имеется два вида временных таблиц:
 
@@ -1266,21 +1115,17 @@ drop table.
 
  
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  --- ------------------------------------------------------------------------------------
-  ·   Таблицы, которые доступны только на протяжении текущего сеанса работы SQL Сервера.
-  --- ------------------------------------------------------------------------------------
-:::
+### Таблицы, которые доступны только на протяжении текущего сеанса работы SQL Сервера.
 
  
 
-Название таких таблиц должно начинаться со знака фунта (\#). В этом
+Название таких таблиц должно начинаться со знака фунта (#). В этом
 случае в операторе создания таблицы достаточно указать только ее
 название, например:
 
  
 
-create table \#my\_temptb1
+create table #my\_temptb1
 
  
 
@@ -1301,14 +1146,10 @@ SQL Сервер обеспечивает уникальность назван�
 
  
 
-create table \#myjobs
-
+create table #myjobs
 (task  char(30),
-
 start  datetime,
-
 stop  datetime,
-
 notes varchar(200))
 
  
@@ -1337,11 +1178,7 @@ sp\_addtype, находясь в базе данных model, и затем пе
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Создание таблиц в разных базах данных
-  -- ---------------------------------------
-:::
+## Создание таблиц в разных базах данных
 
  
 
@@ -1356,7 +1193,7 @@ sp\_addtype, находясь в базе данных model, и затем пе
 
  
 
-creat table newpubs..newtab (cоl l int)
+    creat table newpubs..newtab (cоl l int)
 
  
 
@@ -1370,11 +1207,7 @@ creat table newpubs..newtab (cоl l int)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------------------
-     Определение ограничений целостности для таблиц
-  -- ------------------------------------------------
-:::
+## Определение ограничений целостности для таблиц
 
  
 
@@ -1464,11 +1297,7 @@ Transact-SQL предоставляет два метода сохранения
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------
-     Спецификация табличных и столбцовых ограничений
-  -- -------------------------------------------------
-:::
+## Спецификация табличных и столбцовых ограничений
 
  
 
@@ -1488,15 +1317,10 @@ Transact-SQL предоставляет два метода сохранения
  
 
 create table my\_publishers
-
 (pub\_id          char(4),
-
 pub\_name     varchar(40),
-
 constraint my\_chk\_constraint
-
-   check(pub\_id in (\"1389\", \"0736\", \"0877\") or pub\_name not like
-\"Bad News Books\"))
+  check(pub\_id in ("1389", "0736", "0877") or pub\_name not like "Bad News Books"))
 
  
 
@@ -1507,13 +1331,12 @@ constraint my\_chk\_constraint
 
  
 
-create table my\_publishers
-
-(pub\_id        char(4) constraint my\_chk\_constraint
-
-                  check(pub\_id in (\"1389\", \"0736\", \"0877\")),
-
-pub\_name   varchar(40))
+create table my\_publishers (
+  pub\_id        char(4)
+  constraint my\_chk\_constraint
+                 check(pub\_id in ("1389", "0736", "0877")),
+  pub\_name   varchar(40)
+)
 
  
 
@@ -1523,11 +1346,7 @@ pub\_name   varchar(40))
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------
-     Установка значений по умолчанию
-  -- ---------------------------------
-:::
+## Установка значений по умолчанию
 
  
 
@@ -1568,15 +1387,12 @@ pub\_name   varchar(40))
 
  
 
-create table my\_titles
-
-(title\_id        char(6),
-
+create table my\_titles (
+title\_id        char(6),
 title            varchar(80),
-
 price           money       default null,
-
-total\_sales    int            default 0)
+total\_sales    int            default 0
+)
 
  
 
@@ -1590,11 +1406,7 @@ total\_sales    int            default 0)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------
-     Спецификация уникальных и главных ключей
-  -- ------------------------------------------
-:::
+## Спецификация уникальных и главных ключей
 
  
 
@@ -1643,13 +1455,9 @@ stor\_id и ord\_num не повторялись.
  
 
 create table my\_sales
-
 (stor\_id         char(4),
-
 ord\_num      varchar(20),
-
 date             datetime,
-
 unique clustered (stor\_id, ord\_num))
 
  
@@ -1667,11 +1475,7 @@ with max\_rows\_per\_page и on название\_сегмента) для со�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------------
-     Спецификация ссылочных ограничений целостности
-  -- ------------------------------------------------
-:::
+## Спецификация ссылочных ограничений целостности
 
  
 
@@ -1703,19 +1507,12 @@ with max\_rows\_per\_page и on название\_сегмента) для со�
  
 
 create table my\_salesdetail
-
 (stor\_id         char(4),
-
 ord\_num      varchar(20),
-
 title\_id         char(6)        references my\_titles(title\_id),
-
 qty              smallint,
-
 constraint salesdet\_constr
-
        foreign key (stor\_id, ord\_num)
-
        references my\_sales (stor\_id, ord\_num))
 
  
@@ -1755,11 +1552,8 @@ constraint salesdet\_constr
  
 
 create table test\_type
-
 (col1  char(4) not null 
-
 references publishers(pub\_id),
-
 col2  varchar(20) not null)
 
  
@@ -1774,11 +1568,7 @@ Features User's Guide).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Спецификация условных ограничений
-  -- -----------------------------------
-:::
+## Спецификация условных ограничений
 
  
 
@@ -1822,18 +1612,11 @@ Transact-SQL функции. В условия отбора нельзя вкл�
  
 
 create table my\_new\_publishers
-
 (pub\_id        char(4)
-
-       check (pub\_id in (\"1389\", \"0736\", \"0877\", \"1622\",
-\"1756\")
-
-       or pub\_id like \"99\[0-9\]\[0-9\]\"),
-
+       check (pub\_id in ("1389", "0736", "0877", "1622", "1756")
+       or pub\_id like "99[0-9][0-9]"),
 pub\_name    varchar(40),
-
 city             varchar(20),
-
 state            char(2))
 
  
@@ -1847,11 +1630,7 @@ state            char(2))
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------------
-     Как проектировать и создавать таблицы
-  -- ---------------------------------------
-:::
+## Как проектировать и создавать таблицы
 
  
 
@@ -1953,11 +1732,7 @@ state            char(2))
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------
-     Подготовка наброска проекта
-  -- -----------------------------
-:::
+## Подготовка наброска проекта
 
  
 
@@ -2002,7 +1777,7 @@ friends\_etc самостоятельно, то он должен предупр
     +-----------+-----------+-----------+-----------+-----------+-----------+
     | zip       | char(5)   | Null      | zipind    | zipdflt   | ziprule   |
     +-----------+-----------+-----------+-----------+-----------+-----------+
-    | phone     | p\#       | Null      |           |           | phonerule |
+    | phone     | p#       | Null      |           |           | phonerule |
     +-----------+-----------+-----------+-----------+-----------+-----------+
     | age       | tinyint   | Null      |           |           | agerule   |
     +-----------+-----------+-----------+-----------+-----------+-----------+
@@ -2018,38 +1793,29 @@ friends\_etc самостоятельно, то он должен предупр
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------
-     Создание определенных пользователей типов данных
-  -- --------------------------------------------------
-:::
+## Создание определенных пользователей типов данных
 
  
 
 Первые два столбца нашей таблицы отводятся для имени и фамилии. Для них
 указан тип данных nm. Перед там как создавать таблицу необходимо
 определить новые (пользовательские) типы данных, к которым относится
-также тип данных p\# из столбца phone.
+также тип данных p# из столбца phone.
 
 Тип данных nm определим как строковый тип данных переменной длины, с
-максимальной длиной 30 байтов. Тип данных p\# определим как строковый
+максимальной длиной 30 байтов. Тип данных p# определим как строковый
 тип данных с фиксированной длиной 10 байтов.
 
 Определение этих типов происходит следующим образом:
 
  
 
-execute sp\_addtype nm, \"varchar(30)\"
-
-execute sp\_addtype p\#, \"char(10)\"
+execute sp\_addtype nm, "varchar(30)"
+execute sp\_addtype p#, "char(10)"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------------
-     Выбор столбцов, допускающих неопределенное значение
-  -- -----------------------------------------------------
-:::
+## Выбор столбцов, допускающих неопределенное значение
 
  
 
@@ -2077,11 +1843,7 @@ Not Null, поскольку она подразумевается по умол
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------
-     Определение таблицы
-  -- ---------------------
-:::
+## Определение таблицы
 
  
 
@@ -2090,31 +1852,19 @@ Not Null, поскольку она подразумевается по умол
  
 
 create table friends\_etc
-
 (pname       nm              not null,
-
 sname        nm              not null,
-
 address      varchar(30)    null,
-
 city           varchar(30)    not null,
-
 state         char(2)          not null,
-
 postalcode  char(5)         null,
-
-phone        p\#               null,
-
+phone        p#               null,
 age           tinyint           null,
-
 bday         datetime        not null,
-
 sex           bit                 not null,
-
 debt         money           not null,
-
 notes        varchar(255)   null
-
+)
  
 
 Итак имеется таблица, в столбцах которой можно хранить имена, фамилии,
@@ -2124,11 +1874,7 @@ notes        varchar(255)   null
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------------------------
-     Создание таблиц из результатов запросов: select into
-  -- ------------------------------------------------------
-:::
+## Создание таблиц из результатов запросов: select into
 
  
 
@@ -2148,26 +1894,16 @@ sp\_helpdb pubs2
  
 
 name    db\_size   owner  dbid    created          status 
-
-\-\-\-\-\--  \-\-\-\-\-\--     \-\-\-\-\--  \-\-\-\--  
-\-\-\-\-\-\-\-\-\-\--      \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+------  -------     ------  -----    -----------      ---------------------
 pubs     2 MB     sa         5       Jun  3 1988    select into/bulkcopy
-
- 
 
 (Выбрана 1 строка)
 
  
 
 device              size         usage
-
-\-\-\-\-\-\-\-\-\-\-\--   \-\-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+------------   ---------   --------------
 master            2 MB         data and log
-
- 
 
                    (Выбрана 1 строка)
 
@@ -2184,7 +1920,8 @@ table. Оператор select into можно использовать для �
 
  
 
-Замечание. Поскольку оператор select into не регистрируется в журнале,
+Замечание.
+Поскольку оператор select into не регистрируется в журнале,
 то рекомендуется использовать команду dump database, чтобы сохранить
 копию базы данных после выполнения оператора select into. Не следует
 пользоваться командой dump transaction, так как не допускается снятие
@@ -2218,40 +1955,29 @@ publishers. Поскольку в этом примере нет предлож�
  
 
 select pub\_id, pub\_name
-
 into newtable
-
 from publishers
-
- 
 
 (3 rows affected)
 
  
 
-Сообщение SQL Сервера \"3 rows affected\" указывает на то, что в новую
+Сообщение SQL Сервера "3 rows affected" указывает на то, что в новую
 таблицу было включено три строки. Новая таблица выглядит следующим
 образом:
 
  
 
-select \*
-
+select *
 from newtable
 
  
 
 pub\_id  pub\_name
-
-\-\-\-\-\--  \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+------  -----------------------
 0736    New Age Books
-
 0877    Binnet & Hardley
-
 1389    Algodata Infosystems
-
- 
 
                    (Выбрано 3 строки)
 
@@ -2267,31 +1993,22 @@ pub\_id  pub\_name
 
  
 
-select \*
-
+select *
 into newtable2
-
 from publishers
-
 where 1=2
-
- 
 
 (0 rows affected)
 
  
 
-select \*
-
+select *
 from newtable2
 
  
 
 pub\_id    pub\_name          city      state
-
-\-\-\-\-\--    \-\-\-\-\-\-\-\-\-\-\-\-\--    \-\-\-\-\-\-\--  \-\-\-\--
-
- 
+------    --------------    --------  -----
 
 (0 rows affected)
 
@@ -2305,41 +2022,25 @@ pub\_id    pub\_name          city      state
 
  
 
-select type, \"Total\_amount\" = sum(advance)
-
-into \#whatspent
-
+select type, "Total\_amount" = sum(advance)
+into #whatspent
 from titles
-
 group by type
-
- 
 
 (Выбрано 6 строк)
 
  
 
-select \* from \#whatspent
-
- 
+select * from #whatspent
 
 type                       Total\_amount
-
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--      \-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+----------------      ----------------
 UNDECIDED        NULL
-
 business                25,125.00
-
 mod\_cook        15,000.00
-
 popular\_comp        15,000.00
-
 psychology           21,275.00
-
 trad\_cook             19,000.00
-
- 
 
 (Выбрано 6 строк)
 
@@ -2347,7 +2048,7 @@ trad\_cook             19,000.00
 
 Надо всегда давать названия столбцам в операторе select into для всех
 результатов вычислений агрегирующих функций или результатов вычисления
-любых других выражений, таких как арифметические выражения (amount\*2),
+любых других выражений, таких как арифметические выражения (amount*2),
 конкатенации строк (lname+fname) или выражения со встроенными функциями
 SQL Сервера (lower(lname)). Далее приводится пример, содержащий
 конкатенацию строк:
@@ -2355,47 +2056,27 @@ SQL Сервера (lower(lname)). Далее приводится пример,
  
 
 select au\_id,
-
-   \"Full\_Name\" = au\_fname + \' \' + au\_lname
-
-into \#g\_authortemp
-
+   "Full\_Name" = au\_fname + \' \' + au\_lname
+into #g\_authortemp
 from authors
-
-where au\_lname like \"G%\"
-
- 
+where au\_lname like "G%"
 
 (Выбрано 3 строки)
 
- 
 
-select \* from \#g\_authortemp
-
- 
+select * from #g\_authortemp
 
 au\_id                      Full\_Name  
-
-\-\-\-\-\-\-\--                
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+--------                -------------------------
 213-46-8915                Marjorie Green
-
 472-27-2349                Burt Gringlesby
-
 527-72-3246                Morningstar Greene
-
- 
 
 (Выбрано 3 строки)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------
-     Выбор столбца для счетчика
-  -- ----------------------------
-:::
+## Выбор столбца для счетчика
 
  
 
@@ -2426,11 +2107,7 @@ syb\_identity. Новый столбец будет наследовать св�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------
-     Добавление счетчика в операторе select into
-  -- ---------------------------------------------
-:::
+## Добавление счетчика в операторе select into
 
  
 
@@ -2442,11 +2119,8 @@ syb\_identity. Новый столбец будет наследовать св�
  
 
 select список\_столбцов
-
 название\_счетчика = identity (точность)
-
 into название\_таблицы
-
 from название\_таблицы
 
  
@@ -2460,11 +2134,7 @@ from название\_таблицы
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------
-     Удаление таблиц
-  -- -----------------
-:::
+## Удаление таблиц
 
  
 
@@ -2473,9 +2143,8 @@ from название\_таблицы
 
  
 
-drop table \[база\_данных.\[владелец\].\] название\_таблицы
-
-\[, \[база\_данных.\[владелец\].\] название\_таблицы\] \...
+drop table [база\_данных.[владелец].] название\_таблицы
+     [, [база\_данных.[владелец].] название\_таблицы] ...
 
  
 
@@ -2502,11 +2171,7 @@ truncate table, то таблица тем не менее остается в �
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Модификация существующих таблиц
-  -- ---------------------------------
-:::
+## Модификация существующих таблиц
 
  
 
@@ -2573,56 +2238,31 @@ truncate table, то таблица тем не менее остается в �
 
  
 
-alter table \[база\_данных.\[владелец\].\]название\_таблицы
-
+alter table [база\_данных.[владелец].]название\_таблицы
 {add название\_столбца тип\_данных
-
-   \[default {константное\_выражение \| user \| null}\]
-
-   {\[{identity \| null}\]
-
-   \| \[\[constraint название\_ограничения\]
-
+   [default {константное\_выражение \| user \| null}]
+   {[{identity \| null}]
+   \| [[constraint название\_ограничения]
        {{unique \| primary key}
-
-           \[clustered \| nonclustered\]
-
-        \[with {fillfactor \| max\_rows\_per\_page} = x\]
-
-        \[on название\_сегмента\]
-
-        \| references \[\[база\_данных.\]владелец.\]таблица\_ссылок
-
-            \[(столбец\_ссылок)\]
-
-        \| check (условие\_отбора)}\]}\...
-
-   {\[, следующий\_столбец\]}\...
-
-\| add {\[constraint название\_ограничения\]
-
+           [clustered \| nonclustered]
+        [with {fillfactor \| max\_rows\_per\_page} = x]
+        [on название\_сегмента]
+        \| references [[база\_данных.]владелец.]таблица\_ссылок
+            [(столбец\_ссылок)]
+        \| check (условие\_отбора)}]}...
+   {[, следующий\_столбец]}...
+\| add {[constraint название\_ограничения]
    {unique \| primary key}
-
-       \[clustered \| nonclustered\]
-
-       (название\_столбца \[{, название\_столбца}\...\])
-
-        \[with {fillfactor \| max\_rows\_per\_page} = x\]
-
-        \[on название\_сегмента\]
-
-\| foreign key (название\_столбца \[{, название\_столбца}\...\])
-
-       references \[\[база\_данных.\]владелец.\]таблица\_ссылок
-
-          \[(столбец\_ссылок \[{, столбец\_ссылок}\...\])\]
-
+       [clustered \| nonclustered]
+       (название\_столбца [{, название\_столбца}...]
+        [with {fillfactor \| max\_rows\_per\_page} = x]
+        [on название\_сегмента]
+\| foreign key (название\_столбца [{, название\_столбца}...]
+       references [[база\_данных.]владелец.]таблица\_ссылок
+          [(столбец\_ссылок [{, столбец\_ссылок}...]]
    \| check (условие\_отбора)}
-
 \| drop constraint название\_ограничения
-
-\| replace название\_столбца default { константное\_выражение \| user \|
-null}}
+\| replace название\_столбца default { константное\_выражение \| user \| null}}
 
  
 
@@ -2643,7 +2283,8 @@ table, то SQL Сервер последовательно записывает
 
  
 
-Замечание. Если в сохраненной процедуре используется оператор выбора
+Замечание.
+Если в сохраненной процедуре используется оператор выбора
 select \*, обращающийся к таблице, которая была изменена, то процедура
 не будет выбирать данные из добавленных столбцов, даже если включена
 опция with recompile. В этом случае необходимо удалить процедуру и снова
@@ -2657,7 +2298,6 @@ select \*, обращающийся к таблице, которая была �
  
 
 alter table friends\_etc
-
    add country varchar(20) null
 
  
@@ -2668,11 +2308,8 @@ alter table friends\_etc
  
 
 alter table friends\_etc
-
    add constraint no\_old\_country
-
-       check (country not in (\"GDR\", \"E. Germany\", \"East
-Germany\"))
+       check (country not in ("GDR", "E. Germany", "East Germany"))
 
  
 
@@ -2682,7 +2319,6 @@ Germany\"))
  
 
 alter table friends\_etc
-
    drop constraint no\_old\_country
 
  
@@ -2698,8 +2334,7 @@ alter table friends\_etc
  
 
 alter table friends\_etc
-
-   replace country default \"USA\"
+   replace country default "USA"
 
  
 
@@ -2708,11 +2343,7 @@ alter table friends\_etc
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Переименование таблиц и других объектов
-  -- -----------------------------------------
-:::
+## Переименование таблиц и других объектов
 
  
 
@@ -2750,7 +2381,7 @@ sp\_rename friends\_etc,  infotable
 
  
 
-sp\_rename \"таблица.столбец\", новое\_название\_столбца
+sp\_rename "таблица.столбец", новое\_название\_столбца
 
  
 
@@ -2760,7 +2391,7 @@ sp\_rename \"таблица.столбец\", новое\_название\_ст
 
  
 
-sp\_rename \"таблица.индекс\", новое\_название\_индекса
+sp\_rename "таблица.индекс", новое\_название\_индекса
 
  
 
@@ -2772,7 +2403,7 @@ tid на t\_id:
 
  
 
-exec sp\_rename tid, \"t\_id\"
+exec sp\_rename tid, "t\_id"
 
  
 
@@ -2784,11 +2415,7 @@ exec sp\_rename tid, \"t\_id\"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------
-     Переименование зависимых объектов
-  -- -----------------------------------
-:::
+## Переименование зависимых объектов
 
  
 
@@ -2811,11 +2438,7 @@ exec sp\_rename tid, \"t\_id\"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------
-     Предоставление прав пользователям
-  -- -----------------------------------
-:::
+## Предоставление прав пользователям
 
  
 
@@ -2886,9 +2509,7 @@ exec sp\_rename tid, \"t\_id\"
  
 
 grant insert, delete
-
 on titles
-
 to mary, joe
 
  
@@ -2903,7 +2524,6 @@ to mary, joe
  
 
 revoke creat table, creat rule
-
 from mary
 
  
@@ -2914,11 +2534,7 @@ from mary
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------------------------------------
-     Получение информации о базах данных и таблицах
-  -- ------------------------------------------------
-:::
+## Получение информации о базах данных и таблицах
 
  
 
@@ -2932,11 +2548,7 @@ SQL Сервера.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------------
-     Использование процедуры sp\_help с объектами базы данных
-  -- ----------------------------------------------------------
-:::
+## Использование процедуры sp\_help с объектами базы данных
 
  
 
@@ -2949,7 +2561,7 @@ SQL Сервера.
 
  
 
-sp\_help \[название\_объекта\]
+sp\_help [название\_объекта]
 
  
 
@@ -2959,82 +2571,45 @@ sp\_help \[название\_объекта\]
  
 
 Name                               Owner        Type
-
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\--   \-\-\-\-\-\-\--
-
+--------------------------   -----------   --------
 publisher                           dbo             user table
 
 Data\_located\_on\_segment          When\_created
-
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--    
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+------------------------------    --------------------
 default                                     Jan  1 1900 12:00AM
 
  
 
 Column\_name        Type        Length     Prec            Scale
-
-\-\-\-\-\-\-\-\-\-\--             \-\-\-\-\-\--      \-\-\-\-\--     
-\-\-\-\--           \-\-\-\--
-
+-----------             -------      ------     -----           -----
 pub\_id                char                4        NULL        NULL
-
-pub\_name                varchar        40        NULL      
- NULL         
-
-city                        varchar        20        NULL      
- NULL         
-
-state                        char                2        NULL      
- NULL
+pub\_name                varchar        40        NULL       NULL
+city                        varchar        20        NULL       NULL
+state                        char                2        NULL       NULL
 
  
 
 Nulls      Default\_name   Rule\_name         Identity
-
-\-\-\-\--      \-\-\-\-\-\-\-\-\-\-\-\--     
-\-\-\-\-\-\-\-\--            \-\-\-\-\-\-\--
-
+-----      -------------     ---------            --------
    0       NULL                NULL                 0
-
    1       NULL                NULL                 0
-
    1       NULL                NULL                 0
-
    1       NULL                NULL                 0
 
  
 
-index\_name     index\_description                           
-index\_keys
-
-\-\-\-\-\-\-\-\-\-\-\-\-\--
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--    
-\-\-\-\-\-\-\-\-\--
-
+index\_name     index\_description                           index\_keys
+-------------- ------------------------------------    ----------
 pubind           clustered, unique located on default     pub\_id
-
- 
 
 (1 row affected)
 
  
 
 keytype     object       related\_object  object\_keys    related\_keys
-
-\-\-\-\-\-\--      \-\-\-\-\--      \-\-\-\-\-\-\-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
-primary     publishers \-- none \--        pub\_id,        
-\*,\*,\*,\*,\*,\*, \*,\*,\*,\*,\*,\*,\*,\*,\*
-
-foreign      titles         publishers        pub\_id,        
-\*,\*,\*,\*,\*,\*,\*, pub\_id,\*,\*,\*,\*,\*,\*,\*
-
- 
+-------      ------      --------------   -----------   ---------------------------------
+primary     publishers -- none --        pub\_id,        *,*,*,*,*,*, *,*,*,*,*,*,*,*,*
+foreign      titles         publishers        pub\_id,        *,*,*,*,*,*,*, pub\_id,*,*,*,*,*,*,*
 
 (return status = 0)
 
@@ -3058,11 +2633,7 @@ sp\_helpconstraint.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Использование процедуры sp\_helpdb в базах данных
-  -- ---------------------------------------------------
-:::
+## Использование процедуры sp\_helpdb в базах данных
 
  
 
@@ -3074,7 +2645,7 @@ sp\_helpconstraint.
 
  
 
-sp\_helpdb \[название\_базы\_данных\]
+sp\_helpdb [название\_базы\_данных]
 
  
 
@@ -3088,36 +2659,22 @@ sp\_helpdb pubs2
  
 
 name    db\_size   owner  dbid   created             status
-
-\-\-\-\--   \-\-\-\-\-\--      \-\-\-\-\--  \-\-\--  
-\-\-\-\-\-\-\-\-\-\-\-\-\--    \-\-\-\-\-\-\-\-\-\-\-\--
-
+-----   -------      ------  ----  --------------    -------------
 pubs2   2 MB       sa        4     Jan 10 1988       no options set
-
- 
 
 (1 row affected)
 
  
 
 device             size         usage
-
-\-\-\-\-\-\-\-\-\-\-\--  \-\-\-\-\-\-\-\-\-- 
-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
- 
-
+------------  ---------- --------------
 pubsdev         2 MB       data + log
 
 (1 row affected)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------
-     Использование процедуры sp\_helpconstraint
-  -- --------------------------------------------
-:::
+## Использование процедуры sp\_helpconstraint
 
  
 
@@ -3129,7 +2686,7 @@ pubsdev         2 MB       data + log
 
  
 
-sp\_helpconstraint  название\_объекта \[, detail \]
+sp\_helpconstraint  название\_объекта [, detail ]
 
  
 
@@ -3144,15 +2701,10 @@ sp\_helpconstraint  название\_объекта \[, detail \]
  
 
 create table states
-
 (rank                smallint,
-
 abbrev        char(2),
-
 name                varchar(20)        null,
-
 population        int                check (population \> 1000000),
-
 constraint stateconstr primary key (rank, abbrev))
 
  
@@ -3167,27 +2719,16 @@ sp\_helpconstraint states
  
 
 name                                defn
-
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+--------------------------- ---------------------------------------
 states\_popula\_1088006907  CHECK (population \> 1000000)
-
 stateconstr                          PRIMARY KEY INDEX (rank, abbrev):
-
                                           CLUSTERED,FOREIGN REFERENCE
-
- 
 
 (3 rows affected, return status = 0)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Использование процедуры sp\_spaceused
-  -- ---------------------------------------
-:::
+## Использование процедуры sp\_spaceused
 
  
 
@@ -3197,7 +2738,7 @@ stateconstr                          PRIMARY KEY INDEX (rank, abbrev):
 
  
 
-sp\_spaceused \[название\_объекта\]
+sp\_spaceused [название\_объекта]
 
  
 
@@ -3214,14 +2755,9 @@ sp\_spaceused titles
 
  
 
-name    rows   reserved    data   index\_size   unused     
-
-\-\-\-\-\-\--    \-\-\-\--    \-\-\-\-\-\-\-\-\--    \-\-\-\--   
-\-\-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\--
-
+name    rows   reserved    data   index\_size   unused
+-------    -----    ----------    -----   -----------     ---------
 titles     18      48 KB      6 KB   4 KB         38 KB
-
- 
 
 (Выбрано 0 строк)
 

@@ -64,9 +64,8 @@ Borland, я наконец нашел решение как это сделат�
      
     end
 
-\- Chris Fioravanti
+- Chris Fioravanti
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

@@ -11,7 +11,7 @@ Explode / Implode a string
 01.01.2007
 :::
 
-// 1. \...\...\...\...\...\...\...\...\...\...\...\...\...\...\.....
+// 1. ...............................................
 
     type
       TStrArray = array of string;
@@ -44,7 +44,7 @@ Explode / Implode a string
         Memo1.Lines.Add(A[i]);
     end;
 
-// 2. \...\...\...\...\...\...\...\...\...\...\...\...\...\...\.....
+// 2. ...............................................
 
     {
       * These 2 functions are from the programming language PHP, unite certainly well-known.

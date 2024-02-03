@@ -138,7 +138,7 @@ Date: 01.01.2007
         end;
         result.s := copy(s, first, i - index + 1);
         if result.s[length(result.s)] = #32 then
-          delete(result.s, length(result.s) , 1);
+          delete(result.s, length(result.s), 1);
       end else begin
         result.length := i - index + 1;
         s1 := copy(s, first, i - index + 1);

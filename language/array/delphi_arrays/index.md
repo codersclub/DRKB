@@ -67,7 +67,7 @@ Date: 01.01.2007
      
     result := pointer + row + col*rows 
 
-и затем вместо myarray\[2,3\] напишите
+и затем вместо myarray[2,3] напишите
 
     myarray.fetch_num(2,3)  
 
@@ -80,7 +80,6 @@ Date: 01.01.2007
 Вот способ создания одно- и двухмерных динамических массивов:
 
     (*
-     
     --
     -- модуль для создания двух очень простых классов обработки динамических массивов
     --     TDynaArray   :  одномерный массив
@@ -173,7 +172,6 @@ Date: 01.01.2007
     implementation
      
     (*
-     
     --
     --  методы TDynArray
     --
@@ -218,7 +216,6 @@ Date: 01.01.2007
     end; {==TDynArray.SetElement==}
      
     (*
-     
     --
     --  методы TDynaMatrix
     --
@@ -311,7 +308,6 @@ Date: 01.01.2007
       M.Free;
     end.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

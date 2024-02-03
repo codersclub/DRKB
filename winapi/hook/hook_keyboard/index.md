@@ -158,7 +158,7 @@ Date: 01.01.2007
        EntryProc(Dll_Process_Attach);
      end.
 
-2\. Code from the calling Program
+2. Code from the calling Program
 
 {this program get\'s the Char from the DLL in 2 ways,
 

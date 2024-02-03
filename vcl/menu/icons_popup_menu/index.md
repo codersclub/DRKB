@@ -41,7 +41,7 @@ Date: 01.01.2007
       // * * Получаем иконку определенного приложения * * /
         Ic := TIcon.Create;
       Ic.Handle := ExtractAssociatedIcon(Hinstance, // * задаем путь и имя файла * /
-        , Index);
+       , Index);
       // * * Создаем для текста изображение * * /
         Txt := TBitmap.Create;
       with Txt do

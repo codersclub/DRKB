@@ -29,7 +29,7 @@ Date: 01.01.2007
      
         hWndToolbar := FindWindowEx(GetParent((Sender as TOpenPictureDialog).Handle), 0,
           'ToolbarWindow32', nil);
-        SendMessage(hWndToolbar, TB_SETBUTTONINFO, TB_BTN_NEWFOLDER  ,LParam(@tbinfo));
+        SendMessage(hWndToolbar, TB_SETBUTTONINFO, TB_BTN_NEWFOLDER ,LParam(@tbinfo));
     end;
 
 Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

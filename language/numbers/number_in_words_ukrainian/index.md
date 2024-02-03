@@ -277,11 +277,10 @@ Date: 01.01.2007
 
 Andrew Tkachenko
 
-ООО \"Проект ВО\"
+ООО "Проект ВО"
 
 Украина, г.Харьков
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

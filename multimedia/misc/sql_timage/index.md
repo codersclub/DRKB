@@ -13,13 +13,13 @@ Date: 01.01.2007
 
 Предполагается, что поле BLOB (например, Pict)
 
-2\) в запросе Query.SQL пишется что-то вроде
+2) в запросе Query.SQL пишется что-то вроде
 
 \'select Pict from sometable where somefield=somevalue\'
 
-3\) запрос открывается
+3) запрос открывается
 
-4\) делается \"присваивание\":
+4) делается "присваивание":
 
 Image1.Picture.Assing(TBlobField(Query.FieldByName(\'Pict\'))
 

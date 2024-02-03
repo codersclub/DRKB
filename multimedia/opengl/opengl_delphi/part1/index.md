@@ -29,7 +29,7 @@ OpenGL ...
 Откройте новый проект: File -\> New -\> Application; У Вас успехи
 (шутка).
 
-Теперь в директиву \"uses\" добавьте \"OpenGL\" вот так:
+Теперь в директиву "uses" добавьте "OpenGL" вот так:
 
        uses
           Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
@@ -56,7 +56,7 @@ OpenGL ...
 
 В разделе private
 
-обьявим\...:
+обьявим...:
 
          DC:HDC; //   переменные для получения контекста воспроизведения
          hrc:HGLRC; //
@@ -64,9 +64,7 @@ OpenGL ...
          procedure initsvet;
          procedure SetPixFormat;
 
-В разделе protected
-
-обьявим\...:
+В разделе protected обьявим:
 
      procedure WMPaint(var Msg: TWMPaint); message WM_PAINT;
 
@@ -87,7 +85,7 @@ OpenGL ...
       hrc := wglCreateContext(DC);
       wglMakeCurrent(DC, hrc); // сделаем "текущим контекст воспроизведения
       Initsvet; // включим свет
-      glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE , @MaterialColor);
+      glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, @MaterialColor);
       glMatrixMode(GL_MODELVIEW);
       Timer1.Enabled := True; // включим таймер
       GLShadeModel(GL_SMOOTH);
@@ -137,7 +135,7 @@ OpenGL ...
      glLoadIdentity; // загрузить матрицу
       glTranslatef(0.0, 0.0, -9.0);
        glRotatef(Angle / (random (1) + 1), 1.0, 0.0, 0.0);
-       glRotatef(Angle , 0.0, 0.0, 1.0); //
+       glRotatef(Angle, 0.0, 0.0, 1.0); //
          glpushmatrix; // сохраним текущу систему координат
            glutsolidcube(2); // нарисуем куб с ребром 2
          glpopmatrix; // восстановим систему координат
@@ -172,7 +170,7 @@ OpenGL ...
 
 А теперь запускаем!!!!
 
-![clip0124](clip0124.png){width="198" height="197"}
+![clip0124](clip0124.png){.center}
 
 Вот и всё!
 

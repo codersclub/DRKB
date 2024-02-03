@@ -23,7 +23,7 @@ FindKey для нескольких полей
 поля.
 
     oEmetb.indexName:='PrimaryKey';
-    if oEmeTb.findkey([prCLient,prDiv,prEme])then 
+    if oEmeTb.findkey([prCLient,prDiv,prEme]) then 
 
 где findkey передаются параметры для Primary Keyfields.
 
@@ -35,6 +35,6 @@ FindKey для нескольких полей
 полям, которые вы ищете.
 
     oEmetb.indexfieldNames:='EmeClient;EmeDiv;EmeNo';
-    if oEmeTb.findkey([123,'A',96])then
+    if oEmeTb.findkey([123,'A',96]) then
 
 Взято с <https://delphiworld.narod.ru>

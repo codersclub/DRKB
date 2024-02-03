@@ -25,7 +25,7 @@ Date: 01.01.2007
             CodElement = record
                           NewLeft,NewRight,
                           P0, P1 : PCodElement;   {элемент входящий одновременно}
-                          LengthBiteChain : byte; { в массив , очередь и дерево }
+                          LengthBiteChain : byte; { в массив, очередь и дерево }
                           BiteChain : word;
                           CounterEnter : word;
                           Key : boolean;

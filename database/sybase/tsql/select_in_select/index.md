@@ -55,11 +55,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------
-     Что такое подзапросы
-  -- ----------------------
-:::
+## Что такое подзапросы
 
  
 
@@ -90,11 +86,7 @@ SQL оператор, который включает подзапросы, на
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Примеры использования подзапросов
-  -- -----------------------------------
-:::
+## Примеры использования подзапросов
 
  
 
@@ -108,15 +100,15 @@ select price
 
 from titles
 
-where title = \"Straight Talk About Computers\"
+where title = "Straight Talk About Computers"
 
  
 
 price
 
-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------
 
-      \$19.99
+      $19.99
 
  
 
@@ -133,15 +125,15 @@ select title, price
 
 from titles
 
-where price = \$19.99
+where price = $19.99
 
  
 
 title                                                             
  price
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--       
-\-\-\-\-\-\-\--
+-------------------------------------------------------------       
+--------
 
 The Busy Executive\'s Database Guide                          19.99
 
@@ -171,15 +163,15 @@ where price =
 
    from titles
 
-   where title = \"Straight Talk About Computers\")
+   where title = "Straight Talk About Computers")
 
  
 
 title                                                             
  price
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--            
-\-\-\-\-\-\-\--
+--------------------------------------------------------            
+--------
 
 The Busy Executive\'s Database Guide                  19.99
 
@@ -206,27 +198,27 @@ Prolonged Data Deprivation: Four Case Studies        19.99
 
  
 
-(select \[distinct\] список\_выбора\_подзапроса
+(select [distinct] список\_выбора\_подзапроса
 
-\[from \[\[database.\]owner.\]{название\_таблицы \| название\_вьювера}
+[from [[database.]owner.]{название\_таблицы \| название\_вьювера}
 
-\[({index название\_индекса \| prefetch size \|\[lru\|mru\]})\]}
+[({index название\_индекса \| prefetch size \|[lru\|mru]})]}
 
-       \[holdlock \| noholdlock\] \[shared\]
+       [holdlock \| noholdlock] [shared]
 
-    \[,\[\[database.\]owner.\]{ название\_таблицы \| название\_вьювера }
+    [,[[database.]owner.]{ название\_таблицы \| название\_вьювера }
 
-\[({index название\_индекса \| prefetch size \|\[lru\|mru\]})\]}
+[({index название\_индекса \| prefetch size \|[lru\|mru]})]}
 
-       \[holdlock \| noholdlock\] \[shared\]\]\... \]
+       [holdlock \| noholdlock] [shared]]... ]
 
-\[where условия\_отбора\]
+[where условия\_отбора]
 
-\[group by выражение\_без\_агрегации \[,
+[group by выражение\_без\_агрегации [,
 
-            выражение\_без\_агрегации\]\... \]
+            выражение\_без\_агрегации]... ]
 
-\[having условия\_отбора\])
+[having условия\_отбора]
 
  
 
@@ -241,11 +233,7 @@ having внешних операторов выбора (select), вставки
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Ограничения на подзапросы
-  -- ---------------------------
-:::
+## Ограничения на подзапросы
 
  
 
@@ -303,11 +291,7 @@ having внешних операторов выбора (select), вставки
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Расширенные названия столбцов
-  -- -------------------------------
-:::
+## Расширенные названия столбцов
 
  
 
@@ -328,7 +312,7 @@ where pub\_id in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
@@ -350,7 +334,7 @@ where publishers.pub\_id in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
@@ -360,16 +344,12 @@ where publishers.pub\_id in
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------
-     Подзапросы с коррелирующимися названиями 
-  -- -------------------------------------------
-:::
+## Подзапросы с коррелирующимися названиями 
 
  
 
-Как отмечалось в главе 5, \"Соединения: Выбор данных из нескольких
-таблиц\", коррелирующиеся (согласующиеся) названия таблиц необходимы в
+Как отмечалось в главе 5, "Соединения: Выбор данных из нескольких
+таблиц", коррелирующиеся (согласующиеся) названия таблиц необходимы в
 самосоединениях, поскольку таблица, присоединенная сама к себе,
 выступает в двух различных ролях. Коррелирующиеся названия могут также
 использоваться во вложенных запросах, которые ссылаются на одну и ту же 
@@ -390,16 +370,16 @@ where au1.city in
 
    from authors au2
 
-   where au2.au\_fname = \"Livia\"
+   where au2.au\_fname = "Livia"
 
-   and au2.au\_lname = \"Karsen\")
+   and au2.au\_lname = "Karsen")
 
  
 
 au\_lname            au\_fname            city
 
-\-\-\-\-\-\-\-\-\-\--        \-\-\-\-\-\-\-\-\-\-\-\-\--    
-\-\-\-\-\-\-\-\-\-\--
+-----------        --------------    
+-----------
 
 Green               Marjorie            Oakland
 
@@ -435,9 +415,9 @@ where city in
 
    from authors
 
-   where au\_fname = \"Livia\"
+   where au\_fname = "Livia"
 
-   and au\_lname = \"Karsen\")
+   and au\_lname = "Karsen")
 
  
 
@@ -453,9 +433,9 @@ from authors au1, authors au2
 
 where au1.city = au2.city
 
-and au2.au\_lname = \"Karsen\"
+and au2.au\_lname = "Karsen"
 
-and au2.au\_fname = \"Livia\"
+and au2.au\_fname = "Livia"
 
  
 
@@ -465,11 +445,7 @@ and au2.au\_fname = \"Livia\"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Несколько уровней вложенности
-  -- -------------------------------
-:::
+## Несколько уровней вложенности
 
  
 
@@ -478,9 +454,9 @@ and au2.au\_fname = \"Livia\"
 вложенности.
 
 Рассмотрим следующую задачу, которая может быть решена с помощью
-оператора с подзапросами нескольких уровней: \"Найти имена писателей,
+оператора с подзапросами нескольких уровней: "Найти имена писателей,
 которые принимали участие в написании, по крайней мере, одной популярной
-компьютерной книги\".
+компьютерной книги".
 
  
 
@@ -500,14 +476,14 @@ where au\_id in
 
        from titles
 
-       where type = \"popular\_comp\") )
+       where type = "popular\_comp") )
 
  
 
 au\_lname                      au\_fname
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--      
-\-\-\-\-\-\-\-\-\-\-\--
+----------------------      
+------------
 
 Carson                        Cheryl
 
@@ -540,15 +516,11 @@ where authors.au\_id = titleauthor.au\_id
 
 and titles.title\_id = titleauthor.title\_id
 
-and type = \"popular\_comp\"
+and type = "popular\_comp"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------------
-     Подзапросы в операторах модификации удаления и вставки 
-  -- ---------------------------------------------------------
-:::
+## Подзапросы в операторах модификации удаления и вставки 
 
  
 
@@ -571,7 +543,7 @@ Age Books. Этот оператор модифицирует таблицу tit
 
 update titles
 
-set price = price \* 2
+set price = price * 2
 
 where pub\_id in
 
@@ -579,7 +551,7 @@ where pub\_id in
 
    from publishers
 
-   where pub\_name = \"New Age Books\")
+   where pub\_name = "New Age Books")
 
  
 
@@ -590,13 +562,13 @@ where pub\_id in
 
 update titles
 
-set price = price \* 2
+set price = price * 2
 
 from titles, publishers
 
 where titles.pub\_id = publishers.pub\_id
 
-and pub\_name = \"New Age Books\"
+and pub\_name = "New Age Books"
 
  
 
@@ -613,7 +585,7 @@ where title\_id in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
@@ -628,15 +600,11 @@ from salesdetail, titles
 
 where salesdetail.title\_id = titles.title\_id
 
-and type = \"business\"
+and type = "business"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------
-     Подзапросы в условных операторах
-  -- ----------------------------------
-:::
+## Подзапросы в условных операторах
 
  
 
@@ -651,7 +619,7 @@ if exists (select title\_id
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
 begin
 
@@ -663,17 +631,13 @@ begin
 
       from titles
 
-      where type = \"business\")
+      where type = "business")
 
 end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------
-     Использование подзапросов на месте выражений
-  -- ----------------------------------------------
-:::
+## Использование подзапросов на месте выражений
 
  
 
@@ -703,7 +667,7 @@ where title in
 
    and titleauthor.au\_id = authors.au\_id
 
-   and authors.state = \"CA\")
+   and authors.state = "CA")
 
 and title in
 
@@ -713,14 +677,14 @@ and title in
 
    where titles.pub\_id = publishers.pub\_id
 
-   and publishers.state = \"CA\")
+   and publishers.state = "CA")
 
  
 
 title                                                        type
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--        
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------------------------------------------        
+------------------
 
 The Busy Executive\'s Database Guide        business
 
@@ -759,8 +723,8 @@ select title, price,
 
 title                                                        price
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--                    
-\-\-\-\-\-\--     \-\-\-\-\-\--
+-----------------------------------                    
+-------     -------
 
 You Can Combat Computer Stress!               2.99        22.95
 
@@ -772,11 +736,7 @@ Fifty Years in Buckingham Palace        11.95    22.95
 
                   Kitchens
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ------------------
-     Типы подзапросов
-  -- ------------------
-:::
+## Типы подзапросов
 
  
 
@@ -786,7 +746,7 @@ Fifty Years in Buckingham Palace        11.95    22.95
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
   --- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ·   Подзапросы, которым предшествует немодифицированная операция сравнения и которые возвращают единственное значение, называются подзапросами- выражениями (скалярными подзапросами).
+  ·   Подзапросы, которым предшествует немодифицированная операция сравнения и которые возвращают единственное значение, называются подзапросами - выражениями (скалярными подзапросами).
   --- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -824,11 +784,7 @@ Fifty Years in Buckingham Palace        11.95    22.95
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------
-     Подзапросы-выражения
-  -- ----------------------
-:::
+## Подзапросы-выражения
 
  
 
@@ -837,13 +793,13 @@ Fifty Years in Buckingham Palace        11.95    22.95
 
  
 
-\[Начало оператора выбора, вставки, модификации, удаления или
-подзапроса\]
+[Начало оператора выбора, вставки, модификации, удаления или
+подзапроса]
 
 where выражение операция\_сравнения (подзапрос)
 
-\[Конец оператора выбора, вставки, модификации, удаления или
-подзапроса\]
+[Конец оператора выбора, вставки, модификации, удаления или
+подзапроса]
 
  
 
@@ -874,13 +830,13 @@ where city =
 
    from publishers
 
-   where pub\_name = \"Algodata Infosystems\")
+   where pub\_name = "Algodata Infosystems")
 
  
 
 au\_lname       au\_fname
 
-\-\-\-\-\-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------     --------------
 
 Carson         Cheryl
 
@@ -892,11 +848,7 @@ Bennet         Abraham
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------------------------------------------
-     Использование скалярных аггрегирующих функций для достижения единственности результата
-  -- ----------------------------------------------------------------------------------------
-:::
+## Использование скалярных аггрегирующих функций для достижения единственности результата
 
  
 
@@ -923,7 +875,7 @@ where price \>
 
 title
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------------------------------------------
 
 The Busy Executive\'s Database Guide
 
@@ -959,11 +911,7 @@ Sushi, Anyone?
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------------
-     Предложения group by и having в подзапросах-выражениях
-  -- --------------------------------------------------------
-:::
+## Предложения group by и having в подзапросах-выражениях
 
  
 
@@ -989,15 +937,11 @@ where price \>
 
    group by type
 
-   having type = \"trad\_cook\")
+   having type = "trad\_cook")
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------------
-     Использование опции distinct в подзапросе-выражении
-  -- -----------------------------------------------------
-:::
+## Использование опции distinct в подзапросе-выражении
 
  
 
@@ -1022,11 +966,7 @@ select pub\_name from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------
-     Квантифицированные предикатные подзапросы
-  -- -------------------------------------------
-:::
+## Квантифицированные предикатные подзапросы
 
  
 
@@ -1044,30 +984,9 @@ having, предшествует один из кванторов any (неко�
   --- -----------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  ---
-   
-  ---
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------------------------------------
-     \[ Начало оператора выбора, вставки, модификации, удаления или подзапроса\]
-  -- -----------------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------------------------------
-            where выражение операция\_сравнения \[any \| all\] (подзапрос)
-  -- -----------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- ----------------------------------------------------------------------------
-     \[ Конец оператора выбора, вставки, модификации, удаления или подзапроса\]
-  -- ----------------------------------------------------------------------------
-:::
-
+     [ Начало оператора выбора, вставки, модификации, удаления или подзапроса]
+            where выражение операция\_сравнения [any \| all] (подзапрос)
+     [ Конец оператора выбора, вставки, модификации, удаления или подзапроса]
  
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
@@ -1076,29 +995,9 @@ having, предшествует один из кванторов any (неко�
   --- -----------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  ---
-   
-  ---
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------------------------------------
-     \[ Начало оператора выбора, вставки, модификации, удаления или подзапроса\]
-  -- -----------------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------
-            where выражение \[not\] in (подзапрос)
-  -- -----------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- ----------------------------------------------------------------------------
-     \[ Конец оператора выбора, вставки, модификации, удаления или подзапроса\]
-  -- ----------------------------------------------------------------------------
-:::
+     [ Начало оператора выбора, вставки, модификации, удаления или подзапроса]
+            where выражение [not] in (подзапрос)
+     [ Конец оператора выбора, вставки, модификации, удаления или подзапроса]
 
  
 
@@ -1108,29 +1007,9 @@ having, предшествует один из кванторов any (неко�
   --- ----------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  ---
-   
-  ---
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------------------------------------------
-     \[ Начало оператора выбора, вставки, модификации, удаления или подзапроса\]
-  -- -----------------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- -----------------------------------------
-            where \[not\] exists (подзапрос)
-  -- -----------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
-  -- ----------------------------------------------------------------------------
-     \[ Конец оператора выбора, вставки, модификации, удаления или подзапроса\]
-  -- ----------------------------------------------------------------------------
-:::
+     [ Начало оператора выбора, вставки, модификации, удаления или подзапроса]
+            where [not] exists (подзапрос)
+     [ Конец оператора выбора, вставки, модификации, удаления или подзапроса]
 
  
 
@@ -1140,11 +1019,7 @@ having, предшествует один из кванторов any (неко�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Подзапросы с кванторами any и all
-  -- -----------------------------------
-:::
+## Подзапросы с кванторами any и all
 
  
 
@@ -1197,17 +1072,13 @@ where advance \> all
 
    where titles.pub\_id = publishers.pub\_id
 
-   and pub\_name = \"New Age Books\")
+   and pub\_name = "New Age Books")
 
  
 
 title
-
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+----------------------------------------
 The Gourmet Microwave
-
- 
 
 (Выбрана одна строка)
 
@@ -1221,11 +1092,7 @@ New Age Books, которые возвращаются подзапросом. �
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------
-     \>all означает больше чем все значения
-  -- ----------------------------------------
-:::
+#### \>all означает больше чем все значения
 
  
 
@@ -1240,26 +1107,17 @@ New Age Books, которые возвращаются подзапросом. �
  
 
 select title from titles where price \> all
-
    (select price from titles
-
-   where type =  \"mod\_cook\")
+   where type =  "mod\_cook")
 
  
 
 title
-
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+---------------------------------------------------
 But Is It User Friendly?
-
 Secrets of Silicon Valley
-
 Computer Phobic and Non-Phobic Individuals: Behavior Variations
-
 Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean
-
- 
 
 (Выбрано 4 строки)
 
@@ -1276,17 +1134,13 @@ Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean
  
 
 select title from titles where price \> all
-
    (select price from titles
-
-   where title\_id = \"popular\_comp\")
+   where title\_id = "popular\_comp")
 
  
 
 title
-
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+---------------------------------------------------
 (0 rows affected)
 
  
@@ -1296,11 +1150,7 @@ title
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------
-     =all означает равно каждому значению
-  -- --------------------------------------
-:::
+#### =all означает равно каждому значению
 
  
 
@@ -1315,24 +1165,15 @@ title
  
 
 select au\_fname, au\_lname, city
-
 from authors
-
 where city = all
-
      (select city
-
      from authors
-
-     where postalcode like \"946%\")
+     where postalcode like "946%")
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------------------------------
-     \>any означает больше, по крайней мере, одного значения
-  -- ---------------------------------------------------------
-:::
+#### \>any означает больше, по крайней мере, одного значения
 
  
 
@@ -1349,54 +1190,31 @@ where city = all
  
 
 select title
-
 from titles
-
 where advance \> any
-
   (select advance
-
    from titles, publishers
-
    where titles.pub\_id = publishers.pub\_id
-
-   and pub\_name = \"New Age Books\")
+   and pub\_name = "New Age Books")
 
  
 
 title
-
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
-
+---------------------------------------------------
 Sushi, Anyone?
-
 Life Without Fear
-
 Is Anger the Enemy?
-
 The Gourmet Microwave
-
 But Is It User Friendly?
-
 Secrets of Silicon Valley
-
 Straight Talk About Computers
-
 You Can Combat Computer Stress!
-
 Emotional Security: A New Algorithm
-
 The Busy Executive\'s Database Guide
-
 Fifty Years in Buckingham Palace Kitchens
-
 Cooking with Computers: Surreptitious Balance Sheets
-
 Computer Phobic and Non-Phobic Individuals: Behavior Variations
-
 Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean
-
- 
 
 (Выбрано 14 строк)
 
@@ -1414,11 +1232,7 @@ Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------
-     =any означает равно некоторому значению
-  -- -----------------------------------------
-:::
+#### =any означает равно некоторому значению
 
  
 
@@ -1430,38 +1244,25 @@ in:
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city = any
-
   (select city
-
    from publishers)
 
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city in
-
   (select city
-
    from publishers)
 
  
 
 au\_lname       au\_fname
-
-\-\-\-\-\-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\-\-\-\-\-\--
-
+--------------     --------------
 Carson         Cheryl
-
 Bennet         Abraham
-
- 
 
 (Выбраны 2 строки)
 
@@ -1477,13 +1278,9 @@ Bennet         Abraham
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city != any
-
   (select city
-
    from publishers)
 
  
@@ -1502,65 +1299,36 @@ not in:
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city not in
-
   (select city
-
    from publishers)
 
  
 
 au\_lname                      au\_fname
-
-\-\-\-\-\-\-\-\-\-\-\-\-\--                          
-\-\-\-\-\-\-\-\-\-\-\--
-
+--------------                          ------------
 del Castillo                   Innes
-
 Blotchet-Halls                 Reginald
-
 Gringlesby                     Burt
-
 DeFrance                       Michel
-
 Smith                          Meander
-
 White                          Johnson
-
 Greene                         Morningstar
-
 Green                          Marjorie
-
 Straight                       Dick
-
 Stringer                       Dirk
-
 MacFeather                     Stearns
-
 Karsen                         Livia
-
 Dull                           Ann
-
 Hunter                         Sheryl
-
 Panteley                       Sylvia
-
 Ringer                         Anne
-
 Ringer                         Albert
-
 Locksley                       Chastity
-
 O\'Leary                        Michael
-
 McBadden                       Heather
-
 Yokomoto                       Akiko
-
- 
 
 (Выбрана 21 строка )
 
@@ -1576,22 +1344,14 @@ Yokomoto                       Akiko
  
 
 select au\_lname, au\_fname
-
 from authors
-
 where city != all
-
   (select city
-
    from publishers)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Подзапросы с условием in
-  -- --------------------------
-:::
+## Подзапросы с условием in
 
  
 
@@ -1611,13 +1371,13 @@ where pub\_id in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
 pub\_name
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+------------------------------
 
 New Age Books
 
@@ -1641,7 +1401,7 @@ select pub\_name
 
 from publishers
 
-where pub\_id in (\"1389\", \"0736\")
+where pub\_id in ("1389", "0736")
 
  
 
@@ -1654,7 +1414,7 @@ select pub\_name
 
 from publishers
 
-where \"business\" in
+where "business" in
 
   (select type
 
@@ -1677,7 +1437,7 @@ from publishers, titles
 
 where publishers.pub\_id = titles.pub\_id
 
-and type = \"business\"
+and type = "business"
 
  
 
@@ -1700,14 +1460,14 @@ from publishers, titles
 
 where publishers.pub\_id = titles.pub\_id
 
-and type = \"business\"
+and type = "business"
 
  
 
 pub\_name                  title
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--  
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------------  
+-----------------------------------------------------
 
 Algodata Infosystems   The Busy Executive\'s Database Guide
 
@@ -1736,7 +1496,7 @@ select au\_lname, au\_fname
 
 from authors
 
-where state = \"CA\"
+where state = "CA"
 
 and au\_id in
 
@@ -1752,8 +1512,8 @@ and au\_id in
 
 au\_lname                  au\_fname
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--     
-\-\-\-\-\-\-\-\-\-\-\--
+------------------------     
+------------
 
 MacFeather               Stearns
 
@@ -1778,7 +1538,7 @@ select au\_lname, au\_fname
 
 from authors, titleauthor
 
-where state = \"CA\"
+where state = "CA"
 
 and authors.au\_id = titleauthor.au\_id
 
@@ -1793,11 +1553,7 @@ and au\_ord = 2
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Подзапросы с условием not in
-  -- ------------------------------
-:::
+## Подзапросы с условием not in
 
  
 
@@ -1819,13 +1575,13 @@ where pub\_id not in
 
    from titles
 
-   where type = \"business\")
+   where type = "business")
 
  
 
 pub\_name
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------------------------
 
 Binnet & Hardley
 
@@ -1846,11 +1602,7 @@ Binnet & Hardley
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------
-     Подзапросы с условием not in, содержащие NULL
-  -- -----------------------------------------------
-:::
+## Подзапросы с условием not in, содержащие NULL
 
  
 
@@ -1876,7 +1628,7 @@ select pub\_name
 
    from publishers
 
-   where \$100.00 not in
+   where $100.00 not in
 
        (select price
 
@@ -1892,7 +1644,7 @@ returns:
 
 pub\_name
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------
 
 New Age Books
 
@@ -1905,11 +1657,7 @@ Algodata Infosystems не были включены в результат, по�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Подзапросы с квантором exists
-  -- -------------------------------
-:::
+## Подзапросы с квантором exists
 
  
 
@@ -1931,19 +1679,19 @@ from publishers
 
 where exists
 
-  (select \*
+  (select *
 
    from titles
 
    where pub\_id = publishers.pub\_id
 
-   and type = \"business\")
+   and type = "business")
 
  
 
 pub\_name
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------------------------
 
 New Age Books
 
@@ -1986,7 +1734,7 @@ Algodata Inforsystems, которое имеет идентификационн�
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 114px;"}
   --- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ·   Список выбора такого подзапроса часто состоит из одной звездочки (\*). Здесь нет необходимости указывать названия столбцов, поскольку осуществляется просто проверка существования строк, удовлетворяющих условиям, указанным в подзапросе. Здесь можно и явно указать список выбора, следуя обычным правилам.
+  ·   Список выбора такого подзапроса часто состоит из одной звездочки (*). Здесь нет необходимости указывать названия столбцов, поскольку осуществляется просто проверка существования строк, удовлетворяющих условиям, указанным в подзапросе. Здесь можно и явно указать список выбора, следуя обычным правилам.
   --- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -2027,7 +1775,7 @@ from authors
 
 where exists
 
-  (select \*
+  (select *
 
    from publishers
 
@@ -2037,7 +1785,7 @@ where exists
 
 au\_lname          au\_fname
 
-\-\-\-\-\-\-\-\-\-\-\-\-\--        \-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------        --------------
 
 Carson            Cheryl
 
@@ -2061,13 +1809,13 @@ from titles
 
 where exists
 
-  (select \*
+  (select *
 
    from publishers
 
    where pub\_id = titles.pub\_id
 
-   and city like \"B%\")
+   and city like "B%")
 
  
 
@@ -2081,13 +1829,13 @@ where pub\_id in
 
    from publishers
 
-   where city like \"B%\")
+   where city like "B%")
 
  
 
 title
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------------------------------------------
 
 The Busy Executive\'s Database Guide
 
@@ -2117,11 +1865,7 @@ Emotional Security: A New Algorithm
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Подзапросы с not exists
-  -- -------------------------
-:::
+## Подзапросы с not exists
 
  
 
@@ -2141,19 +1885,19 @@ from publishers
 
 where not exists
 
-  (select \*
+  (select *
 
    from titles
 
    where pub\_id = publishers.pub\_id
 
-   and type = \"business\")
+   and type = "business")
 
  
 
 pub\_name
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------------------
 
 Binnet & Hardley
 
@@ -2183,7 +1927,7 @@ where not exists
 
 title
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-----------------------------------------
 
 The Psychology of Computer Cooking
 
@@ -2195,11 +1939,7 @@ Net Etiquette
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------------
-     Нахождение пересечения и разности множеств с помощью exists
-  -- -------------------------------------------------------------
-:::
+## Нахождение пересечения и разности множеств с помощью exists
 
  
 
@@ -2220,7 +1960,7 @@ from authors
 
 where exists
 
-(select \*
+(select *
 
   from publishers
 
@@ -2230,7 +1970,7 @@ where exists
 
 city
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------------
 
 Berkeley
 
@@ -2252,7 +1992,7 @@ from authors
 
 where not exists
 
-(select \*
+(select *
 
   from publishers
 
@@ -2262,7 +2002,7 @@ where not exists
 
 city
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------------
 
 Gary                 
 
@@ -2300,11 +2040,7 @@ Salt Lake City
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------------------
-     Использование коррелированных подзапросов
-  -- -------------------------------------------
-:::
+## Использование коррелированных подзапросов
 
  
 
@@ -2338,7 +2074,7 @@ where 100 in
 
 au\_lname        au\_fname
 
-\-\-\-\-\-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------     --------------
 
 Carson          Cheryl               
 
@@ -2381,7 +2117,7 @@ select royaltyper
 
 from titleauthor
 
-where au\_id = \"238-95-7766\"
+where au\_id = "238-95-7766"
 
  
 
@@ -2405,11 +2141,7 @@ Carson включается в результат. Если эту же проц
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------------
-     Коррелированные подзапросы с коррелирующимися названиями
-  -- ----------------------------------------------------------
-:::
+## Коррелированные подзапросы с коррелирующимися названиями
 
  
 
@@ -2434,7 +2166,7 @@ where t1.type in
 
 type
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------------
 
 business
 
@@ -2462,11 +2194,7 @@ and t1.pub\_id != t2.pub\_id
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Коррелированные подзапросы с операциями сравнения
-  -- ---------------------------------------------------
-:::
+## Коррелированные подзапросы с операциями сравнения
 
  
 
@@ -2480,7 +2208,7 @@ select s1.ord\_num, s1.title\_id, s1.qty
 
 from salesdetail s1
 
-where title\_id like \"PS%\"
+where title\_id like "PS%"
 
 and s1.qty \<
 
@@ -2498,8 +2226,8 @@ and s1.qty \<
 
 ord\_num                           title\_id        qty    
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--                   
-\-\-\-\-\-\-\-\-\-\--      \-\-\-\--
+------------------                   
+-----------      -----
 
 91-A-7                            PS3333        90 
 
@@ -2557,8 +2285,8 @@ where t1.price \>
 
 type                          title
 
-\-\-\-\-\-\-\-\--                 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------                 
+-------------------------------------------------------------
 
 business             The Busy Executive\'s Database Guide
 
@@ -2590,11 +2318,7 @@ of            the Mediterranean
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------
-     Коррелированные подзапросы в предложении having
-  -- -------------------------------------------------
-:::
+## Коррелированные подзапросы в предложении having
 
  
 
@@ -2607,28 +2331,18 @@ of            the Mediterranean
  
 
 select t1.type
-
 from titles t1
-
 group by t1.type
-
 having max(t1.advance) \>=any
-
-  (select 2 \* avg(t2.advance)
-
+  (select 2 * avg(t2.advance)
   from titles t2
-
   where t1.type = t2.type)
 
  
 
 type
-
-\-\-\-\-\-\-\-\-\-\-\-\--
-
+-------------
 mod\_cook
-
- 
 
 (Выбрана 1 строка)
 

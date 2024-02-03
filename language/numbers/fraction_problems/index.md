@@ -23,15 +23,15 @@ THOUSANDSEPARATOR - разделитель тысяч, который приня
 
 Для USA регионального стандарта
 
-DECIMALSEPARATOR будет \".\"
+DECIMALSEPARATOR будет "."
 
-THOUSANDSEPARATOR будет \",\"
+THOUSANDSEPARATOR будет ","
 
 Для России
 
-DECIMALSEPARATOR будет \",\"
+DECIMALSEPARATOR будет ","
 
-THOUSANDSEPARATOR будет \".\" или \" \" (не помню уже)
+THOUSANDSEPARATOR будет "." или " " (не помню уже)
 
 Автор: Vit
 

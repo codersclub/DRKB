@@ -17,7 +17,7 @@ Date: 01.01.2007
 организации сетей internet можно найти в RFC - документах,
 распространяемых DDN Network Information Center. Полный каталог RFC, а
 также сами документы можно получить по электронной почте, обратившись по
-адресу service\@nic.ddn.mil. Поле \"Subject:\" в вашем запросе должно
+адресу service\@nic.ddn.mil. Поле "Subject:" в вашем запросе должно
 содержать название желаемого документа. Например, для получения RFC 822
 вы должны указать
 
@@ -83,7 +83,7 @@ Oбъявления
 Meeting Announcements and Group Overviews
 
 1120 - Internet Activities Board
-828 - Data Communications: IFIP\'s International \"Network\" of Experts
+828 - Data Communications: IFIP\'s International "Network" of Experts
 631 - Call for Papers: International Meeting on Minicomputers and Data
 Communication
 584 - Charter for ARPANET Users Interest Working Group
@@ -115,7 +115,7 @@ Network Working Group Meetings
 212 - NWG Meeting on Network Usage
 157 - Invitation to the Second Symposium on Problems in the Optimization
 of Data Communication Systems
-149 - The Best Laid Plans\...
+149 - The Best Laid Plans...
 147 - The Definition of a Socket
 111 - Pressure from the Chairman
 048 - A Possible Protocol Plateau
@@ -435,13 +435,13 @@ Applications
 Specification
 908 - Reliable Data Protocol
 722 - Thoughts on Interactions in Distributed Services
-713 - MSDTP \-- Message Services Data Transmission Protocol
+713 - MSDTP - Message Services Data Transmission Protocol
 712 - A Distributed Capability Computing System DCCS
 708 - Elements of a Distributed Programming System
 707 - A High-Level Framework for Network-Based Resource Sharing
 684 - A Commentary on Procedure Calling as A Network Protocol
 677 - The Maintenance of Duplicate Databases
-674 - Procedure Call Documents\--Version 2
+674 - Procedure Call Documents--Version 2
 672 - A Multi-Site Data Collection Facility
 671 - A Note on Reconnection Protocol
 645 - Network Standard Data Specification Syntax
@@ -518,7 +518,7 @@ System
 357 - An Echoing Strategy for Satellite Links
 355, 346 - Satellite Considerations
 340 - Proposed Telnet Changes
-339 - MLTNET - A \"Multi-Telnet\" Subsystem for TENEX
+339 - MLTNET - A "Multi-Telnet" Subsystem for TENEX
 328 - Suggested Telnet Protocol Changes
 318 - Ad Hoc Telnet Protocol
 216 - Telnet Access to UCSB\'s On-Line System
@@ -621,7 +621,7 @@ File Transfer and Access Protocols
 697 - CWD Command of FTP
 691 - One More Try on the FTP
 686 - Leaving Well Enough Alone
-683 - FTPSRV \-- Tenex Extension for Paged Files
+683 - FTPSRV - Tenex Extension for Paged Files
 678 - Document File Format Standards
 662 - Performance Improvement in ARPANET File Transfers from Multics
 640 - Revised FTP Reply Codes
@@ -636,7 +636,7 @@ File Transfer and Access Protocols
 520 - Memo to FTP Group (Proposal for File Access Protocol)
 506 - An FTP Command Naming Problem
 505 - Two Solutions to a File Transfer Access Problem
-501 - Un-Muddling \"Free File Transfer\"
+501 - Un-Muddling "Free File Transfer"
 487 - Host-Dependent FTP Parameters
 486 - Data Transfer Revisited
 480 - Host-Dependent FTP Parameters
@@ -656,7 +656,7 @@ Document
 412 - User FTP Documentation
 385 - Comments on the File Transfer Protocol (RFC 354)
 310 - Another Look at Data and File Transfer Protocols
-294 - The Use of \"Set Data Type\" Transaction in the File Transfer
+294 - The Use of "Set Data Type" Transaction in the File Transfer
 Protocol
 281 - A Suggested Addition to File Transfer Protocol
 269 - Some Experience with File Transfer
@@ -690,7 +690,7 @@ Domain Name System
 830 - A Distributed System for Internet Name Service
 819 - The Domain Naming Convention for Internet User Applications
 799 - Internet Name Domains
-756 - The NIC Name Server \-- A Datagram-Based Information Utility
+756 - The NIC Name Server - A Datagram-Based Information Utility
 
 752 - A Universal Host Table
 
@@ -748,7 +748,7 @@ Messages
 555 - Responses to Critiques of the Proposed Mail Protocol
 539, 524 - A Proposed Mail Protocol
 498 - On Mail Service to CCN
-491 - What is \"Free\"?
+491 - What is "Free"?
 475 - On FTP and the Network Mail System
 458 - Mail Retrieval via FTP
 333 - A Proposed Experiment with a Message Switching Protocol
@@ -822,7 +822,7 @@ NETRJS
 490 - Surrogate RJS for UCLA-CCN
 477, 436 - Remote Job Service at UCSB
 407 - Remote Job Entry
-368 - Comments on \"Proposed Remote Job Entry Protocol\"
+368 - Comments on "Proposed Remote Job Entry Protocol"
 360 - Proposed Remote Job Entry Protocol
 338 - EBCDIC/ASCII Mapping for Network RJE
 307 - Using Network Remote Job Entry
@@ -1021,7 +1021,7 @@ Sequencing
 406 - Scheduled IMP Software Releases
 395 - Switch Settings on IMPs and TIPs
 394 - Two Proposed Changes to the IMP-HOST Protocol
-369- Evaluation of ARPANET Services (January through March, 1972)
+369 - Evaluation of ARPANET Services (January through March, 1972)
 335 - New Interface-IMP/360
 312 - Proposed Change in IMP-to-Host Protocol
 297 - TIP Message Buffers
@@ -1029,7 +1029,7 @@ Sequencing
 274 - Establishing a Local Guide for Network Usage
 271 - IMP System Change Notification
 270 - Correction to the BBN Report No. 1822
-263 - \"Very Distant\" Host Interface
+263 - "Very Distant" Host Interface
 254 - Scenarios for Using ARPANET Computers
 247 - Proffered Set of Standard Host Names
 241 - Connecting Computers to NLC Ports
@@ -1080,7 +1080,7 @@ ARPANET NCP (Obsolete predecessor of TCP/IP)
 492, 467 - Proposed Change to Host-Host Protocol Resynchronization of
 Connection Status
 489 - Comment on Resynchronization of Connection Status Proposal
-425 - \"But my NCP Costs \$500 a day\...\"
+425 - "But my NCP Costs $500 a day..."
 210 - Improvement of Flow Control
 197 - Initial Connection Protocol - Revised
 176 - Comments on Byte Size for Connections
@@ -1183,7 +1183,7 @@ Surveys
 
 971 - A Survey of Data Representation Standards
 876 - Survey of SMTP Implementations
-848 - Who Provides the \"Little\" TCP Services?
+848 - Who Provides the "Little" TCP Services?
 847 - Summary of Smallberg Surveys
 844 - Who Talks ICMP, too? Survey of 18 February 1983
 846, 845, 843, 842, 839, 838, 837, 836, 835, 834, 833, 832 - Who Talks
@@ -1232,11 +1232,11 @@ Privacy And Security
 
 1135 - Helminthiasis of the Internet
 1115 - Privacy enhancement for Internet electronic mail: Part III -
-algorithms, modes, and identifiers \[Draft\]
+algorithms, modes, and identifiers [Draft]
 1114 - Privacy enhancement for Internet electronic mail: Part II -
-certificate-based key management \[Draft\]
+certificate-based key management [Draft]
 1113 - Privacy enhancement for Internet electronic mail: Part I -
-message encipherment and authentication procedures \[Draft\]
+message encipherment and authentication procedures [Draft]
 1040 - Privacy enhancement for Internet electronic mail: Part I: Message
 encipherment and authentication procedures
 1038 - Draft revised IP security option

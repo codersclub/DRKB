@@ -30,7 +30,7 @@ Date: 01.01.2007
      i, MaxIndex, N, Code: Integer;
      V, MaxVersion: Double;
     const
-     RegKey = 'Software\Microsoft\.NETFramework\Policy';
+     RegKey = 'Software\Microsoft.NETFramework\Policy';
     begin
      Result := '';
      R := TRegistry.Create;

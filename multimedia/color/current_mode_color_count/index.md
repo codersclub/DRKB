@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) \*
+GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) *
 
 GetDeviceCaps(Form1.Canvas.Handle, PLANES)
 
@@ -36,7 +36,7 @@ GetDeviceCaps(Form1.Canvas.Handle, PLANES)
 
 NumberOfColors := (1 shl
 
-(GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) \*
+(GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL) *
 
 GetDeviceCaps(Form1.Canvas.Handle, PLANES));
 

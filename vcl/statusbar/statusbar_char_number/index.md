@@ -32,7 +32,7 @@ Date: 01.01.2007
     begin
       label1.Repaint;
       application.processmessages;{yield;}
-      statusbar1.Canvas.CopyRect(rect(2,round((statusbar1.height- label1.height)/2),label1.width,label1.height),
+      statusbar1.Canvas.CopyRect(rect(2,round((statusbar1.height - label1.height)/2),label1.width,label1.height),
     label1.canvas,rect(0,0,label1.width,label1.height));
     end;
 

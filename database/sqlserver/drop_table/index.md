@@ -30,7 +30,7 @@ intuitive. Luckily, however, it doesn\'t involve low-level BDE API
 calls.
 
 Below is a procedure listing that drops tables from any SQL Server
-database. After the listing I\'ll discuss particulars\...
+database. After the listing I\'ll discuss particulars...
 
 Parameter Descriptions
 
@@ -108,9 +108,10 @@ Ses        var TSession        This is a session instance variable that
 you pass by reference into the procedure. Note: It MUST be instantiated
 prior to use. The procedure does not create an instance. It assumes it
 already exists. This is especially necessary when using this procedure
-within a thread. But if you\'re not creating a multi- threaded
-application, then you can use the default Session variable.       DBName
-       String        Name of the MS SQL Server client database      
+within a thread. But if you\'re not creating a multi-threaded
+application, then you can use the default Session variable.
+
+DBName       String        Name of the MS SQL Server client database
 
 ArTables        Array of String        This is an open array of string
 that you can pass into the procedure. This means that you can pass any
@@ -144,7 +145,7 @@ as follows:
     thr.Synchronize(thr.UpdateStatus); 
     end;  
 
-The trick here is that \"thr\" is the instance variable used to
+The trick here is that "thr" is the instance variable used to
 instantiate my thread class. The instance variable resides in the main
 form of my application. This means that it too must be declared as an
 interface variable.

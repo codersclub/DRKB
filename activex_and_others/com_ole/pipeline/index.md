@@ -20,7 +20,7 @@ IDictionary, который передается всем компонентам
 работы этих компонент может быть видоизмененный IDictionary, либо еще
 чего-нибудь.
 
-Описание.
+#### Описание.
 
 Pipeline компоненты должны поддерживать интерфейс IPipelineComponent,  а
 также несколько других. Обо всех будет рассказано поподробнее ниже.
@@ -37,11 +37,11 @@ tabsheet -\> ActiveX Library. Затем там добавим Automation Object
 Назовем объект DumpOrderToXml. Добавим методы SetXmlFilename и
 GetXmlFilename. Результатом должны быть следующие объявления:
 
-function SetXmlFilename(XmlFileName: WideString): HResult \[dispid
-\$00000001\]; stdcall;
-
-function GetXmlFileName(retval XmlFileName: WideString): HResult
-\[dispid \$00000002\]; stdcall;
+    function SetXmlFilename(XmlFileName: WideString): HResult [dispid
+      $00000001]; stdcall;
+    
+    function GetXmlFileName(retval XmlFileName: WideString): HResult
+      [dispid $00000002]; stdcall;
 
 Для дальнейшей успешной работы Вы должны иметь на диске следующие файлы:
 COMMERCELib\_TLB.pas, MSCSAspHelpLib\_TLB.pas, MSCSCoreLib\_TLB.pas,
@@ -213,14 +213,14 @@ IEnumVARIANT. Соотвественно, наша задача - взять IEn
 обычные значения варианта и сложные, такие как интерфейсы. Для обычных
 типов обработка будет такая:
 
-Res := Res + Format(\'\<%s\>%s\</%s\>\', \[string(Key),
-string(ItemValue), string(Key)\]);
+    Res := Res + Format('<%s>%s</%s>', [string(Key),
+                        string(ItemValue), string(Key)]);
 
 Для типа varUnknown обработка будет еще проще. Понятно, что для более
 продвинутой информации эту обработку можно расширить:
 
-Res := Res + Format(\'\<%s\>IUnknown\</%s\>\',\[string(Key),
-string(Key)\]);
+    Res := Res + Format('<%s>IUnknown</%s>',[string(Key),
+                        string(Key)]);
 
 Наиболее сложная обработка для типа varDispatch. Здесь нам необходимо
 убедится, что элемент является либо IDictionary, либо ISimpleList. Для

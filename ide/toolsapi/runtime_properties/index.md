@@ -107,9 +107,8 @@ Date: 01.01.2007
         Result := Result + #9;
     end;
 
-\- Thomas von Stetten
+- Thomas von Stetten
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

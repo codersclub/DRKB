@@ -13,7 +13,7 @@ Date: 01.01.2007
 :::
 
 Очень удобно выбирать шрифты, когда в списке каждый шрифт написан собой.
-Например, \"Arial\" будет написано шрифтом Arial, а \"Times\" - Times.
+Например, "Arial" будет написано шрифтом Arial, а "Times" - Times.
 Список шрифтов лежит в свойстве Fonts объекта Screen.
 
     procedure TForm1.FormCreate(Sender: TObject);

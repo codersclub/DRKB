@@ -17,10 +17,10 @@ Complex numbers
 
 Complex numbers have two representations :
 
-rectanglar : Z = a + i \* b, a being the real part, and b being the
+rectanglar : Z = a + i * b, a being the real part, and b being the
 imaginary part
 
-polar : Z = r \* exp(i \* phi), r being the absolute value, and phi
+polar : Z = r * exp(i * phi), r being the absolute value, and phi
 being the argument(angle)
 
 a reason to demotivate compiler writers to have it as native type.

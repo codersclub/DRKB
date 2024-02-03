@@ -58,11 +58,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Что такое триггер ?
-  -- ---------------------
-:::
+## Что такое триггер ?
 
  
 
@@ -138,11 +134,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------
-     Сравнение триггеров с ограничениями целостности
-  -- -------------------------------------------------
-:::
+## Сравнение триггеров с ограничениями целостности
 
  
 
@@ -192,11 +184,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------
-     Создание триггеров
-  -- --------------------
-:::
+## Создание триггеров
 
  
 
@@ -219,15 +207,11 @@ for insert, update, delete
 
 as
 
-print \"Now modify the titleauthor table the same way.\"
+print "Now modify the titleauthor table the same way."
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Синтаксис команды создания триггера creat trigger
-  -- ---------------------------------------------------
-:::
+## Синтаксис команды создания триггера creat trigger
 
  
 
@@ -235,9 +219,9 @@ print \"Now modify the titleauthor table the same way.\"
 
  
 
-creat trigger \[владелец.\]название\_триггера
+creat trigger [владелец.]название\_триггера
 
-on \[владелец.\]название\_таблицы
+on [владелец.]название\_таблицы
 
 for {insert, update, delete}
 
@@ -249,23 +233,23 @@ as SQL\_операторы
 
  
 
-creat trigger \[владелец.\]название\_триггера
+creat trigger [владелец.]название\_триггера
 
-on \[владелец.\]название\_таблицы
+on [владелец.]название\_таблицы
 
 for {insert, update}
 
 as
 
-\[if update (название\_столбца) \[{and \| or} update
-(название\_столбца)\] ... \]
+[if update (название\_столбца) [{and \| or} update
+(название\_столбца)] ... ]
 
       SQL\_операторы
 
-\[if update (название\_столбца) \[{and \| or} update
-(название\_столбца)\] ...
+[if update (название\_столбца) [{and \| or} update
+(название\_столбца)] ...
 
-       SQL\_операторы\] ...
+       SQL\_операторы] ...
 
  
 
@@ -308,11 +292,7 @@ update не используется при удалении данных опе
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------------------------------------------------
-     Операторы, которые нельзя использовать в триггерах
-  -- ----------------------------------------------------
-:::
+## Операторы, которые нельзя использовать в триггерах
 
  
 
@@ -383,11 +363,7 @@ update не используется при удалении данных опе
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------
-     Удаление триггеров
-  -- --------------------
-:::
+## Удаление триггеров
 
  
 
@@ -398,9 +374,9 @@ update не используется при удалении данных опе
 
  
 
-drop trigger \[владелец.\]название\_триггера
+drop trigger [владелец.]название\_триггера
 
-    \[, \[владелец.\]название\_триггера\] ...
+    [, [владелец.]название\_триггера] ...
 
  
 
@@ -411,11 +387,7 @@ drop trigger \[владелец.\]название\_триггера
 
  
 
-::: {style="text-align: center; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------------------------
-     Использование триггеров для сохранения ссылочной целостности
-  -- --------------------------------------------------------------
-:::
+## Использование триггеров для сохранения ссылочной целостности
 
  
 
@@ -470,11 +442,7 @@ roysched является внешним ключом, а сами эти таб
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Как работают триггера
-  -- -----------------------
-:::
+## Как работают триггера
 
  
 
@@ -488,11 +456,7 @@ roysched является внешним ключом, а сами эти таб
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------------------
-     Проверка модификации данных и триггерные тестовые таблицы
-  -- -----------------------------------------------------------
-:::
+## Проверка модификации данных и триггерные тестовые таблицы
 
  
 
@@ -519,11 +483,10 @@ roysched является внешним ключом, а сами эти таб
 :::
 
  
-
-![](embim1736.png){width="543" height="426"}
-
+:::{.center}
+![](embim1736.png)  
 Рис. 15-1: Использование триггерных тестовых таблиц при изменении данных
-
+:::
  
 
 При установке условий запуска триггера следует использовать  проверочную
@@ -553,11 +516,7 @@ delete, но в этих случаях эти таблицы будут пус�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Пример вставляющего триггера
-  -- ------------------------------
-:::
+## Пример вставляющего триггера
 
  
 
@@ -592,27 +551,27 @@ for insert
 
 as
 
-if (select count(\*)
+if (select count(*)
 
    from titles, inserted
 
    where titles.title\_id = inserted.title\_id) != @\@rowcount
 
-/\* cancel the insert and print a message.\*/
+/* cancel the insert and print a message.*/
 
 begin
 
    rollback transaction
 
-   print \"No, a title\_id does not exist in titles\"
+   print "No, a title\_id does not exist in titles"
 
 end 
 
-/\* Otherwise, allow it. \*/   
+/* Otherwise, allow it. */   
 
 else
 
-print \"Added! All title\_id\'s exist in titles.\"
+print "Added! All title\_id\'s exist in titles."
 
  
 
@@ -622,7 +581,7 @@ print \"Added! All title\_id\'s exist in titles.\"
 значений ключа из столбца title\_id, добавленных в таблицу salesdetail,
 в таблице titles осуществляется путем соединения таблицы titles и
 таблицы добавления. Если число соединенных строк, которые подсчитываются
-в операторе select count(\*), отличается от значения переменной
+в операторе select count(*), отличается от значения переменной
 @\@rowcount, то некоторые из добавленных строк были неправильными и
 поэтому все изменения, произведенные этой транзакцией, будут отменены.
 
@@ -631,11 +590,7 @@ print \"Added! All title\_id\'s exist in titles.\"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------
-     Пример удаляющего триггера
-  -- ----------------------------
-:::
+## Пример удаляющего триггера
 
  
 
@@ -669,9 +624,9 @@ from titleauthor, deleted
 
 where titleauthor.title\_id = deleted.title\_id
 
-       /\* Remove titleauthor rows
+       /* Remove titleauthor rows
 
-       \*\* that match deleted (titles) rows.\*/
+       ** that match deleted (titles) rows.*/
 
 delete salesdetail
 
@@ -679,9 +634,9 @@ from salesdetail, deleted
 
 where salesdetail.title\_id = deleted.title\_id
 
-       /\* Remove salesdetail rows
+       /* Remove salesdetail rows
 
-       \*\* that match deleted (titles) rows.\*/
+       ** that match deleted (titles) rows.*/
 
 delete roysched
 
@@ -689,9 +644,9 @@ from roysched, deleted
 
 where roysched.title\_id = deleted.title\_id
 
-       /\* Remove roysched rows
+       /* Remove roysched rows
 
-       \*\* that match deleted (titles) rows.\*/
+       ** that match deleted (titles) rows.*/
 
  
 
@@ -718,7 +673,7 @@ for delete
 
 as
 
-if (select count(\*)
+if (select count(*)
 
    from deleted, salesdetail
 
@@ -730,7 +685,7 @@ begin
 
    rollback transaction
 
-   print \"You can\'t delete a title with sales.\"
+   print "You can\'t delete a title with sales."
 
 end
 
@@ -742,11 +697,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Примеры обновляющих триггеров
-  -- -------------------------------
-:::
+## Примеры обновляющих триггеров
 
  
 
@@ -780,25 +731,25 @@ for update
 
 as
 
-/\* If an attempt is made to change titles.title\_id
+/* If an attempt is made to change titles.title\_id
 
-\*\* on Saturday or Sunday, cancel the update.
+** on Saturday or Sunday, cancel the update.
 
-\*/
+*/
 
 if update (title\_id)
 
    and datename(dw, getdate())
 
-   in (\"Saturday\", \"Sunday\")
+   in ("Saturday", "Sunday")
 
 begin
 
    rollback transaction
 
-   print \"We don\'t allow changes to\"
+   print "We don\'t allow changes to"
 
-   print \"primary keys on the weekend!\"
+   print "primary keys on the weekend!"
 
 end
 
@@ -828,23 +779,23 @@ if update (title\_id)
 
 and datename(dw, getdate())
 
-in (\"Saturday\", \"Sunday\")
+in ("Saturday", "Sunday")
 
 begin
 
    rollback transaction
 
-   print \"We don\'t allow changes to\"
+   print "We don\'t allow changes to"
 
-   print \"primary keys on the weekend!\"
+   print "primary keys on the weekend!"
 
 end
 
 if update (price) or update (advance)
 
-if (select count(\*) from inserted
+if (select count(*) from inserted
 
-   where (inserted.price \* inserted.total\_sales)
+   where (inserted.price * inserted.total\_sales)
 
    \< inserted.advance) \> 0
 
@@ -852,21 +803,17 @@ if (select count(\*) from inserted
 
      rollback transaction
 
-     print \"We don\'t allow changes to price or\"
+     print "We don\'t allow changes to price or"
 
-     print \"advance for a title until its total\"
+     print "advance for a title until its total"
 
-     print \"revenue exceeds its latest advance.\"
+     print "revenue exceeds its latest advance."
 
    end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------
-     Обновление внешнего ключа
-  -- ---------------------------
-:::
+## Обновление внешнего ключа
 
  
 
@@ -908,7 +855,7 @@ as
 
 declare \@row int
 
-/\* save value of rowcount \*/
+/* save value of rowcount */
 
 select \@row = @\@rowcount 
 
@@ -924,15 +871,15 @@ begin
 
        rollback transaction
 
-       print \"No!  Old title\_id must be in
+       print "No!  Old title\_id must be in
 
-             salesdetail\"
+             salesdetail"
 
      end
 
    else
 
-     if (select count(\*)
+     if (select count(*)
 
          from titles, inserted
 
@@ -944,23 +891,19 @@ begin
 
          rollback transaction
 
-         print \"No! New title\_id not in titles\"
+         print "No! New title\_id not in titles"
 
        end
 
      else
 
-       print \"salesdetail table updated\"
+       print "salesdetail table updated"
 
 end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------
-     Операции с группами строк
-  -- ---------------------------
-:::
+## Операции с группами строк
 
  
 
@@ -994,7 +937,7 @@ on salesdetail
 
 for insert as
 
-   /\* check value of @\@rowcount \*/
+   /* check value of @\@rowcount */
 
 if @\@rowcount = 1
 
@@ -1008,9 +951,9 @@ if @\@rowcount = 1
 
 else
 
-   /\* when rowcount is greater than 1,
+   /* when rowcount is greater than 1,
 
-      use a group by clause \*/
+      use a group by clause */
 
    update titles
 
@@ -1042,7 +985,7 @@ for delete
 
 as
 
-   /\* check value of @\@rowcount \*/
+   /* check value of @\@rowcount */
 
 if @\@rowcount = 1
 
@@ -1056,9 +999,9 @@ if @\@rowcount = 1
 
 else
 
-   /\* when rowcount is greater than 1,
+   /* when rowcount is greater than 1,
 
-      use a group by clause \*/
+      use a group by clause */
 
    update titles
 
@@ -1101,7 +1044,7 @@ if update (qty)
 
 begin
 
-   /\* check value of @\@rowcount \*/
+   /* check value of @\@rowcount */
 
    if @\@rowcount = 1
 
@@ -1119,9 +1062,9 @@ begin
 
    else
 
-   /\* when rowcount is greater than 1,
+   /* when rowcount is greater than 1,
 
-      use a group by clause \*/
+      use a group by clause */
 
    begin
 
@@ -1159,11 +1102,7 @@ end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Условный вставляющий триггер
-  -- ------------------------------
-:::
+## Условный вставляющий триггер
 
  
 
@@ -1209,8 +1148,8 @@ newsales
 
 stor\_id  ord\_num    title\_id        qty     discount
 
-\-\-\-\-\-\-- \-\-\-\-\-\-\-\-\--  \-\-\-\-\-\-\-\--       \-\-\--   
-\-\-\-\-\-\-\-\--
+------- ----------  ---------       ----   
+---------
 
  
 
@@ -1231,7 +1170,7 @@ stor\_id  ord\_num    title\_id        qty     discount
 
 insert salesdetail
 
-select \* from newsales
+select * from newsales
 
  
 
@@ -1251,7 +1190,7 @@ for insert as
 
 if
 
-(select count(\*) from titles, inserted
+(select count(*) from titles, inserted
 
 where titles.title\_id = inserted.title\_id)
 
@@ -1267,9 +1206,9 @@ delete salesdetail from salesdetail, inserted
 
    (select title\_id from titles)
 
-print \"Only records with matching title\_ids
+print "Only records with matching title\_ids
 
-   added.\"
+   added."
 
 end
 
@@ -1284,11 +1223,7 @@ intrig, но транзакция при этом не откатывается.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------
-     Откатывающие триггера
-  -- -----------------------
-:::
+## Откатывающие триггера
 
  
 
@@ -1323,7 +1258,7 @@ publisher, который выдает команду rollback trigger, то о�
 
 rollback trigger
 
-   \[with raiserror\_оператор\]
+   [with raiserror\_оператор]
 
  
 
@@ -1341,7 +1276,7 @@ rollback trigger
 
 rollback trigger with raiserror 25002
 
-   \"title\_id does not exist in titles table.\"
+   "title\_id does not exist in titles table."
 
  
 
@@ -1371,7 +1306,7 @@ for insert
 
 as
 
-if (select count(\*) from titles, inserted
+if (select count(*) from titles, inserted
 
    where titles.title\_id = inserted.title\_id) !=
 
@@ -1379,9 +1314,9 @@ if (select count(\*) from titles, inserted
 
   rollback trigger with raiserror 25003
 
-    \"Trigger rollback: salesdetail row not added
+    "Trigger rollback: salesdetail row not added
 
-    because a title\_id does not exist in titles.\"
+    because a title\_id does not exist in titles."
 
  
 
@@ -1394,11 +1329,11 @@ rollback transaction (как и триггер forinsertrig1), поэтому в
 
  
 
-insert salesdetail values (\"7777\", \"JR123\",
+insert salesdetail values ("7777", "JR123",
 
-   \"PS9999\", 75, 40)
+   "PS9999", 75, 40)
 
-delete salesdetail where stor\_id = \"7067\"
+delete salesdetail where stor\_id = "7067"
 
  
 
@@ -1413,13 +1348,13 @@ rollback transaction, поэтому результаты работы опер�
 
 begin tran
 
-update stores set payterms = \"Net 30\"
+update stores set payterms = "Net 30"
 
-   where stor\_id = \"8042\"
+   where stor\_id = "8042"
 
-insert salesdetail values (\"7777\", \"JR123\",
+insert salesdetail values ("7777", "JR123",
 
-   \"PS9999\", 75, 40)
+   "PS9999", 75, 40)
 
  
 
@@ -1435,11 +1370,7 @@ SQL Сервер игнорирует команду rollback trigger, если 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Многоуровневые вызовы триггеров
-  -- ---------------------------------
-:::
+## Многоуровневые вызовы триггеров
 
  
 
@@ -1484,7 +1415,7 @@ as
 
 insert del\_save
 
-select \* from deleted
+select * from deleted
 
  
 
@@ -1512,11 +1443,7 @@ delcascadetrig.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Саморекурсивные триггера
-  -- --------------------------
-:::
+## Саморекурсивные триггера
 
  
 
@@ -1545,12 +1472,12 @@ triggers (допустить многоуровневые триггера).
 
  
 
-select \* from new\_budget
+select * from new\_budget
 
 unit                  parent\_unit       budget
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--    \-\-\-\-\-\-\-\-\-\-\-\--    
-\-\-\-\-\-\--
+---------------    -------------    
+-------
 
  
 
@@ -1577,7 +1504,7 @@ on new\_budget
 
 for update as
 
-if exists (select \* from inserted
+if exists (select * from inserted
 
            where parent\_unit is not null)
 
@@ -1634,12 +1561,12 @@ end
 
  
 
-select \* from new\_budget
+select * from new\_budget
 
 unit                   parent\_unit     budget
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- \-\-\-\-\-\-\-\-\-\-\-\-\-\--    
-\-\-\-\-\-\--
+--------------- ---------------    
+-------
 
  
 
@@ -1672,11 +1599,7 @@ company\_wide    NULL                 1003
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------
-     Правила связанные с триггерами
-  -- --------------------------------
-:::
+## Правила связанные с триггерами
 
  
 
@@ -1687,11 +1610,7 @@ company\_wide    NULL                 1003
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Триггера и права доступа
-  -- --------------------------
-:::
+## Триггера и права доступа
 
  
 
@@ -1719,11 +1638,7 @@ salesdetail.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Ограничения для триггеров
-  -- ---------------------------
-:::
+## Ограничения для триггеров
 
  
 
@@ -1755,11 +1670,7 @@ SQL Сервер накладывает на триггера следующие
   --- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Явные и неявные неопределенные значения
-  -- -----------------------------------------
-:::
+## Явные и неявные неопределенные значения
 
  
 
@@ -1793,41 +1704,41 @@ as
 
 if update(a) and update(b)
 
-       print \"FIRING\"
+       print "FIRING"
 
-   /\*\"if update\" is true for both columns.
+   /*"if update" is true for both columns.
 
-     The trigger is activated.\*/
+     The trigger is activated.*/
 
 insert junk (a, b) values (1, 2)
 
-   /\*\"if update\" is true for both columns.
+   /*"if update" is true for both columns.
 
-     The trigger is activated.\*/
+     The trigger is activated.*/
 
 insert junk values (1, 2)
 
-   /\*Explicit NULL:
+   /*Explicit NULL:
 
-     \"if update\" is true for both columns.
+     "if update" is true for both columns.
 
-     The trigger is activated.\*/
+     The trigger is activated.*/
 
 insert junk values (NULL, 2)
 
-   /\* If default exists on column a,  
+   /* If default exists on column a,  
 
-     \"if update\" is true for either column.  
+     "if update" is true for either column.  
 
-     The trigger is activated.\*/
+     The trigger is activated.*/
 
 insert junk (b) values (2)
 
-   /\* If no default exists on column a,  
+   /* If no default exists on column a,  
 
-     \"if update\" is not true for column a.  
+     "if update" is not true for column a.  
 
-     The trigger is not activated.\*/
+     The trigger is not activated.*/
 
 insert junk (b)values (2)
 
@@ -1856,11 +1767,7 @@ if update(a) or update(b)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Триггеры и производительность
-  -- -------------------------------
-:::
+## Триггеры и производительность
 
  
 
@@ -1875,11 +1782,7 @@ if update(a) or update(b)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------
-     Команда установки set в триггерах
-  -- -----------------------------------
-:::
+## Команда установки set в триггерах
 
  
 
@@ -1889,11 +1792,7 @@ if update(a) or update(b)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Переименование и триггера
-  -- ---------------------------
-:::
+## Переименование и триггера
 
  
 
@@ -1905,11 +1804,7 @@ if update(a) or update(b)
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------
-     Получение информации о триггерах
-  -- ----------------------------------
-:::
+## Получение информации о триггерах
 
  
 
@@ -1920,7 +1815,7 @@ if update(a) or update(b)
 
  
 
-select \*
+select *
 
 from sysobjects
 
@@ -1938,11 +1833,7 @@ sysprocedures. Некоторые системные процедуры пред
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------
-     Процедура sp\_help
-  -- --------------------
-:::
+## Процедура sp\_help
 
  
 
@@ -1958,7 +1849,7 @@ sp\_help deltitle
 
 Name        Owner   Type       
 
-\-\-\-\-\-\-\-\-\-\--  \-\-\-\-\-\--   \-\-\-\-\-\-\-\-\-\--
+-----------  -------   -----------
 
 deltitle        dbo      trigger    
 
@@ -1966,8 +1857,8 @@ deltitle        dbo      trigger
 
 Data\_located\_on\_segment  When\_created
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--       
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-----------------------       
+-----------------
 
 not applicable                   Feb 9 1987  3:56PM
 
@@ -1977,11 +1868,7 @@ not applicable                   Feb 9 1987  3:56PM
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------
-     Процедура sp\_helptext
-  -- ------------------------
-:::
+## Процедура sp\_helptext
 
  
 
@@ -1994,9 +1881,9 @@ sp\_helptext deltitle
 
  
 
-\# Lines of Text
+# Lines of Text
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------
 
  
 
@@ -2006,7 +1893,7 @@ sp\_helptext deltitle
 
 text
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------------------------------------
 
  
 
@@ -2018,7 +1905,7 @@ for delete
 
 as
 
-if (select count(\*) from deleted, salesdetail
+if (select count(*) from deleted, salesdetail
 
 where salesdetail.title\_id = deleted.title\_id) \>0
 
@@ -2026,17 +1913,13 @@ begin
 
 rollback transaction
 
-print \"You can\'t delete a title with sales.\"
+print "You can\'t delete a title with sales."
 
 end
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Процедура sp\_depends
-  -- -----------------------
-:::
+## Процедура sp\_depends
 
  
 
@@ -2056,8 +1939,8 @@ Things the object references in the current database.
 
 object                  type       updated  selected
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--   \-\-\-\-\-\-\-\-\--  \-\-\-\-\-\--  
-\-\-\-\-\-\-\--
+----------------   ----------  -------  
+--------
 
 dbo.salesdetail     user table     no        no
 
@@ -2084,8 +1967,8 @@ Things inside the current database that reference the object.
 
 object                               type        
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- 
+--------------------------- 
+---------------- 
 
  
 

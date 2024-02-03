@@ -78,7 +78,7 @@ Here is an OP function that will do it for you:
 
 ------------------------------------------------------------------------
 
-It\'s very simple to create a empty Access-Database (\*.mdb File) using
+It\'s very simple to create a empty Access-Database (*.mdb File) using
 OLE. It\'s not necessary to have MS-Access installed on your computer.
 If an exception occures the error message will returned. After creating
 the DB you can create Tables with simple SQL-Statements.

@@ -11,23 +11,23 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-1\. ButtonText = Всплывающая подсказка к кнопке
+1. ButtonText = Всплывающая подсказка к кнопке
 
-2\. MenuText = Текст, который будет использован для пункта в меню
-\"Сервис\"
+2. MenuText = Текст, который будет использован для пункта в меню
+"Сервис"
 
-3\. MenuStatusbar = \*Ignore\*
+3. MenuStatusbar = *Ignore*
 
-4\. CLSID = Ваш уникальный classID. Для создания нового CLSID (для каждой
+4. CLSID = Ваш уникальный classID. Для создания нового CLSID (для каждой
 кнопки) можно использовать GUIDTOSTRING.
 
-5\. Default Visible := Показать ей.
+5. Default Visible := Показать ей.
 
-6\. Exec := Путь к Вашей программе.
+6. Exec := Путь к Вашей программе.
 
-7\. Hoticon := иконка из shell32.dll когда мышка находится над кнопкой
+7. Hoticon := иконка из shell32.dll когда мышка находится над кнопкой
 
-8\. Icon := иконка из shell32.dll
+8. Icon := иконка из shell32.dll
 
     procedure CreateExplorerButton;
     const

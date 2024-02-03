@@ -18,7 +18,7 @@ Library.
 
 Выберите Microsoft Shell Controls & Automation (version 1.0).
 
-Нажмите Install\...
+Нажмите Install...
 
 На панели компонентов, в закладке ActiveX появится несколько
 компонентов. Перетащите на форму компонент TShell. После этого,

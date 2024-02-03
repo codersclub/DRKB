@@ -135,9 +135,9 @@ TCP Port 1068 - Installation Bootstrap Service Installation Bootstrap
 protocol client
 TCP Port 1270 - MOM-Encrypted Microsoft Operations Manager 2000
 TCP Port 1433 - SQL over TCP Microsoft SQL Server
-TCP Port 1433 - SQL over TCP MSSQL\$UDDI
+TCP Port 1433 - SQL over TCP MSSQL$UDDI
 UDP Port 1434 - SQL Probe Microsoft SQL Server
-UDP Port 1434 - SQL Probe MSSQL\$UDDI
+UDP Port 1434 - SQL Probe MSSQL$UDDI
 UDP Port 1645 - Legacy RADIUS Internet Authentication Service
 UDP Port 1646 - Legacy RADIUS Internet Authentication Service
 UDP Port 1701 - L2TP Routing and Remote Access

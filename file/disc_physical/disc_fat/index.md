@@ -24,7 +24,7 @@ Date: 01.01.2007
     
                      Автор  : NikNet
                      E-MAIL : NikNet\@Yandex.ru
-                     Сайт   : NikNet.narod.ru \[Скоро будет :)\]
+                     Сайт   : NikNet.narod.ru [Скоро будет :)]
                             2006г
                    Версия 4.00 (Win9x/NT)
     }

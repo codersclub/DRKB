@@ -42,9 +42,9 @@ IBSTOP.BAT
 
 \@echo off
 
-net stop \"InterBase Guardian\" \>NULL
+net stop "InterBase Guardian" \>NULL
 
-net stop \"InterBase Server\" \>NULL
+net stop "InterBase Server" \>NULL
 
 IBSTART.BAT
 
@@ -52,6 +52,6 @@ IBSTART.BAT
 
 \@echo off
 
-net start \"Interbase Guardian\" \>NULL
+net start "Interbase Guardian" \>NULL
 
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

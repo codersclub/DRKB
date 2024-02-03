@@ -31,8 +31,8 @@ Example of checking and changing a Memo text ...
 #### Properties
 
 LetterChars - Characters considered to be letters. default is  
-             \['A'..'Z','a'..'z'\] (English) but could be changed to
-             \['A'..'Z','a'..'z','б','й','н','у','ъ'\] (Spanish)
+             ['A'..'Z','a'..'z'] (English) but could be changed to
+             ['A'..'Z','a'..'z','б','й','н','у','ъ'] (Spanish)
 
 Color       - Backgound color of Default dialog Editbox and Listbox
 

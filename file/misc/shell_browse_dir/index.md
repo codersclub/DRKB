@@ -11,8 +11,8 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Статья из рассылки \"Мастера DELPHI. Новости мира компонент, FAQ,
-статьи\...\".
+Статья из рассылки "Мастера DELPHI. Новости мира компонент, FAQ,
+статьи...".
 
 Как использовать функцию Shell API SHBrowseForFolder чтобы позволить
 пользователю выбрать каталог?
@@ -107,7 +107,7 @@ Date: 01.01.2007
     if Result then
     begin
     ShGetPathFromIDList(ItemIDList!
-    , Buffer);
+   , Buffer);
     ShellMalloc.Free(ItemIDList);
     Directory := Buffer;
     end;

@@ -12,7 +12,7 @@ Date: 01.01.2007
 :::
 
 Данная статья посвящена созданию приложений архитектуры клиент/сервер в
-Borland Delphi на основе сокетов (\"sockets\" - гнезда). В отличие от
+Borland Delphi на основе сокетов ("sockets" - гнезда). В отличие от
 предыдущей статьи на тему сокетов, здесь мы разберем создание серверных
 приложений.
 
@@ -39,15 +39,15 @@ Borland Delphi на основе сокетов (\"sockets\" - гнезда). В
 Ниже следует примерная схема работы сокетного сервера в
 Дельфи-приложениях:
 
-![clip0002](clip0002.gif){width="162" height="50"}
-![clip0003](clip0003.gif){width="50" height="50"}
-![clip0007](clip0007.png){width="162" height="50"}
-![clip0006](clip0006.png){width="50" height="50"}
-![clip0008](clip0008.png){width="162" height="50"}
-![clip0009](clip0009.png){width="50" height="50"}
-![clip0010](clip0010.png){width="162" height="50"}
-![clip0005](clip0005.gif){width="50" height="50"}
-![clip0011](clip0011.png){width="162" height="50"}
+![clip0002](clip0002.gif)
+![clip0003](clip0003.gif)
+![clip0007](clip0007.png)
+![clip0006](clip0006.png)
+![clip0008](clip0008.png)
+![clip0009](clip0009.png)
+![clip0010](clip0010.png)
+![clip0005](clip0005.gif)
+![clip0011](clip0011.png)
 
 Разберем схему подробнее:
 
@@ -204,7 +204,7 @@ TServerSocket.Socket (TServerWinSocket)
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"}
   --- -------------------------------------------------------------
-  ·   ServerSocket1.Socket.Connections\[0\].SendText(\'Hello!\');
+  ·   ServerSocket1.Socket.Connections[0].SendText(\'Hello!\');
   --- -------------------------------------------------------------
 :::
 
@@ -406,13 +406,13 @@ TServerSocket.
 файлового (TFileStream), он передает данные медленнее (сами понимаете -
 сеть, ограниченный трафик, и т.д.). Именно поэтому две команды:
 
-ServerSocket1.Socket.Connections\[0\].SendText(\'Hello, \');
+ServerSocket1.Socket.Connections[0].SendText(\'Hello, \');
 
-ServerSocket1.Socket.Connections\[0\].SendText(\'world!\');
+ServerSocket1.Socket.Connections[0].SendText(\'world!\');
 
 совершенно идентичны одной команде:
 
-ServerSocket1.Socket.Connections\[0\].SendText(\'Hello, world!\');
+ServerSocket1.Socket.Connections[0].SendText(\'Hello, world!\');
 
 И именно поэтому, если Вы отправите через сокет файл, скажем, в 100 Кб,
 то тому, кому Вы посылали этот блок, придет несколько блоков с

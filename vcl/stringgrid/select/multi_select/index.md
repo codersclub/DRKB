@@ -16,7 +16,7 @@ Shift-MouseDown, только Ctrl-MouseDown).
 
 Для TStringGrid вам нужно выполнить следующие шаги:
 
-Заполните сетку, связывая Objects\[0, ARow\] с некоторым логическим
+Заполните сетку, связывая Objects[0, ARow] с некоторым логическим
 объектом типа:
 
     TBooleanObject = class(TObject)
@@ -28,7 +28,7 @@ Shift-MouseDown, только Ctrl-MouseDown).
 требует ситуация.
 
 В обработчике события OnDrawCell отрисуйте строку согласно флагу
-Objects\[0,ARow\].
+Objects[0,ARow].
 
 <https://delphiworld.narod.ru/>
 

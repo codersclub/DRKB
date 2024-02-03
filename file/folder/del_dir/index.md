@@ -26,7 +26,7 @@ Date: 01.01.2007
      sFileName : String; 
     begin 
      Result := False; 
-     sDir := sDir + '\*.*'; 
+     sDir := sDir + '*.*'; 
      iIndex := FindFirst(sDir, faAnyFile, SearchRec); 
      while iIndex = 0 do 
      begin 
@@ -71,7 +71,7 @@ Date: 01.01.2007
 
 Надо путь писать: c:\\\\test\\dfg
 
-Чтобы вначале "\\\\" было... иначе не будет удалять диры из корня
+Чтобы вначале "\\\" было... иначе не будет удалять диры из корня
 
 Автор: Baa
 

@@ -23,15 +23,15 @@ Date: 01.01.2007
 Что ж, будет немного подлиннее.
 
 1. [Введение](./)
-2. [Простой пример](simple_sample/)
-3. [DLL!](dll/)
-4. [Еще шаг в направлении COM](com_step/)
-5. [Понятие интерфейса](interface/)
-6. [Понятие интерфейса − 2](interface2/)
-7. [Собираем тестовый пример](testsample/)
-8. [Стандарт СОМ](comstandard/)
-9. [Как система создает объект СОМ](com_create/)
-10. [IClassFactory](iclassfactory/)
+2. [Простой пример](02_simple_sample/)
+3. [DLL!](03_dll/)
+4. [Еще шаг в направлении COM](04_com_step/)
+5. [Понятие интерфейса](05_interface/)
+6. [Понятие интерфейса − 2](06_interface2/)
+7. [Собираем тестовый пример](07_testsample/)
+8. [Стандарт СОМ](08_com_standard/)
+9. [Как система создает объект СОМ](09_com_create/)
+10. [IClassFactory](10_iclassfactory/)
 
 Взято с Vingrad.ru <https://forum.vingrad.ru>
 

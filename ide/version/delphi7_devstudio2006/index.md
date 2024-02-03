@@ -1,14 +1,14 @@
 ---
-Title: Переход от Delphi 7 к Developer Studio 2006 -- сравнивая компоненты
-Date: 01.01.2007
+Title: Переход от Delphi 7 к Developer Studio 2006 - сравнивая компоненты
+Date: 01.01.2005
 ---
 
 
-Переход от Delphi 7 к Developer Studio 2006 -- сравнивая компоненты
+Переход от Delphi 7 к Developer Studio 2006 - сравнивая компоненты
 ===================================================================
 
 ::: {.date}
-01.01.2007
+01.01.2005
 :::
 
 © 2005, Сергей Досюков, Dragon Soft
@@ -19,8 +19,8 @@ Delphi или C++Builder не являются исключением.
 
 Когда вы разрабатываете программный продукт разрабатывался на протяжении
 нескольких лет всегда возникает вопрос при переходе на новую версию
-среды разработки - \"а все ли компоненты доступны, что появилось нового
-и возможен ли переход вообще?\".
+среды разработки - "а все ли компоненты доступны, что появилось нового
+и возможен ли переход вообще?".
 
 10/10/2005 Borland представил новую версию Borland Delphi - Borland
 Developer Studio 2006. Отличительной особенностью стала интеграция C++
@@ -33,8 +33,8 @@ C++Builder.
 
 Примечание
 
-Когда \"\*\" присутствует в какой либо колонке это значит что поле
-\"Примечание\" содержит дополнительную информацию.
+Когда "*" присутствует в какой либо колонке это значит что поле
+"Примечание" содержит дополнительную информацию.
 
 Название компоненты
 
@@ -251,7 +251,7 @@ TEdit
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
@@ -263,7 +263,7 @@ TEdit
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
@@ -271,11 +271,11 @@ TEdit
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 В WinForms.Net доступно как TextBox.Multiline = False
@@ -405,7 +405,7 @@ TLabel
 TLinkLabel
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
@@ -413,7 +413,7 @@ TLinkLabel
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
@@ -519,7 +519,7 @@ TMainMenu
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 MenuStrip
@@ -543,7 +543,7 @@ TMemo
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
@@ -555,7 +555,7 @@ TMemo
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
@@ -563,11 +563,11 @@ TMemo
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 В WinForms.Net доступно как TextBox.Multiline = True
@@ -661,7 +661,7 @@ TPopupMenu
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 в VS2005 - ContextMenuStrip
@@ -1043,27 +1043,27 @@ TChart
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
@@ -1071,7 +1071,7 @@ TChart
 :::
 
 ::: {style="text-align: center;"}
-\*
+*
 :::
 
 ::: {style="text-align: center;"}
@@ -1300,21 +1300,21 @@ TDrawGrid
 
 TFlowPanel
 
-\*
+*
 
 FlowLayoutPanel
 
 TGridPanel
 
-\*
+*
 
-\*
+*
 
 TableLayoutPanel
 
 TImage
 
-\*
+*
 
 PictureBox
 
@@ -1322,7 +1322,7 @@ TLabeledEdit
 
 TMaskEdit
 
-\*
+*
 
 MaskedTextBox
 
@@ -1444,13 +1444,13 @@ TProgressBar
 
 TRichEdit
 
-\*
+*
 
 RichTextBox
 
 TStatusBar
 
-\*
+*
 
 StatusStrip
 
@@ -1472,11 +1472,11 @@ HelpProvider
 
 ErrorProvider
 
-\*
+*
 
-\*
+*
 
-\*
+*
 
 www.dragonsoftru.com?go=vcl
 
@@ -1670,17 +1670,17 @@ DATA CONTROLS
 
 TDBChart
 
-\*
+*
 
-\*
+*
 
-\*
+*
 
-\*
+*
 
-\*
+*
 
-\*
+*
 
 ?
 
@@ -1710,7 +1710,7 @@ TDBMemo
 
 TDBNavigator
 
-\*
+*
 
 BindingNavigator
 
@@ -2110,24 +2110,24 @@ TXMLDocument
 
 TWebBrowser
 
-\*
+*
 
 TCppWebBrowser
 
 TServerSocket
 
-\*
+*
 
-\*
+*
 
 Устарело (см. dclsocketsNN.bpl: ScktComp.pas для доп. инфо). Используйте
 INDY или др.
 
 TClientSocket
 
-\*
+*
 
-\*
+*
 
 Устарело (см. dclsocketsNN.bpl: ScktComp.pas для доп. инфо). Используйте
 INDY или др.
@@ -2290,7 +2290,7 @@ VS.Net 2005
 
 ECO/BOLD
 
-\...
+...
 
 ECO заменило BOLD в D2005
 
@@ -2298,17 +2298,17 @@ Bold для Win32/VCL и ECO для .Net/.Net+Winforms
 
 DECISION CUBE
 
-\...
+...
 
 SAMPLES
 
-\...
+...
 
 ColorGrid
 
 Gauge
 
-\*
+*
 
 TCGaude
 
@@ -2316,40 +2316,40 @@ CollapsePanel
 
 FASTNET
 
-\...
+...
 
 ACTIVEX
 
-\...
+...
 
 RAVE REPORTS
 
-\...
+...
 
 INDY
 
-\...
+...
 
-\*
+*
 
-\*
+*
 
-\*
+*
 
 www.indyproject.org
 
 COM+
 
-\...
+...
 
 IntraWeb
 
-\...
+...
 
-\*
+*
 
 SERVERS
 
-\...
+...
 
 © 2005, Сергей Досюков, Dragon Soft

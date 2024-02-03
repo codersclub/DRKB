@@ -1,10 +1,10 @@
 ---
-Title: TRichEdit -- поиск текста
+Title: TRichEdit - поиск текста
 Date: 01.01.2007
 ---
 
 
-TRichEdit -- поиск текста
+TRichEdit - поиск текста
 =========================
 
 ::: {.date}

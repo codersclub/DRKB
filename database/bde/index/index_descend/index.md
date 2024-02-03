@@ -11,6 +11,6 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Table1.AddIndex(\'NewIndex\', \'CustNo;CustName\', \[ixDescending\]);
+Table1.AddIndex(\'NewIndex\', \'CustNo;CustName\', [ixDescending];
 
 Взято с <https://delphiworld.narod.ru>

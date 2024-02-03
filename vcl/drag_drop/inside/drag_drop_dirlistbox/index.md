@@ -1,10 +1,10 @@
 ---
-Title: Drag & Drop -- как использовать ItemAtPos для получения элемента DirListBox
+Title: Drag & Drop - как использовать ItemAtPos для получения элемента DirListBox
 Date: 01.01.2007
 ---
 
 
-Drag & Drop -- как использовать ItemAtPos для получения элемента DirListBox
+Drag & Drop - как использовать ItemAtPos для получения элемента DirListBox
 ===========================================================================
 
 ::: {.date}

@@ -18,13 +18,13 @@ Date: 01.01.2007
 
 Файл выглядит примерно так:
 
-TFH\...\....\<First record type, первый тип записи\>
+TFH.......\<First record type, первый тип записи\>
 
-TBH\...\....\<Second record type, второй тип записи\>
+TBH.......\<Second record type, второй тип записи\>
 
-TAB\...\.....\<Third record type, третий тип записи\>
+TAB........\<Third record type, третий тип записи\>
 
-TAA\...\.....\<Fourth record type, четвертый тип записи\>
+TAA........\<Fourth record type, четвертый тип записи\>
 
 Вы можете поймать больше одного зайца в случае объявления переменной
 записи, но если сделаете это правильно.
@@ -59,7 +59,7 @@ TAA\...\.....\<Fourth record type, четвертый тип записи\>
       end;
 
 IndexFromDataTag должен искать передаваемый тэг поля в массиве DataTags.
-Определите все поля в TDataRec как Array \[1..someUpperBound\] of Char.
+Определите все поля в TDataRec как Array [1..someUpperBound] of Char.
 
 <https://delphiworld.narod.ru/>
 

@@ -13,7 +13,7 @@ Date: 01.01.2007
 
     // This function stretches a bitmap with specified number of pixels 
     // in horizontal, vertical dimension 
-    // Example Call : ResizeBmp(Image1.Picture.Bitmap , 200 , 200); 
+    // Example Call : ResizeBmp(Image1.Picture.Bitmap, 200, 200); 
      
     function TForm1.ResizeBmp(bitmp: TBitmap; wid, hei: Integer): Boolean;
      var

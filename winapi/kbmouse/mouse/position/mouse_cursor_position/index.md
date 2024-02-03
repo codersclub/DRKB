@@ -55,7 +55,7 @@ GetCursorPos()
       foo: TPoint;
     begin
       GetCursorPos(foo)
-      ShowMessage( '(' + IntToStr(foo.X) + ' ,' + IntToStr( foo.Y ) + ')' );
+      ShowMessage( '(' + IntToStr(foo.X) + ',' + IntToStr( foo.Y ) + ')' );
     end;
 
 Взято из <https://forum.sources.ru>
@@ -72,7 +72,7 @@ GetCursorPos()
       foo: TPoint;
     begin
       GetCursorPos(foo);
-      ShowMessage('(' + IntToStr(foo.X) + ' ,' + IntToStr(foo.Y) + ')');
+      ShowMessage('(' + IntToStr(foo.X) + ',' + IntToStr(foo.Y) + ')');
     end;
 
 <https://delphiworld.narod.ru/>

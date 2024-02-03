@@ -71,7 +71,7 @@ POST\_EVENT, PRECISION, PROCEDURE, PROTECTED, PRIMARY,
 
 PRIVILEGES
 
-RAW\_PARTITIONS, RDB\$DB\_KEY, READ, REAL, RECORD\_VERSION,
+RAW\_PARTITIONS, RDB$DB\_KEY, READ, REAL, RECORD\_VERSION,
 
 REFERENCES, RESERV, RESERVING, RETAIN, RETURNING\_VALUES,
 
@@ -97,6 +97,6 @@ WAIT, WHEN, WHERE, WHILE, WITH, WORK, WRITE
 
 YEAR
 
-\|\|, -, \*, /, \<\>, \<, \>, ,(comma), =, \<=, \>=, \~=, !=, \^=, (, )
+\|\|, -, *, /, \<\>, \<, \>,,(comma), =, \<=, \>=, \~=, !=, \^=, (, )
 
 Взято с сайта <https://www.delphikingdom.ru/>

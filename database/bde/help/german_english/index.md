@@ -13,7 +13,7 @@ Date: 01.01.2007
 :::
 
 Я просто установил DtopicsP v1.20 и DtopicsD (03-29-96). При запуске
-dtopics.exe возникает ошибка DB-Error \$3E05 (\'cannot load driver\')
+dtopics.exe возникает ошибка DB-Error $3E05 (\'cannot load driver\')
 (не могу загрузить драйвер).
 
 Я нашел ответ в German Borland Forum. Ошибка происходит, если установлен

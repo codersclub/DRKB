@@ -95,7 +95,7 @@ integer-параметр вместо longint), могут быть пробле
 таблицами (RecordCount\>MaxInt). Объяснение этому факту я нашел в
 журнале Delphi Magazine. Для больших таблиц вы должны заменить вызовы
 MoveBy на DBISetToSeqNo или DBIGetRelativeRecord. Не забудьте после
-данного вызова вызвать Resnyc(\[\]) или Refresh!
+данного вызова вызвать Resnyc([] или Refresh!
 
 P.S. Пока вы ковыряетесь в DBGRIDS.PAS: найдите и замените TitleColor на
 FixedColor в TCustomDBGrid.Create и в TCustomDBGrid.DrawCell. Значение

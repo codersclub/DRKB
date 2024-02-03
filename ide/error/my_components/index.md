@@ -31,6 +31,6 @@ If it looks like the components are there but the bitmap images are
 missing then try unistalling and reinstalling each package. This can be
 done very easily by going into the Delphi menu option Component \|
 Install Packages. Uncheck each of the packages and then check it again.
-Say \"Yes\" to any message boxes that appear asking about the removal of
-related packages. I recommend you start by removing \"Borland Database
-Components\" since this will remove several others as well.
+Say "Yes" to any message boxes that appear asking about the removal of
+related packages. I recommend you start by removing "Borland Database
+Components" since this will remove several others as well.

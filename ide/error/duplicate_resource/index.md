@@ -12,7 +12,7 @@ Duplicate resource error
 :::
 
 When I try to add a resource to my project\'s .res file, I get a
-\"Duplicate Resource\" error when linking. The resource I have added is
+"Duplicate Resource" error when linking. The resource I have added is
 a unique resource. How can I successfully add the resource to my
 project?
 
@@ -23,7 +23,7 @@ conflict with either the project or any of  the unit names. Then to add
 the resource file to Delphi, simply add the following line to any unit
 file in the project:
 
-[{\$R MyRes.Res}]{style="color: teal;"}
+[{$R MyRes.Res}]{style="color: teal;"}
 
 (where MyRes.Res is the name of the resource file).
 

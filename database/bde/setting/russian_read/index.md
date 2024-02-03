@@ -16,15 +16,15 @@ Date: 01.01.2007
 
 HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
-SystemFont=\"Fixedsys\"
+SystemFont="Fixedsys"
 
 Если такой ключ не существует, его следует создать.
 
 или
 
-\[HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CodePage\]
+[HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CodePage]
 
-\"1252\"=\"c\_1251.nls\"
+"1252"="c\_1251.nls"
 
 Автор: Pegas
 
@@ -43,7 +43,7 @@ SystemFont=\"Fixedsys\"
 
 Для DBD 5.0 в файл c:\\windows\\pdoxwin.ini вставить в секцию
 
-\[Properties\]
+[Properties]
 
 SystemFont=Arial Cyr
 
@@ -51,19 +51,19 @@ SystemFont=Arial Cyr
 
 HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
-SystemFont=\"Fixedsys\"
+SystemFont="Fixedsys"
 
 Если такой ключ не существует, его следует создать. Впрочем, для
 просмотра таблиц
 
-все равно можно порекомендовать rx Database Explorer \-- у него это
+все равно можно порекомендовать rx Database Explorer - у него это
 получается очень хорошо.
 
 О: Sergey V. Baldin
 
 Это - проблема русских .dbf и Desktop\'а . Надо установить шрифт
 
-по умолчанию не Arial Cyr , а Fixedsys или System. копать примерно так:
+по умолчанию не Arial Cyr, а Fixedsys или System. копать примерно так:
 
 1.находишь производителя Desktop :
 
@@ -76,7 +76,7 @@ HKEY\_CURRENT\_USER\\SOFTWARE\\BORLAND\\DBD\\7.0\\Preferences\\Properties\\Syste
 
 (писать название шрифта с большой буквы).
 
-2\. И в стандартном драйвере BDE ,например DBASE, ставишь русский драйвер
+2. И в стандартном драйвере BDE,например DBASE, ставишь русский драйвер
 dBASE RUS cp866.
 
 Открываешь BDE configurator(administrator), ярлык на 32-BDE находится в
@@ -95,7 +95,7 @@ cp866.
 
 вставить в секцию
 
-\[Properties\]
+[Properties]
 
 SystemFont=Arial Cyr
 
@@ -103,10 +103,10 @@ SystemFont=Arial Cyr
 
 HKCU\\Software\\Borland\\DBD\\7.0\\Preferences\\Properties\
 
-SystemFont=\"Fixedsys\"
+SystemFont="Fixedsys"
 
 Если такой ключ не существует, его следует создать. Впрочем, для
 просмотра таблиц все равно можно порекомендовать rx Database
-Explorer \-- у него это получается очень хорошо.
+Explorer - у него это получается очень хорошо.
 
 Copyright (C) Alexey Mahotkin 1997-1999

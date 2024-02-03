@@ -26,7 +26,7 @@ Date: 01.01.2007
       Result := GetTypeData (PTypeInfo(Obj.ClassInfo))^.UnitName
     end;
 
-Для создания описанной вами функции \"Какой модуль\" могут
+Для создания описанной вами функции "Какой модуль" могут
 использоваться описанные в TOOLINTF.INT методы GetModuleCount,
 GetModuleName, GetComponentCount и GetComponentName.
 

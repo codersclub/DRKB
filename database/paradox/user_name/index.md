@@ -45,7 +45,6 @@ DBITYPES
       if pszUserName <> nil then FreeMem(pszUserName, SizeOf(Char) * DBIMAXXBUSERNAMELEN);
     end;
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

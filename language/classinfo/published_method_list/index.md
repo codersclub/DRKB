@@ -201,7 +201,7 @@ Class name: TProject
 
 3 Properties
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------
 
 Name: TComponentName
 

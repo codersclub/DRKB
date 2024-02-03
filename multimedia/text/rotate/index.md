@@ -69,7 +69,7 @@ Date: 01.01.2007
     var   LogRec: TLOGFONT;     { Информация о шрифте }
     begin
      {Читаем текущюю инф. о шрифте }
-     GetObject(c.Font.Handle,SizeOf(LogRec) ,Addr(LogRec) );
+     GetObject(c.Font.Handle,SizeOf(LogRec),Addr(LogRec) );
      { Изменяем угол }
      LogRec.lfEscapement := round(d*10);
      { Устанавливаем новые параметры }
@@ -164,7 +164,7 @@ DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Некоторое время я делал так: я создавал шрифт, выбирал его в DC \...
+Некоторое время я делал так: я создавал шрифт, выбирал его в DC ...
 
     function CreateMyFont(degree: Integer): HFONT;
     begin
@@ -174,7 +174,7 @@ DelphiWorld 6.0
       0, 0, 0, szFontName);
     end;
 
-\.... и затем использовал любую функцию рисования для вывода текста.
+.... и затем использовал любую функцию рисования для вывода текста.
 
 <https://delphiworld.narod.ru/>
 

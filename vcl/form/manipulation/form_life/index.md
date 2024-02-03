@@ -16,7 +16,7 @@ Date: 01.01.2007
 В Windows основной элемент пользовательского интерфейса - форма. В
 Delphi каждый проект имеет по крайней мере одно окно - главное окно
 приложения. Все окна в Delphi основаны на объекте TForm. В данной статье
-мы рассмотрим основные события учавствующие в \"жизни формы\".
+мы рассмотрим основные события учавствующие в "жизни формы".
 
   Форма
 
@@ -28,15 +28,15 @@ Delphi, но в отличие от других, её нет на панели 
 
 Дополнительные формы в проекте создаются через File \| New Form. Так же
 существуют и другие способы создания форм, но здесь мы не будем
-рассматривать их\...
+рассматривать их...
 
 Как и любой другой компонент (объект) форма имеет свои методы и
-реагирует на события. Давайте рассмотрим некоторые из этих событий\...
+реагирует на события. Давайте рассмотрим некоторые из этих событий...
 
 Рождение
 
 OnCreate -\> OnShow -\> OnActivate-\> OnPaint -\> OnResize -\> OnPaint
-\...
+...
 
 OnCreate
 
@@ -78,7 +78,7 @@ OnPaint, OnResize
 
 При уничтожении формы, события генерируются в следующем порядке:
 
-\... OnCloseQuery -\> OnClose-\> OnDeactivate -\> OnHide -\> OnDestroy
+... OnCloseQuery -\> OnClose-\> OnDeactivate -\> OnHide -\> OnDestroy
 
 OnCloseQuery
 
@@ -93,8 +93,8 @@ procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 
 begin
 
-if MessageDlg(\'Really close this window?\', mtConfirmation, \[mbOk,
-mbCancel\], 0) = mrCancel then
+if MessageDlg(\'Really close this window?\', mtConfirmation, [mbOk,
+mbCancel], 0) = mrCancel then
 
   CanClose := False;
 

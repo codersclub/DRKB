@@ -4,7 +4,7 @@ Title: Добавить материал
 
 
 -   [C++](javascript:%20voidPutATag('%5Bcode=cpp%5D','%5B/code%5D','content'))
--   [C\#](javascript:%20voidPutATag('%5Bcode=csharp%5D','%5B/code%5D','content'))
+-   [C#](javascript:%20voidPutATag('%5Bcode=csharp%5D','%5B/code%5D','content'))
 -   [CSS](javascript:%20voidPutATag('%5Bcode=css%5D','%5B/code%5D','content'))
 -   [Delphi](javascript:%20voidPutATag('%5Bcode=delphi%5D','%5B/code%5D','content'))
 -   [Java](javascript:%20voidPutATag('%5Bcode=java%5D','%5B/code%5D','content'))
@@ -41,7 +41,7 @@ Title: Добавить материал
 Отправить интересный материал можно прямо отсюда. Для этого
 воспользуйтесь формой ниже:
 
-Заголовок статьи:[\*]{.star}
+Заголовок статьи:[*]{.star}
 
 
 /\>
@@ -59,7 +59,7 @@ Title: Добавить материал
 Полная ссылка на источник:
 :::
 
-Содержание:[\*\*]{.star}
+Содержание:[**]{.star}
 
 
 
@@ -68,9 +68,9 @@ Title: Добавить материал
 Предварительный просмотр
 :::
 
-[\*]{.star}Обязательно для заполнения, название должно отражать суть
+[*]{.star}Обязательно для заполнения, название должно отражать суть
 статьи
-[\*\*]{.star}Не менее двух коротких предложений, не считая тегов
+[**]{.star}Не менее двух коротких предложений, не считая тегов
 
 
 Отправить

@@ -12,7 +12,7 @@ Date: 01.01.2007
 :::
 
 Для начала необходимо установить свойство формы KeyPreview в True. А
-потом уже можно отлавливать \"Esc\":
+потом уже можно отлавливать "Esc":
 
     procedure TForm1.FormCreate(Sender: TObject);
     begin

@@ -1,6 +1,7 @@
 ---
 Title: Примеры использования Drag & Drop для различных визуальных компонентов
-Date: 01.01.2007
+author: Борис Новгородов
+Date: 01.01.2002
 ---
 
 
@@ -374,7 +375,7 @@ else
 
      for c := 0 to FieldCount - 1 do
 
-       s := s + Fields\[c\].AsString + \' \| \';
+       s := s + Fields[c].AsString + \' \| \';
 
      memo2.lines.add(s);
 
@@ -430,7 +431,7 @@ Shift: TShiftState; X, Y: Integer);
 
 const
 
-SC\_DragMove = \$F012;
+SC\_DragMove = $F012;
 
 begin
 
@@ -470,7 +471,7 @@ h: THandle;
 
 //i,num:integer;
 
-pchr: array\[0..maxlen\] of char;
+pchr: array[0..maxlen] of char;
 
 fname: string;
 
@@ -488,7 +489,7 @@ h := Msg.Drop;
 
 //  DragQueryFile(h,i,pchr,maxlen);
 
-//\...обработка каждого
+//...обработка каждого
 
 //end;
 
@@ -551,7 +552,8 @@ Image1, находящемся на Panel3, Doc загружается в OleCon
 компонентов.
 
 В заключение хочу выразить благодарность Игорю Шевченко и Максиму
-Власову за ценные советы при подготовке примеров\... Автор статьи: 
-Борис Новгородов, Новосибирск, 2002
+Власову за ценные советы при подготовке примеров...
+
+Автор статьи: Борис Новгородов, Новосибирск, 2002
 
 Взято с сайта [www.emanual.ru](https://www.emanual.ru)

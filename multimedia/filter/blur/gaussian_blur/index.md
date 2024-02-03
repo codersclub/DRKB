@@ -20,15 +20,15 @@ Date: 01.01.2007
 быстроты обработки изображений.
 
 Ядро гауссовой функции exp(-(x\^2 + y\^2)) есть разновидность формулы
-f(x)\*g(y), которая означает, что мы можем выполнить двумерную свертку,
+f(x)*g(y), которая означает, что мы можем выполнить двумерную свертку,
 делая последовательность одномерных сверток - сначала мы свертываем
 каждую строчку изображения, затем - каждую колонку. Хороший повод для
-ускорения (N\^2 становится N\*2). Любая свертка требует некоторого место
+ускорения (N\^2 становится N*2). Любая свертка требует некоторого место
 для временного хранения результатов - ниже в коде программа BlurRow как
 раз распределяет и освобождает память для каждой колонки. Вероятно это
 должно ускорить обработку изображения, правда не ясно насколько.
 
-Поле \"size\" в записи TKernel ограничено значением 200. Фактически,
+Поле "size" в записи TKernel ограничено значением 200. Фактически,
 если вы хотите использовать еще больший радиус, это не вызовет проблем -
 попробуйте со значениями radius = 3, 5 или другими. Для большого
 количества данных методы свертки на поверку оказываются эффективнее
@@ -272,7 +272,7 @@ f(x)\*g(y), которая означает, что мы можем выполн
 
 Имейте в виду, что 24-битные изображения при системной 256-цветной
 палитре требуют некоторых дополнительных хитростей, так как эти
-изображения не только выглядят в таком случае немного \"странными\", но
+изображения не только выглядят в таком случае немного "странными", но
 и серьезно нарушают работу фильтра.
 
 Взято с <https://delphiworld.narod.ru>
@@ -287,7 +287,7 @@ f(x)\*g(y), которая означает, что мы можем выполн
 Данный метод позволяет создавать тень у текстовых меток TLabel. Не
 требует лазить в Photoshop и что-то ваять там - тень рисуется
 динамически, поэтому и объём программы не раздувает. Создание тени
-присходит в фоновом режиме, во время \"простоя\" процессора.
+присходит в фоновом режиме, во время "простоя" процессора.
 
 Пример использования:
 
@@ -448,16 +448,16 @@ Blur.pas
 
 ------------------------------------------------------------------------
 
-The gaussian kernel exp(-(x\^2 + y\^2)) is of the form f(x)\*g(y), which
+The gaussian kernel exp(-(x\^2 + y\^2)) is of the form f(x)*g(y), which
 means that you can perform a two-dimensional convolution by doing a
 sequence of one-dimensional convolutions - first you convolve each row
-and then each column. This is much faster (an N\^2 becomes an N\*2). Any
+and then each column. This is much faster (an N\^2 becomes an N*2). Any
 convolution requires some temporary storage - below the BlurRow routine
 allocates and frees the memory, meaning that it gets allocated and freed
 once for each row. Probably changing this would speed it up some, it\'s
 not entirely clear how much.
 
-The kernel \"size\" is limited to 200 entries. In fact if you use radius
+The kernel "size" is limited to 200 entries. In fact if you use radius
 anything like that large it will take forever - you want to try this
 with a radius = 3 or 5 or something. For a kernel with that many entries
 a straight convolution is the thing to do, while when the kernel gets

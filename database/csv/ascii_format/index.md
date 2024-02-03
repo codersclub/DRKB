@@ -14,8 +14,8 @@ Date: 01.01.2007
 В файле asciidrv.txt насчет последнего числа в строке схемы поля
 говорится:
 
-\"\* Offset - Number of characters from the beginning of the line that
-the field begins. Used for FIXED format only.\" (Offset - количество
+"* Offset - Number of characters from the beginning of the line that
+the field begins. Used for FIXED format only." (Offset - количество
 символов он начала линии до начала поля. Используется только для
 фиксированного формата.).
 
@@ -23,15 +23,15 @@ the field begins. Used for FIXED format only.\" (Offset - количество
 каждой строке смещение, равное нулю. После некоторых попыток, чтобы
 заставить это работать, я следал следующие изменения:
 
-\[discs\]
+[discs]
 
 filetype = varying
 
 charset = ascii
 
-delimiter = \"
+delimiter = "
 
-separator = ,
+separator =,
 
 field1 = id,char,10,0,1
 
@@ -39,21 +39,21 @@ field2 = title,char,30,0,2
 
 field3 = artist,char,30,0,3
 
-\...
+...
 
 field36 = song30,char,50,0,36
 
 После более произвольных изменений это стало таким:
 
-\[discs\]
+[discs]
 
 filetype = varying
 
 charset = ascii
 
-delimiter = \"
+delimiter = "
 
-separator = ,
+separator =,
 
 field1 = id,char,10,0,10
 
@@ -61,14 +61,13 @@ field2 = title,char,30,0,20
 
 field3 = artist,char,30,0,30
 
-\...
+...
 
 field36 = song30,char,50,0,360
 
 и внезапно все заработало! Для поля, которое игнорируется форматом
-файла, \"Offset\" несомненно дало огромный эффект.
+файла, "Offset" несомненно дало огромный эффект.
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

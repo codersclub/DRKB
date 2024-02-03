@@ -210,7 +210,7 @@ Date: 01.01.2007
     begin
       Form1.ListView1.Items.BeginUpdate;
       Form1.ListView1.Items.Clear;
-      if FindFirst(Form1.DirectoryListBox1.Directory + '\*.*', faAnyFile, sr)= 0 then
+      if FindFirst(Form1.DirectoryListBox1.Directory + '*.*', faAnyFile, sr)= 0 then
      repeat
         if sr.Attr and faDirectory <> 0 then continue;
         li := Form1.ListView1.Items.Add;

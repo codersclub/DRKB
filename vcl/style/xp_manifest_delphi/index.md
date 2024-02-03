@@ -56,9 +56,9 @@ Windows будет читать для того чтобы отрисовка к
 связанный с ресурсом. Номер группы обычно называется понятным именем.
 Если вы посмотрите проводник ресурсов (resource explorer), поставляемый
 с Delphi в виде демонстрационного проекта (распологается
-{\$delphi\\Demos}) вы увидите группы называемые \"Strings\" (Строки),
-\"Bitmaps\" (Картинки), \"Icons\" (Иконки) или \"Cursos\" (Курсоры мыши)
-- это просто представления номер группы. Номер группы для \"Manifest\"
+{$delphi\\Demos}) вы увидите группы называемые "Strings" (Строки),
+"Bitmaps" (Картинки), "Icons" (Иконки) или "Cursos" (Курсоры мыши)
+- это просто представления номер группы. Номер группы для "Manifest"
 (манифеста) - 24, в соответствии с заголовками C распространяемыми
 Microsoft. Номер манифеста для определения версии библиотеки
 comctl32.dll - 1 (Также в соответствии с заголовками C распространяемыми
@@ -71,24 +71,20 @@ Microsoft). Эта информация будет необходима когд
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ------------------
-  ·   1\. WindowsXP.RC
+  1.  WindowsXP.RC
   --- ------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ------------------------
-  ·   2\. WindowsXP.Manifest
+  2.  WindowsXP.Manifest
   --- ------------------------
 :::
 
 Файл WindowsXP.RC содержит инструции для подключения WindowsXP.Manifest
 (XML-документа), а именно:
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  --- -----------------------------
-  ·   1 24 \"WindowsXP.Manifest\"
-  --- -----------------------------
-:::
+        1 24 "WindowsXP.Manifest"
 
 Сам манифест - XML документ содержащий информацию о вашем приложении
 которую вы добавляете как и информацию содержащую версию библиотеки
@@ -124,7 +120,7 @@ comctl32.dll для использования. Его содержание до
 чего у нас получится файл WindowsXP.RES который мы можем подключить в
 наше приложение. Для компиляции ресурса введите в командной строке:
 
-C:\\project1\> brcc32 windowsxp.rx
+    C:\project1> brcc32 windowsxp.rx
 
 Конечно, я думаю что вы вставили в переменную окружения PATH директорию
 BIN Delphi.
@@ -135,16 +131,16 @@ WindowsXP-совместимым, это подключение ресурсно
 приложение. Самый простой способ сделать это добавить нижеприведенную
 директиву в ваш файл проекта или главную форму:
 
-[{\$R WindowsXP.res}]{style="color: teal"}
+    [{$R WindowsXP.res}]{style="color: teal"}
 
 Скорее всего вам прийдется поместить эту строчку сразу за директивой
-{\$R \*.dfm} которая уже имеется в вашем приложении, сразу за
+`{$R *.dfm}` которая уже имеется в вашем приложении, сразу за
 приедложением implementation. Как только вы подключили WindowsXP.RES в
 ваше приложение откомпилируйте ваше приложение и запустите его. Менеджер
 тем Windows приведет ваше приложение к виду остальных приложений
 написанных для Windows XP.
 
-Предупреждения
+**Предупреждения**
 
 Microsoft предупреждает всех разработчиков что они убрали большое
 количество кода из библиотеки comctl32.dll, и что необходимо тщательно
@@ -157,26 +153,25 @@ Microsoft предупреждает всех разработчиков что 
 колонок с указанием вида показа у вас возникнет ошибка ядра (Kernel
 Error).
 
-Исправление проблемы с TListView (спасибо Евгению Иванову)
+**Исправление проблемы с TListView (спасибо Евгению Иванову)**
 
 Стал искать как исправить это упущение, так как и Delphi 6 с Update 1 не
 помогает справиться с этой проблемой. Решение заключается в следующем:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- -------------------------------------------------------------------
-  1.   Открыть \"ComCtrls.pas\" и найти \"TCustomListView.UpdateColumn\"
+  1.   Открыть "ComCtrls.pas" и найти "TCustomListView.UpdateColumn"
   ---- -------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- --------------------------
-  1.   Найдем следующую строку.
+  2.   Найдем следующую строку.
   ---- --------------------------
 :::
 
-    if FImageIndex \<\> -1 then
-
-       fmt := fmt or LVCFMT\_IMAGE or LVCFMT\_COL\_HAS\_IMAGES;
+        if FImageIndex \<\> -1 then
+           fmt := fmt or LVCFMT\_IMAGE or LVCFMT\_COL\_HAS\_IMAGES;
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- -----------------
@@ -184,13 +179,10 @@ Error).
   ---- -----------------
 :::
 
-    if FImageIndex \<\> -1 then
-
-      fmt := fmt or LVCFMT\_IMAGE or LVCFMT\_COL\_HAS\_IMAGES
-
-    else
-
-      mask := mask and not (LVCF\_IMAGE);
+        if FImageIndex \<\> -1 then
+          fmt := fmt or LVCFMT\_IMAGE or LVCFMT\_COL\_HAS\_IMAGES
+        else
+          mask := mask and not (LVCF\_IMAGE);
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- -----------------------------------------------------------------------------------------------
@@ -200,35 +192,32 @@ Error).
 
 Автор поправки Matteo Riso.
 
-Исправление проблемы с TPageControl
+**Исправление проблемы с TPageControl**
 
 Решение проблемы с установкой цвета фона clBtnFace для TTabSheet.
 
 Как вы знаете TPageControl является контейнером TTabSheet: TPageControl
 нормально воспринимается Windows XP манифестом, но это остается
-правильным пока вы не добавите TTabSheet\...
+правильным пока вы не добавите TTabSheet...
 
 Решение заключается в следующем:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- -----------------------------------------------------------------------------------
-  1.   Откройте модуль \"ComCtrls.pas\" и найдите строчку \"TTabSheet.UpdateTabShowing\"
+  1.   Откройте модуль "ComCtrls.pas" и найдите строчку "TTabSheet.UpdateTabShowing"
   ---- -----------------------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- -----------------------------
-  1.   Вы увидите следующий текст:
+  2.   Вы увидите следующий текст:
   ---- -----------------------------
 :::
 
-procedure TTabSheet.UpdateTabShowing;
-
-begin
-
-SetTabShowing((FPageControl \<\> nil) and FTabVisible);
-
-end;
+        procedure TTabSheet.UpdateTabShowing;
+        begin
+        SetTabShowing((FPageControl \<\> nil) and FTabVisible);
+        end;
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- ---------------------------------------------
@@ -240,33 +229,27 @@ SetWindowLong(handle,GWL\_EXSTYLE,WS\_EX\_TRANSPARENT);
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Если в вашем TPageControl создано более одного TTabSheet, возможно при запуске вашего приложения вы увидите все компоненты отрисованные на первом листе (TTabSheet). Не надо впадать в панику\... Найдите метод \"TPageControl.Loaded\" и измените его чтобы он был похож на следующий код:
+  4.   Если в вашем TPageControl создано более одного TTabSheet, возможно при запуске вашего приложения вы увидите все компоненты отрисованные на первом листе (TTabSheet). Не надо впадать в панику... Найдите метод "TPageControl.Loaded" и измените его чтобы он был похож на следующий код:
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
-  ---- --
-  5.   
-  ---- --
-:::
-
-    procedure TPageControl.Loaded; 
-    var 
-    I: integer; 
-    begin 
-      inherited Loaded; 
-      UpdateTabHighlights; 
-      for I:=self.PageCount-1 downto 0 do 
-            self.ActivePage:=self.Pages[I]; 
-    end;
+        procedure TPageControl.Loaded; 
+        var 
+        I: integer; 
+        begin 
+          inherited Loaded; 
+          UpdateTabHighlights; 
+          for I:=self.PageCount-1 downto 0 do 
+                self.ActivePage:=self.Pages[I]; 
+        end;
 
 Добавленый код заставляет TPageControl пройтись по всем страницам перед
-показом. Это конечно немного некрасиво, но работает\... Если у вас есть
+показом. Это конечно немного некрасиво, но работает... Если у вас есть
 другие методы решения этой проблемы сообщите мне.
 
 Автор поправки Matteo Riso.
 
-Исправление проблемы с TTrackBar
+**Исправление проблемы с TTrackBar**
 
 TTrackBar - извините, а какая текущая позиция?
 
@@ -276,41 +259,41 @@ TTrackBar - извините, а какая текущая позиция?
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- -----------------------------------------------------------------
-  1.   Откройте \"ComCtrls.pas\" и найдите \"TTrackBar.CreateParams\".
+  1.   Откройте "ComCtrls.pas" и найдите "TTrackBar.CreateParams".
   ---- -----------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- ---------------------------
-  1.   Вы увидите следующий код:
+  2.   Вы увидите следующий код:
   ---- ---------------------------
 :::
 
-    procedure TTrackBar.CreateParams(var Params: TCreateParams); 
-    const 
-      OrientationStyle: array[TTrackbarOrientation] of DWORD = (TBS_HORZ, TBS_VERT); 
-      TickStyles: array[TTickStyle] of DWORD = (TBS_NOTICKS, TBS_AUTOTICKS, 0); 
-      ATickMarks: array[TTickMark] of DWORD = (TBS_BOTTOM, TBS_TOP, TBS_BOTH); 
-    begin 
-    [...] 
-      with Params do 
-      begin 
-        Style := Style or OrientationStyle[FOrientation] or 
-          TickStyles[FTickStyle] or ATickMarks[FTickMarks] or TBS_FIXEDLENGTH or 
-          TBS_ENABLESELRANGE; 
-    [...] 
-      end; 
-    end; 
+        procedure TTrackBar.CreateParams(var Params: TCreateParams); 
+        const 
+          OrientationStyle: array[TTrackbarOrientation] of DWORD = (TBS_HORZ, TBS_VERT); 
+          TickStyles: array[TTickStyle] of DWORD = (TBS_NOTICKS, TBS_AUTOTICKS, 0); 
+          ATickMarks: array[TTickMark] of DWORD = (TBS_BOTTOM, TBS_TOP, TBS_BOTH); 
+        begin 
+        [...] 
+          with Params do 
+          begin 
+            Style := Style or OrientationStyle[FOrientation] or 
+              TickStyles[FTickStyle] or ATickMarks[FTickMarks] or TBS_FIXEDLENGTH or 
+              TBS_ENABLESELRANGE; 
+        [...] 
+          end; 
+        end; 
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- ------------------------------------------------------------------------------------------------
-  3.   Добавьте условие \"or TBS\_TOOLTIPS\" в линию \"Style:=\". В конечном итоге должно получиться:
+  3.   Добавьте условие "or TBS\_TOOLTIPS" в линию "Style:=". В конечном итоге должно получиться:
   ---- ------------------------------------------------------------------------------------------------
 :::
 
-    Style := Style or OrientationStyle[FOrientation] or 
-          TickStyles[FTickStyle] or ATickMarks[FTickMarks] or TBS_FIXEDLENGTH or 
-          TBS_ENABLESELRANGE or TBS_TOOLTIPS; 
+        Style := Style or OrientationStyle[FOrientation] or 
+              TickStyles[FTickStyle] or ATickMarks[FTickMarks] or TBS_FIXEDLENGTH or 
+              TBS_ENABLESELRANGE or TBS_TOOLTIPS; 
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   ---- ----------------------------------------------------

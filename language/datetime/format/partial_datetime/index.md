@@ -13,10 +13,10 @@ Date: 01.01.2007
 
 При отображении TDateTimeField в DBGrid с форматированием hh:mm (для
 показа только времени), любая попытка изменения времени приводит (при
-передаче данных) к ошибке примерно такого содержания: \"\'07:00 is not a
-valid DateTime\" (07:00 - неверный DateTime). Я хотел бы посылать данные
+передаче данных) к ошибке примерно такого содержания: "\'07:00 is not a
+valid DateTime" (07:00 - неверный DateTime). Я хотел бы посылать данные
 приблизительно в таком виде
-\"trunc(oldDateTimevalue)+strtoTime(displaytext)\"
+"trunc(oldDateTimevalue)+strtoTime(displaytext)"
 
 Следующий обработчик события TDateTimeField OnSetText не слишком
 элегантен, но он работает!

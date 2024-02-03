@@ -21,7 +21,7 @@ Date: 01.01.2007
 
 Примечание: Vit
 
-Скорее всего последний параметр не \"NULL\", а \"Nil\" (NULL в паскале -
+Скорее всего последний параметр не "NULL", а "Nil" (NULL в паскале -
 варианта для обозначения пустого поля в базе данных)
 
 Взято с Vingrad.ru <https://forum.vingrad.ru>
@@ -67,7 +67,7 @@ Date: 01.01.2007
     end;
     RegisterClass( WndClass );
     handleWnd:= CreateWindow(myClassName, 'Hажми кнопку', ws_OverlappedWindow,
-    400, 300, 200, 100, 0, 0, hInstance , NIL);
+    400, 300, 200, 100, 0, 0, hInstance, NIL);
     if handleWnd = 0 then
     begin
     MessageBox( 0, 'Error', NIL, MB_OK );

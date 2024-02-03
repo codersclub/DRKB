@@ -13,11 +13,7 @@ Views
 
 Вьюверы: ограниченый доступ к данным
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Что такое вьверы?
-  -- -------------------
-:::
+## Что такое вьверы?
 
  
 
@@ -50,11 +46,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------
-     Преимущества вьюверов
-  -- -----------------------
-:::
+## Преимущества вьюверов
 
  
 
@@ -67,11 +59,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------
-     Фокусировка
-  -- -------------
-:::
+## Фокусировка
 
 Вьюверы позволяют пользователю сосредоточиться на интересующих его
 данных и на задаче, которую ему надо решить. Данные, которые не имеют
@@ -80,11 +68,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------
-     Более простая работа с данными
-  -- --------------------------------
-:::
+## Более простая работа с данными
 
  
 
@@ -95,11 +79,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ----------
-     Гибкость
-  -- ----------
-:::
+## Гибкость
 
 Вьюверы позволяют различным пользователям иметь различные точки зрения
 на одни и те же данные. Это особенно важно, когда много различных
@@ -108,11 +88,7 @@ Views
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------
-     Безопасность
-  -- --------------
-:::
+## Безопасность
 
 Через вьювер пользователи могут запрашивать и модифицировать только те
 данные, которые они видят. Остальная часть базы данных остается для них
@@ -193,11 +169,7 @@ revoke дается в Руководстве по  администрирова
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------
-     Логическая независимость данных
-  -- ---------------------------------
-:::
+## Логическая независимость данных
 
  
 
@@ -235,11 +207,7 @@ select (выбор) у пользователей будут работать к
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------
-     Примеры вьюверов
-  -- ------------------
-:::
+## Примеры вьюверов
 
  
 
@@ -253,13 +221,13 @@ select (выбор) у пользователей будут работать к
 
  
 
-select \*
+select *
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -272,13 +240,13 @@ and advance \> \$5000
 
 create view hiprice
 
-as select \*
+as select *
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -298,7 +266,7 @@ syscolumns.
 
 update hiprice
 
-set price = price \* 2
+set price = price * 2
 
  
 
@@ -309,11 +277,11 @@ SQL Сервер сам находит определение вьювера в 
 
 update titles
 
-set price = price \* 2
+set price = price * 2
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -336,18 +304,14 @@ computer stress" до 25.95 долларов, то ее можно будет у
 
 Однако, если происходят изменения в структуре базовой таблицы, например
 к ней добавляются новые столбцы, то эти столбцы не будут отображены во
-вьювере, поскольку их нет в соответствующем операторе выбора select \*.
+вьювере, поскольку их нет в соответствующем операторе выбора select *.
 Для их появления необходимо переопределить вьювер, поскольку звездочка
-(\*) является сокращением для списка столбцов, присутствующих в таблице
+(*) является сокращением для списка столбцов, присутствующих в таблице
 в момент определения вьювера.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Создание вьюверов
-  -- -------------------
-:::
+## Создание вьюверов
 
  
 
@@ -365,11 +329,7 @@ quoted\_identifier on, то можно заключать название вь�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------
-     Синтаксис команды создания вьюверов
-  -- -------------------------------------
-:::
+## Синтаксис команды создания вьюверов
 
  
 
@@ -377,13 +337,13 @@ quoted\_identifier on, то можно заключать название вь�
 
  
 
-create view \[\[название\_базы.\]владелец.\]название\_вьювера
+create view [[название\_базы.]владелец.]название\_вьювера
 
-     \[(название\_столбца \[, название\_столбца\]\...)\]
+     [(название\_столбца [, название\_столбца]...)]
 
-     as select \[distinct\] оператор\_выбора
+     as select [distinct] оператор\_выбора
 
-     \[with check option\]
+     [with check option]
 
  
 
@@ -392,7 +352,7 @@ create view \[\[название\_базы.\]владелец.\]название
 оператора создания вьювера. В этом случае SQL Сервер присваивает
 столбцам вьювера те же названия и те же типы данных, что приведены в
 списке выбора оператора select. Этот список может быть заменен
-звездочкой (\*), как в предыдущем примере, или быть частью списка
+звездочкой (*), как в предыдущем примере, или быть частью списка
 названий столбцов базовой таблицы.
 
 Пользователь может определить вьювер, в котором не будет повторяющихся
@@ -462,11 +422,7 @@ from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------------------------------
-     Использование оператора выбора при создании вьюверов
-  -- ------------------------------------------------------
-:::
+## Использование оператора выбора при создании вьюверов
 
  
 
@@ -504,11 +460,7 @@ from publishers
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------
-     Определение вьювера в виде проекции
-  -- -------------------------------------
-:::
+## Определение вьювера в виде проекции
 
 Чтобы создать вьювер, в котором отображаются все строки таблицы titles,
 содержащие информацию только из части столбцов (проекция), можно
@@ -529,11 +481,7 @@ from titles
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------------
-     Определение вьювера с вычисляемым столбцом
-  -- --------------------------------------------
-:::
+## Определение вьювера с вычисляемым столбцом
 
 Далее приводится определение вьювера, значение в одном из столбцов
 которого вычисляется из величин, содержащихся в столбцах price, royalty
@@ -543,14 +491,14 @@ from titles
 
 create view accounts (title, advance, amt\_due)
 
-as select titles.title\_id, advance, (price \* royalty /100 ) \*
+as select titles.title\_id, advance, (price * royalty /100 ) *
 total\_sales
 
 from titles, roysched
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
 and titles.title\_id = roysched.title\_id
 
@@ -567,11 +515,7 @@ and total\_sales between lorange and hirange
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------------------------
-     Определение вьювера с агрегирующими и встроенными функциями
-  -- -------------------------------------------------------------
-:::
+## Определение вьювера с агрегирующими и встроенными функциями
 
 Если в определении вьювера используются агрегирующие или встроенные
 функции, то в предложении creat нужно указывать названия столбцов.
@@ -604,7 +548,7 @@ as select type, avg(price)
 
 from titles
 
-where type = \"business\"
+where type = "business"
 
  
 
@@ -616,11 +560,7 @@ where type = \"business\"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------
-     Определение вьювера через соединение
-  -- --------------------------------------
-:::
+## Определение вьювера через соединение
 
 Пользователь может создать вьювер из нескольких базовых таблиц. Далее
 приводится пример вьювера, полученного из таблиц authors и publishers. В
@@ -639,11 +579,7 @@ where authors.city = publishers.city
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------------
-     Построение вьювера из других вьюверов
-  -- ---------------------------------------
-:::
+## Построение вьювера из других вьюверов
 
  
 
@@ -661,11 +597,7 @@ where type = \'popular\_comp\'
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------------------------------
-     Построение вьювера с ключевым словом distinct
-  -- -----------------------------------------------
-:::
+## Построение вьювера с ключевым словом distinct
 
  
 
@@ -725,7 +657,7 @@ select a,b from myview,
 
 a         b
 
-\-\--    \-\-\-\--
+---    -----
 
 1        1
 
@@ -740,11 +672,7 @@ a         b
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -----------------------
-     Вьюверы со счетчиками
-  -- -----------------------
-:::
+## Вьюверы со счетчиками
 
 Пользователь может определить вьювер со столбцом счетчика, например:
 
@@ -796,11 +724,7 @@ sp\_help, то атрибут IDENTITY для этого столбца буде
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Использование опции with check в определении вьювера 
-  -- -------------------------------------------------------
-:::
+## Использование опции with check в определении вьювера 
 
  
 
@@ -826,9 +750,9 @@ check. В этом вьювере содержатся данные о книж�
 
 create view stores\_cal
 
-as select \* from stores
+as select * from stores
 
-where state = \"CA\"
+where state = "CA"
 
 with check option
 
@@ -843,8 +767,8 @@ with check option
 
 insert stores\_cal
 
-values (\"7100\", \"Castle Books\", \"351 West 24 St.\", \"New York\",
-\"NY\", \"USA\",        \"10011\",        \"Net 30\")
+values ("7100", "Castle Books", "351 West 24 St.", "New York",
+"NY", "USA",        "10011",        "Net 30")
 
  
 
@@ -858,19 +782,15 @@ values (\"7100\", \"Castle Books\", \"351 West 24 St.\", \"New York\",
 
 update stores\_cal
 
-set state = \"MA\"
+set state = "MA"
 
-where stor\_id = \"7066\"
-
- 
+where stor\_id = "7066"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ------------------------------------------------------------------
-     Построение вьювера на основе другого вьювера с опцией with check
-  -- ------------------------------------------------------------------
-:::
+ 
+
+## Построение вьювера на основе другого вьювера с опцией with check
 
 Если вьювер был опеределен с опцией with check, то все вьюверы
 определенные на его базе (вторичные вьюверы) также будут удовлетворять
@@ -885,9 +805,9 @@ stores\_cal. Во вторичный вьювер включается инфо�
 
 create view stores\_cal30
 
-as select \* from stores\_cal
+as select * from stores\_cal
 
-where payterms = \"Net 30\"
+where payterms = "Net 30"
 
  
 
@@ -898,7 +818,7 @@ where payterms = \"Net 30\"
 
 Заметим, что сам вторичный вьювер stores\_cal30 был определен без опции
 with check. Отсюда следует, что через этот вьювер возможна вставка или
-обновление строк, у которых поле payterms не равно \"Net 30\". Следующий
+обновление строк, у которых поле payterms не равно "Net 30". Следующий
 оператор обновления будет успешно выполнен, несмотря на то, что
 обновляемая строка не будет больше видна во вьювере stores\_cal30:
 
@@ -906,17 +826,13 @@ with check. Отсюда следует, что через этот вьювер
 
 update stores\_cal30
 
-set payterms = \"Net 60\"
+set payterms = "Net 60"
 
-where stor\_id = \"7067\"
+where stor\_id = "7067"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------------------------
-     Ограничения вьюверов основанных на внешнем соединении
-  -- -------------------------------------------------------
-:::
+## Ограничения вьюверов основанных на внешнем соединении
 
  
 
@@ -974,7 +890,7 @@ create view A\_B as
 
 select a,b,c from A,B 
 
-where A.a\*=B.b
+where A.a*=B.b
 
  
 
@@ -989,7 +905,7 @@ select a,c from A\_B where c = 10
 
 a        с
 
-\-\-\--    \-\-\--
+----    ----
 
 1       10       
 
@@ -1011,11 +927,7 @@ a        с
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------
-     Выборка данных через вьювер
-  -- -----------------------------
-:::
+## Выборка данных через вьювер
 
  
 
@@ -1034,13 +946,13 @@ resolution).
 
 create view hiprice
 
-as select \*
+as select *
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -1061,9 +973,9 @@ select title, type
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
 and type = \'popular\_comp\'
 
@@ -1075,7 +987,7 @@ and type = \'popular\_comp\'
 комбинациях. Однако, если вьювер определяется внешним соединением или с
 агрегирующими функциями, то запрос к этому вьюверу может привести к
 неожиданным результатам, как это было отмечено в предыдущем разделе
-"Ограничения вьюверов \...".
+"Ограничения вьюверов ...".
 
  
 
@@ -1087,11 +999,7 @@ readtext (считать текст) и writetext (записать текст).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------
-     Раскрытие вьювера
-  -- -------------------
-:::
+## Раскрытие вьювера
 
  
 
@@ -1133,11 +1041,7 @@ readtext (считать текст) и writetext (записать текст).
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Переопределение вьюверов
-  -- --------------------------
-:::
+## Переопределение вьюверов
 
  
 
@@ -1161,7 +1065,7 @@ create view view1 as
 
 select au\_lname, phone from authors
 
-where postalcode like \"94%\"
+where postalcode like "94%"
 
  
 
@@ -1171,7 +1075,7 @@ create view view2 as
 
 select au\_lname, phone from view1
 
-where au\_lname like \"\[M-Z\]%\"
+where au\_lname like "[M-Z]%"
 
  
 
@@ -1181,7 +1085,7 @@ create view view3 as
 
 select au\_lname, phone from view2
 
-where au\_lname = \"MacFeather\"
+where au\_lname = "MacFeather"
 
  
 
@@ -1216,11 +1120,7 @@ phone объекта, от которого он зависит.
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------
-     Переименование вьюверов
-  -- -------------------------
-:::
+## Переименование вьюверов
 
  
 
@@ -1251,11 +1151,7 @@ sp\_rename titles\_view, bookview
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Изменение и удаление базовых объектов
-  -- ---------------------------------------
-:::
+## Изменение и удаление базовых объектов
 
  
 
@@ -1282,7 +1178,7 @@ sp\_rename titles\_view, bookview
 сообщение об ошибке. Однако, если будет создана новая таблица, которая
 заменяет старую, то вьювер вновь можно будет использовать.
 
-Если вьювер определяется предложением select \* и затем изменяется
+Если вьювер определяется предложением select * и затем изменяется
 структура базовой таблицы путем добавления некоторых столбцов, то новые
 столбцы не будут видны в этом вьювере, поскольку звездочка
 интерпретируется как полный список столбцов существующих на момент
@@ -1291,11 +1187,7 @@ sp\_rename titles\_view, bookview
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------
-     Изменение данных через вьювер
-  -- -------------------------------
-:::
+## Изменение данных через вьювер
 
  
 
@@ -1391,19 +1283,11 @@ sp\_rename titles\_view, bookview
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------
-     Ограничения на обновление через вьюверы
-  -- -----------------------------------------
-:::
+## Ограничения на обновление через вьюверы
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------
-     Вычисляемые столбцы в определении вьювера
-  -- -------------------------------------------
-:::
+## Вычисляемые столбцы в определении вьювера
 
  
 
@@ -1416,14 +1300,14 @@ sp\_rename titles\_view, bookview
 
 create view accounts (title\_id, advance, amt\_due)
 
-as select titles.title\_id, advance, (price \* royalty/100) \*
+as select titles.title\_id, advance, (price * royalty/100) *
 total\_sales
 
 from titles, roysched
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
 and titles.title\_id = roysched.title\_id
 
@@ -1435,13 +1319,13 @@ and total\_sales between lorange and hirange
 
  
 
-select \* from accounts
+select * from accounts
 
  
 
 title\_id        advance       amt\_due
 
-\-\-\-\-\-\-\-\--       \-\-\-\-\-\-\--         \-\-\-\-\-\-\-\--
+---------       --------         ---------
 
 PC1035       7,000.00    32,240.16
 
@@ -1465,11 +1349,7 @@ royalty, исходя из введенного в столбец amt\_due зн�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------------------------------
-     Предложения group by и compute by в определении вьювера
-  -- ---------------------------------------------------------
-:::
+## Предложения group by и compute by в определении вьювера
 
  
 
@@ -1491,13 +1371,13 @@ group by type
 
  
 
-select \* from categories
+select * from categories
 
  
 
 category                average\_price
 
-\-\-\-\-\-\-\-\-\-\-\-\--             \-\-\-\-\-\-\-\-\-\-\-\--
+-------------             -------------
 
 UNDECIDED       NULL
 
@@ -1528,11 +1408,7 @@ trad\_cook               15.96
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- --------------------------------------------
-     Неопределенные значения в базовых объектах
-  -- --------------------------------------------
-:::
+## Неопределенные значения в базовых объектах
 
  
 
@@ -1574,11 +1450,7 @@ titles, поэтому и вставка через вьювер titleview не 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------------------------------
-     Вьюверы, определенные с опцией with chek option
-  -- -------------------------------------------------
-:::
+## Вьюверы, определенные с опцией with chek option
 
  
 
@@ -1593,11 +1465,7 @@ titles, поэтому и вставка через вьювер titleview не 
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- -------------------------
-     Мультитабличные вьюверы
-  -- -------------------------
-:::
+## Мультитабличные вьюверы
 
 Пятое ограничение касается модификации данных проводящейся, через
 вьюверы, в которых соединяются данные из нескольких таблиц
@@ -1648,9 +1516,9 @@ where titles.pub\_id = publishers.pub\_id
 
 update multitable\_view
 
-set type = \"user\_friendly\"
+set type = "user\_friendly"
 
-where type = \"popular\_comp\"
+where type = "popular\_comp"
 
  
 
@@ -1661,19 +1529,15 @@ where type = \"popular\_comp\"
 
 update multitable\_view
 
-set type = \"cooking\_trad\",
+set type = "cooking\_trad",
 
-state = \"WA\"
+state = "WA"
 
-where type = \"trad\_cook\"
+where type = "trad\_cook"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 16px 63px;"}
-  -- ---------------------------------
-     Вьюверы со столбцами-счетчиками
-  -- ---------------------------------
-:::
+## Вьюверы со столбцами-счетчиками
 
  
 
@@ -1689,11 +1553,7 @@ where type = \"trad\_cook\"
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Удаление вьюверов
-  -- -------------------
-:::
+## Удаление вьюверов
 
  
 
@@ -1702,9 +1562,9 @@ where type = \"trad\_cook\"
 
  
 
-drop view \[\[база\_данных.\]владелец.\]название\_вьювера
+drop view [[база\_данных.]владелец.]название\_вьювера
 
-          \[, \[\[база\_данных.\]владелец.\]название\_вьювера\] \...
+          [, [[база\_данных.]владелец.]название\_вьювера] ...
 
  
 
@@ -1734,11 +1594,7 @@ syscomments, sysprotects sysdepends. Все права на этот вьюве�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------------------
-     Использование вьюверов для обеспечения безопасности
-  -- -----------------------------------------------------
-:::
+## Использование вьюверов для обеспечения безопасности
 
  
 
@@ -1771,11 +1627,7 @@ grant all on titles to sales
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Получение информации о вьюверах
-  -- ---------------------------------
-:::
+## Получение информации о вьюверах
 
  
 
@@ -1795,8 +1647,8 @@ sp\_help hiprice
 
 Name            Owner     type         Created\_on
 
-\-\-\-\-\-\-\-\--          \-\-\-\-\--        \-\-\-\--         
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------          ------        -----         
+-------------------
 
 hiprice           dbo          view        Feb 12 1987 11:57AM
 
@@ -1806,8 +1658,8 @@ hiprice           dbo          view        Feb 12 1987 11:57AM
 
 Data\_located\_on\_segment            When\_created         
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--                
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+----------------------------                
+--------------------
 
  
 
@@ -1815,8 +1667,8 @@ Data\_located\_on\_segment            When\_created
 
 Column\_name        Type            Length       Precision    Scale
 
-\-\-\-\-\-\-\-\-\-\-\--               \-\-\-\-\-\--         
-\-\-\-\-\-\-\--          \-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\--
+------------               -------         
+--------          ---------     ---------
 
 title\_id                tid                        6        NULL    
 NULL
@@ -1844,8 +1696,8 @@ NULL
 
 Null      Default\_name   Rule\_name    Identity
 
-\-\-\-\-\--    \-\-\-\-\-\-\-\-\-\-\-\-\--      
-\-\-\-\-\-\-\-\--          \-\-\-\-\-\-\--
+------    --------------      
+---------          --------
 
 0          NULL             NULL            0
 
@@ -1881,7 +1733,7 @@ sp\_helptext:
 
 sp\_helptext hiprice
 
-\-\-\-\-\-\-\-\-\--
+----------
 
        1
 
@@ -1891,17 +1743,17 @@ sp\_helptext hiprice
 
 text
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-----------------------
 
 create view hiprice
 
-as select \*
+as select *
 
 from titles
 
-where price \> \$15
+where price \> $15
 
-and advance \> \$5000
+and advance \> $5000
 
  
 
@@ -1923,8 +1775,8 @@ Things inside the current database that reference the object (Объекты
 
 object             type
 
-\-\-\-\-\-\-\-\-\-\-\-\--  
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------  
+--------------------------
 
 dbo.hiprice      view
 

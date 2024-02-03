@@ -24,21 +24,27 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-Я построил диограмму так:
+Я построил диограмму так: Назначил
 
-Назначил F:= TFileStream.Create(OpenDialog1.FileName, fmOpenRead );
+    F:= TFileStream.Create(OpenDialog1.FileName, fmOpenRead );
 
-Затем считал заголовок Wav- SampleCount, SamplesPerSec, BitsPerSample,
-Channeles.
+Затем считал заголовок
 
-Затем считал данные- GetMem(buf, SampleCount \* Channeles \*
-BitsPerSample);
+    Wav - SampleCount, SamplesPerSec, BitsPerSample, Channeles.
 
-Описал массив Volume- SetLength(Volume, SampleCount);
+Затем считал данные:
 
-Затем - F.Read(buf\^, SampleCount\*2); F.Free;
+    GetMem(buf, SampleCount * Channeles * BitsPerSample);
 
-Затем заполнил массив -
+Описал массив Volume:
+
+    SetLength(Volume, SampleCount);
+
+Затем:
+
+    F.Read(buf\^, SampleCount*2); F.Free;
+
+Затем заполнил массив:
 
     buf16 := buf;
     for h := 0 to SampleCount - 1 do
@@ -49,7 +55,7 @@ BitsPerSample);
     FreeMem(buf);
 
 Затем строил график(в экранных координатах) - по горизонтальной оси
-откладывал значения SampleCount, по вертикальной значения Volume\[h\].
+откладывал значения SampleCount, по вертикальной значения Volume[h].
 
 График получается точно такой же как в SoundForge.
 

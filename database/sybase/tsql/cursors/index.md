@@ -74,11 +74,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------
-     Что такое курсор ?
-  -- --------------------
-:::
+## Что такое курсор ?
 
  
 
@@ -149,11 +145,7 @@ Date: 01.01.2007
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------------
-     Как SQL Сервер обрабатывает курсоры
-  -- -------------------------------------
-:::
+## Как SQL Сервер обрабатывает курсоры
 
  
 
@@ -229,11 +221,7 @@ SQL Сервер закрывает результирующее множест�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------
-     Объявление курсоров
-  -- ---------------------
-:::
+## Объявление курсоров
 
  
 
@@ -249,11 +237,7 @@ update (для обновления) или for read only (только для �
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ------------------------------
-     Синтаксис объявления курсора
-  -- ------------------------------
-:::
+## Синтаксис объявления курсора
 
  
 
@@ -263,10 +247,8 @@ update (для обновления) или for read only (только для �
  
 
 declare название\_курсора cursor
-
    for оператор\_выбора
-
-  \[for {read only \| update \[of список\_столбцов\]}\]
+  [for {read only \| update [of список\_столбцов]}]
 
  
 
@@ -308,11 +290,7 @@ where state != \'CA\'
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------
-     Области действия курсора
-  -- --------------------------
-:::
+## Области действия курсора
 
  
 
@@ -381,11 +359,7 @@ names\_crsr будет определен в процессе выполнени
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- --------------------------------------------------
-     Развертывание курсора и результирующее множество
-  -- --------------------------------------------------
-:::
+## Развертывание курсора и результирующее множество
 
  
 
@@ -439,11 +413,7 @@ SQL Сервер допускает объявление курсора в та�
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -------------------------------
-     Создание обновляемых курсоров
-  -- -------------------------------
-:::
+## Создание обновляемых курсоров
 
  
 
@@ -578,11 +548,7 @@ for update
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------
-     Открытие курсоров
-  -- -------------------
-:::
+## Открытие курсоров
 
  
 
@@ -607,11 +573,7 @@ SQL Сервер не позволяет открывать курсор, есл
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- --------------------------------------------
-     Считывание строк данных с помощью курсоров
-  -- --------------------------------------------
-:::
+## Считывание строк данных с помощью курсоров
 
  
 
@@ -623,11 +585,7 @@ SQL Сервер не позволяет открывать курсор, есл
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------
-     Синтаксис оператора fetch
-  -- ---------------------------
-:::
+## Синтаксис оператора fetch
 
  
 
@@ -635,7 +593,7 @@ SQL Сервер не позволяет открывать курсор, есл
 
  
 
-fetch название\_курсора \[into список\_переменных\]
+fetch название\_курсора [into список\_переменных]
 
  
 
@@ -650,8 +608,8 @@ fetch authors\_crsr
 
 au\_id            au\_lname            au\_fname
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--  
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--     \-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------  
+-------------------     ---------------
 
 341-22-1782   Smith                 Meander
 
@@ -668,8 +626,8 @@ fetch authors\_crsr
 
 au\_id           au\_lname           au\_fname
 
-\-\-\-\-\-\-\-\-\-\-\-\-\--   \-\-\-\-\-\-\-\-\-\-\-\-\--        
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+--------------   --------------        
+---------------
 
 527-72-3246  Greene              Morningstar
 
@@ -706,11 +664,7 @@ SQL Сервер ожидает взаимно однозначного соот
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------
-     Проверка состояния курсора
-  -- ----------------------------
-:::
+## Проверка состояния курсора
 
  
 
@@ -753,7 +707,7 @@ select @\@sqlstatus
 
  
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------
 
 0
 
@@ -768,11 +722,7 @@ select @\@sqlstatus
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------
-     Проверка количества загруженных строк
-  -- ---------------------------------------
-:::
+## Проверка количества загруженных строк
 
  
 
@@ -798,7 +748,7 @@ select @\@rowcount
 
  
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------
 
 1
 
@@ -808,11 +758,7 @@ select @\@rowcount
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ---------------------------------------------------
-     Получение нескольких строк одним оператором fetch
-  -- ---------------------------------------------------
-:::
+## Получение нескольких строк одним оператором fetch
 
  
 
@@ -854,8 +800,8 @@ fetch authors\_crsr
 
 au\_id           au\_lname            au\_fname
 
-\-\-\-\-\-\-\-\-\-\--      \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--    
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-----------      -------------------    
+---------------
 
 648-92-1872  Blotchet-Halls      Reginald
 
@@ -878,11 +824,7 @@ au\_id           au\_lname            au\_fname
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------------------------
-     Обновление и удаление строк с помощью курсора
-  -- -----------------------------------------------
-:::
+## Обновление и удаление строк с помощью курсора
 
  
 
@@ -891,16 +833,12 @@ au\_id           au\_lname            au\_fname
 курсор, чтобы выяснить можно ли обновлять через этот курсор. Можно также
 явно указать на обновляющий курсор с помощью предложения for update в
 операторе объявления курсора declare cursor. Дополнительную информацию
-по этому поводу можно посмотреть в разделе \"Создание обновляемых
-курсоров\".
+по этому поводу можно посмотреть в разделе "Создание обновляемых
+курсоров".
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- -----------------------------------------------------
-     Удаление строк из результирующего множества курсора
-  -- -----------------------------------------------------
-:::
+## Удаление строк из результирующего множества курсора
 
  
 
@@ -909,11 +847,11 @@ au\_id           au\_lname            au\_fname
 множества, то она также удаляется из соответствующей базовой таблицы. С
 помощью курсора за один раз можно удалить только одну строку.
 
-Предложение delete\... where current of имеет следующий синтаксис:
+Предложение delete... where current of имеет следующий синтаксис:
 
  
 
-delete \[from\] \[\[база\_данных.\]владелец.\]{название\_таблицы \|
+delete [from] [[база\_данных.]владелец.]{название\_таблицы \|
 название\_вьювера}
 
        where current of название\_курсора
@@ -963,8 +901,8 @@ fetch authors\_crsr
 
 au\_id           au\_lname          au\_fname
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--  \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--  
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+---------------  -------------------  
+---------------
 
 807-91-6654  Panteley            Sylvia
 
@@ -980,11 +918,7 @@ au\_id           au\_lname          au\_fname
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 42px;"}
-  -- ----------------------------------------------------
-     Обновление строк результирующего множества курсора
-  -- ----------------------------------------------------
-:::
+## Обновление строк результирующего множества курсора
 
  
 
@@ -993,24 +927,14 @@ au\_id           au\_lname          au\_fname
 обновление результирующего множества курсора приводит к обновлению
 содержимого базовой таблицы, из которой получено множество курсора.
 
-Оператор update\... where current of имеет следующий синтаксис:
+Оператор update... where current of имеет следующий синтаксис:
 
- 
-
-update \[\[база\_данных.\]владелец.\]{название\_таблицы \|
-название\_вьювера}
-
-   set \[\[\[база\_данных.\]владелец.\]{название\_таблицы \|
-название\_вьювера}\]
-
+update [[база\_данных.]владелец.]{название\_таблицы \| название\_вьювера}
+   set [[[база\_данных.]владелец.]{название\_таблицы \| название\_вьювера}]
        название\_столбца1 = { выражение1 \| NULL \| (оператор\_выбора)}
-
-     \[, название\_столбца2 = { выражение2 \| NULL \|
-(оператор\_выбора)}\] \...
-
+     [, название\_столбца2 = { выражение2 \| NULL \| (оператор\_выбора)}] ...
        where current of название\_курсора
 
- 
 
 В предложении set указываются названия столбцов и их новые (обновляемые)
 значения. Если здесь указывается несколько столбцов, то они должны
@@ -1029,9 +953,9 @@ update \[\[база\_данных.\]владелец.\]{название\_таб
 
 update publishers
 
-set city = \"Pasadena\",
+set city = "Pasadena",
 
-   state = \"CA\"
+   state = "CA"
 
 where current of pubs\_crsr
 
@@ -1048,11 +972,7 @@ SQL позволяет обновлять столбцы базовой табл
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -----------------------------
-     Закрытие и удаление курсора
-  -- -----------------------------
-:::
+## Закрытие и удаление курсора
 
  
 
@@ -1091,8 +1011,8 @@ fetch authors\_crsr
 
 au\_id           au\_lname          au\_fname
 
-\-\-\-\-\-\-\-\-\-\--      \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--  
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-----------      -------------------  
+---------------
 
 341-22-1782  Smith               Meander
 
@@ -1119,11 +1039,7 @@ deallocate cursor название\_курсора
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- -------------------------------
-     Примеры использования курсора
-  -- -------------------------------
-:::
+## Примеры использования курсора
 
  
 
@@ -1132,7 +1048,7 @@ deallocate cursor название\_курсора
 
  
 
-select author = au\_fname + \" \" + au\_lname, au\_id
+select author = au\_fname + " " + au\_lname, au\_id
 
 from authors
 
@@ -1146,8 +1062,8 @@ order by au\_lname
 
 author                           au\_id
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--  
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+------------------------------  
+----------------
 
 Abraham Bennet              409-56-7008
 
@@ -1211,7 +1127,7 @@ Innes del Castillo             712-45-1867
 
 declare newauthors\_crsr cursor for
 
-select author = au\_fname + \" \" + au\_lname, au\_id
+select author = au\_fname + " " + au\_lname, au\_id
 
 from authors
 
@@ -1245,8 +1161,8 @@ fetch newauthors\_crsr
 
 author                      au\_id
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------------   
+---------------
 
 Abraham Bennet         409-56-7008
 
@@ -1268,8 +1184,8 @@ fetch newauthors\_crsr
 
 author                            au\_id
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--        
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------------        
+----------------
 
 Reginald Blotchet-Halls     648-92-1872
 
@@ -1293,8 +1209,8 @@ fetch newauthors\_crsr
 
 author                      au\_id
 
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--   
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+-------------------------   
+-----------------
 
 Morningstar Greene     527-72-3246
 
@@ -1338,11 +1254,7 @@ close newauthors\_crsr
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------------------
-     Курсоры в сохраненных процедурах
-  -- ----------------------------------
-:::
+## Курсоры в сохраненных процедурах
 
  
 
@@ -1363,7 +1275,7 @@ create procedure au\_sales (\@author\_id id)
 
 as
 
-/\* declare local variables used for fetch \*/
+/* declare local variables used for fetch */
 
 declare \@title\_id tid
 
@@ -1375,7 +1287,7 @@ declare \@msg varchar(120)
 
  
 
-/\* declare the cursor to get each book written by given author \*/
+/* declare the cursor to get each book written by given author */
 
 declare author\_sales cursor for
 
@@ -1403,7 +1315,7 @@ if (@\@sqlstatus = 2)
 
 begin
 
-   print \"We do not sell books by this author.\"
+   print "We do not sell books by this author."
 
    close author\_sales
 
@@ -1413,8 +1325,8 @@ end
 
  
 
-/\* if cursor result set is not empty, then process each row of
-information \*/
+/* if cursor result set is not empty, then process each row of
+information */
 
 while (@\@sqlstatus = 0)
 
@@ -1426,7 +1338,7 @@ begin
 
        select \@msg = \@title +
 
-          \" had no sales this year.\"
+          " had no sales this year."
 
        print \@msg
 
@@ -1438,7 +1350,7 @@ begin
 
        select \@msg = \@title +
 
-           \" had poor sales this year.\"
+           " had poor sales this year."
 
        print \@msg
 
@@ -1450,7 +1362,7 @@ begin
 
        select \@msg = \@title +
 
-           \" had mediocre sales this year.\"
+           " had mediocre sales this year."
 
        print \@msg
 
@@ -1462,7 +1374,7 @@ begin
 
        select \@msg = \@title +
 
-           \" had good sales this year.\"
+           " had good sales this year."
 
        print \@msg
 
@@ -1476,7 +1388,7 @@ end
 
  
 
-/\* if error occurred, call a designated handler \*/
+/* if error occurred, call a designated handler */
 
 if (@\@sqlstatus = 1) exec error\_handle
 
@@ -1489,15 +1401,11 @@ return
  
 
 Дополнительную информацию о сохраненных процедурах можно получить в
-главе 14 \"Использование сохраненных процедур\".
+главе 14 "Использование сохраненных процедур".
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ----------------------
-     Курсоры и блокировка
-  -- ----------------------
-:::
+## Курсоры и блокировка
 
  
 
@@ -1530,11 +1438,7 @@ update оператора declare cursor. Если предложение for up
 
  
 
-::: {style="text-align: left; text-indent: 0px; border-color: #000000; border-style: solid; border-width: 1px; border-top: none; border-right: none; border-left: none; padding: 0px 0px 1px 0px; margin: 0px 0px 1px 21px;"}
-  -- ---------------------------------
-     Получение информации о курсорах
-  -- ---------------------------------
-:::
+## Получение информации о курсорах
 
  
 
@@ -1550,38 +1454,19 @@ sp\_cursorinfo 0, authors\_crsr
  
 
 Cursor name \'authors\_crsr\' is declared at nesting level \'0\'.
-
 The cursor id is 327681
-
 The cursor has been successfully opened 1 times
-
 The cursor was compiled at isolation level 1.
-
 The cursor is not open.
-
-The cursor will remain open when a transaction is committed or rolled
-back.
-
+The cursor will remain open when a transaction is committed or rolled back.
 The number of rows returned for each FETCH is 1.
-
 The cursor is updatable.
 
 There are 3 columns returned by this cursor.
-
- 
-
 The result columns are:
 
-Name = \'au\_id\', Table = \'authors\', Type = ID,
-
-   Length = 11 (updatable)
-
-Name = \'au\_lname\', Table = \'authors\', Type =
-
-   VARCHAR, Length = 40 (updatable)
-
-Name = \'au\_fname\', Table = \'authors\', Type =
-
-   VARCHAR, Length = 20 (updatable)
+Name = \'au\_id\', Table = \'authors\', Type = ID, Length = 11 (updatable)
+Name = \'au\_lname\', Table = \'authors\', Type = VARCHAR, Length = 40 (updatable)
+Name = \'au\_fname\', Table = \'authors\', Type = VARCHAR, Length = 20 (updatable)
 
  

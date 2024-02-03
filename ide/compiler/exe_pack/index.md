@@ -13,36 +13,35 @@ Date: 01.01.2007
 
 Generally, EXE files created with Delphi are larger than EXE files
 created with another programming language. The reason is the VCL. (Sure,
-VCL has many advantages\...)
+VCL has many advantages...)
 
 There are several ways to reduce a EXE\'s size:
 
-01\) Use a EXE-Packer (UPX, ASPack,\...)
+01) Use a EXE-Packer (UPX, ASPack,...)
 
-02\) Use KOL.
+02) Use KOL.
 
-03\) Write your application without VCL
+03) Write your application without VCL
 
-04\) Use the ACL (API Controls Library)
+04) Use the ACL (API Controls Library)
 
-05\) Use StripReloc.
+05) Use StripReloc.
 
-06\) Deactivate remote debugging information and TD32.
+06) Deactivate remote debugging information and TD32.
 
-07\) You might want to put code in a dll.
+07) You might want to put code in a dll.
 
-08\) Don\'t put the same images several times on a form. Load them at
-runtime.
+08) Don\'t put the same images several times on a form. Load them at runtime.
 
-09\) Use compressed images (JPG and not BMP)
+09) Use compressed images (JPG and not BMP)
 
-10\) Store less properties in DFM files
+10) Store less properties in DFM files
 
-(See Link below \"How To Make Your EXE\'s Lighter\")
+(See Link below "How To Make Your EXE\'s Lighter")
 
-11\) Use the TStringList replacement by \~LOM\~
+11) Use the TStringList replacement by \~LOM\~
 
-12\) Use the Minireg - TRegistry replacement by Ben Hochstrasser
+12) Use the Minireg - TRegistry replacement by Ben Hochstrasser
 
 
 
@@ -80,7 +79,7 @@ with no runtime performance penalties.
 
 <https://www.aspack.com/aspack.htm>
 
-{\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*}
+{****************************************************************}
 
 02)
 
@@ -93,7 +92,7 @@ It is distributed free of charge, with source code.
 
 <https://bonanzas.rinet.ru/>
 
-{\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*}
+{****************************************************************}
 
 03)
 
@@ -111,7 +110,7 @@ using 100% WinAPI calls, standard resources, etc.
 
 <https://www.tutorials.delphi-source.de/nonvcl/>
 
-{\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*}
+{****************************************************************}
 
 04)
 
@@ -133,14 +132,14 @@ Windows controls classes, derived from it has appeared.
 
 <https://www.apress.ru/pages/bokovikov/delphi/index.html/>
 
-{\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*}
+{****************************************************************}
 
 05)
 
 StripReloc is a free (GPL license) command line utility that removes the
 relocation
 
-(\".reloc\") section from Win32 PE EXE files, reducing their size.
+(".reloc") section from Win32 PE EXE files, reducing their size.
 
 Most compilers/linkers (including Delphi) put a relocation section in
 EXE files,
@@ -153,7 +152,7 @@ Why not use an EXE compressor?
 
 <https://www.jrsoftware.org/striprlc.php>
 
-{\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*}
+{****************************************************************}
 
 06)
 
@@ -171,14 +170,14 @@ Debugging can take up until half of the size.
 
 The options that are going to singificantly reduce your file size are
 
-\"Include TD32 debug info\" and \"Build with runtime packages\". If you
+"Include TD32 debug info" and "Build with runtime packages". If you
 are
 
 shipping commercial applications, you usually don\'t need the debug info
 
 linked with your project.
 
-{\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*}
+{****************************************************************}
 
 08/09)
 
@@ -198,7 +197,7 @@ bitmaps.
 
 Use JPEG-files instead of BMP-files. This also reduces the EXE size.
 
-{\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*}
+{****************************************************************}
 
 10)
 
@@ -206,7 +205,7 @@ How To Make Your EXE\'s Lighter:
 
 <https://www.undu.com/DN970301/00000064.htm>
 
-{\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*}
+{****************************************************************}
 
 11)
 

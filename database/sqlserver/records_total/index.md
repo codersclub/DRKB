@@ -49,6 +49,6 @@ recordcount property.
 
 ByTheWay: use this only for sqlserver
 
-for other cs db apps simply use a count sql (coming upnext time\...)
+for other cs db apps simply use a count sql (coming upnext time...)
 
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

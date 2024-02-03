@@ -21,9 +21,9 @@ Date: 01.01.2007
 
 присвоить цвет точки исходного изображения с координатами x,y, где
 
-x = xo + r \* cos(alpha + beta)
+x = xo + r * cos(alpha + beta)
 
-y = yo + r \* sin(alpha + beta)
+y = yo + r * sin(alpha + beta)
 
 (xo,yo - центр поворота, r - длина отрезка OM).
 

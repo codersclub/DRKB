@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-\- в /help/delphi3.cfg добавить строку типа
+- в /help/delphi3.cfg добавить строку типа
 
   :index Win32=Win32.hlp
 

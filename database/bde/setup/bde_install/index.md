@@ -19,16 +19,16 @@ Date: 01.01.2007
     Пример использования в качестве простейшего инсталлятора для программы
     C:\MyDir\MyProg.exe
     1.Создайте каталог C:\MyDir\BDE и скопируйте в него след. файлы:
-    CHARSET.BLL
-    OTHER.BLL
-    IDAPI32.CFG
-    BLW32.DLL
-    IDAPI32.DLL
-    IDBAT32.DLL
-    IDPDX32.DLL
-    IDR20009.DLL
-    IDSQL32.DLL
-    BDEADMIN.EXE - по вкусу, т.к. необходимым не является.
+      CHARSET.BLL
+      OTHER.BLL
+      IDAPI32.CFG
+      BLW32.DLL
+      IDAPI32.DLL
+      IDBAT32.DLL
+      IDPDX32.DLL
+      IDR20009.DLL
+      IDSQL32.DLL
+      BDEADMIN.EXE - по вкусу, т.к. необходимым не является.
     2.Измените значение константы AliasName на имя необходимого вам алиаса.
     3.Откомпиллируйте и запустите эту программу из каталога C:\MyDir.
     ВHИМАHИЕ!!! Если на машине уже установлено BDE, то перед экспериментами
@@ -195,72 +195,69 @@ Date: 01.01.2007
 клиентской машине:
 
   ---- ---------------------------------------------------------------------------------------------------------
-  1.   Отформатируйте две дискеты в дисководе клиентской машины. Пометьте дискеты как \"Disk 1\" и \"Disk 2\".
+  1.   Отформатируйте две дискеты в дисководе клиентской машины. Пометьте дискеты как "Disk 1" и "Disk 2".
   ---- ---------------------------------------------------------------------------------------------------------
 
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Скопируйте файлы с DELPHI CD, содержащиеся в каталоге \\REDIST\\BDEINST\\DISK1 на дискету, помеченную как \"Disk 1\", и файлы из каталога \\REDIST\\BDEINST\\DISK2 на дискету \"Disk 2\".
+  2.   Скопируйте файлы с DELPHI CD, содержащиеся в каталоге \\REDIST\\BDEINST\\DISK1 на дискету, помеченную как "Disk 1", и файлы из каталога \\REDIST\\BDEINST\\DISK2 на дискету "Disk 2".
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- ---------------------------------------------------------------------------------------------------------------------------------------
-  3.   Вставьте в дисковод клиентской машины дискету, помеченную как \"BDE Install 1\" (в нашем примере мы используем дисковод с буквой A:).
+  3.   Вставьте в дисковод клиентской машины дискету, помеченную как "BDE Install 1" (в нашем примере мы используем дисковод с буквой A:).
   ---- ---------------------------------------------------------------------------------------------------------------------------------------
 
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Убедитесь в том, что в Windows отсутствуют запущенные программы. В Windows Program Manager выберите File\|Run, введите в поле редактирования командной строки (\"Command Line\") \"A:\\DISK1\\SETUP\" и нажмите \"OK\" для начала установки Borland Database Engine на клиентской машине.
+  4.   Убедитесь в том, что в Windows отсутствуют запущенные программы. В Windows Program Manager выберите File\|Run, введите в поле редактирования командной строки ("Command Line") "A:\\DISK1\\SETUP" и нажмите "OK" для начала установки Borland Database Engine на клиентской машине.
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  5.   Сначала, на короткое время, появится окно \"Database Engine Install\", затем диалог \"preparing to install\...\", и, наконец, диалог \"BDE Redisttributable\", содержащий кнопки Continue (Продолжить) и Exit (Выйти). Нажмите \"Continue\".
+  5.   Сначала, на короткое время, появится окно "Database Engine Install", затем диалог "preparing to install...", и, наконец, диалог "BDE Redisttributable", содержащий кнопки Continue (Продолжить) и Exit (Выйти). Нажмите "Continue".
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  6.   Появится диалог \"Borland Database Engine Location Settings\", позволяющий изменить каталог установки программ BDE и конфигурационных файлов. Оставьте настройки по умолчанию и нажмите \"Continue\" (Продолжить).
+  6.   Появится диалог "Borland Database Engine Location Settings", позволяющий изменить каталог установки программ BDE и конфигурационных файлов. Оставьте настройки по умолчанию и нажмите "Continue" (Продолжить).
   ---- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-  7.   Появится диалог \"Borland Database Engine Installation\", позволяющий вернуться к предыдущим диалогам или начать установку. Нажмите \"Install\" (Установить).
+  7.   Появится диалог "Borland Database Engine Installation", позволяющий вернуться к предыдущим диалогам или начать установку. Нажмите "Install" (Установить).
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ---- -------------------------------------------------------------------------------
-  8.   Процесс копирования дискеты \"Disk 1\" будет отображаться полоской прогресса.
+  8.   Процесс копирования дискеты "Disk 1" будет отображаться полоской прогресса.
   ---- -------------------------------------------------------------------------------
 
   ---- --------------------------------------------------------------------------------------------------------------------------
-  9.   Появится диалог \"BDE Redistributable Install Request\". Вставьте дискету \"Disk 2\". Нажмите \"continue\" (Продолжить).
+  9.   Появится диалог "BDE Redistributable Install Request". Вставьте дискету "Disk 2". Нажмите "continue" (Продолжить).
   ---- --------------------------------------------------------------------------------------------------------------------------
 
   ----- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  10.   По окончании процедуры установки появится диалог \"Borland Database Engine Installation Notification\", сообщающий об успешной установке BDE. Нажмите \"Exit\" (Выход).
+  10.   По окончании процедуры установки появится диалог "Borland Database Engine Installation Notification", сообщающий об успешной установке BDE. Нажмите "Exit" (Выход).
   ----- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ----- -----------------------------------------------------------------------------------------
   11.   Завершите работу Windows, удалите дискету из дисковода и перегрузите клиентскую машину.
   ----- -----------------------------------------------------------------------------------------
 
-12\.        Если настройки по умолчанию уже где-то используются,
+12. Если настройки по умолчанию уже где-то используются,
 произойдут изменения, указанные ниже.
 
 На клиентской машине появятся два новых каталога - \\IDAPI и
 \\IDAPI\\LANGDRV. Обратите внимание на то, что утилита BDE Configuration
 Utility, BDECFG.EXE, располагается в каталоге \\IDAPI. Языковые драйвера
-располагаются в каталоге \\IDAPI\\LANGDRV как файлы \*.LD. AUTOEXEC.BAT,
+располагаются в каталоге \\IDAPI\\LANGDRV как файлы *.LD. AUTOEXEC.BAT,
 CONFIG.SYS и SYSTEM.INI при инсталляции не изменяются.
 
 WIN.INI в каталоге \\WINDOWS\\SYSTEM будет иметь новые секции:
 
-\[IDAPI\]
+    [IDAPI]
+    DLLPATH=C:\IDAPI
+    CONFIGFILE01=C:\IDAPI\IDAPI.CFG
 
-DLLPATH=C:\\IDAPI
+    [Borland Language Drivers]
+    LDPath=C:\IDAPI\LANGDRV
 
-CONFIGFILE01=C:\\IDAPI\\IDAPI.CFG
 
-\[Borland Language Drivers\]
-
-LDPath=C:\\IDAPI\\LANGDRV
-
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba
 
@@ -313,21 +310,9 @@ BDEINST.CAB. There are several ways this can be done. Two of them are:
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- --
-  ·   
-  --- --
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   --- -----------------------------------------------------------------------
   ·   C:\\Program Files\\Borland\\Common Files\\BDE\>EXTRACT /E BDEINST.CAB
   --- -----------------------------------------------------------------------
-:::
-
-::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
-  --- --
-  ·   
-  --- --
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
@@ -358,12 +343,12 @@ from the DLL.
 
 ------------------------------------------------------------------------
 
-Problem/Question/Abstract:
+**Problem/Question/Abstract:**
 
 What are the essential files to ship with an application that uses the
 BDE?
 
-Answer:
+**Answer:**
 
 Delphi allows you to generate a nice tight executable file (.EXE), but
 if you have created a database application you must include the files
@@ -371,37 +356,23 @@ that make up the Borland Database Engine as well. The table below shows
 the files that are mandatory when delivering a database application with
 Delphi.
 
-File Name        Description
-
-IDAPI01.DLL - BDE API DLL
-
-IDBAT01.DLL -  BDE Batch Utilities DLL
-
-IDQRY01.DLL -  BDE Query DLL
-
-IDASCI01.DLL - BDE ASCII Driver DLL
-
-IDPDX01.DLL - BDE Paradox Driver DLL
-
-IDDBAS01.DLL - BDE dBASE Driver DLL
-
-IDR10009.DLL - BDE Resources DLL
-
-ILD01.DLL  - Language Driver DLL
-
-IDODBC01.DLL - BDE ODBC Socket DLL
-
-ODBC.New  - Microsoft ODBC Driver Manager DLL V2.0
-
-ODBCINST.NEW - Microsoft ODBC Driver Installation DLL V2.0
-
-TUTILITY.DLL - BDE Table Repair Utility DLL 
-
-BDECFG.EXE  - BDE Configuration Utility DLL
-
-BDECFG.HLP  -  BDE Configuration Utility Help
-
-IDAPI.CFG -        BDE Configuation File (settings)
+File Name   |     Description
+----------- | ---------------
+IDAPI01.DLL | BDE API DLL
+IDBAT01.DLL |  BDE Batch Utilities DLL
+IDQRY01.DLL |  BDE Query DLL
+IDASCI01.DLL | BDE ASCII Driver DLL
+IDPDX01.DLL | BDE Paradox Driver DLL
+IDDBAS01.DLL | BDE dBASE Driver DLL
+IDR10009.DLL | BDE Resources DLL
+ILD01.DLL  | Language Driver DLL
+IDODBC01.DLL | BDE ODBC Socket DLL
+ODBC.New  | Microsoft ODBC Driver Manager DLL V2.0
+ODBCINST.NEW | Microsoft ODBC Driver Installation DLL V2.0
+TUTILITY.DLL | BDE Table Repair Utility DLL 
+BDECFG.EXE  | BDE Configuration Utility DLL
+BDECFG.HLP  | BDE Configuration Utility Help
+IDAPI.CFG   | BDE Configuation File (settings)
 
 To assist the user, Delphi ships with an install program for exporting
 the appropriate files that you want deliver to your clients. Also,
@@ -409,11 +380,11 @@ installation programs such as InnoSetup and InstallShield can
 automatically include the relevant files in their setup programs.
 
 InnoSetup is my program installation program of choice, and it is FREE!
-For more information or to download a copy visit Jordan Russ[https://
-www.jrsoftware.org](https://%20www.jrsoftware.org)ell\'s site at
+For more information or to download a copy visit Jordan Russell\'s site at
+[https://www.jrsoftware.org](https://www.jrsoftware.org)
 
 Finally a tip on using the setup CAB file that ships with the BDE to
 install the relevant files can be found in DKB, article title
-\"Installing BDE from BDEINST.CAB\"
+"Installing BDE from BDEINST.CAB"
 
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

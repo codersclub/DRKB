@@ -18,7 +18,7 @@ One way of starting Access is Excelto try the GetActiveObject call, to
 get a running instance of Access, but put a call to CoApplication.Create
 in an except clause. But except clauses are slow, and can cause problems
 within the IDE for people who like Break On Exceptions set to True. The
-following code removes the need for a try\...except clause, by avoiding
+following code removes the need for a try... except clause, by avoiding
 using OleCheck on GetActiveObject in the case when Access is not
 running.
 

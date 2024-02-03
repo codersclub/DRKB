@@ -140,7 +140,7 @@ property BlobFieldCount: Integer;
 
 Доступ к значениям полей текущей записи предоставляет свойство
 
-property FieldValues\[const FieldName: string\]: Variant; default;
+property FieldValues[const FieldName: string]: Variant; default;
 
 где в параметре FieldName задается имя поля.
 
@@ -222,8 +222,7 @@ procedure InsertRecord(const Values: array of const);
 
 А делается это примерно так:
 
-МуТаblе.AppendRecord(\[2345, \'New customer\', \'+7(812)4569012\', 0,
-\'\'\]);
+    МуТаblе.AppendRecord([2345, 'New customer', '+7(812)4569012', 0, ''];
 
 После вызова этих методов и их завершения набор данных автоматически
 возвращается в состояние просмотра.
@@ -231,32 +230,32 @@ procedure InsertRecord(const Values: array of const);
 Для существующей записи аналогичным образом можно заполнить все поля,
 использовав метод
 
-procedure SetFields(const Values: array of const);
+    procedure SetFields(const Values: array of const);
 
 Текущая запись удаляется методом
 
-procedure Delete;
+    procedure Delete;
 
 При этом набор данных не выдает никаких предупреждений, а просто делает
 это.
 
 Очистить содержимое всех полей текущей записи может метод
 
-procedure ClearFields;
+    procedure ClearFields;
 
 Обратите внимание, что поля становятся пустыми (NULL), а не сбрасываются
 в нулевое значение.
 
 О том, редактировалась ли текущая запись, сообщает свойство
 
-property Modified: Boolean;
+    property Modified: Boolean;
 
 если оно имеет значение True.
 
 Набор данных можно обновить, не закрывая и не открывая его снова. Для
 этого применяется метод
 
-procedure Refresh;
+    procedure Refresh;
 
 Однако он сработает только для таблиц и тех запросов, которые нельзя
 редактировать.
@@ -322,7 +321,7 @@ procedure Refresh;
 Обратите внимание, что помимо методов-обработчиков режима вставки
 существует дополнительный метод
 
-property OnNewRecord: TDataSetNotifyEvent;
+    property OnNewRecord: TDataSetNotifyEvent;
 
 который вызывается непосредственно при вставке или добавлении записи.
 Дополнительно к этому могут использоваться методы-обработчики
@@ -331,7 +330,7 @@ property OnNewRecord: TDataSetNotifyEvent;
 
 Метод-обработчик
 
-property OnCalcFields: TDataSetNotifyEvent;
+    property OnCalcFields: TDataSetNotifyEvent;
 
 очень важен для задания значений вычисляемых полей. Он вызывается для
 каждой записи, которая отображается в визуальных компонентах, связанных

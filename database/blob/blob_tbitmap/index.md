@@ -12,9 +12,9 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-1\) LoadFromStream/SaveToStream
+1) LoadFromStream/SaveToStream
 
-2\) TBlobField.assign
+2) TBlobField.assign
 
 Автор: Vit
 

@@ -24,7 +24,7 @@ Date: 01.01.2007
       retcode: Integer;
     begin
       oldMode: = SetErrorMode(SEM_FAILCRITICALERRORS);
-      mask := '?:\*.*';
+      mask := '?:*.*';
       mask[1] := driveletter;
     {$I-} { не возбуждаем исключение при неудаче }
       retcode := FindFirst(mask, faAnyfile, SRec);
@@ -77,7 +77,7 @@ WfW 3.11, если, конечно, это необходимо.
       end;
     end;
 
-\...можно для пущей функциональности добавить ряд строк:
+...можно для пущей функциональности добавить ряд строк:
 
     function DiskInDrive(const Drive: char): Boolean;
     var

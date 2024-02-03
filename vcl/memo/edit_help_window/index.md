@@ -16,9 +16,9 @@ Date: 01.01.2007
 
 Допустим у тебя TMemo..
 
-1\. Делаешь ListBox, заполняешь, visible := false, parent := Memo
+1. Делаешь ListBox, заполняешь, visible := false, parent := Memo
 
-2\. У Memo в обработчике Memo.onKeyDown что-нибудь типа:
+2. У Memo в обработчике Memo.onKeyDown что-нибудь типа:
 
     if (key = Ord('J')) and (ssCtrl in Shift) then
     begin

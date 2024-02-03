@@ -14,7 +14,7 @@ Date: 01.01.2007
 
 Автор: Nomadic
 
-Смотрите книгу \"Developing Custom Delphi Components\" от Рэя Конопки.
+Смотрите книгу "Developing Custom Delphi Components" от Рэя Конопки.
 
 Здесь немного исправленный пример из этой книги -
 

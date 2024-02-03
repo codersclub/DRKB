@@ -54,7 +54,7 @@ DelphiWorld 6.0
            Col := 1;
          end
           else
-         begin {End of Grid- Go to Top again}
+         begin {End of Grid - Go to Top again}
            Row := 1;
            Col := 1;
          end;

@@ -78,7 +78,7 @@ HookAgnt.dpr
     | |
     | DLL_PROCESS_DETACH |
     | |
-    \----------------------------}
+    ----------------------------}
      
     procedure DLLMain(Reason: Integer);
     begin
@@ -93,7 +93,7 @@ HookAgnt.dpr
     | |
     | DLL_PROCESS_ATTACH |
     | |
-    \----------------------------}
+    ----------------------------}
      
     begin
       DLLProc := @DLLMain;

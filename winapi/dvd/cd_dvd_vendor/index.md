@@ -19,8 +19,8 @@ Date: 01.01.2007
 Win32\_CDROMDrive. Может кто знает как сразу к конкретному свойству
 обратиться, т.е.
 
-избавиться от строки \"while PropEnum.Next(1, TempObj, Value) = S\_OK
-do\"
+избавиться от строки "while PropEnum.Next(1, TempObj, Value) = S\_OK
+do"
 
 Вот рабочий пример для D7.
 

@@ -214,7 +214,7 @@ Date: 01.01.2007
     procedure TDelphiTool.SetDelphiVersion(version: TDelphiVersion);
       //*************************************************************
       //  for versions other then D6 lookup the registry and add lines
-      // like below , also add dvDx entries to TDelphiVersion
+      // like below, also add dvDx entries to TDelphiVersion
     begin
       case version of
         dvD6: F_ToolPath := '\Software\Borland\Delphi\6.0\Transfer';

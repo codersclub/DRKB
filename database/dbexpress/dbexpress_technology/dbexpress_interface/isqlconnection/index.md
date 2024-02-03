@@ -72,7 +72,7 @@ TSQLConnection. В нем реализована защищенная проце
           FMessage := AllocMem(FSize + I); 
           FStatus := IConn.getErrorMessage(FMessage); 
           if FStatus = SQL_SUCCESS then 
-            MessageDlg (FMessage, mtError, [rnbOK] , 0) 
+            MessageDlg (FMessage, mtError, [rnbOK], 0) 
           else 
             MessageDlg('Checking error', mtWarning, [mbOK], 0) ; 
           if Assigned(FMessage) then FreeMem(FMessage); 

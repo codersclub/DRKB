@@ -127,7 +127,7 @@ CopyTo...` а если так, то почему бы не перевести и
         OS:TOleStream;
         S:String;
     begin
-     OleCheck(StgCreateDocfile('Testing.stg',STGM_READWRITE or STGM_SHARE_EXCLUSIVE ,0,Stg));
+     OleCheck(StgCreateDocfile('Testing.stg',STGM_READWRITE or STGM_SHARE_EXCLUSIVE,0,Stg));
      OleCheck(Stg.CreateStream('Testing',STGM_READWRITE or STGM_SHARE_EXCLUSIVE,0,0,Strm));
      OS:=TOleStream.Create(Strm);
      try
@@ -233,9 +233,11 @@ CopyTo...` а если так, то почему бы не перевести и
     Skip(celt:longint):HResult;stdcall;
 
 Reset - он и в Африке Reset:
+
     Reset:HResult;stdcall;
 
 Клонирование интерфейса
+
     Clone(out enm:IEnumStatStg):HResult;stdcall;
 
 На данный момент для нас самым важным из этих методов есть метод Next:
@@ -357,36 +359,36 @@ Reset - он и в Африке Reset:
 
 * Копирование содержимого хранилища в другое хранилище:
 
-    function CopyTo(ciidExclude: Longint; rgiidExclude: PIID; snbExclude: TSNB;
-                    const stgDest: IStorage): HResult; stdcall;
+        function CopyTo(ciidExclude: Longint; rgiidExclude: PIID; snbExclude: TSNB;
+                        const stgDest: IStorage): HResult; stdcall;
 
 * Перемещение хранилища в другое хранилище:
 
-    function MoveElementTo(pwcsName: POleStr; const stgDest: IStorage;
-                           pwcsNewName: POleStr; grfFlags: Longint): HResult; stdcall;
+        function MoveElementTo(pwcsName: POleStr; const stgDest: IStorage;
+                               pwcsNewName: POleStr; grfFlags: Longint): HResult; stdcall;
 
 * Подтверждение изменетий внесенных в хранилище. Используется совместно с
 флагом STGM_TRANSACTED при открытии или создании хранилища:
 
-    function Commit(grfCommitFlags: Longint): HResult; stdcall;
+        function Commit(grfCommitFlags: Longint): HResult; stdcall;
 
 * Отмена изменений вносимых в хранилище. Используется совместно с флагом
 STGM_TRANSACTED при открытии или создании хранилища:
 
-    function Revert: HResult; stdcall;
+        function Revert: HResult; stdcall;
 
 * Удаление элемента из хранилища:
 
-    function DestroyElement(pwcsName: POleStr): HResult; stdcall;
+        function DestroyElement(pwcsName: POleStr): HResult; stdcall;
 
 * Переименование элемента хранилища:
 
-    function RenameElement(pwcsOldName: POleStr; pwcsNewName: POleStr): HResult; stdcall;
+        function RenameElement(pwcsOldName: POleStr; pwcsNewName: POleStr): HResult; stdcall;
 
 * Обновление информации о дате создания, модификации и последнего обращения к элементу хранилища.
 
-    function SetElementTimes(pwcsName: POleStr; const ctime: TFileTime;
-                             const atime: TFileTime; const mtime: TFileTime): HResult; stdcall;
+        function SetElementTimes(pwcsName: POleStr; const ctime: TFileTime;
+                                 const atime: TFileTime; const mtime: TFileTime): HResult; stdcall;
 
 ### Сжатие хранилищ
 
@@ -428,18 +430,12 @@ STGM_TRANSACTED при открытии или создании хранилищ
 
 ### Флаги доступа к хранилищам и потокам
 
-`STGM_DIRECT`
+`STGM_DIRECT` - Каждое изменение содержания сразу же записывается в файл
 
-Каждое изменение содержания сразу же записывается в файл
-
-`STGM_TRANSACTED`
-
-Изменения записываются в буфер, а потом по команде Commit в файл.
+`STGM_TRANSACTED` - Изменения записываются в буфер, а потом по команде Commit в файл.
 Команда Revert отменяет изменения
 
-`STGM_SIMPLE`
-
-Упрощенный вариант хранения данных:
+`STGM_SIMPLE` - Упрощенный вариант хранения данных:
 
 * Нет поддержки подхранилищ
 * Нельзя повторно открыть поток для записи
@@ -467,7 +463,7 @@ STGM_TRANSACTED при открытии или создании хранилищ
 `STGM_CREATE` - Стирает существующий файл с тем же именем
 
 `STGM_CONVERT` - Создает новый файл в поток CONTENTS которого заносит данные из
-существующего файла с тем же именем , если такой существует
+существующего файла с тем же именем, если такой существует
 
 `STGM_FAILSAFE` - Если существует файл с таким же именем - возвращает значение
 `STG_E_FILEALREADYEXISTS`
@@ -476,7 +472,7 @@ STGM_TRANSACTED при открытии или создании хранилищ
 используется незадействованное пространство в самом файле. Более
 эффективное использование ресурсов компьютера
 
-::: .author
+::: {.author}
 Автор: Михаил Продан
 :::
 

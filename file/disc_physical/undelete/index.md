@@ -60,7 +60,7 @@ Date: 01.01.2007
       entres : Integer;
       dir    : PDIR_Entry;
       Drv    : Char;
-      I , J  : DWORD;
+      I, J  : DWORD;
       QP     : LongInt;
      
      

@@ -252,8 +252,8 @@ Windows-98. Но теперь мы видим, что Windows XP ее в это�
      
      
      
-            Selector := Rect( ARect.Left , ARect.Top ,
-            ARect.right , ARect.bottom );
+            Selector := Rect( ARect.Left, ARect.Top,
+            ARect.right, ARect.bottom );
      
             FRect:= Rect(Arect.Left+3,Arect.Top +3,
             Arect.Right -3, Arect.Bottom -3);
@@ -370,9 +370,9 @@ Windows-98. Но теперь мы видим, что Windows XP ее в это�
      
           Canvas.Brush.Style := bsClear;
           Canvas.Pen.color := $00984E00;
-          Canvas.RoundRect(ARect.Left ,
-                    Arect.top , Arect.right ,
-                    Arect.bottom , 5, 5);
+          Canvas.RoundRect(ARect.Left,
+                    Arect.top, Arect.right,
+                    Arect.bottom, 5, 5);
      
           Canvas.Brush.Style:= bsSolid;
           Canvas.Brush.Color := FSelBackColor;
@@ -420,9 +420,9 @@ Windows-98. Но теперь мы видим, что Windows XP ее в это�
      
           Canvas.Brush.Style := bsClear;
           Canvas.Pen.color := $00984E00;
-          Canvas.RoundRect(ARect.Left ,
-                    Arect.top , Arect.right ,
-                    Arect.bottom , 5, 5);
+          Canvas.RoundRect(ARect.Left,
+                    Arect.top, Arect.right,
+                    Arect.bottom, 5, 5);
      
           Canvas.Brush.Style:= bsSolid;
           Canvas.Brush.Color := FSelBackColor;
@@ -520,8 +520,8 @@ Windows-98. Но теперь мы видим, что Windows XP ее в это�
      
      
      
-            Selector := Rect( ARect.Left , ARect.Top ,
-            ARect.right , ARect.bottom );
+            Selector := Rect( ARect.Left, ARect.Top,
+            ARect.right, ARect.bottom );
      
             FRect:= Rect(Arect.Left+3,Arect.Top +3,
             Arect.Right -3, Arect.Bottom -3);
@@ -635,8 +635,8 @@ Windows-98. Но теперь мы видим, что Windows XP ее в это�
      
           Canvas.Brush.Style := bsClear;
           Canvas.Pen.color := $00984E00;
-          Canvas.Rectangle(ARect.Left ,
-                    Arect.top , Arect.right ,
+          Canvas.Rectangle(ARect.Left,
+                    Arect.top, Arect.right,
                     Arect.bottom );
      
           Canvas.Brush.Style:= bsSolid;
@@ -679,8 +679,8 @@ Windows-98. Но теперь мы видим, что Windows XP ее в это�
      
           Canvas.Brush.Style := bsClear;
           Canvas.Pen.color := $00984E00;
-          Canvas.Rectangle(ARect.Left ,
-                    Arect.top , Arect.right ,
+          Canvas.Rectangle(ARect.Left,
+                    Arect.top, Arect.right,
                     Arect.bottom );
      
           Canvas.Brush.Style:= bsSolid;

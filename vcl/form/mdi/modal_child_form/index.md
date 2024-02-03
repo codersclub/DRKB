@@ -20,7 +20,7 @@ Date: 01.01.2007
 1.Убераешь свою MDIChild форму из автосоздания: (MainMenu)
 Project-\>Options-\>Forms. Там её перебрасываешь в: Available forms
 
-2\. Переключаешься на свою MDIChild форму и дописываеш в описание
+2. Переключаешься на свою MDIChild форму и дописываеш в описание
 класса(пусть например твой класс формы для MDIChild называется TForm2):
 
      TForm2 = class(TForm)
@@ -31,7 +31,7 @@ Project-\>Options-\>Forms. Там её перебрасываешь в: Availabl
       public
      
 
-3\. Реализуешь эту процедуру:
+3. Реализуешь эту процедуру:
 
     procedure TForm2.CreateWindowHandle(const Params: TCreateParams);
     var Comp:TForm2;

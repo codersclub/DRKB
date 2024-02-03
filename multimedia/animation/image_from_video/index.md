@@ -11,8 +11,8 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Для использования следующиего примера необходимо иметь \"Microsoft Video
-for Windows SDK\". Пример показывает, как открыть видео устройство для
+Для использования следующиего примера необходимо иметь "Microsoft Video
+for Windows SDK". Пример показывает, как открыть видео устройство для
 захвата видео, как сграбить фрейм с устройства, как сохранить этот фрейм
 на диск в виде файла .BMP, как записать .AVI файл (со звуком, но без
 предварительного просмотра), и как закрыть устройство.
@@ -92,7 +92,7 @@ for Windows SDK\". Пример показывает, как открыть ви
     procedure TForm1.OpenVideoClick(Sender: TObject);
     begin
       hWndC := capCreateCaptureWindowA('My Own Capture Window',
-                                       WS_CHILD or WS_VISIBLE ,
+                                       WS_CHILD or WS_VISIBLE,
                                        Panel1.Left,
                                        Panel1.Top,
                                        Panel1.Width,

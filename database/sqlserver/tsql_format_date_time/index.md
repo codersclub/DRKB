@@ -31,12 +31,12 @@ Date: 01.01.2007
       Declare @pm varchar(35)    Set @pm=  'PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP'
      
      
-      if PATINDEX('%dddd%' , @Format)>0 Set @Format=Replace(@Format,'dddd', @dddd)
-      if PATINDEX('%ddd%' , @Format)>0 Set @Format= Replace(@Format,'ddd', @ddd)
-      if PATINDEX('%mmmm%' , @Format)>0 Set @Format=Replace(@Format,'mmmm',@mmmm)
-      if PATINDEX('%mmm%' , @Format)>0  Set @Format=Replace(@Format,'mmm', @mmm)
+      if PATINDEX('%dddd%', @Format)>0 Set @Format=Replace(@Format,'dddd', @dddd)
+      if PATINDEX('%ddd%', @Format)>0 Set @Format= Replace(@Format,'ddd', @ddd)
+      if PATINDEX('%mmmm%', @Format)>0 Set @Format=Replace(@Format,'mmmm',@mmmm)
+      if PATINDEX('%mmm%', @Format)>0  Set @Format=Replace(@Format,'mmm', @mmm)
      
-      if PATINDEX('%doy%' , @Format)>0 
+      if PATINDEX('%doy%', @Format)>0 
       begin
         Declare @Doy int
      
@@ -73,7 +73,7 @@ Date: 01.01.2007
       end 
      
      
-      if PATINDEX('%dd%' , @Format)>0 
+      if PATINDEX('%dd%', @Format)>0 
       begin
         if DATENAME(d, @time)<10
           Set @Format= Replace(@Format,'dd', '0'+DATENAME(d, @time))
@@ -81,13 +81,13 @@ Date: 01.01.2007
           Set @Format= Replace(@Format,'dd', DATENAME(d, @time))
       end 
      
-      if PATINDEX('%d%' , @Format)>0 Set @Format= Replace(@Format,'d', DATENAME(d, @time))
-      if PATINDEX('%yyyy%' , @Format)>0 Set @Format= Replace(@Format,'yyyy', Year(@Time))
-      if PATINDEX('%yy%' , @Format)>0 Set @Format= Replace(@Format,'yy', Right(Cast(Year(@Time) as varchar(4)),2))
+      if PATINDEX('%d%', @Format)>0 Set @Format= Replace(@Format,'d', DATENAME(d, @time))
+      if PATINDEX('%yyyy%', @Format)>0 Set @Format= Replace(@Format,'yyyy', Year(@Time))
+      if PATINDEX('%yy%', @Format)>0 Set @Format= Replace(@Format,'yy', Right(Cast(Year(@Time) as varchar(4)),2))
      
-      if PATINDEX('%hh%' , @Format)>0 
+      if PATINDEX('%hh%', @Format)>0 
       begin
-        if PATINDEX('%am/pm%' , @Format)>0
+        if PATINDEX('%am/pm%', @Format)>0
         begin
           Set @Format=
             Case DATENAME(hh, @time)
@@ -132,9 +132,9 @@ Date: 01.01.2007
         end
       end 
      
-      if PATINDEX('%h%' , @Format)>0 
+      if PATINDEX('%h%', @Format)>0 
       begin
-        if PATINDEX('%am/pm%' , @Format)>0
+        if PATINDEX('%am/pm%', @Format)>0
           begin
             Set @Format=
               Case DATENAME(hh, @time)
@@ -176,7 +176,7 @@ Date: 01.01.2007
           end
       end
      
-      if PATINDEX('%mm%' , @Format)>0 
+      if PATINDEX('%mm%', @Format)>0 
       begin
         if Month(@Time)<10
           Set @Format= Replace(@Format,'mm', '0'+cast(Month(@Time) as varchar(2)))
@@ -184,9 +184,9 @@ Date: 01.01.2007
           Set @Format= Replace(@Format,'mm', Month(@Time))
       end 
      
-      if PATINDEX('%m%' , @Format)>0 Set @Format= Replace(@Format,'m', Month(@Time))
+      if PATINDEX('%m%', @Format)>0 Set @Format= Replace(@Format,'m', Month(@Time))
      
-      if PATINDEX('%nn%' , @Format)>0 
+      if PATINDEX('%nn%', @Format)>0 
       begin
         if DATENAME(mi, @time)<10
           Set @Format= Replace(@Format,'nn', '0'+cast(DATENAME(mi, @time) as varchar(2)))
@@ -194,9 +194,9 @@ Date: 01.01.2007
           Set @Format= Replace(@Format,'nn', DATENAME(mi, @time))
       end 
      
-      if PATINDEX('%n%' , @Format)>0 Set @Format= Replace(@Format,'n', DATENAME(mi, @time))
+      if PATINDEX('%n%', @Format)>0 Set @Format= Replace(@Format,'n', DATENAME(mi, @time))
      
-      if PATINDEX('%ss%' , @Format)>0 
+      if PATINDEX('%ss%', @Format)>0 
       begin
         if DATENAME(ss, @time)<10
           Set @Format= Replace(@Format,'ss', '0'+cast(DATENAME(ss, @time) as varchar(2)))
@@ -204,9 +204,9 @@ Date: 01.01.2007
           Set @Format= Replace(@Format,'ss', DATENAME(ss, @time))
       end 
      
-      if PATINDEX('%s%' , @Format)>0 Set @Format= Replace(@Format,'s', DATENAME(ss, @time))
+      if PATINDEX('%s%', @Format)>0 Set @Format= Replace(@Format,'s', DATENAME(ss, @time))
      
-      if PATINDEX('%'+@dddd+'%' , @Format)>0 
+      if PATINDEX('%'+@dddd+'%', @Format)>0 
       begin
          Set @Format=
            Case DAtepart(weekday, @time) 
@@ -220,7 +220,7 @@ Date: 01.01.2007
            End  
       end 
      
-      if PATINDEX('%'+@ddd+'%' , @Format)>0 
+      if PATINDEX('%'+@ddd+'%', @Format)>0 
       begin
          Set @Format=
            Case DAtepart(weekday, @time) 
@@ -234,7 +234,7 @@ Date: 01.01.2007
            End  
       end 
      
-      if PATINDEX('%'+@mmmm+'%' , @Format)>0 
+      if PATINDEX('%'+@mmmm+'%', @Format)>0 
       begin
          Set @Format=
            Case DAtepart(month, @time) 
@@ -254,7 +254,7 @@ Date: 01.01.2007
            End  
       end 
      
-      if PATINDEX('%'+@mmm+'%' , @Format)>0 
+      if PATINDEX('%'+@mmm+'%', @Format)>0 
       begin
          Set @Format=
            Case DAtepart(month, @time) 
@@ -273,8 +273,8 @@ Date: 01.01.2007
            End  
       end 
      
-      if PATINDEX('%'+@am+'%' , @Format)>0 Set @Format=Replace(@Format, @am,'AM')
-      if PATINDEX('%'+@pm+'%' , @Format)>0 Set @Format=Replace(@Format, @pm,'PM')
+      if PATINDEX('%'+@am+'%', @Format)>0 Set @Format=Replace(@Format, @am,'AM')
+      if PATINDEX('%'+@pm+'%', @Format)>0 Set @Format=Replace(@Format, @pm,'PM')
      
       Return @Format
      

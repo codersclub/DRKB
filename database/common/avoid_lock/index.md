@@ -29,7 +29,7 @@ over the size of results sets (this may mean using TQueries),
 
 minimize the length of transactions (usually not an issue if the
 
-SQLPASSTHRU MODE is set to \...AUTOCOMMIT), and only open dbaware
+SQLPASSTHRU MODE is set to ...AUTOCOMMIT), and only open dbaware
 
 controls when necessary to help minimize resource drain on the
 
@@ -47,7 +47,7 @@ Work with smaller result sets (TQueries, server views, etc.)
 
 also see above form more info.
 
-Check the SQL Links MSSQL Driver \"TDS Packet Size\" param
+Check the SQL Links MSSQL Driver "TDS Packet Size" param
 
 making sure that it is set to, at least, 4096.
 
@@ -61,7 +61,7 @@ Filter results before opening a dataset or use tqueries
 
 Investigate using the BDE SQL PASSTHRU MODE parameter
 
-\"NOT SHARED\" (please see BDEADMIN.HLP and BDE32.HLP for
+"NOT SHARED" (please see BDEADMIN.HLP and BDE32.HLP for
 
 addtional information on the SQL PASSTHRU MODE parameter)
 
@@ -69,7 +69,7 @@ Please note:
 
 BDE/SQL Links 4.01 will not only detect and raise a deadlock
 
-error but it will \"reset\" its database transaction state when
+error but it will "reset" its database transaction state when
 
 it detects an MSSQL error 1205. It is not necessary to rollback
 
@@ -79,7 +79,7 @@ deadlock has been detected.
 
 The error 1205 signals to the client that the server has
 
-\"resolved\" a deadlock and chosen one of the users to end the
+"resolved" a deadlock and chosen one of the users to end the
 
 deadlock. This user\'s transaction is automatically rolled back.
 

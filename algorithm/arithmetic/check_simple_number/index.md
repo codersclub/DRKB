@@ -76,7 +76,7 @@ Date: 01.01.2007
     @@7:  JNZ   @@6 
           CMP   EAX,1      { b^((N -1)(2^s)) mod N ==  1 mod N ?? } 
           JE    @@A 
-    @@8:  CMP   EAX,EBP    { b^((N -1)(2^s)) mod N == -1 mod N ?? , EBP = N -1 } 
+    @@8:  CMP   EAX,EBP    { b^((N -1)(2^s)) mod N == -1 mod N ??, EBP = N -1 } 
           JE    @@A 
           DEC   ECX        { second part to 2^s } 
           JNG   @@9 

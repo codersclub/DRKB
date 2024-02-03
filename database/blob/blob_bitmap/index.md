@@ -31,7 +31,7 @@ BlobField как Bitmap
     .
     end;
 
-\*\* Читаем Bitmap в Timage из поля dbase с именем Icon.
+** Читаем Bitmap в Timage из поля dbase с именем Icon.
 
     procedure .....
     var IconStream : TMemoryStream;

@@ -49,7 +49,6 @@ C Уважением,
 
 Сергей Дьяченко, sd\@arzamas.nnov.ru
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

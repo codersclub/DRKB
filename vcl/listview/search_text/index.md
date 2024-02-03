@@ -47,7 +47,7 @@ Date: 01.01.2007
       Search for text in a listview item 
       @Param lv is the listview, supposed to be in vaReport mode 
       @Param S is the text to search for 
-      @Param column is the column index for the column to search , 0-based 
+      @Param column is the column index for the column to search, 0-based 
       @Returns the found listview item, or Nil if none was found 
       @Precondition  lv  nil, lv in report mode if column  0, S not empty 
       @Desc The search is case-insensitive and will only match on the 

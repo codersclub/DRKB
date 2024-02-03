@@ -62,7 +62,7 @@ sdecl - вызовы в стиле С (для обращения к DLL испо
 созданных другим компилятором (в другом формате), то тебе, в принципе,
 все равно, какая реализация используется - компилятор сам примет верное
 решение и согласует вызовы подпрограмм в своем стиле. Исключение,
-пожалуй, составляет лишь опция \"registers\" - по смыслу это означает
+пожалуй, составляет лишь опция "registers" - по смыслу это означает
 приоритетное использование регистров процессора для передачи(получения)
 данных процедуре. Как правило, это ускоряет вызов процедуры и возврат из
 нее: может быть использования для повышения быстродействия. Однако это
@@ -75,7 +75,7 @@ sdecl - вызовы в стиле С (для обращения к DLL испо
 библиотеке.
 
 Или при явном вызове win api из кода также нужно учесть способ их вызова
-(stdcall)\...
+(stdcall)...
 
 Автор: Chingachguk
 
@@ -116,7 +116,7 @@ with the same parameter values so one can
 
 use the CPU windows stack pane to study the resulting stack layout.
 
-1\. Pascal calling convention
+1. Pascal calling convention
 
     function Test1( i: Integer; b: Boolean; d: Double ): Integer; Pascal;
 
@@ -135,10 +135,10 @@ ebp + 04 return address, 4 bytes
 ebp + 00 old ebp value
 
 The parameters are cleared off the stack by the called function using a
-ret \$10 instruction (\$10 = 16 is the total size of the parameters on
+ret $10 instruction ($10 = 16 is the total size of the parameters on
 stack).
 
-2\. Register calling convention
+2. Register calling convention
 
     function Test2( i: Integer; b: Boolean; d: Double ): Integer; Register;
 
@@ -155,10 +155,10 @@ ebp + 04 return address, 4 bytes
 ebp + 00 old ebp value
 
 The value of i is passed in eax, the value of b in edx. The parameters
-are cleared off the stack by the called function using a ret \$8
-instruction (\$8 = 8 is the total size of the parameters on stack).
+are cleared off the stack by the called function using a ret $8
+instruction ($8 = 8 is the total size of the parameters on stack).
 
-3\. cdecl calling convention
+3. cdecl calling convention
 
     function Test3( i: Integer; b: Boolean; d: Double ): Integer; cdecl;
 
@@ -178,10 +178,10 @@ ebp + 00 old ebp value
 
 The parameters are cleared off the stack by the calling function, so the
 function ends with a ret 0 and after the call instruction we find a add
-esp, \$10 instruction (\$10 = 16 is the total size of the parameters on
+esp, $10 instruction ($10 = 16 is the total size of the parameters on
 stack).
 
-4\. Stdcall calling convention
+4. Stdcall calling convention
 
     function Test4( i: Integer; b: Boolean; d: Double ): Integer; stdcall;
 
@@ -200,7 +200,7 @@ ebp + 04 return address, 4 bytes
 ebp + 00 old ebp value
 
 The parameters are cleared off the stack by the called function using a
-ret \$10 instruction (\$10 = 16 is the total size of the parameters on
+ret $10 instruction ($10 = 16 is the total size of the parameters on
 stack).
 
 When writing DLLs that are only be meant to be used from Delphi programs
@@ -230,7 +230,7 @@ decorate names. Unless told to do otherwise a C compiler will prefix all
 cdecl functions with an underbar and will decorate stdcall functions in
 the format \_name\@x, where x is the total parameter size, e.g.
 \_Test3\@16. C++ is even worse, unless functions are declared as extern
-\"C\" it will export names in a decorated format that encodes parameter
+"C" it will export names in a decorated format that encodes parameter
 size and type, in a compiler-specific fashion. For routines exported
 with Pascal calling convention the names may be all uppercase,
 

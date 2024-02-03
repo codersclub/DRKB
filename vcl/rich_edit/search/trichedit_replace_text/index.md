@@ -1,10 +1,10 @@
 ---
-Title: TRichEdit -- замена текста
+Title: TRichEdit - замена текста
 Date: 01.01.2007
 ---
 
 
-TRichEdit -- замена текста
+TRichEdit - замена текста
 ==========================
 
 ::: {.date}

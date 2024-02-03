@@ -25,7 +25,7 @@ Consider the following (simplified code):
 Seems pretty simple, doesn\'\'t it? Anybody who can spot the bug? I got
 spurious access violations in the line Result\^ := \_Value; Ok, the
 reason: Memory allocated with GetMem is not initialised, so the
-\"Variant\" pointed to by Result contains some random data, for example
+"Variant" pointed to by Result contains some random data, for example
 something that might represent a variant type which requires some
 finalisation when the variant is changed, lets say a variant array of
 some sort. But this finalisation won\'\'t work because the content is

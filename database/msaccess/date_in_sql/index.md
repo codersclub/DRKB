@@ -12,7 +12,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Для дат используйте \#:
+Для дат используйте #:
 
     SELECT Students.Name,Students.BirthDate,Teachers.Name 
     FROM Teachers 

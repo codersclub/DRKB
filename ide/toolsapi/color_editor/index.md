@@ -104,9 +104,8 @@ Date: 01.01.2007
      
     end.
 
-\- Ed Jordan
+- Ed Jordan
 
-Взято из Советов по Delphi от [Валентина
-Озерова](mailto:mailto:webmaster@webinspector.com)
+Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

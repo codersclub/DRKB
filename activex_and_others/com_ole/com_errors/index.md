@@ -34,9 +34,8 @@ Date: 01.01.2007
             #13' Adress:' + Format('%p', [ExceptAddr]);
           if (ExceptObject is EOleSysError) and
             (EOleSysError(ExceptObject).ErrorCode < 0) then
-            ExMsg := ExMsg + #13'
-              OleSysError.ErrorCode =
-                '+IntToStr(EOleSysError(ExceptObject).ErrorCode);
+            ExMsg := ExMsg + #13'OleSysError.ErrorCode = '
+              +IntToStr(EOleSysError(ExceptObject).ErrorCode);
         end;
         toLog(ExMsg);
       except

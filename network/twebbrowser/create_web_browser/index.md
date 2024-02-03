@@ -178,7 +178,7 @@ OLECMDID\_STOP,
 
 OLECMDID\_HIDETOOLBARS,
 
-OLECMDID\_SETPROGRESSMAX ,
+OLECMDID\_SETPROGRESSMAX,
 
 OLECMDID\_SETPROGRESSPOS,
 
@@ -237,12 +237,12 @@ except
 end;
 
 Эта команда вызивает диалоговое окно печати документа. Если же опустить
-try...except, то при нажатии \"Отмена\" в этом окне будет сгенерировано
+try...except, то при нажатии "Отмена" в этом окне будет сгенерировано
 уведомление об ошибке типа:
 
-raised exception class EOleException with message \"Невозможно
+raised exception class EOleException with message "Невозможно
 установить свойство coISpan. Недопустимое значения свойства. Требуется
-ввести значение от 1 до 1000\".
+ввести значение от 1 до 1000".
 
 Теперь поговорим о свойствах.
 
@@ -277,7 +277,7 @@ PopupMenu; Как оконный элемент управления, TwebBrowse
 property OffLine : WordBool; Позволяет загружать документы из локального
 кеша - если присвоить True.
 
-property LocationURL: WideString; Позначено как \"только для чтения\" и
+property LocationURL: WideString; Позначено как "только для чтения" и
 содержит URL ресурса, загруженого в браузер.
 
 Теперь события.

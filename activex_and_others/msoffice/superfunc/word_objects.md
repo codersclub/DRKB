@@ -41,12 +41,12 @@ author: Василий КОРНЯКОВ (_kvn@mail.ru)
 части статьи, - это внутренние объекты.
 
 Кто программирует в Visual Basic в среде Word и в Delphi, тот может
-дальше сам развивать тему \"Суперфункций\". Все просто. Объекты,
+дальше сам развивать тему "Суперфункций". Все просто. Объекты,
 коллекции и методы, которые работают в среде Word, переносятся почти без
 изменений в среду Delphi. Главное здесь - применить немного
 изобретательности и находчивости. Можно использовать палитру компонентов
 Servers, которая есть в Delphi, начиная с 5-й версии. Выбор между
-готовыми компонентами и работой \"напрямую\" с Word.Application зависит
+готовыми компонентами и работой "напрямую" с Word.Application зависит
 от профессионализма, сложности поставленных задач, отпущенного времени и
 главное - от вкусов и стиля программирования. Это индивидуально для
 каждого, кто занимается разработкой сложных и не очень сложных
@@ -221,13 +221,13 @@ ActiveDocument.Shapes.AddPolyline (massiv)
 AddOLEObject коллекции Shapes. Например, чтобы получить доступ к объекту
 в Visual Basic, используется следующий оператор:
 
-Set obb = ActiveDocument.Shapes.AddOLEObject(\"MSGraph.Chart.8\")
+Set obb = ActiveDocument.Shapes.AddOLEObject("MSGraph.Chart.8")
 
 В Delphi он выглядит следующим образом:
 
 Var Obb:variant;
 
-Obb:=W.ActiveDocument.Shapes.AddOLEObject(\"MSGraph.Chart.8\");
+Obb:=W.ActiveDocument.Shapes.AddOLEObject("MSGraph.Chart.8");
 
 Где W - Word.Application.
 
@@ -252,7 +252,7 @@ Obb:=W.ActiveDocument.Shapes.AddOLEObject(\"MSGraph.Chart.8\");
        Messagebox(0,'Документ создан.','',0);
        CreateTextBox(1,1,100,50,BoxName_);
        Messagebox(0,'Создали форму - надпись.','',0);
-       Messagebox(0,pchar(GetNameIndexShape(1)) ,
+       Messagebox(0,pchar(GetNameIndexShape(1)),
         'Считали имя формы',0);
        BoxName_:=SetNewNameShape(BoxName_,'Новое имя');
        Messagebox(0,pchar(GetNameIndexShape (1)),

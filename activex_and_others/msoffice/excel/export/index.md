@@ -60,7 +60,7 @@ xlCenter = -4108;
 
 Теперь до любой ячейки мы можем добраться следующим образом:
 
-Excel.ActiveWorkBook.WorkSheets\[1\].Cells\[1, 2\]:=\'Текст ячейки
+Excel.ActiveWorkBook.WorkSheets[1].Cells[1, 2]:=\'Текст ячейки
 (1,2)\';
 
 Объект Range, выделение диапазона, объединение ячеек, выравнивание.
@@ -70,11 +70,11 @@ Excel.ActiveWorkBook.WorkSheets\[1\].Cells\[1, 2\]:=\'Текст ячейки
 
 Выделяем:
 
-Excel.ActiveWorkBook.WorkSheets\[1\].Range\[\'A1:G1\'\].Select;
+Excel.ActiveWorkBook.WorkSheets[1].Range[\'A1:G1\'].Select;
 
 Объединяем:
 
-Excel.ActiveWorkBook.WorkSheets\[1\].Range\[\'A1:G1\'\].Merge;
+Excel.ActiveWorkBook.WorkSheets[1].Range[\'A1:G1\'].Merge;
 
 И выравниваем:
 
@@ -159,7 +159,7 @@ Excel.ActiveSheet.PageSetup.Orientation:= 2;
 количеством строк размещается на нескольких страницах в таких случаях
 очень удобны сквозные строки, они печатаются на каждой странице отчета:
 
-Excel.ActiveSheet.PageSetup.PrintTitleRows:=\'\$2:\$3\';
+Excel.ActiveSheet.PageSetup.PrintTitleRows:=\'$2:$3\';
 
 Здесь мы указываем вторую и третью строки для печати на каждой странице.
 
@@ -250,6 +250,6 @@ Selection:
       Excel.ActiveSheet.PageSetup.RightHeader:='Правый верхний колонтитул';
 
 Для изменения размера шрифта добавьте к колонтитулу управляющий символ
-\"&\" и размер шрифта:
+"&" и размер шрифта:
 
       Excel.ActiveSheet.PageSetup.LeftFooter:='&7Левый нижний колонтитул';

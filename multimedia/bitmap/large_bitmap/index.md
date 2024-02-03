@@ -24,9 +24,9 @@ Date: 01.01.2007
      
      { This code will fill a bitmap by stretching an image coming from a big bitmap on disk. 
      
-      FileName.- Name of the uncompressed bitmap to read 
-      DestBitmap.- Target bitmap  where the bitmap on disk will be resampled. 
-      BufferSize.- The size of a memory buffer used for reading scanlines from the physical bitmap on disk. 
+      FileName - Name of the uncompressed bitmap to read 
+      DestBitmap - Target bitmap  where the bitmap on disk will be resampled. 
+      BufferSize - The size of a memory buffer used for reading scanlines from the physical bitmap on disk. 
         This value will decide how many scanlines can be read from disk at the same time, with always a 
         minimum value of 2 scanlines. 
      

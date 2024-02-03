@@ -11,7 +11,7 @@ Error: Interface not supported
 01.01.2007
 :::
 
-I receive an \"Interface is not supported\" error when trying to use an
+I receive an "Interface is not supported" error when trying to use an
 interface.
 
 Verify that STDVCL32.DLL and your type library are registered.  If

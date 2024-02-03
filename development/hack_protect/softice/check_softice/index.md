@@ -18,7 +18,7 @@ Date: 01.01.2007
       hFile: Thandle;
     begin
       result := false;
-      hFile := CreateFileA('\.SICE', GENERIC_READ or GENERIC_WRITE,
+      hFile := CreateFileA('.SICE', GENERIC_READ or GENERIC_WRITE,
         FILE_SHARE_READ or FILE_SHARE_WRITE, nil, OPEN_EXISTING,
         FILE_ATTRIBUTE_NORMAL, 0);
       if (hFile <> INVALID_HANDLE_VALUE) then
@@ -34,7 +34,7 @@ Date: 01.01.2007
       hFile: Thandle;
     begin
       result := false;
-      hFile := CreateFileA('\.NTICE', GENERIC_READ or GENERIC_WRITE,
+      hFile := CreateFileA('.NTICE', GENERIC_READ or GENERIC_WRITE,
         FILE_SHARE_READ or FILE_SHARE_WRITE, nil, OPEN_EXISTING,
         FILE_ATTRIBUTE_NORMAL, 0);
       if (hFile <> INVALID_HANDLE_VALUE) then

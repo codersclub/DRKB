@@ -135,7 +135,7 @@ MyConnection.SetTraceCallbackEvent(GetTracelnfo, 8);
 
 MyConnection.Open;
 
-{\...}
+{...}
 
 MyConnection.Close;
 

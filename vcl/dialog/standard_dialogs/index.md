@@ -44,7 +44,7 @@ with OpenDialog1 do
 
 Options := Options +
 
-  \[ofAllowMultiSelect, ofFileMustExist\];
+  [ofAllowMultiSelect, ofFileMustExist];
 
 мы позволим пользователю выбирать несколько файлов, а так же заставим
 генерироваться сообщение об ошибке, если пользователь выберет
@@ -70,7 +70,7 @@ SaveDialog1.InitialDir :=
 
 OpenDialog1.Filter :=
 
-\'Text files (\*.txt)\|\*.txt\|All files (\*.\*)\|\*.\*\';
+\'Text files (*.txt)\|*.txt\|All files (*.*)\|*.*\';
 
 Свойство FileName. Когда пользователь нажмёт на диалоге кнопку OK, то
 это свойство будет содержать полный путь и имя выбранного файла.
@@ -82,7 +82,7 @@ OpenDialog1.Filter :=
 TReplaceDialog, все остальные диалоги отображаются модально.
 
 Все стандартные диалоговые окошки позволяют определить нажал ли
-пользователь кнопку \"Отмена\" (Cancel) (или нажал ESC). Если метод
+пользователь кнопку "Отмена" (Cancel) (или нажал ESC). Если метод
 Execute вернул True значит пользователь нажал OK или сделал двойной
 щелчёк по файлу либо нажал Enter на клавиатуре, иначе, если  была нажата
 кнопка Cancel, клавиша Esc или Alt-F4, будет возвращено значение False.
@@ -92,7 +92,7 @@ if OpenDialog1.Execute then
 ShowMessage(OpenDialog1.FileName);
 
 Этот код показывает диалог File Open и, если пользователь нажал
-\"Открыть\" (Open), то будет показано имя выбранного файла.
+"Открыть" (Open), то будет показано имя выбранного файла.
 
 Использование только кода
 
@@ -133,7 +133,7 @@ ShowMessage(OpenDialog1.FileName);
 
   Код
 
-1\. Поместите в событие формы FormCreate следующий код:
+1. Поместите в событие формы FormCreate следующий код:
 
     procedure TForm1.FormCreate(Sender: TObject);
     begin
@@ -152,7 +152,7 @@ ShowMessage(OpenDialog1.FileName);
 Этот код устанавливает некоторые свойства диалога Open как было описано
 в начале статьи.
 
-2\. Добавьте следующий код в событие Onclick для кнопок btnOpen и
+2. Добавьте следующий код в событие Onclick для кнопок btnOpen и
 btnSave:
 
     procedure TForm1.btnOpenClick(Sender: TObject);

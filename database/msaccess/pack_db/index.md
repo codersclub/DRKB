@@ -61,32 +61,32 @@ Important Notes:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -----------------------------------------------------------
-  1.   1\.        Include the JRO\_TLB unit in your uses clause.
+  1.        Include the JRO\_TLB unit in your uses clause.
   ---- -----------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------
-  2.   2\.        Nobody should use or open the database during compacting.
+  2.        Nobody should use or open the database during compacting.
   ---- ----------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ---------------------------------------------------------------------------
-  3.   3\.        If the compiler gives you an error on the JRO\_TLB unit follow
+  3.        If the compiler gives you an error on the JRO\_TLB unit follow
        these steps:
   ---- ---------------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
   --- ------------------------------------------------------------
-  ·   Using the Delphi IDE go to Project -- Import Type Library.
+  ·   Using the Delphi IDE go to Project - Import Type Library.
   --- ------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
   --- ------------------------------------------------------------------------------------
-  ·   Scroll down until you reach \"Microsoft Jet and Replication Objects 2.1 Library\".
+  ·   Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
   --- ------------------------------------------------------------------------------------
 :::
 
@@ -112,8 +112,8 @@ Answer:
 Usually the size of MS Access keep growing fast by time because of it\'s
 internal caching and temporary buffering, which in over whole effect the
 performance, space required for storing, and backing-up (if needed). 
-The solution is to compact it from Access menus (Tools -- Database
-Utilities -- Compact and Repair Database) or to do that from inside your
+The solution is to compact it from Access menus (Tools - Database
+Utilities - Compact and Repair Database) or to do that from inside your
 Delphi application.
 
     function CompactAndRepair(sOldMDB: string; sNewMDB: string): Boolean;
@@ -147,32 +147,31 @@ Important Notes:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -----------------------------------------------------------
-  1.   1\.        Include the JRO\_TLB unit in your uses clause.
+  1.        Include the JRO\_TLB unit in your uses clause.
   ---- -----------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------
-  2.   2\.        Nobody should use or open the database during compacting.
+  2.        Nobody should use or open the database during compacting.
   ---- ----------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ---------------------------------------------------------------------------
-  3.   3\.        If the compiler gives you an error on the JRO\_TLB unit follow
-       these steps:
+  3.        If the compiler gives you an error on the JRO\_TLB unit follow these steps:
   ---- ---------------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
   --- ------------------------------------------------------------
-  ·   Using the Delphi IDE go to Project -- Import Type Library.
+  ·   Using the Delphi IDE go to Project - Import Type Library.
   --- ------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 72px;"}
   --- ------------------------------------------------------------------------------------
-  ·   Scroll down until you reach \"Microsoft Jet and Replication Objects 2.1 Library\".
+  ·   Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
   --- ------------------------------------------------------------------------------------
 :::
 

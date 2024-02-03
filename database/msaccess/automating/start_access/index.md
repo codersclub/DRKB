@@ -41,4 +41,4 @@ different, because there is no TAccessApplication component. (This is
 because Microsoft declared the Application object as hidden in the type
 library.) However you can create an Application object in the same way
 as it was done in D4 (see below), and then connect the Access components
-to it. See Access- common problems for an example.
+to it. See Access - common problems for an example.

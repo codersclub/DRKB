@@ -101,10 +101,10 @@ Administrator.)
 :::
 
  
-
-Figure 2
-
-![clip0134](clip0134.png){width="1024" height="768"}
+:::{.center}
+Figure 2  
+![clip0134](clip0134.png)
+:::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ---------------------------------------------------------------------------------------------------------------------------
@@ -113,11 +113,10 @@ Figure 2
 :::
 
  
-
-Figure 3
-
-![clip0136](clip0136.png){width="347" height="435"}
-
+:::{.center}
+Figure 3  
+![clip0136](clip0136.png)
+:::
  
 
 5.   The following information must be provided to create an ODBC data
@@ -251,11 +250,10 @@ to use Titan SQL Anywhere with ASA 7.0, follow these steps:
  
 
  
-
-Figure 4
-
-![clip0137](clip0137.png){width="1024" height="768"}
-
+:::{.center}
+Figure 4  
+![clip0137](clip0137.png)
+:::
  
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
@@ -364,7 +362,7 @@ important, so following these steps carefully.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Click the 'Add' button and select the package 'NdbPack\*.dpl' from the directory where you downloaded NativeDB\\NativeDB\\Delphi\*, where '\*' should be replaced by the version of Delphi being used
+  2.   Click the 'Add' button and select the package 'NdbPack*.dpl' from the directory where you downloaded NativeDB\\NativeDB\\Delphi*, where '*' should be replaced by the version of Delphi being used
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -376,7 +374,7 @@ important, so following these steps carefully.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------
-  4.   Click the 'Add' button again and this time select the package 'NdbSa\*.dpl where '\*' should be replaced by the version of Delphi being used
+  4.   Click the 'Add' button again and this time select the package 'NdbSa*.dpl where '*' should be replaced by the version of Delphi being used
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -400,7 +398,7 @@ important, so following these steps carefully.
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  8.   In the 'Library Path' edit box, add the path to the folder named Delphi\* where '\*' is the version of Delphi being used.  An example path would be 'C:\\NativeDB\\Delphi3'
+  8.   In the 'Library Path' edit box, add the path to the folder named Delphi* where '*' is the version of Delphi being used.  An example path would be 'C:\\NativeDB\\Delphi3'
   ---- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -465,11 +463,10 @@ extra programming.  The 'DBGrid' is an example of a component that
 accesses the database through the 'DataSource' property.
 
  
-
-Figure 5
-
-![clip0138](clip0138.png){width="1024" height="768"}
-
+:::{.center}
+Figure 5  
+![clip0138](clip0138.png)
+:::
  
 
 When binding components to each other certain errors can occur.  For
@@ -687,11 +684,10 @@ When all of these are set the 'Connected' property can be set to 'True'
 and the database engine will start.
 
  
-
-Figure 6
-
-![clip0139](clip0139.png){width="421" height="489"}
-
+:::{.center}
+Figure 6  
+![clip0139](clip0139.png)
+:::
  
 
 Once the 'TAsaSession' component is set up, you are ready to work with
@@ -841,11 +837,10 @@ displayed and added to the DelphiDemoDb database when clicking on the
 button 'Load Blob into table'.
 
  
-
-Figure 7
-
-![clip0140](clip0140.png){width="761" height="357"}
-
+:::{.center}
+Figure 7  
+![clip0140](clip0140.png)
+:::
  
 
 Unlike inserting, saving BLOBs of any size to a file creates no problems
@@ -981,11 +976,10 @@ displayed using the BDE because it is larger then 1.4 megabytes in size.
  
 
  
-
-Figure 8
-
-![clip0142](clip0142.png){width="700" height="432"}
-
+:::{.center}
+Figure 8  
+![clip0142](clip0142.png)
+:::
  
 
 Saving BLOBs using ODBCExpress is similar to saving them using BDE.  The
@@ -1180,13 +1174,13 @@ Some things to note are the following:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1.   It is not obvious which table is being accessed in this example.  The 'SQL' property for the 'TAsaDataset' component is set to 'Select \* from blob' meaning that the table 'blob' is being accessed. Recall that table 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and default 'autoincrement'.  The column 'imagefld' has the data type 'long binary'
+  1.   It is not obvious which table is being accessed in this example.  The 'SQL' property for the 'TAsaDataset' component is set to 'Select * from blob' meaning that the table 'blob' is being accessed. Recall that table 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and default 'autoincrement'.  The column 'imagefld' has the data type 'long binary'
   ---- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2.   Unlike BDE, ODBCExpress, and Titan, NativeDB deals with the default 'autoincrement' automatically.  It does this by setting AsaDataset.Fields\[0\].Required to false initially.  Please refer to Appendix C: Primary Key Issues, for more information
+  2.   Unlike BDE, ODBCExpress, and Titan, NativeDB deals with the default 'autoincrement' automatically.  It does this by setting AsaDataset.Fields[0].Required to false initially.  Please refer to Appendix C: Primary Key Issues, for more information
   ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -1282,11 +1276,10 @@ having its 'Active' property set to true.
  
 
  
-
-Figure 9
-
+:::{.center}
+Figure 9  
 ![clip0143](clip0143.png){width="1024" height="768"}
-
+:::
  
 
 Setting the 'Active' property to 'True' causes an error when exiting
@@ -1392,11 +1385,10 @@ Figure 10 depicts the 'IndexFieldName' property being set to the column
 'id'.  The 'DBNavigator' component is circled.
 
  
-
-Figure 10
-
-![clip0144](clip0144.png){width="1024" height="768"}
-
+:::{.center}
+Figure 10  
+![clip0144](clip0144.png)
+:::
  
 
 A problem may also arise when using an ASA table that has a column with
@@ -1452,7 +1444,7 @@ error 'List index out of bounds (0)' will occur because the form shows
 no columns in 'DBGrid' when the 'Active' property is false.  To get
 around this error, the line of code,  
 
-                              Table1.Fields\[0\].Required := False;
+                              Table1.Fields[0].Required := False;
 
 should be placed in another event, such as a button click event
 discussed above.
@@ -1522,7 +1514,7 @@ When the 'Order By' clause is included and the 'Display Table' button is
 clicked, the entire table is displayed in a specific order.  An example
 of a SQL statement with an 'Order By' clause is:
 
-SELECT \* FROM Grid ORDER BY id
+SELECT * FROM Grid ORDER BY id
 
 This statement selects all rows and columns in the table 'Grid' and
 orders the rows according to the value in the 'id' column. 
@@ -1534,7 +1526,7 @@ clicked, a select group of rows and columns are displayed in a certain
 order.  An example of an SQL statement where both clauses are included
 is:
 
-SELECT \* FROM Grid WHERE name = 'your name' ORDER BY id
+SELECT * FROM Grid WHERE name = 'your name' ORDER BY id
 
 This statement selects all the columns in the table Grid where the value
 in the 'name' column is 'your name' and displays them in order of the
@@ -1549,11 +1541,10 @@ in the SQL statement.  To refresh the table after it has been modified,
 the SQL statement just has to be rerun. 
 
  
-
-Figure 11
-
-![clip0145](clip0145.png){width="1024" height="768"}
-
+:::{.center}
+Figure 11  
+![clip0145](clip0145.png)
+:::
  
 
 The 'TQuery' component, when used with a 'DBGrid' component can do much
@@ -1565,7 +1556,7 @@ statement that involves more than one table is:
 
  
 
-SELECT \* FROM Grid, AnotherGrid WHERE Grid.Name = 'your name'
+    SELECT * FROM Grid, AnotherGrid WHERE Grid.Name = 'your name'
 
 Assume that 'Name' is a column in the table 'Grid'.  This statement will
 take all the columns in both Grid and AnotherGrid, and display only the
@@ -1680,7 +1671,7 @@ through result sets containing many rows that are displayed in
 data-aware controls.  An attempt to scroll through the result set will
 often result in the error 'Fetch type out of range'.  Attempts to
 insert, delete or edit rows in the result set produce the same error. 
-If the Forward- Only cursor is chosen, it will create the same error
+If the Forward-Only cursor is chosen, it will create the same error
 when attempting to scroll backward through the result set.  Again,
 inserting, deleting, and editing rows in the result set generate this
 error.  Therefore, when using a 'OEDataSet' component where bookmarks
@@ -1787,7 +1778,7 @@ the behavior of ASA 6.0.3 the following can be done:
   ---- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
-dbisql -c \"uid=dba;pwd=sql;dsn=DelphiDemo\"
+dbisql -c "uid=dba;pwd=sql;dsn=DelphiDemo"
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------------------------------------------------
@@ -1982,10 +1973,10 @@ To install ODBCExpress:
 :::
 
  
-
-Figure 12
-
-![clip0146](clip0146.png){width="1024" height="768"}
+:::{.center}
+Figure 12  
+![clip0146](clip0146.png)
+:::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- -----------------------------------
@@ -2045,11 +2036,10 @@ simply select 'Help' from the tool bar and you can search for the
 information you are looking for.
 
  
-
-Figure 13
-
-![clip0147](clip0147.png){width="1019" height="107"}
-
+:::{.center}
+Figure 13  
+![clip0147](clip0147.png)
+:::
  
 
 These instructions can also be found in the Readme file that is included
@@ -2127,11 +2117,10 @@ The simplest way to modify the database is to do the following:
  
 
  
-
-Figure 14
-
-![clip0148](clip0148.png){width="1024" height="768"}
-
+:::{.center}
+Figure 14  
+![clip0148](clip0148.png)
+:::
  
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
@@ -2142,7 +2131,7 @@ Figure 14
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 48px;"}
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT \* FROM \"DBA\".\"department\"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
+  9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT * FROM "DBA"."department"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
   ---- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
@@ -2154,11 +2143,10 @@ is selected on the 'department' table.
  
 
  
-
-Figure 15
-
-![clip0149](clip0149.png){width="925" height="670"}
-
+:::{.center}
+Figure 15  
+![clip0149](clip0149.png)
+:::
  
 
 To insert a new row, use the following command and then click the play
@@ -2228,7 +2216,7 @@ For Example 3 they are:
 
        OEDataSet1.Last;
 
-nextnum := OEDataSet1.FieldValues\['keyfld'\] + 1;
+nextnum := OEDataSet1.FieldValues['keyfld'] + 1;
 
 These lines of code are jumping to the last row in the table, and
 assigning nextnum the value that is in the 'keyfld' column currently
@@ -2291,15 +2279,15 @@ The method that is recommended for providing a value for the column
 the ASA end where the default is autoincrement.  The line of code that
 can accomplish this for BDE is:
 
-       Table1.Fields\[0\].Required := False;
+       Table1.Fields[0].Required := False;
 
 For ODBCExpress the line of code would be:
 
-       OEDataSet1.Fields\[0\].Required := False;
+       OEDataSet1.Fields[0].Required := False;
 
 For Titan SQLAnywhere Developer the line of code would be:
 
-       tsTable1.Fields\[0\].Required := False;
+       tsTable1.Fields[0].Required := False;
 
 It should be noted that Delphi represents columns in a table through
 numbers starting at 0.  In the lines of code above, it is assumed that

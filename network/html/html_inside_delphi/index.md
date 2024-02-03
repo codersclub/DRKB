@@ -29,12 +29,12 @@ WEB страничка внутри Delphi приложения
 внимание, что, когда Вы добавляете тэг картинки внутрь htm страницы, то
 в исходнике страницы будет присутствовать следудующая строка:
 
-\<img src=\"../graphics/adp.gif\" \...\>
+\<img src="../graphics/adp.gif" ...\>
 
 Нам необходимо подправить тэг IMG так, чтобы атрибут SRC равнялся имени,
 которое мы указали в ресурсах:
 
-\<img src=\"ABOUTDP\" \...\>
+\<img src="ABOUTDP" ...\>
 
 У меня HTML код выглядит следующим образом:
 
@@ -43,7 +43,7 @@ exe\</TITLE\>\</HEAD\>\<BODY\>
 
 This is a HTML Delphi resource test:\<br\>
 
-\<img src=\"ABOUTDP\" width=106 height=58 border=0 alt=\"\"\>
+\<img src="ABOUTDP" width=106 height=58 border=0 alt=""\>
 
 \</BODY\>\</HTML\>
 
@@ -52,18 +52,18 @@ This is a HTML Delphi resource test:\<br\>
 Запомните, что для того, чтобы создать новый скрипт-файл ресурсов,
 необходимо:
 
-1\. Создать новый текстовый файл в директории Вашего проекта.
+1. Создать новый текстовый файл в директории Вашего проекта.
 
-2\. Переименовать его в AHTMLDelphi.rc.
+2. Переименовать его в AHTMLDelphi.rc.
 
-3\. Добавить следующие две строки текста в файл AHTMLDelphi.rc.
+3. Добавить следующие две строки текста в файл AHTMLDelphi.rc.
 
-DELPHIINDEX HTML \"c:\\Delphi\\projects\\aboutindex.htm\"
+DELPHIINDEX HTML "c:\\Delphi\\projects\\aboutindex.htm"
 
-ABOUTDP GIF \"c:\\library\\graphics\\adp.gif\"
+ABOUTDP GIF "c:\\library\\graphics\\adp.gif"
 
-Обратите внимание, что \"HTML\" тип ресурса RT\_HTML, определён как
-\"23\". Это значение является дефолтовым для протокола RES.
+Обратите внимание, что "HTML" тип ресурса RT\_HTML, определён как
+"23". Это значение является дефолтовым для протокола RES.
 
 Таким образом мы подготовили одну HTML страницу и одну картинку GIF,
 которые будут включены в исполняемый EXE модуль.
@@ -78,7 +78,7 @@ BRCC32 AHTMLDelphi.RC
 unit Вашего проекта. Следующая строка заставляет компилятор включить в
 проект файл RES:
 
-{\$R AHTMLDelphi.RES}
+{$R AHTMLDelphi.RES}
 
 Отображение внутри Web браузера
 

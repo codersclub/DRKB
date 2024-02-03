@@ -22,7 +22,7 @@ connect using the BDE with ODBC.
 
 Access 95 or 97:
 
-You may get the message \"BDE error 13059\" and \"General SQL error\".
+You may get the message "BDE error 13059" and "General SQL error".
 If you are trying to connect to Access 95 or 97 databases using the
 BDE\'s native MSACCESS driver, then you need to have DAO 3.0 installed
 for Access 95 or DAO 3.5 for Access 97 (DAO = Data Access Objects for

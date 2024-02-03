@@ -38,37 +38,37 @@ WEB-сайт: http://daddy.mirgames.ru
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ---------------------------------------
-  ·   isUp - по умолчанию \"стрелка вверх\"
+  ·   isUp - по умолчанию "стрелка вверх"
   --- ---------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ----------------------------------------
-  ·   isDown - по умолчанию \"стрелка вниз\"
+  ·   isDown - по умолчанию "стрелка вниз"
   --- ----------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- -------------------------------------------
-  ·   isRight - по умолчанию \"стрелка вправо\"
+  ·   isRight - по умолчанию "стрелка вправо"
   --- -------------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- -----------------------------------------
-  ·   isLeft - по умолчанию \"стрелка влево\"
+  ·   isLeft - по умолчанию "стрелка влево"
   --- -----------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ------------------------------------
-  ·   IsButton1 - по умолчанию \"Space\"
+  ·   IsButton1 - по умолчанию "Space"
   --- ------------------------------------
 :::
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- ------------------------------------
-  ·   IsButton2 - по умолчанию \"Enter\"
+  ·   IsButton2 - по умолчанию "Enter"
   --- ------------------------------------
 :::
 
@@ -90,12 +90,12 @@ WEB-сайт: http://daddy.mirgames.ru
     //действие
     end
 
-Чтобы определить \"тикер\": DXInput.Keyboard.KeyAssigns\[\<тикер\>,X\]:=
-\<кнопка\> ,где:
+Чтобы определить "тикер": DXInput.Keyboard.KeyAssigns[\<тикер\>,X]:=
+\<кнопка\>,где:
 
 ::: {style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 7px 0px 7px 24px;"}
   --- -----------------------------------------------------------------------------------------
-  ·   X - значение от 0 до 2 (то есть на каждый \"тикер\" можно присвоить до трех \<кнопок\>)
+  ·   X - значение от 0 до 2 (то есть на каждый "тикер" можно присвоить до трех \<кнопок\>)
   --- -----------------------------------------------------------------------------------------
 :::
 
@@ -107,7 +107,7 @@ WEB-сайт: http://daddy.mirgames.ru
 
 Примечание: буквенные клавиши указываются в верхнем регистре, т.е.
 
-DXInput.Keyboard.KeyAssigns\[isButton10,X\]:=ord(\'q\')
+DXInput.Keyboard.KeyAssigns[isButton10,X]:=ord(\'q\')
 
 не будет реагировать на нажатие клавиши \'q\' .
 
@@ -117,8 +117,8 @@ DXInput.Keyboard.KeyAssigns\[isButton10,X\]:=ord(\'q\')
     If (ssAlt in Shift) then ...
     If (ssShift in Shift) then ...
 
-Небольшой примерчик. Зарекрепим за тикером isUp - кнопки \"E\",\"I\" и
-\"стрелка вверх\":
+Небольшой примерчик. Зарекрепим за тикером isUp - кнопки "E","I" и
+"стрелка вверх":
 
      
     procedure TForm1.DXTimerTimer(Sender: TObject; LagCount: Integer);
@@ -146,7 +146,7 @@ DXInput.Keyboard.KeyAssigns\[isButton10,X\]:=ord(\'q\')
        DXInput.Keyboard.KeyAssigns[isUp,2]:=ord('I');
     end;
 
-2\. Мышь
+2. Мышь
 
 DXinput.Mouse.X - положение курсора по горизонтали
 DXinput.Mouse.Y - положение курсора по вертикали
@@ -202,7 +202,7 @@ DXinput.Mouse.Z - положение курсора по третьей оси
        LeftB:=false; RightB:=false;
     end;
 
-3\. Джойстик
+3. Джойстик
 
 Настроим джойстик:
 DXinput.Joystick.RangeX = 0 - 1000, устанавливает диапазон изменения

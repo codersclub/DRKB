@@ -28,23 +28,23 @@ Product, Month, Sales, и вам необходимо отображать да�
 
 Store         Product    Month   Sales
 
-   \#1            Toys       1      100
+   #1            Toys       1      100
 
-   \#2            Toys       1       68
+   #2            Toys       1       68
 
-   \#1            Toys       2      150
+   #1            Toys       2      150
 
-   \#1            Books      1       75
+   #1            Books      1       75
 
-   \...
+   ...
 
 Желаемый отчет должен выглядеть похожим на этот:
 
-     Product         January      February    March  \.....
+     Product         January      February    March  .....
 
       Toys             168          150
 
-      Books             75         \.....
+      Books             75         .....
 
 -------------------------
 
@@ -52,9 +52,9 @@ Store         Product    Month   Sales
 
 Установите pivot-таблицу с именем tblPivot и 12 строками:
 
-  pvtMonth   pvtJan  pvtFeb   pvtMar  pvtApr   \....
+  pvtMonth   pvtJan  pvtFeb   pvtMar  pvtApr   ....
 
-      1        1       0        0       0      \....
+      1        1       0        0       0      ....
 
       2        0       1        0       0
 
@@ -62,7 +62,7 @@ Store         Product    Month   Sales
 
       4        0       0        0       1
 
-    \.....
+    .....
 
 Теперь запрос, выполненный в виде:
 

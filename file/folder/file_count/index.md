@@ -22,7 +22,7 @@ Cколько файлов есть в определенной папке?
     var fs:TSearchRec;
     begin
       Result:=0;
-      if FindFirst(Dir+'\*.htm',faAnyFile-faDirectory-faVolumeID, fs)=0 then
+      if FindFirst(Dir+'*.htm',faAnyFile-faDirectory-faVolumeID, fs)=0 then
         repeat
           inc(Result);
         until FindNext(fs)<>0;

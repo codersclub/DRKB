@@ -29,7 +29,7 @@ Pdoxwin код:
     endvar
 
     d.open( "MYALIAS" )
-    s = "select * from mytable where somefield=\"" + entryField.value + "\""
+    s = "select * from mytable where somefield="" + entryField.value + """
     q.readFromString( s )
     q.executeSQL( d )
 

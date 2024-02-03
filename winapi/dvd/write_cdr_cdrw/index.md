@@ -15,7 +15,7 @@ Date: 01.01.2007
 крайне скудна по этому поводу. Вот список линков по которым удалось хоть
 что-то найти:
 
-1\) на torry есть компонент
+1) на torry есть компонент
 
 [https://www.torry.net/vcl/filedrv/cd/xpburn.zip](https://www.torry.net/vcl/filedrv/cd/xpburn.zip%20)
 (только для WindowsXP)

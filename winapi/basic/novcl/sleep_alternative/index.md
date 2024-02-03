@@ -27,7 +27,7 @@ Date: 01.01.2007
         t := GetTickCount;
         if MsgWaitForMultipleObjects(0, nil^, False, ATimeOut, QS_ALLINPUT) = WAIT_TIMEOUT then
           Exit;
-        Application.ProcessMessages;  // Пришли новые сообщения Windwos , обрабатываем их..
+        Application.ProcessMessages;  // Пришли новые сообщения Windwos, обрабатываем их..
         dec(ATimeout, GetTickCount - t);
       end;
     end;

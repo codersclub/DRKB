@@ -423,4 +423,4 @@ Date: 01.01.2007
 
 Взято с сайта Анатолия Подгорецкого  <https://podgoretsky.com>
 
-по материалам fido7.ru.delphi.\*
+по материалам fido7.ru.delphi.*

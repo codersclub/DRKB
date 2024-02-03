@@ -64,6 +64,6 @@ are
 BeginUpdate and EndUpdate (just allow to reduce a flickering)
 
 So if you want to exchange items in any ListView, just call this
-procedure\...
+procedure...
 
 Взято с сайта: <https://www.swissdelphicenter.ch>

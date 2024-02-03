@@ -324,7 +324,7 @@ Date: 01.01.2007
      
       Win32Check(ReadProcessMemory(hProcess,
                                     Source,
-                                    Dest ,
+                                    Dest,
                                     Count,
                                     Result));
     end;

@@ -19,12 +19,12 @@ Date: 01.01.2007
 является практически стандартом русского языка в Linux. Для того, чтобы
 Kylix мог понимать русские шрифты, нужно сделать следующее:
 
-1\. Открыть файл /etc/sysconfig/i18n и добавить в него следующие
+1. Открыть файл /etc/sysconfig/i18n и добавить в него следующие
 недостающие строки:
 
 LANG=ru
 
-LANGUAGE=ru\_RU.KOI8-R:ru \#опционально
+LANGUAGE=ru\_RU.KOI8-R:ru #опционально
 
 LC\_CTYPE=ru\_RU.KOI8-R
 
@@ -54,9 +54,9 @@ SYSFONTACM=koi8-r
 И последнее, что надо сделать - настрокить переключение клавиатуры в
 файле /etc/X11/XF86Config. Там нужно отредактировать следующие строки:
 
-Option \"XkbLayout\" \"ru(winkeys)\"
+Option "XkbLayout" "ru(winkeys)"
 
-Option \"XkbOptions\" \"grp:ctrl\_shift\_toggle\"
+Option "XkbOptions" "grp:ctrl\_shift\_toggle"
 
 Последняя строка показывает как будет переключатся раскладка. В данном
 случае будет использоваться сочетание клавишь Ctrl+Shift.

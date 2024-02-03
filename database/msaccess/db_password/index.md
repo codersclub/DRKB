@@ -11,13 +11,13 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-I know there that there are many utilities out there costing \$\$ for
+I know there that there are many utilities out there costing $$ for
 removing the password of an access database. Here\'s how to implement it
 in Delphi.Please note that this method is not meant for a database with
 user-level security and work group information file. The idea is based
 on the file format of an access db.
 
-The password is stored from location \$42 and encrypted using simple
+The password is stored from location $42 and encrypted using simple
 xoring. The following function does decryption.
 
     function GetPassword(filename: string): string;

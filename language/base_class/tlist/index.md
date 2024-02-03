@@ -21,7 +21,7 @@ TList
 
 Приведем доступные ему методы и свойства класса:
 
-property Items\[Index: Integer\]: Pointer; --- Возвращает указатель на
+property Items[Index: Integer]: Pointer; --- Возвращает указатель на
 содержимое элемента списка с индексом Index. Это свойство является
 векторным свойством, принимаемым по умолчанию, и его имя можно при
 записи опускать. ---
@@ -77,7 +77,7 @@ property List: pPointerList;
 
 pPointerList = \^TPointerList;
 
-TPointerList = array\[0..65520 div SizeOf(Pointer)\] of Pointer;
+TPointerList = array[0..65520 div SizeOf(Pointer)] of Pointer;
 
 возвращает указатель непосредственно на список указателен ((ко)
 означает, что свойство доступно только для чтения).

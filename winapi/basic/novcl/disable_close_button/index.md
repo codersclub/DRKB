@@ -14,7 +14,7 @@ Date: 01.01.2007
 
      
     EnableMenuItem(GetSystemMenu(FindWindow(Nil, Pchar('Название Окна')),False)
-      ,SC_CLOSE,MF_BYCOMMAND or MF_GRAYED);
+     ,SC_CLOSE,MF_BYCOMMAND or MF_GRAYED);
 
 Автор: Radmin
 
