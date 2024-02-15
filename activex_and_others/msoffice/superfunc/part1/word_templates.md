@@ -296,7 +296,7 @@ Word.Application.
 каким образом это сделать.
 
 По всем вопросам вы можете обратиться к
-автору по адресу www.kornjakov.ru или \_kvn\@mail.ru.
+автору по адресу www.kornjakov.ru или \_kvn@mail.ru.
 
 Василий КОРНЯКОВ,  
 www.kornjakov.ru,  

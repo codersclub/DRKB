@@ -37,7 +37,7 @@ HINSTANCE
     return 0; 
     } 
 
-rundll32 test.dll,\_Test\@16 this is a command line
+rundll32 test.dll,\_Test@16 this is a command line
 
 выдаст message box со строкой "this is a command line".
 
@@ -98,7 +98,7 @@ UNICODE-веpсию. Под
 
 Alexey A Popoff
 
-pvax\@glas.apc.org, posp\@ccas.ru
+pvax@glas.apc.org, posp@ccas.ru
 
 https://www.ccas.ru/\~posp/popov/pvax.html
 

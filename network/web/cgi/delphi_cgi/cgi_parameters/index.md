@@ -56,7 +56,7 @@ Date: 01.01.2007
 
  
 
-\@ECHO OFF
+@ECHO OFF
 
 ECHO content-type: text/html
 

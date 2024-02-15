@@ -213,9 +213,9 @@ MS-DOS. Фактически сигналы основаны на програм
 сигналов SIGTERM и SIGHUP. Связываем обработчик TranslateSig с этими
 сигналами:
 
-signal( SIGTERM, \@TranslateSig );
+signal( SIGTERM, @TranslateSig );
 
-signal( SIGHUP, \@TranslateSig );
+signal( SIGHUP, @TranslateSig );
 
 Теперь следует задать цикл обработки сигналов. Можно просто проверять
 значение SigNum в бесконечном цикле, однако есть более изящный и менее

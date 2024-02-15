@@ -452,11 +452,11 @@ Oracle JDeveloper [Oracle Press, 1998], JBuilder Essentials
 Informant Magazine, and an internationally respected trainer of Delphi
 and Java. For more information, visit
 http://www.delphizine.com/include/Click\_Redir.asp?Url=http://www.jensendatasystems.com/,
-or e-mail Cary at mailto:cjensen\@compuserve.com.
+or e-mail Cary at mailto:cjensen@compuserve.com.
 
 By Cary Jensen, Ph.D.
 
-Перевел Мотов Олег mailto:olegm\@tebuk.parma.ru http://olegmotov.h1.ru
+Перевел Мотов Олег mailto:olegm@tebuk.parma.ru http://olegmotov.h1.ru
 
 -----------------------------
 
@@ -1044,7 +1044,7 @@ Oracle JDeveloper [Oracle Press, 1998], JBuilder Essentials
 [Osborne/McGraw-Hill, 1996]. He is a Contributing Editor of Delphi
 Informant Magazine, and an internationally respected trainer of Delphi
 and Java. For more information, visit http://www.jensendatasystems.com,
-or e-mail Cary at mailto:cjensen\@compuserve.com
+or e-mail Cary at mailto:cjensen@compuserve.com
 
-Перевел Мотов Олег mailto:olegm\@tebuk.parma.ru http://olegmotov.h1.ru
+Перевел Мотов Олег mailto:olegm@tebuk.parma.ru http://olegmotov.h1.ru
 

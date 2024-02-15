@@ -187,6 +187,6 @@ Install BDE программы
         WriteString('Ошибка инициализации BDE');
     end.
 
-Константин Кочедыков / kostya\@roadtech.saratov.su /
+Константин Кочедыков / kostya@roadtech.saratov.su /
 
 Взято с сайта <https://blackman.wp-club.net/>

@@ -599,9 +599,9 @@ create rule [владелец. ]название\_правила
 
 create rule pub\_idrule
 
-as \@pub\_id in ("1389", "0736", "0877", "1622", "1756")
+as @pub\_id in ("1389", "0736", "0877", "1622", "1756")
 
-or \@pub\_id like "99[0-9] [0-9]"
+or @pub\_id like "99[0-9] [0-9]"
 
  
 
@@ -610,7 +610,7 @@ or \@pub\_id like "99[0-9] [0-9]"
 Аргумент ссылается на значение в столбце, которое может изменяться
 операторами update и insert.
 
-В предыдущем примере аргумент называется \@pub\_id, чтобы подчеркнуть,
+В предыдущем примере аргумент называется @pub\_id, чтобы подчеркнуть,
 что это правило будет связано со столбцом pub\_id. Для аргумента можно
 использовать любое имя, но первым символом обязательно должен быть
 символ "@". Использование в качестве названия аргумента названия столбца
@@ -633,7 +633,7 @@ or \@pub\_id like "99[0-9] [0-9]"
 
 create rule phonerule
 
-as \@phone like '415\_ \_ \_ \_ \_ \_ \_'
+as @phone like '415\_ \_ \_ \_ \_ \_ \_'
 
  
 
@@ -644,7 +644,7 @@ as \@phone like '415\_ \_ \_ \_ \_ \_ \_'
 
 create rule agerule
 
-as \@age between 1 and 120 and \@age !=17  
+as @age between 1 and 120 and @age !=17  
 
  
 
@@ -707,7 +707,7 @@ sp\_binderule pub\_idrule, "publishers.pub\_id"
 
 create rule postalcoderule946
 
-as \@postalcode like "946[0-9] [0-9]"
+as @postalcode like "946[0-9] [0-9]"
 
  
 
@@ -808,7 +808,7 @@ sp\_binderule, "p#"
 
 create rule debtrule
 
-as \@debt = $0.00 or \@debt between $5.0 and $200.00
+as @debt = $0.00 or @debt between $5.0 and $200.00
 
  
 

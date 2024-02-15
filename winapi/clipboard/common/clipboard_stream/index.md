@@ -121,12 +121,12 @@ Date: 01.01.1998
      
     end.
 
-Alexey Mahotkin alexm\@hsys.msk.ru (2:5020/433)
+Alexey Mahotkin alexm@hsys.msk.ru (2:5020/433)
 
 Взято из FAQ:
 
 Delphi and Windows API Tips\'n\'Tricks
 
-olmal\@mail.ru
+olmal@mail.ru
 
 https://www.chat.ru/\~olmal

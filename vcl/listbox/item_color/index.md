@@ -1,6 +1,6 @@
 ---
 Title: Как выводить элементы списка разными шрифтами?
-Author: Даниил Карапетян (delphi4all\@narod.ru)
+Author: Даниил Карапетян (delphi4all@narod.ru)
 Date: 01.01.2007
 ---
 
@@ -47,6 +47,6 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Даниил Карапетян (delphi4all\@narod.ru)
+Автор: Даниил Карапетян (delphi4all@narod.ru)
 
-Автор справки: Алексей Денисов (aleksey\@sch103.krasnoyarsk.su)
+Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)

@@ -23,7 +23,7 @@ File: msi.zip
 Product: MiTeC System Information Component  
 Version: 6.2  
 Author: MichaL MutL  
-E-Mail: michal.mutl\@atlas.cz  
+E-Mail: michal.mutl@atlas.cz  
 Target: Delphi 5.x, Delphi 6.x  
 Platform: W95, W98, NT, W2000, Windows ME, Windows XP  
 Status: Fully Functional  

@@ -35,7 +35,7 @@ Date: 01.01.2007
 
 Автор: Leonid Tserling
 
-tlv\@f3334.dd.vaz.tlt.ru
+tlv@f3334.dd.vaz.tlt.ru
 
 Автор: StayAtHome
 

@@ -16,7 +16,7 @@ Date: 01.01.2007
 Смирнов Александр
 www.idbsoft.nnov.ru
 
-idbsoft\@online.ru
+idbsoft@online.ru
 
  
 

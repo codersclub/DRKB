@@ -228,8 +228,8 @@ exports clause of the DLL, case and all. Case is
 significant for exported functions in Win32! Other compilers may
 decorate names. Unless told to do otherwise a C compiler will prefix all
 cdecl functions with an underbar and will decorate stdcall functions in
-the format \_name\@x, where x is the total parameter size, e.g.
-\_Test3\@16. C++ is even worse, unless functions are declared as extern
+the format \_name@x, where x is the total parameter size, e.g.
+\_Test3@16. C++ is even worse, unless functions are declared as extern
 "C" it will export names in a decorated format that encodes parameter
 size and type, in a compiler-specific fashion. For routines exported
 with Pascal calling convention the names may be all uppercase,

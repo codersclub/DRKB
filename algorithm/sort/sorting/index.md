@@ -11,7 +11,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Владимир ТКАЧУК vova.tkachuk\@ua.fm
+Владимир ТКАЧУК vova.tkachuk@ua.fm
 
 Взято с <https://mycomp.com.ua>
 

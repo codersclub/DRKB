@@ -1003,8 +1003,8 @@ text
 
 create rule pub\_idrule
 
-as \@pub\_id in ("1389", "0736", "0877", "1622", "1756") or
-\@pub\_id like "99[0-9][0-9]"
+as @pub\_id in ("1389", "0736", "0877", "1622", "1756") or
+@pub\_id like "99[0-9][0-9]"
 
  
 
@@ -1590,19 +1590,19 @@ where au\_id="172-32-1176"
 
  
 
-declare \@val varbinary(16)
+declare @val varbinary(16)
 
-select \@val = textptr(copy) from blurbs
+select @val = textptr(copy) from blurbs
 
 where  au\_id="172-32-1176"
 
-writetext blurbs.copy \@val  "This book is a must for true data
+writetext blurbs.copy @val  "This book is a must for true data
 junkies."
 
  
 
 В этом примере текстовый указатель записывается в локальную переменную
-\@val, а затем команда writetext записывает новый текст в строку, на
+@val, а затем команда writetext записывает новый текст в строку, на
 которую указывает тестовый указатель.
 
  

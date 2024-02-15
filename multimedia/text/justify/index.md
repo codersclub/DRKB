@@ -1,6 +1,6 @@
 ---
 Title: Выравнивание текста по ширине
-Author: Даниил Карапетян (delphi4all\@narod.ru)
+Author: Даниил Карапетян (delphi4all@narod.ru)
 Date: 01.01.2007
 ---
 
@@ -242,6 +242,6 @@ Date: 01.01.2007
       draw;
     end;
 
-Автор: Даниил Карапетян (delphi4all\@narod.ru)
+Автор: Даниил Карапетян (delphi4all@narod.ru)
 
-Автор справки: Алексей Денисов (aleksey\@sch103.krasnoyarsk.su)
+Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)

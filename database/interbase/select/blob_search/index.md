@@ -46,7 +46,7 @@ Technologies)
 
 Материал не является официальной информацией компании Borland.
 
-E-mail mailto:delphi\@demo.ru
+E-mail mailto:delphi@demo.ru
 
 www: http://www.ibase.ru/
 

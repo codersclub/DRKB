@@ -12,7 +12,7 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Радик Усманов radik\@binep.ac.ru
+Радик Усманов radik@binep.ac.ru
 
 Оригинальная версия документа RFC793 размещается на сервере ISI
 (Information Sciences Institute ):

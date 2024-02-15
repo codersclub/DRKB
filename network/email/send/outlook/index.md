@@ -53,7 +53,7 @@ Date: 01.01.2007
 
 Совместимость: все версии Delphi
 
-Измените recipientaddress\@recipienthost.com на Ваш собственный e-mail
+Измените recipientaddress@recipienthost.com на Ваш собственный e-mail
 
 адресс. У Вас должен быть проинсталирован Outlook,
 

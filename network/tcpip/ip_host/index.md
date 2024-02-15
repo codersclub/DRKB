@@ -57,7 +57,7 @@ Date: 01.01.2007
 
 Alex Konshin
 
-mailto:alexk\@msmt.spb.su"
+mailto:alexk@msmt.spb.su"
 
 (2:5030/217)
 

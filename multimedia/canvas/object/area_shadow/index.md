@@ -79,4 +79,4 @@ Win32 API.
 
 Титов Игорь Евгеньевич
 
-infos\@obninsk.ru
+infos@obninsk.ru

@@ -1450,57 +1450,44 @@ Jacques         Glon
 не появляющийся в упоминаемом столбце как информационный символ. Часто
 для этих целей используются символы "@" и "~".
 
- 
-
-SELECT first\_name, last\_name
-
+```sql
+SELECT first_name, last_name
 FROM employee
+WHERE first_name LIKE "%@_%" ESCAPE "@"
+```
 
-WHERE first\_name LIKE "%\@\_%" ESCAPE "@"
+получить список сотрудников,
+в имени которых содержится "\_"
+(знак подчеркивания)
 
-               получить список сотрудников,
 
-               в имени которых содержится "\_"
-
-               (знак подчеркивания)
-
-               CONTAINING
-
- 
+CONTAINING
 
 Предикат CONTAINING аналогичен предикату LIKE, за исключением того, что
 он не чувствителен к регистру букв. Разрешено также использовать
 конструкцию  NOT  CONTAINING.
 
  
-
-SELECT first\_name, last\_name
-
+```sql
+SELECT first_name, last_name
 FROM employee
-
-WHERE last\_name CONTAINING "ne"
-
-               получить список сотрудников,
-
-               фамилии которых содержат буквы
-
-               "ne", "Ne", "NE", "nE"
+WHERE last_name CONTAINING "ne"
+```
+получить список сотрудников,
+фамилии которых содержат буквы
+"ne", "Ne", "NE", "nE"
 
  
 
-FIRST\_NAME      LAST\_NAME           
-
-=============== ====================
-
-Robert          Nelson              
-
-Ann             Bennet              
-
-Pierre          Osborne
+FIRST\_NAME     | LAST\_NAME
+--------------- | ---------------
+Robert          | Nelson
+Ann             | Bennet
+Pierre          | Osborne
 
  
 
-               IS NULL
+IS NULL
 
  
 

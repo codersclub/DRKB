@@ -420,7 +420,7 @@ TDXDraw.DDraw.SurfaceCount, TDXDraw.DDraw.Surfaces, TDXDraw.Flip -
 На этом пока все. Если Вы заинтересовались - скачайте демо-программку и
 поэкспериментируйте.
 
-Пишите мне - aziz\@telebot.com или error\@softhome.net - с
+Пишите мне - aziz@telebot.com или error@softhome.net - с
 удовольствием приму Ваши пожелания и предложения (особенно если
 предложите какую-нибудь работу) :-).
 

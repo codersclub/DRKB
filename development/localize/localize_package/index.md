@@ -1,6 +1,6 @@
 ---
 Title: Как локализовать (русифицировать) ресурсы какого-либо пакета (runtime package)?
-author: Alexander Simonenko, alex\@protec.kiev.ua
+author: Alexander Simonenko, alex@protec.kiev.ua
 Date: 01.01.2007
 ---
 
@@ -46,6 +46,6 @@ pесуpсы,
 
 Более подpобно об этом - см Help - Index - Localizing...
 
-Alexander Simonenko, alex\@protec.kiev.ua, (2:463/249)
+Alexander Simonenko, alex@protec.kiev.ua, (2:463/249)
 
 <https://delphiworld.narod.ru/>

@@ -27,9 +27,9 @@ https://cardy.hypermart.net
 
 ICQ UIN:7329451
 
-admin\@cardy.hypermart.net
+admin@cardy.hypermart.net
 
-e-pager: 7329451\@pager.mirabilis.com
+e-pager: 7329451@pager.mirabilis.com
 
 (2:5013/11.3)
 

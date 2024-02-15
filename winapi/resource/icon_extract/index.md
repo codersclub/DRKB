@@ -70,6 +70,6 @@ Image1.Picture.Icon.Handle:=ExtractIcon(hInstance, pchar(paramstr(0)),
       ic.Destroy;
     end;
 
-Автор: Даниил Карапетян (delphi4all\@narod.ru)
+Автор: Даниил Карапетян (delphi4all@narod.ru)
 
-Автор справки: Алексей Денисов (aleksey\@sch103.krasnoyarsk.su)
+Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)

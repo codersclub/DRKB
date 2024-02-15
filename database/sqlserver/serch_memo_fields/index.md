@@ -24,4 +24,4 @@ Date: 01.01.2007
 
 ICQ UIN 15925834
 
-tolik\@katren.nsk.ru
+tolik@katren.nsk.ru

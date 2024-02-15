@@ -279,7 +279,7 @@ Obb:=W.ActiveDocument.Shapes.AddOLEObject("MSGraph.Chart.8");
 посвящено программированию документов в Excel из приложений на Delphi.
 
 По всем вопросам вы можете обратиться к автору по адресу
-www.kornjakov.ru или \_kvn\@mail.ru.
+www.kornjakov.ru или \_kvn@mail.ru.
 
 Исходный текст: [st1_5.zip](st1_5.zip).
 

@@ -26,32 +26,24 @@ OpenService()
 StartService() or ControlService().
 
 But luckily there is a much easier solution that uses the NET.EXE
-program which has been part of Windows since Windows for Workgroups (Wfw
-3.11). Just create the two batch files
-
-IBSTOP.BAT
-
-IBSTART.BAT
-
+program which has been part of Windows since Windows for Workgroups
+(Wfw 3.11). Just create the two batch files: IBSTOP.BAT and IBSTART.BAT,
 and call them from your code. You may want to call them and wait for
 their termination.
 
-IBSTOP.BAT
+IBSTOP.BAT:
 
-=============
+```bat
+@echo off
+net stop "InterBase Guardian" >NULL
+net stop "InterBase Server" >NULL
+```
 
-\@echo off
+IBSTART.BAT:
 
-net stop "InterBase Guardian" \>NULL
-
-net stop "InterBase Server" \>NULL
-
-IBSTART.BAT
-
-=============
-
-\@echo off
-
-net start "Interbase Guardian" \>NULL
+```bat
+@echo off
+net start "Interbase Guardian" >NULL
+```
 
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -143,8 +143,7 @@ Define the cursor map
 
 then create the cursor
 
-hCur := CreateCursor(HInstance, 19, 2, 32, 32, \@ANDmaskCursor,
-\@XORmaskCursor);
+hCur := CreateCursor(HInstance, 19, 2, 32, 32, @ANDmaskCursor, @XORmaskCursor);
 
 Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 

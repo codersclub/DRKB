@@ -1,6 +1,6 @@
 ---
 Title: Вернуть строку в DOS-кодировке
-Author: Sh\@dow
+Author: Sh@dow
 Date: 01.01.2007
 ---
 
@@ -45,6 +45,6 @@ Date: 01.01.2007
         RETURN @ds
     END 
 
-Автор: Sh\@dow
+Автор: Sh@dow
 
 Взято с Vingrad.ru <https://forum.vingrad.ru>

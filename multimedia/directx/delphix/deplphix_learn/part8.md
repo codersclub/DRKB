@@ -1,5 +1,6 @@
 ---
 Date: 29.06.2006
+Title: The End? (Часть 8)
 Updated: 02.03.2009
 tags: Delphi, DelphiX
 source: https://gamedev.ru/pages/hex/articles/DelphiX?page=9

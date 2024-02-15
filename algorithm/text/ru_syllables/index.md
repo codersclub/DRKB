@@ -233,7 +233,7 @@ Date: 01.01.2007
 
 Alex Gorbunov
 
-acdc\@media-press.donetsk.ua
+acdc@media-press.donetsk.ua
 
 www.media-press.donetsk.ua
 
@@ -245,6 +245,6 @@ www.media-press.donetsk.ua
 
 Delphi and Windows API Tips\'n\'Tricks
 
-olmal\@mail.ru
+olmal@mail.ru
 
 <https://www.chat.ru/~olmal>

@@ -329,13 +329,13 @@ $91: Размер сообщения.
 Модули к статье можно взять [здесь](oexpress2.zip)
 
 Все дополнения, модификации, предложения, благодарности и т.п. просьба
-присылать на Samum2000\@mail15.com (особенно к русскому переводу) или на
-walther\_e\@yahoo.com (на английском языке, касательно оригинала).
+присылать на Samum2000@mail15.com (особенно к русскому переводу) или на
+walther\_e@yahoo.com (на английском языке, касательно оригинала).
 
-Walther Estergaard Walther\_e\@yahoo.com
+Walther Estergaard Walther\_e@yahoo.com
 
 Перевод:
 
-Боднар Денис aka Samum, Samum2000\@mail15.com, ICQ: 278395965.
+Боднар Денис aka Samum, Samum2000@mail15.com, ICQ: 278395965.
 
 <https://www.samum2000.narod.ru/articles/oedb.html>

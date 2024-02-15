@@ -365,7 +365,7 @@ IDirectDrawMediaStream (соответствующий второму уровн
 
 Автор: JINX (Elchin Aziz Ali OglI)
 
-EMail: aziz\@telebot.com, error\@softhome.net
+EMail: aziz@telebot.com, error@softhome.net
 
 CopyLeft 2000.
 

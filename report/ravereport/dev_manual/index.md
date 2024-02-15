@@ -36,7 +36,7 @@ BE50a)
 
 https://podgoretsky.com/
 
-anatoly\@podgoretsky.com
+anatoly@podgoretsky.com
 
 Примечание от Vit: Часть иллюстративного материала статьи и приложения 
 были исключены с целью экономии места в DRKB - за полной версией

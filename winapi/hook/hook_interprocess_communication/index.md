@@ -759,4 +759,4 @@ WM\_COPYDATA, оно должно скопировать данные в лок�
 
 ICQ UIN 15925834
 
-tolik\@katren.nsk.ru
+tolik@katren.nsk.ru

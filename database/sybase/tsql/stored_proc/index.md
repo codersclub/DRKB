@@ -318,9 +318,9 @@ sp\_recompile titles
 
 create procedure [владелец.]название\_процедуры[;номер] [
 
-[(] \@название\_параметра тип\_данных [= default] [output]
+[(] @название\_параметра тип\_данных [= default] [output]
 
-[,  \@название\_параметра тип\_данных [= default]
+[,  @название\_параметра тип\_данных [= default]
 [output]]...[]] [with
 
 recompile]
@@ -338,18 +338,18 @@ as sql\_операторы
 
  
 
-[execute] [\@return\_status =]
+[execute] [@return\_status =]
 
      
  [[[сервер.]база\_данных.]владелец.]название\_процедуры[;номер]
 
-               [[\@название\_параметра = ] значение \|
+               [[@название\_параметра = ] значение \|
 
-                [\@название\_параметра = ] \@переменная [output]
+                [@название\_параметра = ] @переменная [output]
 
-[,[\@название\_параметра = ] значение \|
+[,[@название\_параметра = ] значение \|
 
-        [\@название\_параметра = ] \@переменная [output]...]]
+        [@название\_параметра = ] @переменная [output]...]]
 
 [with recompile]
 
@@ -392,17 +392,17 @@ rollback transaction (откатить транзакцию), то любые и
 
  
 
-create proc au\_info \@lastname varchar(40),
+create proc au\_info @lastname varchar(40),
 
-\@firstname varchar(20) as
+@firstname varchar(20) as
 
 select au\_lname, au\_fname, title, pub\_name
 
 from authors, titles, publishers, titleauthor
 
-where au\_fname = \@firstname
+where au\_fname = @firstname
 
-and au\_lname = \@lastname
+and au\_lname = @lastname
 
 and authors.au\_id = titleauthor.au\_id
 
@@ -441,7 +441,7 @@ Ringer   Anne     Is Anger the Enemy?                New Age Books
 
  
 
-create proc showind \@table varchar(30) as
+create proc showind @table varchar(30) as
 
 select table\_name = sysobjects.name,
 
@@ -449,7 +449,7 @@ index\_name = sysindexes.name, index\_id = indid
 
 from sysindexes, sysobjects
 
-where sysobjects.name = \@table
+where sysobjects.name = @table
 
 and sysobjects.id = sysindexes.id
 
@@ -465,7 +465,7 @@ execute showind titles
 
 exec showind titles
 
-execute showind \@table = titles
+execute showind @table = titles
 
 execute GATEWAY.pubs2.dbo.showind titles
 
@@ -498,11 +498,11 @@ titles                titleind                      2
 
  
 
-Замечание: Если параметры задаются в виде "\@параметр=значение", то их
+Замечание: Если параметры задаются в виде "@параметр=значение", то их
 можно задавать в любом порядке. В противном случае, они должны быть
 заданы в том же порядке, в каком они указаны в операторе create
 procedure. Если хотя бы один параметр был задан в виде
-"\@параметр=значение ", то все остальные параметры должны быть заданы в
+"@параметр=значение ", то все остальные параметры должны быть заданы в
 таком же виде.
 
  
@@ -525,13 +525,13 @@ procedure. Если хотя бы один параметр был задан в
 
 create proc pub\_info
 
-\@pubname varchar(40) = "Algodata Infosystems" as
+@pubname varchar(40) = "Algodata Infosystems" as
 
 select au\_lname, au\_fname, pub\_name
 
 from authors a, publishers p, titles t, titleauthor ta
 
-where \@pubname = p.pub\_name
+where @pubname = p.pub\_name
 
 and a.au\_id = ta.au\_id
 
@@ -587,12 +587,12 @@ Locksley      Chastity      Algodata  Infosystems
 
  
 
-В следующей процедуре showind2 параметру \@table присваивается по
+В следующей процедуре showind2 параметру @table присваивается по
 умолчанию значение "titles":
 
  
 
-create proc showind2 \@table varchar(30) = titles
+create proc showind2 @table varchar(30) = titles
 
 as
 
@@ -602,7 +602,7 @@ select table\_name = sysobjects.name,
 
 from sysindexes, sysobjects
 
-where sysobjects.name = \@table
+where sysobjects.name = @table
 
 and sysobjects.id = sysindexes.id
 
@@ -677,11 +677,11 @@ create procedure для этого параметра не указано ник
 
  
 
-create procedure showind3 \@table varchar(30) = null
+create procedure showind3 @table varchar(30) = null
 
 as
 
-if \@table is null
+if @table is null
 
    print "Please give a table name"
 
@@ -693,7 +693,7 @@ else
 
   from sysindexes, sysobjects
 
-  where sysobjects.name = \@table
+  where sysobjects.name = @table
 
   and sysobjects.id = sysindexes.id
 
@@ -721,7 +721,7 @@ sp\_helptext.
 
  
 
-create procedure showind4 \@table varchar(30)="sys%"
+create procedure showind4 @table varchar(30)="sys%"
 
 as
 
@@ -731,7 +731,7 @@ select table\_name = sysobjects.name,
 
 from sysindexes, sysobjects
 
-where sysobjects.name like \@table
+where sysobjects.name like @table
 
 and sysobjects.id = sysindexes.id
 
@@ -746,17 +746,17 @@ and sysobjects.id = sysindexes.id
 
  
 
-create proc au\_info2 \@lastname varchar(30) = "D%",
+create proc au\_info2 @lastname varchar(30) = "D%",
 
-\@firstname varchar(18) = "%" as
+@firstname varchar(18) = "%" as
 
 select au\_lname, au\_fname, title, pub\_name
 
 from authors, titles, publishers, titleauthor
 
-where au\_fname like \@firstname
+where au\_fname like @firstname
 
-and au\_lname like \@lastname
+and au\_lname like @lastname
 
 and authors.au\_id = titleauthor.au\_id
 
@@ -800,11 +800,11 @@ DeFrance Michel        The Gourmet Microwave      Binnet & Hardley
 
  
 
-Замечание: Если параметры задаются в виде "\@параметр=значение", то они
+Замечание: Если параметры задаются в виде "@параметр=значение", то они
 могут располагаться в любом порядке. Можно также пропустить любой
 параметр, если для него указано значение по умолчанию.
 
-Если хотя бы один параметр был задан в виде "\@параметр=значение", то
+Если хотя бы один параметр был задан в виде "@параметр=значение", то
 остальные параметры должны быть заданы в таком же виде.
 
  
@@ -934,7 +934,7 @@ drop proc orders;2
 уменьшается, когда вызываемая процедура или триггер заканчивают
 выполнение. Превышение максимального 16-го уровня вложенности ведет к
 прерыванию процедуры. Текущий уровень вложенности процедуры хранится в
-глобальной переменной @\@nestlevel.
+глобальной переменной @@nestlevel.
 
  
 
@@ -1126,16 +1126,16 @@ exec gateway.remotedb.dbo.remoteproc
 
  
 
-declare \@status int
+declare @status int
 
-execute  \@status = pub\_info
+execute  @status = pub\_info
 
-select \@status
+select @status
 
  
 
 Статус выполнения (код возврата) процедуры pub\_info сохраняется в
-переменной \@status. В этом примере код возврата просто выводится с
+переменной @status. В этом примере код возврата просто выводится с
 помощью оператора select; в последующих примерах код возврата будет
 анализироваться с помощью условных конструкций.
 
@@ -1215,13 +1215,13 @@ SQL Сервер резервирует код 0 для указания усп�
 
  
 
-create proc checkcontract \@titleid tid
+create proc checkcontract @titleid tid
 
 as
 
 if (select contract from titles where
 
-       title\_id = \@titleid) = 1
+       title\_id = @titleid) = 1
 
   return 1
 
@@ -1237,15 +1237,15 @@ else
 
  
 
-create proc get\_au\_stat \@titleid tid
+create proc get\_au\_stat @titleid tid
 
 as
 
-declare \@retvalue int
+declare @retvalue int
 
-execute \@retvalue = checkcontract \@titleid 
+execute @retvalue = checkcontract @titleid 
 
-if (\@retvalue = 1)
+if (@retvalue = 1)
 
   print "Contract is valid"
 
@@ -1324,30 +1324,30 @@ else
 
 Нижеприведенная процедура выполняет умножение двух целых чисел, которые
 передаются ей в качестве двух первых аргументов, а третий аргумент
-\@result определяется с опцией output:
+@result определяется с опцией output:
 
  
 
-create procedure mathtutor \@mult1 int, \@mult2 int,
+create procedure mathtutor @mult1 int, @mult2 int,
 
-\@result int output
+@result int output
 
 as
 
-select \@result = \@mult1 * \@mult2
+select @result = @mult1 * @mult2
 
  
 
 Чтобы использовать процедуру mathtutor для целей обучения, можно
-объявить переменную \@result и включить ее в оператор execute.
+объявить переменную @result и включить ее в оператор execute.
 Добавление ключевого слова output в операторе execute позволяет увидеть
 значения возвращаемого параметра.
 
  
 
-declare \@result int
+declare @result int
 
-exec mathtutor 5, 6, \@result output
+exec mathtutor 5, 6, @result output
 
  
 
@@ -1380,17 +1380,17 @@ mathtutor 5,6,32
 
 Значение параметра, определенного с опцией output, должно передаваться
 через переменную, а не через константу. В следующем примере переменная
-\@guess используется для передачи в процедуру mathtutor значения
+@guess используется для передачи в процедуру mathtutor значения
 третьего параметра. При этом SQL Сервер выводит значение возвращаемого
 параметра:
 
  
 
-declare \@guess int
+declare @guess int
 
-select \@guess = 32
+select @guess = 32
 
-exec mathtutor 5, 6, \@result = \@guess output
+exec mathtutor 5, 6, @result = @guess output
 
  
 
@@ -1404,7 +1404,7 @@ Return parameters:
 
  
 
-\@result     
+@result     
 
 ----------- 
 
@@ -1415,37 +1415,37 @@ Return parameters:
 Значения возвращаемых параметров выводятся всегда, независимо от того,
 изменились эти значения, или нет. Заметим, что:
 
-- В предыдущем примере выходной параметр \@result должен передаваться в виде "\@параметр=\@переменная". Если бы он не был последним передаваемым параметром, то все следующие за ним параметры также должны передаваться в таком же виде;
+- В предыдущем примере выходной параметр @result должен передаваться в виде "@параметр=@переменная". Если бы он не был последним передаваемым параметром, то все следующие за ним параметры также должны передаваться в таком же виде;
 
-- Переменную \@result не нужно объявлять в вызывающем пакете, поскольку это название параметра процедуры mathtutor.
+- Переменную @result не нужно объявлять в вызывающем пакете, поскольку это название параметра процедуры mathtutor.
 
-- Несмотря на то, что измененное значение параметра \@result возвращается через переменную, указанную в операторе execute, в данном случае через переменную \@guess, оно выводится под своим названием, т.е. \@result.
+- Несмотря на то, что измененное значение параметра @result возвращается через переменную, указанную в операторе execute, в данном случае через переменную @guess, оно выводится под своим названием, т.е. @result.
 
  
 
 Если в дальнейшем после оператора execute может потребоваться
-первоначальное значение переменной \@guess, то его нужно сохранить в
+первоначальное значение переменной @guess, то его нужно сохранить в
 другой переменной перед вызовом процедуры. Следующий пример
-иллюстрирует  использование переменной \@store для хранения значения
+иллюстрирует  использование переменной @store для хранения значения
 переменной во время выполнения сохраненной процедуры, и использование
-"нового" возвращаемого значения переменной \@guess в условных
+"нового" возвращаемого значения переменной @guess в условных
 конструкциях:
 
  
 
-declare \@guess int
+declare @guess int
 
-declare \@store int
+declare @store int
 
-select \@guess = 32
+select @guess = 32
 
-select \@store = \@guess
+select @store = @guess
 
-execute mathtutor 5, 6, \@result = \@guess output
+execute mathtutor 5, 6, @result = @guess output
 
-select Your\_answer = \@store, Right\_answer = \@guess
+select Your\_answer = @store, Right\_answer = @guess
 
-if \@guess = \@store
+if @guess = @store
 
    print "Right-o"
 
@@ -1467,7 +1467,7 @@ Return parameters:
 
  
 
-\@result     
+@result     
 
 ----------- 
 
@@ -1490,30 +1490,30 @@ Wrong, wrong, wrong!
  
 
 Ниже приведена сохраненная процедура, которая проверяет, влияет ли объем
-продажи новой книги на изменение гонорара ее автора. Параметр \@pc
+продажи новой книги на изменение гонорара ее автора. Параметр @pc
 определяется как выходной (output) параметр:
 
  
 
-create proc roy\_check \@title tid, \@newsales int,
+create proc roy\_check @title tid, @newsales int,
 
-       \@pc int output
+       @pc int output
 
 as
 
-declare \@newtotal int
+declare @newtotal int
 
-select \@newtotal = (select titles.total\_sales + \@newsales
+select @newtotal = (select titles.total\_sales + @newsales
 
-                 from titles where title\_id = \@title)
+                 from titles where title\_id = @title)
 
-select \@pc = royalty from  roysched
+select @pc = royalty from  roysched
 
-  where \@newtotal  \>= roysched.lorange and
+  where @newtotal  \>= roysched.lorange and
 
-         \@newtotal \< roysched.hirange
+         @newtotal \< roysched.hirange
 
-  and roysched.title\_id = \@title
+  and roysched.title\_id = @title
 
  
 
@@ -1523,13 +1523,13 @@ select \@pc = royalty from  roysched
 
  
 
-declare \@percent int
+declare @percent int
 
-select \@percent = 10
+select @percent = 10
 
-execute roy\_check "BU1032", 1050, \@pc = \@percent output
+execute roy\_check "BU1032", 1050, @pc = @percent output
 
-select Percent = \@percent
+select Percent = @percent
 
  
 
@@ -1545,7 +1545,7 @@ Return parameters:
 
  
 
-\@pc         
+@pc         
 
 ----------- 
 
@@ -1571,17 +1571,17 @@ Percent
 
  
 
-create proc newsales \@title tid, \@newsales int
+create proc newsales @title tid, @newsales int
 
 as
 
-declare \@percent int
+declare @percent int
 
-declare \@stor\_pc int
+declare @stor\_pc int
 
-select \@percent = (select royalty from roysched, titles
+select @percent = (select royalty from roysched, titles
 
-       where roysched.title\_id = \@title
+       where roysched.title\_id = @title
 
        and total\_sales \>= roysched.lorange
 
@@ -1589,21 +1589,21 @@ select \@percent = (select royalty from roysched, titles
 
        and roysched.title\_id=titles.title\_id)
 
-select \@stor\_pc = \@percent
+select @stor\_pc = @percent
 
-execute roy\_check \@title, \@newsales, \@pc = \@percent
+execute roy\_check @title, @newsales, @pc = @percent
 
 output
 
 if
 
-\@stor\_pc != \@percent
+@stor\_pc != @percent
 
 begin
 
 print "Royalty is changed"
 
-select Percent = \@percent
+select Percent = @percent
 
 end
 
@@ -1636,13 +1636,13 @@ Percent
 
  
 
-В двух предыдущих примерах, где вызывается процедура roy\_check, \@pc
+В двух предыдущих примерах, где вызывается процедура roy\_check, @pc
 является названием параметра, который передается процедуре roy\_check, а
-\@percent является выходной переменной. Когда процедура newsales
-вызывает процедуру roy\_check, то значение переменной \@percent может
+@percent является выходной переменной. Когда процедура newsales
+вызывает процедуру roy\_check, то значение переменной @percent может
 изменяться в зависимости от значения других передаваемых параметров.
 Если нужно сравнить возвращаемое значение percent с первоначальным
-значением параметра \@pc, то следует сохранить начальное значение в
+значением параметра @pc, то следует сохранить начальное значение в
 другой переменной. В предыдущем примере это значение сохраняется в
 переменной stor\_proc.
 
@@ -1656,7 +1656,7 @@ Percent
 
  
 
-\@параметр=\@переменная
+@параметр=@переменная
 
  
 
@@ -1670,7 +1670,7 @@ Percent
 Замечание: Если сохраненная процедура требует нескольких параметров, то
 либо выходной параметр должен быть указан последним в операторе execute,
 либо все следующие после него параметры должны быть указаны в виде
-"\@параметр=значение".
+"@параметр=значение".
 
  
 
@@ -1687,7 +1687,7 @@ execute можно сокращать до exec.
 
  
 
-exec myproc \@a = \@myvara out, \@b = \@myvarb out
+exec myproc @a = @myvara out, @b = @myvarb out
 
  
 
@@ -2128,7 +2128,7 @@ Parameter\_name    Type           Length                 Param\_order
 --------------               ------         
  ------                  -----------
 
-\@percentage            int                4                  1
+@percentage            int                4                  1
 
  
 
@@ -2173,13 +2173,13 @@ text
 
 ---------------------------------------------------
 
-create procedure byroyalty \@percentage int
+create procedure byroyalty @percentage int
 
 as
 
 select au\_id from titleauthor
 
-where titleauthor.royaltyper = \@percentage
+where titleauthor.royaltyper = @percentage
 
  
 

@@ -617,4 +617,4 @@ BF\_ADJUST        Корректирует qrc так, что
 
 ICQ UIN 15925834
 
-tolik\@katren.nsk.ru
+tolik@katren.nsk.ru

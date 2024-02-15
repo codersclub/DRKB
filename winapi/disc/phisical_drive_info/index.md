@@ -53,7 +53,7 @@ SMART (современные винчестеры поддерживают).
 
 Зависимости: Windows, SysUtils
 
-Автор:       Alex Konshin, akonshin\@earthlink.net, Boston, USA
+Автор:       Alex Konshin, akonshin@earthlink.net, Boston, USA
 
 Copyright:   http://home.earthlink.net/\~akonshin/index.htm
 
@@ -252,4 +252,4 @@ Copyright:   http://home.earthlink.net/\~akonshin/index.htm
       else WriteLn('Disk serial number: ''', s,'''');
     end. 
 
-Автор:       Alex Konshin, akonshin\@earthlink.net, Boston, USA
+Автор:       Alex Konshin, akonshin@earthlink.net, Boston, USA

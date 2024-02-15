@@ -21,4 +21,4 @@ Author: Тенцер А. Л. <tolik@katren.nsk.ru>, ICQ UIN 15925834
 
 ICQ UIN 15925834
 
-tolik\@katren.nsk.ru
+tolik@katren.nsk.ru

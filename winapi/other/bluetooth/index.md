@@ -2714,7 +2714,7 @@ Bluetooth и сможет выполнять AT-команды.
 http://www.btframework.com. Там же приведено решение по установке
 драйверов от Microsoft.
 
-Всегда буду рад ответить на ваши вопросы: mike\@btframework.com
+Всегда буду рад ответить на ваши вопросы: mike@btframework.com
 
 Copyright© 2006 Петриченко Михаил, Soft Service Company
 

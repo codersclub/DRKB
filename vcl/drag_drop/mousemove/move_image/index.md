@@ -200,7 +200,7 @@ B: Bool; //Объявите B где-нибудь после implementation
 
 B := True;
 
-SystemParametersInfo(SPI\_SETDRAGFULLWINDOWS, 0, \@B, SPIF\_SENDCHANGE)
+SystemParametersInfo(SPI\_SETDRAGFULLWINDOWS, 0, @B, SPIF\_SENDCHANGE)
 
 // Не проверял
 
@@ -213,7 +213,7 @@ SystemParametersInfo(SPI\_SETDRAGFULLWINDOWS, 0, \@B, SPIF\_SENDCHANGE)
 решение.
 
 Ну вот и всё. Надеюсь, вам понравится. Обругать меня вы можете по адресу
-yanval\@yandex.ru
+yanval@yandex.ru
 
 <https://delphiworld.narod.ru/>
 

@@ -42,7 +42,7 @@ Borland Interbase / Firebird Q&A, версия 2.02 от 31 мая 1999
 
 Материал не является официальной информацией компании Borland.
 
-E-mail delphi\@demo.ru
+E-mail delphi@demo.ru
 
 www: http://www.ibase.ru/
 

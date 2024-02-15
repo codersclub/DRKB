@@ -1,6 +1,6 @@
 ---
 Title: Использование таблиц Access при помощи ODBC
-Author: Валентин Озеров, mailto:webmaster\@webinspector.com
+Author: Валентин Озеров, mailto:webmaster@webinspector.com
 Date: 01.01.2007
 ---
 
@@ -138,7 +138,7 @@ Swart и Chris Frizelle.
 
 Взято из Советов по Delphi, Сборник Kuliba
 
-Автор: Валентин Озеров, mailto:webmaster\@webinspector.com
+Автор: Валентин Озеров, mailto:webmaster@webinspector.com
 
 ------------------------------------------------------------------------
 

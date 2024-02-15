@@ -48,7 +48,7 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-Вариант от Анатолия (SAVwa\@eleks.lviv.ua)
+Вариант от Анатолия (SAVwa@eleks.lviv.ua)
 
     threadvar myDir: string;
     function BrowseCallbackProc(hwnd: HWND; uMsg: UINT; lParam: LPARAM; lpData:

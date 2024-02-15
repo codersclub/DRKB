@@ -105,11 +105,10 @@ def\_tab\_compression, как в следующем примере:
     from dba_tablespaces;
 
 
-
-tablespace\_name def\_tab\_compression
---------------- -------------------
-data\_ts\_01 disabled
-index\_ts\_01 disabled
+tablespace\_name | def\_tab\_compression
+--------------- | -------------------
+data\_ts\_01    | disabled
+index\_ts\_01   | disabled
 
 Как и следовало ожидать, вы можете сжимать или не сжимать таблицу в
 табличном пространстве, независимо от значения compress, заданного на
@@ -127,15 +126,18 @@ index\_ts\_01 disabled
 таблицу. Сжатие данных происходит только при массовой загрузке или в
 процессе массовой вставки, с помощью одного из следующих четырех
 методов:
-Непосредственная загрузка sql*loader
-Последовательные вставки insert с подсказкой append
-Параллельный insert
+
+- Непосредственная загрузка sql\*loader
+- Последовательные вставки insert с подсказкой append
+- Параллельный insert
+
 create table ... as select
 
-Метод непосредственной загрузки sql*loader - наиболее удобный способ
+Метод непосредственной загрузки sql\*loader - наиболее удобный способ
 загрузки данных в таблицу, если данные доступны в текстовом файле.
 Пример представлен ниже:
-$sqlldr sanjay/sanjay\@proddb control=sales\_history.ctl direct=true
+
+$sqlldr sanjay/sanjay@proddb control=sales\_history.ctl direct=true
 
 Если данные доступны в промежуточной (staging) таблице, можно
 использовать последовательные операторы insert с подсказкой append или

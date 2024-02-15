@@ -208,7 +208,7 @@ rec(Trect): размер кнопки.
 
 Дата: 25 Августа 2000г.
 
-Автор: NeNashev nashev\@mail.ru
+Автор: NeNashev nashev@mail.ru
 
 InvalidateRect на событие Resize ничего не даёт. Но даже без него
 кнопка всё равно моргает при Resize формы... Надо ещё где-то убрать

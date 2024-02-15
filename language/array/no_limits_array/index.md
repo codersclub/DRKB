@@ -47,7 +47,7 @@ Date: 01.01.2007
 
 C Уважением,
 
-Сергей Дьяченко, sd\@arzamas.nnov.ru
+Сергей Дьяченко, sd@arzamas.nnov.ru
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

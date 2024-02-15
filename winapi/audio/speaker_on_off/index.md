@@ -27,6 +27,6 @@ Alexey Lesovik
 
 Delphi and Windows API Tips\'n\'Tricks
 
-olmal\@mail.ru
+olmal@mail.ru
 
 https://www.chat.ru/\~olmal

@@ -352,7 +352,7 @@ prgextract.zip
 
 Created by Wersion
 
-E-mail: wcrkgroup2002\@mail.ru
+E-mail: wcrkgroup2002@mail.ru
 
 Site: http://expwinprg.cjb.net/
 

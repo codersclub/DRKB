@@ -12,7 +12,7 @@ Source: http://www.borland.ru/
 
 (С) И. Мирончик,  
 независимый разработчик и преподаватель курсов по Delphi, C++Builder, Oracle.  
-E-maile EKSKHQ\@Elsite.ru
+E-mail EKSKHQ@Elsite.ru
 
 >Эта статья была опубликована на сайте http://www.borland.ru/
 

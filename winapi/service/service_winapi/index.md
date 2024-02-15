@@ -107,8 +107,8 @@ StartServiceCtrlDispatcher выполнится только после того
 ServiceMain - основная функция сервиса. Если в ехешнике несколько
 сервисов, но для каждого сервиса пишется своя ServiceMain функция. Имя
 функции может быть любым! и передается в
-DispatchTable.lpServiceProc:=\@ServiceMain (см.предыдущущий абзац). У
-меня она называется ServiceProc и описывается так:
+DispatchTable.lpServiceProc:=@ServiceMain (см.предыдущущий абзац).
+У меня она называется ServiceProc и описывается так:
 
 procedure ServiceProc(argc : DWORD;var argv : array of PChar);stdcall;
 

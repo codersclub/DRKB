@@ -375,7 +375,7 @@ Borland.Delphi.System.dcuil для WinForms приложения нам пона
 2007 или Delphi 2008.
 
 Если у Вас не получилось сделать что-нибудь, что описано в статье,
-сообщите мне об этом на мой почтовый адрес (4quadr0\@gmail.com).
+сообщите мне об этом на мой почтовый адрес (4quadr0@gmail.com).
 
 Статья в формате Microsoft Word со всеми исходными кодами:
 http://quadr0.pochta.ru/delphinet2/delphinet2.zip

@@ -94,7 +94,7 @@ Date: 01.01.2007
 
 Eugeny Sverchkov
 
-es906\@kolnpp.elektra.ru
+es906@kolnpp.elektra.ru
 
 (2:5031/12.23)
 

@@ -127,6 +127,6 @@ Date: 01.01.2007
 
 Alexander Burnashov
 
-E-mail alex\@arta.spb.su
+E-mail alex@arta.spb.su
 
 (2:5030/254.36)

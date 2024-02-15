@@ -16,7 +16,7 @@ https://delfaq.wallst.ru/faq/emul.html
 
 Этот модуль является почти полным аналогом мотоду SendKeys из VB.
 
-(Автор: Ken Henderson, email:khen\@compuserve.com)
+(Автор: Ken Henderson, email:khen@compuserve.com)
 
     {
     SendKeys routine for 32-bit Delphi. 

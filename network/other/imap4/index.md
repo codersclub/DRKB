@@ -358,11 +358,11 @@ S: * 10 FETCH (BODY [HEADER] {350}
 
 S: Date: Wed, 17 Jul 1996 02:23:25 -0700 (PDTl
 
-S: From: raan\@globe.com
+S: From: raan@globe.com
 
 S: Subject: Hi
 
-S: To: imap\@world.edu
+S: To: imap@world.edu
 
 S: Message-Id:
 
@@ -431,7 +431,7 @@ C: From: Fred Foobar
 
 C: Subject: aftenoon meeteng
 
-C: TO: mooch\@owatagu.siam.edu
+C: TO: mooch@owatagu.siam.edu
 
 C: Message-Id:
 

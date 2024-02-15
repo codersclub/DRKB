@@ -1,6 +1,6 @@
 ---
 Title: Функция возвращающая n-ое слово в строке
-Author: TP\@MB\@Y
+Author: TP@MB@Y
 Date: 01.01.2007
 ---
 
@@ -41,7 +41,7 @@ Date: 01.01.2007
      GetWord:=buf;
     end;
 
-Автор: TP\@MB\@Y
+Автор: TP@MB@Y
 
 Взято с Vingrad.ru <https://forum.vingrad.ru>
 

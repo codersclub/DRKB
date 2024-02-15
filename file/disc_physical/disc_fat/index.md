@@ -23,7 +23,7 @@ Date: 01.01.2007
             Модуль для работы с дисковыми драйверами
     
                      Автор  : NikNet
-                     E-MAIL : NikNet\@Yandex.ru
+                     E-MAIL : NikNet@Yandex.ru
                      Сайт   : NikNet.narod.ru [Скоро будет :)]
                             2006г
                    Версия 4.00 (Win9x/NT)

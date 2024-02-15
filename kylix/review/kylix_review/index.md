@@ -392,7 +392,7 @@ virtual void setText(const QString &)
 
 TxtLbl := \'this is a test\';
 
-QLabel\_setText(LabelHandle,\@Txtlbl);
+QLabel\_setText(LabelHandle,@Txtlbl);
 
 События (в терминологии Qt - signals) и обработчики события (в
 терминологии Qt - slots). В Qt связывание события с обработчиком
@@ -400,8 +400,7 @@ QLabel\_setText(LabelHandle,\@Txtlbl);
 
 // Декларация
 
-bool connect (const QObject *sender, const char *signal, const char
-*member)
+    bool connect (const QObject *sender, const char *signal, const char *member)
 
 // Привязка
 

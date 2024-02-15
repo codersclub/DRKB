@@ -277,6 +277,6 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Даниил Карапетян (delphi4all\@narod.ru)
+Автор: Даниил Карапетян (delphi4all@narod.ru)
 
-Автор справки: Алексей Денисов (aleksey\@sch103.krasnoyarsk.su)
+Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)

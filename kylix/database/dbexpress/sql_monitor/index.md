@@ -79,7 +79,7 @@ Memo1.LinesAddString(SQLMonitor1.TraceList);
 текст сообщения, находящийся в поле pszTrace вышеуказанной структуры.
 
 Ну вот и все. Ваши замечания и предложения я рад буду увидеть в почтовом
-ящике mgoblin\@mail.ru
+ящике mgoblin@mail.ru
 
 Автор: Mike Goblin
 

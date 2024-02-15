@@ -130,7 +130,7 @@ OnCompare). Например:
 будет вызвать метод CustomSort, передав ему адрес функции сортировки.
 Например:
 
-ListView1.CustomSort(\@ByFourth, 0);
+ListView1.CustomSort(@ByFourth, 0);
 
 Параметр Data в функции сортировки используется для указания номера
 колонки.

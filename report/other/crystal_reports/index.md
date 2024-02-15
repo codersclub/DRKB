@@ -375,7 +375,7 @@ TRUE, тогда свойства из структуры применяются
 
 // Скопировать в поле ServerName путь к БД отчета.
 
-StrPCopy(\@lt.ServerName, ExtractFilePath(edtPathReport.Text) +
+StrPCopy(@lt.ServerName, ExtractFilePath(edtPathReport.Text) +
 \'source\_db.mdb\');
 
 // Установить параметры для таблицы 0 и только для нее.

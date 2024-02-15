@@ -82,7 +82,7 @@ C: MAIL FROM:\<drozd\> \'указываем отправителя
 
 S: 250 OK
 
-C: RCPT TO:\<drol\@mail.ru\> \'указываем получателя
+C: RCPT TO:\<drol@mail.ru\> \'указываем получателя
 
 S: 250 OK
 
@@ -97,9 +97,9 @@ S: 354 Start mail input; end with \<CRLF\>.\<CRLF\>
 
 S: 250 OK
 
-C: From: Drozd \<drozd\@mail.ru\>
+C: From: Drozd \<drozd@mail.ru\>
 
-C: To: Drol \<drol\@mail.ru\>
+C: To: Drol \<drol@mail.ru\>
 
 C: Subject: Hello
 

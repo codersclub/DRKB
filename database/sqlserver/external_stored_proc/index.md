@@ -77,7 +77,7 @@ number by one. We can call xp\_incbyone1 as followings:
             exec master..xp_incbyone1 @mynumber output
             select @mynumber
 
-The declare statement declares a variable \@mynumber of type integer.
+The declare statement declares a variable @mynumber of type integer.
 Next we set it to one, pass it to the xp and allow the xp to modify it
 by appending output to the parameter. Finally we display the number with
 a select statement to see if it has been updated. The result should be 2
@@ -436,7 +436,7 @@ Every user can now call xp\_delphiecho from every database by prefixing
 xp\_delphiecho with \'master..\'. For example to call xp\_delphiecho
 from the pubs database you say:
 
-       exec master..xp\_delphiecho \@paramin, \@paramout output
+       exec master..xp_delphiecho @paramin, @paramout output
 
 Unloading extended stored procedures
 

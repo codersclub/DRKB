@@ -56,18 +56,18 @@ native kernel32 функции ядра.
 Используем объект \'\\Device\\PhysicalMemory\' и преобразовав его в тип
 TNtUnicodeString;
 
-RtlInitAnsiString(\@AnsiPhysicalMemory, \'\\Device\\PhysicalMemory\');
-RtlAnsiStringToUnicodeString(\@UniPhysicalMemory, \@AnsiPhysicalMemory,
+RtlInitAnsiString(@AnsiPhysicalMemory, \'\\Device\\PhysicalMemory\');
+RtlAnsiStringToUnicodeString(@UniPhysicalMemory, @AnsiPhysicalMemory,
 true);
 
-InitializeObjectAttributes(\@NtObjectAttributes, \@UniPhysicalMemory,
+InitializeObjectAttributes(@NtObjectAttributes, @UniPhysicalMemory,
 OBJ\_KERNEL\_HANDLE, 0, nil);
 
 Получаем дескриптор секции вызывая функцию ядра
 
  
 
-NtOpenSection(SectionHandle, SECTION\_MAP\_READ, \@NtObjectAttributes);
+NtOpenSection(SectionHandle, SECTION\_MAP\_READ, @NtObjectAttributes);
 
 Этим самым мы открываем объект \'\\Device\\PhysicalMemory\' для чтения
 отображенного участка физической памяти в процессе пользователя.

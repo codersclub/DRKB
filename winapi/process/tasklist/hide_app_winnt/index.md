@@ -11,11 +11,11 @@ Date: 01.01.2007
 01.01.2007
 :::
 
-Author: Holy\_Father \<holy\_father\@phreaker.net\>
+Author: Holy\_Father \<holy\_father@phreaker.net\>
 
 Version: 1.2 russian  
 Date: 05.08.2003  
-Translation: Kerk \<kerk\_p\@yahoo.com\>
+Translation: Kerk \<kerk\_p@yahoo.com\>
 
 ## Вступление
 
@@ -1554,7 +1554,7 @@ https://www.rootkit.com.
 Отдельное спасибо Ratter\'у, который дал мне много ноу-хау, которые были
 необходимы для написания этой статьи и кода проекта Hacker Defender.
 
-Все комментарии присылаете на holy\_father\@phreaker.net или на доску на
+Все комментарии присылаете на holy\_father@phreaker.net или на доску на
 сайте http://rootkit.host.sk.
 
 Взято из <https://forum.sources.ru>

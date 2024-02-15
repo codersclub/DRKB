@@ -24,4 +24,4 @@ Konstantin Kipa
 
 2:5061/19.17
 
-kotya\@extranet.ru
+kotya@extranet.ru

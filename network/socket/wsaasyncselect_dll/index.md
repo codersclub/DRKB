@@ -66,7 +66,7 @@ WSAEnumNetworkEvents( FSocket, FEventHandle, lpNetWorkEvents );
 
 Автор: Alex Konshin
 
-alexk\@msmt.spb.su
+alexk@msmt.spb.su
 
 (2:5030/217)
 

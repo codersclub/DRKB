@@ -479,4 +479,4 @@ Status := BTRVID(B\_DELETE, {системная константа}
 кому-то сэкономит время. Хотя лучше всего, если эта информация вам не
 понадобится вовсе!
 
-{[vic\@regentgroup.ru}](mailto:vic@regentgroup.ru%7D%20)
+[vic@regentgroup.ru](mailto:vic@regentgroup.ru)

@@ -24,7 +24,7 @@ Date: 01.01.2007
 Страничка:      
  http://a-press.parad.ru/pc/bokovikov/delphi/acl/acl.zip        
 
-E-Mail:        abb\@adx.ru        
+E-Mail:        abb@adx.ru        
 
 Классы:        TFont, TFonts, TControl, TWinControl, TStdControl,
 TLabel, TEdit, TListBox, TButton, TCheckBox, TComboBox, TGroupBox,
@@ -38,7 +38,7 @@ TProgressBar, TKeyboard
 
 Страничка:        http://xcl.cjb.net        
 
-E-Mail:        bonanzas\@xcl.cjb.net        
+E-Mail:        bonanzas@xcl.cjb.net        
 
 Классы:        XForm, XApplet, XCanvas, XPen, XBrush, XFont, ZDDB,
 ZHiBmp, ZDIBitmap, ZBitmap, ZIcon, ZGifDecoder, ZGif, ZJpeg, XLabel,

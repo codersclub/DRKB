@@ -12,13 +12,13 @@ PPP
 01.01.2007
 :::
 
-Author:      John Wobus, jmwobus\@syr.edu (corrections welcome)
+Author:      John Wobus, jmwobus@syr.edu (corrections welcome)
 
 Оpигинал #1: http://cs.uni-bonn.de/ppp/part1.html
 
 Оpигинал #2: http://www.cisco.com/univercd/cc/td/doc/cisintwk/ito\_doc/55168.htm
 
-Пеpевод:    осуществлен Гоpоховым Виталием (GSLab\@email.com) в
+Пеpевод:    осуществлен Гоpоховым Виталием (GSLab@email.com) в
             pамках поддеpжки FAQ\'а по эхоконфеpенциям Su.net и
             Ru.Lan.nw
 

@@ -26,8 +26,7 @@ examples are in Visual Basic, thus a conversion to Delphi was required.
 
 I have posted this procedure
 
-CreateAVI(const FileName : string; BMPFileList : TStrings; FramesPerSec
-: integer = 10);
+    CreateAVI(const FileName : string; BMPFileList : TStrings; FramesPerSec: integer = 10);
 
 To keep the text of the example simple and readable I have left out most
 to the error checking (try except etc.). You can also play with the
@@ -44,18 +43,14 @@ All Blockreads are valid with no read errors.
 Ray has a downloadable EXE that works quite nicely, however I am about
 to write my own utility that incorporates the following ...
 
-Multiline file selection.
-
-Listbox line reordering (drag/drop).
-
-Sort File list
-
-Layout Save and Load .
-
-AVI Preview.
+- Multiline file selection.
+- Listbox line reordering (drag/drop).
+- Sort File list
+- Layout Save and Load .
+- AVI Preview.
 
 (I have beta version 1.0.0.0 ready, if anyone wants a copy of exe or
-source code, drop me a mail at mheydon\@pgbison.co.za)
+source code, drop me a mail at mheydon@pgbison.co.za)
 
 For further info on AVI files I recommend you vist Ray\'s site at
 http://www.shrinkwrapvb.com/avihelp/avihelp.htm it really is a well

@@ -186,6 +186,6 @@ Free прекрасно справляется с освобождением о�
 
 Интернет-страница KOL/MCK: http://xcl.cjb.net
 
-Почта: bonanzas\@xcl.cjb.net
+Почта: bonanzas@xcl.cjb.net
 
 Взято с сайта [www.emanual.ru](https://www.emanual.ru)

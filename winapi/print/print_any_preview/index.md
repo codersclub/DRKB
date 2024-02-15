@@ -251,7 +251,7 @@ PPS.
 Hо код - выдpан из pаботающих исходников.
 
 Боpисов Олег Hиколаевич (ZB)  
-panterra\@sbtx.tmn.ru  
+panterra@sbtx.tmn.ru  
 (2:5077/5)
 
 Взято с сайта <https://blackman.wp-club.net/>
