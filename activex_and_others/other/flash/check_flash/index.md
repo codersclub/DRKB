@@ -1,15 +1,12 @@
 ---
 Title: Определить, установлен ли Adobe Flash
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Определить, установлен ли Adobe Flash
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     program SeekFlash;
      
@@ -141,4 +138,3 @@ Date: 01.01.2007
        end; // while mainVer 
     end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

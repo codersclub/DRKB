@@ -1,15 +1,13 @@
 ---
 Title: Как посчитать корни квадратного уравнения?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как посчитать корни квадратного уравнения?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
 
     unit SqRoot_;
      
@@ -92,6 +90,4 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

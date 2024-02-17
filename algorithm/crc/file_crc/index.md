@@ -1,15 +1,13 @@
 ---
 Title: Как вычислить CRC (контрольную сумму) для файла?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как вычислить CRC (контрольную сумму) для файла?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
 
     function GetCheckSum(FileName: string): DWORD; 
     var 
@@ -45,4 +43,3 @@ Date: 01.01.2007
       ShowMessage(IntToStr(GetCheckSum('c:\Autoexec.bat'))); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Как использовать проверку грамматики?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как использовать проверку грамматики?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       If you are using Delphi 2+ and have the ActiveX component TVSSpell, it is very 
@@ -43,4 +40,3 @@ Date: 01.01.2007
     - VSPELL.HLP 
     } 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

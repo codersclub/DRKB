@@ -2,15 +2,12 @@
 Title: Работа с очень большими числами
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Работа с очень большими числами
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
 Это модуль для работы с очень большими числами без потери точности.
 Модуль даёт возможность манипулирования с 10000 и более значащими
@@ -19,16 +16,13 @@ Date: 01.01.2007
 аргументов принимают длинные строки и результат выдают тоже в виде
 строки.
 
-Автор: Vit
-
 Просьба связаться со мной, если кто хочет доработать модуль и расширить
 функциональность.
 
-    unit UMathServices;
 
+    unit UMathServices;
      
     interface
-     
      
     Type TProgress = procedure(Done:real);
      
@@ -92,6 +86,7 @@ Date: 01.01.2007
         end;
     end;
      
+     
     Function Num2Array(Var n:TNumber; var a:TMathArray):integer;
       var i:integer;
     begin
@@ -99,6 +94,7 @@ Date: 01.01.2007
       setlength(a,length(n.int)+result);
       for i:=0 to length(a)-1 do if i<result then a[i]:=n.frac[i] else a[i]:=n.int[i-result];
     end;
+     
      
     Procedure MultiplyArray(var a1, a2, a:TMathArray);
       var i, j:integer;
@@ -142,6 +138,7 @@ Date: 01.01.2007
       n.sign:=sign;
     end;
      
+     
     Function Number2Str(var n:TNumber):string;
       var i:integer;
           s:string;
@@ -159,6 +156,7 @@ Date: 01.01.2007
       setlength(n.int,0);
       setlength(n.frac,0);
     end;
+     
      
     Procedure DisposeNumber(var n:TNumber);
     begin
@@ -194,6 +192,7 @@ Date: 01.01.2007
       DisposeNumber(n1);
     end;
      
+     
     Function ulPower(First, Second :string):string;
       var i, j, c:integer;
           a, a1, a2:TMathArray;
@@ -212,7 +211,6 @@ Date: 01.01.2007
             result:=First;
             exit;
           end;
-     
      
       max:=j-1;
       Str2Number(First, n1);
@@ -240,8 +238,6 @@ Date: 01.01.2007
       result:=Number2Str(n1);
       DisposeNumber(n1);
     end;
-     
-     
      
      
     Procedure MultiplyNumbers(var n1, n2 :TNumber);
@@ -328,6 +324,7 @@ Date: 01.01.2007
       until b;
     end;
      
+     
     Procedure AssignNumber(out n1:TNumber; const n2:TNumber);
       var i:integer;
     begin
@@ -337,6 +334,7 @@ Date: 01.01.2007
       for i:=0 to length(n2.frac)-1 do n1.frac[i]:=n2.frac[i];
       n1.sign:=n2.sign;
     end;
+     
      
     Procedure SubNumber(var n1, n2 : TNumber);
       var i:integer;
@@ -358,6 +356,7 @@ Date: 01.01.2007
           DisposeNumber(n2);
         end;
     end;
+     
      
     Function SumInteger(a1,a2:TMathArray):integer;
       var i:integer;
@@ -387,6 +386,7 @@ Date: 01.01.2007
       until b;
     end;
      
+     
     Procedure SumNumber(var n1, n2:TNumber);
       var i:integer;
     begin
@@ -401,6 +401,7 @@ Date: 01.01.2007
         end;
       DisposeNumber(n2);
     end;
+     
      
     Procedure SumNumbers(var n1, n2:TNumber);
     begin
@@ -427,6 +428,7 @@ Date: 01.01.2007
             end;
     end;
      
+     
     Function ulSum(First, Second :string):string;
     begin
       Str2Number(First, n1);
@@ -435,6 +437,7 @@ Date: 01.01.2007
       result:=Number2Str(n1);
       DisposeNumber(n1);
     end;
+     
      
     Function ulSub(First, Second :string):string;
     begin
@@ -447,13 +450,6 @@ Date: 01.01.2007
     end;
      
      
-     
-     
-     
-     
-     
-     
-     
     function  DupChr(const X:Char;Count:Integer):AnsiString;
     begin
       if Count>0 then begin
@@ -461,6 +457,7 @@ Date: 01.01.2007
         if Length(Result)=Count then FillChar(Result[1],Count,X);
       end;
     end;
+     
      
     function StrCmp(X,Y:AnsiString):Integer;
     var
@@ -491,7 +488,6 @@ Date: 01.01.2007
       Result:=I-J;
       if Result=0 then Result:=CompareStr(X,Y);
     end;
-     
      
      
     function StrDiv(X,Y:AnsiString):AnsiString;
@@ -551,6 +547,7 @@ Date: 01.01.2007
       if V then if R[1]<>#48 then R:=#45+R;
     end;
      
+     
     Function Mul10(First:string; Second:integer):string;
       var s:string;
           i, j:integer;
@@ -576,6 +573,7 @@ Date: 01.01.2007
         end;
     end;
      
+     
     Function Div10(First:string; Second:integer):string;
       var s:string;
           i:integer;
@@ -591,6 +589,7 @@ Date: 01.01.2007
       Result:=s;
     end;
      
+     
     function UlDiv(First, Second:String; Precision:integer):String;
     begin
       First:=Mul10(First, Precision);
@@ -599,4 +598,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

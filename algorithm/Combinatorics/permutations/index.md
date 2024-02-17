@@ -1,15 +1,13 @@
 ---
 Title: Hапечатать все перестановки чисел 1...N
 Date: 01.01.2007
+Source: <https://algolist.manual.ru>
 ---
 
 
 Hапечатать все перестановки чисел 1...N
 ========================================
 
-::: {.date}
-01.01.2007
-:::
 
 First = (1,2,...,N)
 
@@ -29,55 +27,53 @@ i+1,...,N так, чтобы перестановка была наименьш�
 возрастающем порядке. Это облегчается тем, что они уже расположены в
 убывающем порядке:
 
-               procedure Next;
-               begin
-                 {найти i: X[i]<X[i+1]>X[i+2]>...>X[N]};
-                 {найти j: X[j]>X[i]>X[j+1]>...>X[N]};
-                 {обменять X[i] и X[j]};
-                 {X[i+1]>X[i+2]>...>X[N]};
-                 {перевернуть X[i+1],X[i+2],...,X[N]};
-               end;
+    procedure Next;
+    begin
+      {найти i: X[i]<X[i+1]>X[i+2]>...>X[N]};
+      {найти j: X[j]>X[i]>X[j+1]>...>X[N]};
+      {обменять X[i] и X[j]};
+      {X[i+1]>X[i+2]>...>X[N]};
+      {перевернуть X[i+1],X[i+2],...,X[N]};
+    end;
 
 Теперь можно написать программу:
 
-        program Perestanovki;
-          type Pere=array [byte] of byte;
-          var N,i,j:byte;
-              X:Pere;
-              Yes:boolean;
-          procedure Next(var X:Pere;var Yes:boolean);
-            var i:byte;
-            procedure Swap(var a,b:byte);  {обмен переменных}
-              var c:byte;
-            begin c:=a;a:=b;b:=c end;
+    program Perestanovki;
+      type Pere=array [byte] of byte;
+      var N,i,j:byte;
+          X:Pere;
+          Yes:boolean;
+      procedure Next(var X:Pere;var Yes:boolean);
+        var i:byte;
+        procedure Swap(var a,b:byte);  {обмен переменных}
+          var c:byte;
+        begin c:=a;a:=b;b:=c end;
+      begin
+        i:=N-1;
+        {поиск i}
+        while (i>0)and(X[i]>X[i+1]) do dec(i);
+        if i>0 then
           begin
-            i:=N-1;
-            {поиск i}
-            while (i>0)and(X[i]>X[i+1]) do dec(i);
-            if i>0 then
-              begin
-                j:=i+1;
-                {поиск j}
-                while (j<N)and(X[j+1]>X[i]) do inc(j);
-                Swap(X[i],X[j]);
-                for j:=i+1 to (N+i) div 2 do Swap(X[j],X[N-j+i+1]);
-                Yes:=true
-              end
-            else Yes:=false
-          end;
-        begin
-          write('N=');readln(N);
-          for i:=1 to N do X[i]:=i;
-          repeat
-            for i:=1 to N do write(X[i]);writeln;
-            Next(X,Yes)
-          until not Yes
-        end.
+            j:=i+1;
+            {поиск j}
+            while (j<N)and(X[j+1]>X[i]) do inc(j);
+            Swap(X[i],X[j]);
+            for j:=i+1 to (N+i) div 2 do Swap(X[j],X[N-j+i+1]);
+            Yes:=true
+          end
+        else Yes:=false
+      end;
+    begin
+      write('N=');readln(N);
+      for i:=1 to N do X[i]:=i;
+      repeat
+        for i:=1 to N do write(X[i]);writeln;
+        Next(X,Yes)
+      until not Yes
+    end.
 
 
-Решение через рекурсию
-
- 
+**Решение через рекурсию**
 
 Опишем рекурсивную процедуру Generate(k), предъявляющую все перестановки
 чисел 1,...,N, у которых фиксировано начало X[1],X[2],...,X[k].
@@ -121,4 +117,3 @@ k+1:
 выполнить ее на бумаге при N=3. Обратите внимание, что порядок вывода
 перестановок не будет лексикографическим!
 
-<https://algolist.manual.ru>

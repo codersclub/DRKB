@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как посчитать факториал?
 ========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     { 
       The factorial of a positive integer is defined as: 
@@ -47,6 +45,8 @@ Date: 01.01.2007
 Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
 Процедура для нахождения точного значения факториала числа.
 
@@ -125,6 +125,5 @@ Date: 01.01.2007
      
      
 
-<https://delphiworld.narod.ru/>
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

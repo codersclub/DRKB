@@ -8,10 +8,6 @@ author: softland, softland@zmail.ru
 Базовые функции по работе с Автокадовскими скриптами
 ====================================================
 
-::: {.date}
-03.06.2002
-:::
-
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Базовые функции по работе с Автокадовскими скриптами, вывод основных примитивов.
      
@@ -555,9 +551,9 @@ author: softland, softland@zmail.ru
       if result = _ERROR_ then begin
         exit;
       end;
-    //размер области метки ~ по размеру блока на символ, т.е. полагаем, что размер одной буквы порядка размера блока
-    // W := length(aLabel) * xScale;
-    // H := yScale;
+      //размер области метки ~ по размеру блока на символ, т.е. полагаем, что размер одной буквы порядка размера блока
+      // W := length(aLabel) * xScale;
+      // H := yScale;
       case LabelAlign of
         BL: result := AS_Text( f, x - xScale * _AM_LABEL_DIST_, y - yScale * _AM_LABEL_DIST_, rotate, style, justify, aLabel );
         ML: result := AS_Text( f, x - xScale * _AM_LABEL_DIST_, y, rotate, style, justify, aLabel );
@@ -621,23 +617,23 @@ author: softland, softland@zmail.ru
     begin
       AssignFile( f, feFileName.Text );
       try
-    //Create file
+        //Create file
         Rewrite( f );
-    //Create new layer: name=WELLS, colour, line style and othe is default
+        //Create new layer: name=WELLS, colour, line style and othe is default
         AS_LayerCreate(f, 'WELLS');
         with _db.data.qryWellPlace do begin
           if not Active then
             Open();
           First();
           while not Eof do begin
-    //get well coordinates
+            //get well coordinates
             x := FieldByName('x').asFloat + edXShift.Value;
             y := FieldByName('y').asFloat + edYShift.Value;
             if ckStateSymbol.Checked then
               s := '_w_DEV' //ignore well state symbol, all wells plot simple circle
             else
               s := FieldByName('DWG_file').asString;
-    //Plot block from file at specified position
+            //Plot block from file at specified position
             AS_InsertBlock(f, Lib_Path + s + '.dwg', x, y, Round(edScale.Value), Round(edScale.Value), 0);
             Next();
           end;

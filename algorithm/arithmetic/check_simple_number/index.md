@@ -1,15 +1,13 @@
 ---
 Title: Как проверить, является ли число простым?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как проверить, является ли число простым?
 =========================================
 
-::: {.date}
-01.01.2007
-:::
 
     function IsPrime(N: Cardinal): Boolean; register; 
       // test if N is prime, do some small Strong Pseudo Prime test in certain bounds 
@@ -126,4 +124,3 @@ Date: 01.01.2007
       Prime := True; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

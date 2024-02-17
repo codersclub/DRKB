@@ -2,17 +2,13 @@
 Title: CRC-64
 Author: Nikonov A.A.
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 CRC-64
 ======
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Nikonov A.A.
 
     unit psnCRC64;
     interface
@@ -118,6 +114,4 @@ CRC-64
       Caption := INTTOHEX(CRC64Stream(INFILE, SIZEOF(INFILE), 1024), 16);   
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

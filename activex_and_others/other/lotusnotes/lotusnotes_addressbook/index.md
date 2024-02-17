@@ -1,15 +1,12 @@
 ---
 Title: Как работать с адресной книгой Lotus Notes?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как работать с адресной книгой Lotus Notes?
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit2;
      
@@ -130,4 +127,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -1,21 +1,18 @@
 ---
 Title: MS Exchange API
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 MS Exchange API
 ===============
 
-::: {.date}
-01.01.2007
-:::
-
 MS Exchange API via CDO (Collaboration Data Objects)
 
 CDO (Collaboration Data Objects) Base Library.
 
-( Talking to MS-Exchange server.)
+(Talking to MS-Exchange server.)
 
 This is a vast subject that is beyond the scope of this article to
 detail all here. This library provides the basic building blocks for
@@ -31,38 +28,38 @@ My basic class provides the following functionality ..
 
 Utility functions and methods
 
-        function CdoNothing(Obj : OleVariant) : boolean;
-        function CdoDefaultProfile : string;
-        function VarNothing : IDispatch;
-     
-        procedure CdoDisposeList(WorkList : TList);
-        procedure CdoDisposeObjects(WorkStrings : TStrings);
-        procedure CdoDisposeNodes(WorkData : TTreeNodes);
+    function CdoNothing(Obj : OleVariant) : boolean;
+    function CdoDefaultProfile : string;
+    function VarNothing : IDispatch;
+    
+    procedure CdoDisposeList(WorkList : TList);
+    procedure CdoDisposeObjects(WorkStrings : TStrings);
+    procedure CdoDisposeNodes(WorkData : TTreeNodes);
 
 Create constructors that allow Default profile logon,Specific profile
 logon and an Impersonated user logon with profile. (This is required for
 successful logon in Windows Service Applications)
 
-       constructor Create; overload;
-       constructor Create(const Profile : string); overload;
-       constructor Create(const Profile : string;
-                           const UserName : string;
-                           const Domain : string;
-                           const Password : string); overload;
+    constructor Create; overload;
+    constructor Create(const Profile : string); overload;
+    constructor Create(const Profile : string;
+                       const UserName : string;
+                       const Domain : string;
+                       const Password : string); overload;
 
 Methods for loading stringlists, treeviews etc. and Object iteration.
 
-       function LoadAddressList(StringList : TStrings) : boolean;
-       function LoadObjectList(const FolderOle : OleVariant; 
-                               List : TList) : boolean;
-       function LoadEMailTree(TV : TTreeView; 
-                              Expand1stLevel : boolean = false;
-                              SubjectMask : string = '') : boolean;
-       function LoadContactList(const FolderOle : OleVariant;
-                                Items : TStrings) : boolean; overload;
-       function LoadContactList(const FolderName : string;
-                                Items : TStrings) : boolean; overload;
-       procedure ShowContactDetails(Contact : OleVariant);
+    function LoadAddressList(StringList : TStrings) : boolean;
+    function LoadObjectList(const FolderOle : OleVariant; 
+                            List : TList) : boolean;
+    function LoadEMailTree(TV : TTreeView; 
+                           Expand1stLevel : boolean = false;
+                           SubjectMask : string = '') : boolean;
+    function LoadContactList(const FolderOle : OleVariant;
+                             Items : TStrings) : boolean; overload;
+    function LoadContactList(const FolderName : string;
+                             Items : TStrings) : boolean; overload;
+    procedure ShowContactDetails(Contact : OleVariant);
 
 The above load various lists into stringlists,lists or treeviews.
 Freeing of lists,object constructs within these data structures are
@@ -72,16 +69,16 @@ yourself or use the utility functions CdoDisposeXXX(). See code
 documentation for further understanding.
 
      
-       function First(const FolderOle : OleVariant; 
-                      out ItemOle : OleVariant) : boolean;
-       function Last(const FolderOle : OleVariant; 
-                     out ItemOle : OleVariant) : boolean;
-       function Next(const FolderOle : OleVariant; 
-                     out ItemOle : OleVariant) : boolean;
-       function Prior(const FolderOle : OleVariant; 
-                      out ItemOle : OleVariant) : boolean;
-       function AsString(const ItemOle : Olevariant; 
-                         const FieldIdConstant : DWORD) : string;
+    function First(const FolderOle : OleVariant; 
+                   out ItemOle : OleVariant) : boolean;
+    function Last(const FolderOle : OleVariant; 
+                  out ItemOle : OleVariant) : boolean;
+    function Next(const FolderOle : OleVariant; 
+                  out ItemOle : OleVariant) : boolean;
+    function Prior(const FolderOle : OleVariant; 
+                   out ItemOle : OleVariant) : boolean;
+    function AsString(const ItemOle : Olevariant; 
+                      const FieldIdConstant : DWORD) : string;
 
 The above provide iterations thru object such as Inbox,Contacts etc. The
 AsString returns a fields value from the object such as Email
@@ -90,20 +87,20 @@ the CONST section "Field Tags").
 
 Properties
 
-         property CurrentUser : OleVariant read FCurrentUser;
-         property Connected : boolean read FConnected;
-         property LastErrorMess : string read FlastError;
-         property LastErrorCode : DWORD read FlastErrorCode;
-         property InBox : OleVariant read FOleInBox;
-         property OutBox : OleVariant read FOleOutBox;
-         property DeletedItems : Olevariant read FOleDeletedItems;
-         property SentItems : Olevariant read FOleSentItems;
-         property GlobalAddressList : Olevariant read FOleGlobalAddressList;
-         property Contacts : Olevariant read FOleContacts;
-         property Session : OleVariant read FOleSession;
-         property Version : string read GetFVersion;
-         property MyName : string read FMyName;
-         property MyEMailAddress : string read FMyEMailAddress;
+    property CurrentUser : OleVariant read FCurrentUser;
+    property Connected : boolean read FConnected;
+    property LastErrorMess : string read FlastError;
+    property LastErrorCode : DWORD read FlastErrorCode;
+    property InBox : OleVariant read FOleInBox;
+    property OutBox : OleVariant read FOleOutBox;
+    property DeletedItems : Olevariant read FOleDeletedItems;
+    property SentItems : Olevariant read FOleSentItems;
+    property GlobalAddressList : Olevariant read FOleGlobalAddressList;
+    property Contacts : Olevariant read FOleContacts;
+    property Session : OleVariant read FOleSession;
+    property Version : string read GetFVersion;
+    property MyName : string read FMyName;
+    property MyEMailAddress : string read FMyEMailAddress;
 
 The Create constructor sets up the predefined objects InBox, OutBox,
 DeletedItems, SentItems, GlobalAddressList, Session and Contacts. The
@@ -1688,4 +1685,3 @@ worth studying as a faster alternative to using MS Outlook API.
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

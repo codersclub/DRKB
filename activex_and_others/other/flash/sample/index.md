@@ -1,15 +1,12 @@
 ---
 Title: Пример работы с Flash
 Date: 01.01.2007
+Source: https://www.delphiflash.com
 ---
 
 
 Пример работы с Flash
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
 The example of a simple movie creating which shows rectangle moving and
 circle transforming is below
@@ -48,4 +45,3 @@ circle transforming is below
     end;
      
 
-https://www.delphiflash.com

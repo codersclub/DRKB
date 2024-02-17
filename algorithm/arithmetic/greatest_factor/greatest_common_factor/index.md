@@ -1,15 +1,13 @@
 ---
 Title: Как найти наибольший общий делитель?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как найти наибольший общий делитель?
 ====================================
 
-::: {.date}
-01.01.2007
-:::
 
     {  The greatest common factor, or GCF, is the greatest factor 
       that divides two numbers. 
@@ -111,4 +109,3 @@ Date: 01.01.2007
           Result := Aarray[Lpos]; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

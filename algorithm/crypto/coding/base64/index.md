@@ -8,9 +8,7 @@ Date: 01.01.2007
 Base64 кодирование
 ==================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     function Decode(const S: AnsiString): AnsiString; 
     const 
@@ -79,6 +77,8 @@ Base64 кодирование
 Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     type TAByte = array [0..maxInt-1] of byte;
     type TPAByte = ^TAByte;
@@ -188,6 +188,8 @@ Base64 кодирование
 
 ------------------------------------------------------------------------
 
+Вариант 3:
+
     const
       Codes64 = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/';
      
@@ -260,6 +262,8 @@ Base64 кодирование
 Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 4:
 
     { 64-битное декодирование файлов }
     { Arne de Bruijn }
@@ -383,6 +387,5 @@ Base64 кодирование
       close(T);
     end.
 
-<https://delphiworld.narod.ru/>
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

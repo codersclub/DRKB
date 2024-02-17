@@ -8,12 +8,8 @@ Date: 01.01.2007
 CRC-32
 ======
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-
-     
     function CRC32(const IniCRC:Integer;Source:AnsiString):Integer;
     asm
     Push EBX
@@ -117,6 +113,8 @@ CRC-32
 Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Быстрый алгоритм подсчета CRC32
@@ -233,6 +231,8 @@ CRC-32
      
 
 ------------------------------------------------------------------------
+
+Вариант 3:
 
 Приведен модуль для Delphi 1.0 (для Delphi 2.0 должны быть сделаны
 небольшие изменения):
@@ -386,6 +386,5 @@ CRC-32
      
      
 
-<https://delphiworld.narod.ru/>
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

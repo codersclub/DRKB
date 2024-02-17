@@ -1,18 +1,13 @@
 ---
 Title: Кодирование русского текста методом сдвига
-Author: \_\_\_Nikolay
+Author: ___Nikolay
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Кодирование русского текста методом сдвига
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: \_\_\_Nikolay
 
     unit uMain;
      
@@ -124,6 +119,3 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

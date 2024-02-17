@@ -1,15 +1,12 @@
 ---
 Title: Умножение больших целых чисел
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Умножение больших целых чисел
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     type
        IntNo = record
@@ -40,4 +37,3 @@ Date: 01.01.2007
         ShowMessage(IntToStr(r.Hi32) + ', ' + IntToStr(r.low32))
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

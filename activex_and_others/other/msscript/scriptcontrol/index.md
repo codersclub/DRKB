@@ -1,5 +1,6 @@
 ---
 Title: Использование Microsoft ScriptControl
+Author: Анатолий Тенцер (tolik@katren.nsk.ru)
 Date: 01.01.2007
 ---
 
@@ -7,11 +8,6 @@ Date: 01.01.2007
 Использование Microsoft ScriptControl
 =====================================
 
-::: {.date}
-01.01.2007
-:::
-
-Анатолий Тенцер
 
 **Содержание**
 

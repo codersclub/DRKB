@@ -1,15 +1,12 @@
 ---
 Title: Example of Skip List source code
 Date: 01.01.2007
+Source: <https://algolist.manual.ru>
 ---
 
 
 Example of Skip List source code
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     {* 
      
@@ -421,4 +418,3 @@ Example of Skip List source code
      
     end.
 
-<https://algolist.manual.ru>

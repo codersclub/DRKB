@@ -2,15 +2,12 @@
 Title: Просто и ясно о PageMaker и Delphi
 Date: 01.01.2007
 Author: Дмитрий Кузан
+Source: <https://www.delphikingdom.com>
 ---
 
 
 Просто и ясно о PageMaker и Delphi
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 Дорогие коллеги, данной статьей я хочу показать вам основные принципы
 работы с Adobe Pagemaker из Delphi.
@@ -146,4 +143,3 @@ P.S. Хочу напоследок заметить что данный комп
 
 Дмитрий Кузан
 
-<https://www.delphikingdom.com>

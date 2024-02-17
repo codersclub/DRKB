@@ -1,15 +1,12 @@
 ---
 Title: CRC
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 CRC
 ===
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Example of calculating a simple checksum. 
@@ -33,4 +30,3 @@ CRC
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
