@@ -1,15 +1,12 @@
 ---
 Title: InputBox для ввода пароля
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 InputBox для ввода пароля
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     const
        InputBoxMessage = WM_USER + 200;
@@ -55,4 +52,3 @@ InputBox для ввода пароля
        InputString := InputBox('Input Box', 'Please Enter a Password', '');
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

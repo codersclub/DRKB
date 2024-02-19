@@ -1,15 +1,12 @@
 ---
 Title: Найти точку пересечения прямых
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Найти точку пересечения прямых
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     // determine if 2 line cross given their end-points
     function LinesCross(LineAP1, LineAP2, LineBP1, LineBP2 : TPoint) : boolean;
@@ -55,4 +52,3 @@ Date: 01.01.2007
       Result.Y := AVec1.Y - AVec2.Y;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

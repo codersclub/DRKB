@@ -1,15 +1,13 @@
 ---
 Title: Стеганография (вшивание информации в рисунки)
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Стеганография (вшивание информации в рисунки)
 =============================================
 
-::: {.date}
-01.01.2007
-:::
 
     // Do the actual encryption of the message inside the picture. 
     procedure TForm1.btnEncryptClick(Sender: TObject);
@@ -101,4 +99,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

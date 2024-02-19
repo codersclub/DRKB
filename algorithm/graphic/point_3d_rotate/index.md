@@ -1,20 +1,17 @@
 ---
 Title: Rotate a 3D Point around another 3D Point
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Rotate a 3D Point around another 3D Point
 =========================================
 
-::: {.date}
-01.01.2007
-:::
-
     const 
       PIDiv180 = 0.017453292519943295769236907684886;
      
-    procedure Rotate(Rx, Ry, Rz: Double; x, y, z, ox, oy, oz: Double;
+    procedure Rotate3(Rx, Ry, Rz: Double; x, y, z, ox, oy, oz: Double;
       var Nx, Ny, Nz: Double);
     begin
       Rotate(Rx, Ry, Rz, x - ox, y - oy, z - oz, Nx, Ny, Nz);
@@ -22,7 +19,6 @@ Rotate a 3D Point around another 3D Point
       Ny := Ny + oy;
       Nz := Nz + oz;
     end;
-     
      
      
     procedure Rotate(Rx, Ry, Rz: Double; x, y, z: Double; var Nx, Ny, Nz: Double);
@@ -61,4 +57,3 @@ Rotate a 3D Point around another 3D Point
       Ny := Tempx * SinZ + TempY * CosZ;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Как проверить правильность International Bank Account Number?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как проверить правильность International Bank Account Number?
 =============================================================
-
-::: {.date}
-01.01.2007
-:::
 
     // IBAN = International Bank Account Number 
     // Example : CH10002300A1023502601 
@@ -70,4 +67,3 @@ Date: 01.01.2007
         Result := False; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

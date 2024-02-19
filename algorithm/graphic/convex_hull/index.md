@@ -2,18 +2,15 @@
 Title: Find the convex hull of 2D points
 Date: 01.01.2007
 Tags: convex hull, 2D points, Grahams scan
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Нахождение выпуклой кривой, проходящей через ряд 2D-точек методом сканирования Грэхема
 ======================================================================================
 
-::: {.date}
-01.01.2007
-:::
+>Find the convex hull of 2D points using Grahams scan
 
-Find the convex hull of 2D points using Grahams scan
-
-Внимание!  
+**Внимание!**  
 Функция перезаписывает исходный массив точек,
 поэтому не забудьте сначала сделать резервную копию, если это необходимо.
 
@@ -170,4 +167,3 @@ Find the convex hull of 2D points using Grahams scan
       if Lo < iHi then QuickSortAngle(A, Angles, Lo, iHi);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,18 +1,13 @@
 ---
 Title: RC5
-Author: Матвеев Игорь
-Date: 01.01.2007
+Author: Igor Matveev, teap_leap@mail.ru
+Date: 01.01.2004
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 RC5
 ===
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Матвеев Игорь
 
 Прежде всего немного о самом алгоритме: алгоритм был разработан
 Рональдом Ривестом (Ronald L. Rivest) для компании RSA Data Security. На
@@ -399,6 +394,4 @@ RC5, как и большинство алгоритмов - раундовый 
 
 Матвеев Игорь Владимирович
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

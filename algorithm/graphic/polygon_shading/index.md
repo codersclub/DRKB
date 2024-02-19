@@ -1,15 +1,14 @@
 ---
 Title: Draw a polygon with Gouraud shading
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Draw a polygon with Gouraud shading
 ===================================
 
-::: {.date}
-01.01.2007
-:::
+Нарисовать многоугольник с затенением Гуро
 
     uses
       Graphics, Dialogs;
@@ -250,4 +249,3 @@ Draw a polygon with Gouraud shading
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

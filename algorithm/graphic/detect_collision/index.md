@@ -1,15 +1,13 @@
 ---
 Title: Detect simple collision and transparency
 Date: 01.01.2007
+Author: Erwin Haantjes, DelphiApplicationDiscussion@hotmail.com
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Detect simple collision and transparency
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
     Simple collision detection and transparency, by Erwin Haantjes
@@ -235,4 +233,3 @@ Detect simple collision and transparency
     Erwin Haantjes.
     }
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

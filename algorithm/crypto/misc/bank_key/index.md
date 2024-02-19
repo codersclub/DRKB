@@ -1,15 +1,14 @@
 ---
 Title: Создание банковского ключа
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Создание банковского ключа
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Вычисляет ключ в номере банковского счета.
 
     function CheckCtrlKey( aNLs : string; aMfo : real ) : boolean;
     const
@@ -36,6 +35,4 @@ Date: 01.01.2007
     end;
      
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

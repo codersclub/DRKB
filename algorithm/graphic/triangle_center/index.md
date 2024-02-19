@@ -1,17 +1,16 @@
 ---
 Title: Найти центр треугольника
 Date: 01.01.2007
+Source:  <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Найти центр треугольника
 ========================
 
-::: {.date}
-01.01.2007
-:::
+\1. Определить центр описанной окружности двумерного треугольника?
 
-Determine the circum-center of a 2D triangle?
+ (Determine the circum-center of a 2D triangle)
 
     procedure Circumcenter(x1, y1, x2, y2, x3, y3: Double; var Px, Py: Double);
     var 
@@ -34,7 +33,10 @@ Determine the circum-center of a 2D triangle?
 
 ------------------------------------------------------------------------
 
-Determine the incenter of a 2D triangle?
+\2. Определить центр двумерного треугольника.
+
+>Determine the incenter of a 2D triangle?
+
 
     procedure Incenter(x1, y1, x2, y2, x3, y3: Double; var Px, Py: Double);
     var
@@ -53,4 +55,3 @@ Determine the incenter of a 2D triangle?
       Py := (Side23 * y1 + Side31 * y2 + Side12 * y3) * Perim;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

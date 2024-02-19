@@ -7,11 +7,7 @@ Date: 01.01.2007
 Как проверить правильность штрих-кода?
 ======================================
 
-::: {.date}
-01.01.2007
-:::
-
-Solve 1:
+Вариант 1:
 
 I want to publish a code for checksum calculation by modulus 10 which is
 used in the barcodes. I must say that this "mod10" is specifical so
@@ -86,6 +82,10 @@ Designer and the my extended algorithm I use in the serial number
 generation as part of the protection schema (in the shareware projects).
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Проверка валидности штрихкода методом подсчета контрольной суммы.
 
     function BarCodeValid(ACode: string): boolean;
     var

@@ -2,15 +2,13 @@
 Title: Определить взаиморасположение точки и прямой
 Author: Digar
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Определить взаиморасположение точки и прямой
 ============================================
 
-::: {.date}
-01.01.2007
-:::
 
     {Расчет нормали от точки до линии и расстояния от начала и до конца линии}
     function Dfptl(key:byte;x,y,xn,yn,xk,yk:real):real;//Distance From Point To Line
@@ -34,6 +32,3 @@ Date: 01.01.2007
     if isZero(Result,r4) then Result:=0;
     end;
 
-Автор: Digar
-
-Взято из <https://forum.sources.ru>

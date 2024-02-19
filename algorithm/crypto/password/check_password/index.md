@@ -1,15 +1,13 @@
 ---
 Title: Определить, что текстовое поле для ввода пароля
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Определить, что текстовое поле для ввода пароля
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
 
     // Determine, if a Edit Field has password characters 
     // Herausfinden, ob das Edit Feld Passwort Charakter hat 
@@ -59,4 +57,3 @@ Date: 01.01.2007
          SetPasswordChar(wnd,'*');
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

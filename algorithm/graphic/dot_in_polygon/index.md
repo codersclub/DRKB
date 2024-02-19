@@ -1,15 +1,12 @@
 ---
 Title: Как определить, лежит ли точка внутри полигона?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как определить, лежит ли точка внутри полигона?
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
 
 The main procedure is called ExploreLine. In this procedure Fst and Lst
 may be two consecutively points in the polyline. Srch is the point
@@ -68,4 +65,3 @@ searched.
         (Result)rr(dis >= lim);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
