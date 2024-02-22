@@ -1,34 +1,26 @@
 ---
 Title: Как работать с комплексными числами?
-Date: 01.01.2007
+Date: 01.01.2000
+Author: Ing.Büro R.Tschaggelar
+Source: <https://www.ibrtses.com/delphi/complexrec.html>
+ID: 04064
 ---
 
 
 Как работать с комплексными числами?
 ====================================
 
-::: {.date}
-01.01.2007
-:::
-
-Взято из <https://www.ibrtses.com/delphi/complexrec.html>
-
 Complex numbers
 
 Complex numbers have two representations :
 
-rectanglar : Z = a + i * b, a being the real part, and b being the
-imaginary part
-
-polar : Z = r * exp(i * phi), r being the absolute value, and phi
-being the argument(angle)
+- rectanglar : Z = a + i * b, a being the real part, and b being the imaginary part
+- polar : Z = r * exp(i * phi), r being the absolute value, and phi being the argument(angle)
 
 a reason to demotivate compiler writers to have it as native type.
 
-Here is a unit that approaches the complex as record.
-
+Here is a unit that approaches the complex as record.  
 the used record is of dual use, either rectangular or polar,
-
 one just has to keep in mind what in is at the moment.
 
     { unit for complex numbers based on C_reords
@@ -429,6 +421,4 @@ one just has to keep in mind what in is at the moment.
      
     end.
 
-Copyright (99,2000) Ing.BЁ№ro R.Tschaggelar
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Copyright (99,2000) Ing.Büro R.Tschaggelar

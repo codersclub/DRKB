@@ -7,10 +7,6 @@ Date: 01.01.2007
 Метод Дихотомии
 ===============
 
-::: {.date}
-01.01.2007
-:::
-
     program dicotomie;
     var y:integer;
     function f(var x:real):real;

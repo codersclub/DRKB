@@ -1,15 +1,12 @@
 ---
 Title: Числа Фибоначчи
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Числа Фибоначчи
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
     {
       Fibonacci integers are defined as:
@@ -57,4 +54,3 @@ Date: 01.01.2007
       ShowMessage(IntToStr(fibrec(10)));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

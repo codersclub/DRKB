@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как представить число в другой системе счисления?
 =================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     function BaseConvert(NumIn: string; BaseIn: Byte; BaseOut: Byte): string; 
     var 
@@ -83,104 +81,82 @@ Date: 01.01.2007
       // returns, ergibt '65535'. 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2.
 
 Решение от Борланд:
 
 The following function will convert a number from one base to
-
 a number of another base:
 
-procedure RadixStr(NumStr : pChar;
-
-                  Radix : LongInt;
-
-                  ResultStr : pChar;
-
-                  NewRadix : LongInt;
-
-                  var ErrorCode : LongInt);
+    procedure RadixStr(NumStr : pChar;
+                       Radix : LongInt;
+                       ResultStr : pChar;
+                       NewRadix : LongInt;
+                       var ErrorCode : LongInt);
 
 The RadixStr() function takes a pointer to a null terminated string
-
 containing a number of one base, and fills a buffer with a null
-
 terminated string containing the number converted to another base.
 
 Parameters:
 
-NumStr: A pointer to a null terminated string containing the numeric
-
+- NumStr: A pointer to a null terminated string containing the numeric
 string to convert:
 
-Radix: The base of the number contained in the NumStr parameter. The
-
+- Radix: The base of the number contained in the NumStr parameter. The
 base must be in the range of 2 to 36;
 
-ResultStr : A pointer to a null terminated string buffer to place the
-
+- ResultStr : A pointer to a null terminated string buffer to place the
 resulting numeric string. The buffer should be sufficiently large to
-
 hold the resulting string.
 
-NewRadix: The base to use in the conversion. The base must be in the
-
+- NewRadix: The base to use in the conversion. The base must be in the
 range of 2 to 36;
 
-ErrorCode: Upon return, contains  the return code 0 if successful, or
-
+- ErrorCode: Upon return, contains  the return code 0 if successful, or
 the character number of the offending character contained in the
-
 buffer NumStr.
 
 Examples of calling the RadixStr() function:
 
+```
 {Convert Hex to Decimal}
-
-RadixStr(\'FF\',
-
+RadixStr('FF',
         16,
-
         lpBuffer,
-
         10,
-
         Code);
+```
 
 Should return the string \'255\' in lpbuffer^.
 
+```
 {Convert Decimal to Binary}
-
-RadixStr(\'255\',
-
+RadixStr('255',
         10,
-
         lpBuffer,
-
         2,
-
         Code);
+```
 
 Should return the string \'11111111\' in lpbuffer^.
 
+```
 {Convert Hex to Octal}
-
-RadixStr(\'FF\',
-
+RadixStr('FF',
         16,
-
         lpBuffer,
-
         8,
-
         Code);
+```
 
 Should return the string \'377\' in lpbuffer^.
 
     {Function code}
-     
     procedure RadixStr(NumStr : pChar;
                        Radix : LongInt;
                        ResultStr : pChar;

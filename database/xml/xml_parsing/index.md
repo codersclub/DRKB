@@ -278,7 +278,7 @@ Parsing XML
     begin
       Result := '';
       if CharAt(AData, APos) <> QIndef then Exit;
-      i        := apos;
+      i        := APos;
       skipnext := True;
       repeat
         if not skipnext then
@@ -289,7 +289,7 @@ Parsing XML
             z := charat(AData, I);
             if (Z = QIndef) or (z = #0) then
             begin
-              Result := Copy(AData, aPos + 1, I - APos - 1);
+              Result := Copy(AData, APos + 1, I - APos - 1);
               //          result:=exch(result,'\','');
               APos := I + 1;
               Exit;
@@ -351,7 +351,7 @@ Parsing XML
       n := parseString(AData, APos);
       if n = '' then Exit;
       if skipspaces(AData, APos) <> '=' then Exit;
-      Inc(apos);
+      Inc(APos);
       V := parseString(AData, APos);
       fdata[n] := dequote(v);
       Result := True;
@@ -475,7 +475,7 @@ Parsing XML
     function TYZXMLTag.CharAt(var S: string; APos: Integer): Char;
     begin
       Result := #0;
-      if (Length(s) < APos) or (apos < 1) then Exit;
+      if (Length(s) < APos) or (APos < 1) then Exit;
       Result := s[APos];
     end;
      

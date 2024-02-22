@@ -8,10 +8,6 @@ Date: 01.01.1999
 Запрос пароля при инициализации приложения
 ==========================================
 
-::: {.date}
-01.01.1999
-:::
-
     {
     Copyright © 1998 by Delphi 4 Developer's Guide - Xavier Pacheco and Steve Teixeira
     }

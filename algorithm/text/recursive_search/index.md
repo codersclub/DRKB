@@ -1,15 +1,12 @@
 ---
 Title: Рекурсивный поиск с помощью функции pos
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Рекурсивный поиск с помощью функции pos
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     function PosN(Substring, Mainstring: string; n: Integer): Integer;
      
@@ -37,18 +34,17 @@ Date: 01.01.2007
      
      //Beispiele / Examples 
      
-      i := posn('s', 'swissdelphicenter.ch', 2);
+     i := posn('s', 'swissdelphicenter.ch', 2);
        //  i=4 
      
      
      
-      i := posn('x', 'swissdelphicenter.ch', 1);
+     i := posn('x', 'swissdelphicenter.ch', 1);
        //  i=0 
      
      
-      i := posn('delphi', 'swissdelphicenter.ch', 1);
+     i := posn('delphi', 'swissdelphicenter.ch', 1);
        //  i=6 
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
  

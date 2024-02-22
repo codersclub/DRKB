@@ -1,15 +1,13 @@
 ---
 Title: Разбиение шестнадцатиричной величины
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Разбиение шестнадцатиричной величины
 ====================================
 
-::: {.date}
-01.01.2007
-:::
 
     Function LoNibble ( X : Byte ) : Byte;
     Begin
@@ -28,6 +26,5 @@ Date: 01.01.2007
     Label1.Caption := 'Верхняя часть - ' + IntToHex ( HiNibble ( $2E ), 2 );
     Label2.Caption := 'Нижняя часть - ' + IntToHex ( LoNibble ( $2E ), 2 ); 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

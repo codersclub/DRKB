@@ -1,15 +1,14 @@
 ---
 Title: Настройка сетки графика по оси ординат
-Date: 01.01.2007
+Author: lookin
+Date: 25.12.2002
 ---
 
 
 Настройка сетки графика по оси ординат
 ======================================
 
-::: {.date}
-01.01.2007
-:::
+//для использования в Delphi:
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Настройка оси
@@ -49,7 +48,7 @@ Date: 01.01.2007
       Minimum:=-100000000000; Maximum:=ymx; Minimum:=ymn; end; end;
     end;
 
-//для использования в Excel в качестве макроса (Visual Basic)
+//для использования в Excel в качестве макроса (Visual Basic):
 
     Function SetAxisRange(CChart As Chart, ByRef AMax As Double, ByRef AMin As Double, ByRef AStep As Double)
      
@@ -111,5 +110,5 @@ Date: 01.01.2007
         End If
      
     End Function 
-     
-     
+
+

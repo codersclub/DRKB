@@ -1,18 +1,13 @@
 ---
 Title: Сортировка двух связанных списков по целочисленным значениям одного из них
-Author: \_\_\_Nikolay
+Author: ___Nikolay
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Сортировка двух связанных списков по целочисленным значениям одного из них
 ==========================================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: \_\_\_Nikolay
 
     procedure SortTwoListsByIntValues(lbNum, lbNames: TStrings);
     var
@@ -44,6 +39,4 @@ Date: 01.01.2007
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

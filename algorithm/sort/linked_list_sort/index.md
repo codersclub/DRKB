@@ -1,15 +1,12 @@
 ---
 Title: Сортировка связанного списка
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Сортировка связанного списка
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     program noname;
      
@@ -152,4 +149,3 @@ Date: 01.01.2007
       WriteLn(root^.next^.next^.name);
     end.
 
-Взято с <https://delphiworld.narod.ru>

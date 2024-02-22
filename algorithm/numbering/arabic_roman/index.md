@@ -1,15 +1,12 @@
 ---
 Title: Конвертация арабских цифр в римские
 Date: 01.01.2007
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Конвертация арабских цифр в римские
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
     function IntToRoman(num: Cardinal): String;  {returns num in capital roman digits}
     const
@@ -30,4 +27,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято из <https://www.lmc-mediaagentur.de/dpool>

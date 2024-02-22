@@ -1,15 +1,12 @@
 ---
 Title: Линза
 Date: 01.01.2007
+Source: <https://algolist.manual.ru>
 ---
 
 
 Линза
 =====
-
-::: {.date}
-01.01.2007
-:::
 
 ## Реализация 1 - на Паскале.
 
@@ -132,10 +129,10 @@ Date: 01.01.2007
               jnz     @next_dy
       end;
      
-      if ((x+vx)>=r0)and ((x+vx)<=319-r0)then Inc(x, vx)
+      if ((x+vx)>=r0) and ((x+vx)<=319-r0) then Inc(x, vx)
                                            else vx:=-vx;
      
-      if ((y+vy)>=r0)and ((y+vy)<=199-r0)then Inc(y,vy)
+      if ((y+vy)>=r0) and ((y+vy)<=199-r0) then Inc(y,vy)
                                            else vy:=-vy;
       Delay(25);
      until Port[$60]=$01;
@@ -151,4 +148,3 @@ Date: 01.01.2007
      
     END.
 
-<https://algolist.manual.ru>

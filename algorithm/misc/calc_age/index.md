@@ -1,15 +1,12 @@
 ---
 Title: Как посчитать возраст человека?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как посчитать возраст человека?
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
     function CalculateAge(Birthday, CurrentDate: TDate): Integer; 
     var 
@@ -41,4 +38,3 @@ Date: 01.01.2007
       Label1.Caption := Format('Your age is %d', [CalculateAge(StrToDate('01.01.1903'), Date)]); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

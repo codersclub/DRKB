@@ -1,15 +1,12 @@
 ---
 Title: Как заменить строку в матрице?
 Date: 01.01.2007
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Как заменить строку в матрице?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     program Matrices;
      
@@ -65,4 +62,3 @@ Date: 01.01.2007
       Readln;
     end.
 
-Взято из <https://www.lmc-mediaagentur.de/dpool>

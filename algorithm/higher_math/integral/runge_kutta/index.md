@@ -7,25 +7,22 @@ author: Андрей Садовой
 Метод Рунге-Кутта решения дифференциальных уравнений и их систем
 ================================================================
 
-::: {.date}
-01.01.2006
-:::
-
-© 2006 Андрей Садовой
-
 Метод позволяет решать системы обыкновенных дифференциальных уравнений
 (ОДУ) первого порядка следующего вида:
 
-      ![clip0307](clip0307.gif),  
-      ![clip0308](clip0308.gif),  
-      и т.д.,  
+![clip0307](clip0307.gif),
+
+![clip0308](clip0308.gif),
+
+и т.д.,
 
 которые имеют решение:
 
-      ![clip0309](clip0309.gif),  
-      ![clip0310](clip0310.gif),  
-      и т.д.,
+![clip0309](clip0309.gif),
 
+![clip0310](clip0310.gif),
+
+и т.д.,
 
 где t - независимая переменная (например, время); X, Y и т.д. -
 искомые функции (зависимые от t переменные). Функции f, g и т.д. -
@@ -43,27 +40,29 @@ author: Андрей Садовой
 Метод Рунге-Кутта заключается в рекурентном применении следующих
 формул:
 
-      ![clip0311](clip0311.gif){.center}
+![clip0311](clip0311.gif)
 
-      ![clip0312](clip0312.gif){.center}
-      ...
+![clip0312](clip0312.gif)
+
+...
+
 где
 
-      ![clip0313](clip0313.gif){.center}
+![clip0313](clip0313.gif)
 
-      ![clip0314](clip0314.gif){.center}
+![clip0314](clip0314.gif)
 
-      ![clip0315](clip0315.png){.center}
+![clip0315](clip0315.png)
 
-      ![clip0001](clip0001.png){.center}
+![clip0001](clip0001.png)
 
-      ![clip0002](clip0002.png){.center}
+![clip0002](clip0002.png)
 
-      ![clip0003](clip0003.png){.center}
+![clip0003](clip0003.png)
 
-      ![clip0004](clip0004.png){.center}
+![clip0004](clip0004.png)
 
-      ![clip0005](clip0005.png){.center}
+![clip0005](clip0005.png)
 
 Реализация Метода Рунге-Кутта на Delphi может выглядеть так
 (привожу полностью модуль):
@@ -170,36 +169,34 @@ author: Андрей Садовой
 Ниже приводится описание функции Runge\_Kutt и типов, использующихся в
 модуле.
 
-     
+```
+Function Runge_Kutt (FunArray: TFunArray; First: Extended; Last: Extended;
+                     Steps: Integer; InitArray: TInitArray; var Res: TResArray
+                    ):Word;
+```
 
-Function Runge\_Kutt (FunArray: TFunArray; First: Extended; Last:
-Extended; Steps: Integer; InitArray: TInitArray; var Res:
-TResArray):Word;
-
-Здесь:
-   FunArray - вектор функций (правых частей уравнений системы);
-   First, Last - начальная и конечная точки расчетного интервала;
-   Steps - число шагов по расчетному интервалу;
-   InitArray - вектор начальных значений
-
-   Res - матрица результатов включая независимую переменную.
+Здесь:  
+-   FunArray - вектор функций (правых частей уравнений системы);  
+-   First, Last - начальная и конечная точки расчетного интервала;  
+-   Steps - число шагов по расчетному интервалу;  
+-   InitArray - вектор начальных значений  
+-   Res - матрица результатов включая независимую переменную.
 
 В модуле описаны типы:
 
+```
 type
-   TVarsArray = array of Extended; // вектор переменных включая
-независимую
+   TVarsArray = array of Extended; // вектор переменных включая независимую
    TInitArray = array of Extended; // вектор начальных значений
-   TFunArray = array of function(VarsArray: TVarsArray ):Extended; //
-вектор функций
+   TFunArray = array of function(VarsArray: TVarsArray ):Extended; // вектор функций
    TResArray = array of array of Extended; // матрица результатов
-
    TCoefsArray = array of Extended; // вектор коэффициетов метода
+```
 
 Функция возвращает коды ошибок:
-  0 - нет ошибок;
 
-  100 - число уравнений не равно числу начальных условий.
+- 0 - нет ошибок;
+- 100 - число уравнений не равно числу начальных условий.
 
 Решение содержится в переменной-матрице Res. Первый индекс матрицы
 относится к переменной (0 - независимая переменная, 1 - первая

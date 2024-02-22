@@ -1,15 +1,12 @@
 ---
 Title: Вычисление интеграла
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Вычисление интеграла
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
 Вычисление интеграла с заданной точностью алгоритмом Симпсона.
 
@@ -62,4 +59,3 @@ Date: 01.01.2007
       writeln; writeln('Press Enter'); readln;
     end.
 
-Взято с <https://delphiworld.narod.ru>

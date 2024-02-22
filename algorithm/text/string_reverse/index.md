@@ -8,11 +8,9 @@ Date: 01.01.2007
 Перевернуть строку
 ==================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
-Автор: \_\_\_Nikolay
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     // Перевернуть строку
     function ReverseString(s: string): string;
@@ -25,13 +23,13 @@ Date: 01.01.2007
           Result := Result + s[i];
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Profit Manson
+Вариант 2.
+
+Author: Profit Manson
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function ReverseString(s: string): string;
     var
@@ -48,11 +46,13 @@ DelphiWorld 6.0
       Result := s;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3.
+
+Source: <https://www.swissdelphicenter.ch>
 
     function ReverseString(const s: string): string;
      var
@@ -66,9 +66,12 @@ DelphiWorld 6.0
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 4.
+
+Source: <https://www.swissdelphicenter.ch>
 
      function ReverseString(const Str: string): string;
      // by Ido Kanner 
@@ -96,9 +99,12 @@ DelphiWorld 6.0
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 5.
+
+Source: <https://www.swissdelphicenter.ch>
 
      function ReverseString(S: string): string;
      // by Rudy Velthuis 
@@ -120,9 +126,12 @@ DelphiWorld 6.0
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 6.
+
+Source: <https://www.swissdelphicenter.ch>
 
      procedure ReverseString(var S: string);
      // by Rudy Velthuis 
@@ -143,4 +152,3 @@ DelphiWorld 6.0
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

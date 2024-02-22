@@ -1,15 +1,12 @@
 ---
 Title: Конвертация римских цифр в арабские
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Конвертация римских цифр в арабские
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
     function RomanToDec(const Value: string): integer;
     var
@@ -45,4 +42,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
