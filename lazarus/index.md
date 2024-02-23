@@ -1,6 +1,6 @@
 ---
 Title: Lazarus IDE и портирование приложений
-author: Valery Votintsev
+author: Valery Votintsev, vvotintev@gmail.com
 date: 18.12.2023
 ---
 
