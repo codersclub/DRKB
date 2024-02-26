@@ -1,15 +1,13 @@
 ---
 Title: Экспорт ADO таблиц в разные форматы
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Author: Carlo Pasolini, ccpasolini@libero.it 
 ---
 
 
 Экспорт ADO таблиц в разные форматы
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
     Exporting ADO tables into various formats 
@@ -210,4 +208,3 @@ Date: 01.01.2007
     carlo Pasolini, Riccione(italy), e-mail: ccpasolini@libero.it 
     } 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

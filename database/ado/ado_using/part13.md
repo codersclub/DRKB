@@ -7,26 +7,22 @@ Date: 01.01.2007
 TADODataSet
 ===========
 
-::: {.date}
-01.01.2007
-:::
-
-Компонент TADODataSet
+**Компонент TADODataSet**
 
 Компонент TADODataSet предназначен для представления набора данных из
 хранилища данных ADO. Он прост в использовании, имея только несколько
-собственных свойств и методов, и применяет функции своего предка
----класса TCustomADODataSet.
+собственных свойств и методов, и применяет функции своего предка -
+класса TCustomADODataSet.
 
 Это единственный компонент ADO, инкапсулирующий набор данных, для
 которого опубликованы свойства, позволяющие управлять командой ADO. Это
 свойства (см. выше)
 
-property CommandText: WideString;
+    property CommandText: WideString;
 
 И
 
-property CommandType: TCommandType;
+    property CommandType: TCommandType;
 
 В результате компонент представляет собой гибкий инструмент, который
 позволяет (в зависимости от типа команды и ее текста) получать данные из
@@ -34,13 +30,12 @@ property CommandType: TCommandType;
 выбираете нужное значение свойства CommandType = cmdText и заносите в
 свойство CommandText текст запроса SQL из редактора:
 
-ADODataSet,CommandType = cmdText;
-
-ADODataSet. CommandText := Memol.Lines.Text;
+    ADODataSet,CommandType = cmdText;
+    ADODataSet. CommandText := Memol.Lines.Text;
 
 И запрос SQL готов к выполнению.
 
-Примечание 
+**Примечание **
 
 Для запросов SQL можно применять только язык Data Manipulation Language
 (использовать только SELECT).

@@ -1,15 +1,12 @@
 ---
 Title: Как сделать ADO-connection
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать ADO-connection
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       ComObj;
@@ -72,4 +69,3 @@ Date: 01.01.2007
       DataBaseConnection_Test(True);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

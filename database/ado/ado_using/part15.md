@@ -7,35 +7,31 @@ Date: 01.01.2007
 TADOQuery
 =========
 
-::: {.date}
-01.01.2007
-:::
-
 Компонент TADOQuery обеспечивает применение запросов SQL при работе с
 данными через ADO. По своей функциональности он подобен стандартному
 компоненту запроса (см. гл. 11).
 
 Текст запроса задается свойством
 
-property SQL: TStrings;
+    property SQL: TStrings;
 
 Параметры запроса определяются свойством
 
-property Parameters: TParameters;
+    property Parameters: TParameters;
 
 Если запрос должен возвращать набор данных, для его открытия
 используется свойство
 
-property Active: Boolean;
+    property Active: Boolean;
 
 или метод
 
-procedure Open;
+    procedure Open;
 
 В противном случае достаточно использовать метод
 
-function ExecSQL: Integer; 
+    function ExecSQL: Integer; 
 
 Число обработанных запросом записей возвращает свойство
 
-property RowsAffected: Integer;
+    property RowsAffected: Integer;

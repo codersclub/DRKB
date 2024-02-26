@@ -7,10 +7,6 @@ Date: 01.01.2007
 Команды
 =======
 
-::: {.date}
-01.01.2007
-:::
-
 Программные средства ADO были бы неполными, если бы не имели возможности
 использовать для работы с данными язык SQL. Операторы DML и DDL, ряд
 специальных операторов ADO носят общее название текстовых команд.
@@ -18,41 +14,38 @@ Date: 01.01.2007
 Объект-команда инкапсулирует саму текстовую команду и механизм обработки
 и передачи команды. Объект команды выполняет следующие операции:
 
-разбор текста команды;
-
-связывание команды с источником данных;
-
-оптимизацию команды;
-
-передачу команды источнику данных.
+- разбор текста команды;
+- связывание команды с источником данных;
+- оптимизацию команды;
+- передачу команды источнику данных.
 
 Главный интерфейс объекта команды icommand имеет три метода:
 
-function Cancel: HResult; stdcall;
+    function Cancel: HResult; stdcall;
 
 отменяет выполнение команды;
 
-function Execute(const punkOuter: lUnknown; const riid: TGUID; var
-pParams: DBPARAMS; pcRowsAffected: PInteger; ppRowset: PlUnknown):
-HResult; stdcall;
+    function Execute(const punkOuter: lUnknown; const riid: TGUID; var
+      pParams: DBPARAMS; pcRowsAffected: PInteger; ppRowset: PlUnknown):
+      HResult; stdcall;
 
 исполняет команду;
 
-function GetDBSession(const riid: TGUID; out ppSession: lUnknown):
-HResult; stdcall;
+    function GetDBSession(const riid: TGUID; out ppSession: lUnknown):
+      HResult; stdcall;
 
 возвращает ссылку на интерфейс сессии, вызвавший данную команду.
 
 Помимо основного, объект команды обеспечивает доступ к дополнительным
 интерфейсам:
 
-ICommandPrepare --- содержит два метода (Prepare И Unprepare) для
+- ICommandPrepare - содержит два метода (Prepare И Unprepare) для
 подготовки команды;
 
-icommandProperties --- задает для команды свойства, которые должны
+- icommandProperties - задает для команды свойства, которые должны
 поддерживаться возвращаемым командой набором данных;
 
-iCommandText --- управляет текстом команды (этот интерфейс обязателен
+- iCommandText - управляет текстом команды (этот интерфейс обязателен
 для объекта команды);
 
-icommandwithParameters --- обеспечивает работу с параметрами команды.
+- icommandwithParameters - обеспечивает работу с параметрами команды.

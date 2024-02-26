@@ -1,15 +1,12 @@
 ---
 Title: Быстрый доступ к ADO
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Быстрый доступ к ADO
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     unit ADO;
     {This unit provides a quick access into ADO
@@ -474,4 +471,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

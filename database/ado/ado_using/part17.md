@@ -7,10 +7,6 @@ Date: 01.01.2007
 Команды ADO
 ===========
 
-::: {.date}
-01.01.2007
-:::
-
 Команде ADO, которой мы уделяли так много внимания в этой главе в VCL
 Delphi, соответствует компонент TADOCormand. Методы этого компонента во
 многом совпадают с методами класса TCustomADODataSet, хотя этот класс не
@@ -29,19 +25,18 @@ ADO и средства представления команды.
 Текстовое представление выполняемой команды должно содержаться в
 свойстве
 
-property CommandText: WideString;
+    property CommandText: WideString;
 
 Однако команду можно задать и другим способом. Прямая ссылка на нужный
 объект команды ADO может быть задана свойством
 
-property CommandObject: \_Command;
+    property CommandObject: _Command;
 
 Тип команды определяется свойством
 
-type TCommandType = (cmdUnknown, cmdText, cmdTable, cmdStoredProc,
-cmdFile, cmdTableDirect);
-
-property CommandType: TCommandType;
+    type TCommandType = (cmdUnknown, cmdText, cmdTable, cmdStoredProc,
+      cmdFile, cmdTableDirect);
+    property CommandType: TCommandType;
 
 Так как тип TCommandType также используется в классе TCustomADODataSet,
 где необходимо представлять все возможные виды команд, по отношению к
@@ -59,54 +54,41 @@ cmdStoredProc должен обозначать только те хранимы
 Если для выполнения команды необходимо задать параметры, используется
 свойство
 
-property Parameters: TParameters;
+    property Parameters: TParameters;
 
 Выполнение команды осуществляется методом Execute:
 
-function Execute: \_RecordSet; overload;
-
-function Execute(const Parameters: OleVariant): \_Recordset;overload;
-
-function Execute(var RecordsAffected: Integer; var Parameters:
-OleVariant;    ExecuteOptions: TExecuteOptions = []: \_RecordSet;
-overload;
+    function Execute: _RecordSet; overload;
+    function Execute(const Parameters: OleVariant): _Recordset); overload;
+    function Execute(var RecordsAffected: Integer; var Parameters: OleVariant;
+                     ExecuteOptions: TExecuteOptions = []: _RecordSet);
+             overload;
 
 Разработчик может использовать любую из представленных нотаций
 перегружаемого метода:
 
-параметр RecordsAffected возвращает число обработанных записей;
+- параметр RecordsAffected возвращает число обработанных записей;
+- параметр Parameters задает параметры команды;
+- параметр ExecuteOptions определяет условия выполнения команды:
 
-параметр Parameters задает параметры команды;
+        TExecuteOption = (eoAsyncExecute, eoAsyncFetch, eoAsyncFetchNonBlocking,
+          eoExecuteNoRecords);
+        TExecuteOptions = set of TExecuteOption;
 
-параметр ExecuteOptions определяет условия выполнения команды:
-
-TExecuteOption = (eoAsyncExecute, eoAsyncFetch, eoAsyncFetchNonBlocking,
-eoExecuteNoRecords);
-
-TExecuteOptions = set of TExecuteOption;
-
-eoAsyncExecute --- асинхронное выполнение команды; 
-
-eoAsyncFetch --- асинхронная передача данных;
-
-eoAsyncFetchNonBlocking --- асинхронная передача данных без блокирования
-потока;
-
-eoExecuteNoRecords --- если команда возвращает набор записей, то они не
-передаются в компонент.
+- eoAsyncExecute - асинхронное выполнение команды; 
+- eoAsyncFetch - асинхронная передача данных;
+- eoAsyncFetchNonBlocking - асинхронная передача данных без блокирования потока;
+- eoExecuteNoRecords - если команда возвращает набор записей, то они не передаются в компонент.
 
 При работе с компонентом TADOConnection желательно использовать опцию
 eoExecuteNoRecords.
 
 Для прерывания выполнения команды используется метод
 
-procedure Cancel;
+    procedure Cancel;
 
 Текущее состояние команды можно определить свойством
 
-type
-
-TObjectState = (stClosed, stOpen, stConnecting, stExecuting,
-stFetching);
-
-TObjectStates = set of TObjectState; property States: TObjectStates;
+    type
+    TObjectState = (stClosed, stOpen, stConnecting, stExecuting, stFetching);
+    TObjectStates = set of TObjectState; property States: TObjectStates;

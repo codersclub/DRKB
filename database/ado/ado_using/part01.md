@@ -7,10 +7,6 @@ Date: 01.01.2007
 Перечислители
 =============
 
-::: {.date}
-01.01.2007
-:::
-
 Объекты-перечислители обеспечивают поиск любых объектов ADO, которые
 имеют доступ к источникам данных. При этом другие перечислители также
 видны в данном перечислителе.
@@ -28,14 +24,13 @@ CLSID\_OLEDB\_ENUMERATOR.
 В Delphi GUID глобального перечислителя содержится в файле
 \\Delphi7\\Source \\Vcl\\OleDB.pas.
 
-CLSID\_OLEDB\_ENrjMERATOR: TGUID=
-\'{C8B522DO-5CF3-11CE-ADE5-OOAA0044773D}
+    CLSID_OLEDB_ENrjMERATOR: TGUID='{C8B522DO-5CF3-11CE-ADE5-OOAA0044773D}";
 
 Функции перечислителя содержатся в интерфейсе isourcesRowset. Метод
 
-function GetSourcesRowset(const punkOuter: lUnknown; const riid: TGUID;
-cPropertySets: UINT; rgProperties: PDBPropSetArray; out ppSourcesRowset:
-lUnknown): HResult; stdcall;
+    function GetSourcesRowset(const punkOuter: lUnknown; const riid: TGUID;
+      cPropertySets: UINT; rgProperties: PDBPropSetArray; out ppSourcesRowset:
+      lUnknown): HResult; stdcall;
 
 возвращает ссылку на объект набора рядов (см. выше), содержащий сведения
 о найденных источниках данных или перечислителях.

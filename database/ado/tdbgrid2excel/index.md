@@ -1,15 +1,12 @@
 ---
 Title: Экспорт из TDBGrid в Excel без OLE
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Экспорт из TDBGrid в Excel без OLE
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Exporting a DBGrid to excel without OLE 
@@ -205,4 +202,3 @@ Date: 01.01.2007
      
     end. 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,17 +1,15 @@
 ---
 Title: Передача параметров ADO запросу
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Передача параметров ADO запросу
 ===============================
 
-::: {.date}
-01.01.2007
-:::
-
-    CONECT_STR = 'Provider=Microsoft.Jet.OLEDB.4.0;Password=" " ;User ID=Admin;' + {Data Source=D:\ExBd\ТЕРМО\Bd0.mdb;}
+    CONECT_STR = 'Provider=Microsoft.Jet.OLEDB.4.0;Password=" " ;User ID=Admin;' +
+    {Data Source=D:\ExBd\ТЕРМО\Bd0.mdb;}
     'Data Source=%s; Mode=Read|Write|Share Deny None;Extended Properties=" " ;' +
     'Locale Identifier=1049;Persist Security Info=True;Jet OLEDB:System database=" " ;' +
     'Jet OLEDB:Registry Path=" " ;Jet OLEDB:Database Password=" " ;Jet OLEDB:Engine Type=4;' +
@@ -38,9 +36,9 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
-Примечание Vit
+---
+**Примечание Vit:**
 
 Я привёл этот код так как он был на сайте и его правильность целиком на
 совести автора. Однако приведенный код полон неточностей и могут быть

@@ -2,17 +2,12 @@
 Title: ADO.OLEDB.JET - Access Violation при передаче неполного параметра
 Author: Дмитрий Померанцев
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 ADO.OLEDB.JET - Access Violation при передаче неполного параметра
 ==================================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Дмитрий Померанцев
 
 Проблема обнаружена под операционной системой Windows 2000 SP3, в среде
 Delphi6, Delphi7 (скорее всего не зависит от версии Delphi) с
@@ -119,6 +114,4 @@ QueryChanged), приводящий к ошибке.
 В этом случае событие OnChange произойдет только при выполнении
 EndUpdate.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

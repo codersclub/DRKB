@@ -7,10 +7,6 @@ Date: 01.01.2007
 Объекты соединения с источниками данных
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
 Внутренний механизм ADO, обеспечивающий соединение с хранилищем данных,
 использует два типа объектов. Это объекты-источники данных и
 объекты-сессии.
@@ -26,36 +22,30 @@ iDBProperties. Для успешного подключения необходи
 всех обязательных параметров соединения с данным хранилищем можно
 воспользоваться методом
 
-function GetPropertylnfo(cPropertylDSets: UINT; rgPropertylDSets:
-PDBPropIDSetArray; var pcPropertylnfoSets: UINT; out
-prgPropertylnfoSets: PDBPropInfoSet; ppDescBuffer: PPOleStr): HResult;
-stdcall;
+    function GetPropertylnfo(cPropertylDSets: UINT; rgPropertylDSets:
+      PDBPropIDSetArray; var pcPropertylnfoSets: UINT; out
+      prgPropertylnfoSets: PDBPropInfoSet; ppDescBuffer: PPOleStr): HResult;
+      stdcall;
 
 который возвращает заполненную структуру DBPROPINFO.
 
-PDBPropInfo = ^TDBPropInfo;
+    PDBPropInfo = ^TDBPropInfo;
 
-DBPROPINFO = packed record
+    DBPROPINFO = packed record
+      pwszDescription: PWideChar;
+      dwPropertylD: DBPROPID;
+      dwFlags: DBPROPFLAGS;
+      vtType: Word;
+      vValues: OleVariant;
+    end; 
 
-pwszDescription: PWideChar;
-
-dwPropertylD: DBPROPID;
-
-dwFlags: DBPROPFLAGS;
-
-vtType: Word;
-
-vValues: OleVariant;
-
-end; 
-
-TDBPropInfo = DBPROPINFO;
+    TDBPropInfo = DBPROPINFO;
 
 Для каждого обязательного параметра в элементе dwFlags устанавливается
 значение DBPROPFLAGS\_REQUIRED.
 
 Для инициализации соединения необходимо использовать метод
 
-function Initialize: HResult; stdcall;
+    function Initialize: HResult; stdcall;
 
 интерфейса iDBinitiaiize объекта-источника данных.

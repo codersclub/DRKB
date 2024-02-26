@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как узнать версию ADO?
 ======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     { 
       With different versions of MDAC available it is sometimes 
@@ -44,9 +42,11 @@ Date: 01.01.2007
         ShowMessage(Format('ADO Version %n, is OK', [GetADOVersion])); 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2.
 
     function TfrmMain.GetADOVersion: Double;
     var
@@ -61,4 +61,4 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>
