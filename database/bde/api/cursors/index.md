@@ -1,246 +1,170 @@
 ---
 Title: Поддержка курсоров
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Поддержка курсоров
 ==================
 
-::: {.date}
-01.01.2007
-:::
+Каждая функция, перечисленная ниже, возвращает информацию о курсоре или выполняет задачу,
+связанную с курсором, например позиционирование курсора,
+связывание курсоров, создание и закрытие курсоров, подсчет записей, связанных с курсором,
+фильтрацию, установку и сравнение закладки (bookmark)
+и обновление всех буферов, связанных с курсором.
 
-Each function listed below returns information about a cursor, or
-performs a task that performs a cursor-related task such as positioning
-of a cursor, linking of cursors, creating and closing cursors, counting
-of records associated with a cursor, filtering, setting and comparing
-bookmarks, and refreshing all buffers associated with a cursor.
+DbiActivateFilter
+: Активирует фильтр.
 
-DbiActivateFilter:
+DbiAddFilter
+: Добавляет фильтр в таблицу, но не активирует фильтр (набор записей еще не изменен).
 
-Activates a filter.
+DbiApplyDelayedUpdates
+: Когда уровень курсора кэшированных обновлений активен, записывает все изменения,
+внесенные в кэшированные данные, в базовую базу данных.
 
-DbiAddFilter:
+DbiBeginDelayedUpdates
+: Создает слой курсора кэшированных обновлений,
+чтобы пользователи могли вносить расширенные изменения
+во временно кэшированные данные таблицы без записи в реальную таблицу,
+тем самым сводя к минимуму блокировку ресурсов.
 
-Adds a filter to a table, but does not activate the filter (the record
-set is not yet altered).
+DbiBeginLinkMode
+: Преобразует курсор в курсор ссылки.
+Учитывая открытый курсор, готовится к связанному доступу.
+Возвращает новый курсор.
 
-DbiApplyDelayedUpdates:
+DbiCloneCursor
+: Создает новый курсор (курсор-клон), который имеет тот же набор результатов,
+что и данный курсор (курсор-источник).
 
-When cached updates cursor layer is active, writes all modifications
-made to cached data to the
+DbiCloseCursor
+: Закрывает ранее открытый курсор.
 
-underlying database.
+DbiCompareBookMarks
+: Сравнивает относительные позиции двух закладок в наборе результатов, связанных с курсором.
 
-DbiBeginDelayedUpdates:
+DbiDeactivateFilter
+: Временно останавливает указанный фильтр от воздействия на набор записей, отключив фильтр.
 
-Creates a cached updates cursor layer so that users can make extended
-changes to temporarily
+DbiDropFilter
+: Деактивирует и удаляет фильтр из памяти, а также освобождает все ресурсы.
 
-cached table data without writing to the actual table, thereby
-minimizing resource locking.
+DbiEndDelayedUpdates
+: Закрывает слой курсора кэшированных обновлений, завершая режим кэшированных обновлений.
 
-DbiBeginLinkMode:
+DbiEndLinkMode
+: Завершает режим связанного курсора и возвращает исходный курсор.
 
-Converts a cursor to a link cursor. Given an open cursor, prepares for
-linked access. Returns a
+DbiExtractKey
+: Извлекает значение ключа для текущей записи данного курсора
+или из предоставленного буфера записей.
 
-new cursor.
+DbiForceRecordReread
+: Перечитывает одну запись с сервера по требованию, обновляя только одну строку,
+а не очищая кеш.
 
-DbiCloneCursor:
+DbiForceReread
+: При необходимости обновляет все буферы, связанные с курсором.
 
-Creates a new cursor (clone cursor) which has the same result set as the
-given cursor
+DbiFormFullName
+: Возвращает полное имя таблицы.
 
-(source cursor).
+DbiGetBookMark
+: Сохраняет текущую позицию курсора в предоставленный клиентом буфер,
+называемый закладкой (bookmark).
 
-DbiCloseCursor:
+DbiGetCursorForTable
+: Находит курсор для данной таблицы.
 
-Closes a previously opened cursor.
+DbiGetCursorProps
+: Возвращает свойства курсора.
 
-DbiCompareBookMarks:
+DbiGetExactRecordCount
+: Получает текущее точное количество записей, связанных с курсором.
+НОВАЯ ФУНКЦИЯ BDE 4.0
 
-Compares the relative positions of two bookmarks in the result set
-associated with the cursor.
+DbiGetFieldDescs
+: Получает список дескрипторов для всех полей таблицы, связанной с курсором.
 
-DbiDeactivateFilter:
+DbiGetLinkStatus
+: Возвращает статус ссылки курсора.
 
-Temporarily stops the specified filter from affecting the record set by
-turning the filter off.
+DbiGetNextRecord
+: Извлекает следующую запись в таблице, связанной с курсором.
 
-DbiDropFilter:
+DbiGetPriorRecord
+: Извлекает предыдущую запись в таблице, связанной с данным курсором.
 
-Deactivates and removes a filter from memory, and frees all resources.
+DbiGetProp
+: Возвращает свойство объекта.
 
-DbiEndDelayedUpdates:
+DbiGetRecord
+: Извлекает текущую запись, если таковая имеется, в таблице, связанной с курсором.
 
-Closes a cached updates cursor layer ending the cached updates mode.
+DbiGetRecordCount
+: Получает текущее количество записей, связанных с курсором.
 
-DbiEndLinkMode:
+DbiGetRecordForKey
+: Находит и извлекает запись, соответствующую ключу, и помещает курсор на эту запись.
 
-Ends linked cursor mode, and returns the original cursor.
+DbiGetRelativeRecord
+: Позиционирует курсор на записи в таблице относительно текущей позиции курсора.
 
-DbiExtractKey:
+DbiGetSeqNo
+: Извлекает порядковый номер текущей записи в таблице, связанной с курсором.
 
-Retrieves the key value for the current record of the given cursor or
-from the supplied record buffer.
+DbiLinkDetail
+: Устанавливает связь между двумя таблицами таким образом,
+что в подробной таблице (detail table) набор записей ограничен набором записей,
+соответствующих значениям связывающего ключа курсора основной таблицы.
 
-DbiForceRecordReread:
+DbiLinkDetailToExp
+: Связывает подробный курсор с главным курсором с помощью выражения.
 
-Rereads a single record from the server on demand, refreshing one row
-only, rather than clearing
+DbiMakePermanent
+: Изменяет временную таблицу, созданную DbiCreateTempTable, на постоянную таблицу.
 
-the cache.
+DbiOpenTable
+: Открывает данную таблицу для доступа и связывает дескриптор курсора с открытой таблицей.
 
-DbiForceReread:
+DbiResetRange
+: Удаляет ограниченный диапазон указанной таблицы, ранее установленный функцией DbiSetRange.
 
-Refreshes all buffers associated with the cursor, if necessary.
+DbiSaveChanges
+: Принудительно сохраняет на диск все обновленные записи, связанные с курсором.
 
-DbiFormFullName:
+DbiSetFieldMap
+: Устанавливает карту полей таблицы, связанной с данным курсором.
 
-Returns the fully qualified table name.
+DbiSetProp
+: Устанавливает указанное свойство объекта в заданное значение.
 
-DbiGetBookMark:
+DbiSetRange
+: Устанавливает диапазон результирующего набора, связанного с курсором.
 
-Saves the current position of a cursor to the client-supplied buffer
-called a bookmark.
+DbiSetToBegin
+: Устанавливает курсор на BOF (непосредственно перед первой записью).
 
-DbiGetCursorForTable:
+DbiSetToBookMark
+: Помещает курсор в место, сохраненное в указанной закладке.
 
-Finds the cursor for the given table.
+DbiSetToCursor
+: Устанавливает положение одного курсора (курсора назначения)
+на положение другого (курсора источника).
 
-DbiGetCursorProps:
+DbiSetToEnd
+: Устанавливает курсор на EOF (сразу после последней записи).
 
-Returns the properties of the cursor.
+DbiSetToKey
+: Позиционирует курсор на основе индекса на значение ключа.
 
-DbiGetExactRecordCount:
+DbiSetToRecordNo
+: Устанавливает курсор таблицы dBASE на заданный номер физической записи.
 
-Retrieves the current exact number of records associated with the
-cursor. NEW FUNCTION BDE 4.0
+DbiSetToSeqNo
+: Устанавливает курсор на указанный порядковый номер таблицы Paradox.
 
-DbiGetFieldDescs:
-
-Retrieves a list of descriptors for all the fields in the table
-associated with the cursor.
-
-DbiGetLinkStatus:
-
-Returns the link status of the cursor.
-
-DbiGetNextRecord:
-
-Retrieves the next record in the table associated with the cursor.
-
-DbiGetPriorRecord:
-
-Retrieves the previous record in the table associated with the given
-cursor.
-
-DbiGetProp:
-
-Returns a property of an object.
-
-DbiGetRecord:
-
-Retrieves the current record, if any, in the table associated with the
-cursor.
-
-DbiGetRecordCount:
-
-Retrieves the current number of records associated with the cursor.
-
-DbiGetRecordForKey:
-
-Finds and retrieves a record matching a key and positions the cursor on
-that record.
-
-DbiGetRelativeRecord:
-
-Positions the cursor on a record in the table relative to the current
-position of the cursor.
-
-DbiGetSeqNo:
-
-Retrieves the sequence number of the current record in the table
-associated with the cursor.
-
-DbiLinkDetail:
-
-Establishes a link between two tables such that the detail table has its
-record set limited to the
-
-set of records matching the linking key values of the master table
-cursor.
-
-DbiLinkDetailToExp:
-
-Links the detail cursor to the master cursor using an expression.
-
-DbiMakePermanent:
-
-Changes a temporary table created by DbiCreateTempTable into a permanent
-table.
-
-DbiOpenTable:
-
-Opens the given table for access and associates a cursor handle with the
-opened table.
-
-DbiResetRange:
-
-Removes the specified table\'s limited range previously established by
-the function DbiSetRange.
-
-DbiSaveChanges:
-
-Forces all updated records associated with the cursor to disk.
-
-DbiSetFieldMap:
-
-Sets a field map of the table associated with the given cursor.
-
-DbiSetProp:
-
-Sets the specified property of an object to a given value.
-
-DbiSetRange:
-
-Sets a range on the result set associated with the cursor.
-
-DbiSetToBegin:
-
-Positions the cursor to BOF (just before the first record).
-
-DbiSetToBookMark:
-
-Positions the cursor to the location saved in the specified bookmark.
-
-DbiSetToCursor:
-
-Sets the position of one cursor (the destination cursor) to that of
-another (the source cursor).
-
-DbiSetToEnd:
-
-Positions the cursor to EOF (just after the last record).
-
-DbiSetToKey:
-
-Positions an index-based cursor on a key value.
-
-DbiSetToRecordNo:
-
-Positions the cursor of a dBASE table to the given physical record
-number.
-
-DbiSetToSeqNo:
-
-Positions the cursor to the specified sequence number of a Paradox
-table.
-
-DbiUnlinkDetail:
-
-Removes a link between two cursors.
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+DbiUnlinkDetail
+: Удаляет линк между двумя курсорами.
