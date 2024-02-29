@@ -1,29 +1,22 @@
 ---
 Title: Управление транзакциями
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Управление транзакциями
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
 Each function listed below begins, ends, or inquires about the status of
 a transaction.
 
-DbiBeginTran:
+DbiBeginTran
+: Begins a transaction.
 
-Begins a transaction.
+DbiEndTran
+: Ends a transaction.
 
-DbiEndTran:
+DbiGetTranInfo
+: Retrieves the transaction state.
 
-Ends a transaction.
-
-DbiGetTranInfo:
-
-Retrieves the transaction state.
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

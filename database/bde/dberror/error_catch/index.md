@@ -2,17 +2,12 @@
 Title: Перехват ошибок DBEngine
 Author: Eryk
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Перехват ошибок DBEngine
 ========================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Eryk
 
 Ошибки общего характера, типа Key Violation или конфликты блокировки
 лучше всего обрабатывать в обработчике события Application.OnException
@@ -56,4 +51,3 @@ Date: 01.01.2007
 список кодов ошибок при работе с базами данных вы можете найти в файле
 DBIERRS.INT, расположенном в каталоге :\\DELPHI\\DOC.
 
-Взято с <https://delphiworld.narod.ru>

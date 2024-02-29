@@ -7,11 +7,7 @@ Date: 01.01.2007
 BLOB has been modified. Index is out of date
 ============================================
 
-::: {.date}
-01.01.2007
-:::
-
-Объяснение от Борланд:
+**Объяснение от Борланд:**
 
 Index out Date ($2F02) is an error that occurs while using Paradox
 tables when the data in a table and a corresponding index is not
@@ -48,7 +44,7 @@ the structure of all indexes before the error occurs.
 
 There are 8 known possible causes for this error.
 
-1. Incorrectly setting the LOCAL SHARE property.
+1\. Incorrectly setting the LOCAL SHARE property.
 
 Most commonly this occurs via Peer-to-Peer networking. In this case the
 two different database engines are on two CPUs, even though they may be
@@ -69,7 +65,7 @@ engines use data remotely, LOCAL SHARE must be set to TRUE.
 Code should be used at startup to check the setting of local share. Look
 at the {DbiOpenCfgInfoList } BDE API function call for more information.
 
-2. Error transmitting data from the workstation to the server.
+2\. Error transmitting data from the workstation to the server.
 
 Most commonly, this occurs with bad network hardware (cable, card, hub,
 etc.). This has been determined to be a problem even though there were
@@ -77,7 +73,7 @@ no other errors are detected in data transmission. To determine if this
 is the cause for your error, try eliminating one CPU at a time from
 using the data and see if the problem continues.
 
-3. Bad VREDIR.VXD on any client accessing tables Windows 95 ONLY:
+3\. Bad VREDIR.VXD on any client accessing tables Windows 95 ONLY:
 
 Several versions (notably 4.00.1113 and 4.00.1114) of the file
 VREDIR.VXD may need to be updated.
@@ -94,7 +90,7 @@ Engine, although it still can occur in 32Bit versions.
 For further information on the update of VREDIR.VXD, Please check the
 following Microsoft Articles: {Q174371} and {Q165403}
 
-4. For Windows 95 clients only, when using data on Windows NT: Add the
+4\. For Windows 95 clients only, when using data on Windows NT: Add the
 following key in your registry:
 HKEY\_LOCAL\_MACHINESystemCurrentControlSetServicesVxDVredir
 
@@ -104,7 +100,7 @@ DiscardCacheonOpen and make it equal to 1.
 Note that this an undocumented registry entry obtained from Microsoft.
 Questions on its functionality should be directed to Microsoft.
 
-5. Problem with opportunistic locking Windows NT ONLY: Try turning off
+5\. Problem with opportunistic locking Windows NT ONLY: Try turning off
 opportunistic locking in the Windows NT registry: See Microsoft Article
 {Q129202}
 
@@ -112,25 +108,25 @@ Note: Borland internal testing has not indicated this setting to be
 significant. However, some Borland customers have indicated this to
 solve the problem.
 
-6. Improperly closing files such as due to loss of power or restarting a
+6\. Improperly closing files such as due to loss of power or restarting a
 workstation or the server without closing files first may cause this
 problem. Paradox tables are not designed to withstand such behavior. If
 this is a possibility in your environment, we recommend you use a Client
 Server database that can recover from such conditions.
 
-7. Extremely large numbers of indexes, especially involving Referential
+7\. Extremely large numbers of indexes, especially involving Referential
 Integrity can cause this problem and especially when using Windows NT as
 the server. Borland recommends using a Client Server database under this
 condition. However, if you are using Windows NT as your server,
 switching to Novell Netware or Windows 95 as the server may resolve the
 problem as well.
 
-8. The one programmatic way you can make this error occur is if you
+8\. The one programmatic way you can make this error occur is if you
 attempt to post a duplicate value to a unique, non-primary index at the
 same time you attempt to open the same table. This problem only occurs
 if local share is set to False and only occurs on local drives.
 
-Unverified solutions
+**Unverified solutions**
 
 1. Windows 95 Only: Bring up the network properties screen on all
 Workstations and enter the netBEUI properties screen. On the advanced
@@ -140,12 +136,9 @@ checked.
 2. Windows 95 Only: If the previous suggestion did not work, try
 removing the following protocols in order. Remove one at a time and then
 re-test your problem: 
-
-   1. NETBIOS support for IPX/SPX-compatible Protocol
-
-   2. TCP/IP
-
-   3. IPX/SPX-compatible Protocol  If the problem disappears, attempt to
+    - NETBIOS support for IPX/SPX-compatible Protocol
+    - TCP/IP
+    - IPX/SPX-compatible Protocol  If the problem disappears, attempt to
 add back in all protocols except for the last one that was taken out.
 Again, make sure netBEUI\'s default protocol check box is checked.
 
@@ -156,14 +149,14 @@ that might cause timing problems. Since NT will send requests back in
 the same protocol as it is sent, changing the bindings on a NT machine
 used as a server will have no effect.
 
-Other resources
+**Other resources**
 
 1. {The Delphi Magazine} has a number of interesting articles on this
-subject as well. See { www.itecuk.com/Delmag/Paradox.htm} for details. 
+subject as well. See <http://www.itecuk.com/Delmag/Paradox.htm> for details. 
 
 ------------------------------------------------------------------------
 
-Примечание от Vit:
+**Примечание от Vit:**
 
 Обычно такие ошибки возникают из-за проблем с кэшированием измений в
 базе данных, особенно при использовании BLOB/Memo полей и особенно при
@@ -171,6 +164,5 @@ subject as well. See { www.itecuk.com/Delmag/Paradox.htm} for details.
 возникновения этой ошибки на несколько порядков помогает вызов метода
 FlushBuffers после каждого изменения таблицы:
 
-Table1.post;
-
-Table1.FlushBuffers;
+    Table1.post;
+    Table1.FlushBuffers;

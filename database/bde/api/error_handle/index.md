@@ -1,36 +1,28 @@
 ---
 Title: Обработка исключений
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Обработка исключений
 ====================
 
-::: {.date}
-01.01.2007
-:::
-
 Each function listed below returns error handling information or
 performs a task that relates to error handling.
 
-DbiGetErrorContext:
-
-After receiving an error code back from a call, enables the client to
+DbiGetErrorContext
+: After receiving an error code back from a call, enables the client to
 probe BDE for more specific
 error information.
 
-DbiGetErrorEntry:
+DbiGetErrorEntry
+: Returns the error description of a specified error stack entry.
 
-Returns the error description of a specified error stack entry.
-
-DbiGetErrorInfo:
-
-Provides descriptive error information about the last error that
+DbiGetErrorInfo
+: Provides descriptive error information about the last error that
 occurred.
 
-DbiGetErrorString:
+DbiGetErrorString
+: Returns the message associated with a given error code.
 
-Returns the message associated with a given error code.
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

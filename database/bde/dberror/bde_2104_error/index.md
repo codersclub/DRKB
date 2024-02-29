@@ -2,17 +2,12 @@
 Title: Ошибка BDE32 2104
 Author: Pat Ritchey
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Ошибка BDE32 2104
 =================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Pat Ritchey
 
 Пример, приведенный для функции dbiGetDatabaseDesc в файле BDE32.HLP,
 неверен. Такой же пример содержится в файле TI3100.ASC. Я пробовал это
@@ -26,4 +21,3 @@ Borland Database Engine (ошибка $2104).\'
 работы с базами данных, вам необходимо инициализировать BDE вызовом
 dbiInit(nil).
 
-Взято с <https://delphiworld.narod.ru>

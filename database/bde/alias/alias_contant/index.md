@@ -1,15 +1,12 @@
 ---
 Title: Как создать постоянный Alias?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как создать постоянный Alias?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
 There has been a number of occasions where I needed to create persistent
 BDE aliases. The point is that the DB API isn\'t very discussed and is
@@ -79,16 +76,13 @@ some error checking and BDE initialization and finalization procedures.
 
 The parameters for this function are:
 
-sAlias: Name of the new alias to be created
-
-sPath: Full path of the directory to which the alias should point. With
+- sAlias: Name of the new alias to be created
+- sPath: Full path of the directory to which the alias should point. With
 little adjustments, this function can be used to create any kind of
 aliases, and, instead of passing the path info in this argument, pass
 all the parameters needed by the driver to create the alias.
-
-sDriver: Name of an existing BDE driver, such as PARADOX, DBASE, STANDARD
-
-PersistentAlias: Determines whether the new alias will be for future use
+- sDriver: Name of an existing BDE driver, such as PARADOX, DBASE, STANDARD
+- PersistentAlias: Determines whether the new alias will be for future use
 (persistent) or just for the actual session.
 
 Example of usage:
@@ -96,4 +90,3 @@ Example of usage:
     CreateAlias('DBTEST', 'c:\progra~1\borland\delphi~1\projects\cd3\data',
                 'PARADOX', true);
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

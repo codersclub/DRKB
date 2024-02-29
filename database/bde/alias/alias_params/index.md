@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как получить параметры Alias?
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
 The following function uses the GetAliasParams method of TSession to get
 the directory mapping for an alias:
@@ -37,9 +35,11 @@ the directory mapping for an alias:
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+
+Вариант 2.
 
     {
       Here's a demo to demonstrate how to get info about aliases in Delphi.
@@ -133,4 +133,4 @@ the directory mapping for an alias:
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>

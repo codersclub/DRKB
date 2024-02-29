@@ -2,17 +2,12 @@
 Title: Добавление псевдонима с помощью функции DbiAddAlias
 Author: Tom Stickle
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Добавление псевдонима с помощью функции DbiAddAlias
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Tom Stickle
 
     var
       pszAliasName: PChar;  { Имя псевдонима }
@@ -41,4 +36,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>
