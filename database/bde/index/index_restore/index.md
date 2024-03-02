@@ -1,15 +1,12 @@
 ---
 Title: Как восстановить индексы?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как восстановить индексы?
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin
@@ -20,4 +17,3 @@ Date: 01.01.2007
       Table.Close;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

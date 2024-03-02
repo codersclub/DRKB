@@ -2,21 +2,16 @@
 Title: Как создать вычисляемые поля во время исполнения программы
 Author: Nomadic
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как создать вычисляемые поля во время исполнения программы
 ==========================================================
 
-::: {.date}
-01.01.2007
-:::
+Смотрите книгу _"Developing Custom Delphi Components"_ от Рэя Конопки.
 
-Автор: Nomadic
-
-Смотрите книгу "Developing Custom Delphi Components" от Рэя Конопки.
-
-Здесь немного исправленный пример из этой книги -
+Здесь немного исправленный пример из этой книги:
 
     function TMyClass.CreateCalcField(const AFieldName: string;
       AFieldClass: TFieldClass; ASize: Word): TField;
@@ -47,6 +42,3 @@ Date: 01.01.2007
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

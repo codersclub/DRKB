@@ -8,18 +8,18 @@ Date: 01.01.2007
 Как зарегистрировать базу данных (BDE)?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     Session.AddAlias(AliasName, AliasDriver, Params);
     Session.SaveConfigFile;
 
-Автор: Vit
+Author: Vit
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2.
 
     uses
       DBIProcs, DBITypes;
@@ -42,4 +42,4 @@ Date: 01.01.2007
      
     AddBDEAlias('WORK_DATA', 'C:\WORK\DATA', 'DBASE');
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>

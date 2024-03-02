@@ -2,17 +2,12 @@
 Title: Информация о TDataLink
 Author: James Thorpe (CSA Australasia)
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Информация о TDataLink
 ======================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: James Thorpe (CSA Australasia)
 
 Вот тексовое описание TDatalink, которое взято из моего учебного
 материала. Оригинал имеет еще несколько диаграмм и рисунков, которые не
@@ -67,6 +62,4 @@ DataSet и ДБ-компонентами, DataLink также обеспечив
 помощью свойства DataLinks BufferCount, а количество записей, реально в
 нем хранимых, с помощью свойства RecordCount.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

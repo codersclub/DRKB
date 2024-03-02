@@ -1,16 +1,14 @@
 ---
 Title: Убывающий индекс
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Убывающий индекс
 ================
 
-::: {.date}
-01.01.2007
-:::
+Добавление индекса по убыванию:
 
-Table1.AddIndex(\'NewIndex\', \'CustNo;CustName\', [ixDescending];
+    Table1.AddIndex('NewIndex', 'CustNo;CustName', [ixDescending]);
 
-Взято с <https://delphiworld.narod.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Как ускорить поиск?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как ускорить поиск?
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TForm1 = class(TForm)
@@ -27,4 +24,3 @@ Date: 01.01.2007
       Table1.EnableControls;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

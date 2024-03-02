@@ -38,7 +38,7 @@ utility available for download from the Borland web site in the
 {Utilities, programs and updates section}.
 
 4. Delete all indexes and recreate them (Index out Date ($2F02) error
-only). To do this you\'ll need to know the structure of all your indexes
+only). To do this you'll need to know the structure of all your indexes
 (including primary) before recreating them, which means you need to know
 the structure of all indexes before the error occurs.
 
@@ -140,7 +140,7 @@ re-test your problem:
     - TCP/IP
     - IPX/SPX-compatible Protocol  If the problem disappears, attempt to
 add back in all protocols except for the last one that was taken out.
-Again, make sure netBEUI\'s default protocol check box is checked.
+Again, make sure netBEUI's default protocol check box is checked.
 
 3. Windows NT Only used as a Workstation: On the Network Bindings page
 of the Network Properties, set the NetBEUI Protocol to be at the top of

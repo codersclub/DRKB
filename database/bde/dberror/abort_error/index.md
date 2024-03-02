@@ -10,7 +10,7 @@ Date: 01.01.2007
 При использовании модулей доступа к BDE (DbiTypes, DbiProcs, DbiErrs),
 любая попытка вызвать процедуру abort выдает ошибку при компиляции при
 вызове метода abort "Statement expected, but expression of type
-\'Integer\' found". Я пытался найти DbiTypes.pas, DbiProcs.pas и
+'Integer' found". Я пытался найти DbiTypes.pas, DbiProcs.pas и
 DbiErrs.pas чтобы разобраться но не нашел этих файлов. Где расположены
 эти файлы и как обойти ошибку?
 

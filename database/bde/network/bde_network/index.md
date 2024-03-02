@@ -1,15 +1,13 @@
 ---
 Title: Использование BDE в сети
 Date: 01.01.2007
+Author: Eryk
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Использование BDE в сети
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
 1) Может ли мое приложение иметь доступ к файлам, расположенным на
 сетевых дисках?
@@ -35,15 +33,14 @@ DIR\' файла IDAPI.CFG. Директория должна быть одна 
 Да. Установите BDE в сети и затем добавьте следующие секции в файл
 WIN.INI каждой рабочей станции:
 
-[IDAPI]
+    [IDAPI]
 
-CONFIGFILE01=F:\\IDAPI\\IDAPI.CFG
+    CONFIGFILE01=F:\IDAPI\IDAPI.CFG
+    DLLPATH=F:\IDAPI
 
-DLLPATH=F:\\IDAPI
+    [Borland Language Drivers]
 
-[Borland Language Drivers]
-
-LDPath=F:\\IDAPI\\LANGDRV
+    LDPath=F:\IDAPI\LANGDRV
 
 ...пути должны отражать текущее месторасположение каталога IDAPI.
 
@@ -60,7 +57,6 @@ C помощью утилиты BDECFG отредактируйте файл IDA
 Рабочая станция открывает файл IDAPI.CFG из каталога, указанного в
 WIN.INI, и уже оттуда читает настройки NET DIR.
 
-Eryk
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

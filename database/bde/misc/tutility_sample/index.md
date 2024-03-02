@@ -1,15 +1,12 @@
 ---
 Title: Пример вызова TUtility DLL из Delphi?
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Пример вызова TUtility DLL из Delphi?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       Session: hTUses;

@@ -1,15 +1,14 @@
 ---
 Title: Определение типа базы данных
 Date: 01.01.2007
+Author: OAmiry/Borland
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
+
 ---
 
 
 Определение типа базы данных
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     {uses должен включать в себя db, dbitypes, dbiprocs }
      
@@ -31,7 +30,6 @@ Date: 01.01.2007
     IsSQLBased }
     end;
 
-OAmiry/Borland
 
 Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 

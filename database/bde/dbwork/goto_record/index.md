@@ -1,15 +1,12 @@
 ---
 Title: Как перейти к указанной записи в БД
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как перейти к указанной записи в БД
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
     function TBDEDirect.GoToRecord(RecNo: LongInt): Boolean;
     var
@@ -39,4 +36,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

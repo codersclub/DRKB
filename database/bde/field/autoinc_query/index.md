@@ -1,15 +1,12 @@
 ---
 Title: Создание автоинкрементного поля SQL запросом?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Создание автоинкрементного поля SQL запросом?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       Lets say that we wish to create a fallawing number (Autoincrese) of an item,
@@ -44,4 +41,3 @@ Date: 01.01.2007
      tblMain.FieldByName('FieldToIncrese').AsInteger := GetNextNumber;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

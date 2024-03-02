@@ -1,15 +1,12 @@
 ---
 Title: Динамическое создание полей
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Динамическое создание полей
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       I: Integer;
@@ -39,4 +36,3 @@ Date: 01.01.2007
       Table1.Active := True;
     end;
 
-Взято с <https://delphiworld.narod.ru>

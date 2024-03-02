@@ -1,15 +1,12 @@
 ---
 Title: Как узнать путь базы данных и её имя?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как узнать путь базы данных и её имя?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
 Делается это при помощи dbiGetDatabaseDesc:
 
@@ -29,4 +26,3 @@ Date: 01.01.2007
         ShowMessage(Format(DescStr, [szDbType, szName, szText, szPhyName]));
     end;
 
-Взято из <https://forum.sources.ru>

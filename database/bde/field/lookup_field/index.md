@@ -1,15 +1,12 @@
 ---
 Title: Как создать поле Lookup во время выполнения приложения
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как создать поле Lookup во время выполнения приложения
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       Forms, Classes, Controls, StdCtrls, Db, DBTables, DBCtrls;
@@ -60,6 +57,4 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

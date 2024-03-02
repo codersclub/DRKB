@@ -1,15 +1,12 @@
 ---
 Title: Не получается вставить в таблицу записи со строками на русском языке
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Не получается вставить в таблицу записи со строками на русском языке
 ====================================================================
-
-::: {.date}
-01.01.2007
-:::
 
 В Database Desktop поставьте правильный Language Driver у таблицы,
 например, Pdox ANSI Cyrr.
@@ -78,4 +75,3 @@ Date: 01.01.2007
        Check(DbiDoRestructure(hDb, 1, @TableDesc, nil, nil, nil, False));
      end;
 
-Взято с <https://delphiworld.narod.ru>

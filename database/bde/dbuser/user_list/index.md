@@ -1,17 +1,14 @@
 ---
 Title: Как сделать список всех пользователей BDE?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать список всех пользователей BDE?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
-
-With Paradox:
+Для Paradox:
 
     procedure BDEGetPDXUserList(AList: TStrings);
     var
@@ -30,4 +27,3 @@ With Paradox:
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

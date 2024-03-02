@@ -1,15 +1,12 @@
 ---
 Title: Как предотвратить Data Corruption (повреждение данных)?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как предотвратить Data Corruption (повреждение данных)?
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       If a database or a table is local on a PC installed (Paradox or Dbase)
@@ -28,4 +25,3 @@ Date: 01.01.2007
       DbiSaveChanges(Table1.Handle);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

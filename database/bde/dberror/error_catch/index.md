@@ -10,8 +10,9 @@ Source: <https://delphiworld.narod.ru>
 ========================
 
 Ошибки общего характера, типа Key Violation или конфликты блокировки
-лучше всего обрабатывать в обработчике события Application.OnException
-...например:
+лучше всего обрабатывать в обработчике события Application.OnException.
+
+Например:
 
     {Секция Interface}
     procedure HandleException(Sender: TObject; E: Exception);
@@ -46,8 +47,8 @@ Source: <https://delphiworld.narod.ru>
       Application.onException:=HandleException;
     end;
 
-Для использования предопределенных констант ошибок (\'DBIERR\_etc.\'),
+Для использования предопределенных констант ошибок ('DBIERR\_etc.'),
 вам необходимо включить DBIERRS в список используемых модулей. Полный
 список кодов ошибок при работе с базами данных вы можете найти в файле
-DBIERRS.INT, расположенном в каталоге :\\DELPHI\\DOC.
+DBIERRS.INT, расположенном в каталоге C:\\DELPHI\\DOC.
 

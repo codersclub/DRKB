@@ -1,15 +1,12 @@
 ---
 Title: Как использовать свой диалог ввода пароля BDE?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как использовать свой диалог ввода пароля BDE?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     //  .....
     //  .....
@@ -57,4 +54,3 @@ Date: 01.01.2007
       ClientDatabase.Session.OnPassword := Password;  // Set OnPassword Event
     end;
 
-Взято с <https://delphiworld.narod.ru>

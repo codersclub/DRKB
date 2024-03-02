@@ -2,15 +2,12 @@
 Title: Какой формат данных предпочесть в Delphi? DBase или Paradox?
 author: Epsylon Technologies
 Date: 01.01.1996
+Source: FAQ Epsylon Technologies
 ---
 
 
 Какой формат данных предпочесть в Delphi? DBase или Paradox?
 ============================================================
-
-::: {.date}
-01.01.1996
-:::
 
 Если вам действительно все равно, то вот несколько пунктов "за" формат
 Paradox:
@@ -24,7 +21,5 @@ Paradox:
 записей, вторичные индексы обеспечивают отсортированный "вид" на
 записи таблицы.
 
-Copyright © 1996 Epsylon Technologies
-
-Взято из FAQ Epsylon Technologies (095)-913-5608; (095)-913-2934;
-(095)-535-5349
+Copyright © 1996 Epsylon Technologies  
+(095)-913-5608; (095)-913-2934; (095)-535-5349

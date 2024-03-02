@@ -1,15 +1,12 @@
 ---
 Title: Список ошибок BDE
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Список ошибок BDE
 =================
-
-::: {.date}
-01.01.2007
-:::
 
 $0000 (0) = Successful completion.
 
@@ -433,10 +430,10 @@ $2811 (10257) = No user transaction is currently in progress.
 
 $2812 (10258) = Record lock failed.
 
-$2813 (10259) = Couldn\'t perform the edit because another user changed
+$2813 (10259) = Couldn't perform the edit because another user changed
 the record.
 
-$2814 (10260) = Couldn\'t perform the edit because another user deleted
+$2814 (10260) = Couldn't perform the edit because another user deleted
 or moved the record.
 
 $2901 (10497) = Insufficient field rights for operation.
@@ -712,7 +709,7 @@ $2E31 (11825) = Variable name is too long.
 
 $2E32 (11826) = Query may take a long time to process.
 
-$2E33 (11827) = Reserved word or one that can\'t be used as a variable
+$2E33 (11827) = Reserved word or one that can't be used as a variable
 name.
 
 $2E34 (11828) = Missing comma.
@@ -872,7 +869,7 @@ $2E98 (11928) = Answer table is of unsuitable type.
 
 $2E99 (11929) = Answer table is not yet supported under server alias.
 
-$2E9A (11930) = Non-null blob field required. Can\'t insert records
+$2E9A (11930) = Non-null blob field required. Can't insert records
 
 $2E9B (11931) = Unique index required to perform changeto
 
@@ -880,7 +877,7 @@ $2E9C (11932) = Unique index required to delete records
 
 $2E9D (11933) = Update of table on the server failed.
 
-$2E9E (11934) = Can\'t process this query remotely.
+$2E9E (11934) = Can't process this query remotely.
 
 $2E9F (11935) = Unexpected end of command.
 
@@ -1153,4 +1150,3 @@ $3F75 (16245) = Line
 
 $3F76 (16246) = Reason
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

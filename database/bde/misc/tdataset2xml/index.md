@@ -1,15 +1,12 @@
 ---
 Title: Как сделать экспорт TDataSet в XML-файл?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать экспорт TDataSet в XML-файл?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     {Unit to export a dataset to XML} 
      
@@ -187,4 +184,3 @@ Date: 01.01.2007
       begin  DatasetToXML(Table1, 'test.xml'); 
       end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -7,15 +7,13 @@ Date: 01.01.2007
 Модификация настроек BDE
 ========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
-Is there a way to change the IDAPI.CFG file from Delphi coding using the
-BDE API, since I wish to avoid having my users utilize the BDECFG.EXE
-utility?
+>Is there a way to change the IDAPI.CFG file from Delphi coding using the
+>BDE API, since I wish to avoid having my users utilize the BDECFG.EXE
+>utility?
 
-Answer:
+**Answer:**
 
 Here is a unit that is supposed to allow changing the config file:
 
@@ -286,12 +284,14 @@ Here is a unit that is supposed to allow changing the config file:
 
 ------------------------------------------------------------------------
 
+Вариант 2.
+
 Problem/Question/Abstract:
 
-How can my program access the idapi.cfg file and probably change its
-INIT (Local Share etc.) section?
+>How can my program access the idapi.cfg file and probably change its
+>INIT (Local Share etc.) section?
 
-Answer:
+**Answer:**
 
 For 32bit only. You can of course use the registry to determine the
 default CFG File instead of passing it as a parameter here:
@@ -362,7 +362,7 @@ default CFG File instead of passing it as a parameter here:
       Session.Open;
     end;
 
-ACFGPath would be \'\\SYSTEM\\INIT\\\', AEntry would be \'LOCAL SHARE\'
-und AValue would be \'TRUE\' or \'FALSE\'.
+ACFGPath would be '\SYSTEM\INIT\', AEntry would be 'LOCAL SHARE'
+und AValue would be 'TRUE' or 'FALSE'.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
