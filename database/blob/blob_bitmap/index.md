@@ -1,18 +1,15 @@
 ---
 Title: BlobField как Bitmap
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 BlobField как Bitmap
 ====================
 
-::: {.date}
-01.01.2007
-:::
-
-Сохраняем Bitmap в поле dbase с именем Icon. Icon представляет собой
-двоичное Blob-поле.
+Сохраняем Bitmap в поле dbase с именем Icon.
+Icon представляет собой двоичное Blob-поле.
 
     procedure ....
     var IconStream : TMemoryStream;
@@ -31,7 +28,7 @@ BlobField как Bitmap
     .
     end;
 
-** Читаем Bitmap в Timage из поля dbase с именем Icon.
+Читаем Bitmap в Timage из поля dbase с именем Icon.
 
     procedure .....
     var IconStream : TMemoryStream;
@@ -54,4 +51,3 @@ BlobField как Bitmap
 они не смогли мне помочь (может быть из-за убогой документации
 borland?).
 
-Взято с <https://delphiworld.narod.ru>

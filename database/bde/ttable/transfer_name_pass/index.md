@@ -1,19 +1,16 @@
 ---
 Title: Как передать Username и Password в удаленный модуль данных
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как передать Username и Password в удаленный модуль данных
 ==========================================================
 
-::: {.date}
-01.01.2007
-:::
-
-В Удаленный Модуль Данных бросьте компонент TDatabase, затем добавьте
-процедуру автоматизации (пункт главного меню Edit \| Add To Interface)
-для Login.
+В Удаленный Модуль Данных бросьте компонент TDatabase,
+затем добавьте процедуру автоматизации
+(пункт главного меню Edit \| Add To Interface) для Login.
 
 Убедитесь, что свойство HandleShared компонента TDatabase установлено в
 True.
@@ -33,6 +30,4 @@ True.
 
     RemoteServer1.AppServer.Login('USERNAME','PASSWORD'); 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

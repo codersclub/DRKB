@@ -1,17 +1,14 @@
 ---
 Title: Как сохранить содержимое таблицы в текстовый файл?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как сохранить содержимое таблицы в текстовый файл?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Эти небольшие функции анализирую таблицу и записывают её содержимое в
+Эти небольшие функции анализируют таблицу и записывают её содержимое в
 TStringList. А затем просто сохраняют в файл.
 
     procedure DatasetRecordToInfFile(aDataset: TDataSet; aStrList: TStrings);
@@ -43,4 +40,3 @@ TStringList. А затем просто сохраняют в файл.
       DatasetToInfFile(Table1,Memo1.Lines);
     end;
 
-Взято с <https://delphiworld.narod.ru>

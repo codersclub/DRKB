@@ -1,15 +1,12 @@
 ---
 Title: Как обновить TQuery не потеряв при этом текущей записи?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как обновить TQuery не потеряв при этом текущей записи?
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure RefreshQuery(AQuery : TQuery; const FieldsForSearch: String); 
     var 
@@ -32,4 +29,3 @@ Date: 01.01.2007
       end; 
     end;
 
-Взято из <https://forum.sources.ru>

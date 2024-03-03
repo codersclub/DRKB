@@ -1,15 +1,19 @@
 ---
 Title: Как создать таблицу в памяти?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как создать таблицу в памяти?
 =============================
 
-::: {.date}
-01.01.2007
-:::
+This is an InMemoryTable example.
+InMemory tables are a feature of the Borland Database Engine (BDE). 
+InMemory tables are created in RAM and deleted when you close them. 
+They are much faster and are very useful when you need fast operations on 
+small tables. This example uses the DbiCreateInMemoryTable DBE function call. 
+
 
     { 
       This is an InMemoryTable example. Free for anyone to use, modify and do 
@@ -157,4 +161,3 @@ Date: 01.01.2007
      
     end. 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

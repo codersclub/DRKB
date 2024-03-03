@@ -1,15 +1,12 @@
 ---
 Title: Копирование таблицы с помощью DBE
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Копирование таблицы с помощью DBE
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     function CopyTable(tbl: TTable; dest: string): boolean;
     var
@@ -32,4 +29,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

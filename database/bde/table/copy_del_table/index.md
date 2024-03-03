@@ -1,15 +1,12 @@
 ---
 Title: Как копировать и удалять таблицы?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как копировать и удалять таблицы?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
 Here is an example of a routine that I use for copying and deleting
 tables. It uses DB, DBTables, DbiProcs,DbiErrs, and DbiTypes.
@@ -87,4 +84,3 @@ should now be completely stand-alone.
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

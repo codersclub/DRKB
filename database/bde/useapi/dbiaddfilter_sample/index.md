@@ -2,17 +2,12 @@
 Title: Пример DbiAddFilter
 Author: Mark Erbaugh
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Пример DbiAddFilter
 ===================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Mark Erbaugh
 
     type
       TmyFilter = record
@@ -60,4 +55,3 @@ Date: 01.01.2007
 Также необходимо включить в ваш файл файлы DBITYPES и DBIPROCS, где
 определены вызываемые функции и константы.
 
-Взято с <https://delphiworld.narod.ru>

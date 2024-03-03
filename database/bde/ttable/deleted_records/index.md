@@ -1,15 +1,12 @@
 ---
 Title: Как показать удаленные записи
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как показать удаленные записи
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure DeletedRecords(Table: TTable; SioNo: Boolean);
     begin
@@ -22,4 +19,3 @@ Date: 01.01.2007
       Table.Refresh;
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

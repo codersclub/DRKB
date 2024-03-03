@@ -7,24 +7,14 @@ Date: 01.01.2007
 Storing / Playing an AVI file in a database
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
-
-How can I store an AVI file in a database and then play AVI
-
-files?
+> How can I store an AVI file in a database and then play AVI files?
 
 AVI files can be stored in BLOB (binary large object) fields.
 
 The easiest way to play an AVI file stored in a BLOB is to write
-
 the BLOB data to a temporary file, then let the mulimedia player
-
 play the file. The following example demonstrates how to store
-
 an AVI file to a BLOB field, and also play the AVI file from the
-
 BLOB field.
 
     var

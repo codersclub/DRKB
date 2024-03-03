@@ -1,15 +1,12 @@
 ---
 Title: FindKey для нескольких полей
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 FindKey для нескольких полей
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     with Table1 do
       begin
@@ -37,4 +34,3 @@ FindKey для нескольких полей
     oEmetb.indexfieldNames:='EmeClient;EmeDiv;EmeNo';
     if oEmeTb.findkey([123,'A',96]) then
 
-Взято с <https://delphiworld.narod.ru>

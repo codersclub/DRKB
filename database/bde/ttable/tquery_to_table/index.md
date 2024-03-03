@@ -1,22 +1,18 @@
 ---
 Title: Как результат TQuery сделать в виде постоянной таблицы?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как результат TQuery сделать в виде постоянной таблицы?
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
+Традиционно для записи результатов запроса на диск используется
+TBatchMove и TTable в дополнение к вашему запросу. Но вы можете
+сократить этот процесс, выполнив пару простых прямых вызовов BDE.
 
-Traditionally, to write the results of a query to disk, you use a
-TBatchMove and a TTable in addition to your query. But you can
-short-circuit this process by making a couple of simple, direct calls to
-the BDE.
-
-Make sure you have BDE declared in your uses section
+Убедитесь, что BDE объявлен в разделе «Uses».
 
     procedure MakePermTable(Qry: TQuery; PermTableName: string);
     var
@@ -29,4 +25,3 @@ Make sure you have BDE declared in your uses section
       Check(DbiMakePermanent(h, PChar(PermTableName), True));
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

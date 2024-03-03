@@ -1,15 +1,12 @@
 ---
 Title: Как узнать версию таблицы
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как узнать версию таблицы
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetTableVersion(Table: TTable): Longint;
     var
@@ -23,4 +20,3 @@ Date: 01.01.2007
       Check(DbiCloseCursor(hCursor));
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Получение информации о таблице
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Получение информации о таблице
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
 Вам нужно воспользоваться свойством FieldDefs. В следующем примере
 список полей и их соответствующий размер передается компоненту TMemo
@@ -27,10 +24,8 @@ Date: 01.01.2007
           Memo1.Lines.Add(Name + ' - ' + IntToStr(Size));
     end;
 
-Если вам просто нужны имена полей (FieldNames), то используйте метода
-TTable GetFieldNames:
-
-GetIndexNames для получения имен индексов:
+Если вам просто нужны имена полей (FieldNames), то используйте метод
+TTable: GetFieldNames, и метод GetIndexNames для получения имен индексов:
 
     var 
       FldNames, IdxNames : TStringList;
@@ -48,5 +43,3 @@ GetIndexNames для получения имен индексов:
 
 Для получения информации об определенном поле вы должны использовать
 FieldDef.
-
-Взято с <https://delphiworld.narod.ru>

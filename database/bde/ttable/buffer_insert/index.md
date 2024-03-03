@@ -1,15 +1,12 @@
 ---
 Title: Вставка новой записи через буфер
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Вставка новой записи через буфер
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     Table2.Insert;
     Move(Table1.ActiveBuffer^,Table2.ActiveBuffer^,Table1.RecordSize);
@@ -25,4 +22,3 @@ Date: 01.01.2007
 ...конечно, это "обходит" VCL, т.к., чтобы увидеть потом новую
 запись, необходимо сделать TTable.Refresh.
 
-Взято с <https://delphiworld.narod.ru>

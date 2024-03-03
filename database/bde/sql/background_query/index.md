@@ -1,15 +1,12 @@
 ---
 Title: Выполнение запросов к базе данных в фоне
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Выполнение запросов к базе данных в фоне
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Данный документ объясняет как выполнить запрос в фоновом режиме,
 используя класс TThread. Для получения общей информации о классе
@@ -38,29 +35,24 @@ TDataSource. Это должно быть сделано в контексте �
 
 Session1
 
-       Active        True;
-
-       SessionName        "Ses1"
+       Active            True;
+       SessionName       "Ses1"
 
 DataBase1
 
-       AliasName        "IBLOCAL"
-
-       DatabaseName        "DB1"
-
-       SessionName        "Ses1"
+       AliasName         "IBLOCAL"
+       DatabaseName      "DB1"
+       SessionName       "Ses1"
 
 Query1
 
-       DataBaseName        "DB1"
-
-       SessionName        "Ses1"
-
-       SQL.Strings        "Select * from employee"
+       DataBaseName      "DB1"
+       SessionName       "Ses1"
+       SQL.Strings       "Select * from employee"
 
 DataSource1
 
-       DataSet        ""
+       DataSet           ""
 
 DBGrid1
 
@@ -68,29 +60,24 @@ DBGrid1
 
 Session2
 
-       Active        True;
-
-       SessionName        "Ses2"
+       Active            True;
+       SessionName       "Ses2"
 
 DataBase2
 
-       AliasName        "IBLOCAL"
-
-       DatabaseName        "DB2"
-
-       SessionName        "Ses2"
+       AliasName         "IBLOCAL"
+       DatabaseName      "DB2"
+       SessionName       "Ses2"
 
 Query2
 
-       DataBaseName        "DB2"
-
-       SessionName        "Ses2"
-
-       SQL.Strings        "Select * from customer"
+       DataBaseName      "DB2"
+       SessionName       "Ses2"
+       SQL.Strings       "Select * from customer"
 
 DataSource2
 
-       DataSet        ""
+       DataSet           ""
 
 DBGrid1
 
@@ -221,4 +208,3 @@ FDataSource.DataSet с FQuery. Тем не менее, это делается �
 Synchronize. Конструктор Create и метод Execute снабжены подробными
 комментариями.
 
-Взято с <https://delphiworld.narod.ru>

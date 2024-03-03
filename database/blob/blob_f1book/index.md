@@ -1,15 +1,12 @@
 ---
 Title: Сохранить F1Book в Blob поле
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Сохранить F1Book в Blob поле
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses vcf1, dbtables;
      
@@ -63,4 +60,3 @@ Date: 01.01.2007
       FLDCW   Default8087CW
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

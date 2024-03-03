@@ -1,15 +1,12 @@
 ---
 Title: Как сравнить Bookmarks в таблице?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как сравнить Bookmarks в таблице?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     function TBDEDirect.CompareBookmarks(Bookmark1,
       Bookmark2: TBookmark): Boolean;
@@ -33,4 +30,3 @@ Date: 01.01.2007
         end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

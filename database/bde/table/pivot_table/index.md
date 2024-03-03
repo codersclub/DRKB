@@ -1,15 +1,12 @@
 ---
 Title: Кросс-таблица через pivot-таблицу
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Кросс-таблица через pivot-таблицу
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
 **ВОПРОС:**
 
@@ -26,25 +23,18 @@ Product, Month, Sales, и вам необходимо отображать да�
 
 Оригинальные данные примера:
 
-Store         Product    Month   Sales
-
-   #1            Toys       1      100
-
-   #2            Toys       1       68
-
-   #1            Toys       2      150
-
-   #1            Books      1       75
-
-   ...
+    Store         Product    Month   Sales
+       #1            Toys       1      100
+       #2            Toys       1       68
+       #1            Toys       2      150
+       #1            Books      1       75
+       ...
 
 Желаемый отчет должен выглядеть похожим на этот:
 
-     Product         January      February    March  .....
-
-      Toys             168          150
-
-      Books             75         .....
+    Product         January      February    March  .....
+    Toys            168          150
+    Books           75           .....
 
 -------------------------
 
@@ -52,27 +42,22 @@ Store         Product    Month   Sales
 
 Установите pivot-таблицу с именем tblPivot и 12 строками:
 
-  pvtMonth   pvtJan  pvtFeb   pvtMar  pvtApr   ....
-
-      1        1       0        0       0      ....
-
-      2        0       1        0       0
-
-      3        0       0        1       0
-
-      4        0       0        0       1
-
+    pvtMonth   pvtJan  pvtFeb   pvtMar  pvtApr   ....
+    1        1       0        0       0          ....
+    2        0       1        0       0
+    3        0       0        1       0
+    4        0       0        0       1
     .....
 
 Теперь запрос, выполненный в виде:
 
-      select Product, January=sum(Sales*pvtJan), 
-                     February=sum(Sales*pvtFeb),
-                        March=sum(Sales*pvtMar), 
-                        April=sum(Sales*pvtApr),
-                        ...
-      where Month = pvtMonth
-      group by Product
+    select Product, January=sum(Sales*pvtJan), 
+                   February=sum(Sales*pvtFeb),
+                      March=sum(Sales*pvtMar), 
+                      April=sum(Sales*pvtApr),
+                      ...
+    where Month = pvtMonth
+    group by Product
 
 даст вам информацию, опубликованную выше.
 
@@ -80,4 +65,3 @@ Store         Product    Month   Sales
 сохранят результат в кэшовой памяти, так что скорость выполнения запроса
 весьма велика.
 
-Взято с <https://delphiworld.narod.ru>
