@@ -1,15 +1,12 @@
 ---
 Title: RecCount в таблицах ASCII
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 RecCount в таблицах ASCII
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 В Delphi 1.0 для получения количества записей в ASCII файле (.TXT- и
 .SCH-файлы) я пользовался свойством RecordCount компонента TTable. В
@@ -33,4 +30,3 @@ ASCII таблице?
       Check(DbiGetRecordCount(Table1.Handle, RecCount);
     end;
 
-Взято с <https://delphiworld.narod.ru>

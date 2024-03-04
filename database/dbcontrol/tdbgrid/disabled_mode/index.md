@@ -1,15 +1,12 @@
 ---
 Title: Как показать TDBGrid в режиме disabled?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как показать TDBGrid в режиме disabled?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
 Ниже приведен пример, меняющий цвет шрифта на clGray, когда доступ к
 элементу управления (в данном случае TDBGrid) запрещен (disabled).
@@ -26,4 +23,3 @@ Date: 01.01.2007
       DbGrid1.Font.Color := clBlack;
     end;
 
-Взято из <https://forum.sources.ru>

@@ -1,22 +1,19 @@
 ---
 Title: Как сделать откат внутри триггера
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как сделать откат внутри триггера
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
 Внутри триггера нельзя управлять транзакциями, поэтому генерируешь там
 исключение а откат транзакции делаешь в приложении, пославшем запрос.
 Естественно exception должен предварительно создан
 
     SET TERM !!;
-
+    
     CREATE TRIGGER " DELETE_INV"  FOR " TINV"
         ACTIVE BEFORE DELETE
         POSITION 10
@@ -27,9 +24,9 @@ Date: 01.01.2007
             THEN
                 EXCEPTION EST_OSTATOK;
         END !!
-
+    
     SET TERM ;!!
-     
+
 
     DBase.StartTransaction;
     try
@@ -40,4 +37,3 @@ Date: 01.01.2007
       raise;    // Для последующей обработки
     end;
 
-Взято с <https://delphiworld.narod.ru>

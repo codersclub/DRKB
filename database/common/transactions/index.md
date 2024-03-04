@@ -1,15 +1,12 @@
 ---
 Title: Работа с транзакциями
 Date: 01.01.2007
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Работа с транзакциями
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
     dbMain.StartTransaction;
     try
@@ -26,6 +23,4 @@ Date: 01.01.2007
       raise;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

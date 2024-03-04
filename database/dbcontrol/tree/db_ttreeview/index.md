@@ -2,15 +2,12 @@
 Title: Построение древа TTreeView из базы данных
 Author: dron-s
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Построение древа TTreeView из базы данных
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TOrgColumn.LoadTreeView;
     type
@@ -58,6 +55,3 @@ Date: 01.01.2007
         end;
     end;
 
-Автор: dron-s
-
-Взято из <https://forum.sources.ru>

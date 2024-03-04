@@ -1,15 +1,12 @@
 ---
 Title: Как изменить шрифт определенной строки в TDBGrid?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как изменить шрифт определенной строки в TDBGrid?
 =================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для этого надо воспользоваться событием OnDrawDataCell в dbgrid.
 
@@ -35,9 +32,7 @@ Date: 01.01.2007
           end;
     end;
 
-Замечание: Вышеприведённый код использует таблицу "CUSTOMER.DB",
-TDBGrid, TDataSource
+**Замечание:**
+Вышеприведённый код использует таблицу "CUSTOMER.DB",
+TDBGrid, TDataSource и TTable
 
-и TTable
-
-Взято из <https://forum.sources.ru>

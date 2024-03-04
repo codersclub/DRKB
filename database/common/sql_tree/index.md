@@ -1,16 +1,13 @@
 ---
 Title: Деревья в SQL
 author: Joe Celko
-Date: May 1996
+Date: 24.05.1996
+Source: DBMS Online - March 1996
 ---
 
 
 Деревья в SQL
 =============
-
-::: {.date}
-May 1996
-:::
 
 Дерево - специальный вид направленного графа. Графы - структуры данных,
 состоящие из узлов связанных дугами. Кажая дуга показывает
@@ -42,38 +39,38 @@ May 1996
 Например, рассмотрим организационную диаграмму компании с шестью
 сотрудниками:
 
-       CREATE TABLE Personnel(
-               emp        CHAR(20)                PRIMARY KEY,
-               boss        CHAR(20)                REFERENCES Personnel(emp), 
-               salary        DECIMAL(6,2)        NOT NULL
-       );
+    CREATE TABLE Personnel(
+      emp     CHAR(20)      PRIMARY KEY,
+      boss    CHAR(20)      REFERENCES Personnel(emp), 
+      salary  DECIMAL(6,2)  NOT NULL
+    );
 
 
-       Personnel:
-       emp        boss        salary 
-       ========================== 
-       \'Jerry\'        NULL        1000.00 
-       \'Bert\'        \'Jerry\'         900.00 
-       \'Chuck\'        \'Jerry\'         900.00 
-       \'Donna\'        \'Chuck\'         800.00 
-       \'Eddie\'        \'Chuck\'         700.00 
-       \'Fred\'        \'Chuck\'         600.00
+    Personnel:
+    emp        boss        salary 
+    =============================
+    'Jerry'    NULL       1000.00 
+    'Bert'     'Jerry'     900.00 
+    'Chuck'    'Jerry'     900.00 
+    'Donna'    'Chuck'     800.00 
+    'Eddie'    'Chuck'     700.00 
+    'Fred'     'Chuck'     600.00
 
 Эта модель имеет преимущества и недостатки. ПЕРВИЧНЫЙ КЛЮЧ - emp, но
 столбец boss - функционально зависит от него, следовательно мы имеем
 проблемы с нормализацией. REFERENCES не даст вам возможность указать
 начальником, того кто не является сотрудником. Однако, что произойдет,
-когда \'Jerry\' изменяет имя на \'Geraldo\', чтобы получить
+когда 'Jerry' изменяет имя на 'Geraldo', чтобы получить
 телевизионное ток-шоу? Вы также должны сделать каскадные изменения в
-строках \'Bert\' и \'Chuck\'.
+строках 'Bert' и 'Chuck'.
 
 Другой недостаток этой модели - то трудно вывести путь. Чтобы найти имя
 босса для каждого служащего, используется самообъединяющийся запрос,
 типа:
 
-            SELECT B1.emp, 'bosses', E1.emp 
-            FROM Personnel AS B1, Personnel AS E1 
-            WHERE B1.emp = E1.boss; 
+    SELECT B1.emp, 'bosses', E1.emp 
+    FROM   Personnel AS B1, Personnel AS E1 
+    WHERE  B1.emp = E1.boss; 
 
 Но кое-что здесь отсутствует. Этот запрос дает Вам только
 непосредственных начальников персонала. Босс Вашего босса также имеет
@@ -81,19 +78,19 @@ May 1996
 два уровня в дереве, Вам необходимо написать более сложный запрос
 самообъединения, типа:
 
-            SELECT B1.emp, 'bosses', E2.emp 
-            FROM Personnel AS B1, Personnel AS E1, Personnel AS E2 
-            WHERE B1.emp = E1.boss AND E1.emp = E2.boss;
+    SELECT B1.emp, 'bosses', E2.emp 
+    FROM   Personnel AS B1, Personnel AS E1, Personnel AS E2 
+    WHERE  B1.emp = E1.boss AND E1.emp = E2.boss;
 
 Чтобы идти более чем на два уровня глубже в дереве, просто расширяют
 образец:
 
-            SELECT B1.emp, 'bosses', E3.emp 
-            FROM Personnel AS B1, Personnel AS E1, 
-                    Personnel AS E2, Personnel AS E3
-            WHERE B1.emp = E1.boss 
-                    AND E1.emp = E2.boss
-                    AND E2.emp = E3.boss;
+    SELECT B1.emp, 'bosses', E3.emp 
+    FROM  Personnel AS B1, Personnel AS E1, 
+          Personnel AS E2, Personnel AS E3
+    WHERE B1.emp = E1.boss 
+      AND E1.emp = E2.boss
+      AND E2.emp = E3.boss;
 
 К сожалению, Вы понятия не имеете насколько глубоко дерево, так что Вы
 должны продолжать расширять этот запрос, пока Вы не получите в
@@ -102,42 +99,36 @@ May 1996
 Листья не имеют потомков. В этой модели, их довольно просто найти: Это
 сотрудники, не являющиеся боссом кому либо еще в компании:
 
+    SELECT *
+    FROM Personnel AS E1
+    WHERE NOT EXISTS(
             SELECT *
-                FROM Personnel AS E1
-            WHERE NOT EXISTS(
-                    SELECT *
-                    FROM Personnel AS E2
-                    WHERE E1.emp = E2.boss);
+            FROM Personnel AS E2
+            WHERE E1.emp = E2.boss
+    );
 
 У корня дерева boss - NULL:
 
-            SELECT *
-            FROM Personnel
-            WHERE boss IS NULL;
+    SELECT *
+    FROM Personnel
+    WHERE boss IS NULL;
 
 Реальные проблемы возникают при попытке вычислить значения вверх и вниз
 по дереву. Как упражнение, напишите запрос, суммирующий жалованье
 каждого служащего и его/ее подчиненных; результат:
 
-       Total Salaries
+    Total Salaries
+     
+    emp        boss         salary 
+    ==============================
+    'Jerry'    NULL        4900.00 
+    'Bert'     'Jerry'      900.00 
+    'Chuck'    'Jerry'     3000.00 
+    'Donna'    'Chuck'      800.00 
+    'Eddie'    'Chuck'      700.00 
+    'Fred'     'Chuck'      600.00 
 
-       emp        boss        salary 
-
-       ========================== 
-
-       \'Jerry\'        NULL        4900.00 
-
-       \'Bert\'        \'Jerry\'         900.00 
-
-       \'Chuck\'        \'Jerry\'        3000.00 
-
-       \'Donna\'        \'Chuck\'         800.00 
-
-       \'Eddie\'        \'Chuck\'         700.00 
-
-       \'Fred\'        \'Chuck\'         600.00 
-
-Множественная модель деревьев.
+## Множественная модель деревьев.
 
 Другой путь представления деревьев состоит в том, чтобы показать их как
 вложенные множества. Это более подходящая модель, т.к. SQL - язык,
@@ -168,34 +159,28 @@ May 1996
 формирования запросов. Таблица Personnel имеет следующий вид, с левыми и
 правыми номерами в виде:
 
-            CREATE TABLE Personnel(
-                    emp        CHAR(10)                PRIMARY KEY, 
-                    salary        DECIMAL(6,2)        NOT NULL, 
-                    left        INTEGER                NOT NULL, 
-                    right        INTEGER                NOT NULL);
+    CREATE TABLE Personnel(
+      emp        CHAR(10)        PRIMARY KEY, 
+      salary     DECIMAL(6,2)    NOT NULL, 
+      left       INTEGER         NOT NULL, 
+      right      INTEGER         NOT NULL
+    );
 
-       Personnel
+    Personnel
 
-       emp        salary        left        right 
-
-       ============================== 
-
-       \'Jerry\'        1000.00  1        12 
-
-       \'Bert\'         900.00  2         3 
-
-       \'Chuck\'         900.00  4        11 
-
-       \'Donna\'         800.00  5         6 
-
-       \'Eddie\'         700.00  7         8 
-
-       \'Fred\'         600.00  9        10 
+    emp         salary  left  right 
+    =============================== 
+    'Jerry'    1000.00  1        12 
+    'Bert'      900.00  2         3 
+    'Chuck'     900.00  4        11 
+    'Donna'     800.00  5         6 
+    'Eddie'     700.00  7         8 
+    'Fred'      600.00  9        10 
 
 Корень всегда имеет 1 в левом столбце и удвоенное число узлов (2*n) в
 правом столбце. Это просто понять: червь должен посетить каждый узел
 дважды, один раз с левой стороны и один раз с правой стороны, так что
-заключительный количество должено быть удвоенное число узлов во всем
+заключительное количество должно быть равно удвоенному числу узлов во всем
 дереве.
 
 В модели вложенных множеств, разность между левыми и правыми значениями
@@ -203,17 +188,17 @@ May 1996
 пока он ползет по дереву. Поэтому, Вы можете найти все листья следующим
 простым запросом:
 
-            SELECT * 
-            FROM Personnel 
-            WHERE (right - left) = 1; 
+    SELECT * 
+    FROM  Personnel 
+    WHERE (right - left) = 1; 
 
 Вы можете использовать такую уловку, для ускорения запросов: постройте
 уникальный индекс по левому столбцу, затем перепишите запрос, чтобы
 воспользоваться преимуществом индекса:
 
-            SELECT * 
-            FROM Personnel 
-            WHERE left = (right - 1);
+    SELECT * 
+    FROM Personnel 
+    WHERE left = (right - 1);
 
 Причина увеличения производительности в том, что SQL может использовать
 индекс по левому столбцеу, когда он не испорльзуется в выражении. Не
@@ -225,11 +210,11 @@ May 1996
 предикатами BETWEEN. Например, чтобы определить всех боссов
 определенного сотрудника необходимо написать:
 
-            SELECT :myworker, B1.emp, (right - left) AS height
-            FROM Personnel AS B1, Personnel AS E1
-            WHERE E1.left BETWEEN B1.left AND B1.right
-            AND E1.right BETWEEN B1.left AND B1.right
-            AND E1.emp = :myworker;
+    SELECT :myworker, B1.emp, (right - left) AS height
+    FROM Personnel AS B1, Personnel AS E1
+    WHERE E1.left BETWEEN B1.left AND B1.right
+    AND E1.right BETWEEN B1.left AND B1.right
+    AND E1.emp = :myworker;
 
 Чем больше height, тем дальше по иерархии босс от служащего. Модель
 вложенных множеств использует факт, что каждое содержащее другие
@@ -241,12 +226,12 @@ May 1996
 вычислить. Например, чтобы найти уровни между заданным рабочим и
 менеджером, Вы могли бы использовть:
 
-            SELECT E1.emp, B1.emp, COUNT(*) - 1 AS levels 
-            FROM Personnel AS B1, Personnel AS E1 
-            WHERE E1.left BETWEEN B1.left AND B1.right 
-            AND E1.right BETWEEN B1.left AND B1.right 
-            AND E1.node = :myworker 
-            AND B1.node = :mymanager; 
+    SELECT E1.emp, B1.emp, COUNT(*) - 1 AS levels 
+    FROM Personnel AS B1, Personnel AS E1 
+    WHERE E1.left BETWEEN B1.left AND B1.right 
+    AND E1.right BETWEEN B1.left AND B1.right 
+    AND E1.node = :myworker 
+    AND B1.node = :mymanager; 
 
 (COUNT(*) - 1) используется для того, чтобы удалить двойной индекс узла
 непосредственно как нахождение на другом уровне, потому что узел -
@@ -258,13 +243,24 @@ May 1996
 узлов, объединяют пути, находят узлы, которые имеют (COUNT(*) \> 1), и
 выбирают с наименьшей глубиной.
 
-Рисунок 1.
-
 Вершина дерева называется корнем. Узлы дерева, которые не имеют
 поддеревьев, называются листьями. Потомки родительского узла - узлы в
-поддервья, имеющие корнем родительский узел.
+поддерве, имеющие корнем родительский узел.
 
-Рисунок 2.
+           Albert(null)
+             /    \
+            /      \
+           /        \
+          /          \
+    Bert(Albert)   Chuck(Albert)
+                    /   |   \
+                   /    |    \
+                  /     |     \
+                 /      |      \
+                /       |       \
+         Donna(Chuck) Eddie(Chuck) Fred(Chuck)
+     
+       Рисунок 1.
 
 Другой путь представления деревьев состоит в том, чтобы показать их как
 вложенные множества. Это более подходящая модель, т.к. SQL - язык,
@@ -272,12 +268,27 @@ May 1996
 другие множества, и отношения предок-потомок описываются принадлежностью
 множества потомков множеству предка.
 
+         Albert(1,12)
+           /    \
+          /      \
+         /        \
+        /          \
+    Bert(2,3)    Chuck(4,11)
+                  /   |   \
+                 /    |    \
+                /     |     \
+               /      |      \
+              /       |       \
+       Donna(5,6) Eddie(7,8) Fred(9,10)
+    
+       Рисунок 2.
+
 © Joe Celko
 DBMS Online - March 1996
 
 Translated by SDM
 
-Множественная модель деревьев. Часть 2.
+## Множественная модель деревьев. Часть 2.
 
 Я предполагаю, что Вы имеете перед собой статью за март 1996, так что я
 не буду повторяться. Множественная модель деревьев имеет некоторые
@@ -286,7 +297,7 @@ Translated by SDM
 буду повсюду обращаться к этой таблице в остальной части этой статьи.
 
 Дерево на рисунке 1 представлено как A) граф и Б) вложенные множества.
-Направление показываетя вложением, то есть Вы знаете, что кто-то -
+Направление показывается вложением, то есть Вы знаете, что кто-то -
 подчиненный кого-то еще в иерархии компании, если что левые и правые
 номера множества этого человека - между таковыми их боссов.
 
@@ -306,25 +317,19 @@ Translated by SDM
 выяснить всех менеджеров, которым должен отчитываться рабочий, вы можете
 написать:
 
-            SELECT 'Mary',
-            P1.emp, (P1.rgt - P1.lft) AS size
-            FROM Personnel AS P1, Personnel AS P2
-            WHERE P2.emp = 'Mary'
-            AND P2.lft BETWEEN P1.lft AND P1.rgt;
+    SELECT 'Mary',
+    P1.emp, (P1.rgt - P1.lft) AS size
+    FROM Personnel AS P1, Personnel AS P2
+    WHERE P2.emp = 'Mary'
+    AND P2.lft BETWEEN P1.lft AND P1.rgt;
 
-       Mary        emp        size 
-
-       ====        ===        ==== 
-
-       Mary        Albert         27 
-
-       Mary        Charles         13 
-
-       Mary        Fred           9 
-
-       Mary        Jim           5 
-
-       Mary        Mary           1 
+    Mary        emp        size 
+    ====        ===        ==== 
+    Mary        Albert       27 
+    Mary        Charles      13 
+    Mary        Fred          9 
+    Mary        Jim           5 
+    Mary        Mary          1 
 
 Заметьте, что, когда size = 1, Вы имеете дело С Мэри как с ее
 собственным боссом. Вы можете исключить этот случай.
@@ -338,44 +343,29 @@ Translated by SDM
 Уровень узла - число дуг между узлом и корнем. Вы можете вычислять
 уровень узла следующим запросом:
 
-            SELECT P2.emp, COUNT(*) AS level
-            FROM Personnel AS P1, Personnel AS P2
-            WHERE P2.lft BETWEEN P1.lft AS P2
-            GROUP BY P2.emp;
+    SELECT P2.emp, COUNT(*) AS level
+    FROM Personnel AS P1, Personnel AS P2
+    WHERE P2.lft BETWEEN P1.lft AS P2
+    GROUP BY P2.emp;
 
-       Этот запрос находит уровни среди менеджеров, следующим образом:
+Этот запрос находит уровни среди менеджеров, следующим образом:
 
-       emp        level 
-
-       ===        ===== 
-
-       Albert        1 
-
-       Bert        2 
-
-       Charles        2 
-
-       Diane        2 
-
-       Edward        3 
-
-       Fred        3 
-
-       George        3 
-
-       Heidi        3 
-
-       Igor        4 
-
-       Jim        4 
-
-       Kathy        4 
-
-       Larry        4 
-
-       Mary        5 
-
-       Ned        5 
+    emp        level 
+    ===        ===== 
+    Albert         1 
+    Bert           2 
+    Charles        2 
+    Diane          2 
+    Edward         3 
+    Fred           3 
+    George         3 
+    Heidi          3 
+    Igor           4 
+    Jim            4 
+    Kathy          4 
+    Larry          4 
+    Mary           5 
+    Ned            5 
 
 В некоторых книгах по теории графов, корень имеет нулевой уровнь вместо
 первого. Если Вам нравится это соглашение, используйте выражение
@@ -384,51 +374,36 @@ Translated by SDM
 Самообъединения в комбинации с предикатом BETWEEN - основной шаблон для
 других запросов.
 
-Агрегатные функции в деревьях.
+### Агрегатные функции в деревьях.
 
 Получение простой суммы зарплаты подчиненных менеджера работает на том
 же самом принципе. Заметьте, что эта общая сумма будет также включать
 зарплату босса:
 
      
-            SELECT P1.emp, SUM(P2.salary) AS payroll
-            FROM Personnel AS P1, Personnel AS P2
-            WHERE P2.lft BETWEEN P1.lft AND P1.rgt
-            GROUP BY P1.emp;
+    SELECT P1.emp, SUM(P2.salary) AS payroll
+    FROM Personnel AS P1, Personnel AS P2
+    WHERE P2.lft BETWEEN P1.lft AND P1.rgt
+    GROUP BY P1.emp;
 
-       emp        payroll 
+    emp        payroll 
+    ===        ======= 
+    Albert     7800.00 
+    Bert       1650.00 
+    Charles    3250.00 
+    Diane      1900.00 
+    Edward      750.00 
+    Fred       1600.00 
+    George      750.00 
+    Heidi      1000.00 
+    Igor        500.00 
+    Jim         300.00 
+    Kathy       100.00 
+    Larry       100.00 
+    Mary        100.00 
+    Ned         100.00 
 
-       ===        ======= 
-
-       Albert        7800.00 
-
-       Bert        1650.00 
-
-       Charles        3250.00 
-
-       Diane        1900.00 
-
-       Edward         750.00 
-
-       Fred        1600.00 
-
-       George         750.00 
-
-       Heidi        1000.00 
-
-       Igor         500.00 
-
-       Jim         300.00 
-
-       Kathy         100.00 
-
-       Larry         100.00 
-
-       Mary         100.00 
-
-       Ned         100.00 
-
-поддеревьев
+### Удаление поддеревьев
 
 Следующий запрос будет брать уволенного служащего как параметр и удалять
 поддерево, расположенное под ним/ней. Уловка в этом запросе - то, что Вы
@@ -436,11 +411,11 @@ Translated by SDM
 значения. Ответ - набор скалярных подзапросов:
 
      
-            DELETE FROM Personnel
-            WHERE lft BETWEEN
-            (SELECT lft FROM Personnel WHERE emp = :downsized)
-            AND
-            (SELECT rgt FROM Personnel WHERE emp = :downsized);
+    DELETE FROM Personnel
+    WHERE lft BETWEEN
+    (SELECT lft FROM Personnel WHERE emp = :downsized)
+    AND
+    (SELECT rgt FROM Personnel WHERE emp = :downsized);
 
 Проблема состоит в том, что после этого запроса появляются промежутки в
 последовательности номеров множеств. Это не мешает выполнять большинство
@@ -455,44 +430,46 @@ Translated by SDM
 закрытии тех промежутков - а именно правильные и левые номера корня
 поддерева. Поэтому, забудьте запрос, и напишите вместо этого процедуру:
 
-            CREATE PROCEDURE DropTree (downsized IN CHAR(10) NOT NULL)
-            BEGIN ATOMIC
-            DECLARE dropemp CHAR(10) NOT NULL;
-            DECLARE droplft INTEGER NOT NULL;
-            DECLARE droprgt INTEGER NOT NULL;
-     
-            --Теперь сохраним данные поддерева: 
-     
-            SELECT emp, lft, rgt
-            INTO dropemp, droplft, droprgt 
-            FROM Personnel
-            WHERE emp = downsized;
-     
-            --Удаление, это просто...
-     
-            DELETE FROM Personnel
-            WHERE lft BETWEEN droplft and droprgt;
-     
-            --Теперь уплотняем промежутки: 
+    CREATE PROCEDURE DropTree (downsized IN CHAR(10) NOT NULL)
+    BEGIN ATOMIC
+    DECLARE dropemp CHAR(10) NOT NULL;
+    DECLARE droplft INTEGER NOT NULL;
+    DECLARE droprgt INTEGER NOT NULL;
 
-            UPDATE Personnel 
-            SET lft = CASE 
-            WHEN lft >  droplf 
-            THEN lft - (droprgt - droplft + 1) 
-            ELSE lft END, 
-            rgt = CASE 
-            WHEN rgt >  droplft 
-            THEN rgt - (droprgt - droplft + 1) 
-            ELSE rgt END;END; 
+    --Теперь сохраним данные поддерева: 
+
+    SELECT emp, lft, rgt
+    INTO dropemp, droplft, droprgt 
+    FROM Personnel
+    WHERE emp = downsized;
+
+    --Удаление, это просто...
+
+    DELETE FROM Personnel
+    WHERE lft BETWEEN droplft and droprgt;
+
+    --Теперь уплотняем промежутки: 
+
+    UPDATE Personnel 
+    SET lft = CASE 
+    WHEN lft >  droplf 
+    THEN lft - (droprgt - droplft + 1) 
+    ELSE lft END, 
+    rgt = CASE 
+    WHEN rgt >  droplft 
+    THEN rgt - (droprgt - droplft + 1) 
+    ELSE rgt END;END; 
 
 Реальная процедура должна иметь обработку ошибок, но я оставляю это как
 упражнение для читателя.
 
-Удалениеузла
+### Удаление узла
 
 Удаление одиночного узла в середине дерева тяжелее чем удаление полных
 поддеревьев. Когда Вы удаляете узел в середине дерева, Вы должны решить,
-как заполнить отверстие. Имеются два пути. Первый метод к повышает
+как заполнить отверстие. Имеются два пути.
+
+Первый метод к повышает
 одного из детей к позиции первоначального узла (предположим, что отец
 умирает, и самый старший сын занимает бизнес, как показано на рисунке
 2). Самый старший потомок всегда показывается как крайний левый дочерний
@@ -510,61 +487,67 @@ Translated by SDM
 узла и изменения нумерации узлов справа. Ниже - процедура выполняющая
 это:
 
-            CREATE PROCEDURE DropNode (downsized IN CHAR(10) NOT NULL)
-            BEGIN ATOMIC
-            DECLARE dropemp CHAR(10) NOT NULL;
-            DECLARE droplft INTEGER NOT NULL;
-            DECLARE droprgt INTEGER NOT NULL;
-     
-            --Теперь сохраним данные поддерева: 
-     
-            SELECT emp, lft, rgt 
-            INTO dropemp, droplft, droprgt 
-            FROM Personnel 
-            WHERE emp = downsized; 
+    CREATE PROCEDURE DropNode (downsized IN CHAR(10) NOT NULL)
+    BEGIN ATOMIC
+    DECLARE dropemp CHAR(10) NOT NULL;
+    DECLARE droplft INTEGER NOT NULL;
+    DECLARE droprgt INTEGER NOT NULL;
 
-            --Удаление, это просто...
-     
-            DELETE FROM Personnel
-            WHERE emp = downsized;
-     
-            --Теперь уплотняем промежутки: 
+    --Теперь сохраним данные поддерева: 
 
-            UPDATE Personnel 
-            SET lft = CASE 
-            WHEN lft BETWEEN droplft AND droprgt THEN lft - 1 
-            WHEN lft >  droprgt THEN lft - 2 
-            ELSE lft END 
-            rgt = CASE 
-            WHEN rgt BETWEEN droplft AND droprgt THEN rgt - 1 
-            WHEN rgt >  droprgt THEN rgt -2 
-            ELSE rgt END; 
-            WHERE lft >  droplft; 
-            END; 
+    SELECT emp, lft, rgt 
+    INTO dropemp, droplft, droprgt 
+    FROM Personnel 
+    WHERE emp = downsized; 
 
-       Листинг 1
+    --Удаление, это просто...
 
-            CREATE TABLE Personnel 
-            (emp        CHAR(10)                PRIMARY KEY,
-            salary        DECIMAL(8,2)        NOT NULL CHECK(salary > = 0.00), 
-            lft        INTEGER                NOT NULL, 
-            rgt        INTEGER                NOT NULL, 
-            CHECK(lft <  rgt)); 
+    DELETE FROM Personnel
+    WHERE emp = downsized;
 
-            INSERT INTO Personnel VALUES ('Albert', 1000.00, 1, 28);
-            INSERT INTO Personnel VALUES ('Bert', 900.00, 2, 5);
-            INSERT INTO Personnel VALUES ('Charles', 900.00, 6, 19);
-            INSERT INTO Personnel VALUES ('Diane', 900.00, 20, 27);
-            INSERT INTO Personnel VALUES ('Edward', 750.00, 3, 4);
-            INSERT INTO Personnel VALUES ('Fred', 800.00, 7, 16);
-            INSERT INTO Personnel VALUES ('George', 750.00, 17, 18);
-            INSERT INTO Personnel VALUES ('Heidi', 800.00, 21, 26);
-            INSERT INTO Personnel VALUES ('Igor', 500.00, 8, 9);
-            INSERT INTO Personnel VALUES ('Jim', 100.00, 10, 15);
-            INSERT INTO Personnel VALUES ('Kathy', 100.00, 22, 23);
-            INSERT INTO Personnel VALUES ('Larry', 100.00, 24, 25);
-            INSERT INTO Personnel VALUES ('Mary', 100.00, 11, 12);
-            INSERT INTO Personnel VALUES ('Ned', 100.00, 13, 14);
+    --Теперь уплотняем промежутки: 
+
+    UPDATE Personnel 
+    SET lft = CASE 
+    WHEN lft BETWEEN droplft AND droprgt THEN lft - 1 
+    WHEN lft >  droprgt THEN lft - 2 
+    ELSE lft END 
+    rgt = CASE 
+    WHEN rgt BETWEEN droplft AND droprgt THEN rgt - 1 
+    WHEN rgt >  droprgt THEN rgt -2 
+    ELSE rgt END; 
+    WHERE lft >  droplft; 
+    END; 
+
+    Листинг 1
+
+    CREATE TABLE Personnel 
+    (emp       CHAR(10)      PRIMARY KEY,
+    salary     DECIMAL(8,2)  NOT NULL CHECK(salary > = 0.00), 
+    lft        INTEGER       NOT NULL, 
+    rgt        INTEGER       NOT NULL, 
+    CHECK(lft <  rgt)); 
+    
+    INSERT INTO Personnel VALUES ('Albert', 1000.00, 1, 28);
+    INSERT INTO Personnel VALUES ('Bert', 900.00, 2, 5);
+    INSERT INTO Personnel VALUES ('Charles', 900.00, 6, 19);
+    INSERT INTO Personnel VALUES ('Diane', 900.00, 20, 27);
+    INSERT INTO Personnel VALUES ('Edward', 750.00, 3, 4);
+    INSERT INTO Personnel VALUES ('Fred', 800.00, 7, 16);
+    INSERT INTO Personnel VALUES ('George', 750.00, 17, 18);
+    INSERT INTO Personnel VALUES ('Heidi', 800.00, 21, 26);
+    INSERT INTO Personnel VALUES ('Igor', 500.00, 8, 9);
+    INSERT INTO Personnel VALUES ('Jim', 100.00, 10, 15);
+    INSERT INTO Personnel VALUES ('Kathy', 100.00, 22, 23);
+    INSERT INTO Personnel VALUES ('Larry', 100.00, 24, 25);
+    INSERT INTO Personnel VALUES ('Mary', 100.00, 11, 12);
+    INSERT INTO Personnel VALUES ('Ned', 100.00, 13, 14);
+
+Рисунок 1.
+
+Дерево на представлено как A) граф и Б) вложенные множества.
+
+Рисунок 2.
 
 Удаление одиночного узла в середине дерева тяжелее чем удаление полных
 поддеревьев. Когда Вы удаляете узел в середине дерева, Вы должны решить,
@@ -573,8 +556,7 @@ Translated by SDM
 умирает, и самый старший сын занимает бизнес. Самый старший потомок
 всегда показывается как крайний левый дочерний узел под родителем.
 
-
-
+Рисунок 3.
 
 Второй метод для удаления одиночного узла в середине дерева состоит в
 том, чтобы подключить потомков к предку первоначального узла (можно
@@ -585,7 +567,7 @@ DBMS Online - April 1996
 
 Translated by SDM
 
-Деревья в SQL. Часть 3.
+## Деревья в SQL. Часть 3.
 
 Давайте продолжим наше обсуждение модели вложенных множеств для деревьев
 в SQL. Я не собираюсь рассматривать любую из моих предидущих статей и
@@ -618,34 +600,34 @@ Translated by SDM
 Классический подход к решению проблемы состоит в том, чтобы брать самое
 простой случай проблемы, и смотреть, можете ли Вы применять его к более
 сложным случаям. Если дерево не имеет узлов, то преобразование просто -
-ничего не делать. Если дерево имеет один узел, то преобразование простое
-- устанавливают левое значение в 1 и правое значение в 2. Природа
-матрицы смежности такова, что Вы можете двигаться только по одному
+ничего не делать. Если дерево имеет один узел,
+то преобразование простое - устанавливают левое значение в 1 и правое значение в 2.
+Природа матрицы смежности такова, что Вы можете двигаться только по одному
 уровню одновременно, так что давайте посмотрим на дерево с двумя
 уровнями - корень и непосредственные потомки. Таблица модели смежности
 напоминала бы следующее:
 
-            CREATE TABLE Personnel
-            (emp CHAR(10) NOT NULL PRIMARY KEY,
-            boss CHAR(10));
+    CREATE TABLE Personnel
+    (emp CHAR(10) NOT NULL PRIMARY KEY,
+    boss CHAR(10));
      
-            Personnel
-     
-            emp        boss
-            =================
-            'Albert'        NULL
-            'Bert'        'Albert'
-            'Charles'        'Albert'
-            'Diane'        'Albert'
+    Personnel
+    
+    emp          boss
+    =================
+    'Albert'     NULL
+    'Bert'       'Albert'
+    'Charles'    'Albert'
+    'Diane'      'Albert'
 
 Давайте поместим модель вложенных множеств в ее собственную рабочую
 таблицу:
 
-            CREATE TABLE WorkingTree(
-            emp CHAR (10),
-            boss CHAR(10),
-            lft INTEGER NOT NULL DEFAULT 0,
-            rgt INTEGER NOT NULL DEFAULT 0);
+    CREATE TABLE WorkingTree(
+    emp CHAR (10),
+    boss CHAR(10),
+    lft INTEGER NOT NULL DEFAULT 0,
+    rgt INTEGER NOT NULL DEFAULT 0);
 
 Из предидущих абзацев этой статьи, Вы знаете, что корень дерева имеет
 левое значение 1, и что правое значение является удвоенным числом узлов
@@ -653,30 +635,30 @@ Translated by SDM
 ключевое значение корня первоначального дерева. В действительности, это
 будет имя вложенного множества:
 
-            INSERT INTO WorkingTree
-            --convert the root node
-            SELECT P0.boss, P0.boss, 1,
-            2 * (SELECT COUNT(*) + 1
-                    FROM Personnel AS P1
-                    WHERE P0.boss = P1.boss)
-                    FROM Personnel AS P0; 
+    INSERT INTO WorkingTree
+    --convert the root node
+    SELECT P0.boss, P0.boss, 1,
+    2 * (SELECT COUNT(*) + 1
+            FROM Personnel AS P1
+            WHERE P0.boss = P1.boss)
+            FROM Personnel AS P0; 
 
 Теперь, Вы должны добавить потомков в таблицу вложенных множеств.
 Первоначальный босс останется тот же самый. Порядок потомков -
 естественный порядок ключа; в данном случае emp char(10):
 
-            INSERT INTO WorkingTree
-            --convert the children
-            SELECT DISTINCT P0.emp, P0.boss,
-            2 * (SELECT COUNT(DISTINCT emp)
-            FROM Personnel AS P1
-            WHERE P1.emp <  P0.emp
-            AND P0.boss IN (P1.emp, P1.boss)),
-            2 * (SELECT COUNT(DISTINCT emp)
-            FROM Personnel AS P1
-            WHERE P1.emp <  P0.emp
-            AND P0.boss IN (P1.boss, P1.emp)) + 1
-            FROM Personnel AS P0; 
+    INSERT INTO WorkingTree
+    --convert the children
+    SELECT DISTINCT P0.emp, P0.boss,
+    2 * (SELECT COUNT(DISTINCT emp)
+    FROM Personnel AS P1
+    WHERE P1.emp <  P0.emp
+    AND P0.boss IN (P1.emp, P1.boss)),
+    2 * (SELECT COUNT(DISTINCT emp)
+    FROM Personnel AS P1
+    WHERE P1.emp <  P0.emp
+    AND P0.boss IN (P1.boss, P1.emp)) + 1
+    FROM Personnel AS P0; 
 
 Фактически, Вы можете использовать эту процедуру, чтобы конвертировать
 модель матрицы смежности в лес деревьев, каждое из которых - модель
@@ -693,8 +675,8 @@ Translated by SDM
 первоначальной таблицы матрицы смежности, так что Вы будете должны
 очистить таблицу WorkingTree следующим запросом:
 
-            DELETE FROM WorkingTree
-            WHERE boss IS NULL OR emp IS NULL; 
+    DELETE FROM WorkingTree
+    WHERE boss IS NULL OR emp IS NULL; 
 
 Чтобы заставить эти деревья сливаться в одно заключительное дерево, Вы
 нуждаетесь в способе прикрепить подчиненное дерево к его предку. На
@@ -702,28 +684,26 @@ Translated by SDM
 делать следующие шаги:
 
 1.   Найти размер подчиненного дерева.
-
-1.   Найти место, куда подчиненное дерево вставляется в дерево-предок.
-
-1.   Раздвинуть дерево-предок в точке вставки.
-
-1.   Вставить подчиненное дерево в точку вставки.
+2.   Найти место, куда подчиненное дерево вставляется в дерево-предок.
+3.   Раздвинуть дерево-предок в точке вставки.
+4.   Вставить подчиненное дерево в точку вставки.
 
 На непроцедурном языке, Вы исполнили бы эти шаги вместе, используя
 логику всех перечисленных пунктов. Вы начинаете этот процесс, задавая
 вопросы и отмечая факты:
 
-Q)Как выбирать дерево-предок и его подчиненное дерево в лесу?
-A)Ищем одиночное ключевое значение, которое является потомком в
+Q) Как выбирать дерево-предок и его подчиненное дерево в лесу?
+
+A) Ищем одиночное ключевое значение, которое является потомком в
 дерево-предке и корнем подчиненного дерева;
 
-Q)Как определить на сколько необходимо раздвинуть дерево-предок?
-A)Это размер подчиненного дерева, равный (2 * (select count(*) from
-Подчиненое)).
+Q) Как определить на сколько необходимо раздвинуть дерево-предок?
+
+A) Это размер подчиненного дерева, равный `(2 * (select count(*) from Подчиненое))`.
 
 Q)Как определить точку вставки?
 
-A)Это - строка в таблице предка, где значение emp равно значению boss в
+A) Это - строка в таблице предка, где значение emp равно значению boss в
 подчиненной таблице. Вы хотите поместить подчиненное дерево левее левого
 значения этого общего узла. Небольшие алгебраические вычисления дают Вам
 число, добавляемое ко всем левым и правым значениям справа от точки
@@ -740,67 +720,67 @@ A)Это - строка в таблице предка, где значение 
 
 Вы готовы к написанию процедуры, объединяющей два дерева:
 
-            CREATE PROCEDURE TreeMerge(superior NOT NULL, subordinate NOT NULL)
-            BEGIN
-            DECLARE size INTEGER NOT NULL;
-            DECLARE insert_point INTEGER NOT NULL;
-            SET size = 2 * (SELECT COUNT(*) FROM WorkingTree WHERE emp = subordinate);
-            SET insert_point = (
-                    SELECT MIN(lft) 
-                    FROM WorkingTree
-                    WHERE emp = subordinate AND boss = superior) - 1;
+    CREATE PROCEDURE TreeMerge(superior NOT NULL, subordinate NOT NULL)
+    BEGIN
+    DECLARE size INTEGER NOT NULL;
+    DECLARE insert_point INTEGER NOT NULL;
+    SET size = 2 * (SELECT COUNT(*) FROM WorkingTree WHERE emp = subordinate);
+    SET insert_point = (
+            SELECT MIN(lft) 
+            FROM WorkingTree
+            WHERE emp = subordinate AND boss = superior) - 1;
+    
+    UPDATE WorkingTree
+    SET boss = CASE WHEN boss = subordinate
+                    THEN CASE WHEN emp = subordinate
+                            THEN NULL
+                            ELSE superior END
+                            ELSE boss END,
      
-            UPDATE WorkingTree
-            SET boss = CASE WHEN boss = subordinate
-                            THEN CASE WHEN emp = subordinate
-                                    THEN NULL
-                                    ELSE superior END
-                                    ELSE boss END,
+    lft = CASE WHEN (boss = superior AND lft >  size)
+            THEN lft + size
+            ELSE CASE WHEN boss = subordinate AND emp <>  subordinate
+                    THEN lft + insert_point
+                    ELSE lft END
+            END,
      
-            lft = CASE WHEN (boss = superior AND lft >  size)
-                    THEN lft + size
-                    ELSE CASE WHEN boss = subordinate AND emp <>  subordinate
-                            THEN lft + insert_point
-                            ELSE lft END
-                    END,
+    rgt = CASE WHEN (boss = superior AND rgt >  size)
+            THEN rgt + size
+            ELSE CASE WHEN boss = subordinate AND emp <>  subordinate
+                    THEN rgt + insert_point
+                    ELSE rgt END
+            END
      
-            rgt = CASE WHEN (boss = superior AND rgt >  size)
-                    THEN rgt + size
-                    ELSE CASE WHEN boss = subordinate AND emp <>  subordinate
-                            THEN rgt + insert_point
-                            ELSE rgt END
-                    END
+    WHERE boss IN (superior, subordinate);
      
-            WHERE boss IN (superior, subordinate);
-
-            --Удаляем избыточные копии корня подчиненного дерева
-            DELETE FROM WorkingTree WHERE boss IS NULL OR emp IS NULL;
+    --Удаляем избыточные копии корня подчиненного дерева
+    DELETE FROM WorkingTree WHERE boss IS NULL OR emp IS NULL;
      
-             END;
+    END;
 
 Обнаружить пары внешних и подчиненных деревьев в таблице WorkingTree
 очень просто. Следующий запрос становится пустым, когда все боссы
 установлены в одно и тоже значение:
 
-            CREATE VIEW AllPairs (superior, subordinate)
-            AS
-            SELECT W1.boss, W1.emp
-            FROM WorkingTree AS W1
-            WHERE EXISTS( SELECT * FROM WorkingTree AS W2 WHERE W2.boss = W1.emp)
-            AND W1.boss <>  W1.emp;
+    CREATE VIEW AllPairs (superior, subordinate)
+    AS
+    SELECT W1.boss, W1.emp
+    FROM WorkingTree AS W1
+    WHERE EXISTS( SELECT * FROM WorkingTree AS W2 WHERE W2.boss = W1.emp)
+    AND W1.boss <>  W1.emp;
 
 Но Вы хотели бы получить только одну пару, которую Вы передатите в
 только что разработанную процедуру. Чтобы переместить одну пару, берем
 крайнюю левую пару из прошлого запроса:
 
-            CREATE VIEW LeftmostPairs(superior, subordinate) 
-            AS
-            SELECT DISTINCT superior, 
-                    (SELECT MIN(subordinate)
-                    FROM AllPairs AS A2
-                    WHERE A1.superior = A2.superior)
-            FROM AllPairs AS A1
-            WHERE superior = (SELECT MIN(superior) FROM AllPairs); 
+    CREATE VIEW LeftmostPairs(superior, subordinate) 
+    AS
+    SELECT DISTINCT superior, 
+            (SELECT MIN(subordinate)
+            FROM AllPairs AS A2
+            WHERE A1.superior = A2.superior)
+    FROM AllPairs AS A1
+    WHERE superior = (SELECT MIN(superior) FROM AllPairs); 
 
 Теперь все, что Вам осталось сделать - поместить этот запрос в ранее
 разработанную процедуру - и у вас будет процедура, которая сольет вместе
@@ -808,8 +788,8 @@ A)Это - строка в таблице предка, где значение 
 значений в LeftmostPairs делайте вызовы процедуры. Это единственная
 процедуральная структура во всей хранимой процедуре.
 
-Таблица 1
-
+    Таблица 1
+    
     +-------+-------+-------+-------+-------+-------+-------+-------+-------+
     | C1    | row   | y     | y     | y     | y     | n     | y     | n     |
     |       | in    |       |       |       |       |       |       |       |
@@ -821,18 +801,15 @@ A)Это - строка в таблице предка, где значение 
     |       | subor |       |       |       |       |       |       |       |
     |       | d     |       |       |       |       |       |       |       |
     +-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    | C3    | lft   | n     | n     | y     | y     | -    | -    | -    |
-    |       | \>    |       |       |       |       |       |       |       |
+    | C3    | lft   | n     | n     | y     | y     | -     | -     | -     |
+    |       | \>     |       |       |       |       |       |       |       |
     |       | cut   |       |       |       |       |       |       |       |
     +-------+-------+-------+-------+-------+-------+-------+-------+-------+
-    | C4    | rgt   | n     | y     | n     | y     | -    | -    | -    |
-    |       | \>    |       |       |       |       |       |       |       |
+    | C4    | rgt   | n     | y     | n     | y     | -     | -     | -     |
+    |       | \>     |       |       |       |       |       |       |       |
     |       | cut   |       |       |       |       |       |       |       |
     +-------+-------+-------+-------+-------+-------+-------+-------+-------+
 
-
-
- 
 
     +-------+-------+-------+-------+-------+-------+-------+-------+-------+
     | A1    | Ошибк |       |       | 1     |       |       | 1     |       |
@@ -866,8 +843,6 @@ A)Это - строка в таблице предка, где значение 
     |       | rgt + |       |       |       |       |       |       |       |
     |       | cut   |       |       |       |       |       |       |       |
     +-------+-------+-------+-------+-------+-------+-------+-------+-------+
-
-© Joe Celko
 
 DBMS Online - May 1996
 

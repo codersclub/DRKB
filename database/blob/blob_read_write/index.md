@@ -1,15 +1,12 @@
 ---
 Title: Сохранение и чтение файлов в BLOB-полях
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Сохранение и чтение файлов в BLOB-полях
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     // Сохраняем
     procedure TForm1.Button1Click(Sender: TObject); 
@@ -51,4 +48,3 @@ Date: 01.01.2007
       end; 
     end;
 
-Взято с <https://delphiworld.narod.ru>

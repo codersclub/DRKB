@@ -7,18 +7,18 @@ Date: 01.01.2007
 Как изменить число фиксированных колонок в TDBGrid?
 ===================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin
       TStringGrid(DbGrid1).FixedCols := 2;
     end;
 
-Взято из <https://forum.sources.ru>
+Source: <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2.
 
 Это маленькая вставка в Ваш наследник от TCustomDBGrid, которая решает
 данную задачу.
@@ -151,4 +151,4 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>

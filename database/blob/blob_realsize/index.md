@@ -1,15 +1,13 @@
 ---
 Title: Как определить реальный размер поля типа BLOB, которое сохранено в таблице?
 Date: 01.01.2007
+Author: Epsylon Technologies
+Source: FAQ Epsylon Technologies
 ---
 
 
 Как определить реальный размер поля типа BLOB, которое сохранено в таблице?
 ===========================================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Ниже приведена функция GetBlobSize, которая возвращает размер данного
 BLOB или MEMO поля.
@@ -34,7 +32,5 @@ BLOB или MEMO поля.
       Edit1.Text := IntToStr(GetBlobSize(Notes));
     end;
 
-Copyright © 1996 Epsylon Technologies
-
-Взято из FAQ Epsylon Technologies (095)-913-5608; (095)-913-2934;
-(095)-535-5349
+Copyright © 1996 Epsylon Technologies  
+(095)-913-5608; (095)-913-2934; (095)-535-5349

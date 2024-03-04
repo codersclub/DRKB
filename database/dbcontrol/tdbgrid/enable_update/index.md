@@ -1,15 +1,12 @@
 ---
 Title: Как в TDBGrid pазpешить только опеpации UPDATE записей?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как в TDBGrid pазpешить только опеpации UPDATE записей?
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
 А я делаю так. На DataSource, к которому прицеплен Grid, вешаю
 обработчик на событие OnStateChange. Ниже текст типичного обратчика
@@ -25,4 +22,3 @@ Date: 01.01.2007
 
 Лучше использовать конструкцию "State in dsEditModes"
 
-Взято с <https://delphiworld.narod.ru>

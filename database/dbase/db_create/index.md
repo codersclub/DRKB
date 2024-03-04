@@ -1,15 +1,12 @@
 ---
 Title: Как создать DBase базу данных?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как создать DBase базу данных?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
 Данная процедура полезна для создания временных таблиц :
 
@@ -36,4 +33,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -1,15 +1,12 @@
 ---
 Title: Как заставить корректно работать колесо мыши в TDBGrid?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как заставить корректно работать колесо мыши в TDBGrid?
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {....}
      
@@ -47,4 +44,3 @@ Date: 01.01.2007
      
     {....}
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

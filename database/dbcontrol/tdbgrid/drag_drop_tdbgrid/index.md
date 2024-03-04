@@ -1,15 +1,12 @@
 ---
 Title: Пример Drag & Drop между двумя TDBGrid
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Пример Drag & Drop между двумя TDBGrid
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
 Данный пример компонента и демонстрационный проект показывают простой
 путь осуществления операции "drag and drop" (перетащи и брось) между
@@ -265,4 +262,3 @@ GridU1.pas. Сохраните проект как GridProj.dpr.
       end
     end
 
-Взято с <https://delphiworld.narod.ru>

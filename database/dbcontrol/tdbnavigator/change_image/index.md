@@ -1,15 +1,12 @@
 ---
 Title: Как сменить картинки на TDBNavigator?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сменить картинки на TDBNavigator?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure ChangeDBNavImage(DBnav: TDbNavigator);
     var
@@ -52,4 +49,3 @@ Date: 01.01.2007
       ChangeDBNavImage(DBNavigator1);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

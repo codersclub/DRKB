@@ -1,15 +1,12 @@
 ---
 Title: Свойства кнопок TDBNavigator
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Свойства кнопок TDBNavigator
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
 Как можно узнать значения свойств кнопок компонента DBNavigator
 (enabled/disabled или видимая/невидимая)?
@@ -31,4 +28,3 @@ VisibleButtons. Например:
     if DBNavigator1.Controls[Ord(nbFirst)].Enabled then
       ShowMessage('Кнопка First активизирована') ;
 
-Взято с <https://delphiworld.narod.ru>

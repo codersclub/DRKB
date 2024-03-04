@@ -2,25 +2,22 @@
 Title: Приемы работы с BLOB (OLE/Memo) полями
 Author: Vit
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Приемы работы с BLOB (OLE/Memo) полями
 ======================================
 
-::: {.date}
-01.01.2007
-:::
-
 Загрузка файла из TImage:
 
-          QAll.Edit;
-          QAll.FieldByName('Logo').assign(Image.Picture);
-          QAll.post; 
+    QAll.Edit;
+    QAll.FieldByName('Logo').assign(Image.Picture);
+    QAll.post; 
 
 Чтение файла из таблицы в TImage:
 
-      Image.Picture.assign(QAll.FieldByName('Logo')); 
+    Image.Picture.assign(QAll.FieldByName('Logo')); 
 
 Загрузка данных в поле:
 
@@ -38,7 +35,3 @@ Date: 01.01.2007
     (Query1.parameters.parambyname('Something') as TBlobField).LoadFromFile ...
     (Query1.parameters.parambyname('Something') as TBlobField).LoadFromStream ...
     (Query1.parameters.parambyname('Something') as TBlobField).assign ... 
-
-Автор: Vit
-
-Взято из <https://forum.sources.ru>

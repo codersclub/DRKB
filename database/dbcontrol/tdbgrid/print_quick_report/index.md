@@ -2,17 +2,12 @@
 Title: Печать содержимого TDBGrid через Quick Report
 Author: Rafael Ribas Aguilу
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Печать содержимого TDBGrid через Quick Report
 =============================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Rafael Ribas Aguilу
 
 Частенько у пользователя возникает необходимость распечатать отчёт из
 базы данных. Естественно, что он начинает просить Вас добавить такую
@@ -101,4 +96,3 @@ DBGrid:
       end; 
     end; 
 
-Взято из <https://forum.sources.ru>

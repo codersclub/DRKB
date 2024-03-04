@@ -1,15 +1,12 @@
 ---
 Title: Шапка в TDBGrid
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Шапка в TDBGrid
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
 Уже реализовано в виде вот этого компонента
 
@@ -212,4 +209,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

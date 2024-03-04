@@ -1,15 +1,12 @@
 ---
 Title: Создание/пересоздание индекса
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Создание/пересоздание индекса
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     DbiRegenIndexes( Table1.Handle ); { Регенерация всех индексов } 
     create index (зависит от существования выражения)
@@ -20,4 +17,3 @@ Date: 01.01.2007
     else
       Table1.AddIndex( cTagName, cTagExp, []);
 
-Взято с <https://delphiworld.narod.ru>

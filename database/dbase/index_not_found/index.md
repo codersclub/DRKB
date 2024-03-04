@@ -1,15 +1,12 @@
 ---
 Title: Index not found Exception
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Index not found Exception
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     {Q: How do I open a dBASE table without the required MDX file?
        I keep getting an "Index not found..." exception.}
@@ -108,4 +105,3 @@ Index not found Exception
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

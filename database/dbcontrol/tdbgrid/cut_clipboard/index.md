@@ -1,15 +1,12 @@
 ---
 Title: TDBGrid.CutToClipboard
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 TDBGrid.CutToClipboard
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
 Внутри TDBGrid "зашит" защищенный (protected) элемент управления типа
 TInPlaceEdit, потомок TCustomMaskEdit. Данный элемент управляется
@@ -33,4 +30,3 @@ TInPlaceEdit, потомок TCustomMaskEdit. Данный элемент упр
 текущим фокусом. Если это элемент управления TInPlaceEdit, то мы
 добились того, чего хотели.
 
-Взято с <https://delphiworld.narod.ru>

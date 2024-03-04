@@ -7,9 +7,7 @@ Date: 01.01.2007
 Работа с удаленными записями
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     procedure TForm1.Table1AfterOpen(DataSet: TDataset);
     begin
@@ -43,9 +41,11 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+
+Вариант 2.
 
 В таблицах dBASE записи не удаляются до тех пор, пока таблица не будет
 упакована. Пока же это не произойдет, удаленные записи остаются в
@@ -111,9 +111,11 @@ ShowDeleted() в качестве параметров передается TTab
      
     end.
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3.
 
 Показ меток удаленных записей в dBASE-файлах
 
@@ -153,9 +155,11 @@ Check(DbiUndeleteRecord(Table1.Handle));
 Ну и, наконец, чтобы все работало, поместите модули DBIPROCS и DBITYPES
 с список USES.
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 4.
 
 Взято из "Dtopics Database 1.10 from 3K computer Consultancy":
 
@@ -169,4 +173,4 @@ Check(DbiUndeleteRecord(Table1.Handle));
 Задание видимости удаленных записей - вкл/выкл (например, dBase SET
 DELETED ON/OFF)
 
-DbiSetProp( hDBIObj(Table1.Handle), curSOFTDELETEON, LongInt(bValue));
+    DbiSetProp( hDBIObj(Table1.Handle), curSOFTDELETEON, LongInt(bValue));

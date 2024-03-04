@@ -1,15 +1,12 @@
 ---
 Title: TDBGrid со свойствами Col и Row
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 TDBGrid со свойствами Col и Row
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
     {
     Код улучшенного TDBGrid, имеющего свойства Col,
@@ -59,4 +56,3 @@ TDBGrid со свойствами Col и Row
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

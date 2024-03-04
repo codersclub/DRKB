@@ -7,9 +7,7 @@ Date: 01.01.2007
 Восстановление записи dBase
 ===========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     function GetTableCursor(oTable: TTable): hDBICur;
     var
@@ -37,13 +35,16 @@ Table1 и имя текущей формы - Form1):
         ShowMessage('Не могу восстановить запись!');
     end;
 
-- Loren Scott
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
+Author: Loren Scott
+
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba
 
 ------------------------------------------------------------------------
+
+Вариант 2.
 
     procedure RecordUndelete(aTable: TTable);
     begin
@@ -55,4 +56,4 @@ Table1 и имя текущей формы - Form1):
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>

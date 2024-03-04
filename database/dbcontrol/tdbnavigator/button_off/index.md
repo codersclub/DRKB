@@ -1,15 +1,12 @@
 ---
 Title: Выключение кнопок в TDBNavigator
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Выключение кнопок в TDBNavigator
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     { Расширение DBNavigator: позволяет разработчику включать и выключать
     отдельные кнопки через методы EnableButton и DisableButton }
@@ -51,4 +48,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

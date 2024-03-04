@@ -1,15 +1,12 @@
 ---
 Title: Удалить dbase index flag
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Удалить dbase index flag
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     Function UnCheckIndex(FileDbf: string): Boolean;
     var
@@ -44,4 +41,3 @@ Date: 01.01.2007
         ShowMessage('Flag removed');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

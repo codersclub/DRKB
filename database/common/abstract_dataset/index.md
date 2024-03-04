@@ -2,19 +2,12 @@
 Title: Абстрактный набор данных
 Author: Влад Шубников
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Абстрактный набор данных
 ========================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Влад Шубников
-
- 
 
 В основе иерархии классов, обеспечивающих функционирование наборов
 данных в приложениях баз данных Delphi, лежит класс TDataSet. Хотя он
@@ -36,61 +29,58 @@ Date: 01.01.2007
 
 Набор данных открывается и закрывается свойством
 
-property Active: Boolean;
+    property Active: Boolean;
 
 которому соответственно необходимо присвоить значение True или False.
 Аналогичные действия выполняют методы
 
-procedure Open; 
-
-procedure Close;
+    procedure Open; 
+    procedure Close;
 
 После открытия набора данных можно перемещаться по его записям.
 
 На одну запись вперед и назад перемещают курсор соответственно методы
 
-procedure Next; 
-
-procedure Prior;
+    procedure Next; 
+    procedure Prior;
 
 На первую и последнюю запись можно попасть, используя соответственно
 методы
 
-procedure First;
-
-procedure Last;
+    procedure First;
+    procedure Last;
 
 Признаком того, что достигнута последняя запись набора, является
 свойство
 
-property Eof: Boolean;
+    property Eof: Boolean;
 
 которое в этом случае имеет значение True.
 
 Аналогичную функцию для первой записи выполняет свойство
 
-property Bof: Boolean;
+    property Bof: Boolean;
 
 Перемещение вперед и назад на заданное число записей выполняет метод
 
-function MoveBy(Distance: Integer): Integer;
+    function MoveBy(Distance: Integer): Integer;
 
-Параметр Distance определяет число записей. Если параметр отрицательный
---- перемещение осуществляется к началу набора данных, иначе --- к
-концу.
+Параметр Distance определяет число записей.
+Если параметр отрицательный - перемещение осуществляется к началу набора данных,
+иначе - к концу.
 
 Для ускоренного перемещения по набору данных можно отключить все
 связанные компоненты отображения данных. Это делается методом
 
-procedure DisableControls;
+    procedure DisableControls;
 
 Обратная операция выполняется методом
 
-procedure EnableControls;
+    procedure EnableControls;
 
 Общее число записей набора данных возвращает свойство
 
-property RecordCount: Integer;
+    property RecordCount: Integer;
 
 однако использовать его нужно аккуратно, т. к. каждое обращение к этому
 свойству приводит к обновлению набора данных, что может вызвать проблемы
@@ -98,7 +88,7 @@ property RecordCount: Integer;
 является ли набор данных пустым (часто используемая операция), можно
 использовать метод
 
-function IsEmpty: Boolean;
+    function IsEmpty: Boolean;
 
 который возвращает значение True, если набор данных пуст, или уже
 упоминавшиеся свойства
@@ -111,11 +101,11 @@ function IsEmpty: Boolean;
 
 Номер текущей записи позволяет узнать свойство
 
-property RecNo: Integer;
+    property RecNo: Integer;
 
 Размер записи в байтах возвращает свойство
 
-property RecordSize: Word;
+    property RecordSize: Word;
 
 Каждая запись набора данных представляет собой совокупность значений
 полей таблицы. В зависимости от типа компонента и его настройки, число
@@ -124,23 +114,23 @@ property RecordSize: Word;
 
 Совокупность полей набора данных инкапсулирует свойство
 
-property Fields: TFields;
+    property Fields: TFields;
 
 а все необходимые параметры полей содержатся в свойстве
 
-property FieldDefs: TFieldDefs;
+    property FieldDefs: TFieldDefs;
 
 Общее число полей набора данных возвращает свойство
 
-property FieldCount: Integer;
+    property FieldCount: Integer;
 
 а общее число полей типа BLOB содержится в свойстве
 
-property BlobFieldCount: Integer;
+    property BlobFieldCount: Integer;
 
 Доступ к значениям полей текущей записи предоставляет свойство
 
-property FieldValues[const FieldName: string]: Variant; default;
+    property FieldValues[const FieldName: string]: Variant; default;
 
 где в параметре FieldName задается имя поля.
 
@@ -149,23 +139,23 @@ property FieldValues[const FieldName: string]: Variant; default;
 изменяется, это можно сделать так:
 
     for i := 0 to MyTable.FieldCount - 1 do 
-    MyTable.Fields[i].DiplayFormat := '#.###'; 
+      MyTable.Fields[i].DiplayFormat := '#.###'; 
 
 Иначе, если порядок следования полей и их состав меняется, можно
 использовать метод
 
-function FieldByName(const FieldName: string): TField;
+    function FieldByName(const FieldName: string): TField;
 
 И делается это следующим образом:
 
-MyTable.FieldByName(\'VENDORNO\').Aslnteger := 1234;
+    MyTable.FieldByName('VENDORNO').Aslnteger := 1234;
 
 Имя поля, передаваемое в параметре FieldName, не чувствительно к
 регистру символов.
 
 Метод
 
-procedure GetFieldNames(List: TStrings);
+    procedure GetFieldNames(List: TStrings);
 
 вернет в параметр List полный список имен полей набора данных.
 
@@ -178,17 +168,17 @@ procedure GetFieldNames(List: TStrings);
 Но сначала бывает полезно поинтересоваться, можно ли редактировать набор
 данных вообще. Это можно сделать при помощи свойства
 
-property CanModify: Boolean;
+    property CanModify: Boolean;
 
 которое принимает значение True для редактируемых наборов. Перед началом
 редактирования набор данных нужно перевести в режим редактирования,
 использовав метод
 
-procedure Edit;
+    procedure Edit;
 
 Для сохранения сделанных изменений применяется метод
 
-procedure Post; virtual;
+    procedure Post; virtual;
 
 Разработчик может вызывать его самостоятельно, или же метод Post
 вызывается самим набором данных при переходе на другую запись.
@@ -196,19 +186,19 @@ procedure Post; virtual;
 При необходимости все сделанные после последнего вызова метода Post
 изменения можно отменить методом
 
-procedure Cancel; virtual;
+    procedure Cancel; virtual;
 
 Новая пустая запись добавляется в конец набора данных методом
 
-procedure Append;
+    procedure Append;
 
 Новая пустая запись добавляется на место текущей методом
 
-procedure Insert;
+    procedure Insert;
 
 а текущая запись и все нижеследующие смещаются на одну позицию вниз.
 
-Внимание
+**Внимание**
 
 При использовании методов Append и insert набор данных переходит в режим
 редактирования самостоятельно.
@@ -216,9 +206,8 @@ procedure Insert;
 Дополнительно, у вас есть возможность добавить или вставить новую запись
 уже с заполненными полями. Для этого применяются методы
 
-procedure AppendRecord(const Values: array of const);
-
-procedure InsertRecord(const Values: array of const);
+    procedure AppendRecord(const Values: array of const);
+    procedure InsertRecord(const Values: array of const);
 
 А делается это примерно так:
 
@@ -277,17 +266,11 @@ procedure InsertRecord(const Values: array of const);
 следующих событий в наборе данных:
 
 * открытие и закрытие набора данных;
-
 * переход в режим редактирования;
-
 * переход в режим вставки новой записи;
-
 * сохранение сделанных изменений;
-
 * отмена сделанных изменений;
-
 * перемещение по записям набора данных;
-
 * обновление набора данных.
 
 Обратите внимание, что помимо методов-обработчиков режима вставки
@@ -312,7 +295,7 @@ procedure InsertRecord(const Values: array of const);
 Если в методе-обработчике OnCalcFields производятся слишком сложные
 вычисления, частота его вызовов может быть уменьшена за счет свойства
 
-property AutoCalcFields: Boolean;
+    property AutoCalcFields: Boolean;
 
 По умолчанию оно равно значению True и расчет вычисляемых полей
 производится при каждой перерисовке. При значении False метод-обработчик
@@ -320,21 +303,17 @@ OnCalcFields вызывается только при открытии, пере
 редактирования и обновлении набора данных. Все перечисленные выше
 обработчики имеют одинаковый тип
 
-type TDataSetNotifyEvent = procedure(DataSet: TDataSet) of object;
+    type TDataSetNotifyEvent = procedure(DataSet: TDataSet) of object;
 
 И метод-обработчик
 
-type TFilterRecordEvent = procedure(DataSet: TDataSet;
-
-var Accept: Boolean) of object;
-
-property OnFilterRecord: TFilterRecordEvent;
+    type TFilterRecordEvent = procedure(DataSet: TDataSet;
+    var Accept: Boolean) of object;
+    property OnFilterRecord: TFilterRecordEvent;
 
 вызывается для каждой записи набора данных при свойстве Filtered = True.
 Помимо перечисленных, класс TDataSet содержит еще много свойств и
 методов, которые обеспечивают работоспособность многих полезных в
 практическом программировании приложений баз данных функций.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

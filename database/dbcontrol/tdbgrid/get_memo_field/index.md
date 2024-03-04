@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как показать содержимое TMemo-поля в TDBGrid?
 =============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
 Поумолчанию, DBGrid не может отображать memo-поля. Однако, проблему
 можно решить при помощи события OnDrawDataCell в DBGrid.
@@ -44,16 +42,19 @@ Date: 01.01.2007
       end; 
     end; 
 
-Замечание: перед тем, запустить пример, создайте объект TMemoField для
+**Замечание:**
+перед тем, запустить пример, создайте объект TMemoField для
 memo-поля двойным кликом по компоненту TTable и добавлением memo-поля.
 
-Взято из <https://forum.sources.ru>
+Source: <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
+Вариант 2.
+
 В обработчик события GetText TMemoField поместите следующую строку:
 
-Text := GrabMemoAsString(TMemoField(Sender));
+    Text := GrabMemoAsString(TMemoField(Sender));
 
 и поместите следующую функцию так, чтобы к ней можно было свободно
 обратиться:
@@ -84,4 +85,4 @@ Text := GrabMemoAsString(TMemoField(Sender));
     end;
      
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>

@@ -2,15 +2,12 @@
 Title: Как выделить кнопку в TDBNavigator программно?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как выделить кнопку в TDBNavigator программно?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     type TFake=class(TDBNavigator);
      
@@ -20,6 +17,3 @@ Date: 01.01.2007
       TFake(DBNavigator1).buttons[nbNext].Perform(WM_RBUTTONUP,0,0);
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

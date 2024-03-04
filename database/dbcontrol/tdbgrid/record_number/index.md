@@ -1,15 +1,12 @@
 ---
 Title: TDBGrid с номером строки
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 TDBGrid с номером строки
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     unit RowGrid;
      
@@ -51,4 +48,3 @@ TDBGrid с номером строки
       eb_visiblerowcount.text := inttostr(rowdbgrid1.visiblerowcount);
     end;
 
-Взято с <https://delphiworld.narod.ru>

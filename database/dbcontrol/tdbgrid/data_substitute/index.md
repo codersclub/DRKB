@@ -1,15 +1,12 @@
 ---
 Title: Как сделать, чтобы в TDBGrid вместо цифр были соответствующие константы?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как сделать, чтобы в TDBGrid вместо цифр были соответствующие константы?
 ========================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Grid1DrawColumnCell(Sender: TObject; const Rect: TRect;
               DataCol: Integer; Column: TColumn; State: TGridDrawState);
@@ -25,4 +22,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

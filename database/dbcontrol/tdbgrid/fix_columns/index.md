@@ -1,16 +1,13 @@
 ---
 Title: Как зафиксировать один или несколько столбцов в TDBGrid с возможностью навигации по этим столбцам?
-Author: Ramil Galiev
+Author: Ramil Galiev (2:5085/33.11)
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как зафиксировать один или несколько столбцов в TDBGrid с возможностью навигации по этим столбцам?
 ==================================================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TDbGridEx.ColEnter;
      
@@ -63,10 +60,3 @@ Date: 01.01.2007
      _LastSelectedIndex := SelectedIndex;
     end;
 
-Автор: Ramil Galiev
-
-(2:5085/33.11)
-
-Автор: StayAtHome
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Как выделить цветом текущую строку в TDBGrid?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как выделить цветом текущую строку в TDBGrid?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.DBGrid1DrawDataCell(Sender: TObject; const Rect:
      TRect;
@@ -24,4 +21,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с <https://delphiworld.narod.ru>

@@ -1,17 +1,14 @@
 ---
 Title: Создание базы данных в run-time с ZEOS?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Создание базы данных в run-time с ZEOS?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
-Примечание от Vit
+**Примечание от Vit**
 
 Zeos - популярный бесплатный пакет доступа к базам данных, подробности
 см. на sourceforge.net
@@ -90,4 +87,3 @@ Zeos - популярный бесплатный пакет доступа к б
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Как узнать значения, которые пользователь вводит в TDBGrid?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как узнать значения, которые пользователь вводит в TDBGrid?
 ===========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.DBGrid1KeyUp(Sender: TObject; 
                                   var Key: Word; Shift: TShiftState); 
@@ -27,4 +24,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято из <https://forum.sources.ru>

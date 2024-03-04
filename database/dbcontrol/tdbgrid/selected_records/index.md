@@ -1,15 +1,12 @@
 ---
 Title: Как работать с выделенными записями в TDBGrid?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как работать с выделенными записями в TDBGrid?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
      In the "Object Inspector" set your DBGrid's Option for dgMultiSelect = True.
@@ -49,4 +46,3 @@ Date: 01.01.2007
       Form1.Caption := 'Processed: ' + IntToStr(Grid_Edit(DBGrid1, Query1));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

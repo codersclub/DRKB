@@ -1,15 +1,12 @@
 ---
 Title: Как изменить цвет отмеченных записей в TDBGrid?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как изменить цвет отмеченных записей в TDBGrid?
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
 
     DefaultDrawing := False;
     ...
@@ -48,4 +45,3 @@ Date: 01.01.2007
       property UpdateLock;
     end;
 
-Взято с <https://delphiworld.narod.ru>

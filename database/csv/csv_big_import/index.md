@@ -1,15 +1,12 @@
 ---
 Title: Импорт большого CSV файла
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Импорт большого CSV файла
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     var s: string; f: TextFile;
       AssignFile(f, 'D:\\INPUT.TXT');
@@ -60,4 +57,3 @@ Date: 01.01.2007
       if result = ' ' then result := '';
     end;
 
-Взято с <https://delphiworld.narod.ru>

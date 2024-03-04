@@ -2,17 +2,12 @@
 Title: ActiveControl имеет DataSet
 Author: OAmiry (Borland)
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 ActiveControl имеет DataSet
 ===========================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: OAmiry (Borland)
 
 Для успешного кодирования необходимо включить typinfo в список
 используемых модулей. Код данного примера инвертирует логическое
@@ -49,6 +44,4 @@ ActiveControl имеет DataSet
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

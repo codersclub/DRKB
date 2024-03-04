@@ -1,15 +1,12 @@
 ---
 Title: Позиция ячейки в TDBGrid
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Позиция ячейки в TDBGrid
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
 В TCustomGrid определен метод CellRect, который, к сожалению, защищен.
 Это означает, что даный метод доступен только для TCustomGrid и его
@@ -51,4 +48,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Выделить все поля в TDBGrid?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Выделить все поля в TDBGrid?
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     function GridSelectAll(Grid: TDBGrid): Longint;
     begin
@@ -37,4 +34,3 @@ Date: 01.01.2007
       GridSelectAll(DBGrid1);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

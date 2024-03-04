@@ -1,15 +1,12 @@
 ---
 Title: Как передвинуть колонку в TDBGrid?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как передвинуть колонку в TDBGrid?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       THackAccess = class(TCustomGrid);
@@ -34,4 +31,3 @@ Date: 01.01.2007
       MoveDBGridColumns(DBGrid1, 1, 2)
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

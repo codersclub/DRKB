@@ -1,15 +1,12 @@
 ---
 Title: Как сохранить RTF в TBlobField?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как сохранить RTF в TBlobField?
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
 В этом примере поле \'Table1Memo\' это paradox \'formatted memo\'. Оно
 так же может быть полем blob.
@@ -55,4 +52,3 @@ Date: 01.01.2007
         end; 
     end;
 
-Взято из <https://forum.sources.ru>

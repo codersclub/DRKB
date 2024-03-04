@@ -1,15 +1,12 @@
 ---
 Title: Как определить изменение фокуса строки в TDBGrid?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как определить изменение фокуса строки в TDBGrid?
 =================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Используйте событие OnDataChange объекта Datasource, соединенного с
 DBGrid. Если параметр State в обработчике событие равен dsBrowse, значит
@@ -33,7 +30,7 @@ TDBGrid.OnColEnter/Exit.
 или щелчке на другой строке. Обработчик события может выглядеть
 приблизительно так:
 
-procedure Form1.DSrc1DataChange(Sender: TObject; Field: TField);
+    procedure Form1.DSrc1DataChange(Sender: TObject; Field: TField);
 
 где Field является колонкой, где произошло изменение.
 
@@ -41,11 +38,11 @@ procedure Form1.DSrc1DataChange(Sender: TObject; Field: TField);
 полей (ключ) с вашими требованиями. С той же целью может быть
 использовано и свойство TDBGrid Fields. Для примера:
 
-if tbl1.Fields[0].AsString = \'BlaBlaBla\' then ...
+    if tbl1.Fields[0].AsString = 'BlaBlaBla' then ...
 
 или
 
-if dbGrid1.Fields[I].IsNull then ...
+    if dbGrid1.Fields[I].IsNull then ...
 
 Для отслеживания изменения колонки, используйте события TDBGrid
 OnColExit & OnColEnter. Для определения выбранной к настоящему времени
@@ -58,9 +55,8 @@ OnColExit, OnColEnter и OnDataChange.
 OnDrawDataCell, которое возникает когда ячейка выбирается, или когда
 сетка скроллируется. Обработчик события может выглядеть примерно так:
 
-procedure Form1.dbGrid1DrawDataCell(Sender: TObject; Rect: TRect;
-
-Field: TField; State: TGridDrawState);
+    procedure Form1.dbGrid1DrawDataCell(Sender: TObject; Rect: TRect;
+                                Field: TField; State: TGridDrawState);
 
 При изменении ячейки вы получаете поток событий, поэтому вам нужно
 каким-то образом их фильтровать.
@@ -167,4 +163,3 @@ TDBGrid.
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

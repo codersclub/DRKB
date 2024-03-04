@@ -1,15 +1,13 @@
 ---
 Title: ASCII-файл с использованием полей
 Date: 01.01.2007
+Author: OAmiry/Borland
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 ASCII-файл с использованием полей
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
 В том случае, когда вы собираетесь использовать содержимое текстового
 файла таким образом, как будто он имеет поля, вам необходим файл схемы,
@@ -106,8 +104,7 @@ ASCII-файл с использованием полей
      
     end;
 
-OAmiry/Borland
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

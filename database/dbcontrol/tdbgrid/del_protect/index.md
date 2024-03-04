@@ -1,15 +1,12 @@
 ---
 Title: Как защитить запись в TDBGrid от удаления?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как защитить запись в TDBGrid от удаления?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Поместите следующий код в событие OnKeyDown в DBGrid.
 
@@ -19,4 +16,3 @@ Date: 01.01.2007
       if (ssctrl in shift) and (key=vk_delete) then key:=0; 
     end;
 
-Взято из <https://forum.sources.ru>

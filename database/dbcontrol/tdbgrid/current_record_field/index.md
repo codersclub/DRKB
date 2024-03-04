@@ -1,15 +1,12 @@
 ---
 Title: Текущая строка и поле в TDBGrid
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Текущая строка и поле в TDBGrid
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
     unit dbcolform;
      
@@ -58,4 +55,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

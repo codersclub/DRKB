@@ -7,10 +7,6 @@ Date: 01.01.2007
 TDBNavigator без иконок
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
     var
       c: shortint;
       s: string;

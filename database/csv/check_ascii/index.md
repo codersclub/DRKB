@@ -2,15 +2,12 @@
 Title: Как определить, имеет ли файл ASCII-формат
 Author: http://www.swissdelphicenter.ch
 Date: 01.01.2007
+Source: http://www.swissdelphicenter.ch
 ---
 
 
 Как определить, имеет ли файл ASCII-формат
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     function isAscii(NomeFile: string): Boolean;
      const
@@ -56,4 +53,3 @@ Date: 01.01.2007
            ShowMessage('ASCII File');
      end;
 
-Автор: http://www.swissdelphicenter.ch

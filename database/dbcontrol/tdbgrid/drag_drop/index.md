@@ -1,15 +1,12 @@
 ---
 Title: Перемещение из TDBGrid
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Перемещение из TDBGrid
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
 Кто-нибудь пробовал перемещать что-либо из DbGrid методом перетащи и
 брось (drag and drop)? Вы сами можете создать потомка TDBGrid (или
@@ -80,4 +77,3 @@ TDBCustomGrid) и добавить необходимую функциональ
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

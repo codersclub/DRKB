@@ -1,15 +1,12 @@
 ---
 Title: Настройки всплывающих подсказок в TDBNavigator
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Настройки всплывающих подсказок в TDBNavigator
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -28,4 +25,3 @@ Date: 01.01.2007
               end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

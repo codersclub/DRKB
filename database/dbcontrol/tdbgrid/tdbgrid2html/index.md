@@ -7,10 +7,6 @@ Date: 01.01.2007
 Экспортировать TDBGrid в HTML
 =============================
 
-::: {.date}
-01.01.2007
-:::
-
     type
      TGridToHTMLOption = (ghWithHeaders);
      TGridToHTMLOptions = set of TGridToHTMLOption;
@@ -19,8 +15,7 @@ Date: 01.01.2007
       ExportOptions: TGridToHTMLOptions): String;
     const
       HTMLStart =
-       '< !DOCTYPE HTML PUBLIC " -//W3C//DTD HTML 4.0 Transitional//EN" > '#13
-    +
+       '< !DOCTYPE HTML PUBLIC " -//W3C//DTD HTML 4.0 Transitional//EN" > '#13 +
        '< HTML> '#13 +
        '< HEAD> < META http-equiv=Content-Type content=" text/html;
     charset=windows-1251" > '#13 +
@@ -89,8 +84,7 @@ Date: 01.01.2007
       BodyRowEnd = '< /TR> '#13;
      
     const
-      StyleNames: array [TAlignment] of String = ('grid', 'gridr',
-    'gridc');
+      StyleNames: array [TAlignment] of String = ('grid', 'gridr', 'gridc');
      
       function TD(Column: TColumn; IsTitle: Boolean; Widht: Integer):
     String;
@@ -114,8 +108,7 @@ Date: 01.01.2007
               Align := taCenter;
           end;
           S := StyleNames[Align];
-          if (Column.Field is TBCDField) or (Column.Field is
-    TIntegerField) then
+          if (Column.Field is TBCDField) or (Column.Field is TIntegerField) then
             S := S + ' NOWRAP'
         end;
         if Widht >  0 then
@@ -182,8 +175,7 @@ Date: 01.01.2007
             Result := Result + BodyRowStart;
             for I := 0 to Pred( Columns.Count ) do begin
               if Assigned(Columns.Items[I].Field) then begin
-                Result := Result + TD(Columns.Items[I], FALSE,
-    -1{Integer(Widhts[Index]});
+                Result := Result + TD(Columns.Items[I], FALSE, -1{Integer(Widhts[Index]});
               end;
             end;
             Result := Result + BodyRowEnd;

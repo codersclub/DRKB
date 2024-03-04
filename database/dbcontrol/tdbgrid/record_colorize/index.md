@@ -1,15 +1,12 @@
 ---
 Title: Как отобразить выбранную строку TDBGrid различными цветами?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как отобразить выбранную строку TDBGrid различными цветами?
 ===========================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Если Вы хотите раскрасить выбранную строку DBGrid, но не хотите
 использовать опцию dgRowSelect, так как хотели бы редактировать данные,
@@ -31,4 +28,3 @@ DBGrid.OnDrawColumnCell:
       DefaultDrawColumnCell(Rect, DataCol, Column, State); 
     end;
 
-Взято из <https://forum.sources.ru>

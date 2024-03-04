@@ -1,15 +1,12 @@
 ---
 Title: Сохранение TForm и её свойств в BLOB-поле
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Сохранение TForm и её свойств в BLOB-поле
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure SaveToField(FField: TBlobField; Form: TComponent);
     var
@@ -46,4 +43,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

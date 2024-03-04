@@ -1,15 +1,12 @@
 ---
 Title: Импорт CSV ASCII
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Импорт CSV ASCII
 ================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Cdbascii;
      
@@ -133,6 +130,6 @@ Date: 01.01.2007
      
     end.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

@@ -8,10 +8,6 @@ Date: 01.01.2007
 Запросы и параметры, или как избавиться от многих проблем
 ========================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Где я? О чём вы?
 
 Компонент TQuery имеет свойство Params:TParams, а компонент TADOQuery
@@ -20,7 +16,6 @@ Date: 01.01.2007
 незамысловатым способом:
 
 
-     
     ADOQuery1.Active:=False;
     ADOQuery1.SQL.text:='Select * From MyTable Where MyField=:prm';
     ADOQuery1.Parameters.ParseSQL(ADOQuery1.SQL.text, true);
@@ -30,7 +25,6 @@ Date: 01.01.2007
 Для BDE код будет собственно таким:
 
 
-     
     Query1.Active:=False;
     Query1.SQL.text:='Select * From MyTable Where MyField=:prm';
     Query1.Params.ParseSQL(Query1.SQL.text, true);
@@ -46,7 +40,6 @@ Date: 01.01.2007
 ...подготавливаем запрос один раз...
 
 
-     
     ADOQuery1.Active:=False;
     ADOQuery1.SQL.text:='Select * From MyTable Where MyField=:prm';
     ADOQuery1.Parameters.ParseSQL(ADOQuery1.SQL.text, true);
@@ -54,7 +47,7 @@ Date: 01.01.2007
 ... всё запрос готов ...
 
     procedure TForm1.Button1Click(Sender: TObject);
-
+    
     begin
       ADOQuery1.Active:=False;
       ADOQuery1.Parameters.ParamByName('prm').Value:=Edit1.text;
@@ -71,7 +64,6 @@ Date: 01.01.2007
 сервер его сам преобразует в тот формат который ему нужен!
 
 
-     
     ADOQuery1.Active:=False;
     ADOQuery1.SQL.text:='Select * From MyTable Where LastDate>:prm';
     ADOQuery1.Parameters.ParseSQL(ADOQuery1.SQL.text, true);
@@ -82,7 +74,6 @@ Date: 01.01.2007
 поля использование параметров - это единственный путь
 
 
-     
     ADOQuery1.Active:=False;
     ADOQuery1.SQL.text:='Insert Into MyTable (id, MyPicture)';
     ADOQuery1.SQL.Add('Values (:Id, :pic)');
@@ -91,11 +82,10 @@ Date: 01.01.2007
     ADOQuery1.Parameters.ParamByName('pic').LoadFromFile('c:\mypic.bmp', ftGraphic);
     ADOQuery1.ExecSQL;
 
-Автор: Vit
 
 ------------------------------------------------------------------------
 
-Примечание от Anatoly Podgoretsky
+**Примечание от Anatoly Podgoretsky**
 
 Для рантайм можно указать про добавление параметров, определение их
 типов, поскольку у людей часто возникают проблемы с типами параметров, с
@@ -128,7 +118,7 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-Примечание от Петровича
+**Примечание от Петровича**
 
 Внесу и свою лепту.
 
@@ -367,7 +357,6 @@ ExecSQL ошибки возникнуть не должно, но результ
 
 Ну а далее все просто. Например:
 
-     
     procedure TForm3.Button1Click(Sender: TObject);
     begin
       ShowMessage( 'Всего стран: '+IntToStr(

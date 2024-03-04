@@ -2,16 +2,12 @@
 Title: Как работать с полями типа DateTime?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как работать с полями типа DateTime?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
-
 
     Query1.sql.text:='Select * From TableName Where (Date>:D1) and (Date<:D2)';
     Query1.params.parsSql(Query1.sql.text, true);
@@ -43,6 +39,3 @@ Date: 01.01.2007
 корректнее - серверу передаётся дата, а он делает кверю в соответствии
 со своими регионарными стандартами.
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

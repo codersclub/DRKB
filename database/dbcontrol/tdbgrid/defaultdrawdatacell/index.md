@@ -1,15 +1,12 @@
 ---
 Title: TDBGrid.DefaultDrawDataCell
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 TDBGrid.DefaultDrawDataCell
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
 TDBGrid имеет недокументированный в электронной справке метод
 DefaultDrawDataCell.
@@ -26,4 +23,3 @@ DefaultDrawDataCell.
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

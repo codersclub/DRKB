@@ -1,16 +1,14 @@
 ---
 Title: Нажать кнопку TDBNavigator програмно
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Нажать кнопку TDBNavigator програмно
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+>Как нажать кнопку TDBNavigator програмно?
 
-DBNavigator1.BtnClick(nbInsert);
+    DBNavigator1.BtnClick(nbInsert);
 
-Взято с <https://delphiworld.narod.ru>

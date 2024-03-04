@@ -2,15 +2,12 @@
 Title: Извлечение текста из TMemoField
 Author: Steve Schafer
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Извлечение текста из TMemoField
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       P: PChar;
@@ -29,6 +26,3 @@ Date: 01.01.2007
       FreeMem(P, Size + 1);
     end;
 
-Автор: Steve Schafer
-
-Взято с <https://delphiworld.narod.ru>

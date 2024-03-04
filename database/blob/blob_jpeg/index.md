@@ -1,15 +1,12 @@
 ---
 Title: Сохранить в базе картинку формата JPEG
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Сохранить в базе картинку формата JPEG
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses JPEG;
     ...
@@ -34,4 +31,3 @@ Date: 01.01.2007
     else 
       Field.Clear; 
 
-Взято с <https://delphiworld.narod.ru>

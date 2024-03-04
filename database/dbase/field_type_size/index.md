@@ -1,15 +1,13 @@
 ---
 Title: Формат и размер dBase-поля
 Date: 01.01.2007
+Author: Eryk Bottomley
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Формат и размер dBase-поля
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure GetdBaseFieldTypes(t: TTable; var l: TStringList);
     var
@@ -85,8 +83,7 @@ Date: 01.01.2007
       end;
     end;
 
--Eryk Bottomley
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

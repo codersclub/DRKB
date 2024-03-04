@@ -1,15 +1,12 @@
 ---
 Title: Читаем CSV текстовый файл в StringGrid
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Читаем CSV текстовый файл в StringGrid
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure ReadTabFile(FN: TFileName; FieldSeparator:
     Char; SG: TStringGrid);
@@ -63,4 +60,3 @@ Date: 01.01.2007
       Screen.Cursor := crDefault; 
     end;
 
-Взято с <https://delphiworld.narod.ru>

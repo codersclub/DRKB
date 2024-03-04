@@ -1,15 +1,12 @@
 ---
 Title: Как в TDBGrid узнать, над каким полем висит мышь?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как в TDBGrid узнать, над каким полем висит мышь?
 =================================================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       ScrPt, GrdPt: TPoint;
@@ -42,4 +39,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с <https://delphiworld.narod.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Как найти размер записи?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как найти размер записи?
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TMainFrm.CalculateRecordSizeClick(Sender: TObject);
     var
@@ -40,4 +37,3 @@ Date: 01.01.2007
         + 'Max No of Records in Table: ' + FormatFloat('###############,', MaxRecs));
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

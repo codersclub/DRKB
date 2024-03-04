@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как паковать таблицу?
 =====================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     function dgPackParadoxTable(Tbl: TTable; Db: TDatabase): DBIResult;
     {Packs a Paradox table by calling the BDE DbiDoRestructure function. The TTable passed as the first parameter must be closed. The TDatabase passed as the second parameter must be connected.}
@@ -23,9 +21,11 @@ Date: 01.01.2007
       Result := DbiDoRestructure(Db.Handle, 1, @TblDesc, nil, nil, nil, False);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+
+Вариант 2.
 
     uses
       DbiProcs;
@@ -46,6 +46,6 @@ Date: 01.01.2007
       { при желании можно сохранить закладку }
     end;
 
-Nomadic
+Author: Nomadic
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>
