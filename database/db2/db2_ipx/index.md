@@ -1,7 +1,7 @@
 ---
 Title: Как заставить работать DB2 через протокол IPX?
 Date: 01.01.2007
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>
 ---
 
 
@@ -35,7 +35,7 @@ Hастройка доступа к DB2
 
         db2 update dbm cfg using fileserver  objectname dbserver <NWSERVER>
 
-    где  <NWSERVER\> - имя сервера;
+    где  &lt;NWSERVER\> - имя сервера;
 
 - выполнить командный файл DBIPXSET.CMD;
 - перестартовать сервер базы данных;
@@ -43,7 +43,7 @@ Hастройка доступа к DB2
 
         db2 register nwbindery user <USERNAME>
 
-    где - <USERNAME\> - имя пользователя, обладающего правами
+    где - &lt;USERNAME\> - имя пользователя, обладающего правами
     администратора на сервере <NWSERVER\> ;
 
 - выполнить командный файл DBIPXREG.CMD;

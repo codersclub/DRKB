@@ -15,11 +15,10 @@ Date: 01.01.2007
       ExportOptions: TGridToHTMLOptions): String;
     const
       HTMLStart =
-       '< !DOCTYPE HTML PUBLIC " -//W3C//DTD HTML 4.0 Transitional//EN" > '#13 +
-       '< HTML> '#13 +
-       '< HEAD> < META http-equiv=Content-Type content=" text/html;
-    charset=windows-1251" > '#13 +
-       '< STYLE> '#13 +
+       '<!DOCTYPE HTML PUBLIC " -//W3C//DTD HTML 4.0 Transitional//EN">'#13 +
+       '<HTML>'#13 +
+       '<HEAD> <META http-equiv=Content-Type content=" text/html; charset=windows-1251">'#13 +
+       '<STYLE>'#13 +
        'BODY {'#13 +
        ' BACKGROUND: white;'#13 +
        ' COLOR: black;'#13 +
@@ -71,17 +70,17 @@ Date: 01.01.2007
        'TH.gridc {'#13 +
        ' TEXT-ALIGN: center;'#13 +
        '}'#13 +
-       '< /STYLE> '#13 +
-       '< TITLE> Печать таблицы< /TITLE> '#13 +
-       '< /HEAD> '#13 +
-       '< BODY> '#13;
-      HTMLEnd = '< /BODY> < /HTML> ';
-      TableStart = '< TABLE WIDTH=" 100%"  CELLSPACING=0 CELLPADDING=1> '#13;
-      TableEnd = '< /TABLE> '#13;
-      HeaderRowStart = '< TR> '#13;
-      HeaderRowEnd = '< /TR> '#13;
-      BodyRowStart = '< TR> '#13;
-      BodyRowEnd = '< /TR> '#13;
+       '</STYLE>'#13 +
+       '<TITLE>Печать таблицы</TITLE>'#13 +
+       '</HEAD>'#13 +
+       '<BODY>'#13;
+      HTMLEnd = '</BODY></HTML>';
+      TableStart = '<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=1>'#13;
+      TableEnd = '</TABLE>'#13;
+      HeaderRowStart = '<TR>'#13;
+      HeaderRowEnd = '</TR>'#13;
+      BodyRowStart = '<TR>'#13;
+      BodyRowEnd = '</TR>'#13;
      
     const
       StyleNames: array [TAlignment] of String = ('grid', 'gridr', 'gridc');
@@ -113,7 +112,7 @@ Date: 01.01.2007
         end;
         if Widht >  0 then
           S := S + Format(' WIDTH=" %d%%" ', [Widht]);
-        Result := '< ' + Tag + ' class=' + S + '> ';
+        Result := '<' + Tag + ' class=' + S + '>';
         if IsTitle then begin
           S := Column.Title.Caption
         end else begin
@@ -131,7 +130,7 @@ Date: 01.01.2007
         end;
         if Length(Trim(S)) = 0 then
           S := ' ';
-        Result := Result + S + '< /' + Tag + '> '#13;
+        Result := Result + S + '</' + Tag + '>'#13;
       end;
      
     var

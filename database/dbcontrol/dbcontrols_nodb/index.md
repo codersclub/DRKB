@@ -1042,8 +1042,8 @@ TDataSet.
 
 - Установка закладки для записи
 
-        FPerformSetBookmark: procedure(Index: integer; NewBookmark:
-TBookmarkStr) of object;
+        FPerformSetBookmark: procedure(Index: integer;
+                             NewBookmark: TBookmarkStr) of object;
 
 - Переход к записи по закладке
 

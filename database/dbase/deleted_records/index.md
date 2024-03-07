@@ -161,7 +161,7 @@ Source: <https://delphiworld.narod.ru>
 
 Вариант 4.
 
-Взято из "Dtopics Database 1.10 from 3K computer Consultancy":
+Source: "Dtopics Database 1.10 from 3K computer Consultancy":
 
 Пакование таблиц
 
