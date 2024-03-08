@@ -1,15 +1,12 @@
 ---
 Title: Создание DBExpress соединения в runtime
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Создание DBExpress соединения в runtime
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       The normal way for Delphi and Kylix is just to check dbExpress,
@@ -56,4 +53,3 @@ Date: 01.01.2007
       Connection.Free;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
