@@ -1,18 +1,14 @@
 ---
 Title: Примеры работы с репортами
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Примеры работы с репортами
 ==========================
 
-::: {.date}
-01.01.2007
-:::
-
-In the next small example I\'ll demonstrate how you can call the report
-in MS Access:
+В следующем небольшом примере я покажу, как можно вызвать отчет в MS Access:
 
     var
       Access: Variant;
@@ -58,4 +54,3 @@ in MS Access:
       Access.Quit(acQuitSaveAll);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -1,26 +1,23 @@
 ---
-Title: Opening Access (early binding)
+Title: Открытие доступа (раннее связывание)
 Date: 01.01.2007
 ---
 
 
-Opening Access (early binding)
+Открытие доступа (раннее связывание)
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Прежде чем вы сможете использовать этот метод, вы должны импортировать библиотеку типов (MSAcc8.olb для Access 97).
 
-Before you can use this method, you must have imported the type library
-(MSAcc8.olb for Access 97).
+Одним из способов запуска Access является попытка Excel выполнить вызов GetActiveObject,
+чтобы получить работающий экземпляр Access, но поместить вызов CoApplication.Create
+в предложение исключения. 
 
-One way of starting Access is Excelto try the GetActiveObject call, to
-get a running instance of Access, but put a call to CoApplication.Create
-in an except clause. But except clauses are slow, and can cause problems
-within the IDE for people who like Break On Exceptions set to True. The
-following code removes the need for a try... except clause, by avoiding
-using OleCheck on GetActiveObject in the case when Access is not
-running.
+Но исключения работают медленно и могут вызвать проблемы в среде IDE для людей,
+которым нравится, когда для параметра Break On Exception установлено значение True.
+
+Следующий код устраняет необходимость в конструкции **try... except**,
+избегая использования OleCheck для GetActiveObject в случае, когда Access не запущен.
 
       uses Windows, ComObj, ActiveX, Access_TLB;
       var 
@@ -51,11 +48,11 @@ running.
         Access.Visible := True;
         ...
 
-Without using the type library
+**Вариант без использования библиотеки типов**
 
-Automation is so much easier and faster using type libraries (early
-binding) that you should avoid managing without if at all possible. But
-if you really can\'t, here\'s how to get started:
+Автоматизация намного проще и быстрее с использованием библиотек типов (раннее связывание),
+поэтому вам следует избегать вариантов работы без их использования, если это вообще возможно.
+Но если вы действительно без них не можете, то вот как начать:
 
             var 
               Access: Variant; 

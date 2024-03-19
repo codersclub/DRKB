@@ -8,14 +8,11 @@ Date: 01.01.2007
 Как паковать базу данных?
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
-Using D6 Pro, Access XP and Jet 4.0 Sp6 - how can I compact Access
-files?
+>Using D6 Pro, Access XP and Jet 4.0 Sp6 - how can I compact Access files?
 
-Answer:
+**Answer:**
 
 This does it:
 
@@ -57,29 +54,24 @@ This does it:
       end;
     end;
 
-Important Notes:
+**Important Notes:**
 
-1.        Include the JRO\_TLB unit in your uses clause.
-
-2.        Nobody should use or open the database during compacting.
-
-3.        If the compiler gives you an error on the JRO\_TLB unit follow
-       these steps:
-
-- Using the Delphi IDE go to Project - Import Type Library.
-
-- Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
-
-- Click on Install button.
-
-- Recompile a gain.
+1. Include the JRO\_TLB unit in your uses clause.
+2. Nobody should use or open the database during compacting.
+3. If the compiler gives you an error on the JRO\_TLB unit follow these steps:
+    - Using the Delphi IDE go to Project - Import Type Library.
+    - Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
+    - Click on Install button.
+    - Recompile a gain.
 
 ------------------------------------------------------------------------
 
-How to compact and repair MS Access 2000 (Jet Engine 4) during run time
-using Delphi 5?
+Вариант 2.
 
-Answer:
+>How to compact and repair MS Access 2000 (Jet Engine 4) during run time
+>using Delphi 5?
+
+**Answer:**
 
 Usually the size of MS Access keep growing fast by time because of it\'s
 internal caching and temporary buffering, which in over whole effect the
@@ -115,25 +107,22 @@ Example :
     else
       ShowMessage('Error…');
 
-Important Notes:
+**Important Notes:**
 
-1.        Include the JRO\_TLB unit in your uses clause.
+1. Include the JRO\_TLB unit in your uses clause.
+2. Nobody should use or open the database during compacting.
+3. If the compiler gives you an error on the JRO\_TLB unit follow these steps:
 
-2.        Nobody should use or open the database during compacting.
+    - Using the Delphi IDE go to Project - Import Type Library.
+    - Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
+    - Click on Install button.
+    - Recompile a gain.
 
-3.        If the compiler gives you an error on the JRO\_TLB unit follow these steps:
-
-- Using the Delphi IDE go to Project - Import Type Library.
-
-- Scroll down until you reach "Microsoft Jet and Replication Objects 2.1 Library".
-
-- Click on Install button.
-
-- Recompile a gain.
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+
+Вариант 3.
 
     procedure CompactDatabase_JRO(DatabaseName:string;DestDatabaseName:string='';Password:string='');
     const
@@ -185,6 +174,6 @@ Important Notes:
 
     CompactDatabase_JRO('C:\MyDataBase\base.mdb','','123');
 
-Автор: ZEE
+Author: ZEE
 
-Взято из <https://forum.sources.ru>
+Source: <https://forum.sources.ru>

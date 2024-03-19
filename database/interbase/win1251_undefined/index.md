@@ -1,20 +1,16 @@
 ---
 Title: Hе получается открыть таблицу (WIN1251 undefined)
-Date: 01.01.2007
+Date: 01.01.2000
+Author: Alexey Mahotkin
 ---
 
 
 Hе получается открыть таблицу (WIN1251 undefined)
 =================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Hе получается открыть таблицу, созданную в InterBase с DEFAULT CHARACTER
-SET WIN1251. Оно говорит, что "WIN1251 undefined".
+>Hе получается открыть таблицу, созданную в InterBase с DEFAULT CHARACTER
+>SET WIN1251. Оно говорит, что "WIN1251 undefined".
 
 Ставьте Interbase в каталог с путем, соответствующим DOS-овским
 соглашениям об именах (8+3).
 
-Copyright (C) Alexey Mahotkin 1997-1999

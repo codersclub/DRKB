@@ -1,15 +1,12 @@
 ---
 Title: Создание таблицы Foxpro
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Создание таблицы Foxpro
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     if savedialog1.execute then
     begin
@@ -46,4 +43,3 @@ Date: 01.01.2007
      query1.close;
     end; // от savedialog
 
-Взято с <https://delphiworld.narod.ru>

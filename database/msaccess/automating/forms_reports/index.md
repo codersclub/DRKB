@@ -1,27 +1,27 @@
 ---
-Title: How to list all reports and forms
+Title: Как получить список всех отчетов и форм
 Date: 01.01.2007
 ---
 
 
-How to list all reports and forms
+Как получить список всех отчетов и форм
 =================================
 
 ::: {.date}
 01.01.2007
 :::
 
-Once you\'ve opened a database, you can use the Access application\'s
-Reports and Forms properties to list the open reports and forms:
+Открыв базу данных, вы можете использовать свойства «Отчеты и формы» приложения Access,
+чтобы вывести список открытых отчетов и форм:
 
      for i := 0 to Access.Reports.Count - 1 do
         Memo1.Lines.Add(Access.Reports[i].Name);
      for i := 0 to Access.Forms.Count - 1 do
         Memo1.Lines.Add(Access.Forms[i].Name);
 
-But note that these properties return only the open reports and forms in
-a database. To get the closed ones you have to use DAO97.pas (or
-DAO\_TLB.pas for Delphi 4) and access the Documents collection:
+Но обратите внимание, что эти свойства возвращают только открытые отчеты и формы в базе данных.
+Чтобы получить закрытые, вам нужно использовать DAO97.pas (или DAO\_TLB.pas для Delphi 4)
+и получить доступ к коллекции документов:
 
     uses DAO97;
     var

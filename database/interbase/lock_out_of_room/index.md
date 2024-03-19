@@ -1,43 +1,30 @@
 ---
 Title: Ошибка: lock manager out of room
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Ошибка: lock manager out of room
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Перейдите в каталог interbase/bin (Windows) или /usr/interbase (Unix)
+и найдите файл конфигурации isc\_config.
+По умолчанию ваш файл конфигурации будет выглядеть так:
 
-Go to the interbase/bin directory (Windows) or /usr/interbase (Unix) and
-locate the configuration file isc\_config. By default your configuration
-file will look like this:
+    #V4_LOCK_MEM_SIZE            98304
+    #ANY_LOCK_MEM_SIZE           98304
+    #V4_LOCK_SEM_COUNT           32
+    #ANY_LOCK_SEM_COUNT          32
+    #V4_LOCK_SIGNAL              16
+    #ANY_LOCK_SIGNAL             16
+    #V4_EVENT_MEM_SIZE           32768
+    #ANY_EVENT_MEM_SIZE          32768
 
-#V4\_LOCK\_MEM\_SIZE                       98304
+Я увеличил запись V4_LOCK_MEM_SIZE с 98304 до 198304, и тогда все стало хорошо.
 
-#ANY\_LOCK\_MEM\_SIZE              98304
+**!!! Важно!!!**
 
-#V4\_LOCK\_SEM\_COUNT              32
+По умолчанию все строки в файле конфигурации закомментированы с помощью начального символа "#".
 
-#ANY\_LOCK\_SEM\_COUNT          32
-
-#V4\_LOCK\_SIGNAL                        16
-
-#ANY\_LOCK\_SIGNAL                        16
-
-#V4\_EVENT\_MEM\_SIZE                      32768
-
-#ANY\_EVENT\_MEM\_SIZE             32768
-
-I increased the V4\_LOCK\_MEM\_SIZE entry from 98304 to 198304 and
-things were fine then.
-
-!!! Important !!!
-
-By default all lines in the config file are commented out with the
-leading # sign. Make sure to remove the # sign in any line that you
-change - the default config file just shows the default parameters.
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+**Обязательно удалите знак "#"** во всех строках, которые вы измените, поскольку в файле конфигурации по умолчанию просто показаны параметры по умолчанию.

@@ -7,10 +7,6 @@ Date: 01.01.2007
 Краткое пособие по языку Informix-4GL
 =====================================
 
-::: {.date}
-01.01.2007
-:::
-
 ## Соглашения о Языке 4GL и Начальные Понятия.
 
 Программа на языке 4GL может состоять из нескольких файлов (модулей) с
@@ -52,7 +48,6 @@ form2.per).
     - index-name (Имя индекса)
     - view-name (Имя псевдотаблицы)
     - synonim-name (Имя синонима)
-
 * Переменные 4GL
     - простая переменная
     - переменная типа "запись"
@@ -79,19 +74,16 @@ form2.per).
 Каждый объект 4GL имеет имя (идентификатор) - это слово,
 состоящее из букв, цифр, и знаков подчеркивания (\_), начинающееся
 с буквы или знака (\_).
+
 В INFORMIX-4GL не различаются маленькие и большие буквы.
 Поэтому i\_Un103Tt и I\_UN103TT - одно и то же имя.
 
 ### Области Действия Имен Переменных:
 
 - Локальная переменная - объявлена внутри блока function, main, report. Действует внутри блока, в котором объявлена.
-
 - Модульная переменная должна быть объявлена в самом начале модуля с исходным текстом вне любого блока report, function или main. Действует внутри всего модуля (за исключением блоков, в которых это имя переобъявлено и является для них локальным).
-
 - Глобальные переменные - объявляются с помощью оператора GLOBALS в начале модулей. Действуют во всех модулях с исходным текстом, в которых есть соответствующее объявление этих переменных.
-
 - Область действия имен КУРСОРОВ и Изготовленных Операторов от точки их объявления (DECLARE, PREPARE) и до конца модуля.
-
 - Область действия имен Окон, Форм, Функций, Отчетов - во всей программе.
 
 ## Операторы SQL
@@ -291,12 +283,12 @@ progrglob.4gl:
 
 На экране пользователь увидит:
 
-+--------------------------------------------------------+
-|   Привет участникам автопробега                        |
-|                                                        |
-|                                                        |
-|                                                        |
-+--------------------------------------------------------+
+    +--------------------------------------------------------+
+    |   Привет участникам автопробега                        |
+    |                                                        |
+    |                                                        |
+    |                                                        |
+    +--------------------------------------------------------+
 
 Примеры Использования Программных Операторов.
 
@@ -510,127 +502,78 @@ DISPLAY (INPUT). Экранные поля можно объединять в э
 В результате работы этих операторов на экране терминала появится
 приблизительно такая картинка:
 
-ѓ\'ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ\'ѓљ         
-ѓ\'ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ\' окно   ѓљ
-
-ѓљ          ѓљ значение равно 8                       ѓљ ...ѓwind1              ѓљ
-
-ѓљ   
-ѓ\'ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ\'     
-
-ѓљ    ѓљ      цех   [  2] [литейный     ]      ѓљ      ѓљѓщѓ‹ѓ„     
-ѓљ
-
-ѓљ    ѓљ таб.номер [26         ]              ѓљ      ѓљ окно       ѓљ
-
-ѓљ    ѓљ фамилия   [Петров У.Е.         ]     ѓљ      ѓљ ...ѓ wind2 
-ѓљ
-
-ѓљ    ѓљ должность [бригадир            ]     ѓљ      ѓљ ѓЉ        ѓљ
-
-ѓљ    ѓљ зарплата [$340         ]            ѓљѓщѓ‹ѓ‹ѓ‹ѓ‹ѓ‹ѓ‹ѓ‹ѓ‹ѓ„ѓљ
-
-ѓљ    ѓљ дата рождения [31.12.1952]            ѓљ      ѓљ         ѓљ
-
-ѓљ    ѓљ                                       ѓљ      ѓљ         ѓљ
-
-ѓљ   
-ѓ"ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ"
-
-ѓљ          ѓљ 789                                    ѓљ         ѓљ
-
-ѓљ         
-ѓ"ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ"
-      
-
-ѓљ                                                                ѓљ
-
-ѓљ   нет таких                                                    ѓљ
-
-ѓ"ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ"
+    +-------------------------------------------------------------+
+    |          +----------------------------------------+ окно    |
+    |          |значение  равно 8                       |  |wind1 |
+    |    +---------------------------------------+      |  |      |
+    |    |      цех   [  2] [литейный     ]      |      |<-+      |
+    |    |  таб.номер [26         ]              |      | окно    |
+    |    |  фамилия   [Петров У.Е.         ]     |      |  | wind2|
+    |    |  должность [бригадир            ]     |      |  |      |
+    |    |  зарплата  [$340         ]            |<--------+      |
+    |    | дата рождения [31.12.1952]            |      |         |
+    |    |                                       |      |         |
+    |    +---------------------------------------+      |         |
+    |          |  789                                   |         |
+    |          +----------------------------------------+         |
+    |                                                             |
+    |нет таких                                                    |
+    +-------------------------------------------------------------+
 
 Операторы MENU. MESSAGE. PROMPT.
 
 В результате работы фрагмента программы
 
-let sta\_return=podtwervdenie(" В самом деле решили закончить? ")
+    let sta_return=podtwervdenie(" В самом деле решили закончить? ")
+            ...
+    function podtwervdenie(stroka)
+    define stroka char(38) , kod_wozwr  int
 
-       ...
+      open window podtwervdenie AT 11,10 WITH 4 rows, 39 columns ATTRIBUTE(border)
+      display stroka at 4, 2 attribute (reverse)
 
-function podtwervdenie(stroka)
-
-define stroka char(38), kod\_wozwr  int
-
-open window podtwervdenie AT 11,10 WITH 4 rows, 39 columns
-ATTRIBUTE(border)
-
-display stroka at 4, 2 attribute (reverse)
-
-   menu " "
-
-     command key("Y")     "   Yes   " "Действительно Да."
-
-       let kod\_wozwr=1
-
-       exit menu
-
-     command key("N",ESC) "   No    " "Нет, вернуться обратно."
-
-       let kod\_wozwr=0
-
-       exit menu
-
-     command key("A")     "  Abort  " "Отменить. И кончить."
-
-       let kod\_wozwr=-1
-
-       exit menu
-
-   end menu
-
-close window podtwervdenie
-
-return kod\_wozwr
-
-end function
+        menu " "
+          command key("Y")     "   Yes   " "Действительно  Да."
+            let kod_wozwr=1
+            exit menu
+          command key("N",ESC) "   No    " "Нет, вернуться обратно."
+            let kod_wozwr=0
+            exit menu
+          command key("A")     "  Abort  " "Отменить. И кончить."
+            let kod_wozwr=-1
+            exit menu
+        end menu
+      close window podtwervdenie
+      return kod_wozwr
+    end function
 
 на экране в текущем окне появится такое меню
-
       
-+---------------------------------------+
-
-       \| :     Yes       No        Abort     \|
-
-       \|Действительно Да.                     \|
-
-       \|                                       \|
-
-       \| В самом деле решили закончить?        \|
-
-      
-+---------------------------------------+
+    +---------------------------------------+
+    | :      Yes        No        Abort     |
+    |Действительно  Да.                     |
+    |                                       |
+    | В самом деле решили закончить?        |
+    +---------------------------------------+
 
 Оператор OPTIONS
 
 Оператор OPTIONS может установить новые режимы для ввода вывода, если
 вас не устраивают заданные по умолчанию.
 
-OPTIONS     MESSAGE LINE 23,
-
-    HELP    FILE "h4gl.txt",   HELP  KEY CONTROL-T,
-
-    DISPLAY ATTRIBUTE(REVERSE, UNDERLINE)
+    OPTIONS     MESSAGE LINE 23,
+        HELP    FILE "h4gl.txt",   HELP  KEY CONTROL-T,
+        DISPLAY ATTRIBUTE(REVERSE, UNDERLINE)
 
 Операторы MESSAGE, ERROR
 
 Оператор MESSAGE выводит строку значений на экран на message line.
 Аргументами MESSAGE могут быть переменные и константы, но не выражения.
 
-let ttmm=CURRENT
+    let ttmm=CURRENT
+    message "Московское время ", ttmm
 
-message "Московское время ", ttmm
-
-error "Данных больше нет, прочитанно ", n, " строк"
+    error "Данных больше нет, прочитанно ", n, " строк"
 
 Оператор ERROR делает тоже, что и MESSAGE, только со звонком и с
 атрибутом REVERSE. Сообщение выводится на 24-ю строку экрана.
@@ -641,21 +584,16 @@ error "Данных больше нет, прочитанно ", n, " строк
 переменных и констант, и вводит после этого с клавиатуры значение в
 указанную вслед за ключевым словом FOR переменную.
 
-PROMPT "Да или нет ?" FOR answer
-
-       ON KEY (CONTROL-U)
-
-          LET  answer=wozderv()
-
-          EXIT PROMPT
-
-END PROMPT
+    PROMPT "Да или нет ?" FOR answer
+            ON KEY (CONTROL-U)
+               LET  answer=wozderv()
+               EXIT PROMPT
+    END PROMPT
 
 Можно включить в PROMPT  контрольные блоки,  выполняющиеся при нажатии
 заданных клавиш. Если в данном примере во время ввода пользователь
 нажмет клавишу CTRL-U то выполнятся операторы из ON  KEY  предложения: 
 будет вызвана функция wozderv() а затем
-
 прерван оператор PROMPT, не завершив ввода.
 
 Операторы обмена с экранной формой
@@ -664,38 +602,54 @@ DISPLAY и INPUT
 
 Оператор DISPLAY выводит данные в поля экранной формы.
 
-DISPLAY a,b,zap[i].nomerceh TO pole1,fscr.* ATTRIBUTE(BOLD)
+    DISPLAY a,b,zap[i].nomerceh TO pole1,fscr.* ATTRIBUTE(BOLD)
 
 Если имена выводимых переменных совпадают с именами экранных полей в
 текущей экранной форме, то можно применить ключевое слово BY NAME.
 
-DISPLAY BY NAME fio, dolvnostx
+    DISPLAY BY NAME fio, dolvnostx
 
 Оператор INPUT  используется для ввода значений через поля экранной
 формы. Можно предусмотреть дополнительные действия при вводе.  Для этого
 в оператор можно включить контрольные блоки AFTER, BEFORE, ON KEY.
 
-INPUT  kadr.* FROM fio, dolvnostx, nomerceh
+    INPUT  kadr.* FROM fio, dolvnostx, nomerceh
+         BEFORE FIELD nomerceh
+            message "Сегодня обслуживаются цеха 5 и 6"
+            sleep 2
+            message ""
+         AFTER FIELD nomerceh
+            IF kadr.nomerceh > 6 then
+            MESSAGE "Нет такого цеха, повторите"
+            NEXT FIELD NOMERCEH
+            ENF IF
+    END INPUT
 
-    BEFORE FIELD nomerceh
+Часто применяемый в 4GL метод вывода данных из таблицы  на
+экран схематически можно изобразить так:
 
-       message "Сегодня обслуживаются цеха 5 и 6"
+    +-Д-И-С-К----+                      курсор
+    | +--------+ |     операторы   +---------------+
+    | |        +------------------->   выбранные   |
+    | |таблица | |    DECLARE FOR  | ­­­­­­­­­­­­­ |
+    | |        | |    SELECT-курсор| ­с­т­р­о­к­и­ |
+    | |        | |     и OPEN      | ­­­­­­­­­­­­­ |
+    | +--------+ |                 +-+-------------+
+    |            |             операторами FETCH
+    |            |             или FOREACH
+    +------------+                   |
+                                  +--V------------+
+    +-Т-Е-Р-М-И-Н-А-Л---------+   |  программный  |
+    |                         |   |      массив   |
+    |+-----------------------+|   +--+------------+
+    ||                       ||   опе|ратор DISPLAY
+    ||     [               ] ||   или| DISPLAY ARRAY
+    ||     [ экранный      ] ||      |
+    ||     [   массив      ] <-------+
+    ||     [               ] ||
+    |+-----------------------+|
+    +-------------------------+
 
-       sleep 2
-
-       message ""
-
-    AFTER FIELD nomerceh
-
-       IF kadr.nomerceh \> 6 then
-
-       MESSAGE "Нет такого цеха, повторите"
-
-       NEXT FIELD NOMERCEH
-
-       ENF IF
-
-END INPUT
 
 Фрагмент, реализующий окошко подсказки.
 
@@ -707,105 +661,65 @@ END INPUT
 цеха и нажимает клавишу CR. Подпрограмма определяет номер цеха и
 возвращает его вызывающей программе.
 
-DATABASE zawod
+    DATABASE zawod
+     . . .
+    let nc= wyborceh()
+     . . .
+      FUNCTION wyborceh()     #  Выбор цеха, для внесения изменений
+      DEFINE counter  int
+      DEFINE ceharr ARRAY[25] OF RECORD       # массив для хранения
+             nomerceh  int,      # номерцеха    данных  из таблицы
+             nameceh char(20)    # название цеха              ceh
+             END RECORD
 
-. . .
+    # Открыть окно с рамкой и вывести в него экранную форму cehform
+        OPEN WINDOW cehwind AT 4 ,6 WITH FORM "cehform"
+             ATTRIBUTE(BORDER)
 
-let nc= wyborceh()
+    # Объявить курсор для выбора содержимого из таблицы ceh
+            DECLARE cehcurs CURSOR FOR
+              SELECT * FROM ceh ORDER BY nomerceh
 
-. . .
+    #  Выполнить запрос и все выбранные строки поместить в програм-
+    #  ный массив ceharr
+            LET counter = 0
+            FOREACH cehcurs INTO ceharr[counter+1].*
+                    LET counter = counter + 1
+                    IF counter >=25 THEN   EXIT FOREACH   END IF
+            END FOREACH
+    # счетчик counter равен фактическому  числу  строк  выданных  в
+    #  курсор
 
-FUNCTION wyborceh()     #  Выбор цеха, для внесения изменений
+            MESSAGE "Выберите цех и нажмите CR"
 
-DEFINE counter  int
+    #  Вывести в экранный массив cehscreen в экранной форме cehform
+    #  counter первых строк из программного массива ceharr
+            call set_count(counter)
+            DISPLAY ARRAY ceharr TO cehscreen.*
+            ON KEY (CONTROL-M) EXIT DISPLAY
+            END DISPLAY
+    # Прервать показ экранного массива при нажатии клавиши CR
 
-DEFINE ceharr ARRAY[25] OF RECORD       # массив для хранения
+    # закрыть окно с экранной формой cehform
+    CLOSE WINDOW cehwind
 
-        nomerceh  int,      # номерцеха    данных из таблицы
-
-        nameceh char(20)    # название цеха              ceh
-
-        END RECORD
-
-# Открыть окно с рамкой и вывести в него экранную форму cehform
-
-   OPEN WINDOW cehwind AT 4,6 WITH FORM "cehform"
-
-        ATTRIBUTE(BORDER)
-
-# Объявить курсор для выбора содержимого из таблицы ceh
-
-       DECLARE cehcurs CURSOR FOR
-
-         SELECT * FROM ceh ORDER BY nomerceh
-
-#  Выполнить запрос и все выбранные строки поместить в програм-
-
-#  ный массив ceharr
-
-       LET counter = 0
-
-       FOREACH cehcurs INTO ceharr[counter+1].*
-
-               LET counter = counter + 1
-
-               IF counter \>=25 THEN   EXIT FOREACH   END IF
-
-       END FOREACH
-
-# счетчик counter равен фактическому числу строк выданных в
-
-#  курсор
-
-       MESSAGE "Выберите цех и нажмите CR"
-
-#  Вывести в экранный массив cehscreen в экранной форме cehform
-
-#  counter первых строк из программного массива ceharr
-
-       call set\_count(counter)
-
-       DISPLAY ARRAY ceharr TO cehscreen.*
-
-       ON KEY (CONTROL-M) EXIT DISPLAY
-
-       END DISPLAY
-
-# Прервать показ экранного массива при нажатии клавиши CR
-
-# закрыть окно с экранной формой cehform
-
-CLOSE WINDOW cehwind
-
-let counter=arr\_curr()             #номер строки массива,
-
-                                  #на котором нажато CR
-
-RETURN ceharr[counter].nomerceh  #номер цеха,
-
-                                #на котором нажато CR
-
-END FUNCTION
+    let counter=arr_curr()             #номер строки массива,
+                                       #на котором нажато CR
+    RETURN ceharr[counter].nomerceh  #номер цеха,
+                                     #на котором нажато CR
+    END FUNCTION
 
 А это пользователь увидит на экране:
 
-  ѓ\'ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ\'
-
-  ѓљ номер        цех            ѓљ
-
-  ѓљ [3  ] [токарный            ]ѓљ
-
-  ѓљ [4  ] [гараж               ]ѓљ
-
-  ѓљ [5 ] [конюшня             ]ѓљ
-
-  ѓљ [6  ] [столовая            ]ѓљ
-
-  ѓљ [   ] [                    ]ѓљ
-
-  ѓљ Выберите цех и нажмите CR   ѓљ
-
-  ѓ"ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ"
+    +----------------------------+
+    |номер        цех            |
+    |[3  ] [токарный            ]|
+    |[4  ] [гараж               ]|
+    |[5  ] [конюшня             ]|
+    |[6  ] [столовая            ]|
+    |[   ] [                    ]|
+    |Выберите цех и нажмите CR   |
+    +----------------------------+
 
 Описание и компиляция экранных форм
 
@@ -816,41 +730,26 @@ INFORMIX\'а form4gl.
 
 Описание экранной формы cehform.per
 
-DATABASE zawod
+    DATABASE zawod
+    SCREEN
+    {
+    номер        цех
+    [f00] [f001                ]
+    [f00] [f001                ]
+    [f00] [f001                ]
+    [f00] [f001                ]
+    [f00] [f001                ]
+    }
+    TABLES
+    ceh
 
-SCREEN
+    ATTRIBUTES
+    f00 =  ceh.nomerceh;
+    f001 = ceh.nameceh;
 
-{
-
-номер        цех
-
-[f00] [f001                ]
-
-[f00] [f001                ]
-
-[f00] [f001                ]
-
-[f00] [f001                ]
-
-[f00] [f001                ]
-
-}
-
-TABLES
-
-ceh
-
-ATTRIBUTES
-
-f00 =  ceh.nomerceh;
-
-f001 = ceh.nameceh;
-
-INSTRUCTIONS
-
-screen record cehscreen[5] (ceh.*)
-
-END
+    INSTRUCTIONS
+    screen record cehscreen[5] (ceh.*)
+    END
 
 В секции DATABASE указана база данных; в секции SCREEN  задана картинка,
 которая будет рисоваться на экране; В TABLES указываются таблицы, в
@@ -862,423 +761,286 @@ ATRIBUTES указываются имена экранных полей, (и, в
 калькулятор. Возвращает значение вычисленного выражения. Скомпилируйте
 ее самостоятельно и посмотрите отладчиком, как она работает.
 
-function kalkulator()           #       Калькулятор
+    function kalkulator()           #       Калькулятор
+    define wyravenie, kalkulator char(64), kolichestwo int
+    define stroka_kalkulatora char(200)
+    define beep char(1)
+    let beep=ascii 7
+    open   window   kalkulator   at   2,2  with  form  "kalkulator"
+    attribute(border, form line first)
 
-define wyravenie, kalkulator char(64), kolichestwo int
+     input by name wyravenie, kalkulator without defaults
+     before field kalkulator
 
-define stroka\_kalkulatora char(200)
+       let stroka_kalkulatora=
+       "select  count(*),",wyravenie," from systables"
 
-define beep char(1)
+       whenever error continue
+       prepare kalkulqtor_operator from stroka_kalkulatora
+       if status<0 then
+          display  beep   to kalkulator
+          display  "Неправильное выражение"  to kalkulator
+          next field  wyravenie
+          end if
 
-let beep=ascii 7
+       declare kalkulator cursor for kalkulqtor_operator
 
-open   window   kalkulator   at   2,2  with  form  "kalkulator"
+         foreach kalkulator into kolichestwo, kalkulator
+         if status<0 then
+            display  beep   to kalkulator
+            display  "Неправильное выражение"  to kalkulator
+            next field  wyravenie
+            end if
+         end foreach
+        whenever error stop
 
-attribute(border, form line first)
+      display  kalkulator to kalkulator
+      next field wyravenie
+      end input
 
-input by name wyravenie, kalkulator without defaults
+    close window kalkulator
+    return kalkulator
 
-before field kalkulator
-
-  let stroka\_kalkulatora=
-
-  "select  count(*),",wyravenie," from systables"
-
-  whenever error continue
-
-  prepare kalkulqtor\_operator from stroka\_kalkulatora
-
-  if status\<0 then display beep to kalkulator display "Неправильное
-выражение" to kalkulator next field wyravenie end if declare kalkulator
-cursor for kalkulqtor\_operator foreach kalkulator into kolichestwo,
-kalkulator if status\<0 then display beep to kalkulator display
-"Неправильное выражение" to kalkulator next field wyravenie end if end
-foreach whenever error stop display kalkulator to kalkulator next field
-wyravenie end input close window kalkulator return kalkulator end
-function
+    end function
 
 Использованная в подпрограмме экранная форма должна быть описана в файле
 kalkulator.per и откомпилирована при помощи компилятора form4gl.
 
-DATABASE formonly
-
-SCREEN
-
-{
-
-       Калькулятор.            Чтобы закончить нажмите ESC
-
-[wyravenie                                                    ]
-
-[kalkulator                                                   ]
-
-}
-
-ATTRIBUTES
-
-wyravenie =formonly.wyravenie;
-
-kalkulator=formonly.kalkulator;
-
-END
-
-Пример программы, выдающей отчет
-
-DATABASE zawod
-
-MAIN
-
-DEFINE zapisx record like kadry.*
-
-DEFINE  simw char (200), zapr char (300),fn  char (18)
-
-OPEN form maxprim from "maxprim"
-
-DISPLAY form maxprim            # вывести экранную форму
-
-CONSTRUCT BY NAME simw ON kadry.* # Введение критериев выбора
-
-                                 # с экрана
-
-LET zapr="select * from kadry  where ",
-
-simw clipped," order by tabnom "
-
-MESSAGE simw
-
-PREPARE selpr FROM zapr           # Изготовление запроса
-
-DECLARE qquer CURSOR FOR selpr    # Объявление курсора для него
-
-DISPLAY "Не забудьте нажать CTRL-O" AT 2,40
-
-PROMPT "Файл, куда выводить отчет? или CR, если на экран: "
-
-                        FOR fn
-
-IF length(fn)=0 then START REPORT kadryrep       # на экран
-
-else                 START REPORT kadryrep TO fn # в файл
-
-END IF
-
-  # выполнить запрос и сбросить выбранные строки в отчет
-
-  FOREACH qquer  into zapisx.*   # Очередную строку из курсора
-
-  OUTPUT TO REPORT kadryrep(zapisx.*)  # поместить в отчет
-
-  END FOREACH
-
-FINISH REPORT kadryrep          # Вывести результаты отчета
-
-END MAIN
-
-REPORT kadryrep(z)
-
-DEFINE nameceh like ceh.nameceh
-
-DEFINE z record like kadry.*
-
-  # nomerceh  int,          # номер цеха
-
-  # tabnom    serial,       # табельн. номер
-
-  # fio       char(20),     # фамилия
-
-  # dolvn     char(20),     # должность
-
-  # zarplata  money(16,2),  # зарплата
-
-  # datarovd  date          # дата рожд.
-
-       OUTPUT
-
-left  margin 0
-
-right margin 80
-
-top   margin 0
-
-bottom margin 0
-
-page  length 23
-
-      ORDER BY z.nomerceh, z.tabnom   # Упорядочить
-
-                   FORMAT
-
-PAGE HEADER
-
-print
-"-------------------------------------------------------"
-
-print "цех\|таб.ном\|фио       \|должность   \|зарплата\| дата рожд"
-
-print
-"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"
-
-ON EVERY ROW
-
-print  z.nomerceh using "##", column 4,z.tabnom using
-"#####",
-
-column 13,z.fio clipped,
-
-column 28,z.dolvn clipped,
-
-column 43,z.zarplata using "$####.##",
-
-column 53,z.datarovd using "dd-mm-yyyy"
-
-BEFORE GROUP OF z.nomerceh
-
-select @nameceh into nameceh from ceh where nomerceh=z.nomerceh
-
-skip to top of page
-
-skip 1 line
-
-print "Цех   ",nameceh
-
-skip 1 line
-
-AFTER GROUP OF  z.nomerceh
-
-need 2 lines
-
-print " В цехе ",nameceh clipped,2 spaces,
-
-      group count(*) using "#####"," человек, "
-
-print " Средняя зарплата ",
-
-      group avg(z.zarplata) using "##### руб.## коп"
-
-PAGE TRAILER
-
-print "заполнена страница номер", pageno
-
-pause "нажмите ВВОД"
-
-END REPORT
+    DATABASE formonly
+    SCREEN
+    {
+            Калькулятор.            Чтобы закончить нажмите ESC
+    [wyravenie                                                    ]
+    [kalkulator                                                   ]
+    }
+    ATTRIBUTES
+    wyravenie =formonly.wyravenie;
+    kalkulator=formonly.kalkulator;
+    END
+
+**Пример программы, выдающей отчет**
+
+    DATABASE zawod
+    MAIN
+    DEFINE zapisx record like kadry.*
+    DEFINE  simw char (200), zapr char (300),fn  char (18)
+
+    OPEN form maxprim from "maxprim"
+    DISPLAY form maxprim            # вывести экранную форму
+
+    CONSTRUCT BY NAME simw ON kadry.* # Введение критериев выбора
+                                      # с экрана
+    LET zapr="select * from kadry  where ",
+    simw clipped," order by tabnom "
+
+    MESSAGE simw
+    PREPARE selpr FROM zapr           # Изготовление запроса
+    DECLARE qquer CURSOR FOR selpr    # Объявление курсора для него
+
+    DISPLAY "Не забудьте нажать CTRL-O" AT 2,40
+    PROMPT "Файл, куда выводить отчет? или CR, если на экран: "
+                             FOR fn
+
+    IF length(fn)=0 then START REPORT kadryrep       # на экран
+    else                 START REPORT kadryrep TO fn # в файл
+    END IF
+
+       # выполнить запрос и сбросить выбранные строки в отчет
+       FOREACH qquer  into zapisx.*   # Очередную строку из курсора
+       OUTPUT TO REPORT kadryrep(zapisx.*)  # поместить в отчет
+       END FOREACH
+    FINISH REPORT kadryrep          # Вывести результаты отчета
+    END MAIN
+
+    REPORT kadryrep(z)
+    DEFINE nameceh like ceh.nameceh
+    DEFINE z record like kadry.*
+       # nomerceh  int,          # номер цеха
+       # tabnom    serial,       # табельн. номер
+       # fio       char(20),     # фамилия
+       # dolvn     char(20),     # должность
+       # zarplata  money(16,2),  # зарплата
+       # datarovd  date          # дата рожд.
+            OUTPUT
+    left  margin 0
+    right margin 80
+    top   margin 0
+    bottom margin 0
+    page  length 23
+           ORDER BY z.nomerceh, z.tabnom   # Упорядочить
+
+                        FORMAT
+    PAGE HEADER
+    print "-------------------------------------------------------"
+    print "цех|таб.ном|фио       |должность   |зарплата| дата рожд"
+    print "_______________________________________________________"
+
+    ON EVERY ROW
+     print  z.nomerceh using "##", column 4,z.tabnom using "#####",
+     column 13,z.fio clipped,
+     column 28,z.dolvn clipped,
+     column 43,z.zarplata using "$####.##",
+     column 53,z.datarovd using "dd-mm-yyyy"
+
+    BEFORE GROUP OF z.nomerceh
+    select @nameceh into nameceh from ceh where nomerceh=z.nomerceh
+     skip to top of page
+     skip 1 line
+     print "Цех   ",nameceh
+     skip 1 line
+
+    AFTER GROUP OF  z.nomerceh
+     need 2 lines
+     print " В цехе ",nameceh clipped,2 spaces,
+           group count(*) using "#####" ," человек, "
+     print " Средняя зарплата ",
+           group avg(z.zarplata) using "##### руб.## коп"
+
+    PAGE TRAILER
+     print "заполнена страница номер", pageno
+     pause "нажмите ВВОД"
+
+    END REPORT
 
 Вот что увидит на пользователь во время работы программы:
 
-+-------------------------------------------------------------+
+    +-------------------------------------------------------------+
+    |Укажите файл, куда выводить отчет, или CR, если на экран:    |
+    |                                 Не забудьте нажать CONTROL-О|
+    |                                                             |
+    |----------------------------------------------               |
+    |     цех   [1:4] [                     ]                     |
+    | таб.номер [           ]                                     |
+    | фамилия   [*ов                 ]                            |
+    | должность [                    ]                            |
+    | зарплата  [>500         ]                                   |
+    |дата рождения [          ]                                   |
+    |                                                             |
+    |                                                             |
+    nomerceh between 1 and 4 and fio matches "*о*" and zarplata>500
+    |                                                             |
+    +-------------------------------------------------------------+
 
-\|Укажите файл, куда выводить отчет, или CR, если на экран:    \|
+    ---------------------------------------------------------------
+    цех|таб.ном|фио            |должность     |зарплата| дата рожд
+    ---------------------------------------------------------------
 
-\|                                 Не забудьте нажать CONTROL-О\|
+    Цех   дирекция
 
-\|                                                             \|
+     1    34    иванов         директор       $ 4000.00
+     1    35    кононов        зав. по снабжению$ 4000.00
+     В цехе дирекция      2 человек,
+     Средняя зарплата   4000 руб.00 коп
 
-\|----------------------------------------------              
-\|
 
-\|     цех   [1:4] [                     ]                     \|
+    заполнена страница номер          1
+    нажмите ВВОД
+    ---------------------------------------------------------------
+    цех|таб.ном|фио            |должность     |зарплата| дата рожд
+    ---------------------------------------------------------------
 
-\| таб.номер [           ]                                     \|
+    Цех   литейный
 
-\| фамилия   [*ов                 ]                            \|
+     2    12    окунев         рабочий        $ 2000.00
+     2    14    липко          лаборант       $ 2000.00
+     2    18    пухов          мастер         $ 2000.00
+     2    21    сухов          рабочий        $ 2000.00
+     2    24    угольков       рабочий        $ 2000.00
+     В цехе литейный      5 человек,
+     Средняя зарплата   2000 руб.00 коп
 
-\| должность [                    ]                            \|
+    заполнена страница номер          2
+    нажмите ВВОД
+    ---------------------------------------------------------------
+    цех|таб.ном|фио            |должность     |зарплата| дата рожд
+    ---------------------------------------------------------------
 
-\| зарплата [\>500         ]                                   \|
+    Цех   гараж
 
-\|дата рождения [          ]                                   \|
+     4     9    потруев        слесарь        $ 1230.00
+     4    12    гундосов       шофер          $ 2000.00
+     В цехе гараж      2 человек,
+     Средняя зарплата   1615 руб.00 коп
 
-\|                                                             \|
 
-\|                                                             \|
+    заполнена страница номер          3
+    нажмите ВВОД
 
-nomerceh between 1 and 4 and fio matches "*о*" and zarplata\>500
 
-\|                                                             \|
-
-+-------------------------------------------------------------+
-
----------------------------------------------------------------------------
-
-цех\|таб.ном\|фио            \|должность     \|зарплата\| дата рожд
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Цех   дирекция
-
-1    34    иванов         директор       $ 4000.00
-
-1    35    кононов        зав. по снабжению$ 4000.00
-
-В цехе дирекция      2 человек,
-
-Средняя зарплата   4000 руб.00 коп
-
-заполнена страница номер          1
-
-нажмите ВВОД
-
----------------------------------------------------------------------------
-
-цех\|таб.ном\|фио            \|должность     \|зарплата\| дата рожд
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Цех   литейный
-
-2    12    окунев         рабочий        $ 2000.00
-
-2    14    липко          лаборант       $ 2000.00
-
-2    18    пухов          мастер         $ 2000.00
-
-2    21    сухов          рабочий        $ 2000.00
-
-2    24    угольков       рабочий        $ 2000.00
-
-В цехе литейный      5 человек,
-
-Средняя зарплата   2000 руб.00 коп
-
-заполнена страница номер          2
-
-нажмите ВВОД
-
----------------------------------------------------------------------------
-
-цех\|таб.ном\|фио            \|должность     \|зарплата\| дата рожд
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Цех   гараж
-
-4     9    потруев        слесарь        $ 1230.00
-
-4    12    гундосов       шофер          $ 2000.00
-
-В цехе гараж      2 человек,
-
-Средняя зарплата   1615 руб.00 коп
-
-заполнена страница номер          3
-
-нажмите ВВОД
-
-Описание экранной формы
+**Описание экранной формы**
 
 Описание состоит из 5 разделов: DATABASE, SCREEN, TABLES, ATTRIBUTES,
 INSTRUCTIONS
 
-#  база данных, с которой ведется работа
+    #  база данных, с которой ведется работа
+    DATABASE zawod
 
-DATABASE zawod
+    #  Картинка, которая выводится на экран.
+    #  экранные поля обозначены так:    [метка поля ]
+    #  метка поля используется в разделе ATTRIBUТЕ
+    SCREEN
+    {
+    номер цеха [nceh  ]             зарплата   [f002       ]
+    фамилия    [fio                 ]
+    должность  [dol                 ]
 
-#  Картинка, которая выводится на экран.
-
-#  экранные поля обозначены так:    [метка поля ]
-
-#  метка поля используется в разделе ATTRIBUТЕ
-
-SCREEN
-
-{
-
-номер цеха [nceh  ]             зарплата   [f002       ]
-
-фамилия    [fio                 ]
-
-должность [dol                 ]
-
-                 Так в экранной форме рисуется рамка.
-
-Значок \\g используется для входа и выхода в графический режим
-
+    Так в экранной форме рисуется рамка.
+    Значок \\g используется для входа и выхода в графический режим
                   
-\\gp-----------------------------q\\g
+    \gp-----------------------------q\g
+    \g|\g Экранный массив         \g|\g
+    \g|\g [s1     ]  [s2            ] \g|\g
+    \g|\g [s1     ]  [s2            ] \g|\g
+    \g|\g [s1     ]  [s2            ] \g|\g
+    \g|\gномер цеха  название цеха    \g|\g
+    \gb-----------------------------d\g
 
-                   \\g\|\\g Экранный массив         \\g\|\\g
+    в графическом режиме символы р q b d - |  заменяются
+    символами рисования рамки    ┌ ┐ └ ┘ ─ │
+    }
+    TABLES          #  имена таблиц, с которыми ассоциированна форма
+      kadry
+      ceh
+    ATTRIBUTES      # Имена экранных полей в форме и их атрибуты.
+    # слева от знака (=) пишется метка поля (которая фигурирует в
+    # разделе SCREEN), справа - имя экранного поля, которое обычно,
+    # для удобства, должно совпадать с именем какого-нибудь столбца
+    # из таблиц, перечисленных в разделе TABLES
 
-                   \\g\|\\g [s1     ]  [s2            ] \\g\|\\g
-
-                   \\g\|\\g [s1     ]  [s2            ] \\g\|\\g
-
-                   \\g\|\\g [s1     ]  [s2            ] \\g\|\\g
-
-                   \\g\|\\gномер цеха название цеха    \\g\|\\g
-
-                  
-\\gb-----------------------------d\\g
-
-       в графическом режиме символы р q b d - \|  заменяются
-
-       символами рисования рамки    ѓ\' ѓ\' ѓ" ѓ" ѓ› ѓљ
-
-}
-
-TABLES          #  имена таблиц, с которыми ассоциированна форма
-
-kadry
-
-ceh
-
-ATTRIBUTES      # Имена экранных полей в форме и их атрибуты.
-
-# слева от знака (=) пишется метка поля (которая фигурирует в
-
-# разделе SCREEN), справа - имя экранного поля, которое обычно,
-
-# для удобства, должно совпадать с именем какого-нибудь столбца
-
-# из таблиц, перечисленных в разделе TABLES
-
-nceh     = kadry.nomerceh;
-
-f002     = zarplata, COLOR=REVERSE WHERE f002 \>500;
-
-#  если в поле выведено значение больше 500, то оно будет
-
-#  выделено с атрибутом  REVERSЕ (негатив)
-
-fio  = fio;
-
-dol  = dolvn, comments="Проверьте наличие в штатном расписании";
-
-s1      = ceh.nomerceh;
-
-s2      = ceh.nameceh;
-
-                           #  здесь экранные поля можно
-
-INSTRUCTIONS                #  объединить в экранные записи
-
-   screen record   kad (kadry.nomerceh, dolvn, zarplata)
-
-               #  и описать экранные массивы
-
-   screen record   scr[3] (ceh.nomerceh, nameceh)
-
-END
-
+    nceh     = kadry.nomerceh;
+    f002     = zarplata, COLOR=REVERSE WHERE f002 \>500;
+    #  если в поле выведено значение больше 500, то оно будет
+    #  выделено с атрибутом  REVERSЕ (негатив)
+    fio  = fio;
+    dol  = dolvn, comments="Проверьте наличие в штатном расписании";
+    s1      = ceh.nomerceh;
+    s2      = ceh.nameceh;
+                               #  здесь экранные поля можно
+    INSTRUCTIONS               #  объединить в экранные записи
+       screen record   kad (kadry.nomerceh, dolvn, zarplata)
+                   #  и описать экранные массивы
+       screen record   scr[3] (ceh.nomerceh, nameceh)
+    END
 
 
 а вот что увидит на экране пользователь, использующий эту форму:
 
-ѓ\'ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ\'
-ѓљ   номер цеха [      ]            зарплата   [f002      ]           ѓљ
-ѓљ   фамилия    [                    ]                                ѓљ
-ѓљ   должность  [                    ]                                ѓљ
-ѓљ                    Так в экранной форме рисуется рамка.            ѓљ
-ѓљ    Значок используется для входа и выхода в графический режим      ѓљ
-ѓљ                     ѓ\'ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ\'              
-ѓљ                      ѓљ   Экранный массив             ѓљ           ѓљ
-ѓљ                      ѓљ   [       ]  [              ] ѓљ           ѓљ
-ѓљ                      ѓљ   [       ]  [              ] ѓљ           ѓљ
-ѓљ                      ѓљ   [       ]  [              ] ѓљ           ѓљ
-ѓљ                      ѓљ   номер цеха название цеха   ѓљ            ѓљ
-ѓљ                     ѓ"ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ"           
-ѓљ          в графическом режиме символы р q b d - \|  заменяются      ѓљ
-ѓљ          символами рисования рамки    ѓ\' ѓ\' ѓ" ѓ" ѓ› ѓљ            ѓљ
-ѓ"ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ›ѓ
+    +--------------------------------------------------------------+
+    |номер цеха [      ]            зарплата   [f002       ]       |
+    |фамилия    [                    ]                             |
+    |должность  [                    ]                             |
+    |                 Так в экранной форме рисуется рамка.         |
+    | Значок  используется для входа и выхода в графический режим  |
+    |                   +-----------------------------+            |
+    |                   | Экранный массив             |            |
+    |                   | [       ]  [              ] |            |
+    |                   | [       ]  [              ] |            |
+    |                   | [       ]  [              ] |            |
+    |                   |номер цеха  название цеха    |            |
+    |                   +-----------------------------+            |
+    |       в графическом режиме символы р q b d - |  заменяются   |
+    |       символами рисования рамки    + + + + - |               |
+    +--------------------------------------------------------------+
 
 
 В этой экранной форме определены экранные поля:  

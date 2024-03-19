@@ -1,15 +1,12 @@
 ---
 Title: Создание UDF для InterBase
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Создание UDF для InterBase
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     library nikelutils
 
@@ -40,7 +37,7 @@ Date: 01.01.2007
     begin
     end.
 
-А это пишим в базе:
+А это пишем в базе:
 
     DECLARE EXTERNAL FUNCTION MAXINT INTEGER, INTEGER
     RETURNS INTEGER BY VALUE
@@ -49,6 +46,4 @@ Date: 01.01.2007
     DECLARE EXTERNAL FUNCTION MININT INTEGER, INTEGER
     RETURNS INTEGER BY VALUE
     ENTRY_POINT "MinInt" MODULE_NAME "nikelutils.dll";
-     
 
-Взято с <https://delphiworld.narod.ru>

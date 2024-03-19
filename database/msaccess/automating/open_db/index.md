@@ -1,19 +1,14 @@
 ---
-Title: How to open a database
+Title: Как открыть базу данных?
 Date: 01.01.2007
 ---
 
 
-How to open a database
+Как открыть базу данных?
 ======================
 
-::: {.date}
-01.01.2007
-:::
-
-Assuming an application variable, Access:
+Предположим, что переменная приложения -  это "Access":
 
       Access.OpenCurrentDatabase('C:\My Documents\Books.mdb', True); 
 
-The second parameter specifies whether you want to open the database in
-Exclusive mode.
+Второй параметр указывает, хотите ли вы открыть базу данных в монопольном режиме или нет.

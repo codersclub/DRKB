@@ -1,30 +1,26 @@
 ---
-Title: Start Access
+Title: Как запустить Access
 Date: 01.01.2007
 ---
 
 
-Start Access
+Как запустить Access
 ============
 
-::: {.date}
-01.01.2007
-:::
+Если у вас есть патч D5, вы можете использовать компонент TAccessApplication для запуска Access.
+Бросьте одну форму, и если ее свойство AutoConnect имеет значение true,
+Access запустится автоматически при запуске вашей программы;
+если свойство AutoConnect = ложь, то просто сделайте следующий вызов для запуска приложения:
 
-If you\'ve got the D5 patch, you can use the TAccessApplication
-component to start Access. Drop one one a form, and if its AutoConnect
-property is true, Access will start automatically when your program
-starts; if it\'s false, just call
+    AccessApplication1.Connect;
 
-AccessApplication1.Connect;
+Чтобы использовать работающий экземпляр Access, если он есть,
+установите для свойства ConnectKind приложения TAccessApplication
+значение ckRunningOrNew;
+либо значение ckRunningInstance если вы не хотите запускать новый экземпляр, если Access не запущен.
 
-when you want to start. To use a running instance of Access, if there is
-one, set the ConnectKind property of TAccessApplication to
-ckRunningOrNew, or to ckRunningInstance if you don\'t want to start a
-new instance if Access isn\'t running.
-
-Once Access has started, you can connect other components, such as
-TAccessReport, using their ConnectTo methods:
+После запуска Access вы можете подключить другие компоненты, такие как TAccessReport,
+используя их методы ConnectTo:
 
       AccessApplication1.Connect;
       AccessApplication1.Visible := True;
@@ -33,12 +29,13 @@ TAccessReport, using their ConnectTo methods:
       AccessReport1.ConnectTo(AccessApplication1.Reports['Sales by Year']);
       AccessReport1.Caption := 'Annual sales - from bad to worse';
 
-Note that a workbook or worksheet must be open before you can connect to
-it.
+Обратите внимание, что книга или лист должны быть открыты,
+прежде чем вы сможете к ним подключиться.
 
-If you haven\'t got the patch for D5, starting Access is a bit
-different, because there is no TAccessApplication component. (This is
-because Microsoft declared the Application object as hidden in the type
-library.) However you can create an Application object in the same way
-as it was done in D4 (see below), and then connect the Access components
-to it. See Access - common problems for an example.
+Если у вас нет патча для D5, запуск Access немного отличается,
+поскольку в нем нет компонента TAccessApplication.
+(Это связано с тем, что Microsoft объявила объект Application скрытым в библиотеке типов.)
+
+Однако вы можете создать объект «Приложение» так же, как это было сделано в D4 (см. ниже),
+а затем подключить к нему компоненты Access.
+Пример см. в разделе «Доступ — распространенные проблемы».

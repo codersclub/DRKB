@@ -1,33 +1,30 @@
 ---
-Title: Why can't I connect to an Access database using the BDE and native MSACCESS driver?
+Title: Почему я не могу подключиться к базе данных Access с помощью BDE и оригинального драйвера MSACCESS?
 Date: 01.01.2007
 ---
 
 
-Why can't I connect to an Access database using the BDE and native MSACCESS driver?
+Почему я не могу подключиться к базе данных Access с помощью BDE и оригинального драйвера MSACCESS?
 ===================================================================================
 
-::: {.date}
-01.01.2007
-:::
+**Access 2000/XP:**
 
-Why can\'t I connect to an Access database using the BDE and native
-MSACCESS driver?
+Вы не можете подключиться к базе данных Access 2000, используя нативный драйвер MSACCESS BDE.
 
-Access 2000/XP:
+Рекомендуется использовать ADO.
+Вы также можете подключиться с помощью BDE с ODBC.
 
-You cannot connect to an Access 2000 database using the BDE\'s native
-MSACCESS driver. It is recommended that you  use ADO. You could also
-connect using the BDE with ODBC.
+**Access 95 or 97:**
 
-Access 95 or 97:
+Вы можете получить сообщение «BDE error 13059» и «General SQL error».
 
-You may get the message "BDE error 13059" and "General SQL error".
-If you are trying to connect to Access 95 or 97 databases using the
-BDE\'s native MSACCESS driver, then you need to have DAO 3.0 installed
-for Access 95 or DAO 3.5 for Access 97 (DAO = Data Access Objects for
-Visual Basic). You can install the DAO by doing a custom installation of
-MS Office and selecting only to install Data Access Objects for Visual
-Basic. You must also have the correct DLL32 setting in the BDE
-Administrator for the DAO you have installed: IDDA3532.DLL for Access
-97, IDDAO32.DLL for Access 95.
+Если вы пытаетесь подключиться к базам данных Access 95 или 97,
+используя оригинальный драйвер MSACCESS BDE,
+вам необходимо установить DAO 3.0 для Access 95 или DAO 3.5 для Access 97
+(DAO = объекты доступа к данным для Visual Basic).
+
+Вы можете установить DAO, выполнив выборочную установку MS Office
+и выбрав установку только объектов доступа к данным для Visual Basic.
+
+У вас также должна быть правильная настройка DLL32 в администраторе BDE для установленного вами DAO:
+IDDA3532.DLL для Access 97, IDDAO32.DLL для Access 95.

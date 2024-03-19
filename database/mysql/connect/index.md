@@ -1,18 +1,16 @@
 ---
 Title: Как подсоединиться к MySQL?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как подсоединиться к MySQL?
 ===========================
 
-::: {.date}
-01.01.2007
-:::
+Возможно, вы уже видели директиву USES.//
 
-Perhaps you have already seen the uses clause. You may download
-mySQL.pas from
+Вы можете скачать mySQL.pas с
 [www.fichtner.net/delphi](https://www.fichtner.net/delphi)
 
     uses mySQL;
@@ -48,4 +46,3 @@ mySQL.pas from
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

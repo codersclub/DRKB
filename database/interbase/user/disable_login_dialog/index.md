@@ -1,22 +1,19 @@
 ---
 Title: Как предотвратить появление login dialog?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как предотвратить появление login dialog?
 =========================================
 
-::: {.date}
-01.01.2007
-:::
+Чтобы обойти диалоговое окно входа в систему при подключении к базе данных сервера,
+используйте свойство LoginPrompt.
+Вам нужно будет указать имя пользователя и пароль во время выполнения,
+но вы также можете настроить это во время разработки в инспекторе объектов, свойство Params.
 
-To bypass the login dialog when connecting to a server database, use the
-property LoginPrompt.You will have to provide the username & password at
-runtime, but you also can set that up at design time in the object
-inspector, property Params.
-
-This short source code shows how to do it:
+Этот короткий исходный код показывает, как это сделать:
 
     Database1.LoginPrompt := false;
     with Database1.Params do
@@ -27,6 +24,5 @@ This short source code shows how to do it:
       Add('USER NAME=SYSDBA');
       Add('PASSWORD=masterkey');
     end;
-    Database1.Connected := tr
+    Database1.Connected := true;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

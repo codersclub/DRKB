@@ -1,21 +1,19 @@
 ---
 Title: Как получить список таблиц?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как получить список таблиц?
 ===========================
 
-::: {.date}
-01.01.2007
-:::
+Список пользовательских таблиц можно получить,
+запросив системную таблицу rdb$relations.
 
-A list of user tables can be retrieved by querying system table
-rdb$relations.
+В примере ниже показано, как это сделать:
+имена таблиц, отсортированные по алфавиту, вставляются в ListBox(lbSourceTables).
 
-The example below shows how to do this - it inserts the table names
-sorted alphabetically into a ListBox (lbSourceTables).
 
     begin
       ibcSourceList.SQL.Clear;
@@ -31,4 +29,3 @@ sorted alphabetically into a ListBox (lbSourceTables).
       ibcSourceList.Close;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

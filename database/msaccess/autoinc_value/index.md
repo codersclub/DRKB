@@ -1,21 +1,17 @@
 ---
 Title: Как узнать номер автоинкремента при вставке новой записи?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как узнать номер автоинкремента при вставке новой записи?
 =========================================================
 
-::: {.date}
-01.01.2007
-:::
+Допустим, у нас имеется таблица в MsAccess: Test,
+с полями: (id=autoinc, name=text);
 
-We have a table in MsAccess like :
-
-Test, Fields (id=autoinc, name=text);
-
-First we have to have a function like the one below :
+Для начала нам нужна функция, подобная приведенной ниже:
 
     function GetLastInsertID: integer;
     begin
@@ -27,9 +23,7 @@ First we have to have a function like the one below :
       datResult.Active := False;
     end;
 
-Now before getting the last inserted record record id = autoincrement
-field, in other words calling the above function. You have to do a SQL
-insert like the following
+Для добавления записи нужно сделать вставку SQL, как показано ниже:
 
     procedure InsertRec;
     begin
@@ -38,8 +32,9 @@ insert like the following
       datCommand.Execute;
     end;
 
-Now if we like to know which is the last autoinc value ( notice that the
-getlastinsertid proc. only works after the insertrec proc)
+Теперь для того, чтобы узнать ID последней вставленной автоинкрементной записи,
+достаточно вызвать приведенную выше функцию GetLastInsertID.
+(обратите внимание, что процедура GetLastInsertIDd работает только после процедуры InsertRec!)
 
     procedure Test;
     begin
@@ -47,7 +42,6 @@ getlastinsertid proc. only works after the insertrec proc)
       Showmessage(format('lastinsertid : %d', [GetLastInsertID]));
     end;
 
-Hope you can make this work, it works for me, any questions feel free to
-ask
+Надеюсь, вы справитесь с этой задачей.
+У меня это работает, если что - не стесняйтесь задавать любые вопросы.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

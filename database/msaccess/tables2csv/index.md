@@ -1,15 +1,12 @@
 ---
 Title: Как экспортировать все таблицы в CSV файл?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как экспортировать все таблицы в CSV файл?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TMainForm.SaveAllTablesToCSV(DBFileName: string);
     var
@@ -101,4 +98,3 @@ Date: 01.01.2007
      
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

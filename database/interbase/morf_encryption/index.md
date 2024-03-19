@@ -1,20 +1,12 @@
 ---
 Title: Шифрование текстовых полей таблицы InterBase
-Author: Vemer
-Date: 01.01.2007
+Author: Vemer, Vemer@List.Ru
+Date: 16.11.2003
 ---
 
 
 Шифрование текстовых полей таблицы InterBase
 ============================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Vemer
-
-WEB-сайт: http://delphibase.endimus.com
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Шифрование текстовых полей таблицы Interbase
@@ -88,3 +80,7 @@ WEB-сайт: http://delphibase.endimus.com
      
     // Для занесения в таблицу в зашифрованном виде например из Edit:
     TableName.Value := Morf(Edit.Text, False);
+
+Author: Vemer
+
+WEB-сайт: http://delphibase.endimus.com

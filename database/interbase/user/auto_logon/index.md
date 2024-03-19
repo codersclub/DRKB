@@ -1,20 +1,18 @@
 ---
 Title: Автоматический logon к локальной InterBase
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Автоматический logon к локальной InterBase
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
+Используйте компонент TDatabase.
 
-Используйте компонент TDatabase. В строках Params пропишите:
+В строках Params пропишите:
 
     USER NAME=sysdba
-
     PASSWORD=masterkey
 
 Затем установите свойство компонента TDataBase LoginPrompt в False.

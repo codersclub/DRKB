@@ -1,15 +1,12 @@
 ---
 Title: Как установить клиента InterBase
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как установить клиента InterBase
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
 1. Для Yaffil или FireBird последних билдов - ничего не надо, кроме
 gds32.dll в директориях поиска библиотек.
@@ -20,11 +17,10 @@ gds32.dll в директориях поиска библиотек.
 
 3. Для IB5, дополнительно к п.2., добавить в ключ реестра:
 
-HKLM\\SOFTWARE\\InterBase Corp\\InterBase\\CurrentVersion\\RootDirectory
+        HKLM\SOFTWARE\InterBase Corp\InterBase\CurrentVersion\RootDirectory
 
-строковое значение - имя папки, в которой лежит файл ib\_license.dat
+    строковое значение - имя папки, в которой лежит файл ib\_license.dat
 
 4. В случае медленного подключения клиентов в сети TCP/IP попробуйте
 прописать адреса IB серверов в файле HOSTS.
 
-Взято с <https://delphiworld.narod.ru>

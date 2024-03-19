@@ -1,50 +1,35 @@
 ---
 Title: Как гарантированно сделать backup?
 Date: 01.01.2007
+Author: Sergey Klochkovski
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как гарантированно сделать backup?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
-
-Как гарантированно сделать backup/restore БД InterBase с опцией
-\'Replace existing database\' и записями протоколов в файлы с
-гарантированным отстрелом пользователей?
+>Как гарантированно сделать backup/restore БД InterBase с опцией
+>\'Replace existing database\' и записями протоколов в файлы с
+>гарантированным отстрелом пользователей?
 
 Att.bat:
 
-at 01:00 /INTERACTIVE "e:\\IB\_DATA\\BR.BAT"
-
+```cmd
+at 01:00 /INTERACTIVE "e:\IB_DATA\BR.BAT"
+```
 BR.bat:
 
-del e:\\IB\_DATA\\b.txt
-
-del e:\\IB\_DATA\\r.txt
-
-del e:\\ib\_data\\AR\_IB.PRV
-
-del e:\\IB\_DATA\\AR\_IB.GBK
-
-d:\\ib\_42\\bin\\gfix -shut -force 1 e:\\ib\_data\\AR\_IB.GDB -user
-"SYSDBA" -password "oooo"
-
+```cmd
+del e:\IB_DATA\b.txt
+del e:\IB_DATA\r.txt
+del e:\ib_data\AR_IB.PRV
+del e:\IB_DATA\AR_IB.GBK
+d:\ib_42\bin\gfix -shut -force 1 e:\ib_data\AR_IB.GDB -user "SYSDBA" -password "oooo"
 net stop "InterBase Server"
-
-copy e:\\ib\_data\\AR\_IB.GDB e:\\ib\_data\\AR\_IB.PRV
-
+copy e:\ib_data\AR_IB.GDB e:\ib_data\AR_IB.PRV
 net start "InterBase Server"
+d:\ib_42\bin\gbak e:\ib_data\AR_IB.GDB e:\ib_data\AR_IB.GBK -user "SYSDBA" -password "oooo" -B -L -Y "e:\IB_DATA\b.txt"
+d:\ib_42\bin\gbak e:\ib_data\AR_IB.GBK e:\ib_data\AR_IB.GDB -user "SYSDBA" -password "oooo" -P 4096 -V -R -Y "e:\IB_DATA\r.txt"
+```
 
-d:\\ib\_42\\bin\\gbak e:\\ib\_data\\AR\_IB.GDB e:\\ib\_data\\AR\_IB.GBK
--user "SYSDBA" -password "oooo" -B -L -Y "e:\\IB\_DATA\\b.txt"
-
-d:\\ib\_42\\bin\\gbak e:\\ib\_data\\AR\_IB.GBK e:\\ib\_data\\AR\_IB.GDB
--user "SYSDBA" -password "oooo" -P 4096 -V -R -Y
-"e:\\IB\_DATA\\r.txt"
-
-Sergey Klochkovski
-
-Взято с <https://delphiworld.narod.ru>

@@ -8,14 +8,11 @@ Date: 01.01.2007
 Создание новой MS Access базы данных
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
 Приведенная ниже процедура создает пустую базу данных MS Access
 
     procedure CreateMSAccessDatabase(filename: string);
-
      
     var DAO: Variant;
       i: integer;
@@ -44,13 +41,15 @@ Date: 01.01.2007
 было бы узнать работает ли логика для Office 2000 (DAO35) и Office 97
 (DAO30)
 
-Автор: Vit
+Author: Vit
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
-Here is an OP function that will do it for you:
+Вариант 2.
+
+Вот функция OP, которая сделает это за вас:
 
     procedure CreateMSAccessDB(filename: string);
     var
@@ -74,14 +73,16 @@ Here is an OP function that will do it for you:
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
 
-It\'s very simple to create a empty Access-Database (*.mdb File) using
-OLE. It\'s not necessary to have MS-Access installed on your computer.
-If an exception occures the error message will returned. After creating
-the DB you can create Tables with simple SQL-Statements.
+Вариант 3.
+
+Создать пустую базу данных доступа (файл *.mdb) с помощью OLE очень просто.
+Нет необходимости устанавливать MS-Access на ваш компьютер.
+Если возникнет исключение, будет возвращено сообщение об ошибке.
+После создания БД вы можете создавать таблицы с помощью простых операторов SQL.
 
     uses comobj, sysutils;
      
@@ -100,9 +101,11 @@ the DB you can create Tables with simple SQL-Statements.
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+
+Вариант 4.
 
     const
       CLASS_DBEngine: TGUID = '{00000100-0000-0010-8000-00AA006D2EA4}';
@@ -118,6 +121,6 @@ the DB you can create Tables with simple SQL-Statements.
           .CreateDatabase (FileName, dbLangCyrillic, dbOption);
     end;
 
-Автор: Петрович
+Author: Петрович
 
-Взято из <https://forum.sources.ru>
+Source: <https://forum.sources.ru>

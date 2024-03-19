@@ -1,15 +1,12 @@
 ---
 Title: Поверка версии Microsoft OLE DB JET 4.X
-Date: 01.01.2007
+Author: Дмитрий Мироводин, support@hcsoft.spb.ru
+Date: 07.07.2004
 ---
 
 
 Поверка версии Microsoft OLE DB JET 4.X
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Поверка версии Microsoft OLE DB JET 4.X

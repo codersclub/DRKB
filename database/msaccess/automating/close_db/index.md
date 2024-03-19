@@ -1,14 +1,10 @@
 ---
-Title: How to close a database
+Title: Как закрыть базу данных?
 Date: 01.01.2007
 ---
 
 
-How to close a database
+Как закрыть базу данных?
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
-Access.CloseCurrentDatabase;
+    Access.CloseCurrentDatabase;

@@ -1,38 +1,35 @@
 ---
 Title: Как скопировать таблицу из одной базы данных в другую?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как скопировать таблицу из одной базы данных в другую?
 ======================================================
 
-::: {.date}
-01.01.2007
-:::
+Если я не ошибаюсь, у вас есть база данных Access с несколькими таблицами,
+и вы хотите скопировать одну из этих таблиц в другую базу данных Access.
 
-f I am not wrong you have an Access db with multiple tables and you want
-to copy one of these tables into another Access db. For this case i
-would do the next:
+В этом случае я бы сделал следующее:
 
-1.        Create database TrasportDB.mdb - use ADOX.
 
-2.        Copy table from source table into TransportDB.mdb with Select
-* Into [TransportTable] in "FullPath\\TransportDB.mdb" From
-SourceTable.
+1. Создайте базу данных TrasportDB.mdb - используйте ADOX.
+2. Скопируйте таблицу из исходной таблицы в TransportDB.mdb с помощью
 
-3.        Deliver TransportDB.mdb on destination computer.
+        Select Into [TransportTable] in "FullPath\TransportDB.mdb" From SourceTable.
 
-4.        Copy table from TransportTable into DestTable with Select *
-Into [DestTable] From [TransportTable] in
-"FullPath\\TransportDB.mdb".
+3. Доставьте TransportDB.mdb на целевой компьютер.
 
-FullPath is the path to TransportDB.mdb and is different on source and
-dest computers.
+4. Скопируйте таблицу из TransportTable в DestTable с помощью
 
-This way you will use native access methods that should be more reliable
-and faster than using ADO methods. If you need to perform more complete
-tasks you should use replication from Microsoft Jet and Replication
-objects (import this typelib).
+        Select * Into [DestTable] From [TransportTable] in "FullPath\TransportDB.mdb"
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+FullPath — это путь к TransportDB.mdb, который различается на исходном и конечном компьютерах.
+
+Таким образом, вы будете использовать собственные методы доступа, которые должны быть более надежными и быстрыми, чем методы ADO.
+
+Если вам необходимо выполнять более сложные задачи,
+то вам следует использовать репликацию из объектов Microsoft Jet и Replication
+(импортируйте эту библиотеку типов).
+

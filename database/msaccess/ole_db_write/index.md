@@ -1,15 +1,12 @@
 ---
 Title: Записываем в Access, используя OLE DB
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Записываем в Access, используя OLE DB
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     // Читаем Access`овскую базу используя ADO
     // Проверяе являеться ли файл .mdb Access
@@ -220,4 +217,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

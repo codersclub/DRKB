@@ -1,17 +1,14 @@
 ---
 Title: Как открыть базу данных Microsoft Access .MDB в Delphi?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как открыть базу данных Microsoft Access .MDB в Delphi?
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
-
-ADO
+**ADO**
 
 Если у Вас Delphi 5 Enterprise или Delphi 5 Professional с ADO Express,
 то Вы можете использовать компонент ADOTable и в его свойстве
@@ -48,40 +45,31 @@ Access. Например:
 безопасности, то необходимо указать файл .MDW или .MDA в свойстве Jet
 OLEDB:System database.
 
-BDE
+**BDE**
 
 Так же для открытия базы данных Access можно воспользоваться BDE которая
 содержит родной драйвер (MSACCESS). В компоненте Database установите
 следующие свойства:
 
-DatabaseName = Any\_name (или Alias\_name)
+    DatabaseName = Any_name (или Alias_name)
+    DriverName   = MSACCESS
+    LoginPrompt  = False
+    Params       = PATH=d:\path
 
-DriverName   = MSACCESS
-
-LoginPrompt  = False
-
-Params       = PATH=d:\\path
-
-              DATABASE NAME=d:\\path\\filename.mdb
-
-              TRACE MODE=0
-
-              LANGDRIVER=Access General
-
-              USER NAME=Admin
-
-              PASSWORD=your\_password
-
-              Open/MODE=Read/Write
-
-              SQLPASSTHRU MODE=Not SHARED
+    DATABASE NAME = d:\path\filename.mdb
+    TRACE MODE    = 0
+    LANGDRIVER    = Access General
+    USER NAME     = Admin
+    PASSWORD      = your_password
+    Open/MODE     = Read/Write
+    SQLPASSTHRU MODE = Not SHARED
 
 Значения свойства DatabaseName объекта Database, это то, которое Вы
 будете использовать в свойстве DatabaseName компонентов Table и Query,
 которые представляют таблицы и запросы для этой базы данных (тем самым
 связывая их с объектом Database).
 
-BDE+ODBC
+**BDE+ODBC**
 
 В случае с базой данных Access, BDE предоставляет драйвер, однако
 существует множество других баз, для которых в BDE драйвера нет, но для
@@ -92,20 +80,15 @@ BDE+ODBC
 Ниже приведён пример использования драйвера ODBC с BDE для открытия базы
 данных Access:
 
-Создайте DSN (Data Source Name) для Вашей базы данных (используя апплет
+- Создайте DSN (Data Source Name) для Вашей базы данных (используя апплет
 ODBC Data Sources в панели управления).
-
-Кликните на закладку "System DSN" или "User DSN"
-
-Кликните по кнопке "Add..."
-
-Выберите "Microsoft Access Driver (*.mdb)" и нажмите ENTER. Появится
-диалоговое окошко "ODBC Microsoft Access Setup".
-
-Задайте имя в текстовом окошке Data Source Name (без пробелов и без
-специальных символов).
-
-Кликните по кнопке "Select..." чтобы выбрать нужный файл .MDB.
+- Кликните на закладку "System DSN" или "User DSN"
+- Кликните по кнопке "Add..."
+- Выберите "Microsoft Access Driver (*.mdb)" и нажмите ENTER.
+  Появится диалоговое окошко "ODBC Microsoft Access Setup".
+- Задайте имя в текстовом окошке Data Source Name
+  (без пробелов и без специальных символов).
+- Кликните по кнопке "Select..." чтобы выбрать нужный файл .MDB.
 
 Если у Вас установлена схема безопасноти, то выберите радио кнопку
 "Database" в "System Database", а затем кликните кнопку "System
@@ -118,11 +101,11 @@ database...", чтобы указать файл рабочей группы .MD
 задавать имя пользователя и пароль необходимо на стадии открытия базы
 данных (см. ниже).
 
-В заключении нажмите "OK", после чего Ваш DSN будет сохранён.
+В заключение нажмите "OK", после чего Ваш DSN будет сохранён.
 
 В Delphi установите свойства компонента TDatabase:
 
-В DatabaseName задайте имя, которое указали в DSN.
+- В DatabaseName задайте имя, которое указали в DSN.
 
 Если Вы хотите, чтобы пользователя спрашивали имя и пароль, то
 установите LoginPrompt в True.
@@ -132,12 +115,10 @@ database...", чтобы указать файл рабочей группы .MD
 LoginPrompt в False и задайте свойство Params (или задайте эти свойства
 по ходу выполнения программы):
 
-USER NAME=your\_username
-
-PASSWORD=your\_password
+    USER NAME=your_username
+    PASSWORD=your_password
 
 Свяжите компоненты TTable или TQuery с компонентом TDatabase, как
 рассказывалось Выше, просто указав тоже имя (которое было задано в DSN)
 в их соответствующих свойствах DatabaseName.
 
-Взято из <https://forum.sources.ru>

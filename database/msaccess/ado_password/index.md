@@ -1,15 +1,13 @@
 ---
 Title: Задать пароль на MS ACCESS через ADO
 Date: 01.01.2007
+Author: dron-s
+Source: <https://forum.sources.ru>
 ---
 
 
 Задать пароль на MS ACCESS через ADO
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TPasswordAction = (paSet, paChange, paRemove);
@@ -63,7 +61,7 @@ Date: 01.01.2007
       end;
     end.
 
-Пример использования:
+**Пример использования:**
 
 устанавливаем новый пароль - БАЗА ДОЛЖНА БЫТЬ НЕ ЗАПАРОЛЕНА, иначе будет
 ошибка:)
@@ -108,9 +106,7 @@ Date: 01.01.2007
     end;
      
 
-Взято из <https://forum.sources.ru>
 
-Автор:dron-s
 
 
 

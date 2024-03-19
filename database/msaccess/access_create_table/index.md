@@ -1,92 +1,88 @@
 ---
 Title: Как создать таблицу в MS Access при помощи DAO?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как создать таблицу в MS Access при помощи DAO?
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
-
 1. Объявляем переменные:
 
-    var
-      access, db, td, recordset: Variant;
+        var
+          access, db, td, recordset: Variant;
 
 2. объявляем массив констант соответствия типов данных
-
 (между полями в Delphi и типами полей DAO)
 
-      arrMDBTypes: array[TFieldType] of Integer =
-        ({dbText} 10 {ftUnknown},
-         {dbText} 10 {ftString},
-         {dbInteger} 3 {ftSmallint},
-         {dbLong} 4 {ftInteger},
-         {dbInteger} 3 {ftWord},
-         {dbBoolean} 1 {ftBoolean},
-         {dbDouble} 7 {ftFloat},
-         {dbCurrency} 5 {ftCurrency},
-         {dbDouble} 7 {ftBCD},
-         {dbDate} 8 {ftDate},
-         {dbTime} 22 {ftTime},
-         {dbDate} 8 {ftDateTime},
-         {dbLongBinary} 11 {ftBytes},
-         {dbLongBinary} 11 {ftVarBytes},
-         {dbInteger} 3 {ftAutoInc},
-         {dbLongBinary} 11 {ftBlob},
-         {dbMemo} 12 {ftMemo},
-         {dbLongBinary} 11 {ftGraphic},
-         {dbMemo} 12 {ftFmtMemo},
-         {dbLongBinary} 11 {ftParadoxOle},
-         {dbLongBinary} 11 {ftDBaseOle},
-         {dbBinary} 9 {ftTypedBinary},
-         {dbText} 10 {ftCursor}
-     
-        {$IFDEF VER120}
-        ,
-         {dbText} 10 {ftFixedChar},
-         {dbText} 10 {ftWideString},
-         {dbBigInt} 16 {ftLargeint},
-         {dbText} 10 {ftADT},
-         {dbText} 10 {ftArray},
-         {dbText} 10 {ftReference},
-         {dbText} 10 {ftDataSet}
-        {$ELSE}
-     
-        {$IFDEF VER125}
-        ,
-         {dbText} 10 {ftFixedChar},
-         {dbText} 10 {ftWideString},
-         {dbBigInt} 16 {ftLargeint},
-         {dbText} 10 {ftADT},
-         {dbText} 10 {ftArray},
-         {dbText} 10 {ftReference},
-         {dbText} 10 {ftDataSet}
-     
-        {$ELSE}
-     
-        {$IFDEF VER130}
-        ,
-         {dbText} 10 {ftFixedChar},
-         {dbText} 10 {ftWideString},
-         {dbBigInt} 16 {ftLargeint},
-         {dbText} 10 {ftADT},
-         {dbText} 10 {ftArray},
-         {dbText} 10 {ftReference},
-         {dbText} 10 {ftDataSet},
-         {dbLongBinary} 11 {ftOraBlob},
-         {dbLongBinary} 11 {ftOraClob},
-         {dbText} 10 {ftVariant},
-         {dbText} 10 {ftInterface},
-         {dbText} 10 {ftIDispatch},
-         {dbGUID} 15 {ftGuid}
-        {$ENDIF}
-        {$ENDIF}
-        {$ENDIF}
-     
+        arrMDBTypes: array[TFieldType] of Integer = (
+           {dbText} 10 {ftUnknown},
+           {dbText} 10 {ftString},
+           {dbInteger} 3 {ftSmallint},
+           {dbLong} 4 {ftInteger},
+           {dbInteger} 3 {ftWord},
+           {dbBoolean} 1 {ftBoolean},
+           {dbDouble} 7 {ftFloat},
+           {dbCurrency} 5 {ftCurrency},
+           {dbDouble} 7 {ftBCD},
+           {dbDate} 8 {ftDate},
+           {dbTime} 22 {ftTime},
+           {dbDate} 8 {ftDateTime},
+           {dbLongBinary} 11 {ftBytes},
+           {dbLongBinary} 11 {ftVarBytes},
+           {dbInteger} 3 {ftAutoInc},
+           {dbLongBinary} 11 {ftBlob},
+           {dbMemo} 12 {ftMemo},
+           {dbLongBinary} 11 {ftGraphic},
+           {dbMemo} 12 {ftFmtMemo},
+           {dbLongBinary} 11 {ftParadoxOle},
+           {dbLongBinary} 11 {ftDBaseOle},
+           {dbBinary} 9 {ftTypedBinary},
+           {dbText} 10 {ftCursor}
+       
+          {$IFDEF VER120}
+           ,
+           {dbText} 10 {ftFixedChar},
+           {dbText} 10 {ftWideString},
+           {dbBigInt} 16 {ftLargeint},
+           {dbText} 10 {ftADT},
+           {dbText} 10 {ftArray},
+           {dbText} 10 {ftReference},
+           {dbText} 10 {ftDataSet}
+          {$ELSE}
+       
+          {$IFDEF VER125}
+           ,
+           {dbText} 10 {ftFixedChar},
+           {dbText} 10 {ftWideString},
+           {dbBigInt} 16 {ftLargeint},
+           {dbText} 10 {ftADT},
+           {dbText} 10 {ftArray},
+           {dbText} 10 {ftReference},
+           {dbText} 10 {ftDataSet}
+       
+          {$ELSE}
+       
+          {$IFDEF VER130}
+           ,
+           {dbText} 10 {ftFixedChar},
+           {dbText} 10 {ftWideString},
+           {dbBigInt} 16 {ftLargeint},
+           {dbText} 10 {ftADT},
+           {dbText} 10 {ftArray},
+           {dbText} 10 {ftReference},
+           {dbText} 10 {ftDataSet},
+           {dbLongBinary} 11 {ftOraBlob},
+           {dbLongBinary} 11 {ftOraClob},
+           {dbText} 10 {ftVariant},
+           {dbText} 10 {ftInterface},
+           {dbText} 10 {ftIDispatch},
+           {dbGUID} 15 {ftGuid}
+          {$ENDIF}
+          {$ENDIF}
+          {$ENDIF}
+       
         );
 
 3. загружаем DAO:
@@ -113,7 +109,7 @@ Date: 01.01.2007
 
         td.Fields.Append(td.CreateField(strFieldName, arrMDBTypes[intDataType], Size));
 
-например,
+    например,
 
         td.Fields.Append(td.CreateField('ID', arrMDBTypes[intDataType], Size));
         td.Fields.Append(td.CreateField('NAME', arrMDBTypes[intDataType], Size));
@@ -132,29 +128,27 @@ Date: 01.01.2007
 
 10. изменяем значения поля
 
-     
         curField := recordset.Fields[0].Value := 1;
         curField := recordset.Fields[1].Value := 'First record';
 
 11. помещаем новую запись в базу
 
-         recordset.Update(dbUpdateRegular, False);
+        recordset.Update(dbUpdateRegular, False);
 
-где
+    где
 
-    const
-      dbUpdateRegular = 1;
+        const
+          dbUpdateRegular = 1;
 
 12. закрываем recordset
 
-         recordset.Close;
+        recordset.Close;
 
 13. закрываем базу данных
 
-         db.Close;
+        db.Close;
 
 14. освобождаем экземпляр DAO
 
-         access := UnAssigned;
+        access := UnAssigned;
 
-Взято из <https://forum.sources.ru>

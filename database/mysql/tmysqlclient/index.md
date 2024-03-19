@@ -2,15 +2,12 @@
 Title: Подключение через TMySQLClient & TMySQLResult
 Author: Mal Hack
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Подключение через TMySQLClient & TMySQLResult
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
 Решение нашел...
 
@@ -18,7 +15,7 @@ Date: 01.01.2007
 TMySQLClien & TMySQLResult.
 
 2. Все эти файлы ( файл приаттачит Secandr (90 кил)) надо положить либо
-в папку с проектом, либо в \<Delphi\_dir\>/lib.
+в папку с проектом, либо в <Delphi\_dir\>/lib.
 
 3. Код:
 
@@ -108,6 +105,3 @@ TMySQLClien & TMySQLResult.
     // Аналогично предыдущей процедуре, без внесения данных в таблицу. для запросов Insert, Update .....
     end;
 
-Автор: Mal Hack
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

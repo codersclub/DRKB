@@ -2,17 +2,12 @@
 Title: OLE и Interbase - прочесть и записать
 Author: Rob Minte
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 OLE и Interbase - прочесть и записать
 ======================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Rob Minte
 
     procedure TForm1.ReadOLE;
     var
@@ -32,4 +27,3 @@ OLE и Interbase - прочесть и записать
       BS.Free;
     end;
 
-Взято с <https://delphiworld.narod.ru>
