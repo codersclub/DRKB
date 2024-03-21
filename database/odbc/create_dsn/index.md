@@ -8,9 +8,7 @@ Date: 01.01.2007
 Как создать новый DSN из программы?
 ===================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     type
 
@@ -47,13 +45,13 @@ Date: 01.01.2007
 PS. Ecли вы собираетесь работать с этим DSN через BDE, то надо закрыть и
 открыть Session, иначе он не будет доступен.
 
-Автор: Vit
+Author: Vit
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
-Автор: Olivio Moura
+Вариант 2.
 
 Этот пример показывает один из способов создания ODBC драйвера для
 доступа к файлу Access MDB. Подобная операция применима к большинству
@@ -89,7 +87,7 @@ PS. Ecли вы собираетесь работать с этим DSN чере
     begin 
       Windows.GetModuleFileName( HInstance, ModName, SizeOf(ModName) ); 
       strHome := ModName; 
-      while ( strHome[length(strHome)] <> '\' ) do 
+      while ( strHome[length(strHome)] <> '\\' ) do 
         Delete( strHome, length(strHome), 1 ); 
       strFile := strHome + 'TestData.MDB';   // Тестовая база данных (Axes = Access) 
       hLib := LoadLibrary( 'ODBCCP32' );    // загружаем библиотеку (путь по умолчанию) 
@@ -133,4 +131,6 @@ PS. Ecли вы собираетесь работать с этим DSN чере
       end; 
     end;
 
-Взято из <https://forum.sources.ru>
+Author: Olivio Moura
+
+Source: <https://forum.sources.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Получаем имена ODBC-источников
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Получаем имена ODBC-источников
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses Registry; 
      
@@ -45,4 +42,3 @@ Date: 01.01.2007
       GetDataSourceNames(False); 
     end;
 
-Взято с <https://delphiworld.narod.ru>

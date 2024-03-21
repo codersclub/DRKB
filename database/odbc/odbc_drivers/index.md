@@ -2,16 +2,11 @@
 Title: Установка ODBC
 Author: Johannes M. Becher (CODATA GmbH Krefeld, Germany)
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Установка ODBC
 ==============
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Johannes M. Becher (CODATA GmbH Krefeld, Germany)
 
 ...если вам нужно знать, что творится за сценой, нужно просто взглянуть
 на эти два файла, оба человеко-читаемых, оба расположенных в вашей
@@ -54,13 +49,13 @@ B) ODBC.INI - описание всех ваших баз данных (исто
 Каждая база данных, как вы увидите позже, имеет собственную секцию, к
 примеру, вот секция PB Demo:
 
-   {1} [Powersoft Demo DB=Watcom SQL 4.0]
-   {2} DatabaseFile=E:\PB4\EXAMPLES\PSDEMO.DB
-   {3} DatabaseName=PSDEMODB
-   {4} UID=dba
-   {5} PWD=sql
-   {6} Driver=D:\WIN31\SYSTEM\WOD40W.DLL
-   {7} Start=D:\WSQL40\DBSTARTW -d -c512
+    {1} [Powersoft Demo DB=Watcom SQL 4.0]
+    {2} DatabaseFile=E:\PB4\EXAMPLES\PSDEMO.DB
+    {3} DatabaseName=PSDEMODB
+    {4} UID=dba
+    {5} PWD=sql
+    {6} Driver=D:\WIN31\SYSTEM\WOD40W.DLL
+    {7} Start=D:\WSQL40\DBSTARTW -d -c512
 
 Строка 1 содержит ссылку на секцию [ODBC Data Sources].
 
@@ -88,12 +83,10 @@ B) ODBC.INI - описание всех ваших баз данных (исто
 поэтому вам необходимо научиться ориентироваться по ключевым словам,
 описанным выше.
 
-Предупреждение:  
+**Предупреждение:**  
 весь опубликованный мною материал получен путем моих
 собственных исследований, вследствие чего я не могу гарантировать его
 достоверность. По крайней мере я успешно использую его для получения
 доступа к ODBC уже более года.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
