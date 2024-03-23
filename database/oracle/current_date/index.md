@@ -1,15 +1,12 @@
 ---
 Title: Как получить текущую дату?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как получить текущую дату?
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     // make the SQL dependent on type of DBMS
      
@@ -19,4 +16,3 @@ Date: 01.01.2007
       SQL.Add('and entry_date < "TODAY"');
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

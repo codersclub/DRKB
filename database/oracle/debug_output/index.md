@@ -2,24 +2,17 @@
 Title: Выводить текст с помощью DBMS\_OUTPUT.PUT\_LINE в режиме отладки
 Author: Nomadic
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Выводить текст с помощью DBMS\_OUTPUT.PUT\_LINE в режиме отладки
 ================================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Nomadic
-
 Эта функция используется действительно только для отладки. Для того,
 чтобы результаты ее работы были видны из SQL Plus, необходимо в нем
 выдать команду:
 
-set serveroutput on size 10000;
+    set serveroutput on size 10000;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -1,25 +1,19 @@
 ---
 Title: Как выяснить номер версии Oracle?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как выяснить номер версии Oracle?
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
 This function gets the connected Oracle version. It returns the version
 info in 3 OUT parameters.
 
-       VerNum                        : double        eg. 7.23
-
-       VerStrShort        : string                eg. \'7.2.3.0.0\'
-
-       VerStrLong        : string                eg. \'Oracle7 Server
-Release 7.2.3.0.0 - Production Release\'
+    VerNum      : double        eg. 7.23
+    VerStrShort : string        eg. '7.2.3.0.0'
+    VerStrLong  : string        eg. 'Oracle7 Server Release 7.2.3.0.0 - Production Release'
 
 I have tested it with Oracle 7.2 and 8.17. I assume it should work for
 the others (not too sure about Oracle 9 though). Any feedback and fixes
@@ -42,16 +36,16 @@ Example :
     end;
      
     procedure GetOraVersion(Query: TQuery;
-                                                                                              out VerNum: double;
-                                                                                              out VerStrShort: string;
-                                                                                              out VerStrLong: string);
+                            out VerNum: double;
+                            out VerStrShort: string;
+                            out VerStrLong: string);
     var
       sTmp: string;
       cKey: char;
       i: integer;
     begin
       Query.SQL.Text := 'select banner from v$version ' +
-                                                                         'where banner like ' + QuotedStr('Oracle%');
+                        'where banner like ' + QuotedStr('Oracle%');
       Query.Open;
      
       if not Query.Eof then
@@ -85,4 +79,3 @@ Example :
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

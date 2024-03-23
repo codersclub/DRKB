@@ -1,15 +1,12 @@
 ---
 Title: Доступ к объекту Oracle
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Доступ к объекту Oracle
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
 Для этого можно воспользоваться компонентами от AllRoundAutomations
 Direct Oracle Access. Если кому надо могу поделиться. При помощи этих
@@ -31,4 +28,3 @@ Direct Oracle Access. Если кому надо могу поделиться. 
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

@@ -2,21 +2,16 @@
 Title: Понятия Instance, Database и т.д.
 Author: Nomadic
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Понятия Instance, Database и т.д.
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Nomadic
-
 Перевод документации:
 
-Что такое ORACLE Database?
+**Что такое ORACLE Database?**
 
 Это данные которые будут обрабатываться как единое целое. Database
 состоит из файлов операционной системы. Физически существуют database
@@ -24,7 +19,7 @@ files и redo log files. Логически database files содержат сл
 таблицы пользователей и redo log файлы. Дополнительно database требует
 одну или более копий control file.
 
-Что такое ORACLE Instance?
+**Что такое ORACLE Instance?**
 
 ORACLE Instance обеспечивает программные механизмы доступа и управления
 database. Instance может быть запущен независимо от любой database (без
@@ -34,14 +29,13 @@ database. Instance может быть запущен независимо от 
 
 Instance состоит из:
 
-SGA (System Global Area), которая обеспечивает коммуникацию между
+- SGA (System Global Area), которая обеспечивает коммуникацию между
 процессами;
+- до пяти (в последних версиях больше) бэкграундовых процессов.
 
-до пяти (в последних версиях больше) бэкграундовых процессов.
-
-От себя добавлю - database включает в себя tablespace, tablespace
-включает в себя segments (в одном файле данных может быть один или
+От себя добавлю - database включает в себя tablespace.  
+tablespace включает в себя segments (в одном файле данных может быть один или
 несколько сегментов, сегменты не могут быть разделены на несколько
-файлов). segments включают в себя extents.
+файлов).  
+segments включают в себя extents.
 
-Взято с <https://delphiworld.narod.ru>

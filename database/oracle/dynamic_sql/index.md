@@ -2,15 +2,12 @@
 Title: Динамические SQL-запросы Oracle для ускорения выборок данных
 Author: Андрей Фионик
 Date: 01.01.2007
+Source: <https://doc.woweb.ru>
 ---
 
 
 Динамические SQL-запросы Oracle для ускорения выборок данных
 ============================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Типичная задача при работе с базами данных - выбрать информацию из
 разных таблиц, отфильтровать ее по определенным критериям, потом
@@ -42,6 +39,7 @@ sql-запроса может быть сформирован внутри кл�
 
 За работу с динамическими sql -запросами отвечает пакет dbms\_sql. В
 общем, работа с ним происходит по следующей схеме.
+
 1. Строится сам текст запроса с метками для параметров. Текст запроса
 может быть представлен в виде строки или коллекции строк.
 2. Функцией dbms\_sql.open\_cursor выделяется идентификатор курсора,
@@ -65,19 +63,19 @@ dbms\_sql.column\_value.
 
 Вначале определимся с используемыми структурами данных.
 
-create table personparticulars
-(id number(9) constraint pk\_personparticulars primary key not null,
-family varchar2(32) constraint pp\_chk\_family not null,
-firstname varchar2(16) constraint pp\_chk\_firstname not null
-)
-tablespace x;
+    create table personparticulars
+     (id number(9) constraint pk_personparticulars primary key not null,
+     family varchar2(32) constraint pp_chk_family not null,
+     firstname varchar2(16) constraint pp_chk_firstname not null
+    )
+    tablespace x;
 
 Поля таблицы personparticulars:
 
-· id - уникальный номер анкетных данных
-· family - фамилия
-· firstname - имя
-· middlename - отчество
+- id - уникальный номер анкетных данных
+- family - фамилия
+- firstname - имя
+- middlename - отчество
 
 Процесс получения результатов разобьем на две части: построение текста
 sql-запроса и, собственно, его выполнение. Можно оформить это как две
@@ -89,9 +87,9 @@ sql-запроса можно формировать как в одну стро
 Условимся также, что в хранимую процедуру будут передаваться следующие
 параметры, управляющие поиском:
 
-· familyfilter - шаблон для поиска по фамилии
-· firstnamefilter - шаблон для поиска по имени
-· middlenamefilter - шаблон для поиска по отчеству
+- familyfilter - шаблон для поиска по фамилии
+- firstnamefilter - шаблон для поиска по имени
+- middlenamefilter - шаблон для поиска по отчеству
 
 Если в качестве какого-либо из параметров передано значение null - этот
 параметр при поиске игнорируем.
@@ -110,63 +108,58 @@ sql-запроса можно формировать как в одну стро
     c integer; /* Идентификатор курсора */
     b_id number; /* Буферная переменная для результатов */
     begin
-    whereclause(1):=’true ‘;
-    if familyfilter is not null then
-    whereclause(whereclause.last+1):=’ and family like :xfamilyfilter’;
-    end if;
-    if firstnamefilter is not null then
-    whereclause(whereclause.last+1):=’ and firstname like :xfirstnamefilter’;
-    end if;
-    if middlenamefilter is not null then
-    whereclause(whereclause.last+1):=’ and middlename like :xmiddlenamefilter’;
-    end if;
-    /* На этом этапе у нас имеется часть запроса - where, в которой упомянуты только те условия, которые были заданы через непустые параметры хранимой процедуры */
-    /* Теперь построим текст запроса полностью */
-    sqltext(1):=’select id’;
-    sqltext(2):=’from personparticulars’;
-    for i in whereclause.first..whereclause.last loop
-    sqltext(sqltext.last+1):=whereclause(i);
-    end loop;
-    /* Получаем идентификатор курсора */
-    c:=dbms_sql.open_cursor;
-    /* Разборка текста запроса */
-    dbms_sql.parse(c, sqltext, sqltext.first, sqltext.last, false, dbms_sql.native);
-    /* Установка параметров запроса */
-    if familyfilter is not null then
-    dbms_sql.bind_variable(c,’:xfamilyfilter’,familyfilter);
-    end if;
-    if firstnamefilter is not null then
-    dbms_sql.bind_variable(c,’:xfirstnamefilter’,firstnamefilter);
-    end if;
-    if middlenamefilter is not null then
-    dbms_sql.bind_variable(c,’:xmiddlenamefilter’,middlenamefilter);
-    end if;
-    /* Установка столбцов в запросе */
-    dbms_sql.define_column(c,1,b_id);
-    /* Выполнение запроса */
-    dbms_sql.execute(c);
-    /* Выборка результатов запроса */
-    loop
-    /* Выбираем следующую строку */
-    if dbms_sql.fetch_rows(c)>0 then
-    dbms_sql.column_value(c,1,b_id);
-    /* В этот момент в переменной b_id имеем текущее значение id очередной строки. Что с ней делать, уже дело разработчика */
-    else
-    exit; /* Если нет больше строк, вываливаемся */
-    end if;
-    end loop;
-    /* Закрываем курсор */
-    dbms_sql.close_cursor(c);
+      whereclause(1):=’true ‘;
+      if familyfilter is not null then
+        whereclause(whereclause.last+1):=’ and family like :xfamilyfilter’;
+      end if;
+      if firstnamefilter is not null then
+        whereclause(whereclause.last+1):=’ and firstname like :xfirstnamefilter’;
+      end if;
+      if middlenamefilter is not null then
+        whereclause(whereclause.last+1):=’ and middlename like :xmiddlenamefilter’;
+      end if;
+      /* На этом этапе у нас имеется часть запроса - where, в которой упомянуты только те условия, которые были заданы через непустые параметры хранимой процедуры */
+      /* Теперь построим текст запроса полностью */
+      sqltext(1):=’select id’;
+      sqltext(2):=’from personparticulars’;
+      for i in whereclause.first..whereclause.last loop
+        sqltext(sqltext.last+1):=whereclause(i);
+      end loop;
+      /* Получаем идентификатор курсора */
+      c:=dbms_sql.open_cursor;
+      /* Разборка текста запроса */
+      dbms_sql.parse(c, sqltext, sqltext.first, sqltext.last, false, dbms_sql.native);
+      /* Установка параметров запроса */
+      if familyfilter is not null then
+        dbms_sql.bind_variable(c,’:xfamilyfilter’,familyfilter);
+      end if;
+      if firstnamefilter is not null then
+        dbms_sql.bind_variable(c,’:xfirstnamefilter’,firstnamefilter);
+      end if;
+      if middlenamefilter is not null then
+        dbms_sql.bind_variable(c,’:xmiddlenamefilter’,middlenamefilter);
+      end if;
+      /* Установка столбцов в запросе */
+      dbms_sql.define_column(c,1,b_id);
+      /* Выполнение запроса */
+      dbms_sql.execute(c);
+      /* Выборка результатов запроса */
+      loop
+        /* Выбираем следующую строку */
+        if dbms_sql.fetch_rows(c)>0 then
+          dbms_sql.column_value(c,1,b_id);
+        /* В этот момент в переменной b_id имеем текущее значение id очередной строки. Что с ней делать, уже дело разработчика */
+        else
+          exit; /* Если нет больше строк, вываливаемся */
+        end if;
+      end loop;
+      /* Закрываем курсор */
+      dbms_sql.close_cursor(c);
     end; 
 
-
-
-Надеюсь, основные идеи понятны?
+Надеюсь, основные идеи понятны?  
 Дальше - сами :)
 
-Использованная литература: oracle8 application developer's guide ©
-oracle corporation
+Использованная литература: oracle8 application developer's guide
+© oracle corporation
 
-Автор: Андрей Фионик
-Источник:
-<https://doc.woweb.ru>

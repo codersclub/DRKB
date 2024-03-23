@@ -1,16 +1,12 @@
 ---
 Title: Как в Oracle создать sequence с некоторого номера?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как в Oracle создать sequence с некоторого номера?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
+    create sequence minvalue 10;
 
-create sequence minvalue 10;
-
-Взято с <https://delphiworld.narod.ru>

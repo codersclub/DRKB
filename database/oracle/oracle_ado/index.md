@@ -2,15 +2,12 @@
 Title: Доступ к Oracle через ADO
 Author: Pegas
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Доступ к Oracle через ADO
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 Для доступа к данных хранящимся в Oracle лучше всего использовать не
 компоненты ADO а компоненты билиотека DAO (Data Access Oracle) с ними
@@ -22,20 +19,14 @@ BDE, или тот же ODBC), и заточены соответственно 
 
 Но если все же решил использовать ADO вот тебе строка:
 
-1) способ если использовать "MS OLE DB Provaider for Oracle" - это
+1. способ если использовать "MS OLE DB Provider for Oracle" - это
 провайдер мелкомягких
 
-Provider=MSDAORA.1;Password=USER123;User ID=USER;Data
-Source=MyDataSourse;
+        Provider=MSDAORA.1;Password=USER123;User ID=USER;Data Source=MyDataSourse;
+        Persist Security Info=False
 
-Persist Security Info=False
-
-2) способ если использовать "Oracle Provaider for Ole DB" - это
+2. способ если использовать "Oracle Provider for Ole DB" - это
 провайдер от Oracle
 
-Provider=OraOLEDB.Oracle.1;Persist Security Info=False;User ID=USER;Data
-Source=MyDataSourse
+        Provider=OraOLEDB.Oracle.1;Persist Security Info=False;User ID=USER;Data Source=MyDataSourse
 
-Автор: Pegas
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
