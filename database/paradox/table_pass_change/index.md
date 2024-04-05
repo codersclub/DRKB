@@ -2,15 +2,12 @@
 Title: Как сменить пароль (master password) для таблицы Paradox
 Author: Nomadic
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как сменить пароль (master password) для таблицы Paradox
 ========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       db: TDatabase;
@@ -25,6 +22,3 @@ Date: 01.01.2007
       Check( DbiDoRestructure( db.Handle, 1, @Desc, nil, nil, nil, FALSE ) );
     end;
 
-Автор: Nomadic
-
-Взято с <https://delphiworld.narod.ru>

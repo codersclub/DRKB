@@ -1,16 +1,13 @@
 ---
 Title: Как упаковать таблицу?
 Author: Pavel Kulchenko
+Source: <https://delphiworld.narod.ru>
 Date: 01.01.2007
 ---
 
 
 Как упаковать таблицу?
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
     uses BDE; // for D3, для D2 не помню (что-то типа DbiProcs и еще что-то)
      
@@ -51,6 +48,3 @@ Date: 01.01.2007
      
     end;
 
-Автор: Pavel Kulchenko
-
-Взято с <https://delphiworld.narod.ru>

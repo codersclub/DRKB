@@ -1,58 +1,53 @@
 ---
 Title: Ограничения Paradox
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Ограничения Paradox
 ===================
 
-::: {.date}
-01.01.2007
-:::
+Табличные и индексные файлы:
 
-Table and Index Files
+127 - Таблицы открыты для каждой системы
 
-127 --- Tables open per system
+64 - Запись блокировок на одну таблицу (16 бит) за сеанс.
 
-64 --- Record locks on one table (16Bit) per session
+255 - Запись блокировок на одну таблицу (32 бита) за сеанс.
 
-255 --- Record locks on one table (32Bit) per session
+255 - Записи в транзакциях в таблице (32 бита)
 
-255 --- Records in transactions on a table (32 Bit)
+512 - Открыть физические файлы (DB, PX, MB, X??, Y??, VAL, TV)
 
-512 --- Open physical files (DB, PX, MB, X??, Y??, VAL, TV)
+300 - Пользователи в одном файле PDOXUSRS.NET
 
-300 --- Users in one PDOXUSRS.NET file
+255 - Количество полей в таблице
 
-255 --- Number of fields per table
+255 - Размер символьных полей
 
-255 --- Size of character fields
+2 – Миллиард записей в таблице
 
-2 --- Billion records in a table
+2 – миллиарды байт в файле .DB (таблица).
 
-2 --- Billion bytes in .DB (Table) file
+10800 байт на запись для индексированных таблиц.
 
-10800 --- Bytes per record for indexed tables
+32750 - Байт на запись для неиндексированных таблиц.
 
-32750 --- Bytes per record for non-indexed tables
+127 - Количество вторичных индексов в таблице
 
-127 --- Number of secondary indexes per table
+16 - Количество полей в индексе
 
-16 --- Number of fields in an index
+255 – одновременных пользователей на таблицу
 
-255 --- Concurrent users per table
+256 - Мегабайты данных на поле BLOB.
 
-256 --- Megabytes of data per BLOB field
+100 – паролей за сеанс
 
-100 --- Passwords per session
+15 - Длина пароля
 
-15 --- Password length
+63 - Пароли для каждой таблицы
 
-63 --- Passwords per table
+159 - Поля с проверкой достоверности (32 бита)
 
-159 --- Fields with validity checks (32 Bit)
-
-63 --- Fields with validity checks (16 Bit)
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+63 - Поля с проверкой достоверности (16 бит)

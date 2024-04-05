@@ -1,15 +1,12 @@
 ---
 Title: Как назначить пароль на таблицу?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как назначить пароль на таблицу?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses Unit2;
     // ..
@@ -69,4 +66,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -1,15 +1,12 @@
 ---
 Title: Как добавить пароль к таблице
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как добавить пароль к таблице
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       Bde, SysUtils, dbtables, windows;
@@ -51,4 +48,3 @@ Date: 01.01.2007
       Result := True;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

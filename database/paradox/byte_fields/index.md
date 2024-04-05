@@ -1,18 +1,15 @@
 ---
 Title: Byte-поля Paradox
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Byte-поля Paradox
 =================
 
-::: {.date}
-01.01.2007
-:::
-
-Что за магия при записи в поле Paradox Byte? По этому поводу в
-документации ничего не сказано.
+> Что за магия при записи в поле Paradox Byte?
+> По этому поводу в документации ничего не сказано.
 
 Есть 2 пути получить доступ к данным в TBytesField.
 
@@ -45,4 +42,3 @@ array of bytes):
 поскольку вам нужно будет работать с variant-методами типа
 VarArrayCreate и др.
 
-Взято с <https://delphiworld.narod.ru>

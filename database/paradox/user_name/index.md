@@ -1,19 +1,17 @@
 ---
 Title: Имя пользователя Paradox
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Имя пользователя Paradox
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
 Вы можете выполнить эту задачу, непосредственно обращаясь к BDE.
-Включите следующие модули в сецию Uses вашего модуля: DBIPROCS, DBIERRS,
-DBITYPES
+
+Включите следующие модули в секцию Uses вашего модуля: DBIPROCS, DBIERRS,
+DBITYPES.
 
 Ниже приведена функция с именем ID, возвращающая сетевое имя входа:
 
@@ -45,6 +43,5 @@ DBITYPES
       if pszUserName <> nil then FreeMem(pszUserName, SizeOf(Char) * DBIMAXXBUSERNAMELEN);
     end;
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

@@ -1,15 +1,12 @@
 ---
 Title: Как изменить языковый драйвер в runtime?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как изменить языковый драйвер в runtime?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure SetLanguage(Tbl: TTable; Lang: DbiName);
     var
@@ -50,4 +47,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

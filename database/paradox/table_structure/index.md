@@ -1,15 +1,12 @@
 ---
 Title: Печать структуры таблицы Paradox
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Печать структуры таблицы Paradox
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     const
@@ -55,6 +52,5 @@ Date: 01.01.2007
         end;
     end;
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
 Сборник Kuliba

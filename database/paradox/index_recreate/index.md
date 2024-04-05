@@ -1,15 +1,12 @@
 ---
 Title: Как пересоздать индексы?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как пересоздать индексы?
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button4Click(Sender: TObject);
     var
@@ -30,17 +27,17 @@ Date: 01.01.2007
       end;
     end;
 
-As when calling any BDE API function, the BDE API wrapper unit BDE (for
-Delphi 1, the units DbiTypes, DbiErrs, and DbiProcs) must be referenced
-in the Uses section of the unit from which the call is to be made. The
-BDE API function DbiSaveChanges, used here, forces any data changes in
-memory buffer to be written to disk at that point.
+Как и при вызове любой функции API BDE, модуль оболочки BDE API BDE
+(для Delphi 1 — модули DbiTypes, DbiErrs и DbiProcs) должен быть указан в разделе «Usesе» модуля,
+из которого должен быть выполнен вызов.
+Используемая здесь функция API BDE DbiSaveChanges принудительно записывает любые изменения данных
+в буфере памяти на диск в этот момент.
 
-Another way to handle this situation - if you know at design-time all
-the indexes that will exist for the table - would be to iterate
-through the items in the TIndexDefs object of the TTable component,
-delete each index (DeleteIndex method), and then add all needed indexes
-back (AddIndex method).
+Другой способ справиться с этой ситуацией
+(если во время разработки вы знаете все индексы, которые будут существовать для таблицы) -
+это перебрать элементы в объекте TIndexDefs компонента TTable,
+удалить каждый индекс (метод DeleteIndex),
+а затем добавить обратно все необходимые индексы (метод AddIndex).
 
     procedure TForm1.Button3Click(Sender: TObject);
     var
@@ -72,4 +69,3 @@ back (AddIndex method).
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

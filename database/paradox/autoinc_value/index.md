@@ -1,23 +1,17 @@
 ---
-Title: Reading the autoincrement value of Paradox table
+Title: Чтение значения автоинкремента таблицы Paradox
 Date: 01.01.2007
 ---
 
 
-Reading the autoincrement value of Paradox table
-================================================
+Чтение значения автоинкремента таблицы Paradox
+==============================================
 
-::: {.date}
-01.01.2007
-:::
+Текущее наибольшее значение сохраняется, начиная с байта 73 в десятичном измерении.
 
-The current highest value is stored beginning at byte 73 decimal.
+Следующее значение определяется добавлением к нему 1.
 
-The next value is determined by adding 1 to it.
-
-Here is a simple Delphi function that returns the current
-
-autoincrement value.
+Вот простая функция Delphi, которая возвращает текущее значение автоинкремента.
 
     function getAutoInc(filename: string): LongInt;
     var
