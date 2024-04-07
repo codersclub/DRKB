@@ -2,44 +2,38 @@
 Title: Генератор SQL-запросов Insert / Update
 Author: Mike Heydon
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Генератор SQL-запросов Insert / Update
 ======================================
 
-::: {.date}
-01.01.2007
-:::
+Вам ещё не надоело динамически генерировать SQL запросы insert и update?
+Давайте посмотрим, как можно раз и навсегда упростить этот процесс.
 
-Автор: Mike Heydon
+Допустим, Вы создавали запрос следующим образом (типы параметров
+Data1:string, Data2:integer, Data3:TdateTime)
 
-Вам ещё не надоело динамически генерировать SQL запросы insert и update
-? Давайте посмотрим, как можно раз и навсегда упростить этот процесс.
-
-Допустим Вы создавали запрос следующим образом (типы параметров
-Data1:string Data2: integer Data3:TdateTime)
-
-    SqlCmd := 'insert into MyTable (Field1,Field2,Field2) values (' +   
-                    QuotedStr(Data1) + ',' + IntToStr(Data2) + ',' + 'to_date(' 
-                    + QuotedStr(FormatdateTime('dd/mm/yyyy',Data3)) + ',' 
-                    + QuotedStr('dd/mm/yyyy') + '))'; 
+    SqlCmd := 'insert into MyTable (Field1,Field2,Field2) values ('
+            + QuotedStr(Data1) + ',' + IntToStr(Data2) + ',' + 'to_date(' 
+            + QuotedStr(FormatdateTime('dd/mm/yyyy',Data3)) + ',' 
+            + QuotedStr('dd/mm/yyyy') + '))'; 
 
 {Ужасно! ещё хуже, когда количество колонок увеличивается}
 
 А если сделать функцию типа ..
 
-    SqlCmd := SqlInsert([Data1,Data2,Variant(Data3)], 
+    SqlCmd := SqlInsert([Data1, Data2, Variant(Data3)], 
                        'MyTable', 
-                       ['Field1','Field2','Field3']); 
+                       ['Field1', 'Field2', 'Field3']); 
 
-она эмулирует строку запроса наподобие ..
+она эмулирует строку запроса наподобие:
 
-insert into MyTable
-
-(Fields1,Field2,Field3)
-
-values (\'Sweets\',934,to\_date(\'21/05/2001\',\'dd/mm/yyyy\'))
+    insert into MyTable
+        (Fields1,Field2,Field3)
+    values
+        ('Sweets',934,to_date('21/05/2001','dd/mm/yyyy'))
 
 неправда ли она более проста в использовании ?
 
@@ -201,4 +195,3 @@ values (\'Sweets\',934,to\_date(\'21/05/2001\',\'dd/mm/yyyy\'))
       Result := RetVar; 
     end; 
 
-Взято из <https://forum.sources.ru>

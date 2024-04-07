@@ -617,8 +617,7 @@ FROM employee
 используется операция конкатенации (\|\|).
 
 ```
-SELECT "сотрудник " || first_name || " " ||
-         last_name
+SELECT "сотрудник " || first_name || " " || last_name
 FROM employee
 ```
 
@@ -1017,8 +1016,7 @@ WHERE job_code IN ("VP", "Admin", "Finan")
 ```
 SELECT first_name, last_name, job_country
 FROM employee
-WHERE job_country NOT IN
-      ("USA", "Japan", "England")
+WHERE job_country NOT IN ("USA", "Japan", "England")
 ```
 
 получить список сотрудников, работающих не в США, не в Японии и не в Великобритании
@@ -1082,7 +1080,7 @@ WHERE first_name LIKE "Jacq_es"
 
 найти сотрудника(ов), в имени  которого неизвестно произношение буквы перед окончанием "es"
 
-FIRST_NAME|LAST_NAME|
+|FIRST_NAME|LAST_NAME|
 |--------|--------|
 |Jacques|Glon|
 
