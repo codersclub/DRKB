@@ -8,10 +8,7 @@ Date: 01.01.2007
 Доступ к внешнему серверу по IP адресу
 ======================================
 
-::: {.date}
-01.01.2007
-:::
 
-    select * from [123.123.123.123].MyExternalDatabase.dbo.MyTable
+    select *
+    from [123.123.123.123].MyExternalDatabase.dbo.MyTable
 
-Автор: Vit

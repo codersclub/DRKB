@@ -8,10 +8,6 @@ Date: 01.01.2007
 Посчитать события по месяцам
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
     SELECT
         YEAR([MyDateFiled]),
         MONTH([MyDateFiled]),
@@ -21,4 +17,3 @@ Date: 01.01.2007
         YEAR([MyDateFiled]),
         MONTH([MyDateFiled])
 
-Автор: Vit

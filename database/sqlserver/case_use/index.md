@@ -8,17 +8,13 @@ Date: 01.01.2007
 Использование case
 ==================
 
-::: {.date}
-01.01.2007
-:::
-
 Оператор выбора Case работает немного по другому чем в классических
 языках. В классических языках Case выбирает какой оператор запускать, а
 в T-SQL он выбирает выражение которое надо использовать для вычисления
 чего-то. Case выступает в ввиде функции которая возвращает результат в
 зависимости от условия. Имеет 2 формы написания:
 
-1.
+**Форма 1.**
 
     Declare @m int
 
@@ -33,7 +29,7 @@ Date: 01.01.2007
         Else 'Не зима'
       End as MonthName
 
-2.
+**Форма 2.**
 
     Declare @m int
 
@@ -60,8 +56,7 @@ Date: 01.01.2007
         Else 'Не зима'
       End
 
-Можно использовать в операциях сравнения, сортировки, группировки и
-функциях:
+Можно использовать в операциях сравнения, сортировки, группировки и функциях:
 
     Select 
       dbo.MyFunction( 
@@ -75,8 +70,10 @@ Date: 01.01.2007
       Case When MyField=0 Then 'False' else 'True' End,
       Count(*) 
     From MyTable
-    Where Case When MyField1=0 Then Field2 else Field3 End>1
-    Group by Case When MyField=0 Then 'False' else 'True' End
-    Order By Case When MyField=0 Then 'False' else 'True' End 
+    Where Case
+      When MyField1=0 Then Field2 else Field3 End
+    Group by Case
+      When MyField=0 Then 'False' else 'True' End
+    Order By Case
+      When MyField=0 Then 'False' else 'True' End 
 
-Автор: Vit

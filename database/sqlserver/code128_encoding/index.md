@@ -2,15 +2,12 @@
 Title: Перекодировка в Code 128
 Author: Sh@dow
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Перекодировка в Code 128
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     /*
     перекодировка символа Widows в code128
@@ -249,6 +246,3 @@ Date: 01.01.2007
      
     END 
 
-Автор: Sh@dow
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

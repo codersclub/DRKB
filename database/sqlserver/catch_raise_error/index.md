@@ -2,15 +2,12 @@
 Title: Как поймать свой RAISEERROR в Delphi
 Author: Nomadic
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как поймать свой RAISEERROR в Delphi
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TFDMUtils.GeneralError(DataSet: TDataSet; E: EDatabaseError; var
       Action: TDataAction);
@@ -56,6 +53,3 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Nomadic
-
-Взято с <https://delphiworld.narod.ru>
