@@ -8,10 +8,6 @@ Date: 01.01.2007
 Узнать автоинкрементное поле после вставки
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
-
     Insert into MyTable
       (Field1, Field2, Field3)
     Values
@@ -28,5 +24,3 @@ Date: 01.01.2007
       ('Value for field1', 'Value for field2', 0)
      
     Select identity_scope() as 'New number for inserted row'
-
-Автор: Vit

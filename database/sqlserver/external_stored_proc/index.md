@@ -1,168 +1,132 @@
 ---
-Title: Разработка внешних Stored Procedures
+Title: Разработка внешних хранимых процкдур
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
-Разработка внешних Stored Procedures
+Разработка внешних хранимых процкдур
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+> Writing MS SQL Server Extended Stored Procedures with Delphi
 
-Answer:
+Microsoft SQL Server 6.5 и 7 обладают мощной способностью делать функции DLL доступными в виде хранимых процедур.
+Microsoft называет их расширенными хранимыми процедурами.
+Если вы прочитали эту статью, вы знаете, что такое расширенные хранимые процедуры, что вы можете с ними делать и как их установить на SQL-сервер.
+Вы также сможете использовать написанную мной объектно-ориентированную структуру, которая чрезвычайно упрощает написание расширенных хранимых процедур в Delphi.
 
-Writing MS SQL Server Extended Stored Procedures with Delphi
+Я предполагаю, что вы знакомы с SQL Server и концепцией хранимых процедур.
+Код и примеры в этой статье применимы как к SQL Server 6.5, так и к SQL Server 7.
 
-Microsoft SQL Server 6.5 and 7 have the powerful capability to make
-functions in DLL\'s available as stored procedures. Microsoft calls them
-Extended Stored Procedures. If you\'ve read this article, you know what
-Extended Stored Procedures are, what you can do with them, and how to
-install them on a SQL Server. You should also be able to use the
-object-oriented framework I wrote, which makes writing Extended Stored
-Procedures with Delphi extremely easy.
+Что такое расширенные хранимые процедуры?
 
-I assume you are familiar with SQL Server and with the concept of stored
-procedures. The code and examples in this article apply both to SQL
-Server 6.5 and SQL Server 7.
+Расширенные хранимые процедуры (впоследствии называемые xp) являются частью Microsoft Open Data Services (ODS) для SQL Server.
+С ODS вы можете сделать три вещи:
 
-What are Extended Stored Procedures?
+1. Сделать подпрограммы в DLL доступными в виде хранимых процедур для любого пользователя SQL Server.
 
-Extended Stored Procedures (called xp\'s afterwards) are part of
-Microsoft\'s Open Data Services (ODS) for SQL Server. With ODS you can
-do three things:
+2. Написание серверных приложений процедур. Они похожи на XP, однако запускаются как отдельное приложение сетевого сервера и могут даже работать на другом компьютере (3-уровневом).
 
-1.        Making routines in a DLL available as stored procedures to any
-SQL Server user.
+3. Написание шлюзов для сред, отличных от SQL Server.
 
-2.        Write procedure server applications. They are similar to
-xp\'s, however they run as a separate network server application and
-could even be running on a different machine (3-tier).
+На следующем рисунке представлен графический обзор архитектуры ODS.
 
-3.        Writing gateways to non-SQL Server based environments.
+В этой статье я обсуждаю искусство написания хранимых процедур с помощью Delphi.
+Технически эта DLL является частью SQL-сервера, поэтому ошибки программиста могут повредить ваш SQL-сервер, поэтому это небезопасное искусство.
 
-In the following figure a graphical overview of the ODS architecture is
-given.
+Доступ к частям вашего приложения на сервере имеет некоторые преимущества, например:
 
-In this article I discuss the art of writing stored procedures with
-Delphi. Technically this DLL is part of SQL server, therefore programmer
-errors may corrupt your SQL Server, so it\'s not an art without danger.
+1. Некоторые вещи легко написать на Delphi, но сложно или невозможно с помощью Transact SQL.
+Например, вы можете использовать некоторые процедуры, написанные на языке, который вы не понимаете или для которого у вас нет исходного кода, поэтому вы не можете перевести их на Transact SQL (с возможностью появления ошибок во время этого перевода). ).
 
-Making parts of your application available on the server has some
-advantages, for example:
+2. Подпрограммы Delphi выполняются намного быстрее, чем Transact SQL. Возьмем, к примеру, численные расчеты.
 
-1.        Some things are easy to write in Delphi, but difficult or
-impossible using Transact SQL. For example you might use some routines
-written in a language you don\'t understand or don\'t have the source
-code for, so you can\'t translate it to Transact SQL (with the
-possibility of errors creeping in during this translation).
+3. Вы можете взаимодействовать с другими программами, базами данных и т.п.
+Например, вы можете написать xp, который принимает имя таблицы парадоксов и возвращает содержимое этой таблицы в виде набора результатов SQL Server.
 
-2.        Delphi routines run much faster than Transact SQL. Take for
-example numerical calculations.
+Xp живут в DLL и поэтому могут быть написаны на любом языке, который может создавать DLL, как это может Delphi.
+Прежде чем вдаваться в подробности о том, как писать XP, сначала несколько примеров с точки зрения пользователя.
+Давайте предположим, что у нас есть xp с именем xp\_incbyone1, который увеличивает заданное число на единицу.
+Мы можем вызвать xp\_incbyone1 следующим образом:
 
-3.        You can interface with other programs, databases and such. For
-example you could write an xp that accepts the name of a paradox table
-and returns the contents of this table as a SQL Server result set.
+    declare
+      @mynumber integer
+    select @mynumber = 1
+    exec master..xp_incbyone1 @mynumber output
+    select @mynumber
 
-Xp\'s live in DLL\'s and can therefore be written in any language which
-can produce DLL\'s like Delphi can. Before going into detail about how
-to write xp\'s, first some examples from a user\'s point of view. Let\'s
-assume we have an xp called xp\_incbyone1 which increments a given
-number by one. We can call xp\_incbyone1 as followings:
+Оператор объявления объявляет переменную @mynumber целочисленного типа.
+Затем мы устанавливаем его в единицу, передаем его в XP и позволяем XP изменить его, добавляя выходные данные к параметру.
+Наконец, мы отображаем число с помощью оператора select, чтобы проверить, было ли оно обновлено.
+Результат, конечно, должен быть 2.
 
-            declare
-              @mynumber integer
-            select @mynumber = 1
-            exec master..xp_incbyone1 @mynumber output
-            select @mynumber
+В этом примере у нас есть xp, который возвращает выходной параметр.
+Xp также может возвращать набор результатов.
+Пример xp\_incbyone2 возвращает число в качестве набора результатов. Код для его вызова будет:
 
-The declare statement declares a variable @mynumber of type integer.
-Next we set it to one, pass it to the xp and allow the xp to modify it
-by appending output to the parameter. Finally we display the number with
-a select statement to see if it has been updated. The result should be 2
-of course.
+    declare
+     @mynumber integer
 
-In this example we have an xp which returns an output parameter. Xp\'s
-can also return a result set. The example xp\_incbyone2 returns the
-number as a result set. The code to call it would be:
+    select @mynumber = 1
 
-            declare
-             @mynumber integer
+    exec master..xp_incbyone2 @mynumber
 
-            select @mynumber = 1
+xp\_incbyone2 вернет таблицу, состоящую всего из одного столбца и одной строки, содержащей значение 1.
 
-            exec master..xp_incbyone2 @mynumber
+И xp\_incbyone1, и xp\_incbyone2 подробно описаны в следующем разделе, где я представляю структуру.
 
-xp\_incbyone2 will return a table of just one column and one row
-containing the value 1.
+Как видите, для пользователей расширенные хранимые процедуры работают точно так же, как и хранимые процедуры.
+Как и хранимые процедуры, расширенные хранимые процедуры могут возвращать параметры и/или наборы результатов.
 
-Both xp\_incbyone1 and xp\_incbyone2 are described in detail in the next
-section where I present the framework.
+Каждая реализация XP должна делать одно и то же:
 
-As you see, for users extended stored procedures work exactly like
-stored procedures. Just like stored procedures, extended stored
-procedures can return parameters and/or result sets.
+1. Убедитесь, что вызывающая процедура предоставила все необходимые параметры и что каждый параметр имеет соответствующий тип данных.
+Если нет, верните соответствующее сообщение.
 
-Each implementation of an xp needs to do the same things:
+2. Определите столбцы для возврата набора результатов.
 
-1.        Check that the caller of the procedure has provided all of the
-required parameters and that each parameter is of the appropriate data
-type. Return an appropriate message if not.
+3. Создайте каждую запись для возврата к звонящему.
 
-2.        Define the columns for returning a result set.
+4. Настройте все выходные параметры и статусы возврата, используемые процедурой.
 
-3.        Create each record for returning to the caller.
+5. По завершении возврата результатов отправьте сообщение о завершении результатов с помощью srv\_senddone с флагом состояния SRV\_DONE\_MORE.
 
-4.        Set up any output parameters and return statuses used by the
-procedure.
+6. Вернитесь из процедуры с желаемым статусом возврата Transact-SQL.
 
-5.        When finished returning results, send the results completion
-message using srv\_senddone with the SRV\_DONE\_MORE status flag.
+Шаг 1 необходим, потому что, за исключением обычных хранимых процедур, программист должен проверять любые заданные пользователем параметры для XP.
 
-6.        Return from the procedure with the desired Transact-SQL return
-status.
+Шаги 2 и 3 не являются обязательными и применимы только в том случае, если вы возвращаете набор результатов.
 
-Step 1 is necessary because, unless normal stored procedures, it is up
-to the programmer to validate any user-specified parameters for xp\'s.
-Step 2 and 3 are optional, and are applicable only if you return a
-result set. Step 4 is also optional, and applies only if you return
-output parameters.
+Шаг 4 также является необязательным и применяется только в том случае, если вы возвращаете выходные параметры.
 
-Writing xp\'s with Delphi
+**Написание XP с помощью Delphi**
 
-The C programmer who wants to develop xp\'s has to install the SQL
-Server 7 development tools. This option can be turned on when installing
-SQL Server 7. In the directory \\MSSQL7\\devtools\\ you will find all
-the required header files and demo-programs. Unfortunately, Inprise did
-not supply a translation of these header files with Delphi. Therefore I
-had to translate the most important parts by hand to Delphi. This means
-that you don\'t need to install the SQL Server 7 development tools if
-you use this framework to write xp\'s. If you want to add more pieces
-you will need this resource kit though. Or you can ask me if I\'ve time
-to expand the framework a bit to cover the missing pieces. Note: in
-previous version of SQL Server the development tools were part of the
-the BackOffice resource kit.
+Программист C, желающий разрабатывать XP, должен установить инструменты разработки SQL Server 7.
+Эту опцию можно включить при установке SQL Server 7.
+В каталоге \\MSSQL7\\devtools\\ вы найдете все необходимые заголовочные файлы и демонстрационные программы.
+К сожалению, Inprise не предоставила перевод этих заголовочных файлов в Delphi.
+Поэтому мне пришлось вручную переводить самые важные части в Delphi.
+Это означает, что вам не нужно устанавливать инструменты разработки SQL Server 7, если вы используете эту структуру для написания XP.
+Если вы хотите добавить больше частей, вам понадобится этот набор ресурсов.
+Или вы можете спросить меня, есть ли у меня время немного расширить структуру, чтобы покрыть недостающие части.
+Примечание. В предыдущей версии SQL Server инструменты разработки входили в комплект ресурсов BackOffice.
 
-In the previous paragraph 6 steps were mentioned each xp has to do. The
-framework makes step 1 through 4 easier by taking care of details. You
-also can use Delphi types, because the framework does type translation
-between SQL Server types and Delphi types. The framework takes entirely
-care off step 5 and 6.
+В предыдущем параграфе было упомянуто 6 шагов, которые должен выполнить каждый опыт.
+Фреймворк упрощает шаги с 1 по 4, заботясь о деталях.
+Вы также можете использовать типы Delphi, поскольку платформа выполняет преобразование типов между типами SQL Server и типами Delphi.
+Фреймворк полностью берет на себя выполнение шагов 5 и 6.
 
-You use this framework as follows:
+Вы используете эту структуру следующим образом:
 
-1.        Create an object of class TSQLXProc and implement its Execute
-method.
+1. Создайте объект класса TSQLXProc и реализуйте его метод Execute.
 
-2.        Write a procedure that allocates this object, calls it\'s Run
-method and frees the object. The name of this procedure should be equal
-to the name of your extended stored procedure. It\'s calling method
-should be stdcall.
+2. Напишите процедуру, которая выделяет этот объект, вызывает его метод Run и освобождает объект.
+Имя этой процедуры должно совпадать с именем вашей расширенной хранимой процедуры.
+Его вызывающий метод должен быть stdcall.
 
-To make this more concrete, let\'s implement the xp\_incbyone1 stored
-procedure. The 1st step is to create a new object based on TSQLXProc and
-implement its Execute method. It\'s header looks like this:
+Чтобы сделать это более конкретным, давайте реализуем хранимую процедуру xp\_incbyone1.
+Первый шаг — создать новый объект на основе TSQLXProc и реализовать его метод Execute.
+Его заголовок выглядит так:
 
     type
       TXPIncByOne1 = class(TSQLXProc)
@@ -177,9 +141,9 @@ implement its Execute method. It\'s header looks like this:
       Result := True;
     end;
 
-The 2nd step is to write a procedure that calls this object. This is the
-procedure that SQL Server is actually calling. For xp\_incbyone1 it
-looks like this:
+Второй шаг — написать процедуру, вызывающую этот объект.
+Это процедура, которую на самом деле вызывает SQL Server.
+Для xp\_incbyone1 это выглядит так:
 
     function xp_incbyone1(srvproc: PSRV_PROC): SRVRETCODE; stdcall;
     const
@@ -192,53 +156,44 @@ looks like this:
       xp.Free;
     end;
 
-It\'s that easy!
+Это так просто!
 
-Let\'s look in more detail to the first step. The only thing you\'ll
-ever need to do is to implement the Execute method. This function
-returns True or False. If False is returned, an error is returned to the
-calling application or user. Exceptions are caught by the code that
-calls your Execute method and a similar error is returned to the calling
-application or user.
+Давайте рассмотрим более подробно первый шаг.
+Единственное, что вам когда-либо понадобится сделать, это реализовать метод Execute.
+Эта функция возвращает True или False.
+Если возвращается False, вызывающему приложению или пользователю возвращается ошибка.
+Исключения перехватываются кодом, который вызывает ваш метод Execute, и аналогичная ошибка возвращается вызывающему приложению или пользователю.
 
-You have access to the parameters of a stored procedure by using the
-variant array Params. Parameters are numbered from one onwards. As noted
-earlier SQL Server does no type checking on xp parameters. The framework
-returns parameters as variants, so it\'s a bit more robust against
-different parameters, but variant conversion errors may occur if a
-parameter type mismatches. You might want to use the ODS API call
-srv\_paramtype to explicitly retrieve and check parameter types, but so
-far I\'ve not found a need this. Another solution for checking parameter
-types is to use the VarType function. See Table 1 for a list of
-Transact-SQL data types and corresponding Delphi data types.
+Доступ к параметрам хранимой процедуры можно получить с помощью массива вариантов Params.
+Параметры нумеруются начиная с единицы.
+Как отмечалось ранее, SQL Server не выполняет проверку типов параметров XP.
+Платформа возвращает параметры как варианты, поэтому она немного более устойчива к различным параметрам, но могут возникнуть ошибки преобразования вариантов, если тип параметра не соответствует.
+Возможно, вы захотите использовать вызов srv\_paramtype API ODS для явного получения и проверки типов параметров, но пока я не нашел в этом необходимости.
+Другим решением для проверки типов параметров является использование функции VarType.
+В таблице 1 приведен список типов данных Transact-SQL и соответствующих типов данных Delphi.
 
-If a parameter is Null, the Params property returns the variant type
-Null. Equally, if you want to return Null, set the corresponding
-parameter in Params to Null.
+Если параметр имеет значение Null, свойство Params возвращает тип варианта Null.
+Аналогичным образом, если вы хотите вернуть значение Null, установите для соответствующего параметра в Params значение Null.
 
-Let\'s look in more detail to the second step. This step will probably
-always be the same except for the value of the ExpectedParams const and
-the particular object to instantiate. This procedure is called by SQL
-Server with one parameter: srvproc. We pass this parameter to the
-instantiated object and we pass it the number of parameters to expect.
-If the actual number of parameters is different from this an error
-message will be send back to the calling application/user. Pass zero if
-you don\'t want to check for the number of parameters, for example to
-support a variable number of parameters.
+Давайте рассмотрим более подробно второй шаг.
+Этот шаг, вероятно, всегда будет одинаковым, за исключением значения константы ExpectedParams и конкретного объекта, экземпляр которого нужно создать.
+Эта процедура вызывается SQL Server с одним параметром: srvproc.
+Мы передаем этот параметр экземпляру объекта и передаем ему ожидаемое количество параметров.
+Если фактическое количество параметров отличается от этого, сообщение об ошибке будет отправлено обратно вызывающему приложению/пользователю.
+Передайте ноль, если вы не хотите проверять количество параметров, например, для поддержки переменного количества параметров.
 
-Next we call the Run method of the instantiated object, which in turn
-will call our Execute method (surrounded by for example a try..except
-block). Finally we free the object.
+Затем мы вызываем метод Run созданного объекта, который, в свою очередь, вызывает наш метод Execute (окруженный, например, блоком try..Exception).
+Наконец мы освобождаем объект.
 
-Now let\'s tackle an xp which returns a result set. It\'s header is
-this:
+Теперь давайте займемся XP, которая возвращает набор результатов.
+Заголовок такой:
 
     type
       TXPIncByOne2 = class(TSQLXProc)
         function Execute: Boolean; override;
       end;
 
-It\'s body is this:
+Тело вот такое:
 
     function TXPIncByOne2.Execute: Boolean;
     var
@@ -250,7 +205,7 @@ It\'s body is this:
       Result := True;
     end;
 
-And the procedure to call this object is this:
+И процедура вызова этого объекта такова:
 
     function xp_incbyone2(srvproc: PSRV_PROC): SRVRETCODE; stdcall;
     const
@@ -263,43 +218,43 @@ And the procedure to call this object is this:
       xp.Free;
     end;
 
-We now have a bit more complicated Execute method. In case we want to
-return a result set, we need to describe every row in the resulting
-table: its column name, its destination type, its destination length,
-its source type, its source length and a pointer to the source data. You
-should call DescribeColumn for every column in the result table. The
-next step is to fill the source data, that\'s the assignment to myint.
-The row is now complete, so we can send it to SQL Server using SendRow.
-You should prepare source data and call SendRow for every row in the
-result table. And finally just return True and exit. After that SQL
-Server will send the entire result table to the client.
+Теперь у нас есть немного более сложный метод Execute.
+Если мы хотим вернуть набор результатов, нам нужно описать каждую строку в результирующей таблице:
+имя столбца, тип назначения, длина назначения, тип источника, длина источника и указатель на исходные данные.
+Вы должны вызывать DescribeColumn для каждого столбца в таблице результатов.
+Следующий шаг — заполнить исходные данные, это задание myint.
+Теперь строка завершена, поэтому мы можем отправить ее на SQL Server с помощью SendRow.
+Вам следует подготовить исходные данные и вызвать SendRow для каждой строки в таблице результатов.
+И, наконец, просто верните True и выйдите.
+После этого SQL Server отправит клиенту всю таблицу результатов.
 
-The xp\_incbyone2 procedure is still a simple call the object and exit.
-In the remaining examples I will omit this procedure.
+Процедура xp\_incbyone2 по-прежнему представляет собой простой вызов объекта и выход.
+В остальных примерах я опущу эту процедуру.
 
-Table 1: supported types for use with DescribeColumn.
+Таблица 1: поддерживаемые типы для использования с DescribeColumn.
 
-ODS constant         TSQL data type(s)        Delhi data type(s)      
-SRVVARCHAR        varchar        string       SRVCHAR        char       
- string       SRVINTN        tinyint, smallint, int      
- shortint,smallint,integer       SRVBIT         bit        Boolean      
-SRVDECIMAL        numeric/decimal        n/a (string)       SRVNUMERIC  
-     numeric/decimal        n/a (string)       SRVFLTN        real,
-float        single, double       SRVMONEYN        smallmoney, money    
-   n/a (integer, DBMONEY)       SRVDATETIMN        smalldatetime,
-datetime        TDateTime      
+ODS constant | TSQL data type(s)       |Delhi data type(s)
+-------------|-------------------------|------------------
+SRVVARCHAR   | varchar                 |string
+SRVCHAR      | char                    |string
+SRVINTN      | tinyint, smallint, int  |shortint,smallint,integer
+SRVBIT       | bit                     |Boolean
+SRVDECIMAL   | numeric/decimal         |n/a (string)
+SRVNUMERIC   | numeric/decimal         |n/a (string)
+SRVFLTN      | real, float             |single, double
+SRVMONEYN    | smallmoney, money       |n/a (integer, DBMONEY)
+SRVDATETIMN  | smalldatetime, datetime |TDateTime
 
-I implemented two xp\'s from the sample xp\'s which Microsoft
-implemented in xp.c. The first one simply copies the contents of the
-first parameter to the second parameter. The second one returns the free
-space from every drive available on the SQL Server computer.
+Я реализовал две XP из образцов XP, которые Microsoft реализовала в xp.c.
+Первый просто копирует содержимое первого параметра во второй параметр.
+Второй возвращает свободное место на каждом диске, доступном на компьютере SQL Server.
 
-To avoid name clashes I called the first xp xp\_delphiecho instead of
-xp\_echo. The second one is called xp\_delphidisklist instead of
-xp\_disklist. Especially xp\_echo looks ways more elegant than the
-Microsoft\'s sample program. You really should have a look at xp.c!
+Чтобы избежать конфликтов имен, я назвал первый xp xp\_delphiecho вместо xp\_echo.
+Второй называется xp\_delphidisklist вместо xp\_disklist.
+Особенно xp\_echo выглядит более элегантно, чем пример программы Microsoft.
+Вам действительно стоит взглянуть на xp.c!
 
-The code for xp\_delphiecho is:
+Код для xp\_delphiecho:
 
     function TXPEcho.Execute: Boolean;
     begin
@@ -307,7 +262,8 @@ The code for xp\_delphiecho is:
       Result := True;
     end;
 
-The code for xp\_delphidisklist is:
+
+Код для xp\_delphidisklist:
 
      
     function TXPDiskList.Execute: Boolean;
@@ -348,107 +304,80 @@ The code for xp\_delphidisklist is:
       Result := True;
     end;
 
-In the first two lines the description of the result table is given. The
-result table consists of two columns \'drive\' and \'bytes free\'. Next
-for every drive we fill the variables drivename and space\_remaining and
-send back the row using SendRow.
+В первых двух строках дано описание таблицы результатов.
+Таблица результатов состоит из двух столбцов: «диск» и «свободные байты».
+Далее для каждого диска мы заполняем переменные имя диска и пространство\_оставшийся и отправляем строку обратно с помощью SendRow.
 
-The framework in more detail
+**Подробнее о системе**
 
-The framework itself is in the unit odsxp.pas. In the following figure
-you see how this framework fits within the ODS architecture. 
+Сам фреймворк находится в модуле odsxp.pas.
+На следующем рисунке показано, как эта структура вписывается в архитектуру ODS.
 
-SQL Server loads and calls the DLL. You have written a simple method
-which creates an object of type TSQLXProc. You call its Run method.
+SQL Server загружает и вызывает DLL.
+Вы написали простой метод, который создает объект типа TSQLXProc.
+Вы вызываете его метод Run.
 
-The Run method does some checks and calls you back on a method you have
-written, the Execute method. When you are finished, you return to Run,
-which in return sends the results back to SQL Server.
+Метод Run выполняет некоторые проверки и вызывает вас обратно к написанному вами методу Execute.
+Когда вы закончите, вы вернетесь в Run, который в свою очередь отправит результаты обратно на SQL Server.
 
-Installing xp\'s on SQL Server
+**Установка XP на SQL Server**
 
-All of the material in this section can also be found in the Microsoft
-SQL Programmers Toolkit or in the Microsoft Transact-SQL reference.
+Весь материал этого раздела также можно найти в наборе инструментов Microsoft SQL Programmers Toolkit или в справочнике Microsoft Transact-SQL.
 
-Installing xp\'s differs between SQL Server 6.5 and SQL Server 7.0.
-Everything that works under SQL Server 6.5 also works under SQL Server
-7.
+Установка XP различается в SQL Server 6.5 и SQL Server 7.0.
+Все, что работает в SQL Server 6.5, работает и в SQL Server 7.
 
-Installing xp\'s on SQL Server 7
+**Установка XP на SQL Server 7**
 
-Installing an extended stored procedure on SQL Server 7 can be done
-using the SQL Enterprise manager:
+Установку расширенной хранимой процедуры на SQL Server 7 можно выполнить с помощью диспетчера SQL Enterprise:
 
-1.        Open a server.
+1. Откройте сервер.
+2. Перейдите к пункту «Базы данных».
+3. Выберите главную базу данных.
+4. Щелкните правой кнопкой мыши и выберите «Новая расширенная хранимая процедура», см. рисунок ниже.
+5. Укажите имя функции в DLL, а также расположение и имя самой DLL.
 
-2.        Go to item \`Databases\'.
+**Установка XP на SQL Server 6.5**
 
-3.        Select the master database.
+Когда вы скомпилировали DLL, вам необходимо установить ее в соответствующий каталог.
+Скопируйте файл в тот же каталог, что и стандартные файлы DLL SQL Server.
+Обычно это что-то вроде c:\\mssql\\binn, обратите внимание, что binn с двумя n, а не каталог bin с одним n, который также существует!
+Как и в случае с другими DLL, как только расширенная хранимая процедура DLL будет помещена в соответствующий каталог и установлены соответствующие пути, вы можете немедленно сделать ее функции доступными для пользователей.
+Перезапускать сервер не обязательно.
 
-4.        Right click it and choose \`New Extended Stored Procedure\',
-see figure below
-
-5.        Give the name of a function in the DLL and the location and
-name of the DLL itself.
-
-Installing xp\'s on SQL Server 6.5
-
-When you have compiled your DLL you have to install it in the
-appropriate directory. Copy the file to the same directory as the
-standard SQL Server DLL files. Usually this directory is something like
-c:\\mssql\\binn, note binn with two n\'s not the bin directory with a
-single n which also exists! As with other DLL\'s, once the extended
-stored procedure DLL is placed in the appropriate directory and the
-appropriate paths are set, you can make its functions available to users
-immediately. It is not necessary to restart the server.
-
-For each function provided in an extended stored procedure DLL, a SQL
-Server system administrator must run the sp\_addextendedproc system
-procedure, specifying the name of the function and the name of the DLL
-in which that function resides. For example:
+Для каждой функции, представленной в DLL расширенной хранимой процедуры, системный администратор SQL Server должен запустить системную процедуру sp\_addextendedproc, указав имя функции и имя DLL, в которой находится эта функция.
+Например:
 
 sp\_addextendedproc \'xp\_delphiecho\', \'xpdelphi.dll\'
 
-This command registers the function xp\_delphiecho, located in the file
-xpdelphi.dll, as a SQL Server extended stored procedure. You must run
-sp\_addextendedproc in the master database.
+Эта команда регистрирует функцию xp\_delphiecho, расположенную в файле xpdelphi.dll, как расширенную хранимую процедуру SQL Server.
+Вы должны запустить sp\_addextendedproc в основной базе данных.
 
-To drop individual extended stored procedures, a system administrator
-uses the system procedure sp\_dropextendedproc.
+Чтобы удалить отдельные расширенные хранимые процедуры, системный администратор использует системную процедуру sp\_dropextendedproc.
 
-Once a system administrator has added an extended stored procedure,
-users can find out what new functions are available by using the system
-procedure sp\_helpextendedproc. When used without an argument,
-sp\_helpextendedproc displays all extended stored procedures that are
-currently registered with the master database. If you specify an
-extended stored procedure name as an argument, sp\_helpextendedproc
-verifies whether that function is currently available.
+После того как системный администратор добавил расширенную хранимую процедуру, пользователи могут узнать, какие новые функции доступны, с помощью системной процедуры sp\_helpextendedproc.
+При использовании без аргумента sp\_helpextendedproc отображает все расширенные хранимые процедуры, которые в данный момент зарегистрированы в базе данных master.
+Если вы укажете имя расширенной хранимой процедуры в качестве аргумента, sp\_helpextendedproc проверяет, доступна ли эта функция в данный момент.
 
-Extended Stored Procedures are subject to the same security mechanisms
-as regular stored procedure. For example to give every right on the
-xp\_delphiecho xp, run the following command in the master database:
+На расширенные хранимые процедуры распространяются те же механизмы безопасности, что и на обычные хранимые процедуры.
+Например, чтобы предоставить все права на xp\_delphiecho xp, выполните следующую команду в основной базе данных:
 
        grant exec on xp\_delphiecho to public
 
-Calling extended stored procedures
+**Вызов расширенных хранимых процедур**
 
-Every user can now call xp\_delphiecho from every database by prefixing
-xp\_delphiecho with \'master..\'. For example to call xp\_delphiecho
-from the pubs database you say:
+Теперь каждый пользователь может вызвать xp\_delphiecho из любой базы данных, добавив к xp\_delphiecho префикс \'master..\'.
+Например, чтобы вызвать xp\_delphiecho из базы данных пабов, вы говорите:
 
        exec master..xp_delphiecho @paramin, @paramout output
 
-Unloading extended stored procedures
+**Выгрузка расширенных хранимых процедур**
 
-SQL Server loads an extended stored procedure DLL as soon as a call is
-made to one of the DLL\'s functions. The DLL remains loaded until the
-server is shut down or until the system administrator uses the DBCC
-command to unload it. For example:
+SQL Server загружает расширенную хранимую процедуру DLL, как только выполняется вызов одной из функций DLL.
+DLL остается загруженной до тех пор, пока сервер не будет выключен или пока системный администратор не использует команду DBCC для ее выгрузки.
+Например:
 
-DBCC xpdelphi(FREE)
+    DBCC xpdelphi(FREE)
 
-This command unloads xpdelphi.dll, allowing the system administrator to
-copy in a newer version of this file without shutting down the server.
-You probably will need this command quite a lot to debug your xp\'s!
-
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
+Эта команда выгружает xpdelphi.dll, позволяя системному администратору скопировать более новую версию этого файла без выключения сервера.
+Вам, вероятно, понадобится эта команда довольно часто для отладки вашего XP!

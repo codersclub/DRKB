@@ -8,10 +8,6 @@ Date: 01.01.2007
 Получить список индексов таблицы
 ================================
 
-::: {.date}
-01.01.2007
-:::
-
     SELECT i.name AS index_name
     FROM sysobjects o 
     INNER JOIN sysindexes i ON o.id = i.id
@@ -19,5 +15,3 @@ Date: 01.01.2007
           i.indid < 255 AND INDEXPROPERTY(i.id, i.name, 'isStatistics') = 0  AND 
           o.name = @TableName
     ORDER BY i.indid
-
-Автор: Vit

@@ -8,10 +8,6 @@ Date: 01.01.2007
 Транзакции и откат при ошибках
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
     Begin Tran
      
       Declare @ErrorCode  
@@ -23,5 +19,3 @@ Date: 01.01.2007
       Set @ErrorCode=@@Error
      
     If @ErrorCode <> 0 Rollback Else Commit
-
-Автор: Vit

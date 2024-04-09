@@ -2,15 +2,12 @@
 Title: Вернуть строку в DOS-кодировке
 Author: Sh@dow
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Вернуть строку в DOS-кодировке
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     -- Возвращает строку в DOS кодировке 
     -- dbo.WIN_DOS_STRING(expression)
@@ -45,6 +42,3 @@ Date: 01.01.2007
         RETURN @ds
     END 
 
-Автор: Sh@dow
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

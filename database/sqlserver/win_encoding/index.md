@@ -2,17 +2,14 @@
 Title: Строка в WIN-кодировке
 Author: Sh@dow
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Строка в WIN-кодировке
 ======================
 
-::: {.date}
-01.01.2007
-:::
-
-     -- Возвращает строку в WIN кодировке, на базе WIN_DOS_String()
+    -- Возвращает строку в WIN кодировке, на базе WIN_DOS_String()
     -- dbo.DOS_WIN_STRING(expression)
     --    expression - строка в DOS кодировке
     CREATE FUNCTION dbo.DOS_WIN_STRING
@@ -22,10 +19,10 @@ Date: 01.01.2007
     RETURNS VARCHAR(8000)
     AS  
     BEGIN
-        DECLARE    @ss        int,        -- счетчик
-                @ws        varchar(8000),    -- WIN строка
-                @ls        int,        -- длина обр. строки
-                @os        int        -- код 1-го обраб-го символа
+        DECLARE @ss        int,           -- счетчик
+                @ws        varchar(8000), -- WIN строка
+                @ls        int,           -- длина обр. строки
+                @os        int            -- код 1-го обраб-го символа
         SET @ws=''
         SET @ls=LEN(@ds)
         SET @ss=0
@@ -46,6 +43,3 @@ Date: 01.01.2007
         RETURN @ws
     END 
 
-Автор: Sh@dow
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

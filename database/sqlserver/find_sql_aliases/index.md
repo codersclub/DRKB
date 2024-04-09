@@ -1,15 +1,12 @@
 ---
 Title: Как найти все Alias, указывающие на MS SQL Server?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как найти все Alias, указывающие на MS SQL Server?
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
     GetAliases(ComboBox1.Items)
      
@@ -31,4 +28,3 @@ Date: 01.01.2007
       end
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

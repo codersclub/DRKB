@@ -1,62 +1,45 @@
 ---
-Title: Extended Stored Procedures with Delphi - Using the ODS (Open Data Services) API from Delphi
+Title: Расширенные хранимые процедуры в Delphi — использование API ODS (Open Data Services) из Delphi
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
-Extended Stored Procedures with Delphi - Using the ODS (Open Data Services) API from Delphi
+Расширенные хранимые процедуры в Delphi — использование API ODS (Open Data Services) из Delphi
 ============================================================================================
 
-::: {.date}
-01.01.2007
-:::
+> Вы когда-нибудь пытались создать хранимую процедуру на SQL-сервере?
+> 
+> Что, если функциональность, которую вы хотите реализовать, находится не внутри SQL,
+> а в вашем проекте Delphi?
+> 
+> Microsoft предоставляет ODS (Open Data Services), который представляет собой API,
+> который поможет вам создать такую функциональность путем добавления на ваш SQL-сервер DLL,
+> содержащих расширенные хранимые процедуры.
+> 
+> Вот как это делать?
 
-Have you ever tried to create a stored procedure on an SQL Server?
+**Ответ:**
 
-What if the functionality you wish to incorporate is not inside the SQL
-but in your Delphi project? Microsoft provides ODS (Open Data Services) 
-which is an API to help you create such  functionality by adding DLL\'s
-to your SQL Server that contain Extended Stored Procedures.
+В качестве особого бонуса эта статья также представляет собой простое решение
+для шифрования ваших данных внутри SQL Server с помощью расширенных хранимых процедур.
 
-This is how you do it....
+Что нам нужно:
 
-Answer:
+1. opends60.dll (из полной установки с помощью инструментов разработчика MSSQL или MSDE)
+2. MsOdsApi.pas (заголовочный файл для использования opends60.dll) (включен в конец статьи)
+3. Локальный SQL-сервер для тестирования (подойдет MSDE).
 
-As a special bonus, this article also is a simple solution to encrypting
-your data inside SQL Server using Extended Stored Procedures.
-
-What do we need?
-
-  ---- ---------------------------------------------------------------------------
-  1.        opends60.dll (from a full installation with developer tools of MSSQL or MSDE)
-  ---- ---------------------------------------------------------------------------
-
-  ---- ------------------------------------------------------------------------
-  2.        MsOdsApi.pas (Header file to use opends60.dll) (included at the end of the article)
-  ---- ------------------------------------------------------------------------
-
-  ---- ----------------------------------------------------------------
-  3.        A Local SQL Server for testing (MSDE will do fine).
-  ---- ----------------------------------------------------------------
-
-NOTE: For cryptography I used the components found under MIT license
-here:
+**ПРИМЕЧАНИЕ:**
+Для криптографии я использовал компоненты, найденные по лицензии MIT здесь:
 
 https://www.cityinthesky.co.uk/cryptography.html
 
-Steps:
+Шаги:
 
-  ---- ------------------------------
-  1.        Create a new DLL.
-  ---- ------------------------------
-
-  ---- ------------------------------------------------------------------------
-  2.        Create a unit and in the uses clause add the MsOdsApi unit.
-  ---- ------------------------------------------------------------------------
-
-  ---- ------------------------------------------------------------------------
-  3.        In the Library file just under ther Uses clause add Exports and the names of the functions to export:
-  ---- ------------------------------------------------------------------------
+1. Создайте новую DLL.
+2. Создайте модуль и в разделе «Uses» добавьте модуль MsOdsApi.
+3. В файле Library сразу под пунктом «Uses» добавьте «Exports» и имена экспортируемых функций:
 
         library MyEncryptDll;
          
@@ -72,15 +55,16 @@ Steps:
         begin
         end.
 
-4. In the Unit file just under the Uses clause add your function reference:
+4. В файле Unit сразу под разделом Uses добавьте ссылку на свою функцию:
 
         function xp_DoEncrypt(pSrvProc: SRV_PROC): Integer; cdecl;
         function xp_DoDecrypt(pSrvProc: SRV_PROC): Integer; cdecl;
 
-NOTES: cdecl is required for ODS to be able to call your functions.  
-SRV\_PROC is a handle to the stored procedure information.
+   **ПРИМЕЧАНИЯ:**
+   cdecl необходим для того, чтобы ODS мог вызывать ваши функции.
+   SRV\_PROC — это дескриптор информации хранимой процедуры.
 
-5. The code of the DoEncrypt is this: (DoDecrypt is exactly the same just with a DecryptString(s) call.
+5. Код DoEncrypt следующий: (DoDecrypt точно такой же, только с вызовом DecryptString(s).
 
         function xp_Encrypt(pSrvProc: SRV_PROC): Integer;cdecl;
         var
@@ -147,19 +131,19 @@ SRV\_PROC is a handle to the stored procedure information.
           result := 1;                                        // Report success (1 = SUCCEED, 0 = FAIL)
         end;
 
-NOTE: There are a number of things you can do with ODS. This is just an
-example for Delphi. You can read the ODS help in MSDN and do even more.
+   **ПРИМЕЧАНИЕ:**
+   С ODS можно делать множество вещей. Это всего лишь
+   пример для Делфи. Вы можете прочитать справку ODS в MSDN и сделать еще больше.
 
-6. Testing and Debugging:
+6. Тестирование и отладка:
 
-A) Install SQL 7.0/2000 on your workstation (or install Delphi on
-workstation where SQL Server is installed).
+   A) Установите SQL 7.0/2000 на свою рабочую станцию (или установите Delphi на рабочую станцию,
+      где установлен SQL Server).
 
-B) Register your Xp on SQL Server.
+   B) Зарегистрируйте свой XP на SQL Server.
 
-    NOTES:
-
-    Register Xp like this:
+  **ПРИМЕЧАНИЯ:**
+  Зарегистрируйте Xp следующим образом:
 
         use master
         go
@@ -168,7 +152,7 @@ B) Register your Xp on SQL Server.
         sp_addextendedproc 'xp_DoDecrypt', 'MyEncryptDll.dll'
         go
 
-    Unregister Xp like this:
+  Отмените регистрацию Xp следующим образом:
 
         use master
         go
@@ -177,43 +161,40 @@ B) Register your Xp on SQL Server.
         sp_dropextendedproc 'xp_DoDecrypt'
         go
 
-    Unlock DLL in case it still being used by SQL like this:
+  Разблокируйте DLL, если она все еще используется SQL следующим образом:
 
         use master
         go
         DBCC MyEncryptDll(FREE)
         go
 
-C) In Delphi, select from main menu Run -\> Run Parameters.
+   C) В Delphi выберите в главном меню «Выполнить» -> «Параметры запуска».
 
-In the Host Application field, specify a pathname to your SQL Server
-executable (sqlservr.exe). For SQL 7.0, this is enough. For SQL 2000, in
-the Parameters field specify a command line parameter
-"-sYOUR\_SQL\_NAME", where YOUR\_SQL\_NAME is the name assigned to
-your SQL Server during the installation.
+   В поле «Хост-приложение» укажите путь к исполняемому файлу SQL Server (sqlservr.exe).
+   Для SQL 7.0 этого достаточно.
+   Для SQL 2000 в поле «Параметры» укажите параметр командной строки «-sВАШ\_SQL\_ИМЯ», где ВАШ\_SQL\_ИМЯ — это имя, присвоенное вашему SQL Server во время установки.
 
-Set breakpoints in your Delphi code and run project. SQL Server will
-start as a console application.
+   Установите точки останова в коде Delphi и запустите проект.
+   SQL Server запустится как консольное приложение.
 
-D) You can execute your Xp from Query Analyzer and trace code in Delphi.
 
-    NOTE:
+   D) Вы можете выполнить свой Xp из анализатора запросов и отследить код в Delphi.
 
-    Executing an extended stored procedure is done like this:
+   **ПРИМЕЧАНИЕ:**
+   Выполнение расширенной хранимой процедуры выполняется следующим образом:
 
         exec master..xp_DoEncrypt 'ValueToEncrypt','KeyValue'
         go
 
-E) To exit application, press Ctrl+Pause in the SQL Server console
-window.
+   E) Чтобы выйти из приложения, нажмите Ctrl+Pause в окне консоли SQL Server.
 
 -------------------------------------------------------
 
-End of article. Bellow follows a unit required for ODS.
+Конец статьи. Ниже следует блок, необходимый для ОРВ.
 
 -------------------------------------------------------
 
-MsOdsApi.pas (Copy from line below)
+MsOdsApi.pas (Копировать из строки ниже)
 
     unit MsOdsApi;
      
@@ -808,4 +789,3 @@ MsOdsApi.pas (Copy from line below)
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

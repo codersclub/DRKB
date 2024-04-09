@@ -1,15 +1,12 @@
 ---
 Title: Перевод ODS API MS SQL 2000 на Delphi (написание extended stored procedures)
-Date: 01.01.2007
+Author: wicked, wilk@ua.fm
+Date: 15.11.2002
 ---
 
 
 Перевод ODS API MS SQL 2000 на Delphi (написание extended stored procedures)
 ============================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> перевод ODS API mssql2000 на Delphi (написание extended stored procedures)

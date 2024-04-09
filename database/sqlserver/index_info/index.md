@@ -8,16 +8,14 @@ Date: 01.01.2007
 Посмотреть информацию об индексах
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Выполнить:
 
     dbcc showcontig(MyTable) with all_indexes
 
 Результат:
 
-    DBCC SHOWCONTIG scanning \'MyTable\' table...
-    Table: \'MyTable\' (310448330); index ID: 1, database ID: 7
+    DBCC SHOWCONTIG scanning 'MyTable' table...
+    Table: 'MyTable' (310448330); index ID: 1, database ID: 7
     TABLE level scan performed.
     - Pages Scanned................................: 22323
     - Extents Scanned..............................: 2810
@@ -37,11 +35,9 @@ Date: 01.01.2007
 
 Один из самых информативных показателей здесь:
 
-- Scan Density [Best Count:Actual Count].......: 98.59% [2791:2831]
+    Scan Density [Best Count:Actual Count].......: 98.59% [2791:2831]
 
 Чем выше плотность, чем она ближе к 100% тем быстрее будет работать
 индекс при поиске. Если плотность маленькая возможно следует
 переиндексировать таблицу или пересоздать индекс.(ВИСС IndexDefrag, DBCC
 ReIndex)
-
-Автор: Vit

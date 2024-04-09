@@ -8,27 +8,27 @@ Date: 01.01.2007
 Как запустить DTS из StoredProcedure
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1.
 
     use master
     exec xp_cmdshell "DTSRun /S servername /U username /P password /N packagename"
 
-Автор: Akim
+Author: Akim
 
-Взято из <https://forum.sources.ru>
+Source: <https://forum.sources.ru>
 
-1.
+--------------------------------------------------
+Вариант 2.
 
-    --©Drkb v.3(2007): www.drkb.ru
+Author: Vit
 
     Exec master..xp_cmdshell '"C:\Program Files\Microsoft SQL Server\80\Tools\Binn\dtsrun.exe" /S'+@ServerName+' /U'+@SQLUserName+' /P'+@SQLPassword+' /N'+@DTSPackageName
 
-2.
+--------------------------------------------------
+Вариант 3.
 
-    --©Drkb v.3(2007): www.drkb.ru
-     
+Author: Vit
+
       Declare @retval int,
               @package int,
               @ServerName char(20),
@@ -41,5 +41,3 @@ Date: 01.01.2007
       EXEC @retval = sp_OACreate 'DTS.Package', @package OUTPUT
       EXEC @retval = sp_OAMethod @package,@LoadString,NULL
       EXEC @retval = sp_OAMethod @package, 'Execute'
-
-Автор: Vit

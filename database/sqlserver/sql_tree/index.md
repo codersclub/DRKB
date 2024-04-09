@@ -1,15 +1,12 @@
 ---
 Title: Дерево на базе MS SQL
-Date: 01.01.2007
+Author: Пенов Сергей, spenov@narod.ru
+Date: 06.09.2002
 ---
 
 
 Дерево на базе MS SQL
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Дерево на базе MsSQL 7/2000 и DELPHI6 (BDE,ADO)

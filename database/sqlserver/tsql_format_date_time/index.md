@@ -8,10 +8,6 @@ Date: 01.01.2007
 Аналог функции FormatDateTime на TSQL
 =====================================
 
-::: {.date}
-01.01.2007
-:::
-
     CREATE FUNCTION dbo.FormatDateTime(@Format varchar(1000), @Time datetime)
     RETURNS varchar(1000) AS
      
@@ -282,48 +278,48 @@ Date: 01.01.2007
 
 Поддерживает любые маски стандартных форматов, писал по спецификации:
 
-Цитата
+Цитата:
 
-d Displays the day as a number without a leading zero (1-31).
-
-dd Displays the day as a number with a leading zero (01-31).
-
-ddd Displays the day as an abbreviation (Sun-Sat)
-
-dddd Displays the day as a full name (Sunday-Saturday)
-
-m Displays the month as a number without a leading zero (1-12). If the m
-specifier immediately follows an h or hh specifier, the minute rather
-than the month is displayed.
-
-mm Displays the month as a number with a leading zero (01-12). If the mm
-specifier immediately follows an h or hh specifier, the minute rather
-than the month is displayed.
-
-mmm Displays the month as an abbreviation (Jan-Dec)
-
-mmmm Displays the month as a full name (January-December)
-
-yy Displays the year as a two-digit number (00-99).
-
-yyyy Displays the year as a four-digit number (0000-9999).
-
-h Displays the hour without a leading zero (0-23).
-
-hh Displays the hour with a leading zero (00-23).
-
-n Displays the minute without a leading zero (0-59).
-
-nn Displays the minute with a leading zero (00-59).
-
-s Displays the second without a leading zero (0-59).
-
-ss Displays the second with a leading zero (00-59).
-
-am/pm Uses the 12-hour clock for the preceding h or hh specifier, and
-displays \'am\' for any hour before noon, and \'pm\' for any hour after
-noon. The am/pm specifier can use lower, upper, or mixed case, and the
-result is displayed accordingly.
+> d Displays the day as a number without a leading zero (1-31).
+> 
+> dd Displays the day as a number with a leading zero (01-31).
+> 
+> ddd Displays the day as an abbreviation (Sun-Sat)
+> 
+> dddd Displays the day as a full name (Sunday-Saturday)
+> 
+> m Displays the month as a number without a leading zero (1-12). If the m
+> specifier immediately follows an h or hh specifier, the minute rather
+> than the month is displayed.
+> 
+> mm Displays the month as a number with a leading zero (01-12). If the mm
+> specifier immediately follows an h or hh specifier, the minute rather
+> than the month is displayed.
+> 
+> mmm Displays the month as an abbreviation (Jan-Dec)
+> 
+> mmmm Displays the month as a full name (January-December)
+> 
+> yy Displays the year as a two-digit number (00-99).
+> 
+> yyyy Displays the year as a four-digit number (0000-9999).
+> 
+> h Displays the hour without a leading zero (0-23).
+> 
+> hh Displays the hour with a leading zero (00-23).
+> 
+> n Displays the minute without a leading zero (0-59).
+> 
+> nn Displays the minute with a leading zero (00-59).
+> 
+> s Displays the second without a leading zero (0-59).
+> 
+> ss Displays the second with a leading zero (00-59).
+> 
+> am/pm Uses the 12-hour clock for the preceding h or hh specifier, and
+> displays \'am\' for any hour before noon, and \'pm\' for any hour after
+> noon. The am/pm specifier can use lower, upper, or mixed case, and the
+> result is displayed accordingly.
 
 Пример использования:
 
@@ -337,11 +333,9 @@ result is displayed accordingly.
 
 Результат будет типа:
 
-27/07/2006
-
-27 Jul 06
-
-July\'27 2006 14:21
+    27/07/2006
+    27 Jul 06
+    July'27 2006 14:21
 
 Любой неописанный мусор в маске останется где он был, функция никаких
 ошибок не генерит, интерпретируются только описанные форматы:
@@ -354,8 +348,6 @@ July\'27 2006 14:21
 
 Результат будет типа:
 
-Сегодня у нас 2006-07-27 (Thursday), чёрт бы его побрал!
+    Сегодня у нас 2006-07-27 (Thursday), чёрт бы его побрал!
 
 Несмотря на громоздкость функция работает достаточно быстро.
-
-Автор: Vit

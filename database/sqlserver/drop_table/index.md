@@ -1,38 +1,37 @@
 ---
 Title: Как удалить таблицу?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как удалить таблицу?
 ====================
 
-::: {.date}
-01.01.2007
-:::
+Я много работал с клиент-серверным Delphi и MS SQL Server в качестве внутренней базы данных.
+Операционная модель, которую я использую для своего клиента/сервера, заключается в том,
+что клиентское приложение действует только как локальный интерфейс,
+и что все запросы и вычисления - даже временные файлы - выполняются или создаются на сервере.
+Это создает пару проблем, поскольку очистка мусора не так проста,
+как при использовании локальных таблиц в качестве временных файлов.
 
-I\'ve been doing extensive work with Client/Server Delphi and MS SQL
-Server as my back-end database. The operational model that I use for my
-Client/Server is that the client application acts only as local
-interface, and that all queries and calculations - even temporary files
-- are performed or created on the server. Now this presents a couple of
-problems in that garbage cleanup isn\'t quite as easy as it is when
-using local tables as temporary files.
+Например, многие из моих программ создают временные файлы,
+на которые я либо ссылаюсь позже в программе,
+либо использую в качестве временного хранилища для внешних объединений.
+Как только я закончу работу с ними, мне нужно будет их удалить.
+С локальными таблицами это проще простого.
+Просто получите список таблиц и удалите их с помощью небольшого количества кода,
+использующего некоторые вызовы Windows API.
 
-For instance, a lot of my programs create temporary files that I either
-reference later in the program or that I use as temporary storage for
-outer joins. Once I\'m done with them, I need to delete them. With local
-tables, it\'s a snap. Just get a list of the tables, and with a little
-bit of code that uses some Windows API calls, delete them. Not so easy
-with SQL Server tables. The reason why is that you have to go through
-the BDE to accomplish the task - something that\'s not necessarily very
-intuitive. Luckily, however, it doesn\'t involve low-level BDE API
-calls.
+Но с таблицами SQL Server не все так просто.
+Причина в том, что для выполнения задачи вам придется пройти через BDE,
+а это не обязательно очень интуитивно понятно.
+К счастью, однако, это не требует низкоуровневых вызовов API BDE.
 
-Below is a procedure listing that drops tables from any SQL Server
-database. After the listing I\'ll discuss particulars...
+Ниже приведен список процедур, которые удаляют таблицы из любой базы данных SQL Server.
+После листинга обсудим детали...
 
-Parameter Descriptions
+Описание параметров:
 
     //var Ses : TSession;         //A valid, open session
     //DBName : String;            //Name of the SQL Server DB
@@ -41,7 +40,7 @@ Parameter Descriptions
                                   //procedure
      
 
-TStatusMsg is a procedural type used as a callback procedure
+TStatusMsg — процедурный тип, используемый в качестве процедуры обратного вызова.
 
     type
       TStatusMsg = procedure(Msg: string);
@@ -85,78 +84,76 @@ TStatusMsg is a procedural type used as a callback procedure
       end; { try/finally }
     end;
 
-The pseudo-code for this is pretty easy.
+Псевдокод для этого довольно прост.
 
-1.        Get a listing of all tables in the SQL Server
-database passed to the procedure.
+1. Получите список всех таблиц в базе данных SQL Server, переданной в процедуру.
 
-2.        Get a table name from the table name array.
+2. Получите имя таблицы из массива имен таблиц.
 
-3.        If a passed table name happens to be in the list of
-table retrieved from the database, DROP it.
+3. Если переданное имя таблицы окажется в списке таблиц, полученных из базы данных, УДАЛИТЬ его.
 
-4.        Repeat 2. and 3. until all table names have been
-exhausted.
+4. Повторяйте шаги 2 и 3, пока не будут исчерпаны все имена таблиц.
 
-The reason why I do the comparison in step 3 is because if you issue a
-DROP query against a non-existent table, SQL Server will issue an
-exception. This methodology avoids that issue entirely.
+Причина, по которой я провожу сравнение на шаге 3, заключается в том, что если вы выдадите
+DROP к несуществующей таблице, SQL Server выдаст
+исключение. Эта методология полностью позволяет избежать этой проблемы.
 
-Below is a detailed description of the parameters.
+Ниже приведено подробное описание параметров.
 
-Ses        var TSession        This is a session instance variable that
-you pass by reference into the procedure. Note: It MUST be instantiated
-prior to use. The procedure does not create an instance. It assumes it
-already exists. This is especially necessary when using this procedure
-within a thread. But if you\'re not creating a multi-threaded
-application, then you can use the default Session variable.
+Ses var TSession
+: это переменная экземпляра сеанса, которую вы передаете в процедуру по ссылке.
+  Примечание.  
+  Перед использованием НЕОБХОДИМО создать экземпляр.
+  Процедура не создает экземпляр. Предполагается, что он уже существует.
+  Это особенно необходимо при использовании этой процедуры внутри потока.
+  Но если вы не создаете многопоточное приложение,
+  вы можете использовать переменную сеанса по умолчанию.
 
-DBName       String        Name of the MS SQL Server client database
+DBName       String
+: Имя клиентской базы данных MS SQL Server.
 
-ArTables        Array of String        This is an open array of string
-that you can pass into the procedure. This means that you can pass any
-size array and the procedure will handle it. For instance, in the
-Primary table maker program, I define an array as follows: 
+ArTables        Array of String
+: это открытый массив строк
+что вы можете перейти в процедуру. Это означает, что вы можете пройти любой
+размер массива, и процедура обработает его. Например, в
+В основной программе создания таблиц я определяю массив следующим образом:
 
-    arPat[0] := 'dbo.Temp0';
-    arPat[1] := 'dbo.Temp1';
-    arPat[2] := 'dbo.Temp2';
-    arPat[3] := 'dbo.Temp3';
-    arPat[4] := 'dbo.Temp4';
-    arPat[5] := 'dbo.Temp5';
-    arPat[6] := 'dbo.PatList';
-    arPat[7] := 'dbo.PatientList';
-    arPat[8] := 'dbo.EpiList';
-    arPat[9] := 'dbo.' + FDisease + 'CrossTbl_' + FQtrYr;
-    arPat[10] := 'dbo.' + FDisease + 'Primary_' + FQtrYr;
+        arPat[0] := 'dbo.Temp0';
+        arPat[1] := 'dbo.Temp1';
+        arPat[2] := 'dbo.Temp2';
+        arPat[3] := 'dbo.Temp3';
+        arPat[4] := 'dbo.Temp4';
+        arPat[5] := 'dbo.Temp5';
+        arPat[6] := 'dbo.PatList';
+        arPat[7] := 'dbo.PatientList';
+        arPat[8] := 'dbo.EpiList';
+        arPat[9] := 'dbo.' + FDisease + 'CrossTbl_' + FQtrYr;
+        arPat[10] := 'dbo.' + FDisease + 'Primary_' + FQtrYr;
 
-and pass it into the procedure.
+    и передать его в процедуру.
 
-StatMsg        TStatusMsg        This is a procedural type of :
-procedure(Msg : String). You can\'t use a class method for this
-procedure; instead, you declare a regular procedure that references a
-regular procedure. For example, I declare an interface-level procedure
-called StatMsg that references a thread instance variable and a method
-as follows: 
+StatMsg        TStatusMsg
+: Это процедурный тип : `procedure(Msg : String)`.
+Вы не можете использовать метод класса для этой процедуры;
+вместо этого вы объявляете обычную процедуру, которая ссылается на обычную процедуру.
+Например, я объявляю процедуру уровня интерфейса под названием StatMsg,
+которая ссылается на переменную экземпляра потока и метод следующим образом:
 
-    procedure StatMsg(Msg: string); 
-    begin   
-    thr.FStatMsg := Msg;   
-    thr.Synchronize(thr.UpdateStatus); 
-    end;  
+        procedure StatMsg(Msg: string); 
+        begin
+          thr.FStatMsg := Msg;
+          thr.Synchronize(thr.UpdateStatus); 
+        end;
 
-The trick here is that "thr" is the instance variable used to
-instantiate my thread class. The instance variable resides in the main
-form of my application. This means that it too must be declared as an
-interface variable.
+Хитрость здесь в том, что «thr» — это переменная экземпляра, используемая для создания экземпляра моего класса потока.
+Переменная экземпляра находится в основной форме моего приложения.
+Это означает, что его тоже необходимо объявить как переменную интерфейса.
 
-I\'m usually averse to using global variables and procedures. It\'s
-against structured programming conventions. However, what this procedure
-buys me is the ability to place it in a centralized library and utilize
-it in all my programs.
+Обычно я не склонен использовать глобальные переменные и процедуры.
+Это противоречит соглашениям структурного программирования.
+Однако эта процедура дает мне возможность разместить ее в централизованной библиотеке и использовать во всех моих программах.
 
-Before you use this, please make sure you review the table above. You
-need to declare a type of TStatusMsg prior to declaring the procedure.
-If you don\'t, you\'ll get a compilation error.
+Прежде чем использовать это, пожалуйста, обязательно ознакомьтесь с таблицей выше.
+Вам необходимо объявить тип TStatusMsg до объявления процедуры.
+Если вы этого не сделаете, вы получите ошибку компиляции.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

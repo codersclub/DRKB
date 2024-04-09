@@ -1,36 +1,30 @@
 ---
 Title: Как узнать версию сервера?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как узнать версию сервера?
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Эта функция получает подключенную версию MS SQL Server.
+Она возвращает информацию о версии в трех параметрах OUT.
 
-This function gets the connected MS SQL Server version. It returns the
-version info in 3 OUT parameters.
+    VerNum      : double   eg. 7.00623
+    VerStrShort : string   eg. '7.00.623'
+    VerStrLong  : string   eg. 'Microsoft SQL Server  7.00 - 7.00.623 (Intel X86)
+                                Nov 27 1998 22:20:07
+                                Copyright (c) 1988-1998 Microsoft Corporation
+                                Enterprise Edition on
+                                Windows NT 5.0 (Build 2195: Service Pack 1)'
 
-       VerNum                        : double        eg. 7.00623
+Я тестировал его с MSSQL 7 и MSSQL 2000.
+Я предполагаю, что это должно сработать и для остальных.
+Буду признателен за любые отзывы и исправления для разных версий.
 
-       VerStrShort        : string                eg. \'7.00.623\'
-
-       VerStrLong        : string                eg. \'Microsoft SQL
-Server  7.00 - 7.00.623 (Intel X86)        Nov 27 1998
-22:20:07                                                            
-Copyright (c) 1988-1998 Microsoft Corporation        Enterprise Edition
-on                                                                  
-Windows NT 5.0 (Build 2195: Service Pack 1)\'
-
-I have tested it with MSSQL 7 and MSSQL 2000. I assume it should work
-for the others. Any feedback and fixes for different versions would be
-appreciated.
-
-The TQuery parameter that it recieves is a TQuery component that is
-connected to an open database connection.
+Полученный им параметр TQuery представляет собой компонент TQuery,
+подключенный к открытому соединению с базой данных.
 
     procedure GetSqlVersion(Query: TQuery;
       out VerNum: double;
@@ -77,4 +71,3 @@ connected to an open database connection.
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
