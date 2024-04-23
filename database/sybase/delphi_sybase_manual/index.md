@@ -7,23 +7,15 @@ Date: 01.01.2007
 Delphi и SyBase (официальное руководство)
 =========================================
 
-::: {.date}
-01.01.2007
-:::
+Borland Delphi: Using SQL Anywhere Studio
 
-Borland Delphi         Using                 SQL Anywhere Studio
-
-Sybase, Inc.
-
-415 Phillip St.
-
-Waterloo, ON
-
-Canada
-
+Sybase, Inc.  
+415 Phillip St.  
+Waterloo, ON  
+Canada  
 www.sybase.com
 
-OVERVIEW
+## OVERVIEW
 
 Borland Delphi is a rapid application development tool for Windows.  Due
 to the increasing popularity of developing with Delphi and SQL Anywhere
@@ -35,7 +27,7 @@ products used to discover the issues and solutions discussed, and their
 version numbers.  Appendix D also lists the web pages of the interfaces
 discussed in this document.
 
-THE DELPHI ENVIRONMENT
+## THE DELPHI ENVIRONMENT
 
 By default, Delphi uses the Borland Database Engine (BDE), a generic
 Open DataBase Connectivity (ODBC) interface.  For greater programming
@@ -57,13 +49,10 @@ Titan and Creating a Titan Alias on page 4.  For more information
 regarding setting up NativeDB to be used with Delphi, please refer to
 Installing NativeDB for SQL Anywhere on page 6.
 
- 
 
-SETTING UP ASA FOR DELPHI COMPATIBILITY
+## SETTING UP ASA FOR DELPHI COMPATIBILITY
 
- 
-
-Creating an ODBC Data Source
+**Creating an ODBC Data Source**
 
 Once you have created an Adaptive Server Anywhere (ASA) database it is
 easy to set it up to be compatible with Delphi.  If you have not created
@@ -72,55 +61,43 @@ database supplied to you, please refer to Appendix B for instructions.
 Since both the BDE and ODBCExpress make use of ODBC, you will need to
 set up an ODBC data source for your database, following these steps:
 
+1. Invoke 'Sybase Central 4.0' (located in Start а Programs а Sybase SQL Anywhere 7 а Sybase Central 4.0, by default).  Double click the 'Utilities' folder located on the left-hand side of Sybase Central, under the title Adaptive Server Anywhere 7.  A list of tools appears on the right hand side of the screen
+2. Double click 'ODBC Administrator'
+
+   (Another way to get into the 'ODBC Administrator' is to click Start а
+   Programs а Sybase SQL Anywhere 7а Adaptive Server Anywhere 7 а ODBC
+   Administrator.)
+
+3. If you want a source that is only visible to your login on that machine, make sure you are on the 'User DSN' tab and click on 'Add' (Figure 2).  If you want a source that is visible to all users on this machine, including NT Services, make sure you are on the 'System DSN' tab and click 'Add'
  
+   :::{.center}
+   Figure 2  
+   ![clip0134](clip0134.png)
+   :::
 
-1.   Invoke 'Sybase Central 4.0' (located in Start а Programs а Sybase SQL Anywhere 7 а Sybase Central 4.0, by default).  Double click the 'Utilities' folder located on the left-hand side of Sybase Central, under the title Adaptive Server Anywhere 7.  A list of tools appears on the right hand side of the screen
+4. Select 'Adaptive Server Anywhere 7.0' and click 'Finish'.  This will bring up another window with several tabs (Figure 3)
 
-2.   Double click 'ODBC Administrator'
+   :::{.center}
+   Figure 3  
+   ![clip0136](clip0136.png)
+   :::
 
- 
+5. The following information must be provided to create an ODBC data source:
 
-(Another way to get into the 'ODBC Administrator' is to click Start а
-Programs а Sybase SQL Anywhere 7а Adaptive Server Anywhere 7 а ODBC
-Administrator.)
+    i.   Under the 'ODBC' tab, type in a 'Data Source Name' that pertains to your database.  This name will identify the ODBC data source that will be worked with
 
- 
+    ii.   Under the 'Login' tab, click the radio button, 'Supply user ID and password' and type in a user name and password in the appropriate text boxes
 
-3.   If you want a source that is only visible to your login on that machine, make sure you are on the 'User DSN' tab and click on 'Add' (Figure 2).  If you want a source that is visible to all users on this machine, including NT Services, make sure you are on the 'System DSN' tab and click 'Add'
+    iii.   Under the 'Database' tab, it is important to supply a path to where your database is saved in the 'Database File' text box.  Type the path or click on the 'Browse' button, and go to the directory where the database is located and click 'OK'.
 
- 
-:::{.center}
-Figure 2  
-![clip0134](clip0134.png)
-:::
+    iv.   Click the check boxes, 'Automatically start the database if it isn't running' and 'Automatically shut down database after last disconnect'
 
-4.   Select 'Adaptive Server Anywhere 7.0' and click 'Finish'.  This will bring up another window with several tabs (Figure 3)
+    v.   To make certain that everything is set properly, select the 'ODBC' tab and click on the button 'Test Connection'.  If everything is correct a window entitled 'Note' will pop up and let you know that your connection was successful
 
- 
-:::{.center}
-Figure 3  
-![clip0136](clip0136.png)
-:::
- 
+    vi.   Click 'OK' and you should see the Data Source Name you created in the ODBC Administrator window under the 'User DSN' tab or the 'System DSN' tab
 
-5.   The following information must be provided to create an ODBC data
-source:
+    vii.   Click 'OK' again.  You have now created an ODBC data source for your database that is ready to be accessed in Delphi
 
-i.   Under the 'ODBC' tab, type in a 'Data Source Name' that pertains to your database.  This name will identify the ODBC data source that will be worked with
-
-ii.   Under the 'Login' tab, click the radio button, 'Supply user ID and password' and type in a user name and password in the appropriate text boxes
-
-iii.   Under the 'Database' tab, it is important to supply a path to where your database is saved in the 'Database File' text box.  Type the path or click on the 'Browse' button, and go to the directory where the database is located and click 'OK'.
-
-iv.   Click the check boxes, 'Automatically start the database if it isn't running' and 'Automatically shut down database after last disconnect'
-
-v.   To make certain that everything is set properly, select the 'ODBC' tab and click on the button 'Test Connection'.  If everything is correct a window entitled 'Note' will pop up and let you know that your connection was successful
-
-vi.   Click 'OK' and you should see the Data Source Name you created in the ODBC Administrator window under the 'User DSN' tab or the 'System DSN' tab
-
-vii.   Click 'OK' again.  You have now created an ODBC data source for your database that is ready to be accessed in Delphi
-
- 
 
 Titan SQL Anywhere for Delphi 3, version 3.02p, is designed for use with
 SQL Anywhere versions 5.x.  If you have a database that was created in
@@ -150,9 +127,8 @@ open the SQL Anywhere documentation, (located in Start а Programs а
 Sybase SQL Anywhere 7), do a search for 'compatibility' and double click
 'Using the compatibility library'.
 
- 
 
-Installing Titan and Creating a Titan Alias
+**Installing Titan and Creating a Titan Alias**
 
 To set up the Titan SQLAnywhere Developer interface you have to install
 a package in Delphi, following these steps.
@@ -166,98 +142,86 @@ a package in Delphi, following these steps.
 You will notice that another tab named Titan SQL Anywhere appears on the
 Delphi component bar.
 
- 
-
 To set up a new Titan alias in the registry, which must be done in order
 to use Titan SQL Anywhere with ASA 7.0, follow these steps:
 
-1.   Click 'Start' and select 'Run' from the menu
+1. Click 'Start' and select 'Run' from the menu
 
-2.   Type in 'regedit' and click 'OK'
+2. Type in 'regedit' and click 'OK'
 
-3.   Open to 'HKEY\_LOCAL\_MACHINE а SOFTWARE а Titan а SqlAnywhere а Aliases' in the 'Registry Editor' window (Figure 4)
+3. Open to 'HKEY\_LOCAL\_MACHINE а SOFTWARE а Titan а SqlAnywhere а Aliases' in the 'Registry Editor' window (Figure 4)
 
-4.   Right click 'Aliases' and select 'New' and then 'Key'
+4. Right click 'Aliases' and select 'New' and then 'Key'
 
+   :::{.center}
+   Figure 4  
+   ![clip0137](clip0137.png)
+   :::
  
 
- 
-:::{.center}
-Figure 4  
-![clip0137](clip0137.png)
-:::
- 
+5. A folder will appear and you can rename the Alias to better describe your database.  This folder will be associated with the database
 
-5.   A folder will appear and you can rename the Alias to better describe your database.  This folder will be associated with the database
+6. Right click the alias name you have just created and select 'New' and then 'String Value'
 
-6.   Right click the alias name you have just created and select 'New' and then 'String Value'
+7. Do the following:
 
-7.   Do the following:
+8. Type in 'Dynamic' and press 'Enter'
 
-8.   Type in 'Dynamic' and press 'Enter'
+9. Double click the name 'Dynamic' and a box will appear.  Type in 'Yes' in the edit box labled 'Value data'
 
-9.   Double click the name 'Dynamic' and a box will appear.  Type in 'Yes' in the edit box labled 'Value data'
+10. Repeat steps 6 and 7 for the following:
 
-10.   Repeat steps 6 and 7 for the following:
+11. 'DatabaseFile' (step 7, part i) and the directory where your database is stored, e.g. 'c:\\Program Files\\Sybase\\ SQL Anywhere 7\\asademo.db' (step 7, part ii)
 
-11.   'DatabaseFile' (step 7, part i) and the directory where your database is stored, e.g. 'c:\\Program Files\\Sybase\\ SQL Anywhere 7\\asademo.db' (step 7, part ii)
+12. 'DatabaseName' and the name of your database, e.g. 'asademo.db'
 
-12.   'DatabaseName' and the name of your database, e.g. 'asademo.db'
+13. 'EngineName' and the name of your engine (in most cases it is the same as the name of your database, e.g. 'asademo')
 
-13.   'EngineName' and the name of your engine (in most cases it is the same as the name of your database, e.g. 'asademo')
+14. 'Password' and 'whatever you use for your database password' (e.g. 'sql')
 
-14.   'Password' and 'whatever you use for your database password' (e.g. 'sql')
+15. 'User' and 'whatever you use for your database user id (e.g. 'dba')
 
-15.   'User' and 'whatever you use for your database user id (e.g. 'dba')
+16. 'StartCommand' and the location of the dbeng6 executable (e.g. 'c:\\Program Files\\Sybase\\SQL Anywhere 7\\win32\\dbeng7.exe')
 
-16.   'StartCommand' and the location of the dbeng6 executable (e.g. 'c:\\Program Files\\Sybase\\SQL Anywhere 7\\win32\\dbeng7.exe')
+17. 'AutoStop' and 'Yes'
 
-17.   'AutoStop' and 'Yes'
+18. Close the 'Registry Editor' window
 
-18.   Close the 'Registry Editor' window
 
- 
-
-Installing NativeDB for SQL Anywhere
+**Installing NativeDB for SQL Anywhere**
 
 NativeDB does not rely on registry settings, ODBC sources or BDE
 aliases, so after the following steps are complete, NativeDB is ready to
 be used with Delphi.
 
- 
 
 Similar to installing the Titan interface, you must install two packages
 in Delphi.  The order in which these packages are installed is
 important, so following these steps carefully.
 
-1.   In Delphi select 'Component' from the tool bar and click 'Install Packages'
+1. In Delphi select 'Component' from the tool bar and click 'Install Packages'
 
-2.   Click the 'Add' button and select the package 'NdbPack*.dpl' from the directory where you downloaded NativeDB\\NativeDB\\Delphi*, where '*' should be replaced by the version of Delphi being used
+2. Click the 'Add' button and select the package 'NdbPack\*.dpl' from the directory where you downloaded NativeDB\\NativeDB\\Delphi\*, where '\*' should be replaced by the version of Delphi being used
 
-3.   Click 'Open'.  You will notice a new entry in the 'Design Packages' window.
+3. Click 'Open'.  You will notice a new entry in the 'Design Packages' window.
 
-4.   Click the 'Add' button again and this time select the package 'NdbSa*.dpl where '*' should be replaced by the version of Delphi being used
+4. Click the 'Add' button again and this time select the package 'NdbSa\*.dpl where '\*' should be replaced by the version of Delphi being used
 
-5.   Click 'Open' and then 'OK' to install
+5. Click 'Open' and then 'OK' to install
 
-6.   Now select 'Tools' from the tool bar and click 'Environment Options'
+6. Now select 'Tools' from the tool bar and click 'Environment Options'
 
-7.   Select the 'Library' tab
+7. Select the 'Library' tab
 
-8.   In the 'Library Path' edit box, add the path to the folder named Delphi* where '*' is the version of Delphi being used.  An example path would be 'C:\\NativeDB\\Delphi3'
+8. In the 'Library Path' edit box, add the path to the folder named Delphi* where '\*' is the version of Delphi being used.  An example path would be 'C:\\NativeDB\\Delphi3'
 
 On the component bar in Delphi, you will notice another tab named
 NativeDB.
 
- 
 
- 
+## INTRODUCTION TO DELPHI CONTROLS
 
- 
-
-INTRODUCTION TO DELPHI CONTROLS
-
-Simple Case Setting Bound Control Properties
+**Simple Case Setting Bound Control Properties**
 
 Delphi was designed so that you can accomplish a number of tasks without
 ever having to do any actual programming.  Certain components can be
@@ -270,7 +234,6 @@ the ODBC data sources or Aliases found on your machine.  By selecting
 one of these you have bound the table component to the database you have
 chosen.
 
- 
 
 The diagram below (Figure 5) is an example of how components can be
 bound together.  On the form, 'Form1', there are three components from
@@ -307,9 +270,9 @@ on page 18.
 
  
 
-Connecting To an ASA Database Through Delphi
+### Connecting To an ASA Database Through Delphi
 
-BDE
+**BDE**
 
 The section above discusses binding controls, including the fact that a
 'TTable' component can be bound to an ODBC data source.  The reason for
@@ -323,7 +286,6 @@ database engine:
 
 2.   Set the 'Active' property to True.
 
- 
 
 Another BDE component that can start an ASA database engine in Delphi is
 the 'TDatabase' component.  To do so:
@@ -336,9 +298,8 @@ the 'TDatabase' component.  To do so:
 
 4.   Set the 'Connected' property to 'True' and the database engine will start up.
 
- 
 
-ODBCExpress
+**ODBCExpress**
 
 Connecting to an ASA database engine using ODBCExpress is similar to
 using the 'TDatabase' component using the BDE.  To start a database
@@ -350,9 +311,8 @@ engine follow these steps:
 
 3.   Set the 'Connected' property to 'True'.
 
- 
 
-Titan SQLAnywhere Developer
+**Titan SQLAnywhere Developer**
 
 After creating an Alias name for the database being used (refer to
 Installing Titan and Creating a Titan Alias on page 4 for details), one
@@ -365,9 +325,8 @@ a 'TtsDatabase' component on the form.  For the 'TtsTable' component:
 
 3.   Set the 'Active' property is set to 'True'
 
- 
 
-For the 'TtsDatabase' component:
+**For the 'TtsDatabase' component:**
 
 1.   Set the 'AliasName' property and 'DatabaseName' property to the Alias name created for the database being accessed
 
@@ -384,11 +343,9 @@ these steps:
 
 2.   Connect to the already started engine using Titan components
 
- 
 
- 
 
-NativeDB for SQL Anywhere
+**NativeDB for SQL Anywhere**
 
 Starting an ASA database engine using NativeDB components is slightly
 different then starting one with any of BDE, ODBCExpress or Titan.  The
@@ -440,11 +397,9 @@ component then it is unnecessary to set the 'Connected' property to
 property is set to 'True' the database engine described in the
 'TAsaSession' component is started automatically.
 
- 
 
- 
 
-Blob Examples
+## Blob Examples
 
 One of the most common problems when using an ASA database with Borland
 Delphi involves Binary Large OBjects, or BLOB.  A BLOB is a large data
@@ -455,7 +410,7 @@ is turned into binary.
 
  
 
-BDE
+**BDE**
 
 A problem involving BLOBs arises when using the BDE for Delphi 3, which
 is the default engine.  It seems that the manipulation of BLOBs larger
@@ -511,25 +466,21 @@ Example 1: Inserting a BLOB into a database using BDE
 
 A few things to note are:
 
-1.   In this example the BLOB is a bitmap file that is displayed using a 'TImage' box
+1. In this example the BLOB is a bitmap file that is displayed using a 'TImage' box
 
-2.   'keyfld' and 'imagefld' are columns in the table.  Keyfld accepts only integer values and is set to the default 'autoincrement' in ASA.  It is also set to be the 'Primary Key'.  This means that every number in the 'keyfld' column must be unique. Refer to Appendix C: Primary Key Issues on page 34, for more details.  'Imagefld' accepts only long binary values.  Long binary values are used to store BLOBs
+2. 'keyfld' and 'imagefld' are columns in the table.  Keyfld accepts only integer values and is set to the default 'autoincrement' in ASA.  It is also set to be the 'Primary Key'.  This means that every number in the 'keyfld' column must be unique. Refer to Appendix C: Primary Key Issues on page 34, for more details.  'Imagefld' accepts only long binary values.  Long binary values are used to store BLOBs
 
- 
+   **Note:** The Create table statement for table 'blob' being used here is
+   the following:
 
-(Note: The Create table statement for table 'blob' being used here is
-the following. 
-
-'CREATE TABLE blob ( keyfld int primary key default autoincrement,
-imagefld long binary)' )
-
- 
+        CREATE TABLE blob (
+          keyfld int primary key default autoincrement,
+          imagefld long binary
+        )
 
 3.   If the bitmap is larger than 1.4 megabytes you will observe the error message,
-
      'Invalid BLOB length'
 
- 
 
 Figure 7 depicts the sample application created with the code used
 above.  Under 'Pick your Alias' is a box which lists all the names of
@@ -578,7 +529,7 @@ Example 2 : Saving a BLOB to a file using BDE
        end;
     end;
 
-ODBCExpress
+**ODBCExpress**
 
 The ODBCExpress engine can be installed so that it can be used with
 Delphi.  For installation instructions, please refer to Appendix A:
@@ -652,7 +603,7 @@ Appendix C: Primary Key Issues on page 33 for details describing a
 better method for providing a value.  It should also be noted that the
 syntax is slightly different from the BDE.  Also, the line:
 
-OEDataSet1.Table := 'blob';
+    OEDataSet1.Table := 'blob';
 
 is the programmatic way of assigning a table name to the data source. 
 The alternative method, used for examples one and two, is to select your
@@ -671,20 +622,11 @@ that will be displayed and loaded into the table when the button 'Load
 Blob into Table' is clicked.  The picture displayed here could not be
 displayed using the BDE because it is larger then 1.4 megabytes in size.
 
- 
-
- 
-
- 
-
- 
-
- 
 :::{.center}
 Figure 8  
 ![clip0142](clip0142.png)
 :::
- 
+
 
 Saving BLOBs using ODBCExpress is similar to saving them using BDE.  The
 following example displays how this can be accomplished.  Recall that
@@ -719,7 +661,7 @@ Example 4: Saving a BLOB to a file using ODBCExpress
 
  
 
-Titan SQLAnywhere Developer
+**Titan SQLAnywhere Developer**
 
 Similar to ODBCExpress, Titan SQLAnywhere Developer can be installed so
 that it can interact with Delphi.  Please see Installing Titan and
@@ -733,17 +675,17 @@ to note are listed below:
 
  
 
-1.   'blob' is the name of the table where the BLOB, which is a bitmap, will be stored.
+1. 'blob' is the name of the table where the BLOB, which is a bitmap, will be stored.
 
-2.   Recall that 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and is set to 'autoincrement'.  The column 'imagefld' has the data type 'long binary'.
+2. Recall that 'blob' has two columns, 'keyfld' and 'imagefld'.  The column 'keyfld' has the data type of 'integer' and is set to 'autoincrement'.  The column 'imagefld' has the data type 'long binary'.
 
-3.   The syntax for this example is almost identical to that of Example 1.  The differences are the following:
+3. The syntax for this example is almost identical to that of Example 1.  The differences are the following:
 
-4.   Since the 'tsTable' component is used instead of the 'TTable' component, the word 'Table1' in Example 1 is replaced with 'tsTable1' in this example.
+4. Since the 'tsTable' component is used instead of the 'TTable' component, the word 'Table1' in Example 1 is replaced with 'tsTable1' in this example.
 
-5.   This example does not insert a number into the column 'keyfld'.  Example 1 does this through the variable nextnum, which is assigned a value by going to the last row in the table and adding one to the value in the 'keyfld' column.  Appendix C: Primary Key Issues discusses different methods for assigning values to nextnum and why the method used in Example 5 is recommended over the method used in Example 1.
+5. This example does not insert a number into the column 'keyfld'.  Example 1 does this through the variable nextnum, which is assigned a value by going to the last row in the table and adding one to the value in the 'keyfld' column.  Appendix C: Primary Key Issues discusses different methods for assigning values to nextnum and why the method used in Example 5 is recommended over the method used in Example 1.
 
-6.   The line 'tsDatabase1.Commit'.  This is necessary when using Titan SQLAnywhere Developer because the default value for committing changes is set differently than the default for BDE or ODBCExpress.  If this line is not placed into the code, the image will be placed into the table initially but when the table is closed the change will be rolled back.
+6. The line 'tsDatabase1.Commit'.  This is necessary when using Titan SQLAnywhere Developer because the default value for committing changes is set differently than the default for BDE or ODBCExpress.  If this line is not placed into the code, the image will be placed into the table initially but when the table is closed the change will be rolled back.
 
  
 
@@ -803,7 +745,7 @@ Example 6:  Saving a BLOB to a file using Titan SQLAnywhere
        end;
     end;
 
-NativeDB for SQL Anywhere
+**NativeDB for SQL Anywhere**
 
 Similar to ODBCExpress and Titan SQLAnywhere Developer, NativeDB can be
 installed so that it can interact with Delphi.  For more information
@@ -899,7 +841,7 @@ Example 8: Saving a BLOB to a file using NativeDB
 
  
 
-DBGrid Examples
+## DBGrid Examples
 
 A 'DBGrid' is a data aware component that can be found on the 'Data
 Control' tab of the component pallet in Delphi.  A data aware component
@@ -917,25 +859,19 @@ page 24.
 
  
 
-BDE
+**BDE**
 
 When just getting started with 'DBGrid' using BDE, there are a few
 things that must be set up.
-
- 
 
 1.   The 'Table', 'DataSouce', and 'DBGrid' properties have been bound to each other. (Recall that binding components was talked about in the section Simple Case Setting Bound Control Properties on page 6)
 
 2.   To ensure that 'DBGrid' will display the information in your database the 'Active' property must be set to true. One way to set this property is to select your 'Table' component on your form, and in the 'Object Inspector' on the 'Properties' tab, the 'Active' property can be seen.  The 'Active' property must be set to True otherwise your data will not appear in the 'DBGrid' even when the application is running.  Note that the 'Active' property can only be set to true once a 'Table Name' has been supplied.
 
- 
 
 Figure 9 depicts a 'DBGrid' application, whose 'TTable' component is
 having its 'Active' property set to true.
 
- 
-
- 
 :::{.center}
 Figure 9  
 ![clip0143](clip0143.png){width="1024" height="768"}
@@ -1067,16 +1003,16 @@ sets the TField.Required property to True.  To fix this, so that
 
  
 
-1.   Select the 'Form', making sure that a component on the form is not highlighted.  Make sure that the display on the top of the 'Object Inspector' says Form1 : TForm, or what you named your form : TForm
+1. Select the 'Form', making sure that a component on the form is not highlighted.  Make sure that the display on the top of the 'Object Inspector' says Form1 : TForm, or what you named your form : TForm
 
-2.   Select the 'Events' tab on the 'Object Inspector' and make the row 'OnShow' the focus.  Double click the white space to the right of the name 'OnShow'.  This will create a procedure header named 'FormShow' where code is to be written.  (Note: creating this procedure in the 'OnShow' event ensures that the autoincrement feature will work as soon as the application is run)
+2. Select the 'Events' tab on the 'Object Inspector' and make the row 'OnShow' the focus.  Double click the white space to the right of the name 'OnShow'.  This will create a procedure header named 'FormShow' where code is to be written.  (Note: creating this procedure in the 'OnShow' event ensures that the autoincrement feature will work as soon as the application is run)
 
-3.   Make your procedure 'FormShow' look like the following by adding lines of code
+3. Make your procedure 'FormShow' look like the following by adding lines of code
 
-    procedure TForm1.FormShow(Sender: TObject);
-    begin
-          Table1.Fields[0].Required := False;
-    end;
+        procedure TForm1.FormShow(Sender: TObject);
+        begin
+              Table1.Fields[0].Required := False;
+        end;
 
  
 
@@ -1092,7 +1028,7 @@ error 'List index out of bounds (0)' will occur because the form shows
 no columns in 'DBGrid' when the 'Active' property is false.  To get
 around this error, the line of code,  
 
-                              Table1.Fields[0].Required := False;
+    Table1.Fields[0].Required := False;
 
 should be placed in another event, such as a button click event
 discussed above.
@@ -1140,7 +1076,8 @@ rows and columns are displayed.
 
 An example of a SQL statement with a 'Where' clause is:
 
-SELECT id FROM Grid WHERE name = 'your name'
+    SELECT id FROM Grid
+    WHERE name = 'your name'
 
 In this statement 'id' is the column in the table 'Grid' that will be
 displayed, but only those rows where the 'name' column has the value
@@ -1150,7 +1087,8 @@ When the 'Order By' clause is included and the 'Display Table' button is
 clicked, the entire table is displayed in a specific order.  An example
 of a SQL statement with an 'Order By' clause is:
 
-SELECT * FROM Grid ORDER BY id
+    SELECT * FROM Grid
+    ORDER BY id
 
 This statement selects all rows and columns in the table 'Grid' and
 orders the rows according to the value in the 'id' column. 
@@ -1162,7 +1100,8 @@ clicked, a select group of rows and columns are displayed in a certain
 order.  An example of an SQL statement where both clauses are included
 is:
 
-SELECT * FROM Grid WHERE name = 'your name' ORDER BY id
+    SELECT * FROM Grid
+    WHERE name = 'your name' ORDER BY id
 
 This statement selects all the columns in the table Grid where the value
 in the 'name' column is 'your name' and displays them in order of the
@@ -1192,7 +1131,8 @@ statement that involves more than one table is:
 
  
 
-    SELECT * FROM Grid, AnotherGrid WHERE Grid.Name = 'your name'
+    SELECT * FROM Grid, AnotherGrid
+    WHERE Grid.Name = 'your name'
 
 Assume that 'Name' is a column in the table 'Grid'.  This statement will
 take all the columns in both Grid and AnotherGrid, and display only the
@@ -1207,7 +1147,7 @@ interface.
 
  
 
-ODBCExpress
+**ODBCExpress**
 
 Using a 'DBGrid' component with ODBCExpress is slightly different than
 using it with the BDE.  ODBCExpress does not have a 'Table' component
@@ -1362,13 +1302,13 @@ the behavior of ASA 6.0.3 the following can be done:
 
 2.   Type in 'dbisql -c "uid=dba;pwd=sql;dsn=the name of your ODBC source' and click 'OK'.  For example, for the DelphiDemo you would type:
 
-dbisql -c "uid=dba;pwd=sql;dsn=DelphiDemo"
+        dbisql -c "uid=dba;pwd=sql;dsn=DelphiDemo"
 
 3.   In the 'SQL Statements' window type,
 
-set option public.ansi\_update\_constraints='off'
+        set option public.ansi\_update\_constraints='off'
 
-      and click the play button.
+     and click the play button.
 
 4.   When dbisql is finished executing the statement just typed in will be highlighted in blue.  Exit dbisql.
 
@@ -1392,7 +1332,7 @@ paper.
 
  
 
-Titan SQLAnywhere Developer
+**Titan SQLAnywhere Developer**
 
 To use a 'DBGrid' component with Titan SQLAnywhere Developer, the BDE
 'DataSource' component must be present, and its 'DataSet' property must
@@ -1441,7 +1381,7 @@ ODBCExpress.
 
  
 
-NativeDB for SQL Anywhere
+**NativeDB for SQL Anywhere**
 
 Similar to ODBCExpress, NativeDB does not have a 'Table' component and
 instead uses an 'AsaDataset' component.  To bind the 'DBGrid' with the
@@ -1468,21 +1408,10 @@ An interesting feature with NativeDB is its ability to position the
 ODBCExpress and Titan only support a three-state scrollbar, where the
 scroll thumb is either at the top, bottom or in the middle.
 
- 
 
- 
+## APPENDIX A
 
- 
-
- 
-
- 
-
- 
-
-APPENDIX A
-
-Setting up Delphi with the ODBCExpress Interface
+**Setting up Delphi with the ODBCExpress Interface**
 
 If you are creating your application using the BDE then no set up is
 necessary after setting up an ODBC data source for your database.  If,
@@ -1512,11 +1441,10 @@ To install ODBCExpress:
 
 2.   Click on the 'Add' button and select the file OE.bpl from the 'Package' folder in the directory in which you unzipped ODBCExpress
 
- 
-:::{.center}
-Figure 12  
-![clip0146](clip0146.png)
-:::
+     :::{.center}
+     Figure 12  
+     ![clip0146](clip0146.png)
+     :::
 
 3.   Click 'OK' to install the package
 
@@ -1565,9 +1493,9 @@ when you download ODBCExpress.
 
  
 
-APPENDIX B
+## APPENDIX B
 
-Modifying ASA 7.0 Sample
+**Modifying ASA 7.0 Sample**
 
 The sample database that comes with ASA 7.0 is called asademo.db and is
 located in the directory you installed ASA in.  By default this is
@@ -1600,61 +1528,47 @@ The simplest way to modify the database is to do the following:
 
 7.   If you click on the '+' to the left of the 'Tables' folder you will see a list of all the names of the tables in the database.  Figure 14 on the following page depicts what you should see at this point
 
- 
-
- 
-
- 
-:::{.center}
-Figure 14  
-![clip0148](clip0148.png)
-:::
+     :::{.center}
+     Figure 14  
+     ![clip0148](clip0148.png)
+     :::
  
 
 8.   If you want to add a table, click on the 'Tables' folder and on the right hand side double click on 'Add Table'.  This will bring you to a form where you can name the table and add columns to it.  Note that this is not a way of putting information into the table.  It is just a way of creating the names of the columns
 
 9.   If you want to modify data in an existing table, right click on the name of the table you wish to modify and select 'View Data'.  This will bring up a window named 'Interactive SQL', which contains three sections.  The first section, labeled 'SQL Statements' contains the command line 'SELECT * FROM "DBA"."department"', where department is the name of the table you chose. The middle section, labeled 'Messages', will be blank.  The last section is labeled 'Results' and contains a list of the column headers and all the information that is associated with it.
 
- 
+     Figure 15 below displays 'Interactive SQL' when the 'View Data' option
+     is selected on the 'department' table.
 
-Figure 15 below displays 'Interactive SQL' when the 'View Data' option
-is selected on the 'department' table.
+     :::{.center}
+     Figure 15  
+     ![clip0149](clip0149.png)
+     :::
+      
 
- 
-
- 
-:::{.center}
-Figure 15  
-![clip0149](clip0149.png)
-:::
- 
-
-To insert a new row, use the following command and then click the play
-button: INSERT INTO department VALUES (\'600\', \'HR\', \'501\');.  Note
-that 'department' is the name of the table that you are inserting values
-into and the values in brackets must correspond to the columns in the
-table.  There must be a value for every column in the table otherwise an
-error will occur.  Also, the values entered must correspond to the type
-assigned to that column.  To delete rows from the table enter the
-following line in the command section and click on the play button:
-DELETE FROM department WHERE dept\_id=600;.  Note that this command not
-only deletes every column in the row where dept\_id (a column in the
-table department) equals 600, but it also deletes every row in the table
-where dept\_id equals 600
+     To insert a new row, use the following command and then click the play
+     button: INSERT INTO department VALUES (\'600\', \'HR\', \'501\');.  Note
+     that 'department' is the name of the table that you are inserting values
+     into and the values in brackets must correspond to the columns in the
+     table.  There must be a value for every column in the table otherwise an
+     error will occur.  Also, the values entered must correspond to the type
+     assigned to that column.  To delete rows from the table enter the
+     following line in the command section and click on the play button:
+     DELETE FROM department WHERE dept\_id=600;.  Note that this command not
+     only deletes every column in the row where dept\_id (a column in the
+     table department) equals 600, but it also deletes every row in the table
+     where dept\_id equals 600
 
 10.   When you are done modifying a table, close the 'Interactive SQL' window.  This will bring you back to 'Sybase Central' where you can modify more tables.  If you are finished modifying asademoTest, click on 'Tools' from the menu bar and select 'Disconnect'.  A window will pop up and you should select asademoTest and click 'Disconnect'.  Then you can close 'Sybase Central'
 
- 
+
+
+## APPENDIX C
 
  
 
- 
-
-APPENDIX C
-
- 
-
-Primary Key Issues
+**Primary Key Issues**
 
 Adaptive Server Anywhere is a SQL relational database.  Many designers
 using this technology adhere to the Third Normal Form design practices. 
@@ -1684,15 +1598,15 @@ Example 1, and Example 3.  A variable called nextnum is created and is
 assigned a value by the following two lines of code.  For Example 1 they
 are:
 
-       Table1.Last;
+    Table1.Last;
 
-       nextnum := Table1.FieldByName('keyfld').asInteger + 1;
+    nextnum := Table1.FieldByName('keyfld').asInteger + 1;
 
 For Example 3 they are:
 
-       OEDataSet1.Last;
+    OEDataSet1.Last;
 
-nextnum := OEDataSet1.FieldValues['keyfld'] + 1;
+    nextnum := OEDataSet1.FieldValues['keyfld'] + 1;
 
 These lines of code are jumping to the last row in the table, and
 assigning nextnum the value that is in the 'keyfld' column currently
@@ -1729,9 +1643,9 @@ for 'keyfld'.  To get this value properly, a jump to the last record in
 the table must occur.  For the BDE, the lines of code to accomplish this
 task would look like this.
 
-       Table1.Last  // To jump to the last row in the table
+    Table1.Last  // To jump to the last row in the table
 
-       nextnum := Table1.RecordCount + 1;
+    nextnum := Table1.RecordCount + 1;
 
 The major concern with using this method is that the values in the
 'keyfld' column must start at 1, and have no numbers missing from 1 to
@@ -1755,15 +1669,15 @@ The method that is recommended for providing a value for the column
 the ASA end where the default is autoincrement.  The line of code that
 can accomplish this for BDE is:
 
-       Table1.Fields[0].Required := False;
+    Table1.Fields[0].Required := False;
 
 For ODBCExpress the line of code would be:
 
-       OEDataSet1.Fields[0].Required := False;
+    OEDataSet1.Fields[0].Required := False;
 
 For Titan SQLAnywhere Developer the line of code would be:
 
-       tsTable1.Fields[0].Required := False;
+    tsTable1.Fields[0].Required := False;
 
 It should be noted that Delphi represents columns in a table through
 numbers starting at 0.  In the lines of code above, it is assumed that
@@ -1777,7 +1691,7 @@ DBGrid Examples on page 18 where autoincrement is discussed.
 
  
 
-APPENDIX D
+## APPENDIX D
 
 The table below is of all the products and their versions used to
 discover the problems and solutions discussed in this paper.  It should
@@ -1805,12 +1719,10 @@ on page 25 has the build number 2934
 More information about the interfaces discussed in this document can be
 found on their respective web pages:
 
- 
+- BDE: http://www.borland.com/delphi
 
-BDE: http://www.borland.com/delphi
+- ODBCExpress: http://www.odbcexpress.com
 
-ODBCExpress: http://www.odbcexpress.com
+- Titan SQL Anywhere Developer: http://www.reggatta.com/sqadev.html
 
-Titan SQL Anywhere Developer: http://www.reggatta.com/sqadev.html
-
-NativeDB: http://www.nativedb.com
+- NativeDB: http://www.nativedb.com
