@@ -1,15 +1,12 @@
 ---
 Title: Конвертировать INI-файл в XML
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Конвертировать INI-файл в XML
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses XMLIntf, XMLDoc, INIFiles;
      
@@ -56,4 +53,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -2,15 +2,12 @@
 Title: Сбростить BDE базу данных в XML файл
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Сбростить BDE базу данных в XML файл
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     Procedure CreateXML(Alias:string; XMLName:string);
      var i,j,x,y:integer;
@@ -86,7 +83,6 @@ Date: 01.01.2007
     end;
      
      
-     
     procedure TForm1.Button1Click(Sender: TObject);
     begin
      CreateXML('MyDatabase', 'c:\XMLFile.xml');
@@ -121,6 +117,3 @@ XML формируется в ввиде
        </Table2>
      </MyDatabase>
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

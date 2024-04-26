@@ -1,15 +1,11 @@
 ---
 Title: Конвертировать результат запроса в XML и обратно
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
-
 
 Конвертировать результат запроса в XML и обратно
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit ADOXMLUnit;
      
@@ -67,4 +63,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

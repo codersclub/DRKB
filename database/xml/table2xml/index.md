@@ -1,17 +1,14 @@
 ---
 Title: Конвертировать таблицу в XML
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Конвертировать таблицу в XML
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
-    { SMExport suite's free demo
+    { SMExport suite free demo
       Data export from dataset into XML-file
      
       Copyright(C) 2000, written by Scalabium, Shkolnik Mike
@@ -188,4 +185,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

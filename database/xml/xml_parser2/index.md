@@ -1,5 +1,6 @@
 ---
 Title: Парсер XML
+Author: Delirium, VideoDVD@hotmail.com
 Date: 22.10.2003
 ---
 
@@ -7,9 +8,8 @@ Date: 22.10.2003
 Парсер XML
 ==========
 
-::: {.date}
-22.10.2003
-:::
+Данный прасер не такой универсальный, как [предыдущий](../xml_parser/),
+но зато - почти в 1000 раз эффективнее!
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Разбор XML
@@ -97,7 +97,7 @@ Date: 22.10.2003
          ' ':;
          '>':State:=9;
          '/':State:=10;
-        else begin
+         else begin
              CurNode^.NameIndex:=LPos;
              CurNode^.NameSize:=1;
              State:=2;
@@ -107,7 +107,7 @@ Date: 22.10.2003
          ' ':State:=3;
          '>':State:=9;
          '/':State:=10;
-        else Inc(CurNode^.NameSize);
+         else Inc(CurNode^.NameSize);
          end;
       3:case Value[LPos] of
          ' ':;
@@ -124,7 +124,7 @@ Date: 22.10.2003
          end;
       4:case Value[LPos] of
          '=':State:=5;
-        else Inc(CurNode^.Attributes[CurAttr].NameSize);
+         else Inc(CurNode^.Attributes[CurAttr].NameSize);
          end;
       5:case Value[LPos] of
          '''':State:=6;
@@ -136,7 +136,7 @@ Date: 22.10.2003
              CurNode^.Attributes[CurAttr].TextSize:=0;
              State:=8;
              end;
-        else begin
+         else begin
              CurNode^.Attributes[CurAttr].TextIndex:=LPos;
              CurNode^.Attributes[CurAttr].TextSize:=1;
              State:=61;
@@ -156,11 +156,11 @@ Date: 22.10.2003
          end;
      61:case Value[LPos] of
          '''':State:=8;
-        else Inc(CurNode^.Attributes[CurAttr].TextSize);
+         else Inc(CurNode^.Attributes[CurAttr].TextSize);
          end;
      71:case Value[LPos] of
          '"':State:=8;
-        else Inc(CurNode^.Attributes[CurAttr].TextSize);
+         else Inc(CurNode^.Attributes[CurAttr].TextSize);
          end;
       8:case Value[LPos] of
          ' ':State:=3;
@@ -169,7 +169,7 @@ Date: 22.10.2003
          end;
       9:case Value[LPos] of
          '<':State:=12;
-        else begin
+         else begin
              CurNode^.TextIndex:=LPos;
              CurNode^.TextSize:=1;
              State:=11;
@@ -185,11 +185,11 @@ Date: 22.10.2003
          end;
      11:case Value[LPos] of
          '<':State:=12;
-        else Inc(CurNode^.TextSize);
+         else Inc(CurNode^.TextSize);
          end;
      12:case Value[LPos] of
          '/':State:=10;
-        else begin
+         else begin
              i:=length(CurNode^.SubNodes);
              Setlength(CurNode^.SubNodes, i+1);
              New(CurNode^.SubNodes[i]); Inc(k);
@@ -213,24 +213,24 @@ Date: 22.10.2003
      
     function GetXMLNodeName(Node:PXMLNode):String;
     begin
-    Result:=Copy(Node^.Data^, Node^.NameIndex, Node^.NameSize);
+     Result:=Copy(Node^.Data^, Node^.NameIndex, Node^.NameSize);
     end;
      
     function GetXMLNodeText(Node:PXMLNode):String;
     begin
-    Result:=Copy(Node^.Data^, Node^.TextIndex, Node^.TextSize);
+     Result:=Copy(Node^.Data^, Node^.TextIndex, Node^.TextSize);
     end;
      
     function GetXMLNodeAttr(AttrName:String; Node:PXMLNode):String;
     var i:integer;
     begin
-    Result:='';
-    if Length(Node^.Attributes)=0 then exit;
-    i:=0;
-    while (i<Length(Node^.Attributes))
-      and (AnsiLowerCase(AttrName)<>AnsiLowerCase(Trim(Copy(Node^.Data^, Node^.Attributes[i].NameIndex, Node^.Attributes[i].NameSize))))
+     Result:='';
+     if Length(Node^.Attributes)=0 then exit;
+     i:=0;
+     while (i<Length(Node^.Attributes))
+       and (AnsiLowerCase(AttrName)<>AnsiLowerCase(Trim(Copy(Node^.Data^, Node^.Attributes[i].NameIndex, Node^.Attributes[i].NameSize))))
        do Inc(i);
-    Result:=Copy(Node^.Data^, Node^.Attributes[i].TextIndex, Node^.Attributes[i].TextSize);
-    end;
+     Result:=Copy(Node^.Data^, Node^.Attributes[i].TextIndex, Node^.Attributes[i].TextSize);
+     end;
      
     end.

@@ -1,20 +1,13 @@
 ---
 Title: Парсер подавляющего большинства нотаций XML
-Author: Delirium
-Date: 01.01.2007
+Author: Delirium, VideoDVD@hotmail.com
+Date: 16.09.2003
+Source: <https://forum.sources.ru>
 ---
 
 
 Парсер подавляющего большинства нотаций XML
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Delirium
-
-Сайт: http://delphibase.endimus.com
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Парсер подавляющего большинства нотаций XML.
@@ -276,4 +269,5 @@ Date: 01.01.2007
         end;
     end;
 
-Взято из <https://forum.sources.ru>
+Сайт: http://delphibase.endimus.com
+
