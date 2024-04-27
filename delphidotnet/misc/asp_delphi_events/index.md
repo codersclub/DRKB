@@ -1,5 +1,6 @@
 ---
 Title: Как создать консольное ASP.NET приложение с событиями Delphi?
+Author: andychap@hotmail.com
 Date: 01.01.2007
 ---
 
@@ -7,9 +8,22 @@ Date: 01.01.2007
 Как создать консольное ASP.NET приложение с событиями Delphi?
 =============================================================
 
-::: {.date}
-01.01.2007
-:::
+Ниже приведен полный список файлов ASPX для открытия и чтения базы данных ACCESS.
+Очевидно, что объявление `source=c:\mydb.mdb` следует изменить,
+чтобы оно указывало на вашу собственную базу данных.
+
+Команды sql также необходимо будет изменить, чтобы они указывали на правильные таблицы и значения.
+Этот исходный код является переводом с нативного языка C#.
+
+Любые проблемы с кодом, комментарии или общие нарушения стандартов кодирования следует отправлять
+на адрес andychap@hotmail.com.
+Пожалуйста, укажите «delphi» в строке темы, чтобы я мог фильтровать нежелательную почту.
+
+Удачи...
+
+В качестве еще одной проблемы у меня также есть несколько примеров,
+которые я написал для Delphi для Dot Net, выполняющих аналогичные действия.
+
 
     {
     ****************** Below is a complete listing for an ASPX file to open and
@@ -94,31 +108,23 @@ Date: 01.01.2007
     </body>
     </html>
 
-To make the code execute locally you should download webmatrix which is
-an
-
-excellent free downloadable aspx development environment. All you need
-then
-
-is the following code in a web.config document:
+Чтобы код выполнялся локально, вам следует загрузить webmatrix,
+который является отличной бесплатной загружаемой средой разработки aspx.
+Все, что вам нужно, это следующий код в файле web.config:
 
     <configuration>
-
-        <system.web>
-    <compilation debug="true">
-    <assemblies>
-      <add assembly="DelphiProvider" />
-    </assemblies>
-                <compilers>
-                    <compiler language="Delphi" extension=".pas" type="Borland.Delphi.DelphiCodeProvider,DelphiProvider" />
-                </compilers>
-            </compilation>
-        </system.web>
+      <system.web>
+        <compilation debug="true">
+          <assemblies>
+            <add assembly="DelphiProvider" />
+          </assemblies>
+          <compilers>
+            <compiler language="Delphi" extension=".pas" type="Borland.Delphi.DelphiCodeProvider,DelphiProvider" />
+          </compilers>
+        </compilation>
+      </system.web>
     </configuration>
 
-and inside a bin directory at the root the DelphiProvider.dll.
+а также разместить DelphiProvider.dll внутри каталога bin в корне.
 
-You may now create and run asp.net applications with delphi as you
-chosen
-
-method of codeing.
+Теперь вы можете создавать и запускать приложения asp.net с помощью Delphi в соответствии с выбранным вами методом кодирования.

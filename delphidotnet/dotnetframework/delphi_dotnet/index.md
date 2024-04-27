@@ -1,23 +1,21 @@
 ---
 Title: Написание приложений под .NET Framework 2.0 в Delphi 8 - Delphi 2006
 Date: 01.01.2007
-Author: Quadr0
+Author: Титов Сергей (Quadr0), (4quadr0@gmail.com)
+Source: vingrad.ru
 ---
 
 
 Написание приложений под .NET Framework 2.0 в Delphi 8 - Delphi 2006
 =====================================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Статья детально описывает шаги, которые необходимо выполнить, чтобы
 написать и скомпилировать полноценное .NET 2.0 приложение в Delphi8,
 Delphi 2005 или BDS 4 под второй фреймворк (Microsoft .NET 2.0
 Framework).
 
-1.0. Введение
+## 1.0. Введение
+
 Как нам всем известно, Borland на данный момент переживает не самые
 лучшие времена. Delphi похоже в скором времени сменит своего хозяина, но
 а тем временем мир не стоит на месте. После выхода BDS 4 (Borland
@@ -29,6 +27,7 @@ Developer Studio 4, он же Delphi 2006) появился Microsoft .NET Frame
 поддерживают фреймворк второй версии, что открывает перед Delphi
 программистами не совсем радужную перспективу. Ведь они фактически
 остаются «не у дел».
+
 Но пока новая версия BDS находится в разработке, многие программисты
 естественно стали искать пути «научить» BDS 4 работе с .NET 2.0. Цель
 данной статьи заключается в том, чтобы подробно описать те шаги, которые
@@ -42,20 +41,22 @@ NET Framework 2.0 в отличие от своего предшественни
 эти нововведения. Но для начала, Я расскажу о том, в чём секрет создания
 .NET 2.0 приложений под BDS 4.
 
-Внимание: В этой статье Я буду ориентироваться на BDS 4, так как не имею
-под рукой компиляторов от восьмёрки и Delphi 2005. Если у Вас Delphi
-младше 2006, то Я не могу гарантировать работоспособность примеров,
-описанных в статье. Тем не менее, обе предыдущие версии Delphi имеют
-.NET компилятор и Я не думаю, что он кардинально отличается от того, что
-есть в BDS 4.
+> **Внимание:**  
+> В этой статье Я буду ориентироваться на BDS 4, так как не имею
+> под рукой компиляторов от восьмёрки и Delphi 2005. Если у Вас Delphi
+> младше 2006, то Я не могу гарантировать работоспособность примеров,
+> описанных в статье. Тем не менее, обе предыдущие версии Delphi имеют
+> .NET компилятор и Я не думаю, что он кардинально отличается от того, что
+> есть в BDS 4.
 
-2.0. Использование .NET компилятора Delphi и работа с его командной
-строкой.
+## 2.0. Использование .NET компилятора Delphi и работа с его командной строкой.
+
 Есть несколько способов получения скомпилированного приложения. Первый
 это использование для компиляции самой среды BDS (или сторонней среды,
 если таковая имеется), а второй это работа с Delphi .NET компилятором
 напрямую, посредством командной строки. Именно этот второй способ и есть
 ключ к созданию .NET 2.0 приложений в Delphi.
+
 Дело в том, что .NET компилятор Delphi разрешает указание версии
 фреймворка, который будет использован для компиляции данного приложения.
 Поэтому, если на вашей машине установлен второй фреймворк, то мы сможем
@@ -70,11 +71,13 @@ NET Framework 2.0 в отличие от своего предшественни
 писать полноценные .NET 2.0 приложения возможно. Это трудно и
 утомительно, долго и изматывающе, из вашей комнаты будет, скорее всего,
 доноситься трёхэтажный мат, но это возможно.
+
 В следующей главе Я подробно расскажу о параметрах командной строки,
 которые мы будем использовать, и мы приступим к написанию нашего первого
 .NET 2.0 приложения в Delphi, если так можно сказать.
 
-2.1. Настройка компилятора с помощью командной строки.
+## 2.1. Настройка компилятора с помощью командной строки.
+
 Давайте посмотрим на директивы командной строки, которые предлагает .NET
 компилятор Delphi. Выберите «Пуск -\> Выполнить» и введите cmd. В
 появившемся окне консоли введите dccil --help.
@@ -91,7 +94,8 @@ NET Framework 2.0 в отличие от своего предшественни
 Кроме этих параметров нам понадобятся ещё несколько, но о них будет
 сказано по мере написания наших .NET 2.0 программ.
 
-3.0. Написание консольного .NET 2.0 приложения в Delphi.
+## 3.0. Написание консольного .NET 2.0 приложения в Delphi.
+
 Вот мы и подошли к самому интересному. Сейчас мы напишем консольное
 приложение, которое будет использовать новые возможности .NET Framework
 2.0. Для наглядного примера Я взял свойства ForegroundColor,
@@ -110,23 +114,23 @@ BackgroundColor класса Console и класс ConsoleColor, позволя�
     {$APPTYPE CONSOLE}
 
     begin
-    // В .NET Framework 1.1 отсутствует класс ConsoleColor и свойства
-    // ForegroundColor и BackgroundColor у класса Console.
-    // Поэтому из BDS 4.0, которая обучена работе только с .NET 1.1,
-    // не получится скомпилировать данный проект.
-    // Используйте командную строку, чтобы самостоятельно указать
-    // компилятору нужный framework.
-    Console.ForegroundColor := ConsoleColor.Blue;
-    Console.BackgroundColor := ConsoleColor.Yellow;
-    Console.WriteLine('***************************************');
-    Console.WriteLine('*** HELLO FROM NET 2.0 Application! ***');
-    Console.WriteLine('***************************************');
-    Console.ForegroundColor := ConsoleColor.Green;
-    Console.BackgroundColor := ConsoleColor.Black;
-    Console.WriteLine('Информация о Вашей ОС:');
-    Console.WriteLine(System.Environment.OSVersion.Version);
-    Console.WriteLine(System.Environment.OSVersion.VersionString);
-    Console.ReadLine;
+      // В .NET Framework 1.1 отсутствует класс ConsoleColor и свойства
+      // ForegroundColor и BackgroundColor у класса Console.
+      // Поэтому из BDS 4.0, которая обучена работе только с .NET 1.1,
+      // не получится скомпилировать данный проект.
+      // Используйте командную строку, чтобы самостоятельно указать
+      // компилятору нужный framework.
+      Console.ForegroundColor := ConsoleColor.Blue;
+      Console.BackgroundColor := ConsoleColor.Yellow;
+      Console.WriteLine('***************************************');
+      Console.WriteLine('*** HELLO FROM NET 2.0 Application! ***');
+      Console.WriteLine('***************************************');
+      Console.ForegroundColor := ConsoleColor.Green;
+      Console.BackgroundColor := ConsoleColor.Black;
+      Console.WriteLine('Информация о Вашей ОС:');
+      Console.WriteLine(System.Environment.OSVersion.Version);
+      Console.WriteLine(System.Environment.OSVersion.VersionString);
+      Console.ReadLine;
     end.
 
 При попытке скомпилировать данное приложение мы естественно получим
@@ -148,10 +152,10 @@ BackgroundColor класса Console и класс ConsoleColor, позволя�
 компиляции. Pause это моя собственная прихоть. Не люблю когда батники
 автоматически закрываются по завершении задачи .
 
-Примечание: Если Windows установлен у Вас не на системном разделе ©, а
-на другом разделе, то не забудьте изменить путь в параметре --NS на
-верный.
-
+> **Примечание:**  
+> Если Windows установлен у Вас не на системном разделе ©, а
+> на другом разделе, то не забудьте изменить путь в параметре --NS на
+> верный.
 
 После запуска файла make.bat на исполнение Вы увидите следующее
 сообщение:
@@ -169,8 +173,6 @@ BackgroundColor класса Console и класс ConsoleColor, позволя�
 
 Эта команда приведёт к компиляции Borland.Delphi.System.pas
 и получению так необходимого нам файла Borland.Delphi.System.dcuil.
-
-
 
 Снова запускайте make.bat. В директории проекта появится
 скомпилированный файл ConsoleApp.exe, а также ещё несколько
@@ -195,7 +197,8 @@ Borland.Delphi.System.dcuil к статье, так как он защищён �
 Borland.Delphi.System.pas за основу из вашего собственного дистрибутива
 BDS.
 
-4.0. Высший пилотаж - пишем полноценное .NET 2.0 WinForms приложение.
+## 4.0. Высший пилотаж - пишем полноценное .NET 2.0 WinForms приложение.
+
 Написание WinForms приложения почти ни чем не отличается от написания
 консольного. Для наглядной демонстрации возможностей .NET 2.0 Я решил
 привести пример с элементом управления ToolStrip. Этот контролл появился
@@ -234,96 +237,96 @@ Borland.Delphi.System.dcuil для WinForms приложения нам пона
 
     constructor TWinForm.Create;
     var
-    DockSite: ToolStripContainer; // Область присоединению панелей управления
-    NewMenuStrip: MenuStrip; // Главное меню
-    NewToolStrip: ToolStrip; // Панель управления
-    FileToolStripMenuItem,
-    NewToolStripMenuItem,
-    EditToolStripMenuItem,
-    ViewToolStripMenuItem: ToolStripMenuItem;
-    NewButton: ToolStripButton;
+      DockSite: ToolStripContainer; // Область присоединению панелей управления
+      NewMenuStrip: MenuStrip; // Главное меню
+      NewToolStrip: ToolStrip; // Панель управления
+      FileToolStripMenuItem,
+      NewToolStripMenuItem,
+      EditToolStripMenuItem,
+      ViewToolStripMenuItem: ToolStripMenuItem;
+      NewButton: ToolStripButton;
     begin
-    inherited Create;
-    //
-    // Required for Windows Form Designer support
-    //
-    InitializeComponent;
-    //
-    // TODO: Add any constructor code after InitializeComponent call
-    //
-    // DockSite
-    DockSite := System.Windows.Forms.ToolStripContainer.Create;
-    DockSite.ContentPanel.Size := System.Drawing.Size.Create(292, 224);
-    DockSite.Dock := System.Windows.Forms.DockStyle.Fill;
-    DockSite.Location := System.Drawing.Point.Create(0, 0);
-    DockSite.Name := 'DockSite';
-    DockSite.Size := System.Drawing.Size.Create(292, 273);
-    DockSite.TabIndex := 0;
-    DockSite.Text := 'DockSite';
-    DockSite.Parent := Self;
-    DockSite.Visible := True;
-    // NewMenuStrip
-    NewMenuStrip := System.Windows.Forms.MenuStrip.Create;
-    NewMenuStrip.Name := 'NewMenuStrip';
-    NewMenuStrip.ClientSize := System.Drawing.Size.Create(292, 24);
-    NewMenuStrip.Location := System.Drawing.Point.Create(0, 0);
-    NewMenuStrip.Text := 'NewMenuStrip';
-    NewMenuStrip.TabIndex := 0;
-    // NewToolStrip
-    NewtoolStrip := System.Windows.Forms.ToolStrip.Create;
-    NewToolStrip.Dock := System.Windows.Forms.DockStyle.None;
-    NewtoolStrip.Location := System.Drawing.Point.Create(3, 24);
-    NewtoolStrip.Name := 'NewToolStrip';
-    NewtoolStrip.Size := System.Drawing.Size.Create(74, 25);
-    NewtoolStrip.TabIndex := 1;
-    // FileToolStripMenuItem
-    FileToolStripMenuItem := System.Windows.Forms.ToolStripMenuItem.create;
-    FileToolStripMenuItem.Name := 'FileToolStripMenuItem';
-    FileToolStripMenuItem.Size := System.Drawing.Size.Create(45, 20);
-    FileToolStripMenuItem.Text := '&Файл';
-    // NewToolStripMenuItem
-    NewToolStripMenuItem := System.Windows.Forms.ToolStripMenuItem.create;
-    NewToolStripMenuItem.Name := 'NewToolStripMenuItem';
-    NewToolStripMenuItem.Size := System.Drawing.Size.Create(107, 22);
-    NewToolStripMenuItem.Text := '&Новый';
-    // Обработчик для команды
-    Include(NewToolStripMenuItem.Click, NewToolStripMenuItem_Click);
-    // EditToolStripMenuItem
-    EditToolStripMenuItem := System.Windows.Forms.ToolStripMenuItem.create;
-    EditToolStripMenuItem.Name := 'EditToolStripMenuItem';
-    EditToolStripMenuItem.Size := System.Drawing.Size.Create(56, 20);
-    EditToolStripMenuItem.Text := '&Правка';
-    // ViewToolStripMenuItem
-    ViewToolStripMenuItem := System.Windows.Forms.ToolStripMenuItem.create;
-    ViewToolStripMenuItem.Name := 'ViewToolStripMenuItem';
-    ViewToolStripMenuItem.Size := System.Drawing.Size.Create(38, 20);
-    ViewToolStripMenuItem.Text := '&Вид';
-    // NewButton
-    NewButton := System.Windows.Forms.ToolStripButton.Create;
-    NewButton.Name := 'NewButton';
-    NewButton.Size := System.Drawing.Size.Create(64, 22);
-    NewButton.Text := 'Кнопа';
-    NewButton.DisplayStyle := ToolStripItemDisplayStyle.ImageAndText;
-    // Добавление панелей инструментов и элементов меню на область перетаскивания
-    DockSite.TopToolStripPanel.Controls.Add(NewMenuStrip);
-    DockSite.TopToolStripPanel.Controls.Add(NewToolStrip);
-    NewMenuStrip.Items.Add(FileToolStripMenuItem);
-    NewMenuStrip.Items.Add(EditToolStripMenuItem);
-    NewMenuStrip.Items.Add(ViewToolStripMenuItem);
-    FileToolStripMenuItem.DropDownItems.Add(NewToolStripMenuItem);
-    NewToolStrip.Items.Add(NewButton);
-    // Редактор текста (Editor)
-    Editor := System.Windows.Forms.TextBox.Create;
-    Editor.Name := 'Editor';
-    Editor.TabIndex := 1;
-    Editor.Location := System.Drawing.Point.Create(0, 0);
-    Editor.Multiline := True;
-    Editor.Dock := System.Windows.Forms.DockStyle.Fill;
-    Editor.Size := System.Drawing.Size.Create(292, 273);
-    Editor.Parent := DockSite.ContentPanel;
-    Editor.Visible := True;
-    // Добавим иконку
-    NewButton.Image := NewButton.Image.FromFile('new.png');
+      inherited Create;
+      //
+      // Required for Windows Form Designer support
+      //
+      InitializeComponent;
+      //
+      // TODO: Add any constructor code after InitializeComponent call
+      //
+      // DockSite
+      DockSite := System.Windows.Forms.ToolStripContainer.Create;
+      DockSite.ContentPanel.Size := System.Drawing.Size.Create(292, 224);
+      DockSite.Dock := System.Windows.Forms.DockStyle.Fill;
+      DockSite.Location := System.Drawing.Point.Create(0, 0);
+      DockSite.Name := 'DockSite';
+      DockSite.Size := System.Drawing.Size.Create(292, 273);
+      DockSite.TabIndex := 0;
+      DockSite.Text := 'DockSite';
+      DockSite.Parent := Self;
+      DockSite.Visible := True;
+      // NewMenuStrip
+      NewMenuStrip := System.Windows.Forms.MenuStrip.Create;
+      NewMenuStrip.Name := 'NewMenuStrip';
+      NewMenuStrip.ClientSize := System.Drawing.Size.Create(292, 24);
+      NewMenuStrip.Location := System.Drawing.Point.Create(0, 0);
+      NewMenuStrip.Text := 'NewMenuStrip';
+      NewMenuStrip.TabIndex := 0;
+      // NewToolStrip
+      NewtoolStrip := System.Windows.Forms.ToolStrip.Create;
+      NewToolStrip.Dock := System.Windows.Forms.DockStyle.None;
+      NewtoolStrip.Location := System.Drawing.Point.Create(3, 24);
+      NewtoolStrip.Name := 'NewToolStrip';
+      NewtoolStrip.Size := System.Drawing.Size.Create(74, 25);
+      NewtoolStrip.TabIndex := 1;
+      // FileToolStripMenuItem
+      FileToolStripMenuItem := System.Windows.Forms.ToolStripMenuItem.create;
+      FileToolStripMenuItem.Name := 'FileToolStripMenuItem';
+      FileToolStripMenuItem.Size := System.Drawing.Size.Create(45, 20);
+      FileToolStripMenuItem.Text := '&Файл';
+      // NewToolStripMenuItem
+      NewToolStripMenuItem := System.Windows.Forms.ToolStripMenuItem.create;
+      NewToolStripMenuItem.Name := 'NewToolStripMenuItem';
+      NewToolStripMenuItem.Size := System.Drawing.Size.Create(107, 22);
+      NewToolStripMenuItem.Text := '&Новый';
+      // Обработчик для команды
+      Include(NewToolStripMenuItem.Click, NewToolStripMenuItem_Click);
+      // EditToolStripMenuItem
+      EditToolStripMenuItem := System.Windows.Forms.ToolStripMenuItem.create;
+      EditToolStripMenuItem.Name := 'EditToolStripMenuItem';
+      EditToolStripMenuItem.Size := System.Drawing.Size.Create(56, 20);
+      EditToolStripMenuItem.Text := '&Правка';
+      // ViewToolStripMenuItem
+      ViewToolStripMenuItem := System.Windows.Forms.ToolStripMenuItem.create;
+      ViewToolStripMenuItem.Name := 'ViewToolStripMenuItem';
+      ViewToolStripMenuItem.Size := System.Drawing.Size.Create(38, 20);
+      ViewToolStripMenuItem.Text := '&Вид';
+      // NewButton
+      NewButton := System.Windows.Forms.ToolStripButton.Create;
+      NewButton.Name := 'NewButton';
+      NewButton.Size := System.Drawing.Size.Create(64, 22);
+      NewButton.Text := 'Кнопа';
+      NewButton.DisplayStyle := ToolStripItemDisplayStyle.ImageAndText;
+      // Добавление панелей инструментов и элементов меню на область перетаскивания
+      DockSite.TopToolStripPanel.Controls.Add(NewMenuStrip);
+      DockSite.TopToolStripPanel.Controls.Add(NewToolStrip);
+      NewMenuStrip.Items.Add(FileToolStripMenuItem);
+      NewMenuStrip.Items.Add(EditToolStripMenuItem);
+      NewMenuStrip.Items.Add(ViewToolStripMenuItem);
+      FileToolStripMenuItem.DropDownItems.Add(NewToolStripMenuItem);
+      NewToolStrip.Items.Add(NewButton);
+      // Редактор текста (Editor)
+      Editor := System.Windows.Forms.TextBox.Create;
+      Editor.Name := 'Editor';
+      Editor.TabIndex := 1;
+      Editor.Location := System.Drawing.Point.Create(0, 0);
+      Editor.Multiline := True;
+      Editor.Dock := System.Windows.Forms.DockStyle.Fill;
+      Editor.Size := System.Drawing.Size.Create(292, 273);
+      Editor.Parent := DockSite.ContentPanel;
+      Editor.Visible := True;
+      // Добавим иконку
+      NewButton.Image := NewButton.Image.FromFile('new.png');
     end;
      
 
@@ -334,9 +337,9 @@ Borland.Delphi.System.dcuil для WinForms приложения нам пона
     // Очищаем поле ввода.
     //---------------------------------------------------------------------------
     procedure TWinForm.NewToolStripMenuItem_Click(sender: System.Object;
-    e: System.EventArgs);
+                                                  e: System.EventArgs);
     begin
-    Editor.Clear;
+      Editor.Clear;
     end;
 
 В регион {$REGION \'Designer Managed Code\'} класса формы помимо
@@ -345,7 +348,6 @@ Borland.Delphi.System.dcuil для WinForms приложения нам пона
     procedure InitializeComponent;
     procedure NewToolStripMenuItem_Click(sender: System.Object; e: System.EventArgs);
 
- 
 
 Это объявление элемента управления редактора теста, а также процедуры
 обработчика клика.
@@ -355,14 +357,13 @@ Borland.Delphi.System.dcuil для WinForms приложения нам пона
 картинки new.png, которая будет отображаться на кнопке, можете взять
 любое изображение размером 16 на 16 пикселей.
 
-
 Сохраните файл и, затаив дыхание, запускайте make.bat. В директории с
 программой должен появиться скомпилированный файл WinFormsApp.exe
 
 Как видите, приложение прекрасно работает и использует элементы
 управления .NET 2.0. С чем всех и поздравляю.
 
-5.0. Заключение.
+## 5.0. Заключение.
 
 Мы успешно написали и скомпилировали два полноценных .NET 2.0
 приложения, используя при этом BDS 4. Этот материал вряд ли понадобится
@@ -384,7 +385,5 @@ http://quadr0.pochta.ru/delphinet2/delphinet2.zip
 http://quadr0.pochta.ru/delphinet2/delphinet2_pdf.zip
 
  
-
 С уважением, Титов Сергей (Quadr0).
 
-vingrad.ru

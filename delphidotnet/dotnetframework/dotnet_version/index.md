@@ -2,15 +2,12 @@
 Title: Определение установленных версий .NET Framework в системе
 Author: Акжан Абдулин
 Date: 01.01.2007
+Source: <https://www.delphikingdom.ru/>
 ---
 
 
 Определение установленных версий .NET Framework в системе
 =========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     /// <summary>
     /// Enumerates all installed Common Language Runtime Engines.
@@ -88,6 +85,3 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Акжан Абдулин
-
-Взято с сайта <https://www.delphikingdom.ru/>
