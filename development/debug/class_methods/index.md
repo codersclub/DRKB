@@ -1,20 +1,17 @@
 ---
 Title: Использование классовых методов для выявления утечек памяти
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Использование классовых методов для выявления утечек памяти
 ===========================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Class Methods aply to the class level, in other words you donґt need an
+Class Methods aply to the class level, in other words you don't need an
 instance to call the method
 
-I wish we could define class objects as well, but they doesnґt exist in
+I wish we could define class objects as well, but they doesn't exist in
 Object Pascal, so we will do a trick, we are going to define a variable
 in the implementation section of the unit, this variable will hold the
 number of instances the class will have in a moment in time. Object
@@ -32,7 +29,7 @@ actual number of instances.
 
 Add a Initilialization and a Finalization section to the Unit, in the
 Finalization section ask if the number of instances is \<\> 0, if this
-is the case you known that you didinґt destroy all the objects that you
+is the case you known that you didn't destroy all the objects that you
 created.
 
     unit U_Foo;
@@ -97,4 +94,3 @@ created.
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

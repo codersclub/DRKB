@@ -1,15 +1,12 @@
 ---
 Title: Декомпиляция в Delphi
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Декомпиляция в Delphi
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
 (перевод одноимённой статьи с delphi.about.com )
 
@@ -136,4 +133,3 @@ dfm файлы, pas файлы и т.д. Но главная его особен
      exe2dpr [-o] exeFile
 
 
-Взято из <https://forum.sources.ru>

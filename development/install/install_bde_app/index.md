@@ -1,20 +1,17 @@
 ---
-Title: Install BDE программы
+Title: Установка BDE программы
 author: Константин Кочедыков /kostya@roadtech.saratov.su/
 Date: 01.01.2007
+Source: <https://blackman.wp-club.net/>
 ---
 
 
-Install BDE программы
+Установка BDE программы
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
 Периодически муссируются вопросы типа "Как установить BDE?" и т.п.
 
-Предлагаю, как пример возможного решения проблемы, след. программу.
+Предлагаю, как пример возможного решения проблемы, следующую программу.
 
     program InstallPrfSt;
     {
@@ -187,6 +184,3 @@ Install BDE программы
         WriteString('Ошибка инициализации BDE');
     end.
 
-Константин Кочедыков / kostya@roadtech.saratov.su /
-
-Взято с сайта <https://blackman.wp-club.net/>

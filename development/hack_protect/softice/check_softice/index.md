@@ -1,15 +1,12 @@
 ---
 Title: Запущен ли Softice?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Запущен ли Softice?
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     //SoftIce in W9x
      
@@ -46,7 +43,7 @@ Date: 01.01.2007
     //to detect it
     if IsSoftIce95Loaded or IsSoftIceNTLoaded then
       Application.Terminate
-        {if you insert a "Nag" (Message telling him he uses SoftIce) then a amatuer cracker w'll find this protection in notime}
+      {if you insert a "Nag" (Message telling him he uses SoftIce)
+       then a amatuer cracker will find this protection in notime}
       //bestway of using this thing is in "project Unit"
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

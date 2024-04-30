@@ -7,10 +7,6 @@ Date: 01.01.2007
 Автозапуск Windows: помещение и удаление програм из автозапуска
 ===============================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
 
 Для этого надо добавить ключ в реестр:
@@ -47,7 +43,7 @@ Date: 01.01.2007
      software after a machine has been rebooted. 
     }
      
-     { 
+    { 
      Jede Anwendung, die im Schlьssel RunOnce aufgefьhrt ist, wird 
      beim nдchsten Windowsstart ausgefьhrt und anschlieЯend wieder 
      aus der Registry entfernt. Betrifft Anwendungen, die nur einmal 
@@ -57,7 +53,7 @@ Date: 01.01.2007
     }
      
      
-     // Add the application to the registry... 
+    // Add the application to the registry... 
     // Anwendung in die Registry aufnehmen... 
      
     procedure DoAppToRunOnce(RunName, AppName: string);
@@ -75,7 +71,7 @@ Date: 01.01.2007
        end;
      end;
      
-     // Check if the application is in the registry... 
+    // Check if the application is in the registry... 
     // Prьfen, ob Anwendung in der Registry vorhanden ist... 
      
     function IsAppInRunOnce(RunName: string): Boolean;
@@ -93,7 +89,7 @@ Date: 01.01.2007
        end;
      end;
      
-     // Remove the application from the registry... 
+    // Remove the application from the registry... 
     // Anwendung aus der Registry entfernen... 
      
     procedure DelAppFromRunOnce(RunName: string);
@@ -111,7 +107,7 @@ Date: 01.01.2007
        end;
      end;
      
-     { 
+    { 
       Applications under the key "Run" will be executed 
       each time the user logs on. 
     { 
@@ -123,7 +119,7 @@ Date: 01.01.2007
     }
      
      
-     // Add the application to the registry... 
+    // Add the application to the registry... 
     // Anwendung in die Registry aufnehmen... 
      
     procedure DoAppToRun(RunName, AppName: string);
@@ -141,7 +137,7 @@ Date: 01.01.2007
        end;
      end;
      
-     // Check if the application is in the registry... 
+    // Check if the application is in the registry... 
     // Prьfen, ob Anwendung in der Registry vorhanden ist... 
      
     function IsAppInRun(RunName: string): Boolean;
@@ -159,7 +155,7 @@ Date: 01.01.2007
        end;
      end;
      
-     // Remove the application from the registry... 
+    // Remove the application from the registry... 
     // Anwendung aus der Registry entfernen... 
      
     procedure DelAppFromRun(RunName: string);
@@ -177,15 +173,15 @@ Date: 01.01.2007
        end;
      end;
      
-     // Examples, Beispiele 
-     
+    // Examples, Beispiele 
+    
     // Add app, Anwendung aufnehmen... 
     DoAppToRun('Programm', 'C:\Programs\XYZ\Program.exe');
      
-     // Is app there ? Ist Anwendung vorhanden? 
+    // Is app there ? Ist Anwendung vorhanden? 
     if IsAppInRun('Programm') then...
      
-     // Remove app, Anwendung entfernen 
+    // Remove app, Anwendung entfernen 
     DelAppFromRun('Programm');
 
 Взято с сайта: <https://www.swissdelphicenter.ch>

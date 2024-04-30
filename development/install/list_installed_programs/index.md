@@ -1,15 +1,12 @@
 ---
 Title: Как получить список инсталлированных програм?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить список инсталлированных програм?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Registry; 
@@ -75,4 +72,3 @@ Date: 01.01.2007
         end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

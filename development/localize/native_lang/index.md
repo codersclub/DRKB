@@ -1,15 +1,13 @@
 ---
 Title: Как возвращать сообщения на родном языке компьютера?
-Date: 01.01.2007
+Author: Walter Verhoeven 
+Date: 14.09.2000
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Как возвращать сообщения на родном языке компьютера?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Call inLanguage like this to get the German text else return english 
@@ -33,7 +31,7 @@ Date: 01.01.2007
      var
        OutputBuffer: PChar;
        SelectedLCID: LCID;               //DWORD constand in Windows.pas 
-    begin
+     begin
        OutputBuffer := StrAlloc(4);     //alocate memory for the PChar 
       try
          try
@@ -42,9 +40,9 @@ Date: 01.01.2007
            Result := StrToInt(OutputBuffer);
          except
            Result := 49;   //german 
-          Abort;
+           Abort;
          end;
-       finally
+      finally
          StrDispose(OutputBuffer);   //alway's free the memory alocated 
       end;
      end;
@@ -65,16 +63,16 @@ Date: 01.01.2007
      ##############################################################}
      
      
-       function INLanguage(English, German: string): string;
+     function INLanguage(English, German: string): string;
      begin
        case FGetLanguageSettings of
          49: Result  := German;   // Return the german string 
-        43: Result  := German;   // If the PC has a german preferance 
-        41: Result  := German;
+         43: Result  := German;   // If the PC has a german preferance 
+         41: Result  := German;
          352: Result := German;
          else
            Result := English;      // if not german then english 
-      end;
+       end;
      end;
      
      
@@ -85,4 +83,3 @@ Date: 01.01.2007
      end;
      
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

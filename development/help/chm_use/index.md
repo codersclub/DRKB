@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как использовать chm-файлы в своем проекте?
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
 
 Всё, что вам надо сделать, это сохранить ниже приведенный модуль на
@@ -455,7 +451,7 @@ Date: 01.01.2007
         StoHelpViewer.InternalShutdown;
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
 Вариант 2:
@@ -737,13 +733,14 @@ Date: 01.01.2007
     type 
       THtmlHelpA = function(hwndCaller: THandle; pszFile: PChar; 
         uCommand: Cardinal; dwData: Longint): THandle;  
-      stdCall; 
+        stdCall; 
       THtmlHelpW = function(hwndCaller: THandle; pszFile: PChar; 
         uCommand: Cardinal; dwData: Longint): THandle;  
-      stdCall; 
+        stdCall; 
      
-    function HH(hwndCaller: THandle; pszFile: PChar; uCommand: Cardinal; 
-      dwData: Longint): THandle; 
+    function HH(hwndCaller: THandle; pszFile: PChar;
+      uCommand: Cardinal; dwData: Longint): THandle;
+
     function HtmlHelpInstalled: Boolean; 
      
     implementation 
@@ -805,14 +802,15 @@ Date: 01.01.2007
      
       {$R *.DFM} 
      
-    procedure TForm1.FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState); 
+    procedure TForm1.FormKeyUp(Sender: TObject; var Key: Word;
+                               Shift: TShiftState); 
     begin 
       if Key = vk_f1 then 
       begin 
         if HtmlHelpInstalled = True then 
         begin 
-          RetCode := HH(Form1.Handle, PChar(MYHELP_FILE), HH_HELP_CONTEXT, 
-            ActiveControl.HelpContext); 
+          RetCode := HH(Form1.Handle, PChar(MYHELP_FILE),
+            HH_HELP_CONTEXT, ActiveControl.HelpContext); 
           Key     := 0; //eat it! 
         end  
         else 
@@ -820,4 +818,4 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>

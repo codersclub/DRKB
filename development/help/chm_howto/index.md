@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как использовать файлы справки?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
 
     { First we need to tell the Application object the name 
@@ -23,7 +19,7 @@ Date: 01.01.2007
     {  To display a specific topic of your help file: } 
     Application.HelpJump('TApplication_HelpJump'); 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
 Вариант 2:
@@ -45,4 +41,4 @@ Date: 01.01.2007
       Application.HelpCommand(HELP_HELPONHELP, 0);
     end;
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>

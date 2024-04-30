@@ -1,18 +1,13 @@
 ---
 Title: Поддержка многоязычного интерфейса
-author: Андрей Чудин, ЦПР ТД Библио-Глобус
-Date: 01.01.2007
+author: Андрей Чудин, chudin@yandex.ru
+Date: 04.04.2001
+Source: [http://delphi.chertenok.ru](https://delphi.chertenok.ru)
 ---
 
 
 Поддержка многоязычного интерфейса
 ==================================
-
-::: {.date}
-01.01.2007
-:::
-
-Поддержка многоязычного интерфейса.
 
 Подчас бывает актуально встроить в разрабатываемую программу поддержку
 нескольких языков. Существует множество средств и компонентов для
@@ -51,35 +46,35 @@ Delphi RTTI. Через Component.ClassInfo получим ссылку на и�
 типа, а затем GetTypeData(TypeInf) даст нам указатель на структуру с его
 описанием.
 
-      TypeInf := Component.ClassInfo; 
-      AName := TypeInf^.Name; 
-      TypeData := GetTypeData(TypeInf); 
-      NumProps := TypeData^.PropCount; 
+    TypeInf := Component.ClassInfo; 
+    AName := TypeInf^.Name; 
+    TypeData := GetTypeData(TypeInf); 
+    NumProps := TypeData^.PropCount; 
 
 
 Далее проходимся по всем свойствам данного (классового) типа.
 
     GetMem(PropList, NumProps*sizeof(pointer)); 
      
-      try 
-        GetPropInfos(TypeInf, PropList); 
-     
-        for i := 0 to NumProps-1 do 
-        begin 
-          PropName := PropList^[i]^.Name; 
-     
-          PropTypeInf := PropList^[i]^.PropType^; 
-          PropInfo := PropList^[i]; 
-     
-     
-          case PropTypeInf^.Kind of 
-            tkString, tkLString:  //... это то, что нам нужно
-            if PropName <> 'Name' then { Переводить свойство Name не следует } 
-            begin 
-              { Получение значения свойства и поиск перевода в словаре } 
-              StringPropValue := GetStrProp( Component, PropInfo ); 
-              SetStrProp( Component, PropInfo, TranslateString(StringPropValue) ); 
-            end; 
+    try 
+      GetPropInfos(TypeInf, PropList); 
+   
+      for i := 0 to NumProps-1 do 
+      begin 
+        PropName := PropList^[i]^.Name; 
+   
+        PropTypeInf := PropList^[i]^.PropType^; 
+        PropInfo := PropList^[i]; 
+   
+   
+        case PropTypeInf^.Kind of 
+          tkString, tkLString:  //... это то, что нам нужно
+          if PropName <> 'Name' then { Переводить свойство Name не следует } 
+          begin 
+            { Получение значения свойства и поиск перевода в словаре } 
+            StringPropValue := GetStrProp( Component, PropInfo ); 
+            SetStrProp( Component, PropInfo, TranslateString(StringPropValue) ); 
+          end; 
     ...
     ...
 
@@ -88,37 +83,37 @@ TListItems. Их придется обработать персонально.
 
 
      tkClass: 
-            begin 
-              PropObject := GetObjectProp(Component, PropInfo{, TPersistent}); 
-     
-              if Assigned(PropObject)then 
-              begin 
-                { Для дочерних свойств-классов вызов просмотра свойств } 
-                if (PropObject is TPersistent) then 
-                 UpdateComponent(PropObject as TPersistent); 
-     
-                { Индивидуальный подход к некоторым классам } 
-                if (PropObject is TStrings) then 
-                begin 
-                  for j := 0 to (PropObject as TStrings).Count-1 do 
-                    TStrings(PropObject)[j] := TranslateString(TStrings(PropObject)[j]); 
-                end; 
-                if (PropObject is TTreeNodes) then 
-                begin 
-                  for j := 0 to (PropObject as TTreeNodes).Count-1 do 
-                    TTreeNodes(PropObject).Item[j].Text := 
-                     TranslateString(TTreeNodes(PropObject).Item[j].Text); 
-                end; 
-                if (PropObject is TListItems) then 
-                begin 
-                  for j := 0 to (PropObject as TListItems).Count-1 do 
-                    TListItems(PropObject).Item[j].Caption 
-                      := TranslateString(TListItems(PropObject).Item[j].Caption); 
-                end; 
-                { Здесь можно добавить обработку остальных классов } 
-              end; 
-     
-            end; 
+       begin 
+         PropObject := GetObjectProp(Component, PropInfo{, TPersistent}); 
+
+         if Assigned(PropObject)then 
+         begin 
+           { Для дочерних свойств-классов вызов просмотра свойств } 
+           if (PropObject is TPersistent) then 
+            UpdateComponent(PropObject as TPersistent); 
+
+           { Индивидуальный подход к некоторым классам } 
+           if (PropObject is TStrings) then 
+           begin 
+             for j := 0 to (PropObject as TStrings).Count-1 do 
+               TStrings(PropObject)[j] := TranslateString(TStrings(PropObject)[j]); 
+           end; 
+           if (PropObject is TTreeNodes) then 
+           begin 
+             for j := 0 to (PropObject as TTreeNodes).Count-1 do 
+               TTreeNodes(PropObject).Item[j].Text := 
+                TranslateString(TTreeNodes(PropObject).Item[j].Text); 
+           end; 
+           if (PropObject is TListItems) then 
+           begin 
+             for j := 0 to (PropObject as TListItems).Count-1 do 
+               TListItems(PropObject).Item[j].Caption 
+                 := TranslateString(TListItems(PropObject).Item[j].Caption); 
+           end; 
+           { Здесь можно добавить обработку остальных классов } 
+         end; 
+
+       end; 
 
 
 Объединяя все написанное, получим компонент для перевода строковых
@@ -310,4 +305,3 @@ TListItems. Их придется обработать персонально.
 
 составление статьи: Андрей Чудин, ЦПР ТД Библио-Глобус.
 
-Взято из [http://delphi.chertenok.ru](https://delphi.chertenok.ru)
