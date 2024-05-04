@@ -1,15 +1,15 @@
 ---
-Title: BMP -> WMF
+Title: Конвертирование BMP -> WMF
 Date: 01.01.2007
 ---
 
 
-BMP -> WMF
+Конвертирование BMP -> WMF
 ==========
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     procedure ConvertBMP2WMF
     (const BMPFileName, WMFFileName: TFileName); 
@@ -38,9 +38,12 @@ BMP -> WMF
 
     ConvertBMP2WMF('c:\mypic.bmp','c:\mypic.wmf')
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -62,6 +65,3 @@ BMP -> WMF
       Image1.Picture.LoadFromFile('C:.emf');
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

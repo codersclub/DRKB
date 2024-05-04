@@ -1,15 +1,12 @@
 ---
 Title: Формат wave файла
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Формат wave файла
 =================
-
-::: {.date}
-01.01.2007
-:::
 
     TWaveHeader = record
       Marker1: array[0..3] of Char;
@@ -58,6 +55,3 @@ Date: 01.01.2007
 так далее. Для моно или 8-битных файлов сделайте соответствующие
 изменения.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

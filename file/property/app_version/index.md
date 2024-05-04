@@ -2,15 +2,12 @@
 Title: Как узнать версию программы?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как узнать версию программы?
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     function FileVersion(AFileName:string): string;
     var
@@ -65,6 +62,3 @@ Date: 01.01.2007
 
     FileVersion(Paramstr(0));
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

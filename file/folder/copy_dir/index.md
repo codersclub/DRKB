@@ -1,15 +1,12 @@
 ---
 Title: Как скопировать директорию?
 Date: 01.01.2007
+Source: <https://blackman.wp-club.net/>
 ---
 
 
 Как скопировать директорию?
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
 Использовать ShFileOperation
 
@@ -33,4 +30,3 @@ Date: 01.01.2007
       ShFileOperation( OpStruc );
     end;
 
-Взято с сайта <https://blackman.wp-club.net/>

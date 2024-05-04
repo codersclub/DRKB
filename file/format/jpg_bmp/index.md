@@ -1,15 +1,12 @@
 ---
-Title: JPG -> BMP
+Title: Конвертирование JPG -> BMP
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-JPG -> BMP
+Конвертирование JPG -> BMP
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       JPEG; 
@@ -42,4 +39,3 @@ JPG -> BMP
       image file size. 1 = Smallest file size, 100 = Best quality. 
     } 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

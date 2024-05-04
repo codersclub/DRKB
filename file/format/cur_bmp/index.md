@@ -1,15 +1,12 @@
 ---
-Title: CUR -> BMP
+Title: Конвертирование CUR -> BMP
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
-CUR -> BMP
+Конвертирование CUR -> BMP
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -25,4 +22,3 @@ CUR -> BMP
       Bitmap.Free;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

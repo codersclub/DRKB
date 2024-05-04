@@ -1,18 +1,13 @@
 ---
-Title: TIF -> PDF
+Title: Конвертирование TIF -> PDF
 Author: Morten Ravn-Jonsen
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
-TIF -> PDF
+Конвертирование TIF -> PDF
 ==========
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Morten Ravn-Jonsen
 
 Совместимость: Delphi 5.x (или выше)
 
@@ -32,12 +27,12 @@ TIF -> PDF
 4) Добавьте PDFlib\_tlb в Ваш проект. Этот файл находится в директории
 Borland\\Delphi5\\Imports.
 
-Как использовать функцию
+**Как использовать функцию**
 
 Вот пример её вызова:
 
-if not TifToPDF(\'c:\\test.tif\', \'c:\\test.pdf\') then
-Showmessage(\'Could not convert\');
+    if not TifToPDF('c:\test.tif', 'c:\test.pdf') then
+      Showmessage('Could not convert');
 
 Функция TifToPdf
 
@@ -82,4 +77,3 @@ Showmessage(\'Could not convert\');
       end; 
     end; 
 
-Взято из <https://forum.sources.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Как получить тип файла?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить тип файла?
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       ShellAPI;
@@ -31,4 +28,3 @@ Date: 01.01.2007
       ShowMessage('File type is: ' + MrsGetFileType('c:\autoexec.bat'));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

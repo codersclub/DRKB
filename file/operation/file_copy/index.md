@@ -1,17 +1,14 @@
 ---
 Title: Копирование файлов
 Date: 01.01.2007
+Source: <https://dmitry9.nm.ru/info/>
 ---
 
 
 Копирование файлов
 ==================
 
-::: {.date}
-01.01.2007
-:::
-
-Копирование методом Pascal
+**Копирование методом Pascal**
 
     Type
       TCallBack=procedure (Position,Size:Longint); {Для индикации процесса копирования}
@@ -57,7 +54,7 @@ Date: 01.01.2007
       Raise EInOutError.Create('File cannot be copied into itself');
     end;
 
-Копирование методом потока
+**Копирование методом потока**
 
     Procedure FileCopy(Const SourceFileName, TargetFileName: String);
     Var
@@ -77,7 +74,7 @@ Date: 01.01.2007
      end;
     end;
 
-Копирование методом LZExpand
+**Копирование методом LZExpand**
 
     uses LZExpand;
     procedure CopyFile(FromFileName, ToFileName  : string);
@@ -100,7 +97,7 @@ Date: 01.01.2007
       end;
     end;
 
-Копирование методами Windows
+**Копирование методами Windows**
 
     uses ShellApi; // !!! важно
      
@@ -120,4 +117,3 @@ Date: 01.01.2007
        ShowMessage('Copy Failed');
     end;
 
-Источник: <https://dmitry9.nm.ru/info/>

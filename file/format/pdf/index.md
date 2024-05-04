@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как работать с PDF файлами?
 ===========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
 Let\'s see how to to show an Adobe Acrobat (.PDF) file in a Delphi
 application. All you need to do is the Acrobat ActiveX control (pdf.ocx
@@ -43,7 +41,7 @@ Here\'s How:
 
 - Using the object inspector, set the src property to the name of an existing PDF file on your system. Now all you have to do is resize the component and read the PDF file from your Delphi application.
 
-Tips:
+**Tips:**
 
 If you do not have the Acrobat ActiveX control, download it
 nowhttp://www.adobe.com/prodindex/acrobat/readstep.html! It will be
@@ -64,12 +62,16 @@ Closing acrobat reader on formdestroy:
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
+
 Ok, you must have installed the Acrobat Reader program in your machine,
-if you donґt have it you can download it from Adobeґs site:
+if you don\'t have it you can download it from Adobe\'s site:
 www.adobe.comhttp://www.adobe.com
 
 After that you have to install the type library for Acrobat (Project -\>
-Import Type Library from Delphiґs menu) select "Acrobat Control for
+Import Type Library from Delphi\'s menu) select "Acrobat Control for
 ActiveX (version x)". Where x stands for the current version of the
 type library. Click the install button to install it into the IDE.
 
@@ -146,11 +148,10 @@ order to know the behaviour of that class so here it is:
         SetWideStringProp stored False;
     end;
 
-finally hereґs an advice:
+finally here\'s an advice:
 
-You canґt be sure your users will have Acrobat Reader installed so
+You can\'t be sure your users will have Acrobat Reader installed so
 please fisrt check that situation before you take any actions with the
 TPdf component. And second if your PDF file have links for an AVI file
-for example, they donґt work from Delphi.
+for example, they don\'t work from Delphi.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

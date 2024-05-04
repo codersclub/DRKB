@@ -1,15 +1,12 @@
 ---
 Title: TFileTime -> TDateTime
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 TFileTime -> TDateTime
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
     function FileTimeToDateTime(FileTime: TFileTime): TDateTime;
      var
@@ -41,4 +38,3 @@ TFileTime -> TDateTime
        Result := Ft;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

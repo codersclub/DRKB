@@ -1,15 +1,12 @@
 ---
 Title: Как выяснить дату последнего изменения файла?
 Date: 01.01.2007
+Source: <https://blackman.wp-club.net/>
 ---
 
 
 Как выяснить дату последнего изменения файла?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetFileDate(FileName: string): string;
       var FHandle: Integer;
@@ -22,4 +19,3 @@ Date: 01.01.2007
     end;
     end;
 
-Взято с сайта <https://blackman.wp-club.net/>

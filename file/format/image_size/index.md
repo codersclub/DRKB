@@ -7,16 +7,15 @@ Date: 01.01.2007
 Как узнать размер картинки для JPG, GIF и PNG файлов?
 =====================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: https://www.swissdelphicenter.ch/en/tipsindex.php
 
     unit ImgSize; 
      
     interface 
      
     uses Classes; 
-     
      
     procedure GetJPGSize(const sFile: string; var wWidth, wHeight: Word); 
     procedure GetPNGSize(const sFile: string; var wWidth, wHeight: Word); 
@@ -218,9 +217,12 @@ Date: 01.01.2007
      
     end. 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: https://www.swissdelphicenter.ch/en/tipsindex.php
 
 Размер Gif файла:
 
@@ -271,4 +273,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

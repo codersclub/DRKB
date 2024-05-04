@@ -1,15 +1,12 @@
 ---
-Title: BMP -> EMF (Enhanced Metafile)
+Title: Конвертирование BMP -> EMF (Enhanced Metafile)
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
-BMP -> EMF (Enhanced Metafile)
+Конвертирование BMP -> EMF (Enhanced Metafile)
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     function bmp2emf(const SourceFileName: TFileName): Boolean;
     // Converts a Bitmap to a Enhanced Metafile (*.emf)
@@ -45,4 +42,3 @@ BMP -> EMF (Enhanced Metafile)
       bmp2emf('C:\TestBitmap.bmp');
     end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

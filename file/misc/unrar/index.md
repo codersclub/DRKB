@@ -1,30 +1,27 @@
 ---
 Title: Создаем собственный UnRar, используя unrar.dll
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Создаем собственный UnRar, используя unrar.dll
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
-
-// Объявления
+    // Объявления
 
     function RAROpenArchive(ArchiveData : Pointer): Integer; stdcall;
-    external 'unrar.dll' name 'RAROpenArchive'; 
+      external 'unrar.dll' name 'RAROpenArchive'; 
      
     function RARCloseArchive(hArcData : Integer): Integer; stdcall;
-    external 'unrar.dll' name 'RARCloseArchive';
+      external 'unrar.dll' name 'RARCloseArchive';
      
     function RARReadHeader(hArcData : Integer; HeaderData : Pointer): Integer; stdcall;
-    external 'unrar.dll' name 'RARReadHeader';
+      external 'unrar.dll' name 'RARReadHeader';
      
     function RARProcessFile(hArcData : Integer; Operation : Integer; DestPath : Pointer;
-    DestName : Pointer): Integer; stdcall;
-    external 'unrar.dll' name 'RARProcessFile';
+      DestName : Pointer): Integer; stdcall;
+      external 'unrar.dll' name 'RARProcessFile';
      
      
     const
@@ -87,7 +84,7 @@ Date: 01.01.2007
       RARComment : array [1..256] of Char;
       RARHeaderData : TRARHeaderData;
      
-    ...
+      ...
      
     procedure ExtractRARArchive;
     var
@@ -113,7 +110,7 @@ Date: 01.01.2007
       RAROpenArchiveData.CmtBuf := @RARComment; 
       RAROpenArchiveData.CmtBufSize := 255; 
      
-    // Открываем RAR архив и выделяем память
+      // Открываем RAR архив и выделяем память
       RARhnd := RAROpenArchive (@RAROpenArchiveData);
       If RAROpenArchiveData.OpenResult <> 0 then
       begin
@@ -149,11 +146,10 @@ Date: 01.01.2007
        end;
       until RARrc <> 0;
      
-    // закрываем RAR архив и освобождаем память
+      // закрываем RAR архив и освобождаем память
       If RARCloseArchive(RARhnd) <> 0 then
       begin
        MessageDlg('Unable to close rar archive!',mtError, [mbOK], 0);
       end;
     end; // ExtractRARArchive
 
-Взято из <https://forum.sources.ru>

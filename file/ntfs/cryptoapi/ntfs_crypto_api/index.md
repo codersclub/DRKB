@@ -1,15 +1,18 @@
 ---
 Title: Как шифровать файлы при помощи Windows NTFS API?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Как шифровать файлы при помощи Windows NTFS API?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
+Этот совет работает с Windows 2000 (NTFS 5) и более поздних версий.
+     
+Эти две функции определены в windows.pas, но они определены неправильно.
+В этом случае понадобится наше собственное определение.
+
 
     {
     This tip works with Windows 2000 (NTFS 5) and later
@@ -38,4 +41,3 @@ Date: 01.01.2007
         ShowMessage('Cannot decrypt directory.');
     end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

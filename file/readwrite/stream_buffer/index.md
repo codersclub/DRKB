@@ -1,15 +1,13 @@
 ---
 Title: Буферы для потоков
 Date: 01.01.2007
+Author: Сергей Парунов
+Source: <https://www.delphikingdom.com>
 ---
 
 
 Буферы для потоков
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
 Стандартные потоки, широко применяющиеся в Delphi, резко упрощают
 повседневную работу с потоковыми данными. Но и у них есть недостаток.
@@ -47,90 +45,102 @@ Date: 01.01.2007
 делается практически так же) - и пользуются ими только для "крупного"
 обмена, осуществляя "мелкий" самостоятельно со своим буфером.
 
-            ByteArray = packed array of Byte;
-     
-            psnAbstractStreamBuffer = class {
-                    Абстрактный предок классов для БЫСТРОЙ (буферизованно: вся цепочка до
-            API-функций задействуется только при переполнении буфера, что даёт ускорение
-            на порядок для данных длиной несколько байт) и УДОБНОЙ (перегруженные методы
-            для разных типов данных позволяют не задавать их размер, хотя можно и так)
-            бинарной работы с потоками заданной структуры. Принцип действия прост:
-            накопление данных в буфере и сброс в поток - у буфера записи; чтение из
-            потока и раздача данных из буфера - у буфера чтения. О позиции потока буфер
-            не заботится - просто пишет или читает в текущей. А иначе будет монстр.
-                    Опасно что-то делать с потоком (хотя кому это надо?), когда к нему
-            присоединён буфер, ведь буфер может переписать поток, прочитать устаревшие
-            данные или сделать это не там, где надо. Перед подобными операциями
-            сбрасывйте буфер методом Flush (при смене присоединённого потока (свойство
-            Stream) и разрушении буфера это делается автоматически). Это касается и
-            попеременной работы буферов чтения и записи с одним потоком... хотя зачем
-            тогда буфер - чтобы постоянно его сбрасывать и устанавливать позицию потока?
-                    При ошибках чтения и записи возникают стандартные VCL-исключения 
-          EReadError и EWriteError.}
-            private
-                    FStream: TStream; {присоединённый поток}
-                    FSize: Cardinal; {размер буфера}
-                    FBuffer, {буфер}
-                    FBufferEnd: PChar; {конец буфера (сразу за последним байтом) - понятно, 
-                что вместе с FSize и FBuffer избыточно, но это повысит скорость и упростит код}
-                    procedure SetStream(const Value: TStream);
-            protected
-                    FCurrPos: PChar; {текущая позиция в буфере}
-                    property Size: Cardinal read FSize;
-                    property Buffer: PChar read FBuffer;
-                    property BufferEnd: PChar read FBufferEnd;
-                    constructor Create(const Stream: TStream; const Size: Cardinal);
-            public
-                    property Stream: TStream read FStream write SetStream; {<> Nil !!!}
-                    procedure Flush; virtual; abstract; {сброс}
-                    destructor Destroy; override; {Stream разрушайте сами, если надо, ПОСЛЕ
-                    разрушения буфера}
-            end;
-     
-            psnStreamWriter = class(psnAbstractStreamBuffer)
-            public
-                    constructor Create(
-                     {присоединённый поток, меняется свойством Stream}
-                            const Stream: TStream;
-                            const Size: Cardinal = 1024 {размер буфера}
-                    );
-                    procedure Flush; override;
-                    procedure WriteBuffer(const Data; const Count: Cardinal); {Этот метод
-                    не перегружен с Write, так как Delphi (4-5, во всяком случае) плохо выносит
-                    перегруженные методы, когда один из них имеет бестиповые параметры: Code
-                    Explorer сходит с ума, а Code Completion вообще хулиганит - самовольно
-                    добавляет раздел Private и дублирует объявление метода (без overload!!!)
-                    там, а потом ругается: мол, первый метод не был объявлен как overload).}
-                    procedure Write(const Data: Byte     ); overload;
-                    procedure Write(const Data: Word     ); overload;
-                    procedure Write(const Data: LongWord ); overload;
-                    procedure Write(const Data: Integer  ); overload;
-                    procedure Write(const Data: Single   ); overload;
-                    procedure Write(const Data: Double   ); overload;
-                    procedure Write(const Data: Extended ); overload;
-                    procedure Write(const Data: String   ); overload;
-                    procedure Write(const Data: ByteArray); overload;
-            end;
-     
-            psnStreamReader = class(psnAbstractStreamBuffer)
-            public
-                    constructor Create(
-                    {присоединённый поток, меняется свойством Stream}
-                            const Stream: TStream; 
-                            const Size: Cardinal = 1024 {размер буфера}
-                    );
-                    procedure Flush; override;
-                    procedure ReadBuffer(out Data; const Count: Cardinal);
-                    procedure Read(out Data: Byte     ); overload;
-                    procedure Read(out Data: Word     ); overload;
-                    procedure Read(out Data: LongWord ); overload;
-                    procedure Read(out Data: Integer  ); overload;
-                    procedure Read(out Data: Single   ); overload;
-                    procedure Read(out Data: Double   ); overload;
-                    procedure Read(out Data: Extended ); overload;
-                    procedure Read(out Data: String   ); overload;
-                    procedure Read(out Data: ByteArray); overload;
-            end;
+    ByteArray = packed array of Byte;
+
+    psnAbstractStreamBuffer = class {
+      Абстрактный предок классов для БЫСТРОЙ
+      (буферизованно: вся цепочка до API-функций задействуется
+       только при переполнении буфера, что даёт ускорение на порядок
+       для данных длиной несколько байт)
+      и УДОБНОЙ
+      (перегруженные методы для разных типов данных позволяют
+       не задавать их размер, хотя можно и так)
+      бинарной работы с потоками заданной структуры.
+      Принцип действия прост:
+      накопление данных в буфере и сброс в поток - у буфера записи;
+      чтение из потока и раздача данных из буфера - у буфера чтения.
+      О позиции потока буфер не заботится - просто пишет или читает в текущей.
+      А иначе будет монстр.
+      
+      Опасно что-то делать с потоком (хотя кому это надо?),
+      когда к нему присоединён буфер, ведь буфер может переписать поток,
+      прочитать устаревшие данные или сделать это не там, где надо.
+      Перед подобными операциями сбрасывйте буфер методом Flush
+      (при смене присоединённого потока (свойство Stream)
+      и разрушении буфера это делается автоматически).
+      Это касается и попеременной работы буферов чтения и записи
+      с одним потоком... хотя зачем тогда буфер -
+      чтобы постоянно его сбрасывать и устанавливать позицию потока?
+      
+      При ошибках чтения и записи возникают стандартные VCL-исключения 
+      EReadError и EWriteError.}
+    
+    private
+            FStream: TStream; {присоединённый поток}
+            FSize: Cardinal; {размер буфера}
+            FBuffer, {буфер}
+            FBufferEnd: PChar; {конец буфера (сразу за последним байтом) -
+              понятно, что вместе с FSize и FBuffer избыточно,
+              но это повысит скорость и упростит код}
+            procedure SetStream(const Value: TStream);
+    protected
+            FCurrPos: PChar; {текущая позиция в буфере}
+            property Size: Cardinal read FSize;
+            property Buffer: PChar read FBuffer;
+            property BufferEnd: PChar read FBufferEnd;
+            constructor Create(const Stream: TStream; const Size: Cardinal);
+    public
+            property Stream: TStream read FStream write SetStream; {<> Nil !!!}
+            procedure Flush; virtual; abstract; {сброс}
+            destructor Destroy; override; {Stream разрушайте сами, если надо, ПОСЛЕ
+            разрушения буфера}
+    end;
+
+    psnStreamWriter = class(psnAbstractStreamBuffer)
+    public
+            constructor Create(
+              {присоединённый поток, меняется свойством Stream}
+              const Stream: TStream;
+              const Size: Cardinal = 1024 {размер буфера}
+            );
+            procedure Flush; override;
+            procedure WriteBuffer(const Data; const Count: Cardinal);
+            {Этот метод не перегружен с Write, так как Delphi (4-5, во всяком случае)
+            плохо выносит перегруженные методы, когда один из них имеет
+            бестиповые параметры: Code Explorer сходит с ума,
+            а Code Completion вообще хулиганит - самовольно добавляет раздел Private
+            и дублирует объявление метода (без overload!!!) там,
+            а потом ругается: мол, первый метод не был объявлен как overload).}
+            procedure Write(const Data: Byte     ); overload;
+            procedure Write(const Data: Word     ); overload;
+            procedure Write(const Data: LongWord ); overload;
+            procedure Write(const Data: Integer  ); overload;
+            procedure Write(const Data: Single   ); overload;
+            procedure Write(const Data: Double   ); overload;
+            procedure Write(const Data: Extended ); overload;
+            procedure Write(const Data: String   ); overload;
+            procedure Write(const Data: ByteArray); overload;
+    end;
+
+    psnStreamReader = class(psnAbstractStreamBuffer)
+    public
+            constructor Create(
+            {присоединённый поток, меняется свойством Stream}
+                    const Stream: TStream; 
+                    const Size: Cardinal = 1024 {размер буфера}
+            );
+            procedure Flush; override;
+            procedure ReadBuffer(out Data; const Count: Cardinal);
+            procedure Read(out Data: Byte     ); overload;
+            procedure Read(out Data: Word     ); overload;
+            procedure Read(out Data: LongWord ); overload;
+            procedure Read(out Data: Integer  ); overload;
+            procedure Read(out Data: Single   ); overload;
+            procedure Read(out Data: Double   ); overload;
+            procedure Read(out Data: Extended ); overload;
+            procedure Read(out Data: String   ); overload;
+            procedure Read(out Data: ByteArray); overload;
+    end;
 
 Их методы WriteBuffer и ReadBuffer работают аналогично одноименным
 методам класса TStream, то есть они генерируют стандартные
@@ -161,6 +171,3 @@ EWriteError может возникнуть много позже того, ка
 помимо данного буферного класса), необходимо сбросить буфер методом
 Flush.
 
-Сергей Парунов
-
-<https://www.delphikingdom.com>

@@ -1,6 +1,6 @@
 ---
 Title: Работа через WinAPI
-Author: 
+Author: Podval
 Date: 01.01.2007
 Keywords: 
 Description: 
@@ -9,13 +9,11 @@ Description:
 Работа через WinAPI
 ===================
 
-::: {.date}
-01.01.2007
-:::
-
 Раздел написан Podval (примеры к сожалению на С++)
 
-Любителям WinAPI посвящается...
+:::{.right}
+_Любителям WinAPI посвящается..._
+:::
 
 ### Функции FileOpen, FileSeek, FileRead.
 

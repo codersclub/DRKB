@@ -1,15 +1,12 @@
 ---
 Title: Создание hardlink и symbolic link
-Date: 01.01.2007
+Author: Alex Konshin, akonshin@earthlink.net
+Date: 30.12.2002
 ---
 
 
 Создание hardlink и symbolic link
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Создание hardlink и symbolic link.
@@ -56,6 +53,7 @@ Date: 01.01.2007
       Windows.FindClose(h);
       Result := ( rFindData.dwFileAttributes and FILE_ATTRIBUTE_DIRECTORY ) = 0;
     end;
+    
     //-------------------------------------------------------------
     // warning: function assumes that it is correct directory name
     function isDirectoryEmpty( const ADirectoryName: String ): Boolean;
@@ -66,8 +64,10 @@ Date: 01.01.2007
       sSeachMask : String;
     begin
       len := Length(ADirectoryName);
-      if (PChar(ADirectoryName)+len-1)^='\' then sSeachMask := ADirectoryName+'*'
-      else sSeachMask := ADirectoryName+'*';
+      if (PChar(ADirectoryName)+len-1)^='\' then
+        sSeachMask := ADirectoryName+'*'
+      else
+        sSeachMask := ADirectoryName+'*';
       h := Windows.FindFirstFile( PChar(sSeachMask), rFindData );
       Result := (h=INVALID_HANDLE_VALUE);
       Windows.FindClose(h);
@@ -87,7 +87,10 @@ Date: 01.01.2007
     end;
      
     //-------------------------------------------------------------
-    procedure _CreateHardlink( AFileName : String; AFileWCName : PWideChar; ALinkName: String; overwrite: Boolean );
+    procedure _CreateHardlink( AFileName : String;
+                               AFileWCName : PWideChar;
+                               ALinkName: String;
+                               overwrite: Boolean );
     var
       aLinkWCFileName, aLinkFullName: Array[0..MAX_PATH] of WChar;
       pwFilePart: LPWSTR;
@@ -168,7 +171,9 @@ Date: 01.01.2007
      
     //-------------------------------------------------------------
     // ADirName and ADirForLinks must not end with backslach
-    procedure _CreateHardlinksForSubDirectory( const ADirName, ADirForLinks: String; options: TOptions );
+    procedure _CreateHardlinksForSubDirectory( const ADirName,
+                                               ADirForLinks: String;
+                                               options: TOptions );
     var
       h: THandle;
       sExistedFile, sLinkName : String;
@@ -179,7 +184,7 @@ Date: 01.01.2007
       dwAttributes := GetFileAttributes( PChar(ADirForLinks) );
       if dwAttributes=FILE_DOES_NOT_EXIST then
         begin
-    // WriteLn('Create Directory ',ADirForLinks);
+          // WriteLn('Create Directory ',ADirForLinks);
           if not CreateDir(ADirForLinks) then 
             raise Exception.Create('Cannot create directory "'+ADirForLinks+'".');
         end
@@ -188,6 +193,7 @@ Date: 01.01.2007
           +'" already exists and it is not a directory.');
       h := Windows.FindFirstFile( PChar(ADirName+'*'), rFindData );
       if h=INVALID_HANDLE_VALUE then Exit;
+      
       try
         repeat
           if (rFindData.cFileName[0]='.') and 
@@ -197,7 +203,6 @@ Date: 01.01.2007
           sLinkName := ADirForLinks+'\'+rFindData.cFileName;
           if (rFindData.dwFileAttributes and FILE_ATTRIBUTE_DIRECTORY)=0 then
             begin
-     
               awcFileName[
                 Windows.MultiByteToWideChar( 0, 0, PChar(sExistedFile),
                   MAX_PATH,awcFileName,MAX_PATH)
@@ -245,7 +250,9 @@ Date: 01.01.2007
     end;
      
     //-------------------------------------------------------------
-    procedure CreateHardlinksForDirectory( const ADirName, ADirForLinks: String; options: TOptions );
+    procedure CreateHardlinksForDirectory( const ADirName,
+                                           ADirForLinks: String;
+                                           options: TOptions );
     var
       dwAttributes: DWORD;
       len : Integer;
@@ -269,7 +276,9 @@ Date: 01.01.2007
     end;
      
     //-------------------------------------------------------------
-    procedure CreateHardlinksInDirectory( const AFileName, ADirForLinks: String; options: TOptions );
+    procedure CreateHardlinksInDirectory( const AFileName,
+                                          ADirForLinks: String;
+                                          options: TOptions );
     var
       dwAttributes: DWORD;
       len : Integer;
@@ -422,9 +431,9 @@ Date: 01.01.2007
       TReparseMountpointDataBuffer = REPARSE_MOUNTPOINT_DATA_BUFFER;
       PReparseMountpointDataBuffer = ^TReparseMountpointDataBuffer;
      
-     
     //-------------------------------------------------------------
-    function CreateSymlink( ATargetName, ALinkName: String; const options: TOptions ): Boolean;
+    function CreateSymlink( ATargetName, ALinkName: String;
+                            const options: TOptions ): Boolean;
     const
       pwcNativeFileNamePrefix : PWideChar = '\??\';
       nNativeFileNamePrefixWCharLength = 4;
@@ -578,6 +587,7 @@ Date: 01.01.2007
       WriteLn('(c) 2002 Alex Konshin');
       Halt;
     end;
+    
     //-------------------------------------------------------------
     procedure Execute;
     var
@@ -656,8 +666,6 @@ Date: 01.01.2007
           end;
           CreateHardlink( sExistedFileName, sLink, options );
         end;
-     
-     
      
     end;
      

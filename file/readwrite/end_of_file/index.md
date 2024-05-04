@@ -1,15 +1,12 @@
 ---
 Title: Переместиться в конец файла
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Переместиться в конец файла
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
     { прыгаем в конец (eof) }
     procedure gotoeof (f : file);
@@ -21,4 +18,3 @@ Date: 01.01.2007
       seek (f, filesize(f));
     end; {gotoeof}
 
-Взято с <https://delphiworld.narod.ru>

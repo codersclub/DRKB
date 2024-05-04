@@ -1,15 +1,12 @@
 ---
-Title: BMP -> RTF
+Title: Конвертирование BMP -> RTF
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-BMP -> RTF
+Конвертирование BMP -> RTF
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     function BitmapToRTF(pict: TBitmap): string; 
     var 
@@ -44,4 +41,3 @@ BMP -> RTF
       Result := rtf; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

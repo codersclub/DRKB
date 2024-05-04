@@ -1,28 +1,21 @@
 ---
 Title: Как поместить в буфер файл с помощью File Mapping?
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как поместить в буфер файл с помощью File Mapping?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
-
-1.
-
-В файлике Delphi5\\Demos\\Resxplor\\exeimage.pas ищи слово
+1. В файлике Delphi5\\Demos\\Resxplor\\exeimage.pas ищи слово
 CreateFileMapping
 
-2.
+2. идея простая: открываешь файл .. (или создаешь)
 
-идея простая открываешь файл .. (или создаешь)
+3. создаешь Mapping ... CreateFileMapping
 
-создаешь Mapping ... CreateFileMapping
-
-отображаешь Mapping в свой процесс MapViewOfFile
+4. отображаешь Mapping в свой процесс MapViewOfFile
 
 и всё
 
@@ -42,7 +35,6 @@ CreateFileMapping
         ...
         ...
         ...
-    // потом
+      // потом
       UnmapViewOfFile(FileView);
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

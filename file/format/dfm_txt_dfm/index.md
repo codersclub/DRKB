@@ -1,22 +1,16 @@
 ---
-Title: DFM -> TXT, TXT -> DFM
+Title: Конвертирование DFM -> TXT -> DFM
 Date: 01.01.2007
 ---
 
 
-DFM -> TXT, TXT -> DFM
+Конвертирование DFM -> TXT -> DFM
 ======================
 
-::: {.date}
-01.01.2007
-:::
+Используйте файл Convert.exe, расположенный в каталоге bin Delphi/C++ Builder.
 
-Use the Convert.exe file found in the Delphi\\C++ Builder
+Пример:
 
-bin directory.
+    C:\Delphi\convert enum.dfm enum.txt
 
-Example:
-
-C:\\Delphi\\convert enum.dfm enum.txt
-
-C:\\Delphi\\convert enum.txt enum.dfm
+    C:\Delphi\convert enum.txt enum.dfm

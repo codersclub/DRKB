@@ -1,15 +1,12 @@
 ---
-Title: BMP -> JPG
+Title: Конвертирование BMP -> JPG
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-BMP -> JPG
+Конвертирование BMP -> JPG
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Jpeg, ClipBrd; 
@@ -32,4 +29,3 @@ BMP -> JPG
       jpgImg.SaveToFile('TChartExample.jpg'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

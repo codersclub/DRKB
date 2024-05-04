@@ -1,15 +1,12 @@
 ---
-Title: BMP -> AVI (для TAnimate)
+Title: Конвертирование BMP -> AVI (для TAnimate)
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
-BMP -> AVI (для TAnimate)
+Конвертирование BMP -> AVI (для TAnimate)
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 TAnimate is a rather nice component. However if you don\'t want to use
 the built in AVI files and want to create your own AVI files from BMP
@@ -36,9 +33,9 @@ on this ?
 
 Errors you should check for are ..
 
-All files are valid BMP files and are of the same size.
+- All files are valid BMP files and are of the same size.
 
-All Blockreads are valid with no read errors.
+- All Blockreads are valid with no read errors.
 
 Ray has a downloadable EXE that works quite nicely, however I am about
 to write my own utility that incorporates the following ...
@@ -52,7 +49,7 @@ to write my own utility that incorporates the following ...
 (I have beta version 1.0.0.0 ready, if anyone wants a copy of exe or
 source code, drop me a mail at mheydon@pgbison.co.za)
 
-For further info on AVI files I recommend you vist Ray\'s site at
+For further info on AVI files I recommend you visit Ray\'s site at
 http://www.shrinkwrapvb.com/avihelp/avihelp.htm it really is a well
 written tutorial (even if it is in Visual Basic)
 
@@ -258,4 +255,3 @@ written tutorial (even if it is in Visual Basic)
       m_memBits := nil;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

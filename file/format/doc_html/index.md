@@ -1,16 +1,12 @@
 ---
-Title: DOC -> HTML
+Title: Конвертирование DOC -> HTML
 Author: jack128
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
-
-DOC -> HTML
+Конвертирование DOC -> HTML
 ===========
-
-::: {.date}
-01.01.2007
-:::
 
     var
       fname: string;
@@ -34,6 +30,3 @@ DOC -> HTML
       end;
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: jack128

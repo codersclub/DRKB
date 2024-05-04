@@ -1,15 +1,12 @@
 ---
 Title: Как проверить, находится ли файл на локальном диске?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как проверить, находится ли файл на локальном диске?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function IsOnLocalDrive(aFileName: string): Boolean; 
     var 
@@ -32,4 +29,3 @@ Date: 01.01.2007
           ShowMessage(OpenDialog1.FileName + ' is on a local drive.'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

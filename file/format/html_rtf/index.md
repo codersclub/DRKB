@@ -1,15 +1,13 @@
 ---
-Title: HTML -> RTF
+Title: Конвертирование HTML -> RTF
+Author: Falk Schulze
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-HTML -> RTF
+Конвертирование HTML -> RTF
 ===========
-
-::: {.date}
-01.01.2007
-:::
 
     { HTML to RTF by Falk Schulze }
      
@@ -363,4 +361,3 @@ HTML -> RTF
       FreeFontStack(fo_stk);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

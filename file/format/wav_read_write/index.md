@@ -1,15 +1,13 @@
 ---
-Title: Пример работы чтения и сохранении wav-файлов
+Title: Пример чтения и сохранения wav-файлов
 Date: 01.01.2007
+Author: Даниил Карапетян (delphi4all@narod.ru)
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
-Пример работы чтения и сохранении wav-файлов
-============================================
-
-::: {.date}
-01.01.2007
-:::
+Пример чтения и сохранения wav-файлов
+=====================================
 
 Сразу оговорюсь, что рассматривать я буду только PCM формат - самый
 простой. Wav-файл состоит из заголовка и собственно информации. В
@@ -100,17 +98,17 @@ Date: 01.01.2007
       SampleCount, SamplesPerSec: integer;
       BitsPerSample, Channeles: smallint;
     begin
-    // Вызов OpenDialog1:
+      // Вызов OpenDialog1:
       if not OpenDialog1.Execute then Exit;
       try
-    // Открытие файла:
+        // Открытие файла:
         F := TFileStream.Create(OpenDialog1.FileName, fmOpenRead);
-    // Чтение заголовка:
+        // Чтение заголовка:
         ReadWaveHeader(F, SampleCount, SamplesPerSec,
           BitsPerSample, Channeles);
         F.Free;
         Memo1.Clear;
-    // Заполнение Memo информацией о файле:
+        // Заполнение Memo информацией о файле:
         Memo1.Lines.Add('SampleCount: ' + IntToStr(SampleCount));
         Memo1.Lines.Add(Format('Length: %5.3f sec', [SampleCount / SamplesPerSec]));
         Memo1.Lines.Add('Channeles: ' + IntToStr(Channeles));
@@ -121,11 +119,7 @@ Date: 01.01.2007
       end;
     end;
 
-Даниил Карапетян.
 
 На сайте <https://delphi4all.narod.ru> Вы найдете еще более 100 советов
 по Delphi.
 
-Email: <delphi4all@narod.ru>
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

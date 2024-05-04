@@ -1,15 +1,12 @@
 ---
 Title: Как проверить папку на shared?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как проверить папку на shared?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     {Following code needs to use ShlObj, ComObj, ActiveX Units}
      
@@ -174,4 +171,3 @@ Date: 01.01.2007
         ShowMessage('not shared');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

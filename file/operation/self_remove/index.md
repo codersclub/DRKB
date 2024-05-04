@@ -2,15 +2,12 @@
 Title: Как удалить файл из самого себя?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как удалить файл из самого себя?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
 Очевидно что под Win32 удаление работающего кода невозможно. На время
 выполнения он просто добавляется к swap файлу - т.е. винды при нехватки
@@ -38,7 +35,6 @@ Date: 01.01.2007
      
     procedure TForm1.FormDestroy(Sender: TObject);
      
-
      
     var f: textFile;
       FileName: string;
@@ -54,6 +50,3 @@ Date: 01.01.2007
       ShellExecute(Handle, 'Open', PChar(FileName), nil, nil, sw_hide);
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -2,17 +2,17 @@
 Title: Как получить длинное имя файла или каталога, зная короткое имя?
 Author: P.O.D.
 Date: 01.01.2007
+Id: 03166
+Source: <https://forum.sources.ru>
 ---
 
 
 Как получить длинное имя файла или каталога, зная короткое имя?
 ===============================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
+
+Author: P.O.D.
 
 Используйте поле **Win32\_Find\_Data** в структуре TSearchRec.
 
@@ -31,13 +31,12 @@ Date: 01.01.2007
       SysUtils.FindClose(SearchRec); 
     end; 
 
-Взято из <https://forum.sources.ru>
-
-Автор: P.O.D.
 
 ------------------------------------------------------------------------
 
 Вариант 2:
+
+Author: Rouse\_
 
     unit Unit1;
      
@@ -76,7 +75,7 @@ Date: 01.01.2007
       S: String;
     begin
       // Получаем полное имя
-      S := ExpandFileName('C:\DOCUME~1\');
+      S := ExpandFileName('C:\DOCUME~1');
       ShowMessage(S);
       // Получаем урезанное имя
       GetShortPathName(PChar(S), PChar(S), MAX_PATH);
@@ -85,8 +84,4 @@ Date: 01.01.2007
      
     end.
 
-©Drkb::03166
 
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

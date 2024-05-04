@@ -2,27 +2,22 @@
 Title: Как найти путь к моей программе?
 Author: Baa
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как найти путь к моей программе?
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
 Используйте **Application.ExeName**
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-Или еще лучше **Paramstr(0)** - лучше потому что работает и без объекта
-Application и в DLL
+Вариант 2:
 
-Автор: Vit
+Или еще лучше **Paramstr(0)** - лучше потому, что работает и без объекта
+Application и в DLL.
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Author: Vit

@@ -1,15 +1,15 @@
 ---
 Title: Как прочитать владельца файла?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как прочитать владельца файла?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Когда вы создаете файл или каталог, вы становитесь его владельцем.
+С помощью GetFileOwner вы получаете владельца файла.
 
     // When you create a file or directory, you become the owner of it. 
     // With GetFileOwner you get the owner of a file. 
@@ -62,4 +62,3 @@ Date: 01.01.2007
      
     // Note: Only works unter NT.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

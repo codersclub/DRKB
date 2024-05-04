@@ -1,15 +1,12 @@
 ---
 Title: Как определить, является ли диск NTFS?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как определить, является ли диск NTFS?
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       ComObj; 
@@ -32,4 +29,3 @@ Date: 01.01.2007
         ShowMessage('File is not on NTFS File System') 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
-Title: Flash SWF \> EXE
+Title: Конвертирование Flash SWF -\> EXE
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Flash SWF \> EXE
+Конвертирование Flash SWF -\> EXE
 ================
-
-::: {.date}
-01.01.2007
-:::
 
     function Swf2Exe(S, D, F: string): string;
       //S = Source file (swf)
@@ -52,4 +49,3 @@ Flash SWF \> EXE
         'c:\Program Files\Macromedia\Flash MX\Players\SAFlashPlayer.exe');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

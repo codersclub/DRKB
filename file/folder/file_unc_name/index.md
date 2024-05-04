@@ -1,15 +1,12 @@
 ---
 Title: Как получить UNC-путь к файлу?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как получить UNC-путь к файлу?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetUNCName(PathStr: string): string;
     var
@@ -38,4 +35,3 @@ Date: 01.01.2007
 
 Работает только на NT/2000/XP
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

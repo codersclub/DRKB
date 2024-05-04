@@ -1,16 +1,15 @@
 ---
 Title: Split / merge files
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Split / merge files
 ===================
 
-::: {.date}
-01.01.2007
-:::
-
+    // Split file
+         
     {
       Parameters:
      
@@ -100,4 +99,3 @@ Split / merge files
       CombineFiles('C:\temp\FileToSplit.001','H:\temp\FileToSplit.chm');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

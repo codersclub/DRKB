@@ -1,15 +1,12 @@
 ---
 Title: Программа для восстановления удаленных файлов
+Author: NikNet (NikNet@Yandex.ru)
 Date: 01.01.2007
 ---
 
 
 Программа для восстановления удаленных файлов
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     {$S-,R-,B-}
      
@@ -168,11 +165,11 @@ Date: 01.01.2007
       {   if (aCol=0) or (aCol=1) then
             brush.color:=$B0C0D0 else}
      
-      brush.color:=$B0C2E0;
-      pen.color:=$A0A0AA;
-      font.color:=000000;
-        rectangle(r);
-        case aCol of
+       brush.color:=$B0C2E0;
+       pen.color:=$A0A0AA;
+       font.color:=000000;
+       rectangle(r);
+       case aCol of
           00:s:='Sector';
           01:s:='Offset';
           //--------------
@@ -187,13 +184,14 @@ Date: 01.01.2007
           10:s:='Accessed';
           11:s:='Cluster';
           12:s:='';
-        end;
-       end else
-    begin
+       end;
+      end else
+      begin
        font.color:=$8088A8;
        if gdSelected in State then
-          brush.color:=$DFE8FF else
-          brush.color:=$FFFFFF;
+         brush.color:=$DFE8FF
+       else
+         brush.color:=$FFFFFF;
      
        if aRow<=qp then
        begin
@@ -212,7 +210,7 @@ Date: 01.01.2007
           10: s:= StringGrid1.Cols[10].Strings[aRow];
           11: s:= StringGrid1.Cols[11].Strings[aRow];
           12: s:= StringGrid1.Cols[12].Strings[aRow];
-       end;
+        end;
      
        if aCol=4 then
        begin
@@ -251,15 +249,15 @@ Date: 01.01.2007
        Begin
         kc(5,-5,-5);
        end;
-      rectangle(r);
-      if gdSelected in State then begin
+       rectangle(r);
+       if gdSelected in State then begin
          pen.Color:=$A0C0FF;
          moveTo(r.left,r.top+1); lineTo(r.right,r.top+1);
          moveTo(r.left,r.bottom-2); lineTo(r.right,r.bottom-2);
+       end;
       end;
-    end;
-    end;
-    textOut(r.left+3,r.top+3,s);
+     end;
+     textOut(r.left+3,r.top+3,s);
     end;
     end;
      
@@ -285,8 +283,8 @@ Date: 01.01.2007
 
     procedure TForm1.StringGrid1DblClick(Sender: TObject);
     begin
-       if (StringGrid1.Cells[5,StringGrid1.Row][1] <> 'F')    then
-          DirView(StrToInt('$'+StringGrid1.Cells[11,StringGrid1.Row]));
+      if (StringGrid1.Cells[5,StringGrid1.Row][1] <> 'F') then
+        DirView(StrToInt('$'+StringGrid1.Cells[11,StringGrid1.Row]));
     end;
      
 
@@ -298,25 +296,25 @@ Date: 01.01.2007
      nSectors:Dword;
      F:File;
     begin
-      if  (StringGrid1.Cells[5,StringGrid1.Row][1]   <> 'D')  then
+      if (StringGrid1.Cells[5,StringGrid1.Row][1] <> 'D') then
       Begin
         SaveDialog1.FileName:=StringGrid1.Cells[2,StringGrid1.Row]+'.'+
         StringGrid1.Cells[3,StringGrid1.Row];
      
-      if SaveDialog1.Execute then
-      Begin
-        Sector:=StrToInt('$'+StringGrid1.Cells[11,StringGrid1.Row]);
-        sector:=((Sector-2) * SectorsPerCluster)+DataAreaSector;
-        nSize:=DWORD(StringGrid1.Objects[07,StringGrid1.Row]);
-        nSectors:=Round(nSize div BytesPerSector)+1;
-        GetMem(Buf,nSize);
-        ReadSector(Sector,nSectors,Buf^,nSize);
-        AssignFile(F,SaveDialog1.FileName);
-        Rewrite(f,1);
-        BlockWrite(F,Buf^,nSize);
-        CloseFile(F);
+        if SaveDialog1.Execute then
+        Begin
+          Sector:=StrToInt('$'+StringGrid1.Cells[11,StringGrid1.Row]);
+          sector:=((Sector-2) * SectorsPerCluster)+DataAreaSector;
+          nSize:=DWORD(StringGrid1.Objects[07,StringGrid1.Row]);
+          nSectors:=Round(nSize div BytesPerSector)+1;
+          GetMem(Buf,nSize);
+          ReadSector(Sector,nSectors,Buf^,nSize);
+          AssignFile(F,SaveDialog1.FileName);
+          Rewrite(f,1);
+          BlockWrite(F,Buf^,nSize);
+          CloseFile(F);
+        end;
       end;
-     end;
     end;
      
     procedure TForm1.Rootdirectory1Click(Sender: TObject);
@@ -326,9 +324,9 @@ Date: 01.01.2007
      
     procedure TForm1.DriveComboBox1Change(Sender: TObject);
     begin
-       drv:=DriveComboBox1.Drive;
-       Init(ord(drv)-64);
-       DirView(0);   
+      drv:=DriveComboBox1.Drive;
+      Init(ord(drv)-64);
+      DirView(0);   
     end;
      
     end.

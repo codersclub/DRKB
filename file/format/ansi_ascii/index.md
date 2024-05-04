@@ -1,15 +1,12 @@
 ---
-Title: ANSI -> ASCII
+Title: Конвертирование ANSI -> ASCII
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
-ANSI -> ASCII
-=============
-
-::: {.date}
-01.01.2007
-:::
+Конвертирование ANSI -\> ASCII
+=============================
 
     {преобразование Ansi to Ascii}
      function AnToAs(s: String) : String;
@@ -29,4 +26,3 @@ ANSI -> ASCII
       end;
      end;
 
-Взято с <https://delphiworld.narod.ru>

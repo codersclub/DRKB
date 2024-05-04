@@ -8,32 +8,40 @@ Date: 01.01.2007
 Как удалить файл после перезагрузки Windows?
 ============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: inko
+
+Source: Vinrad.ru <https://forum.vingrad.ru>
 
 Я использую функцию, которая заносит в ключ реестра RunOnce командную
 строку:
 
-command.com /c del C:\\Путь\\Имя\_файла
+    command.com /c del C:\Путь\Имя_файла
 
-Автор: inko
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+----
 
-В wininit добавляешь строку NUL={ПУТЬ УДАЛЯЕМОГО ФАЙЛА}
+Вариант 2:
 
-Автор: VoL
+Author: VoL
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+В wininit добавляешь строку `NUL={ПУТЬ УДАЛЯЕМОГО ФАЙЛА}`
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: p0s0l
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Еще есть способ через реестр:
 
     uses Registry;
      
-
      
     procedure DeleteFileOnRestart (const FileName : String);
     var Reg : TRegistry;
@@ -51,6 +59,3 @@ command.com /c del C:\\Путь\\Имя\_файла
 
 Одна из них сработает, а другая пройдет в холостую...
 
-Автор: p0s0l
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

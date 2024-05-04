@@ -1,15 +1,14 @@
 ---
 Title: Устанавливаем дату создания файла
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Устанавливаем дату создания файла
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     function SetFileDate(
       Const FileName : String;
@@ -42,11 +41,9 @@ Date: 01.01.2007
     SetFileDate('c:\mydir\myfile.ext', Now)
      
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     var
       f: file;
@@ -56,13 +53,11 @@ DelphiWorld 6.0
       SetFTime(f, Time);
       Close(f);
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
 
 Функция, которая устанавливает дату одного файла, равную дате другого
 файла
@@ -78,6 +73,3 @@ DelphiWorld 6.0
       FileClose(DestHand);                            { закрываем целевой файл }
     end; 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

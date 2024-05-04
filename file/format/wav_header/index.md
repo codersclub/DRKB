@@ -1,15 +1,12 @@
 ---
 Title: Как прочитать заголовок wav файла?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как прочитать заголовок wav файла?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TWaveHeader = record
@@ -31,11 +28,10 @@ Date: 01.01.2007
 With this structure you can get all the information\'s about a wave file
 you want to.
 
-After this header following the wave data which contains the data for
-playing the wave file.
+После этого заголовка следуют wave данные, которые содержат данные для воспроизведения wav файла.
 
-Now we trying to get the information\'s from a wave file. To be sure
-it\'s really a wave file, we test the information\'s:
+Теперь мы пытаемся получить информацию из wav файла.
+Чтобы убедиться, что это действительно wav файл, мы проверяем информацию:
 
     function GetWaveHeader(FileName: TFilename): TWaveHeader;
     const
@@ -71,4 +67,3 @@ it\'s really a wave file, we test the information\'s:
       Result := w;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -2,25 +2,27 @@
 Title: Проход дерева каталогов
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Проход дерева каталогов
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
+
+Author: Vit
 
     Procedure ScanDir(Dir:string);
     var SearchRec:TSearchRec;
     begin
-      if Dir<>'' then if Dir[length(Dir)]<>'\' then Dir:=Dir+'\';
+      if Dir<>'' then
+        if Dir[length(Dir)]<>'\' then
+          Dir:=Dir+'\';
       if FindFirst(Dir+'*.*', faAnyFile, SearchRec)=0 then
       repeat
-        if (SearchRec.name='.') or (SearchRec.name='..') then continue;
+        if (SearchRec.name='.') or (SearchRec.name='..') then
+          continue;
         if (SearchRec.Attr and faDirectory)<>0 then
           ScanDir(Dir+SearchRec.name) //we found Directory: "Dir+SearchRec.name"
         else
@@ -34,10 +36,10 @@ Date: 01.01.2007
       ScanDir('c:');
     end;
 
-Автор: Vit
-
 -----------------------------
 Вариант 2:
+
+Author: December
 
 Ненамного сложнее, но возможностей поболе будет.
 
@@ -48,7 +50,7 @@ Date: 01.01.2007
     begin
       if ScanSub then
       begin
-        FindFirst(path+'*.*',faDirectory,SearchRec);{. found}
+        FindFirst(path+'*.*',faDirectory,SearchRec); {. found}
         FindNext(SearchRec); {.. found}
         a:=FindNext(SearchRec);
         while a=0 do
@@ -73,6 +75,3 @@ Date: 01.01.2007
      
     end; {ScanDir}
 
-Автор: December
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

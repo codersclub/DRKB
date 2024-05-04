@@ -2,15 +2,12 @@
 Title: Перетаскивание файлов в приложение
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Перетаскивание файлов в приложение
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 Взято из FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
 
@@ -29,8 +26,9 @@ Date: 01.01.2007
 Uses необходимо подключить модуль ShellAPI.
 В private области окна нужно вставить следующую строку:
 
-    procedure WMDropFiles(var Msg: TWMDropFiles); message WM_DROPFILES;//получение сообщений о переносе файла в окно приложения
-     
+    //получение сообщений о переносе файла в окно приложения
+    procedure WMDropFiles(var Msg: TWMDropFiles); message WM_DROPFILES;
+
 
 Процедура обработки этого сообщения будет выглядеть следующим образом:
 
@@ -62,6 +60,3 @@ Uses необходимо подключить модуль ShellAPI.
       DragAcceptFiles(Handle, True); 
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -1,15 +1,15 @@
 ---
-Title: ICO -> BMP
+Title: Конвертирование ICO -> BMP
 Date: 01.01.2007
 ---
 
 
-ICO -> BMP
+Конвертирование ICO -> BMP
 ==========
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://blackman.wp-club.net/>
 
     Var
     Icon   : TIcon;
@@ -26,9 +26,10 @@ ICO -> BMP
       Bitmap.Free;
     end;
 
-Взято с сайта <https://blackman.wp-club.net/>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     procedure TIconShow.FileListBox1Click(Sender: TObject);
     var
@@ -62,6 +63,10 @@ ICO -> BMP
 
 ------------------------------------------------------------------------
 
+Вариант 3:
+
+Source: <https://delphiworld.narod.ru>
+
 Чтобы преобразовать Icon в Bitmap используйте TImageList. для обратного
 преобразования замените метод AddIcon на Add, и метод GetBitmap на
 GetIcon.
@@ -77,7 +82,11 @@ GetIcon.
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>
+
+------------------------------------------------------
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Способ преобразования изображения размером 32x32 в иконку.
 
@@ -148,6 +157,3 @@ GetIcon.
      
     end. 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

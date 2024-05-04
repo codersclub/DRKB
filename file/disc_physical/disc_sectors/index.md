@@ -1,15 +1,12 @@
 ---
 Title: Модуль для работы с дисковыми драйверами (На уровне секторов)
+Author: NikNet (NikNet@Yandex.ru)
 Date: 01.01.2007
 ---
 
 
 Модуль для работы с дисковыми драйверами (На уровне секторов)
 =============================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { Автор : NikNet
       MAIL   : NikNet@yandex.ru}
@@ -251,19 +248,19 @@ Date: 01.01.2007
     begin
       VWIN32Error := ERROR_NON;
       Result := false;
-        ReadWritePacket.StartSector := Sector;
-        ReadWritePacket.Sectors := Count;
-        ReadWritePacket.Buffer := @Buffer;
-     
-        Registers.EAX   := $7305;
-        Registers.EBX   := DWord(@ReadWritePacket);
-        Registers.ECX   := $FFFFFFFF;
-        Registers.EDX   := Drive;
-        Registers.ESI   := $0000;
-        Registers.Flags := $00000000;
-     
-        if VWIN32DIOC(VWIN32_DIOC_DOS_DRIVEINFO,@Registers) then
-          if ((Registers.Flags and FLAG_CARRY) = 0) then Result := true;
+      ReadWritePacket.StartSector := Sector;
+      ReadWritePacket.Sectors := Count;
+      ReadWritePacket.Buffer := @Buffer;
+   
+      Registers.EAX   := $7305;
+      Registers.EBX   := DWord(@ReadWritePacket);
+      Registers.ECX   := $FFFFFFFF;
+      Registers.EDX   := Drive;
+      Registers.ESI   := $0000;
+      Registers.Flags := $00000000;
+   
+      if VWIN32DIOC(VWIN32_DIOC_DOS_DRIVEINFO,@Registers) then
+        if ((Registers.Flags and FLAG_CARRY) = 0) then Result := true;
      
       if (not Result) then
       begin
@@ -282,7 +279,6 @@ Date: 01.01.2007
         end;
       end;
     end;
-     
      
      
     function Write9xSector(Drive: Byte; Sector: DWord; Count: Word; Var Buffer; Mode: Byte): Boolean;
@@ -331,7 +327,6 @@ Date: 01.01.2007
       mul edx
       mov [ecx],edx
     end;
-     
      
      
     function ReadNTSector(Drive: Byte; Sector,SectorCount: DWord; Var Buffer): Boolean;
@@ -398,7 +393,6 @@ Date: 01.01.2007
      End;
     end;
      
-     
     function ReadPlysicalSector (HddNumber: Byte; Sector:Int64; Count:word;  Var Buffer): DWORD;
     var
       hFile: THandle;
@@ -434,7 +428,6 @@ Date: 01.01.2007
       end;
       CloseHandle(hFile);
     end;
-     
      
      
       Function GetLogic(C,H,S,Hmax,Smax:Int64):comp;

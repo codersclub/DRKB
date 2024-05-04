@@ -2,18 +2,14 @@
 Title: Информация о AVI файле (разбор заголовка AVI)
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Информация о AVI файле (разбор заголовка AVI)
 =============================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-     
 
      
     interface
@@ -216,6 +212,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

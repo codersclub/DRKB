@@ -1,15 +1,12 @@
 ---
 Title: Показать структуру разделов жесткого диска
+Author: NikNet (NikNet@Yandex.ru)
 Date: 01.01.2007
 ---
 
 
 Показать структуру разделов жесткого диска
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -221,6 +218,7 @@ Date: 01.01.2007
      
      
     {$R *.dfm}
+
      Function TForm1.SearchLogicalDisks:Int64;
      Label
          PrimPartFound,
@@ -257,8 +255,8 @@ Date: 01.01.2007
        I         : Integer;
      
      Begin
-     MNode:=TreeView1.Items.Add(nil,'HDD Driver');
-     Result:=0;
+       MNode:=TreeView1.Items.Add(nil,'HDD Driver');
+       Result:=0;
        // Выделяем память для наших переменных
        New(Data);
        // Онулируем все переменные

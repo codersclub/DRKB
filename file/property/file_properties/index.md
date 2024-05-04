@@ -2,15 +2,12 @@
 Title: Как извлечь «Сводку» свойств файла?
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как извлечь «Сводку» свойств файла?
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
 Ниже показан пример получения набора свойств файла (которые отображаются
 на вкладке "Сводка" диалогового окна "Свойства:").
@@ -57,8 +54,8 @@ Date: 01.01.2007
     uses ActiveX, ComObj;
      
     function StgOpenStorageEx(const pwcsName : POleStr; grfMode : LongInt; stgfmt : DWORD;
-                               grfAttrs : DWORD;  pStgOptions : Pointer; reserved2 : Pointer;
-                                riid : PGUID; out stgOpen : IStorage ) : HResult; stdcall; external 'ole32.dll';
+                              grfAttrs : DWORD;  pStgOptions : Pointer; reserved2 : Pointer;
+                              riid : PGUID; out stgOpen : IStorage ) : HResult; stdcall; external 'ole32.dll';
      
      
     const
@@ -165,9 +162,9 @@ Date: 01.01.2007
      
        ps[0].ulKind:=PRSPEC_PROPID;   // считываем св-ва по их идентификатору (см. ActiveX.pas)
      
-    //  Прочитаем несколько св-в файла.
-    //  В этом примере - для наглядности - читаем по одному св-ву из потока (можно за один раз прочитать и больше),
-    //  поэтому каждый раз значение будет лежать в pv[0].
+       // Прочитаем несколько св-в файла.
+       // В этом примере - для наглядности - читаем по одному св-ву из потока (можно за один раз прочитать и больше),
+       // поэтому каждый раз значение будет лежать в pv[0].
      
        ps[0].propid:=PIDSI_TITLE;     // заголовок
        lit:=ListView1.Items.Add;
@@ -248,6 +245,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: Krid

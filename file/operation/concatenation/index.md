@@ -7,10 +7,6 @@ Date: 01.01.2007
 Объединить два файла
 ====================
 
-::: {.date}
-01.01.2007
-:::
-
      Procedure ConCatFiles(Const targetname: String;
                            Const Sourcenames: Array of String);
        Var
@@ -33,13 +29,10 @@ Date: 01.01.2007
          end;
        End;
 
- 
 
 Использование:
 
- 
 
       chDir(ExtractFileDir(Application.Exename));
       ConcatFiles('sum.txt', ['project1.dpr','unit1.pas','unit2.pas']);
 
- 

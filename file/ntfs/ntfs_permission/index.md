@@ -2,15 +2,12 @@
 Title: Права доступа NTFS
 Author: Александр (Rouse\_) Багель
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Права доступа NTFS
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
     uses ..., Aclapi, AccCtrl;
      
@@ -54,15 +51,6 @@ Date: 01.01.2007
     end;
 
 
-
-
-Параметры: путь к объекту, имя пользователя, маска доступа, ее
-расчитываешь вот так:
-http://msdn.microsoft.com/library/default....access\_mask.asp
-
-
- 
-
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>
+Параметры:  
+путь к объекту, имя пользователя, маска доступа, её расчитываешь вот так:
+<https://learn.microsoft.com/ru-ru/windows/win32/secauthz/access-mask>

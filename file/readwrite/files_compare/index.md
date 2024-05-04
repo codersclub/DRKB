@@ -7,11 +7,11 @@ Date: 01.01.2007
 Как сравнить два файла?
 =======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-{1.}
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+
+Первый пример:
 
     function Are2FilesEqual(const File1, File2: TFileName): Boolean; 
     var 
@@ -41,9 +41,10 @@ Date: 01.01.2007
           if Are2FilesEqual(Opendialog1.FileName, Opendialog2.FileName) then 
             ShowMessage('Files are equal.'); 
     end; 
-     
 
-{2.}
+
+Второй пример:
+
 
     function FilesAreEqual(const File1, File2: TFileName): Boolean; 
     const   
@@ -80,9 +81,12 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     function CompareFiles(Filename1,FileName2:string):longint;
     {
@@ -147,9 +151,12 @@ Date: 01.01.2007
       FreeMem(Buff2,Buf_Size);
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     unit findin;
      
@@ -458,4 +465,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

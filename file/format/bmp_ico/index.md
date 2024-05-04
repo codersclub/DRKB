@@ -1,18 +1,18 @@
 ---
-Title: BMP -> ICO
+Title: Конвертирование BMP -> ICO
 Author: Bernhard Angerer
 Date: 01.01.2007
 ---
 
 
-BMP -> ICO
+Конвертирование BMP -> ICO
 ==========
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Bernhard Angerer
+Author: Bernhard Angerer
+
+Source: <https://forum.sources.ru>
 
 Вам необходимо создать два битмапа, битмап маски (назовём его "AND"
 bitmap) и битмап изображения (назовём его XOR bitmap). Вы можете
@@ -89,9 +89,12 @@ bitmap) и битмап изображения (назовём его XOR bitmap
       Icon.Free; 
     end; 
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
 Способ преобразования изображения размером 32x32 в иконку.
 
@@ -162,4 +165,3 @@ bitmap) и битмап изображения (назовём его XOR bitmap
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

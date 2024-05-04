@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как вызвать диалог свойств файла?
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
     Procedure ShowFileProperties(Const filename: String);
     Var
       sei: TShellExecuteinfo;
@@ -23,4 +19,3 @@ Date: 01.01.2007
       ShellExecuteEx(@sei);
     End;
 
- 

@@ -1,15 +1,12 @@
 ---
 Title: Как разрезать wav файл?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как разрезать wav файл?
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TWaveHeader = record
@@ -29,7 +26,7 @@ Date: 01.01.2007
     end;
      
 
-You can load the file header with this function:
+Вы можете загрузить заголовок файла с помощью этой функции:
 
     function GetWaveHeader(FileName: TFilename): TWaveHeader;
     const
@@ -65,9 +62,8 @@ You can load the file header with this function:
       Result := w;
     end;
 
-Now we have all for creating the code for spliting the wave file:
+Теперь у нас есть все для создания кода для разделения wav файла:
 
-     
     function SplitWave(Source, Dest1, Dest2: TFileName; Pos: Integer): Boolean;
     var
       f1, f2, f3: TfileStream;
@@ -110,4 +106,3 @@ Now we have all for creating the code for spliting the wave file:
       Result:=True;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

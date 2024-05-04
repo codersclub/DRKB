@@ -2,17 +2,16 @@
 Title: Чтение из открытого файла
 Author: neutrino
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Чтение из открытого файла
 =========================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
+
+Author: neutrino
 
 Даже если файл открыт с низкими привелегиями (используя ReadOnly,
 ShareReadWrite), иногда открытие уже открытого файла может приводить к
@@ -41,55 +40,50 @@ ShareReadWrite), иногда открытие уже открытого фай�
 Памяти(Memory), но изменения не будут записаны на диск до тех пор, пока
 Вы не запишете их в файл (командой SaveToFile).
 
-Автор: neutrino
 
 **Комментарий от Vit:**
 
 Решение хорошее, но накладно если файл большой...
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
 Вариант 2:
 
+Author: Vit
+
     var b:string[15];
     begin
-    with TFileStream.create('c:\MyFile.doc', fmShareDenyNone) do
-    try
-    read(b,14);
-    showmessage(b);
-    finally
-    Free;
+      with TFileStream.create('c:\MyFile.doc', fmShareDenyNone) do
+      try
+        read(b,14);
+        showmessage(b);
+      finally
+        Free;
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
 Вариант 3:
 
+Author: PILOTIK
+
     procedure TForm1.Button1Click(Sender: TObject);
     type
-    AnyType = byte; // ??? ???? ?????
+      AnyType = byte; // ??? ???? ?????
     var
-    F: file of AnyType;
+      F: file of AnyType;
     const
-    FName = 'D:/Exp.exe'; //?????????? ????
+      FName = 'D:/Exp.exe'; //?????????? ????
     begin
-    begin
-    AssignFile(F, FName); { File selected in dialog }
-    FileMode:=fmOpenRead;
-    Reset(F);
-    // ...
-    // ...
-    CloseFile(F);
-    FileMode:=fmOpenReadWrite;
-    end;
+      AssignFile(F, FName); { File selected in dialog }
+      FileMode:=fmOpenRead;
+      Reset(F);
+      // ...
+      // ...
+      CloseFile(F);
+      FileMode:=fmOpenReadWrite;
     end;
 
-Автор: PILOTIK
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

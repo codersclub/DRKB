@@ -1,17 +1,15 @@
 ---
 Title: Компонент для работы с PCX файлами
-Date: 01.01.2007
+Author: M. de Haan, M.deHaan@inn.nl
+Date: 10.08.2001
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Компонент для работы с PCX файлами
 ==================================
 
-::: {.date}
-01.01.2007
-:::
-
-Fully supports reading and writing of: 1, 8 and 24 bit PCX images.
+Полностью поддерживает чтение и запись: 1-, 8- и 24-битных изображений PCX.
 
     ///////////////////////////////////////////////////////////////////////
     //                                                                   //
@@ -1644,4 +1642,3 @@ Fully supports reading and writing of: 1, 8 and 24 bit PCX images.
       //---------------------------------------------------------------------
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

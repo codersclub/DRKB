@@ -1,17 +1,14 @@
 ---
 Title: Чтение и запись переменных типа Record
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Чтение и запись переменных типа Record
 ======================================
 
-::: {.date}
-01.01.2007
-:::
-
-Файл с множеством записей
+**Файл с множеством записей**
 
 Обычно, я использую файл с заголовком, который я затем загружаю в
 память, и использую его для поиска необходимой мне записи.
@@ -54,13 +51,9 @@ Date: 01.01.2007
       BlockRead(f, hotspotrec, Sizeof(THotspot));
     end; 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+**Добавление записи в файл:**
 
-------------------------------------------------------------------------
-
-Добавление записи в файл
 
     unit apprec_;
      
@@ -168,13 +161,8 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
-
-------------------------------------------------------------------------
-
-Запись и чтение из файла массива записей
+**Запись и чтение из файла массива записей:**
 
 Это не очень Delphi-подобно (тем не менее, работа происходит с
 действительно паскалевскими записями), но вы можете писать и читать
@@ -218,39 +206,35 @@ Routines" электронной справки по Delphi.
 всяком случае, всю функциональность можно инкапсулировать в отдельном
 специализированном компоненте.
 
-<https://delphiworld.narod.ru/>
+**Запись и чтение из файла массива записей**
 
-DelphiWorld 6.0
-
-------------------------------------------------------------------------
-
-Запись и чтение из файла массива записей
-
-    type TR=Record
-            Name:string[100]; 
-            Age:Byte; 
-            Income:Real; 
-           end; 
-    var f:file of TR; 
-        r:TR; 
+    type
+      TR=Record
+        Name:string[100]; 
+        Age:Byte; 
+        Income:Real; 
+      end; 
+    
+    var
+      f:file of TR; 
+      r:TR; 
      
     begin 
-    //assign file 
+      //assign file 
       assignFile(f, 'MyFileName'); 
-    //open file 
+      //open file 
       if FileExists('MyFileName') then 
         reset(f) 
       else 
         rewrite(f); 
-    //чтение 10й записи 
+      //чтение 10й записи 
       seek(f,10); 
       read(f,r); 
-    //запись 20й записи 
-     seek(f, 20); 
-     write(f,r); 
-     closefile(f); 
+      //запись 20й записи 
+      seek(f, 20); 
+      write(f,r); 
+      closefile(f); 
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

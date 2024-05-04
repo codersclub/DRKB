@@ -8,17 +8,15 @@ Date: 01.01.2007
 Мониторинг изменений на диске
 =============================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
+
+Author: Rouse\_
+
+Source: <https://forum.sources.ru>
 
 Как определяешь наличие новых файлов? По таймеру или через
 ReadDirectoryChangesW? Если по таймеру, то оставь его и попробуй вот
 такой код (тебя интересует флаг FILE\_NOTIFY\_CHANGE\_CREATION):
-
- 
 
     unit Unit1;
      
@@ -88,12 +86,15 @@ ReadDirectoryChangesW? Если по таймеру, то оставь его и
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_
 
 ------------------------------------------------------------------------
 Вариант 2:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
+
+PS: только для NT/2000/XP/2003
 
     unit wfsU;
      
@@ -334,14 +335,4 @@ ReadDirectoryChangesW? Если по таймеру, то оставь его и
     end;
      
     end.
-
-
-
-PS: только для NT/2000/XP/2003
-
- 
-
-Взято из <https://forum.sources.ru>
-
-Автор: Krid
 

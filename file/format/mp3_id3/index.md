@@ -1,15 +1,12 @@
 ---
 Title: Как прочитать MP3 ID3-Tag?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как прочитать MP3 ID3-Tag?
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Byte 1-3 = ID 'TAG' 
@@ -111,4 +108,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

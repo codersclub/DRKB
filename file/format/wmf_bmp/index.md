@@ -1,15 +1,12 @@
 ---
-Title: WMF -> BMP
+Title: Конвертирование WMF -> BMP
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
-WMF -> BMP
+Конвертирование WMF -> BMP
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     procedure ConvertWMF2BMP
     (const WMFFileName, BMPFileName: TFileName); 
@@ -38,4 +35,3 @@ WMF -> BMP
 
     ConvertWMF2BMP('c:\mypic.wmf','c:\mypic.bmp')
 
-Взято из <https://forum.sources.ru>

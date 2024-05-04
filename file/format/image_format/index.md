@@ -1,18 +1,15 @@
 ---
 Title: Как определить графический формат файла (не используя расширение)?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как определить графический формат файла (не используя расширение)?
 ==================================================================
 
-::: {.date}
-01.01.2007
-:::
-
-You can determine it without extention. Below is a function that reads
-the file header and determines the type.
+Определить это можно и без расширения.
+Ниже представлена функция, которая читает заголовок файла и определяет его тип.
 
     function PhysicalResolveFileType(AStream: TStream): Integer;
     var
@@ -56,4 +53,3 @@ the file header and determines the type.
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

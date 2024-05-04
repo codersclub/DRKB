@@ -1,15 +1,12 @@
 ---
 Title: Работа с TGA файлами
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Работа с TGA файлами
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     const
       FERRORMSG2 = 'Sorry, Unsupported Compressed(RLE) File Format';
@@ -92,4 +89,3 @@ Date: 01.01.2007
           MB_ICONHAND);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

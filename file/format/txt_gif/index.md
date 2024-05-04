@@ -1,15 +1,12 @@
 ---
-Title: TXT -> GIF
+Title: Конвертирование TXT -> GIF
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
-TXT -> GIF
+Конвертирование TXT -> GIF
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TxtToGif(txt, FileName: string);
     var
@@ -46,4 +43,3 @@ TXT -> GIF
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

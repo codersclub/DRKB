@@ -1,15 +1,12 @@
 ---
 Title: Как инсталлировать INF файл?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как инсталлировать INF файл?
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       ShellAPI; 
@@ -35,4 +32,3 @@ Date: 01.01.2007
       InstallINF('C:\XYZ.inf', 0); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

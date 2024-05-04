@@ -1,17 +1,14 @@
 ---
 Title: Как конвертировать WideString в String?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как конвертировать WideString в String?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
-    {:Converts Unicode string to Ansi string using specified code page. 
+    {Converts Unicode string to Ansi string using specified code page. 
       @param   ws       Unicode string. 
       @param   codePage Code page to be used in conversion. 
       @returns Converted ansi string. 
@@ -58,4 +55,3 @@ Date: 01.01.2007
       end; 
     end; { StringToWideString } 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
