@@ -1,26 +1,24 @@
 ---
 Title: Еще примеры экспертов
-Date: 01.01.2007
+Date: 12.12.2003
+Author: Daniel Wischnewski
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Еще примеры экспертов
 =====================
 
-::: {.date}
-01.01.2007
-:::
-
 This article introduces you to the world of Delphi Experts. Delphi
 Experts are DLLs, that will be loaded during the startup sequence of
 Delphi. This article first appeared on
-Delphi-PRAXiShttp://www.delphipraxis.net/viewtopic.php?t=5300 in German.
+Delphi-PRAXiS http://www.delphipraxis.net/viewtopic.php?t=5300 in German.
 
 NOTE: The techniques shown in this article are valid starting with
 Delphi 3 or 4 and since Delphi 7 they are deprecated, however, still
 fully suported by the Delphi IDE.
 
-Installation of a Delphi-IDE-Expert
+**Installation of a Delphi-IDE-Expert**
 
 Every Delphi-Expert has to be registered in the Windows-Registry. For
 each Delphi-Version installed on a machine, as well as for each user
@@ -29,9 +27,9 @@ using the machine, the Delphi-Expert has to be registered separately.
 In the Registry the Delphi-Expert has to be registered under the
 folowing key:
 
-HKCU\\Software\\Borland\\Delphi\\X.0\\Experts
+    HKCU\Software\Borland\Delphi\X.0\Experts
 
-, where the X has to be replaced by the appropriate Delphi-Version
+where the X has to be replaced by the appropriate Delphi-Version
 supported. It may happen that the Experts key is not installed, in such
 case you are required to create it.
 
@@ -41,7 +39,7 @@ Delphi-Expert DLL, including both complete path and file name of the
 Delphi-Expert. Next time Delphi starts, the Expert will be loaded
 automatically.
 
-The interface of the Delphi-Expert
+**The interface of the Delphi-Expert**
 
 In order for the Delphi Expert to interact with the Delphi-IDE ist has
 to export a function with the name ExpertEntryPoint, using the following
@@ -60,7 +58,7 @@ The InitExpert method returns True, if the Expert has loaded
 successfully, otherwise it can eiter return False or raises an exception
 to unload the DLL from the Delphi-IDE (see code sample for solution).
 
-The PlugIn class TIExpert
+**The PlugIn class TIExpert**
 
 Any Delphi-Expert must be derived from the class TIExpert, which is
 declared in the unit ExptIntf. This class defines some abstract methods,
@@ -69,7 +67,7 @@ GetComment, GetPage, GetGlyph (different for Windows and Linux),
 GetStyle, GetState, GetIDString, GetMenuText and Execute. The purpose of
 each method is explained in the source code below.
 
-The simplest Delphi-Expert
+**The simplest Delphi-Expert**
 
 This Delphi-Expert want do much good, however, it shows you the basic
 way of getting the job done. It will show an entry in the Help menu
@@ -77,10 +75,10 @@ way of getting the job done. It will show an entry in the Help menu
 Execute from the Expert will be called. The following points must be
 respected in order to get the expert working:
 
-· The method GetState must return [esEnabled]
-· The method GetStyle must return esStandard
-· The method GetMenuText returns the text to be shown in the Help menu
-· The method Execute defines the expert action upon activation
+- The method GetState must return [esEnabled]
+- The method GetStyle must return esStandard
+- The method GetMenuText returns the text to be shown in the Help menu
+- The method Execute defines the expert action upon activation
 
 
 The Library Source Code (DelphiPlugI.dpr)
@@ -289,4 +287,3 @@ The Library Source Code (DelphiPlugI.dpr)
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

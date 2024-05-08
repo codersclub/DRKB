@@ -7,12 +7,8 @@ Date: 01.01.2007
 Data segment too large error
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
-When I add a large number of typed constants to my application, my data
-segment grows too large. How can I get around this?
+> When I add a large number of typed constants to my application, my data
+> segment grows too large. How can I get around this?
 
 Typed constants are added to the Program\'s data segment. Untyped
 constants are added to the code segment of the application only if they

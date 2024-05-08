@@ -2,15 +2,12 @@
 Title: Смена свойств приложения, открываемого по умолчанию
 Author: Jin X
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Смена свойств приложения, открываемого по умолчанию
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Большинство стандартных темплейтов зашиты в delphide70.bpl (70 -
 версия), остальные - в каталоге Objrepos. Описаны же последние в файле
@@ -18,26 +15,19 @@ bin\\delphi32.dro. Т.о:
 
 1. Добавляем в "delphi32.dro" строки:
 
-[C:\\Program Files\\Lang\\Delphi7\\ObjRepos\\MyApp\\MyApp]
+  ```
+  [C:\Program Files\Lang\Delphi7\ObjRepos\MyApp\MyApp]
+  Type=ProjectTemplate
+  Page=Projects
+  Name=My Application
+  Description=This is my application template
+  Author=Eugene
+  Icon=C:\Program Files\Lang\Delphi7\ObjRepos\MyApp\MyApp.ico
+  DefaultProject=1
+  Designer=dfm
+  ```
 
-Type=ProjectTemplate
-
-Page=Projects
-
-Name=My Application
-
-Description=This is my application template
-
-Author=Eugene
-
-Icon=C:\\Program Files\\Lang\\Delphi7\\ObjRepos\\MyApp\\MyApp.ico
-
-DefaultProject=1
-
-Designer=dfm
-
-(для темплейтов формы Type=FormTemplate, DefaultMainForm=0/1,
-DefaultNewForm=0/1)
+  (для темплейтов формы Type=FormTemplate, DefaultMainForm=0/1, DefaultNewForm=0/1)
 
 2. Размещаем нашу темплейт-прогу в каталоге "C:\\Program
 Files\\Lang\\Delphi7\\ObjRepos\\MyApp\\" и называем её "MyApp.dpr".
@@ -48,6 +38,3 @@ Application".
 
 4. Радуемся! 
 
-Автор: Jin X
-
-Взято из <https://forum.sources.ru>

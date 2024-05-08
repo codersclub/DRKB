@@ -7,10 +7,6 @@ Date: 01.01.2007
 Stack Overflow, runtime error 202
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
 Simply put, stack overflows are caused by putting too much on the stack.
 Usually, they are caused by recursive procedures that never end. A good
 example would be creating an event handler for the TMemo\'s onChange

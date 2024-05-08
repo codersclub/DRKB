@@ -2,15 +2,12 @@
 Title: EOleSysError - как бороться?
 Author: Vit
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 EOleSysError - как бороться?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
 Перед тем как Дельфи сможет использовать любые ActiveX/COM (в том числе
 и ADO компоненты) должна быть выполнена строка Application.Initialize -
@@ -18,6 +15,3 @@ EOleSysError - как бороться?
 консольное приложение, которые не имеют объекта Application, то надо
 просто добавить в Uses ещё один модуль: "oleauto"
 
-Автор: Vit
-
-Взято из <https://forum.sources.ru>

@@ -1,16 +1,12 @@
 ---
 Title: Эксперты в Delphi или Программист, упростите себе жизнь
-Date: 2004.11.03
+Date: 03.11.2004
 Author: Олег Гопанюк, <https://www.cpp.com.ua>
 ---
 
 
 Эксперты в Delphi или Программист, упростите себе жизнь
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Имеющее множество достоинств и довольно популярное средство разработки
 Delphi позволяет расширять функциональные возможности среды
@@ -28,14 +24,14 @@ Delphi позволяет расширять функциональные воз
 Рис. 1. Многие возможности Delphi реализуются с помощью экспертов
 :::
 
-Что это --- стандартные возможности рабочей среды? Да, но применить их
+Что это - стандартные возможности рабочей среды? Да, но применить их
 можно лишь с помощью эксперта. О том, как это сделать, и пойдет речь
 далее.
 
-Эксперты в Delphi --- что это такое?
+**Эксперты в Delphi - что это такое?**
 
 Если не хватает возможностей среды или какие-то операции кажутс слишком
-громоздкими, то эксперты --- именно то, что нужно. С помощью экспертов
+громоздкими, то эксперты - именно то, что нужно. С помощью экспертов
 вы словно проникаете внутрь среды Delphi и без труда дополняете ее.
 Естественно, такое проникновение должно быть осторожным и аккуратным,
 потому как неправильное обращение с объектами и интерфейсами может
@@ -43,17 +39,17 @@ Delphi позволяет расширять функциональные воз
 существовать в виде библиотек DLL либо компилированных модулей DCU.
 Выбор "формы жизни" будущего эксперта остается за вами, но имейте в
 виду, что расширение файла эксперта определяет способ его регистрации. О
-способах регистрации чуть далее --- сперва давайте рассмотрим стили
+способах регистрации чуть далее - сперва давайте рассмотрим стили
 экспертов Delphi. Их всего четыре, и все они приведены в таблице.
 
-Стили экспертов
+**Стили экспертов**
 
 ![clip0249](clip0249.gif){.center}
 
 Главное отличие между стилями заключается в способе вызова эксперта
 пользователем в среде Delphi. Как видите, можно определить самый удобный
 из них. Реализация экспертов предполагает использование интерфейса Open
-Tools API --- набора классов, позволяющего обращатьс ко множеству
+Tools API - набора классов, позволяющего обращатьс ко множеству
 функций среды Delphi. В экспертах Open Tools API может использоватьс
 для:
 
@@ -70,17 +66,17 @@ Tools API --- набора классов, позволяющего обраща
 программ, запущенных как часть интегрированной среды Delphi. В следующем
 разделе мы рассмотрим несколько полезных экспертов.
 
-Реализация класса TIExpert
+**Реализация класса TIExpert**
 
 Для создания нового эксперта необходимо наследовать новый класс от
 класса TIExpert, переопределив при этом часть его методов (таблица 2)
 
-Возможность переопределени методов экспертов тех или иных стилей
+**Возможность переопределения методов экспертов тех или иных стилей**
 
 ![clip0250](clip0250.gif){.center}
 
 Все девять методов (таблица 3) предоставляют информацию об эксперте и
-организуют его взаимодействие со средой. TIExpert --- это абстрактный
+организуют его взаимодействие со средой. TIExpert - это абстрактный
 виртуальный класс с заданными, но не реализованными функциональными
 возможностями. От этого класса будут порождены другие, имеющие
 необходимые возможности.
@@ -90,39 +86,38 @@ Tools API --- набора классов, позволяющего обраща
 Определение класса TIExpert приведено далее.
 
     TIExpert = class(TInterface)
-    public
-    { Методы пользовательского
-    интерфейса с экспертом }
-    function GetName: string;
-    virtual; stdcall; abstract;
-    function GetAuthor: string;
-    virtual; stdcall; abstract;
-    function GetComment: string;
-    virtual; stdcall; abstract;
-    function GetPage: string;
-    virtual; stdcall; abstract;
-    function GetGlyph: HICON;
-    virtual; stdcall; abstract;
-    function GetStyle:
-    TExpertStyle; virtual; stdcall;
-    abstract;
-    function GetState:
-    TExpertState; virtual; stdcall;
-    abstract;
-    function GetIDString: string;
-    virtual; stdcall; abstract;
-    function GetMenuText: string;
-    virtual; stdcall; abstract;
-    { Запуск эксперта }
-    procedure Execute; virtual;
-    stdcall; abstract;
+      public
+      { Методы пользовательского интерфейса с экспертом }
+      function GetName: string;
+        virtual; stdcall; abstract;
+      function GetAuthor: string;
+        virtual; stdcall; abstract;
+      function GetComment: string;
+        virtual; stdcall; abstract;
+      function GetPage: string;
+        virtual; stdcall; abstract;
+      function GetGlyph: HICON;
+        virtual; stdcall; abstract;
+      function GetStyle:
+        TExpertStyle; virtual; stdcall;
+        abstract;
+      function GetState:
+        TExpertState; virtual; stdcall;
+        abstract;
+      function GetIDString: string;
+        virtual; stdcall; abstract;
+      function GetMenuText: string;
+        virtual; stdcall; abstract;
+      { Запуск эксперта }
+      procedure Execute; virtual;
+        stdcall; abstract;
     end; 
 
 **Open Tools API**
 
-Open Tools API --- это набор интерфейсов; они предоставляют доступ к
+Open Tools API - это набор интерфейсов; они предоставляют доступ к
 среде Delphi и позволяют управлять файлами и проектами. Основной объект
-Open Tools API --- ToolServices --- это глобальная переменная. При
+Open Tools API - ToolServices - это глобальная переменная. При
 запуске Delphi создается экземпляр класса TIToolServices, и переменной
 ToolServices присваивается ссылка на него. Эксперты могут использовать
 ToolServices дл доступа к функциям среды разработки.
@@ -133,34 +128,33 @@ ToolServices дл доступа к функциям среды разработ
 вызывается через ToolServices. В таблице приведено краткое описание Open
 Tools API.
 
-Переопределение методов --- задача довольно простая; она предполагает
+Переопределение методов - задача довольно простая; она предполагает
 написание всего нескольких строк кода. Например, реализация метода
 GetStyle вряд ли отнимет у вас много времени:
 
-    function MyExpert.GetStyle:
-    TexpertStyle
+    function MyExpert.GetStyle: TexpertStyle
     begin
-    Result := [esStandard];
+      Result := [esStandard];
     end; 
 
-Регистрация экспертов
+**Регистрация экспертов**
 
 Зарегистрировать эксперт можно одним из двух способов. Первый способ
 сводится к определению эксперта как компонента путем вызова процедуры
 RegisterLibraryExpert из процедуры Register. Второй способ заключается в
 создании DLL-библиотеки эксперта. Преимущество первого способа в том,
 что не приходитс закрывать среду Delphi при внесении изменений в эксперт
---- достаточно его перекомпилировать. Сперва рассмотрим регистрацию
+- достаточно его перекомпилировать. Сперва рассмотрим регистрацию
 эксперта как компонента. Необходимо добавить в модуль эксперта процедуру
 Register:
 
     Procedure Register;
-    Implementation {$R*.DFM}
-    Procedure Register;
-    Begin
-    RegisterLibraryExpert
-    (TPowerExpert. Create);
-    // TpowerExpert — это класс регистрируемого эксперта
+      Implementation {$R*.DFM}
+      Procedure Register;
+      Begin
+        RegisterLibraryExpert
+        (TPowerExpert. Create);
+        // TpowerExpert — это класс регистрируемого эксперта
     End; 
 
 Для регистрации эксперта как DLLбиблиотеки следует выполнить две
@@ -171,46 +165,41 @@ Register:
 экспортировать функцию InitExpert. Обратите внимание, что эта функция
 экспортируется с помощью специальной константы ExpertEntryPoint, которую
 Delphi определяет для всех экспертов, создаваемых в виде DLL. Основное
-назначение функции InitExpert --- возврат ссылки на объект ToolServices
+назначение функции InitExpert - возврат ссылки на объект ToolServices
 для дальнейшего использования и вызова процедуры RegisterProc, которая,
 собственно, и регистрирует эксперт. Ниже приведена реализация этой
 функции:
 
     Function InitExpert(
-    ToolServices:ToolServices;
-    RegisterProc:TexpertRegisterProc;
-    var
-    Terminate:TExpertTerminateProc):
-    Boolean; export; stdcall;
+      ToolServices:ToolServices;
+      RegisterProc:TexpertRegisterProc;
+      var Terminate:TExpertTerminateProc):
+      Boolean; export; stdcall;
     implementation
-    procedure TerminateExpert;
-    begin
-    // завершение работы эксперта
-    end;
-    function InitExpert(
-    ToolServices:ToolServices;
-    RegisterProc:TExpertRegisterProc;
-    var
-    Terminate:TExpertTerminateProc):
-    Boolean; export; stdcall;
-    begin
-    Result:=False;
-    end;
-    // проверка, является ли запущенное приложение единственным
-    if (ToolServices=nil) or Assigned(ExptIntf.ToolServices)
-    then Exit;
-    ExptIntf.ToolServices:=ToolServices;
-    //сохраняем указатель на ToolServices
-    Application.Handle:=
-    ToolServices.GetParentHandle;
-    //сохраняем указатель на
-    ToolServices для родительского
-    окна
-    Terminate:=TerminateExpert;
-    //устанавливаем процедуру завершения
-    RegisterProc(TGenericExpert.Create);
-    //регистрация эксперта
-    Result:=True;
+      procedure TerminateExpert;
+      begin
+        // завершение работы эксперта
+      end;
+      function InitExpert(
+        ToolServices:ToolServices;
+        RegisterProc:TExpertRegisterProc;
+        var Terminate:TExpertTerminateProc):
+        Boolean; export; stdcall;
+      begin
+        Result:=False;
+      end;
+      // проверка, является ли запущенное приложение единственным
+      if (ToolServices=nil) or Assigned(ExptIntf.ToolServices)
+        then Exit;
+      ExptIntf.ToolServices:=ToolServices;
+      //сохраняем указатель на ToolServices
+      Application.Handle:= ToolServices.GetParentHandle;
+      //сохраняем указатель на ToolServices для родительского окна
+      Terminate:=TerminateExpert;
+      //устанавливаем процедуру завершения
+      RegisterProc(TGenericExpert.Create);
+      //регистрация эксперта
+      Result:=True;
     end; 
 
 Когда DLL с экспертом будет готова, от вас потребуется лишь изменить
@@ -218,27 +207,23 @@ Delphi определяет для всех экспертов, создавае
 экспертом и смогла ее загрузить. Для этого с помощью редактора реестра
 (regedit.exe) добавьте в реестр такую запись:
 
-
-
-HKEY\_CURRENT\_USER\\Software\\Borland\\ Delphi\\4.0\\Experts
-MyExpert=C:\\MyExpertts\\MyExpert.DLL
-
-
+    HKEY_CURRENT_USER\Software\Borland\Delphi\4.0\Experts
+    MyExpert=C:\MyExpertts\MyExpert.DLL
 
 Для того чтобы среда зарегистрировала DLL, Delphi необходимо
 перезапустить. Вариант реализации эксперта в виде DLL кажетс автору
 менее удобным: перезагрузка среды отнимает больше времени по сравнению с
 перекомпиляцией библиотеки компонентов, что особенно ощутимо при отладке
-эксперта. Еще одна проблема --- неполна совместимость экспертов в виде
+эксперта. Еще одна проблема - неполна совместимость экспертов в виде
 DLL, которые были созданы и скомпилированы для других версий Delphi.
 Автор надеется, что эта стать поможет профессионалам поближе
 познакомиться с экспертами Delphi. Возможно, ее публикация подтолкнет
 многих программистов к изучению темы.
 
-Некоторые полезные эксперты
+**Некоторые полезные эксперты**
 
 Знаете ли вы, что в Internet есть предостаточно мест, где можно найти
-эксперты для Delphi. Одно из таких мест --- польский сервер "Delphi
+эксперты для Delphi. Одно из таких мест - польский сервер "Delphi
 Super Page" (http://sunsite.icm.edu.pl/delphi/). Там вы найдете
 множество различных экспертов и полезных компонентов. Давайте рассмотрим
 самый интересный, по мнению автора, набор экспертов, предоставляющий
@@ -246,13 +231,13 @@ Super Page" (http://sunsite.icm.edu.pl/delphi/). Там вы найдете
 загрузить по адресу:
 http://sunsite.icm.edu.pl/delphi/ftp/d40free/myexp100.zip.
 
-Рассмотрим вкратце эти маленькие "добавки". Набор содержит эксперт ---
+Рассмотрим вкратце эти маленькие "добавки". Набор содержит эксперт -
 редактор префиксов для имен компонентов. После того, как он будет
 установлен в инспекторе объектов, напротив свойства Name появится кнопка
 с многоточием. Это говорит о том, что можно воспользоватьс редактором
 для изменения свойства Name. С его помощью можно указывать префикс для
 данного класса компонента. Строго говоря, использование префиксов в
-названиях компонентов --- это правило хорошего тона. В меню Tools теперь
+названиях компонентов - это правило хорошего тона. В меню Tools теперь
 появляется новое подменю Prefix list editor, с помощью которого можно
 изменять и добавлять такие префиксы.
 
@@ -274,8 +259,6 @@ editor, можно определить свой набор клавиатурн
 
 ![clip0253](clip0253.gif){.center}
 
-2004.11.03
-
 Автор: Олег Гопанюк, ведущий программист департамента
-"KM-Solution" корпорации "Квазар-Микро"
+"KM-Solution" корпорации "Квазар-Микро"  
 <https://www.cpp.com.ua>

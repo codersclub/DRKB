@@ -1,24 +1,22 @@
 ---
 Title: Новые позможности языка в Delphi 2006
 Author: CatATonik
-Date: 01.01.2007
+Date: 12.12.2006
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Новые позможности языка в Delphi 2006
 =====================================
 
-::: {.date}
-01.01.2007
-:::
-
 В Delphi 2006 появилось много расширений языка, в том числе перегрузка
 операторов, "Class-like" записи. Что позволяет создавать собственные
-типы данных (не классы, а именно типы значения)! Для демонстрации этих
+типы данных (не классы, а именно типы значения)!
+
+Для демонстрации этих
 возможностей я написал тип TDate для работы с датами.
 
     unit DateType;
-
      
     interface
      
@@ -548,24 +546,21 @@ Date: 01.01.2007
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
-    Date: TDate;
+      Date: TDate;
     begin
-    Label1.Caption := Date.Text;
-    Date := TDate.Today;
-    Label2.Caption := Date.Text;
-    Dec(Date);
-    Label3.Caption := Date.Text;
-    Label4.Caption := IntToStr(TDate.Today - Date);
-    Date := Now;
-    Label5.Caption := Date.Format('DD MMM YYYY');
-    Date := MaxInt;
-    Label6.Caption := Date.Text;
-    Date.ISODate := '2009-11-25';
-    Label7.Caption := Date.Text;
-    Date.Year := 1993;
-    Label8.Caption := Date.Text;
+      Label1.Caption := Date.Text;
+      Date := TDate.Today;
+      Label2.Caption := Date.Text;
+      Dec(Date);
+      Label3.Caption := Date.Text;
+      Label4.Caption := IntToStr(TDate.Today - Date);
+      Date := Now;
+      Label5.Caption := Date.Format('DD MMM YYYY');
+      Date := MaxInt;
+      Label6.Caption := Date.Text;
+      Date.ISODate := '2009-11-25';
+      Label7.Caption := Date.Text;
+      Date.Year := 1993;
+      Label8.Caption := Date.Text;
     end;
 
-Автор: CatATonik
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

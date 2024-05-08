@@ -1,22 +1,18 @@
 ---
 Title: Как мне избавиться от выскакивающего окна CPU при ошибках?
 Date: 01.01.2007
+Source: <https://www.delphifaq.com>
 ---
 
 
 Как мне избавиться от выскакивающего окна CPU при ошибках?
 ==========================================================
 
-::: {.date}
-01.01.2007
-:::
+1. Зайти в реестр:
 
-Зайти в реестр:
+        HKEY_CURRENT_USER\Software\Borland\Delphi\4.0\Debugging
 
-HKEY\_CURRENT\_USER\\Software\\Borland\\Delphi\\4.0\\Debugging
+2. Поменять значение:
 
-Поменять значение:
+        ViewCPUOnException=0
 
-ViewCPUOnException=0
-
-Взято с сайта <https://www.delphifaq.com>

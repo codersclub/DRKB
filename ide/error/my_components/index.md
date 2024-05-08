@@ -7,11 +7,7 @@ Date: 01.01.2007
 Where are my components?
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
-Windows NT and 2000:
+**Windows NT and 2000:**
 
 Most likely Delphi was installed by an administrator or a user with
 administrator rights and the user currently logged on does not have

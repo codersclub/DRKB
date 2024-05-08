@@ -1,15 +1,12 @@
 ---
 Title: Работа с IDE из программы
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Работа с IDE из программы
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот подпрограммы, работающие у меня в связке D1 и Win 3.1x:
 
@@ -129,4 +126,3 @@ Date: 01.01.2007
       IniFileObj.Free;
     end; {GetIni}
 
-Взято с <https://delphiworld.narod.ru>

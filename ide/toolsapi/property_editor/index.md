@@ -1,17 +1,12 @@
 ---
 Title: Создание редактора свойства
 Date: 01.01.2007
+Source: <https://blackman.km.ru/myfaq/cont4.phtml>
 ---
 
 
 Создание редактора свойства
 ===========================
-
-::: {.date}
-01.01.2007
-:::
-
-Взято из FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
 
 Если вы присвоили свойству имя TableName, то полный цикл создания
 редактора свойств включает следующие шаги:
@@ -49,5 +44,3 @@ Date: 01.01.2007
 Затем зарегистрируйте данный редактор свойства следующим образом:
 
      RegisterPropertyEditor(TypeInfo(string), TcsNotebook, 'TableName', TTableNameProperty);         
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -7,10 +7,6 @@ Date: 01.01.2007
 Hidden or missing IDE
 =====================
 
-::: {.date}
-01.01.2007
-:::
-
 Occasionally in Delphi 5 the IDE will \'disappear\'. This is to say you
 will launch Delphi, and most or all of your IDE will not be visible.
 Delphi is clearly running and working, as you can still use your hot

@@ -2,18 +2,12 @@
 Title: Создание pop-up меню своего компонента и кое-что еще о классе TComponentExpert
 Author: Раструсный Владислав Юрьевич
 Date: 01.01.2007
+Source: <https://www.delphimaster.ru/>
 ---
 
 
 Создание pop-up меню своего компонента и кое-что еще о классе TComponentExpert
 ==============================================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Создание pop-up меню своего компонента и кое-что еще о классе
-TComponentExpert
 
 Давайте рассмотрим создание простейшего одно уровневого контекстного
 меню на своем компоненте, которое будет открываться при щелчке правой
@@ -137,90 +131,98 @@ MyComponentReg.pas
 Конструктор нам переопределять не нужно. Поэтому начнем с описания
 метода Edit.
 
-Метод Edit вызывается при двойном щелчке по компоненту. Вот так просто!
+Метод Edit
+: вызывается при двойном щелчке по компоненту. Вот так просто!
 При двойном щелчке на компоненте! Если метод не определен, то при
 двойном щелчке будет выполнен первый пункт меню, которое вы определили.
 
-Метод GetVerbCount: Integer должен возвращать количество определенных
+Метод GetVerbCount
+: Integer должен возвращать количество определенных
 вами пунктов меню.
 
-Метод GetVerb(Index: Integer): string должен возвращать название пункта
-меню № Index.
+Метод GetVerb(Index: Integer): string
+: должен возвращать название пункта меню № Index.
 
-Метод ExecuteVerb(Index: Integer) вызывается при щелчке на пункте меню,
+Метод ExecuteVerb(Index: Integer)
+: вызывается при щелчке на пункте меню,
 определенном вами. Index - номер меню из метода GetVerb. В нем вы
 определяете действия, которые будут происходить при нажатии на ваш пункт
 меню.
 
-Метод Copy вызывается при копировании вашего компонента в буфер обмена
+Метод Copy
+: вызывается при копировании вашего компонента в буфер обмена
 
-Свойство Component как вы уже наверное догадались позволяет получить
+Свойство Component
+: как вы уже наверное догадались позволяет получить
 доступ к компоненту, на котором щелкнули мышью и т.п.
 
-Метод PrepareItem(Index: Integer; const AItem: IMenuItem) вызывается для
+Метод PrepareItem(Index: Integer; const AItem: IMenuItem)
+: вызывается для
 каждого определенного вами пункта меню № Index и через параметр AItem
 передает сам пункт меню для настройки. Для работы нам нужно будет
 рассмотреть саму реализацию интерфейса IMenuItem. Он определен в модуле
 DesignMenus.pas и является потомком интерфейса IMenuItems.
 
-    IMenuItems = interface
-        ['{C9CC6C38-C96A-4514-8D6F-1D121727BFAF}']
-     
-        // public
-        function SameAs(const AItem: IUnknown): Boolean;
-        function Find(const ACaption: WideString): IMenuItem;
-        function FindByName(const AName: string): IMenuItem;
-        function Count: Integer;
-        property Items[Index: Integer]: IMenuItem read GetItem;
-        procedure Clear;
-     
-        function AddItem(const ACaption: WideString; AShortCut: TShortCut;
-          AChecked, AEnabled: Boolean; AOnClick: TNotifyEvent = nil;
-          hCtx: THelpContext = 0; const AName: string = ''): IMenuItem; overload;
-     
-        function AddItem(AAction: TBasicAction;
-          const AName: string = ''): IMenuItem; overload;
-     
-        function InsertItem(const ACaption: WideString;
-          AShortCut: TShortCut; AChecked, AEnabled: Boolean; AOnClick: TNotifyEvent = nil;
-          hCtx: THelpContext = 0; const AName: string = ''): IMenuItem; overload;
-        function InsertItem(Index: Integer; const ACaption: WideString;
-          AShortCut: TShortCut; AChecked, AEnabled: Boolean; AOnClick: TNotifyEvent = nil;
-          hCtx: THelpContext = 0; const AName: string = ''): IMenuItem; overload;
-     
-        function InsertItem(AAction: TBasicAction;
-          const AName: string = ''): IMenuItem; overload;
-        function InsertItem(Index: Integer; AAction: TBasicAction;
-          const AName: string = ''): IMenuItem; overload;
-     
-        function AddLine(const AName: string = ''): IMenuItem;
-     
-        function InsertLine(const AName: string = ''): IMenuItem; overload;
-        function InsertLine(Index: Integer; const AName: string = ''): IMenuItem; overload;
-      end;
-     
-     
-      IMenuItem = interface(IMenuItems)
-        ['{DAF029E1-9592-4B07-A450-A10056A2B9B5}']
-     
-        // public
-        function Name: TComponentName;
-        function MenuIndex: Integer;
-        function Parent: IMenuItem;
-        function HasParent: Boolean;
-        function IsLine: Boolean;
-     
-        property Caption: WideString;
-        property Checked: Boolean;
-        property Enabled: Boolean;
-        property GroupIndex: Byte;
-        property HelpContext: THelpContext;
-        property Hint: string;
-        property RadioItem: Boolean;
-        property ShortCut: TShortCut;
-        property Tag: LongInt;
-        property Visible: Boolean;
-      end;
+```delphi
+IMenuItems = interface
+  ['{C9CC6C38-C96A-4514-8D6F-1D121727BFAF}']
+ 
+  // public
+  function SameAs(const AItem: IUnknown): Boolean;
+  function Find(const ACaption: WideString): IMenuItem;
+  function FindByName(const AName: string): IMenuItem;
+  function Count: Integer;
+  property Items[Index: Integer]: IMenuItem read GetItem;
+  procedure Clear;
+
+  function AddItem(const ACaption: WideString; AShortCut: TShortCut;
+    AChecked, AEnabled: Boolean; AOnClick: TNotifyEvent = nil;
+    hCtx: THelpContext = 0; const AName: string = ''): IMenuItem; overload;
+
+  function AddItem(AAction: TBasicAction;
+    const AName: string = ''): IMenuItem; overload;
+
+  function InsertItem(const ACaption: WideString;
+    AShortCut: TShortCut; AChecked, AEnabled: Boolean; AOnClick: TNotifyEvent = nil;
+    hCtx: THelpContext = 0; const AName: string = ''): IMenuItem; overload;
+  function InsertItem(Index: Integer; const ACaption: WideString;
+    AShortCut: TShortCut; AChecked, AEnabled: Boolean; AOnClick: TNotifyEvent = nil;
+    hCtx: THelpContext = 0; const AName: string = ''): IMenuItem; overload;
+
+  function InsertItem(AAction: TBasicAction;
+    const AName: string = ''): IMenuItem; overload;
+  function InsertItem(Index: Integer; AAction: TBasicAction;
+    const AName: string = ''): IMenuItem; overload;
+
+  function AddLine(const AName: string = ''): IMenuItem;
+
+  function InsertLine(const AName: string = ''): IMenuItem; overload;
+  function InsertLine(Index: Integer; const AName: string = ''): IMenuItem; overload;
+end;
+ 
+ 
+IMenuItem = interface(IMenuItems)
+  ['{DAF029E1-9592-4B07-A450-A10056A2B9B5}']
+
+  // public
+  function Name: TComponentName;
+  function MenuIndex: Integer;
+  function Parent: IMenuItem;
+  function HasParent: Boolean;
+  function IsLine: Boolean;
+
+  property Caption: WideString;
+  property Checked: Boolean;
+  property Enabled: Boolean;
+  property GroupIndex: Byte;
+  property HelpContext: THelpContext;
+  property Hint: string;
+  property RadioItem: Boolean;
+  property ShortCut: TShortCut;
+  property Tag: LongInt;
+  property Visible: Boolean;
+end;
+```
 
 Начнем с конца. Т.е. с IMenuItem. Как видно, почти все члены интерфейса
 соответствуют членам класса TMenuItem. Т.е. обратившись в методе
@@ -234,77 +236,78 @@ PrepareItem к AItem.Enabled:=false мы запретим выбор этого 
 параметра: первый - класс компонента, для которого создается редактор
 свойств и второй - собственно сам класс редактора свойств.
 
-Создание редакторов свойств
+**Создание редакторов свойств**
 
 Для создания редактора свойств нужно написать класс, унаследованный от
 TBasePropertyEditor. Но мы рассмотрим более функционального его потомка
 TPropertyEditor
 
-      TPropertyEditor = class(TBasePropertyEditor, IProperty, IProperty70)
-      protected
-        procedure SetPropEntry(Index: Integer; AInstance: TPersistent;
-          APropInfo: PPropInfo); override;
-      protected
-        function GetFloatValue: Extended;
-        function GetFloatValueAt(Index: Integer): Extended;
-        function GetInt64Value: Int64;
-        function GetInt64ValueAt(Index: Integer): Int64;
-        function GetMethodValue: TMethod;
-        function GetMethodValueAt(Index: Integer): TMethod;
-        function GetOrdValue: Longint;
-        function GetOrdValueAt(Index: Integer): Longint;
-        function GetStrValue: string;
-        function GetStrValueAt(Index: Integer): string;
-        function GetVarValue: Variant;
-        function GetVarValueAt(Index: Integer): Variant;
-        function GetIntfValue: IInterface;
-        function GetIntfValueAt(Index: Integer): IInterface;
-        procedure Modified;
-        procedure SetFloatValue(Value: Extended);
-        procedure SetMethodValue(const Value: TMethod);
-        procedure SetInt64Value(Value: Int64);
-        procedure SetOrdValue(Value: Longint);
-        procedure SetStrValue(const Value: string);
-        procedure SetVarValue(const Value: Variant);
-        procedure SetIntfValue(const Value: IInterface);
-      protected
-        { IProperty }
-        function GetEditValue(out Value: string): Boolean;
-        function HasInstance(Instance: TPersistent): Boolean;
-        { IProperty70 } 
-        function GetIsDefault: Boolean; virtual;
-      public
-        constructor Create(const ADesigner: IDesigner; APropCount: Integer); override;
-        destructor Destroy; override;
-        procedure Activate; virtual;
-        function AllEqual: Boolean; virtual;
-        function AutoFill: Boolean; virtual;
-        procedure Edit; virtual;
-        function GetAttributes: TpropertyAttributes; virtual;
-        function GetComponent(Index: Integer): TPersistent;
-        function GetEditLimit: Integer; virtual;
-        function GetName: string; virtual;
-        procedure GetProperties(Proc: TGetPropProc); virtual;
-        function GetPropInfo: PPropInfo; virtual;
-        function GetPropType: PTypeInfo;
-        function GetValue: string; virtual;
-        function GetVisualValue: string;
-        procedure GetValues(Proc: TGetStrProc); virtual;
-        procedure Initialize; override;
-        procedure Revert;
-        procedure SetValue(const Value: string); virtual;
-        function ValueAvailable: Boolean;
-        property Designer: IDesigner read FDesigner;
-        property PrivateDirectory: string read GetPrivateDirectory;
-        property PropCount: Integer read FPropCount;
-        property Value: string read GetValue write SetValue;
-      end;
+    TPropertyEditor = class(TBasePropertyEditor, IProperty, IProperty70)
+    protected
+      procedure SetPropEntry(Index: Integer; AInstance: TPersistent;
+        APropInfo: PPropInfo); override;
+    protected
+      function GetFloatValue: Extended;
+      function GetFloatValueAt(Index: Integer): Extended;
+      function GetInt64Value: Int64;
+      function GetInt64ValueAt(Index: Integer): Int64;
+      function GetMethodValue: TMethod;
+      function GetMethodValueAt(Index: Integer): TMethod;
+      function GetOrdValue: Longint;
+      function GetOrdValueAt(Index: Integer): Longint;
+      function GetStrValue: string;
+      function GetStrValueAt(Index: Integer): string;
+      function GetVarValue: Variant;
+      function GetVarValueAt(Index: Integer): Variant;
+      function GetIntfValue: IInterface;
+      function GetIntfValueAt(Index: Integer): IInterface;
+      procedure Modified;
+      procedure SetFloatValue(Value: Extended);
+      procedure SetMethodValue(const Value: TMethod);
+      procedure SetInt64Value(Value: Int64);
+      procedure SetOrdValue(Value: Longint);
+      procedure SetStrValue(const Value: string);
+      procedure SetVarValue(const Value: Variant);
+      procedure SetIntfValue(const Value: IInterface);
+    protected
+      { IProperty }
+      function GetEditValue(out Value: string): Boolean;
+      function HasInstance(Instance: TPersistent): Boolean;
+      { IProperty70 } 
+      function GetIsDefault: Boolean; virtual;
+    public
+      constructor Create(const ADesigner: IDesigner; APropCount: Integer); override;
+      destructor Destroy; override;
+      procedure Activate; virtual;
+      function AllEqual: Boolean; virtual;
+      function AutoFill: Boolean; virtual;
+      procedure Edit; virtual;
+      function GetAttributes: TpropertyAttributes; virtual;
+      function GetComponent(Index: Integer): TPersistent;
+      function GetEditLimit: Integer; virtual;
+      function GetName: string; virtual;
+      procedure GetProperties(Proc: TGetPropProc); virtual;
+      function GetPropInfo: PPropInfo; virtual;
+      function GetPropType: PTypeInfo;
+      function GetValue: string; virtual;
+      function GetVisualValue: string;
+      procedure GetValues(Proc: TGetStrProc); virtual;
+      procedure Initialize; override;
+      procedure Revert;
+      procedure SetValue(const Value: string); virtual;
+      function ValueAvailable: Boolean;
+      property Designer: IDesigner read FDesigner;
+      property PrivateDirectory: string read GetPrivateDirectory;
+      property PropCount: Integer read FPropCount;
+      property Value: string read GetValue write SetValue;
+    end;
 
 Предположим, нам нужно создать редактор для текстового свойства, при
 нажатии кнопки "..." в Object Inspector.
 
-Объявим специальный тип этого свойства TMyComponentStringProperty =
-string;
+Объявим специальный тип этого свойства
+
+    TMyComponentStringProperty = string;
 
 Далее, в компоненте укажем свойство данного типа property MyProperty:
 TMyComponentStringProperty, далее в Run-time части компонента
@@ -337,114 +340,129 @@ class(TStringProperty) . Переопределим в нем несколько
 Итак, приступаем к рассмотрению методов класса TPropertyEditor. Начнем с
 тех, которые мы уже использовали.
 
-Метод Edit. Просто вызывается при щелчке на кнопке "..." в Object
+Метод Edit
+: Просто вызывается при щелчке на кнопке "..." в Object
 Inspector. В TStringProperty не переопределен.
 
-Метод SetValue(Text: string). Должен устанавливать значение свойства в
+Метод SetValue(Text: string)
+: Должен устанавливать значение свойства в
 переданную строку. В TStringProperty переопределен. Этот метод
 вызывается самим Object Inspector, когда пользователь вводит значение
 поля. Вы можете переопределить этот метод для установки вашего свойства
 в зависимости от значения, введенного пользователем. Если вы
 обнаруживаете ошибку в переданном параметре - вызовите исключение.
 
-Метод GetAttributes: TPropertyAttributes. Задает параметры свойства.
+Метод GetAttributes: TPropertyAttributes
+: Задает параметры свойства.
 Рассмотрим их по порядку.
 
-paValueList - указывает, что редактор свойств возвращает список
+- paValueList - указывает, что редактор свойств возвращает список
 допустимых значений свойства через метод GetValues. В редакторе свойств
 рядом со свойством появляется раскрывающийся список
 
-paSortList - указывает, что список, возвращенный GetValues нужно
+- paSortList - указывает, что список, возвращенный GetValues нужно
 сортировать
 
-paSubProperties - указывает, что у свойства имеются подсвойства (типа
+- paSubProperties - указывает, что у свойства имеются подсвойства (типа
 подсвойства Name у свойства Font класса TFont). Подсвойства, если этот
 флаг установлен, должны возвращаться методом GetProperties.
 
-paDialog - указывает, что рядом со свойством должна быть кнопка "...",
+- paDialog - указывает, что рядом со свойством должна быть кнопка "...",
 по нажатию которой вызывается метод Edit для редактирования значения
 свойства. Что мы и указали в нашем примере.
 
-paMultiSelect - Разрешает отображать свойство в Object Inspector, даже
+- paMultiSelect - Разрешает отображать свойство в Object Inspector, даже
 если выделено более одного объекта
 
-paAutoUpdate - указывает, что метод SetValue нужно вызывать при каждом
+- paAutoUpdate - указывает, что метод SetValue нужно вызывать при каждом
 изменении значения свойства, а не после нажатия Enter или выхода из
 Object Inspector (Пример: свойство Caption у формы изменяется
 одновременно с набором на клавиатуре)
 
-paReadOnly - указывает, что значение через Object Inspector изменить
+- paReadOnly - указывает, что значение через Object Inspector изменить
 нельзя. Оно устанавливается в классе TClassProperty, от которого
 унаследованы все классовые редакторы свойств типа TStrings, TFont и т.п.
 При установке рядом со значением свойства отображается строка,
 возвращенная методом GetValue и значение это изменить нельзя.
 
-paRevertable - указывает, изменение значения свойства можно отменить.
+- paRevertable - указывает, изменение значения свойства можно отменить.
 Это не касается вложенных подсвойств.
 
-paFullWidthName - указывает Object Inspector, что прорисовка значения
+- paFullWidthName - указывает Object Inspector, что прорисовка значения
 свойства не требуется и можно занять под имя свойства всю длину панели.
 
-paVolatileSubProperties - установка этого значения указывает, что при
+- paVolatileSubProperties - установка этого значения указывает, что при
 любом изменении свойства нужно повторить сборку подсвойств
 (GetProperties)
 
-paVCL - ???
+- paVCL - ???
 
-paReference - указывает, что свойство является указателем на что-либо.
+- paReference - указывает, что свойство является указателем на что-либо.
 Используется вместе с paSubProperties для указания отображения объекта,
 на которое ссылается в качестве подсвойств (TFont).
 
-paNotNestable - указывает, что отображать значение свойства в момент,
+- paNotNestable - указывает, что отображать значение свойства в момент,
 когда его подсвойства развернуты - небезопасно (этот пункт мне пока
 непонятен)
 
-Методы GetXXXValue и SetXXXValue. Используются для внутренней установки
+Методы GetXXXValue и SetXXXValue
+: Используются для внутренней установки
 реального значения свойства. Как правило, используются методом GetValue
 и SetValue. В принципе, все эти методы уже определены в классе
 TPropertyEditor, и переопределять их не нужно.
 
-Метод Modified вызывается для указания того факта, что значение свойства
+Метод Modified
+: вызывается для указания того факта, что значение свойства
 изменено. Это метод уже определен в TPropertyEditor и переопределять его
 не требуется.
 
-Метод GetEditValue возвращает true, если значение можно редактировать
+Метод GetEditValue
+: возвращает true, если значение можно редактировать
 
-Метод GetIsDefault возвращает true, если значение свойства в текущий
+Метод GetIsDefault
+: возвращает true, если значение свойства в текущий
 момент является значением свойства по умолчанию. Т.е. метод должен
 возвращать true, если НЕ нужно сохранять значение свойства в .dfm файле.
 
-Метод Activate вызывается при выборе свойства в Object Inspector. При
+Метод Activate
+: вызывается при выборе свойства в Object Inspector. При
 использовании переопределения этого метода для отображения значения
 свойства исключительно в момент активизации нужно быть осторожным, если
 указаны параметры свойства paSubProperties и paMultiSelect.
 
-Метод AllEqual вызывается всякий раз, когда выделяется более одного
+Метод AllEqual
+: вызывается всякий раз, когда выделяется более одного
 компонента. Если этот метод вернет true, будет вызван метод GetValue, в
 противоположном случае будет отображена пустая строка. Вызывается
 только, если указано свойство paMultiSelect. Очевидно, метод должен
 проверять совпадение свойств у все выбранных компонентов путем опроса
 метода GetComponent.
 
-Метод AutoFill вызывается для определения, могут ли элементы списка быть
+Метод AutoFill
+: вызывается для определения, могут ли элементы списка быть
 выбраны по возрастанию. Указывается, только если указан параметр
 paValueList.
 
-Метод GetComponent возвращает компонент с заданным индексом из выбранных
+Метод GetComponent
+: возвращает компонент с заданным индексом из выбранных
 компонентов.
 
-Метод GetEditLimit возвращает максимальное количество символов, которые
+Метод GetEditLimit
+: возвращает максимальное количество символов, которые
 можно ввести в текстовое значение свойства. По умолчанию 255.
 
-Метод GetName возвращает имя свойства, в котором знаки подчеркивания
+Метод GetName
+: возвращает имя свойства, в котором знаки подчеркивания
 заменены на пробелы. Свойство метод должен переопределяться только, если
 свойство не предназначено для отображения в Object Inspector
 
-Метод GetComponentValue возвращает значение свойства типа TComponent в
+Метод GetComponentValue
+: возвращает значение свойства типа TComponent в
 том и только в том случае, если свойство унаследовано от TComponent.
 Этот метод переопределяется в классе TComponentEditor
 
-Метод GetProperties вызывается для каждого подсвойства, которое
+Метод GetProperties
+: вызывается для каждого подсвойства, которое
 редактируется. В метод передается параметр типа TGetPropertyProc. Это
 указатель на процедуру для обработки каждого свойства. Например,
 TClassProperty вызывает процедуру TGetPropertyProc для каждого published
@@ -452,14 +470,17 @@ TClassProperty вызывает процедуру TGetPropertyProc для ка�
 при использовании подсвойств вы должны определить процедуру
 TGetPropertyProc, чтобы она определяла каждое подсвойство.
 
-Метод GetPropType возвращает указатель на информацию о типе
+Метод GetPropType
+: возвращает указатель на информацию о типе
 редактируемого свойства (TypeInfo (Type))
 
-Метод GetValue возвращает значение свойства в виде текстовой строки.
+Метод GetValue
+: возвращает значение свойства в виде текстовой строки.
 Например, в TClassProperty этот метод переопределен для возвращения в
 качестве результата имени типа класса (TStrings и т.п.).
 
-Метод ValueAvailable возвращает true, если можно получить доступ к
+Метод ValueAvailable
+: возвращает true, если можно получить доступ к
 значению свойства, не вызывая исключения.
 
 Описания для остальных методов и свойств, к сожалению, найти не удалось,
@@ -468,11 +489,13 @@ TGetPropertyProc, чтобы она определяла каждое подсв
 По завершении создания редактора свойств не забудьте зарегистрировать
 его внутри метода register вызовом
 
-RegisterPropertyEditor(TypeInfo(\<тип свойства\>), \<тип компонента\>,
-\<имя свойства\>, \<тип редактора свойства\>);
+    RegisterPropertyEditor(TypeInfo(<тип свойства>),
+                           <тип компонента>,
+                           <имя свойства>,
+                           <тип редактора свойства>);
 
-RegisterPropertyEditor(TypeInfo(TMyComponentsStringProperty),
-TMyComponent, \'\', TMCSPEditor);
+    RegisterPropertyEditor(TypeInfo(TMyComponentsStringProperty),
+                           TMyComponent, '', TMCSPEditor);
 
 Передав вместо имени свойства пустую строку, мы указали тем самым, что
 имя может быть любым. Так же пустую строку можно передать вместо имени
@@ -481,9 +504,9 @@ TMyComponent, \'\', TMCSPEditor);
 Вот, собственно, и все. Пишите свой редактор свойств, переопределяйте
 нужные методы и вперед!
 
-Delphi 7 ToolsAPI: Эксперты
+**Delphi 7 ToolsAPI: Эксперты**
 
-Написание простейшего эксперта
+**Написание простейшего эксперта**
 
 Какой же код нужно написать для создания простейшего эксперта? Для этого
 нужно написать класс, унаследованный от IOTAWizard (определен в файле
@@ -491,7 +514,7 @@ ToolsAPI.pas) или одного из его потомков, располож
 Register, как мы это делали с компонентами, и вызвать внутри ее
 процедуру
 
-RegisterPackageWizard (const Wizard: IOTAWizard);
+    RegisterPackageWizard (const Wizard: IOTAWizard);
 
 например:
 
@@ -516,7 +539,7 @@ RegisterPackageWizard (const Wizard: IOTAWizard);
 методы IOTAWizard: Метод GetIDString должен возвращать уникальный
 идентификатор эксперта. Например: MyCompany.MyExpert
 
-Метод GetName должен возвращать название эксперта
+Метод GetName должен возвращать название эксперта.
 
 Метод GetState должен возвращать [wsEnabled], если эксперт
 функционирует, wsChecked если выбран.
@@ -539,12 +562,9 @@ Execute - унаследуйте его от IOTARepositoryWizard
         function GetGlyph: Cardinal;
       end;
 
-Метод GetAuthor должен возвращать имя автора,
-
-Метод GetComment - комментарий,
-
-Метод GetPage - страницу на которой будет расположена иконка эксперта
-
+Метод GetAuthor должен возвращать имя автора,  
+Метод GetComment - комментарий,  
+Метод GetPage - страницу на которой будет расположена иконка эксперта,  
 Метод GetGlyph - дескриптор иконки
 
 Если вы хотите, чтобы эксперт появлялся на странице форм в репозитории -
@@ -566,19 +586,19 @@ Execute помещался в мень Help главного меню IDE, ун�
 
 Вот так все просто, оказывается!
 
-Расположение эксперта внутри DLL библиотеки
+**Расположение эксперта внутри DLL библиотеки**
 
 Если вы хотите расположить вашего эксперта не в пакете, а в DLL
 библиотеке, библиотека должна экспортировать функцию INITWIZARD0001
 следующего формата:
 
-type TWizardRegisterProc = function(const Wizard: IOTAWizard): Boolean;
+    type TWizardRegisterProc = function(const Wizard: IOTAWizard): Boolean;
 
-type TWizardTerminateProc = procedure;
+    type TWizardTerminateProc = procedure;
 
-function INITWIZARD0001(const BorlandIDEServices: IBorlandIDEServices;
-RegisterProc: TWizardRegisterProc; var Terminate: TWizardTerminateProc):
-Boolean stdcall;
+    function INITWIZARD0001(const BorlandIDEServices: IBorlandIDEServices;
+      RegisterProc: TWizardRegisterProc; var Terminate: TWizardTerminateProc):
+      Boolean stdcall;
 
 Для регистрации вашего эксперта вызовите внутри этой функции
 RegisterProc и передайте ей экземпляр заранее созданного класса вашего
@@ -589,17 +609,15 @@ RegisterProc и передайте ей экземпляр заранее соз
 
 Поместите полный путь к DLL в ключ реестра
 
-HKEY\_CURRENT\_USER\\Software\\Borland\\Delphi\\7.0\\Experts
+    HKEY_CURRENT_USER\Software\Borland\Delphi\7.0\Experts
 
 или
 
-HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Borland\\Delphi\\7.0\\Experts
+    HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi\7.0\Experts
 
 Именем ключа может быть произвольная строка.
 
 Эксперт будет запущен только при перезапуске среды, если она
 выполнялась. Вуаля!
 
-Автор: Раструсный Владислав Юрьевич
 
-Взято с сайта <https://www.delphimaster.ru/>

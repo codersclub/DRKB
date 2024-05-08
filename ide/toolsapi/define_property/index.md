@@ -1,21 +1,19 @@
 ---
 Title: Код определения свойств
 Date: 01.01.2007
+Author: Mike Scott, Mobius Ltd.
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Код определения свойств
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
 Итак вам опять нужно "немного" кода. Вот небольшой примерчик
 компонента лично для вас и остальных моих читателей. Установите этот
 компонент в палитру Delphi, бросьте экземпляр на форму, закройте ее и
 модуль и откройте форму как файл формы, используя в диалоге открытия тип
-*.dfm.
+\*.dfm.
 
 Вы увидите дополнительные свойства \'StringThing\' и \'Thing\'.
 Первое - свойство строки, второе - бинарное свойство, фактически запись.
@@ -41,7 +39,7 @@ Date: 01.01.2007
     type
       TDemoProps = class(TComponent)
       private
-    { Private declarations }
+      { Private declarations }
         FStringThing: string;
         FThing: record
           i, j, k: integer;
@@ -53,13 +51,13 @@ Date: 01.01.2007
         procedure ReadThing(Stream: TStream);
         procedure WriteThing(Stream: TStream);
       protected
-    { Protected declarations }
+      { Protected declarations }
         procedure DefineProperties(Filer: TFiler); override;
       public
-    { Public declarations }
+      { Public declarations }
         constructor Create(AOwner: TComponent); override;
       published
-    { Published declarations }
+      { Published declarations }
       end;
      
     procedure Register;
@@ -70,7 +68,7 @@ Date: 01.01.2007
      
     begin
       inherited Create(AOwner);
-    { создайте любые данные, чтобы было что передать в поток}
+      { создайте любые данные, чтобы было что передать в поток}
       FStringThing := 'Всем привет!';
       with FThing do
         begin
@@ -118,10 +116,4 @@ Date: 01.01.2007
      
     end.
 
-Mike Scott
 
-Mobius Ltd.
-
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

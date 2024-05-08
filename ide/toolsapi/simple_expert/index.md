@@ -1,15 +1,12 @@
 ---
 Title: Как создать простейший эксперт?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как создать простейший эксперт?
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
     This unit can be compiled into a package and will then appear in the Delphi 
@@ -76,4 +73,3 @@ Date: 01.01.2007
      
     end. 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

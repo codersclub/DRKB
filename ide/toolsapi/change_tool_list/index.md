@@ -1,15 +1,12 @@
 ---
 Title: Програмно меняем Delphi Tool List
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Програмно меняем Delphi Tool List
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     //**  class to manage Delphi's Tool list
     //**
@@ -288,6 +285,5 @@ Date: 01.01.2007
           Free;
         end;
     end;
-     
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+

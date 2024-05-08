@@ -1,19 +1,18 @@
 ---
 Title: Показ свойств во время выполнения программы
 Date: 01.01.2007
+Author: Thomas von Stetten
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 ---
 
 
 Показ свойств во время выполнения программы
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
-
 Я написал компонент-отладчик, выводящий в дереве все компоненты.
-Попробуйте этот код. Вызывайте функцию DisplayProperties как показано
-ниже:
+Попробуйте этот код.
+
+Вызывайте функцию DisplayProperties как показано ниже:
 
     DisplayProperties(Form1, {Вы можете использовать любой компонент}
       Outline1.Lines, {Допускается любой TStrings-объект}
@@ -107,8 +106,3 @@ Date: 01.01.2007
         Result := Result + #9;
     end;
 
-- Thomas von Stetten
-
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba
