@@ -7,10 +7,6 @@ Date: 01.01.2007
 How do I create an executible file using the command line directive in Linux with Kylix?
 ========================================================================================
 
-::: {.date}
-01.01.2007
-:::
-
 How do I create an executable file, i.e. foo.exe, using dcc in Kylix?
 
 Create the project file, i.e. foo.dpr, using VI, Pico or some other text

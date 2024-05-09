@@ -1,15 +1,12 @@
 ---
 Title: Как получить имя текущего пользователя?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить имя текущего пользователя?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetCurrentUser: string; 
     var 
@@ -19,4 +16,3 @@ Date: 01.01.2007
       Result := pwrec.pw_name; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

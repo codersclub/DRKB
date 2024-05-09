@@ -1,19 +1,13 @@
 ---
 Title: Взаимодействие с системой: Linux API и Qt library
-Author: Андрей Боровский
-Date: 01.01.2007
+Author: Андрей Боровский, kylixportal@narod.ru
+Date: 12.12.2001
+Source: <https://forum.sources.ru>
 ---
 
 
 Взаимодействие с системой: Linux API и Qt library
 =================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Андрей Боровский
-([www.kylixportal.chat.ru](https://www.myhomepage.com/index.html))
 
 В процессе разработки приложений в средах Delphi и Kylix время от
 времени возникает необходимость в обращении непосредственно к
@@ -69,7 +63,7 @@ System, SysUtils и т. д., а большинство возможностей 
 интерфейсами Linux, так и с классами библиотеки Qt. Далее мы рассмотрим
 эти возможности подробнее.
 
-Kylix и Linux API
+**Kylix и Linux API**
 
 Импортирование функций Linux API осуществляется достаточно просто и
 очень похоже на импортирование функций из Windows DLL. В Linux аналогом
@@ -89,11 +83,11 @@ glibc и страницами man. Между прочим, если в окне
 вызвана эта функция. В glibc данная функция определена следующим
 образом:
 
-pid\_t fork (void);
+    pid_t fork (void);
 
 В модуле Libc декларация этой функции выглядит так:
 
-function fork: \_\_pid\_t; cdecl;
+    function fork: __pid_t; cdecl;
 
 Обратите внимание на указание формата вызова cdecl. Этот формат
 используется по умолчанию для вызова системных функций Linux, также как
@@ -104,27 +98,25 @@ function fork: \_\_pid\_t; cdecl;
 библиотеки VGAlib (разделяемый файл libvga.so). В заголовке библиотеки,
 написанной на С, эта функция объявляется как
 
-int vga\_setmode (int mode);
+    int vga_setmode (int mode);
 
 В модуле Kylix пишем:
 
-    … 
+    ...
     interface
      
     function SetVGAMode (Mode: Integer) : Integer; cdecl; 
-     
-    … 
-     
+    ...     
     implementation
      
     function SetVGAMode; external 'libvga.so' name 'vga_setmode'; 
-     
-    …
+    ...     
+
 
 Интеграция кода, написанного на C/C++, и Kylix-приложений будет
 рассмотрена подробнее в следующих статьях.
 
-Kylix и Qt library
+**Kylix и Qt library**
 
 Библиотека Qt library является основой библиотеки VisualCLX точно также,
 как Windows GUI API является основой Delphi VCL. Большинство компонентов
@@ -190,24 +182,24 @@ Kylix и документация к Qt library.
 Из файла qpushbutton.h, входящего в Qt library, явствует, что у класса
 QPushButton три конструктора:
 
-QPushButton( QWidget *parent, const char *name=0 );
-
-QPushButton( const QString &text, QWidget *parent, const char* name=0
-);
-
-QPushButton( const QIconSet& icon, const QString &text, QWidget
-*parent, const char* name=0 );
+    QPushButton( QWidget *parent, const char *name=0 );
+    QPushButton( const QString &text, QWidget *parent, const char* name=0);
+    QPushButton( const QIconSet& icon, const QString &text,
+                 QWidget *parent, const char* name=0 );
 
 Каждому из этих конструкторов соответствует своя функция в модуле Qt:
 
-function QPushButton\_create(parent: QWidgetH; name: PAnsiChar):
-QPushButtonH; overload; cdecl;
+    function QPushButton_create(parent: QWidgetH;
+                                name: PAnsiChar): QPushButtonH; overload; cdecl;
 
-function QPushButton\_create(text: PWideString; parent: QWidgetH; name:
-PAnsiChar): QPushButtonH; overload; cdecl;
+    function QPushButton_create(text: PWideString;
+                                parent: QWidgetH;
+                                name: PAnsiChar): QPushButtonH; overload; cdecl;
 
-function QPushButton\_create(icon: QiconSetH; text: PWideString; parent:
-QWidgetH; name: PAnsiChar): QPushButtonH; overload; cdecl;
+    function QPushButton_create(icon: QiconSetH;
+                                text: PWideString;
+                                parent: QWidgetH;
+                                name: PAnsiChar): QPushButtonH; overload; cdecl;
 
 Обратите внимание на спецификатор overload. В качестве префикса к имени
 функции используется имя класса, в данном случае QPushButton. Далее
@@ -230,20 +222,19 @@ QWidgetH - эта переменная является ссылкой на эк
 Для уничтожения экземпляра объекта QPushButton служит процедура
 QPushButton\_destroy:
 
-procedure QPushButton\_destroy(handle: QPushButtonH); cdecl;
+    procedure QPushButton_destroy(handle: QPushButtonH); cdecl;
 
 В качестве единственного параметра этой функции передается ссылка на
 экземпляр объекта, который нужно уничтожить. Для вызова метода SetFlat,
 отключающего или восстанавливающего вывод границы для неактивной кнопки,
 служит процедура QPushButton\_setFlat:
 
-procedure QPushButton\_setFlat(handle: QPushButtonH; p1: Boolean);
-cdecl;
+    procedure QPushButton_setFlat(handle: QPushButtonH; p1: Boolean); cdecl;
 
 Для проверки того, является ли данная кнопка элементом управления,
 выбираемым по умолчанию предназначена функция
 
-function QPushButton\_isDefault(handle: QPushButtonH): Boolean; cdecl;
+    function QPushButton_isDefault(handle: QPushButtonH): Boolean; cdecl;
 
 В начале этого раздела было отмечено, что в основе компонентов VisualCLX
 лежат классы Qt library. Можно ли получить доступ к экземпляру класса
@@ -259,7 +250,7 @@ Button1.Handle имеет тип QPushButtonH. Воспользуемся эти
 доступа к Qt объекту и сделаем данную кнопку элементом управления по
 умолчанию:
 
-QPushButton\_setDefault(Button1.Handle, True);
+    QPushButton_setDefault(Button1.Handle, True);
 
 Конечно, тоже самое можно было бы сделать и при помощи свойства Default
 объекта Button1.
@@ -299,6 +290,5 @@ Qt library из программы, написанной на Object Pascal. О�
 создавать свои обработчики событий Qt library. О том, как это сделать,
 будет рассказано в следующей статье.
 
-Статья и примеры программ © 2001 Андрей Наумович Боровский.
-
-Взято из <https://forum.sources.ru>
+Статья и примеры программ © 2001 Андрей Наумович Боровский.  
+([www.kylixportal.chat.ru](www.kylixportal.chat.ru))

@@ -1,15 +1,12 @@
 ---
 Title: Как клонировать процесс?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как клонировать процесс?
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       In Linux it is possible to duplicate a process with fork. In the original 
@@ -92,4 +89,3 @@ Date: 01.01.2007
     original process end 
     } 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

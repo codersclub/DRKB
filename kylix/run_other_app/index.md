@@ -1,15 +1,12 @@
 ---
 Title: Как запустить другое приложение?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как запустить другое приложение?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       libc; 
@@ -24,4 +21,3 @@ Date: 01.01.2007
         ShowMessage('Error executing your program'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

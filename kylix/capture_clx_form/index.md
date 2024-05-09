@@ -1,15 +1,12 @@
 ---
 Title: Как отловить CLX форму?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как отловить CLX форму?
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Capturing a CLX form is easy, once you know. 
@@ -59,4 +56,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

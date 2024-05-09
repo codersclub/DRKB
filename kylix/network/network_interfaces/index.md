@@ -2,15 +2,12 @@
 Title: Информация о сетевых интерфейсах
 Author: pve
 Date: 01.01.2007
+Source: Исходники.Ru <https://forum.sources.ru/>
 ---
 
 
 Информация о сетевых интерфейсах
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit netinfo;
      
@@ -50,7 +47,7 @@ Date: 01.01.2007
       pAddrChar;
     begin
       Result := False;
-     //создать UDP сокет
+      //создать UDP сокет
       SHandle := Socket(AF_INET, SOCK_DGRAM, 0);
       if SHandle = INVALID_SOCKET then exit;
      
@@ -85,36 +82,36 @@ Date: 01.01.2007
           free(buf);
         end;
       Result := True;
-     //здесь результат получен полностью
-     //len - кол-во интерфейсов
+      //здесь результат получен полностью
+      //len - кол-во интерфейсов
       len := ifc.ifc_len div sizeof(ifreq);
       SetLength(IInfo.Info, len);
      
-     //указатель - на начало буфера
+      //указатель - на начало буфера
       pifr := ifc.ifc_ifcu.ifcu_req;
       for i := 0 to len - 1 do
         begin
           fillchar(ifr, sizeof(ifreq), 0);
-      //считать очередную порцию данных
+          //считать очередную порцию данных
           move(pifr^, ifr, sizeof(ifreq));
      
-      //имя интерфейса
+          //имя интерфейса
           IInfo.INFO[i].Name := ifr.ifrn_name;
-      //адрес интерфейса
+          //адрес интерфейса
           pAddr := inet_ntoa(ifr.ifru_addr.sin_addr);
           IInfo.INFO[i].IPAddress := pAddr;
      
-      //ШВ адрес
+          //ШВ адрес
           ioctl(SHandle, SIOCGIFBRDADDR, @ifr);
           pAddr := inet_ntoa(ifr.ifru_netmask.sin_addr);
           IInfo.INFO[i].Broadcast := pAddr;
      
-      //маска сети
+          //маска сети
           ioctl(SHandle, SIOCGIFNETMASK, @ifr);
           pAddr := inet_ntoa(ifr.ifru_netmask.sin_addr);
           IInfo.INFO[i].NetMask := pAddr;
      
-      //флаги
+          //флаги
           ioctl(SHandle, SIOCGIFFLAGS, @ifr);
      
           IInfo.INFO[i].IsUP := (ifr.ifru_flags and IFF_UP) = IFF_UP;
@@ -130,6 +127,3 @@ Date: 01.01.2007
     end;
     end.
 
-Взято с Исходников.Ru
-
-Автор: pve

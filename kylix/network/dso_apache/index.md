@@ -1,18 +1,16 @@
 ---
-Title: Using a DSO on Apache 2.0.43, created with Kylix 3
+Title: Использование DSO на Apache 2.0.43, созданном с помощью Kylix 3.
 Date: 01.01.2007
 ---
 
 
-Using a DSO on Apache 2.0.43, created with Kylix 3
+Использование DSO на Apache 2.0.43, созданном с помощью Kylix 3
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
+> После компиляции и установки Apache 2.0.39 с поддержкой DSO,
+> развертывание файла .so, созданного с помощью Kylix 3, не работает.
 
-After compiling and installing Apache 2.0.39 with DSO support, deploying
-an .so file built with Kylix 3 doesn\'t work.
+Вам необходимо изменить `MODULE_MAGIC_NUMBER_MAJOR` в файле HTTPD.pas на следующее:
 
-You need to change MODULE\_MAGIC\_NUMBER\_MAJOR in HTTPD.pas file to the
-following: MODULE\_MAGIC\_NUMBER\_MAJOR = 20020903;
+    MODULE_MAGIC_NUMBER_MAJOR = 20020903;
+	

@@ -1,22 +1,16 @@
 ---
 Title: Kylix Tutorial. Работа с DBExpress (статья)
-Date: 01.01.2007
+Date: 06.07.2008
+Author: Mike Goblin, mgoblin@mail.ru
+Source: <https://www.delphimaster.ru/>
 ---
 
 
 Kylix Tutorial. Работа с DBExpress (статья)
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
-
 Эта серия статей была любезно предоставлена автором Mike Goblin для
 нашего FAQ.
 
-Взято с сайта <https://www.delphimaster.ru/>
-
-Kylix Tutorial. Работа с DBExpress (статья)
-===========================================
 
 <!-- TOC -->

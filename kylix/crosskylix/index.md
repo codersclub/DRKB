@@ -2,15 +2,12 @@
 Title: Кросс-Kylix - возможность под Windows получать Linux-исполняемые файлы
 Author: Remax
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Кросс-Kylix - возможность под Windows получать Linux-исполняемые файлы
 =======================================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Информация здесь:
 
@@ -20,6 +17,3 @@ Date: 01.01.2007
 
 <https://crosskylix.untergrund.net/crosskylix-100.zip>
 
-Автор: Remax
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

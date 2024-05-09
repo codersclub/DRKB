@@ -8,10 +8,6 @@ Date: 01.01.2007
 CopyFile для Linux
 ==================
 
-::: {.date}
-01.01.2007
-:::
-
     function CopyFile(Org, Dest:string):boolean;
       var Source, Target:TFileStream;
     begin
@@ -32,5 +28,3 @@ CopyFile для Linux
       except
       end;
     end;
-
-Автор: Vit

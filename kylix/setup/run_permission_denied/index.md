@@ -7,10 +7,6 @@ Date: 01.01.2007
 Error «permission denied» when trying to run Kylix
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
-
 If you installed as root and accepted the defaults then Kylix was
 installed under the /root directory. By default the permissions for this
 directory are 700 so only the root user can access this directory tree

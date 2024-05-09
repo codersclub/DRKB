@@ -7,10 +7,6 @@ Date: 01.01.2007
 Accessing InterBase via dbExpress with Kylix produces error: «Unable to load libgds.so»
 =======================================================================================
 
-::: {.date}
-01.01.2007
-:::
-
 If you install the dbExpress InterBase client driver, you will need to
 have libcrypt.so installed. Some Linux distributions omit this library
 or do not include it in a base install. If your distribution does not
@@ -27,6 +23,6 @@ help Kylix find the library. For example, if you are missing libcrypt.so
 but find /lib/libcrypt.so.1, you would enter the following shell
 commands as root:
 
-cd /lib
+    cd /lib
 
-ln -s libcrypt.so.1 libcrypt.so
+    ln -s libcrypt.so.1 libcrypt.so

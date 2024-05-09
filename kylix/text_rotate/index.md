@@ -1,15 +1,12 @@
 ---
 Title: Как нарисовать повернутый текст?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как нарисовать повернутый текст?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       QT; 
@@ -27,4 +24,3 @@ Date: 01.01.2007
       Canvas.TextOut(PrPoint.X, PrPoint.Y, 'Txt'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

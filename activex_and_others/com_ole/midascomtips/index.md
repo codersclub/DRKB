@@ -224,7 +224,7 @@ DBGRID и двух DBNAVIGATOR. Верхний DBGRID и DBNAVIGATOR отобр�
 информацию о заказчике и нижний DBGRID и DBNAVIGATOR - таблицу заказов.
 
 Модуль данных содержит компонент DCOMCONNECTION, два ClientDataSet и два
-DataSources. Имя DCOMCONNECTION компонента - DemoConn, и св-во
+DataSources. Имя DCOMCONNECTION компонента - DemoConn, и свойство
 ServerName установлено в DemoDllSrvr.DllDemoServer. Свойство
 RemoteServer CustomerCds установлено в DemoConn, и ProviderName
 установлено равным CustomerProv. Свойство DataSetField компонента

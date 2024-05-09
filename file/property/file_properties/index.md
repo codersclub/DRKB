@@ -12,16 +12,16 @@ Source: <https://forum.sources.ru>
 Ниже показан пример получения набора свойств файла (которые отображаются
 на вкладке "Сводка" диалогового окна "Свойства:").
 В файловой системе NTFS читаются свойства любого файла (если они вообще
-есть, конечно). В других ФС читаются св-ва только compound-файлов (они
+есть, конечно). В других ФС читаются свойства только compound-файлов (они
 же structured storage, т.е. файлы хранения структурированной информации,
 такие как файлы MS Office, пакеты MSI, etc.), т.к. в этом случае вся
-информация о св-вах находится в самих файлах (опять же, она может там и
+информация о свойствах находится в самих файлах (опять же, она может там и
 отсутствовать). Ну и, естественно, не читаются нестандартные свойства,
 т.к. они нигде не хранятся, а динамически добавляются на вкладку
-соответствующим файлу COM-сервером - обработчиком вкладок св-в
+соответствующим файлу COM-сервером - обработчиком вкладок свойств
 (PropertySheetHandlers).
 
-В этом примере считывается несколько св-в из набора SummaryInformation.
+В этом примере считывается несколько свойств из набора SummaryInformation.
 
     unit Unit1;
      
@@ -59,7 +59,7 @@ Source: <https://forum.sources.ru>
      
      
     const
-    // GUID'ы для набора св-в SummaryInformation
+    // GUID'ы для набора свойств SummaryInformation
      FMTID_SummaryInformation  : TGUID = '{F29F85E0-4FF9-1068-AB91-08002B27B3D9}';
      IID_IPropertySetStorage   : TGUID = '{0000013A-0000-0000-C000-000000000046}';
      
@@ -67,10 +67,10 @@ Source: <https://forum.sources.ru>
       STGFMT_ANY = 4;
      
     type
-     PPropSpecArray=^TPropSpecArray;  // массив спецификаций св-в
+     PPropSpecArray=^TPropSpecArray;  // массив спецификаций свойств
      TPropSpecArray=array[0..999] of TPropSpec; 
      
-     PPropVariantArray=^TPropVariantArray; // массив - приемник, куда будут помещены значения нужных св-в
+     PPropVariantArray=^TPropVariantArray; // массив - приемник, куда будут помещены значения нужных свойств
      TPropVariantArray=array[0..999] of TPropVariant;
      
      
@@ -121,7 +121,7 @@ Source: <https://forum.sources.ru>
      stgP:IPropertyStorage;
      ps:PPropSpecArray;
      pv:PPropVariantArray;
-     lit:TListItem;  // значения св-в записываем в ListView
+     lit:TListItem;  // значения свойств записываем в ListView
     begin
      
      if (not OpenDialog1.Execute) then exit;  // выбираем файл
@@ -147,7 +147,7 @@ Source: <https://forum.sources.ru>
       end;
      
      stgPS:=stgRoot as IPropertySetStorage;  // ссылаемся на нужный интерфейс
-    //открываем набор св-в
+    //открываем набор свойств
      if (stgPS.Open(FMTID_SummaryInformation,STGM_READ or STGM_SHARE_EXCLUSIVE,stgP)<>S_OK) then
      begin
       MessageBox(Handle,'Can not open property set','Error',MB_ICONERROR);
@@ -160,16 +160,16 @@ Source: <https://forum.sources.ru>
        GetMem(ps,SizeOf(TPropSpec));
        GetMem(pv,SizeOf(TPropVariant));
      
-       ps[0].ulKind:=PRSPEC_PROPID;   // считываем св-ва по их идентификатору (см. ActiveX.pas)
+       ps[0].ulKind:=PRSPEC_PROPID;   // считываем свойства по их идентификатору (см. ActiveX.pas)
      
-       // Прочитаем несколько св-в файла.
-       // В этом примере - для наглядности - читаем по одному св-ву из потока (можно за один раз прочитать и больше),
+       // Прочитаем несколько свойств файла.
+       // В этом примере - для наглядности - читаем по одному свойству из потока (можно за один раз прочитать и больше),
        // поэтому каждый раз значение будет лежать в pv[0].
      
        ps[0].propid:=PIDSI_TITLE;     // заголовок
        lit:=ListView1.Items.Add;
        lit.Caption:='Title';
-       if (stgP.ReadMultiple(1, @ps[0], @pv[0])=S_OK) then  // читаем св-во
+       if (stgP.ReadMultiple(1, @ps[0], @pv[0])=S_OK) then  // читаем свойство
        lit.SubItems.Add(pv[0].pszVal) // добавляем в ListView
        else lit.SubItems.Add('');
      

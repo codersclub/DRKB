@@ -7,64 +7,55 @@ Date: 01.01.2007
 Installing Kylix 3 Open Edition on Mandrake 9
 =============================================
 
-::: {.date}
-01.01.2007
-:::
+> How can I get Kylix 3 Open Edition installed and running on Mandrake 9?
 
-How can I get Kylix 3 Open Edition installed and running on Mandrake 9?
+1. Open a Super User Terminal,
 
-Open a Super User Terminal, select "Sessions/New Root Midnight
-Commander" and in "/", create a directory "temp"
+   select "`Sessions/New Root Midnight Commander`"
 
-Download or copy the file kylix3\_open.tar.gz into the "temp"
-directory you just created.
+   and in "/", create a directory "temp"
 
-Check that all necessary programs are installed on your system:
+2. Download or copy the file kylix3\_open.tar.gz into the "temp"
+   directory you just created.
 
-Open kmenu/configuration/packaging/Remove Software or kpackage
+3. Check that all necessary programs are installed on your system:
 
-Check for installation of the following:
+    - Open `kmenu/configuration/packaging/Remove Software or kpackage`
+    - Check for installation of the following:
 
-kernel =\> 2.2 (mdk9.0 uses 2.4)
+            kernel => 2.2 (mdk9.0 uses 2.4)
+            libgtk => 1.2 (mdk 9.0 uses 1.2-1.2.10-29)
+            libjpeg => 6.2 (mdk 9.0 uses 6.-66-25)
+            XIIR6 (XFree86) (mdk uses 4.2.1-3)
+            XFree86-dev (mdk9.0 uses 4.2.1-3)
+            glibc-dev (mdk9.0 uses 2.2.5-16)
 
-libgtk =\> 1.2 (mdk 9.0 uses 1.2-1.2.10-29)
+4. Once you have verified that you have all of the necessary programs do
+   the following:
 
-libjpeg =\> 6.2 (mdk 9.0 uses 6.-66-25)
+    In a Super User Terminal do:
 
-XIIR6 (XFree86) (mdk uses 4.2.1-3)
+        cd /temp
+        tar zxf kylix3_open.tar.gz
 
-XFree86-dev (mdk9.0 uses 4.2.1-3)
+    In user terminal (NOT as root):
 
-glibc-dev (mdk9.0 uses 2.2.5-16)
+        cd /temp/kylix3_open
+        ./setup.sh
 
-Once you have verified that you have all of the necessary programs do
-the following:
+    In Gui select "I Agree"
 
-In a Super User Terminal do:
+    Now select "install"
 
-cd /temp
+5. Logout and log back in as same user to get the Borland Kylix entry in
+   the KDE menu
 
-tar zxf kylix3\_open.tar.gz
+6. In Borland Kylix 3 menu, select "register now"
 
-In user terminal (NOT as root):
+7. In the Gui select "next"
 
-cd /temp/kylix3\_open
+8. In the Gui select "Finish"
 
-./setup.sh
-
-In Gui select "I Agree"
-
-Now select "install"
-
-Logout and log back in as same user to get the Borland Kylix entry in
-the KDE menu
-
-In Borland Kylix 3 menu, select "register now"
-
-In the Gui select "next"
-
-In the Gui select \'Finish"
-
-The Gui disappears and the registration process has completed.
+    The Gui disappears and the registration process has completed.
 
 The Kylix Delphi and Kylix C++ IDE\'s can now be run.

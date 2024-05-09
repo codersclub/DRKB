@@ -8,10 +8,6 @@ Date: 01.01.2007
 Как узнать имя компьютера?
 ==========================
 
-::: {.date}
-01.01.2007
-:::
-
     Uses Libc;
      
     Function GetPCName:string;
@@ -24,5 +20,3 @@ Date: 01.01.2007
       Result:=String(Name);
       FreeMem(Name);
     end;
-
-Автор: Vit

@@ -1,18 +1,13 @@
 ---
-Title: Does Kylix support Postgres?
+Title: Поддерживает ли Kylix СУБД Postgres?
 Date: 01.01.2007
 ---
 
 
-Does Kylix support Postgres?
+Поддерживает ли Kylix СУБД Postgres?
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
-The Kylix 2 dbExpress PostgreSQL/RedHat database driver is available for
-download from the
+Драйвер базы данных Kylix 2 dbExpress PostgreSQL/RedHat доступен для загрузки по адресу
 <https://www.borland.com/kylix/webreg/k2/k2_registeredusers.html>
 
-You can also use ODBC
+Вы также можете использовать ODBC.

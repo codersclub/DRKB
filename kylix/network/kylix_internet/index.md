@@ -1,5 +1,8 @@
 ---
 Title: Программирование интернет-приложений в Borland Kylix (статья)
+Author: Андрей Боровский, kylixportal@narod.ru
+Source: <https://forum.sources.ru>
+Date: 12.12.2001
 ---
 
 

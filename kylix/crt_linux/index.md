@@ -1,15 +1,12 @@
 ---
 Title: Модуль CRT для Linux
-Date: 01.01.2007
+Author: Andrei Borovsky, aborovsky@mtu-net.ru
+Date: 12.12.2002
 ---
 
 
 Модуль CRT для Linux
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       LinCRT Kylix unit v 1.0

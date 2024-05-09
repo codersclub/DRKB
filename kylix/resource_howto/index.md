@@ -1,15 +1,12 @@
 ---
 Title: Как использовать ресурсы?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как использовать ресурсы?
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       To create resource files (*.res) for Kylix you can use the Delphi 
@@ -58,4 +55,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

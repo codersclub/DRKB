@@ -7,13 +7,9 @@ Date: 01.01.2007
 Problem generating font matrix in Kylix
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
-My install of Kylix was successfull but after startup with
-"startkylix" I see the message "generating font matrix" forever.
-What should I do about this?
+> My install of Kylix was successfull but after startup with
+> "startkylix" I see the message "generating font matrix" forever.
+> What should I do about this?
 
 If you installed as root the font matrix will be created for each user
 the first time they start Kylix. How long it takes depends on the number
@@ -21,7 +17,7 @@ of fonts that you have installed and the speed of your machine. If it
 seems to freeze or last a long time you should still be able to run
 Kylix even if you terminate the font matrix generation.
 
-Possible workarounds
+**Possible workarounds**
 
 This problem could be caused by a bad truetype font. If you have any
 Windows tt-fonts installed try removing them. Another thing to try is to

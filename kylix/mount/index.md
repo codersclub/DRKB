@@ -1,18 +1,15 @@
 ---
 Title: Как сделать mount?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать mount?
 ==================
 
-::: {.date}
-01.01.2007
-:::
-
-    {  The following example shows a Linux-Console application, which mount 
-      the floppy. 
+    {  The following example shows a Linux-Console application,
+       which mount the floppy. 
     } 
      
     program Project1; 
@@ -28,4 +25,3 @@ Date: 01.01.2007
         WriteLn('Floppy mounted'); 
     end. 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,11 @@
 ---
-Title: Does Kylix support ODBC?
+Title: Поддерживает ли Kylix ODBC?
 Date: 01.01.2007
 ---
 
 
-Does Kylix support ODBC?
+Поддерживает ли Kylix ODBC?
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
-You can connect using an ODBC driver via dbExpress in Kylix. There is an
-ODBC dbExpress gateway driver on the Kylix companion CD.
+Вы можете подключиться с помощью драйвера ODBC через dbExpress в Kylix.
+Драйвер шлюза ODBC dbExpress находится на сопутствующем компакт-диске Kylix.

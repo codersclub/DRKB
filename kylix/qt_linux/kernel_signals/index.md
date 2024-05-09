@@ -1,15 +1,12 @@
 ---
 Title: Как перехватывать kernel-signals?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как перехватывать kernel-signals?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     program TestSignals; 
      
@@ -47,4 +44,3 @@ Date: 01.01.2007
       until bTerminate; 
     end. 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
