@@ -1,15 +1,13 @@
 ---
 Title: Как получить значение свойства в виде варианта по тексту имени свойства?
 Date: 01.01.2007
+Author: Ralph Friedman
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Как получить значение свойства в виде варианта по тексту имени свойства?
 ========================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit MorePropInfo;
      
@@ -142,6 +140,3 @@ Date: 01.01.2007
      
     end.
 
-Tip by Ralph Friedman
-
-Взято из <https://www.lmc-mediaagentur.de/dpool>

@@ -1,15 +1,13 @@
 ---
 Title: Как определить, насдледовано ли свойство от определенного класса?
 Date: 01.01.2007
+Author: Peter Below
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Как определить, насдледовано ли свойство от определенного класса?
 =================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetFontProp(anObj: TObject): TFont;
     var
@@ -27,6 +25,3 @@ Date: 01.01.2007
           Result := TFont(GetOrdProp(anObj, PInfo));
     end;
 
-Tip by Peter Below
-
-Взято из <https://www.lmc-mediaagentur.de/dpool>

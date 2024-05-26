@@ -1,19 +1,17 @@
 ---
 Title: Дни недели
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Дни недели
 ==========
 
-::: {.date}
-01.01.2007
-:::
-
     unit datefunc;
      
     interface
+    
     function checkdate(date: string): boolean;
     function Date2julian(date: string): longint;
     function Julian2date(julian: longint): string;
@@ -168,11 +166,4 @@ Date: 01.01.2007
         7: Result := 'Суббота';
       end;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

@@ -1,15 +1,12 @@
 ---
 Title: Сохранение массива c изображениями
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Сохранение массива c изображениями
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 Я решил проблему записи массива TBitmap в файл и его повторного чтения.
 
@@ -100,6 +97,3 @@ TBitmap. Эту манипуляцию мы проделываем для каж
       Caption := 'Bingo-создатель - ' + ExtractFilename(SaveFilename);
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

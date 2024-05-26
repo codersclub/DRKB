@@ -1,15 +1,12 @@
 ---
 Title: Использование ассоциативных массивов
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Использование ассоциативных массивов
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -22,6 +19,4 @@ Date: 01.01.2007
       DataField.Free; 
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

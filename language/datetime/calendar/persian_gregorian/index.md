@@ -1,15 +1,12 @@
 ---
 Title: Преобразовать Персидскую дату в дату по Грегорианскому календарю
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Преобразовать Персидскую дату в дату по Грегорианскому календарю
 ================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function Persia_to_Ger_date(aa: ShortString; ResultKind: Byte = 0): ShortString;
      
@@ -82,6 +79,5 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
  

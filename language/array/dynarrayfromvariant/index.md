@@ -1,15 +1,12 @@
 ---
 Title: Использование DynArrayFromVariant
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Использование DynArrayFromVariant
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
      type
@@ -37,6 +34,4 @@ Date: 01.01.2007
       would consider it a bug. 
     }
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
- 

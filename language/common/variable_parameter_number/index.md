@@ -1,15 +1,12 @@
 ---
 Title: Как сделать procedure / function с переменным числом параметров?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать procedure / function с переменным числом параметров?
 ================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { .... }
      
@@ -44,4 +41,3 @@ Date: 01.01.2007
         {par6}WideString('WCHAR'));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

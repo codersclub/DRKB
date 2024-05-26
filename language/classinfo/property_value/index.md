@@ -1,29 +1,23 @@
 ---
 Title: Как прочитать значение свойства компонента по имени?
 Date: 01.01.2007
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Как прочитать значение свойства компонента по имени?
 ====================================================
 
-::: {.date}
-01.01.2007
-:::
+Во время выполнения вам может потребоваться узнать, какие свойства доступны для конкретного компонента во время выполнения.
+Список можно получить вызовом GetPropList.
+Типы, функции и процедуры, включая GetPropList, которые обеспечивают доступ к этой информации о свойствах, находятся в исходном файле VCL TYPINFO.PAS.
 
-You may need to know at runtime what properties are available for a
-particular component at runtime. The list can be obtained by a call to
-GetPropList. The types, functions and procedures, including GetPropList,
-that allow access to this property information reside in the VCL source
-file TYPINFO.PAS.
-
-GetPropList Parameters
+**Параметры GetPropList**
 
     function GetPropList(TypeInfo: PTypeInfo; TypeKinds: TTypeKinds; PropList: PPropList): Integer;
 
-The first parameter for GetPropList is of type PTypeInfo, and is part of
-the RTTI (Run Time Type Information) available for any object. The
-record structure defined:
+Первый параметр GetPropList имеет тип PTypeInfo и является частью RTTI (информации о типе времени выполнения), доступной для любого объекта.
+Определена структура записи:
 
     PPTypeInfo = ^PTypeInfo;
     PTypeInfo = ^TTypeInfo;
@@ -33,27 +27,23 @@ record structure defined:
       {TypeData: TTypeData}
     end;
 
-The TTypeInfo record can be accessed through the objects ClassInfo
-property. For example, if you were getting the property list of a
-TButton, the call might look, so far, like this:
+Доступ к записи TTypeInfo можно получить через свойство ClassInfo объекта.
+Например, если вы получаете список свойств TButton, вызов может выглядеть так:
 
     GetPropList(Button1.ClassInfo, ....
 
-The second parameter, of type TTypeKinds, is a set type that acts as a
-filter for the kinds of properties to include in the list. There are a
-number of valid entries that could be included in the set (see
-TYPEINFO.PAS), but tkProperties covers the majority. Now our call to
-GetPropList would look like:
+Второй параметр типа TTypeKinds — это заданный тип, который действует как фильтр для типов свойств, включаемых в список.
+Существует ряд допустимых записей, которые можно включить в набор (см. TYPEINFO.PAS), но tkProperties охватывает большинство.
+Теперь наш вызов GetPropList будет выглядеть так:
 
     GetPropList(Button1.ClassInfo, tkProperties ....
 
-The last parameter, PPropList is an array of PPropInfo and is defined in
-TYPEINFO.PAS:
+Последний параметр, PPropList, представляет собой массив PPropInfo и определен в TYPEINFO.PAS:
 
     PPropList = ^TPropList;
     TPropList = array[0..16379] of PPropInfo;
 
-Now the call might read:
+Теперь вызов может звучать так:
 
     procedure TForm1.FormCreate(Sender: TObject);
     var
@@ -63,13 +53,13 @@ Now the call might read:
       GetPropList(TButton.ClassInfo, tkProperties + [tkMethod], PropList);
     {...}
 
-Getting Additional Information from the TTypeInfo Record:
+**Получение дополнительной информации из записи TTypeInfo:**
 
-The example at the end of this document lists not just the property
-name, but it\'s type. The name of the property type resides in an
-additional set of structures. Let\'s take a second look at the TPropInfo
-record. Notice that it contains a PPTypeInfo that points ultimately to a
-TTypeInfo record. TTypeInfo contains the class name of the property.
+В примере в конце этого документа указано не только имя свойства, но и его тип.
+Имя типа свойства находится в дополнительном наборе структур.
+Давайте еще раз взглянем на запись TPropInfo.
+Обратите внимание, что она содержит PPTypeInfo, который в конечном итоге указывает на запись TTypeInfo.
+TTypeInfo содержит имя класса свойства.
 
     PPropInfo = ^TPropInfo;
     TPropInfo = packed record
@@ -92,14 +82,12 @@ TTypeInfo record. TTypeInfo contains the class name of the property.
       {TypeData: TTypeData}
     end;
 
-The example below shows how to set up the call to GetPropList, and how
-to access the array elements. TForm will be referenced in this example
-instead of TButton, but you can substitute other values in the
-GetPropList call. The visible result will be to fill the list with the
-property name and type of the TForm properties.
+В примере ниже показано, как настроить вызов GetPropList и как получить доступ к элементам массива.
+В этом примере вместо TButton будет использоваться ссылка на TForm, но вы можете заменить другие значения в вызове GetPropList.
+Видимым результатом будет заполнение списка именем свойства и типом свойств TForm.
 
-This project requires a TListBox. Enter the code below in the forms
-OnCreate event handler.
+Для этого проекта требуется TListBox.
+Введите приведенный ниже код в обработчик событий OnCreate формы.
 
     uses
       TypInfo;
@@ -124,4 +112,3 @@ OnCreate event handler.
       end;
     end;
 
-Взято из <https://www.lmc-mediaagentur.de/dpool>

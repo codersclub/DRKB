@@ -1,6 +1,5 @@
 ---
 Title: Использование многомерного массива
-Author: Steve Schafer
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,11 @@ Date: 01.01.2007
 Использование многомерного массива
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Michael Day
+
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 
     type RecType = integer; {<-- здесь задается тип элементов массива}
      
@@ -27,16 +28,13 @@ Date: 01.01.2007
       FreeMem(MyArray, ItemCnt * sizeof(MyArray[1])); {освобождаем массив после работы с ним}
     end;
 
-Michael Day
-
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba
 
 ------------------------------------------------------------------------
 Вариант 2:
 
-Автор: Steve Schafer
+Author: Steve Schafer
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     type
       PRow = ^TRow;
@@ -67,9 +65,4 @@ Michael Day
       WriteLn('Массив инициализирован и готов к работе.');
       WriteLn('Но эта программа закончила свою работу.');
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

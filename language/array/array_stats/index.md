@@ -8,10 +8,6 @@ Date: 01.01.2007
 Поиск минимального (максимального) элемента массива, статистика элементов массива
 =================================================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Задачу поиска минимального элемента массива рассмотрим на примере
 массива целых чисел.
 
@@ -31,31 +27,22 @@ Labeia), использующиеся для вывода информацион
 которой выполняется поиск минимального элемента массива. В табл. 5.4
 приведены значения свойств компонента stringGridi.
 
-Свойство                  Значение
-
-ColCount                  005
-
-FixedCols                 000
-
-RowCount                  001
-
-DefaultRowHeight          024
-
-Height                    024
-
-DefaultColWidth           064
-
-Width                     328
-
-Options.goEditing         True
-
-Options.AlwaysShowEditing True
-
-Options.goTabs            True
+Свойство                  |Значение
+--------------------------|--------
+ColCount                  |005
+FixedCols                 |000
+RowCount                  |001
+DefaultRowHeight          |024
+Height                    |024
+DefaultColWidth           |064
+Width                     |328
+Options.goEditing         |True
+Options.AlwaysShowEditing |True
+Options.goTabs            |True
 
 В листинге 5.6 приведена процедура обработки события Onclick для
 командной кнопки Button1, которая вводит массив, выполняет поиск
-мини-мального элемента и выводит результат --- номер и значение
+мини-мального элемента и выводит результат - номер и значение
 минимального элемента массива.
 
 Листинг 5.6. Поиск минимального элемента массива
@@ -120,7 +107,7 @@ DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Примечание от Vit
+**Примечание от Vit**
 
 боюсь что код приведенный выше представляет интерес для студентов и тех
 кто изучает алгоритмы програмирования, для тех же кто занимается
@@ -128,64 +115,63 @@ DelphiWorld 6.0
 сделано до нас, осталосьт заглянуть в модуль Math от Delphi и найти в
 нём функции нахождения требуемых величин:
 
-    +-----------------------------------+-----------------------------------+
-    | Функция модуля Math               | Описание                          |
-    +-----------------------------------+-----------------------------------+
-    | MaxIntValue                       | Returns the largest signed value  |
-    |                                   | in an integer array               |
-    +-----------------------------------+-----------------------------------+
-    | MaxValue                          | Returns the largest signed value  |
-    |                                   | in an array                       |
-    +-----------------------------------+-----------------------------------+
-    | Mean                              | Returns the average of all values |
-    |                                   | in an array                       |
-    +-----------------------------------+-----------------------------------+
-    | MeanAndStdDev                     | Calculates the mean and standard  |
-    |                                   | deviation of array elements       |
-    +-----------------------------------+-----------------------------------+
-    | MinIntValue                       | Returns the smallest signed value |
-    |                                   | in an integer array               |
-    +-----------------------------------+-----------------------------------+
-    | MinValue                          | Returns smallest signed value in  |
-    |                                   | an array                          |
-    +-----------------------------------+-----------------------------------+
-    | MomentSkewKurtosis                | Calculates the mean, variance,    |
-    |                                   | skew, and kurtosis                |
-    +-----------------------------------+-----------------------------------+
-    | Norm                              | Returns the Euclidean \'L-2\'     |
-    |                                   | norm.                             |
-    +-----------------------------------+-----------------------------------+
-    | PopnStdDev                        | Calculates the population         |
-    |                                   | standard deviation                |
-    +-----------------------------------+-----------------------------------+
-    | PopnVariance                      | Calculates the population         |
-    |                                   | variance                          |
-    +-----------------------------------+-----------------------------------+
-    | StdDev                            | Returns the sample standard       |
-    |                                   | deviation for elements in an      |
-    |                                   | array.                            |
-    +-----------------------------------+-----------------------------------+
-    | Sum                               | Returns the sum of the elements   |
-    |                                   | in an array.                      |
-    +-----------------------------------+-----------------------------------+
-    | SumInt                            | Returns the sum of the elements   |
-    |                                   | in an integer array.              |
-    +-----------------------------------+-----------------------------------+
-    | SumOfSquares                      | Returns the sum of the squared    |
-    |                                   | values from a data array.         |
-    +-----------------------------------+-----------------------------------+
-    | SumsAndSquares                    | Returns the sum of the values and |
-    |                                   | the sum of the squared values in  |
-    |                                   | an array.                         |
-    +-----------------------------------+-----------------------------------+
-    | TotalVariance                     | Returns the statistical variance  |
-    |                                   | from an array of values.          |
-    +-----------------------------------+-----------------------------------+
-    | Variance                          | Calculates statistical sample     |
-    |                                   | variance from an array of data.   |
-    +-----------------------------------+-----------------------------------+
+    +---------------------------+-----------------------------------+
+    | Функция модуля Math       | Описание                          |
+    +---------------------------+-----------------------------------+
+    | MaxIntValue               | Returns the largest signed value  |
+    |                           | in an integer array               |
+    +---------------------------+-----------------------------------+
+    | MaxValue                  | Returns the largest signed value  |
+    |                           | in an array                       |
+    +---------------------------+-----------------------------------+
+    | Mean                      | Returns the average of all values |
+    |                           | in an array                       |
+    +---------------------------+-----------------------------------+
+    | MeanAndStdDev             | Calculates the mean and standard  |
+    |                           | deviation of array elements       |
+    +---------------------------+-----------------------------------+
+    | MinIntValue               | Returns the smallest signed value |
+    |                           | in an integer array               |
+    +---------------------------+-----------------------------------+
+    | MinValue                  | Returns smallest signed value in  |
+    |                           | an array                          |
+    +---------------------------+-----------------------------------+
+    | MomentSkewKurtosis        | Calculates the mean, variance,    |
+    |                           | skew, and kurtosis                |
+    +---------------------------+-----------------------------------+
+    | Norm                      | Returns the Euclidean \'L-2\'     |
+    |                           | norm.                             |
+    +---------------------------+-----------------------------------+
+    | PopnStdDev                | Calculates the population         |
+    |                           | standard deviation                |
+    +---------------------------+-----------------------------------+
+    | PopnVariance              | Calculates the population         |
+    |                           | variance                          |
+    +---------------------------+-----------------------------------+
+    | StdDev                    | Returns the sample standard       |
+    |                           | deviation for elements in an      |
+    |                           | array.                            |
+    +---------------------------+-----------------------------------+
+    | Sum                       | Returns the sum of the elements   |
+    |                           | in an array.                      |
+    +---------------------------+-----------------------------------+
+    | SumInt                    | Returns the sum of the elements   |
+    |                           | in an integer array.              |
+    +---------------------------+-----------------------------------+
+    | SumOfSquares              | Returns the sum of the squared    |
+    |                           | values from a data array.         |
+    +---------------------------+-----------------------------------+
+    | SumsAndSquares            | Returns the sum of the values and |
+    |                           | the sum of the squared values in  |
+    |                           | an array.                         |
+    +---------------------------+-----------------------------------+
+    | TotalVariance             | Returns the statistical variance  |
+    |                           | from an array of values.          |
+    +---------------------------+-----------------------------------+
+    | Variance                  | Calculates statistical sample     |
+    |                           | variance from an array of data.   |
+    +---------------------------+-----------------------------------+
 
-Впрочем тем кто изучает алгоритмику неплохо было бы взглянуть на
+Впрочем, тем, кто изучает алгоритмику, неплохо было бы взглянуть на
 исходники этого модуля Math, где и найти реализацию приведенных функций.
 
-Автор: Vit

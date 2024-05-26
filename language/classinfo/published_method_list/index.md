@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как прочитать весь список Published методов?
 ============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.lmc-mediaagentur.de/dpool>
 
     procedure EnumMethods( aClass: TClass; lines: TStrings );
      
@@ -58,9 +58,12 @@ Date: 01.01.2007
       EnumMethods( Classtype, memo1.lines );
     end;
 
-Взято из <https://www.lmc-mediaagentur.de/dpool>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Grega Loboda
 
     function GetComponentProperties(Instance: TPersistent; AList: TStrings): Integer;
     var
@@ -99,9 +102,14 @@ Date: 01.01.2007
       end;
     end;
 
-Tip by Grega Loboda
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Ronan van Riet
+
+Source: <https://www.lmc-mediaagentur.de/dpool>
 
     uses
       TypInfo
@@ -192,23 +200,15 @@ My tProject is defined as
          property Naam: string read FNaam write SetNaam;
        end;
 
-Also note the output, there seem to be 2 standard properties (Name and
-Tag) !
+Also note the output, there seem to be 2 standard properties (Name and Tag) !
 
-Memo3
+> **MEMO:**  
+>  
+> Class name: TProject
+> 
+> 3 Properties:
+> 
+> - Name: TComponentName
+> - Tag: Integer
+> - Naam: String
 
-Class name: TProject
-
-3 Properties
-
--------------------
-
-Name: TComponentName
-
-Tag: Integer
-
-Naam: String
-
-Tip by Ronan van Riet
-
-Взято из <https://www.lmc-mediaagentur.de/dpool>

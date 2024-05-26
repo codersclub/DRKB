@@ -1,15 +1,12 @@
 ---
 Title: Перевести секунды в формат времени
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Перевести секунды в формат времени
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     const 
       SecPerDay = 86400; 
@@ -33,8 +30,6 @@ Date: 01.01.2007
       label1.Caption := DateTimeToStr(Date + SecondToTime(86543)); 
     end; 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

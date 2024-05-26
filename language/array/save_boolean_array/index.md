@@ -1,15 +1,12 @@
 ---
 Title: Сохранение и загрузка двумерного динамического масива
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Сохранение и загрузка двумерного динамического масива
 =====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       T2DBooleanArray = array of array of Boolean;
@@ -54,4 +51,3 @@ Date: 01.01.2007
       end; { Finally }
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

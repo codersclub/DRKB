@@ -1,15 +1,12 @@
 ---
 Title: Сохранение и загрузка коллекций
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Сохранение и загрузка коллекций
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
     unit DelphiPt;
      
@@ -224,4 +221,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

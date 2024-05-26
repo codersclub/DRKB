@@ -7,9 +7,7 @@ Date: 01.01.2007
 Массив в Delphi
 ===============
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
 Вот несколько функций для операций с двухмерными массивами. Самый
 простой путь для создания собственной библиотеки. Процедуры SetV и GetV
@@ -57,6 +55,8 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
 Самый простой путь - создать массив динамически
 
      Myarray := GetMem(rows * cols * sizeof(byte,word,single,double и пр.)  
@@ -76,6 +76,10 @@ Date: 01.01.2007
 сложными массивами и эти функции показали отличный результат.
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 
 Вот способ создания одно- и двухмерных динамических массивов:
 
@@ -105,9 +109,9 @@ Date: 01.01.2007
      
       TDynArrayNDX = 1..vMaxElements;
       TArrayElements = array[TDynArrayNDX] of TDynArrayBaseType;
-    {= самый большой массив TDynArrayBaseType, который мы может объявить =}
+      {= самый большой массив TDynArrayBaseType, который мы может объявить =}
       PArrayElements = ^TArrayElements;
-    {= указатель на массив =}
+      {= указатель на массив =}
      
       EDynArrayRangeError = class(ERangeError);
      
@@ -134,15 +138,15 @@ Date: 01.01.2007
     const
      
       vMaxMatrixColumns = 65520 div sizeof(TDynArray);
-    {= построение матрицы класса с использованием массива объектов TDynArray =}
+      {= построение матрицы класса с использованием массива объектов TDynArray =}
      
     type
      
       TMatrixNDX = 1..vMaxMatrixColumns;
       TMatrixElements = array[TMatrixNDX] of TDynArray;
-    {= каждая колонка матрицы будет динамическим массивом =}
+      {= каждая колонка матрицы будет динамическим массивом =}
       PMatrixElements = ^TMatrixElements;
-    {= указатель на массив указателей... =}
+      {= указатель на массив указателей... =}
      
       TDynaMatrix = class
       private
@@ -227,10 +231,10 @@ Date: 01.01.2007
       inherited Create;
       fRows := NumRows;
       fColumns := NumColumns;
-    {= выделение памяти для массива указателей (т.е. для массива TDynArrays) =}
+      {= выделение памяти для массива указателей (т.е. для массива TDynArrays) =}
       GetMem(mtxElements, fColumns * sizeof(TDynArray));
       fMemAllocated := fColumns * sizeof(TDynArray);
-    {= теперь выделяем память для каждого столбца матрицы =}
+      {= теперь выделяем память для каждого столбца матрицы =}
       for col := 1 to fColumns do
         begin
           mtxElements^[col] := TDynArray.Create(fRows);
@@ -308,6 +312,3 @@ Date: 01.01.2007
       M.Free;
     end.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

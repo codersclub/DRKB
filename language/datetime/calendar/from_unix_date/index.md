@@ -1,15 +1,12 @@
 ---
 Title: Конвертируем Unix-дату
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Конвертируем Unix-дату
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
 The value is a Unix Time, defined as seconds since
 1970-01-01T00:00:00,0Z. Important is the Letter Z, you live in Sweden,
@@ -33,8 +30,8 @@ The Date for 977347109 is 2000-12-20T22:18:29+01:00.
     function UnixTimeToDateTime(AUnixTime: DWord; ABias: Integer): TDateTime;
     begin
       Result := UnixDateDelta + (AUnixTime div SecPerDay) { Days }
-      + ((AUnixTime mod SecPerDay) / SecPerDay) { Seconds }
-      - ABias * MinDayFraction { Bias to UTC in minutes };
+              + ((AUnixTime mod SecPerDay) / SecPerDay) { Seconds }
+              - ABias * MinDayFraction { Bias to UTC in minutes };
     end;
      
     {Convert Unix time to String with locale settings}
@@ -56,4 +53,3 @@ The Date for 977347109 is 2000-12-20T22:18:29+01:00.
       Label1.Caption := UnixTimeToStr(977347109, -60);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

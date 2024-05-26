@@ -1,15 +1,12 @@
 ---
 Title: Как получить строковое значение перечисляемого типа?
 Date: 01.01.2007
+Source: <https://www.torry.net>
 ---
 
 
 Как получить строковое значение перечисляемого типа?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure GetEnumNameList(Pti: PTypeInfo; AList: 
                                    TStrings; X: Integer);
@@ -38,4 +35,3 @@ Date: 01.01.2007
         AList.Add(Copy(GetEnumName(pti, I), X + 1, 255));
     end;
 
-Взято с сайта <https://www.torry.net>

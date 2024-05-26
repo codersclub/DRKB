@@ -1,15 +1,12 @@
 ---
 Title: Как динамически прочитать информацию о классе?
 Date: 01.01.2007
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Как динамически прочитать информацию о классе?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.FormCreate(Sender: TObject);
     begin
@@ -40,4 +37,3 @@ Date: 01.01.2007
         MessageDlg('No such class', mtWarning, [mbOk], 0);
     end;
 
-Взято из <https://www.lmc-mediaagentur.de/dpool>

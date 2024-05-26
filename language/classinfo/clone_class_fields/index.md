@@ -7,23 +7,23 @@ Date: 01.01.2007
 Как присвоить все значения полей одного класса другому такому же классу?
 ========================================================================
 
-::: {.date}
-01.01.2007
-:::
+> How can I assign all property values (or if it\'s not possible only
+> published property values, or some of them) of one class (TComponent) to
+> another instance of the same class? What I want to do is:
+> 
+>     MyComponent1.{property1} := MyComponent2.{property1};
+>     {...}
+>     MyComponent2.{propertyN} := MyComponent2.{propertyN};
+> 
+> Is there a better and shorter way to do this? I tried this:
+> 
+>     MyComponent1 := MyComponent2;
+> 
+> But it doesn\'t work. Why not? Can I point to the second component ?
 
-How can I assign all property values (or if it\'s not possible only
-published property values, or some of them) of one class (TComponent) to
-another instance of the same class? What I want to do is:
+Вариант 1:
 
-    MyComponent1.{property1} := MyComponent2.{property1};
-    {...}
-    MyComponent2.{propertyN} := MyComponent2.{propertyN};
-
-Is there a better and shorter way to do this? I tried this: MyComponent1
-:= MyComponent2; But it doesn\'t work. Why not? Can I point to the
-second component ?
-
-Answer 1:
+Author: Serge Gubenko
 
 MyComponent2 and MyComponent1 are pointers to your components, and this
 kind of assigment leads to MyComponent1 pointing to MyComponent2. But it
@@ -46,11 +46,16 @@ attributes. Here\'s example:
 
 To assign properties you\'ll need to set this line in the code:
 
-MyComponent1.Assign(MyComponent2);
+    MyComponent1.Assign(MyComponent2);
 
-Tip by Serge Gubenko
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Gokhan Ersumer
+
+Source: <https://www.lmc-mediaagentur.de/dpool>
 
     procedure EqualClassProperties(AClass1, AClass2: TObject);
     var
@@ -91,6 +96,3 @@ Tip by Serge Gubenko
 Note that this code skips object properties inherited other than
 TPersistent.
 
-Tip by Gokhan Ersumer
-
-Взято из <https://www.lmc-mediaagentur.de/dpool>

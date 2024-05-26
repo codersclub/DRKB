@@ -1,22 +1,23 @@
 ---
 Title: Частичный показ DateTime
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Частичный показ DateTime
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
 При отображении TDateTimeField в DBGrid с форматированием hh:mm (для
 показа только времени), любая попытка изменения времени приводит (при
-передаче данных) к ошибке примерно такого содержания: "\'07:00 is not a
-valid DateTime" (07:00 - неверный DateTime). Я хотел бы посылать данные
-приблизительно в таком виде
-"trunc(oldDateTimevalue)+strtoTime(displaytext)"
+передаче данных) к ошибке примерно такого содержания:
+
+    '07:00 is not a valid DateTime'
+    (07:00 - неверный DateTime)
+
+Я хотел бы посылать данные приблизительно в таком виде:
+
+    trunc(oldDateTimevalue) + strtoTime(displaytext)
 
 Следующий обработчик события TDateTimeField OnSetText не слишком
 элегантен, но он работает!
@@ -40,8 +41,6 @@ valid DateTime" (07:00 - неверный DateTime). Я хотел бы посы
 Здесь мы исходим из предположения, что у вас имеется маска
 редактирования, допускающая формат hh:mm или hh:mm:ss.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

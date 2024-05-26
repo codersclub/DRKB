@@ -1,15 +1,13 @@
 ---
 Title: Как выполнить метод по его имени?
 Date: 01.01.2007
+Author: Sasan Adami
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Как выполнить метод по его имени?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     type
@@ -43,6 +41,3 @@ Date: 01.01.2007
       ShowMessage(S);
     end; 
 
-Tip by Sasan Adami
-
-Взято из <https://www.lmc-mediaagentur.de/dpool>

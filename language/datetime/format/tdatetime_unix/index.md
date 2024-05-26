@@ -1,21 +1,18 @@
 ---
 Title: Конвертируем TDateTime в Unix Timestamp
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Конвертируем TDateTime в Unix Timestamp
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
     {
-      Sometimes you want to communicate with mySQL or other databases using
-      the unix timestamp. To solve this difference you may want to convert your
-      TDateTime to the unix timestamp format and vice versa.
-     
+      Иногда вам нужно взаимодействовать с MySQL или другими базами данных,
+      используя временную метку unix.
+      Чтобы устранить эту разницу, вы можете преобразовать TDateTime
+      в формат метки времени unix и обратно.
     }
      
     unit unix_utils;
@@ -42,4 +39,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

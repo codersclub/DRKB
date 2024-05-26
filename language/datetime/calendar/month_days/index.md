@@ -8,13 +8,13 @@ Date: 01.01.2007
 Дни в месяце
 ============
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Ревенко Алексей
+Author: Ревенко Алексей
 
-    // Колическтво дней в любом месяце любого
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+    // Количество дней в любом месяце любого
     // года можно получить с помощью EndOfAMonth
      
     var
@@ -26,11 +26,12 @@ Date: 01.01.2007
       DecodeDate(D, YYYY, MM, DD); // DD - номер последнего дня в месяце
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+
 
 ------------------------------------------------------------------------
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Получить число дней в месяце
 
@@ -68,11 +69,16 @@ DelphiWorld 6.0
       ShowMessage('July 2001 has ' + IntToStr(days) + ' days'); 
     end; 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Вычислить последний день текущего месяца:
 
     function LastDayOfCurrentMonth: TDate;
      var
@@ -93,8 +99,4 @@ DelphiWorld 6.0
        ShowMessage(DateToStr(LastDayOfCurrentMonth));
      end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
-
- 

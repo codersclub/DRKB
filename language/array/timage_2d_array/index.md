@@ -1,15 +1,12 @@
 ---
 Title: Как поместить двумерный массив в TImage?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как поместить двумерный массив в TImage?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Представим, что данные находятся в массиве:
 
@@ -25,11 +22,9 @@ Date: 01.01.2007
     SetBitmapBits(Image1.Picture.Bitmap.Handle, sizeof(TestArray), @TestArray); 
     Image1.Refresh; {для того, чтобы изменения отобразились}
 
-Однако, если вы используете свою палитру, то ее нужно создать
+Однако, если вы используете свою палитру, то ее нужно создать.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  
 

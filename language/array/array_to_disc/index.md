@@ -7,9 +7,11 @@ Date: 01.01.2007
 Запись массива на диск
 ======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Steve Schafer
+
+Source: Советs по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 
 Скажем, ваша структура данных выглядит следующим образом:
 
@@ -42,13 +44,11 @@ Date: 01.01.2007
       Stream.Free;
     end;
 
-- Steve Schafer
-
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     type
       TCharArray = array[500] of Char;
@@ -71,8 +71,6 @@ Date: 01.01.2007
      
       CloseFile(fFileHandle);
     end; {end Procedure, WriteToFile()}
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

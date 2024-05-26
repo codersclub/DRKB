@@ -1,15 +1,13 @@
 ---
 Title: Массив без ограничения типа и размера
 Date: 01.01.2007
+Author: Сергей Дьяченко, sd@arzamas.nnov.ru
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 
 Массив без ограничения типа и размера
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     //к примеру опишем свой тип
     type
@@ -34,9 +32,9 @@ Date: 01.01.2007
      
         begin
           SetLength(m, Length(m) + 1); // увеличение длины массива на 1
-          m[i].zap1 := i; //  присвоение
-          m[i].zap2 := chr(i); //          полям
-          m[i].zap3 := inttostr(i); //              значений
+          m[i].zap1 := i;              // присвоение
+          m[i].zap2 := chr(i);         // полям
+          m[i].zap3 := inttostr(i);    // значений
         end;
     end;
      
@@ -45,10 +43,3 @@ Date: 01.01.2007
     SetLength(m, 0); // освобождение памяти
     end.
 
-C Уважением,
-
-Сергей Дьяченко, sd@arzamas.nnov.ru
-
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

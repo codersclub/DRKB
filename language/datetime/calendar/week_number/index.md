@@ -1,15 +1,12 @@
 ---
-Title: Число текущей недели
+Title: Номер текущей недели в году
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
-Число текущей недели
+Номер текущей недели в году
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     function WeekOfYear(ADate: TDateTime): word;
     var
@@ -29,9 +26,7 @@ Date: 01.01.2007
     end;
      
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  
 

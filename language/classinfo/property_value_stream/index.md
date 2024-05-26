@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как сохранить значение свойства в поток?
 ========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Rick Rogers
 
 How can I save properties of a TList to a stream? I need the entire list
 to be saved as a whole and not as individual objects.
@@ -361,11 +361,14 @@ possible approaches to saving object property data to a stream:
      
     end.
 
-Tip by Rick Rogers
 
 ------------------------------------------------------------------------
 
-Answer 2:
+Вариант 2:
+
+Author: Yoav (<Yoav@tsoft-tele.com>)
+
+Source: <https://www.lmc-mediaagentur.de/dpool>
 
 The solution above will work, but it forces you to implement streaming
 support for each of the TStreamableObject objects. Delphi has already
@@ -578,6 +581,3 @@ collection is freed), but this functionality can be changed.
      
     end.
 
-Tip by Yoav (<Yoav@tsoft-tele.com>)
-
-Взято из <https://www.lmc-mediaagentur.de/dpool>

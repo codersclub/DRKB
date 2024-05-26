@@ -1,15 +1,12 @@
 ---
 Title: Получить номер дня в году
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Получить номер дня в году
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetDays(ADate: TDate): Extended;
      var
@@ -24,6 +21,5 @@ Date: 01.01.2007
        label1.Caption := 'Today is the ' + FloatToStr(GetDays(Date)) + '. day of the year';
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
  

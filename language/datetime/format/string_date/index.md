@@ -1,38 +1,35 @@
 ---
 Title: Как преобразовать строку в дату?
 Author: Vit
-Date: 01.01.2007
+Date: 01.05.2002
 ---
 
 
 Как преобразовать строку в дату?
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Код распознаёт и русский и английский языки. Кстати вполне корректно
-обрабатывает и падежи типа:
+Author: Vit
 
-2 мая 2002
+Код распознаёт и русский и английский языки.
+Кстати вполне корректно обрабатывает и падежи типа:
 
-май месяц 1999 года, 3е число
-
-3е мая 1999 года
-
-Солнечный апрельский день в 1998м году, 20е число
+- 2 мая 2002
+- май месяц 1999 года, 3е число
+- 3е мая 1999 года
+- Солнечный апрельский день в 1998м году, 20е число
 
 Корректно распознаёт что-нибудь типа
 
-July 3, 99
+- July 3, 99
 
 но естественно не способен распознать
 
-01-jan-03
+- 01-jan-03
 
-т.е. год если двузначный, то должен быть больше 31. Иначе необоходим
-дополнительный параметер, указывающий годом считать первую или вторую
+т.е. если год двузначный, то должен быть больше 31. Иначе необоходим
+дополнительный параметр, указывающий годом считать первую или вторую
 найденную цифру в строке
 
      
@@ -41,8 +38,10 @@ July 3, 99
       type TDateItem=(diYear, diMonth, diDay, diUnknown);
            TCharId=(ciAlpha, ciNumber, ciSpace);
      
-      //языковые настройки. Для включения нового языка добавляем раскладку сюда, дополняем тип alpha и меняем 
-      //единственную строку где используется эта константа
+      //языковые настройки.
+      //Для включения нового языка добавляем раскладку сюда,
+      //дополняем тип alpha и меняем /единственную строку
+      //где используется эта константа
       const
         eng_monthes:array[1..12] of string=('jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec');
         rus_monthes:array[1..12] of string=('янв', 'фев', 'мар', 'апр', 'ма', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дес');
@@ -56,7 +55,8 @@ July 3, 99
      
       Function GetWord(var temp:string):string;
       begin
-        //возвращаем следующее слово из строки и вырезаем это слово из исходной строки
+        //возвращаем следующее слово из строки
+        //и вырезаем это слово из исходной строки
         if pos(' ', temp)>0 then
           begin //берём слово до пробела
             result:=trim(copy(temp, 1, pos(' ', temp)));
@@ -92,21 +92,20 @@ July 3, 99
       end;
      
      
-     
     begin
       temp:=trim(ansilowercase(temp));
       month:='';
       day:='';
       year:='';
-    //замена любого мусора на пробелы
+      //замена любого мусора на пробелы
       For i:=1 to length(temp) do
         if not (temp[i] in alpha+['0'..'9']) then temp[i]:=' ';
      
-    //удаление лишних пробелов
+      //удаление лишних пробелов
       while pos('  ', temp)>0 do
         Temp:=StringReplace(temp, '  ',' ',[rfReplaceAll]);
      
-    //вставка пробелов если месяц слеплен с днём или годом
+      //вставка пробелов если месяц слеплен с днём или годом
       ci1:=GetCharId(temp[1]);
       i:=1;
       Repeat
@@ -117,7 +116,7 @@ July 3, 99
         ci1:=ci2;
       Until i>=length(temp);
      
-    //собственно парсинг
+      //собственно парсинг
       while temp>'' do
         begin
           temp1:=GetWord(temp);
@@ -132,19 +131,22 @@ July 3, 99
         end;
      
      
-    //проверка - все ли элементы определены
+      //проверка - все ли элементы определены
       if (month='') or (Day='') or (Year='') then raise Exception.Create('Could not be converted!');
      
-    //поправка на двузначный год
+      //поправка на двузначный год
       if length(year)<3 then year:='19'+year;
      
-    //кодирование результата
+      //кодирование результата
       Result:=EncodeDate(Strtoint(Year), Strtoint(month), Strtoint(Day));
     end;
 
-Автор: Vit
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
 Функция StrToDate преобразует только числа, поэтому, если у Вас месяцы в
 виде имён, то прийдётся использовать VarToDateTime.
@@ -159,72 +161,57 @@ July 3, 99
     DateToStr(D3));
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-When extracting data from text or other operating systems the format of
-date strings can vary dramatically. Borland function StrToDateTime()
-converts a string to a TDateTime value, but it is limited to the fact
-that the string parameter must be in the format of the current locale\'s
-date/time format. eg. "MM/DD/YY HH:MM:SS"
+Вариант 3:
 
-Answer:
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
+
+> When extracting data from text or other operating systems the format of
+> date strings can vary dramatically. Borland function StrToDateTime()
+> converts a string to a TDateTime value, but it is limited to the fact
+> that the string parameter must be in the format of the current locale\'s
+> date/time format. eg. "MM/DD/YY HH:MM:SS"
+
+**Answer:**
 
 This is of little use when extracting dates such as ..
 
-       1) "Friday 18 October 2002 08:34am (45 secs)"  or "Wednesday
-15 May 2002 06:12 (22 secs)"
-
-       2) "20020431"
-
-       3) "12.Nov.03"
-
-       4) "14 Hour 31 Minute 25 Second 321 MSecs"
+1. "Friday 18 October 2002 08:34am (45 secs)"  
+   or "Wednesday 15 May 2002 06:12 (22 secs)"
+2. "20020431"
+3. "12.Nov.03"
+4. "14 Hour 31 Minute 25 Second 321 MSecs"
 
 This function will evaluate a DateTime string in accordance to the
 DateTime specifier format string supplied. The following specifiers are
 supported ...
 
-dd                        the day as a number with a leading zero or
-space (01-31).  
-
-ddd                        the day as an abbreviation (Sun-Sat)
-
-dddd                        the day as a full name (Sunday-Saturday)
-
-mm                        the month as a number with a leading zero or
-space (01-12).
-
-mmm                the month as an abbreviation (Jan-Dec)
-
-mmmm                the month as a full name (January-December)
-
-yy                        the year as a two-digit number (00-99).
-
-yyyy                        the year as a four-digit number (0000-9999).
-
-hh                        the hour with a leading zero or space (00-23)
-
-nn                        the minute with a leading zero or space
-(00-59).
-
-ss                        the second with a leading zero or space
-(00-59).
-
-zzz                        the millisecond with a leading zero
-(000-999).
-
-ampm                Specifies am or pm flag hours (0..12)
-
-ap                        Specifies a or p flag hours (0..12)
+Format| Description
+------|---------------
+dd    | the day as a number with a leading zero or space (01-31).
+ddd   | the day as an abbreviation (Sun-Sat)
+dddd  | the day as a full name (Sunday-Saturday)
+mm    | the month as a number with a leading zero or space (01-12).
+mmm   | the month as an abbreviation (Jan-Dec)
+mmmm  | the month as a full name (January-December)
+yy    | the year as a two-digit number (00-99).
+yyyy  | the year as a four-digit number (0000-9999).
+hh    | the hour with a leading zero or space (00-23)
+nn    | the minute with a leading zero or space (00-59).
+ss    | the second with a leading zero or space (00-59).
+zzz   | the millisecond with a leading zero (000-999).
+ampm  | Specifies am or pm flag hours (0..12)
+ap    | Specifies a or p flag hours (0..12)
 
 (Any other character corresponds to a literal or delimiter.)
 
-NOTE : One assumption I have to make is that DAYS, MONTHS, HOURS and
-MINUTES have a leading                       ZERO or SPACE (ie. are 2
+**NOTE:**  
+One assumption I have to make is that DAYS, MONTHS, HOURS and
+MINUTES have a leading ZERO or SPACE (ie. are 2
 chars long) and MILLISECONDS are 3 chars long (ZERO or
-SPACE                        padded)
+SPACE padded)
 
 Using function
 
@@ -233,10 +220,10 @@ Using function
 The above Examples (1..4) can be evaluated as ... (Assume DT1 to DT4
 equals example strings 1..4)
 
-            MyDate := DateTimeStrEval('dddd dd mmmm yyyy hh:nnampm (ss xxxx)', DT1);
-            MyDate := DateTimeStrEval('yyyymmdd', DT2);
-            MyDate := DateTimeStrEval('dd-mmm-yy', DT3);
-            MyDate := DateTimeStrEval('hh xxxx nn xxxxxx ss xxxxxx zzz xxxxx', DT4);
+    MyDate := DateTimeStrEval('dddd dd mmmm yyyy hh:nnampm (ss xxxx)', DT1);
+    MyDate := DateTimeStrEval('yyyymmdd', DT2);
+    MyDate := DateTimeStrEval('dd-mmm-yy', DT3);
+    MyDate := DateTimeStrEval('hh xxxx nn xxxxxx ss xxxxxx zzz xxxxx', DT4);
 
     uses SysUtils, DateUtils
      
@@ -483,4 +470,3 @@ equals example strings 1..4)
       Result := Retvar;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

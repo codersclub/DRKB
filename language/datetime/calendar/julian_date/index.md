@@ -1,15 +1,12 @@
 ---
 Title: Как получить дату по Юлианскому календарю?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как получить дату по Юлианскому календарю?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     function julian(year, month, day: Integer): real;
     var
@@ -39,4 +36,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

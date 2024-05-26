@@ -7,12 +7,9 @@ Date: 01.01.2007
 String -> Array
 ===============
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-    Procedure AssignFixedString( Var FixedStr: Array of Char; Const S: String
-    );
+    Procedure AssignFixedString( Var FixedStr: Array of Char; Const S: String );
     Var
       maxlen: Integer;
     Begin
@@ -24,9 +21,12 @@ String -> Array
         Move( S[1], FixedStr, Length(S));
     End;
 
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function StrToArrays(str, r: string; out Temp: TStrings): Boolean;
     var
@@ -48,8 +48,5 @@ String -> Array
       else
         Result:=False;
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

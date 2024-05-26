@@ -1,15 +1,14 @@
 ---
 Title: Использование PHP-like операций с массивами
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Использование PHP-like операций с массивами
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
+Ниже представлены функции explode(), implode(), sort(), rsort()
 
     //Some Array-functions like in PHP.
      
@@ -67,4 +66,3 @@ Date: 01.01.2007
       slTmp.Free;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

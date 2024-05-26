@@ -1,22 +1,18 @@
 ---
-Title: Получить даты с понедельника по пятницу текущей недели
+Title: Получить даты текущей недели с понедельника по пятницу
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
-Получить даты с понедельника по пятницу текущей недели
+Получить даты текущей недели с понедельника по пятницу
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       Data sometimes have to be filtered regarding to working
-      days (Mo.-Fri.) of the current Week. Following procs set
-      your TDateTimePicker automatically. 
+      days (Mo.-Fri.) of the current Week.
+      Following procs set your TDateTimePicker automatically. 
     } 
-     
      
     function GetMonday(RefDay: TDate): TDate; 
     var 
@@ -59,7 +55,6 @@ Date: 01.01.2007
     {Just as short as simple} 
     {Einfach und kurz} 
      
-     
     type 
       TForm1 = class(TForm) 
         DStart: TDateTimePicker; 
@@ -74,8 +69,6 @@ Date: 01.01.2007
     end;
      
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

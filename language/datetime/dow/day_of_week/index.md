@@ -8,9 +8,11 @@ Date: 01.01.2007
 Как определить день недели?
 ===========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1: 
+
+Author: Vit
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -19,21 +21,16 @@ Date: 01.01.2007
       d := StrToDate(Edit1.Text);
       ShowMessage(FormatDateTime('dddd',d));
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
 
- 
+Вариант 2: 
 
-Функции DayOfTheWeek и DayOfWeek (см. справку по Дельфи)
+Author: Vit
 
-Автор: Vit
+Функции `DayOfTheWeek` и `DayOfWeek` (см. справку по Дельфи)
+
 
  
 

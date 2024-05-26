@@ -1,15 +1,13 @@
 ---
 Title: Как получить контекст свойства по его целочисленному значению?
 Date: 01.01.2007
+Author: Ralph Friedman
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Как получить контекст свойства по его целочисленному значению?
 ==============================================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit PropertyList;
      
@@ -129,6 +127,3 @@ Date: 01.01.2007
      
     end.
 
-Tip by Ralph Friedman
-
-Взято из <https://www.lmc-mediaagentur.de/dpool>

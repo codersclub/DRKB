@@ -2,15 +2,12 @@
 Title: Копирование свойств одного компонента другому
 Author: Alex
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Копирование свойств одного компонента другому
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
        StrUtils;
@@ -59,7 +56,7 @@ Date: 01.01.2007
         for I:= 0 to Source_NumProps - 1 do begin
           PropName:= Source_PropList^[I]^.Name;
      
-          if  (AnsiIndexText('None' , aExcept                ) =  -1) and
+          if  (AnsiIndexText('None'  , aExcept                ) =  -1) and
              ((AnsiIndexText(PropName, ['Name', 'Left', 'Top']) <> -1) or
               (AnsiIndexText(PropName, aExcept                ) <> -1)) then Continue;
      
@@ -158,6 +155,3 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Alex
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

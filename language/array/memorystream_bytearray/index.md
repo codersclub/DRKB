@@ -8,10 +8,6 @@ Date: 01.01.2007
 TMemoryStream -> Array of Byte
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
 Для преобразования TMemoryStream в array of Byte можно использовать
 следующий код:
 
@@ -33,9 +29,3 @@ TMemoryStream -> Array of Byte
         M.Free;
       end;
     end;
-
-
-
-
-
-Автор: Rouse\_

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Проверка правильности даты
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     function DateExists(Date: string; Separator: char): Boolean;
     var
@@ -37,9 +37,12 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function ValidDate(const S: String): Boolean;
     BEGIN
@@ -51,8 +54,5 @@ Date: 01.01.2007
           Result := False;
       end;
     END
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

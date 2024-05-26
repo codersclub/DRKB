@@ -1,18 +1,18 @@
 ---
 Title: Установка бита в единицу
 Author: s-mike
-Date: 01.01.2007
+Date: 08.07.2003
 ---
 
 
 Установка бита в единицу
 ========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Установка бита в единицу
+Author: s-mike
+
+Source: <https://forum.sources.ru>
 
     function BitOn(const val: longint; const TheBit: byte): LongInt;
 
@@ -20,22 +20,23 @@ Date: 01.01.2007
       Result := val or (1 shl TheBit);
     end;
 
-Автор: s-mike
+------------------------------------------------------------------------
 
-Взято из <https://forum.sources.ru>
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure SetBit(SetWord, BitNum: Word);
     begin
       SetWord := SetWord or BitNum; { Устанавливаем бит }
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Григорий Ситнин, gregor@gregor.ru
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Установка определенного бита в слове

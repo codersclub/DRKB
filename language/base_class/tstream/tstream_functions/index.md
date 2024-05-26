@@ -1,15 +1,12 @@
 ---
 Title: Несколько функций для TStream
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Несколько функций для TStream
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     {These are three utility functions to write strings to a TStream. 
     Nothing fancy, but I just ended up coding this repeatedly so 
@@ -23,19 +20,19 @@ Date: 01.01.2007
       SysUtils,
       Classes;
      
-    {: Write a string to the stream 
+      {: Write a string to the stream 
       @param Stream is the TStream to write to. 
       @param s is the string to write 
       @returns the number of bytes written. }
     function Writestring(_Stream: TStream; const _s: string): Integer;
      
-    {: Write a string to the stream appending CRLF 
+      {: Write a string to the stream appending CRLF 
       @param Stream is the TStream to write to. 
       @param s is the string to write 
       @returns the number of bytes written. }
     function WritestringLn(_Stream: TStream; const _s: string): Integer;
      
-    {: Write formatted data to the stream appending CRLF 
+      {: Write formatted data to the stream appending CRLF 
       @param Stream is the TStream to write to. 
       @param Format is a format string as used in sysutils.format 
       @param Args is an array of const as used in sysutils.format 
@@ -62,4 +59,3 @@ Date: 01.01.2007
       Result := WritestringLn(_Stream, Format(_Format, _Args));
     end;
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как конвертировать RFC дату и обратно?
 ======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     function DateTimeToRfcTime(
       dt: TDateTime;
@@ -113,9 +113,12 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     function RFC1123ToDateTime(Date: string): TDateTime; 
     var 
@@ -169,4 +172,3 @@ Date: 01.01.2007
         Year, Hour, Min, Sec]); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

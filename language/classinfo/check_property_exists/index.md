@@ -8,9 +8,9 @@ Date: 01.01.2007
 Как выяснить, имеет ли объект определенное свойство?
 ====================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.lmc-mediaagentur.de/dpool>
 
     function hasprop(comp: TComponent; const prop: String): Boolean;
     var
@@ -57,9 +57,9 @@ Date: 01.01.2007
       end;
     end;
 
-Взято из <https://www.lmc-mediaagentur.de/dpool>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     function HasProperty(Obj: TObject; Prop: string): PPropInfo;
     begin
@@ -89,6 +89,12 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 3:
+
+Author: [Nomadic](mailto:Nomadic@newmail.ru)
+
+Source: <https://delphiworld.narod.ru>
+
     TypInfo.GetPropInfo (My_Component.ClassInfo, 'Hint') <> nil 
 
 Таким образом можно узнать наличие таковой published "прОперти". А вот
@@ -106,6 +112,3 @@ FieldAddress (крайне нежелательно!) либо использу�
 получением в цикле PropertyInfo объекта и записи в объект на основе
 PropInfo.
 
-Автор: [Nomadic](mailto:Nomadic@newmail.ru)
-
-Взято с <https://delphiworld.narod.ru>

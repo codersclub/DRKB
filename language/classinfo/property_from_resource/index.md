@@ -1,15 +1,13 @@
 ---
 Title: Как прочитать свойство напрямую из его ресурса?
 Date: 01.01.2007
+Author: Michael Duerig and Tjipke A. van der Plaats
+Source: <https://www.lmc-mediaagentur.de/dpool>
 ---
 
 
 Как прочитать свойство напрямую из его ресурса?
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
 
     if ReadPropertyValue('Form1.Button1', 'width') > 1000 then
       ShowMessage('You are about to create a big button!');
@@ -83,6 +81,3 @@ Date: 01.01.2007
     { ... }
       THackReader(r).SkipValue;
 
-Tip by Michael Duerig and Tjipke A. van der Plaats
-
-Взято из <https://www.lmc-mediaagentur.de/dpool>

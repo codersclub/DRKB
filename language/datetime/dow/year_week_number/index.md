@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как узнать номер недели данного дня в году?
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
 
     function WeekOfYear(ADate : TDateTime) : word;
@@ -50,6 +46,8 @@ Date: 01.01.2007
 
 Вариант 3:
 
+Source: <https://forum.sources.ru>
+
     function WeekOfYear(Dat: TDateTime): Word;
     // Интерпретация номеров дней:
     // ISO: 1 = Понедельник, 7 = Воскресенье
@@ -69,9 +67,12 @@ Date: 01.01.2007
       Result    := 1 + (DateDiff div 7);
     end;
 
-Взято из <https://forum.sources.ru>
 
- 
+------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://www.swissdelphicenter.ch>
 
 Получить номер недели по дате
 
@@ -121,6 +122,5 @@ Date: 01.01.2007
        ShowMessage(IntToStr(year));
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
  

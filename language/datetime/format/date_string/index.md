@@ -1,15 +1,13 @@
 ---
 Title: Преобразование даты и времени в строковый вид YYYYMMDDHHNNSS и обратно
-Date: 01.01.2007
+Author: mfender, mfender@fromru.com
+Date: 10.08.2003
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Преобразование даты и времени в строковый вид YYYYMMDDHHNNSS и обратно
 ======================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Преобразование даты-времени в строковый вид и обратно (yyyymmddhhnnss)
@@ -49,8 +47,4 @@ Date: 01.01.2007
       mfDateTimeToString := FormatDateTime('yyyymmddhhnnss', Date); //No comments
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
-
- 

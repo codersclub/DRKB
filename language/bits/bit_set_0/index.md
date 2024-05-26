@@ -8,9 +8,11 @@ Date: 01.01.2007
 Установка бита в ноль
 =====================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: s-mike
+
+Source: <https://forum.sources.ru>
 
 Установка бита в ноль
 
@@ -20,11 +22,13 @@ Date: 01.01.2007
       Result := val and ((1 shl TheBit) xor $FFFFFFFF);
     end;
 
-Автор: s-mike
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Yanis
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     function BitOff(const val: longint; const TheBit: byte): LongInt; 
 
@@ -32,11 +36,11 @@ Date: 01.01.2007
       Result := val and not (1 shl TheBit); 
     end; 
 
-Автор: Yanis
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure ClearBit(SetWord, BitNum: Word);
     begin
@@ -44,8 +48,3 @@ Date: 01.01.2007
       SetWord := SetWord xor BitNum; { Переключаем бит   }
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

@@ -1,15 +1,12 @@
 ---
 Title: Как работать с битами?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как работать с битами?
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
 Есть два способа.
 
@@ -38,8 +35,4 @@ Date: 01.01.2007
       Exclude(TIntegerSet(I), N);     // сбросили N-ный бит в 0
       if N in TIntegerSet(I) then...  // проверили N-ный бит
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

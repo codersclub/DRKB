@@ -8,46 +8,46 @@ Date: 01.01.2007
 Проверка значения бита
 ======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
 
 Проверка - установлен ли определенный бит?
 
     function IsBitSet(Value: cardinal; BitNum : byte): boolean;
-
     begin
       result:=((Value shr BitNum) and 1) = 1
     end;
     ...
     if IsBitSet(43691,1) then //установлен (равен 1)
 
-Автор: Krid
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function GetBitStat(SetWord, BitNum: Word): Boolean;
     begin
       GetBitStat := SetWord and BitNum = BitNum { Если бит установлен }
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit BitsForm;
      
     interface
      
     uses
-      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-      ComCtrls, StdCtrls;
+      Windows, Messages, SysUtils, Classes, Graphics, Controls,
+      Forms, Dialogs, ComCtrls, StdCtrls;
      
     type
       TForm1 = class(TForm)
@@ -119,23 +119,20 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit BitsForm;
      
     interface
      
     uses
-      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-      ComCtrls, StdCtrls;
+      Windows, Messages, SysUtils, Classes, Graphics, Controls,
+      Forms, Dialogs, ComCtrls, StdCtrls;
      
     type
       TForm1 = class(TForm)
@@ -195,9 +192,3 @@ DelphiWorld 6.0
     end;
      
     end.
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
