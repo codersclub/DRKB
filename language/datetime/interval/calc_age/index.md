@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как подсчитать возраст по дню рождения?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     { BrthDate:  Date of birth }
      
@@ -30,6 +28,10 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -52,9 +54,11 @@ Date: 01.01.2007
       Label1.Caption := IntToStr(Age);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     function CalculateAge(Birthday, CurrentDate: TDate): Integer;
     var
@@ -87,9 +91,12 @@ Date: 01.01.2007
         [CalculateAge(StrToDate('01.01.1903'), Date)]);
     end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     DecodeDate(DM.Table.FieldByName('Born').AsDateTime, Year, Month, Day); // Дата рождения
     DecodeDate(Date, YYYY, MM, DD); // Текущая дата
@@ -99,6 +106,4 @@ Date: 01.01.2007
     else
       Edit2.Text := IntToStr((YYYY - Year) - 1);
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

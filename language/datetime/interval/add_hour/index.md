@@ -1,15 +1,12 @@
 ---
 Title: Прибавить час
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Прибавить час
 =============
-
-::: {.date}
-01.01.2007
-:::
 
 Тип TDateTime, используемый для передачи даты и времени, это тип double,
 у которого целая часть определяет день, а дробная время от полуночи. То
@@ -24,8 +21,4 @@ Date: 01.01.2007
       Label2.Caption := DateTimeToStr(Time + 1 / 24);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
-
- 

@@ -7,11 +7,7 @@ Date: 01.01.2007
 Using Visual Basic arrays in Delphi
 ===================================
 
-::: {.date}
-01.01.2007
-:::
-
-How do I pass arrays from VB to Delphi?
+> How do I pass arrays from VB to Delphi?
 
 Arrays can be passed as variants:
 

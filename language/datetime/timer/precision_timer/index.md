@@ -8,14 +8,17 @@ Date: 01.01.2007
 Как реализовать сверхточный таймер?
 ===================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Windows is not a real time operating system so it is not really able to
-reliably achieve high accuracy timing without using a device driver. The
-best I have been able to get is a few nanoseconds using
-QueryPerformanceCounter. This is the procedure I use:
+Source: <https://www.lmc-mediaagentur.de/dpool>
+
+Windows не является операционной системой реального времени,
+поэтому она не может надежно обеспечить высокую точность синхронизации
+без использования драйвера устройства.
+Лучшее, что мне удалось получить, - это несколько наносекунд,
+с использованием QueryPerformanceCounter.
+
+Вот процедура, которую я использую:
 
     var
       WaitCal: Int64;
@@ -35,7 +38,7 @@ QueryPerformanceCounter. This is the procedure I use:
         Sleep(ns div 1000);
     end;
 
-To get improved accuracy do this a little while before using Wait()
+Чтобы повысить точность, сделайте вот это до того, как использовать Wait().
 
     var
       Start, Finish: Int64;
@@ -47,8 +50,8 @@ To get improved accuracy do this a little while before using Wait()
     QueryPerformanceCounter(Finish);
     WaitCal := Start - Finish;
 
-A trick I have found to increase the reliability of this on my computer
-is to call Wait like this:
+Я нашел трюк, позволяющий повысить надежность этого метода на моём компьютере:
+нужно вызывать Wait следующим образом:
 
     Application.ProcessMessages;
     Sleep(0);
@@ -56,9 +59,13 @@ is to call Wait like this:
     Wait(10);
     DoSomethingElse;
 
-Взято из <https://www.lmc-mediaagentur.de/dpool>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: 7jin
+
+Source: <https://forum.sources.ru>
 
     Unit Counter;           (* Written by Jin *)
     {$O-,F-,S-,N-,R-,Q-}
@@ -438,11 +445,13 @@ is to call Wait like this:
 отключает многозадачность Windows, и на экране вы ничего не увидите
 (будет впечатление, что прога повисла).
 
-Автор: 7jin
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: 7jin
+
+Source: <https://forum.sources.ru>
 
 А вот ещё один способ (работает только на Pentium или выше)....
 
@@ -572,7 +581,6 @@ is to call Wait like this:
      
     End.
 
-nbsp;
 
 И программа-тестер:
 
@@ -588,8 +596,3 @@ nbsp;
        WriteLn(' всё!')
     End.
 
-Автор: 7jin
-
-Взято из <https://forum.sources.ru>
-
-------------------------------------------------------------------------

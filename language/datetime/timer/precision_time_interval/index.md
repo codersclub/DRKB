@@ -1,21 +1,19 @@
 ---
-Title: Как отчитывать промежутки времени с точностью, большей чем 60 мсек?
-Author: Leonid Tserling
+Title: Как отсчитывать промежутки времени с точностью, большей чем 60 мсек?
+Author: Leonid Tserling, <tlv@f3334.dd.vaz.tlt.ru>
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
-Как отчитывать промежутки времени с точностью, большей чем 60 мсек?
+Как отсчитывать промежутки времени с точностью, большей чем 60 мсек?
 ===================================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для начала описываешь процедуру, которая будет вызываться по сообщению
 от таймера :
 
-    procedure FNTimeCallBack(uTimerID, uMessage: UINT;dwUser, dw1, dw2: DWORD);stdcall;
+    procedure FNTimeCallBack(uTimerID, uMessage: UINT;
+                             dwUser, dw1, dw2: DWORD);stdcall;
     begin
     //
     //  Тело процедуры.
@@ -30,13 +28,10 @@ Date: 01.01.2007
 
     timeKillEvent(uTimerID); 
 
-И все. Точность этого способа до 1 мсек. минимальный интервал времени
+И всё. Точность этого способа до 1 мсек. Минимальный интервал времени
 можно задавать 1 мсек.
 
-Автор: Leonid Tserling
-
+Автор: Leonid Tserling  
 tlv@f3334.dd.vaz.tlt.ru
 
 Автор: StayAtHome
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

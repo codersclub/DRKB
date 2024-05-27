@@ -1,15 +1,12 @@
 ---
 Title: Получить текст элемента перечисляемого типа
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Получить текст элемента перечисляемого типа
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     // For example, if you have some enum type
     // Als Beispiel, wenn dieser Aufzahlungstyp vorhanden ist
@@ -38,4 +35,3 @@ Date: 01.01.2007
     end;
      
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -1,15 +1,12 @@
 ---
 Title: Допустимые периоды истечения времени
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Допустимые периоды истечения времени
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Retrieves information about the time-out period associated 
@@ -108,8 +105,3 @@ Date: 01.01.2007
        SetAccessTimeOut(True, True, 600000); // 10 min. timeout 
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

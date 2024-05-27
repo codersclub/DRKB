@@ -1,15 +1,12 @@
 ---
 Title: Округление времени
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Округление времени
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
     function RoundTime(ADate: string; Rounding: Integer; bRound: Boolean): string;
      var
@@ -49,6 +46,3 @@ Date: 01.01.2007
        // Example: RoundTime('07.08.02 10:41', '15', True) -- > 07.08.02 10:45 
     end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 

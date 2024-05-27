@@ -1,15 +1,12 @@
 ---
 Title: Использовать TTime для более 24 часов
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Использовать TTime для более 24 часов
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function TextToTime(S: string): Integer;
      var
@@ -62,6 +59,3 @@ Date: 01.01.2007
        Result := H + ':' + M + ':' + S;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 

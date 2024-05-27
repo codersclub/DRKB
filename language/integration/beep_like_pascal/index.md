@@ -1,23 +1,17 @@
 ---
-Title: Beep для Delphi, который работает как в Turbo Pascal
+Title: Бип (beep) для Delphi, который работает как в Turbo Pascal
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
-Beep для Delphi, который работает как в Turbo Pascal
+Бип (beep) для Delphi, который работает как в Turbo Pascal
 ====================================================
 
-::: {.date}
-01.01.2007
-:::
+Я применяю следующий код, однако он работает только под Win9x/me.
 
-BEEP, для дельфи, который работает, как в B.Pascal 7.0
-
-Я применяю следующий код, однако он работает только под Win9x/me
-
-(Под WinNT/2000/XP вы можете использовать Beep(Tone, Duration)
-
-- задавать тон и продолжительность звучания).
+(Под WinNT/2000/XP вы можете использовать функцию Beep(Tone, Duration) -
+задавать тон и продолжительность звучания).
 
     procedure Sound(Freq : Word);
       var B : Byte;
@@ -65,4 +59,3 @@ BEEP, для дельфи, который работает, как в B.Pascal 7
       GetPort := bValue;
     end;
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
