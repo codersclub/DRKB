@@ -1,15 +1,12 @@
 ---
 Title: Dec -> Hex
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Dec -> Hex
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     function dec2hex(value: dword): string[8];
     const
@@ -23,4 +20,3 @@ Dec -> Hex
       if dec2hex = '' then dec2hex := '0';
     end;
 
-Взято с <https://delphiworld.narod.ru>

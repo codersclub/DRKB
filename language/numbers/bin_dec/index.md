@@ -2,15 +2,12 @@
 Title: Bin -> Dec
 Author: Yanis
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Bin -> Dec
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     function BinToInt(const Value: string): Integer;
 
@@ -27,6 +24,3 @@ Bin -> Dec
     end;
      
 
-Автор: Yanis
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
