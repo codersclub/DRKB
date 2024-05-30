@@ -1,15 +1,14 @@
 ---
 Title: Hex -> Integer
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 
 Hex -> Integer
 ==============
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     var
       i: integer
@@ -20,6 +19,8 @@ Hex -> Integer
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     const HEX: array['A'..'F'] of INTEGER = (10, 11, 12, 13, 14, 15);
     var str: string;
@@ -36,6 +37,3 @@ Hex -> Integer
       READLN;
     end.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

@@ -1,21 +1,20 @@
 ---
-Title: Число украинской строкой
+Title: Число прописью на украинском языке
 Date: 01.01.2007
+Author: Andrew Tkachenko, proektwo@netcity.ru
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 
-Число украинской строкой
+Число прописью на украинском языке
 ========================
 
-::: {.date}
-01.01.2007
-:::
 
     unit UkrRecog;
     {копирайт непомню чей. Был для русских циферок, а я переделал под
     украинские}
     {если кто что найдет пришлите
-     
+    
     }
     {by Andrew Tkachenko, proektwo@netcity.ru, Ukraine,
      
@@ -275,12 +274,6 @@ Date: 01.01.2007
 
 С уважением,
 
-Andrew Tkachenko
-
-ООО "Проект ВО"
-
+Andrew Tkachenko  
+ООО "Проект ВО"  
 Украина, г.Харьков
-
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

@@ -1,15 +1,17 @@
 ---
-Title: Число английской строкой
+Title: Число прописью на английском языке
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 
-Число английской строкой
+Число прописью на английском языке
 ========================
 
-::: {.date}
-01.01.2007
-:::
+По русски это называется "сумма прописью".
+Однажды потребовалось сделать то же самое, но на англицком...
+
+Вариант 1:
 
     unit uNum2Str;
      
@@ -135,11 +137,11 @@ Date: 01.01.2007
           dNum := dNum - (workVar * 1000000);
         end;
      
-    // deal with 1000's
+      // deal with 1000's
       if (dNum >= 1000) and (dNum <= 999999.99) then
         begin
-    // doing the two below statements in one line of code yields some really
-    // freaky floating point errors
+          // doing the two below statements in one line of code yields some really
+          // freaky floating point errors
           workVar := dNum / 1000;
           workVar := Int(workVar);
           if (workVar <= 9) then result := ZeroTo19(workVar) else 
@@ -150,14 +152,14 @@ Date: 01.01.2007
           dNum := dNum - (workVar * 1000);
         end;
      
-    // deal with 100's
+      // deal with 100's
       if (dNum >= 100.00) and (dNum <= 999.99) then
         begin
           result := result + ' ' + Hundreds(dNum);
           dNum := FloatMod(dNum, 100);
         end;
      
-    // format in anything less than 100
+      // format in anything less than 100
       if (dNum > 0) or ((dNum = 0) and (Length(result) = 0)) then
         begin
           result := result + ' ' + LessThan99(dNum);
@@ -168,6 +170,8 @@ Date: 01.01.2007
     end.
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     function HundredAtATime(TheAmount: Integer): string;
     var
@@ -373,7 +377,7 @@ Date: 01.01.2007
      
       TheAmount := Abs(TheAmount);
      
-    { центы }
+      { центы }
       TmpVal := Round(Frac(TheAmount) * 100);
       IntVal := Trunc(TheAmount);
       TmpStr := HundredAtATime(TmpVal);
@@ -381,27 +385,27 @@ Date: 01.01.2007
       RetVal := TmpStr + 'cents';
       if IntVal > 0 then RetVal := 'dollars and ' + RetVal;
      
-    { сотни }
+      { сотни }
       TmpVal := Round(Frac((IntVal * 1.0) / 1000.0) * 1000);
       IntVal := Trunc((IntVal * 1.0) / 1000.0);
       TmpStr := HundredAtATime(TmpVal);
       RetVal := TmpStr + RetVal;
      
-    { тысячи }
+      { тысячи }
       TmpVal := Round(Frac((IntVal * 1.0) / 1000.0) * 1000);
       IntVal := Trunc((IntVal * 1.0) / 1000.0);
       TmpStr := HundredAtATime(TmpVal);
       if TmpStr <> '' then
         RetVal := TmpStr + 'Thousand ' + RetVal;
      
-    { миллионы }
+      { миллионы }
       TmpVal := Round(Frac((IntVal * 1.0) / 1000.0) * 1000);
       IntVal := Trunc((IntVal * 1.0) / 1000.0);
       TmpStr := HundredAtATime(TmpVal);
       if TmpStr <> '' then
         RetVal := TmpStr + 'Million ' + RetVal;
      
-    { миллиарды }
+      { миллиарды }
       TmpVal := Round(Frac((IntVal * 1.0) / 1000.0) * 1000);
       IntVal := Trunc((IntVal * 1.0) / 1000.0);
       TmpStr := HundredAtATime(TmpVal);
@@ -410,6 +414,8 @@ Date: 01.01.2007
      
       Real2CheckAmount := RetVal;
     end;
+
+**Комментарий:**
 
 Хммммм... вроде бы работает, но как все громоздко и неуклюже...
 
@@ -592,6 +598,3 @@ Date: 01.01.2007
       spell.text := IntToSpell(StrToInt(num.text));
     end;
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba
