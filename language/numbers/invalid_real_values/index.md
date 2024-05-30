@@ -48,7 +48,7 @@ Source: DelphiWorld <https://delphiworld.narod.ru/>
 где `AcceptableRelativeError` определяет величину относительной
 погрешности (ну, и конечно, TrueValue \<\> 0.0).
 
-Математеческий модуль Delphi вычисляет относительную погрешность
+Математический модуль Delphi вычисляет относительную погрешность
 следующим образом (но оно не вынесено в секцию interface):
 
     FUNCTION RelSmall(X, Y: Extended): Boolean;

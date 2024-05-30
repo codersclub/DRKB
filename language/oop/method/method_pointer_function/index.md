@@ -1,15 +1,12 @@
 ---
 Title: Как преобразовать указатель на метод в указатель на функцию?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как преобразовать указатель на метод в указатель на функцию?
 ============================================================
-
-::: {.date}
-01.01.2007
-:::
 
     // Converting method pointers into function pointers 
     // Often you need a function pointer for a callback function. But what, if you want to specify a method as 
@@ -22,7 +19,6 @@ Date: 01.01.2007
     // (code & data) into the registers, one calls the method via the code pointer, and the last is just a return 
     // Now you can use this pointer to the allocated memory as a plain function pointer, but in fact you are 
     // calling a method for a specific instance of a Class. 
-     
      
      
     type TMyMethod = procedure of object; 
@@ -60,4 +56,3 @@ Date: 01.01.2007
       FreeMem(ProcInstance, 15); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

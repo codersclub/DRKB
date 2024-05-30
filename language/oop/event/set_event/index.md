@@ -8,9 +8,9 @@ Date: 01.01.2007
 Как присвоить событие в runtime?
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Пример стандартного присвоения события в run-time:
 
@@ -40,17 +40,18 @@ Date: 01.01.2007
      
     end.
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-А как сделать чтобы "procedure Click" была не методом класса, а
-отдельно стоящей функцией?
+Вариант 2:
+
+Author: Le Taon
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+> А как сделать чтобы "procedure Click" была не методом класса, а
+> отдельно стоящей функцией?
 
 
-     
     procedure Click(Self: TObject; Sender: TObject);
     begin
       ...
@@ -70,14 +71,16 @@ Date: 01.01.2007
      
       Button1.OnClick := TDummy.Click;
 
-Автор: Le Taon
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
+Вариант 3:
+
+Author: Fantasist
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
 По идее, при вызове OnClick первым параметром будет запихнут указатель
-на экземпляр того класса который в этом OnClick хранится . Я в
+на экземпляр того класса который в этом OnClick хранится. Я в
 низкоуровневой реализации не силен, но кажись, так как параметры в
 процедурах в Delphi передаются через регистры, то ничего страшного не
 произойдет.
@@ -96,6 +99,3 @@ Date: 01.01.2007
 Self тут у нас будет равен nil, а Sender как раз и получается
 Sender\'ом.
 
-Автор: Fantasist
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
