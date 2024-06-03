@@ -1,15 +1,12 @@
 ---
 Title: Список handle всех окон моего приложения
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Список handle всех окон моего приложения
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     function EnumProc(wnd: HWND; var count: DWORD): Bool; stdcall;
     begin
@@ -27,4 +24,3 @@ Date: 01.01.2007
       Caption := Format('%d window handles in use', [count]);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

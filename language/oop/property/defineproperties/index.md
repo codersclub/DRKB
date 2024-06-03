@@ -1,32 +1,30 @@
 ---
 Title: Демонстрация DefineProperties
-Author: Mike Scott
+Author: Mike Scott, Mobius Ltd.
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 
 Демонстрация DefineProperties
 =============================
 
-::: {.date}
-01.01.2007
-:::
-
 Хорошо, создайте на основе опубликованного ниже кода модуль PropDemo.pas
-и добавьте новый компонент в палитру компонентов. Расположите его на
-форме и сохраните ее. Затем посмотрите файл DFM каким-либо
-шестнадцатиричным редактором и проверьте наличие определенных свойств по
-их именованным тэгам. Вы можете также попробовать закрыть форму и
-модуль, а затем открыть его с помощью пункта меню File \| Open file...,
-изменив тип файла в выпадающем списке на *.DFM.
+и добавьте новый компонент в палитру компонентов.
 
-Mike Scott
+Расположите его на форме и сохраните ее.
 
-Mobius Ltd.
+Затем посмотрите файл DFM каким-либо шестнадцатиричным редактором
+и проверьте наличие определенных свойств по их именованным тэгам.
+
+Вы можете также попробовать закрыть форму и модуль,
+а затем открыть его с помощью пункта меню File \| Open file...,
+изменив тип файла в выпадающем списке на \*.DFM.
+
 
     unit PropDemo;
      
-    { Демонстрация DefineProperties.Mike Scott, CIS 100140,2420. }
+    { Демонстрация DefineProperties. Mike Scott, CIS 100140,2420. }
      
     interface
      
@@ -37,7 +35,7 @@ Mobius Ltd.
     type
       TDemoProps = class(TComponent)
       private
-    { Private declarations }
+        { Private declarations }
         FStringThing: string;
         FThing: record
           i, j, k: integer;
@@ -49,13 +47,13 @@ Mobius Ltd.
         procedure ReadThing(Stream: TStream);
         procedure WriteThing(Stream: TStream);
       protected
-    { Protected declarations }
+        { Protected declarations }
         procedure DefineProperties(Filer: TFiler); override;
       public
-    { Public declarations }
+        { Public declarations }
         constructor Create(AOwner: TComponent); override;
       published
-    { Published declarations }
+        { Published declarations }
       end;
      
     procedure Register;
@@ -66,7 +64,7 @@ Mobius Ltd.
      
     begin
       inherited Create(AOwner);
-    { создайте любые данные, чтобы было что передать в поток}
+      { создайте любые данные, чтобы было что передать в поток}
       FStringThing := 'Всем привет!';
       with FThing do
         begin
@@ -115,6 +113,3 @@ Mobius Ltd.
      
     end.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba
