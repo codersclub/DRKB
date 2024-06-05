@@ -1,5 +1,7 @@
 ---
 Title: Method pointers -> Function pointers
+Author: Florian.Benz@t-online.de
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 Date: 01.01.2007
 ---
 
@@ -7,9 +9,7 @@ Date: 01.01.2007
 Method pointers -> Function pointers
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+Преобразование указателя на метод в указатель на функцию
 
     {
      Converting method pointers into function pointers
@@ -79,4 +79,3 @@ Method pointers -> Function pointers
     // Wer noch Fragen hat / if you have questions: Florian.Benz@t-online.de
     }
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

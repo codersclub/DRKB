@@ -8,9 +8,9 @@ Date: 01.01.2007
 Быстрый способ обмена значений двух переменных
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     procedure SwapVars1(var u, v; Size: Integer); 
     var 
@@ -53,9 +53,14 @@ Date: 01.01.2007
       SwapVars1(X1, X2, SizeOf(Integer)); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: \_\_\_ALex\_\_\_
+
+Source: <https://forum.pascal.dax.ru>
 
     var 
      X1, X2: Byte; 
@@ -64,6 +69,3 @@ Date: 01.01.2007
      X2 := X1 xor X2; // X2 = X1 
      X1 := X1 xor X2; // X1 = X2 
 
-Автор: \_\_\_ALex\_\_\_
-
-<https://forum.pascal.dax.ru>

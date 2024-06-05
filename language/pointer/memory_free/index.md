@@ -7,9 +7,9 @@ Date: 01.01.2007
 Освобождение памяти
 ===================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit MemMan;
      
@@ -172,15 +172,12 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit MemMan;
      
@@ -233,15 +230,12 @@ DelphiWorld 6.0
       AllocatedList.Free;
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit SnapForm;
      
@@ -573,8 +567,6 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

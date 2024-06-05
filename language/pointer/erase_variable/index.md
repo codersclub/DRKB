@@ -1,24 +1,18 @@
 ---
 Title: Очистить переменную в оперативной памяти
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Очистить переменную в оперативной памяти
 ========================================
 
-::: {.date}
-01.01.2007
-:::
+Если вы хотите стереть переменную, чтобы никакая другая программа больше не могла прочитать ее из памяти, просто используйте эту функцию:
 
-If you want to erase a variable, that no other program can read it out
-of the memory anymore, just use this function:
-
+    // ZeroMemory(Address of the variable, Size of the variable); 
     ZeroMemory(Addr(yourVar), SizeOf(yourVar));
     ZeroMemory(Addr(yourStr), Length(yourStr));
-    // ZeroMemory(Address of the variable, Size of the variable); 
 
-Very usefull, if you asked for a password and you want, that nobody
-other can get it.
+Очень полезная штука, если вы запросили пароль и хотите, чтобы никто другой не смог его получить.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

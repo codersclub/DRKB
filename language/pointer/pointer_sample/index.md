@@ -1,17 +1,13 @@
 ---
 Title: Пример работы с указателями
 Author: Baa
+Source: Vingrad.ru <https://forum.vingrad.ru>
 Date: 01.01.2007
 ---
 
 
 Пример работы с указателями
 ===========================
-
-::: {.date}
-01.01.2007
-:::
-
 
     var
       p1 : ^String;
@@ -23,12 +19,5 @@ Date: 01.01.2007
       p1^ := 'Test';
       Label1.Caption := s1
 
- 
-
- 
-
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
  

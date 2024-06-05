@@ -1,15 +1,12 @@
 ---
 Title: Linked List Memory Table
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Linked List Memory Table
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -199,6 +196,4 @@ Linked List Memory Table
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
- 
