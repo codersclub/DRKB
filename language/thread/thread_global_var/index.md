@@ -2,17 +2,12 @@
 Title: Поток с доступом к глобальной переменной основной программы
 Author: Xavier Pacheco
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Поток с доступом к глобальной переменной основной программы
 ===========================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Xavier Pacheco
 
     unit Main;
      
@@ -86,4 +81,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
