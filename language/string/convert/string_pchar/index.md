@@ -7,27 +7,32 @@ Date: 01.01.2007
 String -> PChar
 ===============
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     var S: String;
         P: PChar;
-     
     ....
-     
     P:=PChar(S);
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
 Все функции API для работы с текстом используют неудобный тип String, а
 PChar - быстрее. Преобразовать строку String в PChar очень просто:
-PChar(\'It is my string\'). Можно использовать то, что PChar - это
+    PChar('It is my string')
+
+ Можно использовать то, что PChar - это
 адрес персого символа строки, заканчивающейся символом #0. И, наконец,
 еще одно удобство. Delphi воспринимает массив типа Char и как обычную
-строку, и как строку PChar. Полная совместимость. Эта программа
+строку, и как строку PChar. Полная совместимость.
+
+Эта программа
 демонстрирует демонстрирует все это.
 
     procedure TForm1.Button1Click(Sender: TObject);
@@ -40,9 +45,4 @@ PChar(\'It is my string\'). Можно использовать то, что PCh
       p := pos('lp', s);
       Form1.Caption := copy(s, p, Length(s) - p);
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

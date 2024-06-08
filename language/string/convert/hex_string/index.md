@@ -2,15 +2,12 @@
 Title: Hex -> String
 Author: Song
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Hex -> String
 =============
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     const Source: string = '4D 5A';
@@ -29,6 +26,3 @@ Hex -> String
       end;
     end;
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Hex -> Bin
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Hex -> Bin
 ==========
-
-::: {.date}
-01.01.2007
-:::
 
     function HexToBin(Hexadecimal: string): string;
      const
@@ -29,4 +26,3 @@ Hex -> Bin
        // Returns 1111111110100001 
     end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

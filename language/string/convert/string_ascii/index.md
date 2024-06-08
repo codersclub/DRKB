@@ -1,15 +1,12 @@
 ---
-Title: String -> ASCII
-Date: 01.01.2007
+Title: Преобразование строки в код типа '#72#101#108#108#111'
+Author: VID, vidsnap@mail.ru
+Date: 25.04.2002
 ---
 
 
-String -> ASCII
+Преобразование строки в набор кодов символов
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Преобразование строки S в набор её чисел,
@@ -44,5 +41,4 @@ String -> ASCII
       end;
       Result := RS;
     end;
-
  

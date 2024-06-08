@@ -1,15 +1,12 @@
 ---
 Title: WideString -> String
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 WideString -> String
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     {:Converts Unicode string to Ansi string using specified code page.
       @param   ws       Unicode string.
@@ -35,6 +32,3 @@ WideString -> String
       end;
     end; { WideStringToString }
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
-------------------------------------------------------------------------

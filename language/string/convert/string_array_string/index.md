@@ -1,15 +1,12 @@
 ---
-Title: Из строки в массив и наоборот
+Title: Преобразование из строки в массив и наоборот
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
-Из строки в массив и наоборот
+Преобразование из строки в массив и наоборот
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     function StrToArrays(str, r: string; out Temp: TStrings): Boolean;
     var
@@ -32,6 +29,8 @@ Date: 01.01.2007
         Result:=False;
     end;
      
+    {----------------------------------------------------}
+
     function ArrayToStr(str: TStrings; r: string): string;
     var
       i: integer;
@@ -43,4 +42,3 @@ Date: 01.01.2007
         Result := Result + Str.Strings[i] + r;
     end;
 
-Взято с <https://delphiworld.narod.ru>

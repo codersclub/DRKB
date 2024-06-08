@@ -7,14 +7,10 @@ Date: 01.01.2007
 PChar -> Integer
 ================
 
-::: {.date}
-01.01.2007
-:::
-
-Many Windows functions claim to want PChar parameters in the
-documentation, but they are defined as requiring LongInts.
-
-Is this a bug?
+> Many Windows functions claim to want PChar parameters in the
+> documentation, but they are defined as requiring LongInts.
+> 
+> Is this a bug?
 
 No, this is where "typecasting" is used. Typecasting allows you to
 fool the compiler into thinking that one type of variable is of another

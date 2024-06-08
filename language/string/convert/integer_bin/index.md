@@ -7,11 +7,11 @@ Date: 01.01.2007
 Integer -> Bin
 ==============
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-    function IntToBin1(Value: Longint; Digits: Integer): string;
+Source: <https://www.swissdelphicenter.ch>
+
+    function IntToBin(Value: Longint; Digits: Integer): string;
      var
        i: Integer;
      begin
@@ -23,11 +23,13 @@ Integer -> Bin
          Result := Result + '0';
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
 ------------------------------------------------------------------------
 
-     function IntToBin2(d: Longint): string;
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
+
+     function IntToBin(d: Longint): string;
      var
        x, p: Integer;
        bin: string;
@@ -44,4 +46,3 @@ Integer -> Bin
        Result := bin;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

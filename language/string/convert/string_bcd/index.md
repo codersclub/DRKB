@@ -1,15 +1,12 @@
 ---
 Title: String -> BCD
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 String -> BCD
 =============
-
-::: {.date}
-01.01.2007
-:::
 
     function NumStringToBCD(const inStr: string): string;
       function Pack(ch1, ch2: Char): Char;
@@ -43,4 +40,3 @@ String -> BCD
       memo1.lines.add('S2 unpacked again: ' + BCDToNumString(S2));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Byte -> Bin
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Byte -> Bin
 ===========
-
-::: {.date}
-01.01.2007
-:::
 
     function ByteToBinStr(a_bByte: byte): string;
     var
@@ -23,6 +20,4 @@ Byte -> Bin
      end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -2,17 +2,12 @@
 Title: Как преобразовать String в Binary и наоборот?
 Author: Rem
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как преобразовать String в Binary и наоборот?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Rem
 
     function BinStrToByte(a_sBinStr: string): byte;
     var
@@ -38,4 +33,3 @@ Date: 01.01.2007
     // Примечание: вторая функция использует тот факт,
     // что в таблице ANSI коды '0' = $30 и '1' = $31
 
-Взято с <https://delphiworld.narod.ru>

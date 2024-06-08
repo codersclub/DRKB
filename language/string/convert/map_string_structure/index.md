@@ -1,15 +1,12 @@
 ---
 Title: Отобразить строку на определенную структуру
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Отобразить строку на определенную структуру
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TEmployee = record 
@@ -30,10 +27,4 @@ Date: 01.01.2007
         sName := cName;    // sName = 'Mosquito' 
       end 
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

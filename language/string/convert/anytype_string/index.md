@@ -1,18 +1,14 @@
 ---
 Title: Как преобразовать значение любого типа в строку?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как преобразовать значение любого типа в строку?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Более подробно ищите в хелпе Delphi по словам "Variant" и
-"TVarData"...
+Более подробно ищите в хелпе Delphi по словам "Variant" и "TVarData"...
 
      
     function ToString(Value: Variant): String;
@@ -55,12 +51,10 @@ Date: 01.01.2007
 
 Так же можно пользоваться другими вариантами, например:
 
-varCurrency  : Result := CurrToStrF(Value,ffFixed,CurrencyDecimals);
+    varCurrency : Result := CurrToStrF(Value,ffFixed,CurrencyDecimals);
 
 и
 
-varDate: Result := DateToStr(Value);
+    varDate: Result := DateToStr(Value);
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

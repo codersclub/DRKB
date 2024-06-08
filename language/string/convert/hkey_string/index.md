@@ -1,15 +1,12 @@
 ---
 Title: HKey -> String
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 HKey -> String
 ==============
-
-::: {.date}
-01.01.2007
-:::
 
     const
       HKEYNames: array[0..6] of string =
@@ -29,4 +26,3 @@ HKey -> String
         Result := HKEYNames[key - HKEY_CLASSES_ROOT];
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

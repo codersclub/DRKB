@@ -1,15 +1,12 @@
 ---
 Title: PWideChar -> String
-Date: 01.01.2007
+Author: Gua, gua@ukr.net
+Date: 18.07.2002
 ---
 
 
 PWideChar -> String
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Конвертация PWideChar в String

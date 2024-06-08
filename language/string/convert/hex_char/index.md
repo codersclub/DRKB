@@ -1,15 +1,12 @@
 ---
 Title: Hex -> Char
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Hex -> Char
 ===========
-
-::: {.date}
-01.01.2007
-:::
 
     var
       Str: Char;
@@ -18,8 +15,6 @@ Hex -> Char
       Form1.Caption := Format('%x', [Ord(Str)]);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

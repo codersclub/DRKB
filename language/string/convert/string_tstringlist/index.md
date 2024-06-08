@@ -1,16 +1,16 @@
 ---
 Title: String -> TStringList
 Author: Vit
-Date: 01.01.2007
+Date: 30.04.2002
 ---
 
 
 String -> TStringList
 =====================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Игорь Шевченко, whitefranz@hotmail.com
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Преобразование строки с разделителями в StringList.
@@ -66,6 +66,10 @@ String -> TStringList
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Author: Vit
+
 Можно сделать значительно проще:
 
     procedure StrBreakApart(const S, Delimeter: string; Parts: TStrings);
@@ -74,8 +78,3 @@ String -> TStringList
       Parts.text:=StringReplace(S, Delimeter, #13#10, [rfReplaceAll, rfIgnoreCase]);
     end;
 
-Автор: Vit
-
- 
-
- 

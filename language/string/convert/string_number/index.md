@@ -1,20 +1,21 @@
 ---
 Title: Преобразование строки в число
-Date: 01.01.2007
+Author: Separator, vilgelm@mail.kz
+Date: 07.05.2003
 ---
 
 
 Преобразование строки в число
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Separator, vilgelm@mail.kz
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Преобразование сроки в число
      
-    Преобразует строку в число, при этом удаля из строки все лишние символы
+    Преобразует строку в число, при этом удаляя из строки все лишние символы
      
     Зависимости: нет
     Автор:       Separator, vilgelm@mail.kz, ICQ:162770303, Алматы
@@ -84,13 +85,19 @@ Date: 01.01.2007
         end //if j <> 0 then begin
       end //if L <> 0 then begin
     end;
-    Пример использования: 
+
+
+Пример использования: 
      
     Edit1.Text = ',...,fgftgtr656,.567erdf..5,,632'
     Edit2.Text := StringToNumber(Edit1.Text);
     Edit2.Text = 0, 656567E5632
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     type 
       TCharSet = set of Char; 
@@ -116,8 +123,5 @@ Date: 01.01.2007
     begin 
       Result := StripNonConforming(S, ['0'..'9']) 
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
