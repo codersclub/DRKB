@@ -8,9 +8,9 @@ Date: 01.01.2007
 Как удалить переносы из строки?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function DeleteLineBreaks(const S: string): string;
     var
@@ -29,15 +29,11 @@ Date: 01.01.2007
       Result := S;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Vit
 
 Можно значительно проще:
 
@@ -48,7 +44,6 @@ DelphiWorld 6.0
       Result := StringReplace(S, #10#13, '',[rfReplaceAll]);
     end;
 
-Автор: Vit
 
  
 

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Первая буква каждого слова в верхнем регистре
 =============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function LowCase(ch: CHAR): CHAR;
     begin
@@ -45,17 +45,13 @@ Date: 01.01.2007
       end;
       result := s;
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function TfrmLoadProtocolTable.ToMixCase(InString: string): string;
     var
@@ -70,17 +66,15 @@ DelphiWorld 6.0
           Result[I + 1] := UpCase(Result[I + 1]);
       end;
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: VID, vidsnap@mail.ru
+
+Date: 30.04.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Установка для каждого слова строки верхнего регистра для

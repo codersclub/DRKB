@@ -7,9 +7,9 @@ Date: 01.01.2007
 Функция наполнения строки
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function Spcs(num : byte) : string;
     var
@@ -21,18 +21,16 @@ Date: 01.01.2007
     end;
      
      
-    //Теперь достаточно написать 
-     
-     
-    Edit1.Text := SurName + spcs(10) + FirstName
+Теперь достаточно написать:
 
-<https://delphiworld.narod.ru/>
+    Edit1.Text := SurName + spcs(10) + FirstName;
 
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Решением является создание функции, функционально похожей на функцию
 Clipper:
@@ -60,15 +58,11 @@ PadL(string, width, character)
 (удобно для задания текстовых счетчиков с фиксированным количеством
 символов - PadL(A,6,\'0\').
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     function LeftPad(S: string; Ch: Char; Len: Integer): string;
      var
@@ -97,6 +91,3 @@ DelphiWorld 6.0
        Edit1.Text := Rightpad(Edit2.Text, '-', 30);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 

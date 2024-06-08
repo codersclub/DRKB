@@ -1,6 +1,5 @@
 ---
 Title: Удаление ненужных подстрок из строки
-Author: Vit
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Удаление ненужных подстрок из строки
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure RemoveInvalid(what, where: string): string;
     // what - удаляемая подстрока, where - обрабатываемая строка
@@ -23,24 +22,16 @@ Date: 01.01.2007
       copy(tstr,pos(what,tstr)+length(tstr),length(tstr));
       Result:=tstr;
     end; 
-     
-     
-     
-     
-    //Применение: 
-     
-     
-     
-    NewStr:=RemoveInvalid('<брак>','Этот <брак> в моей строке, и я хочу
-    удалить из нее этот <брак>');
 
-<https://delphiworld.narod.ru/>
+Применение: 
 
-DelphiWorld 6.0
-
- 
+    NewStr:=RemoveInvalid('<брак>','Этот <брак> в моей строке, и я хочу удалить из нее этот <брак>');
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Используйте стандартную функцию Pascal DELETE...
 
@@ -53,17 +44,17 @@ DelphiWorld 6.0
       DELETE(string,P,Length(Target));
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  
 
 ------------------------------------------------------------------------
 
+Вариант 3:
+
+Author: Vit
+
 Всё даже проще:
 
+    Result := StringReplace(ИсходнаяСтрока, ТоЧтоНадоУдалить, '' , [rfReplaceAll])
 
-    Result:=StringReplace(ИсходнаяСтрока,ТоЧтоНадоУдалить,'',[rfReplaceAll])
-
-Автор: Vit

@@ -2,17 +2,13 @@
 Title: Обрезание строки по длине
 Author: \_\_\_Nikolay
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Обрезание строки по длине
 =========================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: \_\_\_Nikolay
 
     // Обрезание строки по длине
     function TfmDW6Main.BeautyStr(s: string; iLength: integer): string;
@@ -49,8 +45,3 @@ Date: 01.01.2007
       Result := sResult;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

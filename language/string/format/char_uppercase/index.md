@@ -1,15 +1,12 @@
 ---
 Title: Перевод символа в верхний регистр для русского алфавита
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Перевод символа в верхний регистр для русского алфавита
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function UpCaseRus(ch: Char): Char;
     asm
@@ -33,8 +30,6 @@ Date: 01.01.2007
     @@exit:
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

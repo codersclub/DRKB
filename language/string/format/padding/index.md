@@ -1,15 +1,12 @@
 ---
 Title: Дополнение строки пробелами
-Date: 01.01.2007
+Author: Anatoly Podgoretsky, anatoly@podgoretsky.com
+Date: 26.04.2002
 ---
 
 
 Дополнение строки пробелами
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Дополнение строки пробелами слева
@@ -28,6 +25,7 @@ Date: 01.01.2007
       while Length(Result) < Lg do
         Result := ' ' + Result;
     end;
+    
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Дополнение строки пробелами справа
      
@@ -45,6 +43,7 @@ Date: 01.01.2007
       while Length(Result) < Lg do
         Result := Result + ' ';
     end;
+    
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Дополнение строки пробелами с обоих сторон
      
@@ -69,7 +68,7 @@ Date: 01.01.2007
       end;
     end;
      
-    //Пример использования: 
+Пример использования: 
      
     S := PADL(S,32); 
      

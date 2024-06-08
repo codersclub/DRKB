@@ -8,9 +8,11 @@ Date: 01.01.2007
 Удаление лишних пробелов в строке
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Артем, boss1999@mail.ru
+
+Date: 24.09.2003
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> удаление лишних пробелов в строке
@@ -57,8 +59,11 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-    Function DeleteUselessSpaces(s:String):string;
+Вариант 2:
 
+Author: Vit
+
+    Function DeleteUselessSpaces(s:String):string;
     begin
       Repeat
         Result:=s;
@@ -66,4 +71,3 @@ Date: 01.01.2007
       Until Result=s; //повторяем до тех пор пока есть двойные пробелы 
     end;
 
-Автор: Vit

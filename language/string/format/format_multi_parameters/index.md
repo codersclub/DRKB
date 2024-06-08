@@ -1,15 +1,12 @@
 ---
 Title: Как использовать параметр в Format больше одного раза?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как использовать параметр в Format больше одного раза?
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Sometimes you probably have written something like this:
 
@@ -36,4 +33,3 @@ which results in
 
     s := ' fCustomerTableAuto := TCustomerTableAuto.Create(fCustmerTable);';
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
