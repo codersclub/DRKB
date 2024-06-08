@@ -1,15 +1,12 @@
 ---
 Title: Unix-строки (чтение и запись Unix-файлов)
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 
 Unix-строки (чтение и запись Unix-файлов)
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit StreamFile;
      
@@ -173,8 +170,6 @@ Unix-строки (чтение и запись Unix-файлов)
           StrPLCopy(Name, FileName, Sizeof(Name) - 1);
         end;
     end;
+    
     end.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba
