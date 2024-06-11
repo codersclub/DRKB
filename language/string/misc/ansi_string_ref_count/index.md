@@ -1,15 +1,12 @@
 ---
 Title: Как получить количество активных ссылок на строку?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить количество активных ссылок на строку?
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetAnsistringRefcount(const S: string): Cardinal;
     asm
@@ -37,4 +34,3 @@ Date: 01.01.2007
         [GetAnsistringRefcount(S1)]));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

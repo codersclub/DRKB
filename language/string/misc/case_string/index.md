@@ -1,15 +1,12 @@
 ---
 Title: Сase для строки
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Сase для строки
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
     const
       vlist = 'первый, второй, третий';
@@ -50,8 +47,3 @@ Date: 01.01.2007
      
     finalization
       VL.Free;
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

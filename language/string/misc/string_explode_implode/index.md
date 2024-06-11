@@ -1,17 +1,14 @@
 ---
 Title: Explode / Implode a string
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Explode / Implode a string
 ==========================
 
-::: {.date}
-01.01.2007
-:::
-
-// 1. ...............................................
+Вариант 1:
 
     type
       TStrArray = array of string;
@@ -30,7 +27,7 @@ Explode / Implode a string
       until S2 = '';
     end;
 
-// How to use it:
+How to use it:
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -44,7 +41,9 @@ Explode / Implode a string
         Memo1.Lines.Add(A[i]);
     end;
 
-// 2. ...............................................
+---------------------------------
+
+Вариант 2:
 
     {
       * These 2 functions are from the programming language PHP, unite certainly well-known.
@@ -88,4 +87,3 @@ Explode / Implode a string
       Result[i] := Copy(S, 1, Length(S));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -11,6 +11,7 @@ Date: 01.01.2007
 Вариант 1:
 
 Author: Матюшкин Сергей, seregam@ua.fm
+
 Date: 26.05.2003
 
     { **** UBPFD *********** by delphibase.endimus.com ****

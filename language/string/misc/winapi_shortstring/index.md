@@ -1,15 +1,12 @@
 ---
 Title: О пользе типа ShortString при использовании WinAPI
-Date: 01.01.2007
+Author: Павел Озерский, pavel@insect.mail.iephb.ru
+Date: 26.04.2002
 ---
 
 
 О пользе типа ShortString при использовании WinAPI
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> О пользе типа shortstring при использовании WinAPI
