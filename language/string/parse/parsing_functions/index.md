@@ -7,9 +7,7 @@ Date: 01.01.2007
 Функции для парсинга строк
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Здесь представлен модуль, в котором я разметил много методов для
 подобной работы. Некоторые функции поименованы по-шведски, но, может
@@ -25,11 +23,13 @@ Date: 01.01.2007
 вхождения изменить на Joey, то Вы должны сделать сперва нечто похожее
 на:
 
-text := stringreplaceall(text, \'Joe\', \'Joeey\');
+    text := stringreplaceall(text, 'Joe', 'Joeey');
 
 И потом:
 
-text := stringreplaceall(text, \'Joeey\', \'Joey\');
+    text := stringreplaceall(text, 'Joeey', 'Joey');
+
+Исходник:
 
     unit sparfunc;
      
@@ -109,14 +109,14 @@ text := stringreplaceall(text, \'Joeey\', \'Joey\');
         createdir(pathen)
       else
       begin
-        if pathen[length(pathen)]  <  >  '\' then
+        if pathen[length(pathen)] <> '\' then
           pathen := pathen+'\';
         pathen := stringreplace(pathen,'\','/');
         del1 := copy(pathen,1,pos('\',pathen));
         pathen := stringreplace(pathen,del1,'');
         del1 := stringreplace(del1,'/','\');
         createdir (del1);
-        while pathen  <  >  '' do
+        while pathen <> '' do
         begin
           temprad := copy(pathen,1,pos('\',pathen));
           pathen := stringreplace(pathen,temprad,'');
@@ -162,7 +162,7 @@ text := stringreplaceall(text, \'Joeey\', \'Joey\');
       temptext : string;
     begin
       start := 0;
-      if vilken  > 0 then
+      if vilken > 0 then
       begin
         temptext := text;
         if vilken = 1 then
@@ -736,11 +736,4 @@ text := stringreplaceall(text, \'Joeey\', \'Joey\');
     end;
      
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

@@ -1,15 +1,12 @@
 ---
 Title: Текст между двумя определенными строками
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Текст между двумя определенными строками
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     Procedure IsolateText( Const S: String; Tag1, Tag2: String; list:TStrings );
       Var
@@ -52,10 +49,4 @@ Date: 01.01.2007
           End; { If }
         Until pScan = Nil;
       End;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

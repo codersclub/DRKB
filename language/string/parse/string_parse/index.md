@@ -8,9 +8,11 @@ Date: 01.01.2007
 Парсинг строк
 =============
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Song
+
+Source: <https://forum.sources.ru>
 
     unit splitfns;
     interface
@@ -79,30 +81,30 @@ Date: 01.01.2007
          Raise Exception.Create('Cannot add token');
     end;
     end. 
-     
+
 
 пример использования:
 
     ...
-      data:= TStringList.Create;
-      splited:=TStringList.Create;
-      data.LoadFromFile(s);
-      Split(data.Text,[',',' ',#10,#13,';','"','.','!','-','+','*','/','\',
-      '(',')','[',']','{','}','<','>','''','"','?','"','#',#0],splited);
-      for i:= 0 to splited.Count-1 do
-      begin
-         if not words.Find(splited.Strings,adr) then
-            words.Add(splited.Strings[i]);
-         application.processmessages;[i]//make program to respond to user 
-            //commands while processing in case of very long string.
-     end;
+    data:= TStringList.Create;
+    splited:=TStringList.Create;
+    data.LoadFromFile(s);
+    Split(data.Text,[',',' ',#10,#13,';','"','.','!','-','+','*','/','\',
+    '(',')','[',']','{','}','<','>','''','"','?','"','#',#0],splited);
+    for i:= 0 to splited.Count-1 do
+    begin
+       if not words.Find(splited.Strings,adr) then
+          words.Add(splited.Strings[i]);
+       application.processmessages;[i]//make program to respond to user 
+          //commands while processing in case of very long string.
+    end;
     ...
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Некоторое время назад одна любезная душа прислала мне этот модуль. Я
 нашел его весьма полезным, но применять его вам надлежит с некоторой
@@ -137,7 +139,7 @@ Date: 01.01.2007
      
     Например, ...
     Sscanf('Name. Bill   Time. 7:32.77   Age. 8',
-    '. %s . %d:%f . %d', [@Name, @hrs, @min, @age]);
+           '. %s . %d:%f . %d', [@Name, @hrs, @min, @age]);
      
     возвратит ...
     Name = Bill  hrs = 7  min = 32.77  age = 8 }
@@ -152,87 +154,87 @@ Date: 01.01.2007
       L: LongInt;
       X: Extended;
      
-      function GetInt: Integer;
-      begin
-        s1 := '';
-        while (s[n] = ' ') and (Length(s) > n) do
-          inc(n);
-        while (s[n] in ['0'..'9', '+', '-'])
-          and (Length(s) >= n) do
-        begin
-          s1 := s1 + s[n];
-          inc(n);
-        end;
-        Result := Length(s1);
-      end;
-     
-      function GetFloat: Integer;
-      begin
-        s1 := '';
-        while (s[n] = ' ') and (Length(s) > n) do
-          inc(n);
-        while (s[n] in ['0'..'9', '+', '-', '.', 'e', 'E'])
-          and (Length(s) >= n) do
-        begin
-          s1 := s1 + s[n];
-          inc(n);
-        end;
-        Result := Length(s1);
-      end;
-     
-      function GetString: Integer;
-      begin
-        s1 := '';
-        while (s[n] = ' ') and (Length(s) > n) do
-          inc(n);
-        while (s[n] <> ' ') and (Length(s) >= n) do
-        begin
-          s1 := s1 + s[n];
-          inc(n);
-        end;
-        Result := Length(s1);
-      end;
-     
-      function ScanStr(c: Char): Boolean;
-      begin
-        while (s[n] <> c) and (Length(s) > n) do
-          inc(n);
+    function GetInt: Integer;
+    begin
+      s1 := '';
+      while (s[n] = ' ') and (Length(s) > n) do
         inc(n);
-     
-        if (n <= Length(s)) then
-          Result := True
-        else
-          Result := False;
-      end;
-     
-      function GetFmt: Integer;
+      while (s[n] in ['0'..'9', '+', '-'])
+        and (Length(s) >= n) do
       begin
-        Result := -1;
-     
-        while (TRUE) do
-        begin
-          while (fmt[m] = ' ') and (Length(fmt) > m) do
-            inc(m);
-          if (m >= Length(fmt)) then
-            break;
-     
-          if (fmt[m] = '%') then
-          begin
-            inc(m);
-            case fmt[m] of
-              'd': Result := vtInteger;
-              'f': Result := vtExtended;
-              's': Result := vtString;
-            end;
-            inc(m);
-            break;
-          end;
-     
-          if (ScanStr(fmt[m]) = False) then
-            break;
-          inc(m);
-        end;
+        s1 := s1 + s[n];
+        inc(n);
       end;
+      Result := Length(s1);
+    end;
+   
+    function GetFloat: Integer;
+    begin
+      s1 := '';
+      while (s[n] = ' ') and (Length(s) > n) do
+        inc(n);
+      while (s[n] in ['0'..'9', '+', '-', '.', 'e', 'E'])
+        and (Length(s) >= n) do
+      begin
+        s1 := s1 + s[n];
+        inc(n);
+      end;
+      Result := Length(s1);
+    end;
+   
+    function GetString: Integer;
+    begin
+      s1 := '';
+      while (s[n] = ' ') and (Length(s) > n) do
+        inc(n);
+      while (s[n] <> ' ') and (Length(s) >= n) do
+      begin
+        s1 := s1 + s[n];
+        inc(n);
+      end;
+      Result := Length(s1);
+    end;
+   
+    function ScanStr(c: Char): Boolean;
+    begin
+      while (s[n] <> c) and (Length(s) > n) do
+        inc(n);
+      inc(n);
+   
+      if (n <= Length(s)) then
+        Result := True
+      else
+        Result := False;
+    end;
+   
+    function GetFmt: Integer;
+    begin
+      Result := -1;
+   
+      while (TRUE) do
+      begin
+        while (fmt[m] = ' ') and (Length(fmt) > m) do
+          inc(m);
+        if (m >= Length(fmt)) then
+          break;
+   
+        if (fmt[m] = '%') then
+        begin
+          inc(m);
+          case fmt[m] of
+            'd': Result := vtInteger;
+            'f': Result := vtExtended;
+            's': Result := vtString;
+          end;
+          inc(m);
+          break;
+        end;
+   
+        if (ScanStr(fmt[m]) = False) then
+          break;
+        inc(m);
+      end;
+    end;
      
     begin
      
@@ -287,12 +289,13 @@ Date: 01.01.2007
     end;
      
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // Parse a string, for example: 
     // How do I get the "B" from "A|B|C|D|E|F"? 
@@ -328,4 +331,3 @@ DelphiWorld 6.0
       Use a unused character like "|" or "?". 
     }
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

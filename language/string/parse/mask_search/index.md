@@ -2,15 +2,12 @@
 Title: Модуль поиска по маске (более совершеный, нежели дельфийский masks)
 Author: Петрович
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Модуль поиска по маске (более совершеный, нежели дельфийский masks)
 ===================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit awMachMask; // © Alexandr Petrovich Sysoev
      
@@ -143,10 +140,9 @@ Date: 01.01.2007
     implementation
      
     uses
-      SysUtils
-     ;
+      SysUtils;
      
-    Function IsMatchMask (aText, aMask :pChar ) :Boolean;            overload;
+    Function IsMatchMask (aText, aMask :pChar ) :Boolean; overload;
     begin
       Result := False;
       While  True  Do begin
@@ -198,7 +194,7 @@ Date: 01.01.2007
       Result := True;
     End;
      
-    Function IsMatchMask (aText, aMask :String; aFileNameMode :Boolean =True) :Boolean;            overload;
+    Function IsMatchMask (aText, aMask :String; aFileNameMode :Boolean =True) :Boolean; overload;
     begin
       If  aFileNameMode And (Pos('.',aText)=0)  then  aText := aText+'.';
       Result := IsMatchMask(pChar(aText),pChar(aMask));
@@ -329,9 +325,5 @@ Date: 01.01.2007
     End;
      
      
-     
     end.
 
-Автор: Петрович
-
-Взято из <https://forum.sources.ru>

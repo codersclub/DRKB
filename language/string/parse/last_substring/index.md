@@ -7,9 +7,12 @@ Date: 01.01.2007
 Нахождение последнего вхождения подстроки в строку
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Федоровских Николай (Fenik,) chook_nu@uraltc.ru
+
+Date: 16.06.2002
+
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Нахождение последнего вхождения подстроки в строку
@@ -70,6 +73,10 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
+
     { 
       Letzte Position von SubStr in S ermitteln. 
       Returns the last occurence of SubStr in S. 
@@ -90,28 +97,27 @@ Date: 01.01.2007
        end;
        LastPos := Found;
      end;
-     
-
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 
-
- 
 
 ------------------------------------------------------------------------
 
-    // by Manuel Wiersch 
+Вариант 3:
+
+Author: Manuel Wiersch 
+
+Source: <https://www.swissdelphicenter.ch>
+
+     // by Manuel Wiersch 
      
      function LastPos(const SubStr: AnsiString; const S: AnsiString): LongInt;
      asm
-             TEST    EAX,EAX         // EAX auf 0 prufen (d.h. SubStr = nil) 
+            TEST    EAX,EAX         // EAX auf 0 prufen (d.h. SubStr = nil) 
             JE      @@noWork        // wenn EAX = 0 dann Sprung zu noWork 
             TEST    EDX,EDX
-             // Test ob S = nil 
+            // Test ob S = nil 
             JE      @@stringEmpty   // bei Erfolg -> Sprung zum Label 'stringEmpty' 
             PUSH    EBX
-             PUSH    ESI
-             PUSH    EDI             // Register auf dem Stack sichern  Grund: OH 
+            PUSH    ESI
+            PUSH    EDI             // Register auf dem Stack sichern  Grund: OH 
                                     // OH: "In einer asm-Anweisung mu? der Inhalt 
                                     // der Register EDI, ESI, ESP, EBP und EBX 
                                     // erhalten bleiben (dh. vorher auf dem Stack 
@@ -122,51 +128,48 @@ Date: 01.01.2007
             MOV     EDX,[ESI-4]     // Lange des SubStr in EDX 
             DEC     EDX             // Length(SubStr) - 1 
             JS      @@fail
-             // Vorzeichenbedingter Sprung (JumpIfSign) 
+            // Vorzeichenbedingter Sprung (JumpIfSign) 
                                     // d.h. (EDX < 0) -> Sprung zu 'fail' 
             STD;                    // SetDirectionFlag -> Stringroutinen von hinten 
                                     // abarbeiten 
             ADD     ESI, EDX        // Pointer auf das letzte Zeichen vom SubStr 
             ADD     EDI, ECX
-             DEC     EDI             // Pointer auf das letzte Zeichen von S 
+            DEC     EDI             // Pointer auf das letzte Zeichen von S 
             MOV     AL, [ESI]       // letztes Zeichen des SubStr in AL laden 
             DEC     ESI             // Pointer auf das vorletzte Zeichen setzen. 
             SUB     ECX, EDX        // Anzahl der Stringdurchlaufe 
                                     // = Length(s) - Length(substr) + 1 
             JLE     @@fail          // Sprung zu 'fail' wenn ECX <= 0 
     @@loop:
-             REPNE   SCASB           // Wdh. solange ungleich (repeat while not equal) 
+            REPNE   SCASB           // Wdh. solange ungleich (repeat while not equal) 
                                     // scan string for byte 
             JNE     @@fail
-             MOV     EBX,ECX         { Zahleregister, ESI und EDI sichern, da nun der 
+            MOV     EBX,ECX         { Zahleregister, ESI und EDI sichern, da nun der 
                                       Vergleich durchgefuhrt wird ob die nachfolgenden 
                                       Zeichen von SubStr in S vorhanden sind }
-             PUSH    ESI
-             PUSH    EDI
-             MOV     ECX,EDX         // Lange des SubStrings in ECX 
+            PUSH    ESI
+            PUSH    EDI
+            MOV     ECX,EDX         // Lange des SubStrings in ECX 
             REPE    CMPSB           // Solange (ECX > 0) und (Compare string fo byte) 
                                     // dh. solange S[i] = SubStr[i] 
             POP     EDI
-             POP     ESI             // alten Source- und Destinationpointer vom Stack holen 
+            POP     ESI             // alten Source- und Destinationpointer vom Stack holen 
             JE      @@found         // Und schon haben wir den Index da ECX = 0 
                                     // dh. alle Zeichen wurden gefunden 
             MOV     ECX, EBX        // ECX wieder auf alte Anzahl setzen und 
             JMP     @@loop          // Start bei 'loop' 
     @@fail:
-             XOR     EAX,EAX         // EAX auf 0 setzen 
+            XOR     EAX,EAX         // EAX auf 0 setzen 
             JMP     @@exit @@stringEmpty:
-             XOR     EAX,EAX
-             JMP     @@noWork @@found:
-             MOV     EAX, EBX        // in EBX steht nun der aktuelle Index 
+            XOR     EAX,EAX
+            JMP     @@noWork @@found:
+            MOV     EAX, EBX        // in EBX steht nun der aktuelle Index 
             INC     EAX             // um 1 erhohen, um die Position des 1. Zeichens zu 
                                     // bekommen 
     @@exit:
-             POP     EDI
-             POP     ESI
-             POP     EBX
-     @@noWork:         CLD;          // DirectionFlag loschen 
+            POP     EDI
+            POP     ESI
+            POP     EBX
+    @@noWork:         CLD;          // DirectionFlag loschen 
     end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 

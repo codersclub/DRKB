@@ -7,9 +7,11 @@ Date: 01.01.2007
 Деление строки не несколько строк
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Сергей, nfkazak@inbox.ru
+
+Date: 11.09.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Делит строку аStr на три строки St1,St2,St3 длиной Long1,Long2,Long3
@@ -61,6 +63,12 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Author: Stoma, stoma@bitex.bg
+
+Date: 04.08.2003
+
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Разбивка строки на подстроки с использованием заданного разделителя
      
@@ -100,41 +108,37 @@ Date: 01.01.2007
       GetDirNames := Tokenize(FullPath, '\');
     end;
 
- 
-
 ------------------------------------------------------------------------
 
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
+
     procedure Explode(var a: array of string; Border, S: string);
-     var
-        S2: string;
-       i: Integer;
-     begin
-       i  := 0;
-       S2 := S + Border;
-       repeat
-         a[i] := Copy(S2, 0,Pos(Border, S2) - 1);
-         Delete(S2, 1,Length(a[i] + Border));
-         Inc(i);
-       until S2 = '';
-     end;
+    var
+       S2: string;
+      i: Integer;
+    begin
+      i  := 0;
+      S2 := S + Border;
+      repeat
+        a[i] := Copy(S2, 0,Pos(Border, S2) - 1);
+        Delete(S2, 1,Length(a[i] + Border));
+        Inc(i);
+      until S2 = '';
+    end;
      
-     // How to use it: 
+    // How to use it: 
     // Und hier ein Beispiel zur Verwendung: 
      
     procedure TForm1.Button1Click(Sender: TObject);
-     var
-        S: string;
-       A: array of String;
-     begin
-       S := 'Ein Text durch Leerzeichen getrennt';
-       SetLength(A, 10);
-       Explode(A, ' ', S);
-       ShowMessage(A[0] + ' ' + A[1] + ' ' + A[2] + ' ' + A[3] + ' ' + A[4]);
-     end;
-     
+    var
+       S: string;
+      A: array of String;
+    begin
+      S := 'Ein Text durch Leerzeichen getrennt';
+      SetLength(A, 10);
+      Explode(A, ' ', S);
+      ShowMessage(A[0] + ' ' + A[1] + ' ' + A[2] + ' ' + A[3] + ' ' + A[4]);
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 
-
-------------------------------------------------------------------------

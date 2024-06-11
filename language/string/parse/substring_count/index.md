@@ -8,9 +8,9 @@ Date: 01.01.2007
 Количество вхождений подстроки в строку
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     function CountPos(const subtext: string; Text: string): Integer;
     begin
@@ -21,9 +21,13 @@ Date: 01.01.2007
           Length(subtext);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Ru, DiVo_Ru@rambler.ru
+
+Date: 18.11.2003
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Подсчёт количества вхождений символа в строке
@@ -48,6 +52,12 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Дмитрий, bestonix@mail.ru
+
+Date: 17.10.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Подсчитать количество вхождений подстроки в строке
@@ -81,7 +91,11 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-Автор: \_\_\_Nikolay
+Вариант 4:
+
+Author: \_\_\_Nikolay
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     // Кол-во вхождений символа в строку
     function SymbolEntersCount(s: string; ch: char): integer;
@@ -94,8 +108,4 @@ Date: 01.01.2007
           if s[i] = ch then
             inc(Result);
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

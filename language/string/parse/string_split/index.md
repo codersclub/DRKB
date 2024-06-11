@@ -8,11 +8,11 @@ Date: 01.01.2007
 Как разделить строку на элементы? (аналог VB функции Split)
 ===========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Вариант 1.
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 В Дельфи есть специальный класс для хранения массивов строк -
 TStringList - очень рекомендую. Вот как вашу строку превратить в
@@ -34,16 +34,18 @@ TStringList:
       //после работы надо уничтожить класс
       t.free;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-Вариант 2. Используем стандартные массивы:
+Вариант 2:
 
-      var a:array of string;//наш массив
-          s:string;//строка которую мы будем разбивать
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+Используем стандартные массивы:
+
+    var a:array of string;//наш массив
+        s:string;//строка которую мы будем разбивать
     begin
       s:='Windows Messages SysUtils Variants Classes Graphics Controls Forms';
       Repeat //мы постепенно заполняем массив на каждом шаге цикла по 1 элементу
@@ -59,7 +61,7 @@ TStringList:
             break;//выход из цикла
           end;
       Until False;//цикл бесконечный, выход изнутри
-    //теперь проверяем что получили
+      //теперь проверяем что получили
       showmessage(a[0]);
       showmessage(a[1]);
       showmessage(a[2]);
@@ -67,11 +69,13 @@ TStringList:
 После использования массива не забудте освободить память a:=nil или
 setlength(a,0)
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Fantasist
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     procedure SplitOnWords(const s:string; Delimiters:set of char; Strings:TStrings);
     var
@@ -100,10 +104,8 @@ setlength(a,0)
      end; 
     end;
 
-Автор: Fantasist
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-См. также [Парсинг строк](/language/string/parse/4d49ea48bd114d25/)
+Вариант 4:
+
+См. также [Парсинг строк](/language/string/parse/string_parse/)
