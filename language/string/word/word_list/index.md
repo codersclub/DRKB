@@ -52,7 +52,8 @@ Source: delphibase.endimus.com
       WP := 1;
       repeat
         X := X + 1;
-        if (POS(AnsiUpperCase(Text[x]), WordDeviders) = 0) and (X <= TextLength)
+        if (POS(AnsiUpperCase(Text[x]), WordDeviders) = 0)
+          and (X <= TextLength)
           then
           W := W + Text[x]
         else

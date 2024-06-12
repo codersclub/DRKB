@@ -12,11 +12,11 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 Delphi имеет в своем распоряжении классную функцию, позволяющую сделать это:
 
     procedure WriteComponentResFile(const FileName: string;
-      Instance: TComponent);
+                                    Instance: TComponent);
 
 Просто заполните имя файла, в котором вы хотите сохранить компонент, и
 читайте его затем следующей функцией:
 
     function ReadComponentResFile(const FileName: string;
-      Instance: TComponent): TComponent;
+                                  Instance: TComponent): TComponent;
 

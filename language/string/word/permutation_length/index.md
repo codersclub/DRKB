@@ -24,7 +24,6 @@ Source: <https://www.swissdelphicenter.ch>
       Output: AB  AC  BA  BC  CA  CB 
     }
      
-     
     { 
       Definition: Permutation 
      
@@ -41,13 +40,11 @@ Source: <https://www.swissdelphicenter.ch>
       Ergebnis: AB  AC  BA  BC  CA  CB 
     }
      
-     
     { 
       The following is a console Program: 
       Choose File, New, Console Application 
      
     }
-     
      
     program Permute;
      {$APPTYPE CONSOLE}
@@ -55,11 +52,11 @@ Source: <https://www.swissdelphicenter.ch>
      uses SysUtils;
      
      var
-        R, Slen: Integer;
+       R, Slen: Integer;
      
      procedure P(var A: string; B: string);
      var
-        J: Word;
+       J: Word;
        C, D: string;
      begin
        { P(N,N) >>  R=Slen  }
@@ -78,7 +75,7 @@ Source: <https://www.swissdelphicenter.ch>
      end;
      
      var
-        Q, S, S2: string;
+       Q, S, S2: string;
      begin
        S  := ' ';
        S2 := ' ';
@@ -87,14 +84,14 @@ Source: <https://www.swissdelphicenter.ch>
          Writeln('');
          Writeln('');
          Write('P(N,R)  N=? : ');
-          ReadLn(S);
+         ReadLn(S);
          SLen := Length(S);
          Write('P(N,R)  R=? : ');
-          ReadLn(S2);
+         ReadLn(S2);
          if s2 <> '' then R := StrToInt(S2);
          Writeln('');
-          Q := '';
-          P(Q, S);
+         Q := '';
+         P(Q, S);
        end;
      end.
 

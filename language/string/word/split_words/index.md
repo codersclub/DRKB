@@ -11,8 +11,9 @@ Date: 01.01.2007
 
 Приведу несколько простых функций, позволяющих работать с отдельными
 словами в строке. Возможно они пригодятся вам для разбивки текстовых
-полей на отдельные слова (for i := 1 to NumToken do ...) с последующим
-сохранением их в базе данных.
+полей на отдельные слова  
+(`for i := 1 to NumToken do ...`)  
+с последующим сохранением их в базе данных.
 
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
@@ -421,27 +422,27 @@ Source: <https://www.swissdelphicenter.ch>
           '?':
             begin
               // matches any character 
-             Inc(sIndex);
+              Inc(sIndex);
               Inc(maskIndex);
             end; { case '?' }
           '*':
             begin
               // matches 0 or more characters, so need to check for 
-             // next character in mask 
-             Inc(maskIndex);
+              // next character in mask 
+              Inc(maskIndex);
               if maskIndex > Length(mask) then
                 // * at end matches rest of string 
-               Exit
+                Exit
               else if mask[maskindex] in ['*', '?'] then
                 raise Exception.Create('Invalid mask');
               // look for mask character in S 
-             while (sIndex <= Length(S)) and
+              while (sIndex <= Length(S)) and
                 (S[sIndex] <> mask[maskIndex]) do
                 Inc(sIndex);
               if sIndex > Length(S) then
               begin
                 // character not found, no match 
-               Result := False;
+                Result := False;
                 Exit;
               end;
               { If }
@@ -454,7 +455,7 @@ Source: <https://www.swissdelphicenter.ch>
             else
               begin
                 // no match 
-               Result := False;
+                Result := False;
                 Exit;
               end;
         end; { Case }
