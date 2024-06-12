@@ -1,15 +1,14 @@
 ---
 Title: Заполнение списка словами из строки
-Date: 01.01.2007
+Author: VID, vidsnap@mail.ru
+Date: 02.05.2002
+Source: delphibase.endimus.com
 ---
 
 
 Заполнение списка словами из строки
 ===================================
 
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Заполнение списка (TargetList) словами из строки (Text),
@@ -29,8 +28,7 @@ Date: 01.01.2007
     Автор: VID, vidsnap@mail.ru, ICQ: 132234868, Махачкала
     Copyright: VID
     Дата: 02 мая 2002 г.
-    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-      * * * * * * * * * * * * }
+    **************************************************** }
      
     function GetWordListFromText(Text, WordDeviders: string; TargetList: TStrings;
       ReturnWordPlace, ReturnWordDeviders: Boolean): Integer;

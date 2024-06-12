@@ -7,25 +7,24 @@ Date: 01.01.2007
 Разбивка строки на слова
 ========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
 Приведу несколько простых функций, позволяющих работать с отдельными
 словами в строке. Возможно они пригодятся вам для разбивки текстовых
 полей на отдельные слова (for i := 1 to NumToken do ...) с последующим
 сохранением их в базе данных.
 
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
     function GetToken(aString, SepChar: string; TokenNum: Byte): string;
     {
-    параметры: aString : полная строка
-     
-    SepChar : единственный символ, служащий
-    разделителем между словами (подстроками)
+    параметры:
+    aString : полная строка
+    SepChar : единственный символ,
+              служащий разделителем между словами (подстроками)
     TokenNum: номер требуемого слова (подстроки))
-    result    : искомое слово или пустая строка, если количество слов
-     
-    меньше значения 'TokenNum'
+    result  : искомое слово или пустая строка, если количество слов
+              меньше значения 'TokenNum'
     }
     var
      
@@ -65,11 +64,11 @@ Date: 01.01.2007
      
     function NumToken(aString, SepChar: string): Byte;
     {
-    parameters: aString : полная строка
-     
-    SepChar : единственный символ, служащий
-    разделителем между словами (подстроками)
-    result    : количество найденных слов (подстрок)
+    parameters:
+    aString : полная строка
+    SepChar : единственный символ,
+              служащий разделителем между словами (подстроками)
+    result  : количество найденных слов (подстрок)
     }
      
     var
@@ -103,11 +102,15 @@ Date: 01.01.2007
       end;
       Result := TNum;
     end;
-     
-    // Или другое решение:
-     
-    function CopyColumn(const s_string: string; c_fence: char;
-      i_index: integer): string;
+
+
+------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+    function CopyColumn(const s_string: string; c_fence: char; i_index: integer): string;
     var
       i, i_left: integer;
     begin
@@ -141,15 +144,20 @@ Date: 01.01.2007
       end;
     end;
 
+**P.S.**
 Я знаю что в GetToken параметр SepChar (в моем случае c\_fence) строка,
 не символ, но комментарий гласит, что функция ожидает единственный
 символ в этой строке, и это очевидно, поскольку если вы пошлете более
 одного символа, функция попросту несработает. ( Delete(aString,1,TEnd)
 будет ошибкой, если Length( SepChar ) \> 1 ).
 
-Взято с <https://delphiworld.narod.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Separator, separator@mail.kz
+
+Date: 13.11.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Разбивка строки на отдельные слова
@@ -184,7 +192,7 @@ Date: 01.01.2007
       StandartDelimiters: TDelimiter = [' ', '!', '@', '(', ')', '-', '|', '\', ';',
         ':', '"', '/', '?', '.', '>', ',', '<'];
      
-      //Преобразование в набор слов
+    //Преобразование в набор слов
     function StringToWords(const DelimitedText: string; ResultList: TStrings;
       Delimiters: TDelimiter = []; ListClear: boolean = true): boolean;
      
@@ -256,25 +264,31 @@ Date: 01.01.2007
     end;
      
     end.
-    //Пример использования: 
+
+Пример использования:
      
     StringToWords(Edit1.Text, Memo1.Lines);
     StringToWords(Edit1.Text, Memo1.Lines, [' ', '.', ',']);
     StringsToWords(Memo1.Lines, Memo2.Lines);
     StringsToWords(Memo1.Lines, Memo2.Lines, [' ', '.', ',']); 
-     
-     
+
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Author: 777, nix@rbcmail.ru
+
+Date: 15.06.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Разбиение текста на слова + получение количества слов в тексте
      
-    T : Собственно строка, которая будет разбиваться на слова
+    T   : Собственно строка, которая будет разбиваться на слова
     Mode: Режим, может быть
-    0: получение английских и русских слов
-    1: только русских
-    2: только английских
+          0: получение английских и русских слов
+          1: только русских
+          2: только английских
     List: Здесь хранятся найденые слова (по умолчанию = nil)
      
     возвращаемое значение: количество слов.
@@ -337,7 +351,8 @@ Date: 01.01.2007
       end;
       result := z;
     end;
-    //Пример использования: 
+
+Пример использования: 
      
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -355,132 +370,138 @@ Date: 01.01.2007
       Dest.SaveToFile('c:\MyWords.txt');
       ShowMessage('Найдено ' + IntToStr(Dest.Count) + ' слов');
     end;
-     
-     
+
 
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure SplitTextIntoWords(const S: string; words: TstringList);
-     var
-       startpos, endpos: Integer;
-     begin
-       Assert(Assigned(words));
-       words.Clear;
-       startpos := 1;
-       while startpos <= Length(S) do
-       begin
-         // skip non-letters 
+    var
+      startpos, endpos: Integer;
+    begin
+      Assert(Assigned(words));
+      words.Clear;
+      startpos := 1;
+      while startpos <= Length(S) do
+      begin
+        // skip non-letters 
         while (startpos <= Length(S)) and not IsCharAlpha(S[startpos]) do
-           Inc(startpos);
-         if startpos <= Length(S) then
-         begin
-           // find next non-letter 
+          Inc(startpos);
+        if startpos <= Length(S) then
+        begin
+          // find next non-letter 
           endpos := startpos + 1;
-           while (endpos <= Length(S)) and IsCharAlpha(S[endpos]) do
-             Inc(endpos);
-           words.Add(Copy(S, startpos, endpos - startpos));
-           startpos := endpos + 1;
-         end; { If }
-       end; { While }
-     end; { SplitTextIntoWords }
+          while (endpos <= Length(S)) and IsCharAlpha(S[endpos]) do
+            Inc(endpos);
+          words.Add(Copy(S, startpos, endpos - startpos));
+          startpos := endpos + 1;
+        end; { If }
+      end; { While }
+    end; { SplitTextIntoWords }
      
-     function StringMatchesMask(S, mask: string;
-       case_sensitive: Boolean): Boolean;
-     var
-       sIndex, maskIndex: Integer;
-     begin
-       if not case_sensitive then
-       begin
-         S    := AnsiUpperCase(S);
-         mask := AnsiUpperCase(mask);
-       end; { If }
-       Result    := True; // blatant optimism 
+    function StringMatchesMask(S, mask: string;
+      case_sensitive: Boolean): Boolean;
+    var
+      sIndex, maskIndex: Integer;
+    begin
+      if not case_sensitive then
+      begin
+        S    := AnsiUpperCase(S);
+        mask := AnsiUpperCase(mask);
+      end; { If }
+      Result    := True; // blatant optimism 
       sIndex    := 1;
-       maskIndex := 1;
-       while (sIndex <= Length(S)) and (maskIndex <= Length(mask)) do
-       begin
-         case mask[maskIndex] of
-           '?':
-             begin
-               // matches any character 
-              Inc(sIndex);
-               Inc(maskIndex);
-             end; { case '?' }
-           '*':
-             begin
-               // matches 0 or more characters, so need to check for 
-              // next character in mask 
+      maskIndex := 1;
+      while (sIndex <= Length(S)) and (maskIndex <= Length(mask)) do
+      begin
+        case mask[maskIndex] of
+          '?':
+            begin
+              // matches any character 
+             Inc(sIndex);
               Inc(maskIndex);
-               if maskIndex > Length(mask) then
-                 // * at end matches rest of string 
-                Exit
-               else if mask[maskindex] in ['*', '?'] then
-                 raise Exception.Create('Invalid mask');
-               // look for mask character in S 
-              while (sIndex <= Length(S)) and
-                 (S[sIndex] <> mask[maskIndex]) do
-                 Inc(sIndex);
-               if sIndex > Length(S) then
-               begin
-                 // character not found, no match 
-                Result := False;
-                 Exit;
-               end;
-               { If }
-             end; { Case '*' }
-           else if S[sIndex] = mask[maskIndex] then
-             begin
-               Inc(sIndex);
-               Inc(maskIndex);
-             end { If }
-             else
-               begin
-                 // no match 
-                Result := False;
-                 Exit;
-               end;
-         end; { Case }
-       end; { While }
-       // if we have reached the end of both S and mask we have a complete 
+            end; { case '?' }
+          '*':
+            begin
+              // matches 0 or more characters, so need to check for 
+             // next character in mask 
+             Inc(maskIndex);
+              if maskIndex > Length(mask) then
+                // * at end matches rest of string 
+               Exit
+              else if mask[maskindex] in ['*', '?'] then
+                raise Exception.Create('Invalid mask');
+              // look for mask character in S 
+             while (sIndex <= Length(S)) and
+                (S[sIndex] <> mask[maskIndex]) do
+                Inc(sIndex);
+              if sIndex > Length(S) then
+              begin
+                // character not found, no match 
+               Result := False;
+                Exit;
+              end;
+              { If }
+            end; { Case '*' }
+          else if S[sIndex] = mask[maskIndex] then
+            begin
+              Inc(sIndex);
+              Inc(maskIndex);
+            end { If }
+            else
+              begin
+                // no match 
+               Result := False;
+                Exit;
+              end;
+        end; { Case }
+      end; { While }
+      // if we have reached the end of both S and mask we have a complete 
       // match, otherwise we only have a partial match 
       if (sIndex <= Length(S)) or (maskIndex <= Length(mask)) then
-         Result := False;
-     end; { stringMatchesMask }
-     
-     procedure FindMatchingWords(const S, mask: string;
-       case_sensitive: Boolean; matches: Tstrings);
-     var
-       words: TstringList;
-       i: Integer;
-     begin
-       Assert(Assigned(matches));
-       words := TstringList.Create;
-       try
-         SplitTextIntoWords(S, words);
-         matches.Clear;
-         for i := 0 to words.Count - 1 do
-         begin
-           if stringMatchesMask(words[i], mask, case_sensitive) then
-             matches.Add(words[i]);
-         end; { For }
-       finally
-         words.Free;
-       end;
-     end;
-     
-     { 
-     The Form has one TMemo for the text to check, one TEdit for the mask, 
-     one TCheckbox (check = case sensitive), one TListbox for the results, 
-     one Tbutton 
+        Result := False;
+    end; { stringMatchesMask }
+    
+    procedure FindMatchingWords(const S, mask: string;
+      case_sensitive: Boolean; matches: Tstrings);
+    var
+      words: TstringList;
+      i: Integer;
+    begin
+      Assert(Assigned(matches));
+      words := TstringList.Create;
+      try
+        SplitTextIntoWords(S, words);
+        matches.Clear;
+        for i := 0 to words.Count - 1 do
+        begin
+          if stringMatchesMask(words[i], mask, case_sensitive) then
+            matches.Add(words[i]);
+        end; { For }
+      finally
+        words.Free;
+      end;
+    end;
+    
+    { 
+    The Form has one TMemo for the text to check, one TEdit for the mask, 
+    one TCheckbox (check = case sensitive), one TListbox for the results, 
+    one Tbutton 
     }
-     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       FindMatchingWords(memo1.Text, edit1.Text, checkbox1.Checked, listbox1.Items);
-     end;
+    procedure TForm1.Button1Click(Sender: TObject);
+    begin
+      FindMatchingWords(memo1.Text, edit1.Text, checkbox1.Checked, listbox1.Items);
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Расщепить строку в слова и обратно
 
@@ -494,7 +515,6 @@ Date: 01.01.2007
     function ArrayToStr(str: TStrings; r: string): string; 
      
     implementation 
-     
      
     function StrToArrays(str, r: string; out temp: TStrings): Boolean; 
     var 
@@ -528,9 +548,97 @@ Date: 01.01.2007
       end; 
     end; 
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+---------------------------------------------------------
+
+Вариант 7:
+
+Author: Gua, fbsdd@ukr.net
+
+Date: 02.05.2002
+
+    { **** UBPFD *********** by delphibase.endimus.com ****
+    >> Получение N-го слова из строки
+     
+    Зависимости: System
+    Автор:       Gua, fbsdd@ukr.net, ICQ:141585495, Simferopol
+    Copyright:   Gua
+    Дата:        02 мая 2002 г.
+    ***************************************************** }
+     
+    {
+      Str: Строка
+      Smb: Разгранечительный символ
+      WordNmbr: Номер нужного сова
+    }
+     
+    function GetWord(Str, Smb: string; WordNmbr: Byte): string;
+    var
+      SWord: string;
+      StrLen, N: Byte;
+    begin
+     
+      StrLen := SizeOf(Str);
+      N := 1;
+     
+      while ((WordNmbr >= N) and (StrLen <> 0)) do
+      begin
+        StrLen := Pos(Smb, str);
+        if StrLen <> 0 then
+        begin
+          SWord := Copy(Str, 1, StrLen - 1);
+          Delete(Str, 1, StrLen);
+          Inc(N);
+        end
+        else
+          SWord := Str;
+      end;
+     
+      if WordNmbr <= N then
+        Result := SWord
+      else
+        Result := '';
+    end;
+
+Пример использования: 
+     
+    GetWord('Здесь ваш текст',' ',3); // Возвращает -> 'текст'
+     
+------------------------------------------------------------------------
+
+Вариант 8:
+
+Author: TP@MB@Y
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+    //Функция возвращающая N-ое слово в строке
+    //Если N=0, то функция возвращает подстоку начиная с первого разделителя
+    function GetWord(str:string;n:word;sep:char):string;
+    var i,space,l,j:integer;
+        buf:string;
+    begin
+     l:=length(str);
+     if n=0 then begin  //особый параметр
+                  j:=pos(GetWord(str,2,sep),str);
+                  GetWord:=copy(str,j,l-j+1);
+                  exit
+                 end;
+     space:=0;
+     i:=0;
+     while (space<>(n-1))and(i<=l) do
+      begin
+       i:=i+1;
+       if str[i]=sep then space:=space+1
+      end;
+     i:=i+1;
+     buf:='';
+     while (i<=l)and(str[i]<>sep) do
+      begin
+       buf:=buf+str[i];
+       i:=i+1
+      end;
+     GetWord:=buf;
+    end;
+

@@ -1,15 +1,12 @@
 ---
 Title: Получать слова нужной длины при перестановке букв в указанном слове
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Получать слова нужной длины при перестановке букв в указанном слове
 ===================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Definition: Permutation 
@@ -28,7 +25,7 @@ Date: 01.01.2007
     }
      
      
-     { 
+    { 
       Definition: Permutation 
      
       Eine Permutation ist eine Anordnung von n Objekten ohne Wiederholung. 
@@ -45,14 +42,14 @@ Date: 01.01.2007
     }
      
      
-     { 
+    { 
       The following is a console Program: 
       Choose File, New, Console Application 
      
     }
      
      
-        program Permute;
+    program Permute;
      {$APPTYPE CONSOLE}
      
      uses SysUtils;
@@ -101,4 +98,3 @@ Date: 01.01.2007
        end;
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

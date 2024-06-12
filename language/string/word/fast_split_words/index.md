@@ -2,18 +2,15 @@
 Title: Быстрая функция для разбивки строки на части (слова) в один цикл
 Author: ДЫМ
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Быстрая функция для разбивки строки на части (слова) в один цикл
 ================================================================
 
-::: {.date}
-01.01.2007
-:::
-
     type TDelim=set of Char;
-            TArrayOfString=Array of String;
+         TArrayOfString=Array of String;
      
      
     //*******************
@@ -48,8 +45,4 @@ Date: 01.01.2007
     StrArr:TArrayOfString
      
     StrArr:=fcToParts('строка1-строка2@строка3',['-','@']):
-     
 
-Автор: ДЫМ
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

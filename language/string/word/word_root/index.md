@@ -2,17 +2,12 @@
 Title: Определить корень слова (для поиска похожих слов)
 Author: \_\_\_Nikolay
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Определить корень слова (для поиска похожих слов)
 =================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: \_\_\_Nikolay
 
     // Поиск по корню слова
     function RootOfWord(s: string): string;
@@ -139,8 +134,3 @@ Date: 01.01.2007
       Result := sResult;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

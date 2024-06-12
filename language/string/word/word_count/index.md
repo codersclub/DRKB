@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как подсчитать количество слов в строке?
 ========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://delphiworld.narod.ru>
 
     function Seps(As_Arg: Char): Boolean; 
     begin 
@@ -44,9 +44,13 @@ Date: 01.01.2007
       call: WordCount(Memo1.Text) 
     }
 
-Взято с <https://delphiworld.narod.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Алексей Вуколов (vuk), vuk@fcenter.ru
+
+Date: 18.04.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Подсчет количества слов в строке.
@@ -79,6 +83,7 @@ Date: 01.01.2007
         inc(wStart, wLen);
       end;
     end;
+    
     //Пример использования: 
      
     WordCount := CountWords('This is a sample', [' ']);
