@@ -26,46 +26,48 @@ Source: <https://delphiworld.narod.ru>
 
 - Внесите в окно кода нового модуля следующий код:
 
-        unit Unit2;
-         
-        interface
-         
-        uses
-          Classes;
-         
-        type
-          TMyThread = class(TThread) //Новый класс
-          private
-            answer: Integer;
-          protected
-            procedure ShowResult;
-            procedure Execute; override;
-          end;
-         
-        implementation
-         
-        uses
-          SysUtils, Unit1;
-         
-        //Процедура для вывода информации из потока
-        procedure TMyThread.ShowResult;
-        begin
-          Form1.Edit1.Text := IntToStr(answer);
-        end;
-         
-        //Длинная процедура
-        procedure TMyThread.Execute;
-        var
-          i: Integer;
-        begin
-          for i := 1 to 10000 do
-          begin
-            answer := answer + 1;
-            Synchronize(ShowResult);
-          end;
-        end;
-         
-        end.
+    ```delphi
+    unit Unit2;
+     
+    interface
+     
+    uses
+      Classes;
+     
+    type
+      TMyThread = class(TThread) //Новый класс
+      private
+        answer: Integer;
+      protected
+        procedure ShowResult;
+        procedure Execute; override;
+      end;
+     
+    implementation
+     
+    uses
+      SysUtils, Unit1;
+     
+    //Процедура для вывода информации из потока
+    procedure TMyThread.ShowResult;
+    begin
+      Form1.Edit1.Text := IntToStr(answer);
+    end;
+     
+    //Длинная процедура
+    procedure TMyThread.Execute;
+    var
+      i: Integer;
+    begin
+      for i := 1 to 10000 do
+      begin
+        answer := answer + 1;
+        Synchronize(ShowResult);
+      end;
+    end;
+     
+    end.
+    ```
 
 Немного комментария по коду. В нашем модуле мы вводим новый класс
 TMyThread как «потомок» TThread. В экземпляре нашего класса и будет
