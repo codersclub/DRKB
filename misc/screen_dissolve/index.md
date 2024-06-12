@@ -1,15 +1,12 @@
 ---
 Title: Растворение экрана
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Растворение экрана
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
     program joke;
      
@@ -31,8 +28,4 @@ Date: 01.01.2007
         desk.Pixels[Random(1024), Random(768)] := 0;
       end;
     end.
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
