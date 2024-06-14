@@ -1,15 +1,12 @@
 ---
 Title: Bitmap.PixelFormat := pf8bit;
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Bitmap.PixelFormat := pf8bit;
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
 Доступ к такому формату изображения легко получить, используя TByteArray
 (определен в SysUtils.PAS):
@@ -54,4 +51,3 @@ pf16bit-изображениям, используя следующие опре
     END
     ...
 
-Взято с <https://delphiworld.narod.ru>

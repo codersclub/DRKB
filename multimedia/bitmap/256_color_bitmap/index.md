@@ -2,17 +2,12 @@
 Title: Загрузка 256-цветного TBitmap
 Author: Steve Schafer
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Загрузка 256-цветного TBitmap
 =============================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Steve Schafer
 
 Windows не очень полезен, когда мы имеем дело с 256-цветными
 изображениями. Что делаю я (поскольку думаю, что это самый простой
@@ -78,4 +73,3 @@ TBitmap.LoadFromStream мог "принять" его. Данным методо
     Image1.Picture.Bitmap := TMyBitmap.Create;
     TMyBitmap(Image1.Picture.Bitmap).Load256ColorBitmap(hInstance, 'BITMAP_1');
 
-Взято с <https://delphiworld.narod.ru>

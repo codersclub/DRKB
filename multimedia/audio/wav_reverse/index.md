@@ -1,15 +1,12 @@
 ---
 Title: Как проиграть wave файл в обратную сторону?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как проиграть wave файл в обратную сторону?
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1; 
      
@@ -230,4 +227,3 @@ Date: 01.01.2007
      
     end. 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

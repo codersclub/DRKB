@@ -1,15 +1,13 @@
 ---
 Title: Как проиграть wave-ресурс?
 Date: 01.01.2007
+Author: Serg Vostrikov (2:5053/15.3)
+Source: <https://blackman.wp-club.net/>
 ---
 
 
 Как проиграть wave-ресурс?
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
 Сначала делаешь файл SOUND.RC, в нем строка вида: MY\_WAV RCDATA
 TEST.WAV
@@ -38,8 +36,3 @@ TEST.WAV
             end;
         end;
 
-Serg Vostrikov
-
-(2:5053/15.3)
-
-Взято с сайта <https://blackman.wp-club.net/>

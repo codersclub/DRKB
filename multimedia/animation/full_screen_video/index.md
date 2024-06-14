@@ -1,15 +1,12 @@
 ---
 Title: Как показать видео на полном экране?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как показать видео на полном экране?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     const
@@ -48,4 +45,3 @@ Date: 01.01.2007
       ret := nil;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

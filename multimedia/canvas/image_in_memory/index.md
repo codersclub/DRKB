@@ -1,25 +1,20 @@
 ---
 Title: Работа с изображением в памяти
 Date: 01.01.2007
+Author: Alexander Burnashov, alex@arta.spb.su
 ---
 
 
 Работа с изображением в памяти
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
 Вот кусок одного моего класса, в котором есть две интересные вещицы -
-
 проецирование файлов в память и работа с битмэпом в памяти через
 указатель.
 
     type 
        TarrRGBTriple=array[byte] of TRGBTriple; 
        ParrRGBTriple=^TarrRGBTriple; 
-     
      
     {организует битмэп размером SX,SY;true_color} 
     procedure TMBitmap.Allocate(SX,SY:integer); 
@@ -125,8 +120,5 @@ Date: 01.01.2007
 
 и загруженный битмэп появится на экране.
 
-Alexander Burnashov
-
-E-mail alex@arta.spb.su
-
+Alexander Burnashov, E-mail alex@arta.spb.su  
 (2:5030/254.36)

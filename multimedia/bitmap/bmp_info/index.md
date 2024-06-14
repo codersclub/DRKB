@@ -7,10 +7,6 @@ Date: 01.01.2007
 Информация о BMP-файлах
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
     {
       This tip show, how to get the filesize, width, height, bitcount and color used 
       from a bitmap. 

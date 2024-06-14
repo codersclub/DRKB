@@ -1,15 +1,12 @@
 ---
 Title: Как играть MIDI без медиаплеера?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как играть MIDI без медиаплеера?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       MMSystem; 
@@ -30,4 +27,3 @@ Date: 01.01.2007
       MCISendString(PChar('stop ' + FileName), nil, 0, 0); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

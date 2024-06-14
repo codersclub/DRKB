@@ -7,11 +7,9 @@ Date: 01.01.2007
 Как определить длительность wav файла в секундах?
 ======================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     uses
       MPlayer, MMsystem;
@@ -47,10 +45,12 @@ Date: 01.01.2007
       ShowMessage(FloatToStr((Int64(1000) * header.DataBytes div header.BytesPerSecond) / 1000));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
 Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     function GetWaveLength(WaveFile: string): Double;
     var
@@ -152,8 +152,8 @@ integer:
         Result := HourString + MinuteString + SecondString;
     end;
 
-Having created these functions you can call them from any relevant event
-- for example a button click:
+Having created these functions you can call them from any relevant event,
+for example a button click:
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -171,4 +171,3 @@ You can even reduce this to a single line of code if you prefer:
         Label1.Caption := SecondsToTimeStr(Trunc(GetWaveLength(Edit1.Text)));
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -1,15 +1,12 @@
 ---
 Title: Загрузка bitmap из .res без потери палитры
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Загрузка bitmap из .res без потери палитры
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure loadgraphic(naam:string);
     var
@@ -41,4 +38,3 @@ Date: 01.01.2007
       FreeResource(MemHandle);
     end;
 
-Взято с <https://delphiworld.narod.ru>

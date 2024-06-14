@@ -1,15 +1,14 @@
 ---
-Title: vfw.pas
+Title: Video for Windows
+Author: Tom Nuydens (delphi3d@gamedeveloper.org)
 Date: 01.01.2007
 ---
 
 
-vfw.pas
+Video for Windows
 =======
 
-::: {.date}
-01.01.2007
-:::
+vfw.pas
 
     {*******************************************************************************
       Original author unknown.

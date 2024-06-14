@@ -1,15 +1,12 @@
 ---
 Title: Как проиграть wav из ресурса не сохраняя его в файл?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как проиграть wav из ресурса не сохраняя его в файл?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     var
@@ -31,4 +28,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

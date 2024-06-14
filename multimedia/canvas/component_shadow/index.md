@@ -1,15 +1,12 @@
 ---
 Title: Как сделать, чтобы компоненты отбрасывали тень?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как сделать, чтобы компоненты отбрасывали тень?
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure ShadeIt(f: TForm; c: TControl; Width: Integer; Color: TColor); 
     var 
@@ -38,4 +35,3 @@ Date: 01.01.2007
         ShadeIt(Self, Self.Controls[i], 3, clBlack); 
     end;
 
-Взято с <https://delphiworld.narod.ru>

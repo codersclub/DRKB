@@ -2,15 +2,12 @@
 Title: Вывод изображения по маске, используется MaskBlt
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Вывод изображения по маске, используется MaskBlt
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -32,9 +29,3 @@ Date: 01.01.2007
       end;
     end;
 
-
-
-
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>

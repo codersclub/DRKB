@@ -2,15 +2,12 @@
 Title: Пример записи информации в битмап
 Author: Аэтерос
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Пример записи информации в битмап
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       BITMAPFILEHEADER = packed record
@@ -76,6 +73,3 @@ Date: 01.01.2007
      
     end;
 
-Автор: Аэтерос
-
-Взято из <https://forum.sources.ru>

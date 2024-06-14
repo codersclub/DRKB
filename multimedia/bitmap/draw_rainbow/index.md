@@ -7,34 +7,21 @@ Date: 01.01.2007
 Как нарисовать радугу?
 ======================
 
-::: {.date}
-01.01.2007
-:::
-
-How do I paint the color spectrum of a rainbow, and if the
-
-spectrum is clicked on, how do I calculate what color was
-
-clicked on?
+> How do I paint the color spectrum of a rainbow, and if the
+> spectrum is clicked on, how do I calculate what color was
+> clicked on?
 
 The following example demonstrates painting a color spectrum,
-
 and calculating the color of a given point on the spectrum.
 
 Two procedures are presented: PaintRainbow() and
-
 ColorAtRainbowPoint(). The PaintRainbow() procedure paints a
-
 spectrum from red to magenta if the WrapToRed parameter is
-
 false, or paint red to red if the WrapToRed parameter is true.
 
 The rainbow can progress either in a horizontal or
-
 vertical progression. The ColorAtRainbowPoint() function
-
 returns a TColorRef containing the color at a given point in
-
 the rainbow.
 
     procedure PaintRainbow(Dc : hDc; {Canvas to paint to}

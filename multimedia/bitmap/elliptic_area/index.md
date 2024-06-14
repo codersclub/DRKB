@@ -1,16 +1,12 @@
 ---
 Title: Вырезание эллиптической области на Bitmap
-author: Fenik, chook_nu@uraltc.ru
+author: Николай федоровских (Fenik), chook_nu@uraltc.ru
 Date: 01.06.2002
 ---
 
 
 Вырезание эллиптической области на Bitmap
 =========================================
-
-::: {.date}
-01.06.2002
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Вырезание эллиптической области на Bitmap
@@ -74,5 +70,6 @@ Date: 01.06.2002
       end;
     end;
 
-    Пример использования: 
+Пример использования: 
+
     EllipticBitmap(FBitmap, clWhite); 

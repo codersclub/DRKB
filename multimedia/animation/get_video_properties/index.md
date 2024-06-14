@@ -1,15 +1,12 @@
 ---
 Title: Как прочитать свойства видеофайла?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как прочитать свойства видеофайла?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 Below is some code to get some of the data. To use the DirectDraw/
 DirectShow calls you need either the older DSHOW.PAS (DX6) or more
@@ -95,4 +92,3 @@ current DirectShow.pas header conversion from the Project JEDI web site:
       Result.Height := DesiredSurface.dwHeight;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

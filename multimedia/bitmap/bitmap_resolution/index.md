@@ -2,15 +2,12 @@
 Title: Размер bitmap
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Размер bitmap
 =============
-
-::: {.date}
-01.01.2007
-:::
 
     function PictureSize: TSize;
     var
@@ -42,6 +39,3 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>

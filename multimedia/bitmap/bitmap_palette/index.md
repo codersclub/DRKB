@@ -1,15 +1,12 @@
 ---
 Title: Назначение палитры bitmap
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Назначение палитры bitmap
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 Если вы рисуете на TImage....
 
@@ -41,4 +38,3 @@ Image.Canvas. Причина кроется в том, что Image1.Picture.Bit
     SelectPalette(Form1.Canvas.handle,Bitmap.Palette,True);
     RealizePalette(Form1.Canvas.Handle);
 
-Взято с <https://delphiworld.narod.ru>

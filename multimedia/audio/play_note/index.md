@@ -1,15 +1,12 @@
 ---
 Title: Как проиграть ноту?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как проиграть ноту?
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
 This is a simple class that plays a formatted musical string. It is
 reminiscent of the old GWBASIC days whereby one could play a string of
@@ -23,36 +20,23 @@ However the WIN API BEEP() takes two arguments.
 
 ie.
 
-BOOL Beep(
-
+    BOOL Beep(
          DWORD dwFreq,     // sound frequency, in hertz
-
          DWORD dwDuration  // sound duration, in milliseconds
-
         );
 
 Parameters
 
-dwFreq
+- dwFreq
 
-  Windows NT:
+    - Windows NT: Specifies the frequency, in hertz, of the sound. This parameter   must
+    be in the range 37 through 32,767 (0x25        through 0x7FFF).
+    - Windows 95: The parameter is ignored.
 
-  Specifies the frequency, in hertz, of the sound. This parameter   must
-be in the range 37 through 32,767 (0x25        through 0x7FFF).
+- dwDuration
 
-  Windows 95:
-
-  The parameter is ignored.
-
-dwDuration
-
-  Windows NT:
-
-  Specifies the duration, in milliseconds, of the sound.
-
-  Windows 95:
-
-  The parameter is ignored.
+    - Windows NT: Specifies the duration, in milliseconds, of the sound.
+    - Windows 95: The parameter is ignored.
 
 As can be seen it appears that BEEP() is NOT supported on WIN95, but is
 OK from there upwards. (I have not tested it on WIN95, but assume you
@@ -60,38 +44,32 @@ will just get a monotone ???? - anyone for comment)
 
 It is easily called by prefixing the unit
 
-ie. Windows.Beep(Freq,Duration)
+ie. `Windows.Beep(Freq,Duration)`
 
-The format of the "Music String" is a comma delimited (",\<"
-terminated) string in the following formats. (The string is
-CASE-INSENSITIVE and [] means optional with defaults).
+The format of the "Music String" is a comma delimited (",\<" terminated)
+string in the following formats.
+(The string is CASE-INSENSITIVE and [] means optional with defaults).
 
-A..G[+ or -][0..5][/BEATS] and
+    A..G[+ or -][0..5][/BEATS]
 
-@[/BEATS]
+and
 
-Where A..G   is the Note to be played.
+    @[/BEATS]
 
-     + or - is optional Sharp or Flat designator respectively. (default
-is normal NULL)
+Where
 
-     0..5   is optional Octave range (default = 1)
-
-     /BEATS is number of 100ms to hold the note (default = 1)
-
-where @      is a musical pause
-
-     /BEATS is the number of beats to pause for (default = 1)
-
-where,\<     is the END OF STRING terminator.
+- A..G   is the Note to be played.
+- + or - is optional Sharp or Flat designator respectively.
+  (default is normal NULL)
+- 0..5   is optional Octave range (default = 1)
+- /BEATS is number of 100ms to hold the note (default = 1)
+- @ is a musical pause
+- ,\<     is the END OF STRING terminator.
 
 Properties:
 
-DefaultOctave                        : Used if no 0..5 designator
-specified in format. (System Default = 1)  
-
-BetweenNotesPause        : Use to set number MS gap between notes
-(faster or slower default = 100ms)
+- DefaultOctave: Used if no 0..5 designator specified in format. (System Default = 1)  
+- BetweenNotesPause: Use to set number MS gap between notes (faster or slower default = 100ms)
 
 Simple Example:
 
@@ -290,4 +268,3 @@ Any enhancements or additional ideas welcome. Happy jingeling.
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

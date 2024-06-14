@@ -2,15 +2,12 @@
 Title: Нажатия клавиши и звук
 Author: Smike
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Нажатия клавиши и звук
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
@@ -24,8 +21,3 @@ Date: 01.01.2007
       PlaySound(nil, 0, 0);
     end;
 
-
-
-Автор: Smike
-
-Взято из <https://forum.sources.ru>

@@ -1,16 +1,12 @@
 ---
 Title: Нарисовать линию, не используя функцию LineTo
 Date: 17.03.2004
-author: Dimka Maslov, mainbox@endimus.com
+Author: Dimka Maslov, mainbox@endimus.com
 ---
 
 
 Нарисовать линию, не используя функцию LineTo
 =============================================
-
-::: {.date}
-17.03.2004
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Отображение текста с тегами форматирования

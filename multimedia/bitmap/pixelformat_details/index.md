@@ -1,17 +1,14 @@
 ---
 Title: Bitmap.PixelFormat - подробности
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Bitmap.PixelFormat - подробности
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
-Общее
+**Общее**
 
 Новое в Delphi 3 свойство scanline допускает быстрый доступ к отдельным
 пикселям, но необходимо указать с каким Bitmap.PixelFormat вы работаете,
@@ -20,22 +17,13 @@ Bitmap.PixelFormat - подробности
 Возможные PixelFormats включают:
 
 - pfDevice
-
 - [pf1bit - посмотреть подробности](pf1bit/)
-
 - pf4bit
-
 - [pf8bit - посмотреть подробности](pf8bit/)
-
 - pf15bit
-
 - pf16bit
-
 - [pf24bit - посмотреть подробности](pf24bit/)
-
 - pf32bit
 
 
-
-Взято с <https://delphiworld.narod.ru>
 

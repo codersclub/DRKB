@@ -1,15 +1,12 @@
 ---
 Title: Как вывести звук через звуковую карту?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как вывести звук через звуковую карту?
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       MMSystem; 
@@ -86,4 +83,3 @@ Date: 01.01.2007
       MakeSound(1200, 1000, 60); 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Вставить Bitmap
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Вставить Bitmap
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
     function InvertBmp1(SourceBmp: TBitmap): TBitMap;
      var
@@ -51,4 +48,3 @@ Date: 01.01.2007
        result := l_bmp;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

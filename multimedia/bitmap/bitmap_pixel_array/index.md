@@ -1,15 +1,12 @@
 ---
 Title: Как создать bitmap из массива пикселей?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как создать bitmap из массива пикселей?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
 Один из способов создания битмапа из массива пикселей заключается в
 использовании Windows API функции CreateDiBitmap(). Это позволит
@@ -136,4 +133,3 @@ Date: 01.01.2007
         lpBitmapInfo^.bmiColors[i].rgbBlue := i; 
       end;
 
-Взято из <https://forum.sources.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Bitmap.PixelFormat := pf24bit;
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Bitmap.PixelFormat := pf24bit;
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
 Для pf24bit-изображений необходимо определить:
 
@@ -52,4 +49,3 @@ Bitmap.PixelFormat := pf24bit;
     END
     ...
 
-Взято с <https://delphiworld.narod.ru>

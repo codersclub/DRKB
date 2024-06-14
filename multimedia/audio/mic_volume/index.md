@@ -1,15 +1,12 @@
 ---
 Title: Как изменить уровень громкости микрофона?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как изменить уровень громкости микрофона?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       MMSystem; 
@@ -280,4 +277,3 @@ Date: 01.01.2007
       SetMixerLineSourceMute(lsLine, True); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

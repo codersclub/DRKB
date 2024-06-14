@@ -1,15 +1,12 @@
 ---
 Title: Низкоуровневые процедуры обработки звука
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Низкоуровневые процедуры обработки звука
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Ниже приведен код, обрабатывающий аудиосигнал, получаемый со входа
 звуковой карты (SoundBlaster). Надеюсь он поможет разобраться вам с этой
@@ -43,8 +40,8 @@ Date: 01.01.2007
     // Начинаем запись
     WaveRecorder.StartRecord;
      
-    ...При каждом заполнении буфера вызывается
-      процедура WaveRecorder.Processbuffer.
+    //...При каждом заполнении буфера вызывается
+    //  процедура WaveRecorder.Processbuffer.
      
     //  Заканчиваем запись
     WaveRecorder.StopRecord;
@@ -92,7 +89,8 @@ Date: 01.01.2007
         procedure ProcessBuffer(uMsg: Word; P: Pointer; n: Integer);
           virtual;
      
-      private
+        private
+         
         fBufferSize: Integer; // Размер буфера
         BufIndex: Integer;
         fTotalBuffers: Integer;
@@ -121,7 +119,8 @@ Date: 01.01.2007
         function AddNextBuffer: Boolean;
         procedure CloseWaveDeviceRecord;
      
-      public
+        public
+        
         { Public declarations }
         pWaveFmtEx: PWaveFormatEx;
         WaveBufSize: Integer; // Размер поля nBlockAlign
@@ -138,7 +137,7 @@ Date: 01.01.2007
      
       end;
      
-      {*************************************************************************}
+    {*************************************************************************}
      
     implementation
      
@@ -151,11 +150,9 @@ Date: 01.01.2007
     {                                                                      }
     {**********************************************************************}
     var
-     
       PlayInErrorMsgC: array[0..255] of Char;
      
     begin
-     
       waveInGetErrorText(iErr, PlayInErrorMsgC, 255);
       TWaveInGetErrorText := StrPas(PlayInErrorMsgC);
     end;
@@ -702,4 +699,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

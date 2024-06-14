@@ -1,15 +1,12 @@
 ---
 Title: Как определить bitrate WAV файла?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как определить bitrate WAV файла?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     {....} 
      
@@ -109,4 +106,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

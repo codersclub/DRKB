@@ -2,15 +2,12 @@
 Title: Изменение громкости в TMediaPlayer
 Author: Smike
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Изменение громкости в TMediaPlayer
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit MpVolume;
      
@@ -81,6 +78,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Smike
-
-Взято из <https://forum.sources.ru>

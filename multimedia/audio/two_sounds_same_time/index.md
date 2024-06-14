@@ -1,15 +1,12 @@
 ---
 Title: Как проигрывать 2 звука одновременно?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как проигрывать 2 звука одновременно?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       MMSystem; 
@@ -36,4 +33,3 @@ Date: 01.01.2007
       SendMCICommand('close waveaudio'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

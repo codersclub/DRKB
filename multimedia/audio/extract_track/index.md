@@ -1,15 +1,13 @@
 ---
 Title: Как экстрагировать аудиодорожку из AVI файла?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+
 ---
 
 
 Как экстрагировать аудиодорожку из AVI файла?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
     {...}, vfw; 
@@ -130,10 +128,3 @@ Date: 01.01.2007
       else 
         ShowMessage('Error while saving...'); 
     end; 
-
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
-Как экстрагировать аудиодорожку из AVI файла?
-=============================================
-
-<!-- TOC -->

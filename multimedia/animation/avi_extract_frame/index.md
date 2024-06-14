@@ -1,15 +1,12 @@
 ---
 Title: Как экстрагировать фрейм из AVI?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как экстрагировать фрейм из AVI?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
      VfW { from download }; 
@@ -136,4 +133,3 @@ Date: 01.01.2007
       GrabAVIFrame('C:\Test.avi', 3, 'c:\avifram.bmp'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

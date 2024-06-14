@@ -7,10 +7,6 @@ Date: 01.01.2007
 Получить bitmap радио кнопок
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
     { 
       Diese Funktion liefert ein Bitmap eines RadioButton. 
      

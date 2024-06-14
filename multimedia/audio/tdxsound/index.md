@@ -1,6 +1,6 @@
 ---
 Title: TDXSound. AudioStream, стерео эффекты
-Author: 3d[Power]
+Author: 3d[Power] <https://www.mirgames.ru>
 Date: 01.01.2007
 ---
 
@@ -8,13 +8,7 @@ Date: 01.01.2007
 TDXSound. AudioStream, стерео эффекты
 =====================================
 
-::: {.date}
-01.01.2007
-:::
-
-TDXSound. AudioStream, стерео эффекты.
-
-Основные принципы:
+**Основные принципы:**
 
 С помощью TDXSound вы можете создавать звуковые эффекты в вашей программе.
 Все что Вам понадобится это поставить на форму 2 компонента: DXSound и
@@ -22,36 +16,53 @@ DXWaveList. Последний является "коллекцией wav фай
 будете заносить wav файлы. Установите DxWaveList1.DXSound := DXSound1. В
 этот DXSound будет воспроизводиться звук.
 Чтобы проиграть звук вам надо в DxWaveList1 добавить какой нибудь wav
-файл. После чего вызвать dxwavelist1.items[0].play(false); Будет
-проигран звук, который находится в списке нулевым. Можно и так:
-dxwavelist1.Items.Find(\'somewave1\').Play(False);
+файл. После чего вызвать
+
+    dxwavelist1.items[0].play(false);
+
+Будет проигран звук, который находится в списке нулевым.
+
+Можно и так:
+
+    dxwavelist1.Items.Find('somewave1').Play(False);
 
 Добавление дополнительных эффектов:
+
 Добавить можно следущие эффекты: изменение frequensy, pan, volume.
+
 Pan - ориентация звука (левый правый канал).
-dxwavelist1.Items.Find(\'somewave1\').Pan := 0; - Центр.
-dxwavelist1.Items.Find(\'somewave1\').Pan := -10000; - Максимально
-слева.
-dxwavelist1.Items.Find(\'somewave1\').Pan := 10000; - Максимально
-справа.
-После чего вызвать dxwavelist1.Items.Find(\'somewave1\').Play(False);.
-Frequency - частота звука.
+
+    dxwavelist1.Items.Find('somewave1').Pan := 0;      // Центр.
+    dxwavelist1.Items.Find('somewave1').Pan := -10000; // Максимально слева.
+    dxwavelist1.Items.Find('somewave1').Pan := 10000;  // Максимально справа.
+
+После чего вызвать
+
+    dxwavelist1.Items.Find('somewave1').Play(False);.
+
+Frequency - частота звука.  
 Назначается это значение так:
-dxwavelist1.Items.Find(\'somewave1\').Frequency. Минимальное значение
-4410, а максимальное 44100.
-Volume - громкость звука.
+
+    dxwavelist1.Items.Find('somewave1').Frequency.
+    // Минимальное значение 4410, а максимальное 44100.
+
+Volume - громкость звука.  
 Назначается это значение так:
-dxwavelist1.Items.Find(\'somewave1\').volume. Минимальное значение
--10000, а максимальное 0.
-Looped. У звука есть еще параметр .Looped : boolean который означает
+
+    dxwavelist1.Items.Find('somewave1').volume.
+    //Минимальное значение -10000, а максимальное 0.
+
+Looped. У звука есть еще параметр `.looped : boolean` который означает
 будет ли звук проигрываться "покругу". Что бы остановить такое
-проигрывание используйте .looped := false;
-Загрузка wav файлов:
+проигрывание используйте `.looped := false;`
+
+**Загрузка wav файлов:**
+
 Загружать звуки в программу можно непосредственно через dxwavelist1
 (просто вручную добавить файлы и все).
-А можно через отдельные *.dxw файлы - это контейнеры wav\'ов. Создавать
+А можно через отдельные \*.dxw файлы - это контейнеры wav'ов. Создавать
 которые можно специальными программами. Dxwavelist1.items.LoadFromFile
-(\'sounds.dxw\'); Это полезно для того чтобы ехе файл занимал меньше
+('sounds.dxw'); Это полезно для того чтобы ехе файл занимал меньше
 размера.
 
 Загрузка wav файлов в "realtime"Ниже указанная процедура загружает
@@ -68,7 +79,7 @@ wav, и автоматически добавляет в Dxwavelist1:
     end;
     end;
 
-NOTE: не забудьте поставить with form1 do. или declarations.
+**NOTE:** не забудьте поставить with form1 do. или declarations.
 Вызывайте эту процедуру до dxsound1.initialize;
 
 Если после, то выполните код:
@@ -102,14 +113,12 @@ findfirst. не более того:
     DXSound1.Primary.SetFormat(WaveFormat);
     Audio.Play;
 
-NOTE: Вам надо в uses занести MMSystem, Wave;
+**NOTE:** Вам надо в uses занести MMSystem, Wave;
 Я заметил что этот метод поджирает память (проверял по тестам).
-
 
 И на последок классная процедура автоматического расчета звука по
 каналам:Эта процедура автоматически расчитывает стерео для разрешения
-экрана 640х480. Вызывается так: playsound(\'somesound1\',320); - центр.
-playsound(\'somesound1\',0); - слева. etc.
+экрана 640х480.
 
     const
     OPT_SOUND : boolean = true ; //наличие звук
@@ -117,8 +126,6 @@ playsound(\'somesound1\',0); - слева. etc.
     OPT_CHANNELAPPROACH : word = 10 ; //степень смешения каналов
     OPT_REVERSESTEREO : boolean = false ; //реверсировать стерео
     OPT_VOLUME : integer = 0 ; //громкость (-10000 | 0).
-     
-     
      
     procedure PlaySound(soundname : shortstring; x : word);
     var PanFactor, PanValue : Double;
@@ -138,6 +145,8 @@ playsound(\'somesound1\',0); - слева. etc.
     end;
     end;
 
-Автор: 3d[Power]
+Вызывается так:
 
-<https://www.mirgames.ru>
+    playsound('somesound1',320); - центр.
+    playsound('somesound1',0); - слева. etc.
+

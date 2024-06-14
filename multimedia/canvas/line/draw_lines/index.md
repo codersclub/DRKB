@@ -2,15 +2,12 @@
 Title: Рисование линий как в Microsoft Paint
 Author: Mischka
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Рисование линий как в Microsoft Paint
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -98,12 +95,7 @@ Date: 01.01.2007
      
     end.
 
-
-
 Более развернутую демку можно найти в папке
 {$DELPHI7}/Demos/Doc/Graphex
 
 
-Автор: Mischka
-
-Взято из <https://forum.sources.ru>
