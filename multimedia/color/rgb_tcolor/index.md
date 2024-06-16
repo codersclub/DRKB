@@ -8,9 +8,7 @@ Date: 01.01.2007
 Как конвертировать RGB в TColor?
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     function RGBToColor(R,G,B:Byte): TColor; 
     begin 
@@ -19,22 +17,24 @@ Date: 01.01.2007
            R;
     end; 
 
-Взято из <https://forum.sources.ru>
+Source: <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-RGB -\> TColor
+Вариант 2:
 
-RGB(r,g,b:byte):tcolor
+> Как разбить цвет на составляющие и наоборот?
 
-TColor -\> RGB
+RGB -\> TColor:
 
-GetRValue(color:tcolor)
+    RGB(r,g,b:byte):tcolor
 
-GetGValue(color:tcolor)
+TColor -\> RGB:
 
-GetBValue(color:tcolor)
+    GetRValue(color:tcolor)
+    GetGValue(color:tcolor)
+    GetBValue(color:tcolor)
 
-Автор: Vit
+Author: Vit
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Source: Vingrad.ru <https://forum.vingrad.ru>

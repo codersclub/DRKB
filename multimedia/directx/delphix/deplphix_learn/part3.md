@@ -218,8 +218,9 @@ Author: hex (https://gamedev.ru/users/?id=14)
 
 ![](20604b.jpg)
 
-Что, устал?
+Что, устал?  
 Ну, расслабься, если хочешь.
+
 Дальше мы сделаем следующее:
 
 1. Добавим второго плеера
@@ -236,25 +237,26 @@ Author: hex (https://gamedev.ru/users/?id=14)
 
 Я выбрал такой вариант для первого игрока:
 
-Up - Num 8
-Down - Num 5
-Left - Num 4
-Right - Num 6
-Button1 - Num 0
-Button2 - Num 7
+Up - Num 8  
+Down - Num 5  
+Left - Num 4  
+Right - Num 6  
+Button1 - Num 0  
+Button2 - Num 7  
 Button3 - Num 9
 
 Для второго игрока:
 
-Button4 - T
-Button5 - G
-Button6 - F
-Button7 - H
-Button8 - E
-Button9 - R
+Button4 - T  
+Button5 - G  
+Button6 - F  
+Button7 - H  
+Button8 - E  
+Button9 - R  
 Button10 - Y
 
 Посмотрите на клаву и поймёте раскладку.
+
 Ну что, приступаем,
 для начала перед Implementation добавим ещё две переменные,
 только уже для второго игрока:

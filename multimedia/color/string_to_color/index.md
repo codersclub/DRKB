@@ -1,20 +1,14 @@
 ---
-Title: String -\> TColor
+Title: Преобразование цвета String -\> TColor
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 
-String -\> TColor
+Преобразование цвета String -\> TColor
 ================
-
-::: {.date}
-01.01.2007
-:::
 
 В модуле graphics имеется недокументированная функция:
 
     function StringToColor(S: string): TColor;
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

@@ -1,23 +1,20 @@
 ---
 Title: Как быстро нарисовать тень в заданном регионе?
 Date: 01.01.2007
+Author: Титов Игорь Евгеньевич, infos@obninsk.ru
 ---
 
 
 Как быстро нарисовать тень в заданном регионе?
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure TForm2.DrawShadows(WDepth, HDepth : Integer); 
     var 
       Dst, RgnBox  : TRect; 
-      hOldDC         : HDC; 
-      OffScreen      : TBitmap; 
-      Pattern          : TBitmap; 
-      Bits               : array[0..7] of WORD; 
+      hOldDC       : HDC; 
+      OffScreen    : TBitmap; 
+      Pattern      : TBitmap; 
+      Bits         : array[0..7] of WORD; 
     begin 
       Bits[0]:=$0055; 
       Bits[1]:=$00aa; 
@@ -50,7 +47,7 @@ Date: 01.01.2007
      
       OffsetRgn(ShadeRgn, 0, RgnBox.Top); 
      
-    //  BitBlt работает быстрее CopyRect 
+      //  BitBlt работает быстрее CopyRect 
       BitBlt(OffScreen.Canvas.Handle, 0, 0, OffScreen.Width, OffScreen.Height, 
              Canvas.Handle, RgnBox.Left, RgnBox.Top, SRCAND); 
      
@@ -69,14 +66,12 @@ Date: 01.01.2007
       Canvas.Handle:=hOldDC; 
     end; 
 
-Комментарии :
+**Комментарии:**
 
 Функция рисует тень сложной формы на форме Form2.
 
 Для определения формы тени используется регион ShadeRgn, который был
-создан где-то раньше (например в OnCreate). Относительно регионов см.
-Win32 API.
+создан где-то раньше (например в OnCreate).
 
-Титов Игорь Евгеньевич
+Относительно регионов см. Win32 API.
 
-infos@obninsk.ru

@@ -1,16 +1,13 @@
 ---
 Title: TColor -\> HTML Color
 Author: Smike
+Source: <https://forum.sources.ru>
 Date: 01.01.2007
 ---
 
 
 TColor -\> HTML Color
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
 Функция для преобразования цвета TColor в формат цветов HTML
 
@@ -22,17 +19,8 @@ TColor -\> HTML Color
       Result := Format('#%.2x%.2x%.2x', [GetRValue(RGBColor), GetGValue(RGBColor), GetBValue(RGBColor)]);
     end;
 
-
-
 Не нужно забывать о
 
     uses SysUtils, Graphics;
 
-
 для функций Format и ColorToRGB!
-
- 
-
-Автор: Smike
-
-Взято из <https://forum.sources.ru>

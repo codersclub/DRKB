@@ -8,9 +8,11 @@ Date: 01.01.2007
 Как определить цвет произвольной точки экрана?
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Baa
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     var
     DC: HDC;
@@ -21,11 +23,13 @@ Date: 01.01.2007
     DeleteDC(DC);
     end;
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Mikel
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     var
     DC: HDC;
@@ -36,6 +40,3 @@ Date: 01.01.2007
     ReleaseDC(0,DC);
     end;
 
-Автор: Mikel
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

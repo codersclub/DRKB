@@ -1,15 +1,12 @@
 ---
 Title: Как найти контрастный цвет к данному?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как найти контрастный цвет к данному?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function FindContrastingColor(Color: TColor): TColor;
     var
@@ -33,4 +30,3 @@ Date: 01.01.2007
       Result := RGB(R, G, B);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

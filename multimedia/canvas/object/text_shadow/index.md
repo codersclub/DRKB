@@ -2,22 +2,20 @@
 Title: Как отбрасывать тень от текста?
 Author: Deni
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как отбрасывать тень от текста?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
-
-Вот ещё одну функцию обнаружил DrawShadowText(...), которая позволяет
+Вот ещё одну функцию обнаружил - DrawShadowText(...), которая позволяет
 отбрасывать тень от текста на hdc контексте. Большой минус состоит в
 том, что она появилась только в XP. Чтобы пример заработал, нужно в
 системной директории найти новую версию библиотеки comctl32.dll и
 скопировать её в папку с примером. У меня эта библиотека лежала в папке
-C:\\WINDOWS\\WinSxS\\x86\_Microsoft.Windows.Common-Controls\_6595b64144ccf1df\_6.0.0.0\_x-ww\_1382d70a
+`C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.0.0_x-ww_1382d70a`
+
 
     unit Unit1;
      
@@ -103,7 +101,7 @@ C:\\WINDOWS\\WinSxS\\x86\_Microsoft.Windows.Common-Controls\_6595b64144ccf1df\_6
                      text,
                      Length(text),
                      @rect,
-                     1,                                                //-> центрировать текст
+                     1,               //-> центрировать текст
                      clRed,
                      clBlack,
                      TB_PosX.Position,
@@ -127,6 +125,3 @@ C:\\WINDOWS\\WinSxS\\x86\_Microsoft.Windows.Common-Controls\_6595b64144ccf1df\_6
      
     end.
 
-Автор: Deni
-
-Взято из <https://forum.sources.ru>

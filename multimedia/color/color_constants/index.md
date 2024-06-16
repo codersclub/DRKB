@@ -2,15 +2,12 @@
 Title: Дополнительные константы цветов
 Author: Stewart Moss
 Date: 21.02.2002
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Дополнительные константы цветов
 ===============================
-
-::: {.date}
-21.02.2002
-:::
 
     unit UnitColorConstants;
     {-----------------------------------------------------------------
@@ -116,4 +113,3 @@ Date: 21.02.2002
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

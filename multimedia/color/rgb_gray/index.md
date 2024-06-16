@@ -1,23 +1,19 @@
 ---
-Title: RGB -> Gray
+Title: Преобразование RGB -> Gray
 Date: 01.01.2007
 ---
 
 
-RGB -> Gray
+Преобразование RGB -> Gray
 ===========
-
-::: {.date}
-01.01.2007
-:::
 
     Function RgbToGray(RGBColor: TColor): TColor;
     var
       Gray: byte;
     begin
       Gray := Round((0.30 * GetRValue(RGBColor)) +
-        (0.59 * GetGValue(RGBColor)) +
-        (0.11 * GetBValue(RGBColor)));
+                    (0.59 * GetGValue(RGBColor)) +
+                    (0.11 * GetBValue(RGBColor)));
       Result := RGB(Gray, Gray, Gray);
     end;
      

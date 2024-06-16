@@ -7,9 +7,9 @@ Date: 01.01.2007
 Градиентная заливка
 ===================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Иногда бывает нужно сложить два или более цветов для получения что-то
 типа переходного цвета. Делается это весьма просто. Координаты
@@ -18,8 +18,7 @@ Date: 01.01.2007
 
 Например, нужно сложить красный и синий. Получаем
 
-(255,0,0)+(0,0,255)=((255+0) div 2,(0+0) div 2,(0+255) div
-2)=(127,0,127).
+    (255,0,0)+(0,0,255)=((255+0) div 2,(0+0) div 2,(0+255) div 2)=(127,0,127).
 
 В результате получаем сиреневый цвет. Также надо поступать, если цветов
 более чем 2: сложить соответствующие координаты, потом каждую сумму
@@ -31,7 +30,11 @@ Date: 01.01.2007
 Итак, пусть заданы 2 цвета своими координатами ((A1, A2, A3) и (B1, B2,
 B3)) и линия (длиной h пикселов), по которой нужно залить. Тогда каждый
 цвет каждого пиксела, находящегося на расстоянии x пикселов от начала
-будет равен (A1-(A1-B1)/h*x, A2-(A2-B2)/h*x, A3-(A3-B3)/h*x). Теперь,
+будет равен
+
+    (A1-(A1-B1)/h*x, A2-(A2-B2)/h*x, A3-(A3-B3)/h*x).
+
+Теперь,
 имея линию с градиентной заливкой, можно таким образом залить совершенно
 любую фигуру: будь то прямоугольник, круг или просто произвольная
 фигура.
@@ -55,11 +58,9 @@ B3)) и линия (длиной h пикселов), по которой нуж
         end;
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     { 
       The following code allows you to draw a gradient on a canvas with 
@@ -68,7 +69,7 @@ DelphiWorld 6.0
       call the DrawGradient() in the OnPaint and OnResize-event handlers. 
     }
      
-     { 
+    { 
       Mit dieser Prozedur kann man auf einen Canvas einen Farbverlauf mit 
       beliebig vielen Farben (min. 2) zeichnen. 
       Z.B. wenn auf eine Form ein Farbverlauf gezeichnet werden soll, 
@@ -76,83 +77,87 @@ DelphiWorld 6.0
       im OnResize-Ereignis der Form auf. 
     }
      
-     procedure DrawGradient(ACanvas: TCanvas; Rect: TRect;
-       Horicontal: Boolean; Colors: array of TColor);
-     type
-       RGBArray = array[0..2] of Byte;
-     var
-       x, y, z, stelle, mx, bis, faColorsh, mass: Integer;
-       Faktor: double;
-       A: RGBArray;
-       B: array of RGBArray;
-       merkw: integer;
-       merks: TPenStyle;
-       merkp: TColor;
-     begin
-       mx := High(Colors);
-       if mx > 0 then
-       begin
-         if Horicontal then
-           mass := Rect.Right - Rect.Left
-         else
-           mass := Rect.Bottom - Rect.Top;
-         SetLength(b, mx + 1);
-         for x := 0 to mx do
-         begin
-           Colors[x] := ColorToRGB(Colors[x]);
-           b[x][0] := GetRValue(Colors[x]);
-           b[x][1] := GetGValue(Colors[x]);
-           b[x][2] := GetBValue(Colors[x]);
-         end;
-         merkw := ACanvas.Pen.Width;
-         merks := ACanvas.Pen.Style;
-         merkp := ACanvas.Pen.Color;
-         ACanvas.Pen.Width := 1;
-         ACanvas.Pen.Style := psSolid;
-         faColorsh := Round(mass / mx);
-         for y := 0 to mx - 1 do
-         begin
-           if y = mx - 1 then
-             bis := mass - y * faColorsh - 1
-           else
-             bis := faColorsh;
-           for x := 0 to bis do
-           begin
-             Stelle := x + y * faColorsh;
-             faktor := x / bis;
-             for z := 0 to 3 do
-               a[z] := Trunc(b[y][z] + ((b[y + 1][z] - b[y][z]) * Faktor));
-             ACanvas.Pen.Color := RGB(a[0], a[1], a[2]);
-             if Horicontal then
-             begin
-               ACanvas.MoveTo(Rect.Left + Stelle, Rect.Top);
-               ACanvas.LineTo(Rect.Left + Stelle, Rect.Bottom);
-             end
-             else
-             begin
-               ACanvas.MoveTo(Rect.Left, Rect.Top + Stelle);
-               ACanvas.LineTo(Rect.Right, Rect.Top + Stelle);
-             end;
-           end;
-         end;
-         b := nil;
-         ACanvas.Pen.Width := merkw;
-         ACanvas.Pen.Style := merks;
-         ACanvas.Pen.Color := merkp;
-       end
-       else
-         // Please specify at least two colors 
-        raise EMathError.Create('Es mussen mindestens zwei Farben angegeben werden.');
-     end;
+    procedure DrawGradient(ACanvas: TCanvas; Rect: TRect;
+      Horicontal: Boolean; Colors: array of TColor);
+    type
+      RGBArray = array[0..2] of Byte;
+    var
+      x, y, z, stelle, mx, bis, faColorsh, mass: Integer;
+      Faktor: double;
+      A: RGBArray;
+      B: array of RGBArray;
+      merkw: integer;
+      merks: TPenStyle;
+      merkp: TColor;
+    begin
+      mx := High(Colors);
+      if mx > 0 then
+      begin
+        if Horicontal then
+          mass := Rect.Right - Rect.Left
+        else
+          mass := Rect.Bottom - Rect.Top;
+        SetLength(b, mx + 1);
+        for x := 0 to mx do
+        begin
+          Colors[x] := ColorToRGB(Colors[x]);
+          b[x][0] := GetRValue(Colors[x]);
+          b[x][1] := GetGValue(Colors[x]);
+          b[x][2] := GetBValue(Colors[x]);
+        end;
+        merkw := ACanvas.Pen.Width;
+        merks := ACanvas.Pen.Style;
+        merkp := ACanvas.Pen.Color;
+        ACanvas.Pen.Width := 1;
+        ACanvas.Pen.Style := psSolid;
+        faColorsh := Round(mass / mx);
+        for y := 0 to mx - 1 do
+        begin
+          if y = mx - 1 then
+            bis := mass - y * faColorsh - 1
+          else
+            bis := faColorsh;
+          for x := 0 to bis do
+          begin
+            Stelle := x + y * faColorsh;
+            faktor := x / bis;
+            for z := 0 to 3 do
+              a[z] := Trunc(b[y][z] + ((b[y + 1][z] - b[y][z]) * Faktor));
+            ACanvas.Pen.Color := RGB(a[0], a[1], a[2]);
+            if Horicontal then
+            begin
+              ACanvas.MoveTo(Rect.Left + Stelle, Rect.Top);
+              ACanvas.LineTo(Rect.Left + Stelle, Rect.Bottom);
+            end
+            else
+            begin
+              ACanvas.MoveTo(Rect.Left, Rect.Top + Stelle);
+              ACanvas.LineTo(Rect.Right, Rect.Top + Stelle);
+            end;
+          end;
+        end;
+        b := nil;
+        ACanvas.Pen.Width := merkw;
+        ACanvas.Pen.Style := merks;
+        ACanvas.Pen.Color := merkp;
+      end
+      else
+        // Please specify at least two colors 
+       raise EMathError.Create('Es mussen mindestens zwei Farben angegeben werden.');
+    end;
      
-     // Example Calls: 
+    // Example Calls: 
     // Aufrufbeispiele: 
      
     DrawGradient(Image1.Canvas, Rect(0, 0, 100, 200), False, [clRed, $00FFA9B4]);
      
-     DrawGradient(Canvas, GetClientRect, True, [121351, clBtnFace, clBlack, clWhite]);
+    DrawGradient(Canvas, GetClientRect, True, [121351, clBtnFace, clBlack, clWhite]);
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure FillGradientRect(Canvas: TCanvas; Recty: TRect; fbcolor, fecolor: TColor; fcolors: Integer);
      var
@@ -218,20 +223,20 @@ DelphiWorld 6.0
      end;
      
      
-     { 
+    { 
       Note, that the OnResize event should also call the FormPaint 
       method if this form is allowed to be resizable. 
       This is because if it is not called then when the 
       window is resized the gradient will not match the rest of the form. 
     }
-     
-     
-     
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
+
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://www.swissdelphicenter.ch>
 
     {***********************************************************}
      
@@ -282,4 +287,3 @@ DelphiWorld 6.0
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

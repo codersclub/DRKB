@@ -1,15 +1,12 @@
 ---
 Title: Рисование квадрата мышкой
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Рисование квадрата мышкой
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     private
        { Private declarations }
@@ -57,6 +54,3 @@ Date: 01.01.2007
        end;
      end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как создать цветовую паллитру?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
 Below are functions that help to create a palette (an identity palette,
 BTW) from an array of RGBQuads (such as you would find in the palette
@@ -20,162 +18,164 @@ palette animation, work in a 256-color mode, and change all the
 PC\_NOCOLLAPSE entries below to PC\_RESERVED. Besides creating the
 palette, the other pieces to the puzzle are:
 
-1. Override the form\'s GetPalette method, so that it returns the new
-palette.
+1. Override the form\'s GetPalette method, so that it returns the new palette.
 
 2. Select and realize the new palette just before you paint.
 
-OldPal := SelectPalette(Canvas.Handle, NewPalette, False);
-
-RealizePalette(Canvas.Handle);
-
-{ Do your painting here }
-
-SelectPalette(Canvas.Handle, OldPal, False);
+        OldPal := SelectPalette(Canvas.Handle, NewPalette, False);
+        RealizePalette(Canvas.Handle);
+        { Do your painting here }
+        SelectPalette(Canvas.Handle, OldPal, False);
 
 3. Remember to release the palette when you are done using DeleteObject
 
 4. If you are used using the RGB function to get color values, use the
-PaletteRGB function in its place.
+   PaletteRGB function in its place.
 
-    function CreateIdentityPalette(const aRGB; nColors: Integer): HPALETTE;
-    type
-      QA = array[0..255] of TRGBQUAD;
-    var
-      Palette: PLOGPALETTE;
-      PalSize: Word;
-      ScreenDC: HDC;
-      I: Integer;
-      nStaticColors: Integer;
-      nUsableColors: Integer;
+```delphi
+function CreateIdentityPalette(const aRGB; nColors: Integer): HPALETTE;
+type
+  QA = array[0..255] of TRGBQUAD;
+var
+  Palette: PLOGPALETTE;
+  PalSize: Word;
+  ScreenDC: HDC;
+  I: Integer;
+  nStaticColors: Integer;
+  nUsableColors: Integer;
+begin
+  PalSize := SizeOf(TLOGPALETTE) + SizeOf(TPALETTEENTRY) * 256;
+  GetMem(Palette, PalSize);
+  try
+    with Palette^ do
     begin
-      PalSize := SizeOf(TLOGPALETTE) + SizeOf(TPALETTEENTRY) * 256;
-      GetMem(Palette, PalSize);
+      palVersion := $0300;
+      palNumEntries := 256;
+      ScreenDC := GetDC(0);
       try
-        with Palette^ do
+        { For SYSPAL_NOSTATIC, just copy the color table into a PALETTEENTRY
+          array and replace the first and last entries with black and white }
+        if (GetSystemPaletteUse(ScreenDC) = SYSPAL_NOSTATIC) then
         begin
-          palVersion := $0300;
-          palNumEntries := 256;
-          ScreenDC := GetDC(0);
-          try
-            { For SYSPAL_NOSTATIC, just copy the color table into a PALETTEENTRY
-              array and replace the first and last entries with black and white }
-            if (GetSystemPaletteUse(ScreenDC) = SYSPAL_NOSTATIC) then
+          { Fill in the palette with the given values, marking each with PalFlag }
+ 
+{$R-}
+          for i := 0 to (nColors - 1) do
+            with palPalEntry[i], QA(aRGB)[I] do
             begin
-              { Fill in the palette with the given values, marking each with PalFlag }
-     
-    {$R-}
-              for i := 0 to (nColors - 1) do
-                with palPalEntry[i], QA(aRGB)[I] do
-                begin
-                  peRed := rgbRed;
-                  peGreen := rgbGreen;
-                  peBlue := rgbBlue;
-                  peFlags := PC_NOCOLLAPSE;
-                end;
-              { Mark any unused entries with PalFlag }
-              for i := nColors to 255 do
-                palPalEntry[i].peFlags := PC_NOCOLLAPSE;
-              { Make sure the last entry is white - This may replace an entry in the array!}
-              I := 255;
-              with palPalEntry[i] do
-              begin
-                peRed := 255;
-                peGreen := 255;
-                peBlue := 255;
-                peFlags := 0;
-              end;
-              { And the first is black - This may replace an entry in the array!}
-              with palPalEntry[0] do
-              begin
-                peRed := 0;
-                peGreen := 0;
-                peBlue := 0;
-                peFlags := 0;
-              end;
-    {$R+}
-            end
-            else
-            begin
-              { For SYSPAL_STATIC, get the twenty static colors into the
-                array, then fill in the empty spaces with the given color table }
-     
-              { Get the static colors from the system palette }
-              nStaticColors := GetDeviceCaps(ScreenDC, NUMRESERVED);
-              GetSystemPaletteEntries(ScreenDC, 0, 256, palPalEntry);
-    {$R-}
-              { Set the peFlags of the lower static colors to zero }
-              nStaticColors := nStaticColors shr 1;
-              for i := 0 to (nStaticColors - 1) do
-                palPalEntry[i].peFlags := 0;
-              { Fill in the entries from the given color table}
-              nUsableColors := nColors - nStaticColors;
-              for I := nStaticColors to (nUsableColors - 1) do
-                with palPalEntry[i], QA(aRGB)[i] do
-                begin
-                  peRed := rgbRed;
-                  peGreen := rgbGreen;
-                  peBlue := rgbBlue;
-                  peFlags := PC_NOCOLLAPSE;
-                end;
-              { Mark any empty entries as PC_NOCOLLAPSE }
-              for i := nUsableColors to (255 - nStaticColors) do
-                palPalEntry[i].peFlags := PC_NOCOLLAPSE;
-              { Set the peFlags of the upper static colors to zero }
-              for i := (256 - nStaticColors) to 255 do
-                palPalEntry[i].peFlags := 0;
+              peRed := rgbRed;
+              peGreen := rgbGreen;
+              peBlue := rgbBlue;
+              peFlags := PC_NOCOLLAPSE;
             end;
-          finally
-            ReleaseDC(0, ScreenDC);
-          end;
-        end;
-        { Return the palette }
-        Result := CreatePalette(Palette^);
-      finally
-        FreeMem(Palette, PalSize);
-      end;
-    end;
-     
-    procedure ClearSystemPalette;
-    var
-      Palette: PLOGPALETTE;
-      PalSize: Word;
-      ScreenDC: HDC;
-      I: Word;
-    const
-      ScreenPal: HPALETTE = 0;
-    begin
-      PalSize := SizeOf(TLOGPALETTE) + SizeOf(TPALETTEENTRY) * 255; {256th = [0] }
-      GetMem(Palette, PalSize);
-      try
-        FillChar(Palette^, PalSize, 0);
-        Palette^.palVersion := $0300;
-        Palette^.palNumEntries := 256;
-    {$R-}
-        for I := 0 to 255 do
-          with Palette^.palPalEntry[I] do
-            peFlags := PC_NOCOLLAPSE;
-    {$R+}
-        { Create, select, realize, deselect, and delete the palette }
-        ScreenDC := GetDC(0);
-        try
-          ScreenPal := CreatePalette(Palette^);
-          if ScreenPal <> 0 then
+          { Mark any unused entries with PalFlag }
+          for i := nColors to 255 do
+            palPalEntry[i].peFlags := PC_NOCOLLAPSE;
+          { Make sure the last entry is white - This may replace an entry in the array!}
+          I := 255;
+          with palPalEntry[i] do
           begin
-            ScreenPal := SelectPalette(ScreenDC, ScreenPal, FALSE);
-            RealizePalette(ScreenDC);
-            ScreenPal := SelectPalette(ScreenDC, ScreenPal, FALSE);
-            DeleteObject(ScreenPal);
+            peRed := 255;
+            peGreen := 255;
+            peBlue := 255;
+            peFlags := 0;
           end;
-        finally
-          ReleaseDC(0, ScreenDC);
+          { And the first is black - This may replace an entry in the array!}
+          with palPalEntry[0] do
+          begin
+            peRed := 0;
+            peGreen := 0;
+            peBlue := 0;
+            peFlags := 0;
+          end;
+{$R+}
+        end
+        else
+        begin
+          { For SYSPAL_STATIC, get the twenty static colors into the
+            array, then fill in the empty spaces with the given color table }
+ 
+          { Get the static colors from the system palette }
+          nStaticColors := GetDeviceCaps(ScreenDC, NUMRESERVED);
+          GetSystemPaletteEntries(ScreenDC, 0, 256, palPalEntry);
+{$R-}
+          { Set the peFlags of the lower static colors to zero }
+          nStaticColors := nStaticColors shr 1;
+          for i := 0 to (nStaticColors - 1) do
+            palPalEntry[i].peFlags := 0;
+          { Fill in the entries from the given color table}
+          nUsableColors := nColors - nStaticColors;
+          for I := nStaticColors to (nUsableColors - 1) do
+            with palPalEntry[i], QA(aRGB)[i] do
+            begin
+              peRed := rgbRed;
+              peGreen := rgbGreen;
+              peBlue := rgbBlue;
+              peFlags := PC_NOCOLLAPSE;
+            end;
+          { Mark any empty entries as PC_NOCOLLAPSE }
+          for i := nUsableColors to (255 - nStaticColors) do
+            palPalEntry[i].peFlags := PC_NOCOLLAPSE;
+          { Set the peFlags of the upper static colors to zero }
+          for i := (256 - nStaticColors) to 255 do
+            palPalEntry[i].peFlags := 0;
         end;
       finally
-        FreeMem(Palette, PalSize);
+        ReleaseDC(0, ScreenDC);
       end;
     end;
+    { Return the palette }
+    Result := CreatePalette(Palette^);
+  finally
+    FreeMem(Palette, PalSize);
+  end;
+end;
+ 
+procedure ClearSystemPalette;
+var
+  Palette: PLOGPALETTE;
+  PalSize: Word;
+  ScreenDC: HDC;
+  I: Word;
+const
+  ScreenPal: HPALETTE = 0;
+begin
+  PalSize := SizeOf(TLOGPALETTE) + SizeOf(TPALETTEENTRY) * 255; {256th = [0] }
+  GetMem(Palette, PalSize);
+  try
+    FillChar(Palette^, PalSize, 0);
+    Palette^.palVersion := $0300;
+    Palette^.palNumEntries := 256;
+{$R-}
+    for I := 0 to 255 do
+      with Palette^.palPalEntry[I] do
+        peFlags := PC_NOCOLLAPSE;
+{$R+}
+    { Create, select, realize, deselect, and delete the palette }
+    ScreenDC := GetDC(0);
+    try
+      ScreenPal := CreatePalette(Palette^);
+      if ScreenPal <> 0 then
+      begin
+        ScreenPal := SelectPalette(ScreenDC, ScreenPal, FALSE);
+        RealizePalette(ScreenDC);
+        ScreenPal := SelectPalette(ScreenDC, ScreenPal, FALSE);
+        DeleteObject(ScreenPal);
+      end;
+    finally
+      ReleaseDC(0, ScreenDC);
+    end;
+  finally
+    FreeMem(Palette, PalSize);
+  end;
+end;
+```
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     unit VideoFcns;
      
@@ -306,9 +306,12 @@ Here is an example how palette is used:
       GlobalFree(hBmp);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://delphiworld.narod.ru>
 
     var
       Form1: TForm1;
@@ -374,4 +377,3 @@ Here is an example how palette is used:
         BlueVal := 0;
     end;
 
-Взято с <https://delphiworld.narod.ru>

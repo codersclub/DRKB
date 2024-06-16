@@ -1,15 +1,12 @@
 ---
 Title: Рисование звезд и многоугольников
-Date: 01.01.2007
+Author: Федоровских Николай (Fenik), chook_nu@uraltc.ru
+Date: 03.06.2002
 ---
 
 
 Рисование звезд и многоугольников
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Рисование звёзд и многоугольников
@@ -103,4 +100,4 @@ Date: 01.01.2007
 Пример использования:
 
     DrawStar(FBitmap.Canvas, Point(FBitmap.Width div 2, FBitmap.Height div 2),
-      Point(FBitmap.Width div 2, 0), 20, 12, False); 
+                             Point(FBitmap.Width div 2, 0), 20, 12, False); 

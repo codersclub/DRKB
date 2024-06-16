@@ -1,15 +1,11 @@
 ---
-Title: CMYK -> RGB
+Title: Преобразование CMYK -> RGB
 Date: 01.01.2007
 ---
 
 
-CMYK -> RGB
+Преобразование CMYK -> RGB
 ===========
-
-::: {.date}
-01.01.2007
-:::
 
     procedure CMYKTORGB(C : byte;
                         M: byte;

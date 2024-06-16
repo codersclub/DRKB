@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как преобразовать шестнадцатиричный цвет HTML в TColor?
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit colours;
      
     interface
@@ -50,4 +46,4 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>

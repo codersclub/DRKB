@@ -37,6 +37,7 @@ Author: hex (https://gamedev.ru/users/?id=14)
 или Dxw.
 
 Ну, так что, приступим.
+
 Для начала кидаем компонент DxSound на форму.
 Затем кидаем DXWaveList и в закладке Properties напротив DXSound
 выбираем наш саунд :). Теперь давайте загрузим наш первый звук. Это
@@ -49,42 +50,42 @@ Author: hex (https://gamedev.ru/users/?id=14)
 
 Для Playerone:
 
-      if isbutton1 in Form1.DXInput1.States then
+    if isbutton1 in Form1.DXInput1.States then
+    begin
+      if lngpolet-oldlngpolet>=250 then
       begin
-        if lngpolet-oldlngpolet>=250 then
+        Inc(lngpolet);
+        with TPlayerFa.Create(Engine) do
         begin
-          Inc(lngpolet);
-          with TPlayerFa.Create(Engine) do
-          begin
-            form1.DXWaveList1.Items.Find('fa').Play(true);
-            Image := form1.DXImageList1.Items.Find('pul');
-            X:=self.X+cos256(ang)*55;
-            Y:=self.y+sin256(ang)*55;
-            anglefa:=ang;
-            oldlngpolet := lngpolet;
-          end;
+          form1.DXWaveList1.Items.Find('fa').Play(true);
+          Image := form1.DXImageList1.Items.Find('pul');
+          X:=self.X+cos256(ang)*55;
+          Y:=self.y+sin256(ang)*55;
+          anglefa:=ang;
+          oldlngpolet := lngpolet;
         end;
       end;
+    end;
 
 Для Playertwo:
 
-      if fa=true then
+    if fa=true then
+    begin
+      if lngpolet-oldlngpolet>=250 then
       begin
-        if lngpolet-oldlngpolet>=250 then
+        Inc(lngpolet);
+        with TPlayerFa.Create(Engine) do
         begin
-          Inc(lngpolet);
-          with TPlayerFa.Create(Engine) do
-          begin
-            form1.DXWaveList1.Items.Find('fa').Play(true);
-            Image := form1.DXImageList1.Items.Find('pul');
-            X:=self.X+cos256(ang2)*55;
-            Y:=self.y+sin256(ang2)*55;
-            anglefa:=ang2;
-            oldlngpolet := lngpolet;
-          end;
-          fa:=false;
+          form1.DXWaveList1.Items.Find('fa').Play(true);
+          Image := form1.DXImageList1.Items.Find('pul');
+          X:=self.X+cos256(ang2)*55;
+          Y:=self.y+sin256(ang2)*55;
+          anglefa:=ang2;
+          oldlngpolet := lngpolet;
         end;
+        fa:=false;
       end;
+    end;
 
 Следующий пример со стереоэффектом.
 Этот пример будет способен различать, в какой стороне находится патрон,
@@ -92,8 +93,9 @@ Author: hex (https://gamedev.ru/users/?id=14)
 
 Let\'s GO!! :)
 
-Перед implementation в Var добавляем две переменные:  
-pulxpl, CurrentPanpl:integer;
+Перед implementation в Var добавляем две переменные:
+
+    pulxpl, CurrentPanpl:integer;
 
 Первая - это X патрона, вторая это высота звука и место расположения.
 
@@ -133,6 +135,7 @@ MediaPlayer. Совет для всех: чтобы музыка коррект�
 игра ещё не загрузилась, а музыка будет играть.
 
 Вот и всё.
+
 Скачать можно [первый пример](part7.1.rar),
 [второй пример](part7.2.rar).
 

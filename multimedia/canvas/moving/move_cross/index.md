@@ -1,15 +1,12 @@
 ---
 Title: Двигаем крестик для показа значений X/Y
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Двигаем крестик для показа значений X/Y
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     // TPanel, TImage e TLabel components
     // Insert Image into Panel...
@@ -77,4 +74,3 @@ Date: 01.01.2007
       LabelHint.Caption := '(X:' + IntToStr(X) + ' x Y:' + IntToStr(Y) +')';
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

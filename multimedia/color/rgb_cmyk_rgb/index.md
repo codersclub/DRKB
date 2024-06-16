@@ -8,34 +8,20 @@ Date: 01.01.2007
 Как преобразовать цвета RGB в CMYK и обратно?
 =============================================
 
-::: {.date}
-01.01.2007
-:::
-
 The following functions RGBTOCMYK() and CMYKTORGB()
-
 demonstrate how to convert between RGB and CMYK color
+spaces.
 
-spaces. Note: There is a direct relationship between RGB
-
+**Note:** There is a direct relationship between RGB
 colors and CMY colors. In a CMY color, black tones are
-
 achieved by printing equal amounts of Cyan, Magenta, and
-
 Yellow ink. The black component in a CMY color is achieved
-
 by reducing the CMY components by the minimum of (C, M,
-
 and Y) and substituting pure black in its place producing a
-
 sharper print and using less ink. Since it is possible for a user
-
 to boost the C,M and Y components where boosting the black
-
 component would have been preferable, a ColorCorrectCMYK()
-
 function is provided to achieve the same color by reducing the
-
 C, M and Y components, and boosting the K component.
 
 Example:
@@ -101,5 +87,3 @@ Example:
      Y := Y - MinColor;
      K := K + MinColor;
     end;
-
-Автор: p0s0l

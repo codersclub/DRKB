@@ -1,15 +1,12 @@
 ---
 Title: Кораблик
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Кораблик
 ========
-
-::: {.date}
-01.01.2007
-:::
 
     unit ship_;
      
@@ -110,6 +107,3 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -1,22 +1,17 @@
 ---
 Title: Заполняем Canvas рисунком с рабочего стола, учитывая координаты
 Date: 01.01.2007
+Author: Зайцев О.В., Владимиров А.М.
+Source: <https://forum.sources.ru>
 ---
 
 
 Заполняем Canvas рисунком с рабочего стола, учитывая координаты
 ===============================================================
 
-::: {.date}
-01.01.2007
-:::
-
     Function PaintDesktop(HDC) : boolean;
 
-Например: PaintDesktop(form1.Canvas.Handle);
+Например:
 
-Зайцев О.В.
+    PaintDesktop(form1.Canvas.Handle);
 
-Владимиров А.М.
-
-Взято из <https://forum.sources.ru>

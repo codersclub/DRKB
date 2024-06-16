@@ -2,19 +2,12 @@
 Title: Приложение для просмотра растровых приложений JPG, JPEG, BMP
 Author: Akella
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Приложение для просмотра растровых приложений JPG, JPEG, BMP
 ============================================================
 
-::: {.date}
-01.01.2007
-:::
-
-
 [Приложение для просмотра растровых приложений JPG, JPEG, BMP](10_2.zip)
 
-Автор: Akella
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

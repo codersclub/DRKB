@@ -7,61 +7,68 @@ Date: 01.01.2007
 Как выбрать цвет пользуя TTrackBar?
 ===================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Drop three TrackBars on a form. Set Min to 0, Max to 255. Drop a TImage
-on the form. Then try this code:
+- Drop three TrackBars on a form.
+- Set Min to 0, Max to 255.
+- Drop a TImage on the form.
+- Then try this code:
 
-    { ... }
-    var
-      Form1: TForm1;
-      MyColor: LongWord;
-      RedColor: LongWord = $00000000;
-      GreenColor: LongWord = $00000000;
-      BlueColor: LongWord = $00000000;
-     
-    implementation
-     
-    {$R *.DFM}
-     
-    procedure TForm1.FormCreate(Sender: TObject);
-    begin
-      DoImageFill;
-    end;
-     
-    procedure TForm1.DoImageFill;
-    begin
-      MyColor := RedColor or GreenColor or BlueColor;
-      Image1.Canvas.Brush.Color := TColor(MyColor);
-      Image1.Canvas.FillRect(Rect(0, 0, Image1.Width, Image1.Height));
-    end;
-     
-    procedure TForm1.RedBarChange(Sender: TObject);
-    begin
-      RedColor := RedBar.Position;
-      DoImageFill;
-    end;
-     
-    procedure TForm1.GreenBarChange(Sender: TObject);
-    begin
-      GreenColor := GreenBar.Position shl 8;
-      DoImageFill;
-    end;
-     
-    procedure TForm1.BlueBarChange(Sender: TObject);
-    begin
-      BlueColor := BlueBar.Position shl 16;
-      DoImageFill;
-    end;
-     
-    end.
+```delphi
+{ ... }
+var
+  Form1: TForm1;
+  MyColor: LongWord;
+  RedColor: LongWord = $00000000;
+  GreenColor: LongWord = $00000000;
+  BlueColor: LongWord = $00000000;
+ 
+implementation
+ 
+{$R *.DFM}
+ 
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  DoImageFill;
+end;
+ 
+procedure TForm1.DoImageFill;
+begin
+  MyColor := RedColor or GreenColor or BlueColor;
+  Image1.Canvas.Brush.Color := TColor(MyColor);
+  Image1.Canvas.FillRect(Rect(0, 0, Image1.Width, Image1.Height));
+end;
+ 
+procedure TForm1.RedBarChange(Sender: TObject);
+begin
+  RedColor := RedBar.Position;
+  DoImageFill;
+end;
+ 
+procedure TForm1.GreenBarChange(Sender: TObject);
+begin
+  GreenColor := GreenBar.Position shl 8;
+  DoImageFill;
+end;
+ 
+procedure TForm1.BlueBarChange(Sender: TObject);
+begin
+  BlueColor := BlueBar.Position shl 16;
+  DoImageFill;
+end;
+ 
+end.
+```
 
 ------------------------------------------------------------------------
 
-Each color value ranges from 0 to 255. Set the three trackbars with this
-range. You can use the RGB function to create a color from these values.
+Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
+
+Each color value ranges from 0 to 255.
+Set the three trackbars with this range.
+You can use the RGB function to create a color from these values.
 
     { ... }
     type
@@ -98,4 +105,3 @@ range. You can use the RGB function to create a color from these values.
       ChangeColor;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

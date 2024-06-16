@@ -1,15 +1,12 @@
 ---
 Title: Движение окружности
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Движение окружности
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -50,13 +47,13 @@ Date: 01.01.2007
      
     procedure Ris;
     begin
-         // стереть окружность
+      // стереть окружность
       form1.Canvas.Pen.Color := form1.Color;
       form1.Canvas.Ellipse(x, y, x + 10, y + 10);
      
       x := x + dx;
      
-         // нарисовать окружность на новом месте
+      // нарисовать окружность на новом месте
       form1.Canvas.Pen.Color := clBlack;
       form1.Canvas.Ellipse(x, y, x + 10, y + 10);
     end;
@@ -68,6 +65,4 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

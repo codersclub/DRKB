@@ -1,18 +1,17 @@
 ---
 Title: Как создать временный Canvas?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как создать временный Canvas?
 =============================
 
-::: {.date}
-01.01.2007
-:::
-
 Создайте Bitmap, и воспользуйтесь свойством холста TBitmap-а, чтобы
-рисовать на нём. Следующий пример создаёт Bitmap, рисует на его
+рисовать на нём.
+
+Следующий пример создаёт Bitmap, рисует на его
 canvas-е, рисует canvas на форме, а затем освобождает bitmap.
 
     procedure TForm1.Button1Click(Sender: TObject); 
@@ -30,4 +29,3 @@ canvas-е, рисует canvas на форме, а затем освобожда
       bm.Free; 
     end;
 
-Взято из <https://forum.sources.ru>

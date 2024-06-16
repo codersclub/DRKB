@@ -2,15 +2,12 @@
 Title: Инверсия цветов
 Author: Song
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Инверсия цветов
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
     function InvertBitmap(Bmp: TBitmap): TBitmap;
     var
@@ -30,8 +27,6 @@ Date: 01.01.2007
     end;
 
 
-
-
 ПРИМЕР ИСПОЛЬЗОВАНИЯ:
 
     procedure TForm1.Button1Click(Sender: TObject);
@@ -39,6 +34,4 @@ Date: 01.01.2007
       Image1.Picture.Bitmap := InvertBitmap(Image1.Picture.Bitmap);
     end;
 
-Взято из <https://forum.sources.ru>
 
-Автор: Song

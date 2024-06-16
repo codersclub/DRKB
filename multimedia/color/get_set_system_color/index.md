@@ -1,15 +1,12 @@
 ---
 Title: Получить и установить системные цвета
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Получить и установить системные цвета
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     var 
      
@@ -23,7 +20,6 @@ Date: 01.01.2007
       changes the current Windows session only. 
       The new colors are not saved when Windows terminates. 
       For a list of color elements see  Win32 API Help - Function GetSysColor 
-     
      
       Open the ColorDialog - and set the new color systemwide 
     } 
@@ -55,4 +51,3 @@ Date: 01.01.2007
       SetSysColors(1, Element, OldColor); 
     end;
 
-Взято с <https://delphiworld.narod.ru>

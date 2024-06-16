@@ -1,15 +1,12 @@
 ---
 Title: Как получить более светлый или более темный цвет?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить более светлый или более темный цвет?
 =================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Here's some function that returns the lighter or darker color of a TColor. 
@@ -49,4 +46,3 @@ Date: 01.01.2007
         Max(GetBValue(ColorToRGB(BaseColor)) - 64, 0)); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

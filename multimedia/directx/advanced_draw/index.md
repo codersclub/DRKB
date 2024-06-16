@@ -1,22 +1,15 @@
 ---
 Title: Advanced Draw
-Author: Daddy
+Author: Daddy, http://daddy.mirgames.ru
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Advanced Draw
 =============
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Daddy
-
-WEB-сайт: http://daddy.mirgames.ru
-
-Кручу-верчу, обмануть хочу, или как использовать продвинутые методы
+_Кручу-верчу, обмануть хочу,_ или как использовать продвинутые методы
 вывода спрайтов. В классе TSprite есть три метода: DoDraw, DoCollision и
 DoMove Чтобы заставить спрайт созданный таким образом:
 
@@ -77,6 +70,3 @@ Alpha (прозрачность спрайта). Примерно так:
        Alpha:=150;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

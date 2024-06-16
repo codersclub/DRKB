@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как получить средний цвет между двумя цветами?
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     function GetColorBetween(StartColor, EndColor: TColor; Pointvalue, Von, Bis:
       Extended): TColor;
@@ -82,6 +80,14 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Author: Dmitri Papichev
+
+Date: 12.12.2001
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
+
     //------------------------------------------------------------------------------
     // Function for getting mixed color from two given colors, with a relative
     // distance from two colors determined by Position value inside
@@ -130,4 +136,3 @@ Date: 01.01.2007
       Result := RGB(R, G, B);
     end; {--GetMixedColor--}
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
