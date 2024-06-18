@@ -1,15 +1,12 @@
 ---
 Title: Узнать / установить разрешение JPEG?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Узнать / установить разрешение JPEG?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure GetResJpg(JPGFile: string);
     const
@@ -80,4 +77,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

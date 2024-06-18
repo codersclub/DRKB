@@ -1,15 +1,12 @@
 ---
 Title: Как получить размер GIF-картинки?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Как получить размер GIF-картинки?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
        TImageSize = record
@@ -58,4 +55,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -2,6 +2,7 @@
 Title: Как построить график, используя модуль Recognition?
 Author: Smike
 Date: 01.01.2007
+Source: <https://blackman.wp-club.net/>
 ---
 
 
@@ -38,4 +39,3 @@ Date: 01.01.2007
             round(PaintBox1.Height / 2 - Num * YScale)] := col;
     end;
 
-Взято с сайта <https://blackman.wp-club.net/>

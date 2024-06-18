@@ -7,10 +7,6 @@ Date: 01.01.2007
 Приложение для просмотра изображений JPEG и BMP
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit mainUnit;
      
     interface
@@ -112,12 +108,12 @@ Date: 01.01.2007
     begin
       with Sender as TSavePictureDialog do
       begin
-    //родительская панель
+        //родительская панель
         PicPanel := (FindComponent('PicturePanel') as TPanel);
         if not Assigned(PicPanel) then Exit;
         ParentHandle := GetParent(Handle);
      
-    //панель-сосед сверху
+        //панель-сосед сверху
         PaintPanel := (FindComponent('PaintPanel') as TPanel);
         PaintPanel.Align := alNone;
         if FilterIndex > 1 then

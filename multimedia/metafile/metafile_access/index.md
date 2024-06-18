@@ -1,15 +1,12 @@
 ---
 Title: Как получить доступ к объекту метафайла?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как получить доступ к объекту метафайла?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Below is an example of getting metafile information and enumerating each
 metafile record :
@@ -64,4 +61,3 @@ metafile record :
       MyMetafile.Free;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -2,19 +2,12 @@
 Title: За какое время было создано изображение?
 Author: Даниил Карапетян
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 За какое время было создано изображение?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Даниил Карапетян
-
-WEB сайт: http://program.dax.ru
 
 При нажатии на Button1 используется свойство Pixels, а при нажатии на
 Button2 - ScanLine. В заголовок окна выводится время в миллисекундах, за
@@ -64,8 +57,5 @@ Button2 - ScanLine. В заголовок окна выводится время
       Form1.Canvas.Draw(0, 0, bm);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
-
- 
+WEB сайт: http://program.dax.ru

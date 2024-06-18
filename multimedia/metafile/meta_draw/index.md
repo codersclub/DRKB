@@ -1,15 +1,12 @@
 ---
 Title: Как нарисовать метафайл?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как нарисовать метафайл?
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Metaform;
      
@@ -134,4 +131,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

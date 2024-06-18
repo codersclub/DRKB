@@ -1,15 +1,12 @@
 ---
 Title: Как показать на экpане и сохранить в базе картинку формата JPEG
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как показать на экpане и сохранить в базе картинку формата JPEG
 ===============================================================
-
-::: {.date}
-01.01.2007
-:::
 
     if Picture.Graphic is TJPegImage then
     begin
@@ -32,8 +29,4 @@ Date: 01.01.2007
     end
     else
       Field.Clear;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

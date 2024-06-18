@@ -1,15 +1,12 @@
 ---
 Title: Как загрузить и отмасштабировать JPEGImage в TImage
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как загрузить и отмасштабировать JPEGImage в TImage
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
     try
       Image1.Picture.Graphic := nil;
@@ -24,6 +21,4 @@ Date: 01.01.2007
       TJPEGImage(Image1.Picture.Graphic).Performance := jpBestSpeed;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

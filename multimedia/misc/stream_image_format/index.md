@@ -1,16 +1,13 @@
 ---
 Title: Как определить формат изображения, загруженного в TMemoryStream?
 Author: Smike
+Source: <https://forum.sources.ru>
 Date: 01.01.2007
 ---
 
 
 Как определить формат изображения, загруженного в TMemoryStream?
 ================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TImageType = (NoImage, Bmp, Gif, Gif89, Png, Jpg);
@@ -33,9 +30,6 @@ Date: 01.01.2007
       else if PW^ = $D8FF then Result := Jpg
       else Result := NoImage;
     end;
-
-
-
 
 Пользоваться можно так:
 
@@ -60,6 +54,3 @@ Date: 01.01.2007
       else Result := NoImage;
     end;
 
-Автор: Smike
-
-Взято из <https://forum.sources.ru>

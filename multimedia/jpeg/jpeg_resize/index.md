@@ -8,9 +8,9 @@ Date: 01.01.2007
 Изменение размеров JPEG Image?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {
      
@@ -26,7 +26,6 @@ Date: 01.01.2007
       gets the JPEG dimensions without actually loading the JPEG into a bitmap,
       saves loads of time if you only need to test its size before resizing.
     }
-     
      
      
     uses
@@ -254,9 +253,13 @@ Date: 01.01.2007
       end; {with}
     end; {JPEGDimensions}
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: RoboSol
+
+Source: <https://forum.sources.ru>
 
 загрузи в bitmap, измени размеры, сделай Stretch и сохрани.
 
@@ -297,6 +300,3 @@ Date: 01.01.2007
 
 Не забудь USES Jpeg;
 
-Автор: RoboSol
-
-Взято из <https://forum.sources.ru>

@@ -2,15 +2,12 @@
 Title: Загрузка JPEG из ресурсов
 Author: Smike
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Загрузка JPEG из ресурсов
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     uses Jpeg;
     {$R test.res}
@@ -38,16 +35,8 @@ Date: 01.01.2007
     end;
 
 
-Для JPEG, загнанного в ресурсы таким образом:
-
-
- 
+Для JPEG, загнанного в ресурсы, таким образом:
 
     MYJPEG RCDATA "Test.jpg" 
 
 
-
-
-Автор: Smike
-
-Взято из <https://forum.sources.ru>
