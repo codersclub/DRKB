@@ -1,18 +1,12 @@
 ---
 Title: Динамическая загрузка спрайтов
-Author: Spose
+Author: Spose, <https://www.mirgames.ru>
 Date: 01.01.2007
 ---
 
 
 Динамическая загрузка спрайтов
 ==============================
-
-::: {.date}
-01.01.2007
-:::
-
-Динамическая загрузка спрайтов
 
 Если делать игру с большим количеством графических изображений, то
 неразумно будет загружать их все сразу, например зачем в основном меню
@@ -24,42 +18,34 @@ Date: 01.01.2007
 
 При загрузке сцены пишем:
 
-    loadpicdata(DxImagelist1 {Вместо DxImagelist1 имя вашего TdxImageLista},'Menu' {Тут название файла со списком используемых картинок данной сцены});
+    loadpicdata(DxImagelist1 {Вместо DxImagelist1 имя вашего TdxImageLista},
+                'Menu' {Тут название файла со списком используемых картинок данной сцены});
 
 Формат файла со списком такой:
 
-[название] (название одинаково с именем файла, только без расширения)
-PictureHeight=800 (Высота картинки)
-PictureWidth=600 (Ширина картинки)
-PatternHeight=0 (Высота кадра (если в картинке несколько кадров))
-PatternWidth=0 (Ширина кадра)
-SkipHeight=0 (Пропуск высоты, пусть останеться 0)
-SkipWidth=0 (Пропуск ширины, пусть останеться 0)
-SystemMemory=0 (Пока не надо, пусть останеться 0)
-Transparent=0 (Прозрачен или нет)
-TransparentColor=clBlack (Цвет прозрачности)
+    [название] (название одинаково с именем файла, только без расширения)
+    PictureHeight=800 (Высота картинки)
+    PictureWidth=600 (Ширина картинки)
+    PatternHeight=0 (Высота кадра (если в картинке несколько кадров))
+    PatternWidth=0 (Ширина кадра)
+    SkipHeight=0 (Пропуск высоты, пусть останеться 0)
+    SkipWidth=0 (Пропуск ширины, пусть останеться 0)
+    SystemMemory=0 (Пока не надо, пусть останеться 0)
+    Transparent=0 (Прозрачен или нет)
+    TransparentColor=clBlack (Цвет прозрачности)
 
 
 Например кусочек файла "game.dat":
 
     [enemy]
-
     PictureHeight=96
-
     PictureWidth=192
-
     PatternHeight=0
-
     PatternWidth=48
-
     SkipHeight=0
-
     SkipWidth=0
-
     SystemMemory=0
-
     Transparent=1
-
     TransparentColor=$00FF8040
 
 При этом файлы должны лежать в папке Pictures\\Bmp (если они Bitmapы)
@@ -68,8 +54,7 @@ TransparentColor=clBlack (Цвет прозрачности)
 
 А вот и сама процедура загрузки:
 
-
-PS. В USES надо дописать DIB, Jpeg, iniFiles
+**PS.** В USES надо дописать DIB, Jpeg, iniFiles
 
     Procedure TForm1.LoadPicData( var DXImageList : TDXImageList; FileName : string);
     Var
@@ -161,6 +146,4 @@ PS. В USES надо дописать DIB, Jpeg, iniFiles
      end;
     end;
 
-<https://www.mirgames.ru>
 
-Автор: Spose
