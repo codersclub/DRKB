@@ -1,17 +1,13 @@
 ---
-Title: Изменение размера
+Title: Изменение размера изображения
 Date: 01.01.2007
 ---
 
 
-Изменение размера
+Изменение размера изображения
 =================
 
-::: {.date}
-01.01.2007
-:::
-
-     {
+    {
     This function resizes a bitmap calculating the average color of a rectangular 
     area of pixels from source bitmap to a pixel or a rectangular area to target 
     bitmap. 
@@ -38,18 +34,18 @@ Date: 01.01.2007
            if x >= 0 then Result := Result + 1
            else
              Result := Result - 1;
-         // Result := Trunc(X + (-2 * Ord(X < 0) + 1) * 0.5); 
-      end;
+          // Result := Trunc(X + (-2 * Ord(X < 0) + 1) * 0.5); 
+       end;
      
      begin
        // Set target size 
      
-      imgd.Width  := nw;
+       imgd.Width  := nw;
        imgd.Height := nh;
      
        // Calcs width & height of every area of pixels of the source bitmap 
      
-      saltx := imgo.Width / nw;
+       saltx := imgo.Width / nw;
        salty := imgo.Height / nh;
      
      
@@ -58,7 +54,7 @@ Date: 01.01.2007
        begin
          // Set the initial and final Y coordinate of a pixel area 
      
-        yini := yfi;
+         yini := yfi;
          yfi  := yini + salty;
          if yfi >= imgo.Height then yfi := imgo.Height - 1;
      
@@ -67,15 +63,15 @@ Date: 01.01.2007
          begin
            // Set the inital and final X coordinate of a pixel area 
      
-          xini := xfi;
+           xini := xfi;
            xfi  := xini + saltx;
            if xfi >= imgo.Width then xfi := imgo.Width - 1;
      
      
            // This loop calcs del average result color of a pixel area 
-          // of the imaginary grid 
+           // of the imaginary grid 
      
-          r := 0;
+           r := 0;
            g := 0;
            b := 0;
            tpix := 0;
@@ -94,7 +90,7 @@ Date: 01.01.2007
      
            // Draws the result pixel 
      
-          imgd.Canvas.Pixels[x, y] :=
+           imgd.Canvas.Pixels[x, y] :=
              rgb(MyRound(r / tpix),
              MyRound(g / tpix),
              MyRound(b / tpix)

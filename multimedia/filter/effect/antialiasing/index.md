@@ -8,11 +8,13 @@ Date: 01.01.2007
 Сглаживание (antialiasing)
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-    {The parameter "percent" needs an integer between 0 and 100 (include zero and 100). If "Percent" is 0, there will be no effect. If it's 100 there will be the strongest effect.} 
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+
+    {The parameter "percent" needs an integer between 0 and 100 (include zero and 100).
+     If "Percent" is 0, there will be no effect.
+     If it's 100 there will be the strongest effect.} 
      
     procedure Antialising(C: TCanvas; Rect: TRect; Percent: Integer); 
     var 
@@ -33,7 +35,6 @@ Date: 01.01.2007
             R1 := GetRValue(Pixels[p, l]); 
             G1 := GetGValue(Pixels[p, l]); 
             B1 := GetBValue(Pixels[p, l]); 
-     
      
             //Pixel links 
             //Pixel left 
@@ -100,9 +101,16 @@ Date: 01.01.2007
       Antialising(Image1.Canvas, Image1.Canvas.ClipRect, 100); 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Rouse\_
+
+Source: <https://forum.sources.ru>
+
+Date: 15.08.2000
 
     {***************************************************************
     *
@@ -117,7 +125,6 @@ Date: 01.01.2007
     * Date    : 15/08/2000
     *
     ***************************************************************}
-     
      
     unit FAAlias;
      
@@ -180,8 +187,6 @@ Date: 01.01.2007
      
     var
       AntiAliasForm: TAntiAliasForm;
-     
-     
      
     const
         MaxPixelCount   =  32768;
@@ -256,8 +261,7 @@ Date: 01.01.2007
         end; // end for columns
       end; // end for rows
     end;
-     
-     
+    
      
     {***************************************************************
      TAntiAliasForm.FastAAliasPicture
@@ -513,7 +517,6 @@ Date: 01.01.2007
     end;
      
      
-     
     {***************************************************************
      TAntiAliasForm.FormCreate
        15/08/2000
@@ -529,7 +532,6 @@ Date: 01.01.2007
      
       // Initialize original bitmap
       DrawFace(Orig_bmp, 2);
-     
      
       // Create supersampled bitmap
       big_bmp := TBitmap.Create;
@@ -596,8 +598,6 @@ Date: 01.01.2007
     end;
      
      
-     
-     
     {***************************************************************
      TAntiAliasForm.Label10Click
        16/08/2000
@@ -643,119 +643,119 @@ Date: 01.01.2007
      
     end.
 
-***************************************************
-
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: alioth
+
+Source: <https://www.swissdelphicenter.ch>
 
     {Originally written by Horst Kniebusch, modified by alioth to make it(alot) faster. 
     }
      
-     procedure Antialiasing(Image: TImage; Percent: Integer);
-     type
-       TRGBTripleArray = array[0..32767] of TRGBTriple;
-       PRGBTripleArray = ^TRGBTripleArray;
-     var
-       SL, SL2: PRGBTripleArray;
-       l, m, p: Integer;
-       R, G, B: TColor;
-       R1, R2, G1, G2, B1, B2: Byte;
-     begin
-       with Image.Canvas do
-       begin
-         Brush.Style  := bsClear;
-         Pixels[1, 1] := Pixels[1, 1];
-         for l := 0 to Image.Height - 1 do
-         begin
-           SL := Image.Picture.Bitmap.ScanLine[l];
-           for p := 1 to Image.Width - 1 do
-           begin
-             R1 := SL[p].rgbtRed;
-             G1 := SL[p].rgbtGreen;
-             B1 := SL[p].rgbtBlue;
+    procedure Antialiasing(Image: TImage; Percent: Integer);
+    type
+      TRGBTripleArray = array[0..32767] of TRGBTriple;
+      PRGBTripleArray = ^TRGBTripleArray;
+    var
+      SL, SL2: PRGBTripleArray;
+      l, m, p: Integer;
+      R, G, B: TColor;
+      R1, R2, G1, G2, B1, B2: Byte;
+    begin
+      with Image.Canvas do
+      begin
+        Brush.Style  := bsClear;
+        Pixels[1, 1] := Pixels[1, 1];
+        for l := 0 to Image.Height - 1 do
+        begin
+          SL := Image.Picture.Bitmap.ScanLine[l];
+          for p := 1 to Image.Width - 1 do
+          begin
+            R1 := SL[p].rgbtRed;
+            G1 := SL[p].rgbtGreen;
+            B1 := SL[p].rgbtBlue;
+    
+            // Left 
+           if (p < 1) then m := Image.Width
+            else
+              m := p - 1;
+            R2 := SL[m].rgbtRed;
+            G2 := SL[m].rgbtGreen;
+            B2 := SL[m].rgbtBlue;
+            if (R1 <> R2) or (G1 <> G2) or (B1 <> B2) then
+            begin
+              R := Round(R1 + (R2 - R1) * 50 / (Percent + 50));
+              G := Round(G1 + (G2 - G1) * 50 / (Percent + 50));
+              B := Round(B1 + (B2 - B1) * 50 / (Percent + 50));
+              SL[m].rgbtRed := R;
+              SL[m].rgbtGreen := G;
+              SL[m].rgbtBlue := B;
+            end;
+    
+            //Right 
+           if (p > Image.Width - 2) then m := 0
+            else
+              m := p + 1;
+            R2 := SL[m].rgbtRed;
+            G2 := SL[m].rgbtGreen;
+            B2 := SL[m].rgbtBlue;
+            if (R1 <> R2) or (G1 <> G2) or (B1 <> B2) then
+            begin
+              R := Round(R1 + (R2 - R1) * 50 / (Percent + 50));
+              G := Round(G1 + (G2 - G1) * 50 / (Percent + 50));
+              B := Round(B1 + (B2 - B1) * 50 / (Percent + 50));
+              SL[m].rgbtRed := R;
+              SL[m].rgbtGreen := G;
+              SL[m].rgbtBlue := B;
+            end;
+    
+            if (l < 1) then m := Image.Height - 1
+            else
+              m := l - 1;
+            //Over 
+           SL2 := Image.Picture.Bitmap.ScanLine[m];
+            R2  := SL2[p].rgbtRed;
+            G2  := SL2[p].rgbtGreen;
+            B2  := SL2[p].rgbtBlue;
+            if (R1 <> R2) or (G1 <> G2) or (B1 <> B2) then
+            begin
+              R := Round(R1 + (R2 - R1) * 50 / (Percent + 50));
+              G := Round(G1 + (G2 - G1) * 50 / (Percent + 50));
+              B := Round(B1 + (B2 - B1) * 50 / (Percent + 50));
+              SL2[p].rgbtRed := R;
+              SL2[p].rgbtGreen := G;
+              SL2[p].rgbtBlue := B;
+            end;
+    
+            if (l > Image.Height - 2) then m := 0
+            else
+              m := l + 1;
+            //Under 
+           SL2 := Image.Picture.Bitmap.ScanLine[m];
+            R2  := SL2[p].rgbtRed;
+            G2  := SL2[p].rgbtGreen;
+            B2  := SL2[p].rgbtBlue;
+            if (R1 <> R2) or (G1 <> G2) or (B1 <> B2) then
+            begin
+              R := Round(R1 + (R2 - R1) * 50 / (Percent + 50));
+              G := Round(G1 + (G2 - G1) * 50 / (Percent + 50));
+              B := Round(B1 + (B2 - B1) * 50 / (Percent + 50));
+              SL2[p].rgbtRed := R;
+              SL2[p].rgbtGreen := G;
+              SL2[p].rgbtBlue := B;
+            end;
+          end;
+        end;
+      end;
+    end;
      
-             // Left 
-            if (p < 1) then m := Image.Width
-             else
-               m := p - 1;
-             R2 := SL[m].rgbtRed;
-             G2 := SL[m].rgbtGreen;
-             B2 := SL[m].rgbtBlue;
-             if (R1 <> R2) or (G1 <> G2) or (B1 <> B2) then
-             begin
-               R := Round(R1 + (R2 - R1) * 50 / (Percent + 50));
-               G := Round(G1 + (G2 - G1) * 50 / (Percent + 50));
-               B := Round(B1 + (B2 - B1) * 50 / (Percent + 50));
-               SL[m].rgbtRed := R;
-               SL[m].rgbtGreen := G;
-               SL[m].rgbtBlue := B;
-             end;
      
-             //Right 
-            if (p > Image.Width - 2) then m := 0
-             else
-               m := p + 1;
-             R2 := SL[m].rgbtRed;
-             G2 := SL[m].rgbtGreen;
-             B2 := SL[m].rgbtBlue;
-             if (R1 <> R2) or (G1 <> G2) or (B1 <> B2) then
-             begin
-               R := Round(R1 + (R2 - R1) * 50 / (Percent + 50));
-               G := Round(G1 + (G2 - G1) * 50 / (Percent + 50));
-               B := Round(B1 + (B2 - B1) * 50 / (Percent + 50));
-               SL[m].rgbtRed := R;
-               SL[m].rgbtGreen := G;
-               SL[m].rgbtBlue := B;
-             end;
-     
-             if (l < 1) then m := Image.Height - 1
-             else
-               m := l - 1;
-             //Over 
-            SL2 := Image.Picture.Bitmap.ScanLine[m];
-             R2  := SL2[p].rgbtRed;
-             G2  := SL2[p].rgbtGreen;
-             B2  := SL2[p].rgbtBlue;
-             if (R1 <> R2) or (G1 <> G2) or (B1 <> B2) then
-             begin
-               R := Round(R1 + (R2 - R1) * 50 / (Percent + 50));
-               G := Round(G1 + (G2 - G1) * 50 / (Percent + 50));
-               B := Round(B1 + (B2 - B1) * 50 / (Percent + 50));
-               SL2[p].rgbtRed := R;
-               SL2[p].rgbtGreen := G;
-               SL2[p].rgbtBlue := B;
-             end;
-     
-             if (l > Image.Height - 2) then m := 0
-             else
-               m := l + 1;
-             //Under 
-            SL2 := Image.Picture.Bitmap.ScanLine[m];
-             R2  := SL2[p].rgbtRed;
-             G2  := SL2[p].rgbtGreen;
-             B2  := SL2[p].rgbtBlue;
-             if (R1 <> R2) or (G1 <> G2) or (B1 <> B2) then
-             begin
-               R := Round(R1 + (R2 - R1) * 50 / (Percent + 50));
-               G := Round(G1 + (G2 - G1) * 50 / (Percent + 50));
-               B := Round(B1 + (B2 - B1) * 50 / (Percent + 50));
-               SL2[p].rgbtRed := R;
-               SL2[p].rgbtGreen := G;
-               SL2[p].rgbtBlue := B;
-             end;
-           end;
-         end;
-       end;
-     end;
-     
-     
-     //Example: 
+    //Example: 
     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       Antialiasing(Image1, 80);
-     end;
+    begin
+      Antialiasing(Image1, 80);
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

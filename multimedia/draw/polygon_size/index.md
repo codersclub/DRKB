@@ -1,15 +1,12 @@
 ---
 Title: Как изменить размеры полигона?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как изменить размеры полигона?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     type
@@ -26,4 +23,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

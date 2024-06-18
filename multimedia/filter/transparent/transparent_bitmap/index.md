@@ -1,5 +1,6 @@
 ---
 Title: Прозрачный bitmap
+Source: <https://delphiworld.narod.ru>
 Date: 01.01.2007
 ---
 
@@ -7,9 +8,7 @@ Date: 01.01.2007
 Прозрачный bitmap
 =================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
 Вам необходимо две копии вашего изображения. Маску и само изображение.
 Маска является ничем иным, как изображением, состоящим из двух цветов.
@@ -35,6 +34,8 @@ TBitmap.
     Canvas.CopyRect(TitleRect, BTitle.Canvas, TitleRect);
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     procedure DrawTransparentBmp(Cnv: TCanvas; x,y: Integer; Bmp: TBitmap; clTransparent: TColor);
     var
@@ -77,4 +78,3 @@ TBitmap.
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

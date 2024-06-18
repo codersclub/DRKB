@@ -1,15 +1,12 @@
 ---
 Title: How to scale bitmap by percent?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 How to scale bitmap by percent?
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
     { .... }
       private
@@ -52,4 +49,3 @@ How to scale bitmap by percent?
       ScalePercentBmp(Image1.Picture.Bitmap, 33);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

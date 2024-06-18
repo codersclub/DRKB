@@ -1,15 +1,13 @@
 ---
 Title: Как сделать Thumbnail?
+Author: Renate Schaaf
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать Thumbnail?
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       Here is the routine I use in my thumbnail component and I belive it is quite
@@ -24,7 +22,7 @@ Date: 01.01.2007
      
      
     const
-     FThumbSize = 150;
+      FThumbSize = 150;
      
     //Speed up by Renate Schaaf, Armido, Gary Williams...
     procedure MakeThumbNail(src, dest: tBitmap);
@@ -177,4 +175,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

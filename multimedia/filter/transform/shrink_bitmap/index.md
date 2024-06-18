@@ -8,10 +8,7 @@ Date: 01.01.2007
 Качественно уменьшить изображение
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
+Вариант 1:
 
 В Delphi изменять размеры изображения очень просто, используя CopyRect:
 
@@ -62,6 +59,10 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     unit ProjetoX_Screen;
      
@@ -241,10 +242,7 @@ Date: 01.01.2007
             MyRegion := BitmapToRegion(imgFundo.Picture.Bitmap,imgFundo.Canvas.Pixels[0,0]);
             SetWindowRgn(Handle,MyRegion,True);
     end;
-     
-     
-     
-     
+
      
     procedure TFormXXXXXX.FormCreate(Sender: TObject);
     begin
@@ -253,46 +251,52 @@ Date: 01.01.2007
             SetWindowRgn(Handle,FormScreen.MyRegion,True);
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------
+
+Вариант 3:
+
+Author: December
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     procedure ShrinkPic(Big:TBitmap;Small:TBitmap;xscale:integer=0;yscale:integer=0);
     //Из уже созданной картинки Big заполняет уже созданную картинку Small
     var
-    x, y: integer;
-    i, j: integer;
-    r, g, b: integer;
+      x, y: integer;
+      i, j: integer;
+      r, g, b: integer;
     begin
-    //Если указан фактор сжатия по ширине, то устанавливаем правильный размер, иначе вычисляем фактор
-    if xscale=0
-    then xscale:=Big.Width div Small.Width
-    else Small.Width:=Big.Width div xscale;
-    //Если указан фактор сжатия по высоте, то устанавливаем правильный размер, иначе вычисляем фактор
-    if yscale=0
-    then yscale:=Big.Height div Small.Height
-    else Small.Height:=Big.Height div yscale;
-    for y := 0 to Small.Height-1 do
-    for x := 0 to Small.Width-1 do
-    begin
-    r := 0;
-    g := 0;
-    b := 0;
-    for i := 0 to xscale-1 do 
-    for j := 0 to yscale-1 do 
-    begin
-    r := r + GetRValue(Big.Canvas.Pixels[xscale*x+i, yscale*y+j]);
-    g := g + GetGValue(Big.Canvas.Pixels[xscale*x+i, yscale*y+j]);
-    b := b + GetBValue(Big.Canvas.Pixels[xscale*x+i, yscale*y+j]);
-    end;//for, for
-    r := round(r/xscale/yscale);
-    g := round(g/xscale/yscale);
-    b := round(b/xscale/yscale);
-    Small.Canvas.Pixels[x,y]:=RGB(r,g,b)
-    end;//for y, x
+      //Если указан фактор сжатия по ширине, то устанавливаем правильный размер, иначе вычисляем фактор
+      if xscale=0
+        then xscale:=Big.Width div Small.Width
+        else Small.Width:=Big.Width div xscale;
+      //Если указан фактор сжатия по высоте, то устанавливаем правильный размер, иначе вычисляем фактор
+      if yscale=0
+        then yscale:=Big.Height div Small.Height
+        else Small.Height:=Big.Height div yscale;
+      for y := 0 to Small.Height-1 do
+        for x := 0 to Small.Width-1 do
+        begin
+          r := 0;
+          g := 0;
+          b := 0;
+          for i := 0 to xscale-1 do 
+            for j := 0 to yscale-1 do 
+            begin
+            r := r + GetRValue(Big.Canvas.Pixels[xscale*x+i, yscale*y+j]);
+            g := g + GetGValue(Big.Canvas.Pixels[xscale*x+i, yscale*y+j]);
+            b := b + GetBValue(Big.Canvas.Pixels[xscale*x+i, yscale*y+j]);
+            end;//for, for
+          r := round(r/xscale/yscale);
+          g := round(g/xscale/yscale);
+          b := round(b/xscale/yscale);
+          Small.Canvas.Pixels[x,y]:=RGB(r,g,b)
+        end;//for y, x
     end;//ShrinkPic
 
-Замечания.
+**Замечания.**
+
 1. В двух вложенных форах можно xscale-1 или yscale-1 заменить
 константой, в зависимости от области использования. Мой пример
 соптимизирован для соотношения 4:1.
@@ -301,6 +305,3 @@ Date: 01.01.2007
 быстродействующий вариант, так как он более запутан. Для продвинутого
 преобразования я использую отдельную библиотеку.
 
-Автор: December
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

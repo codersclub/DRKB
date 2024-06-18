@@ -1,15 +1,12 @@
 ---
 Title: Эффект блоков
-Date: 01.01.2007
+Author: Николай федоровских (Fenik), chook_nu@uraltc.ru
+Date: 01.06.2002
 ---
 
 
 Эффект блоков
 =============
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Эффект 'Блоки'
@@ -23,7 +20,7 @@ Date: 01.01.2007
     procedure Blocks(Bitmap: TBitmap; Hor, Ver, MaxOffset:
       Integer; BackColor: TColor);
     {вырезаем прямоугольники со сторонами Hor Ver
-    и копируем их в радиусе MaxOffset}
+     и копируем их в радиусе MaxOffset}
      
       function RandomInRadius(Num, Radius: Integer): Integer;
       begin
@@ -56,7 +53,7 @@ Date: 01.01.2007
       end;
     end;
     
-    Пример использования: 
+Пример использования: 
      
     Blocks(FBitmap, FBitmap.Width div 10, FBitmap.Height div 10, 4, clWhite); 
      

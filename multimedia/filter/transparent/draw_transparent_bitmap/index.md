@@ -8,9 +8,9 @@ Date: 01.01.2007
 Как нарисовать bitmap с прозрачностью
 =====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure DrawTransparentBmp(Cnv: TCanvas; x,y: Integer; Bmp: TBitmap; clTransparent: TColor);
     var
@@ -52,13 +52,12 @@ Date: 01.01.2007
         bmpTarget.Free;
       end;
     end;
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Вам необходимо две копии вашего изображения. Маску и само изображение.
 Маска является ничем иным, как изображением, состоящим из двух цветов.
@@ -83,13 +82,13 @@ TBitmap.
     Canvas.CopyMode := cmSrcPaint;
     Canvas.CopyRect(TitleRect, BTitle.Canvas, TitleRect);
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Павел
+Author: Павел
+
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Пожалуй, это самый простой способ создания прозрачного изображения. Суть
 его в том, что маска создается автоматически во время выполнения
@@ -106,6 +105,4 @@ DelphiWorld 6.0
       SrcBitmap.Canvas.Handle, 0, 0, SRCINVERT);
     MaskBitmap.Free;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

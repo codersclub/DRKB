@@ -7,9 +7,9 @@ Date: 01.01.2007
 Зеркальное преобразование
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure flip_horizontal(Quelle, Ziel: TBitMap);
      begin
@@ -42,9 +42,14 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Федоровских Николай (Fenik), chook_nu@uraltc.ru
+
+Date: 16.07.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Зеркальное отражение изображения

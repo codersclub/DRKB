@@ -7,29 +7,25 @@ Date: 01.01.2007
 Как создать disabled битмап из обычного (emboss)?
 =================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
 
-CreateMappedBitmap() :-)
+Author: Serge Zakharchuk, (2:5060/32)
+
+`CreateMappedBitmap()` :-)
 
 Один из паpаметpов yказатель на COLORMAP, в нем для 16 основных цветов
 делаешь пеpекодиpовкy, цвета подбеpешь сам из пpинципа:
 
-  все самые яpкие -\> в GetSysColor( COLOR\_3DLIGHT );
+- все самые яpкие -\> в GetSysColor( COLOR\_3DLIGHT );
+- самые  темные -\> GetSysColor( COLOR\_3DSHADOW );
+- нейтpальные, котpые бyдyт пpозpачные -\> GetSysColor( COLOR\_3DFACE );
 
-  самые  темные -\> GetSysColor( COLOR\_3DSHADOW );
-
-  нейтpальные, котpые бyдyт пpозpачные -\> GetSysColor( COLOR\_3DFACE );
-
-Serge Zakharchuk
-
-(2:5060/32)
 
 ------------------------------------------------------------------------
+
 Вариант 2:
+
+Author: Denis Tanayeff (denis@demo.ru)
 
     procedure Tform1.aaa(bmpFrom,bmpTo:Tbitmap); 
     var 
@@ -95,12 +91,11 @@ ImageList\_DrawEx, в которой можно на 25 и 50 процентов
 параметры ILD\_BLEND25, ILD\_BLEND50, ILD\_BLEND-A-MED. Естественно, что
 последний абзац работает только с тройкой.
 
-Denis Tanayeff
-
-[denis@demo.ru](mailto:denis@demo.ru%20)
 
 ------------------------------------------------------------------------
 Вариант 3:
+
+Author: Andy Nikishin (2:5031/16.2)
 
 Это кусочек из рабочей проги на Си, Вроде все лишнее я убрал.
 
@@ -134,14 +129,15 @@ Denis Tanayeff
      
     } 
 
-Andy Nikishin
+Andy Nikishin (2:5031/16.2)
 
 https://www.gs.ru/\~links/andy.shtml
 
-(2:5031/16.2)
-
 ------------------------------------------------------------------------
+
 Вариант 4:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure Emboss(ABitmap : TBitmap; AMount : Integer);
      var
@@ -164,4 +160,3 @@ https://www.gs.ru/\~links/andy.shtml
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

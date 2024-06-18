@@ -1,15 +1,12 @@
 ---
 Title: Эффект разбрызгивания (Spray effect)
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Эффект разбрызгивания (Spray effect)
 ============
-
-::: {.date}
-01.01.2007
-:::
 
     procedure Spray(Canvas: TCanvas; x, y, r: Integer; Color: TColor);
     var
@@ -36,4 +33,3 @@ Date: 01.01.2007
       if ssLeft in Shift then Spray(Image1.Canvas, x, y, 40, clRed);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

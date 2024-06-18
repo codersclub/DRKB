@@ -2,19 +2,15 @@
 Title: Изменение глубины цвета изображения
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Изменение глубины цвета изображения
 ===================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
      
-
      
     interface
      
@@ -73,7 +69,3 @@ Date: 01.01.2007
     end;
      
     end.
-
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>

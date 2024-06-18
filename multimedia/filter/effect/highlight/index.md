@@ -1,15 +1,12 @@
 ---
 Title: Подсветить изображение
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Подсветить изображение
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
     Question: 
@@ -60,4 +57,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

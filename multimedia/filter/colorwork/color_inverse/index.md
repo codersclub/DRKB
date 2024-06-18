@@ -8,9 +8,11 @@ Date: 01.01.2007
 Инверсия всех цветов в bitmap
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Song
+
+Source: <https://forum.sources.ru>
 
     function InvertBitmap(Bmp: TBitmap): TBitmap;
     var
@@ -34,11 +36,13 @@ Date: 01.01.2007
       Image1.Picture.Bitmap := InvertBitmap(Image1.Picture.Bitmap);
     end;
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Николай федоровских (Fenik), chook_nu@uraltc.ru
+
+Date: 01.06.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Инверсия всех цветов Bitmap

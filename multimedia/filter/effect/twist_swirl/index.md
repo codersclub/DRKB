@@ -1,15 +1,14 @@
 ---
-Title: Как сделать Twist / Swirl эффект?
+Title: Как сделать эффект скручивания (Twist / Swirl)?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
-Как сделать Twist / Swirl эффект?
+Как сделать эффект скручивания (Twist / Swirl)?
 =================================
 
-::: {.date}
-01.01.2007
-:::
+> Looking for something like this:
 
     { ... }
     try
@@ -189,4 +188,3 @@ Hope this is what you were looking for:
       Screen.Cursor := crDefault;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

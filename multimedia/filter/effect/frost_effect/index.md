@@ -1,15 +1,12 @@
 ---
 Title: Эффект инея
-Date: 01.01.2007
+Author: Николай федоровских (Fenik), chook_nu@uraltc.ru
+Date: 01.06.2002
 ---
 
 
 Эффект инея
 ===========
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Эффект 'Иней' (разброс)
@@ -74,7 +71,8 @@ Date: 01.01.2007
         Bmp.Free;
       end;
     end;
-    Пример использования: 
+
+Пример использования: 
      
     Disorder(FBitmap, 5, 5, clWhite); 
      

@@ -1,23 +1,21 @@
 ---
 Title: Как работать с Fade для TImage?
 Date: 01.01.2007
+Author: Yucel Karapinar, ykarapinar@hotmail.com
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как работать с Fade для TImage?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
-
     type 
       PRGBTripleArray = ^TRGBTripleArray; 
       TRGBTripleArray = array[0..32767] of TRGBTriple; 
      
-      ///////////////////////////////////////////////// 
-      //                  Fade In                    // 
-      ///////////////////////////////////////////////// 
+    ///////////////////////////////////////////////// 
+    //                  Fade In                    // 
+    ///////////////////////////////////////////////// 
      
      
     procedure FadeIn(ImageFileName: TFileName); 
@@ -121,7 +119,7 @@ Date: 01.01.2007
      
      
     {*****************************} 
-     {by Yucel Karapinar, ykarapinar@hotmail.com } 
+    {by Yucel Karapinar, ykarapinar@hotmail.com } 
      
     { Only for 24 ve 32 bits bitmaps } 
      
@@ -157,4 +155,3 @@ Date: 01.01.2007
       FadeOut(Image1, 1); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

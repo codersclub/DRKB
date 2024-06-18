@@ -1,15 +1,12 @@
 ---
 Title: Как изменить яркость и контраст?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как изменить яркость и контраст?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
 Вариант 1:
 
@@ -18,11 +15,9 @@ bitmaps, you must edit the palette. For 15 - 32 bit bitmaps, you must
 edit the pixel direct. For larger bitmaps you should precalulate a table
 and set the RGB values from this table.
 
-Red := BCTable[Red];
-
-Green := BCTable[Green];
-
-Blue := BCTable[Blue];
+    Red := BCTable[Red];
+    Green := BCTable[Green];
+    Blue := BCTable[Blue];
 
 You can find the calculation of the table below. The rest is standard
 source code, look at EFG\'s Computer Lab for any solution.
@@ -103,6 +98,7 @@ definitions are possible, change BMax, CMax, BNorm and CNorm.
     end;
 
 ------------------------------------------------------------------------
+
 Вариант 2:
 
 Add a fixed value and clip it to the range. I have used a LUT, which is
@@ -167,4 +163,3 @@ compiler setting ChangeBrightness24Bit.
     {$ENDIF}
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

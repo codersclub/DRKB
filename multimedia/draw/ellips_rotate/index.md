@@ -1,15 +1,14 @@
 ---
 Title: Как повернуть элипс?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как повернуть элипс?
 ====================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     procedure TForm1.EllipseAngle(ACanvas: TCanvas; XCenter, YCenter,
       XRadius, YRadius: Integer; Angle: Integer);
@@ -45,6 +44,8 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
     procedure RotatedEllipse(aCanvas: TCanvas; X1, Y1, X2, Y2: Integer);
     var
       T, O: TXForm; {in unit Windows}
@@ -64,4 +65,3 @@ Date: 01.01.2007
       SetWorldTransform(TheDraw.Handle, O);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

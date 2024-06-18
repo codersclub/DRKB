@@ -1,15 +1,12 @@
 ---
 Title: Конвертация bitmap в sepia или greyscale
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Конвертация bitmap в sepia или greyscale
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     //This function adds a sepia effect to a bitmap.
     //the 'depth' sets the colour intensity of the red-brown colour
@@ -55,4 +52,3 @@ Date: 01.01.2007
       bmptosepia(image1.picture.bitmap, 20);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

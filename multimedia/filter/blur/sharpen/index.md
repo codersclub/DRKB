@@ -1,15 +1,12 @@
 ---
-Title: Sharpen a bitmap
+Title: Повышение резкости растрового изображения (Sharpen a bitmap)
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Sharpen a bitmap
+Повышение резкости растрового изображения (Sharpen a bitmap)
 ================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure Sharpen(sbm, tbm: TBitmap; alpha: Single);
     //to sharpen, alpha must be >1.
@@ -69,7 +66,7 @@ Sharpen a bitmap
         tt^ := st[1]^; //1st col unchanged
         for j := 1 to bmw do
         begin
-        //calcutate average weighted by -beta
+          //calcutate average weighted by -beta
           re := 0; gr := 0; bl := 0;
           for k := 0 to 4 do
           begin
@@ -82,13 +79,13 @@ Sharpen a bitmap
           gr := (intb * gr + $7FFF) shr 16;
           bl := (intb * bl + $7FFF) shr 16;
      
-        //add center pixel weighted by alpha
+          //add center pixel weighted by alpha
           p := pRGBTriple(st[1]); //after inc, st[1] is at center
           re := (inta * p^.rgbtRed + $7FFF) shr 16 - re;
           gr := (inta * p^.rgbtGreen + $7FFF) shr 16 - gr;
           bl := (inta * p^.rgbtBlue + $7FFF) shr 16 - bl;
      
-        //clamp and move into target pixel
+          //clamp and move into target pixel
           inc(tt);
           if re < 0 then
             re := 0
@@ -129,4 +126,3 @@ Sharpen a bitmap
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

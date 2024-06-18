@@ -8,9 +8,9 @@ Date: 01.01.2007
 Вращение изображения
 ====================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://delphiworld.narod.ru>
 
 Вот быстрый и примитивный способ вращения изображения. Должно работать.
 По крайней мере хоть какой-то выход из-положения, поскольку Windows
@@ -59,9 +59,10 @@ Date: 01.01.2007
       BitMap.Visible := true;
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
 ...я думаю над принудительным грубым методом, но его эффективность
 может быть сомнительна, и не вздумайте пробовать его без сопроцессора!
@@ -77,22 +78,15 @@ Date: 01.01.2007
 
 Для преобразования X- и Y-координат объявлены следующие переменные:
 
-X,Y    = старые координаты пикселя
+    X,Y    = старые координаты пикселя
+    X1,Y1  = новые координаты пикселя
+    T      = угол вращения (в радианах)
+    R, A   - промежуточные величины, представляющие собой полярные координаты
 
-X1,Y1  = новые координаты пикселя
-
-T      = угол вращения (в радианах)
-
-R, A   - промежуточные величины, представляющие собой полярные
-координаты
-
-R = Sqrt(Sqr(X) + Sqr(Y));
-
-A = Arctan(Y/X);
-
-X1 = R * Cos(A+T);
-
-Y1 = R * Sin(A+T);
+    R = Sqrt(Sqr(X) + Sqr(Y));
+    A = Arctan(Y/X);
+    X1 = R * Cos(A+T);
+    Y1 = R * Sin(A+T);
 
 Я отдаю себе отчет, что это не оптимальное решение, поэтому, если вы
 найдете еще какое-либо решение, дайте мне знать. В действительности мой
@@ -108,31 +102,23 @@ Y1 = R * Sin(A+T);
 
 Для начала вот мой вариант формулы вращения:
 
-x, y = координаты в целевом изображении
-
-t = угол
-
-u, v = координаты в исходном изображении
-
-x = u * cos(t) - v * sin(t)
-
-y = v * cos(t) + u * sin(t)
+    x, y = координаты в целевом изображении
+    t = угол
+    u, v = координаты в исходном изображении
+    x = u * cos(t) - v * sin(t)
+    y = v * cos(t) + u * sin(t)
 
 Теперь, если я захочу решить эти уравнения и вычислить u и v (привести
 их к правой части уравнения), то формулы будут выглядеть следующим
 образом (без гарантии, по этой причине я и включил исходные уравнения!):
 
-     x * cos(t) + y
+         x * cos(t) + y
+    u = --------------------
+         sqr(cos(t)) + sin(t)
 
-u = --------------------
-
-   sqr(cos(t)) + sin(t)
-
-v =   y * cos(t) - x
-
-   --------------------
-
-   sqr(cos(t)) + sin(t)
+         y * cos(t) - x
+    v = --------------------
+        sqr(cos(t)) + sin(t)
 
 Так, подразумевая, что вы уже знаете угол вращения, можно вычислить
 константы cos(t) и 1/sqr(cos(t))+sin(t) непосредственно перед самим
@@ -187,33 +173,29 @@ v =   y * cos(t) - x
 Xp, Yp (X-sub-p, Y-sub-p) точка оси вращения, другие константы
 определены выше
 
-x = Xp + (u - Xp) * cos(t) - (y - Yp) * sin(t)
-
-y = Yp + (y - Yp) * cos(t) - (x - Xp) * sin(t)
+    x = Xp + (u - Xp) * cos(t) - (y - Yp) * sin(t)
+    y = Yp + (y - Yp) * cos(t) - (x - Xp) * sin(t)
 
 Оригинальные уравнения:
 
-x = u * cos(t) - v * sin(t)
-
-y = v * cos(t) + u * sin(t)
+    x = u * cos(t) - v * sin(t)
+    y = v * cos(t) + u * sin(t)
 
 верны, но когда я решаю их для u и v, я получаю это:
 
-     x * cos(t) + y * sin(t)
-
-u = -----------------------
-
-    sqr(cos(t)) + sqr(sin(t))
-
-     y * cos(t) - x * sin(t)
-
-v = ------------------------
-
-     sqr(cos(t)) + sqr(sin(t))
+        x * cos(t) + y * sin(t)
+    u = -----------------------
+        sqr(cos(t)) + sqr(sin(t))
+        
+        y * cos(t) - x * sin(t)
+    v = ------------------------
+        sqr(cos(t)) + sqr(sin(t))
 
 Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
 
     {**** UBPFD *********** by delphibase.endimus.ru ****
     >> Вращение изображения на заданный угол
@@ -373,6 +355,8 @@ v = ------------------------
 
 ------------------------------------------------------------------------
 
+Вариант 4:
+
     const
       PixelMax = 32768;
      
@@ -451,14 +435,15 @@ v = ------------------------
         Bitmap.Free;
       end;
     end;
-     
-     
+
 
 <https://delphiworld.narod.ru/>
 
 DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 5:
 
 Автор: Айткулов Павел
 
@@ -522,168 +507,170 @@ DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
+Вариант 6:
+
+Source: <https://www.swissdelphicenter.ch>
+
     function RotateBitmap(var hDIB: HGlobal; radang: Double; clrBack: TColor): Boolean;
-     // (c) Copyright original C Code: Code Guru 
+    // (c) Copyright original C Code: Code Guru 
     var
-       lpDIBBits: Pointer;
-       lpbi, hDIBResult: PBitmapInfoHeader;
-       bpp, nColors, nWidth, nHeight, nRowBytes: Integer;
-       cosine, sine: Double;
-       x1, y1, x2, y2, x3, y3, minx, miny, maxx, maxy, ti, x, y, w, h: Integer;
-       nResultRowBytes, nHeaderSize: Integer;
-       i, len: longint;
-       lpDIBBitsResult: Pointer;
-       dwBackColor: DWORD;
-       PtrClr: PRGBQuad;
-       RbackClr, GBackClr, BBackClr: Word;
-       sourcex, sourcey: Integer;
-       mask: Byte;
-       PtrByte: PByte;
-       dwpixel: DWORD;
-       PtrDWord: PDWord;
-       hDIBResInfo: HGlobal;
-     begin;
-       // Get source bitmap info 
+      lpDIBBits: Pointer;
+      lpbi, hDIBResult: PBitmapInfoHeader;
+      bpp, nColors, nWidth, nHeight, nRowBytes: Integer;
+      cosine, sine: Double;
+      x1, y1, x2, y2, x3, y3, minx, miny, maxx, maxy, ti, x, y, w, h: Integer;
+      nResultRowBytes, nHeaderSize: Integer;
+      i, len: longint;
+      lpDIBBitsResult: Pointer;
+      dwBackColor: DWORD;
+      PtrClr: PRGBQuad;
+      RbackClr, GBackClr, BBackClr: Word;
+      sourcex, sourcey: Integer;
+      mask: Byte;
+      PtrByte: PByte;
+      dwpixel: DWORD;
+      PtrDWord: PDWord;
+      hDIBResInfo: HGlobal;
+    begin;
+      // Get source bitmap info 
       lpbi := PBitmapInfoHeader(GlobalLock(hdIB));
-       nHeaderSize := lpbi^.biSize + lpbi^.biClrUsed * SizeOf(TRGBQUAD);
-       lpDIBBits := Pointer(Longint(lpbi) + nHeaderSize);
-       bpp := lpbi^.biBitCount; // Bits per pixel 
+      nHeaderSize := lpbi^.biSize + lpbi^.biClrUsed * SizeOf(TRGBQUAD);
+      lpDIBBits := Pointer(Longint(lpbi) + nHeaderSize);
+      bpp := lpbi^.biBitCount; // Bits per pixel 
       ncolors := lpbi^.biClrUsed; // Already computed when bitmap was loaded 
       nWidth := lpbi^.biWidth;
-       nHeight := lpbi^.biHeight;
-       nRowBytes := ((((nWidth * bpp) + 31) and (not 31)) shr 3);
+      nHeight := lpbi^.biHeight;
+      nRowBytes := ((((nWidth * bpp) + 31) and (not 31)) shr 3);
      
-       // Compute the cosine and sine only once 
+      // Compute the cosine and sine only once 
       cosine := cos(radang);
-       sine := sin(radang);
+      sine := sin(radang);
      
-       // Compute dimensions of the resulting bitmap 
+      // Compute dimensions of the resulting bitmap 
       // First get the coordinates of the 3 corners other than origin 
       x1 := ceil(-nHeight * sine); // Originally floor at all places 
       y1 := ceil(nHeight * cosine);
-       x2 := ceil(nWidth * cosine - nHeight * sine);
-       y2 := ceil(nHeight * cosine + nWidth * sine);
-       x3 := ceil(nWidth * cosine);
-       y3 := ceil(nWidth * sine);
-     
-       minx := min(0, min(x1, min(x2, x3)));
-       miny := min(0, min(y1, min(y2, y3)));
-       maxx := max(0, max(x1, max(x2, x3)));// added max(0, 
+      x2 := ceil(nWidth * cosine - nHeight * sine);
+      y2 := ceil(nHeight * cosine + nWidth * sine);
+      x3 := ceil(nWidth * cosine);
+      y3 := ceil(nWidth * sine);
+    
+      minx := min(0, min(x1, min(x2, x3)));
+      miny := min(0, min(y1, min(y2, y3)));
+      maxx := max(0, max(x1, max(x2, x3)));// added max(0, 
       maxy := max(0, max(y1, max(y2, y3)));// added max(0, 
      
       w := maxx - minx;
-       h := maxy - miny;
+      h := maxy - miny;
      
        // Create a DIB to hold the result 
       nResultRowBytes := ((((w * bpp) + 31) and (not 31)) div 8);
-       len := nResultRowBytes * h;
-       hDIBResInfo := GlobalAlloc(GMEM_MOVEABLE, len + nHeaderSize);
-       if hDIBResInfo = 0 then
-       begin
-         Result := False;
-         Exit;
-       end;
-     
-       hDIBResult := PBitmapInfoHeader(GlobalLock(hDIBResInfo));
-       // Initialize the header information 
+      len := nResultRowBytes * h;
+      hDIBResInfo := GlobalAlloc(GMEM_MOVEABLE, len + nHeaderSize);
+      if hDIBResInfo = 0 then
+      begin
+        Result := False;
+        Exit;
+      end;
+    
+      hDIBResult := PBitmapInfoHeader(GlobalLock(hDIBResInfo));
+      // Initialize the header information 
       CopyMemory(hDIBResult, lpbi, nHeaderSize);
-       //BITMAPINFO &bmInfoResult = *(LPBITMAPINFO)hDIBResult ; 
+      //BITMAPINFO &bmInfoResult = *(LPBITMAPINFO)hDIBResult ; 
       hDIBResult^.biWidth := w;
-       hDIBResult^.biHeight := h;
-       hDIBResult^.biSizeImage := len;
-       lpDIBBitsResult := Pointer(Longint(hDIBResult) + nHeaderSize);
-     
-       // Get the back color value (index) 
+      hDIBResult^.biHeight := h;
+      hDIBResult^.biSizeImage := len;
+      lpDIBBitsResult := Pointer(Longint(hDIBResult) + nHeaderSize);
+    
+      // Get the back color value (index) 
       ZeroMemory(lpDIBBitsResult, len);
-       case bpp of
-         1:
-           begin //Monochrome 
+      case bpp of
+        1:
+          begin //Monochrome 
             if (clrBack = RGB(255, 255, 255)) then
-               FillMemory(lpDIBBitsResult, len, $ff);
-           end;
-         4,
-         8:
-           begin //Search the color table 
-            PtrClr := PRGBQuad(Longint(lpbi) + lpbi^.bisize);
-             RBackClr := GetRValue(clrBack);
-             GBackClr := GetGValue(clrBack);
-             BBackClr := GetBValue(clrBack);
-             for i := 0 to nColors - 1 do // Color table starts with index 0 
-            begin
-               if (PtrClr^.rgbBlue = BBackClr) and
-                 (PtrClr^.rgbGreen = GBackClr) and
-                 (PtrClr^.rgbRed = RBackClr) then
-               begin
-                 if (bpp = 4) then //if(bpp==4) i = i | i<<4; 
-                  ti := i or (i shl 4)
-                 else
-                   ti := i;
-                 FillMemory(lpDIBBitsResult, ti, len);
-                 break;
-               end;
-               Inc(PtrClr);
-             end;// If not match found the color remains black 
+              FillMemory(lpDIBBitsResult, len, $ff);
           end;
-         16:
-           begin
-             (* When the Compression field is set to BI_BITFIELDS,
-             Windows 95 supports
-             only the following 16bpp color masks: A 5-5-5 16-bit image, where the blue mask
-             is $001F, the green mask is $03E0, and the red mask is $7C00; and a 5-6-5
-             16-bit image, where the blue mask is $001F, the green mask is $07E0,
-             and the red mask is $F800. *)
-             PtrClr := PRGBQuad(Longint(lpbi) + lpbi^.bisize);
-             if (PtrClr^.rgbRed = $7c00) then // Check the Red mask 
+        4,
+        8:
+          begin //Search the color table 
+            PtrClr := PRGBQuad(Longint(lpbi) + lpbi^.bisize);
+            RBackClr := GetRValue(clrBack);
+            GBackClr := GetGValue(clrBack);
+            BBackClr := GetBValue(clrBack);
+            for i := 0 to nColors - 1 do // Color table starts with index 0 
+            begin
+              if (PtrClr^.rgbBlue = BBackClr) and
+                (PtrClr^.rgbGreen = GBackClr) and
+                (PtrClr^.rgbRed = RBackClr) then
+              begin
+                if (bpp = 4) then //if(bpp==4) i = i | i<<4; 
+                  ti := i or (i shl 4)
+                else
+                  ti := i;
+                FillMemory(lpDIBBitsResult, ti, len);
+                break;
+              end;
+              Inc(PtrClr);
+            end;// If not match found the color remains black 
+         end;
+        16:
+          begin
+            (* When the Compression field is set to BI_BITFIELDS,
+            Windows 95 supports
+            only the following 16bpp color masks: A 5-5-5 16-bit image, where the blue mask
+            is $001F, the green mask is $03E0, and the red mask is $7C00; and a 5-6-5
+            16-bit image, where the blue mask is $001F, the green mask is $07E0,
+            and the red mask is $F800. *)
+            PtrClr := PRGBQuad(Longint(lpbi) + lpbi^.bisize);
+            if (PtrClr^.rgbRed = $7c00) then // Check the Red mask 
             begin // Bitmap is RGB555 
               dwBackColor := ((GetRValue(clrBack) shr 3) shl 10) +
-                 ((GetRValue(clrBack) shr 3) shl 5) +
-                 (GetBValue(clrBack) shr 3);
-             end
-             else
-             begin // Bitmap is RGB565 
+                ((GetRValue(clrBack) shr 3) shl 5) +
+                (GetBValue(clrBack) shr 3);
+            end
+            else
+            begin // Bitmap is RGB565 
               dwBackColor := ((GetRValue(clrBack) shr 3) shl 11) +
-                 ((GetRValue(clrBack) shr 2) shl 5) +
-                 (GetBValue(clrBack) shr 3);
-             end;
-           end;
-         24,
-         32:
-           begin
-             dwBackColor := ((GetRValue(clrBack)) shl 16) or
-               ((GetGValue(clrBack)) shl 8) or
-               ((GetBValue(clrBack)));
-           end;
-       end;
+                ((GetRValue(clrBack) shr 2) shl 5) +
+                (GetBValue(clrBack) shr 3);
+            end;
+          end;
+        24,
+        32:
+          begin
+            dwBackColor := ((GetRValue(clrBack)) shl 16) or
+              ((GetGValue(clrBack)) shl 8) or
+              ((GetBValue(clrBack)));
+          end;
+      end;
      
-       // Now do the actual rotating - a pixel at a time 
+      // Now do the actual rotating - a pixel at a time 
       // Computing the destination point for each source point 
       // will leave a few pixels that do not get covered 
       // So we use a reverse transform - e.i. compute the source point 
       // for each destination point 
      
       for y := 0 to h - 1 do
-       begin
-         for x := 0 to w - 1 do
-         begin
-           sourcex := floor((x + minx) * cosine + (y + miny) * sine);
-           sourcey := floor((y + miny) * cosine - (x + minx) * sine);
-           if ((sourcex >= 0) and (sourcex < nWidth) and
-             (sourcey >= 0) and (sourcey < nHeight)) then
-           begin // Set the destination pixel 
+      begin
+        for x := 0 to w - 1 do
+        begin
+          sourcex := floor((x + minx) * cosine + (y + miny) * sine);
+          sourcey := floor((y + miny) * cosine - (x + minx) * sine);
+          if ((sourcex >= 0) and (sourcex < nWidth) and
+            (sourcey >= 0) and (sourcey < nHeight)) then
+          begin // Set the destination pixel 
             case bpp of
                1:
                  begin //Monochrome 
-                  mask := PByte(Longint(lpDIBBits) +
+                   mask := PByte(Longint(lpDIBBits) +
                      nRowBytes * sourcey +
                      (sourcex div 8))^ and ($80 shr
                      (sourcex mod 8));
                    if mask <> 0 then
                      mask := $80 shr (x mod 8);
                    PtrByte  := PByte(Longint(lpDIBBitsResult) +
-                     nResultRowBytes * y + (x div
-                     8));
-                   PtrByte^ := PtrByte^ and (not ($80 shr (x mod
-                     8)));
+                     nResultRowBytes * y + (x div 8));
+                   PtrByte^ := PtrByte^ and (not ($80 shr (x mod 8)));
                    PtrByte^ := PtrByte^ or mask;
                  end;
                4:
@@ -703,8 +690,7 @@ DelphiWorld 6.0
                        mask := (mask shl 4);
                    end;
                    PtrByte := PByte(Longint(lpDIBBitsResult) +
-                     nResultRowBytes * y + (x div
-                     2));
+                     nResultRowBytes * y + (x div 2));
                    if ((x and 1) <> 0) then
                      PtrByte^ := PtrByte^ and (not $0f)
                    else
@@ -714,8 +700,7 @@ DelphiWorld 6.0
                8:
                  begin
                    mask := PByte(Longint(lpDIBBits) +
-                     nRowBytes * sourcey +
-                     sourcex)^;
+                     nRowBytes * sourcey + sourcex)^;
                    PtrByte  := PByte(Longint(lpDIBBitsResult) +
                      nResultRowBytes * y + x);
                    PtrByte^ := mask;
@@ -749,9 +734,9 @@ DelphiWorld 6.0
                  end;
              end; // Case 
           end
-           else
-           begin
-             // Draw the background color. The background color 
+          else
+          begin
+            // Draw the background color. The background color 
             // has already been drawn for 8 bits per pixel and less 
             case bpp of
                16:
@@ -772,15 +757,14 @@ DelphiWorld 6.0
                      nResultRowBytes * y + x * 4);
                    PtrDword^ := dwBackColor;
                  end;
-             end;
-           end;
-         end;
-       end;
-       GlobalUnLock(hDIBResInfo);
-       GlobalUnLock(hDIB);
-       GlobalFree(hDIB);
-       hDIB := hDIBResInfo;
-       Result := True;
-     end;
+            end;
+          end;
+        end;
+      end;
+      GlobalUnLock(hDIBResInfo);
+      GlobalUnLock(hDIB);
+      GlobalFree(hDIB);
+      hDIB := hDIBResInfo;
+      Result := True;
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

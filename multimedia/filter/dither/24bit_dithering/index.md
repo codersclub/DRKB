@@ -1,15 +1,12 @@
 ---
 Title: Как сделать 24bit dithering?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать 24bit dithering?
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     type
@@ -126,4 +123,3 @@ Date: 01.01.2007
       FreeMem(error2B);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

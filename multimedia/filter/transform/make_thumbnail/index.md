@@ -1,16 +1,13 @@
 ---
 Title: Алгоритм качественного уменьшения
 Author: s-mike
+Source: <https://forum.sources.ru>
 Date: 01.01.2007
 ---
 
 
 Алгоритм качественного уменьшения
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure MakeThumbNail(const Src, Dest: TBitmap);
     type
@@ -161,15 +158,8 @@ Date: 01.01.2007
       end;
     end;
 
-
 Можно еще через StretchBlt, только перед ним надо задать
-
- 
 
     SetStretchBltMode(Canvas.Handle, HALFTONE);
 
 
-
-Автор: s-mike
-
-Взято из <https://forum.sources.ru>

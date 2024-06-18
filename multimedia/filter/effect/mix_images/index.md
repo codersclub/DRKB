@@ -1,20 +1,14 @@
 ---
 Title: Смешать два изображения
-Author: Вадим Исаенко
+Author: Вадим Исаенко, http://v-isa.narod.ru
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Смешать два изображения
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Вадим Исаенко
-
-WEB-сайт: http://v-isa.narod.ru
 
 Модуль MyGraph.pas включает в себя только одну процедуру, позволяющую
 смешать 2 изображения. Такая функция может быть полезна для получения
@@ -58,6 +52,3 @@ WEB-сайт: http://v-isa.narod.ru
     begin
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -1,15 +1,12 @@
 ---
 Title: Как сделать Wipe эффект?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать Wipe эффект?
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     unit ClockWipe;
      
@@ -95,4 +92,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

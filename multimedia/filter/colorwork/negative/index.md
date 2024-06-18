@@ -1,15 +1,12 @@
 ---
 Title: Негатив картинки
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Негатив картинки
 ================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       Line: pByteArray;
@@ -27,4 +24,3 @@ Date: 01.01.2007
       Image1.Refresh;
     end;
 
-Взято с <https://delphiworld.narod.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Как начертить круг?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как начертить круг?
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
      
@@ -61,7 +58,7 @@ Date: 01.01.2007
         plotcircle(x, y, x1, y1);
     end;
 
-Used like this:
+Использовать следующим образом:
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin
@@ -70,4 +67,3 @@ Used like this:
       {Add Math to the uses clause for the Min function}
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

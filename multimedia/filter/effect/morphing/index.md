@@ -1,15 +1,12 @@
 ---
-Title: Плавно превратить один рисунок в другой
+Title: Плавно превратить один рисунок в другой (Morphing)
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
-Плавно превратить один рисунок в другой
+Плавно превратить один рисунок в другой (Morphing)
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     const
@@ -73,4 +70,3 @@ Date: 01.01.2007
       bm1.Destroy; bm2.Destroy; bm.Destroy;
     end;
 
-Взято с <https://delphiworld.narod.ru>

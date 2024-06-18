@@ -1,18 +1,22 @@
 ---
 Title: Как начертить hexagon?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как начертить hexagon?
 ======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-    procedure PlotPolygon(const Canvas: TCanvas; const N: Integer; const R: Single;
-      const XC: Integer; const YC: Integer);
+Рисуем многоугольник.
+
+    procedure PlotPolygon(const Canvas: TCanvas;
+                          const N: Integer;
+                          const R: Single;
+                          const XC: Integer;
+                          const YC: Integer);
     type
       TPolygon = array of TPoint;
     var
@@ -54,6 +58,10 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Заштрихованный шестиугольник (hexagon)
 
     unit HexGrid;
      
@@ -306,4 +314,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

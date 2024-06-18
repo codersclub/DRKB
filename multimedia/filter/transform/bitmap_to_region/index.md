@@ -1,17 +1,13 @@
 ---
 Title: Создание уменьшенной копии картинки
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Создание уменьшенной копии картинки
 ===================================
 
-::: {.date}
-01.01.2007
-:::
-
-     
     unit ProjetoX_Screen;
      
     interface
@@ -228,13 +224,9 @@ Date: 01.01.2007
       MyRegion := BitmapToRegion(imgFundo.Picture.Bitmap,imgFundo.Canvas.Pixels[0,0]);
       SetWindowRgn(Handle,MyRegion,True);
     end;
-     
-     
-     
-     
-     
-     
-    Para os outros formulЯrios basta declarar as seguintes linhas na procedure FormCreate
+
+
+Para os outros formulЯrios basta declarar as seguintes linhas na procedure FormCreate
      
     procedure TFormXXXXXX.FormCreate(Sender: TObject);
     begin
@@ -247,6 +239,4 @@ Date: 01.01.2007
       SetWindowRgn(Handle,FormScreen.MyRegion,True);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

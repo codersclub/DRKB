@@ -1,15 +1,14 @@
 ---
 Title: Как добавить когерентный шум?
+Author: Ken Perlin
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как добавить когерентный шум?
 =============================
 
-::: {.date}
-01.01.2007
-:::
 
     {Coherent noise function over 1, 2 or 3 dimensions by Ken Perlin}
      
@@ -388,4 +387,3 @@ Used like this:
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

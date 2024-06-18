@@ -1,15 +1,12 @@
 ---
 Title: Как сделать colorize?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать colorize?
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
     function Colorize(RGB, Luma: Cardinal);
     var
@@ -25,4 +22,3 @@ Date: 01.01.2007
       Result := Round(b) shl 16 or Round(g) shl 8 or Round(r);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

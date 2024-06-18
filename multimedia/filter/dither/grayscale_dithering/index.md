@@ -1,15 +1,12 @@
 ---
 Title: Как сделать grayscale dithering?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать greyscale dithering?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure Greyscale(dib8, dib24: TFastDIB; Colors: Byte);
     type
@@ -108,4 +105,3 @@ Date: 01.01.2007
       Dispose(Div3);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
