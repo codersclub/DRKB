@@ -1,17 +1,14 @@
 ---
 Title: Вывод текста с эффектами
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Вывод текста с эффектами
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
-How to make TextOut with 3d-Effect or hollow Text
+> How to make TextOut with 3d-Effect or hollow Text?
 
 Answer:
 
@@ -54,4 +51,3 @@ Pen-Styles too!
      
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

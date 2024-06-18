@@ -12,9 +12,9 @@ vfw.pas
 
     {*******************************************************************************
       Original author unknown.
-      Modified for Delphi 3/4 COM syntax by Tom Nuydens
-                                            (delphi3d@gamedeveloper.org)
-                                            (www.gamedeveloper.org/delphi3d)
+      Modified for Delphi 3/4 COM syntax
+      by Tom Nuydens (delphi3d@gamedeveloper.org)
+                     (www.gamedeveloper.org/delphi3d)
     *******************************************************************************}
      
     unit VFW;
@@ -431,7 +431,7 @@ vfw.pas
             lpFormat                : PVOID ;   // format of frame to decompress
             lpData                  : PVOID ;   // frame data to decompress
             cbData                  : DWORD ;
-            lTime                   : DWORD  ;   // time in drawbegin units (see dwRate and dwScale)
+            lTime                   : DWORD ;   // time in drawbegin units (see dwRate and dwScale)
         end;
      
         PICDRAWSUGGEST              = ^TICDRAWSUGGEST;
@@ -517,7 +517,7 @@ vfw.pas
         lpBits          : PVOID;                // frame data to compress
         lpckid          : PDWORD;               // ckid for data in AVI file
         lpdwFlags       : PDWORD;               // flags in the AVI index.
-        lFrameNum       : DWORD;                 // frame number of seq.
+        lFrameNum       : DWORD;                // frame number of seq.
         dwFrameSize     : DWORD;                // reqested size in bytes. (if non zero)
         dwQuality       : DWORD;                // quality within one frame
         lpbiPrev        : PBITMAPINFOHEADER;    // format of previous frame
@@ -680,7 +680,7 @@ vfw.pas
         lpFormat    : PVOID;                // format of frame to decompress
         lpData      : PVOID;                // frame data to decompress
         cbData      : DWORD;                // size of data
-        lTime       : DWORD                  // time to draw this frame
+        lTime       : DWORD                 // time to draw this frame
         ): DWORD; cdecl;
      
     // ICMessage is not supported on Win32, so provide a static inline function
@@ -742,8 +742,8 @@ vfw.pas
         lpbiIn      : PBITMAPINFO;          // format to compress from
         lpBits      : PVOID;                // data to compress
         lpbiOut     : PBITMAPINFO;          // compress to this (NULL ==> default)
-        lQuality    : DWORD;                 // quality to use
-        plSize      : PDWORD                 // compress to this size (0=whatever)
+        lQuality    : DWORD;                // quality to use
+        plSize      : PDWORD                // compress to this size (0=whatever)
         ): THANDLE; stdcall;
      
     function    ICImageDecompress(
@@ -764,7 +764,7 @@ vfw.pas
     type
         PCOMPVARS       = ^TCOMPVARS;
         TCOMPVARS       = record
-            cbSize      : DWORD;             // set to sizeof(COMPVARS) before
+            cbSize      : DWORD;            // set to sizeof(COMPVARS) before
                                             // calling ICCompressorChoose
             dwFlags     : DWORD;            // see below...
             hic         : HIC;              // HIC of chosen compressor
@@ -776,12 +776,12 @@ vfw.pas
             lpBitsOut   : PVOID;
             lpBitsPrev  : PVOID;
             lFrame      : DWORD;
-            lKey        : DWORD;             // key frames how often?
-            lDataRate   : DWORD;             // desired data rate KB/Sec
-            lQ          : DWORD;             // desired quality
+            lKey        : DWORD;            // key frames how often?
+            lDataRate   : DWORD;            // desired data rate KB/Sec
+            lQ          : DWORD;            // desired quality
             lKeyCount   : DWORD;
             lpState     : PVOID;            // state of compressor
-            cbState     : DWORD;             // size of the state
+            cbState     : DWORD;            // size of the state
         end;
      
     // FLAGS for dwFlags element of COMPVARS structure:
@@ -819,7 +819,7 @@ vfw.pas
         uiFlags     : UINT;                     // flags
         lpBits      : PVOID;                    // input DIB bits
         pfKey       : PBOOL;                    // did it end up being a key frame?
-        plSize      : PDWORD                     // size to compress to/of returned image
+        plSize      : PDWORD                    // size to compress to/of returned image
         ): PVOID; stdcall;
      
     procedure   ICCompressorFree(pc: PCOMPVARS); stdcall;
@@ -2454,7 +2454,7 @@ vfw.pas
         TCAPINFOCHUNK                   = record
             fccInfoID                   : FOURCC;   // Chunk ID, "ICOP" for copyright
             lpData                      : PVOID;    // pointer to data
-            cbData                      : DWORD;     // size of lpData
+            cbData                      : DWORD;    // size of lpData
         end;
      
     {-- CapControlCallback states ------------------------------------------------}
@@ -3940,7 +3940,7 @@ vfw.pas
         lpBits          : PVOID;                // frame data to compress
         lpckid          : PDWORD;               // ckid for data in AVI file
         lpdwFlags       : PDWORD;               // flags in the AVI index.
-        lFrameNum       : DWORD;                 // frame number of seq.
+        lFrameNum       : DWORD;                // frame number of seq.
         dwFrameSize     : DWORD;                // reqested size in bytes. (if non zero)
         dwQuality       : DWORD;                // quality within one frame
         lpbiPrev        : PBITMAPINFOHEADER;    // format of previous frame
@@ -3994,7 +3994,7 @@ vfw.pas
         lpFormat    : PVOID;                // format of frame to decompress
         lpData      : PVOID;                // frame data to decompress
         cbData      : DWORD;                // size of data
-        lTime       : DWORD                  // time to draw this frame
+        lTime       : DWORD                 // time to draw this frame
         ): DWORD; cdecl; external VFWDLL;
      
     {== Helper routines for DrawDib and MCIAVI... ================================}
@@ -4010,8 +4010,8 @@ vfw.pas
         lpbiIn      : PBITMAPINFO;          // format to compress from
         lpBits      : PVOID;                // data to compress
         lpbiOut     : PBITMAPINFO;          // compress to this (NULL ==> default)
-        lQuality    : DWORD;                 // quality to use
-        plSize      : PDWORD                 // compress to this size (0=whatever)
+        lQuality    : DWORD;                // quality to use
+        plSize      : PDWORD                // compress to this size (0=whatever)
         ): THANDLE; stdcall; external VFWDLL;
      
     function    ICImageDecompress(
@@ -4041,7 +4041,7 @@ vfw.pas
         uiFlags     : UINT;                     // flags
         lpBits      : PVOID;                    // input DIB bits
         pfKey       : PBOOL;                    // did it end up being a key frame?
-        plSize      : PDWORD                     // size to compress to/of returned image
+        plSize      : PDWORD                    // size to compress to/of returned image
         ): PVOID; stdcall; external VFWDLL;
      
     procedure   ICCompressorFree(pc: PCOMPVARS); stdcall; external VFWDLL;

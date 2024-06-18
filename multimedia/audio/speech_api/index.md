@@ -20,7 +20,7 @@ ActiveX компонент TextToSpeech входящий в стандартну
 и Win 2x.
 
 Если у Вас этого компонента нет Вам необходимо скачать и установить
-Microsoft Speech API 4.0 825 Кб и Lernout &Hauspie Text-To-Speech 2.9 Мб
+Microsoft Speech API 4.0 (825 Кб) и Lernout &Hauspie Text-To-Speech (2.9 Мб)
 (русский мужской и женский голос.)
 
 Применение этого компонента позволяет значительно расширить

@@ -1,15 +1,12 @@
 ---
 Title: Show text progressively as typed with a typewriter (horizontal/vertical)
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Show text progressively as typed with a typewriter (horizontal/vertical)
 ========================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
      To make this code to work you would need 2 images,
@@ -68,4 +65,3 @@ Show text progressively as typed with a typewriter (horizontal/vertical)
      HorizontalTypewriter('Hello Big-X',  image2,  100,     1       );
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: OpenGL - радиальное размытие
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 OpenGL - радиальное размытие
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     // К заголовку RadialBlur(For OpenGL)
     // Данный код работает правильно только, если в пректе 0 форм,
@@ -774,4 +771,3 @@ OpenGL - радиальное размытие
       WinMain(hInstance, hPrevInst, CmdLine, CmdShow);
     end.
 
-Взято с <https://delphiworld.narod.ru>

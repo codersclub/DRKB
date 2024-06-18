@@ -1,15 +1,12 @@
 ---
 Title: Как сделать прозрачным фон текста?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как сделать прозрачным фон текста?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 Используйте функцию SetBkMode():
 
@@ -29,6 +26,4 @@ Date: 01.01.2007
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

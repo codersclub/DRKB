@@ -1,15 +1,12 @@
 ---
 Title: OpenGL в Delphi. Часть 1. Первые полигоны
 Date: 01.01.2007
+Source: <https://www.ogldelphi.km.ru/about.html>
 ---
 
 
 OpenGL в Delphi. Часть 1. Первые полигоны
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Первая программа с использованием OpenGL
 
@@ -19,7 +16,7 @@ OpenGL ...
 
 Начнём, пожалуй! Для начала скачайте пример ... и  посмотрите на его работу...
 
-Если Вы видели ВРАЩАЮЩИЙСЯ КУБ,то я Вас поздравляю!
+Если Вы видели ВРАЩАЮЩИЙСЯ КУБ, то я Вас поздравляю!
 Вы только-что запустили Вашу первую программу на OpenGL!!.
 
 А теперь самое интересное начнём разбор полётов...
@@ -31,10 +28,10 @@ OpenGL ...
 
 Теперь в директиву "uses" добавьте "OpenGL" вот так:
 
-       uses
-          Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-          Dialogs,ExtCtrls,OpenGL, //Подключаем OpenGL32.dll,
-          dglut;//модуль для рисования правильных объектов одной строкой кода
+    uses
+       Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
+       Dialogs,ExtCtrls,OpenGL, //Подключаем OpenGL32.dll,
+       dglut;//модуль для рисования правильных объектов одной строкой кода
 
 Прекрасно!
 
@@ -42,31 +39,31 @@ OpenGL ...
 
 (я,надеюсь, что вы знакомы с Delphi):
 
-        procedure FormCreate(Sender: TObject);
-        procedure FormDestroy(Sender: TObject);
-        procedure FormResize(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure FormResize(Sender: TObject);
 
 А теперь в разделе private сделайте следующее
 
-        procedure Initsvet;
-        procedure SetPixFormat;// формат пукселя
-        procedure Draww;
-        procedure WMPaint( var Msg: TWMPaint );// похожа на OnPaint
-        message WM_PAINT; // сообщение от OnPaint
+    procedure Initsvet;
+    procedure SetPixFormat;// формат пукселя
+    procedure Draww;
+    procedure WMPaint( var Msg: TWMPaint );// похожа на OnPaint
+    message WM_PAINT; // сообщение от OnPaint
 
 В разделе private
 
 обьявим...:
 
-         DC:HDC; //   переменные для получения контекста воспроизведения
-         hrc:HGLRC; //
-         Angle:GLfloat; // угол, на который будет поворачиваться куб
-         procedure initsvet;
-         procedure SetPixFormat;
+    DC:HDC; //   переменные для получения контекста воспроизведения
+    hrc:HGLRC; //
+    Angle:GLfloat; // угол, на который будет поворачиваться куб
+    procedure initsvet;
+    procedure SetPixFormat;
 
 В разделе protected обьявим:
 
-     procedure WMPaint(var Msg: TWMPaint); message WM_PAINT;
+    procedure WMPaint(var Msg: TWMPaint); message WM_PAINT;
 
 просто вот так всё и пишите, компилятор не обидится!!
 
@@ -174,4 +171,3 @@ OpenGL ...
 
 Вот и всё!
 
-<https://www.ogldelphi.km.ru/about.html>

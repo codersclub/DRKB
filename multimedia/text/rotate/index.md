@@ -8,9 +8,11 @@ Date: 01.01.2007
 Как вывести текст, написанный под углом или вращение текста?
 ============================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Pegas
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Для того чтобы вывести текст под углом, вытянуть или сжать его нужно
 воспользоваться структурой LOGFONT. Здесь показаны не все ее
@@ -57,11 +59,13 @@ Date: 01.01.2007
     end;
      
 
-Автор: Pegas
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Зайцев О.В., Владимиров А.М.
+
+Source: <https://forum.sources.ru>
 
     { Эта процедура устанавливает угол вывода текста для указанного Canvas, угол в градусах }
     { Шрифт должен быть TrueType ! }
@@ -76,13 +80,11 @@ Date: 01.01.2007
      c.Font.Handle := CreateFontIndirect(LogRec);
     end;
 
-Зайцев О.В.
-
-Владимиров А.М.
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://forum.sources.ru>
 
     procedure TextOutAngle(x,y,aAngle,aSize: integer; txt: string); 
     var hFont, Fontold: integer; 
@@ -102,9 +104,12 @@ Date: 01.01.2007
       DeleteObject(hFont); 
     end; 
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure AngleTextOut(CV: TCanvas; const sText:
       string; x, y, angle: integer);
@@ -127,11 +132,13 @@ Date: 01.01.2007
       SaveFont.Free;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TextOutVertical(var bitmap: TBitmap; x, y: Integer; s: string);
     var
@@ -158,11 +165,13 @@ DelphiWorld 6.0
       end
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Некоторое время я делал так: я создавал шрифт, выбирал его в DC ...
 
@@ -176,11 +185,12 @@ DelphiWorld 6.0
 
 .... и затем использовал любую функцию рисования для вывода текста.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 7:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Попробуйте это:
 
@@ -198,11 +208,11 @@ DelphiWorld 6.0
       DeleteObject(hNewFont);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 8:
 
 Выводим цветной текст на форме под любым углом
 
@@ -242,6 +252,10 @@ OnClick следующий код:
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 9:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     {Create a rotated font based on the font object F}
     function CreateRotatedFont(F : TFont; Angle : Integer) : hFont;
@@ -284,11 +298,8 @@ OnClick следующий код:
     if FontAngle <> 0 then
       Canvas.Font.Handle := CreateRotatedFont(Font, FontAngle);
     ...
-     
-     
+
 
 Вращаются только векторные шрифты.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

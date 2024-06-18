@@ -1,18 +1,15 @@
 ---
 Title: OpenGL в Delphi. Часть 5. GLAux
 Date: 01.01.2007
+Source: <https://www.ogldelphi.km.ru/about.html>
 ---
 
 
 OpenGL в Delphi. Часть 5. GLAux
 ===============================
 
-::: {.date}
-01.01.2007
-:::
-
 До этого мы писали программы с использованием OpenGL и GLUT.
-Но SGI* приготовила программистам ещё одну библиотеку.
+Но SGI\* приготовила программистам ещё одну библиотеку.
 
 GLAUX - библиотека, где есть всё для работы с OpenGL
 (чтение файла растра, наложение текстуры, построение примитивов...).
@@ -24,7 +21,7 @@ glaux.dll в архиве RAR (\~160kb), но в распакованном ви
 со своей программой. Так же в разделе Инструмент вы найдёте
 заголовки Этой библиотеки для DELPHI и для C++.
 
-!!!ВНИМАНИЕ!!!
+**!!!ВНИМАНИЕ!!!**
 
 Кто может "конвертнуть" заголовки из С++ в DELPHI, тот сделает
 благородное дело для себя и ОСТАЛЬНЫХ!
@@ -69,9 +66,7 @@ auxWireIcosahedron(1); auxSolidIcosahedron(1); auxWireOctahedron(1);
 auxSolidOctahedron(1); auxWireTetrahedron(1); auxSolidTetrahedron(1);
 auxWireDodecahedron(1); auxSolidDodecahedron(1); auxWireCone(1,0.5);
 auxSolidCone(1,0.5); auxWireTeapot(1);
-
 auxSolidTeapot(1);
 
 Вот и всё!
 
-<https://www.ogldelphi.km.ru/about.html>

@@ -2,17 +2,12 @@
 Title: Вывод строковой информации
 Author: Xavier Pacheco
 Date: 12.12.1999
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Вывод строковой информации
 ==========================
-
-::: {.date}
-12.12.1999
-:::
-
-Автор: Xavier Pacheco
 
     {
     Copyright © 1999 by Delphi 5 Developer's Guide - Xavier Pacheco and Steve Teixeira
@@ -140,6 +135,4 @@ Date: 12.12.1999
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

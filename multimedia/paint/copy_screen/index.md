@@ -1,15 +1,13 @@
 ---
 Title: Копирование экрана
 Date: 01.01.2007
+Author: Зайцев О.В., Владимиров А.М.
+Source: <https://forum.sources.ru>
 ---
 
 
 Копирование экрана
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
     unit ScrnCap;
     interface
@@ -99,8 +97,3 @@ Date: 01.01.2007
     end;
     end.
 
-Зайцев О.В.
-
-Владимиров А.М.
-
-Взято из <https://forum.sources.ru>

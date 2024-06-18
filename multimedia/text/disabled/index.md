@@ -1,15 +1,13 @@
 ---
 Title: Как нарисовать disabled текст?
 Date: 01.01.2007
+Author: Зайцев О.В., Владимиров А.М.
+Source: <https://forum.sources.ru>
 ---
 
 
 Как нарисовать disabled текст?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     {Draw Disabled Text **************
      ***** This function draws text in "disabled" style.  *****
@@ -29,8 +27,3 @@ Date: 01.01.2007
       DrawText (Canvas.Handle, Str, Count, Rect, Format);
     end;
 
-Зайцев О.В.
-
-Владимиров А.М.
-
-Взято из <https://forum.sources.ru>

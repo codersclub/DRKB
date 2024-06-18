@@ -1,15 +1,12 @@
 ---
 Title: Вертикальный текст с горизонтальной ориентацией букв
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Вертикальный текст с горизонтальной ориентацией букв
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       Hfont: Thandle;
@@ -39,6 +36,4 @@ Date: 01.01.2007
       deleteobject(font);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

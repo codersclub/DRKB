@@ -1,15 +1,13 @@
 ---
 Title: Получение OpenGL расширений
-Date: 01.01.2007
+Author: Gua, gua@ukr.net
+Date: 18.07.2002
 ---
 
 
 Получение OpenGL расширений
 ===========================
 
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение OpenGL расширений

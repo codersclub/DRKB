@@ -31,7 +31,7 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
         mciGetErrorString(err, ret, 255);
         messageDlg(ret, mtInformation, [mbOk], 0);
       end;
-      {Sending the "play fullscreen command to the Windows MCI}
+      {Sending the "play fullscreen command to the Windows MCI"}
       err := mciSendString(pchar('play movie fullscreen'), 0, 0, 0);
       {Use the following line instead of the above one if you want to play 
             it in screen mode}

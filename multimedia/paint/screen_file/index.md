@@ -1,6 +1,7 @@
 ---
 Title: Как копировать образ экрана в файл?
 Author: Vit
+Source: Vingrad.ru <https://forum.vingrad.ru>
 Date: 01.01.2007
 ---
 
@@ -8,15 +9,9 @@ Date: 01.01.2007
 Как копировать образ экрана в файл?
 ===================================
 
-::: {.date}
-01.01.2007
-:::
-
 На форме у меня стоит TImage (его можно сделать невидимым)
 
     uses JPEG;
-     
-
      
     ...
     var i: TJPEGImage;
@@ -46,14 +41,8 @@ Date: 01.01.2007
 
 Типы использованных переменных:
 
-Dwh : HWND;
+    Dwh : HWND;
+    DRect: TRect;
+    DescDC : HDC;
+    Canv : TCanvas;
 
-DRect: TRect;
-
-DescDC : HDC;
-
-Canv : TCanvas;
-
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

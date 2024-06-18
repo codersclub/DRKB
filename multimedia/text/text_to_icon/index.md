@@ -2,15 +2,12 @@
 Title: Как преобразовать текст в иконку?
 Author: Baa
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как преобразовать текст в иконку?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit unit1;
      
@@ -401,6 +398,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

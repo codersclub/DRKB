@@ -1,15 +1,13 @@
 ---
 Title: Как разместить прозрачную надпись на TBitmap?
 Date: 01.01.2007
+Author: Aziz (JINX)
+Source: Королевство Дельфи (https://delphi.vitpc.com/)
 ---
 
 
 Как разместить прозрачную надпись на TBitmap?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -21,9 +19,7 @@ Date: 01.01.2007
             SetBkMode(Image1.Picture.Bitmap.Canvas.Handle,OldBkMode);
     end;
 
-Взято из
-
-DELPHI VCL FAQ Перевод с английского      
+Взято из "DELPHI VCL FAQ Перевод с английского"
 
 Подборку, перевод и адаптацию материала подготовил Aziz(JINX)
 

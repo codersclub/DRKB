@@ -1,6 +1,5 @@
 ---
 Title: Вывод надписи на рабочий стол
-Author: Fantasist
 Date: 01.01.2007
 ---
 
@@ -8,17 +7,24 @@ Date: 01.01.2007
 Вывод надписи на рабочий стол
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Fantasist
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 На рабочий стол можно вывести строку используя
 
     TextOut(GetWindowDC(GetDesktopWindow),100,100,'Thom',4);
 
-Автор: Fantasist
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+----------------------------------------------
+
+Вариант 2:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Поверх всех окон можно нарисовать надпись использую следующую процедуру:
 
@@ -34,6 +40,3 @@ Date: 01.01.2007
       c.free;
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

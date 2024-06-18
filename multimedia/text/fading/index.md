@@ -1,15 +1,12 @@
 ---
 Title: Эффект потухания текста
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Эффект потухания текста
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот небольшой участок кода из купленного мною CD-ROM "How To Book".
 Файл с именем "HowUtils.Pas" содержит реализацию алгоритма
@@ -53,9 +50,6 @@ Date: 01.01.2007
       FadeInto(Target, TarRect.Left, TarRect.Top, Pic);
       Pic.Free;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

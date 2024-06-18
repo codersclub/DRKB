@@ -1,21 +1,18 @@
 ---
 Title: OpenGL в Delphi. Часть 3. Quadric-объекты
 Date: 01.01.2007
+Source: <https://www.ogldelphi.km.ru/about.html>
 ---
 
 
 OpenGL в Delphi. Часть 3. Quadric-объекты
 =========================================
 
-::: {.date}
-01.01.2007
-:::
-
 В разделе переменных укажим:
 
-       quadObj : NewQuadricObj;
+    quadObj : NewQuadricObj;
 
-,а далее пишем следующее(я просто прокомментирую код)
+а далее пишем следующее(я просто прокомментирую код)
 
     WMPaint:
      
@@ -38,4 +35,3 @@ OpenGL в Delphi. Часть 3. Quadric-объекты
 
 Вот и всё!
 
-<https://www.ogldelphi.km.ru/about.html>
