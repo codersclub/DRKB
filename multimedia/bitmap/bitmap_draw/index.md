@@ -33,11 +33,11 @@ Date: 01.01.2007
      
     procedure TForm1.FormPaint(Sender: TObject);
     begin
-         // создать битовые образы
+      // создать битовые образы
       sky := TBitMap.Create;
       aplane := TBitMap.Create;
      
-         // загрузить картинки
+      // загрузить картинки
       sky.LoadFromFile('sky.bmp');
       aplane.LoadFromFile('aplane.bmp');
      
@@ -45,11 +45,11 @@ Date: 01.01.2007
       Form1.Canvas.Draw(20, 20, aplane); // отрисовка левого самолета
      
       aplane.Transparent := True;
-         // теперь элементы рисунка, цвет которых совпадает с цветом
-         // левой нижней точки битового образа, не отрисовываются
+      // теперь элементы рисунка, цвет которых совпадает с цветом
+      // левой нижней точки битового образа, не отрисовываются
       Form1.Canvas.Draw(120, 20, aplane); // отрисовка правого самолета
      
-         // освободить память
+      // освободить память
       sky.free;
       aplane.free;
     end;

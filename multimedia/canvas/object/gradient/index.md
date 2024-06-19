@@ -280,8 +280,8 @@ Source: <https://www.swissdelphicenter.ch>
          bitmap1.Height := 100;
          Gradient(clred, clBlack, bitmap1);
          // So konnte man das Bild dann zB in einem TImage anzeigen 
-        // To show the image in a TImage: 
-        Image1.Picture.Bitmap.Assign(bitmap1);
+         // To show the image in a TImage: 
+         Image1.Picture.Bitmap.Assign(bitmap1);
        finally
          Bitmap1.Free;
        end;

@@ -4,12 +4,10 @@ Title: The End? (Часть 8)
 Updated: 02.03.2009
 tags: Delphi, DelphiX
 source: https://gamedev.ru/pages/hex/articles/DelphiX?page=9
-Author: hex (https://gamedev.ru/users/?id=14)
+Author: Влад Энгельгардт (hex), hexware@gmail.com
 ---
 
 # Изучаем DelphiX
-
-Влад Энгельгардт
 
 29 июня 2006 (Обновление: 28 фев 2009)
 

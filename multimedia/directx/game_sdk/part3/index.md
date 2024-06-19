@@ -1,6 +1,7 @@
 ---
 Title: DirectX (Игровой SDK) 3
 Date: 01.01.2007
+Author: Стас Бакулин (ogion@stud.vsu.ru)
 ---
 
 

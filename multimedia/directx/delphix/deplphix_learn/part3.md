@@ -4,18 +4,18 @@ Date: 29.06.2006
 Updated: 02.03.2009
 tags: Delphi, DelphiX
 source: https://gamedev.ru/pages/hex/articles/DelphiX?page=4
-Author: hex (https://gamedev.ru/users/?id=14)
+Author: Влад Энгельгардт (hex), hexware@gmail.com
 ---
 
 # Изучаем DelphiX
-
-Влад Энгельгардт
 
 29 июня 2006 (Обновление: 28 фев 2009)
 
 ## Часть 3: Крутим спрайты.
 
+:::{.right}
 *«Крутимся не накрутимся:)»*
+:::
 
 В DelphiX существует маленькая проблема, это разворот спрайтов.
 Она решается относительно просто, сейчас я объясню, как и что.

@@ -9,10 +9,8 @@ Source: <https://delphiworld.narod.ru>
 =====================================
 
     var 
-     
       OldColor: TColor; 
       Element: TColor = COLOR_BTNFACE; 
-     
       {....} 
      
     { 

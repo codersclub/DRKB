@@ -1,10 +1,10 @@
 ---
-Title: Преобразование RGB -> Gray
+Title: РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ RGB -> Gray
 Date: 01.01.2007
 ---
 
 
-Преобразование RGB -> Gray
+РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ RGB -> Gray
 ===========
 
     Function RgbToGray(RGBColor: TColor): TColor;

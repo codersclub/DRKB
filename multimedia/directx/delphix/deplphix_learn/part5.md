@@ -4,18 +4,18 @@ Date: 29.06.2006
 Updated: 02.03.2009
 tags: Delphi, DelphiX
 source: https://gamedev.ru/pages/hex/articles/DelphiX?page=7
-Author: hex (https://gamedev.ru/users/?id=14)
+Author: Влад Энгельгардт (hex), hexware@gmail.com
 ---
 
 # Изучаем DelphiX 
-
-Влад Энгельгардт
 
 29 июня 2006 (Обновление: 28 фев 2009)
 
 ## Часть 5: AI.
 
+:::{.right}
 *"Все люди - всего навсего сложный AI"*
+:::
 
 Здравствуйте! Сегодня я реализую у вас на глазах, простенький Ai,
 который будет стрелять по вам, и двигаться к вам.

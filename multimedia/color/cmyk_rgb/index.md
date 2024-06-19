@@ -1,10 +1,10 @@
 ---
-Title: Преобразование CMYK -> RGB
+Title: РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ CMYK -> RGB
 Date: 01.01.2007
 ---
 
 
-Преобразование CMYK -> RGB
+РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ CMYK -> RGB
 ===========
 
     procedure CMYKTORGB(C : byte;

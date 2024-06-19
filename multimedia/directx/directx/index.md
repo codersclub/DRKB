@@ -18,11 +18,12 @@ DirectX и Delphi
 В момент
 написания сего опуса я использую компонент DelphiX (автор - Hiroyuki
 Hori), распространяемый бесплатно -
-http://www.yks.ne.jp/\~hori/DelphiX-e.html. (если у вас есть что-нибудь
+<http://www.yks.ne.jp/~hori/DelphiX-e.html>.
+(если у вас есть что-нибудь
 получше и Вы поделитесь со мной - я буду очень признателен.)
 
 И еще один адрес, по которому можно скачать компонент DelphiX:
-http://www.torry.ru/vcl/packs/hhdelphix.zip
+<http://www.torry.ru/vcl/packs/hhdelphix.zip>
 
 По возможности я буду писать и названия методов DelphiX и названия
 соответствующих интерфейсов Directx API - чтоб вам легче было
@@ -117,7 +118,7 @@ or D3DRMRENDERMODE_SORTEDTRANSPARENCY);` - Эти два флага устано
 координате Z чтоб понять кто кого загораживает. Включает такую
 сортировку флаг, названный скромненько эдак, по Microsots-ки:
 `D3DRMRENDERMODE_SORTEDTRANSPARENCY`. Однако как говаривал К. Прутков -
-смотри в корень. Корнем же у нас является метод
+_смотри в корень._ Корнем же у нас является метод
 
     TMainForm.DXDrawInitialize(Sender: TObject);
 

@@ -10,6 +10,8 @@ Date: 01.01.2007
 
 Вариант 1:
 
+Source: <https://forum.sources.ru>
+
 Следущий пример показывает, как преобразовать RGB цвет в аналогичный
 оттенок серого, наподобие того, как это делает чёрно-белый телевизор:
 
@@ -31,11 +33,13 @@ Date: 01.01.2007
       Shape2.Brush.Color := RgbToGray(Shape1.Brush.Color);
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------
 
 Вариант 2:
+
+Author: Rouse\_
+
+Source: <https://forum.sources.ru>
 
     // Используется функция преобразования изображения в оттенки серого
     // взятая из UBPFD - http://delphibase.endimus.com/
@@ -101,6 +105,3 @@ Date: 01.01.2007
 
     ModColors(BitMap, RGB(150,150,150));
 
-Author: Rouse\_
-
-Source: <https://forum.sources.ru>

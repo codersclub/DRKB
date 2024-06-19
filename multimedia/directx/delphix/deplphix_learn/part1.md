@@ -4,19 +4,19 @@ Date: 29.06.2006
 Updated: 02.03.2009
 tags: Delphi, DelphiX
 source: https://gamedev.ru/pages/hex/articles/DelphiX?page=2
-Author: hex (https://gamedev.ru/users/?id=14)
+Author: Влад Энгельгардт (hex), hexware@gmail.com
 ---
 
 # Изучаем DelphiX
-Влад Энгельгардт  
+
 29 июня 2006 (Обновление: 28 фев 2009)
 
 # Часть 1: Первая игра.
 
-::: {.float-right}
-*«Как много игр-то хороших,  
+::: {.right}
+_«Как много игр-то хороших,  
 Да только сегодня не до них»  
-Автор.*
+Автор._
 :::
 
 Теперь мы создадим первую, и надеюсь не последнюю игрушку,

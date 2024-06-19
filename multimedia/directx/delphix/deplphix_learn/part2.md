@@ -4,18 +4,18 @@ Date: 29.06.2006
 Updated: 02.03.2009
 tags: Delphi, DelphiX
 source: https://gamedev.ru/pages/hex/articles/DelphiX?page=3
-Author: hex (https://gamedev.ru/users/?id=14)
+Author: Влад Энгельгардт (hex), hexware@gmail.com
 ---
 
 # Изучаем DelphiX
-
-Влад Энгельгардт
 
 29 июня 2006 (Обновление: 28 фев 2009)
 
 ## Часть 2: Усложняем нашу игру.
 
+:::{.right}
 *«Хех! загружу»*
+:::
 
 Прежде чем начать, объясню решение Д/З:
 
@@ -24,8 +24,8 @@ Author: hex (https://gamedev.ru/users/?id=14)
 
 Это очень легко сделать достаточно в процедуру DoMove патрона вставить:
 
-    if y<= 0 then Dead;
-    if y>= 600 then Dead;
+    if y <= 0 then Dead;
+    if y >= 600 then Dead;
 
 Нужно это для того, чтобы повысилось качество игры.
 
@@ -347,5 +347,5 @@ FormCreate написать:
 
 Нравится?
 
-Здесь можно скачать исподники всей этой части.  
+Здесь можно скачать исходники всей этой части.  
 [part2.rar](part2.rar) (77,5 kB)

@@ -49,7 +49,7 @@ Author: Alexander Burnashov, alex@arta.spb.su
       end; 
     end; 
      
-    {эта процедура загружает из файла true-color'ный битмэп} 
+    {эта процедура загружает из файла true-color-ный битмэп} 
     procedure TMBitmap.LoadFromFile(const FileName:string); 
     var HF:integer; {file handle} 
         HM:THandle; {file-mapping handle} 
@@ -60,7 +60,7 @@ Author: Alexander Burnashov, alex@arta.spb.su
     {открываем файл} 
       HF:=FileOpen(FileName,fmOpenRead or fmShareDenyWrite); 
      
-      if HF<0 then Error('open file '''+FileName+''''); 
+      if HF<0 then Error('open file "'+FileName+'"'); 
       try 
     {создаем объект-проецируемый файл} 
         HM:=CreateFileMapping(HF,nil,PAGE_READONLY,0,0,nil); 

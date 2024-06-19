@@ -1,6 +1,7 @@
 ---
 Title: Как получить цвет строки в HTML-формате?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
@@ -28,4 +29,3 @@ SMExport я использую следующую функцию:
       GetBValue(rgbColor)]) + '"';
     end;
 
-Source: <https://delphiworld.narod.ru>

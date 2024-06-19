@@ -1,6 +1,7 @@
 ---
 Title: Как преобразовать шестнадцатиричный цвет HTML в TColor?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
@@ -46,4 +47,3 @@ Date: 01.01.2007
      
     end.
 
-Source: <https://delphiworld.narod.ru>

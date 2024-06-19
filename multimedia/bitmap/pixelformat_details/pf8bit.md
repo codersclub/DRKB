@@ -26,15 +26,11 @@ pf16bit-изображениям, используя следующие опре
     TYPE
     THistogram  = ARRAY[0..255] OF INTEGER;
     ...
-     
-     
     VAR
     Histogram:  THistogram;
-    i      :  INTEGER;
-    j      :  INTEGER;
-    Row    :  pByteArray;
-     
-     
+    i        :  INTEGER;
+    j        :  INTEGER;
+    Row      :  pByteArray;
     ...
     FOR i := Low(THistogram) TO High(THistogram) DO
       Histogram[i] := 0;

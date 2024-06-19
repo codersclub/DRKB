@@ -61,7 +61,7 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
       end;
     end;
      
-    {эта процедура загружает из файла true-color'ный битмэп}
+    {эта процедура загружает из файла true-color-ный битмэп}
      
     procedure TMBitmap.LoadFromFile(const FileName: string);
     var

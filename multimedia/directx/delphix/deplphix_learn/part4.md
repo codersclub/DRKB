@@ -4,18 +4,18 @@ Date: 29.06.2006
 Updated: 02.03.2009
 tags: Delphi, DelphiX
 source: https://gamedev.ru/pages/hex/articles/DelphiX?page=6
-Author: hex (https://gamedev.ru/users/?id=14)
+Author: Влад Энгельгардт (hex), hexware@gmail.com
 ---
 
 # Изучаем DelphiX
-
-Влад Энгельгардт
 
 29 июня 2006 (Обновление: 28 фев 2009)
 
 ## Часть 4: Разбираем классы.
 
+:::{.right}
 *«Классы - это хорошо :)»*
+:::
 
 В этой части, дорогие мои читатели, мы разберем классы. Здесь будет
 рассказано, как создать грамотный, читаемый, и не тормозной код (на

@@ -38,9 +38,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     var
       Back, bitmap, Buf: TBitMap; // фон, картинка, буфер
       BackRct: TRect; // область фона, которая должна быть
-      // восстановлена из буфера
-      BufRct: Trect; // область буфера, которая используется для
-      // восстановления фона
+                      // восстановлена из буфера
+      BufRct: Trect;  // область буфера, которая используется для
+                      // восстановления фона
      
       x, y: integer; // текущее положение картинки
       W, H: integer; // размеры картинки
@@ -116,5 +116,4 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     end;
      
     end.
-
 

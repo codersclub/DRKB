@@ -1,15 +1,15 @@
 ---
 Title: Что такое DirectShow?
 Author: JINX (Elchin Aziz Ali OglI), aziz@telebot.com
-Date: 01.01.2001
+Date: 12.12.2000
+ID: 03913
 ---
 
 
 Что такое DirectShow?
 =====================
 
-На этот раз речь пойдет о DirectShow. Для чего нам может понадобиться
-DirectShow?
+На этот раз речь пойдет о DirectShow. Для чего нам может понадобиться DirectShow?
 
 **DirectShow** - это архитектура для воспроизведения, перехвата и обработки
 потоков мультимедиа. Звучит туманно? Поясняю - c помощью этого API
@@ -46,8 +46,8 @@ Surface DirectDraw (что для нас как раз интересно).
 - иметь некоторое представление о технологии COM
  (Component Object Model) - хотя быть знатоком этой технологии
  вовсе не обязательно - просто
-достаточно знать, что для получения COM-интерфейса нужно вызвать
-QueryInterface;
+ достаточно знать, что для получения COM-интерфейса нужно вызвать
+ QueryInterface;
 
 - скачать заголовочные файлы DirectShow API, переведенные на Delphi в
 рамках проекта JEDI -
@@ -266,11 +266,9 @@ Stream - позволяет управлять непосредственно э
 чтобы добраться до обьектов StreamSample. Вообще цепочка обьектов,
 которую предстоит создать выглядит так:
 
-IAMMultiMediaStream
-
-   + IDirectDrawMediaStream
-
-          + IDirectDrawStreamSample
+    IAMMultiMediaStream
+       +--> IDirectDrawMediaStream
+               +--> IDirectDrawStreamSample
 
 Сравните это с нашим рисунком. Как видите на вершине находится объект
 типа MultiMediaStream, который будет содержать MediaStream конкретного,
@@ -283,19 +281,20 @@ IDirectDrawStreamSample.
 OpenFile, которая автоматически строит граф фильтров для воспроизведения
 файла.
 
-CoCreateInstance(CLSID\_AMMultiMediaStream, nil, CLSCTX\_INPROC\_SERVER,
-IID\_IAMMultiMediaStream, AMStream);
+    CoCreateInstance(CLSID_AMMultiMediaStream, nil, CLSCTX_INPROC_SERVER,
+                     IID_IAMMultiMediaStream, AMStream);
 
 Здесь переменная AMStream имеет тип IAMMultiMediaStream.
 
 Мы создали контейнер для мультимедийных потоков. Сверяемся с рисунком -
-мы на верхнем уровне иерархии. У нас есть объект типа IMultimediaStream
-- теперь в этот контейнер нужно проинициализировать и добавить один или
-несколько мультимедиа потоков, нужного нам типа. Сначала инициализация:
+мы на верхнем уровне иерархии.
+У нас есть объект типа IMultimediaStream - теперь в этот контейнер нужно
+проинициализировать и добавить один или
+несколько мультимедиа потоков, нужного нам типа.
 
-AMStream.Initialize(STREAMTYPE\_READ,
+Сначала инициализация:
 
-AMMSF\_NOGRAPHTHREAD, nil);
+    AMStream.Initialize(STREAMTYPE_READ, AMMSF_NOGRAPHTHREAD, nil);
 
 При инициализации указываем, что будут создаваться мультимедиа потоки
 для чтения, передав значение STREAMTYPE\_READ (другие варианты
@@ -303,16 +302,15 @@ STREAMTYPE\_WRITE, STREAMTYPE\_TRANSFORM).
 
 Создадим теперь мультимедиа потоки для видео и звука:
 
-AMStream.AddMediaStream(DDraw, MSPID\_PrimaryVideo, 0,
-NewMediaStremVideo);
-
-   AMStream.AddMediaStream(nil, MSPID\_PrimaryAudio,
-AMMSF\_ADDDEFAULTRENDERER, NewMediaStremAudio);
+    AMStream.AddMediaStream(DDraw, MSPID_PrimaryVideo,
+                            0, NewMediaStremVideo);
+    AMStream.AddMediaStream(nil, MSPID_PrimaryAudio,
+                            AMMSF_ADDDEFAULTRENDERER, NewMediaStremAudio);
 
 Вызываем метод OpenFile - файл загружается, и автоматически строится
 граф фильтов:
 
-AMStream.OpenFile(\'cool.avi\', 0);
+    AMStream.OpenFile('cool.avi', 0);
 
 Осталось направить видео поток мультимедиа поток на Surface. Вот
 процедура, которая делает это:
@@ -346,17 +344,16 @@ IDirectDrawMediaStream (соответствующий второму уровн
 таймеру - здесь для простоты опускаем):
 
     hr:=Sample.Update(0, 0, nil, 0);
-     
-       if hr = $40003 {MS_S_ENDOFSTREAM} then
+    if hr = $40003 {MS_S_ENDOFSTREAM} then
          MMStream.Seek(0);
 
-Метод IDirectDrawStreamSample.Update выводит очередной кадр на Surface.
+Метод `IDirectDrawStreamSample.Update` выводит очередной кадр на Surface.
 При достижении конца потока он вернет ошибку с кодом $40003
 (MS\_S\_ENDOFSTREAM), я в этом случае просто перематываю поток к началу,
 методом Seek.
 
 Полностью программу, фрагменты кода из которой здесь приведены можно
-скачать здесь \<\<URL\>\>.
+скачать здесь: [DelphiDirectShow.zip](delphidirectshow.zip) (277 K).
 
 В этой программе инициализируется DirectDraw, создается Surface, а
 затем на него выводится видео из avi-файла.

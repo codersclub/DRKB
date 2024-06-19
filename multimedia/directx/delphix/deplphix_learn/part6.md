@@ -4,19 +4,19 @@ Date: 29.06.2006
 Updated: 02.03.2009
 tags: Delphi, DelphiX
 source: https://gamedev.ru/pages/hex/articles/DelphiX?page=8
-Author: hex (https://gamedev.ru/users/?id=14)
+Author: Влад Энгельгардт (hex), hexware@gmail.com
 ---
 
 # Изучаем DelphiX
-
-Влад Энгельгардт
 
 29 июня 2006 (Обновление: 28 фев 2009)
 
 ## Часть 6: Мультиплеер.
 
+:::{.right}
 *«SINGLE-хорошо, а  
 MULTIPLAYER — лучше»*
+:::
 
 Здравствуйте дорогие мои читатели.
 Сегодня мы будем говорить о мультиплеере.

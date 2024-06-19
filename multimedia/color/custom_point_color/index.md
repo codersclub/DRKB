@@ -18,9 +18,9 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
     DC: HDC;
     Color: Cardinal;
     begin
-    DC := CreateDC ('MONITOR', nil, nil, nil);
-    Color := GetPixel(DC, 300, 300);
-    DeleteDC(DC);
+      DC := CreateDC ('MONITOR', nil, nil, nil);
+      Color := GetPixel(DC, 300, 300);
+      DeleteDC(DC);
     end;
 
 ------------------------------------------------------------------------
@@ -35,8 +35,8 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
     DC: HDC;
     Color: Cardinal;
     begin
-    DC :=GetDC(0);
-    Color := GetPixel(DC, 300, 300);
-    ReleaseDC(0,DC);
+      DC := GetDC(0);
+      Color := GetPixel(DC, 300, 300);
+      ReleaseDC(0,DC);
     end;
 

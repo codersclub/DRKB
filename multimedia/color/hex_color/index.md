@@ -10,26 +10,30 @@ Date: 01.01.2007
 
 Вариант 1:
 
-GetRValue, GetGValue, GetBValue - дадут тебе байты цветов, затем тебе
-надо их перевести в hex...
-
 Author: Vit
 
 Source: Vingrad.ru <https://forum.vingrad.ru>
+
+GetRValue, GetGValue, GetBValue - дадут тебе байты цветов, затем тебе
+надо их перевести в hex...
 
 ------------------------------------------------------------------------
 
 Вариант 2:
 
-    IntToHex(Color);
-
 Author: neutrino
 
 Source: Vingrad.ru <https://forum.vingrad.ru>
 
+    IntToHex(Color);
+
 ------------------------------------------------------------------------
 
 Вариант 3:
+
+Author: Pegas
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 В модуле graphics имеются две недокументированные функции:
 
@@ -44,6 +48,3 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 Данная функция преобразует "clRed" или "$0000FF" во внутреннее
 значение цвета.
 
-Author: Pegas
-
-Source: Vingrad.ru <https://forum.vingrad.ru>

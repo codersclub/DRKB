@@ -4,12 +4,10 @@ Date: 29.06.2006
 Updated: 02.03.2009
 Tags: Delphi, DelphiX
 Source: https://gamedev.ru/pages/hex/articles/DelphiX
-Author: hex (hexware@gmail.com)
+Author: Влад Энгельгардт (hex), hexware@gmail.com
 ---
 
 # Изучаем DelphiX
-
-Влад Энгельгардт
 
 29 июня 2006 (Обновление: 28 фев 2009)
 
@@ -87,7 +85,7 @@ TDXPaintBox — Альтернатива TImage, только DIB-версия.
 
 Вот таблица зависимых и вспомогательных:
 
-![](20524.jpg)
+![](20524.jpg){.center}
 
 [](#principal)
 ### 2. Принцип написания кода и основные процедуры для классов.

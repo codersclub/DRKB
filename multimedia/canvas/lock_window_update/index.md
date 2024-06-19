@@ -13,5 +13,4 @@ Date: 01.01.2007
 
     LockWindowUpdate(Memo1.Handle); 
     ... 
-     
     LockWindowUpdate(0); 

@@ -57,7 +57,7 @@ the rainbow.
         ColorChunk := Width div Chunks else
         ColorChunk := Height div Chunks;
      
-     {Red To Yellow}
+      {Red To Yellow}
       r := 255;
       b := 0;
       for i := 0 to ColorChunk do begin
@@ -69,7 +69,7 @@ the rainbow.
         DeleteObject(SelectObject(Dc, OldBrush));
       end;
      
-     {Yellow To Green}
+      {Yellow To Green}
       g:=255;
       b:=0;
       for i := ColorChunk  to (ColorChunk * 2) do begin
@@ -81,7 +81,7 @@ the rainbow.
         DeleteObject(SelectObject(Dc, OldBrush));
       end;
      
-     {Green To Cyan}
+      {Green To Cyan}
       r:=0;
       g:=255;
       for i:= (ColorChunk * 2) to (ColorChunk * 3) do begin
@@ -93,7 +93,7 @@ the rainbow.
         DeleteObject(SelectObject(Dc,OldBrush));
       end;
      
-     {Cyan To Blue}
+      {Cyan To Blue}
       r := 0;
       b := 255;
       for i:= (ColorChunk * 3) to (ColorChunk * 4) do begin
@@ -105,7 +105,7 @@ the rainbow.
         DeleteObject(SelectObject(Dc, OldBrush));
       end;
      
-     {Blue To Magenta}
+      {Blue To Magenta}
       g := 0;
       b := 255;
       for i:= (ColorChunk * 4) to (ColorChunk * 5) do begin
@@ -118,7 +118,7 @@ the rainbow.
       end;
      
       if WrapToRed <> false then begin
-       {Magenta To Red}
+        {Magenta To Red}
         r := 255;
         g := 0;
         for i := (ColorChunk * 5) to ((ColorChunk * 6) - 1) do begin
@@ -131,7 +131,7 @@ the rainbow.
         end;
       end;
      
-     {Fill Remainder}
+      {Fill Remainder}
       if (Width - (ColorChunk * Chunks) - 1 ) > 0 then begin
         if WrapToRed <> false then begin
           r := 255;
@@ -176,7 +176,7 @@ the rainbow.
         result := RGB(255, 0, 0);
         exit;
      end;
-    {WhatChunk}
+     {WhatChunk}
       if WrapToRed <> false then
         ColorChunk := RainbowWidth div 6 else
         ColorChunk := RainbowWidth div 5;

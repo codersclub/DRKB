@@ -13,7 +13,7 @@ Author: Vit
 
 Source: Vingrad.ru <https://forum.vingrad.ru>
 
-Если Edit1.text это String то что такое Edit1.font.color?
+> Если Edit1.text это String то что такое Edit1.font.color?
 
 TColor - это Integer, чтоб задать нужный цвет можно пользовать
 константы, а можно в числовом виде:
@@ -49,7 +49,7 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Можно использовать константы типа clred, clblack, cllime, clgreen...
 
-Для работы с цветом можно использовать следующие функцииЖ
+Для работы с цветом можно использовать следующие функции:
 
 - RGB(r,g,b:byte):tcolor //получаешь цвет по 3 составляющим
 - GetRValue(color:tcolor)

@@ -57,7 +57,7 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
       BmpV.Width := 10;
       BmpV.Height := Image.Height;
       BmpV.Canvas.CopyRect(Rect(0,0,BmpV.Width,BmpV.Height),
-                     Image.Canvas,Rect(X - 5, 0, X + 5, BmpV.Height));
+           Image.Canvas,Rect(X - 5, 0, X + 5, BmpV.Height));
      
       // Now draw the current position
       Image.Canvas.MoveTo(0, Y);
