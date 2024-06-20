@@ -9,14 +9,14 @@ OpenGL в Delphi. Часть 5. GLAux
 ===============================
 
 До этого мы писали программы с использованием OpenGL и GLUT.
-Но SGI\* приготовила программистам ещё одну библиотеку.
+Но SGI (Silicon Graphics, Inc.) приготовила программистам ещё одну библиотеку.
 
 GLAUX - библиотека, где есть всё для работы с OpenGL
 (чтение файла растра, наложение текстуры, построение примитивов...).
 
 Правда,
 одно маленькое замечание: в разделе Инструмент вы найдёте
-glaux.dll в архиве RAR (\~160kb), но в распакованном виде она
+glaux.dll в архиве RAR (~160kb), но в распакованном виде она
 "весит" !1.32 Mb!, и вам придётся "таскать" этот файл вместе
 со своей программой. Так же в разделе Инструмент вы найдёте
 заголовки Этой библиотеки для DELPHI и для C++.
@@ -59,14 +59,28 @@ glaux.dll в архиве RAR (\~160kb), но в распакованном ви
 
 Вот список того, что можно построить:
 
-auxWireSphere(1); auxSolidSphere(1); auxWireCube(1); auxSolidCube(1);
-auxWireBox(1,2,3); auxSolidBox(1,2,3); auxWireTorus(1,2);
-auxSolidTorus(1,2); auxWireCylinder(1,2); auxSolidCylinder(1,2);
-auxWireIcosahedron(1); auxSolidIcosahedron(1); auxWireOctahedron(1);
-auxSolidOctahedron(1); auxWireTetrahedron(1); auxSolidTetrahedron(1);
-auxWireDodecahedron(1); auxSolidDodecahedron(1); auxWireCone(1,0.5);
-auxSolidCone(1,0.5); auxWireTeapot(1);
-auxSolidTeapot(1);
+- auxWireSphere(1);  Сфера проволочная
+- auxSolidSphere(1); Сфера твёрдая
+- uxWireCube(1);  Куб проволочный
+- uxSolidCube(1); Куб твёрдый
+- uxWireBox(1,2,3);  Параллелепипед проволочный
+- uxSolidBox(1,2,3); Параллелепипед твёрдый
+- uxWireTorus(1,2);  Тор проволочный
+- uxSolidTorus(1,2); Тор твёрдый
+- uxWireCylinder(1,2);  Цилиндр проволочный
+- uxSolidCylinder(1,2); Цилиндр твёрдый
+- uxWireIcosahedron(1);  Икосаэдр проволочный
+- uxSolidIcosahedron(1); Икосаэдр твёрдый
+- uxWireOctahedron(1);  Октаэдр проволочный
+- uxSolidOctahedron(1); Октаэдр твёрдый
+- uxWireTetrahedron(1);  Тетраэдр проволочный
+- uxSolidTetrahedron(1); Тетраэдр твёрдый
+- uxWireDodecahedron(1);  Додекаэдр проволочный
+- uxSolidDodecahedron(1); Додекаэдр твёрдый
+- uxWireCone(1,0.5);  Конус проволочный
+- uxSolidCone(1,0.5); Конус твёрдый
+- uxWireTeapot(1);  Чайник проволочный
+- uxSolidTeapot(1); Чайник твёрдый
 
 Вот и всё!
 

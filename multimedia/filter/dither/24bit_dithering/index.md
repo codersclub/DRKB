@@ -60,7 +60,8 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
       error2R := AllocMem((bmpS.Width + 2) * sizeof(integer));
       error2G := AllocMem((bmpS.Width + 2) * sizeof(integer));
       error2B := AllocMem((bmpS.Width + 2) * sizeof(integer));
-      {dx holds the delta for each iteration as we zigzag, it'll change between 1 and -1}
+      {dx holds the delta for each iteration as we zigzag,
+       it will change between 1 and -1}
       dx := 1;
       for y := 0 to bmpS.Height - 1 do
       begin

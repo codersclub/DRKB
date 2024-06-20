@@ -131,7 +131,7 @@ Author: Andy Nikishin (2:5031/16.2)
 
 Andy Nikishin (2:5031/16.2)
 
-https://www.gs.ru/\~links/andy.shtml
+https://www.gs.ru/~links/andy.shtml
 
 ------------------------------------------------------------------------
 

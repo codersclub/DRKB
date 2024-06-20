@@ -1,6 +1,6 @@
 ---
 Title: Добавление шума
-Author: Федоровских Николай(Fenik), chook_nu@uraltc.ru, Новоуральск
+Author: Федоровских Николай (Fenik), chook_nu@uraltc.ru
 Date: 05.06.2002
 ---
 

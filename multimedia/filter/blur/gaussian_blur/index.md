@@ -8,7 +8,7 @@ Date: 01.01.2007
 Получение Gaussian Blur
 =======================
 
-Вариант 2:
+Вариант 1:
 
 Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 

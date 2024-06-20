@@ -1,11 +1,11 @@
 ---
-Title: Show text progressively as typed with a typewriter (horizontal/vertical)
+Title: Постепенное отображение текста, как на пишущей машинке (горизонтально/вертикально)
 Date: 01.01.2007
 Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Show text progressively as typed with a typewriter (horizontal/vertical)
+Постепенное отображение текста, как на пишущей машинке (горизонтально/вертикально)
 ========================================================================
 
     {

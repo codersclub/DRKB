@@ -32,7 +32,8 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     implementation
      
     {$R *.DFM}
-    {===========================molda o formato do formulЯrio no bitmap}
+    {===========================
+     размещает форму на битмапе}
     function TFormScreen.BitmapToRegion(hBmp: TBitmap; TransColor: TColor): HRGN;
      
     const
@@ -58,11 +59,11 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
       Result := 0;
       if hBmp <> nil then
       begin
-        { Cria um Device Context onde serЯ armazenado o Bitmap }
+        { Создает контекст устройства, в котором будет храниться растровое изображение. }
         MemDC := CreateCompatibleDC(0);
         if MemDC <> 0 then
         begin
-         { Cria um Bitmap de 32 bits sem compressТo }
+         { Создает несжатое 32-битное растровое изображение. }
           with BitmapInfo.bmiHeader do
           begin
             biSize          := sizeof(TBitmapInfoHeader);
@@ -82,7 +83,7 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
           begin
             holdMemBmp := SelectObject(MemDC, hbm32);
             {
-              Calcula quantos bytes por linha o bitmap de 32 bits ocupa.
+              Вычисляет, сколько байтов в строке занимает 32-битное растровое изображение.
             }
             GetObject(hbm32, SizeOf(bm32), @bm32);
             while (bm32.bmWidthBytes mod 4) > 0 do
@@ -92,9 +93,10 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
             holdBmp := SelectObject(DC, hBmp.Handle);
             BitBlt(MemDC, 0, 0, hBmp.Width, hBmp.Height, DC, 0, 0, SRCCOPY);
             {
-              Para melhor performance, serЯ utilizada a funюТo ExtCreasteRegion
-              para criar o HRGN. Esta funюТo recebe uma estrutura RGNDATA.
-              Cada estrutura terЯ 100 retФngulos por padrТo (ALLOC_UNIT)
+             Для повышения производительности для создания HRGN
+             будет использоваться функция ExtCreasteRegion.
+             Эта функция получает структуру RGNDATA.
+             По умолчанию каждая структура будет иметь 100 прямоугольников (ALLOC_UNIT).
             }
             maxRects := ALLOC_UNIT;
             hData := GlobalAlloc(GMEM_MOVEABLE, sizeof(TRgnDataHeader) +
@@ -105,24 +107,24 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
             pData^.rdh.nCount := 0;
             pData^.rdh.nRgnSize := 0;
             SetRect(pData^.rdh.rcBound, MaxInt, MaxInt, 0, 0);
-            { Separa o pixel em suas cores fundamentais }
+            { Разделяет пиксель на его основные цвета. }
             CR := GetRValue(ColorToRGB(TransColor));
             CG := GetGValue(ColorToRGB(TransColor));
             CB := GetBValue(ColorToRGB(TransColor));
             {
-              Processa os pixels bitmap de baixo para cima, jЯ que bitmaps sТo
-              verticalmente invertidos.
+             Обрабатывает растровые пиксели снизу вверх,
+             поскольку растровые изображения инвертированы по вертикали.
             }
             p32 := bm32.bmBits;
             inc(PChar(p32), (bm32.bmHeight - 1) * bm32.bmWidthBytes);
             for y := 0 to hBmp.Height-1 do
             begin
-              { Processa os pixels do bitmap da esquerda para a direita }
+              { Обрабатывать пиксели растрового изображения слева направо }
               x := -1;
               while x+1 < hBmp.Width do
               begin
                 inc(x);
-                { Procura por uma faixa contЭnua de pixels nТo transparentes }
+                { Ищет непрерывную полосу непрозрачных пикселей }
                 x0 := x;
                 p := PLongInt(p32);
                 inc(PChar(p), x * SizeOf(LongInt));
@@ -145,8 +147,8 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
                 if x > x0 then
                 begin
                   {
-                    Adiciona o intervalo de pixels [(x0, y),(x, y+1)] como um novo
-                    retФngulo na regiТo.
+                    Добавляет диапазон пикселей [(x0, y),(x, y+1)]
+                    в качестве нового прямоугольника в регионе.
                   }
                   if pData^.rdh.nCount >= maxRects then
                   begin
@@ -169,17 +171,18 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
                     pData^.rdh.rcBound.Bottom := y+1;
                   inc(pData^.rdh.nCount);
                   {
-                   No Windows98, a funюТo ExtCreateRegion() pode falhar se o n·mero
-                   de retФngulos for maior que 4000. Por este motivo, a regiТo deve
-                   ser criada por partes com menos de 4000 retФngulos. Neste caso, foram
-                   padronizadas regi§es com 2000 retФngulos.
+                    В Windows98 функция ExtCreateRegion() может завершиться ошибкой,
+                    если количество прямоугольников превышает 4000.
+                    По этой причине регион должен быть создан из частей,
+                    содержащих менее 4000 прямоугольников.
+                    В данном случае стандартизировались регионы с 2000 прямоугольниками.
                   }
                   if pData^.rdh.nCount = 2000 then
                   begin
                     h := ExtCreateRegion(NIL, SizeOf(TRgnDataHeader) +
                        (SizeOf(TRect) * maxRects), pData^);
                     Assert(h <> 0);
-                   { Combina a regiТo parcial, recЪm criada, com as anteriores }
+                   { Объединяет вновь созданную частичную область с предыдущими }
                     if Result <> 0 then
                     begin
                       CombineRgn(Result, Result, h, RGN_OR);
@@ -195,7 +198,7 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
             end;
             { Cria a regiТo geral }
             h := ExtCreateRegion(NIL, SizeOf(TRgnDataHeader) +
-               (SizeOf(TRect) * maxRects), pData^);
+                 (SizeOf(TRect) * maxRects), pData^);
             Assert(h <> 0);
             if Result <> 0 then
             begin
@@ -203,8 +206,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
               DeleteObject(h);
             end else
               Result := h;
-            { Com a regiТo final completa, o bitmap de 32 bits pode ser
-              removido da mem?ria, com todos os outros ponteiros que foram criados.}
+            { После завершения окончательного региона
+              32-битное растровое изображение можно удалить из памяти
+              вместе со всеми другими созданными указателями. }
             GlobalFree(hData);
             SelectObject(DC, holdBmp);
             DeleteDC(DC);
@@ -218,22 +222,22 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     procedure TFormScreen.FormCreate(Sender: TObject);
     begin
      
-    {carregue uma imagem na TImage ImgFundo}
+      {загрузить изображение в TImage ImgFundo}
      
-    {redesenha o formulario no formato do ImgFundo}
+      {перепроектирует форму в формате ImgFundo}
       MyRegion := BitmapToRegion(imgFundo.Picture.Bitmap,imgFundo.Canvas.Pixels[0,0]);
       SetWindowRgn(Handle,MyRegion,True);
     end;
 
 
-Para os outros formulЯrios basta declarar as seguintes linhas na procedure FormCreate
+Для других форм просто объявите следующие строки в процедуре FormCreate:
      
     procedure TFormXXXXXX.FormCreate(Sender: TObject);
     begin
      
-    {carregue uma imagem na TImage ImgFundo}
+      {загрузить изображение в TImage ImgFundo}
      
-    {redesenha o formulario no formato do ImgFundo}
+      {перепроектирует форму в формате ImgFundo}
       FormScreen.MyRegion := FormScreen.BitmapToRegion(imgFundo.Picture.Bitmap,
               imgFundo.Canvas.Pixels[0,0]);
       SetWindowRgn(Handle,FormScreen.MyRegion,True);

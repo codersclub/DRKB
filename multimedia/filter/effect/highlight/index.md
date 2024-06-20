@@ -13,7 +13,7 @@ Source: <https://www.swissdelphicenter.ch>
       Does anyone know of a way that I can achieve the same effect on a bitmap 
       that windows achieves when you single click on an icon on the desktop?  In 
       other words, I want to "sorta highlight" a bitmap and let the user know that 
-      it's selected. 
+      it is selected. 
      
     Answer: 
      

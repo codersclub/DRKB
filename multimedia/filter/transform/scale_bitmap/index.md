@@ -1,11 +1,11 @@
 ---
-Title: How to scale bitmap by percent?
+Title: Как масштабировать растровое изображение в процентах?
 Date: 01.01.2007
 Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-How to scale bitmap by percent?
+Как масштабировать растровое изображение в процентах?
 ===============================
 
     { .... }

@@ -113,7 +113,7 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
       MetafilePict^.yExt := ExtRect.Top - ExtRect.Bottom;
       MetafilePict^.HMF := FMetafileHandle;
       GlobalUnlock(FClipboardHandle);
-      { I'm giving you this handle, but please do NOT eat it. }
+      { I am giving you this handle, but please do NOT eat it. }
       Result := FClipboardHandle;
     end;
      

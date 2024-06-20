@@ -22,7 +22,7 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
       Load the JPEG into a bitmap, create a new bitmap
       of the size that you want and pass them both into
       SmoothResize then save it again ...
-      there's a neat routine JPEGDimensions that
+      there is a neat routine JPEGDimensions that
       gets the JPEG dimensions without actually loading the JPEG into a bitmap,
       saves loads of time if you only need to test its size before resizing.
     }

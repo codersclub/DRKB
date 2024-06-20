@@ -8,13 +8,14 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 Вывод текста с эффектами
 ========================
 
+> Question:  
 > How to make TextOut with 3d-Effect or hollow Text?
 
 Answer:
 
 Make a new Application and take this Proc bellow for the OnPaint-Event
-of the Form. The TextOutput will look like written with a kaligraf.If
-You replace the for loop in the proc with a single call of textout you
+of the Form. The TextOutput will look like written with a kaligraf.
+If you replace the for loop in the proc with a single call of textout you
 can use this code to write "hollow" text. Try it with different
 Pen-Styles too!
 

@@ -14,7 +14,7 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {The parameter "percent" needs an integer between 0 and 100 (include zero and 100).
      If "Percent" is 0, there will be no effect.
-     If it's 100 there will be the strongest effect.} 
+     If it is 100 there will be the strongest effect.} 
      
     procedure Antialising(C: TCanvas; Rect: TRect; Percent: Integer); 
     var 
@@ -652,7 +652,8 @@ Author: alioth
 
 Source: <https://www.swissdelphicenter.ch>
 
-    {Originally written by Horst Kniebusch, modified by alioth to make it(alot) faster. 
+    {Originally written by Horst Kniebusch,
+     modified by alioth to make it (alot) faster. 
     }
      
     procedure Antialiasing(Image: TImage; Percent: Integer);

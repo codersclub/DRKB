@@ -324,7 +324,7 @@ GLScene поддерживает загрузку и отображение ст
 При переключении анимации можно проверить завершилась ли текущая
 (newani - новая анимация, символьный идентификатор):
 
-    if GLActorMain.CurrentAnimation\<\>newani then
+    if GLActorMain.CurrentAnimation<>newani then
       GLActorMain.SwitchToAnimation(newani);
 
 **7\. Спецэффекты огня**

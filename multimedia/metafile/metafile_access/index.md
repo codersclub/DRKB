@@ -8,8 +8,7 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 Как получить доступ к объекту метафайла?
 ========================================
 
-Below is an example of getting metafile information and enumerating each
-metafile record :
+Ниже приведен пример получения информации о метафайле и перечисления каждой записи метафайла:
 
     function MyEnhMetaFileProc(DC: HDC; {handle to device context}
       lpHTable: PHANDLETABLE; {pointer to metafile handle table}

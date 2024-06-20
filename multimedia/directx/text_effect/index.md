@@ -162,7 +162,3 @@ DelphiX и скачать файлы со шрифтами :) Большое с�
 
 Пример к статье: [games_texteffect.zip](games_texteffect.zip)
 
-Автор: Релорт Relort@yandex.ru Февраль 2003.
-
-WEB-сайт: http://daddy.mirgames.ru
-

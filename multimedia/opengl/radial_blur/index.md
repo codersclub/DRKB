@@ -403,7 +403,7 @@ OpenGL - радиальное размытие
     end;
      
     {------------------------------------------------------------------}
-    { Determines the application's response to the messages received }
+    { Determines the application response to the messages received     }
     {------------------------------------------------------------------}
      
     function WndProc(hWnd: HWND; Msg: UINT; wParam: WPARAM; lParam: LPARAM):

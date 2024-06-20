@@ -13,13 +13,13 @@ Source: <https://forum.sources.ru>
     interface
     uses WinTypes, WinProcs, Forms, Classes, Graphics, Controls;
      
-     { Копирует прямоугольную область экрана }
+    { Копирует прямоугольную область экрана }
     function CaptureScreenRect(ARect : TRect) : TBitmap;
-     { Копирование всего экрана }
+    { Копирование всего экрана }
     function CaptureScreen : TBitmap;
-     { Копирование клиентской области формы или элемента }
+    { Копирование клиентской области формы или элемента }
     function CaptureClientImage(Control : TControl) : TBitmap;
-     { Копирование всей формы элемента }
+    { Копирование всей формы элемента }
     function CaptureControlImage(Control : TControl) : TBitmap;
      
     {===============================================================}

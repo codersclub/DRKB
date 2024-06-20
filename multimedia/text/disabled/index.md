@@ -9,12 +9,14 @@ Source: <https://forum.sources.ru>
 Как нарисовать disabled текст?
 ==============================
 
-    {Draw Disabled Text **************
+    {***** Draw Disabled Text *********************************
      ***** This function draws text in "disabled" style.  *****
      ***** i.e. the text is grayed .                      *****
      **********************************************************}
-    function DrawDisabledText (Canvas : tCanvas; Str: PChar; Count: Integer;
-                               var Rect: TRect;  Format: Word): Integer;
+    function DrawDisabledText (Canvas : tCanvas; Str: PChar;
+                               Count: Integer;
+                               var Rect: TRect;
+                               Format: Word): Integer;
     begin
       SetBkMode(Canvas.Handle, TRANSPARENT);
      
