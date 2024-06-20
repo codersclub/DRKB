@@ -1,16 +1,20 @@
 ---
-Title: Send e-mails via WinSock API?
+Title: Send e-mails via WinSock API
 Author: TauxCanolf
 Date: 01.01.2007
 ---
 
 
-Send e-mails via WinSock API?
+Send e-mails via WinSock API
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Melih SARICA (Non ZERO)
+
+Date: 17.01.2004
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     unit SMTP_Connections;
     // *********************************************************************
@@ -61,32 +65,32 @@ Send e-mails via WinSock API?
      
      
     function WSAStartup(Version:word; 
-                          Var Data:TwsaData):integer; stdcall; far; external winsock;
+                        Var Data:TwsaData):integer; stdcall; far; external winsock;
     function socket(Family,Kind,Protocol:integer):integer; stdcall; far; external winsock;
     function shutdown(Socket,How:Integer):integer; stdcall; far; external winsock;
     function closesocket(socket:Integer):integer; stdcall; far; external winsock;
     function WSACleanup:integer; stdcall; far; external winsock;
     function bind(Socket:Integer; Var SockAddr:TSockAddr; 
-                          AddrLen:integer):integer; stdcall; far; external winsock;
+                  AddrLen:integer):integer; stdcall; far; external winsock;
     function listen(socket,flags:Integer):integer; stdcall; far; external winsock;
     function connect(socket:Integer; Var SockAddr:TSockAddr; 
-                          AddrLen:integer):integer; stdcall; far; external winsock;
+                     AddrLen:integer):integer; stdcall; far; external winsock;
     function accept(socket:Integer; Var SockAddr:TSockAddr; 
-                          Var AddrLen:Integer):integer; stdcall; far; external winsock;
+                    Var AddrLen:Integer):integer; stdcall; far; external winsock;
     function WSAGetLastError:integer; stdcall; far; external winsock;
     function recv(socket:integer; data:pchar; datalen,
-                          flags:integer):integer; stdcall; far; external winsock;
+                  flags:integer):integer; stdcall; far; external winsock;
     function send(socket:integer; var data; datalen,
-                          flags:integer):integer; stdcall; far; external winsock;
+                  flags:integer):integer; stdcall; far; external winsock;
     function gethostbyname(HostName:PChar):PHost; stdcall; far; external winsock;
     function WSAIsBlocking:boolean; stdcall; far; external winsock;
     function WSACancelBlockingCall:integer; stdcall; far; external winsock;
     function ioctlsocket(socket:integer; cmd: Longint; 
-                          var arg: longint): Integer; stdcall; far; external winsock;
+                         var arg: longint): Integer; stdcall; far; external winsock;
     function gethostname(name:pchar; size:integer):integer; stdcall; far; external winsock;
      
     procedure _authSendMail(MailServer,uname,upass,mFrom,mFromName,mToName,
-                      Subject:string;mto,mbody:TStringList);
+                            Subject:string;mto,mbody:TStringList);
     function ConnectServer(mhost:string;mport:integer):integer;
     function ConnectServerwin(mhost:string;mport:integer):integer;
     function DisConnectServer:integer;
@@ -96,7 +100,6 @@ Send e-mails via WinSock API?
     function SendCommandWin(Command: String): string;
     function ReadCommand: string;
     function encryptB64(s:string):string;
-     
      
     var
       mconnHandle: Integer;
@@ -493,12 +496,18 @@ Send e-mails via WinSock API?
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
 ------------------------------------------------------------------------
 
-    function _RegReadString(_hkey:longint;const ValueName:string; 
-                      var Value:string;const SubKey:string):Boolean;
+Вариант 2:
+
+Author: TauxCanolf
+
+Source: <https://forum.sources.ru>
+
+    function _RegReadString(_hkey:longint;
+                            const ValueName:string; 
+                            var Value:string;
+                            const SubKey:string):Boolean;
     var Key:HKey; BufLen,Typed:DWord;
     begin
      Result:=False; Value:=EmptyStr;
@@ -523,33 +532,35 @@ Send e-mails via WinSock API?
      hostEnt : PHostEnt;   
      addr : PChar;   
     begin  
-     WSAStartup ($0101, wsdata);   
-     gethostname (hostName, sizeof (hostName));   
-     StrPCopy(hostName, Name);   
-     hostEnt := gethostbyname (hostName);   
-     if Assigned (hostEnt) then   
-       if Assigned (hostEnt^.h_addr_list) then   
-         begin   
-         addr := hostEnt^.h_addr_list^;   
-     if Assigned (addr) then   
-     begin   
-     Result := Format ('%d.%d.%d.%d', [byte (addr [0]),   
-     byte (addr [1]), byte (addr [2]), byte (addr [3])]);   
-     end;
-     end;   
-       WSACleanup;   
+      WSAStartup ($0101, wsdata);   
+      gethostname (hostName, sizeof (hostName));   
+      StrPCopy(hostName, Name);   
+      hostEnt := gethostbyname (hostName);   
+      if Assigned (hostEnt) then   
+        if Assigned (hostEnt^.h_addr_list) then   
+        begin   
+          addr := hostEnt^.h_addr_list^;   
+          if Assigned (addr) then
+          begin   
+            Result := Format ('%d.%d.%d.%d', [byte (addr [0]),   
+                              byte (addr [1]),
+                              byte (addr [2]),
+                              byte (addr [3])]);
+          end;
+        end;   
+      WSACleanup;   
     end;
      
     function GetSMTPServer:string;
     var s,j:string;
     begin
-    result := '';
-    _regreadstring(hkey_current_user,'Default Mail Account',s,
+      result := '';
+      _regreadstring(hkey_current_user,'Default Mail Account',s,
               'Software\Microsoft\Internet Account Manager');
-    if s = '' then exit;
-    _regreadstring(hkey_current_user,'SMTP Server',j,
+      if s = '' then exit;
+      _regreadstring(hkey_current_user,'SMTP Server',j,
               'Software\Microsoft\Internet Account Manager\Accounts\' + s);
-    result := j;
+      result := j;
     end;
      
     procedure SendStr(Sock:cardinal;str: String);
@@ -569,32 +580,29 @@ Send e-mails via WinSock API?
       iaddr: Integer;
       buf: array[0..255] of char;
     begin
-    MySmtp := _HostToIP(getsmtpserver);
-    WSAStartUp(257, wsadata);
-    sock:=socket(AF_INET,SOCK_STREAM,IPPROTO_IP);
-    sin.sin_family := AF_INET;
-    htons(25);
-    sin.sin_port := htons(25);
-    iaddr:=inet_addr(PChar(MySmtp));
-    sin.sin_addr.S_addr:=iaddr;
-    connect(sock,sin,sizeof(sin));
-    recv(sock,buf,sizeof(buf),0);
-    sendstr(sock,'HELO google.com'+#13#10);
-    recv(sock,buf,sizeof(buf),0);
-    sendstr(sock,'MAIL FROM: '+from+#13#10);
-    recv(sock,buf,sizeof(buf),0);
-    sendstr(sock,'RCPT TO: '+_to+#13#10);
-    recv(sock,buf,sizeof(buf),0);
-    sendstr(sock,'DATA'+#13#10);
-    recv(sock,buf,sizeof(buf),0);
-    sendstr(sock,st);
-    sendstr(sock,#13#10'.'#13#10);
-    recv(sock,buf,sizeof(buf),0);
-    sendstr(sock,'QUIT'#13#10);
-    recv(sock,buf,sizeof(buf),0);
-    closesocket(sock);
+      MySmtp := _HostToIP(getsmtpserver);
+      WSAStartUp(257, wsadata);
+      sock:=socket(AF_INET,SOCK_STREAM,IPPROTO_IP);
+      sin.sin_family := AF_INET;
+      htons(25);
+      sin.sin_port := htons(25);
+      iaddr:=inet_addr(PChar(MySmtp));
+      sin.sin_addr.S_addr:=iaddr;
+      connect(sock,sin,sizeof(sin));
+      recv(sock,buf,sizeof(buf),0);
+      sendstr(sock,'HELO google.com'+#13#10);
+      recv(sock,buf,sizeof(buf),0);
+      sendstr(sock,'MAIL FROM: '+from+#13#10);
+      recv(sock,buf,sizeof(buf),0);
+      sendstr(sock,'RCPT TO: '+_to+#13#10);
+      recv(sock,buf,sizeof(buf),0);
+      sendstr(sock,'DATA'+#13#10);
+      recv(sock,buf,sizeof(buf),0);
+      sendstr(sock,st);
+      sendstr(sock,#13#10'.'#13#10);
+      recv(sock,buf,sizeof(buf),0);
+      sendstr(sock,'QUIT'#13#10);
+      recv(sock,buf,sizeof(buf),0);
+      closesocket(sock);
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: TauxCanolf

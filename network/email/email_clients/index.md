@@ -1,15 +1,12 @@
 ---
 Title: Как получить имена установленных почтовых клиентов?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить имена установленных почтовых клиентов?
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       Get names of installed Mail-Clients.
@@ -53,4 +50,3 @@ Date: 01.01.2007
       GetInstalledMailClients(ListBox1.Items);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

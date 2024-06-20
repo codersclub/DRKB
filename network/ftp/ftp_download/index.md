@@ -1,15 +1,12 @@
 ---
 Title: Как загрузить файл?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как загрузить файл?
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       The following function shows how to connect to a ftp server 
@@ -167,4 +164,3 @@ Date: 01.01.2007
       Result := True; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

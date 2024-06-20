@@ -1,17 +1,12 @@
 ---
 Title: Веб-страничка внутри Delphi-приложения
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Веб-страничка внутри Delphi-приложения
 ======================================
-
-::: {.date}
-01.01.2007
-:::
-
-WEB страничка внутри Delphi приложения
 
 (Перевод одноимённой статьи с сайта delphi.about.com )
 
@@ -21,7 +16,7 @@ WEB страничка внутри Delphi приложения
 можно легко добавить в Delphi приложение HTML и связанные с ним файлы
 (картинки).
 
-Создание HTML страницы
+**Создание HTML страницы**
 
 Для начала мы должны создать простую страницу HTML. Для этого можно
 использовать Ваш любимый HTML редактор, и создать одну страницу с одним
@@ -29,23 +24,19 @@ WEB страничка внутри Delphi приложения
 внимание, что, когда Вы добавляете тэг картинки внутрь htm страницы, то
 в исходнике страницы будет присутствовать следудующая строка:
 
-\<img src="../graphics/adp.gif" ...\>
+    <img src="../graphics/adp.gif" ...>
 
 Нам необходимо подправить тэг IMG так, чтобы атрибут SRC равнялся имени,
 которое мы указали в ресурсах:
 
-\<img src="ABOUTDP" ...\>
+    <img src="ABOUTDP" ...>
 
 У меня HTML код выглядит следующим образом:
 
-\<HTML\>\<HEAD\>\<TITLE\>HTML inside a Delphi
-exe\</TITLE\>\</HEAD\>\<BODY\>
-
-This is a HTML Delphi resource test:\<br\>
-
-\<img src="ABOUTDP" width=106 height=58 border=0 alt=""\>
-
-\</BODY\>\</HTML\>
+    <HTML><HEAD><TITLE>HTML inside a Delphi exe</TITLE></HEAD><BODY>
+    This is a HTML Delphi resource test:<br>
+    <img src="ABOUTDP" width=106 height=58 border=0 alt="">
+    </BODY></HTML>
 
 Создание и компиляция файла ресурсов
 
@@ -53,14 +44,11 @@ This is a HTML Delphi resource test:\<br\>
 необходимо:
 
 1. Создать новый текстовый файл в директории Вашего проекта.
-
 2. Переименовать его в AHTMLDelphi.rc.
-
 3. Добавить следующие две строки текста в файл AHTMLDelphi.rc.
 
-DELPHIINDEX HTML "c:\\Delphi\\projects\\aboutindex.htm"
-
-ABOUTDP GIF "c:\\library\\graphics\\adp.gif"
+    DELPHIINDEX HTML "c:\Delphi\projects\aboutindex.htm"
+    ABOUTDP GIF "c:\library\graphics\adp.gif"
 
 Обратите внимание, что "HTML" тип ресурса RT\_HTML, определён как
 "23". Это значение является дефолтовым для протокола RES.
@@ -72,21 +60,21 @@ ABOUTDP GIF "c:\\library\\graphics\\adp.gif"
 AHTMLDelphi.rc в файл .res, выполните следующую команду из командной
 строки (в директории Вашего проекта):
 
-BRCC32 AHTMLDelphi.RC
+    BRCC32 AHTMLDelphi.RC
 
 Заключительный шаг - это добавление следующей директивы компилятора в
 unit Вашего проекта. Следующая строка заставляет компилятор включить в
 проект файл RES:
 
-{$R AHTMLDelphi.RES}
+    {$R AHTMLDelphi.RES}
 
-Отображение внутри Web браузера
+**Отображение внутри Web браузера**
 
 После того, как Вы получите экзешник приложения (назовём его, например,
 myhtmldelphi.exe), то HTML ресурсы, содержащиеся в нём, могут быть
-доступны через протокол RES: . Запустите Internet Explorer и, адресной
-строке напишите следующее:
+доступны через протокол RES: .
 
-res://c:\\myhtmldelphi.exe/DELPHIINDEX
+Запустите Internet Explorer и, адресной строке напишите следующее:
 
-Взято из <https://forum.sources.ru>
+    res://c:\myhtmldelphi.exe/DELPHIINDEX
+

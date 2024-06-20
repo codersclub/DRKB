@@ -1,23 +1,15 @@
 ---
 Title: Описание протокола SMTP
 Date: 01.01.2007
+Author: Бельбаков Александр
+Source: https://msa.km.ru/
 ---
 
 
 Описание протокола SMTP
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
-Описание протокола SMTP
-
-Введение
-
-Бельбаков Александр
-
-https://msa.km.ru/
+**Введение**
 
 Основная задача протокола SMTP (Simple Mail Transfer Protocol)
 заключается в том, чтобы обеспечивать передачу электронных сообщений
@@ -36,103 +28,64 @@ https://msa.km.ru/
 заканчивается символами CRLF. Вот синтаксис всех команд протокола SMTP
 (SP - пробел):
 
-HELO \<SP\> \<domain\> \<CRLF\>
-
-MAIL \<SP\> FROM:\<reverse-path\> \<CRLF\>
-
-RCPT \<SP\> TO:\<forward-path\> \<CRLF\>
-
-DATA \<CRLF\>
-
-RSET \<CRLF\>
-
-SEND \<SP\> FROM:\<reverse-path\> \<CRLF\>
-
-SOML \<SP\> FROM:\<reverse-path\> \<CRLF\>
-
-SAML \<SP\> FROM:\<reverse-path\> \<CRLF\>
-
-VRFY \<SP\> \<string\> \<CRLF\>
-
-EXPN \<SP\> \<string\> \<CRLF\>
-
-HELP \<SP\> \<string\> \<CRLF\>
-
-NOOP \<CRLF\>
-
-QUIT \<CRLF\>
+    HELO <SP> <domain> <CRLF>
+    MAIL <SP> FROM:<reverse-path> <CRLF>
+    RCPT <SP> TO:<forward-path> <CRLF>
+    DATA <CRLF>
+    RSET <CRLF>
+    SEND <SP> FROM:<reverse-path> <CRLF>
+    SOML <SP> FROM:<reverse-path> <CRLF>
+    SAML <SP> FROM:<reverse-path> <CRLF>
+    VRFY <SP> <string> <CRLF>
+    EXPN <SP> <string> <CRLF>
+    HELP <SP> <string> <CRLF>
+    NOOP <CRLF>
+    QUIT <CRLF>
 
 Обычный ответ SMTP сервера состоит из номера ответа, за которым через
 пробел следует дополнительный текст. Номер ответа служит индикатором
 состояния сервера.
 
-Отправка почты
+**Отправка почты**
 
 Первым делом подключаемся к SMTP серверу через порт 25. Теперь надо
 передать серверу команду HELLO и наш IP адрес:
 
-C: HELLO 195.161.101.33
-
-S: 250 smtp.mail.ru is ready
+    C: HELLO 195.161.101.33
+    S: 250 smtp.mail.ru is ready
 
 При отправке почты передаём некоторые нужные данные (отправитель,
 получатель и само письмо):
 
-C: MAIL FROM:\<drozd\> \'указываем отправителя
+    C: MAIL FROM:<drozd> <-- указываем отправителя
+    S: 250 OK
+    C: RCPT TO:<drol@mail.ru> <<< указываем получателя
+    S: 250 OK
+    >>>далее указываем серверу, что будем передавать содержание письма (заголовок и тело письма)
+    C: DATA
+    S: 354 Start mail input; end with <CRLF>.<CRLF>
+    >>>передачу письма необходимо завершить символами CRLF.CRLF
+    S: 250 OK
+    C: From: Drozd <drozd@mail.ru>
+    C: To: Drol <drol@mail.ru>
+    C: Subject: Hello
+    >>>между заголовком письма и его текстом не одна пара CRLF, а две.
+    C: Hello Drol!
+    C: You will be die on next week!
+    >>>заканчиваем передачу символами CRLF.CRLF
+    S: 250 OK
+    >>>Теперь завершаем работу, отправляем команду QUIT:
+    S: QUIT
+    C: 221 smtp.mail.ru is closing transmission channel
 
-S: 250 OK
-
-C: RCPT TO:\<drol@mail.ru\> \'указываем получателя
-
-S: 250 OK
-
-указываем серверу, что будем передавать содержание письма (заголовок и
-тело письма)
-
-C: DATA
-
-S: 354 Start mail input; end with \<CRLF\>.\<CRLF\>
-
-передачу письма необходимо завершить символами CRLF.CRLF
-
-S: 250 OK
-
-C: From: Drozd \<drozd@mail.ru\>
-
-C: To: Drol \<drol@mail.ru\>
-
-C: Subject: Hello
-
-между заголовком письма и его текстом не одна пара CRLF, а две.
-
-C: Hello Drol!
-
-C: You will be die on next week!
-
-заканчиваем передачу символами CRLF.CRLF
-
-S: 250 OK
-
-Теперь завершаем работу, отправляем команду QUIT:
-
-S: QUIT
-
-C: 221 smtp.mail.ru is closing transmission channel
-
-\> Другие команды
+**Другие команды**
 
 - SEND - используется вместо команды MAIL и указыает, что почта должна быть доставлена на терминал пользователя.
-
 - SOML, SAML - комбинации команд SEND или MAIL, SEND и MAIL соответственно.
-
 - RSET - указвает серверу прервать выполнение текущего процесса. Все сохранённые данные (отправитель, получатель и др) удаляются. Сервер должен отправить положительный ответ.
-
 - VRFY - просит сервер проверить, является ли переданный аргумент именем пользователя. В случае успеха сервер возвращает полное имя пользователя.
-
 - EXPN - просит сервер подтвердить, что переданный аргумент - это список почтовой группы, и если так, то сервер выводит членов этой группы.
-
 - HELP - запрашивает у сервера полезную помощь о переданной в качестве аргумента команде.
-
 - NOOP - на вызов этой команды сервер должен положительно ответить. NOOP ничего не делает и никак не влияет на указанные до этого данные.
 
  

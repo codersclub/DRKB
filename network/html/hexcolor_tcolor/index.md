@@ -1,19 +1,16 @@
 ---
 Title: Как преобразовать шестнадцатиричный цвет HTML в TColor?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как преобразовать шестнадцатиричный цвет HTML в TColor?
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
-
 допустим, мы имеем переменную:
 
-const BGCOLOR = \'#003366\';
+    const BGCOLOR = '#003366';
 
 и нам необходимо связать её с фоновым цветом memo либо любого другого
 TColor.
@@ -26,7 +23,7 @@ TColor.
       Memo.Color := ConvertHtmlHexToTColor(BGCOLOR);
     end;
 
-Ниже приведён исходник этой функции, а так же код функции
+Ниже приведён исходник этой функции, а также код функции
 CheckHexForHash.
 
     unit colours;
@@ -51,7 +48,7 @@ CheckHexForHash.
      
       if (length(color) >= 6) then
         begin
-    {незабудьте, что TColor это bgr, а не rgb: поэтому необходимо изменить порядок}
+    {не забудьте, что TColor это bgr, а не rgb: поэтому необходимо изменить порядок}
           color := '$00' + copy(color, 5, 2) + copy(color, 3, 2) + copy(color, 1, 2);
           rColor := StrToInt(color);
         end;
@@ -71,4 +68,3 @@ CheckHexForHash.
     end;
     end.
 
-Взято из <https://forum.sources.ru>

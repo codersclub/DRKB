@@ -2,17 +2,12 @@
 Title: Проверка правильности E-mail адреса
 Author: Udo Nesshoever
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Проверка правильности E-mail адреса
 ===================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Udo Nesshoever
 
 Если пользователю Вашего приложения необходимо вводить почтовый адрес,
 то возникает потребность в проверке адреса на правильнось. Конечно
@@ -55,4 +50,3 @@ Date: 01.01.2007
       Result:= CheckAllowed(namePart) and CheckAllowed(serverPart); 
     end; 
 
-Взято из <https://forum.sources.ru>

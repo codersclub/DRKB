@@ -8,14 +8,12 @@ Date: 01.01.2007
 Работа через MAPI
 =================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Работа через MAPI
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
-Пример с delphi.mastak.ru мне понравился(который нашел Song), я решил
-его сюда скопировать, может кому понадобится:
+Пример с delphi.mastak.ru мне понравился (который нашел Song),
+и я решил его сюда скопировать, может кому понадобится:
 
     unit Email;
      
@@ -32,77 +30,83 @@ Date: 01.01.2007
      
     function SendEmail(const RecipName, RecipAddress, Subject, Attachment: string): Boolean;
     var
-    MapiMessage: TMapiMessage;
-    MapiFileDesc: TMapiFileDesc;
-    MapiRecipDesc: TMapiRecipDesc;
-    i: integer;
-    s: string;
+      MapiMessage: TMapiMessage;
+      MapiFileDesc: TMapiFileDesc;
+      MapiRecipDesc: TMapiRecipDesc;
+      i: integer;
+      s: string;
     begin
-    with MapiRecipDesc do 
-    begin
-    ulResved:= 0;
-    ulRecipClass:= MAPI_TO;
-    lpszName:= PChar(RecipName);
-    lpszAddress:= PChar(RecipAddress);
-    ulEIDSize:= 0;
-    lpEntryID:= nil;
+      with MapiRecipDesc do 
+      begin
+        ulResved:= 0;
+        ulRecipClass:= MAPI_TO;
+        lpszName:= PChar(RecipName);
+        lpszAddress:= PChar(RecipAddress);
+        ulEIDSize:= 0;
+        lpEntryID:= nil;
       end;
-    with MapiFileDesc do 
-    begin
-    ulReserved:= 0;
-    flFlags:= 0;
-    nPosition:= 0;
-    lpszPathName:= PChar(Attachment);
-    lpszFileName:= nil;
-    lpFileType:= nil;
-    end;
-    with MapiMessage do 
-    begin
-    ulReserved := 0;
-    lpszSubject := nil;
-    lpszNoteText := PChar(Subject);
-    lpszMessageType := nil;
-    lpszDateReceived := nil;
-    lpszConversationID := nil;
-    flFlags := 0;
-    lpOriginator := nil;
-    nRecipCount := 1;
-    lpRecips := @MapiRecipDesc;
-      if length(Attachment) > 0 then 
-        begin
-          nFileCount:= 1;
-          lpFiles := @MapiFileDesc;
-        end 
-      else 
-        begin
-          nFileCount:= 0;
-          lpFiles:= nil;
-        end;
-    end;
-    Result:= MapiSendMail(0, 0, MapiMessage, MAPI_DIALOG or MAPI_LOGON_UI or MAPI_NEW_SESSION, 0) = SUCCESS_SUCCESS;
+      with MapiFileDesc do 
+      begin
+        ulReserved:= 0;
+        flFlags:= 0;
+        nPosition:= 0;
+        lpszPathName:= PChar(Attachment);
+        lpszFileName:= nil;
+        lpFileType:= nil;
+      end;
+      with MapiMessage do 
+      begin
+        ulReserved := 0;
+        lpszSubject := nil;
+        lpszNoteText := PChar(Subject);
+        lpszMessageType := nil;
+        lpszDateReceived := nil;
+        lpszConversationID := nil;
+        flFlags := 0;
+        lpOriginator := nil;
+        nRecipCount := 1;
+        lpRecips := @MapiRecipDesc;
+        if length(Attachment) > 0 then 
+          begin
+            nFileCount:= 1;
+            lpFiles := @MapiFileDesc;
+          end 
+        else 
+          begin
+            nFileCount:= 0;
+            lpFiles:= nil;
+          end;
+      end;
+      Result:= MapiSendMail(0, 0, MapiMessage,
+                            MAPI_DIALOG or MAPI_LOGON_UI or MAPI_NEW_SESSION,
+                            0) = SUCCESS_SUCCESS;
     end;
      
     function IsOnline: Boolean;
     var
-    RASConn: TRASConn;
-    dwSize,dwCount: DWORD;
+      RASConn: TRASConn;
+      dwSize,dwCount: DWORD;
     begin
-    RASConns.dwSize:= SizeOf(TRASConn);
-    dwSize:= SizeOf(RASConns);
-    Res:=RASEnumConnectionsA(@RASConns, @dwSize, @dwCount);
-    Result:= (Res = 0) and (dwCount > 0);
+      RASConns.dwSize:= SizeOf(TRASConn);
+      dwSize:= SizeOf(RASConns);
+      Res:=RASEnumConnectionsA(@RASConns, @dwSize, @dwCount);
+      Result:= (Res = 0) and (dwCount > 0);
     end;
      
     end.
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
-Автор: Sven Lohmann
+Вариант 2:
 
-Обычно в программах используется два способа отправки email. Первый -
-это "ShellExecute", а второй - через OLE server, как в Delphi 5.
+Author: Sven Lohmann
+
+Source: <https://forum.sources.ru>
+
+Обычно в программах используется два способа отправки email.  
+Первый - это "ShellExecute", а второй - через OLE server, как в Delphi 5.
+
 Однако, предлагаю посмотреть, как эта задача решается посредствам MAPI.
 
 Совместимость: Delphi 4.x (или выше)
@@ -394,18 +398,20 @@ Date: 01.01.2007
           no Session, no Login Dialog so the system refuses to compose a 
           new email. In Express Versions the email is sent in the 
           background. 
-         } 
+        } 
         if FShowDialog then 
-          MError := MapiSendMail(0, AppHandle, MapiMessage, MAPI_DIALOG or MAPI_LOGON_UI or MAPI_NEW_SESSION, 0) 
+          MError := MapiSendMail(0, AppHandle, MapiMessage,
+                                 MAPI_DIALOG or MAPI_LOGON_UI or MAPI_NEW_SESSION, 0) 
         else 
           MError := MapiSendMail(0, AppHandle, MapiMessage, 0, 0); 
      
-        { Теперь обработаем сообщения об ошибках. В MAPI их присутствует достаточное. 
-          количество. В этом примере я обрабатываю только два из них: USER_ABORT и SUCCESS, 
-          относящиеся к специальным. 
+        { Теперь обработаем сообщения об ошибках.
+          В MAPI их присутствует достаточное количество.
+          В этом примере я обрабатываю только два из них:
+          USER_ABORT и SUCCESS, относящиеся к специальным. 
      
           Сообщения, не относящиеся к специальным: 
-          MAPI_E_AMBIGUOUS_RECIPIENT, 
+            MAPI_E_AMBIGUOUS_RECIPIENT, 
             MAPI_E_ATTACHMENT_NOT_FOUND, 
             MAPI_E_ATTACHMENT_OPEN_FAILURE, 
             MAPI_E_BAD_RECIPTYPE, 
@@ -447,11 +453,17 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-     uses ..., MAPI;
+Вариант 3:
+
+Author: Rouse\_
+
+Source: <https://forum.sources.ru>
+
+    uses ...,
+      MAPI;
      
     // отправка письма с вложением
     // =============================================================================
@@ -560,9 +572,6 @@ Date: 01.01.2007
       end;
     end;
 
-
-
-
 пример вызова:
 
     procedure TForm1.Button1Click(Sender: TObject);
@@ -581,8 +590,3 @@ Date: 01.01.2007
       end;
     end;
 
-
-
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

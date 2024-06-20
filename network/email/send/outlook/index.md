@@ -8,16 +8,15 @@ Date: 01.01.2007
 Использование COM-объекта Outlook
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Пример отсылки письма используя COM объект Outlook
 
     uses Outlook_TLB;
-     
-
-     
      
     var outlook : _application;
      
@@ -39,27 +38,24 @@ Date: 01.01.2007
         end;
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-Автор: Eddie Shipman
+Вариант 2:
+
+Author: Eddie Shipman
 
 Пример использует VB Script для Outlook, который позволяет произвести
-такую операцию. Создаётся OLE-объект - \'Outlook.Application\' и в него
+такую операцию. Создаётся OLE-объект - **Outlook.Application** и в него
 передаётся скрипт.
 
 Совместимость: все версии Delphi
 
-Измените recipientaddress@recipienthost.com на Ваш собственный e-mail
-
+Измените `recipientaddress@recipienthost.com` на Ваш собственный e-mail
 адресс. У Вас должен быть проинсталирован Outlook,
+(Я не уверен, что это будет работать в Outlook Express).
 
-{Я не уверен, что это будет работать в Outlook Express.}
-
-Примечание Vit: Это точно не будет работать в  Outlook Express
+> **Примечание Vit:**  
+> Это точно не будет работать в  Outlook Express
 
     uses ComObj; {Delphi 5} 
      

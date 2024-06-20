@@ -1,15 +1,12 @@
 ---
 Title: Пример FTP-сервера
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Пример FTP-сервера
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -184,4 +181,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

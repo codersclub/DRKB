@@ -2,15 +2,12 @@
 Title: Как отправить Email?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как отправить Email?
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
 Cуществуют следующие возможности:
 
@@ -33,8 +30,6 @@ Cуществуют следующие возможности:
 можно использовать для любых версий Delphi/Kylix компоненты из пакета
 ICS - Internet component suite.
 
-Вот ещё вариант: [Send e-mails via WinSock API?](sendemailsviawinsockapi/)
+Вот ещё вариант: Отправка электронной почты через WinSock API -
+[Send e-mails via WinSock API](sendemailsviawinsockapi/)
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

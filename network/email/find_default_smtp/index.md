@@ -1,15 +1,12 @@
 ---
 Title: Как найти SMTP Mail Server по умолчанию?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как найти SMTP Mail Server по умолчанию?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Here is some code I successfully used te determine 
@@ -43,4 +40,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,20 +1,17 @@
 ---
 Title: GIF для HTML в EXE
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 GIF для HTML в EXE
 ==================
 
-::: {.date}
-01.01.2007
-:::
-
-Есть программа на Delphi, котоpая отображает какой-то html. В html
-используется gif-файл. Как в Delphi-пpоекте указать, чтобы этот gif
-находился в exe как некий кусок кода. А когда надо будет, записать его
-обратно в gif-файл без изменений, выковырнув из exe?
+> Есть программа на Delphi, котоpая отображает какой-то html. В html
+> используется gif-файл. Как в Delphi-пpоекте указать, чтобы этот gif
+> находился в exe как некий кусок кода. А когда надо будет, записать его
+> обратно в gif-файл без изменений, выковырнув из exe?
 
 Можно, используя RxLib. После его установки в меню View появится пунктик
 Project Resources. Hужно выбрать Project Resources-\>New-\>User Data и
@@ -25,10 +22,10 @@ Project Resources. Hужно выбрать Project Resources-\>New-\>User Data 
     === Begin gifs.rc ===
     mygif rcdata "имя_gif-файла.gif"
     mygif1 rcdata "RCDATA_1"
-    === End dots.rc ===
+    === End gifs.rc ===
 
-Потом скомпилировать его командой brcc32 gifs.rc и получить gifs.res В
-начало модуля добавь строчку {$R gifs.res}
+Потом скомпилировать его командой brcc32 gifs.rc и получить gifs.res.
+В начало модуля добавь строчку {$R gifs.res}
 
 В своей программе необходимо написать:
 
@@ -63,4 +60,3 @@ Project Resources. Hужно выбрать Project Resources-\>New-\>User Data 
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

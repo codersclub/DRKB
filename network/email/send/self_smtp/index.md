@@ -2,15 +2,12 @@
 Title: Использование SMTP Relay Server
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Использование SMTP Relay Server
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
 Использование SMTP Relay Server - отсылка письма напрямую минуя любые
 промежуточные сервера (пример взят из библиотеки Indy). Для отсылки
@@ -21,9 +18,6 @@ Date: 01.01.2007
 Пример модуля:
 
     unit fMain;
-     
-
-     
      
     interface
      
@@ -175,7 +169,6 @@ Date: 01.01.2007
     btnSendMail.enabled := true;
     end;
      
-     
     function TfrmMain.PadZero(s: String): String;
     begin
     if length(s) < 2 then s := '0' + s;
@@ -202,12 +195,14 @@ Date: 01.01.2007
         if SendMail(fMailServers.Strings[i]) then
           begin
           MessageDlg('Mail successfully sent and available for pickup by recipient !', 
-    mtInformation, [mbOK], 0);
+                     mtInformation, [mbOK], 0);
           Exit;
           end;
         end;
-      // if we are here then something went wrong .. ie there were no available servers to accept our mail!
-      MessageDlg('Could not send mail to remote server - please try again later.', mtInformation, [mbOK], 0);
+      // if we are here then something went wrong ..
+      // ie there were no available servers to accept our mail!
+      MessageDlg('Could not send mail to remote server - please try again later.',
+                  mtInformation, [mbOK], 0);
       end;
     if assigned(fMailServers) then FreeAndNil(fMailServers);
     end;
@@ -247,12 +242,16 @@ Date: 01.01.2007
     begin
     Result := True;
     ErrString := '';
-    if trim(edtDNS.text) = '' then ErrString := ErrString +  #13 + #187 + 'DNS server not filled in';
-    if trim(edtSender.text) = '' then ErrString := ErrString + #13 + #187 + 'Sender email not filled in';
-    if trim(edtRecipient.text) = '' then ErrString := ErrString +  #13 + #187 + 'Recipient not filled in';
+    if trim(edtDNS.text) = '' then
+      ErrString := ErrString +  #13 + #187 + 'DNS server not filled in';
+    if trim(edtSender.text) = '' then
+      ErrString := ErrString + #13 + #187 + 'Sender email not filled in';
+    if trim(edtRecipient.text) = '' then
+      ErrString := ErrString +  #13 + #187 + 'Recipient not filled in';
     if ErrString <> '' then
       begin
-      MessageDlg('Cannot proceed due to the following errors:'+#13+#10+ ErrString, mtInformation, [mbOK], 0);
+      MessageDlg('Cannot proceed due to the following errors:'+#13+#10+ ErrString,
+                 mtInformation, [mbOK], 0);
       Result := False;
       end;
     end;
@@ -478,6 +477,3 @@ Date: 01.01.2007
       end
     end
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

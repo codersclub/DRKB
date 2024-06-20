@@ -7,13 +7,7 @@ Date: 01.01.2007
 Описание протокола POP3
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
-Описание протокола POP3
-
-Введение
+**Введение**
 
 Перед работой через протокол POP3 сервер прослушивает порт 110. Когда
 клиент хочет использовать этот протокол, он должен создать TCP
@@ -57,7 +51,7 @@ POP3 сервер освобождает все занятые ресурсы и
 Как только будет установлено TCP соединение с POP3 сервером, он
 отправляет приглашение, заканчивающееся парой CRLF, например:
 
-S: +OK POP3 server ready
+    S: +OK POP3 server ready
 
 Теперь POP3 сессия находится в режиме AUTHORIZATION. Клиент должен
 идентифицировать себя на сервере, используя команды USER и PASS. Сначала
@@ -72,80 +66,52 @@ QUIT. После успешной авторизации сервер откры
 сессия находится в режиме TRANSACTION. Подведём итоги с командами:
 
 Команда: USER [имя]
-
-Аргументы: [имя] - строка, указывающая имя почтового ящика
-
-Описание: Передаёт серверу имя пользователя.
-
-Возможные ответы:
-
-- +OK name is a valid mailbox
-
-- -ERR never heard of mailbox name
+: Аргументы: [имя] - строка, указывающая имя почтового ящика  
+  Описание: Передаёт серверу имя пользователя.  
+  Возможные ответы:  
+        +OK name is a valid mailbox  
+        -ERR never heard of mailbox name
 
 Примеры:
 
-C: USER MonstrVB
-
-S: +OK MonstrVB is a real hoopy frood
-
-...
-
-C: USER MonstrVB
-
-S: -ERR sorry, no mailbox for frated here
+    C: USER MonstrVB
+    S: +OK MonstrVB is a real hoopy frood
+    ...
+    C: USER MonstrVB
+    S: -ERR sorry, no mailbox for frated here
 
 Команда: PASS [пароль]
-
-Аргументы: [пароль] - пароль для почтового ящика
-
-Описание: Передаёт серверу пароль почтового ящика.
-
-Возможные ответы:
-
-- +OK maildrop locked and ready
-
-- -ERR invalid password
-
-- -ERR unable to lock maildrop
+:   Аргументы: [пароль] - пароль для почтового ящика  
+    Описание: Передаёт серверу пароль почтового ящика.  
+    Возможные ответы:  
+        +OK maildrop locked and ready  
+        -ERR invalid password  
+        -ERR unable to lock maildrop
 
 Примеры:
 
-C: USER MonstrVB
-
-S: +OK MonstrVB is a real hoopy frood
-
-C: PASS mymail
-
-S: +OK MonstrVB\'s maildrop has 2 messages (320 octets)
-
-...
-
-C: USER MonstrVB
-
-S: +OK MonstrVB is a real hoopy frood
-
-C: PASS mymail
-
-S: -ERR maildrop already locked
+    C: USER MonstrVB
+    S: +OK MonstrVB is a real hoopy frood
+    C: PASS mymail
+    S: +OK MonstrVB's maildrop has 2 messages (320 octets)
+    ...
+    C: USER MonstrVB
+    S: +OK MonstrVB is a real hoopy frood
+    C: PASS mymail
+    S: -ERR maildrop already locked
 
 Команда: QUIT
-
-Аргументы: нет
-
-Описание: Сервер завершает POP3 сессию и переходит в режим UPDATE.
-
-Возможные ответы:
-
-- +OK
+:   Аргументы: нет  
+    Описание: Сервер завершает POP3 сессию и переходит в режим UPDATE.  
+    Возможные ответы:  
+        +OK
 
 Примеры:
 
-C: QUIT
+    C: QUIT
+    S: +OK dewey POP3 server signing off
 
-S: +OK dewey POP3 server signing off
-
-Основные команды (Transaction)
+**Основные команды (Transaction)**
 
 После успешной идентификации пользователя на сервере POP3 сессия
 переходит в режим TRANSACTION, где пользователь может передавать ниже
@@ -153,226 +119,177 @@ S: +OK dewey POP3 server signing off
 Вот доступные команды в этом режиме:
 
 Команда: STAT
-
-Аргументы: нет
-
-Описание: В ответ на вызов команды сервер выдаёт положительный ответ
-"+OK", за которым следует количество сообщений в почтовом ящике и их
-общий размер в символах. Сообщения, которые помечены для удаления не
-учитываются в ответе сервера.
-
-Возможные ответы:
-
-- +OK n s
+:   Аргументы: нет  
+    Описание: В ответ на вызов команды сервер выдаёт положительный ответ
+    "+OK", за которым следует количество сообщений в почтовом ящике и их
+    общий размер в символах. Сообщения, которые помечены для удаления не
+    учитываются в ответе сервера.  
+    Возможные ответы:  
+        +OK n s
 
 Примеры:
 
-C: STAT
-
-S: +OK 2 320
+    C: STAT
+    S: +OK 2 320
 
 Команда: LIST [сообщение]
-
-Аргументы: [сообщение] - номер сообщения (необязательный аргумент)
-
+: Аргументы: [сообщение] - номер сообщения (необязательный аргумент)  
 Описание: Если был передан аргумент, то сервер выдаёт информацию о
 указанном сообщении. Если аргумент не был передан, то сервер выдаёт
 информацию о всех сообщениях, находящихся в почтовом ящике. Сообщения,
-помеченные для удаления не перечисляются.
-
-Возможные ответы:
-
-- +OK scan listing follows
-
-- -ERR no such message
+помеченные для удаления не перечисляются.  
+Возможные ответы:  
+  +OK scan listing follows  
+  -ERR no such message
 
 Примеры:
 
-C: LIST
+    C: LIST
+    S: +OK 2 messages (320 octets)
+    S: 1 120
+    S: 2 200
+    S: .
+    ...
+    C: LIST 2
+    S: +OK 2 200
+    ...
+    C: LIST 3
+    S: -ERR no such message, only 2 messages in maildrop
 
-S: +OK 2 messages (320 octets)
-
-S: 1 120
-
-S: 2 200
-
-S: .
-
-...
-
-C: LIST 2
-
-S: +OK 2 200
-
-...
-
-C: LIST 3
-
-S: -ERR no such message, only 2 messages in maildrop
-
-Команда:RETR [сообщение]
-
-Аргументы: [сообщение] - номер сообщения
-
-Описание: После положительного ответа сервер передаёт содержание
-сообщения.
-
-Возможные ответы:
-
-- +OK message follows
-
-- -ERR no such message
+Команда: RETR [сообщение]
+: Аргументы: [сообщение] - номер сообщения  
+Описание: После положительного ответа сервер передаёт содержание сообщения.  
+Возможные ответы:  
+  +OK message follows  
+  -ERR no such message
 
 Примеры:
 
-C: RETR 1
-
-S: +OK 120 octets
-
-S:
-
-S: .
+    C: RETR 1
+    S: +OK 120 octets
+    S:
+    S: .
 
 Команда: DELE [ообщение]
-
-Аргументы: [ообщение] - номер сообщения
-
+: Аргументы: [ообщение] - номер сообщения  
 Описание: POP3 сервер помечает указанное сообщение как удалённое, но не
-удалет его, пока сессия не перейдёт в редим UPDATE.
-
-Возможные ответы:
-
-- +OK message deleted
-
-- -ERR no such message
+удаляет его, пока сессия не перейдёт в редим UPDATE.  
+Возможные ответы:  
+  +OK message deleted  
+  -ERR no such message
 
 Примеры:
 
-C: DELE 1
-
-S: +OK message 1 deleted
-
-...
-
-C: DELE 2
-
-S: -ERR message 2 already deleted
+    C: DELE 1
+    S: +OK message 1 deleted
+    ...
+    C: DELE 2
+    S: -ERR message 2 already deleted
 
 Команда: NOOP
-
-Аргументы: нет
-
-Описание: POP3 сервер ничего не делает и вседа отвечает полжительно.
-
-Возможные ответы:
-
-- +OK
+: Аргументы: нет  
+Описание: POP3 сервер ничего не делает и вседа отвечает полжительно.  
+Возможные ответы:  
+    +OK
 
 Примеры:
 
-C: NOOP
-
-S: +OK
+    C: NOOP
+    S: +OK
 
 Команда: RSET
-
-Аргументы: нет
-
-Описание: Если какие - то сообщения были помечены для удаления, то с них
-снимается эта метка.
-
-Возможные ответы:
-
-- +OK
+: Аргументы: нет  
+Описание: Если какие - то сообщения были помечены для удаления, то с них снимается эта метка.  
+Возможные ответы:  
+  +OK
 
 Примеры:
 
-C: RSET
+    C: RSET
+    S: +OK maildrop has 2 messages (320 octets)
 
-S: +OK maildrop has 2 messages (320 octets)
-
-Обновление
+**Обновление**
 
 Когда клиент передаёт команду QUIT в режиме TRANSACTION, то сессия
 переходит в режим UPDATE. В этом режиме сервер удаляет все сообщения,
 помеченные для удаления. После этого TCP соединение закрывается.
 
-Дополнительные POP3 команды
+**Дополнительные POP3 команды**
 
 Следующие дополнительные команды дают вам большую свободу при работе с
-сообщениями: Команда: TOP [сообщение] [n] Аргументы: [сообщение] -
-номер сообщения [n] - положительное число (обязательный аргумент)
+сообщениями:
+
+Команда: TOP [сообщение] [n]
+: Аргументы: [сообщение] - номер сообщения; [n] - количество строк сообщения, положительное число (обязательный аргумент)  
 Описание: Если ответ сервера положительный, то после него он передаёт
-заголовки сообщения и указанное кол - во строк из тела сообщения.
-Возможные ответы: +OK top of message follows -ERR no such message
-Примеры: C: TOP 1 10 S: +OK S: \<здесь POP3 сервер передаёт заголовки
-первого сообщения и первые 10-ть строк из тела сообщения.\> S: . ... C:
-TOP 100 3 S: -ERR no such message Команда: UIDL [сообщение] Аргументы:
-[сообщение] - номер сообщения (необязательный аргумент). Описание:
-Если был указан номер сообщения, то сервер выдаёт уникальный
+          заголовки сообщения и указанное количество строк из тела сообщения.  
+Возможные ответы:  
+   +OK top of message follows
+   -ERR no such message
+
+Примеры:
+
+    C: TOP 1 10
+    S: +OK S: <здесь POP3 сервер передаёт заголовки первого сообщения
+               и первые 10-ть строк из тела сообщения.>
+    S: .
+    ...
+    C: TOP 100 3
+    S: -ERR no such message
+
+Команда: UIDL [сообщение]
+: Аргументы: [сообщение] - номер сообщения (необязательный аргумент).  
+Описание: Если был указан номер сообщения, то сервер выдаёт уникальный
 идентификатор для этого сообщения. Если аргумент не был передан, то
 идентификаторы перечисляются для всех сообщений, кроме помеченных для
-удаления. Возможные ответы: +OK unique-id listing follows -ERR no such
-message Примеры: C: UIDL S: +OK S: 1 whqtswO00WBw418f9t5JxYwZ S: 2
-QhdPYR:00WBw1Ph7x7 S: . ... C: UIDL 2 S: +OK 2 QhdPYR:00WBw1Ph7x7 ...
-C: UIDL 3 S: -ERR no such message, only 2 messages in maildrop
+удаления.  
+Возможные ответы:  
+   +OK unique-id listing follows  
+   -ERR no such message
 
-Заключение
+Примеры:
+
+    C: UIDL
+    S: +OK
+    S: 1 whqtswO00WBw418f9t5JxYwZ
+    S: 2 QhdPYR:00WBw1Ph7x7
+    S: .
+    ...
+    C: UIDL 2
+    S: +OK 2 QhdPYR:00WBw1Ph7x7
+    ...
+    C: UIDL 3
+    S: -ERR no such message, only 2 messages in maildrop
+
+**Заключение**
 
 Вот пример простого сеанса с POP3 сервером:
 
-S: \<создаём новое TCP соединение c POP3 сервером через порт 110\>
-
-S: +OK POP3 server ready
-
-C: USER MonstrVB
-
-S: +OK User MonstrVB is exists
-
-C: PASS mymail
-
-S: +OK MonsrVB\'s maildrop has 2 messages (320 octets)
-
-C: STAT
-
-S: +OK 2 320
-
-C: LIST
-
-S: +OK 2 messages (320 octets)
-
-S: 1 120
-
-S: 2 200
-
-S: .
-
-C: RETR 1
-
-S: +OK 120 octets
-
-S:
-
-S: .
-
-C: DELE 1
-
-S: +OK message 1 deleted
-
-C: RETR 2
-
-S: +OK 200 octets
-
-S:
-
-S: .
-
-C: DELE 2
-
-S: +OK message 2 deleted
-
-C: QUIT
-
-S: +OK dewey POP3 server signing off (maildrop empty)
-
-C: \<закрываем соединение\>
+    S: (создаём новое TCP соединение c POP3 сервером через порт 110)
+    S: +OK POP3 server ready
+    C: USER MonstrVB
+    S: +OK User MonstrVB is exists
+    C: PASS mymail
+    S: +OK MonsrVB's maildrop has 2 messages (320 octets)
+    C: STAT
+    S: +OK 2 320
+    C: LIST
+    S: +OK 2 messages (320 octets)
+    S: 1 120
+    S: 2 200
+    S: .
+    C: RETR 1
+    S: +OK 120 octets
+    S:
+    S: .
+    C: DELE 1
+    S: +OK message 1 deleted
+    C: RETR 2
+    S: +OK 200 octets
+    S:
+    S: .
+    C: DELE 2
+    S: +OK message 2 deleted
+    C: QUIT
+    S: +OK dewey POP3 server signing off (maildrop empty)
+    C: (закрываем соединение)

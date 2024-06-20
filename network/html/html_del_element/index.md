@@ -1,15 +1,12 @@
 ---
 Title: Удаление HTML элементов из текста
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Удаление HTML элементов из текста
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
 Как-то раз пришлось решить задачу удаления из файла элементов HTML
 таких, как, например, ненужные ссылки, и в то эе время преобразования
@@ -18,7 +15,9 @@ Date: 01.01.2007
 
 Следующие две процедуры показывают, как это можно сделать:
 
-    procedure TMainForm.LoadFileIntoList(TextFileName:String; AWebPage:TStringList; WithFilter:Boolean); 
+    procedure TMainForm.LoadFileIntoList(TextFileName:String;
+                                         AWebPage:TStringList;
+                                         WithFilter:Boolean); 
     var CurrentFile : TStringList; 
     begin 
        CurrentFile := TStringList.Create; 
@@ -48,8 +47,7 @@ Date: 01.01.2007
              i := 0; 
              repeat 
                 if FilterMemo.Lines.GetText[i] = Char(VK_RETURN)      // ищем cr 
-                then S := S+'
-    ' 
+                then S := S+'' 
                 else if FilterMemo.Lines.GetText[i] = '<' 
                      then repeat 
                              inc(i); 
@@ -68,15 +66,14 @@ Date: 01.01.2007
 
 Всё, что нужно сделать - это вызвать :
 
-LoadFileIntoList("filename.txt",Webpage, True);
+    LoadFileIntoList('filename.txt',Webpage, True);
 
-Где filename - это имя файла, который вы хотите обработать.
-
-"WebPage" - это TStringList
-
+Где filename - это имя файла, который вы хотите обработать.  
+"WebPage" - это TStringList,  
 последний параметр в функции указывает, применять или нет HTML-фильтр.
 
-PS: В этом примере объект TMemo (который вызывается из "FilterMemo")
+**PS:**  
+В этом примере объект TMemo (который вызывается из "FilterMemo")
 лежит на форме и поэтому не видим.
 
     WebPage := TStringList.Create; 
@@ -95,4 +92,3 @@ PS: В этом примере объект TMemo (который вызывае
           Screen.Cursor := crDefault; 
        end; 
 
-Взято из <https://forum.sources.ru>
