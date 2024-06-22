@@ -1,15 +1,12 @@
 ---
 Title: Как очистить кэш в IE?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как очистить кэш в IE?
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
 В примере описывается как программно в Internet Explorer нажать кнопку
 "Clear cache".
@@ -47,4 +44,3 @@ Date: 01.01.2007
         Until ( dwLastError = ERROR_NO_MORE_ITEMS ); 
     End;
 
-Взято из <https://forum.sources.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Перехват сообщений IE
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Перехват сообщений IE
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
     {
     This component allows you to intercept Internet Explorer messages such as
@@ -587,4 +584,3 @@ Project source
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Как добавить кнопку в панель инструментов IE?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как добавить кнопку в панель инструментов IE?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
 1. ButtonText = Всплывающая подсказка к кнопке
 
@@ -18,8 +15,9 @@ Date: 01.01.2007
 
 3. MenuStatusbar = *Ignore*
 
-4. CLSID = Ваш уникальный classID. Для создания нового CLSID (для каждой
-кнопки) можно использовать GUIDTOSTRING.
+4. CLSID = Ваш уникальный classID.  
+   Для создания нового CLSID (для каждой
+   кнопки) можно использовать GUIDTOSTRING.
 
 5. Default Visible := Показать ей.
 
@@ -29,9 +27,10 @@ Date: 01.01.2007
 
 8. Icon := иконка из shell32.dll
 
+    ```delphi
     procedure CreateExplorerButton;
     const
-      TagID = '\{10954C80-4F0F-11d3-B17C-00C0DFE39736}\';
+      TagID = '{10954C80-4F0F-11d3-B17C-00C0DFE39736}';
     var
       Reg: TRegistry;
             ProgramPath: string;
@@ -58,7 +57,7 @@ Date: 01.01.2007
       Reg.Free;
      end;
     end;
+    ```
 
 После выполнения этого кода достаточно просто запустить IE.
 
-Взято из <https://forum.sources.ru>

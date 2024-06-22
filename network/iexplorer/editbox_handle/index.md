@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как получить handle на editbox в IE?
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     var
       hndl: HWND;
@@ -38,6 +36,10 @@ Date: 01.01.2007
                 hndl := findwindowex(hndl, 0, 'Edit', nil);
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     unit Unit1;
      
@@ -132,4 +134,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

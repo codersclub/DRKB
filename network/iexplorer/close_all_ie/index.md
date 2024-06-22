@@ -2,15 +2,12 @@
 Title: Закрытие всех окон IE
 Author: bizar
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Закрытие всех окон IE
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
     Procedure CloseAllIE_1;
     var
@@ -28,6 +25,3 @@ Date: 01.01.2007
           end;
     end;
 
-Автор: bizar
-
-Взято из <https://forum.sources.ru>

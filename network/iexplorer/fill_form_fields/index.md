@@ -1,15 +1,12 @@
 ---
 Title: Как автоматически заполнить поля формы в IE?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как автоматически заполнить поля формы в IE?
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       This example shows how to automatically fill in a search string 
@@ -93,4 +90,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

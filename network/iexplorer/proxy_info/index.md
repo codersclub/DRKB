@@ -1,15 +1,11 @@
 ---
 Title: Узнать информацию о прокси сервере
-Date: 01.01.2007
+Date: 08.04.2004
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
-
 
 Узнать информацию о прокси сервере
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       WinInet;
@@ -82,4 +78,3 @@ Date: 01.01.2007
       label2.Caption := IntToStr(ProxyPort);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Удалить временные файлы IE
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Удалить временные файлы IE
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       WinInet; 
@@ -48,4 +45,3 @@ Date: 01.01.2007
       DeleteIECache; 
     end;
 
-Взято с <https://delphiworld.narod.ru>

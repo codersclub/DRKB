@@ -1,15 +1,12 @@
 ---
 Title: Как обновить все окна IE?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как обновить все окна IE?
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
      MSHTML_TLB, SHDocVw_TLB;
@@ -40,4 +37,3 @@ Date: 01.01.2007
      end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

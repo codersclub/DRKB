@@ -1,15 +1,12 @@
 ---
 Title: Как узнать путь к браузеру по умолчанию?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как узнать путь к браузеру по умолчанию?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Registry; 
@@ -39,4 +36,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

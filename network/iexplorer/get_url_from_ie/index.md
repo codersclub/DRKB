@@ -8,9 +8,11 @@ Date: 01.01.2007
 Как взять URL из окна IE?
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Song
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     uses windows, ddeman, ......
      
@@ -42,11 +44,11 @@ Date: 01.01.2007
       showmessage(Get_URL('IExplore'));
     end; 
 
-Автор: Song
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
 Пример показывает, как найти окно Internet Explorer, и захватить из него
 текущий URL, находящийся в поле адреса IE. В Исходнике используются
@@ -87,4 +89,3 @@ Date: 01.01.2007
       showmessage(GetURL);
     end;
 
-Взято из <https://forum.sources.ru>

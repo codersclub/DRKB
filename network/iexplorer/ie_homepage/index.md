@@ -1,15 +1,12 @@
 ---
 Title: Как прочитать / изменить домашнюю страницу IE?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как прочитать / изменить домашнюю страницу IE?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       {...,}Registry; 
@@ -65,4 +62,3 @@ Date: 01.01.2007
       SetIEStartPage('http://forum.vingrad.ru'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

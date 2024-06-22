@@ -1,15 +1,12 @@
 ---
 Title: Как определить, установлен ли IE?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как определить, установлен ли IE?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       registry; 
@@ -41,4 +38,3 @@ Date: 01.01.2007
         ShowMessage(Format('Internet Explorer %s installed.', [IE_Version])); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

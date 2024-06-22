@@ -1,15 +1,12 @@
 ---
 Title: Как прочитать выделенный текст из IE?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как прочитать выделенный текст из IE?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       SHDocVw_TLB; // http://www.euromind.com/iedelphi if don't have that unit
@@ -29,4 +26,3 @@ Date: 01.01.2007
         end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -2,17 +2,12 @@
 Title: Как получить активный URL из браузера?
 Author: Ruslan Abu Zant
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как получить активный URL из браузера?
 ======================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Ruslan Abu Zant
 
 Приводимая здесь функция показывает, как Ваше приложение может извлечь
 из браузера (IE или Netscape) URL, как, например, это делает аська.
@@ -49,4 +44,3 @@ Date: 01.01.2007
        showmessage(Get_URL('IExplore')); 
     end;
 
-Взято из <https://forum.sources.ru>

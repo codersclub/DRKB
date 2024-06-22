@@ -2,22 +2,18 @@
 Title: Кнопка программы в IE
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Кнопка программы в IE
 =====================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure CreateExplorerButton(Path: string); 
      
-
      
     const 
-      Tagit = '\{10954C80-4F0F-11d3-B17C-00C0DFE39736}\'; 
+      Tagit = '{10954C80-4F0F-11d3-B17C-00C0DFE39736}';
     var 
       Reg: TRegistry; 
       Path1: string; 
@@ -47,6 +43,3 @@ Date: 01.01.2007
       end; 
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

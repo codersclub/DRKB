@@ -1,15 +1,12 @@
 ---
 Title: Как добавить cookie?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как добавить cookie?
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
 Пример демонстрирует создание cookie посредствам стандартного компонента
 Delphi
@@ -26,4 +23,3 @@ Delphi
         end; 
     end; 
 
-Взято из <https://forum.sources.ru>
