@@ -2,15 +2,12 @@
 Title: Коды ответов HTTP сервера
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Коды ответов HTTP сервера
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 **Успешные:**
 
@@ -60,10 +57,5 @@ Date: 01.01.2007
     505 HTTP Version Not Supported
 
 
-Дополнительная информация здесь: Hypertext Transfer Protocol - HTTP/1.0
-
-
-
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_
+Дополнительная информация здесь:
+[Hypertext Transfer Protocol - HTTP/1.0](https://www.w3.org/Protocols/HTTP/1.0/draft-ietf-http-v10-spec-01.html)

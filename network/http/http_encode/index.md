@@ -1,15 +1,12 @@
 ---
 Title: HTTP кодирование строки
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 HTTP кодирование строки
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     function HTTPEncode(const AStr: string): string;
      const
@@ -43,4 +40,3 @@ HTTP кодирование строки
        Edit1.Text := HTTPEncode(Edit1.Text);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

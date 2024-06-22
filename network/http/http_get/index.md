@@ -1,15 +1,13 @@
 ---
 Title: Пример HTTP Get - загружаем файлы и страницы из Интернета
-Date: 01.01.2007
+Date: 06.06.2000
+Source: <https://delphiworld.narod.ru>
+Author: UtilMind Solutions (http://www.utilmind.com)
 ---
 
 
 Пример HTTP Get - загружаем файлы и страницы из Интернета
 ==========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {*************************************************************}
     {            HTTPGet component for Delphi 32                  }
@@ -462,4 +460,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

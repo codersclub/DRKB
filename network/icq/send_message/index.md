@@ -1,19 +1,16 @@
 ---
-Title: Как послать сообщение?
+Title: Как послать ICQ сообщение?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Как послать сообщение?
+Как послать ICQ сообщение?
 ======================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       You need 3 TEdits, 1 TMemo and 1 TClientSocket. 
-      Set the  TClientsocket's Port to 80 and the Host to wwp.mirabilis.com. 
+      Set the Port in TClientsocket to 80 and the Host to wwp.mirabilis.com. 
     } 
      
     var 
@@ -47,4 +44,3 @@ Date: 01.01.2007
       clientsocket1.Active := False; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

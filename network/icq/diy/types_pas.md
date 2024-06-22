@@ -1,15 +1,15 @@
 ---
-Title: Types.pas
-Date: 01.01.2007
+Title: Модуль Types.pas
+Author: Alexander Vaga, alexander_vaga@hotmail.com
+Date: 22.05.2002
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Types.pas
 =========
 
-::: {.date}
-01.01.2007
-:::
+статья: [ICQ2000 - сделай сам](./)
 
     {* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     Author:       Alexander Vaga

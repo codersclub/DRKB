@@ -1,15 +1,12 @@
 ---
 Title: URL декодирование строки
-Date: 01.01.2007
+Author: Dimka Maslov, mainbox@endimus.ru
+Date: 27.05.2002
 ---
 
 
 URL декодирование строки
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> URL декодирование строки
