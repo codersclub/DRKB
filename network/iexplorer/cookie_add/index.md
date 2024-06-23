@@ -11,8 +11,10 @@ Source: <https://forum.sources.ru>
 Пример демонстрирует создание cookie посредствам стандартного компонента
 Delphi
 
-    procedure TwebDispatcher.WebAction(Sender: TObject; Request: TWebRequest; 
-      Response: TWebResponse; var Handled: Boolean); 
+    procedure TwebDispatcher.WebAction(Sender: TObject;
+                                       Request: TWebRequest; 
+                                       Response: TWebResponse;
+                                       var Handled: Boolean); 
     begin 
         with (Response.Cookies.Add) do begin 
           Name := 'TESTNAME'; 
