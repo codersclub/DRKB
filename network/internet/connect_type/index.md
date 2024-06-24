@@ -1,15 +1,12 @@
 ---
 Title: Как узнать тип соединения с интернетом?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как узнать тип соединения с интернетом?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       WinInet; 
@@ -43,4 +40,3 @@ Date: 01.01.2007
         ShowMessage(strKind); 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

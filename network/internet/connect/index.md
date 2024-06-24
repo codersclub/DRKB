@@ -8,18 +8,23 @@ Date: 01.01.2007
 Есть ли соединение с инетом?
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-За это отвечает ф-ии InternetGetConnectedState() из wininet.dll или
-InetIsOffLine() из url.dll
+Author: Song
 
-Автор: Song
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+
+За это отвечают функции `InternetGetConnectedState()` из wininet.dll или
+`InetIsOffLine()` из url.dll
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Единственный 100% достоверный способ узнать находится ли комп в
 интернете это скачать что-то со стабильного внешнего сервера - такого
@@ -31,11 +36,13 @@ InetIsOffLine() из url.dll
 Firewall может быть запрещен Ping - тогда надо именно попытаться скачать
 что-нибудь)
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Vitaly Zayko
+
+Source: <https://forum.sources.ru>
 
 Часто приложению, которое работает в интернете, требуется знать,
 подключён пользователь к интернету или нет. Предлагаю Вам довольно
@@ -46,25 +53,21 @@ Firewall может быть запрещен Ping - тогда надо име�
 Для работы Вам необходимо импортировать функцию InetIsOffline из
 URL.DLL:
 
-function InetIsOffline(Flag: Integer): Boolean; stdcall; external
-\'URL.DLL\';
+    function InetIsOffline(Flag: Integer): Boolean;
+             stdcall; external 'URL.DLL';
 
 а затем поместить в программу простой вызов функции для проверки статуса
 соединения:
 
-if InetIsOffline(0) then
-
-  ShowMessage(\'This computer is not connected to Internet!\')
-
-else
-
-  ShowMessage(You are connected to Internet!\');
+    if InetIsOffline(0) then
+      ShowMessage('This computer is not connected to Internet!')
+    else
+      ShowMessage(эYou are connected to Internet!');
 
 Эта функция возвращает TRUE если соединение с интернетов отсутствует,
 или FALSE если соединение установлено.
 
-Замечание:
-
+**Замечание:**  
 параметр Flag игнорируется, соответственно используем ноль.
 
 Эта DLL обычно проинсталлирована на большинстве компьютеров. Она также
@@ -74,11 +77,11 @@ Office 97 и т.д..
 Более подробно можно прочитать в MSDN. Оригинал:
 http://msdn.microsoft.com/library/psdk/shellcc/shell/Functions/InetIsOffline.htm
 
-Автор: Vitaly Zayko
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     interface 
      
@@ -196,4 +199,3 @@ http://msdn.microsoft.com/library/psdk/shellcc/shell/Functions/InetIsOffline.htm
       end; 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

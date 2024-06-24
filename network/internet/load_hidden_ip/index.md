@@ -1,15 +1,12 @@
 ---
 Title: Как загрузить веб-страницу со скрытым IP?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как загрузить веб-страницу со скрытым IP?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     { Add a button and memo }
      
@@ -58,4 +55,3 @@ Date: 01.01.2007
       memo1.Lines.LoadFromFile('filename.htm');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

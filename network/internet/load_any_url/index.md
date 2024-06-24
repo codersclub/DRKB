@@ -1,15 +1,12 @@
 ---
 Title: Как скачать любой URL используя стандартные настройки сети?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как скачать любой URL используя стандартные настройки сети?
 ===========================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Начиная с Internet Explorer 3, Microsoft поддерживает очень полезные
 API, Wininet. Эти функции позволяют использовать все возможности IE,
@@ -38,7 +35,7 @@ Win32 Internet API Functions.
           UrlHandle := InternetOpenUrl(NetHandle, PChar(Url), nil, 0, INTERNET_FLAG_RELOAD, 0);
      
           if Assigned(UrlHandle) then
-    { UrlHandle правильный? Начинаем загрузку }
+            { UrlHandle правильный? Начинаем загрузку }
             begin
               FillChar(Buffer, SizeOf(Buffer), 0);
               repeat
@@ -50,15 +47,14 @@ Win32 Internet API Functions.
             end
           else
             begin
-    { UrlHandle неправильный. Генерируем исключительную ситуацию. }
+              { UrlHandle неправильный. Генерируем исключительную ситуацию. }
               raise Exception.CreateFmt('Cannot open URL %s', [Url]);
             end;
      
           InternetCloseHandle(NetHandle);
         end
       else
-    { NetHandle недопустимый. Генерируем исключительную ситуацию }
+        { NetHandle недопустимый. Генерируем исключительную ситуацию }
         raise Exception.Create('Unable to initialize Wininet');
     end;
 
-Взято из <https://forum.sources.ru>
