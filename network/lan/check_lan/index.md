@@ -1,15 +1,12 @@
 ---
 Title: Как узнать, подключен ли компьютер к сети?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как узнать, подключен ли компьютер к сети?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject); 
     begin 
@@ -19,4 +16,3 @@ Date: 01.01.2007
         ShowMessage('Computer is not attached to a network!'); 
     end; 
 
-Взято из <https://forum.sources.ru>

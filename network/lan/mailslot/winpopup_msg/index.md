@@ -2,19 +2,14 @@
 Title: Отправка WinPopup сообщения через MailSlots
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Отправка WinPopup сообщения через MailSlots
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure TForm1.Button1Click(Sender: TObject);
-     
-
      
     var
       MSHandle: THandle;
@@ -50,9 +45,3 @@ Date: 01.01.2007
       CloseHandle(MSHandle);
     end;
 
-
-
-
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

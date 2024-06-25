@@ -1,15 +1,12 @@
 ---
 Title: Как получить primary domain controller (PDC)?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить primary domain controller (PDC)?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       The NetGetDCName function returns the name of the primary domain controller (PDC).
@@ -131,4 +128,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

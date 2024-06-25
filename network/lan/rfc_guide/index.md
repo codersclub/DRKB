@@ -7,12 +7,6 @@ Date: 01.01.2007
 Путеводитель по RFC
 ===================
 
-::: {.date}
-01.01.2007
-:::
-
-Путеводитель по RFC
-
 Более подробную информацию по протоколам семейства TCP/IP и способам
 организации сетей internet можно найти в RFC - документах,
 распространяемых DDN Network Information Center. Полный каталог RFC, а
@@ -29,25 +23,22 @@ Date: 01.01.2007
 
 Каталог RFC содержит полный список документов, упорядоченный в обратном
 хронологическом порядке. Его можно получить, послав запрос
+`Subject: RFC INDEX`.
 
-       Subject: RFC INDEX
+**Тематический каталог RFC**
 
-Тематический каталог RFC
-
-Административные вопросы
-
+```
+Административные вопросы  
 Administrative
 
-RFC о выделенных номерах
-
+RFC о выделенных номерах  
 Assigned Numbers RFCs
 
 1117, 1062, 1020, 1010, 997, 990, 960, 943, 923, 900, 870, 820, 790,
 776, 770, 762, 758, 755, 750, 739, 717, 604, 503, 433, 349, 322, 317,
 204, 179, 175, 167
 
-Официальные стандарты IAB и другие списки протоколов
-
+Официальные стандарты IAB и другие списки протоколов  
 Official IAB Standards and Other Lists of Protocols
 
 1130, 1100, 1083, 1011, 991, 961, 944, 924, 901, 880, 840, 694, 661,
@@ -55,17 +46,13 @@ Official IAB Standards and Other Lists of Protocols
 
 774 - Internet Protocol Handbook Table of Contents
 
-Отчеты о заседаниях рабочих групп
-
+Отчеты о заседаниях рабочих групп  
 Meeting Notes and Minutes
 
-1152 - Workshop report: Internet research steering group workshop on
-very-high-speed networks
+1152 - Workshop report: Internet research steering group workshop on very-high-speed networks
 1077 - Critical issues in high bandwidth networking
-1019 - Report of the Workshop on Environments for Computational
-Mathematics
-1017 - Network requirements for scientific research: Internet task force
-on scientific computing
+1019 - Report of the Workshop on Environments for Computational Mathematics
+1017 - Network requirements for scientific research: Internet task force on scientific computing
 898 - Gateway Special Interest Group Meeting Notes
 808, 805, 469 - Computer Mail Meeting Notes
 910, 807 - Multimedia Mail Meeting Notes
@@ -75,25 +62,21 @@ on scientific computing
 327 - Data and File Transfer Workshop Notes
 316 - Data Management Working Group Meeting Report
 
-164, 131, 116, 108, 101, 082, 077, 066, 063, 037, 102 - Network Working
-Group Meeting
+164, 131, 116, 108, 101, 082, 077, 066, 063, 037, 102 - Network Working Group Meeting
 
-Oбъявления
-
+Oбъявления  
 Meeting Announcements and Group Overviews
 
 1120 - Internet Activities Board
 828 - Data Communications: IFIP\'s International "Network" of Experts
-631 - Call for Papers: International Meeting on Minicomputers and Data
-Communication
+631 - Call for Papers: International Meeting on Minicomputers and Data Communication
 584 - Charter for ARPANET Users Interest Working Group
 537 - Announcement of NGG Meeting
 526 - Technical Meeting - Digital Image Processing Software Systems
 504 - Workshop Announcement
 483 - Cancellation of the Resource Notebook Framework Meeting
 474, 314, 246, 232, 134 - Network Graphics Working Group
-471 - Announcement of a (Tentative) Workshop on Multi-Site Executive
-Programs
+471 - Announcement of a (Tentative) Workshop on Multi-Site Executive Programs
 461 - Telnet Meeting Announcement
 457 - TIPUG
 456 - Memorandum
@@ -109,12 +92,10 @@ Programs
 299 - Information Management System
 295 - Report of the Protocol Workshop
 291, 188, 173 - Data Management Meetings
-245, 234, 207, 188, 173, 140, 116, 099, 087, 085, 075, 043, 035 -
-Network Working Group Meetings
+245, 234, 207, 188, 173, 140, 116, 099, 087, 085, 075, 043, 035 - Network Working Group Meetings
 222 - System Programmer\'s Workshop
 212 - NWG Meeting on Network Usage
-157 - Invitation to the Second Symposium on Problems in the Optimization
-of Data Communication Systems
+157 - Invitation to the Second Symposium on Problems in the Optimization of Data Communication Systems
 149 - The Best Laid Plans...
 147 - The Definition of a Socket
 111 - Pressure from the Chairman
@@ -122,8 +103,7 @@ of Data Communication Systems
 
 046 - ARPA Network Protocol Notes
 
-Списки распространения информации
-
+Списки распространения информации  
 Distribution List
 
 402, 363, 329, 303, 300, 211, 168, 155 - ARPA Network Mailing Lists
@@ -131,14 +111,12 @@ Distribution List
 
 052 - Updated Distribution List
 
-Официальные вопросы
-
+Официальные вопросы  
 Policies
 
 1124 - Policy issues in interconnecting networks
 1087 - Ethics and the Internet
-1052 - IAB recommendations for the development of Internet network
-management standards
+1052 - IAB recommendations for the development of Internet network management standards
 1039 - DoD statement on Open System Interconnection protocols
 980 - Protocol Document Order Form
 952, 810, 608 - Host Table Specification
@@ -151,13 +129,11 @@ management standards
 
 053 - An Official Protocol Mechanism
 
-Документы о RFC
-
+Документы о RFC  
 Request for Comments Administrative
 
 1150 - F.Y.I. on F.Y.I.: Introduction to the F.Y.I. notes
-1111 - Request for comments on Request for Comments: Introductions to
-RFC authors
+1111 - Request for comments on Request for Comments: Introductions to RFC authors
 1000 - Request For Comments reference guide
 999, 899, 800, 699 - Requests for Comments Summary
 825 - Request for Comments on Requests for Comments
@@ -166,8 +142,7 @@ RFC authors
 
 598, 200, 170, 160, 100, 084 - RFC Index
 
-Библиография
-
+Библиография  
 Bibliographies
 
 1012 - Bibliography of Request For Comments 1 through 999
@@ -176,8 +151,7 @@ Bibliographies
 
 243 - Network and Data Sharing Bibliography
 
-Разное
-
+Разное  
 Other
 
 637 - Change of Network Address for SU-DSL
@@ -192,12 +166,10 @@ Other
 518 - ARPANET Accounts
 511 - Enterprise Phone Service to NIC From ARPANET Sites
 510 - Request for Network Mailbox Addresses
-432 - Network Logical Map 423, 389 - UCLA Campus Computing Network
-Liaison Staff for APRA Network
+432 - Network Logical Map 423, 389 - UCLA Campus Computing Network Liaison Staff for APRA Network
 421 - A Software Consulting Service for Network Users
 419 - MIT-DMS on Vacation
-416 - The ARC System will be Unavailable for Use During Thanksgiving
-Week
+416 - The ARC System will be Unavailable for Use During Thanksgiving Week
 405 - Correction to RFC 404
 404 - Host Address Changes Involving Rand and ISI
 403 - Desirability of a Network 1108 Service
@@ -219,75 +191,55 @@ Week
 
 016 - MIT
 
-Основные требования
-
+Основные требования  
 Requirements Documents And Major Protocol Revisions
 
-Требования к узлам
-
+Требования к узлам  
 Host requirements
 
 1127 - Perspective on the Host Requirements RFCs
 1123 - Requirements for Internet hosts - application and support
-
 1122 - Requirements for Internet hosts - communication layers
 
-Требования к шлюзам
-
+Требования к шлюзам  
 Gateway requirements
 
 1009 - Requirements for Internet gateways
 
-Уровень интерфейса с сетью
-
+Уровень интерфейса с сетью  
 Network Interface Level
 
-Отображение адресов (ARP, RARP)
-
+Отображение адресов (ARP, RARP)  
 Address Binding
 
 1027 - Using ARP to implement transparent subnet gateways
 
-Межсетевой протокол IP в различных сетях
-
+Межсетевой протокол IP в различных сетях  
 Internet Protocol over another network
 
 1149 - Standard for the transmission of IP datagrams on avian carriers
-1103 - Proposed standard for the transmission of IP datagrams over FDDI
-Networks
-1088 - Standard for the transmission of IP datagrams over NetBIOS
-networks
-1055 - Nonstandard for transmission of IP datagrams over serial lines:
-SLIP
-1051 - Standard for the transmission of IP datagrams and ARP packets
-over ARCNET networks
-1044 - Internet Protocol on Network System\'s HYPERchannel: Protocol
-specification
-1042 - Standard for the transmission of IP datagrams over IEEE 802
-networks
-948 - Two Methods for the Transmission of IP Datagrams Over IEEE 802.3
-Networks
+1103 - Proposed standard for the transmission of IP datagrams over FDDI Networks
+1088 - Standard for the transmission of IP datagrams over NetBIOS networks
+1055 - Nonstandard for transmission of IP datagrams over serial lines: SLIP
+1051 - Standard for the transmission of IP datagrams and ARP packets over ARCNET networks
+1044 - Internet Protocol on Network System\'s HYPERchannel: Protocol specification
+1042 - Standard for the transmission of IP datagrams over IEEE 802 networks
+948 - Two Methods for the Transmission of IP Datagrams Over IEEE 802.3 Networks
 907 - Host Access Protocol
 903 - A Reverse Address Resolution Protocol
-895 - A Standard for the Transmission of IP Datagrams over Experimental
-Ethernet Networks
-894 - A Standard for the Transmission of IP Datagrams over Ethernet
-Networks
+895 - A Standard for the Transmission of IP Datagrams over Experimental Ethernet Networks
+894 - A Standard for the Transmission of IP Datagrams over Ethernet Networks
 893 - Trailer Encapsulations
 891 - Internet Protocol on DC Networks
-877 - A Standard for the Transmission of IP Datagrams Over Public Data
-Networks
+877 - A Standard for the Transmission of IP Datagrams Over Public Data Networks
 826 - Address Resolution Protocol
 796 - Address Mappings
-
 795 - Service Mappings
 
-Межсетевой уровень
-
+Межсетевой уровень  
 Internet Level
 
-Межсетевой протокол IP
-
+Межсетевой протокол IP  
 Internet Protocol
 
 1154 - Encoding header field for internet messages
@@ -297,35 +249,28 @@ Internet Protocol
 1025 - TCP and IP bake off
 815 - IP Datagram Reassembly Algorithms
 791, 760 - Internet Protocol (IP)
-
 781 - A Specification of the Internet Protocol IP Timestamp Option
 
-Межсетевой протокол управляющих сообщений ICMP
-
+Межсетевой протокол управляющих сообщений ICMP  
 Internet Control Message Protocol
 
 1018 - Some comments on SQuID
-1016 - Something a host could do with source quench: The Source Quench
-Introduced Delay (SQuID)
+1016 - Something a host could do with source quench: The Source Quench Introduced Delay (SQuID)
 
 792, 777 - Internet Control Message Protocol (ICMP)
 
-Межсетевой протокол групповых передач IGMP
-
+Межсетевой протокол групповых передач IGMP  
 Internet Group Multicast Protocol
 
 1112, 1054 - Host extentions for IP multicasting
 
-Маршрутизация и шлюзовые протоколы GGP, RIP, OSPF
-
+Маршрутизация и шлюзовые протоколы GGP, RIP, OSPF  
 Routing and Gateway Protocols
 
-1136 - Administrative Domains and Routing Domains: A model for routing
-in the Internet
+1136 - Administrative Domains and Routing Domains: A model for routing in the Internet
 1133 - Routing between the NSFNET and the DDN
 1131 - OSPF specification
-1126 - Goals and functional requirements for inter-autonomous system
-routing
+1126 - Goals and functional requirements for inter-autonomous system routing
 1125 - Policy requirements for inter Administrative Domain routing
 1105 - Border Gateway Protocol (BGP)
 1104 - Models of policy based routing
@@ -342,18 +287,14 @@ routing
 911 - EGP Gateway under Berkeley Unix
 904, 890, 888, 827 - Exterior Gateway Protocol
 875 - Gateways, Architectures, and Heffalumps
-
 823 - Gateway Gateway Protocol
 
-Разное
-
+Разное  
 Other
 
-986 - Working Draft - Guidelines for the Use of Internet-IP Addressing
-in the ISO Connectionless-Mode Network
+986 - Working Draft - Guidelines for the Use of Internet-IP Addressing in the ISO Connectionless-Mode Network
 981 - An Experimental Multiple-Path Routing Algorithm
-963 - Some Problems with the Specification of the Military Standard
-Internet Protocol
+963 - Some Problems with the Specification of the Military Standard Internet Protocol
 950 - Internet Standard Subnetting Procedure
 947 - Multi-Network Broadcasting Within the Internet
 940, 917, 925, 932, 936, 922 - Internet Subnets Protocol
@@ -367,21 +308,17 @@ Internet Protocol
 814 - Name, Addresses, Ports, and Routes
 796 - Address Mapping
 795 - Service Mappings
-
 730 - Extensible Field Addressing
 
-Транспортный уровень
-
+Транспортный уровень  
 Transport Level
 
-Протокол пользовательских датаграмм UDP
-
+Протокол пользовательских датаграмм UDP  
 User Datagram Protocol
 
 768 - User Datagram Protocol
 
-Протокол управления передачей TCP
-
+Протокол управления передачей TCP  
 Transmission Control Protocol
 
 1146, 1145 - TCP alternate checksum options
@@ -391,8 +328,7 @@ Transmission Control Protocol
 1078 - TCP port service Multiplexer (TCPMUX)
 1072 - TCP extensions for long-delay paths
 983 - ISO Transport Services on Top of the TCP
-964 - Some Problems with the Specification of the Military Standard
-Transmission Control Protocol
+964 - Some Problems with the Specification of the Military Standard Transmission Control Protocol
 896 - Congestion Control in IP/TCP Internetworks
 889 - Internet Delay Experiments
 879 - The TCP Maximum Segment Size and Related Topics
@@ -406,33 +342,25 @@ Transmission Control Protocol
 
 700 - A Protocol Experiment
 
-Протоколы для двухточечных каналов
-
+Протоколы для двухточечных каналов  
 Point-To-Point Protocols
 
-1134 - Point-to-Point Protocol: A proposal for multi-protocol
-transmission of datagrams over Point-to-Point links
+1134 - Point-to-Point Protocol: A proposal for multi-protocol transmission of datagrams over Point-to-Point links
 
-1055 - Nonstandard for transmission of IP datagrams over serial lines:
-SLIP
+1055 - Nonstandard for transmission of IP datagrams over serial lines: SLIP
 
-Протоколы надежной доставки датаграмм RDP, VMTP
-
+Протоколы надежной доставки датаграмм RDP, VMTP  
 Reliable Datagram Protocols
 
 1151 - Version 2 of the Reliable Data Protocol (RDP)
 
-1045 - VMTP: Versatile Message Transaction Protocol: Protocol
-specification
+1045 - VMTP: Versatile Message Transaction Protocol: Protocol specification
 
-Транзакции и распределенные операционные системы
-
+Транзакции и распределенные операционные системы  
 Transaction Protocols and Distributed Operating Systems
 
-955 - Towards a Transport Service for Transaction Processing
-Applications
-938 - Internet Reliable Transaction Protocol Functional and Interface
-Specification
+955 - Towards a Transport Service for Transaction Processing Applications
+938 - Internet Reliable Transaction Protocol Functional and Interface Specification
 908 - Reliable Data Protocol
 722 - Thoughts on Interactions in Distributed Services
 713 - MSDTP - Message Services Data Transmission Protocol
@@ -448,26 +376,22 @@ Specification
 615 - Proposed Network Standard Data Pathname Syntax
 610 - Further Datalanguage Design Concepts
 592 - Some Thoughts on System Design to Facilitate Resource Sharing
-578 - Using MIT-MATHLAB MACSYMA From MIT-DMS Muddle - An Experiment in
-Automated Resource Sharing
+578 - Using MIT-MATHLAB MACSYMA From MIT-DMS Muddle - An Experiment in Automated Resource Sharing
 515 - Specifications for Datalanguage, Version 0/9
 500 - The Integration of Data Management Systems on a Computer Network
 441 - Inter-Entity Communication - An Experiment
 437 - Data Reconfiguration Service at UCSB
 203 - Achieving Reliable Communication
 076 - Connection-by-Name: User-Oriented Protocol
-062 - A System for Interprocess Communication in a Resource Sharing
-Computer Network
-061 - A Note on Interprocess Communication in a Resource Sharing
-Computer Network
+062 - A System for Interprocess Communication in a Resource Sharing Computer Network
+061 - A Note on Interprocess Communication in a Resource Sharing Computer Network
 051 - Proposal for a Network Interchange Language
 031 - Binary Message Forms in Computer Networks
 005 - DEL
 
 001 - Host Software
 
-Разное
-
+Разное  
 Other
 
 998, 969 - NETBLT: A Bulk Data Transfer Protocol
@@ -480,12 +404,10 @@ Other
 
 162 - NETBUGGER3
 
-Прикладной уровень
-
+Прикладной уровень  
 Application Level
 
-Протокол сетевого терминала TELNET
-
+Протокол сетевого терминала TELNET  
 Telnet Protocol
 
 854, 764 - Telnet Protocol Specification
@@ -501,8 +423,7 @@ Telnet Protocol
 595 - Some Thoughts in Defense of the Telnet Go-Ahead
 593 - Telnet and FTP Implementation Schedule Change
 576 - Proposal for Modifying Linking
-570 - Experimental Input Mapping Between NVT ASCII and UCSB Online
-System
+570 - Experimental Input Mapping Between NVT ASCII and UCSB Online System
 562 - Modifications to the Telnet Specification
 559 - Comments on the New Telnet Protocol and Its Implementation
 529 - A Note on Protocol Synch Sequences
@@ -529,16 +450,14 @@ System
 158 - Proposed Telnet Protocol
 139 - Discussion of Telnet Protocol
 137 - Telnet Protocol - A Proposed Document
-135, 110 - Conventions for Using an IBM 2741 Terminal as a User Console
-for Access to Network Server Hosts
+135, 110 - Conventions for Using an IBM 2741 Terminal as a User Console for Access to Network Server Hosts
 103 - Implementation of Interrupt Keys
 097 - A First Cut at a Proposed Telnet Protocol
 091 - A Proposed User-User Protocol
 
 015 - Network Subsystem for Time Sharing Hosts
 
-Опции Telnet
-
+Опции Telnet  
 Telnet Options
 
 1143 - Q method of implementing Telnet option negotiation
@@ -595,14 +514,12 @@ Telnet Options
 652 - Telnet Output Carriage Return Disposition Option
 651 - Revised Telnet Status Option
 587 - Announcing New Telnet Options
-581 - Corrections to RFC 560 - Remote Controlled Transmission and
-Echoing Telnet Option
+581 - Corrections to RFC 560 - Remote Controlled Transmission and Echoing Telnet Option
 563 - Comments on the RCTE Telnet Option
 
 560 - Remote Controlled Transmission and Echoing Telnet Option
 
-Протоколы передачи и доступа к файлам (FTP, TFTP, SFTP, NFS)
-
+Протоколы передачи и доступа к файлам (FTP, TFTP, SFTP, NFS)  
 File Transfer and Access Protocols
 
 1094 - NFS: Network File System Protocol specification
@@ -646,8 +563,7 @@ File Transfer and Access Protocols
 468 - FTP Data Compression
 463 - FTP Comments and Response to RFC 430
 458 - Mail Retrieval via FTP
-454 - File Transfer Protocol - Meeting Announcement and a New Proposed
-Document
+454 - File Transfer Protocol - Meeting Announcement and a New Proposed  Document
 448 - Print Files in FTP
 438 - FTP Server-Server Interaction
 430 - Comments on File Transfer Protocol
@@ -656,8 +572,7 @@ Document
 412 - User FTP Documentation
 385 - Comments on the File Transfer Protocol (RFC 354)
 310 - Another Look at Data and File Transfer Protocols
-294 - The Use of "Set Data Type" Transaction in the File Transfer
-Protocol
+294 - The Use of "Set Data Type" Transaction in the File Transfer  Protocol
 281 - A Suggested Addition to File Transfer Protocol
 269 - Some Experience with File Transfer
 264, 171 - The Data Transfer Protocol
@@ -669,8 +584,7 @@ Protocol
 
 133 - File Transfer and Error Recovery
 
-Справочная служба имен
-
+Справочная служба имен  
 Domain Name System
 
 1101 - DNS encoding of network names and other types
@@ -694,14 +608,12 @@ Domain Name System
 
 752 - A Universal Host Table
 
-Почтовая служба и система передачи сообщений (SMTP)
-
+Почтовая служба и система передачи сообщений (SMTP)  
 Mail and Message Systems
 
 1153 - Digest message format
 1148, 1138 - Mapping between X.400(1988)/ISO 10021 and RFC 822
-1137 - Mapping between full RFC 822 and RFC 822 with restricted
-encoding
+1137 - Mapping between full RFC 822 and RFC 822 with restricted encoding
 1090 - SMTP on X.25
 1082 - Post Office Protocol - version 3: Extended service offerings
 1081 - Post Office Protocol - version 3
@@ -718,26 +630,22 @@ encoding
 915 - Network Mail Path Service
 886 - Proposed Standard for Message Header Munging
 850 - Standard for Interchange of USENET Messages
-841 - Specification for Message Format for Computer Based Message
-Systems
+841 - Specification for Message Format for Computer Based Message Systems
 822 - Standard for the Format of ARPA Internet Text Messages
 821 - Simple Mail Transfer Protocol
-806 - Specification for Message Format for Computer Based Message
-Systems
+806 - Specification for Message Format for Computer Based Message Systems
 780, 772 - Mail Transfer Protocol
 786 - Mail Transfer Protocol - ISI TOPS-20 MTP-NIMAIL Interface
 785 - Mail Transfer Protocol - ISI TOPS-20 File Definitions
 784 - Mail Transfer Protocol - ISI TOPS-20 Implementation
 771 - Mail Transition Plan
 763 - Role Mailboxes
-757 - A Suggested Solution to the Naming, Addressing, and Delivery
-Problem for ARPANET Message Systems
+757 - A Suggested Solution to the Naming, Addressing, and Delivery Problem for ARPANET Message Systems
 754 - Out-of-Net Host Addresses for Mail
 753 - Internet Message Protocol
 751 - Survey of FTP Mail and MLFL
 733 - Standard for the Format of ARPA Network Text Messages
-724 - Proposed Official Standard for the Format of ARPA Network
-Messages
+724 - Proposed Official Standard for the Format of ARPA Network Messages
 720 - Address Specification Syntax for Network Mail
 706 - On the Junk Mail Problem
 680 - Message Transmission Protocol
@@ -755,8 +663,7 @@ Messages
 
 278, 224, 221, 196 - A Mail Box Protocol
 
-Факсимиле
-
+Факсимиле  
 Facsimile
 
 809 - UCL Facsimile System
@@ -767,8 +674,7 @@ Facsimile
 
 769 - Rapicom 450 Facimile File Format
 
-Графические и многооконные системы
-
+Графические и многооконные системы  
 Graphics and Window Systems
 
 1013 - X Window System Protocol, version 11: Alpha update April 1987
@@ -777,8 +683,7 @@ Graphics and Window Systems
 493 - Graphics Protocol
 401 - Conversion of NGP-0 Coordinates to Device Specific Coordinates
 398 - UCSB Online Graphics
-387 - Some Experiences in Implementing Network Graphics Protocol Level
-0
+387 - Some Experiences in Implementing Network Graphics Protocol Level 0
 351 - Information Form for the ARPANET Graphics Resources Notebook
 336 - Level 0 Graphics Input Protocol
 296 - DS-1 Display System
@@ -792,31 +697,26 @@ Graphics and Window Systems
 184 - Proposed Graphic Display Modes
 181, 177 - A Device Independent Graphical Display Description
 178 - Network Graphics Attention Handling
-125, 086 - Proposal for a Network Standard Format for a Data Stream to
-Control Graphics Display
+125, 086 - Proposal for a Network Standard Format for a Data Stream to Control Graphics Display
 
 094 - Some Thoughts on Network Graphics
 
-Управление данными
-
+Управление данными  
 Data Management
 
 304 - A Data Management System Proposal for the ARPA Network
 195 - Data Computers - Data Descriptions and Access Language
-194 - The Data Reconfiguration Service - Compiler/Interpreter
-Implementation Notes
+194 - The Data Reconfiguration Service - Compiler/Interpreter Implementation Notes
 166 - Data Reconfiguration Service - An Implementation Specification
 144 - Data Sharing on Computer Networks
 138 - Status Report on Proposed Data Reconfiguration Service
 
 083 - Language-Machine for Data Reconfiguration
 
-Удаленный ввод заданий (NETRJE, NETRJS)
-
+Удаленный ввод заданий (NETRJE, NETRJS)  
 Remote Job Entry
 
-740, 599, 589, 325, 189, 088 - CCN Network Remote Job Entry Program -
-NETRJS
+740, 599, 589, 325, 189, 088 - CCN Network Remote Job Entry Program - NETRJS
 725 - An RJE Protocol for a Resource Sharing Network
 499 - Harvard\'s Network RJE
 490 - Surrogate RJS for UCLA-CCN
@@ -828,28 +728,21 @@ NETRJS
 307 - Using Network Remote Job Entry
 283 - NETRJT - Remote Job Service Protocol for TIPS
 
-105 - Network Specification for Remote Job Entry and Remote Job Output
-Retrieval at UCSB
+105 - Network Specification for Remote Job Entry and Remote Job Output Retrieval at UCSB
 
-Удаленный вызов процедур (RPC)
-
+Удаленный вызов процедур (RPC)  
 Remote Procedure Call
 
 1057 - RPC: Remote Procedure Call Protocol specification version 2
-
 1050 - RPC: Remote Procedure Call Protocol specification
 
-Дата и время (NTP)
-
+Дата и время (NTP)  
 Time And Date
 
 1129 - Internet time synchronization: The Network Time Protocol
-1128 - Measured performance of the Network Time Protocol in the Internet
-system
-1119 - Network Time Protocol (version 2) specification and
-implementation
-1059 - Network Time Protocol (version 1) specification and
-implementation
+1128 - Measured performance of the Network Time Protocol in the Internet system
+1119 - Network Time Protocol (version 2) specification and implementation
+1059 - Network Time Protocol (version 1) specification and implementation
 958, 957, 956 - Network Time Protocol
 868 - Time Server Protocol
 867 - Daytime Protocol
@@ -861,28 +754,23 @@ implementation
 
 028 - Time Standards
 
-Представление данных (XDR)
-
+Представление данных (XDR)  
 Presentation and Representation
 
 1014 - XDR: External Data Representation standard
-
 1003 - Issues in defining an equations representation standard
 
-Управление в сетях (SNMP, CMOT, MIB)
-
+Управление в сетях (SNMP, CMOT, MIB)  
 Network Management
 
 1109 - Report of the second Ad Hoc Network Management Review Group
-1095 - Common Management Information Services and Protocol over TCP/IP
-(CMOT)
+1095 - Common Management Information Services and Protocol over TCP/IP (CMOT)
 1089 - SNMP over Ethernet
 1076 - HEMS monitoring and control language
 1067 - Simple Network Management Protocol
 1156, 1066 - Management Information Base for network management of
 TCP/IP-based internets
-1155, 1065 - Structure and identification of management information for
-TCP/IP-based internets
+1155, 1065 - Structure and identification of management information for TCP/IP-based internets
 1028 - Simple Gateway Monitoring Protocol
 1024 - HEMS variable definitions
 1023 - HEMS monitoring and control language
@@ -890,22 +778,18 @@ TCP/IP-based internets
 
 1021 - High-level Entity Management System (HEMS)
 
-Служба каталогов
-
+Служба каталогов  
 Directory Services
 
 1107 - Plan for Internet directory services
-
 1157, 1098 - Simple Network Management Protocol (SNMP)
 
-Протоколы начальной загрузки (BOOTP)
-
+Протоколы начальной загрузки (BOOTP)  
 Bootstrap Protocols
 
 1084, 1048 - BOOTP vendor information extensions
 
-Разное
-
+Разное  
 Other
 
 978 - Voice File Interchange Protocol (VFIP)
@@ -939,8 +823,7 @@ Other
 
 029 - Note in Response to Bill English\'s Request for Comments
 
-Документация к программам
-
+Документация к программам  
 Program Documentation
 
 496 - A TNLS Quick Reference Card is Available
@@ -973,8 +856,7 @@ Program Documentation
 
 Особенности некоторых сетей
 
-Network Specific
-
+Network Specific  
 Сеть ARPANET
 
 1005, 878, 851, 802 - The ARPANET 1822L Host Access Protocol
@@ -993,8 +875,7 @@ Network Specific
 638, 633 - IMP/TIP Preventive Maintenance Schedule
 632 - Throughput Degradation for Single Packet Message
 627 - ASCII Text File of Hostnames
-626 - On a possible Lockup Condition in IMP Subnet due to Message
-Sequencing
+626 - On a possible Lockup Condition in IMP Subnet due to Message  Sequencing
 625 - On Line Hostnames Service
 623 - Comments on On-line Host Name Service
 622 - Scheduling IMP/TIP Down Time
@@ -1037,8 +918,7 @@ Sequencing
 237 - The NIC\'s View of Standard Host Names
 236 - Standard Host Names
 233 - Standardization of Host Call Letters
-230 - Toward Reliable Operation of Minicomputer-based Terminals on a
-TIP
+230 - Toward Reliable Operation of Minicomputer-based Terminals on a TIP
 229 - Standard Host Names
 228 - Clarification
 226 - Standardization of Host Mnemonics
@@ -1059,14 +939,12 @@ TIP
 
 006 - Conversation with Bob Kahn
 
-Протоколы сетевого доступа
-
+Протоколы сетевого доступа  
 Host Front End Protocols
 
 929, 928, 705, 647 - Host-Front End Protocol
 
-Протокол NCP сети ARPANET (предшественник TCP/IP)
-
+Протокол NCP сети ARPANET (предшественник TCP/IP)  
 ARPANET NCP (Obsolete predecessor of TCP/IP)
 
 801 - NCP/TCP Transition Plan
@@ -1077,8 +955,7 @@ ARPANET NCP (Obsolete predecessor of TCP/IP)
 636 - TIP/TENEX Reliability Improvements
 635 - An Assessment of ARPANET Protocols
 534, 516, 512 - Lost Message Detection
-492, 467 - Proposed Change to Host-Host Protocol Resynchronization of
-Connection Status
+492, 467 - Proposed Change to Host-Host Protocol Resynchronization of Connection Status
 489 - Comment on Resynchronization of Connection Status Proposal
 425 - "But my NCP Costs $500 a day..."
 210 - Improvement of Flow Control
@@ -1087,8 +964,7 @@ Connection Status
 165 - A Proferred Official Initial Connection Protocol
 147 - The Definition of a Socket
 142 - Time-out Mechanism in the Host-Host Protocol
-132, 124, 107, 102 - Output of the Host-Host Protocol Glitch Cleaning
-Committee
+132, 124, 107, 102 - Output of the Host-Host Protocol Glitch Cleaning Committee
 129 - A Request for Comments on Socket Name Structure
 128 - Bytes
 117 - Some Comments on the Official Protocol
@@ -1102,8 +978,7 @@ RET) and RFNM
 057, 054 - An Official Protocol Proffering
 056 - Third Level Protocol
 055 - A Prototypical Implementation of the NCP
-050, 049, 048, 047, 046, 045, 044, 040, 039, 038, 036, 033 - New
-Host-Host Protocol
+050, 049, 048, 047, 046, 045, 044, 040, 039, 038, 036, 033 - New Host-Host Protocol
 042 - Message Data Types
 023 - Transmission of Multiple Control Messages
 022 - Host-Host Control Message Formats
@@ -1116,8 +991,7 @@ Host-Host Protocol
 
 002 - Links
 
-Протокол ICP сети ARPANET
-
+Протокол ICP сети ARPANET  
 ARPANET Initial Connection Protocol
 
 202 - Possible Deadlock in ICP
@@ -1135,8 +1009,7 @@ ARPANET Initial Connection Protocol
 
 1036 - Standard for interchange of USENET messages
 
-Разное
-
+Разное  
 Other
 
 1132 - Standard for the transmission of 802.2 packets over IPX networks
@@ -1146,12 +1019,10 @@ Other
 
 824 - The Cronus Virtual Local Network
 
-Измерение
-
+Измерение  
 Measurement
 
-Общие вопросы
-
+Общие вопросы  
 General
 
 573 - Data and File Transfer - Some Measurement Results
@@ -1177,8 +1048,7 @@ General
 
 106 - USER/SERVER Site Protocol Network Host Questionnaire
 
-Обзоры
-
+Обзоры  
 Surveys
 
 971 - A Survey of Data Representation Standards
@@ -1186,8 +1056,7 @@ Surveys
 848 - Who Provides the "Little" TCP Services?
 847 - Summary of Smallberg Surveys
 844 - Who Talks ICMP, too? Survey of 18 February 1983
-846, 845, 843, 842, 839, 838, 837, 836, 835, 834, 833, 832 - Who Talks
-TCP?
+846, 845, 843, 842, 839, 838, 837, 836, 835, 834, 833, 832 - Who Talks TCP?
 787 - Connectionless Data Transmission Survey/Tutorial
 703, 702, 701, 679, 669 - Survey of New-Protocol Telnet Servers
 565 - Storing Network Survey Data at the Datacomputer
@@ -1201,19 +1070,16 @@ TCP?
 459 - Network Questionnaire
 450 - Multics Sampling Timeout Change
 446 - Proposal to Consider a Network Program Resource Notebook
-096 - An Interactive Network Experiment to Study Modes of Access to the
-Network Information Center
+096 - An Interactive Network Experiment to Study Modes of Access to the Network Information Center
 090 - CCN as a Network Service Center
 081 - Request for Reference Information
 
 078 - NCP Status Report: UCSB/Rand
 
-Статистика
-
+Статистика  
 Statistics
 
-1128 - Measured performance of the Network Time Protocol in the Internet
-system
+1128 - Measured performance of the Network Time Protocol in the Internet system
 1030 - On testing the NETBLT Protocol over divers networks
 996 - Statistics Server
 618 - A Few Observations on NCP Statistics
@@ -1226,28 +1092,22 @@ system
 
 255, 252, 240, 235 - Site Status
 
-Безопасность и конфиденциальность
-
+Безопасность и конфиденциальность  
 Privacy And Security
 
 1135 - Helminthiasis of the Internet
-1115 - Privacy enhancement for Internet electronic mail: Part III -
-algorithms, modes, and identifiers [Draft]
-1114 - Privacy enhancement for Internet electronic mail: Part II -
-certificate-based key management [Draft]
-1113 - Privacy enhancement for Internet electronic mail: Part I -
-message encipherment and authentication procedures [Draft]
-1040 - Privacy enhancement for Internet electronic mail: Part I: Message
-encipherment and authentication procedures
+1115 - Privacy enhancement for Internet electronic mail: Part III - algorithms, modes, and identifiers [Draft]
+1114 - Privacy enhancement for Internet electronic mail: Part II - certificate-based key management [Draft]
+1113 - Privacy enhancement for Internet electronic mail: Part I - message encipherment and authentication procedures [Draft]
+1040 - Privacy enhancement for Internet electronic mail: Part I: Message encipherment and authentication procedures
 1038 - Draft revised IP security option
 
 1004 - Distributed-protocol authentication scheme
 
-Опыт в области сетей
-
+Опыт в области сетей  
 Network Experience and Demonstrations
 
-968 - \'Twas the Night Before Start-up
+968 - 'Twas the Night Before Start-up
 967 - All Victims Together
 573 - Data and File Transfer - Some Measurement Results
 527 - ARPAWOCKY
@@ -1264,20 +1124,17 @@ Network Experience and Demonstrations
 
 004 - Network Timetable
 
-О документации
-
+О документации  
 Site Documentation
 
 030, 027, 024, 016, 010, 003 - Documentation Conventions
 
-Стандарты организаций, не связанных с IAB
-
+Стандарты организаций, не связанных с IAB  
 Protocol Standards By Other Groups Of Interest
 
 ANSI
 
-570 - Experimental Input Mapping Between NVT ASCII and UCSB Online
-System
+570 - Experimental Input Mapping Between NVT ASCII and UCSB Online System
 183 - The EBCDIC Codes and Their Mapping to ASCII
 
 020 - ASCII Format for Network Interchange
@@ -1292,73 +1149,60 @@ NRC
 
 942 - Transport Protocols for Department of Defense Data Networks
 
-939 - Executive Summary of the NRC Report on Transport Protocols for
-Department of Defense Data Networks
+939 - Executive Summary of the NRC Report on Transport Protocols for Department of Defense Data Networks
 
 ISO
 
 1139 - Echo function for ISO 8473
 1008 - Implementation guide for the ISO Transport Protocol
 1007 - Military supplement to the ISO Transport Protocol
-995 - End System to Intermediate System Routing Exchange Protocol for
-Use in Conjunction with ISO 8473
-994 - Final Text of DIS 8473, Protocol for Providing the Connectionless
-Mode Network Service
-982 - Guidelines for the Specification of the Structure of the Domain
-Specific Part (DSP) of the ISO Standard NSAP Address
-941 - Addendum to the Network Service Definition Covering Network Layer
-Addressing
+995 - End System to Intermediate System Routing Exchange Protocol for Use in Conjunction with ISO 8473
+994 - Final Text of DIS 8473, Protocol for Providing the Connectionless Mode Network Service
+982 - Guidelines for the Specification of the Structure of the Domain Specific Part (DSP) of the ISO Standard NSAP Address
+941 - Addendum to the Network Service Definition Covering Network Layer Addressing
 926 - Protocol for Providing the Connectionless-Mode Network Services
 905 - ISO Transport Protocol Specification (ISO DP 8073)
 892 - ISO Transport Protocol
 
 873 - The Illusion of Vendor Support
 
-Взаимодействие с протоколами, не входящими в семейство TCP/IP
-
+Взаимодействие с протоколами, не входящими в семейство TCP/IP  
 Interoperability With Other Protocols
 
-Согласование протоколов и мосты
-
+Согласование протоколов и мосты  
 Protocol Translation And Bridges
 
 1086 - ISO-TP0 bridge between TCP and X.25
 
-1029 - More fault tolerant approach to address resolution for a
-Multi-LAN system of Ethernets
+1029 - More fault tolerant approach to address resolution for a Multi-LAN system of Ethernets
 
-Согласование уровней протоколов
-
+Согласование уровней протоколов  
 Tunneling And Layering
 
 1090 - SMTP on X.25
 1089 - SNMP over Ethernet
 1085 - ISO presentation services on top of TCP/IP based internets
-1070 - Use of the Internet as a subnetwork for experimentation with the
-OSI network layer
+1070 - Use of the Internet as a subnetwork for experimentation with the OSI network layer
 1006 - ISO transport services on top of TCP: Version: 3
-1002 - Protocol standard for a NetBIOS service on a TCP/UDP transport:
-Detailed specifications
+1002 - Protocol standard for a NetBIOS service on a TCP/UDP transport: Detailed specifications
 
-1001 - Protocol standard for a NetBIOS service on a TCP/UDP transport:
-Concepts and methods
+1001 - Protocol standard for a NetBIOS service on a TCP/UDP transport: Concepts and methods
 
-Отображение имен, адресов и идентификаторов
-
+Отображение имен, адресов и идентификаторов  
 Mapping of Names, Addresses and Identifiers
 
 1148, 1138 - Mapping between X.400(1988)/ISO 10021 and RFC 822
-1069 - Guidelines for the use of Internet-IP addresses in the ISO
-Connectionless-Mode Network Protocol
+1069 - Guidelines for the use of Internet-IP addresses in the ISO Connectionless-Mode Network Protocol
 1026 - Addendum to RFC 987: (Mapping between X.400 and RFC-822)
 
 987 - Mapping Between X.400 and RFC 822
 
-Разное
-
+Разное  
 Miscellaneous
 
 1121 - Act one - the poems
 1118 - Hitchhikers guide to the Internet
 
 1015 - Implementation plan for interagency research Internet
+```
+

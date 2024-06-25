@@ -1,35 +1,31 @@
 ---
-Title: Как определить MAC адрес NIC?
+Title: Как определить MAC адрес сетевой карты?
 Author: Garik
 Date: 01.01.2007
 ---
 
 
-Как определить MAC адрес NIC?
+Как определить MAC адрес сетевой карты?
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Sergey Gazimagomedov 2:453/11.13
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Вот на что наткнулся в одном из ФАКов:
-
-Вариант1:
-
-From : Sergey Gazimagomedov 2:453/11.13
 
 Мне нужен был МАС адpес, так я его получал, пользуясь NetBIOS.
 
 Добавляешь имя NetBIOS и посылаешь на имя станции, нужной для
-опpеделения(можно
-
-и своей) датагpамный пакет с заполненным NCB.
+опpеделения (можно и своей) датагpамный пакет с заполненным NCB.
 
 Вот исходник моей функции для опpеделения МАС адpеса.
 
     UCHAR MYLIBAPI GetAdapterID(char *Name,
-    UINT lana_num,
-    CARDID *ID)
+                                UINT lana_num,
+                                CARDID *ID)
     {
     UCHAR rc = 0;
     UCHAR Status[256];
@@ -43,111 +39,116 @@ From : Sergey Gazimagomedov 2:453/11.13
     SNcb.ncb_lana_num = lana_num;
     rc = Netbios( &SNcb );
     if(rc ==0){
-    memcpy(ID, Status, 6);
+      memcpy(ID, Status, 6);
     }
     return(SNcb.ncb_cmd_cplt);
     }
 
 Это под Win32. Конечно должен быть пpотокол NetBIOS, но он в фоpточках и
-так
+так необходим.
 
-необходим.
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+-----------------------------------------------------
 
-Вариант2:
+Вариант 2:
 
-From : Alexey Grachyov
+Author: Alexey Grachyov
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     void main()
     {
-    int iAdapters,iOpt=sizeof(iAdapters),iSize=sizeof(SOCKADDR_IPX);
-    SOCKET skNum;
-    SOCKADDR_IPX Addr;
-    WSADATA Wsa;
-    if(WSAStartup(0x0101,&Wsa)) return;
-    if((skNum=socket(AF_IPX,SOCK_DGRAM,NSPROTO_IPX))!=INVALID_SOCKET)
-    {
-    memset(&Addr,0,sizeof(Addr));
-    Addr.sa_family=AF_IPX;
-    if(bind(skNum,(SOCKADDR *)&Addr,iSize)!=SOCKET_ERROR)
-    {
-    if(getsockopt(skNum,NSPROTO_IPX,IPX_MAX_ADAPTER_NUM,
-    (char *)&iAdapters,&iOpt)!=SOCKET_ERROR)
-    {
-    while(iAdapters)
-    {
-    IPX_ADDRESS_DATA Data;
-    memset(&Data,0,sizeof(Data));
-    Data.adapternum=iAdapters-1;
-    iOpt=sizeof(Data);
-    if(getsockopt(skNum,NSPROTO_IPX,IPX_ADDRESS,(char
-    *)&Data,&iOpt)!=SOCKET_ERROR)
-    {
-    printf("Addr: %02X%02X%02X%02X:%02X%02X%02X%02X%02X%02X\n",
-    (int)Data.netnum[0],(int)Data.netnum[1],(int)Data.netnum[2],
-    (int)Data.netnum[3],(int)Data.netnum[4],(int)Data.netnum[5],
-    (int)Data.netnum[6],(int)Data.netnum[7],(int)Data.netnum[8],
-    (int)Data.netnum[9]);
-    }
-    iAdapters--;
-    }
-    }
-    }
-    closesocket(skNum);
-    }
-    WSACleanup();
+      int iAdapters,iOpt=sizeof(iAdapters),iSize=sizeof(SOCKADDR_IPX);
+      SOCKET skNum;
+      SOCKADDR_IPX Addr;
+      WSADATA Wsa;
+      if(WSAStartup(0x0101,&Wsa)) return;
+      if((skNum=socket(AF_IPX,SOCK_DGRAM,NSPROTO_IPX))!=INVALID_SOCKET)
+      {
+        memset(&Addr,0,sizeof(Addr));
+        Addr.sa_family=AF_IPX;
+        if(bind(skNum,(SOCKADDR *)&Addr,iSize)!=SOCKET_ERROR)
+        {
+          if(getsockopt(skNum,NSPROTO_IPX,IPX_MAX_ADAPTER_NUM,
+            (char *)&iAdapters,&iOpt)!=SOCKET_ERROR)
+          {
+            while(iAdapters)
+            {
+              IPX_ADDRESS_DATA Data;
+              memset(&Data,0,sizeof(Data));
+              Data.adapternum=iAdapters-1;
+              iOpt=sizeof(Data);
+              if(getsockopt(skNum,NSPROTO_IPX,IPX_ADDRESS,(char *)&Data,&iOpt)!=SOCKET_ERROR)
+              {
+                printf("Addr: %02X%02X%02X%02X:%02X%02X%02X%02X%02X%02X\n",
+                       (int)Data.netnum[0],(int)Data.netnum[1],(int)Data.netnum[2],
+                       (int)Data.netnum[3],(int)Data.netnum[4],(int)Data.netnum[5],
+                       (int)Data.netnum[6],(int)Data.netnum[7],(int)Data.netnum[8],
+                       (int)Data.netnum[9]);
+              }
+              iAdapters--;
+            }
+          }
+        }
+        closesocket(skNum);
+      }
+      WSACleanup();
     }
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
-Вариант3:
+----------------------------------------------
 
-From: MSDN
+Вариант 3:
+
+Author: Garik
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+From MSDN:
 
     typedef struct _ASTAT_
     {
-    ADAPTER_STATUS adapt;
-    NAME_BUFFER NameBuff [30];
-    }ASTAT, * PASTAT;
+      ADAPTER_STATUS adapt;
+      NAME_BUFFER NameBuff [30];
+    } ASTAT, * PASTAT;
     ASTAT Adapter;
     void main (void)
     {
-    NCB Ncb;
-    UCHAR uRetCode;
-    char NetName[50];
-    memset( &Ncb, 0, sizeof(Ncb) );
-    Ncb.ncb_command = NCBRESET;
-    Ncb.ncb_lana_num = 0;
-    uRetCode = Netbios( &Ncb );
-    printf( "The NCBRESET return code is: 0x%x \n", uRetCode );
-    memset( &Ncb, 0, sizeof (Ncb) );
-    Ncb.ncb_command = NCBASTAT;
-    Ncb.ncb_lana_num = 0;
-    strcpy( Ncb.ncb_callname, "* " );
-    Ncb.ncb_buffer = (char *) &Adapter;
-    Ncb.ncb_length = sizeof(Adapter);
-    uRetCode = Netbios( &Ncb );
-    printf( "The NCBASTAT return code is: 0x%x \n", uRetCode );
-    if ( uRetCode == 0 )
-    {
-    printf( "The Ethernet Number is: %02x%02x%02x%02x%02x%02x\n",
-    Adapter.adapt.adapter_address[0],
-    Adapter.adapt.adapter_address[1],
-    Adapter.adapt.adapter_address[2],
-    Adapter.adapt.adapter_address[3],
-    Adapter.adapt.adapter_address[4],
-    Adapter.adapt.adapter_address[5] );
+      NCB Ncb;
+      UCHAR uRetCode;
+      char NetName[50];
+      memset( &Ncb, 0, sizeof(Ncb) );
+      Ncb.ncb_command = NCBRESET;
+      Ncb.ncb_lana_num = 0;
+      uRetCode = Netbios( &Ncb );
+      printf( "The NCBRESET return code is: 0x%x \n", uRetCode );
+      memset( &Ncb, 0, sizeof (Ncb) );
+      Ncb.ncb_command = NCBASTAT;
+      Ncb.ncb_lana_num = 0;
+      strcpy( Ncb.ncb_callname, "* " );
+      Ncb.ncb_buffer = (char *) &Adapter;
+      Ncb.ncb_length = sizeof(Adapter);
+      uRetCode = Netbios( &Ncb );
+      printf( "The NCBASTAT return code is: 0x%x \n", uRetCode );
+      if ( uRetCode == 0 )
+      {
+        printf( "The Ethernet Number is: %02x%02x%02x%02x%02x%02x\n",
+        Adapter.adapt.adapter_address[0],
+        Adapter.adapt.adapter_address[1],
+        Adapter.adapt.adapter_address[2],
+        Adapter.adapt.adapter_address[3],
+        Adapter.adapt.adapter_address[4],
+        Adapter.adapt.adapter_address[5] );
+      }
     }
-    }
-
-Автор: Garik
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
-Автор: Daniel Wischnewski
+Вариант 4:
+
+Author: Daniel Wischnewski
+
+Source: <https://forum.sources.ru>
 
 Для того, чтобы этот код работал, необходимо включить в проект юнит
 NB30. Простой вызов функции GetMACAddress возвращает адрес первого
@@ -155,9 +156,8 @@ NB30. Простой вызов функции GetMACAddress возвращае�
 
 Совместимость: Delphi 3.x (или выше)
 
-Данный пример был составлен на основе статьи на сайте  Borland:
-
-[https://community.borland.com/article/0,1410,26040,00.html](https://community.borland.com/article/0,1410,26040,00.html%20)
+Данный пример был составлен на основе статьи на сайте Borland:  
+https://community.borland.com/article/0,1410,26040,00.html
 
     uses 
       NB30; 
@@ -214,4 +214,3 @@ NB30. Простой вызов функции GetMACAddress возвращае�
         Result := 'mac not found'; 
     end; 
 
-Взято из <https://forum.sources.ru>

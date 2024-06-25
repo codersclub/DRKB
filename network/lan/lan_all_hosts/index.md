@@ -8,9 +8,9 @@ Date: 01.01.2007
 Как найти все комьютеры в сети?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+ID: 03286
 
     unit FindComp; 
      
@@ -99,11 +99,13 @@ Date: 01.01.2007
      
     end.
 
-©Drkb::03286
-
- 
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Pegas
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     function TNetForm.FillNetLevel(xxx: PNetResource; List:TListItems): Word;
     Type
@@ -156,11 +158,13 @@ Date: 01.01.2007
 
        ©Drkb::03287
 
-Автор: Pegas
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: SmaLL
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     function EnumerateFunc( hwnd: HWND; hdc: HDC; lpnr: PNetResource ): Boolean;
     const
@@ -219,11 +223,13 @@ Date: 01.01.2007
        Result :=  True;
     end;
 
-Код вроде бы из борландовского FAQ. На форуме приведен SmaLL
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Код вроде бы из борландовского FAQ.
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Вот решение приведенное на <https://delphi.mastak.ru> для нахождения
 всех компютеров:
@@ -274,4 +280,3 @@ Date: 01.01.2007
       WNetCloseEnum(EnumHandle);
     end; { Find All Computers }
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -1,15 +1,13 @@
 ---
 Title: Как выключить удаленный компьютер?
-Date: 01.01.2007
+Author: Stewart Moss
+Date: 27.02.2002 16:30
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как выключить удаленный компьютер?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     {-----------------------------------------------------------------------------
      Unit Name:     formClient
@@ -111,4 +109,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -2,15 +2,12 @@
 Title: Библиотека для работы с LAN
 Author: Alex
 Date: 01.01.2007
+Source: <https://www.delphikingdom.ru/>
 ---
 
 
 Библиотека для работы с LAN
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
     unit NetProcs;
      
@@ -183,6 +180,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Alex
-
-Взято с сайта <https://www.delphikingdom.ru/>

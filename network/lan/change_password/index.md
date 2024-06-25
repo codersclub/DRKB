@@ -1,15 +1,12 @@
 ---
 Title: Как изменить пароль для указанной сети или домена?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как изменить пароль для указанной сети или домена?
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function NetUserChangePassword(Domain: PWideChar; UserName: PWideChar; OldPassword: PWideChar;
       NewPassword: PWideChar): Longint; stdcall; external 'netapi32.dll'
@@ -28,4 +25,3 @@ Date: 01.01.2007
         PWideChar(WideString('newpass')));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

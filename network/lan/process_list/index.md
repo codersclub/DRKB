@@ -1,15 +1,12 @@
 ---
 Title: Получить список процессов в компьютере сети
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Получить список процессов в компьютере сети
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit PerfInfo;
      
@@ -332,4 +329,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

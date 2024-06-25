@@ -1,19 +1,16 @@
 ---
 Title: Обзор сети (типа Network Neighborhood)
 Date: 01.01.2007
+Source: <https://articles.org.ru>
 ---
 
 
 Обзор сети (типа Network Neighborhood)
 ======================================
 
-::: {.date}
-01.01.2007
-:::
-
-Обзор сети (типа Network Neighborhood)
-
 Пример может служить отправной точкой для создания рабочего варианта.
+
+
 
     unit netres_main_unit;
      
@@ -300,11 +297,3 @@ Date: 01.01.2007
     end;
      
     end.
-
- 
-
- 
-
-<https://articles.org.ru>
-
- 

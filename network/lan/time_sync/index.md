@@ -1,16 +1,12 @@
 ---
 Title: Как синхронизировать время на двух компьютерах?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как синхронизировать время на двух компьютерах?
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
+    WinExec('net time \\nts2 /set /yes',SW_HIDE);
 
-WinExec(\'net time \\\\nts2 /set /yes\',SW\_HIDE);
-
-Взято с <https://delphiworld.narod.ru>

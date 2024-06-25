@@ -2,15 +2,12 @@
 Title: Получение IP-адресов всех компьютеров в рабочей группе
 Author: Song
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Получение IP-адресов всех компьютеров в рабочей группе
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     var 
       Computer: array[1..500] of string[25]; 
@@ -58,6 +55,3 @@ Date: 01.01.2007
       WNetCloseEnum(EnumHandle); 
     end; { Find All Computers }
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>

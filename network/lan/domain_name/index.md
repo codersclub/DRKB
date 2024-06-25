@@ -7,29 +7,32 @@ Date: 01.01.2007
 Как узнать имя домена Windows NT/2000?
 ======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     function GetNTDomainName: string; 
     var hReg: TRegistry; 
     begin 
-    hReg := TRegistry.Create; 
-    hReg.RootKey := HKEY_LOCAL_MACHINE; 
-    hReg.OpenKey('SOFTWARE\Microsoft\Windows NT\CurrentVersion 
-    \Winlogon', false ); 
-    Result := hReg.ReadString( 'DefaultDomainName' ); 
-    hReg.CloseKey; 
-    hReg.Destroy; 
+      hReg := TRegistry.Create; 
+      hReg.RootKey := HKEY_LOCAL_MACHINE; 
+      hReg.OpenKey('SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon', false ); 
+      Result := hReg.ReadString( 'DefaultDomainName' ); 
+      hReg.CloseKey; 
+      hReg.Destroy; 
     end; 
-
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+
     function NetServerGetInfo (serverName : PWideChar; level : Integer;
-            var bufptr : Pointer) : Cardinal; stdcall; external 'NETAPI32.DLL';
-    function NetApiBufferFree (buffer : Pointer) : Cardinal; stdcall; external 'NETAPI32.DLL';
+            var bufptr : Pointer) : Cardinal;
+            stdcall; external 'NETAPI32.DLL';
+    function NetApiBufferFree (buffer : Pointer) : Cardinal;
+             stdcall; external 'NETAPI32.DLL';
      
     type
       SERVER_INFO_503 = record
@@ -113,4 +116,3 @@ Date: 01.01.2007
       Label1.Caption := GetDomainName;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

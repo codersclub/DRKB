@@ -8,9 +8,11 @@ Date: 01.01.2007
 Пример работы с MailSlot
 ========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Baa
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -28,11 +30,13 @@ Date: 01.01.2007
      //то память чистится т.е. все, что мы туда поназаписали удаляется
     end;
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 --------------------------------------
+
+Вариант 2:
+
+Author: p0s0l
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 WinAPI-\>Windows-\>Процессы...-\>Пример работы с MailSlot
 
@@ -46,6 +50,3 @@ WinAPI-\>Windows-\>Процессы...-\>Пример работы с MailSlot
 
 т.е. вместо `\\` надо просто `\`
 
-Автор: p0s0l
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
