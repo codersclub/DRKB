@@ -1,15 +1,12 @@
 ---
 Title: Создание сетевых приложений на Delphi с использованием Windows Sockets API
 Date: 01.01.2007
+Source: <https://ruconsult.org/articles?article=2>
 ---
 
 
 Создание сетевых приложений на Delphi с использованием Windows Sockets API
 ==========================================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Сегодня уже никому не надо рассказывать, что такое компьютерные сети, -
 сети прочно вошли в нашу жизнь. Сейчас многие программисты занимаются
@@ -114,19 +111,19 @@ winsock. Для написания приложений с сетевой под
 К сожалению, этот файл импортирует не все необходимые нам функции, и
 позже мы напишем свой файл импорта.
 
-function wsastartup(wversionrequired: word; var wsdata: twsadata):
-integer; stdcall;
+    function wsastartup(wversionrequired: word; var wsdata: twsadata):
+             integer; stdcall;
 
 Функция сообщает ОС, что в любом процессе приложения могут быть
 использованы функции winsock. Функция должна быть вызвана один раз при
 запуске приложения перед использованием любой функции winsock.
 
-function wsacleanup: integer; stdcall;
+    function wsacleanup: integer; stdcall;
 
 Функция сообщает ОС, что приложение более не использует winsock. Должна
 быть вызвана перед завершением приложения.
 
-function socket(af, struct, protocol: integer): tsocket; stdcall;
+    function socket(af, struct, protocol: integer): tsocket; stdcall;
 
 Функция создает сокет. Порт и адрес задается в функции bind (сервер) или
 connect (клиент). Входящий параметр af - спецификация семейства сокетов
@@ -136,31 +133,31 @@ connect (клиент). Входящий параметр af - специфик�
 функция выполнена без ошибок, она возвращает дескриптор на новый сокет,
 если ошибки есть, возвращается invalid\_socket.
 
-function connect(s: tsocket; var name: tsockaddr; namelen: integer):
-integer; stdcall;
+    function connect(s: tsocket; var name: tsockaddr;
+                     namelen: integer): integer; stdcall;
 
 Функция соединения для клиента. Структура адреса содержит порт
 (необходимо привести функцией htons) и адрес (для клиента необходимо
 привести из имени или спецификации ip4 - xxx.xxx.xxx.xxx).
 
-function bind(s: tsocket; var addr: tsockaddr; namelen: integer):
-integer; stdcall;
+    function bind(s: tsocket; var addr: tsockaddr;
+                  namelen: integer): integer; stdcall;
 
 Функция ассоциирует адрес с сокетом. Структура адреса содержит порт
 (необходимо привести функцией htons) и адрес (для сервера обычно
 указывается inaddr\_any - любой).
 
-function send(s: tsocket; var buf; len, flags: integer): integer;
-stdcall;
+    function send(s: tsocket; var buf; len, flags: integer):
+             integer; stdcall;
 
 Функция отправки данных. Помещает в очередь сокета s кусок данных из
 buf, длиной len. Последний параметр отвечает за вид передачи сообщения.
 Может быть проигнорирован (0).
 
-function recv(s: tsocket; var buf; len, flags: integer): integer;
-stdcall;
+    function recv(s: tsocket; var buf; len, flags: integer):
+             integer; stdcall;
 
-Функция получение данных.
+**Функция получения данных.**
 
 Итак, рассмотрим примеры элементарного сервера и клиента. Договоримся,
 что сервер будет работать в асинхронном (блокирующем режиме).
@@ -178,83 +175,84 @@ stdcall;
     //На каждое соединение создается отдельный поток.
     {$apptype console}
     uses
-    sysutils,
-    winsock,
-    windows;
+      sysutils,
+      winsock,
+      windows;
     var
-    vwsadata : twsadata;
-    vlistensocket,vsocket : tsocket;
-    vsockaddr : tsockaddr;
-    trid : thandle;
+      vwsadata : twsadata;
+      vlistensocket,vsocket : tsocket;
+      vsockaddr : tsockaddr;
+      trid : thandle;
     const
-    cport = word(33);
-    csigexit = 'q';
+      cport = word(33);
+      csigexit = 'q';
     //Процедура отдельного потока для каждого клиента.
     procedure socketthread;
-    var sockname : tsockaddr;
-    abuf : array of char;
-    vbuf : string;
-    vsize : integer;
-    s :tsocket;
-    bufsize : integer;
+    var
+      sockname : tsockaddr;
+      abuf : array of char;
+      vbuf : string;
+      vsize : integer;
+      s :tsocket;
+      bufsize : integer;
     begin
-    s := vsocket;
-    if s = invalid_socket then exit;
-    vsize := sizeof(tsockaddr);
-    getpeername(s, sockname, vsize);
-    writeln(format('client accepted, remote address [%s].',[inet_ntoa (sockname.sin_addr)]));
-    //Определяем размер буфера чтения для сокета
-    vsize := sizeof(bufsize);
-    getsockopt(s,sol_socket,so_rcvbuf,pchar(@
-    bufsize),vsize);
-    writeln(format('receive buffer size [%d]',[bufsize]));
-    setlength(abuf,bufsize);
-    repeat
-    //Получаем данные. Процедура работает в блокирующем режиме,
-    //таким образом следующая строка кода не получит управление,
-    //пока не поступят данные от клиента.
-    vsize := recv(s,abuf[0],bufsize,0);
-    if vsize<=0 then break;
-    setlength(vbuf,vsize);
-    lstrcpyn(@vbuf[1],@abuf[0],vsize);
-    writeln(format('received from cleint: %s',[vbuf]));
-    until vbuf = 'q';
-    writeln(format('client disconnected, remote address [%s].',[inet_ntoa(sockname.sin_addr)]));
-    setlength(abuf,0);
-    closesocket(s);
+      s := vsocket;
+      if s = invalid_socket then exit;
+      vsize := sizeof(tsockaddr);
+      getpeername(s, sockname, vsize);
+      writeln(format('client accepted, remote address [%s].',
+                     [inet_ntoa (sockname.sin_addr)]));
+      //Определяем размер буфера чтения для сокета
+      vsize := sizeof(bufsize);
+      getsockopt(s,sol_socket,so_rcvbuf,pchar(@ bufsize),vsize);
+      writeln(format('receive buffer size [%d]',[bufsize]));
+      setlength(abuf,bufsize);
+      repeat
+        //Получаем данные. Процедура работает в блокирующем режиме,
+        //таким образом следующая строка кода не получит управление,
+        //пока не поступят данные от клиента.
+        vsize := recv(s,abuf[0],bufsize,0);
+        if vsize<=0 then break;
+        setlength(vbuf,vsize);
+        lstrcpyn(@vbuf[1],@abuf[0],vsize);
+        writeln(format('received from cleint: %s',[vbuf]));
+      until vbuf = 'q';
+      writeln(format('client disconnected, remote address [%s].',
+                     [inet_ntoa(sockname.sin_addr)]));
+      setlength(abuf,0);
+      closesocket(s);
     end;
      
     begin
-    writeln('starting application...');
-    //Объявляем, что программа будет использовать windows sockets.
-    if wsastartup($101,vwsadata)<>0 then halt(1);
-    writeln('using windows sockets.');
-    //Создаем прослушивающий сокет.
-    vlistensocket := socket(af_inet,sock_stream,ipproto_ip);
-    writeln(format('creating socket on port [%d].',[cport]));
-    if vlistensocket = invalid_socket then halt(1);
-    fillchar(vsockaddr,sizeof(tsockaddr),0);
-    vsockaddr.sin_family := af_inet;
-    vsockaddr.sin_port := htons(cport);
-    vsockaddr.sin_addr.s_addr := inaddr_any;
-    writeln('binding socket...');
-    //Привязываем адрес и порт к сокету.
-    if bind(vlistensocket,vsockaddr,sizeof(tsockaddr)) <> 0
-    then halt(1);
-    //Начинаем прослушивать.
-    if listen(vlistensocket,somaxconn) <> 0
-    then halt(1);
-    writeln('socket status: listening.');
-    repeat
-    //Ожидаем подключения.
-    vsocket := accept(vlistensocket,nil,nil);
-    //Клиент подключился, запускаем новый процесс на соединение.
-    createthread(nil,0,@socketthread,0,0,trid);
-    until false;
-    closesocket(vlistensocket);
-    wsacleanup;
+      writeln('starting application...');
+      //Объявляем, что программа будет использовать windows sockets.
+      if wsastartup($101,vwsadata)<>0 then halt(1);
+      writeln('using windows sockets.');
+      //Создаем прослушивающий сокет.
+      vlistensocket := socket(af_inet,sock_stream,ipproto_ip);
+      writeln(format('creating socket on port [%d].',[cport]));
+      if vlistensocket = invalid_socket then halt(1);
+      fillchar(vsockaddr,sizeof(tsockaddr),0);
+      vsockaddr.sin_family := af_inet;
+      vsockaddr.sin_port := htons(cport);
+      vsockaddr.sin_addr.s_addr := inaddr_any;
+      writeln('binding socket...');
+      //Привязываем адрес и порт к сокету.
+      if bind(vlistensocket,vsockaddr,sizeof(tsockaddr)) <> 0
+      then halt(1);
+      //Начинаем прослушивать.
+      if listen(vlistensocket,somaxconn) <> 0
+      then halt(1);
+      writeln('socket status: listening.');
+      repeat
+        //Ожидаем подключения.
+        vsocket := accept(vlistensocket,nil,nil);
+        //Клиент подключился, запускаем новый процесс на соединение.
+        createthread(nil,0,@socketthread,0,0,trid);
+      until false;
+      closesocket(vlistensocket);
+      wsacleanup;
     end. 
-
 
 
 Исходный текст снабжен подробными комментариями и, думаю, не требует
@@ -284,33 +282,33 @@ stdcall;
     {$apptype console}
      
     uses
-    sysutils,
-    winsock;
+      sysutils,
+      winsock;
     const
-    cport = 33;
-    csigexit = 'q';
+      cport = 33;
+      csigexit = 'q';
     var
-    vwsadata : twsadata;
-    vsocket : tsocket;
-    vsockaddr : tsockaddr;
-    buf : string;
+      vwsadata : twsadata;
+      vsocket : tsocket;
+      vsockaddr : tsockaddr;
+      buf : string;
     begin
-    if wsastartup($101,vwsadata)<>0 then halt(1);
-    vsocket := socket(af_inet,sock_stream,ipproto_ip);
-    if vsocket = invalid_socket then halt(1);
-    fillchar(vsockaddr,sizeof(tsockaddr),0);
-    vsockaddr.sin_family := af_inet;
-    vsockaddr.sin_port := htons(cport);
-    vsockaddr.sin_addr.s_addr := inet_addr('127.0.0.1');
-    if connect(vsocket,vsockaddr,sizeof(tsockaddr)) = socket_error then halt(1);
-    repeat
-    readln(buf);
-    if send(vsocket,buf[1],length(buf),0) = socket_error then break;
-    until buf = csigexit;
-    closesocket(vsocket);
-    wsacleanup;
+      if wsastartup($101,vwsadata)<>0 then halt(1);
+      vsocket := socket(af_inet,sock_stream,ipproto_ip);
+      if vsocket = invalid_socket then halt(1);
+      fillchar(vsockaddr,sizeof(tsockaddr),0);
+      vsockaddr.sin_family := af_inet;
+      vsockaddr.sin_port := htons(cport);
+      vsockaddr.sin_addr.s_addr := inet_addr('127.0.0.1');
+      if connect(vsocket,vsockaddr,sizeof(tsockaddr)) = socket_error then
+        halt(1);
+      repeat
+        readln(buf);
+        if send(vsocket,buf[1],length(buf),0) = socket_error then break;
+      until buf = csigexit;
+      closesocket(vsocket);
+      wsacleanup;
     end.
-
 
 
 Итак, мы рассмотрели, как работают сокеты в асинхронном режиме, давайте
@@ -327,8 +325,9 @@ stdcall;
 сокетом. Для этого существует несколько механизмов. Первый, который мы
 рассмотрим, это использование функции select(...).
 
-function select(nfds: integer; readfds, writefds, exceptfds: pfdset;
-timeout: ptimeval): longint; stdcall;
+    function select(nfds: integer;
+                    readfds, writefds, exceptfds: pfdset;
+                    timeout: ptimeval): longint; stdcall;
 
 Эта функция позволяет контролировать состояние набора сокетов.
 
@@ -339,18 +338,18 @@ timeout: ptimeval): longint; stdcall;
 которой осуществляется специальными макросами, описанными в
 winsock.pas:
 
-procedure fs\_zero(var fdset: tfdset) - обнуляет структуру,
+`procedure fs_zero(var fdset: tfdset)`
+: Функция обнуляет структуру,
 устанавливает количество контролируемых сокетов в 0;
 
-procedure fd\_set(socket: tsocket; var fdset: tfdset) - добавляет
-указанный сокет в структуру;
+`procedure fd_set(socket: tsocket; var fdset: tfdset)`
+: добавляет указанный сокет в структуру;
 
-procedure fd\_clr(socket: tsocket; var fdset: tfdset) - удаляет
-указанный сокет из структуры;
+`procedure fd_clr(socket: tsocket; var fdset: tfdset)`
+: удаляет указанный сокет из структуры;
 
-function fd\_isset(socket: tsocket; var fdset: tfdset): boolean -
-возвращает true, если указанный сокет является членом указанной
-структуры.
+`function fd_isset(socket: tsocket; var fdset: tfdset): boolean`
+: возвращает true, если указанный сокет является членом указанной структуры.
 
 Аргумент timeout является ссылкой на структуру типа ptimeval, в которой
 можно указать время ожидания срабатывания функции select. В случае
@@ -372,14 +371,14 @@ function fd\_isset(socket: tsocket; var fdset: tfdset): boolean -
 Для начала в основной части программы необходимо перевести вновь
 созданный сокет в неблокирующий режим:
 
-arg := 1;
-ioctlsocket(socket,fionbio,arg);
+    arg := 1;
+    ioctlsocket(socket,fionbio,arg);
 
 Внимание, перед закрытием сокета его необходимо будет вернуть в
 блокирующий режим:
 
-arg := 0;
-ioctlsocket(socket,fionbio,arg);
+    arg := 0;
+    ioctlsocket(socket,fionbio,arg);
 
 Затем необходимо реализовать возможность сохранения каждого сокета в
 некоторый массив sockarray. Далее, нужно обеспечить, чтобы поток,
@@ -407,20 +406,19 @@ ioctlsocket(socket,fionbio,arg);
     fd_zero(wfds);
     for i:=1 to connum do
     begin
-    fd_set(sock[i],wfds);
+      fd_set(sock[i],wfds);
     end;
-
 
 
 Далее, указываем в структуре tv время задержки для функции select:
 
-tv.tv\_sec := 5;
-tv.tv\_usec := 0;
+    tv.tv_sec := 5;
+    tv.tv_usec := 0;
 
 Теперь можно вызывать функцию select (т.к. мы следим только за приемом
 данных, то в качестве writefds, exceptfds мы указываем nil):
 
-select(0,@wfds,nil,nil,@tv);
+    select(0,@wfds,nil,nil,@tv);
 
 
 Теперь, когда функция select возвратит управление в переменной wfds, мы
@@ -430,10 +428,9 @@ select(0,@wfds,nil,nil,@tv);
     if wfds.fd_count=0 then continue;
     for i:=0 to wfds.fd_count-1 do
     begin
-    vsocket := wfds.fd_array[i];
-    //Обработка поступивших данных с сокета vsocket.
+      vsocket := wfds.fd_array[i];
+      //Обработка поступивших данных с сокета vsocket.
     end;
-
 
 
 Условие выхода из основного цикла - отсутствие открытых сокетов в
@@ -465,17 +462,15 @@ select, пока не будет установлен функцией fs\_set, 
 Помимо функции select существует еще два метода работы с асинхронными
 сокетами:
 
-function wsaasyncselect(s: tsocket; hwindow: hwnd; wmsg: u\_int; levent:
-longint): integer; stdcall;
-
+    function wsaasyncselect(s: tsocket; hwindow: hwnd; wmsg: u_int;
+                            levent:longint): integer; stdcall;
 
 Эта функция связывает сокет с получением сообщений окна. При вызове этой
 функции, сообщения о соединении, чтении/записи данных в сокет и закрытии
 сокета можно обрабатывать в функции обработки сообщений от окна.
 
     const wm_mysocket = wm_user + 1;
-     
-     
+    
     ...
     type
     tform1 = class(tform)
@@ -488,11 +483,10 @@ longint): integer; stdcall;
     ....
     procedure tform1.socket_proc(var msg: tmessage);
     begin
-    if ((msg.msg = wm_mysocket)
-    and (msg.lparam = fd_accept))
-    then showmessage('connected');
+      if ((msg.msg = wm_mysocket)
+         and (msg.lparam = fd_accept))
+      then showmessage('connected');
     end;
-
 
 
 Не будем задерживаться на обработке сообщений окна, а рассмотрим еще
@@ -502,37 +496,33 @@ winsock.pas не импортирует соответствующие функ�
 многие программисты пренебрегают возможностями событий. Но для нас это
 не беда - напишем собственный импорт необходимых процедур:
 
-    function wsaeventselect(s: tsocket; event: thandle; levent: longint):integer;stdcall;
-    external 'ws2_32.dll' name 'wsaeventselect';
+    function wsaeventselect(s: tsocket; event: thandle; levent: longint):
+             integer;stdcall; external 'ws2_32.dll' name 'wsaeventselect';
     function wsawaitformultipleevents(ncount: dword; lphandles: pwohandlearray;
-    bwaitall: bool; dwmilliseconds: dword; falertable:bool):integer;stdcall;
-    external 'ws2_32.dll' name 'wsawaitformultipleevents';
+             bwaitall: bool; dwmilliseconds: dword; falertable:bool):
+             integer;stdcall; external 'ws2_32.dll' name 'wsawaitformultipleevents';
     function wsacreateevent:thandle;stdcall;
-    external 'ws2_32.dll' name 'wsacreateevent';
+             external 'ws2_32.dll' name 'wsacreateevent';
     function wsaresetevent(event : thandle):bool;stdcall;
-    external 'ws2_32.dll' name 'wsaresetevent';
+             external 'ws2_32.dll' name 'wsaresetevent';
     function wsaenumnetworkevents(const s : tsocket;
-    const event : thandle; lpnetworkevents : lpwsanetworkevents): longint ;
-    stdcall;far;
-    external 'ws2_32.dll' name 'wsaenumnetworkevents';
+             const event : thandle; lpnetworkevents : lpwsanetworkevents):
+             longint; stdcall;far;
+             external 'ws2_32.dll' name 'wsaenumnetworkevents';
     function wsacloseevent(event : thandle):integer;
-    stdcall; external 'ws2_32.dll' name 'wsacloseevent'; 
-
-
-
+             stdcall; external 'ws2_32.dll' name 'wsacloseevent'; 
 
 Также нам потребуется описание структуры wsanetworkevents
 
     const
-    fd_max_events = 10;
+      fd_max_events = 10;
     type
-    twsanetworkevents = record
-    lnetworkevents: longint;
-    ierrorcode: array[0..fd_max_events-1] of integer;
-    end;
+      twsanetworkevents = record
+        lnetworkevents: longint;
+        ierrorcode: array[0..fd_max_events-1] of integer;
+      end;
     pwsanetworkevents = ^twsanetworkevents;
     lpwsanetworkevents = pwsanetworkevents;
-
 
 
 Принцип работы с этим набором функций состоит в создании специального
@@ -551,24 +541,23 @@ winsock.pas не импортирует соответствующие функ�
 структуру типа twsanetworkevents.
 
     var
-    fevent : thandle;
+      fevent : thandle;
     //Создаем серверный сокет
     ...
     feventclose := wsacreateevent;
     wsaeventselect(socket,fevent, fd_close + fd_read );
     repeat
-    waitforsingleobject(fevent,infinite);
-    wsaenumnetworkevents(fsocket,fevent,@ni);
-    case ni.lnetworkevents of
-    fd_close:break;
-    fd_read: begin
-    receivedata;
-    end;
-    end;
-    wsaresetevent(feventclose);
+      waitforsingleobject(fevent,infinite);
+      wsaenumnetworkevents(fsocket,fevent,@ni);
+      case ni.lnetworkevents of
+        fd_close:break;
+        fd_read: begin
+          receivedata;
+        end;
+      end;
+      wsaresetevent(feventclose);
     until false;
     wsacloseevent(feventclose);
-
 
 
 Вне зависимости от того, используем ли мы синхронные или асинхронные
@@ -582,10 +571,10 @@ winsock.pas не импортирует соответствующие функ�
 буфер, отправляются не сразу, а могут накапливаться для отправки в
 дальнейшем одним пакетом. Таким образом, последовательный вызов
 
-send(vsocket,@buf1,length(buf1),0);
-send(vsocket,@buf2,length(buf2),0);
-фактически будет идентичен одному вызову send с объединенным буфером
-buf1+buf2.
+    send(vsocket,@buf1,length(buf1),0);
+    send(vsocket,@buf2,length(buf2),0);
+
+фактически будет идентичен одному вызову send с объединенным буфером buf1+buf2.
 
 Таким образом, при приеме данных, хотя мы послали две порции данных, мы
 получим одну. Совсем другой случай, когда мы посылаем порцию данных,
@@ -616,4 +605,3 @@ buf1+buf2.
 sdk" в разделе "windows sockets 2 application program interface".
 
 
-Источник: <https://ruconsult.org/articles?article=2>

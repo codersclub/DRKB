@@ -2,17 +2,12 @@
 Title: Посылка Raw IP-пакетов
 Author: Erwin Molendijk
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Посылка Raw IP-пакетов
 ======================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Erwin Molendijk
 
 Используя данный исходник можно конструировать собственные пакеты
 содержащие внутри всё, что угодно. Можно самостоятельно указывать в
@@ -164,7 +159,7 @@ spoofing.
      
       IPPROTO_IP      = 0;                // dummy for IP 
       IPPROTO_TCP     = 6;                // tcp 
-      IPPROTO_UDP     = 17;              // user datagram protocol 
+      IPPROTO_UDP     = 17;               // user datagram protocol 
       IPPROTO_RAW     = 255;              // raw IP пакет 
      
       INVALID_SOCKET = TSocket(NOT(0)); 
@@ -178,12 +173,12 @@ spoofing.
     // Импортируем функции Winsock 2 
     const WinSocket = 'WS2_32.DLL'; 
      
-    function closesocket;        external    winsocket name 'closesocket'; 
+    function closesocket;       external    winsocket name 'closesocket'; 
     function socket;            external    winsocket name 'socket'; 
     function sendto;            external    winsocket name 'sendto'; 
     function setsockopt;        external    winsocket name 'setsockopt'; 
-    function inet_addr;          external    winsocket name 'inet_addr'; 
-    function htons;              external    winsocket name 'htons'; 
+    function inet_addr;         external    winsocket name 'inet_addr'; 
+    function htons;             external    winsocket name 'htons'; 
     function WSAGetLastError;   external    winsocket name 'WSAGetLastError'; 
     function WSAStartup;        external    winsocket name 'WSAStartup'; 
     function WSACleanup;        external    winsocket name 'WSACleanup'; 
@@ -269,12 +264,12 @@ spoofing.
         // IP header length (in 32-bit words) goes in the lower 4 bits. 
         // 
         ipHdr.ip_verlen := (iIPVersion shl 4) or iIPSize; 
-        ipHdr.ip_tos := 0;                          // IP type of service 
+        ipHdr.ip_tos := 0;                         // IP type of service 
         ipHdr.ip_totallength := htons(iTotalSize); // Total packet len 
-        ipHdr.ip_id := 0;                  // Unique identifier: set to 0 
-        ipHdr.ip_offset := 0;              // Fragment offset field 
+        ipHdr.ip_id := 0;                 // Unique identifier: set to 0 
+        ipHdr.ip_offset := 0;             // Fragment offset field 
         ipHdr.ip_ttl := 128;              // время жизни пакета 
-        ipHdr.ip_protocol := $11;          // Protocol(UDP) 
+        ipHdr.ip_protocol := $11;         // Protocol(UDP) 
         ipHdr.ip_checksum := 0 ;          // IP checksum 
         ipHdr.ip_srcaddr := dwFromIP;     // Source address 
         ipHdr.ip_destaddr := dwToIP;      // Destination address 
@@ -424,4 +419,3 @@ spoofing.
      
     end.
 
-Взято из <https://forum.sources.ru>

@@ -7,10 +7,6 @@ Date: 01.01.2007
 SmtpSock.pas
 ============
 
-::: {.date}
-01.01.2007
-:::
-
     unit SmtpSock;
      
     {

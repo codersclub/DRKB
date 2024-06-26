@@ -8,11 +8,9 @@ Date: 01.01.2007
 Отправка файлов при помощи TClientSocket / TServerSocket
 ========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: M K
+Source: <https://forum.sources.ru>
 
 На вопрос "Как я могу отправлять файлы через TClientSocket &
 TServerSocket?" даём наш ответ :)
@@ -136,9 +134,12 @@ TServerSocket?" даём наш ответ :)
      
     end.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     unit Unit1; 
      
@@ -237,4 +238,3 @@ TServerSocket?" даём наш ответ :)
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

@@ -2,17 +2,12 @@
 Title: Использование компонента TServerSocket
 Author: Brian Pedersen
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Использование компонента TServerSocket
 ======================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Brian Pedersen
 
 В Delphi документации по многопотоковому TServerSocket налито довольно
 много воды, и начинающему программисту сложно понять суть дела. Давайте
@@ -148,9 +143,8 @@ TWinSocketStream.Create(). Если Вы не знаете сколько вре
 ожидает только один пакет, так что я должен послать мои данные назад в
 одном блоке:
 
-fSocketStream.WriteBuffer( fRep, fReplySize );
+    fSocketStream.WriteBuffer( fRep, fReplySize );
 
-fRep это буфер, содержащий ответ на запрос клиента, и fReplySize - это
-размер буфера.
+`fRep` это буфер, содержащий ответ на запрос клиента,  
+`fReplySize` - это размер буфера.
 
-Взято из <https://forum.sources.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Определить, занят ли порт сокета
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Определить, занят ли порт сокета
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     var SockAddrIn : TSockAddrIn;
         FSocket    : TSocket;
@@ -21,4 +18,3 @@ Date: 01.01.2007
         обрабатываем WSAGetLastError
       end;
 
-Взято с <https://delphiworld.narod.ru>

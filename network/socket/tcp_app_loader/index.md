@@ -1,15 +1,15 @@
 ---
-Title: Do an application loader with TCP?
+Title: Как сделать загрузчик приложений с TCP?
+Author: Max Kleiner
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Do an application loader with TCP?
+Как сделать загрузчик приложений с TCP?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+> How to do an application loader with TCP?
 
     {
     Loading Delphi apps without a browser and on Win as Linux as well needs a
@@ -163,4 +163,3 @@ Do an application loader with TCP?
     Code is available: http://max.kleiner.com/download/dws.zip
     }
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

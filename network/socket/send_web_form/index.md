@@ -2,15 +2,12 @@
 Title: Как отправить веб-форму на сервер?
 Date: 12.12.1999
 author: E.J.Molendijk
+Source: <https://forum.sources.ru>
 ---
 
 
 Как отправить веб-форму на сервер?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 Как отправить вебформу на сервер при помощи TClientSocket (напрямую и
 через прокси)
@@ -147,4 +144,3 @@ author: E.J.Molendijk
       ClientSocket1.Open; 
     end;
 
-Взято из <https://forum.sources.ru>

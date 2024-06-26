@@ -8,9 +8,9 @@ Date: 01.01.2007
 Как запросить страницу с сайта?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Fantasist
 
 Это можно сделать с помощью TClientSocket.
 
@@ -22,7 +22,7 @@ Date: 01.01.2007
       StdCtrls, ScktComp;
      
     const Request: AnsiString = 'GET / HTTP/1.1' + #$D#$A +
-      'Accept: application/vnd.ms-excel, application/msword, */*' + #$D#$A +
+        'Accept: application/vnd.ms-excel, application/msword, */*' + #$D#$A +
         'Accept-Language: en-us' + #$D#$A +
         'Accept-Encoding: gzip, deflate' + #$D#$A +
         'User-Agent: Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)' + #$D#$A +
@@ -71,14 +71,22 @@ Request - это запрос который посылает мой IE5.
 
 В принципе, по протоколу HTTP он может ограничиваться:
 
-\'GET / HTTP/1.1\'+#13+#13. Если хотите запросить оределенный
-документ: \'GET /\<полный путь\> HTTP/1.1\'+#13+#13.
+    'GET / HTTP/1.1'+#13+#13
+
+Если хотите запросить оределенный документ:
+
+    'GET /<полный путь> HTTP/1.1'+#13+#13
 
 Конечно, всегда можно воспользоваться готовыми компонентами.
 
-Автор: Fantasist
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: E.J.Molendijk
+
+Source: <https://forum.sources.ru>
 
     {
     Присоедините следующий обработчик к Вашему TClientSocket. 
@@ -128,4 +136,3 @@ Request - это запрос который посылает мой IE5.
       ErrorCode:=0; { Ошибки игнорируем }
     end;
 
-Взято из <https://forum.sources.ru>
