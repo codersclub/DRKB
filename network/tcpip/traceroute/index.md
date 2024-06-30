@@ -2,15 +2,12 @@
 Title: Трассировка пути до определенного IP-адреса (Traceroute)
 Author: p0s0l
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Трассировка пути до определенного IP-адреса (Traceroute)
 ========================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Трассировка пути до определенного IP адреса (как tracert.exe в Windows)
 
@@ -26,7 +23,7 @@ Date: 01.01.2007
 
 В ListBox1 выведется путь в таком формате:
 
-IP;TIME;TTL;STATUS
+    IP;TIME;TTL;STATUS
 
 Сам модуль:
 
@@ -172,6 +169,3 @@ IP;TIME;TTL;STATUS
     {eof} 
     end. 
 
-Автор: p0s0l
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

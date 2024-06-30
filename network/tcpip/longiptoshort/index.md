@@ -1,29 +1,29 @@
 ---
 Title: Как преобразовать длинный IP-адрес в короткий адрес / порт?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как преобразовать длинный IP-адрес в короткий адрес / порт?
 ===========================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Некоторые старые internet протоколы ( такие как FTP ) посылают IP адреса
+Некоторые старые internet протоколы (такие как FTP) посылают IP адреса
 и номера портов в шестизначном формате XXX.XXX.XXX.XXX.XX.XXX  Следующий
 код позволяет преобразовать такой адрес к нормальному четырёхзначному IP
 адресу.
 
-    procedure LongIPToShort(aLongIPAddress: string; out ShortIPAddress: string; out PortNumber: Integer);
+    procedure LongIPToShort(aLongIPAddress: string;
+                            out ShortIPAddress: string;
+                            out PortNumber: Integer);
     var I, DotPos, tempPort: Integer;
     var tempAddy, temp: string;
     var TempStr: string;
     begin
       tempAddy := '';
       tempStr := '';
-    // Определяем, какой символ использует отправитель в качестве разделителя длинного IP:, или .
+      // Определяем, какой символ использует отправитель
+      // в качестве разделителя длинного IP: "," или "."
      
       if (POS(',', aLongIPAddress) <> 0) then
         TempStr := ','
@@ -46,4 +46,3 @@ Date: 01.01.2007
       PortNumber := tempPort;
     end;
 
-Взято из <https://forum.sources.ru>

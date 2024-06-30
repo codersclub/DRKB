@@ -1,18 +1,15 @@
 ---
 Title: Как вычислить IP-адрес по доменному имени?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как вычислить IP-адрес по доменному имени?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
-
-    uses winsock 
-    ------- 
+    uses winsock;
+    
     function IPAddrToName(IPAddr : String): String; 
     var 
       SockAddrIn: TSockAddrIn; 
@@ -39,4 +36,3 @@ Date: 01.01.2007
       Label1.Caption:=IPAddrToName(Edit1.Text); 
     end;
 
-Взято из <https://forum.sources.ru>

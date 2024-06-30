@@ -1,22 +1,21 @@
 ---
 Title: Как узнать IP-адрес?
 Date: 01.01.2007
+Source: <https://blackman.wp-club.net/>
 ---
 
 
 Как узнать IP-адрес?
 ====================
 
-::: {.date}
-01.01.2007
-:::
+Можно посмотреть в реестре:
 
-HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\Class\\NetTrans\
+HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\Class\\NetTrans\\  
 (для 98-винды)
 
-  Ищем параметр IPAddress
+Ищем параметр "IPAddress".
 
-  Программно можно определить следующим образом:
+Программно можно определить следующим образом:
 
     var
       WSAData: TWSAData;
@@ -30,4 +29,3 @@ HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\Class\\NetTrans\
       WSACleanup;
     end;
 
-Взято с сайта <https://blackman.wp-club.net/>

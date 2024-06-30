@@ -8,9 +8,11 @@ Date: 01.01.2007
 Как вычислить IP-адрес компьютера?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: neutrino
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Описывается функция, которая показывает, как вычислить IP адрес
 компьютера в интернете по его доменному имени.
@@ -21,38 +23,38 @@ Date: 01.01.2007
 
     function HostToIP(Name: string; var Ip: string): Boolean;
     var 
-    wsdata : TWSAData; 
-    hostName : array [0..255] of char; 
-    hostEnt : PHostEnt; 
-    addr : PChar; 
+      wsdata : TWSAData; 
+      hostName : array [0..255] of char; 
+      hostEnt : PHostEnt; 
+      addr : PChar; 
     begin 
-    WSAStartup ($0101, wsdata); 
-    try 
-    gethostname (hostName, sizeof (hostName)); 
-    StrPCopy(hostName, Name); 
-    hostEnt := gethostbyname (hostName); 
-    if Assigned (hostEnt) then 
-      if Assigned (hostEnt^.h_addr_list) then 
-        begin 
-          addr := hostEnt^.h_addr_list^; 
-    if Assigned (addr) then 
-    begin 
-    IP := Format ('%d.%d.%d.%d', [byte (addr [0]), 
-    byte (addr [1]), byte (addr [2]), byte (addr [3])]); 
-    Result := True; 
-    end 
-    else 
-    Result := False; 
-    end 
-    else 
-    Result := False 
-    else 
-    begin 
-    Result := False; 
-    end; 
-    finally 
-      WSACleanup; 
-    end 
+      WSAStartup ($0101, wsdata); 
+      try 
+        gethostname (hostName, sizeof (hostName)); 
+        StrPCopy(hostName, Name); 
+        hostEnt := gethostbyname (hostName); 
+        if Assigned (hostEnt) then 
+          if Assigned (hostEnt^.h_addr_list) then 
+            begin 
+              addr := hostEnt^.h_addr_list^; 
+              if Assigned (addr) then 
+              begin 
+                IP := Format ('%d.%d.%d.%d', [byte (addr [0]), 
+                byte (addr [1]), byte (addr [2]), byte (addr [3])]); 
+                Result := True; 
+              end 
+              else 
+                Result := False; 
+            end 
+            else 
+              Result := False 
+          else 
+          begin 
+            Result := False; 
+          end; 
+      finally 
+        WSACleanup; 
+      end 
     end; 
 
 Вы можете разметстить на форме EditBox, Кнопку и Label и добавить к
@@ -65,14 +67,14 @@ Date: 01.01.2007
       if HostToIp(Edit1.Text, IP) then Label1.Caption := IP; 
     end; 
 
-Автор: neutrino
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
 А вот какой способ предложен для нахождения собственного IP рассылкой
-мастеров дельфи <https://Subscribe.Ru/catalog/comp.soft.prog.mdelphi>():
+мастеров дельфи <https://Subscribe.Ru/catalog/comp.soft.prog.mdelphi>:
 
     var
       WSAData: TWSAData;
@@ -90,4 +92,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

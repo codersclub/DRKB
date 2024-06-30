@@ -2,15 +2,12 @@
 Title: Как оперделить все IP и порты на моем компьютере?
 Author: Spawn
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как оперделить все IP и порты на моем компьютере?
 =================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Функции GetTcpTable, GetUdpTable.
 
@@ -33,7 +30,8 @@ Date: 01.01.2007
         dwNumEntries: LongWord;
         table: array[0..0] of TMIB_TCPROW;
       end;
-    function GetTcpTable(var TcpTable: PMIB_TCPTABLE; var Size: PDWord; bOrder: Boolean): LongWord; stdcall
+    function GetTcpTable(var TcpTable: PMIB_TCPTABLE; var Size: PDWord;
+                         bOrder: Boolean): LongWord; stdcall
     implementation
     function GetTcpTable; external 'Iphlpapi.dll' name 'GetTcpTable';
     end.
@@ -63,6 +61,3 @@ Date: 01.01.2007
         end;
     {$R+}
 
-Автор: Spawn
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -2,17 +2,12 @@
 Title: Как преобразовать http://192.168.1.2 в http://3232235778?
 Author: Roni Havas
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как преобразовать http://192.168.1.2 в http://3232235778?
 =========================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Roni Havas
 
 Функция, представленная в этом примере может быть и не очень элегантна,
 зато работает. Функция получает в качестве параметра строку, содержащую
@@ -34,11 +29,17 @@ IP адрес, и возвращает строку с IP адресом в ви
       Xc: Integer;
     begin
      
-    // Сохраняем в обратном порядке для простого случая
-      Xn[8] := IntPower(16, 0); Xn[7] := IntPower(16, 1); Xn[6] := IntPower(16, 2); Xn[5] := IntPower(16, 3);
-      Xn[4] := IntPower(16, 4); Xn[3] := IntPower(16, 5); Xn[2] := IntPower(16, 6); Xn[1] := IntPower(16, 7);
+      // Сохраняем в обратном порядке для простого случая
+      Xn[8] := IntPower(16, 0);
+      Xn[7] := IntPower(16, 1);
+      Xn[6] := IntPower(16, 2);
+      Xn[5] := IntPower(16, 3);
+      Xn[4] := IntPower(16, 4);
+      Xn[3] := IntPower(16, 5);
+      Xn[2] := IntPower(16, 6);
+      Xn[1] := IntPower(16, 7);
      
-    // Сохраняем оригинальный IP адрес
+      // Сохраняем оригинальный IP адрес
       OrgVal := OrgIP;
       O1 := Copy(OrgVal, 1, Pos('.', OrgVal) - 1); Delete(OrgVal, 1, Pos('.', OrgVal));
       O2 := Copy(OrgVal, 1, Pos('.', OrgVal) - 1); Delete(OrgVal, 1, Pos('.', OrgVal));
@@ -48,10 +49,10 @@ IP адрес, и возвращает строку с IP адресом в ви
       H1 := IntToHex(StrToInt(O1), 2); H2 := IntToHex(StrToInt(O2), 2);
       H3 := IntToHex(StrToInt(O3), 2); H4 := IntToHex(StrToInt(O4), 2);
      
-    // Получаем шестнадцатиричное значение IP адреса
+      // Получаем шестнадцатиричное значение IP адреса
       HexIP := H1 + H2 + H3 + H4;
      
-    // Преобразуем это большое шестнадцатиричное значение в переменную Float
+      // Преобразуем это большое шестнадцатиричное значение в переменную Float
       Flt1 := 0;
       for Xc := 1 to 8 do
         begin
@@ -68,4 +69,3 @@ IP адрес, и возвращает строку с IP адресом в ви
       Result := FloatToStr(Flt1);
     end;
 
-Взято из <https://forum.sources.ru>

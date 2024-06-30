@@ -1,6 +1,7 @@
 ---
 Title: Как узнать IP клиента и IP сервера для активного RAS-подключения?
 Author: p0s0l
+Source: Vingrad.ru <https://forum.vingrad.ru>
 Date: 01.01.2007
 ---
 
@@ -8,13 +9,7 @@ Date: 01.01.2007
 Как узнать IP клиента и IP сервера для активного RAS-подключения?
 =================================================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses Ras, RasError;
-     
-
      
     type
      TRASIP = record
@@ -72,6 +67,3 @@ Date: 01.01.2007
      end;
     end;
 
-Автор: p0s0l
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -2,17 +2,12 @@
 Title: Получение IP-адреса и маски для всех сетевых интерфейсов
 Author: Giannis Sampaziotis
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Получение IP-адреса и маски для всех сетевых интерфейсов
 ========================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Giannis Sampaziotis
 
 Существует множество методов получения IP адреса компьютера. Но данный
 пример представляет наиболее корректный способ получения всех адресов,
@@ -24,7 +19,7 @@ Date: 01.01.2007
 Это завершённый Delphi компонент. Для его использования достаточно
 вызвать :
 
-  EnumInterfaces(var s string): Boolean;
+    EnumInterfaces(var s string): Boolean;
 
 которая вернёт строку, разделённую CRLF и содержащую всё, нужную нам
 информацию.
@@ -36,13 +31,11 @@ Date: 01.01.2007
     uses Windows, Winsock; 
      
     { 
-     
       Если Вы поместите строку результатов в wide TMEMO (в его свойство memo.lines.text)
       то никаких результатов не увидите. 
      
       Тестировалось на Win98/ME/2K, 95 OSR 2 и NT service 
       pack #3, потому что используется WinSock 2 (WS2_32.DLL) 
-     
     } 
      
     function EnumInterfaces(var sInt: string): Boolean; 
@@ -102,34 +95,32 @@ Date: 01.01.2007
       Buffer: array[0..20] of INTERFACE_INFO; 
       i: Integer; 
     begin 
-      result := true;                                // Инициализируем переменную 
+      result := true;                               // Инициализируем переменную 
       sInt := ''; 
      
       WSAStartup($0101, wsaD);                      // Запускаем WinSock 
                                                     // Здесь можно дабавить различные обработчики ошибки :) 
      
-      s := Socket(AF_INET, SOCK_STREAM, 0);          // Открываем сокет 
+      s := Socket(AF_INET, SOCK_STREAM, 0);         // Открываем сокет 
       if (s = INVALID_SOCKET) then exit; 
      
-      try                                            // Вызываем WSAIoCtl 
+      try                                           // Вызываем WSAIoCtl 
         PtrA := @bytesReturned; 
-        if (WSAIoCtl(s, SIO_GET_INTERFACE_LIST, nil, 0, @Buffer, 1024, PtrA, nil, 
-          nil) 
-          <> SOCKET_ERROR) 
-          then 
-        begin                                        // Если OK, то определяем количество существующих интерфейсов 
+        if (WSAIoCtl(s, SIO_GET_INTERFACE_LIST, nil, 0, @Buffer, 1024, PtrA,
+                     nil, nil) <> SOCKET_ERROR) then 
+        begin                                       // Если OK, то определяем количество существующих интерфейсов 
      
           NumInterfaces := BytesReturned div SizeOf(INTERFACE_INFO); 
      
           for i := 0 to NumInterfaces - 1 do        // Для каждого интерфейса 
           begin 
-            pAddrInet := Buffer[i].iiAddress.addressIn;            // IP адрес 
+            pAddrInet := Buffer[i].iiAddress.addressIn;          // IP адрес 
             pAddrString := inet_ntoa(pAddrInet.sin_addr); 
             sInt := sInt + ' IP=' + pAddrString + ','; 
-            pAddrInet := Buffer[i].iiNetMask.addressIn;            // Маска подсети 
+            pAddrInet := Buffer[i].iiNetMask.addressIn;          // Маска подсети 
             pAddrString := inet_ntoa(pAddrInet.sin_addr); 
             sInt := sInt + ' Mask=' + pAddrString + ','; 
-            pAddrInet := Buffer[i].iiBroadCastAddress.addressIn;  // Broadcast адрес 
+            pAddrInet := Buffer[i].iiBroadCastAddress.addressIn; // Broadcast адрес 
             pAddrString := inet_ntoa(pAddrInet.sin_addr); 
             sInt := sInt + ' Broadcast=' +  pAddrString + ','; 
      
@@ -139,24 +130,24 @@ Date: 01.01.2007
             else 
               sInt := sInt + ' Interface DOWN,'; 
      
-            if (SetFlags and IFF_BROADCAST) = IFF_BROADCAST then  // Broadcasts 
-              sInt := sInt + ' Broadcasts supported,'              // поддерживает или 
-            else                                                  // не поддерживается 
+            if (SetFlags and IFF_BROADCAST) = IFF_BROADCAST then // Broadcasts 
+              sInt := sInt + ' Broadcasts supported,'            // поддерживает или 
+            else                                                 // не поддерживается 
               sInt := sInt + ' Broadcasts NOT supported,'; 
      
-            if (SetFlags and IFF_LOOPBACK) = IFF_LOOPBACK then    // Циклический или 
+            if (SetFlags and IFF_LOOPBACK) = IFF_LOOPBACK then   // Циклический или 
               sInt := sInt + ' Loopback interface' 
             else 
-              sInt := sInt + ' Network interface';                  // нормальный 
+              sInt := sInt + ' Network interface';               // нормальный 
      
-            sInt := sInt + #13#10;                                // CRLF между каждым интерфейсом 
+            sInt := sInt + #13#10;                               // CRLF между каждым интерфейсом 
           end; 
         end; 
       except 
       end; 
-    // 
-    // Закрываем сокеты 
-    // 
+      // 
+      // Закрываем сокеты 
+      // 
       CloseSocket(s); 
       WSACleanUp; 
       result := false; 
@@ -164,4 +155,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>

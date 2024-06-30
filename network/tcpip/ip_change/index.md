@@ -1,16 +1,13 @@
 ---
 Title: Смена IP-адреса
-Author: vovs
+Author: Malomush Vladimir (vovs), vovs@neocm.com
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Смена IP-адреса
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
     { Programmed Malomush Vladimir. Ukraine, Cherkassy vovs@neocm.com
      IP tools unit for set IP and Mask of network connection fo Win9X & NT Platforms
@@ -20,7 +17,7 @@ Date: 01.01.2007
     interface
     uses Windows,Registry,SysUtils, Variants, Classes,Dialogs,ShellApi;
     //-----------------------------------------------------
-      var
+    var
      Registry1: Tregistry;
      Keyslist:  Tstrings;
      P: Pointer;
@@ -43,13 +40,15 @@ Date: 01.01.2007
              with VersionInfo do
              begin
                 case dwPlatformId of
-                   VER_PLATFORM_WIN32s   : OSName := 'Win32s';
+                   VER_PLATFORM_WIN32s        : OSName := 'Win32s';
                    VER_PLATFORM_WIN32_WINDOWS : OSName := 'Windows 95';
                    VER_PLATFORM_WIN32_NT      : OSName := 'Windows NT';
                 end; // case dwPlatformId
-               // Result := OSName + ' Version ' + IntToStr( dwMajorVersion ) + '.' + IntToStr( dwMinorVersion ) +
-                 //         #13#10' (Build ' + IntToStr( dwBuildNumber ) + ': ' + szCSDVersion + ')';
-                 Result:= OSName;
+                // Result := OSName + ' Version ' + IntToStr( dwMajorVersion ) +
+                //           '.' + IntToStr( dwMinorVersion ) +
+                //           #13#10' (Build ' + IntToStr( dwBuildNumber ) +
+                //           ': ' + szCSDVersion + ')';
+                Result:= OSName;
              end; // with VersionInfo
           end // if GetVersionEx
        else
@@ -64,7 +63,8 @@ Date: 01.01.2007
      s: string;
     begin
     //Initialization----------------------------------------
-    s:='netsh interface ip set address "Подключение по локальной сети" source=static addr='+IP+' mask='+Mask;
+    s:='netsh interface ip set address "Подключение по локальной сети" '+
+       'source=static addr='+IP+' mask='+Mask;
     p:=pchar(s);
     WinExec( @p[0], sw_show);
     beep;
@@ -86,12 +86,14 @@ Date: 01.01.2007
       //Detect phisical net device-----------------------------
       For I:=0 to KeysList.Count-1 do
        Begin
-        Registry1.OpenKey('System\CurrentControlSet\Services\Class\Net\'+KeysList.Strings[i],True);
+        Registry1.OpenKey('System\CurrentControlSet\Services\Class\Net\'
+                          +KeysList.Strings[i],True);
         If Registry1.ValueExists('IOBaseAddress')=True Then NumDev:=I;
         Registry1.CloseKey;
        End;
      //Open device  & set setings------------------------------
-     Registry1.OpenKey('System\CurrentControlSet\Services\Class\NetTrans\'+KeysList.Strings[NumDev],True);
+     Registry1.OpenKey('System\CurrentControlSet\Services\Class\NetTrans\'
+                       +KeysList.Strings[NumDev],True);
      Registry1.WriteString('IPAddress',IP);
      Registry1.WriteString('IPMask',Mask);
      Registry1.CloseKey;
@@ -99,7 +101,8 @@ Date: 01.01.2007
      Registry1.Free;
      Keyslist.Free;
      Beep;
-     MessageDlg('Все изменения вступят в силу только после перезагрузки.', mtInformation, [mbOk], 0);
+     MessageDlg('Все изменения вступят в силу только после перезагрузки.',
+                 mtInformation, [mbOk], 0);
     end;
      
     Procedure Set_IP_AND_MASK (IP,Mask: String);
@@ -112,6 +115,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: vovs

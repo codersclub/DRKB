@@ -1,18 +1,13 @@
 ---
 Title: Обмен информацией по TCP/IP-протоколу
-Date: 12.12.2004
 Author: Рудюк С.А. (rudjuk.kiev.ua)
+Date: 12.12.2004
 ---
 
 
 Обмен информацией по TCP/IP-протоколу
 =====================================
 
-::: {.date}
-01.01.2007
-:::
-
-© 2004 Рудюк С.А. rudjuk.kiev.ua
 
 Часто возникает необходимость обмениваться данными между программами на
 разных компьютерах. Например, это необходимо в чатах, или в программах,
@@ -26,9 +21,10 @@ Author: Рудюк С.А. (rudjuk.kiev.ua)
 
 Для обмена данными по протоколу TCP/IP будем использовать три
 Indy-компоненты:
-TIdTCPServer        ![](server.jpg),
-TIdTCPClient        ![](cli.jpg),
-TIdThreadMgrDefault ![](thread.jpg)
+
+- ![](server.jpg) TIdTCPServer,
+- ![](cli.jpg) TIdTCPClient,
+- ![](thread.jpg) TIdThreadMgrDefault 
 
 Клиентская компонента предназначена для посылки и приёма сообщений, а
 серверная компонента - для приёма сообщения и рассылки клиентским
@@ -44,8 +40,9 @@ TIdThreadMgrDefault ![](thread.jpg)
 ## Серверная часть
 
 Установим на форму в программе серверной части компоненты
-TIdTCPServer ![](server.jpg),
-TIdThreadMgrDefault ![](thread.jpg).
+
+- ![](server.jpg) TIdTCPServer,
+- ![](thread.jpg) TIdThreadMgrDefault.
 
 Свяжите свойство ThreadMgr компоненты TIdTCPServer с компонентой
 TIdThreadMgrDefault.
@@ -220,20 +217,21 @@ ServerDisconnect.
       ComputerName: String[100]; // Название компьютера, посылающего сообщение
     end;
 
-Поле Command - команда, котора посылается с клиентского места.
-MyUserName - имя пользователя, который посылает сообщение.
-Msg - Текст сообщения.
+Поле `Command` - команда, котора посылается с клиентского места.
 
-ReceiverName - название компьютера-получателя сообщения, если это поле
+`MyUserName` - имя пользователя, который посылает сообщение.
+
+`Msg` - Текст сообщения.
+
+`ReceiverName` - название компьютера-получателя сообщения, если это поле
 будет пустым, то сообщение будет отправляться всем компьютерам.
 
-Клиентская часть
+**Клиентская часть**
 
 Через клиентскую компоненту мы можем отправлять сообщения, а так же
 получать сообщения от других сообщений.
 
-Установим на форму клиентского приложения компоненту TIdTCPClient
-![](cli.jpg).
+Установим на форму клиентского приложения компоненту ![](cli.jpg) TIdTCPClient.
 
 Установим на форму кнопки Подключиться и Отключиться.
 
@@ -303,7 +301,9 @@ ReceiverName - название компьютера-получателя соо
     begin
       if Assigned(EventMest) then EventMest(Self);
       // Обработка команд 
-      if RusCompare(CB.Command,'MESSAGE') Or (RusCompare(CB.Command,cmdSendPrav)) or (RusCompare(CB.Command, cmdAskPrav)) or
+      if RusCompare(CB.Command,'MESSAGE') Or
+        (RusCompare(CB.Command,cmdSendPrav)) or
+        (RusCompare(CB.Command, cmdAskPrav)) or
         (RusCompare(CB.Command,cmdNewGame)) or (RusCompare(CB.Command,cmdEndGame)) or
         (RusCompare(CB.Command,cmdNewTur)) or (RusCompare(CB.Command,cmdEndTur)) or
         (RusCompare(CB.Command,cmdRunShellAll)) or (RusCompare(CB.Command,cmdRunShell)) or
@@ -356,4 +356,3 @@ ReceiverName - название компьютера-получателя соо
       Client.WriteBuffer (CommBlock, SizeOf (CommBlock), true);
     end; 
 
-Copyright© 2004 Рудюк С.А.

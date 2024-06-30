@@ -2,17 +2,12 @@
 Title: Преобразуем доменное имя в IP адрес
 Author: Lutfi Baran
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Преобразуем доменное имя в IP адрес
 ===================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Lutfi Baran
 
 Описывается функция, которая показывает, как вычислить IP адрес
 компьютера в интернете по его доменному имени.
@@ -59,9 +54,8 @@ Date: 01.01.2007
 
     procedure TForm1.Button1Click(Sender: TObject); 
     var 
-    IP: string; 
+      IP: string; 
     begin 
-    if HostToIp(Edit1.Text, IP) then Label1.Caption := IP; 
+      if HostToIp(Edit1.Text, IP) then Label1.Caption := IP; 
      
 
-Взято из <https://forum.sources.ru>
