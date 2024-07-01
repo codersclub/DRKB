@@ -1,15 +1,12 @@
 ---
 Title: Как перевести TWebBrowser в режим редактирования (дизайна)?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как перевести TWebBrowser в режим редактирования (дизайна)?
 ===========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       You can use the designMode property to put the Webbrowser
@@ -33,4 +30,3 @@ Date: 01.01.2007
       WebBrowser1.Navigate('http://wp.netscape.com/assist/net_sites/example1-F.html')
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

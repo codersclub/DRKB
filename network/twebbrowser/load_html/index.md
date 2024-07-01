@@ -1,15 +1,12 @@
 ---
 Title: Как загрузить HTML-код непосредственно в TWebBrowser?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как загрузить HTML-код непосредственно в TWebBrowser?
 =====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       ActiveX; 
@@ -47,4 +44,3 @@ Date: 01.01.2007
       WB_LoadHTML(WebBrowser1,'SwissDelphiCenter'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

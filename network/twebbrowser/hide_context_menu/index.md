@@ -1,15 +1,12 @@
 ---
 Title: Как скрыть контекстное меню TWebBrowser?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как скрыть контекстное меню TWebBrowser?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     var 
       HookID: THandle; 
@@ -56,4 +53,3 @@ Date: 01.01.2007
       Webbrowser1.Navigate('http://www.google.com'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

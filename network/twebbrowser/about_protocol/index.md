@@ -1,19 +1,15 @@
 ---
 Title: Как использовать протокол about?
 Date: 01.01.2007
+Source: FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
 ---
 
 
 Как использовать протокол about?
 ================================
 
-::: {.date}
-01.01.2007
-:::
 
-Взято из FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
-
-Перевод материала с сайта members.home.com/hfournier/webbrowser.htm
+_Перевод материала с сайта members.home.com/hfournier/webbrowser.htm_
 
     procedure TForm1.LoadHTMLString(sHTML: String);
     var

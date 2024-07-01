@@ -1,15 +1,13 @@
 ---
 Title: Перехватить WM\_CONTEXTMENU в TWebBrowser
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
+ID: 03472
 ---
 
 
 Перехватить WM\_CONTEXTMENU в TWebBrowser
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Перехват меню (ТОЛЬКО БЛОКИРОВКА):
 
@@ -178,4 +176,3 @@ Date: 01.01.2007
     end;
     end.
 
-Взято с <https://delphiworld.narod.ru>

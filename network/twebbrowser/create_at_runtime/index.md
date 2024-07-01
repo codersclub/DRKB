@@ -1,15 +1,12 @@
 ---
 Title: Create a TWebBrowser at runtime?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Create a TWebBrowser at runtime?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -23,4 +20,3 @@ Create a TWebBrowser at runtime?
       wb.Navigate('http://www.swissdelphicenter.ch');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: How to add alternative text to a Webbrowser image?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 How to add alternative text to a Webbrowser image?
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { Alternative Text for a image of a TWebBrowser }
      
@@ -27,4 +24,3 @@ How to add alternative text to a Webbrowser image?
       HTMLTxtRangeIfc.pasteHTML('<image alt="Hello" src="c:\test.gif"> ');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

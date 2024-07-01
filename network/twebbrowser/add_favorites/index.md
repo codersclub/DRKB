@@ -1,15 +1,12 @@
 ---
 Title: Как добавить текущую страницу TWebBrowser в favorites?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как добавить текущую страницу TWebBrowser в favorites?
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     // You need: 1 TEdit, 2 TButtons, 1 TWebbrowser 
     // Du brauchst: 1 TEdit, 2 TButtons, 1 TWebbrowser 
@@ -105,4 +102,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

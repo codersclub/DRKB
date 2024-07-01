@@ -8,13 +8,12 @@ Date: 01.01.2007
 Реагируем на щелчок по ссылке в TWebBrowser
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
+Author: Rouse\_
 
-     
-     
+Source: <https://forum.sources.ru>
+
     var
       Document: IHtmlDocument2;
       V: Variant;
@@ -45,16 +44,15 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>
-
-
 
 ------------------------------------------------------------------------
 
+Вариант 2:
 
-     
+Author: s-mike
+
+Source: <https://forum.sources.ru>
+
     var
       NavigateTo: Boolean = False;
      
@@ -75,21 +73,20 @@ Date: 01.01.2007
       NavigateTo := True;
     end;
 
-Автор: s-mike
-
-Взято из <https://forum.sources.ru>
-
-
 
 ------------------------------------------------------------------------
 
-OnNewWindow2
-Возникает при попытке открыть документ в новом окне. Если Вы хотите,
-чтобы документ был открыт в Вашем экземпляре броузера, то Вам нужно
-создать свой экземпляр броузера и параметру ppDisp присвоить
+Вариант 3:
+
+Author: -TOXA-
+
+Source: <https://forum.sources.ru>
+
+Событие `OnNewWindow2` возникает при попытке открыть документ в новом окне.
+Если Вы хотите, чтобы документ был открыт в Вашем экземпляре броузера, то
+Вам нужно создать свой экземпляр броузера и параметру ppDisp присвоить
 интерфейсную ссылку на этот экземпляр:
 
- 
 
     procedure TFormSimpleWB.WebBrowser1NewWindow2(Sender: TObject;
       var ppDisp: IDispatch; var Cancel: WordBool);
@@ -101,10 +98,3 @@ OnNewWindow2
       ppDisp := newForm.WebBrowser1.ControlInterface;
     end;
 
-
-
-Автор: -TOXA-
-
-Взято из <https://forum.sources.ru>
-
- 

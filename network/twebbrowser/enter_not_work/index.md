@@ -1,19 +1,16 @@
 ---
-Title: Не работает кнопка \<Enter\> в WebBrowser
+Title: Не работает кнопка "Enter" в WebBrowser
 Author: Song
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
-Не работает кнопка \<Enter\> в WebBrowser
+Не работает кнопка "Enter" в WebBrowser
 =========================================
 
-::: {.date}
-01.01.2007
-:::
-
 Html страницы, отображаемые в TWebBrowser часто имеют кнопки "Submit",
-и нажатие \<Enter\> не воспринимается непосредственно этой кнопкой.
+и нажатие `<Enter>` не воспринимается непосредственно этой кнопкой.
 
     unit Unit1;
      
@@ -93,6 +90,3 @@ Html страницы, отображаемые в TWebBrowser часто име
       end;
     end;
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>

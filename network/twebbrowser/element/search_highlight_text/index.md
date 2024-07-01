@@ -1,15 +1,12 @@
 ---
 Title: Как найти и выделить текст TWebBrowser?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как найти и выделить текст TWebBrowser?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     {....}
      
@@ -49,4 +46,3 @@ Date: 01.01.2007
       SearchAndHighlightText('delphi');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

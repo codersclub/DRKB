@@ -2,15 +2,12 @@
 Title: Как добраться до конкретного фрейма?
 Author: Good Man
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как добраться до конкретного фрейма?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     var
      
@@ -24,6 +21,3 @@ Date: 01.01.2007
       name_frame := 'mainFrame';
       oRange1 := Window.frames.item(name_frame).document.body.createTextRange;
 
-Автор: Good Man
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

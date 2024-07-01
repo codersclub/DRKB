@@ -1,19 +1,15 @@
 ---
 Title: Как загрузить строковые данные в TWebBrowser, не прибегая к открытию файла?
 Date: 01.01.2007
+Source: FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
 ---
 
 
 Как загрузить строковые данные в TWebBrowser, не прибегая к открытию файла?
 ===========================================================================
 
-::: {.date}
-01.01.2007
-:::
 
-Взято из FAQ:<https://blackman.km.ru/myfaq/cont4.phtml>
-
-Перевод материала с сайта members.home.com/hfournier/webbrowser.htm
+_Перевод материала с сайта members.home.com/hfournier/webbrowser.htm_
 
 Загрузите строку массив Variant, а затем запишите в документ (Document):
 

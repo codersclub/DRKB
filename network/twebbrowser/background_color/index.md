@@ -1,15 +1,12 @@
 ---
 Title: Получить или установить задний фон в TWebBrowser
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Получить или установить задний фон в TWebBrowser
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     //You need a TWebbrowser and 3 TButtons 
      
@@ -32,4 +29,3 @@ Date: 01.01.2007
       WebBrowser1.OleObject.Document.bgColor := '#000000'; 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

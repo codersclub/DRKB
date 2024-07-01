@@ -2,19 +2,15 @@
 Title: Как сделать TWebBrowser плоским вместо 3D?
 Author: Donovan J. Edye
 Date: 01.01.2007
+Source: FAQ <https://blackman.km.ru/myfaq/cont4.phtml>
 ---
 
 
 Как сделать TWebBrowser плоским вместо 3D?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
 
-Взято из FAQ:<https://blackman.km.ru/myfaq/cont4.phtml>
-
-Перевод материала с сайта members.home.com/hfournier/webbrowser.htm
+_Перевод материала с сайта members.home.com/hfournier/webbrowser.htm_
 
 Следующий пример устанавливает borderStyle:
 
@@ -24,14 +20,12 @@ Date: 01.01.2007
       Doc : IHTMLDocument2;
       Element : IHTMLElement;
     begin
-    Doc := IHTMLDocument2(TWebBrowser(Sender).Document);
-    if Doc = nil then Exit;
-    Element := Doc.body;
-    if Element = nil then Exit;
-    case Make_Flat of
-    TRUE : Element.style.borderStyle := 'none';
-    FALSE : Element.style.borderStyle := '';
+      Doc := IHTMLDocument2(TWebBrowser(Sender).Document);
+      if Doc = nil then Exit;
+      Element := Doc.body;
+      if Element = nil then Exit;
+      case Make_Flat of
+        TRUE : Element.style.borderStyle := 'none';
+        FALSE : Element.style.borderStyle := '';
+      end;
     end;
-    end;
-
-Автор: Donovan J. Edye

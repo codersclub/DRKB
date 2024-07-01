@@ -1,15 +1,12 @@
 ---
 Title: Навигация в TWebBrowser по линкам
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Навигация в TWebBrowser по линкам
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -37,4 +34,3 @@ Date: 01.01.2007
       IEApp.Navigate(Url, Flags, TargetFrameName, PostData, Headers);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

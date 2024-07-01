@@ -1,15 +1,12 @@
 ---
 Title: Как проверить является ли текущее соединение в TWebBrowser secure (SSL)?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как проверить является ли текущее соединение в TWebBrowser secure (SSL)?
 ========================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     // You need a TWebbrowser, a TLabel 
      
@@ -22,4 +19,3 @@ Date: 01.01.2007
         label1.Caption := 'Unsichere Verbindung' 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

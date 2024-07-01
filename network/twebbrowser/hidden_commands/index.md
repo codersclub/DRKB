@@ -1,15 +1,12 @@
 ---
 Title: Как вызвать скрытые команды TWebBrowser?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как вызвать скрытые команды TWebBrowser?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     // The following codes demonstrates an innovative way to invoke hidden
     // commands to show modal dialogs such as "Add To Favorite" dialog,
@@ -90,4 +87,3 @@ Date: 01.01.2007
       web.Go('http://http://www.swissdelphicenter.ch/en');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

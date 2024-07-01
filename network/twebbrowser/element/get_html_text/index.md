@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как получить текст HTML-документа из TWebBrowser без тегов
 ==========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://delphiworld.narod.ru>
 
     uses mshtml, activex;
      
@@ -23,9 +23,12 @@ Date: 01.01.2007
      PersistFile.save(StringToOleStr(FileName), true);
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     var
       Document: IHTMLDocument2;
@@ -34,4 +37,3 @@ Date: 01.01.2007
      if Document < >  nil then
        Memo1.Text := (Document.all.Item(NULL, 0) as IHTMLElement).OuterHTML;
 
-Взято с <https://delphiworld.narod.ru>

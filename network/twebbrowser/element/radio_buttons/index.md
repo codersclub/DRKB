@@ -1,15 +1,12 @@
 ---
 Title: RadioButtons in a TWebbrowser
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 RadioButtons in a TWebbrowser
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -48,4 +45,3 @@ RadioButtons in a TWebbrowser
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Как выполнить JavaScript-функцию?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как выполнить JavaScript-функцию?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       MSHTML_TLB, SHDocVw, ShellAPI; 
@@ -150,4 +147,3 @@ Date: 01.01.2007
       FillInGMXForms(Web, iDoc1, Webbrowser1.Document, 'user@gmx.net', 'pswd'); 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

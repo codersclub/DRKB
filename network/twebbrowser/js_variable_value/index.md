@@ -1,15 +1,12 @@
 ---
 Title: Читать значения переменных из JavaScript?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Читать значения переменных из JavaScript?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     // Just add a Webbrowser and two Buttons to the form and insert the following code
      
@@ -40,4 +37,3 @@ Date: 01.01.2007
     ('Countdown').Elements.item('Countdown').Value;
     //top is the framename in this example
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

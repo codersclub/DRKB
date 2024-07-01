@@ -1,17 +1,14 @@
 ---
 Title: Использоватние Drag & Drop для заполнения полей в TWebBrowser?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Использоватние Drag & Drop для заполнения полей в TWebBrowser?
 ==============================================================
 
-::: {.date}
-01.01.2007
-:::
-
-      This example shows how to fill out fields in your webbrowser by 
+    { This example shows how to fill out fields in your webbrowser by 
       dragging the content of Label1 to a field of your webbrowser} 
      
     procedure TForm1.FormCreate(Sender: TObject); 
@@ -49,4 +46,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

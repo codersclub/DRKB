@@ -2,15 +2,12 @@
 Title: Cut и Copy отказываются работать
 Author: Song
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Cut и Copy отказываются работать
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
 Вам нужно добавить следующие строки в конец unit:
 
@@ -19,6 +16,3 @@ Cut и Copy отказываются работать
     finalization
       OleUninitialize;
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>

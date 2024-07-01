@@ -1,15 +1,12 @@
 ---
 Title: Скопировать, удалить, вставить в TWebBrowser
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Скопировать, удалить, вставить в TWebBrowser
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
      ActiveX; 
@@ -51,4 +48,3 @@ Date: 01.01.2007
      
     // as of Internet Explorer 4
 
-Взято с <https://delphiworld.narod.ru>
