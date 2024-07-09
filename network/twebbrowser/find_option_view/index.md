@@ -30,7 +30,7 @@ _Перевод материала с сайта members.home.com/hfournier/webb
     begin
       New(PtrGUID);
       PtrGUID^ := CGID_WebBrowser;
-      if WebBrowser1.Document < > nil then
+      if WebBrowser1.Document <> nil then
       try
         WebBrowser1.Document.QueryInterface(IOleCommandTarget, CmdTarget);
         if CmdTarget <> nil then

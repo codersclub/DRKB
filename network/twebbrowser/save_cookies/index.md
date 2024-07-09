@@ -1,15 +1,12 @@
 ---
 Title: Для своего браузера, как мне сохранить свои cookies?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Для своего браузера, как мне сохранить свои cookies?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -92,6 +89,5 @@ Date: 01.01.2007
 
 
 
-© Delphi 4 Developer\'s Guide
+&copy; Delphi 4 Developer\'s Guide
 
-Взято из <https://forum.sources.ru>

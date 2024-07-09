@@ -1,15 +1,12 @@
 ---
 Title: Как сохранить все картинки TWebBrowser?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сохранить все картинки TWebBrowser?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       UrlMon;
@@ -44,4 +41,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

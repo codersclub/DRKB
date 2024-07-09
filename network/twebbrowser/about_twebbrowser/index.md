@@ -1,22 +1,18 @@
 ---
 Title: Что из себя представляет TWebBrowser?
 Date: 01.01.2007
+Source: FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
 ---
 
 
 Что из себя представляет TWebBrowser?
 =====================================
 
-::: {.date}
-01.01.2007
-:::
 
-Взято из FAQ:<https://blackman.km.ru/myfaq/cont4.phtml>
+_Перевод материала с сайта members.home.com/hfournier/webbrowser.htm_
 
-Перевод материала с сайта members.home.com/hfournier/webbrowser.htm 
+Веббраузер **TWebBrowser** - это Microsoft\'s Internet Explorer в виде ActiveX контрола.
 
-Веббраузер это Microsoft\'s Internet Explorer в виде ActiveX контрола.
-
-Его можно импортировать в Delphi IDE и размещать на форме на равне с
+Его можно импортировать в Delphi IDE и размещать на форме наравне с
 другими компонентами. Поэтому, чтобы превратить Ваше приложение в
 браузер, достаточно воспользоваться всей мощью IE.

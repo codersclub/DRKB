@@ -1,20 +1,16 @@
 ---
 Title: Как получить полный исходник HTML?
-Author: Ron Loewy Обратите внимание: Вам понадобится импортировать
+Author: Ron Loewy
 Date: 01.01.2007
+Source: FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
 ---
 
 
 Как получить полный исходник HTML?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
 
-Взято из FAQ:<https://blackman.km.ru/myfaq/cont4.phtml>
-
-Перевод материала с сайта members.home.com/hfournier/webbrowser.htm
+_Перевод материала с сайта members.home.com/hfournier/webbrowser.htm_
 
 В IE5, можно получить исходник используя свойство outerHTML тэгов
 HTML. В IE4 или IE3, Вам понадобится записать документ в файл, а затем
@@ -33,6 +29,6 @@ HTML. В IE4 или IE3, Вам понадобится записать доку
     ...
     end;
 
-Автор: Ron Loewy Обратите внимание: Вам понадобится импортировать
-библиотеку
+**Обратите внимание:**  
+Вам понадобится импортировать библиотеку
 MSHTML и добавить MSHTML\_TLB как ActiveX, в секцию Uses.

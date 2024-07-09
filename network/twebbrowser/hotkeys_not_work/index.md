@@ -1,15 +1,18 @@
 ---
-Title: Кобинации клавиш Ctrl-C, Ctrl-O, и т.д. не срабатывают. В чем проблема?
+Title: Не работают Ctrl-C, Ctrl-O, и т.д.
 Date: 01.01.2007
 Source: FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
 ---
 
 
-Кобинации клавиш Ctrl-C, Ctrl-O, и т.д. не срабатывают. В чем проблема?
+Не работают Ctrl-C, Ctrl-O, и т.д.
 =======================================================================
 
 
 _Перевод материала с сайта members.home.com/hfournier/webbrowser.htm_
+
+> Вопрос:
+> Комбинации клавиш Ctrl-C, Ctrl-O, и т.д. не срабатывают. В чем проблема?
 
 Это не ошибка. Информацию по данному вопросу можно найти на сайте
 Microsoft KnowledgeBase статья Q168777.
@@ -59,14 +62,14 @@ Microsoft KnowledgeBase статья Q168777.
         if FOleInPlaceActiveObject = nil then
         begin
           Dispatch := WebBrowser.Application;
-          if Dispatch < > nil then
+          if Dispatch <> nil then
           begin
             Dispatch.QueryInterface(IOleInPlaceActiveObject, iOIPAO);
-            if iOIPAO < > nil then
+            if iOIPAO <> nil then
               FOleInPlaceActiveObject := iOIPAO;
           end;
         end;
-        if FOleInPlaceActiveObject < > nil then
+        if FOleInPlaceActiveObject <> nil then
           if ((Msg.message = WM_KEYDOWN) or (Msg.message = WM_KEYUP)) and
              ((Msg.wParam = VK_BACK) or (Msg.wParam = VK_LEFT) or (Msg.wParam = VK_RIGHT)) then
              //nothing - do not pass on Backspace, Left or Right arrows

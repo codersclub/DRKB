@@ -1,15 +1,12 @@
 ---
 Title: Как сохранить исходник HTML из TWebBrowser.Document на диск?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как сохранить исходник HTML из TWebBrowser.Document на диск?
 ============================================================
-
-::: {.date}
-01.01.2007
-:::
 
 TWebBrowser.Document включает в себя IPersistStreamInit который содержит
 метод Save(). Всё, что нам нужно знать, это как использовать данный
@@ -49,7 +46,9 @@ TWebBrowser.Document включает в себя IPersistStreamInit котор�
         SaveHTMLSourceToFile(SaveDialog1.FileName, WebBrowser1); 
     end; 
 
-А как сохранить вместе с исходником все файлы (.CSS, JPG, GIF Etc..) ?
+> А как сохранить вместе с исходником все файлы (.CSS, JPG, GIF Etc..) ?
+
+Вот так:
 
     try 
       WebBrowser1.ExecWB(4, 0); 
@@ -57,4 +56,3 @@ TWebBrowser.Document включает в себя IPersistStreamInit котор�
       on E: Exception do  msError:=true; 
     end; 
 
-Взято из <https://forum.sources.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Save all TWebBrowser frame sources
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Save all TWebBrowser frame sources
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       ActiveX;
@@ -76,4 +73,3 @@ Save all TWebBrowser frame sources
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
