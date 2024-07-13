@@ -1,30 +1,24 @@
 ---
 Title: Передача параметров
+Author: Paul TOTH
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Передача параметров
 ===================
 
-::: {.date}
-01.01.2007
-:::
-
-Передача параметров
-
-Методы GET и POST
+## Методы GET и POST
 
 Существует по крайней мере два метода передачи параметров CGI-программе.
 
     <form method=GET action="program.exe">
-     
     <form method=POST action="program.exe">
 
 Чтобы определить, каким именно методом CGI-программе переданы параметры,
 достаточно в вашей программе проверить переменную среды REQUEST\_METHOD.
 
- 
 
 Ниже привдена функция, с помощью которой можно получить значение
 переменной среды окружения:
@@ -44,50 +38,34 @@ Date: 01.01.2007
      end;
     {$ENDIF}
 
- 
 
 Автор предпочитает работать не с массивами, а со строками, поэтому
 результат функции преобразовывается в строку...
 
- 
-
 Теперь посмотрим, как определить значение переменной среды под DOS в
 .BAT файле:
 
- 
-
-@ECHO OFF
-
-ECHO content-type: text/html
-
-ECHO.
-
-ECHO ^\<HTML^\>^\<HEAD^\>^\<TITLE^\>^\</TITLE^\>^\</HEAD^\>^\<BODY^\>
-
-ECHO REQUEST\_METHOD=%REQUEST\_METHOD%
-
-ECHO ^\</BODY^\>^\</HTML^\>
-
- 
+    @ECHO OFF
+    ECHO content-type: text/html
+    ECHO.
+    ECHO ^<HTML^>^<HEAD^>^<TITLE^>^</TITLE^>^</HEAD^>^<BODY^>
+    ECHO REQUEST_METHOD=%REQUEST_METHOD%
+    ECHO ^</BODY^>^</HTML^>
 
 Обратите внимание, что специальные символы, используемые в DOS (такие,
 как "\<", "\>", "&",...), необходимо предварять знаком "^".
 
- 
-
 Таким образом, если мы обратимся к функции в виде
-GetVar(\'REQUEST\_METHOD\'), то получим в виде строки метод, которым
+`GetVar('REQUEST_METHOD')`, то получим в виде строки метод, которым
 были переданы параметры: \'GET\' или \'POST\'.
 
- 
 
-Согласно Спецификации CGI, параметры могут быть прочитаны:
+Согласно [Спецификации CGI](http://hoohoo.ncsa.uiuc.edu/cgi/interface.html),
+параметры могут быть прочитаны:
 
 - Из переменной окружения QUERY\_STRING для метода GET
-
 - Из стандартного ввода (STDIN) с помощью процедуры ReadLn для метода POST
 
- 
 
 Метод POST используется в тех случаях, когда необходимо передать большое
 количество параметров или большой объем данных. При использовании же
@@ -95,37 +73,31 @@ GetVar(\'REQUEST\_METHOD\'), то получим в виде строки мет
 переменная среды окружения, а она, как вы понимаете, не резиновая, так
 что ее максимального размера в некоторых случаях может не хватить...
 
- 
 
-Метод GET и переменная QUERY\_STRING
+**Метод GET и переменная QUERY\_STRING**
 
 Переменная среды окружения QUERY\_STRING содержит список имен и значений
 параметров, переданных из формы... Но сначала рассмотри код HTML:
 
- 
 
-\<form method="GET" action="program.exe"\>
+    <form method="GET" action="program.exe">
+    <input type=text name="toto" value="titi">
+    <input type=submit value="GO">
+    </form>
 
-\<input type=text name="toto" value="titi"\>
-
-\<input type=submit value="GO"\>
-
-\</form\>
-
- 
 
 Кликнув на "GO" (здесь кликать не надо, это просто пример!), вы
 запускаете на сервере программу "program.exe" передавая серверу запрос
 в виде:
 
-https://www.ваш\_сервер/cgi-bin/program.exe?toto=titi
+    https://www.ваш_сервер/cgi-bin/program.exe?toto=titi
 
 Вы видите, что сразу за именем программы следует знак вопроса и
 передаваемый в программу параметр. В переменную QUERY\_STRING как раз и
 будет помещено все, что находится после символа "?". Заметим, что
 точно так же можно задать параметры и в обычной ссылке:
 
-\<a href="https://www.ваш\_сервер/cgi-bin/program.exe?toto=titi"\>...\</a\>
+    <a href="https://www.ваш_сервер/cgi-bin/program.exe?toto=titi">...</a>
 
 И последнее уточнение: если запрос содержит несколько параметров, то они
 отделяются друг от друга амперсандом &. Кроме того, некоторые символы в
@@ -135,18 +107,18 @@ https://www.ваш\_сервер/cgi-bin/program.exe?toto=titi
 представлен в виде "%26".
 
 Представьте, что вам требуется на сайте yahoo.com найти результаты
-поиска по ключевым словам cgi и delphi, для чего в окне поиска вы
+поиска по ключевым словам "cgi" и "delphi", для чего в окне поиска вы
 вводите "cgi + delphi".
 
 Тогда в результате вашего запроса будет сгенерирован следующий URL:
 
-https://search.yahoo.com/bin/search?p=cgi+%2B+delphi
+    https://search.yahoo.com/bin/search?p=cgi+%2B+delphi
 
 Тем самым, вы обратитесь к программе "search" и зададите значение
 параметра "p" равным "cgi + delphi", при этом символ "+" будет
 автоматически заменен браузером на "%2B", а пробелы - на "+".
 
-Метод POST
+**Метод POST**
 
 Для получения данных, переданных по методу POST, необходимо читать
 данные из "устройства стандартного ввода" STDIN. Размер данных,
@@ -156,15 +128,15 @@ CONTENT\_LENGTH.
 Посмотрим, как это выглядит в Delphi:
 
     // Получение переданных параметров
-      if getvar('REQUEST_METHOD')='POST' then begin
-       parmstring:=getvar('CONTENT_LENGTH');
-       if parmstring<>'' then begin
-        size:=strtoint(parmstring);
-        setlength(parmstring,size);
-        for i:=1 to size do read(parmstring[i]);
-       end;
-      end else
-       parmstring:=getvar('QUERY_STRING'); 
+    if getvar('REQUEST_METHOD')='POST' then begin
+     parmstring:=getvar('CONTENT_LENGTH');
+     if parmstring<>'' then begin
+      size:=strtoint(parmstring);
+      setlength(parmstring,size);
+      for i:=1 to size do read(parmstring[i]);
+     end;
+    end else
+     parmstring:=getvar('QUERY_STRING'); 
 
 В заключение я предлагаю вашему вниманию маленькую CGI-программу,
 которая просто выводит то, что происходит на сервере:
@@ -235,7 +207,6 @@ CONTENT\_LENGTH.
      
     end.
 
-Примечание:
+**Примечание:**
 
-Кроме стандартного вывода информация параллельно выводится еще и в
-лог-файл.
+Кроме стандартного вывода информация параллельно выводится еще и в лог-файл.

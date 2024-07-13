@@ -2,20 +2,14 @@
 Title: Простейший CGI на Дельфи
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Простейший CGI на Дельфи
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
     program helloworld;
-     
-
-     
      
     {$E cgi}
     begin
@@ -30,7 +24,7 @@ cgi-bin IIS сервера, убеждаемся что в настройках 
 исполнение серверных скриптов и сам сервер включен, далее открываем
 браузер и вводим адрес, у меня это:
 
-httр://vitaly/cgi-bin/helloworld.cgi
+    httр://vitaly/cgi-bin/helloworld.cgi
 
 любуемся надписью "Hello World!" в браузере.
 
@@ -39,15 +33,13 @@ httр://vitaly/cgi-bin/helloworld.cgi
 
     procedure OutputStream(m: TStream);
      
-
-     
-     
     var h: Integer;
       j: cardinal;
     begin
       h := GetStdHandle(STD_OUTPUT_HANDLE);
       try
-        WriteFile(h, 'Content type: image/x-MS-bmp' + #13#10#13#10, 32, j, nil);
+        WriteFile(h, 'Content type: image/x-MS-bmp' +
+                      #13#10#13#10, 32, j, nil);
         WriteFile(h, m.memory^, m.size, j, nil);
       finally
         CloseHandle(h);
@@ -61,60 +53,31 @@ httр://vitaly/cgi-bin/helloworld.cgi
 
 Ещё типы контента:
 
-text/html
+- text/html
+- text/plain
+- text/richtext
+- image/gif
+- image/jpeg
+- image/x-MS-bmp
+- image/x-xpixmap
+- video/mpeg
+- video/quicktime
+- audio/x-wav
+- audio/basic (Sun \*.au audio files)
+- audio/mp3
+- audio/mpeg
+- audio/x-mp3
+- audio/x-mpeg
+- audio/m3u
+- audio/x-m3u
+- audio/x-aiff (aif aiff aifc)
+- application/msword
+- application/octet-stream (для exe)
+- application/x-zip
+- application/mac-binhex40 (hqx)
+- application/pdf
+- application/rtf
+- application/x-latex
+- application/zip
+- application/rss+xml
 
-text/plain
-
-text/richtext
-
-image/gif
-
-image/jpeg
-
-image/x-MS-bmp
-
-image/x-xpixmap
-
-video/mpeg
-
-video/quicktime
-
-audio/x-wav
-
-audio/basic (Sun *.au audio files)
-
-audio/mp3
-
-audio/mpeg
-
-audio/x-mp3
-
-audio/x-mpeg
-
-audio/m3u
-
-audio/x-m3u
-
-audio/x-aiff (aif aiff aifc)
-
-application/msword
-
-application/octet-stream (для exe)
-
-application/x-zip
-
-application/mac-binhex40 (hqx)
-
-application/pdf
-
-application/rtf
-
-application/x-latex
-
-application/zip
-
-application/rss+xml
-
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

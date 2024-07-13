@@ -1,26 +1,24 @@
 ---
-Title: How to debug an Apache Shared Module
+Title: Как отладить разделяемый модуль Apache
 Date: 01.01.2007
 ---
 
 
-How to debug an Apache Shared Module
-====================================
+Как отладить разделяемый модуль Apache
+===================================
 
-::: {.date}
-01.01.2007
-:::
+> Я использую Apache в Windows и хочу знать, как отлаживать разделяемые модули Apache?
 
-I am running Apache on Windows and want to know how to debug Apache
-Shared Modules?
+Отладка разделяемых модулей в Delphi — это простая задача.
+Единственное, что необходимо сделать, это установить хост-приложение и параметры для проекта разделяемого модуля.
 
-     It is a straight forward task to debug Shared Modules in Delphi.
-The only thing that needs to be done is to set the Host Application and
-Parameters for the Shared Module\'s Project. From the Delphi menu bar go
-to Run \| Parameters. Set the Host Application to point to Apache.exe,
-and specify the following parameters: -X -w -f "c:\\path
-tohttpd.conf".
+В строке меню Delphi выберите «Выполнить» \| Параметры.
 
-     When you run the project be sure that IIS is not running. If you
-need IIS to run while Apache is running then change the Port value
-stored in httpd.conf.
+Настройте хост-приложение так, чтобы оно указывало на Apache.exe,
+и укажите следующие параметры:
+
+    -X -w -f "c:\pathtohttpd.conf"
+
+При запуске проекта убедитесь, что IIS не запущен.
+
+Если вам нужно, чтобы IIS работал во время работы Apache, измените значение порта, хранящееся в httpd.conf.

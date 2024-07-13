@@ -1,17 +1,14 @@
 ---
 Title: Как отправить бинарные данные из CGI приложения?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как отправить бинарные данные из CGI приложения?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Не для кого не секрет, как просто можно получать данные различного типа
+Ни для кого не секрет, как просто можно получать данные различного типа
 из CGI приложения. Однако, иногда необходимо, чтобы данные сохранялись в
 виде файла с определённым именем, типа "Test.ZIP". Для этого
 необходимо добавить в заголовок HTTP пункт "Content-Disposition".
@@ -30,7 +27,7 @@ Date: 01.01.2007
       if request.query='download' then
       try
         response.Title := 'Download Test.ZIP';
-        response.CustomHeaders.Add('Content-Disposition=filename=Test.zip');
+        response.CustomHeaders.Add('Content-Disposition:attachment; filename=Test.zip');
         response.ContentType := 'application/zip';
         s := TFileStream.Create(fmOpenRead+fmShareDenyNone,'Test.zip');
         response.contentstream := s;
@@ -40,4 +37,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято из <https://forum.sources.ru>

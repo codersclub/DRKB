@@ -8,11 +8,6 @@ Author: Сергей Кривошеев
 Разработка ASP-приложений при помощи Delphi 5
 =============================================
 
-::: {.date}
-08.04.2004
-:::
-
-
 Сервер ASP работает под управлением Windows NT (98, 2000) с Internet
 Information Server (IIS) или Microsoft Personal Web Server (PWS). Такая
 зависимость несколько сужает круг использования ASP. По существу,
@@ -38,10 +33,12 @@ ASP-серверу, имели расширение ASP. Примеры таки
 
 Типичное обращение к ASP-серверу из документа HTML выглядит так:
 
-    <%
-    Set FileSystem=Server.CreateObject("Scripting.FileSystemObject")
-    FileSystem.FindAllFiles
-    %>
+```vb
+<%
+Set FileSystem=Server.CreateObject("Scripting.FileSystemObject")
+FileSystem.FindAllFiles
+%>
+```
 
 Это сценарий, написанный на Visual Basic (VB). Поскольку сценарии из
 ASP-документов выполняются на сервере, то клиенту передается уже готовая
@@ -64,9 +61,11 @@ ASP может быть доступна клиентам, работающим 
 ASP-сервера вставляется в код исходной вебстраницы. Например, если
 документ ASP представлен в виде:
 
-    <% Set DelphiASPObj = Server.CreateObject("MyASP.TestASP")
-    DelphiASPObj.MyContent
-    %>
+```vb
+<% Set DelphiASPObj = Server.CreateObject("MyASP.TestASP")
+DelphiASPObj.MyContent
+%>
+```
 
 и результатом выполнения метода MyContent является строка
 `"Первое обращение к ASP-серверу"`,
@@ -101,9 +100,11 @@ COM-объекта. Кроме того, один экземпляр COM-объ�
 ASP-сервер и рассмотрим принципы его работы.
 Пусть сервер выполняет один запрос.
 
-Создадим с помощью команды `File &rarr; New &rarr; ActiveX &rarr; ActiveX Library`
+Создадим с помощью команды  
+`File` &rarr; `New` &rarr; `ActiveX` &rarr; `ActiveX Library`  
 новый проект и сохраним его под именем `MyASP`.
-Теперь воспользуемся командой `File &rarr; New &rarr; ActiveX &rarr; Active Server Object`.
+Теперь воспользуемся командой  
+`File` &rarr; `New` &rarr; `ActiveX` &rarr; `Active Server Object`.
 
 В появившемся диалоговом окне определим имя класса,
 например, `TestASP` (рис. 1).
@@ -112,7 +113,7 @@ ASP-сервер и рассмотрим принципы его работы.
 то в данном случае параметр Instancing не играет роли,
 зато имеет значение параметр Threading Model.
 Выбор режима `Single` приводит к неэффективной работе сервера,
-т. к. при одновременном обращении к нему нескольких клиентов
+т.к. при одновременном обращении к нему нескольких клиентов
 сервер будет выполнять запросы последовательно.
 Если выполнение запроса одного из клиентов потребует много времени,
 то остальные клиенты будут вынуждены ожидать его окончания,
@@ -146,8 +147,9 @@ ASP-сервера. Если планируется инсталлировать
 `Page Level Events Methods`.
 С IIS 5 этот режим также работает, но в этом случае
 эффективнее будет работать опция `Object Context`.
-Её же следует выбирать, если работой ASP управляет `Microsoft Transaction Server` (MTS).
-В режиме `Generate a template test script for this object`
+Её же следует выбирать, если работой ASP управляет
+**Microsoft Transaction Server** (MTS).
+В режиме "Generate a template test script for this object"
 будет создан документ HTML, который в дальнейшем можно будет использовать
 для тестирования ASP-сервера.
 
@@ -177,11 +179,13 @@ ASP-сервера. Если планируется инсталлировать
 где следует описать эту реализацию.
 Пусть метод выглядит следующим образом:
 
-    procedure TTestASP.MyContent;
-    begin
-      if Assigned(Response) then
-        Response.Write ('First call to ASP server');
-    end;
+```delphi
+procedure TTestASP.MyContent;
+begin
+  if Assigned(Response) then
+    Response.Write ('First call to ASP server');
+end;
+```
 
 Здесь происходит обращение к методу `Write` интерфейса `IResponse`.
 Проверка `Assigned (Response)` гарантирует наличие ссылки на интерфейс
@@ -192,23 +196,22 @@ ASP-сервера. Если планируется инсталлировать
 Он хранится в файле `TestASP.asp`.
 В этом документе имеется следующий VB-сценарий:
 
-    <% Set DelphiASPObj = Server.CreateObject("MyASP.TestASP")
-
-    DelphiASPObj.{Insert method name here}
-
-    %>
+```vb
+<% Set DelphiASPObj = Server.CreateObject("MyASP.TestASP")
+DelphiASPObj.{Insert method name here}
+%>
+```
 
 В таком виде он работать не будет.
 Необходимо заменить фигурную скобку `{Insert Method name here}`
 на имя метода ASP-сервера, который генерирует отклик.
 В данном примере это `MyContent`:
 
-    <% Set DelphiASPObj = Server.CreateObject("MyASP.TestASP")
-
-    DelphiASPObj.MyContent
-
-    %>
-
+```vb
+<% Set DelphiASPObj = Server.CreateObject("MyASP.TestASP")
+DelphiASPObj.MyContent
+%>
+```
 
 Скомпилируем проект, выбрав пункт меню `Run` &rarr; `Register ActiveX Server`.
 
@@ -270,7 +273,7 @@ IRequest и IResponse.
 единственным полем Name. Таблица создана в схеме Demo. Далее приведен
 SQL-запрос, создающий эту таблицу.
 
-```
+```sql
 CREATE TABLE Names (
   Name VARCHAR2(50)
 )
@@ -280,7 +283,7 @@ CREATE TABLE Names (
 с помощью которой будут вызываться методы ASP-сервера.
 Например, такой:
 
-```
+```html
 <form action="http://localhost/TestASP/TestASP.asp" method="POST" name="Query">
   Имя <input size="50" name="field">
   <br/>
@@ -313,17 +316,19 @@ ASP-сервере. Это можно сделать при помощи мет�
 Метод `IRequestDictionary` определен в модуле `ASPTlb.pas` следующим
 образом:
 
-    IRequestDictionary = interface(IDispatch)
-      ['{D97A6DA0-A85F-11DF-83AE-00A0C90C2BD8}']
-      function Get_Item (Var_: OleVariant): OleVariant; safecall;
-      function Get__NewEnum: IUnknown; safecall;
-      function Get_Count: SYSINT; safecall;
-      function Get_Key (VarKey: OleVariant): OleVariant; safecall;
-      property Item [Var_: OleVariant]: OleVariant read Get_Item; default;
-      property _NewEnum: IUnknown read Get__NewEnum;
-      property Count: SYSINT read Get_Count;
-      property Key [VarKey: OleVariant]: OleVariant read Get_Key;
-    end;
+```delphi
+IRequestDictionary = interface(IDispatch)
+  ['{D97A6DA0-A85F-11DF-83AE-00A0C90C2BD8}']
+  function Get_Item (Var_: OleVariant): OleVariant; safecall;
+  function Get__NewEnum: IUnknown; safecall;
+  function Get_Count: SYSINT; safecall;
+  function Get_Key (VarKey: OleVariant): OleVariant; safecall;
+  property Item [Var_: OleVariant]: OleVariant read Get_Item; default;
+  property _NewEnum: IUnknown read Get__NewEnum;
+  property Count: SYSINT read Get_Count;
+  property Key [VarKey: OleVariant]: OleVariant read Get_Key;
+end;
+```
 
 Свойство `Count` содержит число элементов управления формы (для формы в
 name.HTML оно равно 2), свойство `Key` - имена элементов управления (в
@@ -340,30 +345,32 @@ name.HTML оно равно 2), свойство `Key` - имена элемен
 создадим новый метод `RequestProp`.
 Введем для этого метода следующий код.
 
-    procedure TTestASP.RequestProp;
-    var
-      S:string;
-      V:OLeVariant;
-      I,J,N:integer;
-    begin
-      S:='';
-      if Assigned(Request) then
-        if Request.Body.Count>0 then begin
-          for I:=1 to Request.Body.Count do begin
-            S:=S+'Key'+IntToStr(I)+'='+Request.Body.Key[I]+'<BR>';
-            V:=Request.Body.Item[I];
-            if not VarIsEmpty(V) then
-              if varType(V)=varDispatch then begin
-                N:=V.Count;
-                S:=S+'ItemCount'+IntToStr(I)+'='+IntToStr(N)+'<BR>';
-                if N>0 then
-                  for J:=1 to N do S:=S+V.Item[J]+'<BR>';
-              end;
+```delphi
+procedure TTestASP.RequestProp;
+var
+  S:string;
+  V:OLeVariant;
+  I,J,N:integer;
+begin
+  S:='';
+  if Assigned(Request) then
+    if Request.Body.Count>0 then begin
+      for I:=1 to Request.Body.Count do begin
+        S:=S+'Key'+IntToStr(I)+'='+Request.Body.Key[I]+'<BR>';
+        V:=Request.Body.Item[I];
+        if not VarIsEmpty(V) then
+          if varType(V)=varDispatch then begin
+            N:=V.Count;
+            S:=S+'ItemCount'+IntToStr(I)+'='+IntToStr(N)+'<BR>';
+            if N>0 then
+              for J:=1 to N do S:=S+V.Item[J]+'<BR>';
           end;
-        end;
-
-      if Assigned(Response) then Response.Write(S);
+      end;
     end;
+
+  if Assigned(Response) then Response.Write(S);
+end;
+```
 
 Скомпилируем проект и в созданном ранее файле TestASP.asp изменим
 VB-скрипты следующим образом:  
@@ -375,6 +382,7 @@ VB-скрипты следующим образом:
 `http://localhost/TestASP/name.HTML`
 
 Откроется страница с формой.
+
 Введем в строке любое значение,
 щелкнем на кнопке **Вперед!**
 и получим результат выполнения приведенного ранее метода
@@ -469,61 +477,66 @@ ItemCount2=1
 объявим процедуры `AfterConstruction` и `BeforeDesctruction` c обязательной
 директивой override:
 
-    TTestASP = class(TASPObject, ITest)
-    private
-      FData:TDataModule1;
-    protected
-     
-    public
-      procedure AfterConstruction; override;
-      procedure BeforeDestruction; override;
-    end;
+```delphi
+TTestASP = class(TASPObject, ITest)
+private
+  FData:TDataModule1;
+protected
+ 
+public
+  procedure AfterConstruction; override;
+  procedure BeforeDestruction; override;
+end;
+```
 
 реализуем процедуры AfterConstruction и BeforeDestruction в секции
 реализации:
 
-    procedure TTest.AfterConstruction;
-    begin
-      inherited;
-        FData:=TDataModule1.Create(nil);
-      end;
-      procedure TTest.BeforeDestruction;
-      begin
-        if Assigned(FData) then begin
-          FData.Query1.Active:=False;
-          FData.ADOConnection1.Connected:=False;
-          FData.Free;
-        end;
-        inherited;
+```delphi
+procedure TTest.AfterConstruction;
+begin
+  inherited;
+    FData:=TDataModule1.Create(nil);
+  end;
+  procedure TTest.BeforeDestruction;
+  begin
+    if Assigned(FData) then begin
+      FData.Query1.Active:=False;
+      FData.ADOConnection1.Connected:=False;
+      FData.Free;
     end;
+    inherited;
+end;
+```
 
 Теперь создадим в библиотеке типов новый метод
 и назовем его `QueryResponse`.
 Реализуем его следующим образом:
 
-    procedure TTest.QueryResponse;
-    var
-      S:string;
-      I,J:integer;
-    begin
-      S:=Request.Body.Item[1].Item[1];
-      if FData.ADOQuery1.Active then FData.ADOQuery1.Close;
-      FData.ADOQuery1.SQL.Clear;
-      FData.ADOQuery1.SQL.Add('Select * from EMP');
-      FData.ADOQuery1.SQL.Add('where name like '+CHR(39)+S+'%'+CHR(39));
-      FData.ADOQuery1.Active:=True;
-      if FData.ADOQuery1.RecordCount&gt;0 then begin
-        FData.ADOQuery1.First;
-        for J:=0 to FData.ADOQuery1.Fields.Count-1 do Response.Write(FData.ADOQuery1.Fields[J].FieldName+' ');
-        Response.Write('<BR>');
-        for I:=1 to FData.ADOQuery1.RecordCount do begin
-          for J:=0 to FData.ADOQuery1.Fields.Count-1 do Response.Write(FData.ADOQuery1.Fields[J].AsString+' ');
-          Response.Write('<BR>');
-          if I<FData.ADOQuery1.RecordCount then FData.ADOQuery1.Next;
-        end;
-      end;
+```delphi
+procedure TTest.QueryResponse;
+var
+  S:string;
+  I,J:integer;
+begin
+  S:=Request.Body.Item[1].Item[1];
+  if FData.ADOQuery1.Active then FData.ADOQuery1.Close;
+  FData.ADOQuery1.SQL.Clear;
+  FData.ADOQuery1.SQL.Add('Select * from EMP');
+  FData.ADOQuery1.SQL.Add('where name like '+CHR(39)+S+'%'+CHR(39));
+  FData.ADOQuery1.Active:=True;
+  if FData.ADOQuery1.RecordCount&gt;0 then begin
+    FData.ADOQuery1.First;
+    for J:=0 to FData.ADOQuery1.Fields.Count-1 do Response.Write(FData.ADOQuery1.Fields[J].FieldName+' ');
+    Response.Write('<BR>');
+    for I:=1 to FData.ADOQuery1.RecordCount do begin
+      for J:=0 to FData.ADOQuery1.Fields.Count-1 do Response.Write(FData.ADOQuery1.Fields[J].AsString+' ');
+      Response.Write('<BR>');
+      if I<FData.ADOQuery1.RecordCount then FData.ADOQuery1.Next;
     end;
-
+  end;
+end;
+```
 
 В этом методе динамически создается SQL-запрос на основе параметров,
 введенных клиентом в форму. Затем осуществляется обращение к
@@ -543,32 +556,35 @@ SQL-серверу, и возвращаемые данные помещаютс�
 установки так, чтобы они отвечали его требованиям. Для этого достаточно
 всего лишь отредактировать HTML-документ.
 
-В качестве примера определим в заголовке класса TTestASP (TestASPUnit.pas) две переменные,
-`FCompanyName:string` и `FCopyrightYear:string`,
-а в библиотеке типов - два новых свойства,
-`CompanyName:string` и `CopyrightYear:integer`.
+В качестве примера определим в заголовке класса TTestASP (TestASPUnit.pas)
+две переменные, `FCompanyName:string` и `FCopyrightYear:string`, а в
+библиотеке типов - два новых свойства, `CompanyName:string` и
+`CopyrightYear:integer`.
 
 Для методов Read и Write для этих свойств определим чтение и возврат данных из
 описанных ранее переменных.
 
 Добавим в библиотеку типов новый метод `ShowCopyright`, который реализуем следующим образом:
 
-    procedure TTestASP.ShowCopyright;
-    var
-      S:OLEVariant;
-    begin
-      S:=Format('Copyright (C) %d by %s',[FCopyrightYear,FCompanyName]);
-      if Assigned(Response) then Response.Write(S);
-    end;
+```delphi
+procedure TTestASP.ShowCopyright;
+var
+  S:OLEVariant;
+begin
+  S:=Format('Copyright (C) %d by %s',[FCopyrightYear,FCompanyName]);
+  if Assigned(Response) then Response.Write(S);
+end;
+```
 
 В созданном ранее файле TestASP.asp изменим VB-сценарии:
 
-    <% Set DelphiASPObj = Server.CreateObject("MyASP.Test")
-    DelphiASPObj.CompanyName = "My Company"
-    DelphiASPObj.CopyrightYear = 1999
-    DelphiASPObj.ShowCopyright
-    %>
-
+```vb
+<% Set DelphiASPObj = Server.CreateObject("MyASP.Test")
+DelphiASPObj.CompanyName = "My Company"
+DelphiASPObj.CopyrightYear = 1999
+DelphiASPObj.ShowCopyright
+%>
+```
 
 Если в файле TestASP.asp изменить имя компании, а это можно сделать при
 помощи любого текстового редактора, то все изменения будут отражены в
@@ -580,6 +596,3 @@ HTML-документе.
 интернет-ресурсам. Привлекательный и функциональный дизайн необходим,
 но, чтобы выжить, ваши страницы должны быть интерактивными.
 
-
-
-2004.04.08 Сергей Кривошеев
