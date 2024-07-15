@@ -1,15 +1,12 @@
 ---
 Title: Как сохранить Quick Report в TStream?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сохранить Quick Report в TStream?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses QRPrntr; 
      
@@ -46,4 +43,3 @@ Date: 01.01.2007
       stream.Free; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

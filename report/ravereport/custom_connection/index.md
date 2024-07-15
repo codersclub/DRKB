@@ -2,20 +2,14 @@
 Title: Пример использования настраиваемого соединения TRvCustomConnection
 Author: Akella
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Пример использования настраиваемого соединения TRvCustomConnection
 ==================================================================
 
-::: {.date}
-01.01.2007
-:::
+Пример использования настраиваемого соединения на основе компонента TRvCustomConnection:
 
-Пример использования настраиваемого соединения TRvCustomConnection
+[26_1.zip](26_1.zip) 9k
 
-[Пример использования настраиваемого соединения на основе компонента TRvCustomConnection](26_1.zip)
-
-Автор: Akella
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

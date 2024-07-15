@@ -7,12 +7,6 @@ Date: 01.01.2007
 Начало работы - техническая информация
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
-Начало работы - Техническая информация
-
 Лицензия на одного пользователя - Single User License Agreement
 
 This is a legal Agreement between you, as the end user, and Nevrona
@@ -112,11 +106,8 @@ of the Rights and Technical Data in Computer Software clause at
 Rave Reports, может быть получена на сайте Nevrona Designs. Для
 получения более подробной информации посетите один из слежующих сайтов:
 
-Техническая поддержка                        -
-http:/www.nevrona.com/support
+Техническая поддержка: http:/www.nevrona.com/support
 
-Добавления, советы и другая информация        -
-http:/www.nevrona.com/rave
+Добавления, советы и другая информация: http:/www.nevrona.com/rave
 
-Обновления                                        -
-http:/www.nevrona.com/rave/download.html
+Обновления: http:/www.nevrona.com/rave/download.html

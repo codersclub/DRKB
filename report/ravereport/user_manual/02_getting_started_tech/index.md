@@ -7,11 +7,7 @@ Date: 01.01.2007
 Начало работы - техническая информация
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
-Лицензия на одного пользователя - Single User License Agreement
+**Лицензия на одного пользователя - Single User License Agreement**
 
 This is a legal Agreement between you, as the end user, and Nevrona
 Designs. By opening the enclosed sealed disk package, or by using the
@@ -56,7 +52,7 @@ the Software to a single hard disk provided you keep the original solely
 for back-up or archival purposes. You may not copy the written materials
 accompanying the Software.
 
-Ограниченная гарантия - Limited Warranty
+**Ограниченная гарантия - Limited Warranty**
 
 1. Limited Warranty - Nevrona Designs warrants that the disks on which
 the Software is furnished to be free from defects in material and
@@ -104,7 +100,7 @@ the Government is subject to restrictions set forth in Section c(1)(ii)
 of the Rights and Technical Data in Computer Software clause at
 52.227-7013.
 
-Техническая поддержка
+**Техническая поддержка**
 
 Техническая поддержка, обновления и другая информация, относящаяся к
 Rave Reports, может быть получена на сайте Nevrona Designs. Для
