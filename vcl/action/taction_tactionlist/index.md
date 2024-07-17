@@ -2,15 +2,12 @@
 Title: Как в runtime добавить TAction в TActionList?
 Author: Dayana
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как в runtime добавить TAction в TActionList?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     var
 
@@ -20,6 +17,3 @@ Date: 01.01.2007
       NewAction.ActionList := ActionList1;
     end; 
 
-Автор: Dayana
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

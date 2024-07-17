@@ -2,15 +2,12 @@
 Title: Блокирование закладок TPageControl
 Author: Rouse\_, Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Блокирование закладок TPageControl
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit GSPageControl;
 
@@ -107,9 +104,3 @@ Date: 01.01.2007
      AllowChange:=GSPageControl1.Pages[GSPageControl1.NewPageIndex].Enabled
     end;
 
-
-
-
-Автор: Rouse\_, Krid
-
-Взято из <https://forum.sources.ru>

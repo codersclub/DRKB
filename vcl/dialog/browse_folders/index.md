@@ -8,9 +8,9 @@ Date: 01.01.2007
 Как вывести диалог «Обзор папок»
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Даниил Карапетян (delphi4all@narod.ru)
 
 Для вывода диалога "Обзор папок" существует функция SHBrowseForFolder.
 Для выбора того, какие папки будут выведены в диалоге, используется
@@ -45,14 +45,17 @@ CSIDL\_DESKTOP.
       Form1.Caption := s;
     end;
 
-Автор: Даниил Карапетян (delphi4all@narod.ru)
-
 Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)
 
 ------------------------------------------------------------------------
 
-    Uses ... ShlObj, ...
+Вариант 2:
 
+Author: Akella
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+    Uses ... ShlObj, ...
      
       private
         { Private declarations }
@@ -129,6 +132,3 @@ CSIDL\_DESKTOP.
     //использование
     dbeArcSended.Text := IncludeTrailingPathDelimiter(Selectdir(ParamStr(0)));
 
-Автор: Akella
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

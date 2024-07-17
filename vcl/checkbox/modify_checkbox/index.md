@@ -1,20 +1,19 @@
 ---
 Title: Видоизменяем чекбоксы в Delphi
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Видоизменяем чекбоксы в Delphi
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
 В WIN3.1 чекбоксы заполняются символом "X". В WIN95 и WINNT - символом
-"V". В тандартной палитре Delphi чекбоксы заполняются символом "X".
-Спрашивается - почему фирма Borland/Inprise не исправила значёк чекбокса
-для W95/W98 ?. Данный пример позволяет заполнять чекбокс такими значками
+"V". В стандартной палитре Delphi чекбоксы заполняются символом "X".
+Спрашивается - почему фирма Borland/Inprise не исправила значок чекбокса
+для W95/W98 ?
+
+Данный пример позволяет заполнять чекбокс такими значками
 как: "X", "V", "o", "закрашенным прямоугольником", или
 бриллиантиком.
 
@@ -431,16 +430,16 @@ Date: 01.01.2007
           fBoxLeft := Width - fRBoxWidth;
           fTextTop := (Height - fTextHeight) div 2;
           fTextLeft := 1;
-       //If fTextWidth > (Width - fBoxWidth - 4) then
-       //   fTextLeft := (Width - fBoxWidth - 4) -  fTextWidth;
+          //If fTextWidth > (Width - fBoxWidth - 4) then
+          //   fTextLeft := (Width - fBoxWidth - 4) -  fTextWidth;
         end;
      
-    // выводим текст в caption
+      // выводим текст в caption
       Canvas.Pen.Color := fFont.Color;
       Canvas.Brush.Color := fColor;
       Canvas.TextOut(fTextLeft, fTextTop, fCaption);
      
-    // Рисуем контур фокуса
+      // Рисуем контур фокуса
       if fFocus = True then
         Canvas.DrawFocusRect(Rect(fTextLeft - 1,
           fTextTop - 2,
@@ -459,8 +458,8 @@ Date: 01.01.2007
           Canvas.Brush.Color := clBtnFace;
         end;
      
-    // Создаём бокс clBtnFace когда кнопка мыши нажимается
-    // наподобие "стандартного" CheckBox
+      // Создаём бокс clBtnFace когда кнопка мыши нажимается
+      // наподобие "стандартного" CheckBox
       if fMouseState = msMouseDown then
         Canvas.Brush.Color := clBtnFace;
      
@@ -469,7 +468,7 @@ Date: 01.01.2007
         fBoxLeft + fRBoxWidth - 2,
         fBoxTop + fRBoxHeight - 2));
      
-    // Рисуем прямоугольный чекбокс
+      // Рисуем прямоугольный чекбокс
       Canvas.Brush.Color := clBtnFace;
       Canvas.Pen.Color := clGray;
       Canvas.MoveTo(fBoxLeft + fRBoxWidth - 1, fBoxTop);
@@ -493,28 +492,28 @@ Date: 01.01.2007
         fBoxTop + fRBoxHeight - 2);
       Canvas.LineTo(fBoxLeft, fBoxTop + fRBoxHeight - 2);
      
-    // Теперь он должен быть таким же как чекбокс в Delphi
+      // Теперь он должен быть таким же как чекбокс в Delphi
      
       if fChecked then
         begin
           Canvas.Pen.Color := clBlack;
           Canvas.Brush.Color := clBlack;
      
-       // Рисуем прямоугольник
+          // Рисуем прямоугольник
           if fType = cbRect then
             begin
               Canvas.FillRect(Rect(fBoxLeft + 4, fBoxTop + 4,
                 fBoxLeft + fRBoxWidth - 4, fBoxTop + fRBoxHeight - 4));
             end;
      
-       // Рисуем значёк "о"
+          // Рисуем значёк "о"
           if fType = cbBullet then
             begin
               Canvas.Ellipse(fBoxLeft + 4, fBoxTop + 4,
                 fBoxLeft + fRBoxWidth - 4, fBoxTop + fRBoxHeight - 4);
             end;
      
-       // Рисуем крестик
+          // Рисуем крестик
           if fType = cbCross then
             begin
           {Right-top to left-bottom}
@@ -536,7 +535,7 @@ Date: 01.01.2007
                 fBoxTop + fRBoxHeight - 4);
             end;
      
-       // Рисуем галочку
+          // Рисуем галочку
           if fType = cbMark then
             for I := 0 to 2 do
               begin
@@ -548,7 +547,7 @@ Date: 01.01.2007
                 Canvas.LineTo(fBoxLeft + 10, fBoxTop + 2 + I);
               end;
      
-       // Рисуем бриллиантик
+          // Рисуем бриллиантик
           if fType = cbDiamond then
             begin
               Canvas.Pixels[fBoxLeft + 06, fBoxTop + 03] := clBlack;
@@ -606,4 +605,3 @@ Date: 01.01.2007
     end.
     {===================================================================}
 
-Взято из <https://forum.sources.ru>

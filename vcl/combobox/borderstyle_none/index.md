@@ -8,11 +8,11 @@ Date: 01.01.2007
 Как у Комбобокса сделать BorderStyle := bsNone?
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
+
+Author: Smike
+
+Source: <https://forum.sources.ru>
 
     procedure TForm1.FormCreate(Sender: TObject);
 
@@ -22,16 +22,13 @@ Date: 01.01.2007
       CreateRectRgn(2, 2, ComboBox1.Width - 2, ComboBox1.Height - 2), True);
     end;
 
- 
-
-Автор: Smike
-
-Взято из <https://forum.sources.ru>
-
- 
 
 ------------------------------------------------------------------------
 Вариант 2:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
 
     unit Unit1;
 
@@ -90,6 +87,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: Krid

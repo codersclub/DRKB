@@ -1,15 +1,12 @@
 ---
 Title: TCheckBox в TDBGrid
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 TCheckBox в TDBGrid
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure DrawGridCheckBox(Canvas: TCanvas; Rect: TRect; Checked: boolean);
     var
@@ -48,4 +45,3 @@ OnColumnEnter:
           Options := Options + [dgEditing]
     end;
 
-Взято с <https://delphiworld.narod.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Как поместить TCheckBox внутри TRichEdit?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как поместить TCheckBox внутри TRichEdit?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для использования следующего примера, необходимо создать новую форму,
 перетащить на неё TRichEdit (RichEdit1) и создать checkbox (acb) в
@@ -28,4 +25,3 @@ Date: 01.01.2007
       Acb.Parent := RichEdit1;
     end;
 
-Взято из <https://forum.sources.ru>

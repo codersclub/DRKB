@@ -2,19 +2,14 @@
 Title: Над какой закладкой курсор в TTabControl
 Author: YoungHacker
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Над какой закладкой курсор в TTabControl
 ========================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: YoungHacker
-
-Получение позиции мышиного курсора для TabControl над какой закладкой
+Получение позиции мышиного курсора для TabControl - над какой закладкой
 находится курсор.
 
     function Form1.ItemAtPos(TabControlHandle : HWND; X, Y : Integer) : Integer;
@@ -29,6 +24,4 @@ Date: 01.01.2007
       Result := HitIndex;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

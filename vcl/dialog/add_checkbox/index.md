@@ -2,22 +2,16 @@
 Title: Как добавить в диалог TOpenDialog свой CheckBox?
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как добавить в диалог TOpenDialog свой CheckBox?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вообще, винда предоставляет возможность расширения некоторых стандартных
 диалогов с помощью шаблонов и hook-процедуры. Например, для
-OpenFileDialog\'а пишется к примеру, такой rc-скрипт с шаблоном
-
-
-myres.rc
+OpenFileDialog\'а пишется к примеру, такой rc-скрипт с шаблоном **myres.rc**:
 
     OFT DIALOG -1, 1, 304, 62
     STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS
@@ -30,16 +24,11 @@ myres.rc
     }
 
 
-потом он компилится
+потом он компилится:
 
- 
+    brcc32.exe myres.rc
 
-brcc32.exe myres.rc
-
-
-
-
-и получается myres.res, который линкуется к проекту директивой {$R}
+и получается "myres.res", который линкуется к проекту директивой `{$R}`
 (удобнее, конечно создавать и компилить шаблон в каком-нить редакторе
 ресурсов, типа Resource Workshop\'а).
 
@@ -53,11 +42,8 @@ OK, etc.
 
 Короче, вот пример кода
 
- 
-
     uses
      commdlg;
-
      
     {$R *.dfm}
      
@@ -104,8 +90,6 @@ OK, etc.
     end;
     end;
      
-     
-     
     procedure TForm1.Button1Click(Sender: TObject);
     begin
      FillChar(f,sizeof(f),0);
@@ -130,12 +114,4 @@ OK, etc.
      // показываем диалог
      if GetOpenFileName(ofn) then ShowMessage(ofn.lpstrFile);
     end;
-     
 
-
-
-Автор: Krid
-
-Взято из <https://forum.sources.ru>
-
- 

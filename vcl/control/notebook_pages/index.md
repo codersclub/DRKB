@@ -8,14 +8,11 @@ Date: 01.01.2007
 Добавление и удаление страниц TNotebook
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+> Как во время выполнения программы динамически добавлять и удалять
+> страницы динамически созданного NoteBook?
 
-Автор: Mark Johnson
 
-Как во время выполнения программы динамически добавлять и удалять
-страницы динамически созданного NoteBook?
+Вариант 1:
 
     procedure AddPage(nbk: TNotebook; tabset: TTabSet; const pagename: string);
     { Добавляем новую страницу к NoteBook и новую закладку к tabset
@@ -96,6 +93,10 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
     procedure TForm1.Button1Click(Sender: TObject);
     var
       NewPage: TWinControl;
@@ -118,9 +119,4 @@ Date: 01.01.2007
         Parent := NewPage;
       end;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

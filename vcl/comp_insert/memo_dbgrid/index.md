@@ -1,15 +1,25 @@
 ---
 Title: TMemo в TDBGrid
+Author: Klaus Herrmann 
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 TMemo в TDBGrid
 ===============
 
-::: {.date}
-01.01.2007
-:::
+Распространенной проблемой при работе с DBGrid является то, что этот компонент не может отображать поля TMemo, многострочные столбцы, графику...
+
+Есть несколько хороших бесплатных компонентов для решения этой проблемы.
+Лучшим из них, безусловно, является «DBGRIDPLUS», который поставляется с полными исходными кодами.
+Однако этот компонент не позволяет редактировать текст в полях-метках.
+
+Поклонники Delphi, купившие версию Delphi, поставляемую с исходными кодами VCL, могут решить эту проблему:
+
+Откройте dbgrids.pas и внесите следующие изменения:
+(Чтобы иметь возможность редактирования заметок в вашем приложении,
+вам нужно просто добавить измененную версию dbgrids.pas в раздел использования)
 
     {
     A common problem when working with DBGrid is, that this component can't display TMemo fields,
@@ -26,7 +36,7 @@ TMemo в TDBGrid
     function TCustomDBGrid.GetEditLimit: Integer;
     begin
       Result := 0;
-      if Assigned(SelectedField) and (SelectedField.DataType in [ftString, ftWideString, ftMemo]) then <-- Add
+      if Assigned(SelectedField) and (SelectedField.DataType in [ftString, ftWideString, ftMemo]) then // <-- Add
         Result := SelectedField.Size;
     end;
      
@@ -36,13 +46,13 @@ TMemo в TDBGrid
       if FDatalink.Active then
       with Columns[RawToDataColumn(ACol)] do
         if Assigned(Field) then
-          Result := Field.AsString; <-- Change this.
+          Result := Field.AsString; // <-- Change this.
       FEditText := Result;
     end;
      
     {
-    Just compare theese edited functions with the original ones, and you will know what to change.
-    To get multiline cell support (not in memo fields!) for DBGridPlus, send me an email and i can send you the changed DBGridPlus.pas file.
+    Просто сравните эти отредактированные функции с исходными, и вы поймете, что нужно изменить.
+    Чтобы получить поддержку многострочных ячеек (не в полях с заметками!) для DBGridPlus,
+     пришлите мне электронное письмо, и я смогу выслать вам измененный файл DBGridPlus.pas.
     }
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

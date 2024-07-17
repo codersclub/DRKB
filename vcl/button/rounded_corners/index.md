@@ -1,15 +1,12 @@
 ---
 Title: Кнопка с закругленными краями
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Кнопка с закругленными краями
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     unit RVButton;
      
@@ -201,6 +198,3 @@ Date: 01.01.2007
      
      end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

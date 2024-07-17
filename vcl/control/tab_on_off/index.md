@@ -1,15 +1,13 @@
 ---
 Title: Включение и выключение закладки TNotebook
+Author: Xavier Pacheco
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Включение и выключение закладки TNotebook
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот хороший трюк от Xavier Pacheco:
 
@@ -66,9 +64,5 @@ Date: 01.01.2007
     end;
      
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

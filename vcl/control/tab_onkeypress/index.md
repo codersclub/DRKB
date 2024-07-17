@@ -1,15 +1,14 @@
 ---
-Title: События OnKeyPress и OnKeyDown не вызываются для Tab - как определить её нажатие?
+Title: События OnKeyPress и OnKeyDown для клавиши Tab
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
-События OnKeyPress и OnKeyDown не вызываются для Tab - как определить её нажатие?
+События OnKeyPress и OnKeyDown для клавиши Tab
 ==================================================================================
 
-::: {.date}
-01.01.2007
-:::
+> События OnKeyPress и OnKeyDown не вызываются для Tab - как определить её нажатие?
 
     type
       TForm1 = class(TForm)
@@ -37,8 +36,6 @@ Date: 01.01.2007
       if Key = VK_TAB then
         Form1.Caption := 'Tab Key Down!';
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

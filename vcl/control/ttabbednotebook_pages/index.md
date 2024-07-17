@@ -1,15 +1,12 @@
 ---
 Title: Доступ к страницам TTabbedNotebook
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Доступ к страницам TTabbedNotebook
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 При добавлении компонентов во время выполнения программы, вам необходимо
 присвоить для каждого компонента свойству parent (контейнер)
@@ -57,4 +54,3 @@ Pages. В следующим коде показано создание кноп
 
     NewButton.Parent := TWinControl(TabSet1.Tabs.Objects[1])
 
-Взято с <https://delphiworld.narod.ru>

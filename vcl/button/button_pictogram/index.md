@@ -1,15 +1,12 @@
 ---
 Title: Создать неактивные пиктограммы для TSpeedButton и TBitBtn во время выполнения
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Создать неактивные пиктограммы для TSpeedButton и TBitBtn во время выполнения
 =============================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure AddDisableBMP(SB : array of TObject);
      var
@@ -68,4 +65,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

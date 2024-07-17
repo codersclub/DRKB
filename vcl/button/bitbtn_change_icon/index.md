@@ -1,15 +1,12 @@
 ---
 Title: Смена иконки BitBtn во время работы приложения
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Смена иконки BitBtn во время работы приложения
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
 Иконка компонента является инкапсулированным объектом, требующим для
 хранения изображения некоторый участок памяти. Следовательно, при замене
@@ -51,9 +48,4 @@ Date: 01.01.2007
         ImageList1.FileLoad(rtBitMap, OpenDialog1.FileName, clBtnFace);
       label1.Caption := 'Количество иконок = ' + IntToStr(ImageList1.Count);
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

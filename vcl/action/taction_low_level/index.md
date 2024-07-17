@@ -1,20 +1,18 @@
 ---
 Title: Создание и регистрация TAction на низком уровне
 Date: 01.01.2007
+Source: <https://atrussk.ru/delphi/>
 ---
 
 
 Создание и регистрация TAction на низком уровне
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
-
-Функция CreateAction (AOwner: TComponent;ActionClass: TBasicActionClass
-):TBasicAction;
-
 Модуль: ActnList
+
+    CreateAction (AOwner: TComponent;
+                  ActionClass: TBasicActionClass
+                 ):TBasicAction;
 
 Функция создает действие (Action) заданного типа, которое отображается
 во время проектирования в редакторе списка Action.
@@ -26,16 +24,12 @@ Date: 01.01.2007
 Resource процедуры RegisterActions для инициализации значений
 action-объекта, основанного на данном параметре.
 
-Процедура EnumRegisteredActions (Proc: TEnumActionProc;Info: Pointer );
+    EnumRegisteredActions (Proc: TEnumActionProc;Info: Pointer);
+    TE numActionProc = Procedure(const Category: string;
+                                 ActionClass:TBasicActionClass;
+                                 Info: Pointer ) of object;
 
-Модуль: ActnList
-
-TEnumActionProc = Procedure( const Category: string;ActionClass:
-TBasicActionClass;
-
-Info: Pointer ) of object;
-
-Процедура производит итерацию списка зарегистрированных действий
+Процедура EnumRegisteredActions производит итерацию списка зарегистрированных действий
 (Action), передавая их процедуре повторного вызова, определенной в
 параметре Proc.
 
@@ -45,24 +39,19 @@ Action. Для потомков TContainedAction параметр Category до�
 классов значение данного параметра может представлять собой пустую
 строку.
 
-Процедура RegisterActions (const CategoryName: string;const AClasses:
-array of TBasicActionClass;Resource: TcomponentClass );
+    RegisterActions (const CategoryName: string;
+                     const AClasses:array of TBasicActionClass;
+                     Resource: TcomponentClass);
 
-Модуль: ActnList
-
-Процедура регистрирует множество Action так, чтобы ими можно было
+Процедура RegisterActions регистрирует множество Action так, чтобы ими можно было
 оперировать с помощью редактора списка Action (Action list editor).
 
 Зарегистрированный класс будет отображаться в "Action list editor" при
 выборе команды редактора "New Action".
 
-Процедура UnRegisterActions (const AClasses: array of TBasicActionClass
-);
+    UnRegisterActions (const AClasses: array of TBasicActionClass);
 
-Модуль: ActnList
-
-Отменяет регистрацию множества Action, зарегистрированных ранее
+Процедура UnRegisterActions отменяет регистрацию множества Action, зарегистрированных ранее
 процедурой RegisterActions. Множество Action определяется параметром
-AClasses
+AClasses.
 
-Взято с <https://atrussk.ru/delphi/>

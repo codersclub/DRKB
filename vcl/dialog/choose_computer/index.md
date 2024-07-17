@@ -1,22 +1,18 @@
 ---
-Title: Как показать Choose Computer диалог?
+Title: Как показать диалог Choose Computer?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Как показать Choose Computer диалог?
+Как показать диалог Choose Computer?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       The "Choose Computer" is a dialog provided by network services 
       (NTLANMAN.DLL) for Windows 2k/NT/XP 
       to display the servers and their computers. 
     } 
-     
      
     type 
       TServerBrowseDialogA0 = function(hwnd: HWND; pchBuffer: Pointer; cchBufSize: DWORD): bool;  
@@ -54,4 +50,3 @@ Date: 01.01.2007
       label1.Caption := ShowServerDialog(Form1.Handle); 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

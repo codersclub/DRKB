@@ -1,15 +1,13 @@
 ---
 Title: Как сделать popup TComboBox по позиции курсора в TMemo?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать popup TComboBox по позиции курсора в TMemo?
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
 
     unit CBoxInMemo;
      
@@ -75,4 +73,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -1,18 +1,15 @@
 ---
-Title: Delphi 7 and FastNet components
+Title: Delphi 7 и компоненты FastNet
 Date: 01.01.2007
 ---
 
 
-Delphi 7 and FastNet components
+Delphi 7 и компоненты FastNet
 ===============================
 
-::: {.date}
-01.01.2007
-:::
+> Где находятся компоненты FastNet в Delphi 7?
 
-Where are the FastNet Components in Delphi 7?
+Компоненты Fastnet больше не входят в состав Delphi.
 
-The Fastnet components are no longer bundled with Delphi. It appears
-Netmasters does have a version compatible with Delphi 7 which can be
-purchased at: http://www.netmastersllc.com/
+Похоже, что у Netmasters есть версия, совместимая с Delphi 7,
+которую можно приобрести по адресу: http://www.netmastersllc.com/.

@@ -1,19 +1,17 @@
 ---
 Title: Как убрать публичное свойство компонента?
-Author: [Nomadic](mailto:Nomadic@newmail.ru)
+Author: Nomadic (mailto:Nomadic@newmail.ru)
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как убрать публичное свойство компонента?
 =========================================
 
-::: {.date}
-01.01.2007
-:::
+Из TForm property не убиpал, но из TWinControl было дело.
 
-Из TForm property не убиpал, но из TWinControl было дело. А дело было
-так:
+А дело было так:
 
     interface
      
@@ -37,9 +35,7 @@ Date: 01.01.2007
 Тепеpь property 'Hint' в Object Inspector не видно.
 
 Рад, если чем-то помог.
+
 Если будут глюки, умоляю сообщить.
 Такой подход у меня сплошь и pядом.
 
-Автор: [Nomadic](mailto:Nomadic@newmail.ru)
-
-Взято с <https://delphiworld.narod.ru>

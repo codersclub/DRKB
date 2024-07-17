@@ -1,15 +1,12 @@
 ---
 Title: Как открыть диалог смены системного времени?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как открыть диалог смены системного времени?
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Shellapi; 
@@ -19,4 +16,3 @@ Date: 01.01.2007
       ShellExecute(Handle, 'open', 'control', 'date/time', nil, SW_SHOW); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

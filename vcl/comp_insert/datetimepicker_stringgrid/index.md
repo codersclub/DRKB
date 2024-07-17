@@ -2,15 +2,12 @@
 Title: TDateTimePicker в TStringGrid
 Author: Smike
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 TDateTimePicker в TStringGrid
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -73,6 +70,3 @@ TDateTimePicker в TStringGrid
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: Smike

@@ -1,15 +1,12 @@
 ---
-Title: Как показать Choose Domain диалог?
+Title: Как показать диалог Choose Domain?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Как показать Choose Domain диалог?
+Как показать диалог Choose Domain?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       If you are developing network software for Windows NT,
@@ -99,4 +96,3 @@ Date: 01.01.2007
       label1.Caption := ShowServerDialog(Form1.Handle);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

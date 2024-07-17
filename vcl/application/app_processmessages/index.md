@@ -1,15 +1,13 @@
 ---
 Title: Замена Application.ProcessMessages
-Date: 01.01.2007
+Author: ssk, ucad@pisem.net
+Date: 07.09.2004
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Замена Application.ProcessMessages
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Замена штатного Application.ProcessMessages
@@ -69,4 +67,3 @@ Date: 01.01.2007
      while ProcessMessage(Msg) do {loop};
     end;
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

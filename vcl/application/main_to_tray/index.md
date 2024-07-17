@@ -2,21 +2,15 @@
 Title: Как сворачивать все приложение при сворачивании неглавного окна?
 Author: Alex
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как сворачивать все приложение при сворачивании неглавного окна?
 ================================================================
 
-::: {.date}
-01.01.2007
-:::
-
-     
-        procedure WMActivateApp(var Msg: TWMActivateApp); message WM_ACTIVATEAPP;
-        procedure WMSysCommand(var Msg: TWMSysCommand); message WM_SYSCOMMAND;
-     
-
+    procedure WMActivateApp(var Msg: TWMActivateApp); message WM_ACTIVATEAPP;
+    procedure WMSysCommand(var Msg: TWMSysCommand); message WM_SYSCOMMAND;
      
     ...
     procedure Form2.WMActivateApp(var Msg: TWMActivateApp);
@@ -35,10 +29,7 @@ Date: 01.01.2007
       else
         inherited;
     end;
-     
+
 
 Теперь при сворачивании формы сворачиваеться все приложение.
 
-Автор: Alex
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

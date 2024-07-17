@@ -2,17 +2,12 @@
 Title: Как добавить TCheckBox в TStringGrid?
 Author: Joel E. Cant.
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как добавить TCheckBox в TStringGrid?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Joel E. Cant.
 
 Пример демонстрирует добавление любого количества чекбоксов в
 StringGrid. В этом примере необходимо добавить TPanel, а в саму панель
@@ -102,4 +97,3 @@ StringGrid. В этом примере необходимо добавить TPa
       if not (gdFixed in State) then set_checkbox_alignment;
     end;
 
-Взято из <https://forum.sources.ru>

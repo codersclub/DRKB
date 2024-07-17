@@ -1,15 +1,12 @@
 ---
 Title: Несколько колонок в TComboBox
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Несколько колонок в TComboBox
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.ComboBox1DrawItem(Control: TWinControl; 
       Index: Integer; Rect: TRect; State: TOwnerDrawState); 
@@ -99,4 +96,3 @@ Date: 01.01.2007
       Combobox1.Style := csOwnerDrawFixed; 
     end;
 
-Взято с <https://delphiworld.narod.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Изменяем цвет TPageControl
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Изменяем цвет TPageControl
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     type 
       TTabSheet = class(ComCtrls.TTabSheet) 
@@ -81,8 +78,6 @@ Date: 01.01.2007
         end; 
       end; 
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

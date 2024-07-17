@@ -7,9 +7,9 @@ Date: 01.01.2007
 Кнопка с многострочным заголовком
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 (https://delphiworld.narod.ru)
 
     procedure TForm1.Button1Click(Sender: TObject); 
     var 
@@ -19,15 +19,12 @@ Date: 01.01.2007
       SetWindowLong(Button1.Handle, GWL_STYLE, i or BS_MULTILINE); 
       Button1.Caption := 'Delphi World - ' + #13#10 + 'лучше не бывает!';
     end;
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 (https://delphiworld.narod.ru)
 
 Приведу способ, как сделать кнопку с тремя (или более) строчками текста.
 Разместите на форме компонент TBitBtn и задайте ему достаточно длинный
@@ -54,9 +51,3 @@ OnCreate как показано ниже:
       DrawText(Glyph.Canvas.Handle, Buff, StrLen(Buff), R,
         DT_CENTER or DT_WORDBREAK);
     end;
-     
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

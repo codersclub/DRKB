@@ -1,15 +1,12 @@
 ---
 Title: Как создать каретку своей собственной формы?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как создать каретку своей собственной формы?
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       The example below demonstrates creating custom caret: 
@@ -128,4 +125,3 @@ Date: 01.01.2007
       end 
     end 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

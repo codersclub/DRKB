@@ -1,20 +1,17 @@
 ---
 Title: Синхронизация TTabSet c TListBox
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Синхронизация TTabSet c TListBox
 ================================
 
-::: {.date}
-01.01.2007
-:::
-
 Что-то аналогичное я делал раньше, тем не менее, вместо Listbox я
 использовал dbGrid со следующими опциями:
 
-[dgAlwaysShowEditor,dgTabs,dgRowSelect,dgAlwaysShowSelection,dgConfirmDelete,
+[dgAlwaysShowEditor, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete,
 dgCancelOnExit]
 
 Кроме того, я привел код, который я использовал в ответ на щелчок на
@@ -50,10 +47,3 @@ dgCancelOnExit]
       end;
     end;
 
- 
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
