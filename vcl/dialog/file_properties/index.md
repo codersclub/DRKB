@@ -1,15 +1,12 @@
 ---
 Title: Как показать File Properties диалог?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как показать File Properties диалог?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     { This code shows the standard file properties dialog like in Windows Explorer } 
      
@@ -36,4 +33,3 @@ Date: 01.01.2007
     PropertiesDialog(Opendialog1.FileName); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

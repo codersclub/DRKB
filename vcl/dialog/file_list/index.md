@@ -1,15 +1,12 @@
 ---
 Title: File list view in file dialogs
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 File list view in file dialogs
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     // If an application asks user to select an icon, it's
     // more convenient for the user to see list of files as
@@ -73,4 +70,3 @@ File list view in file dialogs
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

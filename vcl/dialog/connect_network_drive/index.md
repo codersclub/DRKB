@@ -7,9 +7,9 @@ Date: 01.01.2007
 Диалог подключения сетевого диска
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://delphiworld.narod.ru>
 
     procedure TStartForm.NetBtnClick(Sender: TObject);
     var
@@ -40,9 +40,14 @@ Date: 01.01.2007
       OldDrives.Free;
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Dimka Maslov, mainbox@endimus.ru
+
+Date: 21.05.2002
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Открытие диалогового окна «Подключение сетевого диска»

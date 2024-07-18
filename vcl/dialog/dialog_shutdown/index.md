@@ -1,15 +1,15 @@
 ---
-Title: Как вызвать Shutdown Windows диалог?
+Title: Как вызвать диалог Shutdown Windows?
 Date: 01.01.2007
 ---
 
 
-Как вызвать Shutdown Windows диалог?
+Как вызвать диалог Shutdown Windows?
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     uses ComObj;
      
@@ -23,9 +23,14 @@ Date: 01.01.2007
       shell.ShutdownWindows;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Gua, gua@ukr.net
+
+Date: 18.07.2002
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Открытие диалогового окна "Завершение работы Windows"
