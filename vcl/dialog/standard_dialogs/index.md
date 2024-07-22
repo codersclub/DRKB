@@ -1,19 +1,16 @@
 ---
 Title: TOpenDialog, TSaveDialog, TOpenPictureDialog и TSavePictureDialog
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 TOpenDialog, TSaveDialog, TOpenPictureDialog и TSavePictureDialog
 =================================================================
 
-::: {.date}
-01.01.2007
-:::
+_Перевод одноимённой статьи с сайта delphi.about.com_
 
-Перевод одноимённой статьи с сайта delphi.about.com )
-
-Стандарные диалоговые окошки
+**Стандарные диалоговые окошки**
 
 Практически любое приложение Windows использует стандартные диалоги,
 встроенные в операционную систему, для открытия и сохранения файлов,
@@ -28,7 +25,7 @@ TOpenDialog, TSaveDialog, TOpenPictureDialog и TSavePictureDialog
 стандартных диалогов являются невидимыми, поэтому Вы не сможете изменить
 дизайн такого диалога во время разработки приложения.
 
-  TOpenDialog и TSaveDialog
+**TOpenDialog и TSaveDialog**
 
 Диалоговые окошки File Open и File Save имеют несколько общих свойств.
 File Open в основном используется для выбора и открытия файлов, в то
@@ -40,11 +37,8 @@ TOpenDialog и TSaveDialog:
 Свойство Options предназначено для задания конечного вида окна.
 Например, при помощи следующего кода:
 
-with OpenDialog1 do
-
-Options := Options +
-
-  [ofAllowMultiSelect, ofFileMustExist];
+    with OpenDialog1 do
+      Options := Options + [ofAllowMultiSelect, ofFileMustExist];
 
 мы позволим пользователю выбирать несколько файлов, а так же заставим
 генерироваться сообщение об ошибке, если пользователь выберет
@@ -54,9 +48,7 @@ Options := Options +
 показана при создании диалога. Следующий код установит начальную
 директорию, из которой было запущено приложение:
 
-SaveDialog1.InitialDir :=
-
-   ExtractFilePath(Application.ExeName);
+    SaveDialog1.InitialDir := ExtractFilePath(Application.ExeName);
 
 Свойство Filter содержит список типов файлов, которые сможет выбирать
 пользователь. Когда пользователь выберет тип файлов, то в диалоговом
@@ -68,14 +60,12 @@ SaveDialog1.InitialDir :=
 описание и расширение для данного типа файлов, разделённые вертикальной
 чертой:
 
-OpenDialog1.Filter :=
-
-\'Text files (*.txt)\|*.txt\|All files (*.*)\|*.*\';
+    OpenDialog1.Filter := 'Text files (*.txt)|*.txt|All files (*.*)|*.*';
 
 Свойство FileName. Когда пользователь нажмёт на диалоге кнопку OK, то
 это свойство будет содержать полный путь и имя выбранного файла.
 
-  Вызов диалогового окошка
+**Вызов диалогового окошка**
 
 Для создания и отображения стандартного диалога необходимо выполнить
 метод Execute для нужного диалога. За исключением диалогов TFindDialog и
@@ -87,14 +77,13 @@ Execute вернул True значит пользователь нажал OK и
 щелчёк по файлу либо нажал Enter на клавиатуре, иначе, если  была нажата
 кнопка Cancel, клавиша Esc или Alt-F4, будет возвращено значение False.
 
-if OpenDialog1.Execute then
-
-ShowMessage(OpenDialog1.FileName);
+    if OpenDialog1.Execute then
+      ShowMessage(OpenDialog1.FileName);
 
 Этот код показывает диалог File Open и, если пользователь нажал
 "Открыть" (Open), то будет показано имя выбранного файла.
 
-Использование только кода
+**Использование только кода**
 
 Чтобы работать диалогом Open (или любым другим) не помещая при этом на
 форму компонент OpenDialog, можно воспользоваться следующим кодом:
@@ -112,29 +101,28 @@ ShowMessage(OpenDialog1.FileName);
 Обратите внимание, что перед вызовом Execute, можно установить различные
 свойства компонента OpenDialog.
 
-  TOpenPictureDialog и TSavePictureDialog  
+**TOpenPictureDialog и TSavePictureDialog**
 
 Эти два диалога есть ничто иное как обычные File Open и File Save с
 дополнительной возможностью предварительного просмотра выбранной
 картинки.
 
-  Мой Блокнот
+**Мой Блокнот**
 
 А теперь предлагаю применить теорию на практике. Создадим простейший
 блокнот, и посмотрим как работают диалоговые окошки Open и Save:
 
 Для создания блокнота проделаем следующее:
 
-. Запустите Delphi и выберите в меню File-New Application.
+- Запустите Delphi и выберите в меню File-New Application.
+- Поместите на форму Memo, OpenDialog, SaveDialog и две кнопки.
+- Переименуйте Button1 в btnOpen, а Button2 в btnSave.
 
-. Поместите на форму Memo, OpenDialog, SaveDialog и две кнопки.
-
-. Переименуйте Button1 в btnOpen, а Button2 в btnSave.
-
-  Код
+Код
 
 1. Поместите в событие формы FormCreate следующий код:
 
+    ```delphi
     procedure TForm1.FormCreate(Sender: TObject);
     begin
      with OpenDialog1 do begin
@@ -148,13 +136,14 @@ ShowMessage(OpenDialog1.FileName);
      end;
      Memo1.ScrollBars := ssBoth;
     end;
+    ```
 
-Этот код устанавливает некоторые свойства диалога Open как было описано
-в начале статьи.
+    Этот код устанавливает некоторые свойства диалога Open как было описано
+    в начале статьи.
 
-2. Добавьте следующий код в событие Onclick для кнопок btnOpen и
-btnSave:
+2. Добавьте следующий код в событие Onclick для кнопок btnOpen и btnSave:
 
+    ```delphi
     procedure TForm1.btnOpenClick(Sender: TObject);
     begin
      if OpenDialog1.Execute then begin
@@ -165,7 +154,6 @@ btnSave:
      end;
     end;
      
-     
     procedure TForm1.btnSaveClick(Sender: TObject);
     begin
      SaveDialog1.FileName := Form1.Caption;
@@ -175,7 +163,7 @@ btnSave:
        Form1.Caption:=SaveDialog1.FileName;
      end;
     end;
+    ```
 
 Теперь можно смело запускать проект
 
-Взято из <https://forum.sources.ru>

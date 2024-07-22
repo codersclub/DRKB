@@ -1,6 +1,5 @@
 ---
 Title: Перемещение изображений по форме с помощью мыши
-Author: Павел
 Date: 01.01.2007
 ---
 
@@ -8,11 +7,11 @@ Date: 01.01.2007
 Перемещение изображений по форме с помощью мыши
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Павел
+Author: Павел (yanval@yandex.ru)
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Во время работы над одной программой предо мной встала задача
 организации перемещения нескольких изображений пользователем с помощью
@@ -112,7 +111,7 @@ Image, присвоим их свойству Tag значения от 1 до n
 по форме мерцания не избежать. Буду благодарен тому, кто покажет
 обратное. Ну в общем применение известных способов, например
 
-MainForm.ControlStyle := MainForm.ControlStyle + [csOpaque];
+    MainForm.ControlStyle := MainForm.ControlStyle + [csOpaque];
 
 или процедуры Invalidate мне не помогло.
 
@@ -120,11 +119,10 @@ MainForm.ControlStyle := MainForm.ControlStyle + [csOpaque];
 Михаила Христосенко "Перемещение Image\'a по форме во время работы
 программы". Применение метода
 
-(Sender as TImage).SetBounds((Sender as TImage).Left + x - x0, (Sender
-as
-
-TImage).Top + y - y0, (Sender as TImage).width, (Sender as
-TImage).height);
+    (Sender as TImage).SetBounds((Sender as TImage).Left + x - x0,
+                                 (Sender as TImage).Top + y - y0,
+                                 (Sender as TImage).width,
+                                 (Sender as TImage).height);
 
 в процедуре Image1MouseMove, рекомендованое Михаилом привело к снижению
 мерцания, но не избавило от него. Более того, в взрослых программах,
@@ -145,7 +143,8 @@ ImageForm. ImageForm относится к Available forms - это действ
 Для того, чтобы ImageForm перемещалась за Image1 создаём следующую
 процедуру:
 
-    procedure TImageForm.Image1MouseDown(Sender: TObject; Button: TMouseButton;
+    procedure TImageForm.Image1MouseDown(Sender: TObject;
+      Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     const
       SC_DragMove = $F012;
@@ -189,20 +188,18 @@ ImageForm. ImageForm относится к Available forms - это действ
 
 Другой вариант - разместить на форме Timer с незначительным интервалом и
 разместить вышеприведённый код в процедуре OnTimer, указав в конце
-Timer1.Enabled:=false;
+`Timer1.Enabled:=false;`
 
 Последний штрих - установите "Отображать содержимое окна при его
 перетаскивании" с помощью следующей процедуры
 
-B: Bool; //Объявите B где-нибудь после implementation
+    B: Bool; //Объявите B где-нибудь после implementation
 
 В FormCreate включите следующее
 
-B := True;
-
-SystemParametersInfo(SPI\_SETDRAGFULLWINDOWS, 0, @B, SPIF\_SENDCHANGE)
-
-// Не проверял
+    B := True;
+    SystemParametersInfo(SPI_SETDRAGFULLWINDOWS, 0, @B, SPIF_SENDCHANGE)
+    // Не проверял
 
 Ура! В созданная таким образом программе перемещаемые изображения не
 мерцают.
@@ -215,21 +212,17 @@ SystemParametersInfo(SPI\_SETDRAGFULLWINDOWS, 0, @B, SPIF\_SENDCHANGE)
 Ну вот и всё. Надеюсь, вам понравится. Обругать меня вы можете по адресу
 yanval@yandex.ru
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
  
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Author: Пётр Соболь
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
 Перетаскивание картинки мышью
-
- 
-
-Автор: Пётр Соболь
 
     type
       TMouseState = (msNormal, msDragging);
@@ -294,8 +287,3 @@ DelphiWorld 6.0
         Label1.Caption := Format('(%d, %d)', [-Left, -Top]); // отображение координат
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

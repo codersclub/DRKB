@@ -2,17 +2,12 @@
 Title: Перетаскивание объектов
 Author: Павел
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Перетаскивание объектов
 =======================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Павел
 
 Свойства DragMode, DragCursor, методы BeginDrag, OnDragOver, OnDragDrop,
 OnEndDrag, OnStartDrag, параметр Accept
@@ -287,6 +282,4 @@ TListBox; списки ListBox готовы принять информацию 
     end;
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

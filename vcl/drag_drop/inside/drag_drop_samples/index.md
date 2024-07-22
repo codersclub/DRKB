@@ -1,16 +1,13 @@
 ---
 Title: Примеры использования Drag & Drop для различных визуальных компонентов
 author: Борис Новгородов
-Date: 01.01.2002
+Date: 12.12.2002
+Source: www.emanual.ru
 ---
 
 
 Примеры использования Drag & Drop для различных визуальных компонентов
 ======================================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Перетаскивание информации с помощью мыши стало стандартом для программ,
 работающих в Windows. Часто это бывает удобно и позволяет добиться более
@@ -44,9 +41,9 @@ dmAutomatic, а у приемника пишем обработчики собы
       ACol, ARow: Integer;
     begin
       StringGrid2.MouseToCell( X, Y, ACol, ARow);
-    // находим, над какой ячейкой произвели Drop
+      // находим, над какой ячейкой произвели Drop
       StringGrid2.Cells[ Acol, Arow] := Edit1.Text;
-    //  записываем в нее содержимое Edit1
+      //  записываем в нее содержимое Edit1
     end;
 
 Теперь рассмотрим копирование в упорядоченный список ListBox1 из другого
@@ -77,14 +74,14 @@ ListBox:
       begin
         ListBox2.Items.Add(ListBox1.Items[ListBox1.ItemIndex]);
         ListBox1.Items.Delete(ListBox1.ItemIndex);
-      //удаляем перенесенный элемент
+        //удаляем перенесенный элемент
       end
       else          //внутренняя перестановка
       begin
         s := ListBox2.Items[ListBox2.ItemIndex];
         ListBox2.Items.Delete(ListBox2.ItemIndex);
         ListBox2.Items.Insert(ListBox2.ItemAtPos(Point(X, Y), False), s);
-      //находим, в какую позицию переносить и вставляем
+        //находим, в какую позицию переносить и вставляем
       end;
     end;
 
@@ -96,7 +93,7 @@ ListBox2DragOver, а в OnDragDrop напишем
     if not CheckBox1.Checked then  // при включении добавляется в конец текста
     begin
      Memo1.SelStart := LoWord(Memo1.Perform(EM_CHARFROMPOS, 0, MakeLParam(X,Y)));
-        // устанавливаем позицию вставки согласно координатам мыши
+       // устанавливаем позицию вставки согласно координатам мыши
      Memo1.SelText := TListBox(Source).Items[TListBox(Source).ItemIndex];
     end
       else
@@ -141,16 +138,16 @@ OnDragOver разрешим прием из ListBox2 и из себя же:
       begin
         Item := ListView1.DropTarget;
         if Item <> nil then
-        //  случай перетаскивания на Caption
+          //  случай перетаскивания на Caption
           if Item.SubItems.Count = 0 then
             Item.SubItems.Add(ListBox2.Items[ListBox2.ItemIndex])
-        //  добавляем SubItem, если их еще нет
+            //  добавляем SubItem, если их еще нет
           else
             Item.SubItems[0]:=ListBox2.Items[ListBox2.ItemIndex]
         //  иначе заменяем имеющийся SubItem
         else
         begin
-       // при перетаскивании на пустое место создаем новый элемент
+          // при перетаскивании на пустое место создаем новый элемент
           Item := ListView1.Items.Add;
           Item.Caption := ListBox2.Items[ListBox2.ItemIndex];
         end;
@@ -159,19 +156,19 @@ OnDragOver разрешим прием из ListBox2 и из себя же:
       else // случай внутренней перестановки
       begin
         CurItem := ListView1.Selected;
-    // запомним выбранный элемент
+        // запомним выбранный элемент
         Item := ListView1.GetItemAt(x, y);
-    // другой метод определения элемента на который делаем Drop
+        // другой метод определения элемента на который делаем Drop
         if Item <> nil then
           Item := ListView1.Items.Insert(Item.Index)
-    // вставляем новый элемент перед найденным
+          // вставляем новый элемент перед найденным
         else
           Item := ListView1.Items.Add;
-    // или добавляем новый элемент в конец
+          // или добавляем новый элемент в конец
         Item.Assign(CurItem);
-    // копируем исходный в новый
+        // копируем исходный в новый
         CurItem.Free;
-    // уничтожаем исходный
+        // уничтожаем исходный
       end;
     end;
 
@@ -196,7 +193,7 @@ OnDragOver разрешим прием из ListBox2 и из себя же:
       Node, SelNode: TTreeNode;
     begin
       Node := TreeView1.GetNodeAt(x, y);
-    // находим узел-приемник
+      // находим узел-приемник
       Accept := (Sender = Source) and (Node <> nil);
       if not Accept then
         Exit;
@@ -218,7 +215,7 @@ OnDragOver разрешим прием из ListBox2 и из себя же:
         Exit;
       SelNode := TreeView1.Selected;
       SelNode.MoveTo(Node, naAddChild);
-    // все уже встроено в TreeView
+      // все уже встроено в TreeView
     end;
 
 Теперь разрешим перенос в TreeView2 из TreeView1
@@ -262,14 +259,14 @@ OnDragOver разрешим прием из ListBox2 и из себя же:
         begin
           MouseToCell(X, Y, Acol, Arow);
           if (Acol >= FixedCols) and (Arow >= FixedRows) then
-    // не будем перетаскивать из фиксированных ячеек
+          // не будем перетаскивать из фиксированных ячеек
           begin
             if ssAlt in Shift then
               Tag := 1
             else
               if ssCtrl in Shift then
                 Tag := 2;
-    // запомним что нажато - Alt или Ctrl -  в Tag StringGrid1
+            // запомним что нажато - Alt или Ctrl -  в Tag StringGrid1
             BeginDrag(True)
           end
           else
@@ -302,10 +299,10 @@ OnDragOver разрешим прием из ListBox2 и из себя же:
         with StringGrid1 do
         begin
           Cells[Acol, Arow] := Cells[Col,Row];
-    //копируем ячейку-источник в приемник
+          //копируем ячейку-источник в приемник
           if Tag = 1 then
             Cells[Col,Row] := '';
-    // очищаем источник, если было нажато Alt
+          // очищаем источник, если было нажато Alt
           Tag := 0;
         end;
 
@@ -320,12 +317,12 @@ StringGrid2:
     if Source = StringGrid2 then
       begin
         GR := StringGrid2.Selection;
-    // Selection - выделенные в StringGrid2 ячейки
+        // Selection - выделенные в StringGrid2 ячейки
         for r := 0 to GR.Bottom - GR.Top do
           for c := 0 to GR.Right - GR.Left do
             if (ACol + c < StringGrid1.ColCount) and
               (ARow + r < StringGrid1.RowCount) then
-    // застрахуемся от записи вне StringGrid1
+              // застрахуемся от записи вне StringGrid1
               StringGrid1.Cells[ACol + c, ARow + r] :=
                 StringGrid2.Cells[c + GR.Left, r + GR.Top];
       end;
@@ -349,197 +346,133 @@ Memo2. Для этого в OnDragOver Memo2 пишем:
             s := '';
             for c := Selection.Left to Selection.Right do
               s := s + Cells[c, r] + #9;
-    // разделим ячейки табуляцией
+              // разделим ячейки табуляцией
             memo2.lines.add(s);
           end
 
 Кроме того, в Memo2 можно переносить выбранную запись из DBGrid1, у
 которого установлено в Options dgRowSelect = True. В сетке отображается
 таблица из стандартной поставки Delphi DBDEMOS - Animals.dbf.
+
 Перетаскивание осуществляется аналогично StringGrid2, правой кнопкой
 мыши, только по событию OnMouseMove
 
-if ssRight in Shift then
-
-   DBGrid1.BeginDrag(true);
+    if ssRight in Shift then
+       DBGrid1.BeginDrag(true);
 
 Код в Memo2DragDrop, относящийся к переносу из DBGrid1:
 
-else
-
-   with DBGrid1.DataSource.DataSet do
-
-   begin
-
-     s := \'\';
-
-     for c := 0 to FieldCount - 1 do
-
-       s := s + Fields[c].AsString + \' \| \';
-
-     memo2.lines.add(s);
-
-   end;
-
-// в случае dgRowSelect = False для переноса одного поля достаточно
-сделать
-
-// memo2.lines.add(DbGrid1.SelectedField.AsString);
+    else
+       with DBGrid1.DataSource.DataSet do
+       begin
+         s := '';
+         for c := 0 to FieldCount - 1 do
+           s := s + Fields[c].AsString + ' | ';
+         memo2.lines.add(s);
+       end;
+    // в случае dgRowSelect = False для переноса одного поля достаточно сделать
+    // memo2.lines.add(DbGrid1.SelectedField.AsString);
 
 Drag из DBGrid1 принимается также на Panel3, условие приема очевидно, а
 OnDragDrop выглядит так:
 
-Panel3.Height := 300;  // раскрываем панель
-
-Image1.visible := True;
-
-OleContainer1.Visible := false;
-
-Image1.Picture.Assign(DBGrid1.DataSource.DataSet.FieldByName(\'BMP\'));
-
-// показываем графическое поле текущей записи таблицы
+    Panel3.Height := 300;  // раскрываем панель
+    Image1.visible := True;
+    OleContainer1.Visible := false;
+    Image1.Picture.Assign(DBGrid1.DataSource.DataSet.FieldByName(\'BMP\'));
+    // показываем графическое поле текущей записи таблицы
 
 Теперь покажу, как можно передвигать мышью визуальные компоненты в
 Run-Time. Для Panel1 установим DragMode = dmAutomatic, в OnDragOver
 формы пишем:
 
-var
-
-Ct: TControl;
-
-begin
-
-Ct := ControlAtPos(Point(X + Panel1.Width, Y + Panel1.Height), True,
-True);
-
-// для упрощения проверяем перекрытие с другими контролами только
-правого нижнего угла
-
-Accept := (Source = Panel1) and ((Ct = nil) or (Ct = Panel1));
+    var
+      Ct: TControl;
+    begin
+      Ct := ControlAtPos(Point(X + Panel1.Width, Y + Panel1.Height),
+                         True, True);
+      // для упрощения проверяем перекрытие с другими контролами только
+      // правого нижнего угла
+      Accept := (Source = Panel1) and ((Ct = nil) or (Ct = Panel1));
 
 и в OnDragDrop формы очень просто
 
-Panel1.Left := X;
-
-Panel1.Top := Y;
+    Panel1.Left := X;
+    Panel1.Top := Y;
 
 Другой метод перетаскивания можно встретить в каждом FAQ по Delphi:
 
-procedure TForm1.Panel2MouseDown(Sender: TObject; Button: TMouseButton;
-
-Shift: TShiftState; X, Y: Integer);
-
-const
-
-SC\_DragMove = $F012;
-
-begin
-
-ReleaseCapture;
-
-Panel2.Perform(WM\_SysCommand, SC\_DragMove, 0);
-
-end;
+    procedure TForm1.Panel2MouseDown(Sender: TObject; Button: TMouseButton;
+        Shift: TShiftState; X, Y: Integer);
+    const
+      SC_DragMove = $F012;
+    begin
+      ReleaseCapture;
+      Panel2.Perform(WM_SysCommand, SC_DragMove, 0);
+    end;
 
 И в завершение реализация популярной задачи перетаскивания значков
 файлов на форму из Проводника. Для этого следует описать обработчик
 сообщения WM\_DROPFILES
 
-private
-
-procedure WMDropFiles(var Msg: TWMDropFiles); message WM\_DROPFILES;
+    private
+    procedure WMDropFiles(var Msg: TWMDropFiles); message WM_DROPFILES;
 
 В OnCreate формы разрешить прием файлов
 
-DragAcceptFiles(Handle, true);
+    DragAcceptFiles(Handle, true);
 
 и в OnDestroy отключить его
 
-DragAcceptFiles(Handle, False);
+    DragAcceptFiles(Handle, False);
 
 Процедура обработки приема файлов может выглядеть так:
 
+```delphi
 procedure TForm1.WMDropFiles(var Msg: TWMDropFiles);
-
 const
-
-maxlen = 254;
-
+  maxlen = 254;
 var
-
-h: THandle;
-
+  h: THandle;
 //i,num:integer;
-
-pchr: array[0..maxlen] of char;
-
-fname: string;
-
+  pchr: array[0..maxlen] of char;
+  fname: string;
 begin
-
-h := Msg.Drop;
-
-// дана реализация для одного файла, а
-
-//если предполагается принимать группу файлов, то можно добавить:
-
-//num:=DragQueryFile(h,Dword(-1),nil,0);
-
-//for i:=0 to num-1 do begin
-
-//  DragQueryFile(h,i,pchr,maxlen);
-
-//...обработка каждого
-
-//end;
-
-DragQueryFile(h, 0, pchr, maxlen);
-
-fname := string(pchr);
-
-if lowercase(extractfileext(fname)) = \'.bmp\' then
-
-begin
-
-   Image1.visible := True;
-
-   OleContainer1.Visible := false;
-
-   image1.Picture.LoadFromFile(fname);
-
-   Panel3.Height := 300;
-
-end
-
-else if lowercase(extractfileext(fname)) = \'.doc\' then
-
-begin
-
-   Image1.visible := False;
-
-   OleContainer1.Visible := True;
-
-   OleContainer1.CreateObjectFromFile(fname, false);
-
-   Panel3.Height := 300;
-
-end
-
-else if lowercase(extractfileext(fname)) = \'.htm\' then
-
-   ShellExecute(0, nil, pchr, nil, nil, 0)
-
-else if lowercase(extractfileext(fname)) = \'.txt\' then
-
-   Memo2.Lines.LoadFromFile(fname)
-
-else
-
-   Memo2.Lines.Add(fname);
-
-DragFinish(h);
-
+  h := Msg.Drop;
+  
+  // дана реализация для одного файла, а
+  // если предполагается принимать группу файлов, то можно добавить:
+  //num:=DragQueryFile(h,Dword(-1),nil,0);
+  //for i:=0 to num-1 do begin
+  //  DragQueryFile(h,i,pchr,maxlen);
+  //...обработка каждого
+  //end;
+  
+  DragQueryFile(h, 0, pchr, maxlen);
+  fname := string(pchr);
+  if lowercase(extractfileext(fname)) = '.bmp' then
+  begin
+    Image1.visible := True;
+    OleContainer1.Visible := false;
+    image1.Picture.LoadFromFile(fname);
+    Panel3.Height := 300;
+  end
+  else if lowercase(extractfileext(fname)) = '.doc' then
+  begin
+    Image1.visible := False;
+    OleContainer1.Visible := True;
+    OleContainer1.CreateObjectFromFile(fname, false);
+    Panel3.Height := 300;
+  end
+  else if lowercase(extractfileext(fname)) = '.htm' then
+    ShellExecute(0, nil, pchr, nil, nil, 0)
+  else if lowercase(extractfileext(fname)) = '.txt' then
+    Memo2.Lines.LoadFromFile(fname)
+  else
+    Memo2.Lines.Add(fname);
+  DragFinish(h);
 end;
+```
 
 При перетаскивании на форму файла с расширением Bmp он отображается в
 Image1, находящемся на Panel3, Doc загружается в OleContainer, для Htm
@@ -556,4 +489,3 @@ Image1, находящемся на Panel3, Doc загружается в OleCon
 
 Автор статьи: Борис Новгородов, Новосибирск, 2002
 
-Взято с сайта [www.emanual.ru](https://www.emanual.ru)

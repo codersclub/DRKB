@@ -1,6 +1,5 @@
 ---
 Title: Drag & Drop в TTreeView
-Author: Smike
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,11 @@ Date: 01.01.2007
 Drag & Drop в TTreeView
 =======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Smike
+
+Source: <https://forum.sources.ru>
 
     unit Unit1;
      
@@ -123,11 +124,11 @@ Drag & Drop в TTreeView
      
     end.
 
-Автор: Smike
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     unit Unit1;
      
@@ -206,6 +207,3 @@ Drag & Drop в TTreeView
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 

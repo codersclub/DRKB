@@ -1,27 +1,21 @@
 ---
 Title: Заполнение полей формы в TWebBrowser методом Drag & Drop
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Заполнение полей формы в TWebBrowser методом Drag & Drop
 ========================================================
 
-::: {.date}
-01.01.2007
-:::
-
     { 
       This example shows how to fill out fields in your webbrowser by 
       dragging the content of Label1 to a field of your webbrowser}
-     
-     
      
      procedure TForm1.FormCreate(Sender: TObject);
      begin
        label1.DragMode := dmAutomatic;
      end;
-     
      
      procedure TForm1.WebBrowserDragOver(Sender, Source: TObject; X,
        Y: Integer; State: TDragState; var Accept: Boolean);
@@ -52,6 +46,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 

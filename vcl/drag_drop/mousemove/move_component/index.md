@@ -1,6 +1,5 @@
 ---
 Title: Как перемещать компонент во время работы программы?
-Author: Олег Кулабухов
 Date: 01.01.2007
 ---
 
@@ -8,11 +7,11 @@ Date: 01.01.2007
 Как перемещать компонент во время работы программы?
 ===================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Олег Кулабухов
+Author: Олег Кулабухов
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Нижеприведенный пример показывает как перемещать компонент при
 перетаскивании его нажатой левой кнопкой мыши при нажатом Ctrl.
@@ -37,18 +36,13 @@ Date: 01.01.2007
     {$ENDIF}
       end;
     end;
-     
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
  
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Перетаскивание компонентов в окне приложения
 
@@ -58,7 +52,6 @@ DelphiWorld 6.0
 Нарисовать в графическом редакторе картинку, сохранить ее в файле с
 расширенем .bmp.
 
-
 Поместить в форме 4 компонента типа TImage.
 
 При создании формы (событие формы onCreate) приложения разделить
@@ -67,22 +60,18 @@ DelphiWorld 6.0
     var
       Pict: TImage;
       beginPict := TImage.Create(Self);
-      Pict.AutoSize :=
-        true;
+      Pict.AutoSize := true;
       Pict.Picture.LoadFromFile('Cus5.bmp');
       Image1.Canvas.CopyRect(Image1.ClientRect,
-        Pict.Canvas, Rect(0, 0, Pict.Width div 2, Pict.Height div
-        2));
-      Image2.Canvas.CopyRect(Image2.ClientRect, Pict.Canvas, Rect(Pict.Width
-        div 2, 0, Pict.Width, Pict.Height div
-        2));
-      Image3.Canvas.CopyRect(Image3.ClientRect, Pict.Canvas, Rect(0, Pict.Height
-        div 2, Pict.Width div
-        2, Pict.Height));
+        Pict.Canvas, Rect(0, 0, Pict.Width div 2, Pict.Height div 2));
+      Image2.Canvas.CopyRect(Image2.ClientRect, Pict.Canvas,
+            Rect(Pict.Width div 2, 0,
+            Pict.Width, Pict.Height div 2));
+      Image3.Canvas.CopyRect(Image3.ClientRect, Pict.Canvas,
+            Rect(0, Pict.Height div 2, Pict.Width div 2, Pict.Height));
       Image4.Canvas.CopyRect(Image4.ClientRect,
-        Pict.Canvas, Rect(Pict.Width div 2, Pict.Height div 2, Pict.Width,
-          Pict.Height
-        ));
+            Pict.Canvas, Rect(Pict.Width div 2,
+            Pict.Height div 2, Pict.Width, Pict.Height));
       Pict.Free;
     end;
 
@@ -100,15 +89,14 @@ DelphiWorld 6.0
 обработчик котрого имеет вид:
 
     procedure
-      TForm1.Image1MouseDown(Sender: TObject; Button: TMouseButton; Shift:
-      TShiftState; X, Y: Integer);
+      TForm1.Image1MouseDown(Sender: TObject; Button: TMouseButton;
+          Shift: TShiftState; X, Y: Integer);
     beginif Button <> mbLeft then
       exit;
     X0 := X;
     Y0 := Y;
     move := true;
-    (Sender as
-      TControl).BringToFront;
+    (Sender as TControl).BringToFront;
     end;
 
 Сначала в этой процедуре проверяется, нажата ли именно левая кнопка
@@ -124,10 +112,10 @@ onMouseMove, имеющий вид:
     procedure
       TForm1.Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y:
       Integer);
-    beginif move&nbsp;
-    then with (Sender as TControl)
+    begin
+    if move then with (Sender as TControl)
       doSetBounds(Left + X - X0, Top + Y - Y0, Width, Height)
-      end;
+    end;
 
 Метод SetBounds изменяет координаты левого верхнего угла на величину
 сдвига курсора мыши (X - X0 для координаты X и Y - Y0 для координаты Y).
@@ -141,13 +129,13 @@ onMouseMove, имеющий вид:
 
     procedure TForm1.Image1MouseUp(Sender: TObject; Button:
       TMouseButton; Shift: TShiftState; X, Y: Integer);
-    beginmove :=
-      false;
+    beginmove := false;
     end;
 
 Этот оператор указывает указывает приложению на конец буксировки. Тогода
 при последующих событиях onMouseMove их обработчик перестанет изменять
 координаты компонента.
+
 Метод 2:
 
 Основной недостаток рассмотренного метода буксировки - некоторое
@@ -158,9 +146,8 @@ onMouseMove, имеющий вид:
 рисования на канве. Для их применения требуется еще одна глобальная
 переменная:
 
-var
-
-rec: Trect;
+    var
+      rec: Trect;
 
 Переменная rec будетиспользоваться для запоминания положения
 перемещаемого курсора компонента.
@@ -169,20 +156,17 @@ rec: Trect;
 
     procedure TForm1.Image4MouseDown(Sender: TObject;
       Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
-    beginif
-      Button <> mbLeft then exit;
-    X0 := X;
-    &nbsp;
-    Y0 := Y;
-    rec := (Sender as
-      TControl).BoundsRect;
-    move := true;
+    begin
+      if Button <> mbLeft then exit;
+      X0 := X;
+      Y0 := Y;
+      rec := (Sender as TControl).BoundsRect;
+      move := true;
     end;
-    Оператор: rec := (Sender as
-      TControl).BoundsRect;
 
+Оператор: `rec := (Sender as TControl).BoundsRect;`
 запоминает в переменной rec исходное положение компонента. В процедуре
-отсутствует также опереатор BringToFront, поскольку сам компонент не
+отсутствует также оператор BringToFront, поскольку сам компонент не
 будет перемещаться.
 
 При дальнейшем перемещении мыши срабатывает обработчик события
@@ -191,21 +175,20 @@ onMouseMove:
     procedure
       TForm1.Image4MouseMove(Sender: TObject; Shift: TShiftState; X, Y:
       Integer);
-    beginif not move then
-      exit;
-    Canvas.DrawFocusRect(rec);
-    with rec dobeginleft := left + X
-      - X0;
-    right := right + X - X0;
-    &nbsp;
-    top := top + Y - Y0;
-    &nbsp;
-    bottom := bottom +
-      Y - Y0;
-    X0 := X;
-    Y0 := Y;
-    end;
-    Canvas.DrawFocusRect(rec);
+    begin
+      if not move then
+        exit;
+      Canvas.DrawFocusRect(rec);
+      with rec do
+      begin
+        left := left + X - X0;
+        right := right + X - X0;
+        top := top + Y - Y0;
+        bottom := bottom + Y - Y0;
+        X0 := X;
+        Y0 := Y;
+      end;
+      Canvas.DrawFocusRect(rec);
     end;
 
 В этой процедуре перерисовывается и сдвигается только прямоугольник
@@ -219,16 +202,17 @@ onMouseMove:
 Когда пользователь отпускает кнопку мыши, наступает событие onMouseUp:
 
     procedure
-      TForm1.Image4MouseUp(Sender: TObject; Button: TMouseButton; Shift:
-        TShiftState;
-      X, Y: Integer);
-    beginCanvas.DrawFocusRect(rec); { if not (ssAlt in
-    Shift) then} with (Sender as TControl) do
-      beginSetBounds(rec.Left + X -
-        X0, rec.Top + Y - Y0, Width, Height);
-    BringToFront;
-    end;
-    move := false;
+      TForm1.Image4MouseUp(Sender: TObject; Button: TMouseButton;
+             Shift: TShiftState; X, Y: Integer);
+    begin
+      Canvas.DrawFocusRect(rec);
+      { if not (ssAlt in Shift) then}
+      with (Sender as TControl) do
+      begin
+        SetBounds(rec.Left + X - X0, rec.Top + Y - Y0, Width, Height);
+        BringToFront;
+      end;
+      move := false;
     end;
 
 Первый ее оператор стирает последнее изображение контура, а второй
@@ -239,143 +223,140 @@ onMouseUp можно предусмотреть условияотказа от 
 Полный текст приложения:
 
     unit UMove;
-    interfaceusesWindows, Messages,
-    SysUtils, Classes, Graphics, Controls, Forms, Dialogs, Menus, ExtCtrls,
-    ExtDlgs;
-    typeTForm1 = class(TForm)Image1: TImage;
-      Image2:
-      TImage;
-      Image3: TImage;
-      Image4: TImage;
-      procedure
-        Image1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState;
-          X,
-        Y: Integer);
-      procedure Image1MouseMove(Sender: TObject; Shift: TShiftState;
-        X, Y: Integer);
-      procedure Image1MouseUp(Sender: TObject; Button:
-        TMouseButton; Shift: TShiftState; X, Y: Integer);
-      procedure
-        FormCreate(Sender: TObject);
-      procedure Image4MouseDown(Sender: TObject;
-        Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
-      procedure
-        Image4MouseMove(Sender: TObject; Shift: TShiftState; X, Y:
-        Integer);
-      procedure Image4MouseUp(Sender: TObject; Button:
-        TMouseButton; Shift: TShiftState; X, Y: Integer);
-    private { Private
-    declarations } public { Public declarations }
+    interface
+    uses
+      Windows, Messages,
+      SysUtils, Classes, Graphics, Controls, Forms,
+      Dialogs, Menus, ExtCtrls,
+      ExtDlgs;
+    type
+      TForm1 = class(TForm)
+        Image1: TImage;
+        Image2: TImage;
+        Image3: TImage;
+        Image4: TImage;
+        procedure
+          Image1MouseDown(Sender: TObject; Button: TMouseButton;
+                          Shift: TShiftState;
+                          X, Y: Integer);
+        procedure Image1MouseMove(Sender: TObject; Shift: TShiftState;
+                          X, Y: Integer);
+        procedure Image1MouseUp(Sender: TObject; Button: TMouseButton;
+                          Shift: TShiftState; X, Y: Integer);
+        procedure
+          FormCreate(Sender: TObject);
+        procedure Image4MouseDown(Sender: TObject;
+          Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+        procedure
+          Image4MouseMove(Sender: TObject; Shift: TShiftState;
+                          X, Y: Integer);
+        procedure Image4MouseUp(Sender: TObject;
+                          Button: TMouseButton; Shift: TShiftState;
+                          X, Y: Integer);
+      private { Private declarations }
+      public { Public declarations }
     end;
-    varForm1:
-    TForm1;
-    implementation{$R *.DFM}var
+    var
+      Form1: TForm1;
+    implementation
+    {$R *.DFM}
+    var
       move: boolean;
-      X0, Y0:
-      Integer;
+      X0, Y0: Integer;
       rec: Trect;
      
     procedure TForm1.Image1MouseDown(Sender: TObject;
       Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
-    beginif
-      Button <> mbLeft then exit;
-    X0 := X;
-    Y0 := Y;
-    move :=
-      true;
-    (Sender as TControl).BringToFront;
+    begin
+      if Button <> mbLeft then exit;
+      X0 := X;
+      Y0 := Y;
+      move := true;
+      (Sender as TControl).BringToFront;
     end;
      
     procedure
       TForm1.Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y:
       Integer);
     beginif move then with (Sender as TControl)
-      doSetBounds(Left + X - X0, Top + Y - Y0, Width,
-      Height)
+      doSetBounds(Left + X - X0, Top + Y - Y0, Width, Height)
     end;
      
     procedure TForm1.Image1MouseUp(Sender: TObject; Button:
       TMouseButton; Shift: TShiftState; X, Y: Integer);
-    beginmove :=
-      false;
+    begin
+      move := false;
     end;
      
     procedure TForm1.FormCreate(Sender: TObject);
     var
       Pict: TImage;
-      beginPict := TImage.Create(Self);
-      Pict.AutoSize :=
-        true;
+    begin
+      Pict := TImage.Create(Self);
+      Pict.AutoSize := true;
       Pict.Picture.LoadFromFile('Cus5.bmp');
       Image1.Canvas.CopyRect(Image1.ClientRect,
-        Pict.Canvas, Rect(0, 0, Pict.Width div 2, Pict.Height div
-        2));
-      Image2.Canvas.CopyRect(Image2.ClientRect, Pict.Canvas, Rect(Pict.Width
-        div 2, 0, Pict.Width, Pict.Height div
-        2));
-      Image3.Canvas.CopyRect(Image3.ClientRect, Pict.Canvas, Rect(0, Pict.Height
-        div 2, Pict.Width div
-        2, Pict.Height));
-      Image4.Canvas.CopyRect(Image4.ClientRect,
-        Pict.Canvas, Rect(Pict.Width div 2, Pict.Height div 2, Pict.Width,
-          Pict.Height
-        ));
+        Pict.Canvas, Rect(0, 0, Pict.Width div 2,
+        Pict.Height div 2));
+      Image2.Canvas.CopyRect(Image2.ClientRect, Pict.Canvas,
+        Rect(Pict.Width div 2, 0, Pict.Width, Pict.Height div 2));
+      Image3.Canvas.CopyRect(Image3.ClientRect, Pict.Canvas,
+        Rect(0, Pict.Height div 2, Pict.Width div 2, Pict.Height));
+      Image4.Canvas.CopyRect(Image4.ClientRect, Pict.Canvas,
+        Rect(Pict.Width div 2, Pict.Height div 2,
+        Pict.Width, Pict.Height));
       Pict.Free;
     end;
      
-    procedure TForm1.Image4MouseDown(Sender:
-      TObject; Button: TMouseButton; Shift: TShiftState; X, Y:
-      Integer);
-    beginif Button <> mbLeft then exit;
-    X0 := X;
-    Y0 :=
-      Y;
-    rec := (Sender as TControl).BoundsRect;
-    move :=
-      true;
+    procedure TForm1.Image4MouseDown(Sender: TObject; Button: TMouseButton;
+                Shift: TShiftState; X, Y: Integer);
+    begin
+      if Button <> mbLeft then exit;
+      X0 := X;
+      Y0 := Y;
+      rec := (Sender as TControl).BoundsRect;
+      move := true;
     end;
      
-    procedure TForm1.Image4MouseMove(Sender: TObject; Shift:
-      TShiftState; X, Y: Integer);
-    beginif not move then
-      exit;
-    Canvas.DrawFocusRect(rec);
-    with rec dobeginleft := left + X
-      - X0;
-    right := right + X - X0;
-    top := top + Y - Y0;
-    bottom :=
-      bottom + Y - Y0;
-    X0 := X;
-    Y0 :=
-      Y;
-    end;
-    Canvas.DrawFocusRect(rec);
+    procedure TForm1.Image4MouseMove(Sender: TObject;
+      Shift: TShiftState; X, Y: Integer);
+    begin
+      if not move then
+        exit;
+      Canvas.DrawFocusRect(rec);
+      with rec do
+      begin
+        left := left + X - X0;
+        right := right + X - X0;
+        top := top + Y - Y0;
+        bottom := bottom + Y - Y0;
+        X0 := X;
+        Y0 := Y;
+      end;
+      Canvas.DrawFocusRect(rec);
     end;
      
-    procedure
-      TForm1.Image4MouseUp(Sender: TObject; Button: TMouseButton; Shift:
-        TShiftState;
-      X, Y: Integer);
-    beginCanvas.DrawFocusRect(rec);
-    if not (ssAlt in
-      Shift)thenwith(Sender as TControl) do beginSetBounds(rec.Left + X -
-      X0, rec.Top + Y - Y0, Width, Height);
-    BringToFront;
+    procedure TForm1.Image4MouseUp(Sender: TObject;
+          Button: TMouseButton; Shift: TShiftState;
+          X, Y: Integer);
+    begin
+      Canvas.DrawFocusRect(rec);
+      if not (ssAlt in Shift) then
+      with(Sender as TControl) do begin
+        SetBounds(rec.Left + X - X0, rec.Top + Y - Y0, Width, Height);
+        BringToFront;
+      end;
+      move := false;
     end;
-    move :=
-    false;
-    end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: NEil
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Перетаскивание элементов управления c рамкой контура
 
@@ -410,11 +391,11 @@ OnMouseDown:
     Notebook1.PageIndex := 1;
     WITH Sender AS TControl DO
     BEGIN
-    DragW := Width;
-    DragH := Height;
-    XOff:= X;
-    YOff := Y;
-    BeginDrag(True);
+      DragW := Width;
+      DragH := Height;
+      XOff:= X;
+      YOff := Y;
+      BeginDrag(True);
     END;
 
 В общем, для всех перетаскиваемых компонентов, обработчике события
@@ -423,14 +404,14 @@ EndDrag:
     Notebook1.PageIndex := 0;
     WITH Sender AS Tcontrol DO
     BEGIN
-    Left := X-Xoff;
-    Top := Y-YOff;
+      Left := X-Xoff;
+      Top := Y-YOff;
     END;
 
 Поместите следующую строку в обработчик события OnPaint компонента
 PaintBox:
 
-PaintBox1.Canvas.Draw(0, 0, Img);
+    PaintBox1.Canvas.Draw(0, 0, Img);
 
 И наконец, если вам еще это не надоело, поместите следующую строчку в
 обработчик OnDragOver компонента PaintBox:
@@ -438,9 +419,9 @@ PaintBox1.Canvas.Draw(0, 0, Img);
     IF (X=DragX) AND (Y=DragY) THEN Exit;
     WITH PaintBox1.Canvas DO
     BEGIN
-    DrawFocusRect(Bounds(DragX-XOff, DragY-YOff, DragW, DragH);
-    DragX := X; DragY := Y;
-    DrawFocusRect(Bounds(DragX-XOff, DragY-YOff, DragW, DragH);
+      DrawFocusRect(Bounds(DragX-XOff, DragY-YOff, DragW, DragH);
+      DragX := X; DragY := Y;
+      DrawFocusRect(Bounds(DragX-XOff, DragY-YOff, DragW, DragH);
     END;
 
 ФУ!! Но это работает! Я не хотел убирать в компонентах возможность
@@ -500,10 +481,5 @@ BoundsRect с областью компонентов. Например, вы н
 Вы должны сделать аналогичную логику или в обработчике EndDrag или
 OnDragDrop компонента PainBox.
 
-Автор: NEil
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
  

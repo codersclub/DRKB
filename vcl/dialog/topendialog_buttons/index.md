@@ -1,15 +1,12 @@
 ---
 Title: Манипулирование кнопками TOpenDialog
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Манипулирование кнопками TOpenDialog
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       CommCtrl;
@@ -32,4 +29,3 @@ Date: 01.01.2007
         SendMessage(hWndToolbar, TB_SETBUTTONINFO, TB_BTN_NEWFOLDER ,LParam(@tbinfo));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

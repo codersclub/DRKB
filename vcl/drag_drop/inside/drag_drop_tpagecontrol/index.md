@@ -1,15 +1,12 @@
 ---
 Title: Перестроить вкладки TPageControl с помощью Drag & Drop
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Перестроить вкладки TPageControl с помощью Drag & Drop
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     // In the PageControl's OnMouseDown event handler: 
      
@@ -54,4 +51,3 @@ Date: 01.01.2007
         Accept := True; 
     end;
 
-Взято с <https://delphiworld.narod.ru>

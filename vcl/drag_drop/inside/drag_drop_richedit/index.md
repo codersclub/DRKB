@@ -1,15 +1,12 @@
 ---
 Title: Drag & Drop из RichEdit
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Drag & Drop из RichEdit
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     var
        Form1: TForm1;
@@ -17,7 +14,7 @@ Drag & Drop из RichEdit
        transfering: boolean;
      implementation
      
-     {$R *.DFM\}
+     {$R *.DFM}
      
      procedure TForm1.RichEdit1MouseDown(Sender: TObject; Button: TMouseButton;
        Shift: TShiftState; X, Y: Integer);
@@ -37,8 +34,6 @@ Drag & Drop из RichEdit
       end; //transfering
      end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

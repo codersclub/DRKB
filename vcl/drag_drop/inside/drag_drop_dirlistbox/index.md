@@ -1,18 +1,17 @@
 ---
 Title: Drag & Drop - как использовать ItemAtPos для получения элемента DirListBox
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Drag & Drop - как использовать ItemAtPos для получения элемента DirListBox
 ===========================================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Просто сохраните результат функции ItematPos в переменной формы, и затем
-используйте эту переменную в обработчике ListBoxDragDrop. Пример:
+используйте эту переменную в обработчике ListBoxDragDrop.
+
+Пример:
 
     FDragItem := ItematPos(X, Y, True);
     if FDragItem >= 0 then
@@ -25,6 +24,4 @@ Drag & Drop - как использовать ItemAtPos для получени�
         ListBox.Items.Add(TDirectoryListBox(Source).GetItemPath(FDragItem));
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

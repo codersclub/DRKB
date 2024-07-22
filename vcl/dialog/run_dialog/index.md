@@ -1,15 +1,12 @@
 ---
 Title: Как показать Run диалог?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как показать Run диалог?
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       ComObj;
@@ -76,4 +73,3 @@ Date: 01.01.2007
       ShowRunFileDialg(FindWindow('Shell_TrayWnd', nil), nil, nil, nil, RFF_NOBROWSE, True);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

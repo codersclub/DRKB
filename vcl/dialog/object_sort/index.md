@@ -2,23 +2,20 @@
 Title: Изменение вида сортировки объектов в диалогах
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Изменение вида сортировки объектов в диалогах
 =============================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-
      
     interface
      
     uses
-      Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+      Windows, Messages, SysUtils, Variants, Classes, Graphics,
+      Controls, Forms,
       Dialogs, StdCtrls;
      
     type
@@ -40,7 +37,12 @@ Date: 01.01.2007
      
     {$R *.dfm}
      
-    // Стили: $7029 - значки, $702B - список, $702C - таблица, $702D - эскизы, $702E - плитка
+    // Стили:
+    //   $7029 - значки,
+    //   $702B - список,
+    //   $702C - таблица,
+    //   $702D - эскизы,
+    //   $702E - плитка.
     // ставим, например таблицу
     function NewSaveDlgProc(wnd:HWND; uMsg:integer; wParam:integer; lParam:integer):integer; stdcall;
     begin
@@ -64,11 +66,4 @@ Date: 01.01.2007
     end;
      
     end.
-
-
-
-Автор: Krid
-
-Взято из <https://forum.sources.ru>
-
 

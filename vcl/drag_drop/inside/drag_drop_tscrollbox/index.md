@@ -1,15 +1,12 @@
 ---
 Title: Drag & Drop из TScrollBox
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Drag & Drop из TScrollBox
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 Вы можете написать общую функцию для отдельного TImage, и назначать этот
 метод для каждого динамически создаваемого TImage, примерно так:
@@ -31,8 +28,6 @@ Drag & Drop из TScrollBox
 пользоваться. Предок dummyImage позволяет легко разрушать все
 динамические объекты обычным деструктором dummyImage.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

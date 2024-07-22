@@ -1,15 +1,12 @@
 ---
 Title: Drag & Drop несколько элементов в TListView
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Drag & Drop несколько элементов в TListView
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     { ListView1.DragMode := dmAutomatic } 
      
@@ -42,8 +39,6 @@ Drag & Drop несколько элементов в TListView
       Accept := Sender = ListView1; 
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

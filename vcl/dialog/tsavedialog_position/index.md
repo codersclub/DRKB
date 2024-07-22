@@ -8,12 +8,13 @@ Date: 01.01.2007
 Позиционирование TSaveDialog
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Александр (Rouse\_) Багель
+
+Source: <https://forum.sources.ru>
 
     unit Unit1;
-
      
     interface
      
@@ -65,12 +66,13 @@ Date: 01.01.2007
     end.
 
 
-
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
 
     unit Unit1;
 
@@ -124,7 +126,3 @@ Date: 01.01.2007
     end.
 
 
-
-Автор: Krid
-
-Взято из <https://forum.sources.ru>

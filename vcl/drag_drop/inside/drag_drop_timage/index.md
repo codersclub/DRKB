@@ -1,15 +1,12 @@
 ---
 Title: Drag & Drop TImage
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Drag & Drop TImage
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот рабочий пример. Расположите на форме панель побольше, скопируйте и
 измените приведенный код так, чтобы изображение загружалось из ВАШЕГО
@@ -43,6 +40,4 @@ Drag & Drop TImage
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

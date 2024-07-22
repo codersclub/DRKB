@@ -1,15 +1,11 @@
 ---
-Title: Using the Shell API function SHBrowseForFolder
+Title: Использование Shell API функции SHBrowseForFolder
 Date: 01.01.2007
 ---
 
 
-Using the Shell API function SHBrowseForFolder
+Использование Shell API функции SHBrowseForFolder
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses ShellAPI, ShlObj;
      

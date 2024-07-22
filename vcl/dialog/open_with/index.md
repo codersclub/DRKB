@@ -1,15 +1,12 @@
 ---
 Title: Как показать Open With диалог?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как показать Open With диалог?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       This code displays the application/file "Open With" dialog 
@@ -34,4 +31,3 @@ Date: 01.01.2007
         OpenWith(Opendialog1.FileName); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

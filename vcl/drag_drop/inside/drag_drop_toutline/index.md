@@ -1,6 +1,5 @@
 ---
 Title: Drag & Drop в TOutline
-Author: Lloyd Linklater (Sysop) (Delphi Technical Support)
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Drag & Drop в TOutline
 ======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Вам нужно перехватывать в TOutline сообщение wm\_DropFiles. Для этого
 необходимо создать его потомка. Также, вы должны убедиться в том, что
@@ -20,13 +19,11 @@ Drag & Drop в TOutline
 WINAPI.HLP по DragAcceptFiles, wm\_DropFiles, DragQueryFile,
 DragQueryPoint и DragFinish, то вы поймете, как все это работает.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Установите DragMode = dmManual, создайте OnMouseDownHandler, внутри
 обработчика осуществите вызов BeginDrag(False). BeginDrag(False) в
@@ -34,13 +31,12 @@ DelphiWorld 6.0
 переместит объект больше, чем на 5 пикселей, так что если пользователь
 просто щелкнет на компоненте, операция перетаскивания даже не начнется.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Проблема заключается в том, что прежде, чем windows сможет обработать
 сообщение WM\_MouseUp, курсор мыши передвинется дальше. Вот решение этой
@@ -56,10 +52,10 @@ DelphiWorld 6.0
     { все сообщения за один шаг }
     end;
 
-Комментарий:
+**Комментарий:**
 
 Обратите пристальное внимание при создании цикла, если вы используете
-цикл типа \'while\', то вы должны предусмотреть возможность выхода из
+цикл типа "while", то вы должны предусмотреть возможность выхода из
 него, например, при закрытии приложения, или других действий
 пользователя, требующих экстренного выхода из тела цикла.
 
@@ -77,19 +73,16 @@ DelphiWorld 6.0
 
 Переместите вызов BeginDrag в обработчик события OmMouseMove.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 
-
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Author: Lloyd Linklater (Sysop) (Delphi Technical Support)
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Drag and Drop для двух компонентов TOutline
 
-Автор: Lloyd Linklater (Sysop) (Delphi Technical Support)
 
     unit Unit1;
      
@@ -165,10 +158,3 @@ Drag and Drop для двух компонентов TOutline
      
     end. 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 

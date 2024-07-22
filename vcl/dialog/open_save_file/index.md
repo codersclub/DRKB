@@ -2,17 +2,14 @@
 Title: Как работать с TOpenFileDialog и TSaveFileDialоg?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как работать с TOpenFileDialog и TSaveFileDialоg?
 =================================================
 
-::: {.date}
-01.01.2007
-:::
-
-как именно с ними работать чтобы на с: открыть файл?
+> как именно с ними работать чтобы на с: открыть файл?
 
 Похоже я понял что тебя смущает: OpenFileDialog и SaveFileDialog -
 ничего сами по себе не открывают и не сохраняют. Они нужны только для
@@ -44,6 +41,3 @@ Cancel:
       CloseFile(f);
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

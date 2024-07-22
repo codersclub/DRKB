@@ -1,15 +1,12 @@
 ---
 Title: Как перетащить целую колонку из StringGrid в ListBox?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как перетащить целую колонку из StringGrid в ListBox?
 =====================================================
-
-::: {.date}
-01.01.2007
-:::
 
 В Object Inspector установите свойство dragmode у StringGrid в
 dmAutomatic.
@@ -81,7 +78,7 @@ dmAutomatic.
      
     procedure TForm1.FormCreate(Sender: TObject);
     begin
-    //Для демонстрационных целей
+      //Для демонстрационных целей
       with StringGrid1 do
       begin
         Cells[1, 1] := 'T1';
@@ -122,8 +119,3 @@ dmAutomatic.
       StartDrag := True;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

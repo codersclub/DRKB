@@ -1,15 +1,12 @@
 ---
 Title: Drag & Drop со списками
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Drag & Drop со списками
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
      This example shows how to drag&drop within a TListBox. 
@@ -59,8 +56,4 @@ Drag & Drop со списками
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
- 
-
- 
