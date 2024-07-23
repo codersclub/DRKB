@@ -2,17 +2,12 @@
 Title: Как пpинимать яpлыки пpи пеpетягивании их на контpол?
 Author: Nomadic
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как пpинимать яpлыки пpи пеpетягивании их на контpол?
 =====================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Nomadic
 
     TForm1 = class(TForm)
       ...
@@ -89,4 +84,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

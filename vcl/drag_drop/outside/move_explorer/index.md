@@ -1,6 +1,5 @@
 ---
 Title: Drag & Drop c Explorer
-Author: Aleksey
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Drag & Drop c Explorer
 ======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     interface
      
@@ -74,13 +73,14 @@ Drag & Drop c Explorer
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Aleksey
+Вариант 2:
+
+Author: Aleksey
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     {Так можно заставить окно принимать файлы, перетаскиваемые из проводника}
     {ОБЯЗАТЕЛЬНО ПОМЕСТИТЕ В СЕКЦИЮ PRIVATE СТРОКИ
@@ -126,6 +126,4 @@ DelphiWorld 6.0
       DragAcceptFiles(Handle, True);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -1,15 +1,12 @@
 ---
 Title: Как сделать Drag & Drop из чужого приложения?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать Drag & Drop из чужого приложения?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       The following example demonstrates the Drag&Drop machanism from an external
@@ -202,4 +199,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

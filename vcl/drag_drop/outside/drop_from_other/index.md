@@ -1,22 +1,20 @@
 ---
 Title: Реализация Drag & Drop из внешнего приложения в ваше
-Date: 01.01.2007
+Autor: Andreas Kosch 
+Date: 16.01.2003
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Реализация Drag & Drop из внешнего приложения в ваше
 ====================================================
 
-::: {.date}
-01.01.2007
-:::
-
     { 
       The following example demonstrates the Drag&Drop machanism from an external 
       application (Wordpad, Microsoft,..) to a TMemo in your own application. 
-     }
+    }
      
-     unit TMemoDragDropFrm;
+    unit TMemoDragDropFrm;
      
      { **************************************************************** 
       Source File Name :  TMemoDragDropFrm.pas 
@@ -31,17 +29,17 @@ Date: 01.01.2007
      **************************************************************** }
       { Comments by Thomas Stutz }
      
-     interface
+    interface
      
-     uses
+    uses
        Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
        Dialogs, ComCtrls, ActiveX, ShlObj, ComObj, StdCtrls;
      
-     type
-       // TForm1's declaration indicates that it's a TForm and that 
+    type
+      // TForm1's declaration indicates that it's a TForm and that 
       // it supports the IDropTarget interface: 
      
-     { 
+    { 
      
       IDropTarget 
      
@@ -64,7 +62,7 @@ Date: 01.01.2007
       Drop 
         The dragged item has been dropped on this application. 
      
-      }
+    }
      
        TForm1 = class(TForm, IDropTarget)
          Memo1: TMemo;
@@ -84,7 +82,7 @@ Date: 01.01.2007
          function Drop(const dataObj: IDataObject;
                        grfKeyState: Longint; pt: TPoint;
                        var dwEffect: Longint): HResult; stdcall;
-        // IUnknown 
+       // IUnknown 
        // Ignore referance counting 
        function _AddRef: Integer; stdcall;
         function _Release: Integer; stdcall;
@@ -104,7 +102,7 @@ Date: 01.01.2007
        ShellAPI;
      
      
-     // In the OnCreate event handler, two important methods are called. 
+    // In the OnCreate event handler, two important methods are called. 
     // First, OleInitalize is called. This initializes the OLE libraries and should always be 
     // called before your application uses any OLE functions. 
     // RegisterDragDrop registers the window as a valid drop target. 
@@ -120,7 +118,7 @@ Date: 01.01.2007
        ShellExecute(Handle, 'open', 'wordpad', 'c:\Test.doc', nil, SW_SHOW);
      end;
      
-     // OnDestroy does the exact opposite. It calls RevokeDropTarget to indicate that 
+    // OnDestroy does the exact opposite. It calls RevokeDropTarget to indicate that 
     // drop events are no longer accepted. 
     // It then calls OleUninitialize, since the application is finished using all OLE functions. 
      
@@ -204,6 +202,5 @@ Date: 01.01.2007
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
  

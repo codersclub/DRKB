@@ -1,35 +1,33 @@
 ---
 Title: Переслать данные в другую программу методом Drag & Drop
+Author: Hagen Reddmann
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Переслать данные в другую программу методом Drag & Drop
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
-
     // Autor: Hagen Reddmann
      
-             uses
+    uses
        ShellAPI;
      
-     function MakeDrop(const FileNames: array of string): THandle;
-     // Creates a hDrop Object 
+    function MakeDrop(const FileNames: array of string): THandle;
+    // Creates a hDrop Object 
     // erzeugt ein hDrop Object 
     var
        I, Size: Integer;
        Data: PDragInfoA;
        P: PChar;
-     begin
-       // Calculate memory size needed 
+    begin
+      // Calculate memory size needed 
       // berechne notwendig Speichergro?e 
       Size := SizeOf(TDragInfoA) + 1;
-       for I := 0 to High(FileNames) do
-         Inc(Size, Length(FileNames[I]) + 1);
-       // allocate the memory 
+      for I := 0 to High(FileNames) do
+        Inc(Size, Length(FileNames[I]) + 1);
+      // allocate the memory 
       // alloziere den speicher 
       Result := GlobalAlloc(GHND or GMEM_SHARE, Size);
        if Result <> 0 then
@@ -61,8 +59,8 @@ Date: 01.01.2007
        end;
      end;
      
-     function MyEnum(Wnd: hWnd; Res: PInteger): Bool; stdcall;
-     // search for a edit control with classname 'TEditControl' 
+    function MyEnum(Wnd: hWnd; Res: PInteger): Bool; stdcall;
+    // search for a edit control with classname 'TEditControl' 
     // suche ein child fenster mit klassennamen 'TEditControl' 
     var
        N: string;
@@ -73,29 +71,28 @@ Date: 01.01.2007
        if not Result then Res^ := Wnd;
      end;
      
-     // Example: Open msdos.sys in Delphi's Editor window 
+    // Example: Open msdos.sys in Delphi's Editor window 
     // Beispiel: msdos.sys im Delphi Editor offnen 
     procedure TForm1.Button1Click(Sender: TObject);
      var
        Wnd: HWnd;
        Drop: hDrop;
      begin
-       // search for Delphi's Editor 
+      // search for Delphi's Editor 
       // suche Delphis Editor Fenster 
       EnumChildWindows(FindWindow('TEditWindow', nil), @MyEnum, Integer(@Wnd));
        if IsWindow(Wnd) then
        begin
-         // Delphi's Editor found. Open msdos.sys 
+        // Delphi's Editor found. Open msdos.sys 
         // Delphis editor gefunden, also offne msdos.sys 
         Drop := MakeDrop(['c:\msdos.sys']);
-         if Drop <> 0 then PostMessage(Wnd, wm_DropFiles, Drop, 0);
-         // Free the memory? 
+        if Drop <> 0 then PostMessage(Wnd, wm_DropFiles, Drop, 0);
+        // Free the memory? 
         // Speicher wieder freigeben? 
         GlobalFree(Drop);
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
  
 
