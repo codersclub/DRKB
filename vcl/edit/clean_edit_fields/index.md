@@ -1,15 +1,12 @@
 ---
 Title: Как очистить все окошки редактирования на форме?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как очистить все окошки редактирования на форме?
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure ClearEdits;
      var i : Integer;
@@ -19,4 +16,3 @@ Date: 01.01.2007
         (Components[i] as TEdit).Text := '';
     end;
 
-Взято из <https://forum.sources.ru>

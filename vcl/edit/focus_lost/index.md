@@ -1,15 +1,12 @@
 ---
 Title: Проблема потери фокуса для TEdit
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Проблема потери фокуса для TEdit
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
 To Reproduce the Problem:
 
@@ -17,7 +14,9 @@ To Reproduce the Problem:
 
 2. In the OnExit Event of Edit1 add the following code:
 
+    ```delphi
     Application.MessageBox( 'Title','...', mb_ok );
+    ```
 
 3. Run the application.
 
@@ -25,15 +24,16 @@ To Reproduce the Problem:
 
 5. The Message box is shown.
 
-Click the OK button, and the Caret has dissapeared!
+    Click the OK button, and the Caret has dissapeared!
 
 6. How to handle this:
 
-     procedure TForm1.Edit1Exit(Sender: TObject);
-     begin
-      Application.MessageBox('qq','qq',mb_ok);
-      if Assigned(ActiveControl) then
-        PostMessage(ActiveControl.Handle,WM_SETFOCUS,0,0);
-     end;
+    ```delphi
+    procedure TForm1.Edit1Exit(Sender: TObject);
+    begin
+     Application.MessageBox('qq','qq',mb_ok);
+     if Assigned(ActiveControl) then
+       PostMessage(ActiveControl.Handle,WM_SETFOCUS,0,0);
+    end;
+    ```
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

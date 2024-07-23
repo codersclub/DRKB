@@ -1,15 +1,12 @@
 ---
 Title: Изменить вид каретки TEdit
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Изменить вид каретки TEdit
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
 В примере показано как создать два цветных "bitmap\'а": "улыбчивый"
 и "хмурый" и присвоить их курсору edit\'а.
@@ -132,6 +129,4 @@ Date: 01.01.2007
      
     end. 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

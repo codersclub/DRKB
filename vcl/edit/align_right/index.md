@@ -1,6 +1,5 @@
 ---
 Title: Выравнивание по правому краю в TEdit
-Author: МММ
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,11 @@ Date: 01.01.2007
 Выравнивание по правому краю в TEdit
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: МММ
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     type 
 
@@ -25,11 +26,13 @@ Date: 01.01.2007
       Params.Style := Params.Style or ES_MULTILINE or ES_RIGHT; 
     end; 
 
-Автор: МММ
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Song
+
+Source: <https://forum.sources.ru>
 
     { Пример TEdit с правым выравниванием 
     © Song }
@@ -73,9 +76,11 @@ Date: 01.01.2007
     With TMySuperEdit.Create(Self) Do Parent:=Self;
     end;
 
-Автор: Song
+-----------------------------------------------------
 
-Взято из <https://forum.sources.ru>
+Вариант 3:
+
+Source: <https://forum.sources.ru>
 
 Идея заключается в том, как сделать правое выравнивание текста в TEdit,
 не прибегая к написанию нового компонента.
@@ -109,4 +114,3 @@ Date: 01.01.2007
       end ; 
     end;
 
-Взято из <https://forum.sources.ru>

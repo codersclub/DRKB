@@ -7,9 +7,9 @@ Date: 01.01.2007
 Преобразовать первую букву каждого слова к верхнему регистру в TEdit
 ====================================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure TForm1.Edit1Change(Sender: TObject);
      var
@@ -33,11 +33,12 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);
     begin
@@ -48,6 +49,4 @@ Date: 01.01.2007
               Key := UpCase(Key);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

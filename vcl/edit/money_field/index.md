@@ -1,15 +1,12 @@
 ---
 Title: Денежное поле редактирования
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Денежное поле редактирования
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     unit CurrEdit;
      
@@ -182,8 +179,4 @@ Date: 01.01.2007
     end;
      
     end.
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

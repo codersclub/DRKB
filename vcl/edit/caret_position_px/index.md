@@ -1,15 +1,12 @@
 ---
 Title: Как узнать физические координаты каретки в пикселях?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как узнать физические координаты каретки в пикселях?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {TRichEdit}
      
@@ -39,4 +36,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как заставить TEdit не пикать при нажатии недопустимых клавиш?
 ==============================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Перехватите событие KeyPress и установите key = #0 для недопустимых
 клавиш.
@@ -19,9 +19,12 @@ Date: 01.01.2007
       if ((UpCase(Key) < 'A') or (UpCase(Key) > 'Z')) then Key := #0;
     end; 
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // Either disable the Beep in the OnKeyPress handler: 
      
@@ -34,7 +37,7 @@ Date: 01.01.2007
       end;
      end;
      
-     // Or in the OnKeyDown-Handler: 
+    // Or in the OnKeyDown-Handler: 
      
     procedure TForm1.Edit1KeyDown(Sender: TObject; var Key: Word;
        Shift: TShiftState);
@@ -45,4 +48,3 @@ Date: 01.01.2007
          PeekMessage(Mgs, 0, WM_CHAR, WM_CHAR, PM_REMOVE);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

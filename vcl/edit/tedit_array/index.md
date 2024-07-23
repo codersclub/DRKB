@@ -7,9 +7,9 @@ Date: 01.01.2007
 Массив TEdit-компонентов
 ========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure DoSomethingWithEditControls;
     var
@@ -37,13 +37,11 @@ Date: 01.01.2007
     end;
      
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 >...массив ячеек TEdit будет просто замечательным, но я не могу понять
 >как мне их создавать и делать видимыми.
@@ -63,14 +61,10 @@ DelphiWorld 6.0
           eds[ix div 3 + 1,ix mod 3 + 1] := ed;
       end;
     end;
-     
 
-Затем, допустим, вам захотелось скопировать текст из строки 1 в строку
-2:
+
+Затем, допустим, вам захотелось скопировать текст из строки 1 в строку 2:
 
     for ix := 1 to 3 do
       eds[2,ix].Text := eds[1,ix].Text;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -7,9 +7,9 @@ Date: 01.01.2007
 TEdit с возможностью автоматического выбора
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Маленький компонент THintEdit, порожденный от TCustomEdit, который
 представляет собой с виду обычный TEdit элемент с возможностью
@@ -194,14 +194,13 @@ TEdit с возможностью автоматического выбора
       FHintList.Free;
       inherited;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+------------------------------------------------------ 
 
- 
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Подстановка в TEdit
 
@@ -272,6 +271,3 @@ DelphiWorld 6.0
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

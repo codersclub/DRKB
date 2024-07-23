@@ -1,15 +1,12 @@
 ---
 Title: Ограничение ввода в текстовое поле
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Ограничение ввода в текстовое поле
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       In this exemple, the only keys allowed are the 
@@ -36,4 +33,3 @@ Date: 01.01.2007
        if not Ok then Key := #0;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

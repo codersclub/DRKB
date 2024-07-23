@@ -1,15 +1,12 @@
 ---
 Title: Компонент TEdit с возможностью задать выравнивание текста
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Компонент TEdit с возможностью задать выравнивание текста
 =========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       All you have to do is to verride the CreateParams of the class TEdit. 
@@ -80,6 +77,4 @@ Date: 01.01.2007
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
- 
