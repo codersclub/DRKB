@@ -1,20 +1,17 @@
 ---
 Title: Как имитировать появление формы как нового приложения?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как имитировать появление формы как нового приложения?
 ======================================================
 
-::: {.date}
-01.01.2007
-:::
+> Как я могу создать форму, и эта форма останется в другом значке на панели задач?
+> (Похоже на новое приложение).
 
-How i can create a form and this form stay in another icon in task bar ?
-(Looks like a new aplication).
-
-In private clause:
+В разделе private:
 
     type
       TForm1 = class(TForm)
@@ -22,7 +19,7 @@ In private clause:
         { Private declarations }
         procedure CreateParams(var Params: TCreateParams); override;
 
-And, in the implementation:
+И в секции implementation:
 
     procedure TForm1.CreateParams(var Params: TCreateParams);
     begin
@@ -31,4 +28,3 @@ And, in the implementation:
         ExStyle := ExStyle or WS_EX_APPWINDOW;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

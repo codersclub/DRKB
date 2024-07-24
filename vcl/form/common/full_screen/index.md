@@ -1,15 +1,12 @@
 ---
 Title: Полноэкранный режим
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Полноэкранный режим
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     function SetFullscreenMode: Boolean;
     var
@@ -47,6 +44,4 @@ Date: 01.01.2007
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

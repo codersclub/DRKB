@@ -1,15 +1,12 @@
 ---
 Title: Как сделать анимацию минимизации формы?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать анимацию минимизации формы?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
 In FormShow:
 
@@ -33,4 +30,3 @@ In FormHide:
       DrawAnimatedRects(GetDesktopWindow, IDANI_CAPTION, RecL, RecS);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

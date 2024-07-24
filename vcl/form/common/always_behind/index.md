@@ -1,15 +1,12 @@
 ---
 Title: Как сделать форму всегда позади всех окон?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать форму всегда позади всех окон?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     protected
       procedure CreateParams(var Params: TCreateParams); override;
@@ -26,4 +23,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

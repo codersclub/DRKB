@@ -1,15 +1,12 @@
 ---
 Title: Мерцание формы
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Мерцание формы
 ==============
-
-::: {.date}
-01.01.2007
-:::
 
 Как бы это осуществить рисование в окне без его дурацкого мерцания и без
 помощи создания виртуального изображения в памяти? WM\_SETREDRAW здесь
@@ -39,4 +36,3 @@ BeginUpdate / EndUpdate, то для таких компонентов, как T
         Windows.InvalidateRect(hwnd, nil, True);
     end;
 
-Взято с <https://delphiworld.narod.ru>

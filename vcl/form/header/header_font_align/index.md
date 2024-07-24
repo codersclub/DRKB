@@ -7,11 +7,10 @@ Date: 01.01.2007
 Как изменить шрифт и выравнивание в заголовке формы?
 ====================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Note: The formDeactivate never gets called so when the form isn\'t
+**Note:**  
+The formDeactivate never gets called so when the form isn\'t
 active, sometimes the FormPaint isn\'t called. If anything causes the
 form to be repainted while in inactive, it draws correctly.
 
@@ -96,6 +95,10 @@ form to be repainted while in inactive, it draws correctly.
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
+
     { ... }
     type
       TForm1 = class(TForm)
@@ -136,4 +139,3 @@ form to be repainted while in inactive, it draws correctly.
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

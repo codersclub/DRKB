@@ -2,17 +2,12 @@
 Title: Изменяем заголовок окна
 Author: Christian Cristofori
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Изменяем заголовок окна
 =======================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Christian Cristofori
 
 В примере показывается, как изменять заголовок окна (видимый в списке
 задач при переключении между приложениями) при минимизации окна в
@@ -49,4 +44,3 @@ Date: 01.01.2007
         Application.Title := ActMsgNorm; 
     end; 
 
-Взято из <https://forum.sources.ru>

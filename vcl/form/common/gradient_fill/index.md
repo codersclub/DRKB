@@ -1,6 +1,5 @@
 ---
 Title: Пример градиентной заливки формы
-Author: Kostas
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Пример градиентной заливки формы
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Mischka
 
 Иногда бывает нужно сложить два или более цветов для получения что-то
 типа переходного цвета. Делается это весьма просто. Координаты
@@ -19,8 +18,7 @@ Date: 01.01.2007
 
 Например, нужно сложить красный и синий. Получаем
 
-(255,0,0)+(0,0,255)=((255+0) div 2,(0+0) div 2,(0+255) div
-2)=(127,0,127).
+    (255,0,0)+(0,0,255) = ((255+0) div 2, (0+0) div 2, (0+255) div 2) = (127,0,127).
 
 В результате получаем сиреневый цвет. Также надо поступать, если цветов
 более чем 2: сложить соответствующие координаты, потом каждую сумму
@@ -32,8 +30,9 @@ Date: 01.01.2007
 Итак, пусть заданы 2 цвета своими координатами ((A1, A2, A3) и (B1, B2,
 B3)) и линия (длиной h пикселов), по которой нужно залить. Тогда каждый
 цвет каждого пиксела, находящегося на расстоянии x пикселов от начала
-будет равен (A1-(A1-B1)/h*x, A2-(A2-B2)/h*x, A3-(A3-B3)/h*x). Теперь,
-имея линию с градиентной заливкой, можно таким образом залить совершенно
+будет равен (A1-(A1-B1)/h\*x, A2-(A2-B2)/h\*x, A3-(A3-B3)/h\*x).
+
+Теперь, имея линию с градиентной заливкой, можно таким образом залить совершенно
 любую фигуру: будь то прямоугольник, круг или просто произвольная
 фигура.
 
@@ -54,13 +53,19 @@ B3)) и линия (длиной h пикселов), по которой нуж
           end; 
     end.
 
-Mischka   Цитата  feriman, 13.09.04, 15:14 Подкиньте примерчик
-градиентной заливки формы.   Вот посмотри:
+-------------------------------------------------
 
- 
+Вариант 2:
+
+Author: Kostas
+
+> feriman, 13.09.04, 15:14:  
+> Подкиньте примерчик градиентной заливки формы.
+
+Вот посмотри:
+
 
     unit Graph32;
-
      
     interface
      
@@ -187,146 +192,18 @@ Mischka   Цитата  feriman, 13.09.04, 15:14 Подкиньте пример
      
     end.
 
-Автор: Kostas
 
 ------------------------------------------------------------------------
 
-    unit Graph32;
+Вариант 3:
 
-     
-    interface
-     
-    uses
-     Windows, Graphics;
-     
-    type
-     TRGB = record
-      B, G, R: byte;
-     end;
-     
-     ARGB = array [0..1] of TRGB;
-     
-     PARGB = ^ARGB;
-     
-    procedure HGradientRect(Canvas: TCanvas; X1, Y1, X2, Y2: integer; Color1, Color2: TColor);
-    procedure VGradientRect(Canvas: TCanvas; X1, Y1, X2, Y2: integer; Color1, Color2: TColor);
-    procedure RGradientRect(Canvas: TCanvas; X1, Y1, X2, Y2: integer; Color1, Color2: TColor);
-     
-    var
-     Bitmap: TBitmap;
-     p: PARGB;
-     
-    implementation
-     
-    procedure HGradientRect(Canvas: TCanvas; X1, Y1, X2, Y2: integer; Color1, Color2: TColor);
-    var
-     x, y, c1, c2, r1, g1, b1: integer;
-     dr, dg, db: real;
-    begin
-     Bitmap.Width:=abs(X1-X2);
-     Bitmap.Height:=abs(Y1-Y2);
-     c1:=ColorToRGB(Color1);
-     r1:=getRValue(c1);
-     g1:=getGValue(c1);
-     b1:=getBValue(c1);
-     c2:=ColorToRGB(Color2);
-     dr:=(getRValue(c2)-r1)/Bitmap.Width;
-     dg:=(getGValue(c2)-g1)/Bitmap.Width;
-     db:=(getBValue(c2)-b1)/Bitmap.Width;
-     for y:=0 to Bitmap.Height-1 do
-     begin
-      p:=Bitmap.ScanLine[y];
-      for x:=0 to Bitmap.Width-1 do
-      begin
-       p[x].R:=round(r1+x*dr);
-       p[x].G:=round(g1+x*dg);
-       p[x].B:=round(b1+x*db)
-      end
-     end;
-     Canvas.Draw(X1, Y1, Bitmap)
-    end;
-     
-    procedure VGradientRect(Canvas: TCanvas; X1, Y1, X2, Y2: integer; Color1, Color2: TColor);
-    var
-     x, y, c1, c2, r1, g1, b1: integer;
-     dr, dg, db: real;
-    begin
-     Bitmap.Width:=abs(X1-X2);
-     Bitmap.Height:=abs(Y1-Y2);
-     c1:=ColorToRGB(Color1);
-     r1:=getRValue(c1);
-     g1:=getGValue(c1);
-     b1:=getBValue(c1);
-     c2:=ColorToRGB(Color2);
-     dr:=(getRValue(c2)-r1)/Bitmap.Height;
-     dg:=(getGValue(c2)-g1)/Bitmap.Height;
-     db:=(getBValue(c2)-b1)/Bitmap.Height;
-     for y:=0 to Bitmap.Height-1 do
-     begin
-      p:=Bitmap.ScanLine[y];
-      for x:=0 to Bitmap.Width-1 do
-      begin
-       p[x].R:=round(r1+y*dr);
-       p[x].G:=round(g1+y*dg);
-       p[x].B:=round(b1+y*db)
-      end
-     end;
-     Canvas.Draw(X1, Y1, Bitmap)
-    end;
-     
-    procedure RGradientRect(Canvas: TCanvas; X1, Y1, X2, Y2: integer; Color1, Color2: TColor);
-    var
-     x, y, c1, c2, r1, g1, b1: integer;
-     dr, dg, db, d: real;
-    begin
-     Bitmap.Width:=abs(X1-X2);
-     Bitmap.Height:=abs(Y1-Y2);
-     c1:=ColorToRGB(Color1);
-     r1:=getRValue(c1);
-     g1:=getGValue(c1);
-     b1:=getBValue(c1);
-     c2:=ColorToRGB(Color2);
-     d:=sqrt(Bitmap.Width*Bitmap.Width+Bitmap.Height*Bitmap.Height)/2;
-     dr:=(getRValue(c2)-r1)/d;
-     dg:=(getGValue(c2)-g1)/d;
-     db:=(getBValue(c2)-b1)/d;
-     for y:=0 to Bitmap.Height-1 do
-     begin
-      p:=Bitmap.ScanLine[y];
-      for x:=0 to Bitmap.Width-1 do
-      begin
-       d:=sqrt(((Bitmap.Width-2*x)*(Bitmap.Width-2*x)+(Bitmap.Height-2*y)*(Bitmap.Height-2*y))/4);
-       p[x].R:=round(r1+d*dr);
-       p[x].G:=round(g1+d*dg);
-       p[x].B:=round(b1+d*db)
-      end
-     end;
-     Canvas.Draw(X1, Y1, Bitmap)
-    end;
-     
-    initialization
-     
-    begin
-     Bitmap:=TBitmap.create();
-     Bitmap.PixelFormat:=pf24bit
-    end;
-     
-    finalization
-     
-    begin
-     Bitmap.free()
-    end;
-     
-    end.
+Author: Rouse\_
 
-Автор: Mischka
-
-------------------------------------------------------------------------
+Source: <https://forum.sources.ru>
 
 Еще, как вариант, воспользоваться стандартной функцией GradientFill:
 
     uses ..., Math;
-
      
     procedure TForm1.Button1Click(Sender: TObject);
      
@@ -386,6 +263,3 @@ Mischka   Цитата  feriman, 13.09.04, 15:14 Подкиньте пример
                      Round(Height/2 - Canvas.TextHeight(Text)/2), Text)
     end;
 
-Автор Rouse\_
-
-Взято из <https://forum.sources.ru>

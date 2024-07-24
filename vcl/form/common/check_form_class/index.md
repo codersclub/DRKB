@@ -7,10 +7,6 @@ Date: 01.01.2007
 Узнать класс формы
 ==================
 
-::: {.date}
-01.01.2007
-:::
-
     type 
       PFieldClassTable = ^TFieldClassTable; 
       TFieldClassTable = packed record 

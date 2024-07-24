@@ -1,15 +1,12 @@
 ---
 Title: Как узнать, форма активна или нет?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как узнать, форма активна или нет?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
        //...
@@ -17,7 +14,6 @@ Date: 01.01.2007
         { Private declarations }
         procedure WMNCACTIVATE(var M: TWMNCACTIVATE); message WM_NCACTIVATE;
       end;
-     
      
     implementation
      
@@ -31,4 +27,3 @@ Date: 01.01.2007
       else caption:='Form not active' ;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
