@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как сделать прозрачное окно родными средствами Windows2000?
 ===========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 В Windows2000 есть для этого ф-я SetLayeredWindowAttributes, вот пример
 её использования:
@@ -19,10 +19,10 @@ Date: 01.01.2007
     uses Graphics, Windows;
      
     function SetLayeredWindowAttributes(
-    hwnd : HWND; // handle to the layered window
-    crKey : TColor; // specifies the color key
-    bAlpha : byte; // value for the blend function
-    dwFlags : DWORD // action
+      hwnd : HWND; // handle to the layered window
+      crKey : TColor; // specifies the color key
+      bAlpha : byte; // value for the blend function
+      dwFlags : DWORD // action
     ): BOOL; stdcall;
      
     function SetLayeredWindowAttributes; external 'user32.dll';
@@ -46,40 +46,41 @@ Date: 01.01.2007
     Transp : Byte;
      
     begin
-    Writeln('Windows2000 Layer <- build by AK ->');
-    Writeln(' Usage: WINLAYER.EXE [window name] [Transp (0-255)]');
-    Writeln(' Example: WINLAYER "Calculator" 200');
-    Writeln;
-    if ParamCount <> 2 then exit;
-    Hndl := FindWindow(nil, PChar(ParamStr(1)));
-    Transp := StrToIntDef(ParamStr(2), 128);
-    if SetWindowLong(Hndl, GWL_EXSTYLE, GetWindowLong(Hndl, GWL_EXSTYLE) or WS_EX_LAYERED) = 0 then
-    Writeln('Error !');
-     
-    if not SetLayeredWindowAttributes(Hndl, 0, Transp, LWA_ALPHA) then
-    // ^^^ степень прозрачности
-    // 0 - полная прозрачность
-    // 255 - полная непрозрачность
-    Writeln('Error !');
+      Writeln('Windows2000 Layer <- build by AK ->');
+      Writeln(' Usage: WINLAYER.EXE [window name] [Transp (0-255)]');
+      Writeln(' Example: WINLAYER "Calculator" 200');
+      Writeln;
+      if ParamCount <> 2 then exit;
+      Hndl := FindWindow(nil, PChar(ParamStr(1)));
+      Transp := StrToIntDef(ParamStr(2), 128);
+      if SetWindowLong(Hndl, GWL_EXSTYLE, GetWindowLong(Hndl, GWL_EXSTYLE) or WS_EX_LAYERED) = 0 then
+        Writeln('Error !');
+       
+      if not SetLayeredWindowAttributes(Hndl, 0, Transp, LWA_ALPHA) then
+        // ^^^ степень прозрачности
+        // 0 - полная прозрачность
+        // 255 - полная непрозрачность
+        Writeln('Error !');
     end.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-SetWindowTransp(hndl: THandle; Perc: byte);
+Вариант 2:
 
-hndl
+Source: <https://delphiworld.narod.ru>
 
-Hanle окна, которое надо сделать полупрозрачным.
+    SetWindowTransp(hndl: THandle; Perc: byte);
 
-Perc
+hndl - Hanle окна, которое надо сделать полупрозрачным.
 
-Число от 1 до 100, указывающее уровень прозрачности.
-
-Взято с <https://delphiworld.narod.ru>
+Perc - Число от 1 до 100, указывающее уровень прозрачности.
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://delphiworld.narod.ru>
 
 Есть более продвинутые возможности (например, альфа-канал в битмапе)
 
@@ -208,4 +209,3 @@ https://msdn.microsoft.com/isapi/msdnlib.idc?theURL=/library/techart/layerwin.ht
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

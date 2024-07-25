@@ -1,15 +1,12 @@
 ---
 Title: Как сделать roll-up форму?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать roll-up форму?
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     unit testmain;
      
@@ -123,4 +120,3 @@ Alt-tab back to it. (If you are familiar with the Macintosh platform,
 the System 7.5 environment offers a very similar facility called a
 "window shade," and makes a roll-up sound when the shade goes up.)
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

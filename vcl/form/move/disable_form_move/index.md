@@ -1,15 +1,12 @@
 ---
 Title: Как запретить перемещение формы?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как запретить перемещение формы?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TyourForm = class(TForm)
@@ -27,4 +24,3 @@ Date: 01.01.2007
           Result := HTNOWHERE;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

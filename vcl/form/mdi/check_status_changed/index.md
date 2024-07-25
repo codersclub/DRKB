@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как узнать, что MDI-форма изменила статус?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
-
      private
        Procedure WMSize( Var msg: TWMSize ); Message WM_SIZE;
     ...

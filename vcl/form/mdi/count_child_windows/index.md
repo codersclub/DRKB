@@ -1,17 +1,15 @@
 ---
 Title: Сколько открыто дочерних окон?
+Author: Bose
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Сколько открыто дочерних окон?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
-    Form1.MDIChildCount
+Можно использовать `Form1.MDIChildCount`.
 
 Закрыть все окна:
 
@@ -22,8 +20,4 @@ Date: 01.01.2007
             MDIChildren[i].Close;
           end;
 
-Взято с <https://delphiworld.narod.ru>
-
-Исправлено Bose
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+[Исправлено Bose]

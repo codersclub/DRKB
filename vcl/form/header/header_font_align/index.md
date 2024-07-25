@@ -9,10 +9,9 @@ Date: 01.01.2007
 
 Вариант 1:
 
-**Note:**  
-The formDeactivate never gets called so when the form isn\'t
-active, sometimes the FormPaint isn\'t called. If anything causes the
-form to be repainted while in inactive, it draws correctly.
+**Примечание:**  
+formDeactivate никогда не вызывается, поэтому, когда форма неактивна, иногда FormPaint не вызывается.
+Если же что-то вызывает перерисовку формы в неактивном состоянии, то она рисуется правильно.
 
     unit Unit1;
      

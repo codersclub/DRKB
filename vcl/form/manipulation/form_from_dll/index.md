@@ -1,15 +1,12 @@
 ---
 Title: Как использовать форму из DLL?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как использовать форму из DLL?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     library Form;
     uses
@@ -75,4 +72,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

@@ -205,7 +205,7 @@ rec(Trect): размер кнопки.
 
 **Комментарии специалистов:**
 
-Date: 25 Августа 2000г.
+Date: 25.08.2000
 
 Author: NeNashev nashev@mail.ru
 

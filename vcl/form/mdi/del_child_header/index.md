@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как убрать заголовок в дочерней форме MDI?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Если в дочерней форме MDI установить BorderStyle в bsNone, то заголовок
 формы не исчезнет. (Об этом сказано в хелпе). А вот следующий пример
@@ -30,9 +30,12 @@ Date: 01.01.2007
       Params.Style := Params.Style and (not WS_CAPTION);
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     type
       TForm2 = class(TForm)
@@ -47,4 +50,3 @@ Date: 01.01.2007
       Params.Style := Params.Style and not WS_OVERLAPPEDWINDOW or WS_BORDER
     end;
 
-Взято с <https://delphiworld.narod.ru>

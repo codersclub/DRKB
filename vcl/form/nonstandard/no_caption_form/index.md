@@ -1,6 +1,5 @@
 ---
 Title: Как сделать форму без Caption?
-Author: Song
 Date: 01.01.2007
 ---
 
@@ -8,19 +7,23 @@ Date: 01.01.2007
 Как сделать форму без Caption?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Song
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Обычная форма:
 
     TForm.Style:=bsNone 
 
-Автор: Song
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: rhf
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 MDIChild форма:
 
@@ -28,11 +31,11 @@ MDIChild форма:
     width:=width+1;
     width:=width-1;
 
-Автор: rhf
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://forum.sources.ru>
 
     { Private Declaration } 
     procedure CreateParams(var Params : TCreateParams); override; 
@@ -47,9 +50,11 @@ MDIChild форма:
     Style := (Style or WS_POPUP) and not WS_DLGFRAME; 
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://delphiworld.narod.ru>
 
     procedure TForm1.HideTitlebar; 
     var 
@@ -101,4 +106,3 @@ MDIChild форма:
       ShowTitlebar; 
     end;
 
-Взято с <https://delphiworld.narod.ru>

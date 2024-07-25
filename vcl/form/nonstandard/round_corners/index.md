@@ -2,15 +2,12 @@
 Title: Создание форм с закругленными краями
 Author: winsoft
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Создание форм с закругленными краями
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Die CreateRoundRectRgn lasst eine Form mit abgerundeten Ecken erscheinen. 
@@ -60,6 +57,3 @@ Date: 01.01.2007
        SetWindowRgn(Form1.Handle, CreatePolygonRgn(Points, 8, WINDING), True);
      end;
 
-Автор: winsoft
-
-Взято из <https://forum.sources.ru>

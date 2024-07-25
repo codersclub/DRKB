@@ -1,15 +1,12 @@
 ---
 Title: Как сделать дырку в окне?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как сделать дырку в окне?
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button4Click(Sender: TObject);
     var
@@ -30,4 +27,3 @@ Date: 01.01.2007
       ShowMessage ('Вам лучше купить новый монитор');
     end;
 
-Взято из <https://forum.sources.ru>

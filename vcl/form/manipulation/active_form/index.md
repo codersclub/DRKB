@@ -2,15 +2,12 @@
 Title: Как сделать форму активной (форма находится в DLL)?
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как сделать форму активной (форма находится в DLL)?
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure ShowMainForm;
 
@@ -41,6 +38,3 @@ Date: 01.01.2007
       SystemParametersInfo(SPI_SETFOREGROUNDLOCKTIMEOUT, 0, Pointer(OldTimeOut), 0); 
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

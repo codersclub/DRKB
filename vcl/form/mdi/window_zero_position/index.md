@@ -7,10 +7,6 @@ Date: 01.01.2007
 Создать MDI-окно с координатами (0, 0)
 ======================================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure TFormX.FormCreate(Sender: TObject);
      Var
        r: TRect;

@@ -1,6 +1,5 @@
 ---
 Title: Прозрачная форма, не реагирующая на мышь?
-Author: Krid
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,11 @@ Date: 01.01.2007
 Прозрачная форма, не реагирующая на мышь?
 =========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
 
     unit transpar_frm;
 
@@ -81,11 +82,13 @@ Date: 01.01.2007
     end;
     end.
 
-Автор: Krid
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Smike
+
+Source: <https://forum.sources.ru>
 
     type
 
@@ -115,11 +118,13 @@ Date: 01.01.2007
         WS_EX_TRANSPARENT;
     end;
 
-Автор:  Smike
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Vitalik
+
+Source: <https://forum.sources.ru>
 
 Вместо перекрытия CreateParams():
 
@@ -132,17 +137,16 @@ Date: 01.01.2007
     setWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) and not WS_EX_TRANSPARENT);
 
 
-
-Автор:  Vitalik
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Author: Scorpy
+
+Source: <https://forum.sources.ru>
 
 Еще одно хорошее решение. Его преимущество в том, что работать оно будет
 на всех системах, включая Win9x.
-
- 
 
     procedure TForm1.HandleMessage(var Msg: tagMSG;var Handled: Boolean);
     Var
@@ -172,8 +176,3 @@ Date: 01.01.2007
       Application.OnMessage:=HandleMessage;
     end;
 
-
-
-Автор: Scorpy
-
-Взято из <https://forum.sources.ru>

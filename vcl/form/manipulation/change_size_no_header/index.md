@@ -1,5 +1,7 @@
 ---
 Title: Форма, изменяющая размеры без заголовка
+Author: feriman
+Source: <https://forum.sources.ru>
 Date: 01.01.2007
 ---
 
@@ -7,13 +9,9 @@ Date: 01.01.2007
 Форма, изменяющая размеры без заголовка
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Форма, изменяющая размеры без заголовка.
 
-Форма изменяющая размеры без заголовка.
-
-Нужно выставить свойство формы BorderStyle := bsNone;
+Нужно выставить свойство формы `BorderStyle := bsNone;`
 
     type
       TForm1 = class(TForm)
@@ -37,6 +35,3 @@ Date: 01.01.2007
       Params.Style := (Params.Style or WS_THICKFRAME);
     end;
 
-Автор feriman
-
-Взято из <https://forum.sources.ru>

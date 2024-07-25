@@ -1,15 +1,12 @@
 ---
 Title: Как сделать subform?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать subform?
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
 Those programmers who use the Win API in their programs know that Win32
 allows you to insert one dialog box into another one and you\'ll can
@@ -129,4 +126,3 @@ Full source code of the subform control:
      
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

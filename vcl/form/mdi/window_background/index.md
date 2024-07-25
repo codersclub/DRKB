@@ -1,6 +1,5 @@
 ---
 Title: Фон MDI-окон
-Author: Neil Rubenkind
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Фон MDI-окон
 ============
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Neil Rubenkind
 
 Привожу код, который может оказаться полезным. Он позволяет в обычной
 или MDI-форме создать графический tile-фон или градиентную заливку.
@@ -248,6 +247,10 @@ MDI-форме. Все что вам необходимо сделать - в р
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
+
 Сначала установите свойство формы FormStyle в fsMDIForm. Затем
 разместите Image на форме и загрузите в него картинку. Найдите { Private
 Declarations } в обьявлении формы и добаьте следующие строки:
@@ -292,9 +295,12 @@ Declarations } в обьявлении формы и добаьте следую
 Добавьте к проекту новую форму и установите ее свойство FormStyle в
 fsMDIChild
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://delphiworld.narod.ru>
 
     procedure TForm.OnPaint(Sender: TObject);
      
@@ -330,9 +336,14 @@ fsMDIChild
         Tile(TForm(Sender).Canvas, fTileWith);
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Author: Neil Rubenkind
+
+Source: <https://delphiworld.narod.ru>
 
 Несколько людей уже спрашивали, как залить фон главной MDI-формы
 повторяющимся изображением. Ключевым моментом здесь является работа с
@@ -363,10 +374,6 @@ Image1, содержащий изображение для заливки фон
       TForm1(Application.Mainform).PaintUnderIcon(Self, Message.DC);
       Message.Result := 0;
     end;
-     
-     
-     
-     
      
     ...
     { Private declarations }
@@ -450,11 +457,14 @@ Image1, содержащий изображение для заливки фон
             LongInt(FClientInstance));
         end;
 
-Автор: Neil Rubenkind
-
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Author: [Alexander N.Voronin](mailto:van@ttk.jar.ru)
+
+Source: <https://delphiworld.narod.ru>
 
 В разделе Заполнение изображением MDI-формы повторяющимся изображением.
 Я нашел (Copyright не мой а из книжки) более простой способ.
@@ -505,11 +515,14 @@ Image1, содержащий изображение для заливки фон
       OutCanvas.Free;
     end;
 
-Автор: [Alexander N.Voronin](mailto:van@ttk.jar.ru)
-
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Author: [Nomadic](mailto:Nomadic@newmail.ru)
+
+Source: <https://delphiworld.narod.ru>
 
     type
       .... = class(TForm)
@@ -596,6 +609,3 @@ Image1, содержащий изображение для заливки фон
           end;
         end;
 
-Автор: [Nomadic](mailto:Nomadic@newmail.ru)
-
-Взято с <https://delphiworld.narod.ru>

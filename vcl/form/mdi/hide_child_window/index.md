@@ -1,15 +1,12 @@
 ---
 Title: Как спрятать окна MDI Child?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как спрятать окна MDI Child?
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TCustomForm.VisibleChanging;
     begin
@@ -17,4 +14,3 @@ Date: 01.01.2007
         raise EInvalidOperation.Create(SMDIChildNotVisible);
     end;
 
-Взято с <https://delphiworld.narod.ru>

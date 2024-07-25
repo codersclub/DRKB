@@ -8,10 +8,6 @@ Date: 04.12.2006.
 Как сделать форму невидимой, а компоненты (TImage) видимые?
 ===========================================================
 
-::: {.date}
-04.12.2006.
-:::
-
 Автор: Нуржанов Аскар. (NikNet/Arazel)
 
 Сайт кому интересно : NikNet.narod.ru
@@ -75,9 +71,9 @@ Date: 04.12.2006.
       for i:=0 to ControlCount-1 do
       with Controls[i] do
       begin
-    //      Rgn:=CreateRectRgn(ClientX+Left,ClientY+Top,ClientX+Left+Width,ClientY+Top+Height);
-    //      CombineRgn(FullRgn,FullRgn,Rgn,RGN_OR);
-    //***************************************************************************************
+      //      Rgn:=CreateRectRgn(ClientX+Left,ClientY+Top,ClientX+Left+Width,ClientY+Top+Height);
+      //      CombineRgn(FullRgn,FullRgn,Rgn,RGN_OR);
+      //***************************************************************************************
           if (TImage(Controls[i]).Picture) <> nil  then
           with TImage(Controls[i]) do
           Begin

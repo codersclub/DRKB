@@ -1,15 +1,12 @@
 ---
 Title: Как создать форму в форме элипса?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как создать форму в форме элипса?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.FormCreate(Sender: TObject);
     var
@@ -19,4 +16,3 @@ Date: 01.01.2007
       SetWindowRgn(Handle, Region, True);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

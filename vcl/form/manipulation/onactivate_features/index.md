@@ -2,15 +2,12 @@
 Title: Особенности работы события OnActivate
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Особенности работы события OnActivate
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
 Наверное многие заметили, что событие onActivate формы ведет себя по
 странному, иногда происходит его активация просто при приобретении
@@ -27,7 +24,6 @@ win95/NT4 событие формы onActivate происходит только
 когда это нужно.
 
     Procedure TForm1.Form1OnActivate(Sender:TObject);
-
      
     begin
     OnActivate:=nil;
@@ -37,8 +33,5 @@ win95/NT4 событие формы onActivate происходит только
 Чтоб подготовить обработку события если она ожидается надо вновь
 присвоить событию процедуру обработки
 
-OnActivate:=Form1OnActivate;
+    OnActivate:=Form1OnActivate;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

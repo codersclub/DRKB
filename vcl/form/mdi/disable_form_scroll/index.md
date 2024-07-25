@@ -1,18 +1,15 @@
 ---
 Title: Избавление от скроллов в MDI-форме
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Избавление от скроллов в MDI-форме
 ==================================
 
-::: {.date}
-01.01.2007
-:::
-
-    { Избавление от ScrollBar'ов в MDI-форме. (С) Peter Below (TeamB)              }
-    { Не надо VCL переписывать :-)                                                 }
+    { Избавление от ScrollBar-ов в MDI-форме. (С) Peter Below (TeamB) }
+    { Не надо VCL переписывать :-)                                    }
      
     unit MainForm;
      
@@ -78,4 +75,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>

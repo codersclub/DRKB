@@ -1,15 +1,12 @@
 ---
 Title: Придание MDI-формам большей трехмерности
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Придание MDI-формам большей трехмерности
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     constructor TMainForm.Create(AOwner: TComponent);
     begin
@@ -20,4 +17,3 @@ Date: 01.01.2007
         swp_DrawFrame or swp_NoMove or swp_NoSize or swp_NoZOrder);
     end;
 
-Взято с <https://delphiworld.narod.ru>

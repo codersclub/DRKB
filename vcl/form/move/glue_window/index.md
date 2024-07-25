@@ -2,17 +2,14 @@
 Title: Липкие окошки
 Author: Nashev
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Липкие окошки
 =============
 
-::: {.date}
-01.01.2007
-:::
-
-Из одноимённой статьи с сайта delphi.about.com
+_Из одноимённой статьи с сайта delphi.about.com_
 
 В статье рассматривается приём создания обработчиков сообщений, которые
 позволяют форме при перетаскивании "прилипать" к краям экранной
@@ -60,7 +57,7 @@ OnResize, соотвествующее сообщению WM\_SIZE, но при 
 если она находится на определённом расстоянии от окна (допустим 20
 пикселей).
 
-  Пример
+**Пример**
 
 К новой форме добавьте Label, один контрол Edit и четыре Check boxes.
 Измените имя контрола Edit на edStickAt. Измените имена чекбоксов на
@@ -80,8 +77,8 @@ Microsoft и т.д.), используем SystemParametersInfo, первый п
 
     ...
      
-      private
-       procedure WMWINDOWPOSCHANGING
+    private
+      procedure WMWINDOWPOSCHANGING
                 (Var Msg: TWMWINDOWPOSCHANGING);
                  message WM_WINDOWPOSCHANGING;
      
@@ -143,30 +140,31 @@ Microsoft и т.д.), используем SystemParametersInfo, первый п
 Теперь достаточно запустить проект и перетащить форму к любому краю
 экрана.
 
-Комментарии:
+**Комментарии:**
 
-Автор: Nashev
+Author: Nashev
 
-а так короче... И, ИМХО, лучше:
+а так короче...  
+И, ИМХО, лучше:
 
     procedure TCustomGlueForm.WMWindowPosChanging1(var Msg: TWMWindowPosChanging);
     var
-    WorkArea: TRect;
-    StickAt : Word;
+      WorkArea: TRect;
+      StickAt : Word;
     begin
-    StickAt := 10;
-    SystemParametersInfo(SPI_GETWORKAREA, 0, @WorkArea, 0);
-    with WorkArea, Msg.WindowPos^ do 
-    begin
-    // Сдвигаем границы для сравнения с левой и верхней сторонами
-    Right:=Right-cx;
-    Bottom:=Bottom-cy;
-    if abs(Left - x) <= StickAt then x := Left;
-    if abs(Right - x) <= StickAt then x := Right;
-    if abs(Top - y) <= StickAt then y := Top;
-    if abs(Bottom - y) <= StickAt then y := Bottom;
-    end;
-    inherited;
+      StickAt := 10;
+      SystemParametersInfo(SPI_GETWORKAREA, 0, @WorkArea, 0);
+      with WorkArea, Msg.WindowPos^ do 
+      begin
+        // Сдвигаем границы для сравнения с левой и верхней сторонами
+        Right:=Right-cx;
+        Bottom:=Bottom-cy;
+        if abs(Left - x) <= StickAt then x := Left;
+        if abs(Right - x) <= StickAt then x := Right;
+        if abs(Top - y) <= StickAt then y := Top;
+        if abs(Bottom - y) <= StickAt then y := Bottom;
+      end;
+      inherited;
     end;
 
 В проекте осталось 2 глюка:
@@ -178,7 +176,7 @@ Microsoft и т.д.), используем SystemParametersInfo, первый п
 2) Иногда 3 формы прикрепляются друг к другу, и иначе, как
 воспользовавшись 1-ым глюком, их не расцепить.
 
-Состав проекта:
+**Состав проекта:**
 
 сам проект, uCustomGlueForm - форма с добавленной липкостью 3 формы -
 пустышки, наследники TCustomGlueForm
@@ -190,10 +188,9 @@ Microsoft и т.д.), используем SystemParametersInfo, первый п
 В принципе, если липкость нужна без прилипания (а это уже работает без
 глюков) можно выкинуть все методы, кроме
 
-procedure WMWindowPosChanging(var Msg: TWMWindowPosChanging);message
-WM\_WINDOWPOSCHANGING;
+    procedure WMWindowPosChanging(var Msg: TWMWindowPosChanging);
+              message WM_WINDOWPOSCHANGING;
 
 и все переменные, а в самом WMWindowPosChanging удалить все упоминания
 этих переменных.
 
-Взято из <https://forum.sources.ru>

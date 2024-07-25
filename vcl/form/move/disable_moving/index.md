@@ -1,17 +1,15 @@
 ---
-Title: Ограничить подвижность формы
+Title: Как ограничить подвижность формы
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Ограничить подвижность формы
+Как ограничить подвижность формы
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
-For some reason messages.pas declares no message record for this message
+Странно, но по какой-то причине в messages.pas
+нет объявления записи для этого сообщения.
 
     type
       TWmMoving = record
@@ -21,19 +19,19 @@ For some reason messages.pas declares no message record for this message
         Result: Integer;
       end;
      
-    // Add a handler to your forms private section:
+    // Добавьте обработчик в приватный раздел вашей формы:
      
     procedure WMMoving(var msg: TWMMoving); message WM_MOVING;
      
-    // Implement it as
+    // Реализуйте это следующим образом:
      
       procedure TFormX.WMMoving(var msg: TWMMoving);
       var
         r: TRect;
       begin
         r := Screen.WorkareaRect;
-       // compare the new form bounds in msg.lpRect^ with r and modify it if
-       // necessary
+        // при необходимости сравните новые границы формы
+        // в msg.lpRect^ с r и измените их
         if msg.lprect^.left < r.left then
           OffsetRect(msg.lprect^, r.left - msg.lprect^.left, 0);
         if msg.lprect^.top < r.top then
@@ -45,4 +43,3 @@ For some reason messages.pas declares no message record for this message
         inherited;
       end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

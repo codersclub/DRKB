@@ -1,15 +1,12 @@
 ---
-Title: Сворачивает всё приложение при сворачивании неглавного окна
-Date: 01.01.2007
+Title: Свернуть всё приложение при сворачивании неглавного окна
+Author: Vemer, Vemer@mail.ru
+Date: 17.03.2004
 ---
 
 
-Сворачивает всё приложение при сворачивании неглавного окна
+Свернуть всё приложение при сворачивании неглавного окна
 ===========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Сворачивает все приложение при сворачивании неглавного окна.
@@ -24,7 +21,7 @@ Date: 01.01.2007
     ********************************************** }
      
     //Пишем в Private формы(неглавной);
-     Procedure WMSysCommand(var message: TWMSysCommand); message WM_SysCommand;
+    Procedure WMSysCommand(var message: TWMSysCommand); message WM_SysCommand;
      
     //Пишем в тексте программы:
     Procedure TF_Shop.WMSysCommand(var message: TWMSysCommand);
