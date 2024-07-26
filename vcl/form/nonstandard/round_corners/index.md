@@ -33,7 +33,6 @@ Source: <https://forum.sources.ru>
      
      { The CreatePolygonRgn function creates a polygonal region. }
      
-     
      procedure TForm1.FormCreate(Sender: TObject);
      const
        C = 20;

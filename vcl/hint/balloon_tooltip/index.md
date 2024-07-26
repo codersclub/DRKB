@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как сделать balloon tooltips?
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     uses 
        Commctrl; 
@@ -70,6 +68,10 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {....} 
      
@@ -140,4 +142,3 @@ Date: 01.01.2007
      3 - Error 
     } 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

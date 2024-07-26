@@ -1,15 +1,12 @@
 ---
 Title: Как сделать графический hint?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать графический hint?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     {********************************************************* 
      
@@ -117,4 +114,3 @@ Date: 01.01.2007
       Application.ShowHint := True; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

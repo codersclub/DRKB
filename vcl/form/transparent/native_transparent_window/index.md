@@ -11,7 +11,7 @@ Date: 01.01.2007
 
 Source: <https://forum.sources.ru>
 
-В Windows2000 есть для этого ф-я SetLayeredWindowAttributes, вот пример
+В Windows2000 есть для этого функция SetLayeredWindowAttributes, вот пример
 её использования:
 
     unit Win2k;

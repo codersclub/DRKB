@@ -2,17 +2,12 @@
 Title: Как создать собственное Hint-окно
 Author: Олег Кулабухов
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как создать собственное Hint-окно
 =================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Олег Кулабухов
 
     procedure TForm1.FormCreate(Sender: TObject);
     begin
@@ -80,6 +75,4 @@ Date: 01.01.2007
         2000);
     end; 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

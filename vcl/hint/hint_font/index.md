@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как изменить шрифт hint?
 ========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     { 
       When the application displays a Help Hint, 
@@ -48,9 +48,12 @@ Date: 01.01.2007
       Application.ShowHint := True; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 В примере перехватывается событие Application.OnShowHint и изменяется
 шрифт Hint\'а.
@@ -92,9 +95,4 @@ Date: 01.01.2007
     begin
       Application.OnShowHint := MyShowHint;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
