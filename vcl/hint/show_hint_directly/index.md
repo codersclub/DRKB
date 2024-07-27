@@ -1,6 +1,5 @@
 ---
 Title: Прямой вызов Hint
-Author: Nomadic
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Прямой вызов Hint
 =================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function RevealHint(Control: TControl): THintWindow;
     {----------------------------------------------------------------}
@@ -64,13 +63,15 @@ Date: 01.01.2007
 управления. Это может быть изменено, если по какой-то причине вам
 необходима другая позиция окна с подсказкой.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Nomadic
+Вариант 2:
+
+Author: Nomadic
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     {Появление}
     IF h<>nil H.ReleaseHandle; {если чей-то хинт yже был, то его погасить}
@@ -84,11 +85,12 @@ DelphiWorld 6.0
 По-дpyгомy задача тоже pешаема, но очень плохо. (см исходник объекта
 TApplication, он как pаз сабжами заведyет.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Сделаем это по нажатию на первую кнопку, а по нажатию на вторую кнопку
 будем скрывать окно hint\'a:
@@ -111,6 +113,4 @@ DelphiWorld 6.0
         H.ReleaseHandle;
     end; 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

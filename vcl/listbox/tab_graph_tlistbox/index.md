@@ -2,15 +2,12 @@
 Title: Табуляция в графическом TListBox
 Author: [Virtualik](mailto:virty1k@mail.ru)
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Табуляция в графическом TListBox
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
 Использование табуляции в ListBox, когда компонент находится в
 стандартном режиме, не составляет труда. Но что делать если надо
@@ -31,7 +28,7 @@ Date: 01.01.2007
       ListBox1.Canvas.FillRect(Rect);
       //Отрисовка графики
       ...
-        //
+      //
       S := ListBox1.Items.Strings[Index];
       P := Pos('|', S);
       if P = 0 then
@@ -48,6 +45,3 @@ Date: 01.01.2007
 
 Не забудьте перед запуском поставить нужное значение TabWidth.
 
-Автор: [Virtualik](mailto:virty1k@mail.ru)
-
-Взято с <https://delphiworld.narod.ru>

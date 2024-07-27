@@ -2,15 +2,12 @@
 Title: Отрисовка элементов TListBox
 Author: Александр (Rouse\_) Багель
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Отрисовка элементов TListBox
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -69,6 +66,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>

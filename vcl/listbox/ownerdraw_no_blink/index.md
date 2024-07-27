@@ -2,32 +2,25 @@
 Title: Уменьшение мерцания TListBox в обработчике OwnerDraw
 Author: Neil
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Уменьшение мерцания TListBox в обработчике OwnerDraw
 ====================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Предположим ListBox имеет в своем списке два элемента, элемент 0 имеет
 фокус, активен другой компонент и вы щелкаете на элементе 1. При этом
 происходит *ПЯТИКРАТНЫЙ* вызов OnDrawItem, смотрите сами изменения
 состояний двух элементов:
 
-      Index   State
-       
-      0       [odSelected, odFocused]
-       
-      0       [odSelected]
-       
-      0       []
-       
-      1       [odSelected]
-       
-      1       [odSelected, odFocused]
+Index | State
+------|----------------
+0     | [odSelected, odFocused]
+0     | [odSelected]
+0     | []
+1     | [odSelected]
+1     | [odSelected, odFocused]
 
 В случае единственного элемента в списке ListBox получается конфуз,
 поскольку при щелчке на нем вы получаете тот же самый сценарий, только
@@ -53,6 +46,3 @@ selected и focused. В этом вам поможет технология от
       LastIndex := Index;
     end;
 
-Автор: Neil
-
-Взято с <https://delphiworld.narod.ru>

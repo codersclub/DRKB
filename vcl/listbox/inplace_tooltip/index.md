@@ -1,15 +1,13 @@
 ---
 Title: Показ in-place подсказки в TListBox и других компонентах
+Author: Joe Huang (Happyjoe@21cn.com)
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Показ in-place подсказки в TListBox и других компонентах
 ========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       In-place ToolTips are used to display text strings for objects that have been clipped, 
@@ -20,7 +18,7 @@ Date: 01.01.2007
      
     //------------------------------------------------------------------------------ 
     //  Show in-place tooltips on ListBox 
-    //  Author??Joe Huang                 Email??Happyjoe@21cn.com 
+    //  Author: Joe Huang   Email: Happyjoe@21cn.com 
     // 
     //------------------------------------------------------------------------------ 
      
@@ -240,4 +238,3 @@ Date: 01.01.2007
     end. 
     end.
 
-Взято с <https://delphiworld.narod.ru>

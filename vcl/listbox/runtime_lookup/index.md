@@ -1,19 +1,15 @@
 ---
 Title: Как создать поле Lookup во время выполнения приложения?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как создать поле Lookup во время выполнения приложения?
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses 
       Forms, Classes, Controls, StdCtrls, Db, DBTables, DBCtrls; 
-     
      
     type 
       TForm1 = class(TForm) 
@@ -59,4 +55,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>

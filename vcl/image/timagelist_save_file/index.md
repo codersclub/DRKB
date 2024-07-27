@@ -1,15 +1,12 @@
 ---
 Title: Сохранить TImageList в файл со всем содержимым
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Сохранить TImageList в файл со всем содержимым
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     // There are ready-made methods for saving any component including all its children to a file.
     // For writing components use WriteComponentResFile(path + source filename, component name source)
@@ -28,4 +25,3 @@ Date: 01.01.2007
     // Tip 2 - Get benfit of storing the heavy components inside compressed files,
     // so you can get smaller programs
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

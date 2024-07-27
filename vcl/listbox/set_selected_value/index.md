@@ -1,15 +1,12 @@
 ---
 Title: Как присвоить значение свойству selected в TListBox?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как присвоить значение свойству selected в TListBox?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Свойство "selected" компонента ТListBox может быть использованно
 только если свойство MultiSelect установленно в True. Если Вы работаете
@@ -25,4 +22,3 @@ ItemIndex.
             ListBox1.ItemIndex := 1; {This is ok}
     end;
 
-Взято из <https://forum.sources.ru>

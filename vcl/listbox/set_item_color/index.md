@@ -1,15 +1,12 @@
 ---
 Title: Как в TListBox нарисовать Item своим цветом?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как в TListBox нарисовать Item своим цветом?
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.ListBox1DrawItem(Control: TWinControl; Index: Integer; 
     Rect: TRect; State: TOwnerDrawState); 
@@ -26,8 +23,5 @@ Date: 01.01.2007
     end; 
 
 Hе забудьте установить свойство Style у своего ListBox в
-lbOwnerDrawFixed или в
+`lbOwnerDrawFixed` или в `lbOwnerDrawVariable`.
 
-lbOwnerDrawVariable.
-
-Взято из <https://forum.sources.ru>

@@ -1,18 +1,13 @@
 ---
 Title: Использование Hints
-Author: Сергей Королев
+Author: Сергей Королев (Serzs)
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Использование Hints
 ===================
-
-::: {.date}
-01.01.2007
-:::
-
-Aвтор: Serzs
 
 Предположим, у нас есть список строк, причем все строки или некоторые не
 влазят по ширине. Пользоваться прокруткой не всегда удобно. Возможно
@@ -184,8 +179,4 @@ Aвтор: Serzs
       Application.Run;
     end.
 
-Автор: Сергей Королев
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -1,15 +1,12 @@
 ---
 Title: Как поместить иконку в окошко подсказки?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как поместить иконку в окошко подсказки?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Следующий код помещает главную иконку приложения в окошки подсказок:
 
@@ -38,7 +35,8 @@ Date: 01.01.2007
     function TIconHintX.CalcHintRect(MaxWidth: Integer; const AHint: string; 
       AData: Pointer): TRect; 
     begin 
-      Result := inherited CalcHintRect(MaxWidth, AHint, AData);       Result.Right := (Length(AHint) * 5) + Application.Icon.Width; 
+      Result := inherited CalcHintRect(MaxWidth, AHint, AData);
+      Result.Right := (Length(AHint) * 5) + Application.Icon.Width; 
       Result.Bottom := (Application.Icon.Height) * 2; 
     end; 
      
@@ -58,6 +56,5 @@ Date: 01.01.2007
     end. 
 
 Чтобы увидеть это в действии, всё, что надо сделать, это поместить этот
-юнит список USES Вашего приложения
+юнит в список USES Вашего приложения
 
-Взято из <https://forum.sources.ru>

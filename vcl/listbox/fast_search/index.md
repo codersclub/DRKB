@@ -1,15 +1,12 @@
 ---
 Title: Как осуществить быстрый поиск в TListBox?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как осуществить быстрый поиск в TListBox?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Очень просто, смотри пример...
 
@@ -21,4 +18,3 @@ Date: 01.01.2007
       ListBox1.Perform(LB_SELECTSTRING,-1,longint(Pchar(Edit1.text)));
     end;
 
-Взято из <https://forum.sources.ru>

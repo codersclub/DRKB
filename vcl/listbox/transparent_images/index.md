@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как сделать картинки из TImageList прозрачными?
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure TForm1.Button1Click(Sender: TObject);
     var
       bm: TBitmap;

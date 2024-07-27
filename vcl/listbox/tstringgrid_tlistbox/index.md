@@ -1,15 +1,12 @@
 ---
 Title: Как перетащить целую колонку из TStringGrid в TListBox?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как перетащить целую колонку из TStringGrid в TListBox?
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
 После того, как поместите TListBox на форму, необходимо изменить
 свойство Style в TListBox на lbOwnerDrawFixed. Если не изменить свойство
@@ -41,4 +38,3 @@ Style, то событие OnDrawItem никогда не вызовется. Т
       end;
     end;
 
-Взято из <https://forum.sources.ru>

@@ -2,17 +2,12 @@
 Title: TCheckListBox: использование методов LoadFromFile / SaveToFile
 Author: Bjarne Winkler
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 TCheckListBox: использование методов LoadFromFile / SaveToFile
 ==============================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Bjarne Winkler
 
 Пример показывает как можно сохранять в файл содержимое TCheckListBox и
 соответственно восстанавливать из файла ранее сохранённые состояния
@@ -85,8 +80,6 @@ TCheckListBox: использование методов LoadFromFile / SaveToFi
       End; 
     end; 
 
-Bjarne \\v/
-
+Bjarne \\v/  
 https://www.go2NTS.com
 
-Взято из <https://forum.sources.ru>

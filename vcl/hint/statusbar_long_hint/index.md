@@ -7,9 +7,9 @@ Date: 01.01.2007
 Длинные подсказки на StatusBar-e
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Этот пример показывает, как сделать, чтобы на StatusBar выводилась
 длинная подсказка при поднесении мыши к объекту.
@@ -37,14 +37,16 @@ Date: 01.01.2007
 желтом фоне, и та, что лежит в Application.Hint. Для работы с частями
 подсказки существуют функции GetShortHint, GetLongHint.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     private
        procedure MyHint(Sender: TObject);
      end;
-     
      
         implementation
      
@@ -65,4 +67,3 @@ DelphiWorld 6.0
        StatusBar1.SimpleText := Application.Hint;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

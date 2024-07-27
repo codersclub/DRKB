@@ -1,15 +1,12 @@
 ---
 Title: Как показать подсказки Hints для элементов меню
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как показать подсказки Hints для элементов меню
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
 
 В примере создается обработчик события Application.Hint - подсказки меню
 изображаются на status Panel:
@@ -63,6 +60,4 @@ Date: 01.01.2007
         Form1.Caption := OpenDialog1.FileName;
     end; 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

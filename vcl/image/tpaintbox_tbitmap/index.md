@@ -1,15 +1,12 @@
 ---
 Title: Как сохранить содержимое TPaintBox в TBitmap
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как сохранить содержимое TPaintBox в TBitmap
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       Bitmap: TBitmap;
@@ -33,4 +30,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>
