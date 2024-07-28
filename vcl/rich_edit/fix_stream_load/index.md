@@ -8,12 +8,6 @@ Date: 01.01.2007
 Исправление загрузки RTF-текста через поток
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Лагонский Сергей Николаевич
-
 В версии Borland Delphi 3 Client/Server я обнаружил, что при загрузке
 текста формата RTF методом "LoadFromStream" в компонент TRichEdit он
 не интерпретируется как RTF, а отображается полностью (со всеми
@@ -24,99 +18,102 @@ COMCTRLS.PAS (дата создания: 4 августа 1997 года, раз�
 "TRichEditStrings.LoadFromStream" (измененные строки отмечены символом
 "!"):
 
-1. Исходный текст
+1\. Исходный текст
 
-    procedure TRichEditStrings.LoadFromStream(Stream: TStream);
-    var
-      EditStream: TEditStream;
-      Position: Longint;
-      TextType: Longint;
-      StreamInfo: TRichEditStreamInfo;
-      Converter: TConversion;
+```delphi
+procedure TRichEditStrings.LoadFromStream(Stream: TStream);
+var
+  EditStream: TEditStream;
+  Position: Longint;
+  TextType: Longint;
+  StreamInfo: TRichEditStreamInfo;
+  Converter: TConversion;
+begin
+  StreamInfo.Stream := Stream;
+  if FConverter <> nil then
+    Converter := FConverter
+  else
+    Converter := RichEdit.DefaultConverter.Create;
+  StreamInfo.Converter := Converter;
+  try
+    with EditStream do
     begin
-      StreamInfo.Stream := Stream;
-      if FConverter <> nil then
-        Converter := FConverter
-      else
-        Converter := RichEdit.DefaultConverter.Create;
-      StreamInfo.Converter := Converter;
-      try
-        with EditStream do
-        begin
-          dwCookie := LongInt(Pointer(@StreamInfo));
-          pfnCallBack := @StreamLoad;
-          dwError := 0;
-        end;
-        Position := Stream.Position;
-        if PlainText then
-          TextType := SF_TEXT
-        else
-          TextType := SF_RTF;
-        SendMessage(RichEdit.Handle, EM_STREAMIN, TextType, Longint(@EditStream));
-        if (TextType = SF_RTF) and (EditStream.dwError <> 0) then
-        begin
-          Stream.Position := Position;
-          ! if PlainText then
-            TextType := SF_RTF
-              !
-            else
-            TextType := SF_TEXT;
-     
-          SendMessage(RichEdit.Handle, EM_STREAMIN, TextType, Longint(@EditStream));
-          if EditStream.dwError <> 0 then
-            raise EOutOfResources.Create(sRichEditLoadFail);
-        end;
-      finally
-        if FConverter = nil then
-          Converter.Free;
-      end;
+      dwCookie := LongInt(Pointer(@StreamInfo));
+      pfnCallBack := @StreamLoad;
+      dwError := 0;
     end;
-
-2. Текст с исправлением:
-
-     
-    procedure TRichEditStrings.LoadFromStream(Stream: TStream);
-    var
-      EditStream: TEditStream;
-      Position: Longint;
-      TextType: Longint;
-      StreamInfo: TRichEditStreamInfo;
-      Converter: TConversion;
+    Position := Stream.Position;
+    if PlainText then
+      TextType := SF_TEXT
+    else
+      TextType := SF_RTF;
+    SendMessage(RichEdit.Handle, EM_STREAMIN, TextType, Longint(@EditStream));
+    if (TextType = SF_RTF) and (EditStream.dwError <> 0) then
     begin
-      StreamInfo.Stream := Stream;
-      if FConverter <> nil then
-        Converter := FConverter
-      else
-        Converter := RichEdit.DefaultConverter.Create;
-      StreamInfo.Converter := Converter;
-      try
-        with EditStream do
-        begin
-          dwCookie := LongInt(Pointer(@StreamInfo));
-          pfnCallBack := @StreamLoad;
-          dwError := 0;
-        end;
-        Position := Stream.Position;
-        if PlainText then
-          TextType := SF_TEXT
+      Stream.Position := Position;
+      {!} if PlainText then
+        TextType := SF_RTF
+          {!}
         else
-          TextType := SF_RTF;
-        SendMessage(RichEdit.Handle, EM_STREAMIN, TextType, Longint(@EditStream));
-        if (TextType = SF_RTF) and (EditStream.dwError <> 0) then
-        begin
-          Stream.Position := Position;
-          ! if PlainText then
-            TextType := SF_TEXT
-              !
-            else
-            TextType := SF_RTF;
-     
-          SendMessage(RichEdit.Handle, EM_STREAMIN, TextType, Longint(@EditStream));
-          if EditStream.dwError <> 0 then
-            raise EOutOfResources.Create(sRichEditLoadFail);
-        end;
-      finally
-        if FConverter = nil then
-          Converter.Free;
-      end;
+        TextType := SF_TEXT;
+
+      SendMessage(RichEdit.Handle, EM_STREAMIN, TextType, Longint(@EditStream));
+      if EditStream.dwError <> 0 then
+        raise EOutOfResources.Create(sRichEditLoadFail);
     end;
+  finally
+    if FConverter = nil then
+      Converter.Free;
+  end;
+end;
+```
+
+2\. Текст с исправлением:
+
+```delphi
+procedure TRichEditStrings.LoadFromStream(Stream: TStream);
+var
+  EditStream: TEditStream;
+  Position: Longint;
+  TextType: Longint;
+  StreamInfo: TRichEditStreamInfo;
+  Converter: TConversion;
+begin
+  StreamInfo.Stream := Stream;
+  if FConverter <> nil then
+    Converter := FConverter
+  else
+    Converter := RichEdit.DefaultConverter.Create;
+  StreamInfo.Converter := Converter;
+  try
+    with EditStream do
+    begin
+      dwCookie := LongInt(Pointer(@StreamInfo));
+      pfnCallBack := @StreamLoad;
+      dwError := 0;
+    end;
+    Position := Stream.Position;
+    if PlainText then
+      TextType := SF_TEXT
+    else
+      TextType := SF_RTF;
+    SendMessage(RichEdit.Handle, EM_STREAMIN, TextType, Longint(@EditStream));
+    if (TextType = SF_RTF) and (EditStream.dwError <> 0) then
+    begin
+      Stream.Position := Position;
+      {!} if PlainText then
+        TextType := SF_TEXT
+          {!}
+        else
+        TextType := SF_RTF;
+
+      SendMessage(RichEdit.Handle, EM_STREAMIN, TextType, Longint(@EditStream));
+      if EditStream.dwError <> 0 then
+        raise EOutOfResources.Create(sRichEditLoadFail);
+    end;
+  finally
+    if FConverter = nil then
+      Converter.Free;
+  end;
+end;
+```

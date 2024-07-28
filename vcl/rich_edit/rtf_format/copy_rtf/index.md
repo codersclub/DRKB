@@ -1,15 +1,12 @@
 ---
 Title: Как копировать RTF-текст в буффер обмена?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как копировать RTF-текст в буффер обмена?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
     You have to dig into the Rich Text Format if you want to copy text to the 
@@ -22,7 +19,6 @@ Date: 01.01.2007
      
     Var 
       CF_RTF : Word; 
-     
       CF_RTF := RegisterClipboardFormat('Rich Text Format'); 
      
     { 
@@ -219,4 +215,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

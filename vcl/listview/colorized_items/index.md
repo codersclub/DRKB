@@ -1,15 +1,12 @@
 ---
 Title: Цветные строки для TListView
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Цветные строки для TListView
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.ListView1CustomDrawItem(Sender: TCustomListView;
        Item: TListItem; State: TCustomDrawState; var DefaultDraw: Boolean);
@@ -24,4 +21,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

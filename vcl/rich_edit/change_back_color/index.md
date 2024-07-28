@@ -1,15 +1,12 @@
 ---
 Title: Как поменять цвет фона в TRichEdit?
 Date: 01.01.2007
+Source: www.swissdelphicenter.ch
 ---
 
 
 Как поменять цвет фона в TRichEdit?
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       RichEdit;
@@ -34,4 +31,3 @@ Date: 01.01.2007
       RE_SetSelBgColor(RichEdit1, clYellow);
     end;
 
-взято с www.swissdelphicenter.ch

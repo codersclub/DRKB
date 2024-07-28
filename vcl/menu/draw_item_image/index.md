@@ -1,19 +1,15 @@
 ---
 Title: Как рисовать картинки в пунктах меню?
-Author: StayAtHome
+Author: Eugeny Sverchkov (StayAtHome) es906@kolnpp.elektra.ru
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как рисовать картинки в пунктах меню?
 =====================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit DN_Win;
-
      
     interface
      
@@ -36,7 +32,7 @@ Date: 01.01.2007
        Procedure WMMeasureItem(var Msg:TWMMeasureItem); message
     wm_MeasureItem;
      
-     end;
+    end;
      
     var
      DNForm : TDNForm;
@@ -83,7 +79,7 @@ Date: 01.01.2007
      
          if ItemState=ods_Selected then mtd:=NotSrcCopy  else mtd:=SrcCopy;
      
-    StretchBlt(hDC,rcItem.left,rcItem.top,yMenu,yMenu,MemDC,0,0,24,23,mtd);
+         StretchBlt(hDC,rcItem.left,rcItem.top,yMenu,yMenu,MemDC,0,0,24,23,mtd);
          DeleteDC(MemDC);
          DeleteObject(BM);
        end;
@@ -92,12 +88,7 @@ Date: 01.01.2007
      
     end.
 
-Eugeny Sverchkov
-
-es906@kolnpp.elektra.ru
-
+Eugeny Sverchkov (StayAtHome)  
+es906@kolnpp.elektra.ru  
 (2:5031/12.23)
 
-Автор: StayAtHome
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

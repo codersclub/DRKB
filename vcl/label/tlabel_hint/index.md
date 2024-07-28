@@ -17,8 +17,6 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 Такое поведение Hint в VCL предусмотренно:
 
     procedure TForm1.DisplayHint(Sender: TObject);
-
-     
     begin
       Label1.caption := GetLongHint(Application.Hint);
     end;

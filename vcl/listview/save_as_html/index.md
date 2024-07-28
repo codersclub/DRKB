@@ -1,15 +1,12 @@
 ---
 Title: Сохранить TListView как HTML страницу
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Сохранить TListView как HTML страницу
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function ListViewConfHTML(Listview:TListview; output:string; center: Boolean) : Boolean;
      var
@@ -60,4 +57,3 @@ Date: 01.01.2007
            ShowMessage('Error occured/ Hat nicht geklappt');
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

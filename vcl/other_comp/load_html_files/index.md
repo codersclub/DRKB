@@ -2,19 +2,14 @@
 Title: Загрузка файлов в THTMLViewer и TFrameBrowser
 Author: Smike
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Загрузка файлов в THTMLViewer и TFrameBrowser
 =============================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-     
-
      
     interface
      
@@ -85,6 +80,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: Smike

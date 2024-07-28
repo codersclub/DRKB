@@ -1,36 +1,35 @@
 ---
 Title: TProgressBar при помощи фонового потока
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 TProgressBar при помощи фонового потока
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
     { 
       Question: 
      
       I am trying query to display records in a dbgrid.however, due to size 
-      of tables and joins takes a while for the query to Execute.is 
+      of tables and joins takes a while for the query to Execute. is 
       there any way to Show a prorgess bar with a timer that increments 
-      position but continues to work while the query is being executed.BTW, 
+      position but continues to work while the query is being executed. BTW, 
       using access so BDE is not used. 
      
       Answer: 
      
       A progress bar would not be an ideal choice since you cannot determine up 
       front how long the query will take, so you do not know the range the progress 
-      bar has to cover.A simple kind of animation that tells the user basically 
-      only that the application is not hung would be more appropriate.One could do 
+      bar has to cover. A simple kind of animation that tells the user basically 
+      only that the application is not hung would be more appropriate. One could do 
       such a thing in a secondary thread but it would have to be done using the 
-      plain Windows API and * no * Synchronize calls (since the main thread is 
-      blocked in the BDE call).Here is an example: unit anithread; 
+      plain Windows API and *no* Synchronize calls (since the main thread is 
+      blocked in the BDE call). Here is an example: unit anithread; 
     }
      
+     unit anithread;
+
      interface
      
      uses
@@ -50,8 +49,7 @@ TProgressBar при помощи фонового потока
          constructor Create(paintsurface : TWinControl; {Control to paint on }
            paintrect : TRect;          {area for animation bar }
            bkColor, barcolor : TColor; {colors to use }
-           interval : integer);       {wait in msecs between 
-    paints}
+           interval : integer);       {wait in msecs between paints}
        end;
      
      implementation
@@ -180,4 +178,3 @@ TProgressBar при помощи фонового потока
        ShowMessage('Done');
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

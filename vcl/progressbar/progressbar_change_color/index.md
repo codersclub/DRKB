@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как изменить стандартный цвет TProgressBar?
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Самый простой способ, это изменить цветовую схему в свойствах экрана...
 
@@ -21,9 +21,12 @@ Date: 01.01.2007
 Вуаля! Теперь Progress Bar зелёный. Это всего лишь простой пример чёрной
 магии ;)
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     uses 
       CommCtrl; 
@@ -35,8 +38,4 @@ Date: 01.01.2007
       // Set bar color to yellow 
       SendMessage(ProgressBar1.Handle, PBM_SETBARCOLOR, 0, clYellow); 
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

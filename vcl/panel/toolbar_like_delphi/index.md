@@ -2,18 +2,12 @@
 Title: Как сделать TToolBar как в среде Delphi, с возможностью вытаскивания кнопок?
 Author: SmaLL
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как сделать TToolBar как в среде Delphi, с возможностью вытаскивания кнопок?
 ============================================================================
 
-::: {.date}
-01.01.2007
-:::
+Смотри пример `$Delphi\Demos\Docking\`
 
-Смотри пример $Delphi\\Demos\\Docking\
-
-Автор: SmaLL
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Virtual ListView с контекстным меню
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Virtual ListView с контекстным меню
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
 В Delphi5/Demos есть пример Virtual ListView. программка чем-то
 напоминает explorer, но без контекстного меню. контекстное меню
@@ -30,4 +27,3 @@ Virtual ListView с контекстным меню
       DestroyMenu(menu);
     end;
 
-Взято из <https://forum.sources.ru>

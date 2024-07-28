@@ -2,15 +2,12 @@
 Title: Что такое фреймы?
 Author: Vinnety
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Что такое фреймы?
 =================
-
-::: {.date}
-01.01.2007
-:::
 
 Фрэйм - это что-то типа TForm, только его можно размещать в любом окне
 программы.
@@ -22,6 +19,3 @@ Date: 01.01.2007
 
 Все просто.
 
-Автор: Vinnety
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

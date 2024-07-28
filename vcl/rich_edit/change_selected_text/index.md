@@ -1,15 +1,12 @@
 ---
 Title: Изменить цвет выделения для TRichEdit
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Изменить цвет выделения для TRichEdit
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
        RichEdit;
@@ -34,4 +31,3 @@ Date: 01.01.2007
        RE_SetSelBgColor(RichEdit1, clYellow);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -1,15 +1,12 @@
 ---
 Title: Подсветить ссылки в TRichEdit
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Подсветить ссылки в TRichEdit
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       So what we need: 
@@ -36,7 +33,7 @@ Date: 01.01.2007
       text string but new too) 
     }
      
-     // 3. now we must detect mouse clicks in URL range. For this task we must 
+    // 3. now we must detect mouse clicks in URL range. For this task we must 
     //    override WndProc method of our form: 
     type
        TForm1 = class(TForm)
@@ -44,7 +41,7 @@ Date: 01.01.2007
          procedure WndProc(var Message: TMessage); override;
        end;
      
-     // 4. the implementation looks like this: 
+    // 4. the implementation looks like this: 
      
     procedure TForm1.WndProc(var Message: TMessage);
      var
@@ -68,9 +65,8 @@ Date: 01.01.2007
        inherited;
      end;
      
-     { 
+    { 
      5. Now you can compile your project (don't forget to include Richedit and 
      ShellAPI units in uses clause). 
     }
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

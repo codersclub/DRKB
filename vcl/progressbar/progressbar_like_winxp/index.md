@@ -1,6 +1,5 @@
 ---
 Title: Как сделать TProgressBar таким же, как на заставке Windows XP
-Author: Rrader
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,11 @@ Date: 01.01.2007
 Как сделать TProgressBar таким же, как на заставке Windows XP
 =============================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Rrader
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     unit Unit1;
      
@@ -63,13 +64,12 @@ Date: 01.01.2007
      
     end.
 
-Автор: Rrader
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     { 
       Use this ProgressBar when you do not know the amount of progress toward 
@@ -80,7 +80,6 @@ Date: 01.01.2007
       In Delphi 7 just drop TXPManifest on the form. For prior versions of Delphi 
       you have to include the XP manifest resource. 
     }
-     
      
      unit MarqueeProgressBar;
      
@@ -153,4 +152,3 @@ Date: 01.01.2007
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

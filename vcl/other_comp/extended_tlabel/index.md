@@ -2,15 +2,12 @@
 Title: Расширенный TLabel для отображения имени файла
 Author: Smike
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Расширенный TLabel для отображения имени файла
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
 
@@ -143,6 +140,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: Smike

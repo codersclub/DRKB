@@ -2,19 +2,13 @@
 Title: Загрузка нескольких RTF-файлов в TRichEdit
 Author: McAndrews
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Загрузка нескольких RTF-файлов в TRichEdit
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: McAndrews
-
-     
     //Кидаем на форму RichEdit1, Button1, OpenDialog1
     //и по клику кнопки создаём следующую процедуру:
     procedure TForm1.Button1Click(Sender: TObject);
@@ -30,7 +24,7 @@ Date: 01.01.2007
      
       OpenDialog1.Options := OpenDialog1.Options
         // что бы можно было выбрать несколько
-      + [ofAllowMultiSelect]; // файлов
+        + [ofAllowMultiSelect]; // файлов
      
       RichEdit1.MaxLength := $7FFFFFF0; // предусмотрительно увеличиваем максимальный
       // объём загружаемых данных в RichEdit1
@@ -80,6 +74,4 @@ Date: 01.01.2007
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

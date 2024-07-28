@@ -1,15 +1,12 @@
 ---
 Title: Как использовать IP Address Control у себя?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как использовать IP Address Control у себя?
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       Microsoft® Internet Explorer Version 4.0 introduces the IP address control,
@@ -134,4 +131,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

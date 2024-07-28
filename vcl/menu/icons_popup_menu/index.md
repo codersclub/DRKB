@@ -1,15 +1,12 @@
 ---
 Title: Иконки в PopupMenu
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Иконки в PopupMenu
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
     type
      
@@ -17,9 +14,9 @@ Date: 01.01.2007
         MainMenu1: TMainMenu;
         File1: TMenuItem;
         // * * * * Элемент для Menu Bar * * * * /
-          Open1: TMenuItem;
+        Open1: TMenuItem;
         // * * * * Элемент для Menu file * * * * /
-          procedure FormCreate(Sender: TObject);
+        procedure FormCreate(Sender: TObject);
         procedure FormShow(Sender: TObject);
       private
         {private declarations}
@@ -31,7 +28,6 @@ Date: 01.01.2007
     procedure TForm2.FormCreate(Sender: TObject);
     var
       R: TRect;
-     
       HIcn: HIcon;
       Ic: TIcon;
       Index: Word;
@@ -39,11 +35,11 @@ Date: 01.01.2007
     begin
      
       // * * Получаем иконку определенного приложения * * /
-        Ic := TIcon.Create;
+      Ic := TIcon.Create;
       Ic.Handle := ExtractAssociatedIcon(Hinstance, // * задаем путь и имя файла * /
        , Index);
       // * * Создаем для текста изображение * * /
-        Txt := TBitmap.Create;
+      Txt := TBitmap.Create;
       with Txt do
       begin
         Width := Canvas.TextWidth(' Тест');
@@ -53,7 +49,7 @@ Date: 01.01.2007
      
       // * * Копируем иконку в bitmap для изменения его размера.
         Вы не можете менять размер иконки * * /
-        Icn := TBitmap.Create;
+      Icn := TBitmap.Create;
       with Icn do
       begin
         Width := 32;
@@ -63,7 +59,7 @@ Date: 01.01.2007
       end;
      
       // * * Создаем окончательное изображение, куда мы помещаем иконку и текст * * /
-        MnuItm := TBitmap.Create;
+      MnuItm := TBitmap.Create;
       with MnuItm do
       begin
         Width := Txt.Width + 18;
@@ -84,11 +80,10 @@ Date: 01.01.2007
      
     procedure TForm2.FormShow(Sender: TObject);
     var
-     
       ItemInfo: TMenuItemInfo;
       hBmp1: THandle;
+    
     begin
-     
       HBmp1 := MnuItm.Handle;
       with ItemInfo do
       begin
@@ -99,16 +94,15 @@ Date: 01.01.2007
       end;
      
       // * * Заменяем MenuItem Open1 законченным изображением * *
-        SetMenuItemInfo(GetSubMenu(MainMenu1.Handle, File1.MenuIndex),
+      SetMenuItemInfo(GetSubMenu(MainMenu1.Handle, File1.MenuIndex),
           Open1.MenuIndex, true, ItemInfo);
-     
     end;
 
     {
-    В меню существуют некоторые проблемы масштабированием и палитрой иконки.
+      В меню существуют некоторые проблемы масштабированием и палитрой иконки.
       Я также ищу лучшее решение, но это все, что я вам могу сейчас дать.
      
-    Листинг был изменен для того, чтобы помещать иконки в "чЕкнутое"
+      Листинг был изменен для того, чтобы помещать иконки в "чЕкнутое"
       состояние меню(просто это делает Win95).Это позволяет вам иметь
       "чЕкнутое" и "нечЕкнутое" состояние.
     }
@@ -154,15 +148,15 @@ Date: 01.01.2007
       Index: Word;
     begin
      
-      {     /** Получаем иконку некоторого приложения **/}
+      {/** Получаем иконку некоторого приложения **/}
      
       Index := 0; { 11-я иконка в файле }
       Ic := TIcon.Create;
       Ic.Handle := ExtractAssociatedIcon(Hinstance,
         'c:\win95\system\shell32.dll', Index);
      
-      {     /** Копируем иконку в bitmap для изменения его размера.
-      Вы не можете менять размер иконки **/}
+      {/** Копируем иконку в bitmap для изменения его размера.
+           Вы не можете менять размер иконки **/}
      
       Icn := TBitmap.Create;
      
@@ -174,7 +168,7 @@ Date: 01.01.2007
         Canvas.Draw(0, 0, Ic);
       end;
      
-      {     /** Создаем окончательное изображение, куда мы помещаем иконку и текст **/}
+      {/** Создаем окончательное изображение, куда мы помещаем иконку и текст **/}
      
       MnuItm := TBitmap.Create;
       with MnuItm do
@@ -206,7 +200,7 @@ Date: 01.01.2007
         hBmpChecked := HBmp1; { Отмеченное (Checked) состояние }
       end;
      
-      {     /** Заменяем MenuItem Open1 законченным изображением **/}
+      {/** Заменяем MenuItem Open1 законченным изображением **/}
      
       SetMenuItemInfo(GetSubMenu(MainMenu1.Handle, File1.MenuIndex),
         Open1.MenuIndex, true, ItemInfo);
@@ -214,4 +208,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

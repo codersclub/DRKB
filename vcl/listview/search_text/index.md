@@ -1,25 +1,20 @@
 ---
 Title: Искать текст в TListView
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Искать текст в TListView
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
     // Call FindCaption Method to search for a list view item labeled by the 
     // string specified as the Value parameter 
-     
      
     // Syntax: 
      
     function FindCaption(StartIndex: Integer; Value: string; 
       Partial, Inclusive, Wrap: Boolean): TListItem; 
-     
      
     // Example, Beispiel: 
      
@@ -140,8 +135,4 @@ Date: 01.01.2007
       LV_FindAndSelectItems(ListView1, Edit1.Text, 1); 
       ListView1.SetFocus; 
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

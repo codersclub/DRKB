@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как получить координаты курсора в memo-поле?
 ============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     procedure CaretPos(H: THandle; var L,C : Word); 
     begin 
@@ -27,19 +27,25 @@ Date: 01.01.2007
 
 Хотя в Delphi 5 свойство CaretPos уже включено в memo.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-Как получить номер строки memo, в которой находится курсор?
+Вариант 2:
 
-Для этого необходимо послать сообщение EM\_LINEFROMCHAR.
+Source: <https://forum.sources.ru>
 
-LineNumber :=   Memo1.Perform(EM\_LINEFROMCHAR, -1, 0);
+> Как получить номер строки memo, в которой находится курсор?
 
-Взято из <https://forum.sources.ru>
+Для этого необходимо послать сообщение `EM_LINEFROMCHAR`.
+
+    LineNumber := Memo1.Perform(EM_LINEFROMCHAR, -1, 0);
+
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     var
       X, Y: LongInt;
@@ -50,8 +56,4 @@ LineNumber :=   Memo1.Perform(EM\_LINEFROMCHAR, -1, 0);
       X := Memo1.SelStart - X + 1;
       Form1.Caption := 'X = ' + IntToStr(X) + ' : ' + 'Y = ' + IntToStr(Y);
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

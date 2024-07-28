@@ -1,25 +1,18 @@
 ---
 Title: Обмен значениями элементов TListView
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Обмен значениями элементов TListView
 ====================================
 
-::: {.date}
-01.01.2007
-:::
-
 Today I want to describe how you may exchange some items in standard
-TListView.
+TListView. For example, you have 5 items and want to swap
+positions for first and third items.
 
-For example, you have 5 items and want to swap
-
-positions for first and third items
-
-Problem that standard TListView component haven\'\'t
-
+Problem that standard TListView component haven\'t
 such method and you must realize it yourself.
 
 We remember that the standard way from old Pascal times (for numbers)
@@ -59,11 +52,8 @@ So correct way is to use Assign method:
      end;
 
 So structure is a same as in our sample for Integer. All what we added
-are
-
-BeginUpdate and EndUpdate (just allow to reduce a flickering)
+are BeginUpdate and EndUpdate (just allow to reduce a flickering).
 
 So if you want to exchange items in any ListView, just call this
 procedure...
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

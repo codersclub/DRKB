@@ -2,17 +2,12 @@
 Title: TProgressBar с невидимой рамкой
 Author: VS
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 TProgressBar с невидимой рамкой
 ===============================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: VS
 
 Заказчик моего проекта обратился с просьбой - "Сделать прогресс
 индикатор как в приложениях Нортона. Чтоб был в статус строке и НИКАКИХ
@@ -98,6 +93,3 @@ ProgressBar? ProgressBar всегда вычерчивает рамку и не 
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

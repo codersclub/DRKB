@@ -1,15 +1,12 @@
 ---
 Title: Как удалить сегодняшнюю дату из TDateTimePicker?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как удалить сегодняшнюю дату из TDateTimePicker?
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       CommCtrl;
@@ -32,4 +29,3 @@ Date: 01.01.2007
       today display at the bottom are gone.
     }
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

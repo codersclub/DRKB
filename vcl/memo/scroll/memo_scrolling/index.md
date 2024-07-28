@@ -7,15 +7,15 @@ Date: 01.01.2007
 Как програмно прокрутить Memo?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Этот пример прокручивает на одну строку вниз.
 
     memo1.Perform(WM_VScroll, SB_LINEDOWN,0);
 
-Возможны так же следующие опции:
+Возможны также следующие опции:
 
 SB\_BOTTOM
 
@@ -37,9 +37,12 @@ SB\_TOP
 
 TComboBox, TListBox, TRichEdit и т.п можно прокрутить подобным образом
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 В поле ввода вводите на какую строку нужно сойти, и по нажатию на кнопку
 эта строка будет попадать о зону видимости:
@@ -53,13 +56,11 @@ TComboBox, TListBox, TRichEdit и т.п можно прокрутить подо
       Memo1.Perform(EM_SCROLLCARET, 0, 0);
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     Var
       ScrollMessage:TWMVScroll;
@@ -73,6 +74,3 @@ DelphiWorld 6.0
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

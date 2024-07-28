@@ -1,6 +1,5 @@
 ---
 Title: Не устанавливается цвет панели
-Author: Smike
 Date: 01.01.2007
 ---
 
@@ -8,12 +7,13 @@ Date: 01.01.2007
 Не устанавливается цвет панели
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Smike
+
+Source: <https://forum.sources.ru>
 
     unit Unit1;
-
      
     interface
      
@@ -71,26 +71,25 @@ Date: 01.01.2007
      
     end.
 
-Автор: Smike
-
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Автор: Krid
+
+Source: <https://forum.sources.ru>
 
 Можно отключать стили XP и для отдельных контролов (темы должны быть
 включены и манифест лежать на форме):
 
- 
-
     unit Unit1;
-
      
     interface
      
     uses
       Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
       Dialogs, ExtCtrls, StdCtrls, ComCtrls, XPMan;
-     
      
     type
       TForm1 = class(TForm)
@@ -132,6 +131,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Krid
-
-Взято из <https://forum.sources.ru>

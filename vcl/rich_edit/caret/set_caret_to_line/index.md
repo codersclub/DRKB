@@ -1,15 +1,12 @@
 ---
 Title: Перейти на строку в TRichEdit
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Перейти на строку в TRichEdit
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     with Richedit1 do
     begin
@@ -23,10 +20,4 @@ Date: 01.01.2007
     The control will only automatically scroll the caret into view if it has
     the focus, thus the EM_SCROLLCARET.
     }
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

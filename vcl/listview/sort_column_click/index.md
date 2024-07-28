@@ -8,9 +8,11 @@ Date: 01.01.2007
 Сортировка TListView
 ====================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Взято из FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
 
@@ -20,28 +22,28 @@ Date: 01.01.2007
 
     begin
     result:=0;
-    if strtodatetime(item1.SubItems[0])> strtodatetime(item2.SubItems[0]) then
-      Result :=1 
-    else
-      if strtodatetime(item1.SubItems[0])< strtodatetime(item2.SubItems[0]) then
-        Result :=-1;
+      if strtodatetime(item1.SubItems[0])> strtodatetime(item2.SubItems[0]) then
+        Result :=1 
+      else
+        if strtodatetime(item1.SubItems[0])< strtodatetime(item2.SubItems[0]) then
+          Result :=-1;
     end; 
      
     procedure TForm1.lv1ColumnClick(Sender: TObject; Column: TListColumn);
     begin
-    if column =lv1.columns[0] then
-      LV1.CustomSort(@CustomNameSortProc, 0)
-    else 
-      LV1.CustomSort(@CustomDateSortProc, 0)
+      if column =lv1.columns[0] then
+        LV1.CustomSort(@CustomNameSortProc, 0)
+      else 
+        LV1.CustomSort(@CustomDateSortProc, 0)
     end; 
-
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
-Сортировка по первой колонке
+Вариант 2:
+
+Source: <https://forum.sources.ru>
+
+**Сортировка по первой колонке**
 
 Сортировка по первой колонке TListView делается так:
 
@@ -56,7 +58,7 @@ TListBox. Список будет оставаться отсортирован�
 
 В TListBox это аналогично установке Sorted в False.
 
-Сортировка по другим колонкам
+**Сортировка по другим колонкам**
 
 Чтобы отсортировать TListView по другой колонке, потребуется написать
 событие OnCompare, либо функцию сортировки, которая будет использоваться
@@ -93,19 +95,18 @@ TListBox. Список будет оставаться отсортирован�
 Теперь достаточно установить SortType в stBoth (вместо stText, который
 сортирует по первой колонке не используя метод OnCompare):
 
-ListView1.SortType := stBoth;
+    ListView1.SortType := stBoth;
 
 Теперь, чтобы сделать временную сортировку, проделайте следующее:
 
-ListView1.SortType := stBoth;
-
-ListView1.SortType := stNone;
+    ListView1.SortType := stBoth;
+    ListView1.SortType := stNone;
 
 или ещё:
 
-ListView1.CustomSort(nil, 0);
+    ListView1.CustomSort(nil, 0);
 
-Сортировка при помощи функции сортировки
+**Сортировка при помощи функции сортировки**
 
 Функция сортировки используется для быстрой сортировки. Эта функция
 должна возвращать 1, -1 или 0 (как параметр Compare в событии
@@ -130,14 +131,17 @@ OnCompare). Например:
 будет вызвать метод CustomSort, передав ему адрес функции сортировки.
 Например:
 
-ListView1.CustomSort(@ByFourth, 0);
+    ListView1.CustomSort(@ByFourth, 0);
 
 Параметр Data в функции сортировки используется для указания номера
 колонки.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     unit SortedListView;
      
@@ -205,11 +209,12 @@ ListView1.CustomSort(@ByFourth, 0);
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://www.swissdelphicenter.ch>
 
     { 
       This example shows how to use the TListView's CustomSort method to 
@@ -350,8 +355,4 @@ ListView1.CustomSort(@ByFourth, 0);
        { Set the sort order for the column}
        LvSortOrder[Column.Index] := not LvSortOrder[Column.Index];
      end;
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 

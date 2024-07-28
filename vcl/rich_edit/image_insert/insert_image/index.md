@@ -8,18 +8,20 @@ Date: 01.01.2007
 Как вставить картинку в TRichEdit?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 В стандартном RichEdit нельзя, для RichEdit с картинками используйте
 RichEdit из RxLib или JVCL.
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
 Ниже представлен пример, который можно применить к RxRichEdit,
 RichEditEx, RichEdit98, и Microsoft RichTextBox (поставляемый с VB5+) не
@@ -71,4 +73,3 @@ RichEditEx, RichEdit98, и Microsoft RichTextBox (поставляемый с VB
     RE.Lines.LoadFromStream(SS);
     SS.Free;
 
-Взято из <https://forum.sources.ru>

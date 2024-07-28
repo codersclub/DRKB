@@ -2,15 +2,12 @@
 Title: Пример компонента HotSpot
 Author: Robert Wittig
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Пример компонента HotSpot
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот пример HotSpot-компонента, основанного на TPanel (небольшая
 переделка). Управляя событиями MouseDown и MouseUp можно получить эффект
@@ -161,6 +158,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Robert Wittig
-
-Взято с <https://delphiworld.narod.ru>

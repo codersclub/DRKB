@@ -1,26 +1,20 @@
 ---
 Title: Добавить цветную строку в TRichEdit
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Добавить цветную строку в TRichEdit
 ===================================
 
-::: {.date}
-01.01.2007
-:::
-
     { 
       To color text in a TRichEdit, follow this two steps: 
-     
-     
       1) Select the text with the SelStart, SelLength properties. 
-     
       2) Set the text attribtutes through the SelAttributes property. 
     }
      
-     { 
+    { 
       1. Example/ Beispiel: 
      
       Add a colored line to a TRichEdit: 
@@ -44,7 +38,7 @@ Date: 01.01.2007
        AddColoredLine(RichEdit1, 'Hallo', clGreen);
      end;
      
-     { 
+    { 
       2. Example/ Beispiel: 
      
       To color the 5 characters. 
@@ -59,7 +53,7 @@ Date: 01.01.2007
        RichEdit1.SelAttributes.Color := clBlue;
      end;
      
-     { 
+    { 
       3. Example/ Beispiel: ( by www.delphimania.de) 
      
       To color a specified line with a color 
@@ -82,4 +76,3 @@ Date: 01.01.2007
        ZeileFaerben(RichEdit1, 4, clGreen);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

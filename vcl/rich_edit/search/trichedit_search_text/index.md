@@ -1,15 +1,12 @@
 ---
 Title: TRichEdit - поиск текста
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 TRichEdit - поиск текста
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     function SearchForText_AndSelect(RichEdit: TRichEdit; SearchText: string): Boolean; 
     var 
@@ -38,6 +35,4 @@ TRichEdit - поиск текста
     begin 
       SearchForText_AndSelect(RichEdit1, 'Some Text'); 
     end;
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

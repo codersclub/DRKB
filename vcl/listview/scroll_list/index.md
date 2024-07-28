@@ -1,15 +1,12 @@
 ---
 Title: Прокрутка для TListView или TTreeView
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Прокрутка для TListView или TTreeView
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     // KEYWORDS:  SendMessage, WM_HSCROLL, WM_VSCROLL
      
@@ -32,4 +29,3 @@ Date: 01.01.2007
     }
      
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

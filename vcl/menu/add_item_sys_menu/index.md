@@ -2,20 +2,15 @@
 Title: Добавляем пункты в системное меню Windows
 Author: MAD Rodrguez
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Добавляем пункты в системное меню Windows
 =========================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: MAD Rodrguez
-
 Вы, наверное, задавались вопросом, почему системное меню постоянно одно
-и тоже ? Пример показывает, как добавить туда такие пункты как "About"
+и то же? Пример показывает, как добавить туда такие пункты как "About"
 или "Information", или что-нибудь ещё.
 
 Нам понадобится две вещи, первая это Item ID, который может быть любым
@@ -27,7 +22,8 @@ Date: 01.01.2007
      
     Interface 
      
-    Uses SysUtils, WinTypes, WinProcs, Messages, Classes, Graphics, Controls, Forms, Dialogs, Menus; 
+    Uses SysUtils, WinTypes, WinProcs, Messages, Classes,
+         Graphics, Controls, Forms, Dialogs, Menus; 
      
     Type 
        TForm1 = Class (TForm) 
@@ -67,4 +63,3 @@ Date: 01.01.2007
      
     End
 
-Взято из <https://forum.sources.ru>

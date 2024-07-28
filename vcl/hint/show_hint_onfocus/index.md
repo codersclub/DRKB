@@ -9,18 +9,18 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 Видеть подсказки все время, пока поле редактирования имеет фокус
 ================================================================
 
-На TabbedNotebook у меня есть множество компонентов TEdit. Я изменяю
-цвет компонентов TEdit на желтый и назначаю свойству Hint компонента
-строчку предупреждения, если поле редактирования содержит неверные
-данные.
-
-Поведение окна со всплывающей подсказкой (hintwindow) позволяет делать
-его видимым только тогда, когда курсор мыши находится в области элемента
-управления. Но мой заказчик хочет видеть подсказки все время, пока поле
-редактирования имеет фокус.
-
-Я не знаю как изменить поведение всплывающей подсказки, заданное по
-умолчанию. Я знаю что это возможно, но кто мне подскажет как?
+> На TabbedNotebook у меня есть множество компонентов TEdit. Я изменяю
+> цвет компонентов TEdit на желтый и назначаю свойству Hint компонента
+> строчку предупреждения, если поле редактирования содержит неверные
+> данные.
+> 
+> Поведение окна со всплывающей подсказкой (hintwindow) позволяет делать
+> его видимым только тогда, когда курсор мыши находится в области элемента
+> управления. Но мой заказчик хочет видеть подсказки все время, пока поле
+> редактирования имеет фокус.
+> 
+> Я не знаю как изменить поведение всплывающей подсказки, заданное по
+> умолчанию. Я знаю что это возможно, но кто мне подскажет как?
 
 Ниже приведен модуль, содержащий новый тип hintwindow, TFocusHintWindow.
 Когда вы "просите" TFocusHintWindow появиться, он появляется ниже
@@ -47,40 +47,41 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     unit Unit1;
     interface
     uses
-    SysUtils, WinTypes, WinProcs, Messages, Classes, Graphics,
-    Controls, Forms, Dialogs, StdCtrls, FHintWin;
+      SysUtils, WinTypes, WinProcs, Messages, Classes, Graphics,
+      Controls, Forms, Dialogs, StdCtrls, FHintWin;
      
     type
     TForm1 = class(TForm)
-    procedure FormCreate(Sender: TObject);
-    private
-    FocusHintWindow: TFocusHintWindow;
-    procedure AppIdle( Sender: TObject; var Done: Boolean );
-    procedure AppShowHint( var HintStr: string;
-    var CanShow: Boolean; var HintInfo: THintInfo );
+      procedure FormCreate(Sender: TObject);
+      private
+      FocusHintWindow: TFocusHintWindow;
+      procedure AppIdle( Sender: TObject; var Done: Boolean );
+      procedure AppShowHint( var HintStr: string;
+      var CanShow: Boolean; var HintInfo: THintInfo );
     end;
      
     implementation
      
     procedure TForm1.FormCreate( Sender: TObject );
     begin
-    Application.OnIdle := AppIdle;
-    Application.OnShowHint := AppShowHint;
-    FocusHintWindow := TFocusHintWindow.Create( Self );
+      Application.OnIdle := AppIdle;
+      Application.OnShowHint := AppShowHint;
+      FocusHintWindow := TFocusHintWindow.Create( Self );
     end;
      
     procedure TForm1.AppIdle(Sender: TObject; var Done: Boolean);
     begin
-    FocusHintWindow.Showing := Screen.ActiveControl is TEdit;
+      FocusHintWindow.Showing := Screen.ActiveControl is TEdit;
     end;
      
     procedure TForm1.AppShowHint( var HintStr: string;
-    var CanShow: Boolean; var HintInfo: THintInfo );
+      var CanShow: Boolean; var HintInfo: THintInfo );
     begin
-    CanShow := not FocusHintWindow.Showing;
+      CanShow := not FocusHintWindow.Showing;
     end;
      
-    end.----------------------------------------------------------- }
+    end.
+    ----------------------------------------------------------- }
      
     interface
      

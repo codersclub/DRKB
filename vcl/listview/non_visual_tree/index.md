@@ -1,16 +1,13 @@
 ---
 Title: Невизуальное дерево
-Author: Мыш
+Author: Малышев Владимир aka "мыш" (feedback@ectosoft.com)
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Невизуальное дерево
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
     unit EctoSoftTree;
      
@@ -28,7 +25,6 @@ Date: 01.01.2007
      feedback@ectosoft.com
      http://www.EctoSoft.com
     ================================================================================}
-
      
     interface
      
@@ -114,7 +110,6 @@ Date: 01.01.2007
           FOnFreeNodeEvent;
     end;
      
-     
     implementation
      
     { TEctoSoftTree }
@@ -179,12 +174,14 @@ Date: 01.01.2007
     procedure TEctoSoftTree.DeleteNode(DeletingNode: TEctoTreeNode);
     begin
       if DeletingNode.IsRoot then
-          FreeAndNil(Root)                                                            // Рут не нужно исключать из родительского списка, поэтому просто 
-    освобождаем
+          // Рут не нужно исключать из родительского списка,
+          // поэтому просто освобождаем
+          FreeAndNil(Root)
         else
         begin
-          DeletingNode.FParentNode.Children.Delete                                   // обращение к ParentNode без проверки на его существование обусловлено тем,
-     что раз это не Root, значит у него обязательно есть Parent
+          // обращение к ParentNode без проверки на его существование обусловлено тем,
+          // что раз это не Root, значит у него обязательно есть Parent
+          DeletingNode.FParentNode.Children.Delete
             (DeletingNode.FParentNode.Children.IndexOf(DeletingNode));
           FreeAndNil(DeletingNode);
         end;
@@ -206,8 +203,9 @@ Date: 01.01.2007
         i:integer;
       begin
      
-        if result<>nil then exit;                                                   // выходим из всех рекурсий, если где-то в одной из них ранее уже был найден 
-    узел
+        // выходим из всех рекурсий,
+        // если где-то в одной из них ранее уже был найден узел
+        if result<>nil then exit;
      
         { проверяем вызванный узел TargetNode на соответствие }
         if TargetNode.Caption = FindCaption then
@@ -236,7 +234,7 @@ Date: 01.01.2007
     function TEctoSoftTree.GetNodeCount: integer;
     begin
       if Root=nil then result := 0 else                                            
-        result := Root.GetDescendantCount+1;                                        // +1 - Учитываем Root
+        result := Root.GetDescendantCount+1;  // +1 - Учитываем Root
     end;
      
     { функция GetNodeFromIndex - "движок" для Nodes[Index:integer] }
@@ -384,18 +382,22 @@ Date: 01.01.2007
       result := nil;
      
       if Children.Count>0 then
-        result := TEctoTreeNode(Children[0]);                                       // Если у узла есть дочерние узлы, то следующим за ним будет очевидно первый 
-    дочерний
+        result := TEctoTreeNode(Children[0]);
+        // Если у узла есть дочерние узлы,
+        // то следующим за ним будет очевидно первый дочерний
      
-      if result = nil then                                                          // Если дочерних нет...
-        result := GetNextSibling();                                                 // то следующим будет следующий сестринский узел
+      if result = nil then          // Если дочерних нет...
+        result := GetNextSibling(); // то следующим будет следующий сестринский узел
      
-      if (result = nil) and (not IsRoot) then                                       // Если и дочерних и сестринских нет, а также это не рут, то следующим будет 
-    первый сестринский узел родителя
+      if (result = nil) and (not IsRoot) then // Если и дочерних и сестринских нет,
+                                              // а также это не рут, то следующим будет 
+                                              // первый сестринский узел родителя
       begin
         Node := FParentNode;
-        while (Node.GetNextSibling = nil) and (not Node.IsRoot) do                  // У родителя может не оказаться сестринских узлов, тогда проводим поиск 
-    (идя назад) первого родителя (беря "родителя родителя") у которого будет сестринский узел
+        while (Node.GetNextSibling = nil) and (not Node.IsRoot) do
+          // У родителя может не оказаться сестринских узлов,
+          // тогда проводим поиск (идя назад) первого родителя
+          // (беря "родителя родителя") у которого будет сестринский узел
           Node := Node.FParentNode;
         if not Node.IsRoot then
           result := Node.GetNextSibling;
@@ -429,14 +431,17 @@ Date: 01.01.2007
       result := nil;
       if IsRoot then
         exit;
-      result := GetPrevSibling();                                                   // получаем предыдущий сестринский узел
+      result := GetPrevSibling();         // получаем предыдущий сестринский узел
       if result=nil then
-        result := FParentNode                                                       // если его нет, значит наш узел первый, значит предыдущим будет его родитель
+        result := FParentNode             // если его нет, значит наш узел первый,
+                                          // значит предыдущим будет его родитель
       else
-      begin                                                                         // а если есть...
-        Node := result.LastDescendant;                                              // получаем последнего потомка
-        if Node<>nil then result := Node;                                           // если такой существует (если вообще есть потомки) то он и будет 
-    предыдущим. Если же не существует, то result остается со значением полученным в строке result := GetPrevSibling();
+      begin                               // а если есть...
+        Node := result.LastDescendant;    // получаем последнего потомка
+        if Node<>nil then result := Node; // если такой существует (если вообще есть потомки)
+                                          // то он и будет предыдущим.
+                                          // Если же не существует, то result остается со значением,
+                                          // полученным в строке result := GetPrevSibling();
       end
      
      
@@ -496,8 +501,10 @@ Date: 01.01.2007
       if IsRoot then exit;
       if NextSibling<>nil then
       begin
-        ChildIndex := Index;                                                        // временная переменная ChildIndex нужна т.к. Index - расчетное свойство, 
-    незачем лишние вызовы. Кроме того после первого оператора индекс теряется
+        ChildIndex := Index; // временная переменная ChildIndex нужна
+                             // т.к. Index - расчетное свойство, 
+                             // незачем лишние вызовы.
+                             // Кроме того после первого оператора индекс теряется
         Temp := ParentNode.Children[ChildIndex];
         ParentNode.Children[ChildIndex] := ParentNode.Children[ChildIndex+1];
         ParentNode.Children[ChildIndex+1] := Temp;
@@ -514,8 +521,10 @@ Date: 01.01.2007
       if (ParentNode.IsRoot) or (IsRoot) then exit;
       ParentNode.ParentNode.Children.Insert(ParentNode.Index+1,self);
       ParentNode.Children.Delete(ParentNode.Children.IndexOf(self));
-      FParentNode := ParentNode.ParentNode;                                         // FParentNode используем вместо ParentNode потому что нам не нужен вызов 
-    всей процедуры присваивания родителя, мы всю работу делаем здесь сами и она специфична.
+      FParentNode := ParentNode.ParentNode;
+      // FParentNode используем вместо ParentNode потому
+      // что нам не нужен вызов всей процедуры присваивания родителя,
+      // мы всю работу делаем здесь сами и она специфична.
     end;
      
     { процедура MoveRight перемещает узел вправо. Перемещение идет по принципу:
@@ -523,8 +532,9 @@ Date: 01.01.2007
       сестринского узла нет, перемещение считается невозможным }
     procedure TEctoTreeNode.MoveRight;
     begin
-      if (IsRoot) or (PrevSibling=nil) then exit;                                   // Если нет сестринского узла перед этим, то невозможно движение вправо
-      ParentNode := PrevSibling;                                                    // Здесь вызов процедуры присваивания родителя.
+      if (IsRoot) or (PrevSibling=nil) then exit; // Если нет сестринского узла перед этим,
+                                                  // то невозможно движение вправо
+      ParentNode := PrevSibling;                  // Здесь вызов процедуры присваивания родителя.
     end;
      
     { процедура MoveUp перемещает узел вверх. Перемещение идет по принципу:
@@ -540,8 +550,10 @@ Date: 01.01.2007
       if IsRoot then exit;
       if PrevSibling<>nil then
       begin
-        ChildIndex := Index;                                                        // временная переменная ChildIndex нужна т.к. Index - расчетное свойство, 
-    незачем лишние вызовы. Кроме того после первого оператора индекс теряется
+        ChildIndex := Index;
+        // временная переменная ChildIndex нужна
+        // т.к. Index - расчетное свойство, незачем лишние вызовы.
+        // Кроме того после первого оператора индекс теряется
         Temp := ParentNode.Children[ChildIndex];
         ParentNode.Children[ChildIndex] := ParentNode.Children[ChildIndex-1];
         ParentNode.Children[ChildIndex-1] := Temp;
@@ -550,7 +562,8 @@ Date: 01.01.2007
       begin
         if not ParentNode.IsRoot then
         begin
-          ParentNode := ParentNode.ParentNode;                                      // Это присваивание автоматически добавит узел в конец, последним дочерним.
+          ParentNode := ParentNode.ParentNode;
+          // Это присваивание автоматически добавит узел в конец, последним дочерним.
           MoveUp;
         end;
       end;
@@ -600,6 +613,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Мыш
-
-Взято из <https://forum.sources.ru>

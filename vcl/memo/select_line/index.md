@@ -1,15 +1,12 @@
 ---
 Title: Выделить строку в TMemo
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Выделить строку в TMemo
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TfrmMain.Memo1Click(Sender: TObject); 
     var 
@@ -22,12 +19,4 @@ Date: 01.01.2007
         SelLength := Length(Lines[Line]); 
       end; 
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
- 

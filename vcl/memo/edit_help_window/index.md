@@ -2,17 +2,12 @@
 Title: Как сделать окошко подсказки в редакторе как Delphi по Ctrl-J
 Author: Hog
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как сделать окошко подсказки в редакторе как Delphi по Ctrl-J
 =============================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Hog
 
 Допустим у тебя TMemo..
 
@@ -20,6 +15,7 @@ Date: 01.01.2007
 
 2. У Memo в обработчике Memo.onKeyDown что-нибудь типа:
 
+    ```
     if (key = Ord('J')) and (ssCtrl in Shift) then
     begin
       lb.Left := Memo.CaretPos.x;
@@ -27,10 +23,8 @@ Date: 01.01.2007
       lb.Visible := True;
       lb.SetFocus;
     end;
+    ```
 
 он показывается.. а дальше работай с листбоксом, вставляй в мемо нужный
 текст, прячь листбокс
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

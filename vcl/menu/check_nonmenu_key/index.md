@@ -1,18 +1,13 @@
 ---
 Title: Как узнать о нажатии non-menu клавиши в момент, когда меню показано?
-Author: Arx  ( http://arxoft.tora.ru )
+Author: Arx (http://arxoft.tora.ru)
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как узнать о нажатии non-menu клавиши в момент, когда меню показано?
 ====================================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Arx  ( http://arxoft.tora.ru )
 
 Создайте обработчик сообщения WM\_MENUCHAR.
 
@@ -50,4 +45,3 @@ Date: 01.01.2007
     end;
     end.
 
-Взято из <https://forum.sources.ru>

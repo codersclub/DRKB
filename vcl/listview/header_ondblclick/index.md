@@ -1,15 +1,19 @@
 ---
 Title: Добавить событие OnDblClick на заголовке TListView
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Добавить событие OnDblClick на заголовке TListView
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
+MS не посчитала нужным отправлять уведомление в listview,
+когда пользователь дважды щелкает по заголовку.
+Но класс управления заголовком имеет стиль CS_DBLCLKS,
+поэтому когда он получает сообщения WM_LBUTTONDBLCLK, он просто ничего с ними не делает!
+
+Чтобы получить эти сообщения, требуется API - Style подкласс управления заголовком.
 
     { 
       MS did not see fit to send a notification to the listview when the user 
@@ -20,8 +24,7 @@ Date: 01.01.2007
     }
      
      uses commctrl;
-     
-     
+    
      function HeaderProc(wnd: HWND; Msg: Cardinal; wParam: wParam; lParam: lParam): Longint;
        stdcall;
      var
@@ -36,7 +39,7 @@ Date: 01.01.2007
          if SendMessage(wnd, HDM_HITTEST, 0, Longint(@hti)) >= 0 then
            if hti.Flags = HHT_ONHEADER then
              // would usually send a custom notification to GetParent(wnd) here 
-            Form1.Memo1.Lines.Add(Format('doubleclick on header item %d', [hti.Item]));
+             Form1.Memo1.Lines.Add(Format('doubleclick on header item %d', [hti.Item]));
        end;
      end;
      
@@ -65,4 +68,3 @@ Date: 01.01.2007
          Memo1.Text := 'No child';
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как узнать, по какой колонке был клик в TListView?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Метод GetItemAt позволяет получить координаты ListItem, по которой был
 клик, но только для первой колонки TListView. Если нужно узнать по
@@ -17,7 +17,6 @@ Date: 01.01.2007
 объявить новый метод в наследованном классе:
 
     uses ComCtrls;
-
      
     type
       TListViewX = class(TListView)
@@ -73,9 +72,10 @@ Date: 01.01.2007
         ShowMessage('Column #' + IntToStr(col));
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     function acGetItemAt(lsv: TListView; X, Y: integer; var Col: integer): TListItem;
     // Получение по координатам элемента, над которым пользователь щелкнул.
@@ -110,6 +110,10 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
+
     procedure TFormMain.Listview1ColumnClick(Sender: TObject; Column: TListColumn);
      var
        ColumnNr: Integer;
@@ -118,4 +122,3 @@ Date: 01.01.2007
        ShowMessage(IntToStr(ColumnNr));
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

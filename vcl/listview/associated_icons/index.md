@@ -8,16 +8,18 @@ Date: 01.01.2007
 Показать файлы с ассоциированными с ними иконками в TListView
 =============================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch>
+
+В следующем примере показано, как отобразить все файлы и связанные с ними значки папки в TListView.
+Для проверки кода вам понадобятся ListView1 и ImageList1, где хранятся значки.
 
     { 
       The following example shows how to show all files and their 
       associated icons of a folder in a TListView. 
       To test the code, you need a ListView1 and a ImageList1 where the icons are stored. 
     }
-     
      
      uses
        ShellApi;
@@ -31,35 +33,35 @@ Date: 01.01.2007
        FileInfo: SHFILEINFO;
      begin
        // Create a temporary TIcon 
-      Icon := TIcon.Create;
+       Icon := TIcon.Create;
        ListView.Items.BeginUpdate;
        try
          // search for the first file 
-        i := FindFirst(strPath + '*.*', faAnyFile, SearchRec);
+         i := FindFirst(strPath + '*.*', faAnyFile, SearchRec);
          while i = 0 do
          begin
            with ListView do
            begin
              // On directories and volumes 
-            if ((SearchRec.Attr and FaDirectory <> FaDirectory) and
+             if ((SearchRec.Attr and FaDirectory <> FaDirectory) and
                (SearchRec.Attr and FaVolumeId <> FaVolumeID)) then
              begin
                ListItem := ListView.Items.Add;
                //Get The DisplayName 
-              SHGetFileInfo(PChar(strPath + SearchRec.Name), 0, FileInfo,
+               SHGetFileInfo(PChar(strPath + SearchRec.Name), 0, FileInfo,
                  SizeOf(FileInfo), SHGFI_DISPLAYNAME);
                Listitem.Caption := FileInfo.szDisplayName;
                // Get The TypeName 
-              SHGetFileInfo(PChar(strPath + SearchRec.Name), 0, FileInfo,
+               SHGetFileInfo(PChar(strPath + SearchRec.Name), 0, FileInfo,
                  SizeOf(FileInfo), SHGFI_TYPENAME);
                ListItem.SubItems.Add(FileInfo.szTypeName);
                //Get The Icon That Represents The File 
-              SHGetFileInfo(PChar(strPath + SearchRec.Name), 0, FileInfo,
+               SHGetFileInfo(PChar(strPath + SearchRec.Name), 0, FileInfo,
                  SizeOf(FileInfo), SHGFI_ICON or SHGFI_SMALLICON);
                icon.Handle := FileInfo.hIcon;
                ListItem.ImageIndex := ImageList.AddIcon(Icon);
                // Destroy the Icon 
-              DestroyIcon(FileInfo.hIcon);
+               DestroyIcon(FileInfo.hIcon);
              end;
            end;
            i := FindNext(SearchRec);
@@ -73,17 +75,21 @@ Date: 01.01.2007
      procedure TForm1.Button1Click(Sender: TObject);
      begin
        // Assign a Imagelist to the ListView 
-      ListView1.SmallImages := ImageList1;
+       ListView1.SmallImages := ImageList1;
        // Show Listview in Report Style and add 2 Columns 
-      ListView1.ViewStyle := vsReport;
+       ListView1.ViewStyle := vsReport;
        ListView1.Columns.Add;
        ListView1.Columns.Add;
        LV_InsertFiles('C:\Windows\', ListView1, ImageList1);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
+--------------------------------------------------------
  
+Вариант 2:
+
+Author: Song
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     uses
       Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
@@ -265,6 +271,3 @@ Date: 01.01.2007
       LoadListViewToFile(ListView1, 'MyListView.sav');
     end;
 
-Автор: Song
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

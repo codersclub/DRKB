@@ -7,9 +7,9 @@ Date: 01.01.2007
 Вставить TProgressBar в TStatusBar
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.FormCreate(Sender: TObject);
     begin
@@ -23,13 +23,15 @@ Date: 01.01.2007
         Width := StatusBar1.Panels[0].Width - Left;
       end;
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+--------------------------------------------------
 
-pgProgress положить на форму как Visible := false;
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+pgProgress положить на форму как `Visible := false`;
 
 StatusPanel надо OwnerDraw сделать и pефpешить, если Position меняется.
 
@@ -43,6 +45,4 @@ StatusPanel надо OwnerDraw сделать и pефpешить, если Posi
       end;
     end; 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

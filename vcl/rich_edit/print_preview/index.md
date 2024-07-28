@@ -2,20 +2,17 @@
 Title: Предпросмотр / печать TRichEdit
 Author: p0s0l
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Предпросмотр / печать TRichEdit
 ===============================
 
-::: {.date}
-01.01.2007
-:::
-
 Чтобы вывести Rich Edit на любой канвас, нужно использовать стандартное
 сообщение EM\_FORMATRANGE.
 
-lParam пареметр этого сообщения содержит указатель на структуру
+lParam параметр этого сообщения содержит указатель на структуру
 TFormatRange.
 
 Перед посылкой сообщения нужно заполнить эту структуру:
@@ -39,26 +36,26 @@ chrg.cpMin и chrg.cpMax - позиции символов, определяющ
     var
       range    : TFormatRange;
     begin
-    FillChar(Range, SizeOf(TFormatRange), 0);
-    // Rendering to the same DC we are measuring.
-    Range.hdc        := ABitmap.Canvas.handle;
-    Range.hdcTarget  := ABitmap.Canvas.Handle;
-     
-    // Set up the page.
-    Range.rc.left    := 0;
-    Range.rc.top     := 0;
-    Range.rc.right   := ABitmap.Width * 1440 div Screen.PixelsPerInch;
-    Range.rc.Bottom  := ABitmap.Height * 1440 div Screen.PixelsPerInch;
-     
-    // Default the range of text to print as the entire document.
-    Range.chrg.cpMax := -1;
-    Range.chrg.cpMin := 0;
-     
-    // format the text
-    Result := SendMessage(ARichedit.Handle, EM_FORMATRANGE, 1, Longint(@Range));
-     
-    // Free cached information
-    SendMessage(ARichEdit.handle, EM_FORMATRANGE, 0,0);
+      FillChar(Range, SizeOf(TFormatRange), 0);
+      // Rendering to the same DC we are measuring.
+      Range.hdc        := ABitmap.Canvas.handle;
+      Range.hdcTarget  := ABitmap.Canvas.Handle;
+       
+      // Set up the page.
+      Range.rc.left    := 0;
+      Range.rc.top     := 0;
+      Range.rc.right   := ABitmap.Width * 1440 div Screen.PixelsPerInch;
+      Range.rc.Bottom  := ABitmap.Height * 1440 div Screen.PixelsPerInch;
+       
+      // Default the range of text to print as the entire document.
+      Range.chrg.cpMax := -1;
+      Range.chrg.cpMin := 0;
+       
+      // format the text
+      Result := SendMessage(ARichedit.Handle, EM_FORMATRANGE, 1, Longint(@Range));
+       
+      // Free cached information
+      SendMessage(ARichEdit.handle, EM_FORMATRANGE, 0,0);
     end;
 
 Следующий пример покажет, как вывести Rich Edit не только на любой
@@ -69,17 +66,17 @@ chrg.cpMin и chrg.cpMax - позиции символов, определяющ
     var
       Range    : TFormatRange;
     begin
-    FillChar(Range, SizeOf(TFormatRange), 0);
-    Range.hdc        := ACanvas.handle;
-    Range.hdcTarget  := ACanvas.Handle;
-    Range.rc.left    := 0;
-    Range.rc.top     := 0;
-    Range.rc.right   := AWidth * 1440 div Screen.PixelsPerInch;
-    Range.rc.Bottom  := AHeight * 1440 div Screen.PixelsPerInch;
-    Range.chrg.cpMax := ToChar;
-    Range.chrg.cpMin := FromChar;
-    Result := SendMessage(ARichedit.Handle, EM_FORMATRANGE, 1, Longint(@Range));
-    SendMessage(ARichEdit.handle, EM_FORMATRANGE, 0,0);
+      FillChar(Range, SizeOf(TFormatRange), 0);
+      Range.hdc        := ACanvas.handle;
+      Range.hdcTarget  := ACanvas.Handle;
+      Range.rc.left    := 0;
+      Range.rc.top     := 0;
+      Range.rc.right   := AWidth * 1440 div Screen.PixelsPerInch;
+      Range.rc.Bottom  := AHeight * 1440 div Screen.PixelsPerInch;
+      Range.chrg.cpMax := ToChar;
+      Range.chrg.cpMin := FromChar;
+      Result := SendMessage(ARichedit.Handle, EM_FORMATRANGE, 1, Longint(@Range));
+      SendMessage(ARichEdit.handle, EM_FORMATRANGE, 0,0);
     end; 
 
 А как вывести Rich-текст с фоновым рисунком ?
@@ -88,18 +85,15 @@ chrg.cpMin и chrg.cpMax - позиции символов, определяющ
 соединяем...
 
     procedure TForm1.Button2Click(Sender: TObject);
-      var Bmp : TBitmap;
+    var Bmp : TBitmap;
     begin
-    Bmp := TBitmap.Create;
-    bmp.Width := 300;
-    bmp.Height := 300;
-    PrintToCanvas(bmp.Canvas,2,5,RichEdit1,300,300);
-    BitBlt(Image1.Picture.Bitmap.Canvas.Handle, 0, 0, Bmp.Width, Bmp.Height,
-           bmp.Canvas.Handle, 0, 0, srcAND);
-    Image1.Repaint;
-    bmp.Free;
+      Bmp := TBitmap.Create;
+      bmp.Width := 300;
+      bmp.Height := 300;
+      PrintToCanvas(bmp.Canvas,2,5,RichEdit1,300,300);
+      BitBlt(Image1.Picture.Bitmap.Canvas.Handle, 0, 0, Bmp.Width, Bmp.Height,
+             bmp.Canvas.Handle, 0, 0, srcAND);
+      Image1.Repaint;
+      bmp.Free;
     end; 
 
-Автор: p0s0l
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -1,15 +1,21 @@
 ---
 Title: Перехват изменения размера колонки в TListView
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Перехват изменения размера колонки в TListView
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вопрос:
+> Как мне перехватить событие изменения размера столбца в TListView,
+> OnResize работает только при изменении ListView?
+
+Ответ:  
+Событие можно добавить, проделав немного работы.
+См. производную TListview ниже.
+В нем есть 3 новых события: OnColumnResize, OnBeginColumnResize, OnEndColumnResize
 
     { 
       Question: 
@@ -152,8 +158,4 @@ Date: 01.01.2007
     end; 
      
     end.
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

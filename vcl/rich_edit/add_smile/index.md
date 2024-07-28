@@ -1,15 +1,12 @@
 ---
 Title: Поместить изображение смайлика в TRxRichEdit
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Поместить изображение смайлика в TRxRichEdit
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     var
        frmMain: TfrmMain;
@@ -184,4 +181,3 @@ Date: 01.01.2007
       end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

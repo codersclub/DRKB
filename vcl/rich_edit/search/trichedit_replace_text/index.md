@@ -1,15 +1,12 @@
 ---
 Title: TRichEdit - замена текста
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 TRichEdit - замена текста
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     // This example doesn't use TReplaceDialog 
     // Ohne Benutzung von TReplaceDialog 
@@ -43,6 +40,4 @@ TRichEdit - замена текста
     begin 
       Search_And_Replace(Richedit1, 'OldText', 'NewText'); 
     end;
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

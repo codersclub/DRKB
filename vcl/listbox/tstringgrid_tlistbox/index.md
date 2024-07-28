@@ -10,7 +10,9 @@ Source: <https://forum.sources.ru>
 
 После того, как поместите TListBox на форму, необходимо изменить
 свойство Style в TListBox на lbOwnerDrawFixed. Если не изменить свойство
-Style, то событие OnDrawItem никогда не вызовется. Теперь поместите
+Style, то событие OnDrawItem никогда не вызовется.
+
+Теперь поместите
 следующий код в обработчик события OnDrawItem Вашего TListBox:
 
     procedure TForm1.ListBox1DrawItem

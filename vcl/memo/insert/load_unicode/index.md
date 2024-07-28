@@ -1,15 +1,12 @@
 ---
 Title: Как загрузить юникоды в мемо?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как загрузить юникоды в мемо?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure LoadUnicodeFile(const filename: string; strings: TStrings);
      
@@ -51,6 +48,5 @@ Date: 01.01.2007
 
 Использовать
 
-LoadUnicodeFile(filename, memo1.lines);
+    LoadUnicodeFile(filename, memo1.lines);
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

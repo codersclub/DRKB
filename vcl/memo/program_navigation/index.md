@@ -1,15 +1,12 @@
 ---
 Title: Програмная навигация в TMemo
-Date: 01.01.2007
+Author: P. Below
+Date: 21.02.1996
 ---
 
 
 Програмная навигация в TMemo
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     {************************************************************
      * Procedure PostKeyEx
@@ -109,7 +106,6 @@ Date: 01.01.2007
 
 Пример:
 
- 
 
     procedure TForm1.SpeedButton2Click(Sender: TObject);
     Var

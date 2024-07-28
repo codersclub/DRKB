@@ -9,6 +9,13 @@ Source: <https://delphiworld.narod.ru>
 Показ in-place подсказки в TListBox и других компонентах
 ========================================================
 
+Встроенные подсказки используются для отображения текстовых строк для объектов,
+которые были обрезаны, например, в TreeView.
+
+Следующий код был протестирован только на стандартном ListBox.
+Конечно, вы можете использовать подсказки на других VCL после соответствующей модификации.
+(Скопируйте только следующий код в файл модуля form1)
+
     { 
       In-place ToolTips are used to display text strings for objects that have been clipped, 
       in TreeView for example. The following code has been tested only on standard ListBox. 

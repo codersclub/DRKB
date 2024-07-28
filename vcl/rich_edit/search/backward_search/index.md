@@ -1,15 +1,12 @@
 ---
 Title: Обратный поиск строки в TRichEdit
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Обратный поиск строки в TRichEdit
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     {+------------------------------------------------------------ 
      | Function FindTextBackwards 
@@ -126,4 +123,3 @@ Date: 01.01.2007
          ShowMessage('Text not found');
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

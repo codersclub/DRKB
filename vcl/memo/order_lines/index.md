@@ -1,15 +1,12 @@
 ---
 Title: Сортировка строк в TMemo
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Сортировка строк в TMemo
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button3Click(Sender: TObject);
     var
@@ -25,8 +22,3 @@ Date: 01.01.2007
       // присваиваем memo уже отсортированные строки
       memo1.Lines.AddStrings(t);
     end;
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

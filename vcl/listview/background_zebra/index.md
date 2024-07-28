@@ -1,15 +1,12 @@
 ---
 Title: Чередование фона строк в TListView
-Date: 01.01.2007
+Author: Subfire, subfire@mail.ru
+Date: 19.02.2003
 ---
 
 
 Чередование фона строк в TListView
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Чередование фона строк в TListView

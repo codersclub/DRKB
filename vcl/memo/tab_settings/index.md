@@ -7,15 +7,18 @@ Date: 01.01.2007
 Как настроить табуляцию в компоненте TMemo?
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://blackman.wp-club.net/>
 
 Пошлите в Memo сообщение EM\_SETTABSTOPS
 
-Взято с сайта <https://blackman.wp-club.net/>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Королевство Дельфи (https://delphi.vitpc.com/)
 
     procedure TForm1.FormCreate(Sender: TObject);
     var
@@ -36,15 +39,17 @@ Date: 01.01.2007
       Memo1.Refresh;
     end;
 
-Взято из
-
-DELPHI VCL FAQ Перевод с английского      
+Взято из "DELPHI VCL FAQ", Перевод с английского.
 
 Подборку, перевод и адаптацию материала подготовил Aziz(JINX)
 
 специально для [Королевства Дельфи](https://delphi.vitpc.com/)
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Для этого надо послать сообщение EM\_SetTabStops компоненте TMemo, в
 котором необходимо указать два параметра. Количество передаваемых
@@ -73,9 +78,5 @@ DELPHI VCL FAQ Перевод с английского
     begin
       SendMessage(Memo1.Handle, EM_SetTabStops, 2, Longint(@TabInc));
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -2,15 +2,12 @@
 Title: Как добавлять в TListView полноцветные иконки?
 Author: alexanderm
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как добавлять в TListView полноцветные иконки?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.FormCreate(Sender: TObject);
     var
@@ -59,6 +56,3 @@ Date: 01.01.2007
       SubItems.Add(FDateTime);
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: alexanderm

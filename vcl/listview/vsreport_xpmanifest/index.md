@@ -1,15 +1,12 @@
 ---
 Title: TListView в режиме отчета под манифестом XP
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 TListView в режиме отчета под манифестом XP
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       The TListView with a vsReport style causes an access violation 
@@ -24,7 +21,7 @@ TListView в режиме отчета под манифестом XP
      
     }
      
-     { 
+    { 
       Wenn ein XP Manifest als Ressource in eine Exe-Datei eingebunden 
       wird, um einer Applikation das neue XP-Design zu verleihen, 
       gibt es bei der TListView mit Style vsReport eine Zugriffsverletzung 
@@ -39,19 +36,18 @@ TListView в режиме отчета под манифестом XP
     }
      
      
-     // ComCtrls.pas: 
+    // ComCtrls.pas: 
      
     procedure TCustomListView.UpdateColumn(AnIndex: Integer);
-     {...}
-     with Column, Columns.Items[AnIndex] do
-     begin
-       { PATCH start:}
-       // mask := LVCF_TEXT or LVCF_FMT or LVCF_IMAGE; 
-      mask := LVCF_TEXT or LVCF_FMT;
-       if FImageIndex >= 0 then
-         mask := mask or LVCF_IMAGE;
-       { PATCH :end }
-       {...}
-     end;
+      {...}
+      with Column, Columns.Items[AnIndex] do
+      begin
+        { PATCH start:}
+        // mask := LVCF_TEXT or LVCF_FMT or LVCF_IMAGE; 
+       mask := LVCF_TEXT or LVCF_FMT;
+        if FImageIndex >= 0 then
+          mask := mask or LVCF_IMAGE;
+        { PATCH :end }
+        {...}
+      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

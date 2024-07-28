@@ -1,15 +1,12 @@
 ---
 Title: Задать расстояние между строк для TRichEdit
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Задать расстояние между строк для TRichEdit
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
        RichEdit;
@@ -31,4 +28,3 @@ Date: 01.01.2007
        RE_SetLineSpacing(RichEdit1, 1);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

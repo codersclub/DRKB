@@ -2,15 +2,12 @@
 Title: Глюк при запуске приложений через ShellListView
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Глюк при запуске приложений через ShellListView
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для правки данного глюка необходимо изменить следующую процедуру в
 исходном коде данного компонента:
@@ -27,9 +24,9 @@ Date: 01.01.2007
               PChar(ExtractFilePath(PathName)), 0);  
       inherited DblClick;
     end;
-     
-    на вот такую:
-     
+
+на вот такую:
+
     procedure TCustomShellListView.DblClick;
     begin
       if FAutoNavigate and (Selected <> nil) then
@@ -42,8 +39,7 @@ Date: 01.01.2007
       inherited DblClick;
     end;
 
-PS: SW\_HIDE = 0
+PS:
 
-Автор: Rouse\_
+    SW_HIDE = 0
 
-Взято из <https://forum.sources.ru>

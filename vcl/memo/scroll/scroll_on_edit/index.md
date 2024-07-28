@@ -1,15 +1,12 @@
 ---
 Title: Постраничная прокрутка Memo, когда фокус находится на Edit
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Постраничная прокрутка Memo, когда фокус находится на Edit
 ==========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Edit1KeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -22,9 +19,4 @@ Date: 01.01.2007
       else if Key = VK_F7 then
         SendMessage(Memo1.Handle, WM_VSCROLL, SB_PAGEUP, 0);
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -1,15 +1,12 @@
 ---
 Title: Как выделить URL в TRichEdit?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как выделить URL в TRichEdit?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     {....}
      
@@ -61,4 +58,3 @@ Date: 01.01.2007
       inherited;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

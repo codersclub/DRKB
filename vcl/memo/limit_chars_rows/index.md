@@ -7,9 +7,9 @@ Date: 01.01.2007
 Ограничение длины и количества строк компонента TMemo
 =====================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit Unit1;
      
@@ -92,15 +92,13 @@ Date: 01.01.2007
     end;
      
     end.
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
  
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure TForm1.Memo1Change(Sender: TObject);
      const
@@ -108,14 +106,13 @@ DelphiWorld 6.0
      begin
        if Memo1.Lines.Count > MaxLineCount then
          // undo the last change 
-        // letze Дnderung rьckgдngig machen 
-        Memo1.Perform(EM_UNDO, 0, 0);
+         // letze Дnderung rьckgдngig machen 
+         Memo1.Perform(EM_UNDO, 0, 0);
        // The EM_EMPTYUNDOBUFFER message clears the undo flag, 
-      // which means that you can no longer undo your last change 
-      // to the edit control. 
-      // Die Message EM_EMPTYUNDOBUFFER lцscht das UnDo Flag, 
-      // damit kann die letzte Дnderung nicht Rьckgдngig gemacht werden. 
-      Memo1.Perform(EM_EMPTYUNDOBUFFER, 0, 0);
+       // which means that you can no longer undo your last change 
+       // to the edit control. 
+       // Die Message EM_EMPTYUNDOBUFFER lцscht das UnDo Flag, 
+       // damit kann die letzte Дnderung nicht Rьckgдngig gemacht werden. 
+       Memo1.Perform(EM_EMPTYUNDOBUFFER, 0, 0);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

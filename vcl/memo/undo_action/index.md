@@ -1,15 +1,12 @@
 ---
 Title: Проверить, можно ли отменить последнее действие в TMemo
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Проверить, можно ли отменить последнее действие в TMemo
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
      begin
@@ -19,4 +16,3 @@ Date: 01.01.2007
          ShowMessage('Undo is not possible');
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

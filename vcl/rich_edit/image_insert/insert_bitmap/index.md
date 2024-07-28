@@ -8,9 +8,11 @@ Date: 01.01.2007
 Как вставить Bitmap в TRichEdit?
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
 
 Вот так можно вставить картинку в формате Bitmap в позицию курсора в
 TRichEdit:
@@ -243,9 +245,8 @@ TRichEdit:
      
     end.
 
-Примеры использования:
 
- 
+Примеры использования:
 
     uses re_bmp;
      
@@ -274,20 +275,16 @@ TRichEdit:
 Таким же образом можно вставлять картинки не только в TRichEdit, но и в
 RxRichEdit, стандартный виндовый RichEdit, etc.
 
- 
-
-Взято из <https://forum.sources.ru>
-
-Автор: Krid
-
- 
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     uses
        RichEdit;
      
-     // Stream Callback function 
+    // Stream Callback function 
     type
        TEditStreamCallBack = function(dwCookie: Longint; pbBuff: PByte;
          cb: Longint; var pcb: Longint): DWORD;
@@ -299,11 +296,11 @@ RxRichEdit, стандартный виндовый RichEdit, etc.
          pfnCallback: TEditStreamCallBack;
        end;
      
-     // RichEdit Type 
+    // RichEdit Type 
     type
        TMyRichEdit = TRxRichEdit;
      
-     // EditStreamInCallback callback function 
+    // EditStreamInCallback callback function 
     function EditStreamInCallback(dwCookie: Longint; pbBuff: PByte;
        cb: Longint; var pcb: Longint): DWORD; stdcall;
        // by P. Below 
@@ -331,7 +328,7 @@ RxRichEdit, стандартный виндовый RichEdit, etc.
        end;
      end;
      
-     // Insert Stream into RichEdit 
+    // Insert Stream into RichEdit 
     procedure PutRTFSelection(RichEdit: TMyRichEdit; SourceStream: TStream);
        // by P. Below 
     var
@@ -346,9 +343,9 @@ RxRichEdit, стандартный виндовый RichEdit, etc.
        RichEdit.Perform(EM_STREAMIN, SF_RTF or SFF_SELECTION, Longint(@EditStream));
      end;
      
-     // Convert Bitmap to RTF Code 
+    // Convert Bitmap to RTF Code 
     function BitmapToRTF(pict: TBitmap): string;
-     // by D3k 
+    // by D3k 
     var
        bi, bb, rtf: string;
        bis, bbs: Cardinal;
@@ -386,7 +383,7 @@ RxRichEdit, стандартный виндовый RichEdit, etc.
      end;
      
      
-     // Example to insert image from Image1 into RxRichEdit1 
+    // Example to insert image from Image1 into RxRichEdit1 
     procedure TForm1.Button1Click(Sender: TObject);
      var
        SS: TStringStream;
@@ -402,4 +399,3 @@ RxRichEdit, стандартный виндовый RichEdit, etc.
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

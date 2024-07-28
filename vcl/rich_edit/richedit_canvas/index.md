@@ -1,15 +1,12 @@
 ---
 Title: How to render a TRichEdit text onto a canvas?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 How to render a TRichEdit text onto a canvas?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure RichEditToCanvas(RichEdit: TRichEdit; Canvas: TCanvas; PixelsPerInch: Integer);
     var
@@ -42,4 +39,3 @@ How to render a TRichEdit text onto a canvas?
        Image1.Refresh;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

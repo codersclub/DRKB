@@ -1,15 +1,13 @@
 ---
 Title: Двоичный поиск для TListView
-Date: 01.01.2007
+Author: P. Below 
+Date: 31.10.1999
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Двоичный поиск для TListView
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     {+------------------------------------------------------------ 
     | Function ListviewBinarySearch 
@@ -77,4 +75,3 @@ Date: 01.01.2007
        Index := First;
      end; { ListviewBinarySearch }
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

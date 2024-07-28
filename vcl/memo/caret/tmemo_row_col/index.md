@@ -1,15 +1,12 @@
 ---
 Title: TMemo со свойствами Row и Col
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 TMemo со свойствами Row и Col
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
 Наследник TMemo со свойствами row & col:
 
@@ -50,25 +47,21 @@ TMemo со свойствами Row и Col
      
     function TRCMemo.GetRow: Integer;
     begin
-     
       Result := Perform(EM_LINEFROMCHAR, $FFFF, 0);
     end;
      
     procedure TRCMemo.SetRow(value: Integer);
     begin
-     
       SelStart := GetCol + Perform(EM_LINEINDEX, Value, 0);
     end;
      
     function TRCMemo.GetCol: Integer;
     begin
-     
       Result := SelStart - Perform(EM_LINEINDEX, GetRow, 0);
     end;
      
     procedure TRCMemo.SetCol(value: Integer);
     begin
-     
       SelStart := Perform(EM_LINEINDEX, GetRow, 0) + Value;
     end;
      
@@ -76,7 +69,6 @@ TMemo со свойствами Row и Col
     var
       ro, co: Integer;
     begin
-     
       ro := GetRow;
       co := SelStart - Perform(EM_LINEINDEX, ro, 0);
       Result := MakeLong(co, ro);
@@ -84,20 +76,14 @@ TMemo со свойствами Row и Col
      
     procedure TRCMemo.SetPosn(value: LongInt);
     begin
-     
       SelStart := Perform(EM_LINEINDEX, HiWord(Value), 0) + LoWord(Value);
     end;
      
     procedure Register;
     begin
-     
       RegisterComponents('NJR', [TRCMemo]);
     end;
      
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

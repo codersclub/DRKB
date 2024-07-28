@@ -1,15 +1,12 @@
 ---
 Title: Как получить RTF-текст из TRichEdit?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Как получить RTF-текст из TRichEdit?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetRTFText(ARichEdit: TRichedit): string;
      var
@@ -33,4 +30,3 @@ Date: 01.01.2007
        Memo1.Text := GetRTFText(RichEdit1);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

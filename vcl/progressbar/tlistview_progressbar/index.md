@@ -1,15 +1,12 @@
 ---
 Title: TProgressBar в колонке TListView
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 TProgressBar в колонке TListView
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject); 
     var 
@@ -44,6 +41,4 @@ TProgressBar в колонке TListView
       pb.StepIt; 
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

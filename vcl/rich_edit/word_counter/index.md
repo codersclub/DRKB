@@ -1,15 +1,12 @@
 ---
 Title: Подсчет слов в TRichEdit
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Подсчет слов в TRichEdit
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetWord: boolean;
     var
@@ -38,8 +35,4 @@ Date: 01.01.2007
           inc(Count);
       closefile(f);
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

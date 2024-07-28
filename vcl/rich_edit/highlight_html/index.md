@@ -1,15 +1,12 @@
 ---
 Title: Подсветить HTML-теги в TRichEdit
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Подсветить HTML-теги в TRichEdit
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure HTMLSyntax(RichEdit: TRichEdit; TextCol,
       TagCol, DopCol: TColor); 
@@ -69,8 +66,4 @@ Date: 01.01.2007
       HTMLSyntax(RichEdit1, clBlue, clRed, clGreen); 
       RichEdit1.Lines.EndUpdate; 
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

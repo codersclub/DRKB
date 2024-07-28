@@ -1,18 +1,15 @@
 ---
 Title: Получить слово под курсором в TRichEdit
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Получить слово под курсором в TRichEdit
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses 
-     RichEdit; 
+      RichEdit; 
      
     procedure TForm1.RichEdit1MouseMove(Sender: TObject; Shift: TShiftState; 
       X, Y: Integer); 
@@ -43,8 +40,4 @@ Date: 01.01.2007
         Caption := Copy(s, i, j - i); 
       end; 
     end;  
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

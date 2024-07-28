@@ -2,17 +2,12 @@
 Title: Обнаружение прокрутки TMemo
 Author: Xavier Pacheco
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Обнаружение прокрутки TMemo
 ===========================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Xavier Pacheco
 
 Создайте потомок TMemo, перехватывающий сообщения WM\_HSCROLL и
 WM\_VSCROLL:
@@ -34,9 +29,4 @@ WM\_VSCROLL:
     begin
       ShowMessage('VScroll');
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -1,15 +1,12 @@
 ---
 Title: Как поместить данные в TRichEdit-контролл?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как поместить данные в TRichEdit-контролл?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit dbrich; 
     interface 
@@ -183,4 +180,3 @@ Date: 01.01.2007
       Result := FDataLink.ReadOnly; 
     end;
 
-Взято из <https://forum.sources.ru>
