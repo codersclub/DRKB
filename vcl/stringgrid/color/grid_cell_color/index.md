@@ -1,15 +1,12 @@
 ---
 Title: Назначение цвета для каждой строки
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Назначение цвета для каждой строки
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TFormHistory.ListHistoryDrawCell(Sender: TObject; Col, Row: Integer;
               Rect: TRect; State: TGridDrawState);
@@ -51,8 +48,5 @@ Date: 01.01.2007
         if Row <> ROW_HEADER then
           (Sender as TStrinGgrid).Canvas.Textout(rect.left+3, rect.top+3, S );
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

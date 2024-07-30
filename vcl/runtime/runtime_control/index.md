@@ -2,15 +2,12 @@
 Title: Как создать контрол в runtime?
 Author: Fantasist
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как создать контрол в runtime?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     var Butt:TButton;
 
@@ -19,7 +16,3 @@ Date: 01.01.2007
       Butt.Parent:=self;
       Butt.Visible:=true;
     end;
-
-Автор: Fantasist
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

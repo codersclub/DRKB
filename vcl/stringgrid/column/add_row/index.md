@@ -1,15 +1,12 @@
 ---
 Title: Вставка строки в TStringGrid
-Date: 01.01.2007
+Author: Борис Новгородов (MBo), mbo@mail.ru
+Date: 27.04.2002
 ---
 
 
 Вставка строки в TStringGrid
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Вставка строки в StringGrid

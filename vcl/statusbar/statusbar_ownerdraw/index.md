@@ -1,15 +1,12 @@
 ---
 Title: OwnerDraw в компоненте TStatusBar
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 OwnerDraw в компоненте TStatusBar
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.StatusBar1DrawPanel(StatusBar: TStatusBar;
     Panel: TStatusPanel; const Rect: TRect);
@@ -21,8 +18,5 @@ OwnerDraw в компоненте TStatusBar
         TextOut(Rect.Left, Rect.Top, 'Панель '+IntToStr(Panel.Index));
       end;
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -7,9 +7,7 @@ Date: 01.01.2007
 Добавление колонки в TStringGrid
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     procedure GridAddColumn(StrGrid: TStringGrid; NewColumn: Integer); 
     Var Column: Integer; 
@@ -21,6 +19,10 @@ Date: 01.01.2007
     end; 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
     procedure AddColumn(SG : TStringGrid; AtColNumber : integer; 
                         ColWidth : integer = 0); 
@@ -45,4 +47,3 @@ Date: 01.01.2007
       end;   
     end; 
 
-Взято из <https://forum.sources.ru>

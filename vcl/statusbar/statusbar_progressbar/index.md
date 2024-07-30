@@ -1,6 +1,5 @@
 ---
 Title: TStatusBar + TProgressBar
-Author: Vit
 Date: 01.01.2007
 ---
 
@@ -8,17 +7,17 @@ Date: 01.01.2007
 TStatusBar + TProgressBar
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Автор: Vit
 
 Вставить ProgressBar в StatusBar:
 
 Вот эту функцию применять вместо стандартного Create
 
     function CreateProgressBar(StatusBar:TStatusBar; index:integer):TProgressBar;
-      var findleft:integer;
-            i:integer;
+    var findleft:integer;
+        i:integer;
     begin
       result:=TProgressBar.create(Statusbar);
       result.parent:=Statusbar;
@@ -32,9 +31,11 @@ TStatusBar + TProgressBar
       result.height:=Statusbar.height-2;
     end;
 
-Автор: Vit
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     var pb: TProgressBar;
 
@@ -53,9 +54,12 @@ TStatusBar + TProgressBar
     ....
     end; 
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
 
     unit adStatba;
      
@@ -103,16 +107,20 @@ TStatusBar + TProgressBar
 понадобиться выровнять элемент управления по правому краю. Не так это
 все сложно...
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
 Сборник Kuliba
 
 ------------------------------------------------------------------------
 
+Вариант 4:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
 pgProgress положить на форму как Visible := false; StatusPanel надо
 OwnerDraw сделать и pефpешить, если Position меняется.
 
-    procedure TMainForm.stStatusBarDrawPanel(StatusBar: TStatusBar; Panel: TStatusPanel; const Rect: TRect);
+    procedure TMainForm.stStatusBarDrawPanel(StatusBar: TStatusBar;
+                                             Panel: TStatusPanel;
+                                             const Rect: TRect);
     begin
 
       if Panel.Index = pnProgress then
@@ -122,10 +130,12 @@ OwnerDraw сделать и pефpешить, если Position меняется
       end;
     end; 
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
-With TProgressBar.Create(StatusBar1) Do Parent:=StatusBar1;
+Вариант 5:
 
-Автор: Song
+Author: Song
+
+    With TProgressBar.Create(StatusBar1) Do Parent:=StatusBar1;
+

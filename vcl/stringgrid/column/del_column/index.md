@@ -7,9 +7,7 @@ Date: 01.01.2007
 Удаление колонки в TStringGrid
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     Procedure GridRemoveColumn(StrGrid: TStringGrid; DelColumn: Integer); 
     Var Column: Integer; 
@@ -23,6 +21,10 @@ Date: 01.01.2007
     end; 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
     procedure RemoveColumn(SG : TStringGrid; ColNumber : integer); 
     var Column : integer; 
@@ -40,7 +42,9 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-Взято из <https://forum.sources.ru>
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Button3Click(Sender: TObject);
     var
@@ -52,13 +56,13 @@ Date: 01.01.2007
         SG1.Rows[i].Assign(SG1.Rows[i+1]);
       SG1.RowCount:=SG1.RowCount-1;
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     type
        TStringGridHack = class(TStringGrid)
@@ -85,8 +89,4 @@ DelphiWorld 6.0
            DeleteCol(ACol + 1);
          end;
      end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

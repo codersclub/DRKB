@@ -7,9 +7,9 @@ Date: 01.01.2007
 Очистить ячейки в TStringGrid
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure TForm1.Button1Click(Sender: TObject);
      var
@@ -21,17 +21,19 @@ Date: 01.01.2007
              Cells[i, k] := '';
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
 
-     // Many times faster! 
-    procedure TForm1.Button2Click(Sender: TObject);
-     var
-       I: Integer;
-     begin
-       for I := 0 to StringGrid1.RowCount - 1 do
-         StringGrid1.Rows[I].Clear();
-     end;
+Вариант 2:
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
+Source: <https://www.swissdelphicenter.ch>
+
+    // Many times faster! 
+    procedure TForm1.Button2Click(Sender: TObject);
+    var
+      I: Integer;
+    begin
+      for I := 0 to StringGrid1.RowCount - 1 do
+        StringGrid1.Rows[I].Clear();
+    end;
+

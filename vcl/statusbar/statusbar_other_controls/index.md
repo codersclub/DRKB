@@ -2,20 +2,17 @@
 Title: TStatusBar с другими контролами
 Author: man2002ua
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 TStatusBar с другими контролами
 ===============================
 
-::: {.date}
-01.01.2007
-:::
-
 Этот StatusBar позволит размещать на себе любые другие контролы.
 
-Создаем новый компонент от StatusBar и првим код как внизу. Потом
-инсталлируем и все.
+Создаем новый компонент от StatusBar и правим код как внизу.
+Потом инсталлируем и всё.
 
     unit StatusBarExt;
      
@@ -48,6 +45,3 @@ TStatusBar с другими контролами
      
     end.
 
-Автор: man2002ua
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

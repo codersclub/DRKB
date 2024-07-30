@@ -1,18 +1,13 @@
 ---
 Title: Цвет неактивной ячейки TStringGrid
 Author: Neil J. Rubenking
-Date: 01.01.2007
+Date: 01.01.2000
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Цвет неактивной ячейки TStringGrid
 ==================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Neil J. Rubenking
 
 >...если я щелкаю на любой ячейке StringGrid2, последняя выбранная
 >ячейка в StringGrid1 становится синей...
@@ -47,6 +42,4 @@ Date: 01.01.2007
 (отрисовку по умолчанию), для таких ячеек, но в то же время разрешая
 Delphi поработать за вас во всех остальных случаях.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

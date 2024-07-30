@@ -8,9 +8,9 @@ Date: 01.01.2007
 Показ всплывающих подсказок в строке состояния
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Я покажу как сделать так, чтобы строка состояния (Status Bar) показывала
 все всплывающие подсказки (Hint) элементов управления формы при
@@ -34,7 +34,7 @@ Date: 01.01.2007
 
 Поместите следующую строку в обработчике события FormCreate вашей формы:
 
-Application.OnHint := DisplayHint;
+    Application.OnHint := DisplayHint;
 
 Шаг 4:
 
@@ -63,7 +63,7 @@ Application.OnHint := DisplayHint;
       end;
     end; {DisplayHint}
 
-Не забудьте поместить \'Procedure DisplayHint(Sender: TObject) в секции
+Не забудьте поместить `Procedure DisplayHint(Sender: TObject)` в секции
 Public.
 
 Это все, что вы должны сделать. Если вы хотите придать такую
@@ -71,13 +71,14 @@ Public.
 установите свойство Hint у необходимых компонентов. Я надеюсь это
 просто.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Иваненко Фёдор Григорьевич
+Вариант 2:
+
+Author: Иваненко Фёдор Григорьевич
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Пришло мне письмо:
 
@@ -100,7 +101,3 @@ TForm.FindComponent, существующий со времен Delphi I ? С е
       if Assigned(C) then
         C.SimpleText := '  ' + Application.Hint;
     end;
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

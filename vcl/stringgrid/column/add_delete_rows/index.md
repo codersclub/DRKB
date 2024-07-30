@@ -1,21 +1,20 @@
 ---
 Title: Вставка и удаление строк в TStringGrid
 Author: Dennis Passmore
-Date: 01.01.2007
 ---
 
 
 Вставка и удаление строк в TStringGrid
 ======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Dennis Passmore
+Date: 01.01.1996
 
-Поскольку свойство Cols[x] компонента TStringGrid реально является
-компонентом TStrings, все методы TStrings применимы также и к Cols[x].
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Поскольку свойство `Cols[x]` компонента TStringGrid реально является
+компонентом TStrings, все методы TStrings применимы также и к `Cols[x]`.
 
 Недавно в интернете я нашел реализацию расширенных функций TStringGrid:
 
@@ -156,16 +155,13 @@ Date: 01.01.2007
     end;
      
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // For this tip you need a StringGrid1 and a Button1. 
     // Fur diesen Tip braucht man ein StringGrid1 und einen Button1. 
@@ -224,11 +220,10 @@ DelphiWorld 6.0
      procedure TForm1.Button1Click(Sender: TObject);
      begin
        // Insert Row, Zeile hinzufugen 
-      TStringGridHack(StringGrid1).InsertRow(1);
+       TStringGridHack(StringGrid1).InsertRow(1);
        // Remove Row, Zeile entfernen 
-      TStringGridHack(StringGrid1).DeleteRow(2);
+       TStringGridHack(StringGrid1).DeleteRow(2);
      end;
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

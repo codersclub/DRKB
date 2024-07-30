@@ -1,6 +1,5 @@
 ---
 Title: Как удалить строку из TStringGrid в runtime?
-Author: Song
 Date: 01.01.2007
 ---
 
@@ -8,18 +7,22 @@ Date: 01.01.2007
 Как удалить строку из TStringGrid в runtime?
 ============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Song
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Можно сделать наследника от TCustomGrid. А у последнего есть метод -
 DeleteRow.
 
-Автор: Song
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Например удаление текущей строки:
 
@@ -31,20 +34,15 @@ DeleteRow.
       TFakeGrid(Grid).DeleteRow(Grid.row);
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
-Примечание от bur80 (Sources.ru):
+**Примечание от bur80 (Sources.ru):**
 
 Предлагаю в разделе VCL -\> StringGrid внести корректировочку в статью
-"Как удалить строку в StringGrid в run-time", что данный метод(!)
+"Как удалить строку в StringGrid в run-time", о том, что данный метод (!)
 будет работать только в случае если форма создаётся вот так:
 
     ...
     Form1.ShowModal;
     ...
-
 
 
 а не так:
@@ -60,6 +58,12 @@ DeleteRow.
 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Борис Новгородов (MBo), mbo@mail.ru
+
+Date: 27.04.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Удаление строки из StringGrid
@@ -86,11 +90,12 @@ DeleteRow.
         end;
       end;
     end;
-     
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure GridDeleteRow(RowNumber: Integer; Grid: TstringGrid);
      var
@@ -114,4 +119,3 @@ DeleteRow.
        GridDeleteRow(3, stringGrid1);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
