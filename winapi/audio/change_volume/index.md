@@ -1,15 +1,12 @@
 ---
 Title: Как получить / изменить громкость?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как получить / изменить громкость?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure GetVolume(var volL, volR: Word);
     var
@@ -46,4 +43,3 @@ Date: 01.01.2007
       waveOutClose(hWO);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

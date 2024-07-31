@@ -1,15 +1,12 @@
 ---
 Title: Как изменить громкость?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как изменить громкость?
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure SetVolume(X: Word); 
     var 
@@ -45,4 +42,3 @@ Date: 01.01.2007
       if (iErr‹›0) then ShowMessage('No audio devices are available!'); 
     end; 
 
-Взято из <https://forum.sources.ru>

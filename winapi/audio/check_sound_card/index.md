@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как определить, установлена ли звуковая карта?
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     { ... }
     if WaveOutGetNumDevs > 0 then
@@ -19,6 +17,10 @@ Date: 01.01.2007
     { ... }
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     function IsSoundCardInstalled: Boolean;
     type
@@ -42,4 +44,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

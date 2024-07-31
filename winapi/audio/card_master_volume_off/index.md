@@ -1,15 +1,12 @@
 ---
 Title: Как выключить master volume в звуковой карте?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как выключить master volume в звуковой карте?
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       MMSystem;
@@ -77,4 +74,3 @@ Date: 01.01.2007
       SetMasterMuteValue(0, CheckBox1.Checked); // Mixer device #0 mute on/off
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
