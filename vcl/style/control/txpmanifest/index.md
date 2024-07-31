@@ -7,10 +7,6 @@ Date: 01.01.2007
 Компонент TXPManifest
 =====================
 
-::: {.date}
-01.01.2007
-:::
-
 На странице Win32 Палитры компонентов Delphi 7 имеется компонент
 TXPManifest. Будучи добавленным в проект, он обеспечивает компиляцию
 манифеста Windows XP в исполняемый файл приложения. В качестве основы
@@ -22,16 +18,16 @@ TXPManifest. Будучи добавленным в проект, он обес�
       type="win32" 
       name="DelphiApplication" 
       version="3.2.0.0"  
-      processorArchitecture="*"/>  
+      processorArchitecture="*" />  
     <dependency> 
     <dependentAssembly> 
       Ossemblyldentity type="win32" 
       name="Microsoft.Windows.Common-Controls" 
       version="6.0.0.0" 
-      publicKeyToken="6595b64144ccfldf 
-      " language="*" 
-      processorArchitecture="*"/>  
-    </dependentAs sembly> 
+      publicKeyToken="6595b64144ccfldf"
+      language="*" 
+      processorArchitecture="*" />  
+    </dependentAssembly> 
     </dependency>  
     </assembly> 
 

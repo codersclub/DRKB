@@ -1,15 +1,12 @@
 ---
 Title: Получение узла в TTreeView по пути заголовков
-Date: 01.01.2007
+Author: lipskiy, lipskiy@mail.ru
+Date: 26.06.2002
 ---
 
 
 Получение узла в TTreeView по пути заголовков
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение узла в TreeView по пути заголовков
@@ -34,13 +31,14 @@ Date: 01.01.2007
       s: string;
     begin
       Result := nil;
-      if (TreeView = nil) or (TreeView.Items.Count = 0) or (Path = '') or (Separator
-        = '') then
+      if (TreeView = nil) or
+         (TreeView.Items.Count = 0) or (Path = '') or
+         (Separator = '') then
         exit;
       List := TStringList.Create;
       // Меняем сепаратор на первод строки
       s := StringReplace(Path, Separator, #13#10,[rfReplaceAll]);
-     // Получаем список уровней
+      // Получаем список уровней
       List.Text := s;
       // Начинаем с нулевой ноды дерева
       Node := TreeView.Items[0];

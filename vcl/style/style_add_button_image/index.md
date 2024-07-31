@@ -2,16 +2,12 @@
 Title: Добавление картинки на кнопку, если используются стили XP
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Добавление картинки на кнопку, если используются стили XP
 =========================================================
-
-::: {.date}
-01.01.2007
-:::
-
 
     function Button_SetImageEx(hwndCtl:HWND; 
                                Img:HGDIOBJ; 
@@ -77,19 +73,13 @@ Date: 01.01.2007
     end;
 
 
-
 Пример использования:
 
     // bitmap
-     SetWindowLong(hwndButton,GWL_STYLE,GetWindowLong(hwndButton,GWL_STYLE) or BS_BITMAP);          
-     Button_SetImageEx(hwndButton,LoadBitmap(hInstance,'IDB_BITMAP1'),IMAGE_BITMAP);
+    SetWindowLong(hwndButton,GWL_STYLE,GetWindowLong(hwndButton,GWL_STYLE) or BS_BITMAP);          
+    Button_SetImageEx(hwndButton,LoadBitmap(hInstance,'IDB_BITMAP1'),IMAGE_BITMAP);
+    
     // иконка
-     SetWindowLong(hwndButton,GWL_STYLE,GetWindowLong(hwndButton,GWL_STYLE) or BS_ICON);
-     Button_SetImageEx(hwndButton,LoadIcon(hInstance,'IDI_ICON1'),IMAGE_ICON);
-     
+    SetWindowLong(hwndButton,GWL_STYLE,GetWindowLong(hwndButton,GWL_STYLE) or BS_ICON);
+    Button_SetImageEx(hwndButton,LoadIcon(hInstance,'IDI_ICON1'),IMAGE_ICON);
 
-
-
-Автор: Krid
-
-Взято из <https://forum.sources.ru>

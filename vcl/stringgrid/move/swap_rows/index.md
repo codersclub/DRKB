@@ -1,15 +1,12 @@
 ---
 Title: Обмен строк TStringGrid
-Date: 01.01.2007
+Author: Борис Новгородов (MBo), mbo@mail.ru
+Date: 27.04.2002
 ---
 
 
 Обмен строк TStringGrid
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Обмен строк StringGrid

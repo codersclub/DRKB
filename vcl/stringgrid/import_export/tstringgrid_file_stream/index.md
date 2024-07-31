@@ -1,17 +1,14 @@
 ---
 Title: TStringGrid и файловый поток
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 TStringGrid и файловый поток
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
-Какое наилучшее решение для сохранения экземпляра TStringGrid (150x10)?
+> Какое наилучшее решение для сохранения экземпляра TStringGrid (150x10)?
 
 Если вы хотите сохранить это на диске:
 
@@ -28,8 +25,4 @@ TStringGrid и файловый поток
      
     myStream    := TFileStream.Create('grid1.sav', fmOpenRead);
     StringGrid1 := myStream1.ReadComponent(StringGrid1) as TStringGrid;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -2,15 +2,12 @@
 Title: TStringGrid, выделить фиксированные строки
 Author: Smike
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 TStringGrid, выделить фиксированные строки
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -86,6 +83,3 @@ TStringGrid, выделить фиксированные строки
      
     end.
 
-Взято из <https://forum.sources.ru>
-
-Автор: Smike

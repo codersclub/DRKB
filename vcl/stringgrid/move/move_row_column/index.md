@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как перемещать строки и колонки в TStringGrid?
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Пользователь может перемещать строки и колонки StringGrid при помощи
 мышки. Можно ли это сделать программно? В описании TCustomGrid можно
@@ -41,27 +41,30 @@ Date: 01.01.2007
 используйте потомка TStringGrid или любого TCustomGrid, и вызывайте его
 методы:
 
-      procedure TForm1.Button1Click(Sender: TObject); 
-      begin 
-        TStringGridX(StringGrid1).MoveColumn(1, 3); 
-      end;
+    procedure TForm1.Button1Click(Sender: TObject); 
+    begin 
+      TStringGridX(StringGrid1).MoveColumn(1, 3); 
+    end;
 
-Взято из <https://forum.sources.ru>
 
-------------------------------------------------------------------------
+**Примечание от Vit:**  
+код можно написать значительно компактнее:
 
-Примечание от Vit: код можно написать значительно компактнее:
-
-     type TFake = class(TStringGrid);
+    type TFake = class(TStringGrid);
     ...
      
-      procedure TForm1.Button1Click(Sender: TObject); 
-
-      begin 
-        TFake(StringGrid1).MoveColumn(1, 3); 
-      end;
+    procedure TForm1.Button1Click(Sender: TObject); 
+    begin 
+      TFake(StringGrid1).MoveColumn(1, 3); 
+    end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Борис Новгородов (MBo), mbo@mail.ru
+
+Date: 28.04.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Перестановка строки в StringGrid в другую позицию

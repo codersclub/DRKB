@@ -2,17 +2,12 @@
 Title: Фокус ячейки TStringGrid
 Author: Simon
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Фокус ячейки TStringGrid
 ========================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Simon
 
     procedure SetGridFocus(SGrid: TStringGrid; r, c: integer);
     var
@@ -32,15 +27,11 @@ Date: 01.01.2007
     end;
      
      
-     
     //Для вызова процедуры:
-     
      
     SetGridFocus(StringGrid1, 10, 2);
 
 Это всегда срабатывает в случае, если никакая ячейка не выбрана или
 фокус имеет другой элемент управления.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

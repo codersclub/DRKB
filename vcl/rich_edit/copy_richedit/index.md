@@ -8,7 +8,7 @@ Source: <https://forum.sources.ru>
 Как скопировать содержимое одного TRichEdit в другой?
 =====================================================
 
-TMemoryStream это самый простой инструмент взаимодействия между всеми
+TMemoryStream - это самый простой инструмент взаимодействия между всеми
 VCL компонентами:
 
     procedure TForm1.Button1Click(Sender: TObject);

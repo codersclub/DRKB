@@ -1,6 +1,5 @@
 ---
 Title: Пример TDrawGrid.DrawCell
-Author: Neil
 Date: 01.01.2007
 ---
 
@@ -8,11 +7,11 @@ Date: 01.01.2007
 Пример TDrawGrid.DrawCell
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Neil
+Author: Neil
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.DrawGrid1DrawCell(Sender: TObject; Col, Row: Longint;
       Rect: TRect; State: TGridDrawState);
@@ -30,16 +29,13 @@ Date: 01.01.2007
         TextRect(Rect, Rect.Left, Rect.Top, Format('(%d,%d)', [vRow, vCol]));
       end;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Это код, который я использую для печати TMemoField в TDBGrid.
 Перекрываем (override) метод DrawCell:
@@ -47,8 +43,8 @@ DelphiWorld 6.0
     Canvas.FillRect(ARect);
     R := ARect;
     WITH TMemoField(Field) DO
-    DrawText(Canvas.Handle, PChar(Value), Length(Value), R,
-    DT_WORDBREAK OR DT_NOPREFIX);
+      DrawText(Canvas.Handle, PChar(Value), Length(Value), R,
+        DT_WORDBREAK OR DT_NOPREFIX);
 
 Я думаю этот код, который я создал в Delphi 1.0, должен помочь вам:
 
@@ -110,6 +106,4 @@ grid.canvas почему-то возвращает мне неверные ре�
 onDrawDataCell. В этом случае сетка нарисует за вас все линии, вам же
 останется нарисовать только содержимое.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

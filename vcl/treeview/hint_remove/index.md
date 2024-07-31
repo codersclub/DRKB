@@ -1,6 +1,5 @@
 ---
 Title: Как убрать всплывающие подсказки в TreeView?
-Author: Eugene Mayevski
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Как убрать всплывающие подсказки в TreeView?
 ============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch>
 
     { 
       If you have installed the Internet Explorer 4.0 or high, in TTreeView component 
@@ -18,28 +17,28 @@ Date: 01.01.2007
       irritates (at least, me). But there is a simple way to switch off this feature: 
     }
      
-     procedure TForm1.FormShow(Sender: TObject);
-     const
-       TVS_NOTOOLTIPS = $0080;
-     begin
-       SetWindowLong(Treeview1.Handle, GWL_STYLE,
-         GetWindowLong(TreeView1.Handle, GWL_STYLE) xor TVS_NOTOOLTIPS);
-     end;
+    procedure TForm1.FormShow(Sender: TObject);
+    const
+      TVS_NOTOOLTIPS = $0080;
+    begin
+      SetWindowLong(Treeview1.Handle, GWL_STYLE,
+        GetWindowLong(TreeView1.Handle, GWL_STYLE) xor TVS_NOTOOLTIPS);
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
 
-Автор: Eugene Mayevski
+Вариант 2:
 
-TCustomTreeView.WMNotify.
+Author: Eugene Mayevski
 
-О том, что такое тип notify\'а TTM\_NEEDTEXT
-пpочтешь в хелпе. Убpать хинты можно, пеpекpыв обpаботчик для этого
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Решение - `TCustomTreeView.WMNotify`.
+
+О том, что такое тип notify\'а `TTM_NEEDTEXT`
+пpочтешь в хелпе.
+
+Убpать хинты можно, пеpекpыв обpаботчик для этого
 уведомительного сообщения.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

@@ -1,15 +1,12 @@
 ---
 Title: Ограничение длины поля TStringGrid
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Ограничение длины поля TStringGrid
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 Вероятно, это не очень эффективное решение, но оно будет работать:
 поместите следующий код в обработчик события onKeyPress:
@@ -28,7 +25,3 @@ Date: 01.01.2007
 
     if Length(s) > maxlengthoffield then exit;
 
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

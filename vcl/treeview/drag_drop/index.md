@@ -2,17 +2,12 @@
 Title: Как реализовать Drag & Drop в TTreeView?
 Author: Васильев Василий
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как реализовать Drag & Drop в TTreeView?
 ========================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Васильев Василий
 
     unit Unit1;
      
@@ -91,8 +86,3 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 

@@ -1,15 +1,12 @@
 ---
 Title: Как получить сообщение об изменении стиля?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить сообщение об изменении стиля?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     const
       WM_THEMECHANGED = $031A;
@@ -34,4 +31,3 @@ Date: 01.01.2007
       Msg.Result := 0;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: TStringGrid как TDBGrid
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 TStringGrid как TDBGrid
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
 Ну это может выглядеть приблизительно так (возможно нужна некоторая
 доработка, написал от руки, не проверяя):
@@ -50,11 +47,11 @@ TStringGrid как TDBGrid
         // doGrid. Итак, мы загружаем данные в объект-сетку
         // и затем копируем их в стобцы, начиная с верхней части.
      
-        grid := TStringGrid.Create(Self);
+      grid := TStringGrid.Create(Self);
       grid.Visible := FALSE;
+      
       with fDB do
       try
-     
         grid.ColCount := fFields.Count;
         DisableControls;
         // Фильтр был установлен с помощью свойства Self.Filter
@@ -66,8 +63,7 @@ TStringGrid как TDBGrid
           begin
             grid.Cells[i, Row] :=
               FieldByName(fFields.Strings[i]).AsString
-              w := doGrid.Canvas.TEXTWIDTH(grid.Cells[i,
-              Row]);
+              w := doGrid.Canvas.TEXTWIDTH(grid.Cells[i, Row]);
             if fColWidths[i] < w then
               fColWidths[i] := w;
           end
@@ -87,9 +83,5 @@ TStringGrid как TDBGrid
         EnableControls
       end
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

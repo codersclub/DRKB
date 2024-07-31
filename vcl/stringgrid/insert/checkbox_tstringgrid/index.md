@@ -8,9 +8,9 @@ Date: 01.01.2007
 TCheckBox в TStringGrid
 =======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit Unit1;
      
@@ -76,15 +76,15 @@ TCheckBox в TStringGrid
     end;
      
     end.
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Joel E. Cant
+Вариант 2:
+
+Author: Joel E. Cant
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Пример демонстрирует добавление любого количества чекбоксов в
 StringGrid. В этом примере необходимо добавить TPanel, а в саму панель
@@ -183,6 +183,4 @@ StringGrid. В этом примере необходимо добавить TPa
         set_checkbox_alignment;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

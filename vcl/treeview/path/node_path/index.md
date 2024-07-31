@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как получить строковый путь узла TTreeView?
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ![clip0035](clip0035.png){.center}
 
@@ -36,9 +36,14 @@ Date: 01.01.2007
       label1.Caption := SrNodeTree(TreeView1.Selected, sPath); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: lipskiy, lipskiy@mail.ru
+
+Date: 02.05.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение пути заголовков к узлу в TreeView

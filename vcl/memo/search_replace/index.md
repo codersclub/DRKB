@@ -50,9 +50,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Вариант 2:
 
-Поиск и замена текста в TMemo
-
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Поиск и замена текста в TMemo
 
     procedure TForm1.FindDialog1Find(Sender: TObject);
     var

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Правое выравнивание ячеек TStringGrid
 =====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.GridSumaDrawCell(Sender: TObject; ACol, ARow: Longint;
       ARect: TRect; State: TGridDrawState);
@@ -37,59 +37,58 @@ Date: 01.01.2007
         end
       end
     end;
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
+
     procedure TForm1.StringGrid1DrawCell(Sender: TObject; ACol, ARow: Integer;
-       Rect: TRect; State: TGridDrawState);
-     
-       procedure WriteText(StringGrid: TStringGrid; ACanvas: TCanvas; const ARect: TRect;
-         const Text: string; Format: Word);
-       const
-         DX = 2;
-         DY = 2;
-       var
-         S: array[0..255] of Char;
-         B, R: TRect;
-       begin
-         with Stringgrid, ACanvas, ARect do
-         begin
-           case Format of
-             DT_LEFT: ExtTextOut(Handle, Left + DX, Top + DY,
-                 ETO_OPAQUE or ETO_CLIPPED, @ARect, StrPCopy(S, Text), Length(Text), nil);
-     
-             DT_RIGHT: ExtTextOut(Handle, Right - TextWidth(Text) - 3, Top + DY,
-                 ETO_OPAQUE or ETO_CLIPPED, @ARect, StrPCopy(S, Text),
-                 Length(Text), nil);
-     
-             DT_CENTER: ExtTextOut(Handle, Left + (Right - Left - TextWidth(Text)) div 2,
-                 Top + DY, ETO_OPAQUE or ETO_CLIPPED, @ARect,
-                 StrPCopy(S, Text), Length(Text), nil);
-           end;
-         end;
-       end;
-     
-       procedure Display(StringGrid: TStringGrid; const S: string; Alignment: TAlignment);
-       const
-         Formats: array[TAlignment] of Word = (DT_LEFT, DT_RIGHT, DT_CENTER);
-       begin
-         WriteText(StringGrid, StringGrid.Canvas, Rect, S, Formats[Alignment]);
-       end;
-     begin
-       // Right-justify columns 0-2 
+      Rect: TRect; State: TGridDrawState);
+  
+    procedure WriteText(StringGrid: TStringGrid; ACanvas: TCanvas; const ARect: TRect;
+      const Text: string; Format: Word);
+    const
+      DX = 2;
+      DY = 2;
+    var
+      S: array[0..255] of Char;
+      B, R: TRect;
+    begin
+      with Stringgrid, ACanvas, ARect do
+      begin
+        case Format of
+          DT_LEFT: ExtTextOut(Handle, Left + DX, Top + DY,
+              ETO_OPAQUE or ETO_CLIPPED, @ARect, StrPCopy(S, Text), Length(Text), nil);
+  
+          DT_RIGHT: ExtTextOut(Handle, Right - TextWidth(Text) - 3, Top + DY,
+              ETO_OPAQUE or ETO_CLIPPED, @ARect, StrPCopy(S, Text),
+              Length(Text), nil);
+  
+          DT_CENTER: ExtTextOut(Handle, Left + (Right - Left - TextWidth(Text)) div 2,
+              Top + DY, ETO_OPAQUE or ETO_CLIPPED, @ARect,
+              StrPCopy(S, Text), Length(Text), nil);
+        end;
+      end;
+    end;
+  
+    procedure Display(StringGrid: TStringGrid; const S: string; Alignment: TAlignment);
+    const
+      Formats: array[TAlignment] of Word = (DT_LEFT, DT_RIGHT, DT_CENTER);
+    begin
+      WriteText(StringGrid, StringGrid.Canvas, Rect, S, Formats[Alignment]);
+    end;
+    
+    begin
+      // Right-justify columns 0-2 
       // Spalten 0-2 rechts ausrichten. 
       if ACol in [0..2] then
-         Display(StringGrid1, StringGrid1.Cells[ACol, ARow], taRightJustify)
-     
-         // Center the first row 
-        // Erste zeile zentrieren 
-        if ARow = 0 then
-           Display(StringGrid1, StringGrid1.Cells[ACol, ARow], taCenter)
-       end;
+        Display(StringGrid1, StringGrid1.Cells[ACol, ARow], taRightJustify)
+    
+      // Center the first row 
+      // Erste zeile zentrieren 
+      if ARow = 0 then
+        Display(StringGrid1, StringGrid1.Cells[ACol, ARow], taCenter)
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

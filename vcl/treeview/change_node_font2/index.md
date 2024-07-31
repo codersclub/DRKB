@@ -7,9 +7,9 @@ Date: 01.01.2007
 Выделение некоторых узлов другим шрифтом
 ========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch>
 
     uses 
       CommCtrl; 
@@ -38,13 +38,13 @@ Date: 01.01.2007
     begin 
       SetNodeBoldState(TreeView1.Items[0], True); 
     end;
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     uses CommCtrl;
     ...
@@ -66,8 +66,4 @@ Date: 01.01.2007
     SetNodeState(TreeView1.Selected, TVIS_CUT); // Иконкy бледной (Ctrl+X)
     SetNodeState(TreeView1.Selected, TVIS_BOLD or TVIS_CUT); // Текст жиpным
     SetNodeState(TreeView1.Selected, 0); // Ни того, ни дpyгого
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

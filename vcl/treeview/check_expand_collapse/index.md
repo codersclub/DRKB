@@ -1,15 +1,12 @@
 ---
 Title: Проверить, развернут ли или свернут полностью TTreeView
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Проверить, развернут ли или свернут полностью TTreeView
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function IsTreeviewFullyExpanded(tv: TTreeview): Boolean;
      var
@@ -49,6 +46,3 @@ Date: 01.01.2007
          Result := False
      end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

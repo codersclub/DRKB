@@ -7,9 +7,9 @@ Date: 01.01.2007
 Tab как Enter в TStringGrid
 ===========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Данный код переводит ввод на другую колонку. При достижении конца
 колонок, ввод перемещается на следующую строку. При достижении самого
@@ -36,11 +36,12 @@ Tab как Enter в TStringGrid
           end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure TForm1.StringGrid1KeyPress(Sender: TObject; var Key: Char);
      begin
@@ -60,4 +61,3 @@ DelphiWorld 6.0
          end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

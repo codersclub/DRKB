@@ -1,6 +1,5 @@
 ---
 Title: Многострочные ячейки в TStringGrid
-Author: Пётр Соболь
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Многострочные ячейки в TStringGrid
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Сперва необходимо установить свойство DefaultDrawing в False. Далее,
 необходимо вставить следующий код в обработчик события OnDrawCell:
@@ -47,11 +46,14 @@ Date: 01.01.2007
 Так же не забудьте изменить высоту строки так, чтобы переносы строки
 поместились в ячейку:
 
-StringGrid1.RowHeights[0] := StringGrid1.DefaultRowHeight * 2 ;
+    StringGrid1.RowHeights[0] := StringGrid1.DefaultRowHeight * 2 ;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Ниже приведен пример, делающий заголовок многострочным, центрированным и
 с жирным шрифтом:
@@ -109,15 +111,13 @@ StringGrid1.RowHeights[0] := StringGrid1.DefaultRowHeight * 2 ;
         canvas.font.style := canvas.font.style - [fsbold];
       end;
     end;
-     
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.grid1DrawCell(Sender: TObject; Col, Row: Longint;
        Rect: TRect; State: TGridDrawState);
@@ -171,16 +171,15 @@ DelphiWorld 6.0
          canvas.font.style:=canvas.font.style-[fsbold];
        end;
      end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Пётр Соболь
+Вариант 4:
+
+Author: Пётр Соболь
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Была необходимость в использовании многострочного TStringGrida. Не один
 из трех способов создания не сработал, Переработал статью о подобной
@@ -202,6 +201,4 @@ WinProcs:
         StrLen(C), Rect, Format);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

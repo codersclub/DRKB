@@ -192,7 +192,8 @@ TVSTRecord.ElementNumber:
 только, скажем, английского или русского текста. Для этого достаточно
 только поменять в файле VirtualTrees.pas текст процедуры DrawTextW на:
 
-    procedure DrawTextW(DC: HDC; lpString: PWideChar; nCount: Integer; var lpRect: TRect; uFormat: Cardinal;
+    procedure DrawTextW(DC: HDC; lpString: PWideChar; nCount: Integer;
+      var lpRect: TRect; uFormat: Cardinal;
       AdjustRight: Boolean);
     begin
       Windows.DrawText(DC, PChar(String(lpString)), nCount, lpRect, uFormat);
@@ -370,8 +371,8 @@ TVSTRecord.ElementNumber:
 вопрос, как это побороть.
 
 Отключить это можно опцией
-TreeOptions.AutoOptions -\>
-`toDisableAutoscrollOnFocus = True` (см. скриншот)
+
+    TreeOptions.AutoOptions -> toDisableAutoscrollOnFocus = True {см. скриншот}
 
 **Сохранение и загрузка**
 

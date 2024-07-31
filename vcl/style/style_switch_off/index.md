@@ -2,29 +2,22 @@
 Title: Как отключать стили XP для отдельных контролов?
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как отключать стили XP для отдельных контролов?
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
-
 Темы должны быть включены и манифест лежать на форме:
 
- 
-
     unit Unit1;
-
      
     interface
      
     uses
       Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
       Dialogs, ExtCtrls, StdCtrls, ComCtrls, XPMan;
-     
      
     type
       TForm1 = class(TForm)
@@ -51,7 +44,6 @@ Date: 01.01.2007
     function SetWindowTheme(hwnd: HWND; pszSubAppName: LPCWSTR; 
                             pszSubIdList: LPCWSTR): HRESULT; stdcall;  external 'uxtheme.dll';
      
-     
     procedure TForm1.Unload2Themes(var M: TMSG);
     begin
       SetWindowTheme(Button4.Handle, ' ', ' ');
@@ -66,6 +58,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Krid
-
-Взято из <https://forum.sources.ru>

@@ -2,17 +2,12 @@
 Title: Увеличение ячейки TStringGrid при увеличении числа строк
 Author: Пётр Соболь
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Увеличение ячейки TStringGrid при увеличении числа строк
 ========================================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Пётр Соболь
 
     procedure TForm1.StringGrid1DrawCell(Sender: TObject; ACol, ARow:
       Integer; Rect: TRect; State: TGridDrawState);
@@ -35,8 +30,6 @@ Date: 01.01.2007
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
  

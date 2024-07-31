@@ -42,7 +42,7 @@ FindGlobalComponent.
 воспользоватся методами: InsertComponent и RemoveComponent самого
 владельца. Эти методы нельзя применять в обработчике события формы.
 
-Решение задачи:
+**Решение задачи:**
 
     procedure ChangeOwner( Component, NewOwner : TComponent);
     begin

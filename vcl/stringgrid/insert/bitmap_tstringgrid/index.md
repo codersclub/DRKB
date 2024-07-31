@@ -1,15 +1,12 @@
 ---
 Title: Bitmap в TStringGrid-ячейке
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Bitmap в TStringGrid-ячейке
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
 В обработчике события OnDrawCell элемента StringGrid поместите следующий
 код:
@@ -25,6 +22,4 @@ Bitmap в TStringGrid-ячейке
 Используйте метод Draw() или StretchDraw() класса TCanvas. Image1 - это
 TImage с предварительно загруженным в него bitmap-ом.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

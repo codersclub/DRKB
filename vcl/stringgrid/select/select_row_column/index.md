@@ -2,17 +2,12 @@
 Title: Выбор строки или колонки компонента TStringGrid
 Author: Neil J. Rubenking
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Выбор строки или колонки компонента TStringGrid
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Neil J. Rubenking
 
 Вот функция, выбирающая при нажатии на кнопку первую строку сетки. Это
 работает независимо от размера сетки и количества фиксированных
@@ -33,11 +28,7 @@ Date: 01.01.2007
     end;
      
      
-     
-     
-     StringGrid1.Row := номер строки от нуля;
-     StringGrid1.Col := номер столбца от нуля;
+    StringGrid1.Row := номер строки от нуля;
+    StringGrid1.Col := номер столбца от нуля;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

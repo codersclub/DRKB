@@ -1,15 +1,12 @@
 ---
 Title: Перетаскиваем колонки и строки в TStringGrid мышью
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Перетаскиваем колонки и строки в TStringGrid мышью
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       The user can move rows and columns of a StringGrid with the mouse. 
@@ -49,6 +46,4 @@ Date: 01.01.2007
     begin 
       TStringGridHack(StringGrid1).MoveColumn(1, 3); 
     end;
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -2,17 +2,12 @@
 Title: TTreeView. Проблемы CustomDraw
 Author: Rustam Kafarov
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 TTreeView. Проблемы CustomDraw
 ==============================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Rustam Kafarov
 
 При использовании компонента TTreeView возникают проблемы при
 собственной отрисовке содержимого компонента в событиях OnCustomDraw,
@@ -64,12 +59,12 @@ Pen.
       TreeView1.Repaint;
     end;
 
-ТИПОВЫЕ РЕШЕНИЯ
+**ТИПОВЫЕ РЕШЕНИЯ**
 
 Использовать API функции Windows такие как SetTextColor, SelectObject и
 т.д, передавая им в качестве первого параметра Canvas.Handle.
 
-КОММЕНТАРИЙ
+**КОММЕНТАРИЙ**
 
 Проверено (Delphi 5 Update Pack 1, WinNT, Win2000). Действительно,
 эффект имеет место быть. Вероятно, Борланд перемудрил что-то в своем
@@ -80,6 +75,4 @@ Pen.
 ColorToRGB(FFont.Color)), как это сделано в TCanvas.Draw. Следовательно,
 мы имеем более глобальную проблему, чем рисование узлов дерева вручную.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -7,10 +7,6 @@ Date: 01.01.2007
 Убрать ScrollBars от TTreeView
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
     uses CommCtrl;
     procedure tNoScrollbarsTreeview.createparams(var params: TCreateParams);
     begin

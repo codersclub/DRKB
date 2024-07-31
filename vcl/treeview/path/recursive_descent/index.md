@@ -1,15 +1,12 @@
 ---
 Title: Рекурсивные механизмы спуска по дереву
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Рекурсивные механизмы спуска по дереву
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
 Нужно использовать рекурсивные механизмы спуска по дереву и иметь метод
 определения наличия child узлов у текущего узла.
@@ -31,6 +28,4 @@ Date: 01.01.2007
       Result := RecurseChilds(curnode.GetFirstChild);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

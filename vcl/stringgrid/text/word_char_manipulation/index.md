@@ -1,15 +1,12 @@
 ---
 Title: Манипуляция словами в TStringGrid
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Манипуляция словами в TStringGrid
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.StringGrid1KeyPress(Sender: TObject; var Key: Char);
     var
@@ -34,19 +31,11 @@ Date: 01.01.2007
           Key := Chr(c);
         end;
     end;
-     
-     
-     
-     
+    
+    
     //В обработчике события onKeyPress сделайте следующее:
-     
-     
      
     if length(field.text) = 0 then
       key := upCase (key);
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

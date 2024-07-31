@@ -2,15 +2,12 @@
 Title: XLS -> TStringGrid
 Author: Kostas
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 XLS -> TStringGrid
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
     function Xls_To_StringGrid(AGrid: TStringGrid; AXLSFile: string): Boolean;
     const
@@ -53,6 +50,3 @@ XLS -> TStringGrid
       Screen.Cursor:=crDefault;
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Kostas

@@ -1,6 +1,5 @@
 ---
 Title: Выравнивание колонок TStringGrid
-Author: Kurt
 Date: 01.01.2007
 ---
 
@@ -8,11 +7,11 @@ Date: 01.01.2007
 Выравнивание колонок TStringGrid
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Kurt
+Author: Kurt
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Организуйте обработчик события сетки OnDrawCell. Создайте код
 обработчика подобный этому:
@@ -30,13 +29,12 @@ Date: 01.01.2007
         ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Нижеприведенный код выравняет данные компонента по правому краю:
 
@@ -80,13 +78,12 @@ lCol и lRow. На входе я присваиваю им значения па
 всех обявленных в шапке блока объектов ((речь идет об объекте Canvas, у
 которого нет свойств с именами Col и Row - В.О.)).
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure WriteText(ACanvas: TCanvas; const ARect: TRect; DX, DY: Integer;
       const Text: string; Format: Word);
@@ -133,16 +130,13 @@ DelphiWorld 6.0
             Display(Cells[Col, Row], taRight);
       end;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Создайте ваш собственный метод drawcell на примере того, что приведен
 ниже:
@@ -173,15 +167,14 @@ DelphiWorld 6.0
       grid1.canvas.font.style := grid1.canvas.font.style - [fsbold];
     end; 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
 
-Автор: Pavel Stont
+Вариант 5:
+
+Author: Pavel Stont, pavel_stont@mail.ru.
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     {
     Код компонента для Delphi на основе стандартного TStringGrid.
@@ -734,11 +727,4 @@ DelphiWorld 6.0
     end;
      
     end.
-     
-     
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

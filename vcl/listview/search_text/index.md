@@ -1,6 +1,7 @@
 ---
 Title: Искать текст в TListView
-Date: 01.01.2007
+Author: P. Below
+Date: 14.10.2001
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 

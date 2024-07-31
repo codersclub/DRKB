@@ -1,28 +1,24 @@
 ---
-Title: Экспорт TStringGrid в исполняемый файл *.exe
+Title: Экспорт TStringGrid в исполняемый файл \*.exe
 Author: Kostas
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
-Экспорт TStringGrid в исполняемый файл *.exe
+Экспорт TStringGrid в исполняемый файл \*.exe
 =============================================
-
-::: {.date}
-01.01.2007
-:::
-
-Экспорт StringGrid в исполняемый файл *.EXE
 
 Как-то раз мне понадобилось из моей программы извлекать все содержимое
 StringGrid\'a в exe-файл. В данном случае можно конечно писать свой
 собственный компилятор, но, согласитесь, это лишнее. Гораздо проще
 заранее написать exe-файл и поместить его в ресурсы нашей программы. А
 потом извлекать его оттуда, и записывать в его ресурсы содержимое
-StringGrid\'a. Заманчиво звучит, правда? Тогда перейдем к реализации.
-
-1. Создание exe-файла, в который поместим в конце содержимое
 StringGrid\'a.
+
+Заманчиво звучит, правда? Тогда перейдем к реализации.
+
+**1. Создание exe-файла, в который поместим в конце содержимое StringGrid\'a.**
 
 Так как данная статья посвящена языку Делфи, то и писать этот exe-файл я
 рекомендую на Делфи. Запускаем Делфи, создаем новый проект, и на форму
@@ -32,14 +28,12 @@ StringGrid\'a в исполняемый файл.
 Ниже представлен код процедуры загрузки содержимого из ресурсов в
 StringGrid:
 
- 
-
     procedure LoadStringGrid(StrGrid: TStringGrid;FName: TStream);
     var
-    LoadList: TStringList;
-    i, j, ListCurentLine: integer;
+     LoadList: TStringList;
+     i, j, ListCurentLine: integer;
     begin
-    LoadList := TStringList.Create;
+     LoadList := TStringList.Create;
     try
     LoadList.LoadFromStream(FName);
      
@@ -61,7 +55,7 @@ StringGrid:
       end;
      
     finally
-    LoadList.Free;
+     LoadList.Free;
     end;
     end;
 
@@ -73,18 +67,18 @@ StringGrid:
     var
       RS : TResourceStream;
     begin
-    RS := TResourceStream.Create(HInstance, 'EXEEXPORT', 'MYEXE');
-    try
-    LoadStringGrid(StringGrid1,RS);
-    finally
-    RS.Free;
-    end;
+      RS := TResourceStream.Create(HInstance, 'EXEEXPORT', 'MYEXE');
+      try
+        LoadStringGrid(StringGrid1,RS);
+      finally
+        RS.Free;
+      end;
     end;
 
 
 Теперь постройте ваш exe-файл. Перейдем к следующему вопросу.
 
-2. Помещение exe-файла в ресурсы вашей программы.
+**2. Помещение exe-файла в ресурсы вашей программы.**
 
 Скопируйте только что созданный exe-файл на диск C: (можно на любом
 другом, это для примера) и назовите его Exe.exe. Там же создайте файл
@@ -103,10 +97,10 @@ Delphi\\Bin, передав ей в качестве параметра полн
 
 
 
-Все, exe-файл теперь будет в ресурсах вашей программы.
+Всё, exe-файл теперь будет в ресурсах вашей программы.
 
-3. Извлечение exe-файла из вашей программы.
 
+**3. Извлечение exe-файла из вашей программы.**
 
 Ну, с этим проще всего, вот процедура для извлечения файла из ресурсов:
 
@@ -132,15 +126,12 @@ Delphi\\Bin, передав ей в качестве параметра полн
       MemStream.Free;
     end;
 
-
-
 Пример вызова:
 
     ExportExeFromRes('Data', путь куда извлекать);
 
 
-
-4. Помещение в ресурсы извлеченного файла содержимого StringGrid\'a.
+**4. Помещение в ресурсы извлеченного файла содержимого StringGrid\'a.**
 
 Вот это было для меня самым сложным. Но мне помог один человек с ником
 Alex-Co, который ко всему прочему является автором отличного модуля
@@ -154,7 +145,7 @@ Component\\Install Component. После этого в появляющихся 
 Ниже представлен код процедуры, которая сохраняет содержимое
 StringGrid\'a в ресурсы exe-файла:
 
-     
+
     procedure SaveStringGridToFile(StrGrid: TStringGrid; FName: string);
     var
     SaveList: TStringList;
@@ -196,11 +187,10 @@ StringGrid\'a в ресурсы exe-файла:
     SaveStringGridToFile(StringGrid1, путь к файлу exe);
 
 
+**5. Поздравляю вас!**
 
-5. Поздравляю вас!
 
-
-Ну, вот и все! Все готово, теперь для того, чтобы извлечь exe-файл из
+Ну, вот и всё! Всё готово, теперь для того, чтобы извлечь exe-файл из
 вашей программы и поместить в его ресурсы содержимое StringGrid\'a,
 выполните следующий код:
 
@@ -215,9 +205,6 @@ StringGrid\'a в ресурсы exe-файла:
 экспорт из чего угодно!
 
 
-Автор: Kostas
-
-Взято из <https://forum.sources.ru>
 
 
 

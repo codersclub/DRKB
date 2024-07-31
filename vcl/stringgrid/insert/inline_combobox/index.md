@@ -1,15 +1,12 @@
 ---
 Title: Встроенный редактор TComboBox в ячейке TStringGrid
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Встроенный редактор TComboBox в ячейке TStringGrid
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.FormCreate(Sender: TObject);
     begin
@@ -53,8 +50,4 @@ Date: 01.01.2007
       end;
       CanSelect := True;
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

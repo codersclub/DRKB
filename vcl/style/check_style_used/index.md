@@ -1,6 +1,5 @@
 ---
 Title: Как определить, использует ли пользователь стили?
-Author: Alex
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Как определить, использует ли пользователь стили?
 =================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     function _IsThemeActive: Boolean;
     // Returns True if the user uses XP style
@@ -50,19 +49,17 @@ Date: 01.01.2007
        ShowMessage('Windows Themes are active.');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Alex
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     uses
     Themes;
     ...
     if ThemeServices.ThemesEnabled then // Тема использется
 
-
-
-Автор: Alex
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

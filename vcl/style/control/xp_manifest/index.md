@@ -7,10 +7,6 @@ Date: 01.01.2007
 Манифест Windows XP
 ===================
 
-::: {.date}
-01.01.2007
-:::
-
 Итак, начнем с манифеста. Он представляет собой документ в формате XML,
 содержащий всю информацию, необходимую для взаимодействия приложения и
 библиотеки ComCtl32.dll версии 6.
@@ -42,7 +38,7 @@ MSDN.
       publicKeyToken="6595b64144ccfldf" 
       language="*" 
     /> 
-    </dependentAss embly> 
+    </dependentAssembly> 
     </dependency> 
     </assembly> 
 

@@ -1,18 +1,14 @@
 ---
 Title: Текст в ячейке TStringGrid, если не помещается, переносится на следующую ячейку
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Текст в ячейке TStringGrid, если не помещается, переносится на следующую ячейку
 ===============================================================================
 
-::: {.date}
-01.01.2007
-:::
-
     //Сначала нужно обработать событие OnDrawCell компонента TStringGrid: 
-     
      
     procedure TForm1.StringGrid1DrawCell(Sender: TObject; ACol, ARow: Integer;
     Rect: TRect; State: TGridDrawState);
@@ -45,11 +41,7 @@ Date: 01.01.2007
     end;
      
      
-     
-     
     //По созданию окна изобразим следующее 
-     
-     
      
     procedure TForm1.FormCreate(Sender: TObject);
     var
@@ -63,9 +55,5 @@ Date: 01.01.2007
             cells[i,k] := Format( 'Cell[%d, %d]', [i, k]);
       end;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -7,9 +7,7 @@ Date: 01.01.2007
 Сортировка StringGrid
 =====================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     Procedure GridSort(StrGrid: TStringGrid; NoColumn: Integer); 
     Var Line, PosActual: Integer; 
@@ -35,6 +33,10 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
     type TStringGridExSortType = (srtAlpha,srtInteger,srtDouble); 
      
@@ -91,9 +93,12 @@ Date: 01.01.2007
       Temp.Free; 
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
 Сортировка по клику на заголовке столбца
 
@@ -154,63 +159,70 @@ Date: 01.01.2007
        SortGridByCols(StringGrid1, [1, 2, 0, 3, 4]);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
+----------------------------------------------------
+
+Вариант 4:
+
+Source: <https://www.swissdelphicenter.ch>
 
     procedure SortStringGrid(var GenStrGrid: TStringGrid; ThatCol: Integer);
-     const
-       // Define the Separator 
+    const
+      // Define the Separator 
       TheSeparator = '@';
-     var
-       CountItem, I, J, K, ThePosition: integer;
-       MyList: TStringList;
-       MyString, TempString: string;
-     begin
-       // Give the number of rows in the StringGrid 
+    var
+      CountItem, I, J, K, ThePosition: integer;
+      MyList: TStringList;
+      MyString, TempString: string;
+    begin
+      // Give the number of rows in the StringGrid 
       CountItem := GenStrGrid.RowCount;
-       //Create the List 
+      //Create the List 
       MyList        := TStringList.Create;
-       MyList.Sorted := False;
-       try
-         begin
-           for I := 1 to (CountItem - 1) do
-             MyList.Add(GenStrGrid.Rows[I].Strings[ThatCol] + TheSeparator +
-               GenStrGrid.Rows[I].Text);
-           //Sort the List 
+      MyList.Sorted := False;
+      try
+        begin
+          for I := 1 to (CountItem - 1) do
+            MyList.Add(GenStrGrid.Rows[I].Strings[ThatCol] + TheSeparator +
+              GenStrGrid.Rows[I].Text);
+          //Sort the List 
           Mylist.Sort;
      
-           for K := 1 to Mylist.Count do
-           begin
-             //Take the String of the line (K – 1) 
+          for K := 1 to Mylist.Count do
+          begin
+            //Take the String of the line (K – 1) 
             MyString := MyList.Strings[(K - 1)];
-             //Find the position of the Separator in the String 
+            //Find the position of the Separator in the String 
             ThePosition := Pos(TheSeparator, MyString);
-             TempString  := '';
-             {Eliminate the Text of the column on which we have sorted the StringGrid}
-             TempString := Copy(MyString, (ThePosition + 1), Length(MyString));
-             MyList.Strings[(K - 1)] := '';
-             MyList.Strings[(K - 1)] := TempString;
-           end;
-     
-           // Refill the StringGrid 
+            TempString  := '';
+            {Eliminate the Text of the column on which we have sorted the StringGrid}
+            TempString := Copy(MyString, (ThePosition + 1), Length(MyString));
+            MyList.Strings[(K - 1)] := '';
+            MyList.Strings[(K - 1)] := TempString;
+          end;
+    
+          // Refill the StringGrid 
           for J := 1 to (CountItem - 1) do
-             GenStrGrid.Rows[J].Text := MyList.Strings[(J - 1)];
-         end;
-       finally
-         //Free the List 
+            GenStrGrid.Rows[J].Text := MyList.Strings[(J - 1)];
+          end;
+      finally
+        //Free the List 
         MyList.Free;
-       end;
-     end;
+      end;
+    end;
      
-     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       // Sort the StringGrid1 on the second Column 
+    procedure TForm1.Button1Click(Sender: TObject);
+    begin
+      // Sort the StringGrid1 on the second Column 
       // StringGrid1 nach der 1. Spalte sortieren 
       SortStringGrid(StringGrid1, 1);
-     end;
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit olimp_;
      
@@ -317,11 +329,12 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     program H;
      
@@ -430,8 +443,3 @@ DelphiWorld 6.0
          end;
      end.
      
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

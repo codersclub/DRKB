@@ -1,15 +1,12 @@
 ---
 Title: Как получить имя текщего стиля и имя цветовой схемы?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить имя текщего стиля и имя цветовой схемы?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses ComObj, SyncObjs;
      
@@ -46,4 +43,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

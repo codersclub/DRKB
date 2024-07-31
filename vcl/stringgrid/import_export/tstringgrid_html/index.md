@@ -8,9 +8,9 @@ Date: 01.01.2007
 TStringGrid -> HTML
 ===================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     procedure SGridToHtml(SG: TStringgrid; Dest: TMemo; BorderSize: Integer);
     var 
@@ -67,9 +67,14 @@ TStringGrid -> HTML
       Memo1.Lines.SaveToFile('c:\test.html');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Kostas
+
+Source: <https://forum.sources.ru>
 
     procedure ToHtml(SG: TStringGrid; S: string);
     Var i,j:integer;
@@ -105,16 +110,9 @@ TStringGrid -> HTML
     end;
 
 
-
 Пример вызова:
 
     ToHtml(StringGrid1, 'C:\123.html');
-
-
-
-Автор: Kostas
-
-Взято из <https://forum.sources.ru>
 
 
 

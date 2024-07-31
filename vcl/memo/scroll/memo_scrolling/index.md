@@ -17,23 +17,15 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Возможны также следующие опции:
 
-SB\_BOTTOM
-
-SB\_ENDSCROLL
-
-SB\_LINEDOWN
-
-SB\_LINEUP
-
-SB\_PAGEDOWN
-
-SB\_PAGEUP
-
-SB\_THUMBPOSITION
-
-SB\_THUMBTRACK
-
-SB\_TOP
+- SB\_BOTTOM
+- SB\_ENDSCROLL
+- SB\_LINEDOWN
+- SB\_LINEUP
+- SB\_PAGEDOWN
+- SB\_PAGEUP
+- SB\_THUMBPOSITION
+- SB\_THUMBTRACK
+- SB\_TOP
 
 TComboBox, TListBox, TRichEdit и т.п можно прокрутить подобным образом
 

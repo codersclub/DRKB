@@ -1,15 +1,12 @@
 ---
 Title: Сменить цвет выделения в TStringGrid
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Сменить цвет выделения в TStringGrid
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.StringGrid1DrawCell(Sender: TObject; ACol, ARow: Integer; 
       Rect: TRect; State: TGridDrawState); 
@@ -24,8 +21,4 @@ Date: 01.01.2007
           TextRect(Rect, Rect.Left + 2, Rect.Top + 2, Cells[aCol, aRow]); 
         end; 
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

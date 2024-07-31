@@ -66,8 +66,8 @@ Date: 21.02.1996
           If ssShift In shift Then
             pKeyBuffers^[0][VK_SHIFT] := $80;
           If ssAlt In shift Then Begin
-            (* Alt needs special treatment since a bit in lparam needs also be
-    set *)
+            (* Alt needs special treatment since a bit in lparam
+               needs also be set *)
             pKeyBuffers^[0][VK_MENU] := $80;
             lparam := lparam or $20000000;
           End;

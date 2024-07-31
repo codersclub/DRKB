@@ -1,24 +1,18 @@
 ---
 Title: Windows XP манифест в Delphi
 Date: 01.01.2007
+Source: Delphi.Diagnostinc.Ru
 ---
 
 
 Windows XP манифест в Delphi
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
-Windows XP манифест в Delphi
-
-Delphi.Diagnostinc.Ru
 
 Данная статья рассказывает о том как сделать чтобы ваши проекты
 выглядели как Windows XP программы.
 
-Зачем?
+**Зачем?**
 
 В Windows XP есть менеджер тем (theme manager) который изменяет вид
 большинства стандартных объектов Windows. Misrosoft утверждает что
@@ -37,7 +31,7 @@ Delphi.Diagnostinc.Ru
 Windows будет читать для того чтобы отрисовка компонентов производилось
 через новую библиотеку.
 
-Что такое манифест?
+**Что такое манифест?**
 
 Что такое манифест, и какую роль он играет в выборе версии 6.0
 библиотеки comctl32.dll для моего приложения? Манифест - XML документ
@@ -48,17 +42,18 @@ Windows будет читать для того чтобы отрисовка к
 секцию позволяет решить Windows XP какую версию comctl32.dll
 использовать.
 
-Как это сделать?
+**Как это сделать?**
 
 Чтобы подключить этот XML манифест в ваше приложение Вы для начала
 должны знать константы предоставленные Microsoft. Когда вы добавляете
 ресурс в ваше приложение, есть номер группы и порядковый номер,
 связанный с ресурсом. Номер группы обычно называется понятным именем.
+
 Если вы посмотрите проводник ресурсов (resource explorer), поставляемый
 с Delphi в виде демонстрационного проекта (распологается
 {$delphi\\Demos}) вы увидите группы называемые "Strings" (Строки),
-"Bitmaps" (Картинки), "Icons" (Иконки) или "Cursos" (Курсоры мыши)
-- это просто представления номер группы. Номер группы для "Manifest"
+"Bitmaps" (Картинки), "Icons" (Иконки) или "Cursos" (Курсоры мыши) -
+это просто представления номер группы. Номер группы для "Manifest"
 (манифеста) - 24, в соответствии с заголовками C распространяемыми
 Microsoft. Номер манифеста для определения версии библиотеки
 comctl32.dll - 1 (Также в соответствии с заголовками C распространяемыми
@@ -70,13 +65,12 @@ Microsoft). Эта информация будет необходима когд
 увидите два файла:
 
 1.  WindowsXP.RC
-
 2.  WindowsXP.Manifest
 
 Файл WindowsXP.RC содержит инструции для подключения WindowsXP.Manifest
 (XML-документа), а именно:
 
-        1 24 "WindowsXP.Manifest"
+    1 24 "WindowsXP.Manifest"
 
 Сам манифест - XML документ содержащий информацию о вашем приложении
 которую вы добавляете как и информацию содержащую версию библиотеки
@@ -154,15 +148,15 @@ Error).
 
 2.   Найдем следующую строку.
 
-        if FImageIndex \<\> -1 then
-           fmt := fmt or LVCFMT\_IMAGE or LVCFMT\_COL\_HAS\_IMAGES;
+        if FImageIndex <> -1 then
+           fmt := fmt or LVCFMT_IMAGE or LVCFMT_COL_HAS_IMAGES;
 
 3.   Заменяем её на:
 
-        if FImageIndex \<\> -1 then
-          fmt := fmt or LVCFMT\_IMAGE or LVCFMT\_COL\_HAS\_IMAGES
+        if FImageIndex <> -1 then
+          fmt := fmt or LVCFMT_IMAGE or LVCFMT_COL_HAS_IMAGES
         else
-          mask := mask and not (LVCF\_IMAGE);
+          mask := mask and not (LVCF_IMAGE);
 
 4.   Сохраняем Comctrls.pas. Теперь TListView не вызывает ошибку в режиме vsReport под Windows XP.
 
@@ -184,14 +178,19 @@ Error).
 
         procedure TTabSheet.UpdateTabShowing;
         begin
-        SetTabShowing((FPageControl \<\> nil) and FTabVisible);
+          SetTabShowing((FPageControl <> nil) and FTabVisible);
         end;
 
 3.   Добавьте следующую строчку в эту процедуру:
 
-SetWindowLong(handle,GWL\_EXSTYLE,WS\_EX\_TRANSPARENT);
+        SetWindowLong(handle,GWL_EXSTYLE,WS_EX_TRANSPARENT);
 
-4.   Если в вашем TPageControl создано более одного TTabSheet, возможно при запуске вашего приложения вы увидите все компоненты отрисованные на первом листе (TTabSheet). Не надо впадать в панику... Найдите метод "TPageControl.Loaded" и измените его чтобы он был похож на следующий код:
+4.   Если в вашем TPageControl создано более одного TTabSheet,
+возможно при запуске вашего приложения вы увидите все компоненты,
+отрисованные на первом листе (TTabSheet).
+Не надо впадать в панику...
+Найдите метод "TPageControl.Loaded" и измените его,
+чтобы он был похож на следующий код:
 
         procedure TPageControl.Loaded; 
         var 
@@ -200,7 +199,7 @@ SetWindowLong(handle,GWL\_EXSTYLE,WS\_EX\_TRANSPARENT);
           inherited Loaded; 
           UpdateTabHighlights; 
           for I:=self.PageCount-1 downto 0 do 
-                self.ActivePage:=self.Pages[I]; 
+            self.ActivePage:=self.Pages[I]; 
         end;
 
 Добавленый код заставляет TPageControl пройтись по всем страницам перед
@@ -211,7 +210,7 @@ SetWindowLong(handle,GWL\_EXSTYLE,WS\_EX\_TRANSPARENT);
 
 **Исправление проблемы с TTrackBar**
 
-TTrackBar - извините, а какая текущая позиция?
+> TTrackBar - извините, а какая текущая позиция?
 
 Подсказка, показывающая текущее значение TTrackBar при перемещении
 ползунка удобна, то есть вам не будет необходимо добавлять TLabel для
@@ -237,7 +236,8 @@ TTrackBar - извините, а какая текущая позиция?
           end; 
         end; 
 
-3.   Добавьте условие "or TBS\_TOOLTIPS" в линию "Style:=". В конечном итоге должно получиться:
+3.   Добавьте условие `or TBS_TOOLTIPS` в строку `Style:=`.
+В конечном итоге должно получиться:
 
         Style := Style or OrientationStyle[FOrientation] or 
               TickStyles[FTickStyle] or ATickMarks[FTickMarks] or TBS_FIXEDLENGTH or 

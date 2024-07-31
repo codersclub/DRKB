@@ -2,15 +2,12 @@
 Title: Как связать TTreeView и TPageControl?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как связать TTreeView и TPageControl?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
 На форме стоит TreeView, PageControl и кнопка.
 
@@ -81,6 +78,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -1,6 +1,5 @@
 ---
 Title: Поиск в TreeView по тексту
-Author: Song
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Поиск в TreeView по тексту
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     // Search a TreeItem through its Text property
     // Return value is a TreeNodeObject
@@ -47,11 +46,15 @@ Example: Search for Wasserfall in TreeView1 and select item
       //or - oder so
       TreeView1.Selected := TreeItemSuchen(TreeView1, 'Wasserfall ');
     end;
-     
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Song
+
+Source: <https://forum.sources.ru>
 
     Function FindNode(Tree: TTreeView; Node: TTreeNode; S: String): TTreeNode;
     Var t:Integer;
@@ -78,17 +81,16 @@ Example: Search for Wasserfall in TreeView1 and select item
       End; {else}
     End;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Song
-
- 
 
 ------------------------------------------------------------------------
 
-Автор: Peter Kane
+Вариант 3:
 
-Небольшие хитрости для работы с узлами TreeView:
+Author: Peter Kane
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+**Небольшие хитрости для работы с узлами TreeView:**
 
 Если вы хотите производить поиск по дереву, может быть для того, чтобы
 найти узел, соответствующий определенному критерию, то НЕ ДЕЛАЙТЕ ЭТО
@@ -128,8 +130,8 @@ Example: Search for Wasserfall in TreeView1 and select item
 но это нигде не засвидетельствовано, поэтому я могу ошибаться.
 
 Вам действительно не нужно просматривать все дерево, чтобы найти что вам
-нужно - получить таким образом доступ к MyTreeView.Items[170] займет
-много больше времени, чем получения доступа к MyTreeView.Items[1].
+нужно - получить таким образом доступ к `MyTreeView.Items[170]` займет
+много больше времени, чем получения доступа к `MyTreeView.Items[1]`.
 
 Как правило, для отслеживания позиции в дереве TreeView, нужно
 использовать временную переменную TTreeNode, а не использовать
@@ -137,14 +139,9 @@ Example: Search for Wasserfall in TreeView1 and select item
 для такого применения, но, к сожалению, я никак не могу понять абзац в
 электронной документации, касающийся данного свойства:
 
-   "Свойство ItemId является дескриптором TTreeNode типа HTreeItem 
+> Свойство ItemId является дескриптором TTreeNode типа HTreeItem 
+> и однозначно идентифицирует каждый элемент дерева. Используйте
+> это свойство, если вам необходимо получить доступ к элементам
+> дерева из внешнего по отношению к TreeView элемента управления.
 
-   и однозначно идентифицирует каждый элемент дерева. Используйте
 
-   это свойство, если вам необходимо получить доступ к элементам
-
-   дерева из внешнего по отношению к TreeView элемента управления."
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
