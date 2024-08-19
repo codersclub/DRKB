@@ -1,15 +1,12 @@
 ---
 Title: Как использовать Microsoft Speech API?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как использовать Microsoft Speech API?
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     // Works on NT, 2k, XP, Win9x with SAPI SDK
     // reference & Further examples: See links below!
@@ -24,4 +21,3 @@ Date: 01.01.2007
       voice.Speak('Hello World!', 0);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

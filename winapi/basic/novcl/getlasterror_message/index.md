@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как получить описание кода, полученного GetLastError?
 =====================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Функция RTL SysErrorMessage(GetLastError).
 
     procedure TForm1.Button1Click(Sender: TObject);
