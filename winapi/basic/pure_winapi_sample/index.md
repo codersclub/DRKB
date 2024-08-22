@@ -7,9 +7,9 @@ Date: 01.01.2007
 Пример приложений на чистом API
 ===============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     program SmallPrg;
      
@@ -109,299 +109,79 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Spawn
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     program WinMin;
     uses Windows, Messages;
     const AppName = 'WinMin';
     Var 
-    Window : HWnd; 
-    Message : TMsg; 
-    WindowClass : TWndClass; 
+      Window : HWnd; 
+      Message : TMsg; 
+      WindowClass : TWndClass;
+    
     function WindowProc (Window : HWnd; Message, WParam : Word; LParam : LongInt) : LongInt; stdcall;
     begin
-    WindowProc := 0;
-    case Message of
-    wm_Destroy :begin 
-    PostQuitMessage (0); 
-    Exit; 
+      WindowProc := 0;
+      case Message of
+        wm_Destroy :begin 
+          PostQuitMessage (0); 
+          Exit; 
+        end;
+      end; // case
+    
+      WindowProc := DefWindowProc (Window, Message, WParam, LParam); 
     end;
-    end; // case
-    WindowProc := DefWindowProc (Window, Message, WParam, LParam); 
-    end;
+    
     begin
-    with WindowClass do 
-    begin
-    Style := cs_HRedraw or cs_VRedraw; 
-    lpfnWndProc := @WindowProc; 
-    cbClsExtra := 0; 
-    cbWndExtra := 0; 
-    hInstance := 0; 
-    hIcon := LoadIcon (0, idi_Application);
-    hCursor := LoadCursor (0, idc_Arrow); 
-    hbrBackground := GetStockObject (White_Brush); 
-    lpszMenuName := ''; 
-    lpszClassName := AppName; 
-    end;
-    If RegisterClass (WindowClass) = 0 then Halt (255); 
-    Window := CreateWindow(AppName, 
-    'Win_Min', 
-    ws_OverlappedWindow, 
-    cw_UseDefault, 
-    cw_UseDefault, 
-    cw_UseDefault, 
-    cw_UseDefault, 
-    0, 
-    0, 
-    HInstance, 
-    nil); 
-    ShowWindow (Window, CmdShow); 
-    UpdateWindow (Window); 
-    while GetMessage (Message, 0, 0, 0) do 
-    begin
-    TranslateMessage (Message); 
-    DispatchMessage (Message); 
-    end;
-    Halt 
+      with WindowClass do 
+      begin
+        Style := cs_HRedraw or cs_VRedraw; 
+        lpfnWndProc := @WindowProc; 
+        cbClsExtra := 0; 
+        cbWndExtra := 0; 
+        hInstance := 0; 
+        hIcon := LoadIcon (0, idi_Application);
+        hCursor := LoadCursor (0, idc_Arrow); 
+        hbrBackground := GetStockObject (White_Brush); 
+        lpszMenuName := ''; 
+        lpszClassName := AppName; 
+      end;
+      If RegisterClass (WindowClass) = 0 then Halt (255); 
+      Window := CreateWindow(AppName, 
+                             'Win_Min', 
+                             ws_OverlappedWindow, 
+                             cw_UseDefault, 
+                             cw_UseDefault, 
+                             cw_UseDefault, 
+                             cw_UseDefault, 
+                             0, 
+                             0, 
+                             HInstance, 
+                             nil); 
+      ShowWindow (Window, CmdShow); 
+      UpdateWindow (Window); 
+      while GetMessage (Message, 0, 0, 0) do 
+      begin
+        TranslateMessage (Message); 
+        DispatchMessage (Message); 
+      end;
+      Halt 
     end.
 
 М. Краснов. "OpenGL и графика в проектах Delphi".
 
-Пример прислан Spawn
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-В этом выпуске мы попробуем написать с Вами программу, которая не будет
-пользоваться VCL, а будет использовать вызовы функций Windows API.
-Приложения такого типа нужны, когда размер исполняемого файла является
-критичным. Например, в инсталяторах, деинсталяторах,
-самораспаковывающихся архивах и т.п. В крайнем случае, для того чтобы
-посмотреть какую работу выполняет за нас VCL, и что из себя представляет
-Windows-программа. На самом деле все очень просто...
+Вариант 3:
 
-Для этого нам необходимо:
-
-    // 1. Зарегистрировать класс окна для окна главной формы.
-     
-    function InitApplication: Boolean;
-    var
-      wcx: TWndClass;
-    begin
-    //Заполняем структуру TWndClass
-        // перерисовываем, если размер изменяется
-        wcx.style := CS_HREDRAW or CS_VREDRAW;
-        // адрес оконной процедуры
-        wcx.lpfnWndProc := @MainWndProc;
-        wcx.cbClsExtra := 0;
-        wcx.cbWndExtra := 0;
-        // handle to instance
-        wcx.hInstance := hInstance;
-        // загружаем стандандартную иконку
-        wcx.hIcon := LoadIcon(0, IDI_APPLICATION);
-        // загружаем стандартный курсор
-        wcx.hCursor := LoadCursor(0, IDC_ARROW);
-        // делаем светло-cерый фон
-        wcx.hbrBackground := COLOR_WINDOW;
-        // пока нет главного меню
-        wcx.lpszMenuName :=  nil;
-        // имя класса окна
-        wcx.lpszClassName := PChar(WinName);
-     
-        // Регистрируем наш класс окна.
-        Result := RegisterClass(wcx) <> 0;
-    end;
-
-    // 2. Написать подпрограмму обработки оконных сообщений.
-     
-    function MainWndProc(Window: HWnd; AMessage, WParam,
-                        LParam: Longint): Longint; stdcall; export;
-    begin
-      //подпрограмма обработки сообщений
-      case AMessage of
-        WM_DESTROY: begin
-          PostQuitMessage(0);
-          Exit;
-        end;
-        else
-           Result := DefWindowProc(Window, AMessage, WParam, LParam);
-      end;
-    end;
-
-    // 3. Создать главное окно приложения.
-     
-    function InitInstance: HWND;
-    begin
-      // Создаем главное окно.
-      Result := CreateWindow(
-       // имя класса окна
-       PChar(WinName),
-       // заголовок
-       'Small program',
-       // стандартный стиль окна
-       WS_OVERLAPPEDWINDOW,
-       // стандартные горизонтальное, вертикальное положение, ширина и высота
-       Integer(CW_USEDEFAULT),
-       Integer(CW_USEDEFAULT),
-       Integer(CW_USEDEFAULT),
-       Integer(CW_USEDEFAULT),
-       0,//нет родительского окна
-       0,//нет меню
-       hInstance, // handle to application instance
-       nil);      // no window-creation data
-    end;
-
-    // 4. Написать тело программы.
-     
-    var
-      hwndMain: HWND;
-      AMessage: msg;
-    begin
-        if (not InitApplication) then
-        begin
-          MessageBox(0, 'Ошибка регистрации окна', nil, mb_Ok);
-          Exit;
-        end;
-        hwndMain := InitInstance;
-        if (hwndMain = 0) then
-        begin
-          MessageBox(0, 'Ошибка создания окна', nil, mb_Ok);
-          Exit;
-        end
-        else
-        begin
-          // Показываем окно и посылаем сообщение WM_PAINT оконной процедуре
-          ShowWindow(hwndMain, CmdShow);
-          UpdateWindow(hwndMain);
-        end;
-        while (GetMessage(AMessage, 0, 0, 0)) do
-        begin
-          //Запускаем цикл обработки сообщений
-          TranslateMessage(AMessage);
-          DispatchMessage(AMessage);
-        end;
-        Halt(AMessage.wParam);
-    end.
-    // 5. Запустить программу на исполнение. ;)
-
-Наша программа пока только может немногое - отображать форму, и
-закрываться после нажатия на кнопку закрытия формы... Но посмотрите на
-размер исполняемого файла - он больше чем на порядок меньше созданного с
-использованием VCL. Кроме того теперь у нас есть скелет приложения,
-возможности которого мы будем расширять в следующих выпусках.
-
-Здесь находится полный текст программы.
-
-    program SmallPrg;
-     
-    uses Windows,  Messages;
-     
-    const
-      WinName = 'MainWClass';
-     
-    function MainWndProc(Window: HWnd; AMessage, WParam,
-                        LParam: Longint): Longint; stdcall; export;
-    begin
-      //подпрограмма обработки сообщений
-      case AMessage of
-        WM_DESTROY: begin
-          PostQuitMessage(0);
-          Exit;
-        end;
-        else
-           Result := DefWindowProc(Window, AMessage, WParam, LParam);
-      end;
-    end;
-     
-    function InitApplication: Boolean;
-    var
-      wcx: TWndClass;
-    begin
-    //Заполняем структуру TWndClass
-        // перерисовываем, если размер изменяется
-        wcx.style := CS_HREDRAW or CS_VREDRAW;
-        // адрес оконной процедуры
-        wcx.lpfnWndProc := @MainWndProc;
-        wcx.cbClsExtra := 0;
-        wcx.cbWndExtra := 0;
-        // handle to instance
-        wcx.hInstance := hInstance;
-        // загружаем стандандартную иконку
-        wcx.hIcon := LoadIcon(0, IDI_APPLICATION);
-        // загружаем стандартный курсор
-        wcx.hCursor := LoadCursor(0, IDC_ARROW);
-        // делаем светло-cерый фон
-        wcx.hbrBackground := COLOR_WINDOW;
-        // пока нет главного меню
-        wcx.lpszMenuName :=  nil;
-        // имя класса окна
-        wcx.lpszClassName := PChar(WinName);
-     
-        // Регистрируем наш класс окна.
-        Result := RegisterClass(wcx) <> 0;
-    end;
-     
-    function InitInstance: HWND;
-    begin
-      // Создаем главное окно.
-      Result := CreateWindow(
-       // имя класса окна
-       PChar(WinName),
-       // заголовок
-       'Small program',
-       // стандартный стиль окна
-       WS_OVERLAPPEDWINDOW,
-       // стандартные горизонтальное, вертикальное положение, ширина и высота
-       Integer(CW_USEDEFAULT),
-       Integer(CW_USEDEFAULT),
-       Integer(CW_USEDEFAULT),
-       Integer(CW_USEDEFAULT),
-       0,//нет родительского окна
-       0,//нет меню
-       hInstance, // handle to application instance
-       nil);      // no window-creation data
-    end;
-     
-    var
-      hwndMain: HWND;
-      AMessage: msg;
-    begin
-        if (not InitApplication) then
-        begin
-          MessageBox(0, 'Ошибка регистрации окна', nil, mb_Ok);
-          Exit;
-        end;
-        hwndMain := InitInstance;
-        if (hwndMain = 0) then
-        begin
-          MessageBox(0, 'Ошибка создания окна', nil, mb_Ok);
-          Exit;
-        end
-        else
-        begin
-          // Показываем окно и посылаем сообщение WM_PAINT оконной процедуре
-          ShowWindow(hwndMain, CmdShow);
-          UpdateWindow(hwndMain);
-        end;
-        while (GetMessage(AMessage, 0, 0, 0)) do
-        begin
-          //Запускаем цикл обработки сообщений
-          TranslateMessage(AMessage);
-          DispatchMessage(AMessage);
-        end;
-        Halt(AMessage.wParam);
-    end.
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
-------------------------------------------------------------------------
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Построение формы на чистом API
 
@@ -494,11 +274,12 @@ DelphiWorld 6.0
       WinMain;
     end. 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     // Put this code in your Project file (*.dpr). 
      
@@ -575,11 +356,11 @@ DelphiWorld 6.0
      end.
      
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Создание формы и кнопки на чистом API
 
@@ -695,8 +476,4 @@ DelphiWorld 6.0
     begin
       WinMain;
     end.
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

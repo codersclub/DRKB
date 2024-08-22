@@ -1,22 +1,12 @@
 ---
 Title: Запись сообщений в журнал событий Windows на Delphi
-Author: FMI Solutions
-Date: 12.12.2002
+Author: FMI Solutions, https://www.fmisolutions.com
+Date: 12.12.2005
 ---
 
 
 Запись сообщений в журнал событий Windows на Delphi
 ===================================================
-
-::: {.date}
-12.12.2002
-:::
-
-Запись сообщений в журнал событий Windows на Delphi
-
-Автор: c "FMI Solutions" 2002
-
-https://www.fmisolutions.com
 
 Перевод: © Digimaster 2005
 
@@ -47,20 +37,25 @@ RegisterEventSource.
     ReportEvent(EventLog,EVENTLOG_INFORMATION_TYPE,0,0,nil,1,0,@MyMsg,nil);
 
 Однако текст сообщения, записанного в журнал будет предварен текстом:
-"The description for Event ID ( 0 ) in Source ( MyApplication ) cannot
-be found. The local computer may not have necessary registry information
-or message DLL files to display messages from a remote computer. The
-following information is part of the event:" (Не найдено описание для
-события с кодом ( 0 ) в источнике ( MyApplication ). Возможно, на
-локальном компьютере нет нужных данных в реестре или файлов DLL
-сообщений для отображения сообщений удаленного компьютера. В записи
-события содержится следующая информация:) (Замечание: Это сообщение
+
+> The description for Event ID ( 0 ) in Source ( MyApplication ) cannot
+> be found. The local computer may not have necessary registry information
+> or message DLL files to display messages from a remote computer. The
+> following information is part of the event:"  
+> (Не найдено описание для события с кодом ( 0 ) в источнике ( MyApplication ).
+> Возможно, на локальном компьютере нет нужных данных в реестре или файлов DLL
+> сообщений для отображения сообщений удаленного компьютера. В записи
+> события содержится следующая информация:)
+
+(**Замечание:** Это сообщение
 специфично для Windows2000 и может немного отличаться на других
 версиях). Для предотвращения появления этого текста необходимо внести в
 реестр некоторые ключи, как показано ниже, и определить строковые
 ресурсы (это может быть выполнено любым компонентом вашего приложения,
 не обязательно приложением, которое будет записывать события).
-Соответствующие записи реестра описаны ниже. Примеры кода предполагают,
+Соответствующие записи реестра описаны ниже.
+
+Примеры кода предполагают,
 что строковые ресурсы и категории расположены в том же исполняемом
 файле, который содержит программу, записывающую события. Ключи категорий
 являются опциональными. Смысл этих ключей реестра и строковых ресурсов в
@@ -73,7 +68,7 @@ following information is part of the event:" (Не найдено описани
 передаст в журнал входную строку. Для более подробного изучения
 определителей формата см. API документацию для FormatMessage.
 
-Ключи реестра
+**Ключи реестра**
 
 Создайте следующий ключ реестра:
 
@@ -85,31 +80,31 @@ HKEY\_LOCAL\_MACHINESYSTEM - CurrentControlSet - Services - Eventlog - Applicati
 
 Создайте следующие ключи:
 
-    +-----------------------+-----------------------+-----------------------+
-    | Имя ключа             | Тип                   | Описание              |
-    +-----------------------+-----------------------+-----------------------+
-    | CategoryCount         | Integer               | Количество категорий  |
-    | (Optional)            |                       | событий, которые вы   |
-    |                       |                       | собираетесь           |
-    |                       |                       | использовать. (Это    |
-    |                       |                       | максимальная          |
-    |                       |                       | величина, и не будет  |
-    |                       |                       | проблем, если не все  |
-    |                       |                       | категории на самом    |
-    |                       |                       | деле будут            |
-    |                       |                       | применяться).         |
-    +-----------------------+-----------------------+-----------------------+
-    | CategoryMessageFile   | String                | Файл, содержащий      |
-    | (Optional)            |                       | ресурсы строк         |
-    |                       |                       | категорий.            |
-    +-----------------------+-----------------------+-----------------------+
-    | EventMessageFile      | String                | Файл, содержащий      |
-    |                       |                       | ресурсы строк         |
-    |                       |                       | событий.              |
-    +-----------------------+-----------------------+-----------------------+
-    | TypesSupported        | Integer               | Допустимые типы       |
-    |                       |                       | событий.              |
-    +-----------------------+-----------------------+-----------------------+
+    +-----------------------+---------+-----------------------+
+    | Имя ключа             | Тип     | Описание              |
+    +-----------------------+---------+-----------------------+
+    | CategoryCount         | Integer | Количество категорий  |
+    | (Optional)            |         | событий, которые вы   |
+    |                       |         | собираетесь           |
+    |                       |         | использовать. (Это    |
+    |                       |         | максимальная          |
+    |                       |         | величина, и не будет  |
+    |                       |         | проблем, если не все  |
+    |                       |         | категории на самом    |
+    |                       |         | деле будут            |
+    |                       |         | применяться).         |
+    +-----------------------+---------+-----------------------+
+    | CategoryMessageFile   | String  | Файл, содержащий      |
+    | (Optional)            |         | ресурсы строк         |
+    |                       |         | категорий.            |
+    +-----------------------+---------+-----------------------+
+    | EventMessageFile      | String  | Файл, содержащий      |
+    |                       |         | ресурсы строк         |
+    |                       |         | событий.              |
+    +-----------------------+---------+-----------------------+
+    | TypesSupported        | Integer | Допустимые типы       |
+    |                       |         | событий.              |
+    +-----------------------+---------+-----------------------+
 
 Пример кода для создания необходимых записей в реестре:
 
@@ -121,35 +116,35 @@ HKEY\_LOCAL\_MACHINESYSTEM - CurrentControlSet - Services - Eventlog - Applicati
      NumCategories:Integer;
      
     Begin
-    Reg:=TRegistry.Create;
-    Try
-     AppPath:=Application.ExeName;
-     AppName:='MyApplication';
-     NumCategories:=2;
-     RegKey:=
-     Format('SYSTEMCurrentControlSetServicesEventLogApplication%s',[AppName]);
-     Reg.RootKey:=HKEY_LOCAL_MACHINE;
-     Reg.OpenKey(RegKey,True);
-     // Собственное имя
-     Reg.WriteString('CategoryMessageFile',AppPath); 
-     // Собственное имя
-     Reg.WriteString('EventMessageFile',AppPath); 
-     // Максимальное количество категорий
-     Reg.WriteInteger('CategoryCount',NumCategories); 
-     // Разрешаем все типы
-     Reg.WriteInteger('TypesSupported',EVENTLOG_SUCCESS or
-                                       EVENTLOG_ERROR_TYPE or
-                                       EVENTLOG_WARNING_TYPE or
-                                       EVENTLOG_INFORMATION_TYPE); 
-     Reg.CloseKey;
-     EventLog:=RegisterEventSource(nil,PChar(AppName));
-    Finally
-     Reg.Free;
-    End; //try..finally
+     Reg:=TRegistry.Create;
+     Try
+      AppPath:=Application.ExeName;
+      AppName:='MyApplication';
+      NumCategories:=2;
+      RegKey:= Format('SYSTEMCurrentControlSetServicesEventLogApplication%s',
+                      [AppName]);
+      Reg.RootKey:=HKEY_LOCAL_MACHINE;
+      Reg.OpenKey(RegKey,True);
+      // Собственное имя
+      Reg.WriteString('CategoryMessageFile',AppPath); 
+      // Собственное имя
+      Reg.WriteString('EventMessageFile',AppPath); 
+      // Максимальное количество категорий
+      Reg.WriteInteger('CategoryCount',NumCategories); 
+      // Разрешаем все типы
+      Reg.WriteInteger('TypesSupported',EVENTLOG_SUCCESS or
+                                        EVENTLOG_ERROR_TYPE or
+                                        EVENTLOG_WARNING_TYPE or
+                                        EVENTLOG_INFORMATION_TYPE); 
+      Reg.CloseKey;
+      EventLog:=RegisterEventSource(nil,PChar(AppName));
+     Finally
+      Reg.Free;
+     End; //try..finally
      
     End;
 
-Сообщение и ресурсы категорий.
+**Сообщение и ресурсы категорий.**
 
 Информация, помещаемая в реестр вышеприведенным кодом, информирует
 журнал событий о том, где искать строки событий и категорий, основываясь
@@ -159,9 +154,7 @@ HKEY\_LOCAL\_MACHINESYSTEM - CurrentControlSet - Services - Eventlog - Applicati
 Этот процесс состоит из следующих шагов:
 
 - Написание исходного файла таблицы сообщений (файл .mc).
-
 - Компиляция .mc файла при помощи Microsoft message compiler.
-
 - Подключение получившейся информации к нашему Delphi приложению.
 
 Есть много примеров по написанию .mc файлов в Windows SDK и на различных
@@ -196,7 +189,7 @@ HKEY\_LOCAL\_MACHINESYSTEM - CurrentControlSet - Services - Eventlog - Applicati
 точки, то файл не будет скомпилирован.
 
 Первая строка каждого ресурса
-является MessageID (index), при помощи которого приложение будет
+является `MessageID (index)`, при помощи которого приложение будет
 обращаться к строке.
 
 Следующая строка указывает язык ресурса. В нашем
@@ -206,9 +199,9 @@ HKEY\_LOCAL\_MACHINESYSTEM - CurrentControlSet - Services - Eventlog - Applicati
 
 Последняя строка определяет собственно
 текст сообщения. В случае ресурса 0, строка будет "%1", что означает,
-что передается сама строка. Если, например, нужен префикс сообщения "An
-Event Message" (Сообщение события), то строка будет иметь вид: "An
-Event Message %1".
+что передается сама строка. Если, например, нужен префикс сообщения
+`"An Event Message"` (Сообщение события), то строка будет иметь вид:
+`"An Event Message %1"`.
 
 Более полное описание форматов см. в API справке по
 FormatMessage и компилятору ресурсов. Ресурсы категорий не требуют
@@ -233,7 +226,7 @@ emess.h может быть использован как заголовочны
 или просто добавлен в проект при помощи project manager, и тогда Delphi
 автоматически его откомпилирует при компиляции проекта (build).
 
-Запись событий с категориями.
+**Запись событий с категориями.**
 
 Теперь наше приложение имеет ресурсы и необходимые записи в реестре или
 код, который их внесет. Значит, приложение может записывать события в

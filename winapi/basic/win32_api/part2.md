@@ -1,65 +1,34 @@
 ---
 Title: Существующие решения
-Author: Александр Боковиков, Екатеринбург, Россия
-Date: 01.01.2007
+Date: 01.01.2000
+Author: Николай Мазуркин
+Source: <https://forum.sources.ru>
 ---
 
 
 Существующие решения
 ====================
 
-::: {.date}
-01.01.2007
-:::
-
 Автору известны две объектно-ориентированные библиотеки, которые можно
 рассматривать как альтернативу библиотеке VCL при написании компактных
 программ. Это библиотеки классов XCL и ACL. Обе библиотеки бесплатны и
 поставляются в исходных кодах.
 
-Библиотека ACL        (API control library)        
+              |
+--------------|-----------------------------
+Библиотека ACL (API control library) | 
+Автор:        |Александр Боковиков, Екатеринбург, Россия
+Страничка:    |http://a-press.parad.ru/pc/bokovikov/delphi/acl/acl.zip
+E-Mail:       |abb@adx.ru
+Классы:       |TFont, TFonts, TControl, TWinControl, TStdControl, TLabel, TEdit, TListBox, TButton, TCheckBox, TComboBox, TGroupBox, TProgressBar, TKeyboard
 
-Автор:        Александр Боковиков, Екатеринбург, Россия        
-
-Страничка:      
- http://a-press.parad.ru/pc/bokovikov/delphi/acl/acl.zip        
-
-E-Mail:        abb@adx.ru        
-
-Классы:        TFont, TFonts, TControl, TWinControl, TStdControl,
-TLabel, TEdit, TListBox, TButton, TCheckBox, TComboBox, TGroupBox,
-TProgressBar, TKeyboard        
-
-------------------------------------------------------------------------
-
-Библиотека XCL        (Extreme class library)        
-
-Автор:        Vladimir Kladov (Mr.Bonanzas)        
-
-Страничка:        http://xcl.cjb.net        
-
-E-Mail:        bonanzas@xcl.cjb.net        
-
-Классы:        XForm, XApplet, XCanvas, XPen, XBrush, XFont, ZDDB,
-ZHiBmp, ZDIBitmap, ZBitmap, ZIcon, ZGifDecoder, ZGif, ZJpeg, XLabel,
-XButton, XBevel, XPanel, XSplitPanel, XStatus, XGrep, XGroup, XCheckBox,
-XRadioBox, XPaint, XScroller, XScrollBox, XScrollBoxEx, XEdit, XNumEdit,
-XCombo, XGrid, XListView, XMultiList, XNotebook, XTabs, XTabbedNotebook,
-XCalendar, XGauge, XGaugePercents, XHysto, XHystoEx, XImageList,
-XImgButton, XTooltip, XCustomForm, XDsgnForm, XDsgnNonvisual, CLabel,
-CPaint, CButton, CEdit, CMemo, CCheckBox, CRadioBox, CListBox,
-CComboBox, ZList, ZMenu, ZPopup, ZMainMenu, ZPopupMenu, ZTimer,
-ZStrings, ZStringList, ZIniFile, ZThread, ZQueue, ZFileChange,
-ZDirChange, ZOpenSaveDialog, ZOpenDirDialog, ZTree, ZDirList,
-ZDirListEx, ZRegistry, ZStream, ZFileStream, ZMemoryStream,
-XStrUtils.pas, XDateUtils.pas, XFileUtils.pas, XWindowUtils,
-XPrintUtils, XShellLinks.pas, XJustOne.pas, XJustOneNotify.pas,
-XPascalUnit.pas, XSysIcons.pas, XCanvasObjectsManager, XRotateFonts,
-XFocusPainter, XFormsStdMouseEvents, XFormsStdKeyEvents, XFormAutoSizer,
-XAligner, XControlAutoPlacer, XMfcAntiFlicker, XSplitSizer,
-XResizeAntiFlicker, XCaretShower, XEditMouseSelect, XEditClipboard,
-XEditUndo, XListMouseSel, XListKeySel, XListEdit, ZNamedTags,
-XBtnRepeats, XBufLabels, XBackgrounds, XWndDynHandlers        
+              |
+--------------|-----------------------------
+Библиотека XCL|(Extreme class library) | 
+Автор:        |Vladimir Kladov (Mr.Bonanzas)
+Страничка:    |http://xcl.cjb.net
+E-Mail:       |bonanzas@xcl.cjb.net
+Классы:       |XForm, XApplet, XCanvas, XPen, XBrush, XFont, ZDDB, ZHiBmp, ZDIBitmap, ZBitmap, ZIcon, ZGifDecoder, ZGif, ZJpeg, XLabel, XButton, XBevel, XPanel, XSplitPanel, XStatus, XGrep, XGroup, XCheckBox, XRadioBox, XPaint, XScroller, XScrollBox, XScrollBoxEx, XEdit, XNumEdit, XCombo, XGrid, XListView, XMultiList, XNotebook, XTabs, XTabbedNotebook, XCalendar, XGauge, XGaugePercents, XHysto, XHystoEx, XImageList, XImgButton, XTooltip, XCustomForm, XDsgnForm, XDsgnNonvisual, CLabel, CPaint, CButton, CEdit, CMemo, CCheckBox, CRadioBox, CListBox, CComboBox, ZList, ZMenu, ZPopup, ZMainMenu, ZPopupMenu, ZTimer, ZStrings, ZStringList, ZIniFile, ZThread, ZQueue, ZFileChange, ZDirChange, ZOpenSaveDialog, ZOpenDirDialog, ZTree, ZDirList, ZDirListEx, ZRegistry, ZStream, ZFileStream, ZMemoryStream, XStrUtils.pas, XDateUtils.pas, XFileUtils.pas, XWindowUtils, XPrintUtils, XShellLinks.pas, XJustOne.pas, XJustOneNotify.pas, XPascalUnit.pas, XSysIcons.pas, XCanvasObjectsManager, XRotateFonts, XFocusPainter, XFormsStdMouseEvents, XFormsStdKeyEvents, XFormAutoSizer, XAligner, XControlAutoPlacer, XMfcAntiFlicker, XSplitSizer, XResizeAntiFlicker, XCaretShower, XEditMouseSelect, XEditClipboard, XEditUndo, XListMouseSel, XListKeySel, XListEdit, ZNamedTags, XBtnRepeats, XBufLabels, XBackgrounds, XWndDynHandlers
 
 Как видно из списка приведенных для каждой библиотеки классов, эти
 библиотеки предендуют скорее не на помощь при написании программ с

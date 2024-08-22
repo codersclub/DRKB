@@ -1,15 +1,12 @@
 ---
 Title: Как писать Win32 API приложения на Delphi?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как писать Win32 API приложения на Delphi?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Главная пробема, возникающая при написании WinAPI приложений - это
 неудобство ручного создания всех окон приложения. Требуется вызывать
@@ -20,7 +17,7 @@ Date: 01.01.2007
 приложения. В этой статье я расскажу как это делается в Delphi на
 примере простоо приложения с одним главным и двумя (модальными) окнами.
 
-Шаг 1. Создание ресурсов диалоговых окон
+**Шаг 1. Создание ресурсов диалоговых окон**
 
 Для создания ресурсов я использовал редактор ресурсов из состава Borland
 C++ 5.02, и поэтому все скриншоты сделаны с него. В Borland Resource
@@ -29,7 +26,7 @@ Workshop 4.5 все почти аналогично. Создаем главно
     500 DIALOGEX 0, 0, 240, 117
     EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_APPWINDOW | WS_EX_CLIENTEDGE
     STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_OVERLAPPED | WS_VISIBLE | WS_CAPTION | 
-    WS_SYSMENU | WS_MINIMIZEBOX
+      WS_SYSMENU | WS_MINIMIZEBOX
     class "WndClass1"
     CAPTION "Главное окно приложения"
     MENU 300
@@ -37,22 +34,22 @@ Workshop 4.5 все почти аналогично. Создаем главно
     LANGUAGE LANG_RUSSIAN, 0
     {
     CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 
-    19, 94, 50, 14, WS_EX_CLIENTEDGE
+      19, 94, 50, 14, WS_EX_CLIENTEDGE
     CONTROL "Cancel", IDCANCEL, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 
-    96, 94, 50, 14, WS_EX_CLIENTEDGE
+      96, 94, 50, 14, WS_EX_CLIENTEDGE
     CONTROL "Help", IDHELP, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 
-    172, 94, 50, 14, WS_EX_CLIENTEDGE
+      172, 94, 50, 14, WS_EX_CLIENTEDGE
     CONTROL "Группа", -1, "button", BS_GROUPBOX | BS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP, 
-    20, 9, 100, 76
+      20, 9, 100, 76
     CONTROL "Кнопка 1", 105, "button", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 
-    28, 21, 60, 12
+      28, 21, 60, 12
     CONTROL "Кнопка 2", 106, "button", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 
-    28, 37, 60, 12
+      28, 37, 60, 12
     CONTROL "Кнопка 3", 107, "button", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 
-    28, 53, 60, 12
+      28, 53, 60, 12
     CONTROL "ListBox1", 108, "listbox", LBS_NOTIFY | LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_CHILD | 
-    WS_VISIBLE | WS_BORDER | WS_TABSTOP, 
-    132, 13, 92, 72
+      WS_VISIBLE | WS_BORDER | WS_TABSTOP, 
+      132, 13, 92, 72
     }
 
 Обратите внимание на поле CLASS. В нем должно стоять то же значение, что
@@ -64,7 +61,7 @@ Workshop 4.5 все почти аналогично. Создаем главно
 привожу - вы можете его посмотреть самостоятельно в исходниках (см. в
 конце статьи).
 
-Шаг 2. Основная программа
+**Шаг 2. Основная программа**
 
 Текст программы в нашем случае несколько отличается от текста, например,
 winmin. Регистрация оконного класса:
@@ -99,7 +96,7 @@ lpszClassName стоит то же значение, что и в соответ
 
     {$r ...}
 
-Шаг 3. Оконная функция
+**Шаг 3. Оконная функция**
 
 Оконная функция ничем не отличается от обычной:
 
@@ -145,7 +142,7 @@ lpszClassName стоит то же значение, что и в соответ
       end;
     end;
 
-Шаг 4. Цикл сбора сообщений
+**Шаг 4. Цикл сбора сообщений**
 
 Цикл сбора сообщений следует изменить следующим образом, как при
 использовании немодальных диалоговых окон. Можно, правда, оставить все
@@ -164,6 +161,4 @@ lpszClassName стоит то же значение, что и в соответ
 После нажатия кнопки "ОК" появляется еще одно окно. Если в нем ввести
 текст и нажать "ОК", этот текст будет добавлен в Listbox.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
