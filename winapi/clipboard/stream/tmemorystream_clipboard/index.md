@@ -1,31 +1,26 @@
 ---
 Title: Буфер обмена (Clipboard) и TMemoryStream
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Буфер обмена (Clipboard) и TMemoryStream
 ========================================
 
-::: {.date}
-01.01.2007
-:::
-
 Обычно, это нужно для того, чтобы запихнуть в буфер обмена данные
 собственного формата. Сначала необходимо зарегистрировать этот формат
 при помощи функции RegisterClipboardFormat():
 
-CF\_MYFORMAT := RegisterClipboardFormat(\'My Format Description\');
+    CF_MYFORMAT := RegisterClipboardFormat('My Format Description');
 
 Затем необходимо проделать следующие шаги:
 
 1. Создать поток (stream) и записать в него данные.
 
-2. Создать в памяти глобальный буфер и скопировать в него поток
-(stream).
+2. Создать в памяти глобальный буфер и скопировать в него поток (stream).
 
-3. При помощи Clipboard.SetAsHandle() поместить глобальный буфер в буфер
-обмена.
+3. При помощи Clipboard.SetAsHandle() поместить глобальный буфер в буфер обмена.
 
 Пример:
 
@@ -85,4 +80,3 @@ CF\_MYFORMAT := RegisterClipboardFormat(\'My Format Description\');
       end;
     end;
 
-Взято из <https://forum.sources.ru>

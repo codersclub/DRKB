@@ -7,9 +7,9 @@ Date: 01.01.2007
 Копирование и вставка данных своего формата из буфера обмена
 ============================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // The TClipboard provides easy clipboard access. But what if you 
     // want to add (several) custom defined items to the clipboard? 
@@ -17,142 +17,147 @@ Date: 01.01.2007
     // For all actions is the unit Clipboard required. 
     uses Clipboard;
      
-     // First you have to register your own ClipBoard format 
+    // First you have to register your own ClipBoard format 
     // Zuerst registrieren wir unser eigenes ClipBoard Format 
     const
-       MyClipboardFormatStr = 'MyData';
+      MyClipboardFormatStr = 'MyData';
      
-     var
-       MyClpFormat: integer;
+    var
+      MyClpFormat: integer;
      
-       MyClpFormat := RegisterClipboardFormat(MyClipboardFormatStr);
+      MyClpFormat := RegisterClipboardFormat(MyClipboardFormatStr);
      
-     { The variable SLMClpFormat will contain a unique format handle for 
+    { The variable SLMClpFormat will contain a unique format handle for 
       your own clipboard format. 
      
       Die Variable SLMClpFormat enthalt ein einzigartiges Format Handle 
       fur unser ClipBoard Format. 
     }
      
-     procedure IncPointer(var p: Pointer; increment: Integer);
-     begin
-       p := PChar(p) + Increment;
-     end;
-     
-     // Say you have a data record defined as: 
+    procedure IncPointer(var p: Pointer; increment: Integer);
+    begin
+      p := PChar(p) + Increment;
+    end;
+    
+    // Say you have a data record defined as: 
     // Definiere zuerst etwa einen solchen Daten Record: 
     type
-       PMyDataRec = ^TMyDataRec;
-       TMyDataRec = record
-         Name: string[50];
-         Value: Integer;
-       end;
-     
-     { Furthermore let's say the data records are stored in a Listbox 
+      PMyDataRec = ^TMyDataRec;
+      TMyDataRec = record
+        Name: string[50];
+        Value: Integer;
+      end;
+    
+    { Furthermore let's say the data records are stored in a Listbox 
       and shall be copied to a list box. 
      
       Angenommen, die Daten Records sind in einer ListBox gespeichert und 
       sollen in eine ListBox kopiert werden. 
     }
      
-       // Copy like this: 
+    // Copy like this: 
     procedure TForm1.CopyItems;
-     var
-       i: integer;
-       dh: THandle;
-       ic: integer;
-       p: Pointer;
-       pi: pInteger;
-     begin
-       // get number of items to be copied 
+    var
+      i: integer;
+      dh: THandle;
+      ic: integer;
+      p: Pointer;
+      pi: pInteger;
+    begin
+      // get number of items to be copied 
       // Die Anzahl zu kopierenden Items 
       ic := List1.SelCount;
-       dh := GlobalAlloc(GMEM_FIXED or GMEM_ZEROINIT,
-         (SizeOf(TMyDataRec) * ic) + SizeOf(Integer));
-       { allocate memory for all items plus for a integer variable giving you the number of 
+      dh := GlobalAlloc(GMEM_FIXED or GMEM_ZEROINIT,
+            (SizeOf(TMyDataRec) * ic) + SizeOf(Integer));
+      { allocate memory for all items plus for a integer variable giving you the number of 
         copied items }
-       p   := GlobalLock(dh);    { Lock the allocated memory }
-       pi  := pInteger(p);
-       pi^ := ic;              { write number of items to allocated memory }
-       IncPointer(p, SizeOf(Integer)); { increment the pointer behind the written data }
-       // You don't have to create an instance of clipboard, this is done automatically 
+      p   := GlobalLock(dh);    { Lock the allocated memory }
+      pi  := pInteger(p);
+      pi^ := ic;              { write number of items to allocated memory }
+      IncPointer(p, SizeOf(Integer)); { increment the pointer behind the written data }
+      // You don't have to create an instance of clipboard, this is done automatically 
      
       for i := 1 to List1.Items.Count do { check all items if they are selected }
-       begin
-         if List1.Items[i - 1].Selected then
-         begin
-           { This one is selected -> copy it o the clipboard }
-           PMyDataRec(p)^ := PMyDataRec(List1.Items[i - 1].Data)^;
-           { of course data must point to a TMyDataRec }
-           IncPointer(p, SizeOf(TMyDataRec));
-           { increment the pointer behind the written data }
-         end;
-       end;
-     
-       // You have now filled the allocated memory with all items that shall be copied. 
+      begin
+        if List1.Items[i - 1].Selected then
+        begin
+          { This one is selected -> copy it o the clipboard }
+          PMyDataRec(p)^ := PMyDataRec(List1.Items[i - 1].Data)^;
+          { of course data must point to a TMyDataRec }
+          IncPointer(p, SizeOf(TMyDataRec));
+          { increment the pointer behind the written data }
+        end;
+      end;
+    
+      // You have now filled the allocated memory with all items that shall be copied. 
       // Now you can put them to the clipboard 
       Clipboard.Open;  { Open the clipboard will prevent overwriting of so far copied items }
-       Clipboard.Clear; { Clear the clipboard first }
-       Clipboard.SetAsHandle(MyClpFormat, Dh);  { Copy to clipboard }
-       Clipboard.Close;  { finally close the clipboard }
-       GlobalUnlock(dh);
-       { and unlock the allocate memory. But don't free it, it will be used by the clipboard }
-     
-       if ic = 0 then
-         GlobalFree(dh);    { You can free it if you haven't copied anything }
-     end;
-     
-     // Check first if your items are still available before pasting them from the clipbard 
+      Clipboard.Clear; { Clear the clipboard first }
+      Clipboard.SetAsHandle(MyClpFormat, Dh);  { Copy to clipboard }
+      Clipboard.Close;  { finally close the clipboard }
+      GlobalUnlock(dh);
+      { and unlock the allocate memory. But don't free it, it will be used by the clipboard }
+    
+      if ic = 0 then
+        GlobalFree(dh);    { You can free it if you haven't copied anything }
+    end;
+    
+    // Check first if your items are still available before pasting them from the clipbard 
      
     if Clipboard.HasFormat(MyClpFormat) then
-     begin
-       Form1.Paste1.Enabled := True;   { Yes, they are still available }
-     end;
-     
-     // And this is, how you paste them after Paste1 is clicked 
+    begin
+      Form1.Paste1.Enabled := True;   { Yes, they are still available }
+    end;
+    
+    // And this is, how you paste them after Paste1 is clicked 
     procedure TMDIForm.Paste1Click(Sender: TObject);
-     var
-       dh: THandle;
-       pdr: PSLMDataRec;
-       i, ic: integer;
-       p: Pointer;
-       pi: pInteger;
-       li: TListItem;
-     begin
-       if Clipboard.HasFormat(MyClpFormat) then
-       // We have already checked, but maybe another application has overwritten the 
+    var
+      dh: THandle;
+      pdr: PSLMDataRec;
+      i, ic: integer;
+      p: Pointer;
+      pi: pInteger;
+      li: TListItem;
+    begin
+      if Clipboard.HasFormat(MyClpFormat) then
+      // We have already checked, but maybe another application has overwritten the 
       // clipboard in between.... 
       begin
-         ClipBoard.Open;       { First open the clipboard again }
-         dh := Clipboard.GetAsHandle(MyClpFormat); { Catch the handle to the stored items }
-         p  := GlobalLock(dh);  { and lock it }
-         pi := pInteger(p);    { The first item is an integer giving the number of items }
-         ic := pi^;            { so get the number of items }
-         IncPointer(p, SizeOf(Integer)); { increment the pointer behind the read data }
-         for i := 1 to ic do   { get all copied items one after another }
-         begin
-           li   := List1.Items.Add;  { first create a new listbox item }
-           pdr  := New(PMyDataRec); { Then create a new pointer to a TMyDataRec }
-           pdr^ := PMyDataRec(p)^; { and fill it with data from the clipboard }
-           IncPointer(p, SizeOf(TSLMDataRec));
-           { increment the pointer behind the written data }
-     
-           li.Data    := pdr;  { Set the data pointer of the list item to the new record }
-           LI.Caption := pdr^.Name;  { Let the item display the record field "Name" }
-     
-           // You can of course add more record fields if the item has subitems: 
+        ClipBoard.Open;       { First open the clipboard again }
+        dh := Clipboard.GetAsHandle(MyClpFormat); { Catch the handle to the stored items }
+        p  := GlobalLock(dh);  { and lock it }
+        pi := pInteger(p);    { The first item is an integer giving the number of items }
+        ic := pi^;            { so get the number of items }
+        IncPointer(p, SizeOf(Integer)); { increment the pointer behind the read data }
+        for i := 1 to ic do   { get all copied items one after another }
+        begin
+          li   := List1.Items.Add;  { first create a new listbox item }
+          pdr  := New(PMyDataRec); { Then create a new pointer to a TMyDataRec }
+          pdr^ := PMyDataRec(p)^; { and fill it with data from the clipboard }
+          IncPointer(p, SizeOf(TSLMDataRec));
+          { increment the pointer behind the written data }
+    
+          li.Data    := pdr;  { Set the data pointer of the list item to the new record }
+          LI.Caption := pdr^.Name;  { Let the item display the record field "Name" }
+    
+          // You can of course add more record fields if the item has subitems: 
           LI.SubItems.Add(IntToStr(Value));
-         end;    { All data retrieved from clipboard }
-         Clipboard.Close;  { Close it }
-         GlobalUnlock(dh);
+        end;    { All data retrieved from clipboard }
+        Clipboard.Close;  { Close it }
+        GlobalUnlock(dh);
         { and unlock the pointer, but don't free it. This will be done by the clipboard itself, 
-         if necessary }
-       end;
-     end;
+          if necessary }
+      end;
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Xavier Pacheco and Steve Teixeira
+
+Date: 12.12.2000
 
     {
     Copyright © 1999 by Delphi 5 Developer's Guide - Xavier Pacheco and Steve Teixeira
@@ -163,8 +168,8 @@ Date: 01.01.2007
       SysUtils, Windows, clipbrd;
      
     const
-     
       DDGData = 'CF_DDG'; // constant for registering the clipboard format.
+    
     type
      
       // Record data to be stored to the clipboard
@@ -286,8 +291,8 @@ Date: 01.01.2007
     uses
       SysUtils, WinTypes, WinProcs, Messages, Classes, Graphics, Controls,
       Forms, Dialogs, StdCtrls, clipbrd, Mask, ComCtrls;
+    
     type
-     
       TMainForm = class(TForm)
         edtFirstName: TEdit;
         edtLastName: TEdit;

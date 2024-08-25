@@ -1,15 +1,12 @@
 ---
 Title: Вставка содержимого буфера как картинку в RTF
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Вставка содержимого буфера как картинку в RTF
 =============================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -32,9 +29,4 @@ Date: 01.01.2007
       image1.Picture.assign(b);
       b.free;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

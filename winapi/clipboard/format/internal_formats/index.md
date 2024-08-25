@@ -2,17 +2,12 @@
 Title: Встроенные форматы буфера обмена
 Author: Peter Below
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Встроенные форматы буфера обмена
 ================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Peter Below
 
     procedure TForm1.BtnShowFormatsClick(Sender: TObject);
     var
@@ -62,4 +57,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

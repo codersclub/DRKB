@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как копировать / менять clipboard text без использования VCL?
 =============================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     unit Unit1;
      
@@ -168,9 +168,12 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure CopyStringToClipboard(s: string);
     var
@@ -186,8 +189,7 @@ Date: 01.01.2007
       CloseClipboard;
       GlobalFree(hg);
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+
+

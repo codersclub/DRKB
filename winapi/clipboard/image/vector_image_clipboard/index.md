@@ -1,15 +1,12 @@
 ---
 Title: Как копировать векторное изображение?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Как копировать векторное изображение?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -67,4 +64,3 @@ Date: 01.01.2007
       mf.Free;
     end;
 
-Взято с <https://delphiworld.narod.ru>

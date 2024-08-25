@@ -1,15 +1,12 @@
 ---
 Title: Скопировать изображение формы
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Скопировать изображение формы
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses clipbrd;
      
@@ -28,8 +25,4 @@ Date: 01.01.2007
         bitmap.free;
       end;
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

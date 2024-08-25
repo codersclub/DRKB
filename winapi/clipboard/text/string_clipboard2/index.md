@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как скопировать содержимое строки в буфер обмена?
 =================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://delphiworld.narod.ru>
 
     procedure CopyStringToClipboard(s: string);
     var
@@ -26,9 +26,12 @@ Date: 01.01.2007
       GlobalFree(hg);
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     uses 
       ClipBrd; 
@@ -80,8 +83,4 @@ Date: 01.01.2007
       StrToClipbrd('Hallo'); 
       ShowMessage(GetStrFromClipbrd); 
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

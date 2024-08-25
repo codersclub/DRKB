@@ -2,17 +2,12 @@
 Title: TPaintBox в буфер обмена
 Author: Xavier Pacheco
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 TPaintBox в буфер обмена
 ========================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Xavier Pacheco
 
     var
       pbRect: TRect;
@@ -28,9 +23,4 @@ TPaintBox в буфер обмена
         BitMap.Free;
       end;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
