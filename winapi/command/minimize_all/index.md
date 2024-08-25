@@ -1,15 +1,12 @@
 ---
 Title: Как пользоваться командой шелла MinimizeAll?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как пользоваться командой шелла MinimizeAll?
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для этого надо импортировать Microsoft Shell Controls & Automation Type
 Library.
@@ -94,4 +91,3 @@ Shell1.MinimizeAll;
       Shell(Button1.Tag);
     end;
 
-Взято из <https://forum.sources.ru>
