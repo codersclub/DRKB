@@ -1,15 +1,12 @@
 ---
 Title: Как скопировать файл в Windows clipboard?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как скопировать файл в Windows clipboard?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       ShlObj, ClipBrd; 
@@ -41,4 +38,3 @@ Date: 01.01.2007
       CopyFilesToClipboard('C:\Bootlog.Txt'#0'C:\AutoExec.Bat'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

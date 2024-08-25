@@ -1,18 +1,16 @@
 ---
 Title: Как прочитать ROM-BIOS?
 Date: 2003-02-15
-author: Nico Bendlin <nicode@gmx.net>
+Author: Nico Bendlin <nicode@gmx.net>
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как прочитать ROM-BIOS?
 =======================
 
-::: {.date}
-2003-02-15
-:::
+Пример этого модуля доступен для скачивания в виде демо-версии.
 
-An Example of this unit is availabe as Demo Download.
 
     ////////////////////////////////////////////////////////////////////////////////
     //
@@ -580,4 +578,3 @@ An Example of this unit is availabe as Demo Download.
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

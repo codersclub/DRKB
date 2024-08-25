@@ -2,15 +2,12 @@
 Title: Получить информацию о BIOSе материнской платы и видеокарты
 Author: Andrey Sorokin (anso@mail.ru)
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Получить информацию о BIOSе материнской платы и видеокарты
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот пример, как можно даты БИОС материнской платы и видеокарты выдрать.
 
@@ -57,8 +54,7 @@ Date: 01.01.2007
      
     function GetBIOSDate : string;
     const
-      BIOSDatePtr
-    = $0ffff5;
+      BIOSDatePtr = $0ffff5;
       SystemKey = 'HARDWARE\DESCRIPTION\System';
       BiosDateParam = 'SystemBiosDate';
     var
@@ -78,8 +74,7 @@ Date: 01.01.2007
           s[0] := #8;
           p := Pointer(BIOSDatePtr);
           Move (p^, s[1], 8);
-         except FillChar (s[1],
-    8, '9');
+         except FillChar (s[1], 8, '9');
         end; { of try}
       Result := copy (s, 1, 2) + copy (s, 4, 2) + copy (s, 7, 2);
     end;
@@ -210,7 +205,7 @@ Date: 01.01.2007
     end.
 
 
-PS.  
+**PS.**  
 Возможно, эти процедуры не всегда дату возвращают,
 но то что практически всегда для разных материнских/видео плат
 возвращаются разные значения - проверено,
@@ -221,4 +216,3 @@ Saint-Petersburg anso@mail.ru
 Russian Technology http://attend.to/rt  
 anso@rt.spb.ru
 
-Взято из <https://forum.sources.ru>

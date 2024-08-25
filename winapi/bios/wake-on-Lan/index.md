@@ -1,16 +1,13 @@
 ---
 Title: Разбудить компьютер по сети, Использование Bios Wake-on-Lan
 Author: Song
+Source: <https://forum.sources.ru>
 Date: 01.01.2007
 ---
 
 
 Разбудить компьютер по сети, Использование Bios Wake-on-Lan
 ===========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {$APPTYPE CONSOLE}
      
@@ -64,6 +61,3 @@ Date: 01.01.2007
         SendMagicPacket(ParamStr(1));
     end.
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>

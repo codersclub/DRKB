@@ -7,102 +7,109 @@ Date: 01.01.2007
 Сохранение всего содержимого буфера обмена в файл
 =================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Из рассылки "Мастера DELPHI. Новости мира компонент, ..."
 
     var FS:TFileStream;
     procedure TForm1.bClearClick(Sender: TObject);
     begin
-    OpenClipBoard(0);
-    EmptyClipboard;
-    CloseClipBoard;
+      OpenClipBoard(0);
+      EmptyClipboard;
+      CloseClipBoard;
     end;
      
     procedure TForm1.BSaveClick(Sender: TObject);
-    var CBF:Cardinal;
-    CBFList:TList;
-    i:Integer;
-    h:THandle;
-    p:Pointer;
-    CBBlockLength,Temp:Cardinal;
-    FS:TFileStream;
+    var
+      CBF:Cardinal;
+      CBFList:TList;
+      i:Integer;
+      h:THandle;
+      p:Pointer;
+      CBBlockLength,Temp:Cardinal;
+      FS:TFileStream;
     begin
-    if OpenClipBoard(0)then begin
-    CBFList:=TList.Create;
-    CBF:=0;
-    repeat
-    CBF:=EnumClipboardFormats(CBF);
-    if CBF<>0 then
-    CBFList.Add(pointer(CBF));
-    until CBF=0;
-    edit1.text:=IntToStr(CBFList.Count);
-    if CBFList.Count>0 then begin
-    FS:=TFileStream.Create('e:\cp.dat',fmCreate);
-    Temp:=CBFList.Count;
-    FS.Write(Temp,SizeOf(Integer));
-    for i:=0 to CBFList.Count-1 do begin
-    h:=GetClipboardData(Cardinal(CBFList[i]));
-    if h>0 then begin
-    CBBlockLength:=GlobalSize(h);
-    if h>0 then begin
-    p:=GlobalLock(h);
-    if p <> nil then begin
-    Temp:=Cardinal(CBFList[i]);
-    FS.Write(Temp,SizeOf(Cardinal));
-    FS.Write(CBBlockLength,SizeOf(Cardinal));
-    FS.Write(p^,CBBlockLength);
-    end;
-    GlobalUnlock(h);
-    end;
-    end;
-    end;
-    FS.Free;
-    end;
-    CBFList.Free;
-    CloseClipBoard;
+      if OpenClipBoard(0)then begin
+        CBFList:=TList.Create;
+        CBF:=0;
+        repeat
+          CBF:=EnumClipboardFormats(CBF);
+          if CBF<>0 then
+            CBFList.Add(pointer(CBF));
+        until CBF=0;
+        edit1.text:=IntToStr(CBFList.Count);
+        if CBFList.Count>0 then begin
+          FS:=TFileStream.Create('e:\cp.dat',fmCreate);
+          Temp:=CBFList.Count;
+          FS.Write(Temp,SizeOf(Integer));
+          for i:=0 to CBFList.Count-1 do begin
+            h:=GetClipboardData(Cardinal(CBFList[i]));
+            if h>0 then begin
+              CBBlockLength:=GlobalSize(h);
+              if h>0 then begin
+                p:=GlobalLock(h);
+                if p <> nil then begin
+                  Temp:=Cardinal(CBFList[i]);
+                  FS.Write(Temp,SizeOf(Cardinal));
+                  FS.Write(CBBlockLength,SizeOf(Cardinal));
+                  FS.Write(p^,CBBlockLength);
+                end;
+                GlobalUnlock(h);
+              end;
+            end;
+          end;
+          FS.Free;
+        end;
+        CBFList.Free;
+        CloseClipBoard;
       end;
     end;
      
     procedure TForm1.bLoadClick(Sender: TObject);
-    var h:THandle;
-    p:Pointer;
-    CBF:Cardin!
-    al;
-    CBBlockLength:Cardinal;
-    i,CBCount:Integer;
-    FS:TFileStream;
+    var
+      h:THandle;
+      p:Pointer;
+      CBF:Cardin!
+      al;
+      CBBlockLength:Cardinal;
+      i,CBCount:Integer;
+      FS:TFileStream;
     begin
-    if OpenClipBoard(0)then begin
-    FS:=TFileStream.Create('e:\cp.dat',fmOpenRead);
-    if FS.Size=0 then Exit;
-    FS.Read(CBCount,sizeOf(Integer));
-    if CBCount=0 then Exit;
-    for i:=1 to CBCount do begin
-    FS.Read(CBF,SizeOf(Cardinal));
-    FS.Read(CBBlockLength,SizeOf(Cardinal));
-    h:=GlobalAlloc(GMEM_MOVEABLE or GMEM_SHARE or GMEM_ZEROINIT,CBBlockLength);
-    if h>0 then begin
-    p:=GlobalLock(h);
-    if p=nil then
-    GlobalFree(h)
-    else begin
-    FS.Read(p^,CBBlockLength);
-    GlobalUnlock(h);
-    SetClipboardData(CBF,h);
-    end;
-    end;
-    end;
-    FS.Free;
-    CloseClipBoard;
-    end;
+      if OpenClipBoard(0)then begin
+        FS:=TFileStream.Create('e:\cp.dat',fmOpenRead);
+        if FS.Size=0 then Exit;
+        FS.Read(CBCount,sizeOf(Integer));
+        if CBCount=0 then Exit;
+        for i:=1 to CBCount do begin
+          FS.Read(CBF,SizeOf(Cardinal));
+          FS.Read(CBBlockLength,SizeOf(Cardinal));
+          h:=GlobalAlloc(GMEM_MOVEABLE or GMEM_SHARE or GMEM_ZEROINIT,CBBlockLength);
+          if h>0 then begin
+            p:=GlobalLock(h);
+            if p=nil then
+              GlobalFree(h)
+            else begin
+              FS.Read(p^,CBBlockLength);
+            GlobalUnlock(h);
+            SetClipboardData(CBF,h);
+          end;
+        end;
+      end;
+      FS.Free;
+      CloseClipBoard;
+      end;
     end;
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Lucifer, _lucifer_@ukr.net
+
+Date: 06.10.2004
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Сохранение буфера обмена в файл

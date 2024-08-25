@@ -1,15 +1,12 @@
 ---
 Title: Получаем имена файлов, скопированных в буфер обмена
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Получаем имена файлов, скопированных в буфер обмена
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject); 
     var 
@@ -36,8 +33,5 @@ Date: 01.01.2007
         Clipboard.Close; 
       end; 
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

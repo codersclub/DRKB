@@ -1,6 +1,5 @@
 ---
 Title: Как узнать номер BIOS для разных версий Windows?
-Author: МММ
 Date: 01.01.2007
 ---
 
@@ -8,11 +7,11 @@ Date: 01.01.2007
 Как узнать номер BIOS для разных версий Windows?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Windows 9X
+Author: МММ
+
+**Windows 9X**
 
 
     with Memo1.Lines do
@@ -23,7 +22,7 @@ Windows 9X
         Add('MainBoardBiosSerialNo:'+^I+string(Pchar(Ptr($FEC71))));
       end;
 
-Windows NT
+**Windows NT**
 
 В Windows NT/2000/XP не получится прочитать значения прямо из BIOS, однако,
 ничего не мешает нам считать нужные значения из реестра.
@@ -101,9 +100,12 @@ Windows NT
 и
 <https://www.sources.ru/delphi/system/get_bios_information_nt_2000_xp.shtml>
 
-Автор: МММ
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Gua, fbsdd@ukr.net
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение серийного номера BIOS

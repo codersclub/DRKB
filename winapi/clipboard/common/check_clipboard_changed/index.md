@@ -1,6 +1,5 @@
 ---
 Title: Контроль за изменением содержимого буфера обмена
-Author: Александр (Rouse\_) Багель
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,11 @@ Date: 01.01.2007
 Контроль за изменением содержимого буфера обмена
 ================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Александр (Rouse\_) Багель
+
+Source: <https://forum.sources.ru>
 
     unit Unit1;
 
@@ -79,11 +80,11 @@ Date: 01.01.2007
 
     end.
 
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     { 
       An application can be notified of changes in the data stored in the 
@@ -194,4 +195,3 @@ Date: 01.01.2007
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

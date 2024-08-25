@@ -1,15 +1,12 @@
 ---
 Title: Копирование в буфер обмена
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Копирование в буфер обмена
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure CopyButtonClick(Sender: TObject);
     begin
@@ -36,6 +33,4 @@ Date: 01.01.2007
     end;
      
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

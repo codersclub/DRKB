@@ -1,6 +1,5 @@
 ---
 Title: Копировать и вставлять ячейки TStringGrid в буфер обмена
-Author: Тенцер А.Л.
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Копировать и вставлять ячейки TStringGrid в буфер обмена
 ========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch>
 
     uses
        Clipbrd;
@@ -70,13 +69,16 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
 
-Как скопировать выбранные в DBGrid записи в клипборд
+Вариант 2:
 
-Автор: Тенцер А.Л.
+Author: Тенцер А.Л.
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Как скопировать выбранные в DBGrid записи в клипборд
 
     const
      FIELD_DELIMITER = #9;
@@ -109,7 +111,7 @@ Date: 01.01.2007
         for I := 0 to Pred( Columns.Count ) do begin
           if Assigned(Columns.Items[I].Field) then
             S1 := S1 + FieldByName( Columns[I].FieldName ).AsString +
-    FIELD_DELIMITER;
+                  FIELD_DELIMITER;
         end;
         S1[ Length( S1 ) ] := RECORD_DELIMITER;
         S := S + S1;
@@ -122,10 +124,5 @@ Date: 01.01.2007
       end;
      end;
     end;
-     
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

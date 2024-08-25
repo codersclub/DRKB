@@ -1,16 +1,15 @@
 ---
 Title: Просмотр буфера обмена
-Author: Neil
-Date: 01.01.2007
 ---
 
 
 Просмотр буфера обмена
 ======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Sect, sect@mail.ru
+Date: 16.06.2002
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Просмотр буфера обмена.
@@ -28,68 +27,62 @@ Date: 01.01.2007
     interface
      
     uses
-     
-    Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-    Dialogs;
+      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
+      Dialogs;
      
     type
      
     TForm1 = class(TForm)
-    procedure FormCreate(Sender: TObject);
-    procedure FormDestroy(Sender: TObject);
-    private
-    FNextViewerHandle : THandle;
-    procedure WMDrawClipboard (var message : TMessage);
-    message WM_DRAWCLIPBOARD;
-    procedure WMChangeCBCHain (var message : TMessage);
-    message WM_CHANGECBCHAIN;
-    public
+      procedure FormCreate(Sender: TObject);
+      procedure FormDestroy(Sender: TObject);
+      private
+      FNextViewerHandle : THandle;
+      procedure WMDrawClipboard (var message : TMessage);
+      message WM_DRAWCLIPBOARD;
+      procedure WMChangeCBCHain (var message : TMessage);
+      message WM_CHANGECBCHAIN;
+      public
     end; 
+
     var
-     
-    Form1: TForm1;
+      Form1: TForm1;
      
     implementation
     {$R *.DFM}
      
     procedure TForm1.FormCreate(Sender: TObject);
     begin
-     
-    // Проверяем работоспособность функции.
-    // При невозможности просмотра буфера обмена
-    // функция возвратит значение Nil.
-    FNextViewerHandle := SetClipboardViewer(Handle);
+      // Проверяем работоспособность функции.
+      // При невозможности просмотра буфера обмена
+      // функция возвратит значение Nil.
+      FNextViewerHandle := SetClipboardViewer(Handle);
     end;
      
     procedure TForm1.FormDestroy(Sender: TObject);
     begin
-     
-    // Восстанавливаем цепочки.
-    ChangeClipboardChain(Handle, FNextViewerHandle);
+      // Восстанавливаем цепочки.
+      ChangeClipboardChain(Handle, FNextViewerHandle);
     end;
      
     procedure TForm1.WMDrawClipboard (var message : TMessage);
     begin
-    // Вызывается при любом изменении содержимого буфера обмена
-     
-    message.Result := SendMessage(WM_DRAWCLIPBOARD, FNextViewerHandle, 0, 0);
+      // Вызывается при любом изменении содержимого буфера обмена
+      message.Result := SendMessage(WM_DRAWCLIPBOARD, FNextViewerHandle, 0, 0);
     end;
      
     procedure TForm1.WMChangeCBCHain (var message : TMessage);
     begin
-     
-    // Вызывается при любом изменении цепочек буфера обмена.
-    if message.wParam = FNextViewerHandle then begin
-    // Удаляем следующую цепочку просмотра. Корректируем внутреннюю переменную.
-    FNextViewerHandle := message.lParam;
-    // Возвращаем 0 чтобы указать, что сообщение было обработано
-    message.Result := 0;
-    end else begin
-    // Передаем сообщение следующему окну в цепочке.
-    message.Result := SendMessage(FNextViewerHandle, WM_CHANGECBCHAIN,
-    message.wParam, message.lParam);
-     
-    end;
+      // Вызывается при любом изменении цепочек буфера обмена.
+      if message.wParam = FNextViewerHandle then begin
+        // Удаляем следующую цепочку просмотра. Корректируем внутреннюю переменную.
+        FNextViewerHandle := message.lParam;
+        // Возвращаем 0 чтобы указать, что сообщение было обработано
+        message.Result := 0;
+      end else begin
+        // Передаем сообщение следующему окну в цепочке.
+        message.Result := SendMessage(FNextViewerHandle, WM_CHANGECBCHAIN,
+        message.wParam, message.lParam);
+      end;
     end;
      
      
@@ -97,7 +90,13 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-Автор: Neil
+Вариант 2:
+
+Author: Neil
+
+Date: 01.01.2007
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Просмотр буфера обмена в Delphi совсем не сложен. Вот участок кода
 программы, вешающий цепочки в буфере обмена и просто отображающий его
@@ -156,6 +155,3 @@ private-поля и методы и создайте их реализацию �
 прежде, чем я это сделал; я просто внимательно прочел файлы помощи по
 SetClipboardViewer и во всех связанных темах.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

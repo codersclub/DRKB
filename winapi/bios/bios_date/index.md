@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как получить дату BIOS?
 =======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     unit BiosDate; 
      
@@ -31,9 +31,12 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     var
       BiosDate: array[0..7] of char absolute
@@ -55,9 +58,12 @@ Date: 01.01.2007
       Caption := 'Дата BIOS: ' + BiosDate + '  Тип ПК: ' + S;
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     function GetBiosDate1: String;
      var
@@ -81,9 +87,12 @@ Date: 01.01.2007
      
      {Only for Win 95/98/ME) 
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function GetBIOSDate: string;
     {получение даты BIOS в Win95}
@@ -111,6 +120,4 @@ Date: 01.01.2007
       setstring(result, s, 8);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
