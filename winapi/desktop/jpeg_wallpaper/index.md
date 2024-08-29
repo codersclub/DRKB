@@ -2,15 +2,12 @@
 Title: Как установить обои в формате JPEG?
 Author: Vasya2000
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как установить обои в формате JPEG?
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
 Как установить обои в формате jpeg.
 
@@ -30,6 +27,3 @@ SystemParametersInfo только для bmp.
       ActiveDesktop.ApplyChanges(AD_APPLY_ALL or AD_APPLY_FORCE);
     end;
 
-Автор: Vasya2000
-
-Взято из <https://forum.sources.ru>

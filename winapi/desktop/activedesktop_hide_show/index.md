@@ -1,15 +1,12 @@
 ---
 Title: Как скрыть / показать ActiveDesktop?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как скрыть / показать ActiveDesktop?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       ComObj, ShlObj, ActiveX;
@@ -36,4 +33,3 @@ Date: 01.01.2007
       ActiveDesk.ApplyChanges(AD_APPLY_ALL);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

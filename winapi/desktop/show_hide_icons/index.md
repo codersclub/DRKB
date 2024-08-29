@@ -7,9 +7,8 @@ Date: 01.01.2007
 Как скрыть / показать иконки на рабочем столе?
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
 
     procedure TForm1.Button1Click(Sender: TObject); 
     begin 
@@ -24,6 +23,10 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
     procedure ShowDesktop(const YesNo : boolean);
     var h : THandle;
@@ -42,4 +45,3 @@ Date: 01.01.2007
     {Показать иконки на рабочем столе}
     ShowDesktop(true);
 
-Взято из <https://forum.sources.ru>

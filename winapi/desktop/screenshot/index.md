@@ -1,15 +1,12 @@
 ---
 Title: Снимок рабочего стола
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Снимок рабочего стола
 =====================
-
-::: {.date}
-01.01.2007
-:::
 
     public
       { Public declarations }
@@ -38,8 +35,6 @@ Date: 01.01.2007
     begin
       GrabScreen;
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

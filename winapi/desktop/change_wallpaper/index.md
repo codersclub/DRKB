@@ -1,6 +1,5 @@
 ---
 Title: Как сменить обои на рабочем столе?
-Author: Garik
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,12 @@ Date: 01.01.2007
 Как сменить обои на рабочем столе?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Garik
+
+Source: <https://forum.vingrad.ru>
+
 
 В принципе, все настройки на фоновый рисунок хранятся в реестре. Поэтому
 надо сначала скопировать картинку в какое-нибудь место (лучше в каталог
@@ -20,29 +22,31 @@ Date: 01.01.2007
 Wallpaper - путь к файлу обоев (gif, bmp, jpg), WallpaperStyle - если 2,
 то обои будут растянуты (отсутствует в 95 винде).
 
-ПОсле установки всех занчений обновляешь рабочий стои и наслаждаешься
+После установки всех значений обновляешь рабочий стои и наслаждаешься
 эффектом.
 
-Автор: Garik
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: p0s0l
 
 Смена обоев только на время текущего сеанса, после перезагрузки обои
 восстановятся:
 
     var Wallpaper : string;
-
      
     begin
       Wallpaper := 'C:\windows\ACD Wallpaper.bmp';
       SystemParametersInfo (SPI_SETDESKWALLPAPER, 0, PChar(Wallpaper), SPIF_SENDCHANGE)
     end;
 
-Автор: p0s0l
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://forum.sources.ru>
 
     program wallpapr;
     uses Registry, WinProcs;
@@ -51,11 +55,11 @@ Wallpaper - путь к файлу обоев (gif, bmp, jpg), WallpaperStyle - 
     var
       reg : TRegIniFile;
     begin
-    // Изменяем ключи реестра
-    // HKEY_CURRENT_USER
-    //   Control Panel\Desktop
-    //     TileWallpaper (REG_SZ)
-    //     Wallpaper (REG_SZ)
+      // Изменяем ключи реестра
+      // HKEY_CURRENT_USER
+      //   Control Panel\Desktop
+      //     TileWallpaper (REG_SZ)
+      //     Wallpaper (REG_SZ)
       reg := TRegIniFile.Create('Control Panel\Desktop' );
       with reg do begin
         WriteString( '', 'Wallpaper',  
@@ -68,19 +72,21 @@ Wallpaper - путь к файлу обоев (gif, bmp, jpg), WallpaperStyle - 
         end;
       end;
       reg.Free;
-    // Оповещаем всех о том, что мы 
-    // изменили системные настройки
-    SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, Nil, 
+      // Оповещаем всех о том, что мы 
+      // изменили системные настройки
+      SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, Nil, 
       {Эта строка - продолжение предыдущей}SPIF_SENDWININICHANGE );
     end;
      
-     // пример установки WallPaper по центру рабочего стола
-     SetWallpaper('c:\winnt\winnt.bmp', False );
+    // пример установки WallPaper по центру рабочего стола
+    SetWallpaper('c:\winnt\winnt.bmp', False );
     //Эту строчку надо написать где-то в программе.
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://forum.sources.ru>
 
     var 
       Reg: TRegIniFile; 
@@ -92,11 +98,13 @@ Wallpaper - путь к файлу обоев (gif, bmp, jpg), WallpaperStyle - 
       SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, nil, SPIF_SENDWININICHANGE); 
     end
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
 
-Автор: Владимир Рыбант
+Вариант 5:
+
+Author: Владимир Рыбант
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Другие подобные советы не изменяют обои, если в Windows работает режим
 Active Desktop
@@ -120,11 +128,12 @@ Active Desktop
 
 Этим способом можно также изменять обои картинками jpg и gif
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit Walpaper;
      
@@ -293,11 +302,12 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 7:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     program change;
     uses 
@@ -313,6 +323,4 @@ DelphiWorld 6.0
     // Запускаешь:
     // change.exe "имя файла с картинкой"
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

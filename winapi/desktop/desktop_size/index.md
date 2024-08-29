@@ -8,9 +8,9 @@ Date: 01.01.2007
 Определить размера рабочей области Desktop\'а
 =============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Даниил Карапетян (delphi4all@narod.ru)
 
 Иногда важно знать, какую часть экрана можно занимать, не перекрывая тем
 самым такие окна, как TaskBar. Эта программа разворачивает окно на всю
@@ -27,11 +27,14 @@ Date: 01.01.2007
       Form1.Height := r.Bottom - r.Top;
     end;
 
-Автор: Даниил Карапетян (delphi4all@narod.ru)
 
 Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Воспользуйтесь функцией SystemParametersInfo(), переслав ей в качестве
 параметров - SPI\_GETWORKAREA и адрес структуры типа TRect, куда будут
@@ -48,13 +51,15 @@ Date: 01.01.2007
       Memo1.Lines.Add(IntToStr(r.Right));
     end; 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
  
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Dimka Maslov, mainbox@endimus.ru
+
+Date: 04.11.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение координат области Рабочего стола, не скрытой Панелью задач
@@ -69,14 +74,14 @@ DelphiWorld 6.0
     var
       RgnDesktop, RgnTrayWnd: HRGN;
      
-      function CreateWindowRgn(Handle: HWND): HRGN;
-      var
-        R: TRect;
-      begin
-        GetWindowRect(Handle, R);
-        with R do
-          Result := CreateRectRgn(Left, Top, Right, Bottom);
-      end;
+    function CreateWindowRgn(Handle: HWND): HRGN;
+    var
+      R: TRect;
+    begin
+      GetWindowRect(Handle, R);
+      with R do
+        Result := CreateRectRgn(Left, Top, Right, Bottom);
+    end;
      
     begin
       RgnDesktop := CreateWindowRgn(GetDesktopWindow);

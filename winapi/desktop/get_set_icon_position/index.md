@@ -1,16 +1,14 @@
 ---
 Title: Как получить и изменить координаты иконок на столе?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как получить и изменить координаты иконок на столе?
 ===================================================
 
-::: {.date}
-01.01.2007
-:::
-
+    //-------------------------------------------
     // For Win9x:
     //-------------------------------------------
      
@@ -86,6 +84,7 @@ Date: 01.01.2007
        end;
     end;
 
+    //-------------------------------------------
     // For NT, Win2k, XP:
     //-------------------------------------------
     // Unit to save/restore the positions of desktop icons to/from the registry)
@@ -350,4 +349,3 @@ https://www.luckie-online.de/programme/luckiedipssfx.exe
 
 (Complete demo to save/restore the positions of desktop icons, nonVCL)
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

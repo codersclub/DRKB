@@ -1,19 +1,35 @@
 ---
 Title: Как показать окно свойств экрана?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как показать окно свойств экрана?
 =================================
 
-::: {.date}
-01.01.2007
-:::
+> Как пpогpаммно вывести окно свойств экpана?
+
+Вариант 1:
+
+Author: Nomadic
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+    ShellExecute(Application.Handle, 'open', 'desk.cpl', nil, nil, sw_ShowNormal); 
+
+
+
+------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Для этого воспользуемся \'Rundll32.exe\' и запустим её в
 \'shellexecute\'. Не забудьте добавить \'shellapi\' в Ваш список uses.
 
+    //getsystemdir это функция, которая совместима со всеми версиями Windows.
     function GetSystemDir: TFileName;
     var
       SysDir: array[0..MAX_PATH - 1] of char;
@@ -28,9 +44,8 @@ Date: 01.01.2007
       x: Tfilename;
     begin
       x := getsystemdir;
-      ShellExecute(Form11.Handle, 'open', Pchar('rundll32.exe'), 'shell32.dll,Control_RunDLL Desk.cpl,@0,3', Pchar(X), SW_normal);
+      ShellExecute(Form11.Handle, 'open', Pchar('rundll32.exe'),
+        'shell32.dll,Control_RunDLL Desk.cpl,@0,3', Pchar(X), SW_normal);
     end;
-     
-    //getsystemdir это функция, которая совместима со всеми версиями windows.
 
-Взято из <https://forum.sources.ru>
+
