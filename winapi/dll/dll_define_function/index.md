@@ -1,18 +1,15 @@
 ---
-Title: Определение функции в DLL
+Title: Определение наличия функции в DLL
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
-Определение функции в DLL
+Определение наличия функции в DLL
 =========================
 
-::: {.date}
-01.01.2007
-:::
-
 Данная функция определяет присутствие нужной функции в библиотеке (dll)
-и, в случае нахождения искомой функции возвращает True, иначе False.
+и, в случае нахождения искомой функции, возвращает True, иначе False.
 
     function FuncAvail (VLibraryname, VFunctionname: string; var VPointer: pointer): 
     boolean; 
@@ -32,4 +29,3 @@ Date: 01.01.2007
        end; 
     end; 
 
-Взято из <https://forum.sources.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Как получить версию моей DLL?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как получить версию моей DLL?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure GetFileVersion(FileName: string; var Major1, Major2, 
         Minor1, Minor2: Integer); 
@@ -39,4 +36,3 @@ Date: 01.01.2007
         end; 
       end;
 
-Взято из <https://forum.sources.ru>
