@@ -1,16 +1,19 @@
 ---
 Title: Информация о физических дисках
 Author: AntonSaburov
-Date: 01.01.2007
 ---
 
 
 Информация о физических дисках
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: AntonSaburov
+
+Date: 30.12.2002
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Посмотри функцию DeviceIoControl - может там что получиться. Я ее мало
 использовал, но что-то там было.
@@ -22,44 +25,40 @@ You can use the CreateFile function to open a disk drive or a partition
 on a disk drive. The function returns a handle to the disk device; that
 handle can be used with the DeviceIOControl function.
 
-Автор: AntonSaburov
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-{ **** UBPFD *********** by delphibase.endimus.com
-****
+Вариант 2:
 
-\>\> Получение серийного номера IDE диска.
+Author: Alex Konshin, akonshin@earthlink.net
 
-Функция получает серийный номер первого физического диска IDE (не
-серийный номер тома!).
+    { **** UBPFD *********** by delphibase.endimus.com ****
+      >> Получение серийного номера IDE диска.
 
-Используется S.M.A.R.T. API, а под Windows NT/2K/XP запрос производится
-не напрямую к диску, а через miniport драйвер контроллера, что позволяет
-читать серийный номер не имея прав администратора.
+    Функция получает серийный номер первого физического диска IDE (не
+    серийный номер тома!).
 
-Функция может не работать, если первый контролер в системе не ATA или
-если первое устройство не является винчестером, который поддерживает
-SMART (современные винчестеры поддерживают).
+    Используется S.M.A.R.T. API, а под Windows NT/2K/XP запрос производится
+    не напрямую к диску, а через miniport драйвер контроллера, что позволяет
+    читать серийный номер не имея прав администратора.
 
-Если Вы хотите получить другие параметры диска/других дисков, то
-смотрите пример IdeInfo2 с моего сайта.
+    Функция может не работать, если первый контролер в системе не ATA или
+    если первое устройство не является винчестером, который поддерживает
+    SMART (современные винчестеры поддерживают).
 
-На Windows 9x требует наличия драйвера smartvsd.vxd (должен быть в
-стандартной поставке), просто скопируйте его в
-\\windows\\system\\iosubsys и перезагрузите компьютер.
+    Если Вы хотите получить другие параметры диска/других дисков, то
+    смотрите пример IdeInfo2 с моего сайта.
 
-Зависимости: Windows, SysUtils
+    На Windows 9x требует наличия драйвера smartvsd.vxd (должен быть в
+    стандартной поставке), просто скопируйте его в
+    \windows\system\iosubsys и перезагрузите компьютер.
 
-Автор:       Alex Konshin, akonshin@earthlink.net, Boston, USA
+    Зависимости: Windows, SysUtils
 
-Copyright:   http://home.earthlink.net/\~akonshin/index.htm
-
-Дата:        30 декабря 2002 г.
-
-     
+    Автор:       Alex Konshin, akonshin@earthlink.net, Boston, USA
+    Copyright:   http://home.earthlink.net/\~akonshin/index.htm
+    Дата:        30 декабря 2002 г.
+    }
+         
     function GetIdeDiskSerialNumber : String;
     type
       TSrbIoControl = packed record
@@ -252,4 +251,3 @@ Copyright:   http://home.earthlink.net/\~akonshin/index.htm
       else WriteLn('Disk serial number: ''', s,'''');
     end. 
 
-Автор:       Alex Konshin, akonshin@earthlink.net, Boston, USA

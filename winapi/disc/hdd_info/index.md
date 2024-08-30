@@ -1,16 +1,17 @@
 ---
 Title: Как получить инфу о жестком диске?
 Author: Pegas
-Date: 01.01.2007
 ---
 
 
 Как получить инфу о жестком диске?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Author: cyborg, cyborg1979@newmail.ru
+
+Date: 23.05.2005
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение сведений о диске (метка/имя диска, файловая система, серийный номер)
@@ -106,34 +107,37 @@ Date: 01.01.2007
      
     procedure TMyForm.FormActivate(Sender: TObject);
     Var
-    S,SOut : String;
-    I : Integer;
-    VolumeName,FileSystemName : String;
-    VolumeSerialNo,MaxComponentLength,FileSystemFlags:LongWord;
+      S,SOut : String;
+      I : Integer;
+      VolumeName,FileSystemName : String;
+      VolumeSerialNo,MaxComponentLength,FileSystemFlags:LongWord;
     begin
-    S:=GetDisks(DiskHDD); {Получаем список Жёстких дисков (Параметр DiskHDD)}
-    SOut:='';
-    For I:=1 to Length(S) do {Получаем информацию о всех дисках и пишем в TLabel на форме}
-    Begin
-    {Если диск существует/вставлен ...}
-    if GetHDDInfo(S[I], VolumeName, FileSystemName, VolumeSerialNo,
-    MaxComponentLength, FileSystemFlags) then {... тогда собираем информацию}
-    SOut:=SOut+
-    'Диск: '+S[I]+#13#10+
-    'Метка: '+VolumeName+#13#10+
-    'Файловая система: '+FileSystemName+#13+#10+
-    'Серийный номер: '+IntToHex(VolumeSerialNo,8)+#13+#10+
-    'Макс. длина имени файла: '+IntToStr(MaxComponentLength)+#13+#10+
-    'Flags: '+IntToHex(FileSystemFlags,4)+#13#10+#13#10;
-    End;
-    Disks.Caption:=SOut; {Выводим в компонент TLabel полученные данные о дисках}
+      S:=GetDisks(DiskHDD); {Получаем список Жёстких дисков (Параметр DiskHDD)}
+      SOut:='';
+      For I:=1 to Length(S) do {Получаем информацию о всех дисках и пишем в TLabel на форме}
+      Begin
+      {Если диск существует/вставлен ...}
+        if GetHDDInfo(S[I], VolumeName, FileSystemName, VolumeSerialNo,
+          MaxComponentLength, FileSystemFlags) then {... тогда собираем информацию}
+          SOut:=SOut+
+                'Диск: '+S[I]+#13#10+
+                'Метка: '+VolumeName+#13#10+
+                'Файловая система: '+FileSystemName+#13+#10+
+                'Серийный номер: '+IntToHex(VolumeSerialNo,8)+#13+#10+
+                'Макс. длина имени файла: '+
+                IntToStr(MaxComponentLength)+#13+#10+
+                'Flags: '+IntToHex(FileSystemFlags,4)+#13#10+#13#10;
+      End;
+      Disks.Caption:=SOut; {Выводим в компонент TLabel полученные данные о дисках}
     end;
 
-Автор: Pegas
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Alex&Co 
+
+Source: <https://alex-co.com.ru>
 
 Присутствует неточность в топике "Как получить инфу о жестком диске?".
 Неточность заключается в том, что функция "GetVolumeInformation"
@@ -146,7 +150,6 @@ Date: 01.01.2007
 
     function SirealNumberDisk(disk: string): string;
     // Определяем серийный номер диска
-
      
     var
       VolumeName         : array [0..MAX_PATH-1] of Char;
@@ -171,8 +174,9 @@ Date: 01.01.2007
       end;
      
     begin
-      GetVolumeInformation(PChar(disk), VolumeName, MAX_PATH, @VolumeSerialNo, MaxComponentLength, 
-    FileSystemFlags, FileSystemName, MAX_PATH);
+      GetVolumeInformation(PChar(disk), VolumeName, MAX_PATH,
+                           @VolumeSerialNo, MaxComponentLength, 
+                           FileSystemFlags, FileSystemName, MAX_PATH);
       Result:= IntToHex(Integer(VolumeSerialNo), 8);
       if Win32Platform <> VER_PLATFORM_WIN32_NT then
         Result:= GetReplaceCDNumber(Result);
@@ -183,6 +187,3 @@ Date: 01.01.2007
       Label1.Caption:= SirealNumberDisk('f:\');
     end; 
 
-Автор: Alex&Co 
-
-Сайт: <https://alex-co.com.ru>            

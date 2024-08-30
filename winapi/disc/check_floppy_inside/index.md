@@ -1,6 +1,5 @@
 ---
 Title: Как узнать, находится ли дискета в дисководе?
-Author: [Галимарзанов Фанис](mailto:inrus51@poikc.bashnet.ru)
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Как узнать, находится ли дискета в дисководе?
 =============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://delphiworld.narod.ru>
 
     type
       TDriveState(DS_NO_DISK, DS_UNFORMATTED_DISK, DS_EMPTY_DISK,
@@ -53,9 +52,14 @@ WfW 3.11, если, конечно, это необходимо.
         Result := DS_NO_DISK;
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Галимарзанов Фанис (inrus51@poikc.bashnet.ru)
+
+Source: <https://delphiworld.narod.ru>
 
     function DiskInDrive(const Drive: char): Boolean;
     var
@@ -105,6 +109,3 @@ WfW 3.11, если, конечно, это необходимо.
       end;
     end;
 
-Автор: [Галимарзанов Фанис](mailto:inrus51@poikc.bashnet.ru)
-
-Взято с <https://delphiworld.narod.ru>

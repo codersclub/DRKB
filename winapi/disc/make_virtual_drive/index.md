@@ -1,15 +1,12 @@
 ---
 Title: Как сделать виртуальный диск?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как сделать виртуальный диск?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
     if DefineDosDevice(DDD_RAW_TARGET_PATH, 'P:', 'F:\Backup\Music\Modules') then
@@ -18,4 +15,3 @@ Date: 01.01.2007
       ShowMessage('Error creating drive');
         { ... }
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

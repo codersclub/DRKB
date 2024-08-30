@@ -2,15 +2,12 @@
 Title: Как форматировать диск?
 Author: Baa
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как форматировать диск?
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
 
@@ -53,7 +50,8 @@ Date: 01.01.2007
         szCSDVersion: PChar;
       end;
      
-    function GetVersionEx(lpVersionInformation: POSVERSIONINFO): Longint; stdcall; external 'kernel32.dll' name 'GetVersionExA';
+    function GetVersionEx(lpVersionInformation: POSVERSIONINFO): Longint;
+             stdcall; external 'kernel32.dll' name 'GetVersionExA';
      
     const VER_PLATFORM_WIN32s = 0;
     const VER_PLATFORM_WIN32_WINDOWS = 1;
@@ -196,6 +194,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -1,15 +1,12 @@
 ---
 Title: Как получить инфу о SCSI дисках?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как получить инфу о SCSI дисках?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     program ScsiSN;
      
@@ -136,4 +133,3 @@ ftp://ftp.t10.org/t10/drafts/spc/
 
 ftp://ftp.t10.org/t10/drafts/spc2/
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
