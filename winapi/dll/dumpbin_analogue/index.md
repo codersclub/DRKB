@@ -2,15 +2,12 @@
 Title: Аналог DumpBin
 Author: x2er0
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Аналог DumpBin
 ==============
-
-::: {.date}
-01.01.2007
-:::
 
 Иногда на форуме проскакивает такой вопрос: "Как можно поглядеть
 экспортируемые функции какой либо DLL\'ины?".
@@ -127,45 +124,30 @@ space of the calling process.
 
 Пример использования:
 
-ExpDump.Exe User32.dll
+    ExpDump.Exe User32.dll
 
-В рехультате:
+В результате:
 
-Programm ExpDump =)
-
-user32.dll functions:
-
-ActivateKeyboardLayout
-
-AdjustWindowRect
-
-AdjustWindowRectEx
-
-AlignRects
-
-AllowForegroundActivation
-
-AllowSetForegroundWindow
-
-AnimateWindow
-
-AnyPopup
-
-AppendMenuA
-
-AppendMenuW
-
-ArrangeIconicWindows
-
-AttachThreadInput
-
-BeginDeferWindowPos
-
-BeginPaint
-
-BlockInput
-
-...
+    Programm ExpDump =)
+    
+    user32.dll functions:
+    
+    ActivateKeyboardLayout
+    AdjustWindowRect
+    AdjustWindowRectEx
+    AlignRects
+    AllowForegroundActivation
+    AllowSetForegroundWindow
+    AnimateWindow
+    AnyPopup
+    AppendMenuA
+    AppendMenuW
+    ArrangeIconicWindows
+    AttachThreadInput
+    BeginDeferWindowPos
+    BeginPaint
+    BlockInput
+    ...
 
 Для улучшения можно доделать так:
 
@@ -180,6 +162,3 @@ BlockInput
 
 И не забудте в конце FreeLibrary()
 
-Автор: x2er0
-
-Взято из <https://forum.sources.ru>
