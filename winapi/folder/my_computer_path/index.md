@@ -1,15 +1,12 @@
 ---
 Title: Путь к папке My Computer
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Путь к папке My Computer
 ========================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       ActiveX, ShlObj;
@@ -47,4 +44,3 @@ Date: 01.01.2007
         slDirectories.Free;
       end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

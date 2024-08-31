@@ -8,12 +8,11 @@ Date: 01.01.2007
 Как найти каталог Windows?
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Vit
 
     function GetWindowsFolder:string;
-
      
     var p:PChar;
     begin
@@ -24,9 +23,11 @@ Date: 01.01.2007
       FreeMem(p);
     end;
 
-Автор: Vit
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     public
       { Public declarations }
@@ -42,8 +43,4 @@ Date: 01.01.2007
         WinDir := StrPas(WinDirP);
       Label1.Caption := WinDir;
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

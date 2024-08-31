@@ -1,15 +1,12 @@
 ---
 Title: Как найти директорию Temp в Windows?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как найти директорию Temp в Windows?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function c_GetTempPath: String; 
     var 
@@ -20,10 +17,7 @@ Date: 01.01.2007
 
 этот код так же можно использовать для:
 
-GetCurrentDirectory
+- GetCurrentDirectory
+- GetSystemDirectory
+- GetWindowsDirectory
 
-GetSystemDirectory
-
-GetWindowsDirectory
-
-Взято из <https://forum.sources.ru>

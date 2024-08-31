@@ -1,19 +1,15 @@
 ---
-Title: Пример очистки куков и Temporaly Internet Files
+Title: Пример очистки куков и Temporarily Internet Files
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
-Пример очистки куков и Temporaly Internet Files
+Пример очистки куков и Temporarily Internet Files
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses ..., WinInet;
-
      
     procedure DeleteCache; 
     var 
@@ -45,6 +41,3 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>
