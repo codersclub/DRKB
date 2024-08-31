@@ -2,18 +2,14 @@
 Title: Эмулирование мыши / клавиатуры через SendInput()
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Эмулирование мыши / клавиатуры через SendInput()
 ================================================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure TForm1.Button1Click(Sender: TObject);
-
      
     var
       TI:TInput;
@@ -56,6 +52,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

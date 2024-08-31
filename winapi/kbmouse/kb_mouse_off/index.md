@@ -8,12 +8,15 @@ Date: 01.01.2007
 Програмное выключение клавиатуры и мыши
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-    winexec(Pchar('rundll32 keyboard,disable' ),sw_Show); Клава OFF 
-    winexec(Pchar('rundll32 mouse,disable' ),sw_Show); Маус OFF 
+Author: Radmin
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+
+    winexec(Pchar('rundll32 keyboard,disable'),sw_Show); //Клава OFF 
+    winexec(Pchar('rundll32 mouse,disable'),sw_Show);    //Маус OFF 
 
 кстати а вот так клава врубается
 
@@ -33,19 +36,21 @@ Date: 01.01.2007
       out 21h,al
     End;
 
-Автор: Radmin
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Song
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 BlockInput(), живёт в user32.dll
 
-Автор: Song
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://forum.sources.ru>
 
 Как скрыть курсор мышки
 
@@ -62,9 +67,12 @@ BlockInput(), живёт в user32.dll
       ShowCursor(True);
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://delphiworld.narod.ru>
 
     //Выключение курсора
     procedure TForm1.Button1Click(Sender: TObject);
@@ -86,4 +94,3 @@ BlockInput(), живёт в user32.dll
         CState := ShowCursor(True);
     end;
 
-Взято с <https://delphiworld.narod.ru>
