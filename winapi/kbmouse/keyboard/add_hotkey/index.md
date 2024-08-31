@@ -7,9 +7,9 @@ Date: 01.01.2007
 Регистрируем горячие клавиши
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Пример демонстрирует установку горячей клавиши CTRL-F7:
 
@@ -50,10 +50,10 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
 Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     { 
       The following example demonstrates registering hotkeys with the 
@@ -63,90 +63,90 @@ Date: 01.01.2007
       darauf reagieren kann, wenn sie gedruckt werden. (systemweit) 
     }
      
-     unit Unit1;
-     
-     interface
-     
-     uses
-       Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-       Dialogs;
-     
-     type
-       TForm1 = class(TForm)
-         procedure FormCreate(Sender: TObject);
-         procedure FormDestroy(Sender: TObject);
-       private
-         { Private declarations }
-         id1, id2, id3, id4: Integer;
-         procedure WMHotKey(var Msg: TWMHotKey); message WM_HOTKEY;
-       public
-         { Public declarations }
-       end;
-     
-     var
-       Form1: TForm1;
-     
-     implementation
-     
-     {$R *.dfm}
-     
-     // Trap Hotkey Messages 
+    unit Unit1;
+    
+    interface
+    
+    uses
+      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
+      Dialogs;
+    
+    type
+      TForm1 = class(TForm)
+        procedure FormCreate(Sender: TObject);
+        procedure FormDestroy(Sender: TObject);
+      private
+        { Private declarations }
+        id1, id2, id3, id4: Integer;
+        procedure WMHotKey(var Msg: TWMHotKey); message WM_HOTKEY;
+      public
+        { Public declarations }
+      end;
+    
+    var
+      Form1: TForm1;
+    
+    implementation
+    
+    {$R *.dfm}
+    
+    // Trap Hotkey Messages 
     procedure TForm1.WMHotKey(var Msg: TWMHotKey);
-     begin
-       if Msg.HotKey = id1 then
-         ShowMessage('Ctrl + A pressed !');
-       if Msg.HotKey = id2 then
-         ShowMessage('Ctrl + Alt + R pressed !');
-       if Msg.HotKey = id3 then
-         ShowMessage('Win + F4 pressed !');
-       if Msg.HotKey = id4 then
-         ShowMessage('Print Screen pressed !');
-     end;
-     
-     procedure TForm1.FormCreate(Sender: TObject);
-       // Different Constants from Windows.pas 
+    begin
+      if Msg.HotKey = id1 then
+        ShowMessage('Ctrl + A pressed !');
+      if Msg.HotKey = id2 then
+        ShowMessage('Ctrl + Alt + R pressed !');
+      if Msg.HotKey = id3 then
+        ShowMessage('Win + F4 pressed !');
+      if Msg.HotKey = id4 then
+        ShowMessage('Print Screen pressed !');
+    end;
+    
+    procedure TForm1.FormCreate(Sender: TObject);
+    // Different Constants from Windows.pas 
     const
-       MOD_ALT = 1;
-       MOD_CONTROL = 2;
-       MOD_SHIFT = 4;
-       MOD_WIN = 8;
-       VK_A = $41;
-       VK_R = $52;
-       VK_F4 = $73;
-     begin
-       // Register Hotkey Ctrl + A 
+      MOD_ALT = 1;
+      MOD_CONTROL = 2;
+      MOD_SHIFT = 4;
+      MOD_WIN = 8;
+      VK_A = $41;
+      VK_R = $52;
+      VK_F4 = $73;
+    begin
+      // Register Hotkey Ctrl + A 
       id1 := GlobalAddAtom('Hotkey1');
-       RegisterHotKey(Handle, id1, MOD_CONTROL, VK_A);
-     
-       // Register Hotkey Ctrl + Alt + R 
+      RegisterHotKey(Handle, id1, MOD_CONTROL, VK_A);
+    
+      // Register Hotkey Ctrl + Alt + R 
       id2 := GlobalAddAtom('Hotkey2');
-       RegisterHotKey(Handle, id2, MOD_CONTROL + MOD_Alt, VK_R);
-     
-       // Register Hotkey Win + F4 
+      RegisterHotKey(Handle, id2, MOD_CONTROL + MOD_Alt, VK_R);
+    
+      // Register Hotkey Win + F4 
       id3 := GlobalAddAtom('Hotkey3');
-       RegisterHotKey(Handle, id3, MOD_WIN, VK_F4);
-     
-       // Globally trap the Windows system key "PrintScreen" 
+      RegisterHotKey(Handle, id3, MOD_WIN, VK_F4);
+    
+      // Globally trap the Windows system key "PrintScreen" 
       id4 := GlobalAddAtom('Hotkey4');
-       RegisterHotKey(Handle, id4, 0, VK_SNAPSHOT);
-     end;
-     
-     // Unregister the Hotkeys 
+      RegisterHotKey(Handle, id4, 0, VK_SNAPSHOT);
+    end;
+    
+    // Unregister the Hotkeys 
     procedure TForm1.FormDestroy(Sender: TObject);
-     begin
-       UnRegisterHotKey(Handle, id1);
-       GlobalDeleteAtom(id1);
-       UnRegisterHotKey(Handle, id2);
-       GlobalDeleteAtom(id2);
-       UnRegisterHotKey(Handle, id3);
-       GlobalDeleteAtom(id3);
-       UnRegisterHotKey(Handle, id4);
-       GlobalDeleteAtom(id4);
-     end;
-     
-     end.
-     
-     { 
+    begin
+      UnRegisterHotKey(Handle, id1);
+      GlobalDeleteAtom(id1);
+      UnRegisterHotKey(Handle, id2);
+      GlobalDeleteAtom(id2);
+      UnRegisterHotKey(Handle, id3);
+      GlobalDeleteAtom(id3);
+      UnRegisterHotKey(Handle, id4);
+      GlobalDeleteAtom(id4);
+    end;
+    
+    end.
+    
+    { 
       RegisterHotKey fails if the keystrokes specified for the hot key have 
       already been registered by another hot key. 
      
@@ -156,10 +156,11 @@ Date: 01.01.2007
       kernel-mode debugger or a just-in-time debugger is resident. 
     }
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
 Вариант 3:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Вот код о том как назначить горячие клавиши если даже активна другая
 программа. Код взят из рассылки "Мастера DELPHI. Новости мира
@@ -183,28 +184,27 @@ Date: 01.01.2007
      
     procedure TForm1.hotykey(var msg:TMessage); 
     begin 
-    if (msg.LParamLo=MOD_CONTROL) and (msg.LParamHi=81) then 
-    begin 
-    ShowMessage('Ctrl + Q wurde gedrьckt !'); 
-    end; 
-    if (msg.LParamLo=MOD_CONTROL) and (msg.LParamHi=82) then 
-    begin 
-    ShowMessage('Ctrl + R wurde gedrьckt !'); 
-    end; 
+      if (msg.LParamLo=MOD_CONTROL) and (msg.LParamHi=81) then 
+      begin 
+        ShowMessage('Ctrl + Q wurde gedrьckt !'); 
+      end; 
+      if (msg.LParamLo=MOD_CONTROL) and (msg.LParamHi=82) then 
+      begin 
+        ShowMessage('Ctrl + R wurde gedrьckt !'); 
+      end; 
     end; 
      
     procedure TForm1.FormCreate(Sender: TObject); 
     begin 
-    id:=GlobalAddAtom('hotkey'); 
-    RegisterHotKey(handle,id,mod_control,81); 
-    id2:=GlobalAddAtom('hotkey2'); 
-    RegisterHotKey(handle,id2,mod_control,82); 
+      id:=GlobalAddAtom('hotkey'); 
+      RegisterHotKey(handle,id,mod_control,81); 
+      id2:=GlobalAddAtom('hotkey2'); 
+      RegisterHotKey(handle,id2,mod_control,82); 
     end; 
      
     procedure TForm1.FormDestroy(Sender: TObject); 
     begin 
-    UnRegisterHotKey(handle,id); 
-    UnRegisterHotKey(handle,id2); 
+      UnRegisterHotKey(handle,id); 
+      UnRegisterHotKey(handle,id2); 
     end;
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>

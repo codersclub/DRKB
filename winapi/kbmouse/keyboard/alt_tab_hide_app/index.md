@@ -8,9 +8,11 @@ Date: 01.01.2007
 Как скрыть программу от Alt+Tab?
 ================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Song
+
+Source: <https://forum.sources.ru>
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin
@@ -18,11 +20,13 @@ Date: 01.01.2007
       ShowWindow(Application.Handle, SW_HIDE);
     end;
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Stavros
+
+Source: <https://forum.sources.ru>
 
     with Application do
       begin
@@ -31,6 +35,3 @@ Date: 01.01.2007
       end; {With}
     SetWindowLong(Handle, GWL_EXSTYLE, GetWindowLong(Handle, GWL_EXSTYLE) or WS_EX_TOOLWINDOW);
 
-Автор: Stavros
-
-Взято из <https://forum.sources.ru>
