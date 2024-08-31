@@ -1,15 +1,12 @@
 ---
 Title: Hook на буфер обмена
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Hook на буфер обмена
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       *Just create a new form and call it ClipFormats. 
@@ -139,4 +136,3 @@ Hook на буфер обмена
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

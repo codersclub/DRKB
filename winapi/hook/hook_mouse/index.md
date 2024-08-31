@@ -1,15 +1,12 @@
 ---
 Title: Создание мышиного перехватчика
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Создание мышиного перехватчика
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     library Hookdemo;
      
@@ -24,8 +21,7 @@ Date: 01.01.2007
     HookProc index 3;
      
     begin
-     
-    HookedAlready:=False;
+      HookedAlready:=False;
     end.
 
 , где beeper.pas содержит следующий код:
@@ -79,6 +75,4 @@ Date: 01.01.2007
 функцией CallNextHookEx значение \< 0 сведетельствует об отсутствии
 манипуляций с мышью.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

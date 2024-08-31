@@ -2,17 +2,12 @@
 Title: Перехват (Hook) клавиатуры (программа Sendkeys)
 Author: Bogachev
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Перехват (Hook) клавиатуры (программа Sendkeys)
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Bogachev
 
     program Project1;
      
@@ -223,6 +218,4 @@ Date: 01.01.2007
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

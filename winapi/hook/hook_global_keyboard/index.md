@@ -1,15 +1,12 @@
 ---
 Title: Глобальный хук на клавиатуру
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Глобальный хук на клавиатуру
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     library Hook;
     uses Windows, SysUtils;
@@ -63,6 +60,4 @@ Date: 01.01.2007
     begin
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

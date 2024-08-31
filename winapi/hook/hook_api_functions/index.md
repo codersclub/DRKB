@@ -2,15 +2,12 @@
 Title: Перехват API функций на примере MessageBoxA
 Author: Song
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Перехват API функций на примере MessageBoxA
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
 DLL:
 
@@ -130,6 +127,3 @@ EXE:
       FreeLibrary(hDll);
     end.
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>
