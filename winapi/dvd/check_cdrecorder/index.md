@@ -1,15 +1,12 @@
 ---
 Title: How to check, if a CD-Recorder is available? (WinXP)
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 How to check, if a CD-Recorder is available? (WinXP)
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {....}
      
@@ -46,4 +43,3 @@ How to check, if a CD-Recorder is available? (WinXP)
         ShowMessage('CD-Recorder NOT available.');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,15 +1,12 @@
 ---
 Title: Как загрузить иконку CD-ROM?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как загрузить иконку CD-ROM?
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetCDIcon(Drive: Char): TIcon; 
     var 
@@ -64,4 +61,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

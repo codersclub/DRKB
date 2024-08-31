@@ -7,18 +7,21 @@ Date: 01.01.2007
 Как узнать букву CD-ROM?
 ========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://blackman.wp-club.net/>
 
     var DriveType: UInt;
      
     DriveType := GetDriveType(PChar('F:\'));
     if DriveType = DRIVE_CDROM then ShowMessage('Сидюк');
 
-Взято с сайта <https://blackman.wp-club.net/>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function GetFirstCDROM: string;
     {возвращает букву 1-го привода CD-ROM или пустую строку}
@@ -42,11 +45,13 @@ Date: 01.01.2007
       Result := '';
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     function GetFirstCDROMDrive: char;
      var
@@ -76,9 +81,12 @@ DelphiWorld 6.0
        ShowMessage(GetFirstCDROMDrive);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -97,6 +105,4 @@ DelphiWorld 6.0
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

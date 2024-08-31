@@ -7,9 +7,7 @@ Date: 01.01.2007
 Как получить информацию о дорожке Audio CD?
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     unit frmMain;
      
@@ -147,6 +145,10 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
+
 To get the number of tracks and the length of the current track that is
 playing, use this code :
 
@@ -186,4 +188,3 @@ And if you would like to check for an audio CD, try this code:
         result := true;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

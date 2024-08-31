@@ -1,21 +1,18 @@
 ---
 Title: Как открыть CD-ROM, если их несколько в системе?
-Date: 01.01.2007
+Date: 12.05.1999
+Source: <https://forum.sources.ru>
 ---
 
 
 Как открыть CD-ROM, если их несколько в системе?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
-
-    // DriveTools 1.0                                                               *
-    //                 (c) 1999 Jan Peter Stotz                                     *
-    // If you find bugs, has ideas for missing featurs, feel free to contact me     *
-    //                           jpstotz@gmx.de                                     *
-    // Date last modified:   May 22, 1999                                           *
+    // DriveTools 1.0                                       *
+    //                 (c) 1999 Jan Peter Stotz             *
+    // If you find bugs, has ideas for missing featurs,     *
+    // feel free to contact me  jpstotz@gmx.de              *
+    // Date last modified:   May 22, 1999                   *
      
     unit DriveTools;
      
@@ -98,4 +95,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>

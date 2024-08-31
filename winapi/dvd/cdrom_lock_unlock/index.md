@@ -1,6 +1,5 @@
 ---
 Title: Блокировка / Разблокировка CD-ROM
-Author: Baa
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Блокировка / Разблокировка CD-ROM
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Author: Baa
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Вы уж простите, что на сях... сподручней было:
 
@@ -51,13 +50,14 @@ Date: 01.01.2007
      
     }
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-     
+Вариант 2:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
+
     const
      
      IOCTL_STORAGE_MEDIA_REMOVAL = $02D4804;
@@ -84,8 +84,8 @@ Date: 01.01.2007
      try
       pmr.PreventMediaRemoval:=fLock;
       if (not DeviceIoControl(hDevice, IOCTL_STORAGE_MEDIA_REMOVAL, @pmr, 
-                               sizeof(pmr),nil, 0,
-                               dwBytesReturned, nil)) then exit else result:=true;
+                              sizeof(pmr),nil, 0,
+                              dwBytesReturned, nil)) then exit else result:=true;
      finally
        CloseHandle (hDevice);
      end;
@@ -109,6 +109,3 @@ Date: 01.01.2007
        MessageBox(Handle,'CD is unlocked','Info',MB_ICONINFORMATION)
     end;
 
-Автор: Krid
-
-Взято из <https://forum.sources.ru>

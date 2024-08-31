@@ -1,15 +1,12 @@
 ---
 Title: Обработать момент вставки и вытаскивания CD
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Обработать момент вставки и вытаскивания CD
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       Some applications need to know when the user inserts or 
@@ -147,4 +144,3 @@ Date: 01.01.2007
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

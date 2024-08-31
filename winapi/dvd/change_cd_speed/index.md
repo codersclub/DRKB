@@ -2,21 +2,17 @@
 Title: Изменение скорости привода CD-ROM
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Изменение скорости привода CD-ROM
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
 Находим в интернете файл ASPI.pas (еще есть wnaspi32.pas), подключаем
 его к проекту, пишем следующий код:
 
     function SetCDSpeed(Host,Target:byte;Speed:integer):BOOL;
-
      
     var
       dwASPIStatus: DWORD;
@@ -61,6 +57,3 @@ Date: 01.01.2007
 
 Какие параметры передавать - написано в том же ASPI.pas
 
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>

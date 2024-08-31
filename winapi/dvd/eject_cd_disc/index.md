@@ -7,16 +7,19 @@ Date: 01.01.2007
 Как выдвинуть дверцу CD-ROM?
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://blackman.wp-club.net/>
 
     mciSendString('Set cdaudio Door Open Wait', nil, 0, handle);
     mciSendCommand(mp.DeviceID, MCI_SET, MCI_SET_DOOR_CLOSED, 0);
 
-Взято с сайта <https://blackman.wp-club.net/>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Основываясь, на этой возможности можно написать классную прогу.
 Представьте себе: ламерюга с умным видом тайпает какой-нибудь док, а тут
@@ -83,11 +86,13 @@ Timer. Устанавливаем его свойство Interval в 30000 ми
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     // Данная прога извлекает и закравет CD-ROM выбранные в Combobox1
     // На форме разместите Button1, Button2 и Combobox1
@@ -215,6 +220,4 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

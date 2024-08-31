@@ -1,15 +1,12 @@
 ---
 Title: Как узнать количество CD в системе?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Как узнать количество CD в системе?
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetNumberOfCDDrives: Byte;
      var
@@ -18,7 +15,7 @@ Date: 01.01.2007
        root: string;
      begin
        Result := 0;
-       root := 'A:\';
+       root := 'A:';
        drivemap := GetLogicalDrives;
        mask := 1;
        for i := 1 to 32 do
@@ -38,4 +35,3 @@ Date: 01.01.2007
        Label1.Caption := IntToStr(GetNumCDDrives);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -1,18 +1,16 @@
 ---
 Title: Как узнать, есть ли в заданном CD-ROM\'е Audio CD?
 Date: 01.01.2007
+Author: Aziz(JINX)
+Source: DELPHI VCL FAQ Перевод с английского
 ---
 
 
 Как узнать, есть ли в заданном CD-ROM\'е Audio CD?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Можно использовать функцию Windows API GetDriveType() чтобы определить
-является ли дисковод CD-ROM\'мом. И функцию API GetVolumeInformation()
+Можно использовать функцию Windows API `GetDriveType()` чтобы определить
+является ли дисковод CD-ROM\'мом. И функцию API `GetVolumeInformation()`
 чтобы проверить VolumeName на равенство \'Audio CD\'.
 
 Пример:
@@ -66,9 +64,6 @@ Date: 01.01.2007
                     ShowMessage('Not an Audio CD');
     end;
 
-Взято из
-
-DELPHI VCL FAQ Перевод с английского      
 
 Подборку, перевод и адаптацию материала подготовил Aziz(JINX)
 
