@@ -7,9 +7,9 @@ Date: 01.01.2007
 Получение переменных среды
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://delphiworld.narod.ru>
 
     procedure GetEnvironmentStrings(ss: TStrings);
     {Переменные среды}
@@ -33,9 +33,12 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Button5Click(Sender: TObject);
     var
@@ -56,13 +59,13 @@ Date: 01.01.2007
       FreeEnvironmentStrings(p);
       {$ENDIF}
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Функция GetEnvironmentStrings возвращает адрес памяти со средой текущего
 процесса. Все переменные возвращаются в виде строк, оканчивающихся
@@ -72,11 +75,13 @@ DelphiWorld 6.0
 опрашиваемого процесса. Величина также возвращается в виде строки с
 завершающим нулем.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit TDosEnv;
     interface
@@ -198,6 +203,4 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

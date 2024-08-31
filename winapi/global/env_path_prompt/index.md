@@ -7,10 +7,6 @@ Date: 01.01.2007
 Как получить переменные окружения типа PATH и PROMPT?
 =====================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Вариант 1:
 
 Для этого используется API функция GetEnvironmentVariable.
@@ -28,27 +24,29 @@ GetEnvironmentVariable возвращает значения:
 требуемому размеру для хранения строки значения и завершающего нулевого
 символа.
 
-    function GetDOSEnvVar(const VarName: string): string; 
-    var 
-      i: integer; 
-    begin 
-      Result := ''; 
-      try 
-        i := GetEnvironmentVariable(PChar(VarName), nil, 0); 
-     
-        if i > 0 then 
-          begin 
-            SetLength(Result, i); 
-            GetEnvironmentVariable(Pchar(VarName), PChar(Result), i); 
+        function GetDOSEnvVar(const VarName: string): string; 
+        var 
+          i: integer; 
+        begin 
+          Result := ''; 
+          try 
+            i := GetEnvironmentVariable(PChar(VarName), nil, 0); 
+         
+            if i > 0 then 
+              begin 
+                SetLength(Result, i); 
+                GetEnvironmentVariable(Pchar(VarName), PChar(Result), i); 
+              end; 
+          except 
+            Result := ''; 
           end; 
-      except 
-        Result := ''; 
-      end; 
-    end; 
+        end; 
 
 ------------------------------------------------------------------------
 
 Вариант 2:
+
+Source: <https://forum.sources.ru>
 
     procedure TMainFrm.AddVarsToMemo(Sender: TObject); 
     var 
@@ -64,4 +62,3 @@ GetEnvironmentVariable возвращает значения:
     FreeEnvironmentStrings(p); 
     end; 
 
-Взято из <https://forum.sources.ru>
