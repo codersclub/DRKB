@@ -2,20 +2,12 @@
 Title: Пример приложения, использующего Shell API
 Author: Akella
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Пример приложения, использующего Shell API
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
+Скачать пример приложения, использующего Shell API: [31_1.zip](31_1.zip) 7k
 
-Пример приложения, использующего Shell API
-
-[Пример приложения, использующего Shell API](31_1.zip)
-
-Автор: Akella
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

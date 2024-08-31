@@ -2,15 +2,12 @@
 Title: Как зарегистрировать свою команду в контекстном меню проводника?
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как зарегистрировать свою команду в контекстном меню проводника?
 ================================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для подобных действий пишется маленький комсервер задача которого лишь
 реализовать 2 интерфейса IShellExtInit и IContextMenu.
@@ -368,12 +365,5 @@ HKEY\_LOCAL\_MASHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer
 находятся в TmpFileNames, если данные типы файлов не подходят, то
 выходить из процедуры с результатом
 
- 
-
     Result := MakeResult(SEVERITY_SUCCESS, FACILITY_NULL, 0);
 
-
-
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

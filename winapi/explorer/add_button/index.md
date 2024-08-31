@@ -1,15 +1,12 @@
 ---
 Title: Как добавить кнопку?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как добавить кнопку?
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TConnType = (COM_OBJECT, EXPLORER_BAR, SCRIPT, EXECUTABLE);
@@ -68,4 +65,3 @@ Date: 01.01.2007
       Result := ID;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

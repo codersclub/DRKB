@@ -1,15 +1,12 @@
 ---
 Title: Как добавить свой пункт меню?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как добавить свой пункт меню?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     function AddMenuItem(ConnType: TconnType; MenuText, StatusBarText,
       GuidOrPath: string; HelpMenu: Boolean): string;
@@ -45,4 +42,3 @@ Date: 01.01.2007
       Result := ID;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

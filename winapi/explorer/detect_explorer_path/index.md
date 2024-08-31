@@ -2,18 +2,14 @@
 Title: Определение адреса во всех открытых Explorer
 Author: Александр (Rouse\_) Багель
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Определение адреса во всех открытых Explorer
 ============================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses SHDocVw;
-
      
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -26,9 +22,5 @@ Date: 01.01.2007
     end;
 
 
-
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>
 
 

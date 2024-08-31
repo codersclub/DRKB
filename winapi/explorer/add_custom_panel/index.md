@@ -1,15 +1,12 @@
 ---
 Title: Как добавить собственную панель?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как добавить собственную панель?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     function AddExplorerBar(BarTitle, Url: string; BarSize: Int64; Horizontal:
       Boolean): string;
@@ -68,4 +65,3 @@ Date: 01.01.2007
       result := ID;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
