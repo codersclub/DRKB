@@ -7,12 +7,13 @@ Date: 01.01.2007
 Определение нажатия определенной клавиши во время загрузки приложения
 =====================================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Используйту WinAPI функцию GetKeyState() для определения нажатия клавиши
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Используйте WinAPI функцию GetKeyState() для определения нажатия клавиши
 в тексте проекта.
+
 Для того чтобы увидеть текст файла проекта в главном
 меню Delphi 3 выберите "View" -> "ProjectSource",
 а в Delphi 4 "Project" -> "View Source".
@@ -34,14 +35,10 @@ Date: 01.01.2007
       Application.Run;
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
-
 ------------------------------------------------------------------------
 Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     program Project1; 
      
@@ -70,6 +67,4 @@ DelphiWorld 6.0
       Application.Run; 
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

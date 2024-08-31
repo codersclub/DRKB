@@ -8,11 +8,9 @@ Date: 01.01.2007
 Как перехватить нажатия функциональных клавиш и стрелок?
 ========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Arx ( http://arxoft.tora.ru )
+Source: <https://forum.sources.ru>
 
 Проверяйте значение переменной key на равенство VK\_RIGHT, VK\_LEFT,
 VK\_F1 и т.д. на событии KeyDown формы
@@ -25,13 +23,16 @@ VK\_F1 и т.д. на событии KeyDown формы
         Form1.Caption := 'F1';
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-Обработка нажатий клавиш вверх-вниз
+Вариант 2:
 
-Автор: Галимарзанов Фанис 
+Author: Галимарзанов Фанис 
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Обработка нажатий клавиш вверх-вниз
 
 Почти всегда требуется обработка нажатий клавиш "вверх-вниз" для смены
 фокуса ввода - мои "тетки-юзеры" боются мышей, да и сам я не любитель
@@ -89,14 +90,15 @@ VK\_F1 и т.д. на событии KeyDown формы
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
     //Автор: Cheers, Julian (TeamB & TurboPower Software) 
-     
      
      
     procedure WMGetDlgCode(var Msg : TMessage); message WM_GETDLGCODE;
@@ -108,13 +110,15 @@ DelphiWorld 6.0
       Msg.Result := DLGC_WANTARROWS;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Robert Wittig
+Вариант 4:
+
+Author: Robert Wittig
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Вы можете перехватывать нажатие курсорных клавиш на уровне приложения:
 
@@ -141,6 +145,4 @@ Application.HandleMessages.
       Application.OnMessage := HandleMessages;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -7,9 +7,7 @@ Date: 01.01.2007
 ASCII код для PrintScreen
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     unit Unit1;
      
@@ -51,6 +49,10 @@ ASCII код для PrintScreen
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: <https://forum.sources.ru>
+
     type
       TForm1 = class(TForm)
         procedure FormCreate(Sender: TObject);
@@ -90,4 +92,3 @@ ASCII код для PrintScreen
       UnRegisterHotKey (Form1.Handle, id_SnapShot);
     end;
 
-Взято из <https://forum.sources.ru>

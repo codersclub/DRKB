@@ -1,6 +1,5 @@
 ---
 Title: Как перехватить нажатие TAB?
-Author: Vit
 Date: 01.01.2007
 ---
 
@@ -8,26 +7,28 @@ Date: 01.01.2007
 Как перехватить нажатие TAB?
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     private
-
      
     Procedure CMDialogKey(Var Msg: TWMKey); message CM_DIALOGKEY;
     .....
     procedure TForm1.CMDialogKey(var Msg: TWMKey);
     begin
-    //здесь Ваш код
-    Msg.Result := 0
+      //здесь Ваш код
+      Msg.Result := 0
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
 
 На уровне формы клавиша tab обычно обрабатывается Windows. В примере
 создается обработчик события CM\_Dialog для перехвата Dialog keys
@@ -57,16 +58,15 @@ Date: 01.01.2007
       if Key = VK_TAB then
         Form1.Caption := 'Tab Key Down!';
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Ralph Friedman
+Вариант 3:
+
+Author: Ralph Friedman
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Единственное место в программе, где можно перехватить нажатие клавиши
 tab - в обработчике Application.OnMessages. Пример ниже:
@@ -132,9 +132,4 @@ tab - в обработчике Application.OnMessages. Пример ниже:
     end;
      
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

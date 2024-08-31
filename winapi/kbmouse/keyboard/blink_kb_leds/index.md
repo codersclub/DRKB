@@ -1,15 +1,12 @@
 ---
 Title: Заставить мерцать индикаторы клавиш CapsLock, NumLock и ScrollLock
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Заставить мерцать индикаторы клавиш CapsLock, NumLock и ScrollLock
 ==================================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Представьте себе такую ситуацию: глупый пользователь включает тачку, а
 тут... светомузыка, индикаторы состояния клавиш то включатся, то
@@ -27,6 +24,4 @@ Date: 01.01.2007
       KS[145] := KS[145] xor 1;
       SetKeyboardstate(KS);
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

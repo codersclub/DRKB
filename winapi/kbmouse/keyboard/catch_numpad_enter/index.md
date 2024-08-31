@@ -1,15 +1,12 @@
 ---
 Title: Как отловить правый Enter (NumPad)
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как отловить правый Enter (NumPad)
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для этого можно воспользоваться функцией GetHeapStatus:
 
@@ -31,6 +28,4 @@ Date: 01.01.2007
       end;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

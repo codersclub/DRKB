@@ -7,18 +7,20 @@ Date: 01.01.2007
 Как узнать состояние клавиши CAPS LOCK?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     function IsCapsLockOn : Boolean; 
     begin 
       Result := 0 <> (GetKeyState(VK_CAPITAL) and $01); 
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure AppOnIdle(Sender: TObject; var Done: Boolean);
      
@@ -38,6 +40,3 @@ Date: 01.01.2007
       Application.OnIdle := AppOnIdle;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

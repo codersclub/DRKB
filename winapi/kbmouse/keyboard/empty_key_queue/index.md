@@ -1,15 +1,12 @@
 ---
 Title: Как очистить буфер клавиатуры?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как очистить буфер клавиатуры?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure EmptyKeyQueue;
     var
@@ -23,4 +20,3 @@ Date: 01.01.2007
       EmptyKeyQueue;
     end.
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

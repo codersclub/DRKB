@@ -1,15 +1,12 @@
 ---
 Title: Как выполнять другую команду по нажатию на кнопку, если зажата клавиша Shift?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Как выполнять другую команду по нажатию на кнопку, если зажата клавиша Shift?
 =============================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin
@@ -19,6 +16,4 @@ Date: 01.01.2007
         ShowMessage('Обычное нажатие кнопки');
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

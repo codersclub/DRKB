@@ -8,11 +8,9 @@ Date: 01.01.2007
 Как заставить кнопку Enter работать наподобие Tab?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Khaled Shagrouni
+Source: <https://forum.sources.ru>
 
 Как-то бухгалтер, который пользовался моей программой, заявил, что ему
 не удобно перескакивать пустые поля в форме кнопкой Tab, и что намного
@@ -45,16 +43,19 @@ Date: 01.01.2007
 
 Не забудьте установить свойство формы KeyPreview в true.
 
-Как Вы можете видеть; этот код использует функцию FindNextControl,
+Как Вы можете видеть, этот код использует функцию FindNextControl,
 которая ищет следующий свободный контрол.
 
-так как все формы в моём приложении наследуются от одной, то достаточно
+Так как все формы в моём приложении наследуются от одной, то достаточно
 поместить этот код в главную форму и после этого все формы будут
 реагировать на нажатие Enter подобным образом.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
 Существует множество методов решения этой проблемы, но самый быстрый
 способ, это перехват нажатия клавиш, перед тем как их получит форма:
@@ -79,9 +80,11 @@ Date: 01.01.2007
 Чтобы ускорить работу приложения, не надо активизировать свойство формы
 KEYPREVIEW
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.FormCreate(Sender: TObject);
     begin
@@ -102,11 +105,12 @@ KEYPREVIEW
         c is TEdit;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);
     begin
@@ -117,11 +121,12 @@ DelphiWorld 6.0
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.FormKeyPress(Sender: TObject; var Key: Char);
     begin
@@ -132,30 +137,30 @@ DelphiWorld 6.0
      end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Source: <https://www.swissdelphicenter.ch>
 
     { 
       This code gives the  key the same habbit as the key to 
       change focus between Controls. 
     }
      
-     // Form1.KeyPreview := True ! 
+    // Form1.KeyPreview := True ! 
      
     procedure TForm1.FormKeyPress(Sender: TObject; var Key: Char);
-     begin
-       if Key = #13 then
-       begin
-         Key := #0;
-         { check if SHIFT - Key is pressed }
-         if GetKeyState(VK_Shift) and $8000 <> 0 then
-           PostMessage(Handle, WM_NEXTDLGCTL, 1, 0)
-         else
-           PostMessage(Handle, WM_NEXTDLGCTL, 0, 0);
-       end;
-     end;
+    begin
+      if Key = #13 then
+      begin
+        Key := #0;
+        { check if SHIFT - Key is pressed }
+        if GetKeyState(VK_Shift) and $8000 <> 0 then
+          PostMessage(Handle, WM_NEXTDLGCTL, 1, 0)
+        else
+          PostMessage(Handle, WM_NEXTDLGCTL, 0, 0);
+      end;
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

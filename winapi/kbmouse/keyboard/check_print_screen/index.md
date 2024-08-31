@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как определить, нажал ли пользователь клавишу PrintScreen?
 ==========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 В событиях, обрабатывающих нажатия клавишь в TForm, клавиша PrintScreen
 не обрабатывается. Однако проблему можно решить при помощи
@@ -33,13 +33,14 @@ Date: 01.01.2007
       Done := True; 
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
 
-The PrintScreen system key is not processed during the TForm keydown
-event. The following example tests if the PrintScreen key has
+Вариант 2:
 
+The PrintScreen system key is not processed during the TForm keydown
+event.
+
+The following example tests if the PrintScreen key has
 been pressed by calling the Windows API function GetAsyncKeyState()
 during the Application.OnIdle event.
 
