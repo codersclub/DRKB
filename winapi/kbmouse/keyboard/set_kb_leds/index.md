@@ -8,23 +8,26 @@ Date: 01.01.2007
 Как програмно переключить состояние клавиш Num Lock, Caps Lock, Scroll Lock?
 ============================================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     VAR 
       KS: TKeyboardState; 
     begin
-    GetKeyboardState(KS); 
-    KS[020] := KS[020] XOR 1; //Caps Lock
-    KS[144] := KS[144] XOR 1; //Num Lock
-    KS[145] := KS[145] XOR 1; //Scroll Lock
-    SetKeyboardState(KS); 
+      GetKeyboardState(KS); 
+      KS[020] := KS[020] XOR 1; //Caps Lock
+      KS[144] := KS[144] XOR 1; //Num Lock
+      KS[145] := KS[145] XOR 1; //Scroll Lock
+      SetKeyboardState(KS); 
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: p0s0l
 
 Во-первых, предложенный способ работает только под 9x (лично
 проверил)...
@@ -37,7 +40,6 @@ Date: 01.01.2007
 Способ для 9x (на NT не работает):
 
     var
-
      
      KeyState : TKeyboardState;
     begin
@@ -61,14 +63,15 @@ Date: 01.01.2007
     end;
 
 т.е. в программе надо будет сделать проверку на версию Windows,
-
 и потом уже вызывать одну из этих функций,
-
 либо же можно их обе вызывать - одна да сработает...
 
-Автор: p0s0l
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Как программно включить или выключить NumLock
 
@@ -80,11 +83,13 @@ Date: 01.01.2007
       SetKeyboardState( Addr( abKeyState[ 0 ] ) );
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TMyForm.Button1Click(Sender: TObject);
     Var
@@ -100,56 +105,55 @@ DelphiWorld 6.0
 
 Для Caps Lock замените VK\_NUMLOCK на VK\_CAPITAL.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
 ------------------------------------------------------------------------
 
+Вариант 5:
+
+Source: <https://www.swissdelphicenter.ch>
+
     type
-       TKeyType = (ktCapsLock, ktNumLock, ktScrollLock);
-     
-     procedure SetLedState(KeyCode: TKeyType; bOn: Boolean);
-     var
-       KBState: TKeyboardState;
-       Code: Byte;
-     begin
-       case KeyCode of
-         ktScrollLock: Code := VK_SCROLL;
-         ktCapsLock: Code := VK_CAPITAL;
-         ktNumLock: Code := VK_NUMLOCK;
-       end;
-       GetKeyboardState(KBState);
-       if (Win32Platform = VER_PLATFORM_WIN32_NT) then
-       begin
-         if Boolean(KBState[Code]) <> bOn then
-         begin
-           keybd_event(Code,
-                       MapVirtualKey(Code, 0),
-                       KEYEVENTF_EXTENDEDKEY,
-                       0);
-     
-           keybd_event(Code,
-                       MapVirtualKey(Code, 0),
-                       KEYEVENTF_EXTENDEDKEY or KEYEVENTF_KEYUP,
-                       0);
-         end;
-       end
-       else
-       begin
-         KBState[Code] := Ord(bOn);
-         SetKeyboardState(KBState);
-       end;
-     end;
-     
-     // Example Call: 
+      TKeyType = (ktCapsLock, ktNumLock, ktScrollLock);
+    
+    procedure SetLedState(KeyCode: TKeyType; bOn: Boolean);
+    var
+      KBState: TKeyboardState;
+      Code: Byte;
+    begin
+      case KeyCode of
+        ktScrollLock: Code := VK_SCROLL;
+        ktCapsLock: Code := VK_CAPITAL;
+        ktNumLock: Code := VK_NUMLOCK;
+      end;
+      GetKeyboardState(KBState);
+      if (Win32Platform = VER_PLATFORM_WIN32_NT) then
+      begin
+        if Boolean(KBState[Code]) <> bOn then
+        begin
+          keybd_event(Code,
+                      MapVirtualKey(Code, 0),
+                      KEYEVENTF_EXTENDEDKEY,
+                      0);
+    
+          keybd_event(Code,
+                      MapVirtualKey(Code, 0),
+                      KEYEVENTF_EXTENDEDKEY or KEYEVENTF_KEYUP,
+                      0);
+        end;
+      end
+      else
+      begin
+        KBState[Code] := Ord(bOn);
+        SetKeyboardState(KBState);
+      end;
+    end;
+    
+    // Example Call: 
     // Beispielaufruf: 
      
     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       SetLedState(ktCapsLock, True);  // CapsLock on 
+    begin
+      SetLedState(ktCapsLock, True);  // CapsLock on 
       SetLedState(ktNumLock, True);  // NumLock on 
       SetLedState(ktScrollLock, True);  // ScrollLock on 
     end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -2,17 +2,12 @@
 Title: Как отловить правый Enter (NumPad)?
 Author: Full ( http://full.hotmail.ru/ )
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как отловить правый Enter (NumPad)?
 ===================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Full ( http://full.hotmail.ru/ )
 
 Для этого можно воспользоваться функцией GetHeapStatus:
 
@@ -34,4 +29,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято из <https://forum.sources.ru>

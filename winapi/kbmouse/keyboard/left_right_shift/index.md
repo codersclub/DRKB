@@ -1,6 +1,5 @@
 ---
 Title: Как отличить нажат правый или левый SHIFT?
-Author: CHERRY
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,11 @@ Date: 01.01.2007
 Как отличить нажат правый или левый SHIFT?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: CHERRY
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     if ((Word(GetKeyState(VK_LSHIFT)) and $8000) <> 0) then
       begin
@@ -22,11 +23,14 @@ Date: 01.01.2007
 
 работает под Win NT/2000, но не работает под Win95.
 
-Автор: CHERRY
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Baa
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 В 95 катит следующее:
 
@@ -42,11 +46,13 @@ Date: 01.01.2007
     end;
     if tt = 1 then ShowMessage ('Right Shift'); 
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: CHERRY
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     procedure TDecEditForm.Memo1KeyPress(Sender: TObject; var Key: Char);
     VAR s:String;  RL:Byte;
@@ -82,6 +88,3 @@ Date: 01.01.2007
     END;
     End;
 
-Автор: CHERRY
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

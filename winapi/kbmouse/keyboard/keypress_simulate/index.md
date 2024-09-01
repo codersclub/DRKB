@@ -8,13 +8,11 @@ Date: 01.01.2007
 Програмная эмуляция нажатия клавиш
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Использование клавиш для управления компонентами
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-Автор: Robert Wittig
+Использование клавиш для управления компонентами.
 
 Так, если у меня есть своего рода кнопка (check, radio, speed и т.п.),
 то почему я не могу с помощью клавиш курсора управлять ею?
@@ -85,13 +83,14 @@ ProcessFormMessages в секцию \'Private\' класса вашей форм
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Как посылать нажатие клавиш в элемент управления
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Как посылать нажатие клавиш в элемент управления.
 
 Ниже приведена процедура, позволяющаю отправлять нажатия в любой элемент
 управления (window control), способный принимать ввод с клавиатуры. Вы
@@ -194,13 +193,14 @@ SimulateKeystroke() получает дополнительный парамет
       SendKeys('Delphi World is REALY BEST');
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Автор: Den is Com 
+Вариант 3:
+
+Author: Den is Com 
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 К сожалению работает хорошо, только когда фокус у вызывающего окна, в
 противном случае может глючить
@@ -217,15 +217,18 @@ DelphiWorld 6.0
     SetKey(VK_SCROLL);
     SetKey(VK_CAPITAL);
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Послать нажатие клавиш
+Вариант 4:
 
-Автор: Xavier Pacheco
+Author: Xavier Pacheco
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Послать нажатие клавиш:
+
 
     unit Main;
      
@@ -332,52 +335,59 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Послать нажатие клавиш в программу Блокнот
+Вариант 5:
+
+Source: <https://www.swissdelphicenter.ch>
+
+Послать нажатие клавиш в программу Блокнот:
 
     procedure TForm1.Button1Click(Sender: TObject);
-     var
-       wnd: HWND;
-       i: Integer;
-       s: string;
-     begin
-       wnd := FindWindow('notepad', nil);
-       if wnd <> 0 then
-       begin
-         wnd := FindWindowEx(wnd, 0, 'Edit', nil);
-     
-         // Write Text in Notepad. 
+    var
+      wnd: HWND;
+      i: Integer;
+      s: string;
+    begin
+      wnd := FindWindow('notepad', nil);
+      if wnd <> 0 then
+      begin
+        wnd := FindWindowEx(wnd, 0, 'Edit', nil);
+    
+        // Write Text in Notepad. 
         // Text ins Notepad schreiben. 
         s := 'Hello';
-         for i := 1 to Length(s) do
-           SendMessage(wnd, WM_CHAR, Word(s[i]), 0);
-         // Simulate Return Key. 
+        for i := 1 to Length(s) do
+          SendMessage(wnd, WM_CHAR, Word(s[i]), 0);
+        // Simulate Return Key. 
         PostMessage(wnd, WM_KEYDOWN, VK_RETURN, 0);
-         // Simulate Space. 
+        // Simulate Space. 
         PostMessage(wnd, WM_KEYDOWN, VK_SPACE, 0);
        end;
      end;
      
      
      // To send keys to Wordpad: 
-      {...}
-       wnd := FindWindow('WordPadClass', nil);
+     {...}
+     wnd := FindWindow('WordPadClass', nil);
      
-       if wnd <> 0 then
-       begin
-         wnd := FindWindowEx(wnd, 0, 'RICHEDIT', nil);
-       {...}
+     if wnd <> 0 then
+     begin
+       wnd := FindWindowEx(wnd, 0, 'RICHEDIT', nil);
+     {...}
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
 
-Посылаем нажатия клавиш другому приложению
+Вариант 6:
+
+Author: Gert v.d. Venis
+
+Source: <https://forum.sources.ru>
+
+Посылаем нажатия клавиш другому приложению.
 
 Компонент Sendkeys:
 
@@ -533,7 +543,7 @@ DelphiWorld 6.0
      
     end.
 
-Описание:
+**Описание:**
 
 Данный компонент получает хэндл(handle) любого запущенного окна и даёт
 возможность отправить по указанному хэндлу любые комбинации нажатия
@@ -564,11 +574,11 @@ DelphiWorld 6.0
 
 Неправда ли весело :)
 
-Gert v.d. Venis
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 7:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Посылка кода клавиши или текста в окно
 
@@ -704,15 +714,15 @@ Gert v.d. Venis
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Почти полный аналог метода SendKeys из VB
+Вариант 8:
 
-Автор: Ken Henderson
+Author: Ken Henderson
+
+Почти полный аналог метода SendKeys из VB
 
     {
     SendKeys routine for 32-bit Delphi.
@@ -1201,14 +1211,20 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+--------------------------------------------------------------------
+
+Вариант 9:
+
+Author: P. Below
+
+Source: <https://www.swissdelphicenter.ch>
 
     {PostKeyEx32 function}
      
-     procedure PostKeyEx32(key: Word; const shift: TShiftState; specialkey: Boolean);
-     {************************************************************ 
+    procedure PostKeyEx32(key: Word; const shift: TShiftState; specialkey: Boolean);
+    {************************************************************ 
     * Procedure PostKeyEx32 
     * 
     * Parameters: 
@@ -1229,272 +1245,283 @@ DelphiWorld 6.0
     *  in an upper-case character! 
     // Code by P. Below 
     ************************************************************}
-     type
-       TShiftKeyInfo = record
-         shift: Byte;
-         vkey: Byte;
-       end;
-       byteset = set of 0..7;
-     const
-       shiftkeys: array [1..3] of TShiftKeyInfo =
-         ((shift: Ord(ssCtrl); vkey: VK_CONTROL),
-         (shift: Ord(ssShift); vkey: VK_SHIFT),
-         (shift: Ord(ssAlt); vkey: VK_MENU));
-     var
-       flag: DWORD;
-       bShift: ByteSet absolute shift;
-       i: Integer;
-     begin
-       for i := 1 to 3 do
-       begin
-         if shiftkeys[i].shift in bShift then
-           keybd_event(shiftkeys[i].vkey, MapVirtualKey(shiftkeys[i].vkey, 0), 0, 0);
-       end; { For }
-       if specialkey then
-         flag := KEYEVENTF_EXTENDEDKEY
-       else
-         flag := 0;
+    type
+      TShiftKeyInfo = record
+        shift: Byte;
+        vkey: Byte;
+      end;
+      byteset = set of 0..7;
+    const
+      shiftkeys: array [1..3] of TShiftKeyInfo =
+        ((shift: Ord(ssCtrl); vkey: VK_CONTROL),
+        (shift: Ord(ssShift); vkey: VK_SHIFT),
+        (shift: Ord(ssAlt); vkey: VK_MENU));
+    var
+      flag: DWORD;
+      bShift: ByteSet absolute shift;
+      i: Integer;
+    begin
+      for i := 1 to 3 do
+      begin
+        if shiftkeys[i].shift in bShift then
+          keybd_event(shiftkeys[i].vkey, MapVirtualKey(shiftkeys[i].vkey, 0), 0, 0);
+      end; { For }
+      if specialkey then
+        flag := KEYEVENTF_EXTENDEDKEY
+      else
+        flag := 0;
+    
+      keybd_event(key, MapvirtualKey(key, 0), flag, 0);
+      flag := flag or KEYEVENTF_KEYUP;
+      keybd_event(key, MapvirtualKey(key, 0), flag, 0);
+    
+      for i := 3 downto 1 do
+      begin
+        if shiftkeys[i].shift in bShift then
+          keybd_event(shiftkeys[i].vkey, MapVirtualKey(shiftkeys[i].vkey, 0),
+            KEYEVENTF_KEYUP, 0);
+      end; { For }
+    end; { PostKeyEx32 }
      
-       keybd_event(key, MapvirtualKey(key, 0), flag, 0);
-       flag := flag or KEYEVENTF_KEYUP;
-       keybd_event(key, MapvirtualKey(key, 0), flag, 0);
      
-       for i := 3 downto 1 do
-       begin
-         if shiftkeys[i].shift in bShift then
-           keybd_event(shiftkeys[i].vkey, MapVirtualKey(shiftkeys[i].vkey, 0),
-             KEYEVENTF_KEYUP, 0);
-       end; { For }
-     end; { PostKeyEx32 }
-     
-     
-     // Example: 
+    // Example: 
      
     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       //Pressing the Left Windows Key 
+    begin
+      //Pressing the Left Windows Key 
       PostKeyEx32(VK_LWIN, [], False);
-     
-       //Pressing the letter D 
+    
+      //Pressing the letter D 
       PostKeyEx32(Ord('D'), [], False);
-     
-       //Pressing Ctrl-Alt-C 
+    
+      //Pressing Ctrl-Alt-C 
       PostKeyEx32(Ord('C'), [ssctrl, ssAlt], False);
-     end;
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
-------------------------------------------------------------------------
-
-    {
-    With keybd_event API}
-     
-     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       {or you can also try this simple example to send any 
-       amount of keystrokes at the same time. }
-     
-       {Pressing the A Key and showing it in the Edit1.Text}
-     
-       Edit1.SetFocus;
-       keybd_event(VK_SHIFT, 0, 0, 0);
-       keybd_event(Ord('A'), 0, 0, 0);
-       keybd_event(VK_SHIFT, 0, KEYEVENTF_KEYUP, 0);
-     
-       {Presses the Left Window Key and starts the Run}
-       keybd_event(VK_LWIN, 0, 0, 0);
-       keybd_event(Ord('R'), 0, 0, 0);
-       keybd_event(VK_LWIN, 0, KEYEVENTF_KEYUP, 0);
-     end;
-
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 10:
+
+Source: <https://www.swissdelphicenter.ch>
 
     {With keybd_event API}
      
-     procedure PostKeyExHWND(hWindow: HWnd; key: Word; const shift: TShiftState;
-       specialkey: Boolean);
-     {************************************************************ 
-     * Procedure PostKeyEx 
-     * 
-     * Parameters: 
-     *  hWindow: target window to be send the keystroke 
-     *  key    : virtual keycode of the key to send. For printable 
-     *           keys this is simply the ANSI code (Ord(character)). 
-     *  shift  : state of the modifier keys. This is a set, so you 
-     *           can set several of these keys (shift, control, alt, 
-     *           mouse buttons) in tandem. The TShiftState type is 
-     *           declared in the Classes Unit. 
-     *  specialkey: normally this should be False. Set it to True to 
-     *           specify a key on the numeric keypad, for example. 
-     *           If this parameter is true, bit 24 of the lparam for
-     *           the posted WM_KEY* messages will be set.
-     * Description:
-     *  This procedure sets up Windows key state array to correctly
-     *  reflect the requested pattern of modifier keys and then posts
-     *  a WM_KEYDOWN/WM_KEYUP message pair to the target window. Then
-     *  Application.ProcessMessages is called to process the messages
-     *  before the keyboard state is restored.
-     * Error Conditions:
-     *  May fail due to lack of memory for the two key state buffers.
-     *  Will raise an exception in this case.
-     * NOTE:
-     *  Setting the keyboard state will not work across applications
-     *  running in different memory spaces on Win32 unless AttachThreadInput
-     *  is used to connect to the target thread first.
-     *Created: 02/21/96 16:39:00 by P. Below
-     ************************************************************}
-     
-     type
-       TBuffers = array [0..1] of TKeyboardState;
-     var
-       pKeyBuffers: ^TBuffers;
-       lParam: LongInt;
-     begin
-       (* check if the target window exists *)
-       if IsWindow(hWindow) then
-       begin
-         (* set local variables to default values *)
-         pKeyBuffers := nil;
-         lParam := MakeLong(0, MapVirtualKey(key, 0));
-     
-         (* modify lparam if special key requested *)
-         if specialkey then
-           lParam := lParam or $1000000;
-     
-         (* allocate space for the key state buffers *)
-         New(pKeyBuffers);
-         try
-           (* Fill buffer 1 with current state so we can later restore it.
-              Null out buffer 0 to get a "no key pressed" state. *)
-           GetKeyboardState(pKeyBuffers^[1]);
-           FillChar(pKeyBuffers^[0], SizeOf(TKeyboardState), 0);
-     
-           (* set the requested modifier keys to "down" state in the buffer*)
-           if ssShift in shift then
-             pKeyBuffers^[0][VK_SHIFT] := $80;
-           if ssAlt in shift then
-           begin
-             (* Alt needs special treatment since a bit in lparam needs also be set *)
-             pKeyBuffers^[0][VK_MENU] := $80;
-             lParam := lParam or $20000000;
-           end;
-           if ssCtrl in shift then
-             pKeyBuffers^[0][VK_CONTROL] := $80;
-           if ssLeft in shift then
-             pKeyBuffers^[0][VK_LBUTTON] := $80;
-           if ssRight in shift then
-             pKeyBuffers^[0][VK_RBUTTON] := $80;
-           if ssMiddle in shift then
-             pKeyBuffers^[0][VK_MBUTTON] := $80;
-     
-           (* make out new key state array the active key state map *)
-           SetKeyboardState(pKeyBuffers^[0]);
-           (* post the key messages *)
-           if ssAlt in Shift then
-           begin
-             PostMessage(hWindow, WM_SYSKEYDOWN, key, lParam);
-             PostMessage(hWindow, WM_SYSKEYUP, key, lParam or $C0000000);
-           end
-           else
-           begin
-             PostMessage(hWindow, WM_KEYDOWN, key, lParam);
-             PostMessage(hWindow, WM_KEYUP, key, lParam or $C0000000);
-           end;
-           (* process the messages *)
-           Application.ProcessMessages;
-     
-           (* restore the old key state map *)
-           SetKeyboardState(pKeyBuffers^[1]);
-         finally
-           (* free the memory for the key state buffers *)
-           if pKeyBuffers <> nil then
-             Dispose(pKeyBuffers);
-         end; { If }
-       end;
-     end; { PostKeyEx }
-     
-     // Example: 
-     
     procedure TForm1.Button1Click(Sender: TObject);
-     var
-       targetWnd: HWND;
-     begin
-       targetWnd := FindWindow('notepad', nil)
-         if targetWnd <> 0 then
-         begin
-           PostKeyExHWND(targetWnd, Ord('I'), [ssAlt], False);
-       end;
-     end;
+    begin
+      {or you can also try this simple example to send any 
+      amount of keystrokes at the same time. }
+    
+      {Pressing the A Key and showing it in the Edit1.Text}
+    
+      Edit1.SetFocus;
+      keybd_event(VK_SHIFT, 0, 0, 0);
+      keybd_event(Ord('A'), 0, 0, 0);
+      keybd_event(VK_SHIFT, 0, KEYEVENTF_KEYUP, 0);
+    
+      {Presses the Left Window Key and starts the Run}
+      keybd_event(VK_LWIN, 0, 0, 0);
+      keybd_event(Ord('R'), 0, 0, 0);
+      keybd_event(VK_LWIN, 0, KEYEVENTF_KEYUP, 0);
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 11:
+
+Source: <https://www.swissdelphicenter.ch>
+
+    {With keybd_event API}
+     
+    procedure PostKeyExHWND(hWindow: HWnd; key: Word; const shift: TShiftState;
+      specialkey: Boolean);
+    {************************************************************ 
+    * Procedure PostKeyEx 
+    * 
+    * Parameters: 
+    *  hWindow: target window to be send the keystroke 
+    *  key    : virtual keycode of the key to send. For printable 
+    *           keys this is simply the ANSI code (Ord(character)). 
+    *  shift  : state of the modifier keys. This is a set, so you 
+    *           can set several of these keys (shift, control, alt, 
+    *           mouse buttons) in tandem. The TShiftState type is 
+    *           declared in the Classes Unit. 
+    *  specialkey: normally this should be False. Set it to True to 
+    *           specify a key on the numeric keypad, for example. 
+    *           If this parameter is true, bit 24 of the lparam for
+    *           the posted WM_KEY* messages will be set.
+    * Description:
+    *  This procedure sets up Windows key state array to correctly
+    *  reflect the requested pattern of modifier keys and then posts
+    *  a WM_KEYDOWN/WM_KEYUP message pair to the target window. Then
+    *  Application.ProcessMessages is called to process the messages
+    *  before the keyboard state is restored.
+    * Error Conditions:
+    *  May fail due to lack of memory for the two key state buffers.
+    *  Will raise an exception in this case.
+    * NOTE:
+    *  Setting the keyboard state will not work across applications
+    *  running in different memory spaces on Win32 unless AttachThreadInput
+    *  is used to connect to the target thread first.
+    *Created: 02/21/96 16:39:00 by P. Below
+    ************************************************************}
+    
+    type
+      TBuffers = array [0..1] of TKeyboardState;
+    var
+      pKeyBuffers: ^TBuffers;
+      lParam: LongInt;
+    begin
+      (* check if the target window exists *)
+      if IsWindow(hWindow) then
+      begin
+        (* set local variables to default values *)
+        pKeyBuffers := nil;
+        lParam := MakeLong(0, MapVirtualKey(key, 0));
+    
+        (* modify lparam if special key requested *)
+        if specialkey then
+          lParam := lParam or $1000000;
+    
+        (* allocate space for the key state buffers *)
+        New(pKeyBuffers);
+        try
+          (* Fill buffer 1 with current state so we can later restore it.
+             Null out buffer 0 to get a "no key pressed" state. *)
+          GetKeyboardState(pKeyBuffers^[1]);
+          FillChar(pKeyBuffers^[0], SizeOf(TKeyboardState), 0);
+    
+          (* set the requested modifier keys to "down" state in the buffer*)
+          if ssShift in shift then
+            pKeyBuffers^[0][VK_SHIFT] := $80;
+          if ssAlt in shift then
+          begin
+            (* Alt needs special treatment since a bit in lparam needs also be set *)
+            pKeyBuffers^[0][VK_MENU] := $80;
+            lParam := lParam or $20000000;
+          end;
+          if ssCtrl in shift then
+            pKeyBuffers^[0][VK_CONTROL] := $80;
+          if ssLeft in shift then
+            pKeyBuffers^[0][VK_LBUTTON] := $80;
+          if ssRight in shift then
+            pKeyBuffers^[0][VK_RBUTTON] := $80;
+          if ssMiddle in shift then
+            pKeyBuffers^[0][VK_MBUTTON] := $80;
+    
+          (* make out new key state array the active key state map *)
+          SetKeyboardState(pKeyBuffers^[0]);
+          (* post the key messages *)
+          if ssAlt in Shift then
+          begin
+            PostMessage(hWindow, WM_SYSKEYDOWN, key, lParam);
+            PostMessage(hWindow, WM_SYSKEYUP, key, lParam or $C0000000);
+          end
+          else
+          begin
+            PostMessage(hWindow, WM_KEYDOWN, key, lParam);
+            PostMessage(hWindow, WM_KEYUP, key, lParam or $C0000000);
+          end;
+          (* process the messages *)
+          Application.ProcessMessages;
+    
+          (* restore the old key state map *)
+          SetKeyboardState(pKeyBuffers^[1]);
+        finally
+          (* free the memory for the key state buffers *)
+          if pKeyBuffers <> nil then
+            Dispose(pKeyBuffers);
+        end; { If }
+      end;
+    end; { PostKeyEx }
+    
+    // Example: 
+     
+    procedure TForm1.Button1Click(Sender: TObject);
+    var
+      targetWnd: HWND;
+    begin
+      targetWnd := FindWindow('notepad', nil)
+        if targetWnd <> 0 then
+        begin
+          PostKeyExHWND(targetWnd, Ord('I'), [ssAlt], False);
+      end;
+    end;
+
+
+------------------------------------------------------------------------
+
+Вариант 12:
+
+Source: <https://www.swissdelphicenter.ch>
 
     {With SendInput API}
      
-     // Example: Send text 
+    // Example: Send text 
     procedure TForm1.Button1Click(Sender: TObject);
-     const
-        Str: string = 'writing writing writing';
-     var
-       Inp: TInput;
-       I: Integer;
-     begin
-       Edit1.SetFocus;
-     
-       for I := 1 to Length(Str) do
-       begin
-         // press 
+    const
+       Str: string = 'writing writing writing';
+    var
+      Inp: TInput;
+      I: Integer;
+    begin
+      Edit1.SetFocus;
+    
+      for I := 1 to Length(Str) do
+      begin
+        // press 
         Inp.Itype := INPUT_KEYBOARD;
-         Inp.ki.wVk := Ord(UpCase(Str[i]));
-         Inp.ki.dwFlags := 0;
-         SendInput(1, Inp, SizeOf(Inp));
-     
-         // release 
+        Inp.ki.wVk := Ord(UpCase(Str[i]));
+        Inp.ki.dwFlags := 0;
+        SendInput(1, Inp, SizeOf(Inp));
+    
+        // release 
         Inp.Itype := INPUT_KEYBOARD;
-         Inp.ki.wVk := Ord(UpCase(Str[i]));
-         Inp.ki.dwFlags := KEYEVENTF_KEYUP;
-         SendInput(1, Inp, SizeOf(Inp));
-     
-         Application.ProcessMessages;
-         Sleep(80);
-       end;
-     end;
-     
-     // Example: Simulate Alt+Tab 
+        Inp.ki.wVk := Ord(UpCase(Str[i]));
+        Inp.ki.dwFlags := KEYEVENTF_KEYUP;
+        SendInput(1, Inp, SizeOf(Inp));
+    
+        Application.ProcessMessages;
+        Sleep(80);
+      end;
+    end;
+    
+    // Example: Simulate Alt+Tab 
     procedure SendAltTab;
-     var
-       KeyInputs: array of TInput;
-       KeyInputCount: Integer;
-     
-       procedure KeybdInput(VKey: Byte; Flags: DWORD);
-       begin
-         Inc(KeyInputCount);
-         SetLength(KeyInputs, KeyInputCount);
-         KeyInputs[KeyInputCount - 1].Itype := INPUT_KEYBOARD;
-         with  KeyInputs[KeyInputCount - 1].ki do
-         begin
-           wVk := VKey;
-           wScan := MapVirtualKey(wVk, 0);
-           dwFlags := KEYEVENTF_EXTENDEDKEY;
-           dwFlags := Flags or dwFlags;
-           time := 0;
-           dwExtraInfo := 0;
-         end;
-       end;
-     begin
-       KeybdInput(VK_MENU, 0);                // Alt 
+    var
+      KeyInputs: array of TInput;
+      KeyInputCount: Integer;
+    
+      procedure KeybdInput(VKey: Byte; Flags: DWORD);
+      begin
+        Inc(KeyInputCount);
+        SetLength(KeyInputs, KeyInputCount);
+        KeyInputs[KeyInputCount - 1].Itype := INPUT_KEYBOARD;
+        with  KeyInputs[KeyInputCount - 1].ki do
+        begin
+          wVk := VKey;
+          wScan := MapVirtualKey(wVk, 0);
+          dwFlags := KEYEVENTF_EXTENDEDKEY;
+          dwFlags := Flags or dwFlags;
+          time := 0;
+          dwExtraInfo := 0;
+        end;
+      end;
+    begin
+      KeybdInput(VK_MENU, 0);                // Alt 
       KeybdInput(VK_TAB, 0);                 // Tab 
       KeybdInput(VK_TAB, KEYEVENTF_KEYUP);   // Tab 
-      KeybdInput(VK_MENU, KEYEVENTF_KEYUP); // Alt 
+      KeybdInput(VK_MENU, KEYEVENTF_KEYUP);  // Alt 
       SendInput(KeyInputCount, KeyInputs[0], SizeOf(KeyInputs[0]));
-     end;
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
 
 ------------------------------------------------------------------------
+
+Вариант 13:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     Memo1.Perform(WM_CHAR, Ord('A'), 0);
 
@@ -1502,11 +1529,14 @@ DelphiWorld 6.0
 
     SendMessage(Memo1.Handle, WM_CHAR, Ord('A'), 0);
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 14:
+
+Author: Dimka Maslov, mainbox@endimus.ru
+
+Date: 29.04.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Эмуляция нажатия клавиши в активном окне
@@ -1526,6 +1556,12 @@ DelphiWorld 6.0
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 15:
+
+Author: Dimka Maslov, mainbox@endimus.ru
+
+Date: 29.04.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Эмуляция нажатия клавиши в любом окне, в т.ч. неактивном
@@ -1558,6 +1594,12 @@ DelphiWorld 6.0
     EmulateKey(Edit1.Handle, VK_RETURN);
 
 ------------------------------------------------------------------------
+
+Вариант 16
+
+Author: VID, vidsnap@mail.ru
+
+Date: 19.06.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Эмуляция нажатия клавиши
@@ -2022,7 +2064,11 @@ DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Как отправить нажатие клавиши с кодом 255 в элемент управления Windows
+Вариант 17:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Как отправить нажатие клавиши с кодом 255 в элемент управления Windows.
 
 Функция keybd\_event() принимает значения до 244 - как мне отправить
 нажатие клавиши с кодом #255 в элемент управления Windows? Это может
@@ -2037,7 +2083,7 @@ DelphiWorld 6.0
                     RepeatCount : word;
                     ScanCode : byte;
                     Bits : byte;
-            end;
+          end;
     begin
             {Let the button repaint}
             Application.ProcessMessages;
@@ -2061,6 +2107,4 @@ DelphiWorld 6.0
             Application.ProcessMessages;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

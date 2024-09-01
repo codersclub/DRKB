@@ -2,17 +2,12 @@
 Title: Программно нажимаем Print Screen
 Author: Simon Carter
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Программно нажимаем Print Screen
 ================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Simon Carter
 
 Совместимость: Delphi 3.x (или выше)
 
@@ -24,16 +19,16 @@ Date: 01.01.2007
     var 
       bmp: TBitmap; 
     begin 
-    bmp := TBitmap.Create; 
-    try 
-    bmp.Width := Screen.Width; 
-    bmp.Height := Screen.Height; 
-    BitBlt(bmp.Canvas.Handle, 0, 0, Screen.Width, Screen.Height, 
-    GetDC(GetDesktopWindow), 0, 0, SRCCopy); 
-    Clipboard.Assign(bmp); 
-    finally 
-    bmp.Free; 
-    end; 
+      bmp := TBitmap.Create; 
+      try 
+        bmp.Width := Screen.Width; 
+        bmp.Height := Screen.Height; 
+        BitBlt(bmp.Canvas.Handle, 0, 0, Screen.Width, Screen.Height, 
+        GetDC(GetDesktopWindow), 0, 0, SRCCopy); 
+        Clipboard.Assign(bmp); 
+      finally 
+        bmp.Free; 
+      end; 
     end; 
 
 Следующая функция скопирует изображение экрана в в bitmap. Переменная
@@ -41,10 +36,9 @@ bitmap *должна* быть инициализирована до вызов�
 
     procedure GetScreenImage(bmp: TBitmap); 
     begin 
-    bmp.Width := Screen.Width; 
-    bmp.Height := Screen.Height; 
-    BitBlt(bmp.Canvas.Handle, 0, 0, Screen.Width, Screen.Height, 
-    GetDC(GetDesktopWindow), 0, 0, SRCCopy); 
+      bmp.Width := Screen.Width; 
+      bmp.Height := Screen.Height; 
+      BitBlt(bmp.Canvas.Handle, 0, 0, Screen.Width, Screen.Height, 
+      GetDC(GetDesktopWindow), 0, 0, SRCCopy); 
     end; 
 
-Взято из <https://forum.sources.ru>

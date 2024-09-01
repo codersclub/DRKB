@@ -2,20 +2,16 @@
 Title: Как послать нажатие клавиши в какое-нибудь окно?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как послать нажатие клавиши в какое-нибудь окно?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Эта процедура посылает сообщение о нажатии клавиши.
 
     procedure PostKeyEx32(key: Word; const shift: TShiftState; specialkey: Boolean);
-
      
     type TShiftKeyInfo = record
         shift: Byte;
@@ -49,10 +45,8 @@ Date: 01.01.2007
 
     SetForegroundWindow(FindWindow(PChar(WindowClassName), PChar(WindowCaption)));
 
-PS. не забудьте поставить задержки типа Sleep(100) после активизации
+**PS.**
+не забудьте поставить задержки типа Sleep(100) после активизации
 окна и между посылаемыми клавишами, не то окно может не успевать
 реагировать на клавиши...
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

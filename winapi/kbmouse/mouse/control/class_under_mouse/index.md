@@ -1,15 +1,12 @@
 ---
 Title: Получить Handle и имя класса окна под мышкой
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Получить Handle и имя класса окна под мышкой
 ============================================
-
-::: {.date}
-01.01.2007
-:::
 
     type 
       TForm1 = class(TForm) 
@@ -21,8 +18,7 @@ Date: 01.01.2007
       private 
         procedure ShowHwndAndClassName(CrPos: TPoint); 
       public 
-     
-    end; 
+      end; 
      
     var 
       Form1: TForm1; 
@@ -57,8 +53,6 @@ Date: 01.01.2007
       Form1.FormStyle := fsStayOnTop; 
       Timer1.Interval := 50; 
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

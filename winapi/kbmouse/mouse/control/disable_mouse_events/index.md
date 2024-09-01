@@ -1,15 +1,12 @@
 ---
 Title: Отключить реакцию на события мыши
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Отключить реакцию на события мыши
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.ApplicationEvents1Message(var Msg: tagMSG;
       var Handled: Boolean);
@@ -18,8 +15,4 @@ Date: 01.01.2007
                  (msg.wParam = vk_rButton) or
                  (msg.wParam = vk_mButton);
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

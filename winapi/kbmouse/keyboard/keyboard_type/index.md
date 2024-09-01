@@ -7,9 +7,7 @@ Date: 01.01.2007
 Получение типа клавиатуры
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     function GettingKeybType: string;  //Win95 or later and NT3.1 or later
     var
@@ -28,6 +26,10 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // The GetKeyboardType function retrieves information about the current keyboard. 
      
@@ -73,4 +75,3 @@ Date: 01.01.2007
        Label3.Caption := Format('Keyboard Subtype: %s', [NumberOfFunctionKeys]);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -1,15 +1,12 @@
 ---
 Title: Переключение раскладки клавиатуры для приложения
-Date: 01.01.2007
+Author: Dimka Maslov, mainbox@endimus.ru
+Date: 21.05.2002
 ---
 
 
 Переключение раскладки клавиатуры для приложения
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Переключение раскладки клавиатуры для приложения
@@ -30,7 +27,7 @@ Date: 01.01.2007
      for i:=0 to Count do if (LoWord(Layouts[i]) and $FF) = LANG then
       Result:=ActivateKeyboardLayout(Layouts[i], 0)<>0;
     end; 
-     
+
 
 Пример использования:
 

@@ -1,20 +1,18 @@
 ---
-Title: Имитация Tab
+Title: Имитация нажатия Tab
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
-Имитация Tab
+Имитация нажатия Tab
 ============
 
-::: {.date}
-01.01.2007
-:::
+Разместите следующий код в обработчике одного из собитий.
 
     SelectNext(screen.ActiveControl, True, True);
 
-Разместите приведенный код в обработчике одного из собитий. SelectNext -
-защищенный метод TWinControl со следующим прототипом:
+SelectNext - защищенный метод TWinControl со следующим прототипом:
 
     procedure SelectNext(CurControl: TWinControl;
     GoForward, CheckTabStop: Boolean);
@@ -22,6 +20,4 @@ Date: 01.01.2007
 Так как форма также является потомком TWinControl, то она имеет доступ к
 защищенным методам.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
