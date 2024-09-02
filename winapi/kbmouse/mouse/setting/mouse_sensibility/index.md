@@ -2,18 +2,14 @@
 Title: функции для изменения и получения чуствительности мышки
 Author: Radmin
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 функции для изменения и получения чуствительности мышки
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
-
     Function SetMouseSpeed ( NewSpeed : Integer ) : Boolean;
-
      
     begin
      Result := SystemParametersInfo(SPI_SETMOUSESPEED, 1, Pointer(NewSpeed), SPIF_SENDCHANGE );
@@ -27,6 +23,3 @@ Date: 01.01.2007
      Result := Int;
     End;
 
-Автор: Radmin
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

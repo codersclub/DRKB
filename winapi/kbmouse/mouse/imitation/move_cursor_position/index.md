@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как программно двигать курсор мышки?
 ====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Следующий пример показывает, как "подтолкнуть мышку" без вмешательства
 пользователя.
@@ -26,9 +26,12 @@ Date: 01.01.2007
        SetCursorPos(pt.x - 1, pt.y - 1);
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     uses
       Windows;
@@ -40,13 +43,11 @@ Date: 01.01.2007
       MyPoint := Sender.ClientToScreen(Point(X, Y));
       SetCursorPos(MyPoint.X, MyPoint.Y);
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
 
 Эта статья даёт вам возможность управлять положением курсора мыши.
 Теперь вы сможете указывать пользователю, что именно он должен сделать,
@@ -91,57 +92,53 @@ X и Y, которые определяют координаты нового п
 
 Для этого нужно сделать следующее:
 
-Поместите на форму компонент типа TLabel
+- Поместите на форму компонент типа TLabel
+- Вынесите компонент TTimer
+- Объявите две глобальных переменные:
 
-Вынесите компонент TTimer
+        var
+          x_need, y_need: integer;
 
-Объявите две глобальных переменные:
+    именно в них мы будем отслеживать координаты нужной позиции для
+    указателя мыши
 
-var
+- По событию формы OnActivate() активизируйте переменные:
 
-x\_need, y\_need: integer;
+        x_need := Label1.Left + Form1.Left + 20;
+        y_need := Label1.Top + Form1.Top + 30;
 
-именно в них мы будем отслеживать координаты нужной позиции для
-указателя мыши
+- По событию OnTimer для компонента Timer напишите:
 
-По событию формы OnActivate() активизируйте переменные:
-
-x\_need := Label1.Left + Form1.Left + 20;
-
-y\_need := Label1.Top + Form1.Top + 30;
-
-По событию OnTimer для компонента Timer напишите:
-
-    procedure TForm1.Timer1Timer(Sender: TObject);
-    var
-      t: TPoint;
-      changex, changey: integer;
-    begin
-      GetCursorPos(t);
-      if t.y<>y_need then
-      begin
-        if t.Y>y_need then
-          changey:=-1
-        else
-          changey:=1;
-        SetCursorPos(t.X,t.Y+changey);
-      end
-      else
-      begin
-        if t.x<>x_need then
+        procedure TForm1.Timer1Timer(Sender: TObject);
+        var
+          t: TPoint;
+          changex, changey: integer;
         begin
-          if t.X>x_need then
-            changex:=-1
+          GetCursorPos(t);
+          if t.y<>y_need then
+          begin
+            if t.Y>y_need then
+              changey:=-1
+            else
+              changey:=1;
+            SetCursorPos(t.X,t.Y+changey);
+          end
           else
-            changex:=1;
-          SetCursorPos(t.X+changex,t.Y);
-        end
-        else
-          Timer1.Enabled:=false;
-      end;
-    end;
+          begin
+            if t.x<>x_need then
+            begin
+              if t.X>x_need then
+                changex:=-1
+              else
+                changex:=1;
+              SetCursorPos(t.X+changex,t.Y);
+            end
+            else
+              Timer1.Enabled:=false;
+          end;
+        end;
 
-Скомпилируйте [F9] и убедитесь, что скорость движения слишком
+- Скомпилируйте [F9] и убедитесь, что скорость движения слишком
 маленькая - отрегулируйте её с помощью свойства Timer\'a Interval.
 Значение этого свойства обратнопропорционально скорости движения
 указателя мыши.

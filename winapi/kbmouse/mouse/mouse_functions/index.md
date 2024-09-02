@@ -1,28 +1,25 @@
 ---
 Title: Функции и процедуры управления мышью
 Date: 01.01.2007
+Source: <https://atrussk.ru/delphi/>
 ---
 
 
 Функции и процедуры управления мышью
 ====================================
 
-::: {.date}
-01.01.2007
-:::
-
-Функция FindVCLWindow( const Pos: TPoint ): TWinControl;
+Функция `FindVCLWindow( const Pos: TPoint ): TWinControl;`
 
 Функция возвращает оконное средство управления для местоположения,
 определенного параметром Pos. Если для данного местоположения нет
 оконных средств управления, то функция возвращает nil.
 
-Функция GetCaptureControl: TControl;
+Функция `GetCaptureControl: TControl;`
 
 Функция возвращает средство управления класса TControl, которое получает
 в текущий момент все сообщения от мыши.
 
-Функция SetCaptureControl( Control: TControl );
+Функция `SetCaptureControl( Control: TControl );`
 
 Функция передает управление мышью средству управления, определенному в
 параметре Control. Данное средство управления будет получать все
@@ -30,4 +27,3 @@ Date: 01.01.2007
 средству управления с помощью функции SetCaptureControl или функцией
 ReleaseCapture Windows API.
 
-Взято с <https://atrussk.ru/delphi/>

@@ -1,20 +1,17 @@
 ---
 Title: Как поменять функции кнопок мышки?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как поменять функции кнопок мышки?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
-
     Begin 
-    //--------- 
-    SwapMouseButton(true); // Поменять обратно - SwapMouseButton(false); 
-    //--------- 
+      //--------- 
+      SwapMouseButton(true);
+      // Поменять обратно - SwapMouseButton(false); 
+      //--------- 
     end; 
 
-Взято из <https://forum.sources.ru>

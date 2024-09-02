@@ -2,61 +2,59 @@
 Title: Как послать нажатие кнопки мыши в окно?
 Author: Song
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как послать нажатие кнопки мыши в окно?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-WM\_LBUTTONDOWN
+Author: Spawn
 
-WM\_RBUTTONDOWN
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
-Автор: Song
+Для этого используйте события:
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+- WM\_LBUTTONDOWN
+- WM\_RBUTTONDOWN
 
-------------------------------------------------------------------------
-
-Я решил проверить точку нажатия мышки таким вот образом:
-
-    ...
-    
-    SetForegroundWindow(WindowUO);
-    
-    mouse_event(MOUSEEVENTF_MOVE,400,400,0,0);
-    
-    ...
-
-и получилось, что мышка перемещалась не в те координаты(относительно
-разрешения монитора (800 на 600)) которые я задумал(в не зависимости от
-местоположения мышки она перемещалась строго по одному направлению на
-одинаковое расстояние), причем я сделал еще один вариант - dx=100,
-dy=100, но тогда перемещение мышки произошло в другую сторону(в сторону
-x=0 y=0 монитора)!
-
-Подскажите плз в чем дело?
-
-Автор: Spawn
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
-Mouse\_event программирует не абсолюьные, а относительные координаты.
+Вариант 2:
+
+Author: Song
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+> Я решил проверить точку нажатия мышки таким вот образом:
+> 
+>     ...
+>     SetForegroundWindow(WindowUO);
+>     mouse_event(MOUSEEVENTF_MOVE,400,400,0,0);
+>     ...
+> 
+> и получилось, что мышка перемещалась не в те координаты (относительно
+> разрешения монитора (800 на 600)) которые я задумал (вне зависимости от
+> местоположения мышки она перемещалась строго по одному направлению на
+> одинаковое расстояние), причем я сделал еще один вариант:
+> `dx=100, dy=100`, но тогда перемещение мышки произошло в другую сторону
+> (в сторону x=0 y=0 монитора)!
+> 
+> Подскажите плз в чем дело?
+
+Mouse\_event программирует не абсолютные, а относительные координаты.
 
 Чтобы не думалось, просто сначала установите курсор в нужную позицию -
 SetCursorPos(), а потом делайте клик - Mouse\_event()
 
-Автор: Song
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 На форму вынесите компонент TTimer и опишите его единственное событие
 следующим образом:
@@ -81,36 +79,37 @@ SetCursorPos(), а потом делайте клик - Mouse\_event()
       Form1.Canvas.Ellipse(x - 2, y - 2, x + 2, y + 2);
     end; 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: сайта: <https://www.swissdelphicenter.ch>
 
     // Set the mouse cursor to position x,y: 
     // Maus an Position x,y setzen: 
     SetCursorPos(x, y);
      
-     // Simulate the left mouse button down 
+    // Simulate the left mouse button down 
     // Linke Maustaste simulieren 
     mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-     mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+    mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
      
-     // Simulate the right mouse button down 
+    // Simulate the right mouse button down 
     // Rechte Maustaste simulieren 
     mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
-     mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
+    mouse_event(MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
      
-     // Simulate a double click 
+    // Simulate a double click 
     // Einen Doppelklick simulieren 
     mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-     mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-     GetDoubleClickTime;
-     mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-     mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-     
-     // Simulate a double click on a panel 
+    mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+    GetDoubleClickTime;
+    mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+    mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+    
+    // Simulate a double click on a panel 
     // Einen Doppelklick auf einen Panel simulieren 
     SendMessage(Panel1.Handle, WM_LBUTTONDBLCLK, 10, 10)
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

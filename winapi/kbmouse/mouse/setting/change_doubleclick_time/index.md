@@ -1,15 +1,12 @@
 ---
 Title: Как прочитать и изменить doubleclick time?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как прочитать и изменить doubleclick time?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     // Set example:
     procedure TForm1.Button1Click(Sender: TObject);
@@ -24,4 +21,3 @@ Date: 01.01.2007
       ShowMessage(IntToStr(GetDoubleClickTime));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,6 +1,5 @@
 ---
 Title: Как определить координаты курсора мыши?
-Author: Spawn
 Date: 01.01.2007
 ---
 
@@ -8,43 +7,46 @@ Date: 01.01.2007
 Как определить координаты курсора мыши?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-GetCursorPos()
+Author: Spawn
 
-Автор: Spawn
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+    GetCursorPos()
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Pegas
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Обрабатывай событие OnMouseMove. Координаты курсора можно получить
 следующим путем:
 
     procedure TForm1.FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     begin
-
-     
        if (X >= 40 or X <= 234) and (Y >= 60 or Y <=258) then {здесь запуск твоей функции};
     end;
 
-Автор: Pegas
+------------------------------------------------------------------------
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Вариант 3:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+    mouse.CursorPos.x
+    mouse.CursorPos.y
 
 ------------------------------------------------------------------------
 
+Вариант 4:
 
-      mouse.CursorPos.x
-      mouse.CursorPos.y
-
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
-------------------------------------------------------------------------
+Source: <https://forum.sources.ru>
 
 Для этого можно воспользоваться API функцией GetCursorPos. Передав в эту
 функцию TPoint, мы получим текущие координаты курсора. Следующий код
@@ -58,15 +60,16 @@ GetCursorPos()
       ShowMessage( '(' + IntToStr(foo.X) + ',' + IntToStr( foo.Y ) + ')' );
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Для этого можно воспользоваться API функцией GetCursorPos. Передав в эту
 функцию TPoint, мы получим текущие координаты курсора. Следующий код
 показывает, как получить значения координат курсора по нажатию кнопки.
 
-     
     procedure Form1.Button1Click(Sender: TObject);
     var
       foo: TPoint;
@@ -75,6 +78,3 @@ GetCursorPos()
       ShowMessage('(' + IntToStr(foo.X) + ',' + IntToStr(foo.Y) + ')');
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

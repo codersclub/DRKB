@@ -1,15 +1,12 @@
 ---
 Title: Как узнать, присутствует ли мышка?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как узнать, присутствует ли мышка?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     function MousePresent : Boolean; 
     begin 
@@ -19,4 +16,3 @@ Date: 01.01.2007
       Result := false; 
     end; 
 
-Взято из <https://forum.sources.ru>
