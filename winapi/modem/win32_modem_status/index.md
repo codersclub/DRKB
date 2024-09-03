@@ -1,15 +1,12 @@
 ---
 Title: Как узнать состояние модема в Win32?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как узнать состояние модема в Win32?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
 Следующий пример демонстрирует получение состояния управляющих регистров
 модема.
@@ -24,7 +21,7 @@ Date: 01.01.2007
     begin 
       CommPort := 'COM2'; 
      
-    {Открываем com-порт} 
+      {Открываем com-порт} 
       hCommFile := CreateFile(PChar(CommPort), 
                               GENERIC_READ, 
                               0, 
@@ -38,7 +35,7 @@ Date: 01.01.2007
         exit; 
       end; 
      
-    {Получаем состояние модема} 
+      {Получаем состояние модема} 
       if GetCommModemStatus(hCommFile, ModemStat) <> false then begin 
         if ModemStat and MS_CTS_ON <> 0 then 
           ShowMessage('The CTS (clear-to-send) is on.'); 
@@ -47,12 +44,10 @@ Date: 01.01.2007
         if ModemStat and MS_RING_ON <> 0then 
           ShowMessage('The ring indicator is on.'); 
         if ModemStat and MS_RLSD_ON <> 0 then 
-          ShowMessage('The RLSD (receive-line-signal-detect) is 
-    on.'); 
-    end; 
+          ShowMessage('The RLSD (receive-line-signal-detect) is on.'); 
+      end; 
      
-    {Закрываем com-порт} 
+      {Закрываем com-порт} 
       CloseHandle(hCommFile); 
     end;
 
-Взято из <https://forum.sources.ru>

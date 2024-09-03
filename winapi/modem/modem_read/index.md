@@ -1,47 +1,44 @@
 ---
 Title: Как прочитать из модема?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как прочитать из модема?
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
 После предварительной настройки переменных, COM порт открывается как
 обычный файл. Так же пример показывает, как очищать буфер COM порта и
 читать из него.
 
     Var 
-    PortSpec : array[0..255] of char; 
-    PortNo   : Word; 
-    success : Boolean; 
-    error:integer; 
+      PortSpec : array[0..255] of char; 
+      PortNo   : Word; 
+      success : Boolean; 
+      error: integer; 
     begin 
-    FillChar(PortSpec,Sizeof(PortSpec),#0); 
-    StrPCopy(PortSpec,'Com1:19200,n,8,1'); 
-    PortSpec[3]:=Char(Ord(PortSpec[3])+Ord(PortNo)); 
-     
-    if not BuildCommDCB(PortSpec,Mode) Then 
+      FillChar(PortSpec,Sizeof(PortSpec),#0); 
+      StrPCopy(PortSpec,'Com1:19200,n,8,1'); 
+      PortSpec[3]:=Char(Ord(PortSpec[3])+Ord(PortNo)); 
+       
+      if not BuildCommDCB(PortSpec,Mode) Then 
       Begin 
-    //какая-то ошибка... 
-      Exit; 
+        //какая-то ошибка... 
+        Exit; 
       End; 
-     
-    PortSpec[5]:=#0;    { 'Com1:' } 
-     
-    Mode.Flags:=EV_RXCHAR +   EV_EVENT2;  { $1001 } 
-     
+       
+      PortSpec[5]:=#0;    { 'Com1:' } 
+       
+      Mode.Flags:=EV_RXCHAR + EV_EVENT2;  { $1001 } 
+       
       Com := CreateFile(PortSpec,GENERIC_READ or GENERIC_WRITE, 
-                        0,    //* comm устройство открывается с эксклюзивным доступом*/ 
+                        0,   //* comm устройство открывается с эксклюзивным доступом*/ 
                         Nil, //* нет security битов */ 
                         OPEN_EXISTING, //* comm устройства должны использовать OPEN_EXISTING*/ 
-                        0,    //* not overlapped I/O */ 
-                        0  //* hTemplate должен быть NULL для comm устройств */ 
-                         ); 
+                        0,   //* not overlapped I/O */ 
+                        0    //* hTemplate должен быть NULL для comm устройств */ 
+                       ); 
       if Com = INVALID_HANDLE_VALUE then Error := GetLastError; 
       Success := GetCommState(Com,Mode); 
      
@@ -65,8 +62,11 @@ Date: 01.01.2007
 
 Переменная "com" типа dword.
 
-Вы так же можете очистить буфер COM порта PurgeComm(Com,PURGE\_RXCLEAR
-or PURGE\_TXCLEAR); И прочитать из него
+Вы также можете очистить буфер COM порта
+
+    PurgeComm(Com,PURGE_RXCLEAR or PURGE_TXCLEAR);
+
+И прочитать из него
 
     Function ReadCh(Var Ch:Byte):dword; 
     var 
@@ -75,4 +75,3 @@ or PURGE\_TXCLEAR); И прочитать из него
       Readfile(Com,ch,1,result,nil); 
     End;
 
-Взято из <https://forum.sources.ru>

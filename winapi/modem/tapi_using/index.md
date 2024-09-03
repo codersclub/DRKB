@@ -7,11 +7,7 @@ Date: 01.01.2007
 Using TAPI
 ==========
 
-::: {.date}
-01.01.2007
-:::
-
-How can I use TAPI to dial the telephone for a voice call?
+> How can I use TAPI to dial the telephone for a voice call?
 
 The following example shows how to interface with tapi to make a voice
 call.
