@@ -1,15 +1,12 @@
 ---
 Title: Получить все возможные разрешения экрана
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Получить все возможные разрешения экрана
 ========================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var 
@@ -43,6 +40,4 @@ Date: 01.01.2007
       end; 
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

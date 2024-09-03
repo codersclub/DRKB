@@ -2,18 +2,14 @@
 Title: Как узнать частоту обновления монитора?
 Author: p0s0l
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как узнать частоту обновления монитора?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
     function GetDisplayFrequency: Integer; 
-
      
     var 
      DeviceMode: TDeviceMode; 
@@ -23,6 +19,3 @@ Date: 01.01.2007
      Result := DeviceMode.dmDisplayFrequency; 
     end;
 
-Автор: p0s0l
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Копирование содержимого экрана на форму
 =======================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     var
       Image3: TImage;
@@ -20,8 +20,8 @@ Date: 01.01.2007
       DeskTopDC: HDc;
       DeskTopCanvas: TCanvas;
       DeskTopRect: TRect;
+    
     begin
-     
       Image3 := TImage.Create(SaverForm);
       with Image3 do
       begin
@@ -40,15 +40,16 @@ Date: 01.01.2007
      
     procedure TSaverForm.FormClose(Sender: TObject; var Action: TCloseAction);
     begin
-     
       Image3.Free;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Visual Developer, HAX #244, Авг/Сент 1996
 
 Попробуйте следующий HAX 244, взятый из Авг/Сен номера журнала Visual
 Developer. Это работает, и работает хорошо.
@@ -72,7 +73,6 @@ Developer. Это работает, и работает хорошо.
     var
       ScreenDC: HDC;
     begin
-     
       Result := TBitmap.Create;
       with Result, ARect do
       begin
@@ -93,7 +93,6 @@ Developer. Это работает, и работает хорошо.
      
     function CaptureScreen: TBitmap;
     begin
-     
       with Screen do
         Result := CaptureScreenRect(Rect(0, 0, Width, Height));
     end;
@@ -103,11 +102,10 @@ Developer. Это работает, и работает хорошо.
      
     function CaptureClientImage(Control: TControl): TBitmap;
     begin
-     
       with Control, Control.ClientOrigin do
         Result := CaptureScreenRect(Bounds(X, Y, ClientWidth,
      
-          ClientHeight));
+      ClientHeight));
     end;
      
     { используйте следующий код для захвата целой формы
@@ -118,8 +116,7 @@ Developer. Это работает, и работает хорошо.
      
       with Control do
         if Parent = nil then
-          Result := CaptureScreenRect(Bounds(Left, Top, Width,
-            Height))
+          Result := CaptureScreenRect(Bounds(Left, Top, Width, Height))
         else
           with Parent.ClientToScreen(Point(Left, Top)) do
             Result := CaptureScreenRect(Bounds(X, Y, Width, Height));
@@ -160,4 +157,5 @@ Developer. Это работает, и работает хорошо.
     Эти четыре функции могут быть использованы для захвата любой
     произвольной области экрана, а также экранных областей форм,
     кнопок, полей редактирования, ComboBox'ов и пр.. Не забывайте
-    после работы освобождать используемые вами картинки (Bitmap). }
+    после работы освобождать используемые вами картинки (Bitmap).
+    }
