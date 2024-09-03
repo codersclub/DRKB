@@ -2,15 +2,12 @@
 Title: Получение уведомлений от оболочки (Shell)
 Author: <maniac_n@hotmail.com>
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Получение уведомлений от оболочки (Shell)
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
 Пример показывает - как можно отслеживать практически все события
 происходящий в Вашей оболочке. Код находится в процессе разработки, но
@@ -54,7 +51,7 @@ Date: 01.01.2007
       TNotificationEvents = set of TNotificationEvent;
      
       TShellNotificationEvent1 = procedure(Sender: TObject;
-        Path: string)of object;
+        Path: string) of object;
       TShellNotificationEvent2 = procedure(Sender: TObject;
         path1, path2: string) of object;
       // TShellNotificationAttributesEvent = procedure(Sender: TObject;
@@ -181,13 +178,13 @@ Date: 01.01.2007
     end;
      
     function SHChangeNotifyRegister( hWnd: HWND; dwFlags: integer;
-    wEventMask : cardinal; uMsg: UINT; cItems : integer;
-    lpItems : PNOTIFYREGISTER) : HWND; stdcall;
+      wEventMask : cardinal; uMsg: UINT; cItems : integer;
+      lpItems : PNOTIFYREGISTER) : HWND; stdcall;
      
     function SHChangeNotifyDeregister(hWnd: HWND) : boolean; stdcall;
      
     function SHILCreateFromPath(Path: Pointer; PIDL: PItemIDList;
-    var Attributes: ULONG):HResult; stdcall;
+      var Attributes: ULONG):HResult; stdcall;
      
     implementation
      
@@ -430,8 +427,8 @@ Date: 01.01.2007
         if neImageListChange in FWatchEvents then
           Flags := Flags or SHCNE_UPDATEIMAGE;
         NotifyHandle := SHChangeNotifyRegister(Handle,
-        SHCNF_ACCEPT_INTERRUPTS or SHCNF_ACCEPT_NON_INTERRUPTS,
-        Flags, SNM_SHELLNOTIFICATION, 1, NotifyRecord);
+          SHCNF_ACCEPT_INTERRUPTS or SHCNF_ACCEPT_NON_INTERRUPTS,
+          Flags, SNM_SHELLNOTIFICATION, 1, NotifyRecord);
       end;
     end;
      
@@ -446,6 +443,7 @@ Date: 01.01.2007
       TPIDLLIST = record
       pidlist : array[1..2] of PITEMIDLIST;
     end;
+    
     PIDARRAY = ^TPIDLLIST;
     var
       Path1 : string;
@@ -464,8 +462,8 @@ Date: 01.01.2007
           Path2 := PathFromPidl( Ptr^.pidList[2] );
      
           repeated := (PrevEvent = event)
-          and (uppercase(prevpath1) = uppercase(Path1))
-          and (uppercase(prevpath2) = uppercase(Path2));
+            and (uppercase(prevpath1) = uppercase(Path1))
+            and (uppercase(prevpath2) = uppercase(Path2));
      
           if Repeated then
             exit;
@@ -501,6 +499,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: <maniac_n@hotmail.com>
-
-Взято с <https://delphiworld.narod.ru>

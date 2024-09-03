@@ -1,16 +1,13 @@
 ---
 Title: Как послать сообщение всем окнам Windows?
-Author: Andrey Burov
+Author: Andrey Burov (2:463/238.19)
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 
 Как послать сообщение всем окнам Windows?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     Var
     FM_FINDPHOTO: Integer;
@@ -36,10 +33,3 @@ Date: 01.01.2007
 Кстати, для посылки сообщения дочерним контролам некоего контрола можно
 использовать метод Broadcast.
 
-Автор: Andrey Burov
-
-(2:463/238.19)
-
-Автор: StayAtHome
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
