@@ -1,15 +1,12 @@
 ---
 Title: Как сделать Multi Screen Emulator?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как сделать Multi Screen Emulator?
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     {** Building a multi screen emulator ***
      
@@ -43,10 +40,10 @@ Date: 01.01.2007
      
     // The EnumWindows function is of type:
      
-     BOOL EnumWindows(
-    WNDENUMPROC lpEnumFunc, // pointer to callback function
-         LPARAM lParam  // application-defined value
-        );
+    BOOL EnumWindows(
+         WNDENUMPROC lpEnumFunc, // pointer to callback function
+                  LPARAM lParam  // application-defined value
+         );
      
     {
       I will call EnumWindows(@EnumWindowsProc, 0);
@@ -83,6 +80,7 @@ Date: 01.01.2007
       HandleList: TStringList;
      
     function EnumWindowsProc(hWnd: HWND; lParam: lParam): Bool; stdcall;
+    
     procedure GetProcessList;
      
     implementation
@@ -399,7 +397,7 @@ Date: 01.01.2007
        function ShiftState: TShiftState;
      
       protected
-        { Protected declarations }
+       { Protected declarations }
        procedure SetVisible(Value: Boolean); virtual;
      
        procedure DoMessage(var Message: TMessage);virtual;
@@ -418,7 +416,7 @@ Date: 01.01.2007
        property Data: TNotifyIconData read FData;
      
       public
-        { Public declarations }
+       { Public declarations }
        constructor Create(Owner: TComponent); override;
        destructor Destroy; override;
      
@@ -431,7 +429,7 @@ Date: 01.01.2007
        function GetHandle():HWND;
      
       published
-        { Published declarations }
+       { Published declarations }
        property Visible: Boolean  read FVisible write SetVisible default false;
        property Hint: string  read FHint write SetHint;
        property PopupMenu: TPopupMenu read FPopupMenu write FPopupMenu;
@@ -948,4 +946,3 @@ Date: 01.01.2007
     //---------------------------------------------------------------------------
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

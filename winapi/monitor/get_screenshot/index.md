@@ -1,6 +1,5 @@
 ---
 Title: Получение изображения экрана
-Author: Rouse\_
 Date: 01.01.2007
 ---
 
@@ -8,16 +7,17 @@ Date: 01.01.2007
 Получение изображения экрана
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Rouse\_
+
+Source: <https://forum.sources.ru>
 
     // В качестве параметров передаются:
     // AHandle - хэндл окна, скриншот которого мы хочем получить
     // CompressPercent - процент сжатия картинки
     // AImage - картинка, в которую будет помещено изображение
     // в случае успешного скриншота функция вернет True
-
      
     function GetScreenShot(const AHandle: THandle; const CompressPercent: Byte;
       var AImage: TJPEGImage): Boolean;
@@ -73,11 +73,13 @@ Date: 01.01.2007
       end;
     end;
 
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Song
+
+Source: <https://forum.sources.ru>
 
     keybd_event(VK_SNAPSHOT,1,KEYEVENTF_KEYUP,0);
     OpenClipBoard(Form1.handle);
@@ -90,18 +92,18 @@ Date: 01.01.2007
      EmptyClipBoard;
     end;
 
- 
-
-Автор: Song
-
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
 
 Еще один способ получения скриншота окна, на чистом WinApi:
 
     function CreateWindwowBitmap(Wnd: HWND): HBITMAP;
-
      
     var
       R: TRect;
@@ -124,11 +126,11 @@ Date: 01.01.2007
       Result := bm;
     end;
 
-Автор: Krid
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: http://www.swissdelphicenter.ch
 
 Универсальный способ - скриншот с прозрачностью:
 
@@ -170,17 +172,18 @@ Date: 01.01.2007
       DeleteDC(hdcScreen);
       DeleteDC(hdcCompatible);
     end;
-    // from http://www.swissdelphicenter.ch
 
 ------------------------------------------------------------------------
 
+Вариант 5:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
 Используйте стандартный Windows API:
 
-используйте hWnd := GetDesktopWindow для получения дескриптора
-\'рабочего стола\';
+`hWnd := GetDesktopWindow` для получения дескриптора \'рабочего стола\';
 
-используйте hDC := GetDC (hWnd) для получения HDC (дескриптора контекста
-экрана) ;
+`hDC := GetDC (hWnd)` для получения HDC (дескриптора контекста экрана) ;
 
 и не забывайте освобождать (уничтожать дескриптор) hDC после выполнения
 задачи.
@@ -189,11 +192,13 @@ Date: 01.01.2007
 реализовать функции рисования, или, если это возможно, можно присвоить
 HDC свойству Handle непосредственно при создании TCanvas.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 В D1 (по идее должно работать и в D2) попробуйте это:
 
@@ -219,13 +224,14 @@ DelphiWorld 6.0
 Это скопирует верхнюю левую область рабочего стола в верхнюю левую
 область вашего TPaintBox.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-Например, с помощью WinAPI так -
+Вариант 7:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+Например, с помощью WinAPI так:
 
     var
       bmp: TBitmap;
@@ -241,9 +247,9 @@ DelphiWorld 6.0
       ReleaseDC(0, DC);
     end;
 
-Или с помощью обертки TCanvas -
+Или с помощью обертки TCanvas:
 
-Объект Screen[.width,height] - размеры
+Объект Screen[.width,.height] - размеры
 
     Var
       Desktop: TCanvas ;
@@ -259,11 +265,12 @@ DelphiWorld 6.0
       ........
     end; 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 8:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     unit ScrnCap;
      
@@ -357,13 +364,14 @@ DelphiWorld 6.0
     end;
      
     end.
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 9:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     // Для копирования изображения, находящегося в клиентской части
     // формы есть метод GetFormImage. Для копирования любого
@@ -409,272 +417,277 @@ DelphiWorld 6.0
           Result := CaptureScreenRect( Bounds( X, Y, Width,Height ));
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 10:
+
+Source: <https://www.swissdelphicenter.ch>
 
     uses
-       Graphics;
+      Graphics;
      
-     // Capture the entire screen 
+    // Capture the entire screen 
     procedure ScreenShot(Bild: TBitMap);
-     var
-       c: TCanvas;
-       r: TRect;
-     begin
-       c := TCanvas.Create;
-       c.Handle := GetWindowDC(GetDesktopWindow);
-       try
-         r := Rect(0, 0, Screen.Width, Screen.Height);
-         Bild.Width := Screen.Width;
-         Bild.Height := Screen.Height;
-         Bild.Canvas.CopyRect(r, c, r);
-       finally
-         ReleaseDC(0, c.Handle);
-         c.Free;
-       end;
-     end;
-     
-     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       Form1.Visible := False;
-       Sleep(750); // some delay, ein wenig Zeit geben 
-      ScreenShot(Image1.Picture.BitMap);
-       Form1.Visible := True;
-     end;
-
-Взято с сайта: <https://www.swissdelphicenter.ch>
+    var
+      c: TCanvas;
+      r: TRect;
+    begin
+      c := TCanvas.Create;
+      c.Handle := GetWindowDC(GetDesktopWindow);
+      try
+        r := Rect(0, 0, Screen.Width, Screen.Height);
+        Bild.Width := Screen.Width;
+        Bild.Height := Screen.Height;
+        Bild.Canvas.CopyRect(r, c, r);
+      finally
+        ReleaseDC(0, c.Handle);
+        c.Free;
+      end;
+    end;
+    
+    procedure TForm1.Button1Click(Sender: TObject);
+    begin
+      Form1.Visible := False;
+      Sleep(750); // some delay, ein wenig Zeit geben 
+     ScreenShot(Image1.Picture.BitMap);
+      Form1.Visible := True;
+    end;
 
 ------------------------------------------------------------------------
+
+Вариант 11:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // Capture Only active window
     procedure ScreenShotActiveWindow(Bild: TBitMap);
-     var
-       c: TCanvas;
-       r, t: TRect;
-       h: THandle;
-     begin
-       c := TCanvas.Create;
-       c.Handle := GetWindowDC(GetDesktopWindow);
-       h := GetForeGroundWindow;
-       if h <> 0 then
-         GetWindowRect(h, t);
-       try
-         r := Rect(0, 0, t.Right - t.Left, t.Bottom - t.Top);
-         Bild.Width  := t.Right - t.Left;
-         Bild.Height := t.Bottom - t.Top;
-         Bild.Canvas.CopyRect(r, c, t);
-       finally
-         ReleaseDC(0, c.Handle);
-         c.Free;
-       end;
-     end;
-     
-     
-     procedure TForm1.Button2Click(Sender: TObject);
-     begin
-       Form1.Visible := False;
-       Sleep(750); //some delay,ein wenig Zeit geben 
+    var
+      c: TCanvas;
+      r, t: TRect;
+      h: THandle;
+    begin
+      c := TCanvas.Create;
+      c.Handle := GetWindowDC(GetDesktopWindow);
+      h := GetForeGroundWindow;
+      if h <> 0 then
+        GetWindowRect(h, t);
+      try
+        r := Rect(0, 0, t.Right - t.Left, t.Bottom - t.Top);
+        Bild.Width  := t.Right - t.Left;
+        Bild.Height := t.Bottom - t.Top;
+        Bild.Canvas.CopyRect(r, c, t);
+      finally
+        ReleaseDC(0, c.Handle);
+        c.Free;
+      end;
+    end;
+    
+    
+    procedure TForm1.Button2Click(Sender: TObject);
+    begin
+      Form1.Visible := False;
+      Sleep(750); //some delay,ein wenig Zeit geben 
       ScreenShotActiveWindow(Image1.Picture.BitMap);
-       Form1.Visible := True;
-     end;
-
-Взято с сайта: <https://www.swissdelphicenter.ch>
+      Form1.Visible := True;
+    end;
 
 ------------------------------------------------------------------------
+
+Вариант 12:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // Capture the entire screen 
     procedure ScreenShot(x: Integer;
-       y: Integer; //(x, y) = Left-top coordinate 
+      y: Integer; //(x, y) = Left-top coordinate 
       Width: Integer;
-       Height: Integer; //(Width-Height) = Bottom-Right coordinate 
+      Height: Integer; //(Width-Height) = Bottom-Right coordinate 
       bm: TBitMap); //Destination 
     var
-       dc: HDC;
-       lpPal: PLOGPALETTE;
-     begin
-       {test width and height}
-       if ((Width = 0) or
-         (Height = 0)) then
-         Exit;
-       bm.Width  := Width;
-       bm.Height := Height;
-       {get the screen dc}
-       dc := GetDc(0);
-       if (dc = 0) then
-         Exit;
-       {do we have a palette device?}
-       if (GetDeviceCaps(dc, RASTERCAPS) and
-         RC_PALETTE = RC_PALETTE) then
-       begin
-         {allocate memory for a logical palette}
-         GetMem(lpPal,
-           SizeOf(TLOGPALETTE) +
-         (255 * SizeOf(TPALETTEENTRY)));
-         {zero it out to be neat}
-         FillChar(lpPal^,
-           SizeOf(TLOGPALETTE) +
-         (255 * SizeOf(TPALETTEENTRY)),
-           #0);
-         {fill in the palette version}
-         lpPal^.palVersion := $300;
-         {grab the system palette entries}
-         lpPal^.palNumEntries :=
-           GetSystemPaletteEntries(dc,
-           0,
-           256,
-           lpPal^.palPalEntry);
-         if (lpPal^.PalNumEntries <> 0) then
-           {create the palette}
-           bm.Palette := CreatePalette(lpPal^);
-         FreeMem(lpPal, SizeOf(TLOGPALETTE) +
-         (255 * SizeOf(TPALETTEENTRY)));
-       end;
-       {copy from the screen to the bitmap}
-       BitBlt(bm.Canvas.Handle,
-         0,
-         0,
-         Width,
-         Height,
-         Dc,
-         x,
-         y,
-         SRCCOPY);
-       {release the screen dc}
-       ReleaseDc(0, dc);
-     end;
-     
-     
-     // Example: 
+      dc: HDC;
+      lpPal: PLOGPALETTE;
+    begin
+      {test width and height}
+      if ((Width = 0) or
+        (Height = 0)) then
+        Exit;
+      bm.Width  := Width;
+      bm.Height := Height;
+      {get the screen dc}
+      dc := GetDc(0);
+      if (dc = 0) then
+        Exit;
+      {do we have a palette device?}
+      if (GetDeviceCaps(dc, RASTERCAPS) and
+        RC_PALETTE = RC_PALETTE) then
+      begin
+        {allocate memory for a logical palette}
+        GetMem(lpPal,
+          SizeOf(TLOGPALETTE) +
+        (255 * SizeOf(TPALETTEENTRY)));
+        {zero it out to be neat}
+        FillChar(lpPal^,
+          SizeOf(TLOGPALETTE) +
+        (255 * SizeOf(TPALETTEENTRY)),
+          #0);
+        {fill in the palette version}
+        lpPal^.palVersion := $300;
+        {grab the system palette entries}
+        lpPal^.palNumEntries :=
+          GetSystemPaletteEntries(dc,
+          0,
+          256,
+          lpPal^.palPalEntry);
+        if (lpPal^.PalNumEntries <> 0) then
+          {create the palette}
+          bm.Palette := CreatePalette(lpPal^);
+        FreeMem(lpPal, SizeOf(TLOGPALETTE) +
+        (255 * SizeOf(TPALETTEENTRY)));
+      end;
+      {copy from the screen to the bitmap}
+      BitBlt(bm.Canvas.Handle,
+        0,
+        0,
+        Width,
+        Height,
+        Dc,
+        x,
+        y,
+        SRCCOPY);
+      {release the screen dc}
+      ReleaseDc(0, dc);
+    end;
+    
+    
+    // Example: 
     procedure TForm1.Button1Click(Sender: TObject);
-     begin
+    begin
       ScreenShot(0,0,Screen.Width, Screen.Height, Image1.Picture.Bitmap);
-     end;
-
-Взято с сайта: <https://www.swissdelphicenter.ch>
+    end;
 
 ------------------------------------------------------------------------
 
-     // Capture a window 
+Вариант 13:
+
+Source: <https://www.swissdelphicenter.ch>
+
+    // Capture a window 
     procedure ScreenShot(hWindow: HWND; bm: TBitmap);
-     var
-       Left, Top, Width, Height: Word;
-       R: TRect;
-       dc: HDC;
-       lpPal: PLOGPALETTE;
-     begin
-       {Check if valid window handle}
-       if not IsWindow(hWindow) then Exit;
-       {Retrieves the rectangular coordinates of the specified window}
-       GetWindowRect(hWindow, R);
-       Left := R.Left;
-       Top := R.Top;
-       Width := R.Right - R.Left;
-       Height := R.Bottom - R.Top;
-       bm.Width  := Width;
-       bm.Height := Height;
-       {get the screen dc}
-       dc := GetDc(0);
-       if (dc = 0) then
+    var
+      Left, Top, Width, Height: Word;
+      R: TRect;
+      dc: HDC;
+      lpPal: PLOGPALETTE;
+    begin
+      {Check if valid window handle}
+      if not IsWindow(hWindow) then Exit;
+      {Retrieves the rectangular coordinates of the specified window}
+      GetWindowRect(hWindow, R);
+      Left := R.Left;
+      Top := R.Top;
+      Width := R.Right - R.Left;
+      Height := R.Bottom - R.Top;
+      bm.Width  := Width;
+      bm.Height := Height;
+      {get the screen dc}
+      dc := GetDc(0);
+      if (dc = 0) then
+      begin
+        Exit;
+      end;
+      {do we have a palette device?}
+      if (GetDeviceCaps(dc, RASTERCAPS) and
+        RC_PALETTE = RC_PALETTE) then
         begin
-         Exit;
-       end;
-       {do we have a palette device?}
-       if (GetDeviceCaps(dc, RASTERCAPS) and
-         RC_PALETTE = RC_PALETTE) then
+          {allocate memory for a logical palette}
+          GetMem(lpPal, SizeOf(TLOGPALETTE) +
+                 (255 * SizeOf(TPALETTEENTRY)));
+        {zero it out to be neat}
+        FillChar(lpPal^, SizeOf(TLOGPALETTE) +
+                 (255 * SizeOf(TPALETTEENTRY)), #0);
+        {fill in the palette version}
+        lpPal^.palVersion := $300;
+        {grab the system palette entries}
+        lpPal^.palNumEntries := GetSystemPaletteEntries(dc,
+          0, 256, lpPal^.palPalEntry);
+        if (lpPal^.PalNumEntries <> 0) then
         begin
-         {allocate memory for a logical palette}
-         GetMem(lpPal,
-           SizeOf(TLOGPALETTE) +
-         (255 * SizeOf(TPALETTEENTRY)));
-         {zero it out to be neat}
-         FillChar(lpPal^,
-           SizeOf(TLOGPALETTE) +
-         (255 * SizeOf(TPALETTEENTRY)),
-           #0);
-         {fill in the palette version}
-         lpPal^.palVersion := $300;
-         {grab the system palette entries}
-         lpPal^.palNumEntries :=
-           GetSystemPaletteEntries(dc,
-           0,
-           256,
-           lpPal^.palPalEntry);
-         if (lpPal^.PalNumEntries <> 0) then
-          begin
-           {create the palette}
-           bm.Palette := CreatePalette(lpPal^);
-         end;
-         FreeMem(lpPal, SizeOf(TLOGPALETTE) +
-         (255 * SizeOf(TPALETTEENTRY)));
-       end;
-       {copy from the screen to the bitmap}
-       BitBlt(bm.Canvas.Handle,
-         0,
-         0,
-         Width,
-         Height,
-         Dc,
-         Left,
-         Top,
-         SRCCOPY);
-       {release the screen dc}
-       ReleaseDc(0, dc);
-     end;
-     // Example: Capture the foreground window: 
+          {create the palette}
+          bm.Palette := CreatePalette(lpPal^);
+        end;
+        FreeMem(lpPal, SizeOf(TLOGPALETTE) +
+                (255 * SizeOf(TPALETTEENTRY)));
+      end;
+      {copy from the screen to the bitmap}
+      BitBlt(bm.Canvas.Handle,
+        0,
+        0,
+        Width,
+        Height,
+        Dc,
+        Left,
+        Top,
+        SRCCOPY);
+      {release the screen dc}
+      ReleaseDc(0, dc);
+    end;
+    // Example: Capture the foreground window: 
     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       ScreenShot(GetForeGroundWindow, Image1.Picture.Bitmap);
-     end;
-
-Взято с сайта: <https://www.swissdelphicenter.ch>
+    begin
+      ScreenShot(GetForeGroundWindow, Image1.Picture.Bitmap);
+    end;
 
 ------------------------------------------------------------------------
 
-     {**********************************************}
+Вариант 14:
+
+Author: Daniel Wischnewski 
+
+Source: <https://www.swissdelphicenter.ch>
+
+    {**********************************************
      // by Daniel Wischnewski 
-    Sometimes you want to take a screen shot,
+     Sometimes you want to take a screen shot,
      however often Windows has trouble with big data amounts and becomes very slow.
      The simple solution is to make many small screen shots and paste the result together.
-     It''s not light speed, however often faster than taking the whole screen at once.
-     const
-       cTileSize = 50;
-     function TForm1.GetSCREENSHOT: TBitmap;
-     var
-       Locked: Boolean;
-       X, Y, XS, YS: Integer;
-       Canvas: TCanvas;
-       R: TRect;
-     begin
-       Result := TBitmap.Create;
-       Result.Width := Screen.Width;
-       Result.Height := Screen.Height;
-       Canvas := TCanvas.Create;
-       Canvas.Handle := GetDC(0);
-       Locked := Canvas.TryLock;
-       try
-         XS := Pred(Screen.Width div cTileSize);
-         if Screen.Width mod cTileSize > 0 then
-           Inc(XS);
-         YS := Pred(Screen.Height div cTileSize);
-         if Screen.Height mod cTileSize > 0 then
-           Inc(YS);
-         for X := 0 to XS do
-           for Y := 0 to YS do
-           begin
-             R := Rect(
-               X * cTileSize, Y * cTileSize, Succ(X) * cTileSize,
-               Succ(Y) * cTileSize);
-             Result.Canvas.CopyRect(R, Canvas, R);
-           end;
-       finally
-         if Locked then
-           Canvas.Unlock;
-         ReleaseDC(0, Canvas.Handle);
-         Canvas.Free;
-       end;
-     end;
+     It's not light speed, however often faster than taking the whole screen at once.
+    }
+    const
+      cTileSize = 50;
+    function TForm1.GetSCREENSHOT: TBitmap;
+    var
+      Locked: Boolean;
+      X, Y, XS, YS: Integer;
+      Canvas: TCanvas;
+      R: TRect;
+    begin
+      Result := TBitmap.Create;
+      Result.Width := Screen.Width;
+      Result.Height := Screen.Height;
+      Canvas := TCanvas.Create;
+      Canvas.Handle := GetDC(0);
+      Locked := Canvas.TryLock;
+      try
+        XS := Pred(Screen.Width div cTileSize);
+        if Screen.Width mod cTileSize > 0 then
+          Inc(XS);
+        YS := Pred(Screen.Height div cTileSize);
+        if Screen.Height mod cTileSize > 0 then
+          Inc(YS);
+        for X := 0 to XS do
+          for Y := 0 to YS do
+          begin
+            R := Rect(
+              X * cTileSize, Y * cTileSize, Succ(X) * cTileSize,
+              Succ(Y) * cTileSize);
+            Result.Canvas.CopyRect(R, Canvas, R);
+          end;
+      finally
+        if Locked then
+          Canvas.Unlock;
+        ReleaseDC(0, Canvas.Handle);
+        Canvas.Free;
+      end;
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -8,20 +8,20 @@ Date: 01.01.2007
 Как узнать разрешение экрана?
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-GetSystemMetrics
+Author: AntonSaburov
 
-Автор: AntonSaburov
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+    GetSystemMetrics
 
-TScreen.WIdth/Height
+-----------------------------------------------------------
 
-Автор: Song
+Вариант 2:
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Author: Song
 
-------------------------------------------------------------------------
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+    TScreen.WIdth/Height

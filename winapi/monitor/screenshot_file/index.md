@@ -8,14 +8,13 @@ Date: 01.01.2007
 Сохранение изображения экрана в файле
 =====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Vit
 
 На форме у меня стоит TImage (его можно сделать невидимым)
 
     var
-
       Dwh : HWND; 
       DRect: TRect; 
       DescDC: HDC; 
@@ -45,12 +44,14 @@ Date: 01.01.2007
           i.free;
         end;
       except
-      end;
-
-Автор: Vit
+    end;
 
 ------------------------------------------------------------------------
 Вариант 2:
+
+Author: Arazel
+
+Source: <https://forum.sources.ru>
 
     program ScrShop;
      
@@ -122,12 +123,10 @@ Date: 01.01.2007
     end.
 
 
-Автор: Arazel
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
 Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -154,8 +153,5 @@ Date: 01.01.2007
         Canva.Free
       end
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

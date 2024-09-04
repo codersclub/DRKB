@@ -64,10 +64,14 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: <https://forum.sources.ru>
+
 Для этого надо воспользоваться функциями API. Получить контекст чужого
 окна, либо всего экрана:
 
-function GetDC(Wnd: HWnd): HDC;
+    function GetDC(Wnd: HWnd): HDC;
 
 где Wnd - указатель на нужное окно, или 0 для получения контекста всего
 экрана. И далее, пользуясь функциями API, нарисовать все что надо.
@@ -85,9 +89,11 @@ function GetDC(Wnd: HWnd): HDC;
 окнам сообщение о необходимости перерисовки, для восстановления их
 первоначального вида.
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     // Пример рисует две горизонтальные линии на экране используя TDesktopCanvas.
     program TrinitronTraining;
@@ -194,9 +200,5 @@ function GetDC(Wnd: HWnd): HDC;
       for i:=1 to YCount do
         F[i].Free;
     end.
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

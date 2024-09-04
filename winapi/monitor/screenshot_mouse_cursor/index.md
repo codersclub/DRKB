@@ -1,6 +1,5 @@
 ---
 Title: Как получить screen shot экран вместе с указателем мыша?
-Author: P.O.D
 Date: 01.01.2007
 ---
 
@@ -8,9 +7,9 @@ Date: 01.01.2007
 Как получить screen shot экран вместе с указателем мыша?
 ========================================================
 
-::: {.date}
-01.01.2007
-:::
+Author: P.O.D
+
+Source: <https://forum.sources.ru>
 
 надо его вручную дорисовать
 
@@ -37,44 +36,44 @@ Date: 01.01.2007
      end;
     end;
 
-Автор: P.O.D        
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // 1. Get the handle to the current mouse-cursor and its position 
     function GetCursorInfo2: TCursorInfo;
-     var
+    var
       hWindow: HWND;
       pt: TPoint;
       pIconInfo: TIconInfo;
       dwThreadID, dwCurrentThreadID: DWORD;
-     begin
+    begin
       Result.hCursor := 0;
       ZeroMemory(@Result, SizeOf(Result));
       // Find out which window owns the cursor 
-     if GetCursorPos(pt) then
+      if GetCursorPos(pt) then
       begin
         Result.ptScreenPos := pt;
         hWindow := WindowFromPoint(pt);
         if IsWindow(hWindow) then
         begin
           // Get the thread ID for the cursor owner. 
-         dwThreadID := GetWindowThreadProcessId(hWindow, nil);
+          dwThreadID := GetWindowThreadProcessId(hWindow, nil);
      
           // Get the thread ID for the current thread 
-         dwCurrentThreadID := GetCurrentThreadId;
+          dwCurrentThreadID := GetCurrentThreadId;
      
           // If the cursor owner is not us then we must attach to 
-         // the other thread in so that we can use GetCursor() to 
-         // return the correct hCursor 
-         if (dwCurrentThreadID <> dwThreadID) then
+          // the other thread in so that we can use GetCursor() to 
+          // return the correct hCursor 
+          if (dwCurrentThreadID <> dwThreadID) then
           begin
             if AttachThreadInput(dwCurrentThreadID, dwThreadID, True) then
             begin
               // Get the handle to the cursor 
-             Result.hCursor := GetCursor;
+              Result.hCursor := GetCursor;
               AttachThreadInput(dwCurrentThreadID, dwThreadID, False);
             end;
           end
@@ -84,25 +83,25 @@ Date: 01.01.2007
           end;
         end;
       end;
-     end;
+    end;
      
-     // 2. Capture the screen 
+    // 2. Capture the screen 
     function CaptureScreen: TBitmap;
-     var
+    var
       DC: HDC;
       ABitmap: TBitmap;
       MyCursor: TIcon;
       CursorInfo: TCursorInfo;
       IconInfo: TIconInfo;
-     begin
+    begin
       // Capture the Desktop screen 
-     DC := GetDC(GetDesktopWindow);
+      DC := GetDC(GetDesktopWindow);
       ABitmap := TBitmap.Create;
       try
         ABitmap.Width  := GetDeviceCaps(DC, HORZRES);
         ABitmap.Height := GetDeviceCaps(DC, VERTRES);
         // BitBlt on our bitmap 
-       BitBlt(ABitmap.Canvas.Handle,
+        BitBlt(ABitmap.Canvas.Handle,
           0,
           0,
           ABitmap.Width,
@@ -112,36 +111,35 @@ Date: 01.01.2007
           0,
           SRCCOPY);
         // Create temp. Icon 
-       MyCursor := TIcon.Create;
+        MyCursor := TIcon.Create;
         try
           // Retrieve Cursor info 
-         CursorInfo := GetCursorInfo2;
+          CursorInfo := GetCursorInfo2;
           if CursorInfo.hCursor <> 0 then
           begin
             MyCursor.Handle := CursorInfo.hCursor;
             // Get Hotspot information 
-           GetIconInfo(CursorInfo.hCursor, IconInfo);
+            GetIconInfo(CursorInfo.hCursor, IconInfo);
             // Draw the Cursor on our bitmap 
-           ABitmap.Canvas.Draw(CursorInfo.ptScreenPos.X - IconInfo.xHotspot,
+            ABitmap.Canvas.Draw(CursorInfo.ptScreenPos.X - IconInfo.xHotspot,
                                 CursorInfo.ptScreenPos.Y - IconInfo.yHotspot, MyCursor);
           end;
         finally
           // Clean up 
-         MyCursor.ReleaseHandle;
+          MyCursor.ReleaseHandle;
           MyCursor.Free;
         end;
       finally
         ReleaseDC(GetDesktopWindow, DC);
       end;
       Result := ABitmap;
-     end;
+    end;
      
-     // Example: Capture the screen and include the cursor. 
+    // Example: Capture the screen and include the cursor. 
     // Show the Screenshot in Image1 
      
     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       Image1.Picture.Assign(CaptureScreen);
-     end;
+    begin
+      Image1.Picture.Assign(CaptureScreen);
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
