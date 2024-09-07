@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как работать с джойстиком?
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     uses MMSYSTEM; 
     var 
@@ -35,9 +35,11 @@ Date: 01.01.2007
      
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 
     var
       myjoy: tjoyinfo;
@@ -51,6 +53,3 @@ Date: 01.01.2007
 
 Не забудьте включить MMSYSTEM в список используемых (USES) модулей
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

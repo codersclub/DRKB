@@ -1,15 +1,12 @@
 ---
 Title: Как работать с web-камерой?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как работать с web-камерой?
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
 First of all, get the SDK at
 http://developer.logitech.comhttp://developer.logitech.com
@@ -92,7 +89,7 @@ Here is a copy a VideoPortal.Pas (constants).
     const
       CAMERA_UNKNOWNSTATUS = 10;
      
-      // Movie Recording Modes, used with MovieRecordMode property
+    // Movie Recording Modes, used with MovieRecordMode property
     const
       SEQUENCECAPTURE_FPS_USERSPECIFIED = 1;
     const
@@ -100,13 +97,13 @@ Here is a copy a VideoPortal.Pas (constants).
     const
       STEPCAPTURE_MANUALTRIGGERED = 3;
      
-      // Movie Creation Flags, used with MovieCreateFlags property
+    // Movie Creation Flags, used with MovieCreateFlags property
     const
       MOVIECREATEFLAGS_CREATENEW = 1;
     const
       MOVIECREATEFLAGS_APPEND = 2;
      
-      // Notification Codes
+    // Notification Codes
     const
       NOTIFICATIONMSG_MOTION = 1;
     const
@@ -134,7 +131,7 @@ Here is a copy a VideoPortal.Pas (constants).
     const
       NOTIFICATIONMSG_MOVIESIZE = 13;
      
-      // Error codes used by NOTIFICATIONMSG_MOVIERECORDERROR notification:
+    // Error codes used by NOTIFICATIONMSG_MOVIERECORDERROR notification:
     const
       WRITEFAILURE_RECORDINGSTOPPED = 0;
     const
@@ -144,7 +141,7 @@ Here is a copy a VideoPortal.Pas (constants).
     const
       WRITEFAILURE_CAMERA_SUSPENDED = 3;
      
-      // Camera type codes, returned by GetCameraType method
+    // Camera type codes, returned by GetCameraType method
     const
       CAMERA_UNKNOWN = 0;
     const
@@ -166,7 +163,7 @@ Here is a copy a VideoPortal.Pas (constants).
     const
       CAMERA_QUICKCAM_EMERALD = 9; // MIGHT CHANGE NAME BUT ENUM STAYS THE SAME
      
-      // Camera-specific property codes used by Set/GetCameraPropertyLong
+    // Camera-specific property codes used by Set/GetCameraPropertyLong
     const
       PROPERTY_ORIENTATION = 0;
     const
@@ -298,7 +295,7 @@ Here is a copy a VideoPortal.Pas (constants).
     implementation
     end.
      
-    Example shows how to use the PictureToMemory method in the QuickCam SDK. 
+Example shows how to use the PictureToMemory method in the QuickCam SDK. 
      
     type
       TMemoryStream = class(Classes.TMemoryStream);
@@ -329,4 +326,3 @@ Here is a copy a VideoPortal.Pas (constants).
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
