@@ -7,9 +7,7 @@ Date: 01.01.2007
 Работа с последовательными портами
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     //{$DEFINE COMM_UNIT}
      
@@ -43,14 +41,13 @@ Date: 01.01.2007
      
     {$IFDEF COMM_UNIT}
     function Simple_Comm_Info: PChar; StdCall;
-    function
-      Simple_Comm_Open(Port: PChar; BaudRate: DWORD; ByteSize, Parity, StopBits:
-        Byte; Mas
-      k: Integer; WndHandle: HWND; WndCommand: UINT; var Id: Integer): Integer;
-        StdCall;
+    function Simple_Comm_Open(Port: PChar; BaudRate: DWORD;
+        ByteSize, Parity, StopBits: Byte;
+        Mask: Integer; WndHandle: HWND; WndCommand: UINT;
+        var Id: Integer): Integer; StdCall;
     function Simple_Comm_Close(Id: Integer): Integer; StdCall;
-    function
-      Simple_Comm_Write(Id: Integer; Buffer: PChar; Count: DWORD): Integer; StdCall;
+    function Simple_Comm_Write(Id: Integer; Buffer: PChar; Count: DWORD):
+             Integer; StdCall;
     function Simple_Comm_PortCount: DWORD; StdCall;
      
     const
@@ -68,7 +65,7 @@ Date: 01.01.2007
      
     const
       bDoRun: array[0..MaxPorts - 1] of boolean
-      = (False, False, False, False, False);
+        = (False, False, False, False, False);
     const
       hCommPort: array[0..MaxPorts - 1] of Integer = (0, 0, 0, 0, 0);
     const
@@ -84,7 +81,6 @@ Date: 01.01.2007
      
     function Simple_Comm_Info: PChar; stdcall;
     begin
-     
       Result := InfoString;
     end;
      
@@ -93,11 +89,9 @@ Date: 01.01.2007
     function Simple_Comm_Read(Param: Pointer): Longint; stdcall;
     var
       Count: Integer;
-     
       id: Integer;
       ReadBuffer: array[0..127] of byte;
     begin
-     
       Id := Integer(Param);
       while bDoRun[id] do
       begin
@@ -106,20 +100,15 @@ Date: 01.01.2007
         begin
           if ((hWndHandle[id] <> 0) and
             (hWndCommand[id] > WM_USER)) then
-     
-            SendMessage(hWndHandle[id], hWndCommand[id], Count,
-              LPARAM(@ReadBuffer));
-     
+            SendMessage(hWndHandle[id], hWndCommand[id], Count, LPARAM(@ReadBuffer));
         end;
       end;
       Result := 0;
     end;
      
     //Export functie voor sluiten compoort
-     
     function Simple_Comm_Close(Id: Integer): Integer; stdcall;
     begin
-     
       if (ID < 0) or (id > MaxPorts - 1) or (not bDoRun[Id]) then
       begin
         Result := ERROR_INVALID_FUNCTION;
@@ -129,10 +118,8 @@ Date: 01.01.2007
       Dec(PortCount);
       FlushFileBuffers(hCommPort[Id]);
       if not
-        PurgeComm(hCommPort[Id], PURGE_TXABORT + PURGE_RXABORT + PURGE_TXCLEAR +
-          PURGE_RXCL
-        EAR) then
-     
+        PurgeComm(hCommPort[Id], PURGE_TXABORT + PURGE_RXABORT +
+          PURGE_TXCLEAR + PURGE_RXCLEAR) then
       begin
         Result := GetLastError;
         Exit;
@@ -160,7 +147,6 @@ Date: 01.01.2007
     var
       Teller: Integer;
     begin
-     
       for Teller := 0 to MaxPorts - 1 do
       begin
         if bDoRun[Teller] then
@@ -172,7 +158,6 @@ Date: 01.01.2007
     var
       Teller: Integer;
     begin
-     
       for Teller := 0 to MaxPorts - 1 do
       begin
         if not bDoRun[Teller] then
@@ -186,18 +171,17 @@ Date: 01.01.2007
      
     //Export functie voor openen compoort
      
-    function
-      Simple_Comm_Open(Port: PChar; BaudRate: DWORD; ByteSize, Parity, StopBits:
-        Byte; Mas
-      k: Integer; WndHandle: HWND; WndCommand: UINT; var Id: Integer): Integer;
-        stdcall;
+    function Simple_Comm_Open(Port: PChar; BaudRate: DWORD;
+        ByteSize, Parity,
+        StopBits: Byte; Mask: Integer; WndHandle: HWND; WndCommand: UINT;
+        var Id: Integer): Integer; stdcall;
      
     var
       PrevId: Integer;
       ctmoCommPort: TCOMMTIMEOUTS; //Lees specificaties voor de compoort
       dcbCommPort: TDCB;
+    
     begin
-     
       if (PortCount >= MaxPorts) or (PortCount < 0) then
       begin
         result := error_invalid_function;
@@ -265,7 +249,6 @@ Date: 01.01.2007
       end;
       //Thread voor lezen compoort
       bDoRun[Id] := TRUE;
-     
       hThread[Id] := CreateThread(nil, 0, @Simple_Comm_Read, Pointer(Id), 0,
         dwThread[Id]
         );
@@ -289,13 +272,11 @@ Date: 01.01.2007
     end;
      
     //Export functie voor schrijven naar compoort;
-     
-    function
-      Simple_Comm_Write(Id: Integer; Buffer: PChar; Count: DWORD): Integer; stdcall;
+    function Simple_Comm_Write(Id: Integer; Buffer: PChar; Count: DWORD):
+             Integer; stdcall;
     var
       Written: DWORD;
     begin
-     
       if (Id < 0) or (id > Maxports - 1) or (not bDoRun[Id]) then
       begin
         Result := ERROR_INVALID_FUNCTION;
@@ -313,10 +294,8 @@ Date: 01.01.2007
     end;
      
     //Aantal geopende poorten voor aanroepende applicatie
-     
     function Simple_Comm_PortCount: DWORD; stdcall;
     begin
-     
       Result := PortCount;
     end;
      
@@ -331,13 +310,11 @@ Date: 01.01.2007
      
     procedure DLLMain(dwReason: DWORD);
     begin
-     
       if dwReason = DLL_PROCESS_DETACH then
         Simple_Comm_CloseAll;
     end;
      
     begin
-     
       DLLProc := @DLLMain;
       DLLMain(DLL_PROCESS_ATTACH); //geen nut in dit geval
     end.
@@ -350,8 +327,15 @@ Date: 01.01.2007
     end.
     {$ENDIF}
 
+------------------------------------------------------------
 
-Другое решение: создание модуля I / O(ввода / вывода)под Windows 95 / NT.Вот он:
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
+
+Другое решение: создание модуля I/O (ввода / вывода)под Windows 95/NT.
+
+Вот он:
 
 
     (с TDCB в SetCommStatus вы можете управлять DTR и т.д.)
@@ -371,7 +355,6 @@ Date: 01.01.2007
     procedure CloseComm;
      
     var
-     
       ComPort: Word;
      
     implementation
@@ -379,16 +362,13 @@ Date: 01.01.2007
     uses Windows, SysUtils;
      
     const
-     
       CPort: array[1..4] of string = ('COM1', 'COM2', 'COM3', 'COM4');
      
     var
-     
       Com: THandle = 0;
      
     function OpenComm(InQueue, OutQueue, Baud: LongInt): Boolean;
     begin
-     
       if Com > 0 then
         CloseComm;
       Com := CreateFile(PChar(CPort[ComPort]),
@@ -401,11 +381,9 @@ Date: 01.01.2007
      
     function SetCommTiming: Boolean;
     var
-     
       Timeouts: TCommTimeOuts;
      
     begin
-     
       with TimeOuts do
       begin
         ReadIntervalTimeout := 1;
@@ -419,17 +397,14 @@ Date: 01.01.2007
      
     function SetCommBuffer(InQueue, OutQueue: LongInt): Boolean;
     begin
-     
       Result := SetupComm(Com, InQueue, OutQueue);
     end;
      
     function SetCommStatus(Baud: Integer): Boolean;
     var
-     
       DCB: TDCB;
      
     begin
-     
       with DCB do
       begin
         DCBlength := SizeOf(Tdcb);
@@ -453,12 +428,10 @@ Date: 01.01.2007
      
     function SendCommStr(S: string): Integer;
     var
-     
       TempArray: array[1..255] of Byte;
       Count, TX_Count: Integer;
      
     begin
-     
       for Count := 1 to Length(S) do
         TempArray[Count] := Ord(S[Count]);
       WriteFile(Com, TempArray, Length(S), TX_Count, nil);
@@ -467,12 +440,10 @@ Date: 01.01.2007
      
     function ReadCommStr(var S: string): Integer;
     var
-     
       TempArray: array[1..255] of Byte;
       Count, RX_Count: Integer;
      
     begin
-     
       S := '';
       ReadFile(Com, TempArray, 255, RX_Count, nil);
       for Count := 1 to RX_Count do
@@ -482,11 +453,9 @@ Date: 01.01.2007
      
     procedure CloseComm;
     begin
-     
       CloseHandle(Com);
       Com := -1;
     end;
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

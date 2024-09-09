@@ -1,15 +1,12 @@
 ---
 Title: Как узнать адрес LPT-порта?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как узнать адрес LPT-порта?
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
 Эта функция работает в Win95 и Win98.
 
@@ -29,4 +26,3 @@ Date: 01.01.2007
 Для NT можно заглянуть сюда:
 <https://www.wideman-one.com/gw/tech/Delphi/iopm/index.htm>
 
-Взято из <https://forum.sources.ru>

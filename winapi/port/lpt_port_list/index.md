@@ -1,15 +1,12 @@
 ---
 Title: Как найти список параллельных портов?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 
 Как найти список параллельных портов?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function PortExists(const PortName: string): Boolean;
     var
@@ -38,4 +35,3 @@ Date: 01.01.2007
         List.Append('Ports: Printer Port (LPT' + IntTostr(i) + ')');
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

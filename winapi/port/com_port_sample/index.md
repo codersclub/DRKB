@@ -1,15 +1,12 @@
 ---
 Title: Пример программирования com портов
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 
 Пример программирования com портов
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit TestRosh;
      
@@ -211,4 +208,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

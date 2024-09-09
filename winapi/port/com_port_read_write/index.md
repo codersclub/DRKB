@@ -1,25 +1,22 @@
 ---
 Title: Write / read a string to / from the serial port
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Write / read a string to / from the serial port
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
-
     function OpenCOMPort: Boolean;
     var
       DeviceName: array[0..80] of Char;
       ComFile: THandle;
     begin
-       { First step is to open the communications device for read/write.
-         This is achieved using the Win32 'CreateFile' function.
-         If it fails, the function returns false.
-       }
+      { First step is to open the communications device for read/write.
+        This is achieved using the Win32 'CreateFile' function.
+        If it fails, the function returns false.
+      }
       StrPCopy(DeviceName, 'COM1:');
      
       ComFile := CreateFile(DeviceName,
@@ -46,9 +43,9 @@ Write / read a string to / from the serial port
       Config: string;
       CommTimeouts: TCommTimeouts;
     begin
-       { We assume that the setup to configure the setup works fine.
-         Otherwise the function returns false.
-       }
+      { We assume that the setup to configure the setup works fine.
+        Otherwise the function returns false.
+      }
      
       Result := True;
      
@@ -127,4 +124,3 @@ Write / read a string to / from the serial port
       CloseHandle(ComFile);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

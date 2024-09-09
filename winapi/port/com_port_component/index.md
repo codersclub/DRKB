@@ -1,15 +1,13 @@
 ---
 Title: Компонент для последовательного устройства (TRS232)
-Date: 01.01.2007
+Date: 12.12.1998
+Author: Angerer Bernhard
+Source: <https://forum.sources.ru>
 ---
 
 
 Компонент для последовательного устройства (TRS232)
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Компонент, который представлен здесь, выполняет функции синхронного
 чтения и записи в последовательный интерфейс RS232.
@@ -1035,8 +1033,6 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
-
     procedure TCommPortDriver.SetActive(const Value: boolean);
     begin
       FActive := Value;
@@ -1044,4 +1040,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>

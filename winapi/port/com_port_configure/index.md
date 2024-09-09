@@ -1,15 +1,12 @@
 ---
 Title: Как программно установить конфигурацию COM-порта в Windows 95?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Как программно установить конфигурацию COM-порта в Windows 95?
 ==============================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject); 
     var 
@@ -59,4 +56,3 @@ Date: 01.01.2007
       CloseHandle(hCommFile); 
     end;
 
-Взято из <https://forum.sources.ru>
