@@ -1,15 +1,12 @@
 ---
 Title: Как предотвратить Shutdown?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как предотвратить Shutdown?
 ===========================
-
-::: {.date}
-01.01.2007
-:::
 
     {
     The WM_QUERYENDSESSION message is sent to all applications
@@ -45,4 +42,3 @@ Date: 01.01.2007
           Msg.Result := 1;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

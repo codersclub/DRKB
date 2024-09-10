@@ -1,15 +1,12 @@
 ---
 Title: Как узнать заряженность батарей?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как узнать заряженность батарей?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -23,8 +20,8 @@ Date: 01.01.2007
       else
       begin
         ShowMessage('System running on battery.');
-        ShowMessage(Format('Battery power left: %d percent.', [SysPowerStatus.BatteryLifePercent]));
+        ShowMessage(Format('Battery power left: %d percent.',
+                           [SysPowerStatus.BatteryLifePercent]));
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

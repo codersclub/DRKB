@@ -2,14 +2,11 @@
 Title: Выключение питания ATX коpпуса из-под DOS
 author: Колесников Сергей Александрович [rovd@inbox.ru]
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 Выключение питания ATX коpпуса из-под DOS
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     mov ax,5301h
     sub bx,bx
@@ -25,8 +22,3 @@ Date: 01.01.2007
     int 15h
     stop: int 20h
 
-Код прислал Колесников Сергей Александрович [mailto:rovd@inbox.ru]
-
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

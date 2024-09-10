@@ -1,15 +1,12 @@
 ---
 Title: How to check if the Workstation is locked?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 How to check if the Workstation is locked?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     function IsWorkstationLocked: Boolean;
     var
@@ -26,4 +23,3 @@ How to check if the Workstation is locked?
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

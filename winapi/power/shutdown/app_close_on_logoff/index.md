@@ -2,18 +2,14 @@
 Title: Закрытие програм при LogOff / Shutdown
 Author: Александр (Rouse\_) Багель
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Закрытие програм при LogOff / Shutdown
 ======================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-
      
     interface
      
@@ -92,6 +88,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как перевести компьютер в Stand by или Hibernate?
 =================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {
       The SetSuspendState function suspends the system by shutting power down.
@@ -79,13 +79,15 @@ Date: 01.01.2007
       SetSuspendState(True, False, False);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
 
-    procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       SendMessage(Handle, WM_SYSCOMMAND, SC_SCREENSAVE, 1);
-     end
+Вариант 2:
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
+Source: <https://www.swissdelphicenter.ch>
+
+    procedure TForm1.Button1Click(Sender: TObject);
+    begin
+      SendMessage(Handle, WM_SYSCOMMAND, SC_SCREENSAVE, 1);
+    end
+

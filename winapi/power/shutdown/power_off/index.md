@@ -1,16 +1,17 @@
 ---
 Title: PowerOff
-Author: Vit
-Date: 01.01.2007
+Date: 01.01.2003
 ---
 
 
 PowerOff
 ========
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: DeMoN-777, DeMoN-777@yandex.ru
+
+Date: 21.06.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Power off (Убивает процессы)
@@ -52,10 +53,13 @@ PowerOff
         raise TShutdownEx.Create('ExitWindowsEx failed');
     end;
 
- 
 
 ------------------------------------------------------------------------
 Вариант 2:
+
+Author: DeMoN-777, DeMoN-777@yandex.ru
+
+Date: 21.06.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Power off (не убивает процессы)
@@ -86,14 +90,17 @@ PowerOff
           ExitWindowsEx(What, 0)
       end
     end;
-    Пример использования: 
+
+Пример использования: 
      
     ExitWinNT(True); 
 
- 
 
 ------------------------------------------------------------------------
+
 Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Сегодня мы напишем прогу на WinApi, выключающую W2k, и занимающую всего
 10 Кб!
@@ -138,12 +145,11 @@ PowerOff
       RebootSystem;
     end.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure NTShutdown;
     var
@@ -175,12 +181,11 @@ DelphiWorld 6.0
       MessageBox(0, 'Access denied', nil, MB_OK or MB_ICONSTOP);
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 Вариант 5:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Выключить монитор - это классно, но можно сделать ещё круче - программно
 завершить работу компьютера. Выглядеть это будет примерно так, с
@@ -220,14 +225,13 @@ DelphiWorld 6.0
     mov  al,0F0h  
     out  64h,al
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
- 
 
 ------------------------------------------------------------------------
 Вариант 6:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     ExitWindowsEx(EWX_FORCE,0);
 
@@ -239,7 +243,3 @@ DelphiWorld 6.0
 
 только под XP все это работает плохо. Надо думать...
 
-
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

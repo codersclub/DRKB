@@ -1,15 +1,12 @@
 ---
 Title: Синхронизация завершения работы Windows
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 
 Синхронизация завершения работы Windows
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
     Works only on Windows NT/2000/XP systems 
@@ -22,7 +19,7 @@ Date: 01.01.2007
        tkp: TOKEN_PRIVILEGES;
      begin
        //get user privileges to shutdown the machine, we are talking about win nt and 2k here 
-      if not OpenProcessToken(GetCurrentProcess, TOKEN_ADJUST_PRIVILEGES or TOKEN_QUERY, hToken) then
+       if not OpenProcessToken(GetCurrentProcess, TOKEN_ADJUST_PRIVILEGES or TOKEN_QUERY, hToken) then
          ShowMessage('Cannot open process token.')
        else
        begin
@@ -42,16 +39,15 @@ Date: 01.01.2007
      end;
      
      //Start shut down 
-    procedure TForm1.Button1Click(Sender: TObject);
+     procedure TForm1.Button1Click(Sender: TObject);
      begin
        if not TimedShutDown('\\computername', 'you have to shutdown', 30, true, true) then
          ShowMessage('function failed...');
      end;
      
      //Abort shut down 
-    procedure TForm1.Button2Click(Sender: TObject);
+     procedure TForm1.Button2Click(Sender: TObject);
      begin
        AbortSystemShutdown('\\computername');
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как заблокировать компьютер?
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     procedure LockPC; 
       var OldValue: LongBool; 
@@ -19,9 +19,13 @@ Date: 01.01.2007
       WinExec(PChar('rundll32 keyboard,disable'), SW_SHOW); 
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Thomas Stutz, SDC
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {
       The LockWorkStation function locks the workstation's display,
@@ -63,9 +67,11 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Вы когда-нибудь видели меню в DOS\'е? Ну, например, то самое, которое
 появляется по нажатию на F8 до загрузки Windows. А представьте себе,
@@ -125,11 +131,14 @@ Date: 01.01.2007
 Esc, а если нажмёт, то то, что он увидит... м-да... лучше сто раз
 увидеть, чем один раз заиметь...
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Author: VID, vidsnap@mail.ru
+
+Date: 26.05.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Блокировка/Разблокировка системы.
@@ -139,9 +148,9 @@ DelphiWorld 6.0
     системные комбинации клавиш, или всё вместе.
     БЛОКИРОВКА СИСТЕМЫ: function LockSystem(LockMode:TLockMode):Boolean;
     Возможные значения параметра LockMode:
-    lmInput - блокировка мыши и клавитатуры
-    lmSystemKeys - блокировка системных комбинаций клавиш
-    lmBoth = lmInput + lmSystemKeys
+      lmInput - блокировка мыши и клавитатуры
+      lmSystemKeys - блокировка системных комбинаций клавиш
+      lmBoth = lmInput + lmSystemKeys
     В случае успеха функция возвращает True, иначе - False
      
     РАЗБЛОКИРОВКА СИСТЕМЫ: function UnLockSystem(UnLockMode:TLockMode):Boolean;
@@ -245,6 +254,7 @@ DelphiWorld 6.0
     end;
      
     end.
+    
     //Пример использования: 
      
     LockSystem(lmBoth); // Блокировка всей системы

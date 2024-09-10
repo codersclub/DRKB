@@ -1,14 +1,11 @@
 ---
 Title: Переход в ждущий режим под Windows NT
-Date: 01.01.2007
+Author: DeMoN-777, DeMoN-777@yandex.ru
+Date: 21.06.2002
 ---
 
 Переход в ждущий режим под Windows NT
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Переход в ждущий режим под WinNT

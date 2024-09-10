@@ -1,15 +1,12 @@
 ---
 Title: Приостановить ПК
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 
 Приостановить ПК
 ================
-
-::: {.date}
-01.01.2007
-:::
 
 Функция **SetSystemPowerState** приостанавливает работу системы путем отключения питания.
 В зависимости от параметра `ForceFlag` функция либо немедленно приостанавливает работу,
@@ -21,6 +18,7 @@ Date: 01.01.2007
        BOOL fForce      
     );      
 ```
+
 **Параметры:**
 
 fSuspend
@@ -55,4 +53,3 @@ fForce
     SetSystemPowerState(True, False); //Makes a "soft" off
 ```
 
-Взято с сайта: <https://forum.sources.ru>

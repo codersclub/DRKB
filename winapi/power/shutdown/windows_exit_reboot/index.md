@@ -8,12 +8,9 @@ Date: 01.01.2007
 Как выключить, перезагрузить или завершить Windows?
 ===================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-1. WIndows Exit
-
+Windows Exit:
 
     function MyExitWindows(RebootParam: Longword): Boolean; 
     var 
@@ -68,7 +65,11 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
-2. Console Shutdown Demo
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
+
+Console Shutdown Demo:
 
     program Shutdown;
     {$APPTYPE CONSOLE}
@@ -191,18 +192,22 @@ Date: 01.01.2007
       end; 
     end.
 
-Взято с <https://delphiworld.narod.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Song
+
+Source: <https://forum.sources.ru>
 
 Для выполнения перезагрузки/выключения предназначены функции
 ExitWindows/ExitWindowsEx
 
-ExitWindows:
+**ExitWindows:**
 
 Описание:
 
-Function ExitWindows(Reserved: DWord; ReturnCode: Word): Bool;
+    Function ExitWindows(Reserved: DWord; ReturnCode: Word): Bool;
 
 Иницииpует стандаpтную пpоцедуpу завеpшения pаботы с Windows. Все
 пpикладные задачи должны подтвеpдить завеpшение pаботы Windows. Вызывает
@@ -210,9 +215,9 @@ Function ExitWindows(Reserved: DWord; ReturnCode: Word): Bool;
 
 Паpаметpы:
 
-Reserved: Установлен в нуль.
+`Reserved`: Установлен в нуль.
 
-ReturnCode: Значение, пеpедаваемое в DOS (в pегистpе AL).
+`ReturnCode`: Значение, пеpедаваемое в DOS (в pегистpе AL).
 
 Возвpащаемое значение:
 
@@ -220,23 +225,21 @@ ReturnCode: Значение, пеpедаваемое в DOS (в pегистpе 
 
 Примеры использования:
 
-ExitWindows(EWX\_LOGOFF,0); - завершение сеанса
-
-ExitWindows(EWX\_SHUTDOWN,0); - выключение компьютера
-
-ExitWindows(EWX\_REBOOT,0); - перезагрузка
+    ExitWindows(EWX_LOGOFF,0);   // завершение сеанса
+    ExitWindows(EWX_SHUTDOWN,0); // выключение компьютера
+    ExitWindows(EWX_REBOOT,0);   // перезагрузка
 
 Флаги EWX\_FORCE, EWX\_POWEROFF и  EWX\_FORCEIFHUNG могут
 комбинироваться к нужному действию.
 
-ExitWindowsEx:
+**ExitWindowsEx:**
 
 Функция ExitWindowsEx() представляет собой расширенный вариант
 ExitWindows().
 
 Описание:
 
-BOOL ExitWindowsEx( UINT uFlags, DWORD dwReserved, );
+    BOOL ExitWindowsEx( UINT uFlags, DWORD dwReserved );
 
 Функция ExitWindowsEx перезагружает(restart) или выключает систему
 (shutdown), а также может завершить сессию для текущего пользователя(log
@@ -244,26 +247,25 @@ off).
 
 Параметры:
 
-uFlags - флаг завершения работы, может принимать следущие значения:
+`uFlags` - флаг завершения работы, может принимать следущие значения:
 
 -  EWX\_LOGOFF завершает сессию текущего пользователя.
--  EWX\_POWEROFF выключает питание компьютера(компьютер должен
-поддерживать данную функцию).
+-  EWX\_POWEROFF выключает питание компьютера(компьютер должен поддерживать данную функцию).
 -  EWX\_REBOOT перезагружает систему.
 -  EWX\_SHUTDOWN завершает работу комьпьютера до того места, где он может
 быть безопасно выключен: сброшенны все файловые буферы на диск,
 завершает работу всех процессов.
 
-dwReserved - Зарезирвированно для последующих нужд, параметр
+`dwReserved` - Зарезирвированно для последующих нужд, параметр
 игнорируется.
 
 Возвращаемое значение:
 
-Не ноль если всё прошло успешно
+Не ноль, если всё прошло успешно
 
 Пример использования:
 
-ExitWindowsEx(EWX\_SHUTDOWN,0);
+    ExitWindowsEx(EWX_SHUTDOWN,0);
 
 Остальные примеры смотри в описании первой функции.
 
@@ -271,10 +273,10 @@ ExitWindowsEx(EWX\_SHUTDOWN,0);
 
 Дело в том, что, чтобы выполнить функциию в NT ОС, нужно получить права
 на выполнение этой функции. Сделать это можно через
-AdjustTokenPriviligies.
+`AdjustTokenPriviligies`.
 
-С помощью нижеприведённой функции можно получить любую привелегию, в
-т.ч. и привеленгию SeShutdownPrivilege, которая нужна для разрешения
+С помощью нижеприведённой функции можно получить любую привилегию, в
+т.ч. и привилегию SeShutdownPrivilege, которая нужна для разрешения
 функции ExitWindows(Ex)
 
     Function SetPrivilege(aPrivilegeName: String; aEnabled: Boolean ): Boolean; 
@@ -298,10 +300,6 @@ AdjustTokenPriviligies.
 
 Пример использования для среды NT:
 
-SetPrivilege(\'SeShutdownPrivilege\',True);
+    SetPrivilege('SeShutdownPrivilege',True);
+    ExitWindowsEx(EWX_SHUTDOWN,0);
 
-ExitWindowsEx(EWX\_SHUTDOWN,0);
-
-Автор: Song
-
-Взято из <https://forum.sources.ru>

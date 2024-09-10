@@ -1,15 +1,12 @@
 ---
 Title: Отключить команду «Завершение работы»
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 
 Отключить команду «Завершение работы»
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       Registry;
@@ -28,8 +25,5 @@ Date: 01.01.2007
         Free;
       end;
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

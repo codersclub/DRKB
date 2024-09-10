@@ -1,15 +1,12 @@
 ---
 Title: Как узнать о переключении сессии в XP?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Как узнать о переключении сессии в XP?
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       Typically, an application does not need to be notified when a session switch
@@ -264,14 +261,13 @@ Example:
     procedure TForm1.FormDestroy(Sender: TObject);
     begin
       // unregister session change notifications.
-     if FRegisteredSessionNotification then
-       UnRegisterSessionNotification(Handle);
+      if FRegisteredSessionNotification then
+        UnRegisterSessionNotification(Handle);
     end;
      
     procedure TForm1.Button1Click(Sender: TObject);
     begin
-     // retrieve current session ID
-     ShowMessage(Inttostr(GetCurrentSessionID));
+      // retrieve current session ID
+      ShowMessage(Inttostr(GetCurrentSessionID));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

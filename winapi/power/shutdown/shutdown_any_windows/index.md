@@ -6,10 +6,11 @@ Date: 01.01.2007
 Как выключить компьютер с любой версией Windows?
 =========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
+Id: 01682
+
+Source: http://forum.sources.ru
 
     function GetWinVersion: String;
     var 
@@ -28,8 +29,10 @@ Date: 01.01.2007
                   VER_PLATFORM_WIN32_WINDOWS : OSName := 'Windows 95';
                   VER_PLATFORM_WIN32_NT      : OSName := 'Windows NT';
                end; // case dwPlatformId
-               Result := OSName + ' Version ' + IntToStr( dwMajorVersion ) + '.' + IntToStr( dwMinorVersion ) +
-                         #13#10' (Build ' + IntToStr( dwBuildNumber ) + ': ' + szCSDVersion + ')';
+               Result := OSName + ' Version ' + IntToStr( dwMajorVersion ) +
+                         '.' + IntToStr( dwMinorVersion ) +
+                         #13#10' (Build ' + IntToStr( dwBuildNumber ) +
+                         ': ' + szCSDVersion + ')';
             end; // with VersionInfo
          end // if GetVersionEx
       else 
@@ -84,30 +87,40 @@ Date: 01.01.2007
          end; // else
     end;
 
-©Drkb::01682
+------------------------------------
 
-Взято из [http://forum.sources.ru](http://forum.sources.ru) (.weblink target=weblink)
+Вариант 2:
 
----
+Id: 01683
 
-exitkernel очень радикальный способ потому что не сохраняются настройки рабочего стола, ini файлы и другие установки, зато быстро 
+Author: Song
+
+Source: Vingrad.ru [http://forum.vingrad.ru](http://forum.vingrad.ru) (.weblink target=weblink)
+
+exitkernel очень радикальный способ потому что не сохраняются настройки рабочего стола,
+ini файлы и другие установки, зато быстро.
 
 Есть способ намного лучше: ф-ия SHExitWindowsEx из shell32.dll,
-С неё всё good. Это запуск из-под WinExec()
+С ней всё good. Это запуск из-под WinExec()
 
-Программно же только с получением привелегии.
+Программно же только с получением привилегии.
 
-Замечу также что флаг EWX_FORCE необходим только для принудительного завершения при выдаче каких либо сообщений или модальных окон, что воспрепятствует завершению, например, "К компьютеру подключены пользователи. Данные могут быть утярены. Вы хотите завершить работу?" или сообщение, которое автор указал в вопросе.
+Замечу также, что флаг EWX_FORCE необходим только для принудительного завершения
+при выдаче каких либо сообщений или модальных окон, что воспрепятствует завершению,
+например, "К компьютеру подключены пользователи. Данные могут быть утеряны. Вы хотите завершить работу?"
+или сообщение, которое автор указал в вопросе.
 
-Если нет таких сообщений EWX_FORCE не обязателен. Также есть отдельные флаги для выключение компьютера (по умолчанию - перезагрузка) или завершения сетевого сеанса. 
+Если нет таких сообщений, EWX_FORCE не обязателен.
+Также есть отдельные флаги для выключение компьютера
+(по умолчанию - перезагрузка) или завершения сетевого сеанса. 
 
-©Drkb::01683
+---------------------------------
 
-Автор: Song
+Вариант 3:
 
-Взято с Vingrad.ru [http://forum.vingrad.ru](http://forum.vingrad.ru) (.weblink target=weblink)
+Id: 01684
 
-------
+Source: DelphiWorld 6.0 <http://delphiworld.narod.ru/>
 
 ```delphi
 function MyExitWindows(RebootParam: Longword): Boolean;
@@ -165,13 +178,14 @@ end;
 // Parameters for MyExitWindows()
 ```
 
-Drkb::01684
 
-[http://delphiworld.narod.ru/](http://delphiworld.narod.ru/) (.weblink target=weblink)
+-------------------------------------
 
-DelphiWorld 6.0
+Вариант 4:
 
-------
+Id: 01685
+
+Source: DelphiWorld 6.0 <http://delphiworld.narod.ru/>
 
 ```delphi
 program Shutdown;
@@ -296,9 +310,3 @@ begin
   end;
 end.
 ```
-
-©Drkb::01685
-
-[http://delphiworld.narod.ru/](http://delphiworld.narod.ru/){.weblink target=_blank}
-
-DelphiWorld 6.0

@@ -1,15 +1,12 @@
 ---
 Title: Поддерживает ли система Hibernation?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Поддерживает ли система Hibernation?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function HibernateAllowed: Boolean;
     type
@@ -36,4 +33,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
