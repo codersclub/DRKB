@@ -1,15 +1,12 @@
 ---
 Title: Detect if a USB device is connected or disconnected?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
 Detect if a USB device is connected or disconnected?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit U_Usb;
      
@@ -138,4 +135,3 @@ Detect if a USB device is connected or disconnected?
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
