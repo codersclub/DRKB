@@ -1,14 +1,11 @@
 ---
 Title: Как узнать минимальные поля для принтера?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как узнать минимальные поля для принтера?
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Printers; 
@@ -64,4 +61,3 @@ Date: 01.01.2007
        InchToCm(Margins.Bottom)])); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

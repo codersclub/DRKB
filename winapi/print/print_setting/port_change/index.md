@@ -6,9 +6,9 @@ Date: 01.01.2007
 Как изменить порт для принтера?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
     uses
       WinSpool;
@@ -69,11 +69,13 @@ Date: 01.01.2007
         RaiseLastWin32Error;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
 
+Вариант 2:
      
+Source: <https://delphiworld.narod.ru>
+
     uses Printers;
      
     {$IFNDEF WIN32}
@@ -104,4 +106,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с <https://delphiworld.narod.ru>

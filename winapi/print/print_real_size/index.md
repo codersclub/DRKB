@@ -1,14 +1,11 @@
 ---
 Title: Сохранение точных размеров при печати
 Date: 01.01.2007
+Source: Советs по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 Сохранение точных размеров при печати
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
 Приведенный ниже модуль демонстрирует принцип использования
 GetDeviceCaps для получения исчерпывающей информации о вашем принтере,
@@ -44,12 +41,12 @@ GetDeviceCaps для получения исчерпывающей информ�
     type
      
     TForm1 = class(TForm)
-    Print: TButton;
-    Image1: TImage;
-    procedure PrintClick(Sender: TObject);
-    private
-    { Private declarations }
-    public{ Public declarations }
+      Print: TButton;
+      Image1: TImage;
+      procedure PrintClick(Sender: TObject);
+      private
+      { Private declarations }
+      public{ Public declarations }
     end;
      
     var
@@ -103,8 +100,8 @@ GetDeviceCaps для получения исчерпывающей информ�
       SCALINGFACTORX = 114; {Смотри определение в windows.h}
       SCALINGFACTORY = 115; {Смотри определение в windows.h}
      
-      DeviceCapsString: array[1..34] of string =
-      ('DRIVERVERSION', 'TECHNOLOGY', 'HORZSIZE',
+      DeviceCapsString: array[1..34] of string = (
+        'DRIVERVERSION', 'TECHNOLOGY', 'HORZSIZE',
         'VERTSIZE', 'HORZRES', 'VERTRES',
         'BITSPIXEL', 'PLANES', 'NUMBRUSHES',
         'NUMPENS', 'NUMMARKERS', 'NUMFONTS',
@@ -115,10 +112,11 @@ GetDeviceCaps для получения исчерпывающей информ�
         'LOGPIXELSY', 'SIZEPALETTE', 'NUMRESERVED',
         'COLORRES', 'PHYSICALWIDTH', 'PHYSICALHEIGHT',
         'PHYSICALOFFSETX', 'PHYSICALOFFSETY', 'SCALINGFACTORX',
-        'SCALINGFACTORY');
+        'SCALINGFACTORY'
+      );
      
-      DeviceCapsIndex: array[1..34] of INTEGER =
-      (0, 2, 4, 6, 8, 10, 12, 14, 16, 18,
+      DeviceCapsIndex: array[1..34] of INTEGER = (
+        0, 2, 4, 6, 8, 10, 12, 14, 16, 18,
         20, 22, 24, 26, 28, 30, 32, 34, 36, 38,
         40, 42, 44, 88, 90, 104, 106, 108, 110, 111,
         112, 113, 114, 115);
@@ -127,18 +125,15 @@ GetDeviceCaps для получения исчерпывающей информ�
      
     function iPosition(const i: INTEGER): INTEGER;
     begin
-     
       RESULT := Integer(i * LongInt(Printer.PageWidth) div 1000)
     end {iPosition};
      
     function jPosition(const j: INTEGER): INTEGER;
     begin
-     
       RESULT := Integer(j * LongInt(Printer.PageHeight) div 1000)
     end {jPosition};
      
     procedure TForm1.PrintClick(Sender: TObject);
-     
     var
       DestinationRectangle: TRect;
       GraphicAspectRatio: DOUBLE;
@@ -157,7 +152,7 @@ GetDeviceCaps для получения исчерпывающей информ�
       x: DOUBLE;
       y: DOUBLE;
     begin
-     
+    
       Printer.Orientation := poLandscape;
       Printer.BeginDoc;
      
@@ -202,8 +197,7 @@ GetDeviceCaps для получения исчерпывающей информ�
      
       Printer.Canvas.TextOut(iBase, jPosition(jBase),
         '`ТЕКСТ`:  ' + IntToStr(Printer.Canvas.TextWidth('ТЕКСТ')) + ' X ' +
-        IntToStr(Printer.Canvas.TextHeight('ТЕКСТ')) + '
-        пикселей');
+        IntToStr(Printer.Canvas.TextHeight('ТЕКСТ')) + ' пикселей');
      
     {Значения GetDeviceCaps}
         INC(jBase, 2 * jDelta);
@@ -230,28 +224,26 @@ GetDeviceCaps для получения исчерпывающей информ�
           end;
      
     {Помещаем изображение в левый нижний угол}
-        Printer.Canvas.Draw(iPosition(300), jPosition(100),
-        Form1.Image1.Picture.Graphic);
+        Printer.Canvas.Draw(iPosition(300), jPosition(100), Form1.Image1.Picture.Graphic);
      
     {Помещаем то же изображение, имеющее ширину 1" и пропорциональную
     высоту в позиции 4"-правее и 1"-ниже верхнего левого угла}
         GraphicAspectRatio := Form1.Image1.Picture.Height /
-        Form1.Image1.Picture.Width;
+          Form1.Image1.Picture.Width;
      
         iPixelsPerInch := GetDeviceCaps(Printer.Handle, LOGPIXELSX);
         jPixelsPerInch := GetDeviceCaps(Printer.Handle, LOGPIXELSY);
         PixelAspectRatio := jPixelsPerInch / iPixelsPerInch;
      
         TargetRectangle := Rect(4 * iPixelsPerInch, {4"}
-        jPixelsPerInch, {1"}
-        6 * iPixelsPerInch, {6" - 2" ширина}
-        jPixelsPerInch +
-        TRUNC(2 * iPixelsPerInch * GraphicAspectRatio *
-        PixelAspectRatio));
+          jPixelsPerInch, {1"}
+          6 * iPixelsPerInch, {6" - 2" ширина}
+          jPixelsPerInch +
+            TRUNC(2 * iPixelsPerInch * GraphicAspectRatio * PixelAspectRatio));
      
         Printer.Canvas.TextOut(4 * iPixelsPerInch, jPixelsPerInch -
-        Printer.Canvas.TextHeight('X'),
-        '2" ширина от (4", 1")');
+          Printer.Canvas.TextHeight('X'),
+          '2" ширина от (4", 1")');
         Printer.Canvas.StretchDraw(TargetRectangle, Form1.Image1.Picture.Graphic);
      
     {Создаем изображение в памяти и затем копируем его на холст принтера}
@@ -260,13 +252,13 @@ GetDeviceCaps для получения исчерпывающей информ�
     {Это не должно работать!  Rectangle = Left, Top, Right, Bottom
     Top и Bottom считаются зарезервированными?}
         DestinationRectangle := Rect(4 * iPixelsPerInch, 6 * jPixelsPerInch,
-        7 * iPixelsPerInch - 1, 4 * jPixelsPerinch - 1);
+          7 * iPixelsPerInch - 1, 4 * jPixelsPerinch - 1);
      
-        Printer.Canvas.TextOut(4 * iPixelsPerInch, 4 * jPixelsPerInch -
-        Printer.Canvas.TextHeight('X'),
-        IntToStr(3 * iPixelsPerInch) + ' пикселей на ' +
-        IntToStr(2 * jPixelsPerInch) + ' пикселей -- ' +
-        '3"-на-2" в (4",4")');
+        Printer.Canvas.TextOut(4 * iPixelsPerInch,
+          4 * jPixelsPerInch - Printer.Canvas.TextHeight('X'),
+          IntToStr(3 * iPixelsPerInch) + ' пикселей на ' +
+          IntToStr(2 * jPixelsPerInch) + ' пикселей -- ' +
+          '3"-на-2" в (4",4")');
      
         OffScreen := TBitMap.Create;
         try
@@ -319,6 +311,3 @@ GetDeviceCaps для получения исчерпывающей информ�
      
     end.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

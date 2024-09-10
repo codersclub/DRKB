@@ -1,14 +1,11 @@
 ---
 Title: Печать в Delphi
 Date: 01.01.2007
+Source: http://www.delphi.h5.ru/
 ---
 
 Печать в Delphi
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
 Объект printer автоматически создается в случае, если в программе
 указана ссылка на модуль printers. Этот объект предоставляет
@@ -33,7 +30,7 @@ printers), позволяющую использовать принтер как
 нужного шрифта отображения/печати документа, для инициации процесса
 печати и для завершения работы программы.
 
-Листинг 1
+**Листинг 1**
 
     unit unit1;
     
@@ -44,20 +41,20 @@ printers), позволяющую использовать принтер как
      
     type 
     tform1 = class(tform) 
-    memo1: tmemo; 
-    button1: tbutton; 
-    button2: tbutton; 
-    opendialog1: topendialog; 
-    bitbtn1: tbitbtn; 
-    button3: tbutton; 
-    fontdialog1: tfontdialog; 
-    procedure button1click(sender: tobject); 
-    procedure button2click(sender: tobject); 
-    procedure button3click(sender: tobject); 
-    private 
-    { private declarations } 
-    public 
-    { public declarations } 
+      memo1: tmemo; 
+      button1: tbutton; 
+      button2: tbutton; 
+      opendialog1: topendialog; 
+      bitbtn1: tbitbtn; 
+      button3: tbutton; 
+      fontdialog1: tfontdialog; 
+      procedure button1click(sender: tobject); 
+      procedure button2click(sender: tobject); 
+      procedure button3click(sender: tobject); 
+      private 
+      { private declarations } 
+      public 
+      { public declarations } 
     end; 
      
     var 
@@ -73,14 +70,14 @@ printers), позволяющую использовать принтер как
     // Выбор файла с текстом и его загрузка в редактор 
     begin 
     if opendialog1.execute then 
-    memo1.lines.loadfromfile(opendialog1.filename) 
+      memo1.lines.loadfromfile(opendialog1.filename) 
     end; 
      
     procedure tform1.button3click(sender: tobject); 
     // Выбор шрифта и связывание его с memo1 
     begin 
-    if fontdialog1.execute then 
-    memo1.font := fontdialog1.font 
+      if fontdialog1.execute then 
+        memo1.font := fontdialog1.font 
     end; 
      
     procedure tform1.button2click(sender: tobject); 
@@ -89,15 +86,15 @@ printers), позволяющую использовать принтер как
     prn: textfile; 
     k: integer; 
     begin 
-    assignprn(prn); // Переназначаем вывод в файл на вывод в принтер 
-    rewrite(prn); // Готовим принтер к печати (аналог begindoc) 
-    { Для печати используем такой же шрифт, как и для показа 
-    в редакторе: } 
-    printer.canvas.font := memo1.font; 
-    // Цикл печати: 
-    for k := 0 to memo1.lines.count-1 do 
-    writeln(prn, memo1.lines[k]); 
-    closefile(prn); // Аналог enddoc 
+      assignprn(prn); // Переназначаем вывод в файл на вывод в принтер 
+      rewrite(prn); // Готовим принтер к печати (аналог begindoc) 
+      { Для печати используем такой же шрифт, как и для показа 
+      в редакторе: } 
+      printer.canvas.font := memo1.font; 
+      // Цикл печати: 
+      for k := 0 to memo1.lines.count-1 do 
+        writeln(prn, memo1.lines[k]); 
+      closefile(prn); // Аналог enddoc 
     end; 
      
     end. 
@@ -110,7 +107,7 @@ printers), позволяющую использовать принтер как
 Покажем, как с его помощью можно напечатать текст, содержащийся в
 редакторе memo1 (printtext.dpr, листинг 2):
 
-Листинг 2
+**Листинг 2**
 
     procedure tform1.button2click(sender: tobject); 
     // Печать содержимого редактора c помощью свойства printer.canvas 
@@ -118,40 +115,40 @@ printers), позволяющую использовать принтер как
     y,dy,x,k: integer; 
     s: string; 
     begin 
-    if memo1.lines.count=0 then exit; 
-    screen.cursor := crhourglass; 
-    with printer do 
-    begin 
-    begindoc; 
-    with canvas do 
-    begin 
-    font := memo1.font; 
-    dy := textheight('1'); // Определяем высоту строки 
-    y := 3*dy; // Отступ от верхнего края листа 
-    x := pagewidth div 15; // Отступ от левого края 
-    for k := 0 to memo1.lines.count-1 do 
-    begin 
-    // Выводим очередную строку 
-    textout(x,y,memo1.lines[k]); 
-    // Смещаемся на следующую строку листа 
-    inc(y,dy); 
-    if pageheight-y<2*dy then // Нижний край листа? 
-    begin // Да 
-    newpage; // Переход на новый лист 
-    // Выводим номер страницы посередине листа: 
-    s := '- '+inttostr(pagenumber)+' -'; 
-    textout((pagewidth-textwidth(s)) div 2, dy, s); 
-    // и отчеркиваем его от текста: 
-    moveto(x, 3*dy div 2); 
-    lineto(pagewidth-x, 9*dy div 4); 
-    // Ордината первой строки: 
-    y := 3*dy 
-    end; // if pageheight-y<2*dy 
-    end; // for k := 0 to memo1.lines.count-1 do 
-    end; // with canvas do 
-    enddoc; 
-    end; // with printer do 
-    screen.cursor := crdefault; 
+      if memo1.lines.count=0 then exit; 
+      screen.cursor := crhourglass; 
+      with printer do 
+      begin 
+        begindoc; 
+        with canvas do 
+        begin 
+          font := memo1.font; 
+          dy := textheight('1'); // Определяем высоту строки 
+          y := 3*dy; // Отступ от верхнего края листа 
+          x := pagewidth div 15; // Отступ от левого края 
+          for k := 0 to memo1.lines.count-1 do 
+          begin 
+            // Выводим очередную строку 
+            textout(x,y,memo1.lines[k]); 
+            // Смещаемся на следующую строку листа 
+            inc(y,dy); 
+            if pageheight-y<2*dy then // Нижний край листа? 
+            begin // Да 
+              newpage; // Переход на новый лист 
+              // Выводим номер страницы посередине листа: 
+              s := '- '+inttostr(pagenumber)+' -'; 
+              textout((pagewidth-textwidth(s)) div 2, dy, s); 
+              // и отчеркиваем его от текста: 
+              moveto(x, 3*dy div 2); 
+              lineto(pagewidth-x, 9*dy div 4); 
+              // Ордината первой строки: 
+              y := 3*dy 
+            end; // if pageheight-y<2*dy 
+          end; // for k := 0 to memo1.lines.count-1 do 
+        end; // with canvas do 
+        enddoc; 
+      end; // with printer do 
+      screen.cursor := crdefault; 
     end; 
 
 Как можно увидеть, прямое обращение к чертежным инструментам свойства
@@ -175,7 +172,7 @@ delphi. Эти компоненты разработаны для создани
 Печать изображений может показаться очень сложным делом, однако свойство
 printer.canvas содержит метод:
 
-    procedure stretchdraw(const rect: trect; graphic: tgraphic );
+    procedure stretchdraw(const rect: trect; graphic: tgraphic);
 
 который легко справляется с этой задачей. При обращении к нему в
 качестве первого параметра указывается прямоугольная область, отводимая
@@ -185,9 +182,8 @@ printer.canvas содержит метод:
 
     with printer do 
     begin 
-    begindoc; 
-    canvas.stretchdraw(canvas.cliprect, image1.picture.graphic); 
-    enddoc; 
+      begindoc; 
+      canvas.stretchdraw(canvas.cliprect, image1.picture.graphic); 
+      enddoc; 
     end; 
 
-Источник: http://www.delphi.h5.ru/

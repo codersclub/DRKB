@@ -1,14 +1,11 @@
 ---
 Title: Как сделать предпросмотр?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 Как сделать предпросмотр?
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     unit printpreview;
      
@@ -372,4 +369,3 @@ Date: 01.01.2007
       end
     end
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

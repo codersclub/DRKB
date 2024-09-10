@@ -2,14 +2,11 @@
 Title: Печать с масштабированием
 Author: Song
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Печать с масштабированием
 =========================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     // © Song
@@ -26,6 +23,3 @@ Date: 01.01.2007
       end;
     End;
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>

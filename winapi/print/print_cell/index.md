@@ -1,16 +1,15 @@
 ---
 Title: Печать ячеек
 Date: 01.01.2007
+Author: Lloyd Linklater \<Sysop\>
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 Печать ячеек
 ============
 
-::: {.date}
-01.01.2007
-:::
-
-> У кого-нибудь есть пример кода печати в заданной ячейке? Типа `PrintAt(row,col,"Text")`?
+> У кого-нибудь есть пример кода печати в заданной ячейке?  
+> Типа `PrintAt(row,col,"Text")`?
 
 Вот некоторый код, который я нашел после блужданий в группах новостей.
 Правда сам я его не проверял, но источник утверждает, что он работает.
@@ -31,7 +30,7 @@ Date: 01.01.2007
         begin
           recordbuffer := concat((Table1.Fields[0].AsString), ' ', (Table1.Fields[1].AsString));
           recordbuffer := recordbuffer + concat(' ', (Table1.Fields[2].AsString);
-    {пока все поля не будут в recordbuffer}
+          {пока все поля не будут в recordbuffer}
             Printer.Canvas.TextOut(xcord, ycord, recordbuffer);
             ycord := ycord + 50;
             Table1.next;
@@ -43,6 +42,3 @@ Date: 01.01.2007
 Lloyd Linklater \<Sysop\>  
 Delphi Technical Support
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

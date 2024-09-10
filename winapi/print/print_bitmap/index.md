@@ -6,10 +6,6 @@ Date: 01.01.2007
 Sending an image to the printer
 ===============================
 
-::: {.date}
-01.01.2007
-:::
-
 Sending a bitmap based on the screen to the printer is an
 invalid operation that will usually fail, unless the print
 driver has been designed to detect this error condition and
@@ -17,7 +13,9 @@ compensate for the error. This means you should use the VCL
 canvas methods Draw, StretchDraw,CopyRect, BrushCopy, and
 the like to transfer a bitmap to the printer, since the
 underlying bitmap is based on the screen, and is device
-dependent. The only way to reliably print an image is to
+dependent.
+
+The only way to reliably print an image is to
 use DIBs (Device Independent Bitmaps). Getting a valid DIB can
 be difficult, as there are many Windows API functions that must
 be used correctly. Further, many video drivers incorrectly fill
@@ -26,6 +24,7 @@ in the DIB structure in regards to the color table in the DIB.
 The following example demonstrates an attempt to overcome
 some of these problems and limitations. The example should
 compile successfully under all versions of Delphi/C++ Builder.
+
 The core function in the example, BltTBitmapAsDib(), accepts
 a handle to a device to image to, the x and y coordinates you
 wish the bitmap to be imaged at, the width and height you wish

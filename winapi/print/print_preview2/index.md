@@ -6,10 +6,6 @@ Date: 01.01.2007
 Print Preview
 =============
 
-::: {.date}
-01.01.2007
-:::
-
     unit printpreview;
     interface
     uses

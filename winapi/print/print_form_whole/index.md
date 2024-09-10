@@ -1,14 +1,12 @@
 ---
 Title: Печать всей формы
+Author: Bill
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 Печать всей формы
 =================
-
-::: {.date}
-01.01.2007
-:::
 
     unit PrintF;
      
@@ -60,7 +58,8 @@ Date: 01.01.2007
       Printer.Canvas.Font := MC.Font;
       DC := Printer.Canvas.Handle; {так DrawText знает о шрифте}
       R := ScaleToPrinter(MC.BoundsRect);
-      if (not (F.Components[I] is TCustomLabel)) and (MC.BorderStyle = bsSingle) then Printer.Canvas.Rectangle(R.Left, R.Top, R.Right, R.Bottom);
+      if (not (F.Components[I] is TCustomLabel)) and (MC.BorderStyle = bsSingle) then
+        Printer.Canvas.Rectangle(R.Left, R.Top, R.Right, R.Bottom);
       Format := DT_LEFT;
       if (F.Components[I] is TEdit) or (F.Components[I] is TCustomMaskEdit) then
         Format := Format or DT_SINGLELINE or DT_VCENTER
@@ -336,6 +335,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

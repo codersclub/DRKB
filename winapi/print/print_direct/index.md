@@ -1,14 +1,12 @@
 ---
 Title: Печать текста в обход Windows
 Date: 01.01.2007
+Author: Steve
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 Печать текста в обход Windows
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
 Откройте файл типа TextFile и пишите в него напрямую:
 
@@ -41,8 +39,3 @@ Date: 01.01.2007
       int $21
     end;
 
--Steve
-
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

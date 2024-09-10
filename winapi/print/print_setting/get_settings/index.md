@@ -1,14 +1,12 @@
 ---
 Title: Как прочитать список возможностей принтера?
-Date: 01.01.2007
+Date: 12.12.1999
+Author: A. Weidauer, alex.weiauer@huckfinn.de 
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как прочитать список возможностей принтера?
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Printers; 
@@ -286,4 +284,3 @@ Date: 01.01.2007
       DevCtrl.SetFocus; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,14 +1,11 @@
 ---
 Title: Как распечатать PRN?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как распечатать PRN?
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Printers, Winspool; 
@@ -49,4 +46,3 @@ Date: 01.01.2007
         ShowMessage('No error...'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

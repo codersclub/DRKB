@@ -6,10 +6,6 @@ Date: 01.01.2007
 Как распечатать decision grid?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure TForm1.Button2Click(Sender: TObject);
     begin
       Printer.BeginDoc;
@@ -30,4 +26,3 @@ Date: 01.01.2007
       end;
     end;
 
- 

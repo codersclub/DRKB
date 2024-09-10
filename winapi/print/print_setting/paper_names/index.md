@@ -6,9 +6,9 @@ Date: 01.01.2007
 Как найти все форматы бумаги, поддерживаемые принтером?
 =======================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     uses 
       Printers, WinSpool; 
@@ -46,9 +46,11 @@ Date: 01.01.2007
       GetPapernames(memo1.Lines); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: Советs по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 
 Вот пример, выводящий список форматов бумаги для принтера,
 установленного по умолчанию:
@@ -87,6 +89,3 @@ Date: 01.01.2007
         end;
     end;
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

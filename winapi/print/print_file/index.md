@@ -6,10 +6,6 @@ Date: 01.01.2007
 Как послать файл на принтер?
 ============================
 
-::: {.date}
-01.01.2007
-:::
-
     uses winspool;
     Const
       GenericPrinter: Pchar = 'Universal/Nur Text';

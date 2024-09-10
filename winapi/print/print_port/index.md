@@ -6,11 +6,7 @@ Date: 01.01.2007
 Печать в порт принтера
 ======================
 
-::: {.date}
-01.01.2007
-:::
-
-{1.}
+Вариант 1:
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -33,7 +29,11 @@ Date: 01.01.2007
       CloseFile(port);
     end;
 
-{2.}
+---------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {
       Question:
@@ -220,7 +220,7 @@ Date: 01.01.2007
      
     end.
 
-// Example of use:
+Example of use:
 
     uses
       PrtRaw;
@@ -316,4 +316,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

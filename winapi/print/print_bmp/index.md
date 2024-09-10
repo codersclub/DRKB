@@ -1,14 +1,11 @@
 ---
 Title: Как распечатать BMP?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 Как распечатать BMP?
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure StretchPrint(R: TRect; ABitmap: Graphics.TBitmap);
     var
@@ -88,4 +85,3 @@ Date: 01.01.2007
       GlobalFree(hDibHeader);
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

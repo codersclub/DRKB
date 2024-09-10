@@ -2,17 +2,13 @@
 Title: Как очистить очередь печати принтера?
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как очистить очередь печати принтера?
 =====================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses ..., WinSpool;
-     
      
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -76,8 +72,5 @@ Date: 01.01.2007
         RaiseLastOSError;
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_
 
  

@@ -1,14 +1,11 @@
 ---
 Title: Как прочитать название порта принтера?
 Date: 01.01.2007
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 Как прочитать название порта принтера?
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     { ... }
      
@@ -63,4 +60,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
