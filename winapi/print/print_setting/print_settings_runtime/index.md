@@ -1,14 +1,11 @@
 ---
 Title: Изменение свойств печати во время её выполнения
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 Изменение свойств печати во время её выполнения
 ===============================================
-
-::: {.date}
-01.01.2007
-:::
 
 Как разрешить изменения свойств принтера (например, лоток с бумагой,
 ориентация и др.) между страницами печати одного документа в шести
@@ -20,50 +17,46 @@ Date: 01.01.2007
 
 1. Создайте копию модуля Printers.pas и переименуйте его в NewPrint.pas.
 
-**НЕ делайте изменения в самом модуле Printers.pas!
-Если вы сделаете это, то получите во время компиляции приложения ошибку
-"Unable to find printers.pas" (не могу найти printer.pas).
-(Я уже получал её, поэтому и упоминаю об этом здесь...)**
+    **НЕ делайте изменения в самом модуле Printers.pas!**
+    Если вы сделаете это, то получите во время компиляции приложения ошибку
+    "Unable to find printers.pas" (не могу найти printer.pas).
+    (Я уже получал её, поэтому и упоминаю об этом здесь...)
 
 2. Переместите модуль NewPrint.pas в директорию Lib.
 
-(Используйте "C:\\Program Files\\Borland\\Delphi Х\\Lib" )
+    (Используйте "C:\\Program Files\\Borland\\Delphi Х\\Lib" )
 
 3. Измените ИМЯ МОДУЛЯ на NewPrint.pas
 
-с:
+    с: `unit Printers`
 
-   unit Printers
-
-на:
-
-   unit NewPrint
+    на: `unit NewPrint`
 
 4. Добавьте декларацию следующего PUBLIC метода класса TPrinter в секции
 Interface модуля NewPrint.pas:
 
-    procedure NewPageDC(DM: PDevMode);
+        procedure NewPageDC(DM: PDevMode);
 
 
 5. Добавьте следующую процедуру в секцию реализации NewPrint.pas:
 
 
-    procedure TPrinter.NewPageDC(DM: PDevMode);
-    begin
-      CheckPrinting(True);
-      EndPage(DC);
-    {Проверяем наличие новых установок для принтера}
-      if Assigned(DM) then
-        ResetDC(DC, DM^);
-      StartPage(DC);
-      Inc(FPageNumber);
-      Canvas.Refresh;
-    end;
+        procedure TPrinter.NewPageDC(DM: PDevMode);
+        begin
+          CheckPrinting(True);
+          EndPage(DC);
+        {Проверяем наличие новых установок для принтера}
+          if Assigned(DM) then
+            ResetDC(DC, DM^);
+          StartPage(DC);
+          Inc(FPageNumber);
+          Canvas.Refresh;
+        end;
 
-Вместо добавления "Printers" в секцию USES вашего приложения (список
-используемых модулей), добавьте "NewPrint".
+    Вместо добавления "Printers" в секцию USES вашего приложения (список
+    используемых модулей), добавьте "NewPrint".
 
-6. Теперь вдобавок к старым методам (таким как BeginDoc, EndDoc, NewPage и
+6. Теперь, вдобавок к старым методам (таким как BeginDoc, EndDoc, NewPage и
 др.), у вас появилась возможность изменения свойств принтера "на
 лету", т.е. между страницами при печати одного и того же документа.
 (Пример приведен ниже.)
@@ -128,6 +121,3 @@ Interface модуля NewPrint.pas:
 Правда я еще не поробовал его под Delphi 4... Если вы имеете любые
 комментарии или улучшения, не постесняйтесь отправить их мне...
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

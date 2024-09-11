@@ -1,14 +1,11 @@
 ---
 Title: Хитрости печати
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 Хитрости печати
 ===============
-
-::: {.date}
-01.01.2007
-:::
 
     const INCHES_PER_MILIMETER: Real = 0.04;
      
@@ -147,6 +144,3 @@ Date: 01.01.2007
       Footer;
     end;
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

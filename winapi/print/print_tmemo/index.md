@@ -6,10 +6,6 @@ Date: 01.01.2007
 Печать содержимого TMemo / TListbox
 ===================================
 
-::: {.date}
-01.01.2007
-:::
-
 > Как мне вывести на печать все строки компонента TMemo или TListbox?
 
 Вариант 1:
@@ -47,6 +43,7 @@ TDBMemo или TOutline.
 ------------------------------------------------------------------------
 Вариант 2:
 
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 
 Для печати содержимого TMemo или TListbox используйте следующий код:
 
@@ -56,6 +53,3 @@ TDBMemo или TOutline.
 
     PrintStrings(Listbox1.Items);
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

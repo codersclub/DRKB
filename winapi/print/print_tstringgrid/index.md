@@ -1,14 +1,11 @@
 ---
 Title: Как распечатать TStringGrid?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как распечатать TStringGrid?
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Printers; 
@@ -62,4 +59,3 @@ Date: 01.01.2007
       PrintGrid(StringGrid1, 'Print Stringgrid'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

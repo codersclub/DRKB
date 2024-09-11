@@ -1,14 +1,11 @@
 ---
 Title: Как распечатать TImage?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как распечатать TImage?
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
 Вариант 1:
 
@@ -42,7 +39,6 @@ Date: 01.01.2007
 Вариант 2:
 
     // Based on posting to borland.public.delphi.winapi by Rodney E Geraghty, 8/8/97. 
-     
      
     procedure PrintBitmap(Canvas: TCanvas; DestRect: TRect; Bitmap: TBitmap); 
     var 
@@ -138,4 +134,3 @@ Date: 01.01.2007
       PrintImage(Image1, 40); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
