@@ -6,12 +6,8 @@ Date: 01.01.2007
 CreateProcess, который возвращает консольный вывод
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
-
-    procedure ExecConsoleApp(CommandLine: AnsiString; Output: TStringList; Errors:
-      TStringList);
+    procedure ExecConsoleApp(CommandLine: AnsiString;
+      Output: TStringList; Errors: TStringList);
     var
       sa: TSECURITYATTRIBUTES;
       si: TSTARTUPINFO;

@@ -1,15 +1,14 @@
 ---
 Title: Перехват вывода консоли
-Author: Song
 Date: 01.01.2007
 ---
 
 Перехват вывода консоли
 =======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     unit consoleoutput; 
      
@@ -43,7 +42,7 @@ Date: 01.01.2007
       // создаём пайп для перенаправления стандартного вывода
       CreatePipe(StdOutPipeRead,  // дескриптор чтения
                  StdOutPipeWrite, // дескриптор записи
-                 @SA,              // аттрибуты безопасности
+                 @SA,             // аттрибуты безопасности
                  0                // количество байт принятых для пайпа - 0 по умолчанию
                  );
       try
@@ -62,7 +61,8 @@ Date: 01.01.2007
      
         // Запускаем компилятор из командной строки
         WorkDir := ExtractFilePath(CommandLine);
-        WasOK := CreateProcess(nil, PChar(CommandLine), nil, nil, True, 0, nil, PChar(WorkDir), SI, PI);
+        WasOK := CreateProcess(nil, PChar(CommandLine), nil, nil, True,
+                               0, nil, PChar(WorkDir), SI, PI);
      
         // Теперь, когда дескриптор получен, для безопасности закрываем запись.
         // Нам не нужно, чтобы произошло случайное чтение или запись.
@@ -103,9 +103,12 @@ Date: 01.01.2007
      
     end.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {
     This function runs a program (console or batch) and adds its output
@@ -187,7 +190,13 @@ Date: 01.01.2007
       RunCaptured('C:\', 'cmd.exe', '/c dir');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+----------------------------------------------------------------
+
+Вариант 3:
+
+Author: Song
+
+Source: <https://forum.sources.ru>
 
     procedure RunDosInMemo(CmdLine: string; AMemo: TMemo);
     const
@@ -260,11 +269,11 @@ Date: 01.01.2007
       RunDosInMemo('ping -t 192.168.28.200', Memo1);
     end;
 
-Автор: Song
-
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Hужно использовать пайпы (CreatePipe), и работать с ними как с обычным
 файлом.
@@ -354,11 +363,14 @@ Hужно использовать пайпы (CreatePipe), и работать 
         Result := False;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Author: Алексей Бойко
+
+Source: <https://forum.sources.ru>
 
 Это пример запуска консольных программ с передачей ей консольного ввода
 (как если бы он был введен с клавиатуры после запуска программы) и
@@ -517,6 +529,3 @@ DelphiWorld 6.0
      
     end;
 
-Автор: Алексей Бойко
-
-Взято из <https://forum.sources.ru>

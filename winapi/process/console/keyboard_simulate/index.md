@@ -2,23 +2,18 @@
 Title: Имитация ввода с клавиатуры для консоли
 Author: Nomadic
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Имитация ввода с клавиатуры для консоли
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Nomadic
-
     const
      
       ExtendedKeys: set of Byte = [ // incomplete list
-      VK_INSERT, VK_DELETE, VK_HOME, VK_END, VK_PRIOR, VK_NEXT,
+        VK_INSERT, VK_DELETE, VK_HOME, VK_END, VK_PRIOR, VK_NEXT,
         VK_LEFT, VK_UP, VK_RIGHT, VK_DOWN, VK_NUMLOCK
-        ];
+      ];
      
     procedure SimulateKeyDown(Key: byte);
     var
@@ -58,18 +53,7 @@ Date: 01.01.2007
       else
         flags := 0;
       scancode := MapVirtualKey(Key, 0);
-      keybd_event(Key,
-        scancode,
-        flags,
-        0);
-      keybd_event(Key,
-        scancode,
-        KEYEVENTF_KEYUP or flags,
-        0);
+      keybd_event(Key, scancode, flags, 0);
+      keybd_event(Key, scancode, KEYEVENTF_KEYUP or flags, 0);
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -1,17 +1,16 @@
 ---
 Title: Как очистить экран в консольном приложении?
-Author: Олег Кулабухов 
 Date: 01.01.2007
 ---
 
 Как очистить экран в консольном приложении?
 ===========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Автор: Олег Кулабухов 
+Author: Олег Кулабухов 
+
+Source: <https://delphiworld.narod.ru>
 
 Нужно просто использовать GetConsoleScreenBufferInfo() для ввода
 нескольких пустых строк.
@@ -38,9 +37,14 @@ Date: 01.01.2007
       Readln;
     end.
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Krid
+
+Source: <https://forum.sources.ru>
 
     uses
       Windows;
@@ -56,10 +60,9 @@ Date: 01.01.2007
      FillChar(Coord,SizeOf(TCoord),0);
      ConsoleHandle:=GetStdHandle(STD_OUTPUT_HANDLE);
      GetConsoleScreenBufferInfo(ConsoleHandle, ConsoleInfo);
-     FillConsoleOutputCharacter(ConsoleHandle,' ', ConsoleInfo.dwSize.X * ConsoleInfo.dwSize.Y, Coord, WrittenChars);
+     FillConsoleOutputCharacter(ConsoleHandle,' ',
+                                ConsoleInfo.dwSize.X * ConsoleInfo.dwSize.Y,
+                                Coord, WrittenChars);
      SetConsoleCursorPosition(ConsoleHandle,ConsoleInfo.dwCursorPosition)
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Krid

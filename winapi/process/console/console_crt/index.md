@@ -1,14 +1,11 @@
 ---
 Title: CRT для консольного приложения
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 CRT для консольного приложения
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     $IfDef VER130}
       {$Define NEW_STYLES}
@@ -1048,4 +1045,3 @@ CRT для консольного приложения
       {$Endif win32}
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

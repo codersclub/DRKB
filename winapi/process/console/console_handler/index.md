@@ -6,11 +6,11 @@ Date: 01.01.2007
 Как получить дескриптор окна консоли?
 =====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-В следуещем примере используется функция Windows API FindWindow().
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+В следующем примере используется функция Windows API FindWindow().
 Обратите внимание, что WndClass консольного окна отличаются для Windows
 95 и Window NT и заголовок окна может содержать полный путь под Windows
 NT.
@@ -34,15 +34,14 @@ NT.
        ShowMessage(IntToStr(FindWindow(PChar(ClassName), PChar(Title)))); 
      end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 При поиске окон, как отмечалось, нужен класс и имя, так вот - если Вы
 ищите DOS-окно, то его класс всегда = \'tty\'.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

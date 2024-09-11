@@ -1,14 +1,11 @@
 ---
 Title: Как переназначить вывод в файл для консольной программы?
-Date: 01.01.2007
+Date: 01.01.2002
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Как переназначить вывод в файл для консольной программы?
 ========================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Я не профи в Win API, просто у меня возникла именно такая проблема. Я
 нашел решение устраивающее меня. И к тому же решил, поделился с вами.
@@ -18,8 +15,9 @@ Date: 01.01.2007
 
 Хочу предложить 2 способа:
 
-1) Простой, с использованием command.com /c имя\_консольной\_проги \>
-имя\_файла\_куда\_переназначить\_StdOut
+1) Простой, с использованием
+
+    command.com /c имя_консольной_проги > имя_файла_куда_переназначить_StdOut
 
 2) С использованием Win API (2 штуки)
 
@@ -27,7 +25,7 @@ Date: 01.01.2007
 
 Рассмотрим их более подробно на примерах.
 
-Способ №1
+**Способ №1**
 
     var
       StartupInfo: TStartupInfo;
@@ -40,17 +38,17 @@ Date: 01.01.2007
         dwFlags := STARTF_USESHOWWINDOW;
       end;
      
-    // для примера будем запускать [c:\program files\Borland\Delphi5\Bin]grep.exe с ключом '?'
+      // для примера будем запускать [c:\program files\Borland\Delphi5\Bin]grep.exe с ключом '?'
       Win32Check(CreateProcess(nil, 'command.com /c  grep.exe ? > MyStdOut.txt',
         nil, nil, FALSE, CREATE_NEW_CONSOLE, nil, nil, StartupInfo, ProcessInformation));
      
-    // ждем пока наш процесс отработает
+      // ждем пока наш процесс отработает
       WaitForSingleObject(ProcInfo.hProcess, INFINITE);
      
       Win32Check(CloseHandle(ProcInfo.hProcess);
     end;
 
-Способ №2.1
+**Способ №2.1**
 
     var
       ProcInfo: TProcessInformation;
@@ -64,7 +62,7 @@ Date: 01.01.2007
       if (hOut = INVALID_HANDLE_VALUE) then
         RaiseLastWin32Error;
     end;
-     
+
 
 А вот в этом месте и происходит все самое важное!!! Необходимо сделать
 рукоятку нашего файла НАСЛЕДУЕМОЙ, что и делаем...
@@ -92,9 +90,11 @@ Date: 01.01.2007
       hStdOutput := hOutDup; // присваиваем рукоятку на свой файл
     end;
 
-Для примера будем запускать [c:\\program
-files\\Borland\\Delphi5\\Bin]grep.exe с ключом \'?\' Вызов
-CreateProcess с флагом bInheritHandles = TRUE !!!
+Для примера будем запускать
+
+    [c:\program files\Borland\Delphi5\Bin]grep.exe с ключом '?'
+
+Вызов CreateProcess с флагом bInheritHandles = TRUE !!!
 
     Win32Check(CreateProcess(nil, 'grep.exe ?', nil, nil, TRUE,
       CREATE_NEW_CONSOLE, nil, nil, StartupInfo, ProcInfo));
@@ -109,7 +109,7 @@ CreateProcess с флагом bInheritHandles = TRUE !!!
     Win32Check(CloseHandle(hOutDup));
     end;
 
-Способ №2.2
+**Способ №2.2**
 
 Этот способ мне показал Юрий Зотов (поместив его в разделе "Обсуждение
 статьи"), спасибо. Оказывается, рукоятку гораздо проще сделать
@@ -159,7 +159,7 @@ CreateProcess с флагом bInheritHandles = TRUE !!!
       Win32Check(CloseHandle(hOut));
     end;
 
-Заключение
+**Заключение**
 
 Первый способ проверялся мной под Win98 и Win2k Pro. Второй (обе
 разновидности) только под Win2k Pro.
@@ -175,6 +175,4 @@ RaiseLastWin32Error добавляйте (убирайте) по своему в
 эти (и смежные) разделы вы сможете переназначить StdOut, StdIn и StdErr
 куда вам захочется.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

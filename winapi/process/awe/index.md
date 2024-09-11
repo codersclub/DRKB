@@ -1,15 +1,11 @@
 ---
-Title: AWE
-Date: 01.01.2002
-Author: Mystic (mailto:mystic2000@newmail.ru)
+Title: Address Windowing Extention (AWE)
+Date: 12.12.2002
+Author: Mystic (mystic2000@newmail.ru)
 ---
 
-AWE
-===
-
-::: {.date}
-01.01.2002
-:::
+Address Windowing Extention (AWE)
+=================================
 
 Расширение адресной оболочки Windows
 

@@ -1,14 +1,11 @@
 ---
 Title: Переключение консольного приложения в полный экран
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Переключение консольного приложения в полный экран
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
        There is no documented way to make a console application fullscreen. 
@@ -144,4 +141,3 @@ Date: 01.01.2007
       end; 
     end;
 
-Взято с <https://delphiworld.narod.ru>

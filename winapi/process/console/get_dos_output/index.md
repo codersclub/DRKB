@@ -1,14 +1,12 @@
 ---
 Title: Получить выходные данные DOS приложения
+Author: Theodoros Bebekis, bebekis@otenet.gr 
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 Получить выходные данные DOS приложения
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     {----------------------------CreateDOSProcessRedirected--------------------------- 
      Description    : executes a (DOS!) app defined in the CommandLine parameter redirected 
@@ -160,4 +158,3 @@ Date: 01.01.2007
        end;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

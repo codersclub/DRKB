@@ -6,9 +6,9 @@ Date: 01.01.2007
 Как использовать консоль в неконсольном приложении?
 ===================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Для того, чтобы добавить в не-консольное приложение ввод/вывод из
 консоли, необходимо воспользоваться функциями AllocConsole и
@@ -30,9 +30,12 @@ FreeConsole.
       end; 
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     { 
      
@@ -45,22 +48,21 @@ FreeConsole.
     }
      
      
-     procedure TForm1.Button1Click(Sender: TObject);
-     var
-       s: string;
-     begin
-       AllocConsole;
-       try
-         // Change color attributes 
-        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),
-                                              FOREGROUND_BLUE OR FOREGROUND_GREEN or
-                                              BACKGROUND_RED );
-         Write('Type here your words and press ENTER: ');
-         Readln(s);
-         ShowMessage(Format('You typed: "%s"', [s]));
-       finally
-         FreeConsole;
-       end;
-     end;
+    procedure TForm1.Button1Click(Sender: TObject);
+    var
+      s: string;
+    begin
+      AllocConsole;
+      try
+        // Change color attributes 
+       SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),
+                                            FOREGROUND_BLUE OR FOREGROUND_GREEN or
+                                            BACKGROUND_RED );
+        Write('Type here your words and press ENTER: ');
+        Readln(s);
+        ShowMessage(Format('You typed: "%s"', [s]));
+      finally
+        FreeConsole;
+      end;
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

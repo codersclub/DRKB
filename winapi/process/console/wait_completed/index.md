@@ -6,12 +6,12 @@ Date: 01.01.2007
 Подождать завершения DOS-задачи
 ===============================
 
-::: {.date}
-01.01.2007
-:::
+> Каким образом организовать ожидание завершения DOS-задачи? Например,
+> надо подождать, пока заархивируется файл, и далее обработать его.
 
-Каким образом организовать ожидание завершения DOS-задачи? Например,
-надо подождать, пока заархивируется файл, и далее обработать его.
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     uses Windows;
      
@@ -47,11 +47,12 @@ Date: 01.01.2007
         MessageDlg(SysErrorMessage(GetLastError), mtError, [mbOK], 0);
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function WinExecute(CmdLine: string; Wait: Boolean): Boolean;
     var
@@ -72,11 +73,12 @@ DelphiWorld 6.0
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function TForm1.StartWithShell(Prog, par, Verz: string;
     var hProcess: THandle): DWord;
@@ -141,6 +143,3 @@ DelphiWorld 6.0
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
