@@ -1,14 +1,11 @@
 ---
 Title: Как получить статус принтера?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как получить статус принтера?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     function TestPrinterStatus(LPTPort: Word): Byte; 
     var 
@@ -45,4 +42,3 @@ Date: 01.01.2007
       from the DOS interrupt call. 
     } 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,14 +1,11 @@
 ---
 Title: Как прочитать очередь печати?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как прочитать очередь печати?
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Winspool, Printers; 
@@ -64,4 +61,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

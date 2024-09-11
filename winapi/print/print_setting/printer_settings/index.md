@@ -1,17 +1,14 @@
 ---
 Title: Настройки принтера
 Date: 01.01.2007
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
 ---
 
 Настройки принтера
 ==================
 
-::: {.date}
-01.01.2007
-:::
-
 Ниже приведены некоторые участки кода, позволяющие изменять настройки
-принтера.Тот код, который позволяет менять установки, позволяет также
+принтера. Тот код, который позволяет менять установки, позволяет также
 вам узнать принцип управления настройками.Смотри документацию по
 структурам ExtDeviceMode, TDEVMODE и escape функциям принтера
 GETSETPAPERBINS и GetDeviceCaps().
@@ -73,7 +70,7 @@ GETSETPAPERBINS и GetDeviceCaps().
 всегда могут правильно масштабироваться.Чтобы гарантировать
 соответствующий масштаб, устанавите свойство шрифта PixelsPerInch.
 
-      uses Printers;
+    uses Printers;
      
     var
      
@@ -109,6 +106,3 @@ GETSETPAPERBINS и GetDeviceCaps().
       Printer.EndDoc;
     end;
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba
