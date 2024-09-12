@@ -1,14 +1,12 @@
 ---
 Title: Проверить приложение на зависание
-Date: 01.01.2007
+Author: Thomas Stutz
+Date: 01.01.2000
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Проверить приложение на зависание
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     // 1. The Documented way
      
@@ -151,4 +149,3 @@ Date: 01.01.2007
         ShowMessage('Word is not open!');
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

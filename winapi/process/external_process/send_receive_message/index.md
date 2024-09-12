@@ -1,14 +1,11 @@
 ---
 Title: Как передать строку другому приложению?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Как передать строку другому приложению?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
 получатель:
 
@@ -34,6 +31,4 @@ Date: 01.01.2007
       SendMessage(FindWindow('TFormReceive', nil), WM_COPYDATA, 0, LParam(@cd));
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -7,9 +7,11 @@ Date: 01.01.2007
 Как найти окно по неполному названию?
 =====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Код не мой, взят где-то из интернета, авторство не помню, я его
 работоспособность проверял, но почему-то работает не в 100% случаев,
@@ -36,11 +38,13 @@ Date: 01.01.2007
       ClassNameFound := False;
       try
         if GetWindowText(hWindow, lpBuffer, 255) > 0 then
-          if Pos(PFindWindowStruct(lParam).Caption, StrPas(lpBuffer)) > 0 then WindowCaptionFound := true;
+          if Pos(PFindWindowStruct(lParam).Caption, StrPas(lpBuffer)) > 0 then
+            WindowCaptionFound := true;
         if PFindWindowStruct(lParam).ClassName = '' then
           ClassNameFound := True
         else if GetClassName(hWindow, lpBuffer, 255) > 0 then
-          if Pos(PFindWindowStruct(lParam).ClassName, StrPas(lpBuffer)) > 0 then ClassNameFound := True;
+          if Pos(PFindWindowStruct(lParam).ClassName, StrPas(lpBuffer)) > 0 then
+            ClassNameFound := True;
         if (WindowCaptionFound and ClassNameFound) then
           begin
             PFindWindowStruct(lParam).WindowHandle := hWindow;
@@ -74,11 +78,13 @@ Date: 01.01.2007
         ShowMessage('Window Not Found!');
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Mikel
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     function TForm1.Find(s: string): hWnd;
     var Wnd: hWnd;
@@ -104,6 +110,3 @@ Date: 01.01.2007
         end;
     end;
 
-Автор: Mikel
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

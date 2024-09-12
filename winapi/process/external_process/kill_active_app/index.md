@@ -1,17 +1,14 @@
 ---
 Title: Убиваем активное приложение
 Author: Dale Berry
-Date: 01.01.2007
+Date: 10.10.2000
+Source: <https://forum.sources.ru>
 ---
 
 Убиваем активное приложение
 ===========================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Dale Berry
+Вариант 1:
 
 Данная функция позволяет завершить выполнение любой активной программы
 по её classname или заголовку окна.
@@ -30,49 +27,48 @@ Date: 01.01.2007
       TerminateProcess(ProcessHandle,4); 
     end;
 
-Комментарии
+----------------------------------------------------
 
-Xianguang Li (22 Октября 2000)
+Вариант 2:
+
+Author: Xianguang Li (22 Октября 2000):
+
+Комментарий:
 
 В Delphi 5, при компиляции получается следующая ошибка :
 
-Incompatible types: \'String\' and \'PChar\'.
+    Incompatible types: 'String' and 'PChar'.
 
 После изменения выражения
 
-TheWindow := FindWindow(ClassName, WindowTitle)
+    TheWindow := FindWindow(ClassName, WindowTitle)
 
 на
 
-TheWindow := FindWindow(PChar(ClassName), PChar(WindowTitle)),
+    TheWindow := FindWindow(PChar(ClassName), PChar(WindowTitle)),
 
 Нормально откомпилировалось.
 
 И ещё: если мы не знаем ClassName или WindowTitle программы, которую мы
-хотим убить,
+хотим убить, то мы не сможем её завершить.
+Причина в том, что нельзя вызвать функцию в виде:
 
-то мы не сможем её завершить. Причина в том, что нельзя вызвать функцию
-в виде:
-
-KillProgram(nil, WindowTitle)
+    KillProgram(nil, WindowTitle)
 
 или
 
-KillProgram(ClassName, nil).
+    KillProgram(ClassName, nil).
 
 Компилятор не позволяет передать nil в переменную типа String.
 
 Итак, я изменил объявление
 
-KillProgram(ClassName: string; WindowTitle: string)
+    KillProgram(ClassName: string; WindowTitle: string)
 
 на
 
-KillProgram(ClassName: PChar; WindowTitle: PChar),
+    KillProgram(ClassName: PChar; WindowTitle: PChar),
 
 вот теперь функция действительно может завершить любое приложение, если
-вы не знаете
+вы не знаете ClassName или WindowTitle этого приложения.
 
-ClassName или WindowTitle этого приложения.
-
-Взято из <https://forum.sources.ru>

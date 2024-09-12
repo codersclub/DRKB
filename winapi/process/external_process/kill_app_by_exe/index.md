@@ -1,16 +1,11 @@
 ---
 Title: Как убить задачу, зная только имя .exe?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как убить задачу, зная только имя .exe?
 =======================================
-
-::: {.date}
-01.01.2007
-:::
-
-nbsp;
 
     {Эта небольшая функция закрывает приложения, соответствующие заданному имени .exe. 
       Пример: KillTask('notepad.exe'); 
@@ -31,8 +26,7 @@ nbsp;
       FSnapshotHandle := CreateToolhelp32Snapshot 
                          (TH32CS_SNAPPROCESS, 0); 
       FProcessEntry32.dwSize := Sizeof(FProcessEntry32); 
-      ContinueLoop := Process32First(FSnapshotHandle, 
-                                     FProcessEntry32); 
+      ContinueLoop := Process32First(FSnapshotHandle, FProcessEntry32); 
      
       while integer(ContinueLoop) <> 0 do 
       begin 
@@ -50,4 +44,3 @@ nbsp;
       CloseHandle(FSnapshotHandle); 
     end;
 
-Взято из <https://forum.sources.ru>

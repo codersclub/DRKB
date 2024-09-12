@@ -1,26 +1,24 @@
 ---
 Title: Как завершить задачу в Windows NT (а заодно получить PID задачи)?
-Date: 01.01.2007
+Date: 20.03.2009
+Source: <https://forum.sources.ru>
 ---
 
 Как завершить задачу в Windows NT (а заодно получить PID задачи)?
 =================================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Ниже приведён unit, который позволяет убить задачу в Windows NT.
 
 Entry :
 
-     
     function Kill_By_Pid(pid : longint) : integer; 
-      где pid, это число, представляющее pid задачи
+
+где pid, это число, представляющее pid задачи
      
     function EnumProcessWithPid(list : TStrings) : integer; 
-      где список, это объект TStrings, который будет содержать имя задачи и pid в полях Object.
-      ( list.Items[i] для имени, integer(list.Object[i]) для PID) 
+
+где список, это объект TStrings, который будет содержать имя задачи и pid в полях Object.
+( list.Items[i] для имени, integer(list.Object[i]) для PID) 
 
 Дальше следует сам код:
 
@@ -242,7 +240,7 @@ Entry :
      
     function  GetTaskListNT(pTask : TStrings) : integer; 
     var 
-      rc      : DWORD; 
+      rc        : DWORD; 
       hKeyNames : HKEY; 
       dwType    : DWORD; 
       dwSize    : DWORd; 
@@ -407,4 +405,3 @@ Entry :
       InitKill; 
     end.
 
-Взято из <https://forum.sources.ru>

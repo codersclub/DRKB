@@ -1,17 +1,14 @@
 ---
 Title: Как вывести результат работы консоли в TMemo?
-Author: Алексей Бойко
 Date: 01.01.2007
 ---
 
 Как вывести результат работы консоли в TMemo?
 =============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Код взят из <https://www.torry.net/memos.htm>
+Source: <https://www.torry.net/memos.htm>
 
     procedure Dos2Win(CmdLine:String; OutMemo:TMemo);
     const BUFSIZE = 2000;
@@ -80,9 +77,13 @@ Date: 01.01.2007
      end;
     end;
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Song
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 А это исправленный Song\'ом вариант для обеспечения вывода текста в
 real-time:
@@ -91,31 +92,29 @@ real-time:
      const 
        ReadBuffer = 2400; 
      var 
-      Security       : TSecurityAttributes; 
-      ReadPipe,WritePipe  : THandle; 
-      start        : TStartUpInfo; 
-      ProcessInfo     : TProcessInformation; 
-      Buffer        : Pchar; 
-      BytesRead      : DWord; 
-      Apprunning      : DWord; 
+      Security           : TSecurityAttributes; 
+      ReadPipe,WritePipe : THandle; 
+      start              : TStartUpInfo; 
+      ProcessInfo        : TProcessInformation; 
+      Buffer             : Pchar; 
+      BytesRead          : DWord; 
+      Apprunning         : DWord; 
      begin 
       Screen.Cursor:=CrHourGlass; 
       Form1.Button1.Enabled:=False; 
       With Security do begin 
-      nlength        := SizeOf(TSecurityAttributes); 
-      binherithandle    := true; 
-      lpsecuritydescriptor := nil; 
+        nlength              := SizeOf(TSecurityAttributes); 
+        binherithandle       := true; 
+        lpsecuritydescriptor := nil; 
       end; 
-      if Createpipe (ReadPipe, WritePipe, 
-             @Security, 0) then begin 
-      Buffer  := AllocMem(ReadBuffer + 1); 
-      FillChar(Start,Sizeof(Start),#0); 
-      start.cb      := SizeOf(start); 
-      start.hStdOutput  := WritePipe; 
-      start.hStdInput  := ReadPipe; 
-      start.dwFlags   := STARTF_USESTDHANDLES + 
-                 STARTF_USESHOWWINDOW; 
-      start.wShowWindow := SW_HIDE; 
+      if Createpipe (ReadPipe, WritePipe, @Security, 0) then begin 
+        Buffer  := AllocMem(ReadBuffer + 1); 
+        FillChar(Start,Sizeof(Start),#0); 
+        start.cb          := SizeOf(start); 
+        start.hStdOutput  := WritePipe; 
+        start.hStdInput   := ReadPipe; 
+        start.dwFlags     := STARTF_USESTDHANDLES + STARTF_USESHOWWINDOW; 
+        start.wShowWindow := SW_HIDE; 
      
       if CreateProcess(nil, 
           PChar(CmdLine), 
@@ -130,10 +129,8 @@ real-time:
       then 
       begin 
        repeat 
-       Apprunning := WaitForSingleObject 
-              (ProcessInfo.hProcess,100); 
-        ReadFile(ReadPipe,Buffer[0], 
-           ReadBuffer,BytesRead,nil); 
+       Apprunning := WaitForSingleObject (ProcessInfo.hProcess,100); 
+        ReadFile(ReadPipe,Buffer[0], ReadBuffer,BytesRead,nil); 
         Buffer[BytesRead]:= #0; 
         OemToAnsi(Buffer,Buffer); 
         AMemo.Text := AMemo.text + String(Buffer); 
@@ -157,11 +154,14 @@ real-time:
      RunDosInMemo('ping -t 192.168.28.200',Memo1); 
     end;
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
 
-Автор: Алексей Бойко
+Вариант 3:
+
+Author: Алексей Бойко
+
+Source: <https://forum.sources.ru>
 
 Это пример запуска консольных программ с передачей ей консольного ввода
 (как если бы он был введен с клавиатуры после запуска программы) и
@@ -193,7 +193,6 @@ real-time:
       Buf       : array[0..1024] of byte;
       TimeStart : TDateTime;
      
-     
     function ReadOutput : string;
     var
       i : integer;
@@ -222,18 +221,15 @@ real-time:
       until false;
     end;
      
-     
     begin
       Result := false;
       for ph := Low(TPipeHandles) to High(TPipeHandles) do
         Pipes[ph] := INVALID_HANDLE_VALUE;
      
-     
       // Создаем пайпы
       sa.nLength := sizeof(sa);
       sa.bInheritHandle := TRUE;
       sa.lpSecurityDescriptor := nil;
-     
      
       if not CreatePipe(Pipes[IN_READ],Pipes[IN_WRITE], @sa, 0 ) then
         goto Error;
@@ -242,12 +238,9 @@ real-time:
       if not CreatePipe(Pipes[ERR_READ],Pipes[ERR_WRITE], @sa, 0 ) then
         goto Error;
      
-     
-     
       // Пишем StdIn
       StrPCopy(@Buf[0],stdInput+^Z);
       WriteFile(Pipes[IN_WRITE],Buf,Length(stdInput),i,nil);
-     
      
       // Хендл записи в StdIn надо закрыть - иначе выполняемая программа
       // может не прочитать или прочитать не весь StdIn.
@@ -256,19 +249,15 @@ real-time:
      
       Pipes[IN_WRITE] := INVALID_HANDLE_VALUE;
      
-     
       FillChar(StartInf,sizeof(TStartupInfo),0);
       StartInf.cb := sizeof(TStartupInfo);
       StartInf.dwFlags := STARTF_USESHOWWINDOW or STARTF_USESTDHANDLES;
      
-     
       StartInf.wShowWindow := SW_SHOW; // SW_HIDE если надо запустить невидимо
-     
      
       StartInf.hStdInput := Pipes[IN_READ];
       StartInf.hStdOutput := Pipes[OUT_WRITE];
       StartInf.hStdError := Pipes[ERR_WRITE];
-     
      
       if not CreateProcess(nil, PChar(FileName), nil,
                            nil, True, NORMAL_PRIORITY_CLASS,
@@ -283,7 +272,6 @@ real-time:
         if (Now-TimeStart)*SecsPerDay>TimeOut then break;
       until false;
      
-     
       if iWAIT_OBJECT_0 then goto Error;
       StdOutput := ReadOutput;
      
@@ -291,12 +279,10 @@ real-time:
         if Pipes[ph]INVALID_HANDLE_VALUE then
           CloseHandle(Pipes[ph]);
      
-     
       CloseHandle(ProcInf.hProcess);
       CloseHandle(ProcInf.hThread);
       Result := true;
       Exit;
-     
      
     Error:
      
@@ -327,4 +313,3 @@ real-time:
      
     end;
 
-Взято из <https://forum.sources.ru>

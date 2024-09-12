@@ -1,19 +1,13 @@
 ---
 Title: Читаем заголовок exe-файла
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Читаем заголовок exe-файла
 ==========================
 
-::: {.date}
-01.01.2007
-:::
-
-     
     { You'll need a OpenDialog to open a Exe-File and a Memo to show the file informations } 
-     
-     
      
     procedure DumpDOSHeader(const h: IMAGE_DOS_HEADER; Lines: TStrings); 
     begin 
@@ -179,4 +173,3 @@ Date: 01.01.2007
       end; 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

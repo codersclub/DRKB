@@ -1,14 +1,11 @@
 ---
 Title: How to get the NT Domain and Username of a process?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 How to get the NT Domain and Username of a process?
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       TlHelp32;
@@ -104,4 +101,3 @@ How to get the NT Domain and Username of a process?
       CloseHandle(hProcSnap);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,22 +1,14 @@
 ---
 Title: Как эмулировать нажатия клавиш в другой программе?
-Date: 01.01.2007
+Author: Ken Henderson, khen@compuserve.com
+Date: 12.12.1995
+Source: https://delfaq.wallst.ru/faq/emul.html
 ---
 
 Как эмулировать нажатия клавиш в другой программе?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Как эмулировать нажатия клавиш в другой программе
-
-https://delfaq.wallst.ru/faq/emul.html
-
-Этот модуль является почти полным аналогом мотоду SendKeys из VB.
-
-(Автор: Ken Henderson, email:khen@compuserve.com)
+Этот модуль является почти полным аналогом методу SendKeys из VB.
 
     {
     SendKeys routine for 32-bit Delphi. 
@@ -122,9 +114,7 @@ https://delfaq.wallst.ru/faq/emul.html
     function SendKeys(SendKeysString : PChar; Wait : Boolean) : Boolean; 
     function AppActivate(WindowName : PChar) : boolean; 
      
-     
     {Buffer for working with PChar's} 
-     
      
     const 
       WorkBufLen = 40; 
@@ -137,7 +127,6 @@ https://delfaq.wallst.ru/faq/emul.html
     var 
       AllocationSize : integer; 
      
-     
     (* 
     Converts a string of characters and key names to keyboard events and 
     passes them to Windows. 
@@ -145,9 +134,7 @@ https://delfaq.wallst.ru/faq/emul.html
     Example syntax: 
      
     SendKeys('abc123{left}{left}{left}def{end}456{left 6}ghi{end}789', True); 
-     
     *) 
-     
      
     function SendKeys(SendKeysString : PChar; Wait : Boolean) : Boolean; 
     type 
@@ -164,7 +151,6 @@ https://delfaq.wallst.ru/faq/emul.html
      
       if you add to this list, you must be sure to keep it sorted alphabetically 
       by Name because a binary search routine is used to scan it.} 
-     
      
       MaxSendKeyRecs = 41; 
       SendKeyRecs : array[1..MaxSendKeyRecs] of TSendKey = 
@@ -471,7 +457,6 @@ https://delfaq.wallst.ru/faq/emul.html
     sending it input messages using the SendKeys function. You can specify 
     a window's name in its entirety, or only portion of it, beginning from 
     the left. 
-     
     } 
      
     var 
@@ -506,4 +491,3 @@ https://delfaq.wallst.ru/faq/emul.html
      
     end. 
 
-Взято с сайта <https://blackman.wp-club.net/>

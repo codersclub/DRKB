@@ -2,17 +2,13 @@
 Title: Как по PID процесса узнать CmdLine, то есть командную строку?
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как по PID процесса узнать CmdLine, то есть командную строку?
 =============================================================
 
-::: {.date}
-01.01.2007
-:::
-
     function GetProcessCmdLine(PID:DWORD):string;
-
      
     var
      h:THandle;
@@ -28,14 +24,13 @@ Date: 01.01.2007
      try
        ret:=NtQueryInformationProcess(h,ProcessBasicInformation,@pbi,sizeof(pbi),@r);
        if ret=STATUS_SUCCESS then
-        if ReadProcessMemory(h,pbi.PebBaseAddress.ProcessParameters.CommandLine.Buffer,PWideChar(ws),
-                               pbi.PebBaseAddress.ProcessParameters.CommandLine.Length,r) then
+        if ReadProcessMemory(h,pbi.PebBaseAddress.ProcessParameters.CommandLine.Buffer,
+                               PWideChar(ws),
+                               pbi.PebBaseAddress.ProcessParameters.CommandLine.Length,
+                               r) then
        result:=string(ws);
      finally
       closehandle(h)
      end
     end;
 
-Автор: Krid
-
-Взято из <https://forum.sources.ru>

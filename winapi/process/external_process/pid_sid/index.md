@@ -2,17 +2,13 @@
 Title: PID и SID процесса
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 PID и SID процесса
 ==================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-
      
     interface
      
@@ -82,21 +78,13 @@ PID и SID процесса
      
     end.
 
-
-
-
 В данном примере GetCurrentProcess можно заменить (если имеешь PID) на
 
-                  hProcess := OpenProcess(PROCESS_QUERY_INFORMATION, True, PID);
-                  if hProcess <> 0 then
-                  try
-                    // теперь заменяй GetCurrentProcess значением из hProcess 
-                  finally
-                    CloseHandle(hProcess);
-                  end;
+    hProcess := OpenProcess(PROCESS_QUERY_INFORMATION, True, PID);
+    if hProcess <> 0 then
+    try
+      // теперь заменяй GetCurrentProcess значением из hProcess 
+    finally
+      CloseHandle(hProcess);
+    end;
 
-
-
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

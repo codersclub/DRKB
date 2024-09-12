@@ -1,18 +1,14 @@
 ---
 Title: Как узнать путь к программе, если известно её имя?
 Author: Rouse\_, P.O.D.
+Source: <https://forum.sources.ru>
 Date: 01.01.2007
 ---
 
 Как узнать путь к программе, если известно её имя?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-
      
     interface
      
@@ -67,8 +63,5 @@ Date: 01.01.2007
         CloseHandle(hSnapshot);
       end;
     end;
-     
 
-Взято из <https://forum.sources.ru>
 
-Автор: Rouse\_, P.O.D.

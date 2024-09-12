@@ -1,14 +1,12 @@
 ---
 Title: Как, зная Handle окна программы, определить имя exe?
 Date: 01.01.2007
+Author: Мыш
+Source: <https://forum.sources.ru>
 ---
 
 Как, зная Handle окна программы, определить имя exe?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function ExeNameByHandle(aWinHandle:HWND):string;
     {исправлено для ©Drkb v.3(2007): www.drkb.ru}
@@ -43,8 +41,3 @@ Date: 01.01.2007
      
     // Не забудь в uses добавить Tlhelp32
 
-Взято с <https://delphiworld.narod.ru>
-
-Код исправлен Мыш
-
-Взято из <https://forum.sources.ru>

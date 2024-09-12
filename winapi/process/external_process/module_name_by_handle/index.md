@@ -2,14 +2,12 @@
 Title: Получение имени модуля по хендлу окна
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
+©Drkb::02133
 ---
 
 Получение имени модуля по хендлу окна
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function GetModuleFileNameExW(hProcess:THandle; hModule:HMODULE; lpFilename:PWideChar; nSize:DWORD):DWORD; stdcall; external 'PSAPI.DLL';
      
@@ -63,14 +61,6 @@ Date: 01.01.2007
         ShowMessage(WindowGetExe(hWnd))
     end;
 
-©Drkb::02133
+PS только для NT4 и выше.
+Для Win9x юзать GetWindowModuleFileName.
 
-
-PS только для NT4 и выше. Для Win9x юзать GetWindowModuleFileName.
-
-
-Автор: Krid
-
-Взято из <https://forum.sources.ru>
-
- 

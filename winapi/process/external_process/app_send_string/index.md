@@ -2,14 +2,11 @@
 Title: Функция передачи строк (а заодно и числа) между программами через SendMessage
 Author: Rrader
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 Функция передачи строк (а заодно и числа) между программами через SendMessage
 =============================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     Function SendString(TargetWnd, SourceWnd: THandle; N: Integer; Const S: String): Integer;
     Var
@@ -38,6 +35,3 @@ Date: 01.01.2007
       N := (Msg.CopyDataStruct^).dwData;
     End;
 
-Автор: Rrader
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

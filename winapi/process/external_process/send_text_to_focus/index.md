@@ -2,17 +2,13 @@
 Title: Передача текста любому окну, где стоит фокус
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Передача текста любому окну, где стоит фокус
 ============================================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure TForm1.Timer1Timer(Sender: TObject);
-
      
     var
       pgui: TGUIThreadinfo;
@@ -22,6 +18,3 @@ Date: 01.01.2007
       SendMessage(pgui.hwndFocus, WM_SETTEXT, Length(Edit1.Text), Integer(@Edit1.Text[1]));
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

@@ -2,21 +2,17 @@
 Title: Поиск значения типа DWORD в указанном процессе
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Поиск значения типа DWORD в указанном процессе
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     //
     // Поиск значения типа DWORD в указанном процессе
     // paul_shmakov@mail.ru
     //
     program search;
-
      
     {$APPTYPE CONSOLE}
      
@@ -129,6 +125,3 @@ Date: 01.01.2007
      ReadLn;
     end.
 
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>

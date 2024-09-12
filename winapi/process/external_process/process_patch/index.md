@@ -1,14 +1,11 @@
 ---
 Title: How to patch a process?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 How to patch a process?
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     {....}
      
@@ -30,7 +27,6 @@ How to patch a process?
      
     {....}
      
-     
     procedure TForm1.Button1Click(Sender: TObject);
     begin
       WindowName := FindWindow(nil, WindowTitle);
@@ -50,4 +46,3 @@ How to patch a process?
       CloseHandle(HandleWindow);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

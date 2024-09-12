@@ -2,14 +2,11 @@
 Title: Поиск в памяти процесса
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Поиск в памяти процесса
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     // Поиск значения типа DWORD в указанном процессе
     // paul_shmakov@mail.ru
@@ -110,8 +107,6 @@ Date: 01.01.2007
       WriteLn('Failed to open process');
     end.
 
-
-
 а вот программа, в которой ведем поиск для примера:
 
     program someprog;
@@ -128,10 +123,5 @@ Date: 01.01.2007
      WriteLn('Press any key to exit');
      ReadLn;
     end.
-
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_
-
 
  
