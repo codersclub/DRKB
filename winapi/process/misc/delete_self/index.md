@@ -1,14 +1,11 @@
 ---
 Title: Как программе удалить саму себя?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как программе удалить саму себя?
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
 Первый способ:
 
@@ -67,7 +64,6 @@ Date: 01.01.2007
     begin 
        BatchFileName:=ExtractFilePath(ParamStr(0))+ '$$336699.bat'; 
      
-     
        AssignFile(BatchFile, BatchFileName); 
        Rewrite(BatchFile); 
      
@@ -122,4 +118,3 @@ Date: 01.01.2007
       end; 
     end;
 
-Взято из <https://forum.sources.ru>

@@ -1,22 +1,18 @@
 ---
 Title: Как получить весь размер системной памяти?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как получить весь размер системной памяти?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
-
     function GetMemoryTotalPhys : DWord; 
     var 
-    memStatus: TMemoryStatus; 
+      memStatus: TMemoryStatus; 
     begin 
-    memStatus.dwLength := sizeOf ( memStatus ); 
-    GlobalMemoryStatus ( memStatus ); 
-    Result := memStatus.dwTotalPhys; 
+      memStatus.dwLength := sizeOf ( memStatus ); 
+      GlobalMemoryStatus ( memStatus ); 
+      Result := memStatus.dwTotalPhys; 
     end; 
 
-Взято из <https://forum.sources.ru>

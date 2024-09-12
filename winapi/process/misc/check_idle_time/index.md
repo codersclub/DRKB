@@ -1,14 +1,11 @@
 ---
 Title: Как определить, насколько долго система находится в Idle?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как определить, насколько долго система находится в Idle?
 =========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function LastInput: DWord;
     var
@@ -31,4 +28,3 @@ Date: 01.01.2007
     // of the last input event.
     // Minimum operating systems: Windows 2000
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

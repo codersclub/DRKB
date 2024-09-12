@@ -6,11 +6,11 @@ Date: 01.01.2007
 Как определить, запущено ли приложение в Windows NT?
 ====================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Следующий кодкомпилируется как на 16-ти, так и на 32-битных платформах.
+Source: <https://forum.sources.ru>
+
+Следующий код компилируется как на 16-ти, так и на 32-битных платформах.
 
     {$IFNDEF WIN32} 
       const WF_WINNT = $4000; 
@@ -40,9 +40,12 @@ Date: 01.01.2007
         ShowMessage('Not Running on NT'); 
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://blackman.wp-club.net/>
 
     function IsNT: bool;
     var osv: TOSVERSIONINFO;
@@ -59,4 +62,3 @@ Date: 01.01.2007
       else
         ShowMessage('Not Running on NT');
 
-Взято с сайта <https://blackman.wp-club.net/>

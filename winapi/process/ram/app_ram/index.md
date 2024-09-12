@@ -1,14 +1,11 @@
 ---
 Title: Как определить, сколько памяти выделено в Delphi для программы?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как определить, сколько памяти выделено в Delphi для программы?
 ===============================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Для этого можно воспользоваться функцией GetHeapStatus:
 
@@ -75,4 +72,3 @@ Date: 01.01.2007
     ListItem.Caption := 'HeapErrorCode';
     ListItem.SubItems.Add(Numb2USA(Format(strFormat,[s.HeapErrorCode])));
 
-Взято из <https://forum.sources.ru>

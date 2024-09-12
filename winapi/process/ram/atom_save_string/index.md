@@ -2,14 +2,11 @@
 Title: Сохранить строку в памяти + пример работы с атомами
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 Сохранить строку в памяти + пример работы с атомами
 ===================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Например через атомы:
 
@@ -18,7 +15,6 @@ Date: 01.01.2007
 значение через атомы:
 
     const UniqueSignature='GI7324hjbHGHJKdhgn90jshUH*hjsjshjdj';
-
      
     Procedure CleanAtoms;
     var P:PChar;
@@ -62,7 +58,7 @@ Date: 01.01.2007
     begin
     Showmessage(ReadAtom);
     end;
-     
+
 
 **Примечание**
 
@@ -73,6 +69,3 @@ Date: 01.01.2007
 значений надо назначить несколько разных UniqueSignature и использовать
 сходные процедуры.
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
