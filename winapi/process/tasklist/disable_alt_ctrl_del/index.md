@@ -1,14 +1,11 @@
 ---
 Title: Disable Ctrl+Alt+Del under Windows XP
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Disable Ctrl+Alt+Del under Windows XP
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure DisableTaskMgr(bTF: Boolean);
     var
@@ -41,4 +38,3 @@ Disable Ctrl+Alt+Del under Windows XP
       DisableTaskMgr(True);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

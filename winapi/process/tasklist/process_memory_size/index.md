@@ -1,14 +1,11 @@
 ---
 Title: Как узнать количество памяти, используемое процессом?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как узнать количество памяти, используемое процессом?
 =====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     // Works only on Windows NT systems (WinNT, Win2000, WinXP)
     uses psAPI;
@@ -29,4 +26,3 @@ Date: 01.01.2007
       FreeMem(pmc);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

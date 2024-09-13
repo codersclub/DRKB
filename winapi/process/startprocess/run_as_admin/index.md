@@ -2,14 +2,11 @@
 Title: Создать процесс с правами админа
 Author: win\_nt
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Создать процесс с правами админа
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Main; 
      
@@ -41,7 +38,8 @@ Date: 01.01.2007
       lpEnvironment: Pointer; 
       lpCurrentDirectory: PWideChar; 
       const lpStartupInfo: _STARTUPINFOA; 
-      var lpProcessInfo: PROCESS_INFORMATION): BOOL; stdcall; external 'advapi32.dll' name 'CreateProcessWithLogonW'; 
+      var lpProcessInfo: PROCESS_INFORMATION): BOOL;
+      stdcall; external 'advapi32.dll' name 'CreateProcessWithLogonW'; 
      
      
     {$R *.dfm} 
@@ -59,16 +57,7 @@ Date: 01.01.2007
      
     end.
 
-
-
 Должно работать, только лучше указывать полный путь до папки
 запускаемого приложения... без этого у меня некоторые приложения не
 запускались(один из параметров после \'notepad\').
 
-
-
-
-
-Автор: win\_nt
-
-Взято из <https://forum.sources.ru>

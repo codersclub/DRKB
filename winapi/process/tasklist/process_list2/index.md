@@ -1,14 +1,11 @@
 ---
 Title: Как получить список процессов?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как получить список процессов?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     function IsRunning( sName : string ) : boolean; 
     var 
@@ -24,20 +21,19 @@ Date: 01.01.2007
       // Loop thru the processes until we find it or hit the end 
       ProcStruct.dwSize := sizeof( PROCESSENTRY32 ); 
       if Process32First( han, ProcStruct ) then 
-        begin 
-          repeat 
-            sID := ExtractFileName( ProcStruct.szExeFile ); 
-            // Check only against the portion of the name supplied, ignoring case 
-            if uppercase( copy( sId, 1, length( sName ) ) ) = uppercase( sName ) then 
-              begin 
-                // Report we found it 
-                Result := true; 
-                Break; 
-              end; 
-          until not Process32Next( han, ProcStruct ); 
-        end; 
+      begin 
+        repeat 
+          sID := ExtractFileName( ProcStruct.szExeFile ); 
+          // Check only against the portion of the name supplied, ignoring case 
+          if uppercase( copy( sId, 1, length( sName ) ) ) = uppercase( sName ) then 
+          begin 
+            // Report we found it 
+            Result := true; 
+            Break; 
+          end; 
+        until not Process32Next( han, ProcStruct ); 
+      end; 
       // clean-up 
       CloseHandle( han ); 
     end;
 
-Взято из <https://forum.sources.ru>

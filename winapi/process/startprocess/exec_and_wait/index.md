@@ -7,41 +7,39 @@ Date: 01.01.2007
 Как запустить программу и подождать её завершения?
 ==================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     var
-    pi : TProcessInformation;
-    si : TStartupInfo;
+      pi : TProcessInformation;
+      si : TStartupInfo;
     begin
-    ZeroMemory(@si,sizeof(si));
-    si.cb:=SizeOf(si);
-    if not CreateProcess(
-    PChar(lpApplicationName), //pointer to name of executable module
-    PChar(lpCommandLine), // Command line.
-    nil, // Process handle not inheritable.
-    nil, // Thread handle not inheritable.
-    False, // Set handle inheritance to FALSE.
-    0, // No creation flags.
-    nil, // Use parent's environment block.
-    nil, // Use parent's starting directory.
-    si, // Pointer to STARTUPINFO structure.
-    pi ) // Pointer to PROCESS_INFORMATION structure.
-    then begin
-    Result:=false;
-    RaiseLastWin32Error; 
-    Exit;
-    end;
-    WaitForSingleObject(pi.hProcess,INFINITE);
-    CloseHandle(pi.hProcess);
-    CloseHandle(pi.hThread);
-    // ... здесь твой код
+      ZeroMemory(@si,sizeof(si));
+      si.cb:=SizeOf(si);
+      if not CreateProcess(
+        PChar(lpApplicationName), //pointer to name of executable module
+        PChar(lpCommandLine), // Command line.
+        nil, // Process handle not inheritable.
+        nil, // Thread handle not inheritable.
+        False, // Set handle inheritance to FALSE.
+        0, // No creation flags.
+        nil, // Use parent's environment block.
+        nil, // Use parent's starting directory.
+        si, // Pointer to STARTUPINFO structure.
+        pi ) // Pointer to PROCESS_INFORMATION structure.
+      then begin
+        Result:=false;
+        RaiseLastWin32Error; 
+        Exit;
+      end;
+      WaitForSingleObject(pi.hProcess,INFINITE);
+      CloseHandle(pi.hProcess);
+      CloseHandle(pi.hThread);
+      // ... здесь твой код
     end;
 
-Автор: TAPAKAH
-
-Примечание Vit:
+**Примечание Vit:**
 
 Если заменить
 
@@ -53,13 +51,17 @@ Date: 01.01.2007
       application.ProcessMessages;
 
 то вызывающая программа не будет казаться завешанной и будет отвечать на
-сообщения
+сообщения/
 
-Примечание Mikel: В RxLib есть функция для этого: FileExecuteWait
+**Примечание Mikel:**
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+В RxLib есть функция для этого: `FileExecuteWait`
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
 Здесь представлена функция, которая вызывается таким же образом как и
 WinExec, однако она ждёт, пока запущенная задача завершится.
@@ -84,11 +86,14 @@ WinExec, однако она ждёт, пока запущенная задач�
       WinExecAndWait := 0; 
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-Автор: Fabrнcio Fadel Kammer
+Вариант 3:
+
+Author: Fabrнcio Fadel Kammer
+
+Source: <https://forum.sources.ru>
 
 Пример показывает как из Вашей программы запустить внешнее приложение и
 подождать его завершения.
@@ -125,14 +130,12 @@ WinExec, однако она ждёт, пока запущенная задач�
 
     ExecAndWait( 'C:\windows\calc.exe', '', SH_SHOWNORMAL);
 
-Параметр FileName = Имя внешней программы.
+Параметр `FileName` = Имя внешней программы.
 
-Параметр Params = Параметры, необходимые для запуска внешней программы
+Параметр `Params` = Параметры, необходимые для запуска внешней программы
 
-Параметр WinState = Указывает - как будет показано окно:  
-Для этого параметра мы можем так же использовать
-следующие константы:
+Параметр `WinState` = Указывает - как будет показано окно:
+Для этого параметра мы можем так же использовать следующие константы:
 
     SW_HIDE, SW_MAXIMIZE, SW_MINIMIZE, SW_SHOWNORMAL
 
-Взято из <https://forum.sources.ru>

@@ -6,9 +6,9 @@ Date: 01.01.2007
 Как получить / установить приоритет процесса?
 =============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     const 
         ppIdle                  : Integer = -1; 
@@ -62,26 +62,27 @@ Date: 01.01.2007
 
 для получения приоритета.
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
 Следующий пример изменяет приоритет приложения. Изменение приоритета
 следует использовать с осторожностью - т.к. присвоение слишком высокого
 приоритета может привети к медленной работе остальных программ и системы
 в целом. См. Win32 help for SetThreadPriority() function.
 
-      procedure TForm1.Button1Click(Sender: TObject);
-      var
-        ProcessID : DWORD;
-        ProcessHandle : THandle;
-        ThreadHandle : THandle;
-      begin
-        ProcessID := GetCurrentProcessID;
-        ProcessHandle := OpenProcess(PROCESS_SET_INFORMATION,
-                                     false,
-                                     ProcessID);
-        SetPriorityClass(ProcessHandle, REALTIME_PRIORITY_CLASS);
-        ThreadHandle := GetCurrentThread;
-        SetThreadPriority(ThreadHandle, THREAD_PRIORITY_TIME_CRITICAL);
-      end;
+    procedure TForm1.Button1Click(Sender: TObject);
+    var
+      ProcessID : DWORD;
+      ProcessHandle : THandle;
+      ThreadHandle : THandle;
+    begin
+      ProcessID := GetCurrentProcessID;
+      ProcessHandle := OpenProcess(PROCESS_SET_INFORMATION,
+                                   false,
+                                   ProcessID);
+      SetPriorityClass(ProcessHandle, REALTIME_PRIORITY_CLASS);
+      ThreadHandle := GetCurrentThread;
+      SetThreadPriority(ThreadHandle, THREAD_PRIORITY_TIME_CRITICAL);
+    end;

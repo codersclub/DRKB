@@ -6,12 +6,11 @@ Date: 01.01.2007
 Как сделать, чтобы запускалась только одна копия приложения?
 ============================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
     var AtomText: array[0..31] of Char; 
-     
      
     procedure LookForPreviousInstance; 
     var 
@@ -43,10 +42,7 @@ Date: 01.01.2007
       // создаём глобальный атом, чтобы предотвратить запуск другой копии приложения
       FoundAtom := GlobalAddAtom(AtomText); 
     end; 
-     
-     
-     
-     
+
     constructor TForm.Create(AOwner: TComponent); 
     begin 
       inherited; 
@@ -54,7 +50,6 @@ Date: 01.01.2007
       LookForPreviousInstance; 
       ... 
     end; 
-     
      
     destructor TForm.Destroy; 
     var 
@@ -68,11 +63,14 @@ Date: 01.01.2007
       inherited Destroy; 
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-В блоке begin..end модуля .dpr:
+Вариант 2:
+
+Source: Советы по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com) Сборник Kuliba
+
+В блоке `begin...end` модуля .dpr:
 
     begin
       if HPrevInst <> 0 then
@@ -105,10 +103,8 @@ Date: 01.01.2007
      
     function EnumApps(Wnd: HWnd; TargetWindow: PHWnd): bool;
     var
-     
       ClassName: array[0..30] of char;
     begin
-     
       Result := true;
       if GetWindowWord(Wnd, GWW_HINSTANCE) = HPrevInst then
         begin
@@ -123,10 +119,8 @@ Date: 01.01.2007
      
     procedure ActivatePreviousInstance;
     var
-     
       PrevInstWnd: HWnd;
     begin
-     
       PrevInstWnd := 0;
       EnumWindows(@EnumApps, LongInt(@PrevInstWnd));
       if PrevInstWnd <> 0 then
@@ -138,6 +132,3 @@ Date: 01.01.2007
      
     end.
 
-Взято из Советов по Delphi от [Валентина Озерова](mailto:webmaster@webinspector.com)
-
-Сборник Kuliba

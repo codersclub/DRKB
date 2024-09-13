@@ -7,20 +7,21 @@ Date: 01.01.2007
 Как получить информацию о загрузке процессора?
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Nomadic
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Читать из реестра HKEY\_DYN\_DATA\\PerfStats\\StatData соответствующий
 ключ Kernel \\CPUUsage.
 
-Автор: Nomadic
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     //NT – 2000 - XP
     const
@@ -171,9 +172,13 @@ DelphiWorld 6.0
       GetCPUUsage
     end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: DDA, Vologda
+
+Date: 11.02.2004
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Показывает загруженость процессора

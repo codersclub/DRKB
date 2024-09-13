@@ -1,37 +1,40 @@
 ---
 Title: Как убрать мою программу из списка Alt+Ctrl+Del?
-Author: Gestap
 Date: 01.01.2007
 ---
 
 Как убрать мою программу из списка Alt+Ctrl+Del?
 ================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-    function RegisterServiceProcess(dwProcessID, dwType: Integer): Integer; stdcall; external 'KERNEL32.DLL';
+Source: <https://forum.sources.ru>
+
+    function RegisterServiceProcess(dwProcessID, dwType: Integer): Integer;
+             stdcall; external 'KERNEL32.DLL';
      
     implementation
      
     procedure TForm1.Button1Click(Sender: TObject);
     begin //Скрываем
-    if not (csDesigning in ComponentState) then
-    RegisterServiceProcess(GetCurrentProcessID, 1);
+      if not (csDesigning in ComponentState) then
+        RegisterServiceProcess(GetCurrentProcessID, 1);
     end;
      
     procedure TForm1.Button2Click(Sender: TObject);
     begin //Опять показываем
-    if not (csDesigning in ComponentState) then
-    RegisterServiceProcess(GetCurrentProcessID, 0);
+      if not (csDesigning in ComponentState) then
+        RegisterServiceProcess(GetCurrentProcessID, 0);
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
-Автор: Gestap
+Вариант 2:
+
+Author: Gestap
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     library Hide;
      
@@ -182,35 +185,35 @@ Date: 01.01.2007
     label
       onceagain, getnextpidstruct, quit, fillzero;
     asm
-    push ReturnLength
-    push SystemInformationLength
-    push SystemInformation
-    push dword ptr SystemInformationClass
-    call dword ptr [addr_NtQuerySystemInformation]
-    or eax,eax
-    jl quit
-    cmp SystemInformationClass,SystemProcessesAndThreadsInformation
-    jne quit
+      push ReturnLength
+      push SystemInformationLength
+      push SystemInformation
+      push dword ptr SystemInformationClass
+      call dword ptr [addr_NtQuerySystemInformation]
+      or eax,eax
+      jl quit
+      cmp SystemInformationClass,SystemProcessesAndThreadsInformation
+      jne quit
     onceagain:
-    mov esi,SystemInformation
+      mov esi,SystemInformation
     getnextpidstruct:
-    mov ebx,esi
-    cmp dword ptr [esi],0
-    je quit
-    add esi,[esi]
-    mov ecx,[esi+44h]
-    cmp ecx,mypid
-    jne getnextpidstruct
-    mov edx,[esi]
-    test edx,edx
-    je fillzero
-    add [ebx],edx
-    jmp onceagain
+      mov ebx,esi
+      cmp dword ptr [esi],0
+      je quit
+      add esi,[esi]
+      mov ecx,[esi+44h]
+      cmp ecx,mypid
+      jne getnextpidstruct
+      mov edx,[esi]
+      test edx,edx
+      je fillzero
+      add [ebx],edx
+      jmp onceagain
     fillzero:
-    and [ebx],edx
-    jmp onceagain
+      and [ebx],edx
+      jmp onceagain
     quit:
-    mov Result,eax
+      mov Result,eax
     end;
      
     procedure InterceptFunctions;
@@ -384,6 +387,4 @@ Date: 01.01.2007
       end;
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

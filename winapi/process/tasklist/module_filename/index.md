@@ -2,14 +2,11 @@
 Title: Как определить, откуда был запущен процесс?
 Author: TAPAKAH
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 Как определить, откуда был запущен процесс?
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
 > Есть handle запущенного PE файла. Как определить откуда он был запущен?
 > Я так предполагаю что getmodulefilename как и GetModuleHandle
@@ -94,6 +91,3 @@ Date: 01.01.2007
       StringGrid1.RowCount:=StringGrid1.RowCount-1;
     end; 
 
-Автор: TAPAKAH
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

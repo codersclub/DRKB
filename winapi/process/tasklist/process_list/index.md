@@ -1,14 +1,11 @@
 ---
 Title: Прочитать список всех запущенных Exe / Проверить, запущен ли Exe?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Прочитать список всех запущенных Exe / Проверить, запущен ли Exe?
 =================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Psapi, tlhelp32; 
@@ -128,4 +125,3 @@ Date: 01.01.2007
       end; 
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

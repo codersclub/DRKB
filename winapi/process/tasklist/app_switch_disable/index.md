@@ -1,14 +1,11 @@
 ---
 Title: Как разрешить / запретить переключение между задачами?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как разрешить / запретить переключение между задачами?
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
 только для ALT+TAB и CTRL+ESC)
 
@@ -22,4 +19,3 @@ Date: 01.01.2007
         SystemParametersInfo( SPI_SCREENSAVERRUNNING, Word( State ), @OldSysParam, 0 ); 
     End;
 
-Взято из <https://forum.sources.ru>

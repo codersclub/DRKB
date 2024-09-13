@@ -2,20 +2,17 @@
 Title: Как запустить и подождать завершения 2-х процессов?
 Author: Baa
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 Как запустить и подождать завершения 2-х процессов?
 ===================================================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure HzChe;
     var
-    hProcess : array [0..1] of Cardinal;
-    struc1 : PSTARTUPINFO;
-    struc2 : PROCESS_INFORMATION;
+      hProcess : array [0..1] of Cardinal;
+      struc1 : PSTARTUPINFO;
+      struc2 : PROCESS_INFORMATION;
     begin
       if not CreateProcess ( PChar('c:\PSTOLD.EXE'),
         nil,
@@ -45,12 +42,9 @@ Date: 01.01.2007
         ShowMessage ('    vce, priehali' );
     end;
 
-P.S.
+**P.S.**
 
 То, что я понаписал нельзя считать цивильным кодом...
 просто демонстрация работы функции WaitForMultipleObjects
 ( код позорный...просто жуть...)
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
