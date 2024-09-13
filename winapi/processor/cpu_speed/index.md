@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как найти скорость процессора?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Пример взят из рассылки: СообЧА. Программирование на Delphi
 (<https://Subscribe.Ru/catalog/comp.soft.prog.delphi2000>)
@@ -48,9 +48,12 @@ Date: 01.01.2007
      
     LabelCPUSpeed.Caption := Format('CPU speed: %f MHz', [GetCPUSpeed]);
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://forum.sources.ru>
 
     function GetCPUSpeed: real; 
      
@@ -60,14 +63,14 @@ Date: 01.01.2007
                 POP    EAX            { флаги в EAX } 
                 MOV    EDX,EAX        { сохраняем текущие флаги }
                 XOR    EAX,$200000    { бит ID не нужен }
-                PUSH    EAX           { в стек } 
-                POPFD                { из стека в флаги, без бита ID } 
+                PUSH   EAX            { в стек } 
+                POPFD                 { из стека в флаги, без бита ID } 
                 PUSHFD                { возвращаем в стек }
                 POP    EAX            { обратно в EAX } 
                 XOR    EAX,EDX        { проверяем, появился ли бит ID }
-                JZ      @exit         { нет, CPUID не доступен }
+                JZ     @exit          { нет, CPUID не доступен }
                 MOV    AL,True        { Result=True } 
-                @exit: 
+        @exit: 
       end; 
      
       function hasTSC: Boolean; 
@@ -77,21 +80,21 @@ Date: 01.01.2007
         asm 
                   MOV    Features,0    { Features = 0 } 
      
-                  PUSH    EBX 
+                  PUSH   EBX 
                   XOR    EAX,EAX 
-                  DW      $A20F 
+                  DW     $A20F 
                   POP    EBX 
      
                   CMP    EAX,$01 
-                  JL      @Fail 
+                  JL     @Fail 
      
                   XOR    EAX,EAX 
                   MOV    EAX,$01 
-                  PUSH    EBX 
-                  DW      $A20F 
+                  PUSH   EBX 
+                  DW     $A20F 
                   MOV    Features,EDX 
                   POP    EBX 
-                  @Fail: 
+           @Fail: 
         end; 
      
         hasTSC := (Features and $10) <> 0; 
@@ -109,8 +112,7 @@ Date: 01.01.2007
       Priority := GetThreadPriority(GetCurrentThread); 
      
       SetPriorityClass(GetCurrentProcess, REALTIME_PRIORITY_CLASS); 
-      SetThreadPriority(GetCurrentThread, 
-        THREAD_PRIORITY_TIME_CRITICAL); 
+      SetThreadPriority(GetCurrentThread, THREAD_PRIORITY_TIME_CRITICAL); 
      
       SleepEx(10, FALSE); 
      
@@ -137,9 +139,11 @@ Date: 01.01.2007
       Result := TimerLo / (1000 * DELAY); 
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://forum.sources.ru>
 
     const 
     ID_BIT=$200000; // EFLAGS ID bit 
@@ -156,7 +160,7 @@ Date: 01.01.2007
       Priority := GetThreadPriority(GetCurrentThread); 
      
       SetPriorityClass(GetCurrentProcess, REALTIME_PRIORITY_CLASS); 
-    SetThreadPriorit(GetCurrentThread,THREAD_PRIORITY_TIME_CRITICAL); 
+      SetThreadPriorit(GetCurrentThread,THREAD_PRIORITY_TIME_CRITICAL); 
      
       Sleep(10); 
       asm 
@@ -188,42 +192,59 @@ Date: 01.01.2007
       edit1.text := cpuspeed; 
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: <https://forum.sources.ru>
 
     function RdTSC : int64; register; 
     asm 
-      db   $0f, $31 
-    end;                                                  
+      db   $0f, $31
+    end;
      
     function GetCyclesPerSecond : int64; 
     var 
       hF, T, et, sc : int64; 
     begin 
-      QueryPerformanceFrequency(hF);                          // HiTicks / second 
-      QueryPerformanceCounter(T);                        // Determine start HiTicks 
-      et := T + hF;           // (Cycles are passing, but we can still USE them!) 
-      sc := RdTSC;                                                          // Get start cycles 
-      repeat                                    // Use Hi Perf Timer to loop for 1 second 
-        QueryPerformanceCounter(T);                            // Check ticks NOW 
-      until (T >= et);                    //  Break the moment we equal or exceed et 
-      Result := RdTSC - sc;                // Get stop cycles and calculate result 
+      QueryPerformanceFrequency(hF); // HiTicks / second 
+      QueryPerformanceCounter(T);    // Determine start HiTicks 
+      et := T + hF;                  // (Cycles are passing, but we can still USE them!) 
+      sc := RdTSC;                   // Get start cycles 
+      repeat                         // Use Hi Perf Timer to loop for 1 second 
+        QueryPerformanceCounter(T);  // Check ticks NOW 
+      until (T >= et);               //  Break the moment we equal or exceed et 
+      Result := RdTSC - sc;          // Get stop cycles and calculate result 
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
 
+Вариант 5:
+
+Author: ISV
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+
+_Новейший российский микропроцессор имеет не только повышенное быстродействие
+и уменьшенное энергопотребление, но и четыре удобные ручки для его переноски грузчиками,
+и улучшенную систему охлаждения, легко подключаемую к обычному водопроводному крану._
+
 Данная тема уже обсуждалась, но у меня есть своя реализация сабжа.
+
 Начиная с Pentium MMX, Intel ввели в процессор счетчик тактов на 64 бита
 (Присутствуэт точно и в К6). Для того чтобы посотреть на его содержание,
 была введена команда "rdtsc" (подробное описание в интеловской
 мануале). Эту возможность можно использовать для реализации сабжа.
+
 Посоку Делфя не вкурсе насчет rdtsc, то пришлось юзать опкод (0F31).
 Привожу простенький примерчик юзания, Вы уж извините - немножко кривоват
-получился, да и ошибка компалера какая-то вылезла :( (V4 Bld5.104 Upd
-2). Кому интересно, поделитесь своими соображениями по этому поводу.
+получился, да и ошибка компалера какая-то вылезла :(
+
+    (V4 Bld5.104 Upd 2).
+
+Кому интересно, поделитесь своими соображениями по этому поводу.
 Особенно интерисует работа в режиме когда меняется частота процессора
 (Duty Cycle, StandBy).
 
@@ -236,7 +257,8 @@ Date: 01.01.2007
     Windows, Messages, SysUtils, Classes, Graphics,
      Controls, Forms,Dialogs,  StdCtrls, Buttons, ExtCtrls;
      
-    type  TForm1 = class(TForm)
+    type
+    TForm1 = class(TForm)
         Label1: TLabel;
         Timer1: TTimer;
         Label2: TLabel;
@@ -249,80 +271,106 @@ Date: 01.01.2007
         procedure Button1Click(Sender: TObject);
         procedure Button2Click(Sender: TObject);
       private    
-    { Private declarations }
+      { Private declarations }
       public    
-    { Public declarations }
+      { Public declarations }
         Counter:integer;
-          //Счетчик срабатывания таймера    
-    Start:int64;              
-    //Начало роботы    
-    Previous:int64;        
-    //Предыдущее значение    
-    PStart,PStop:int64;
-     //Для примера выч. времени   
-     CurRate:integer;
-         //Текущая частота проца    
-    function GetCPUClick:int64;    
-    function GetTime(Start,Stop:int64):double;
-     end;
-    var  Form1: TForm1;implementation{$R *.DFM}
+        //Счетчик срабатывания таймера    
+        Start:int64;              
+        //Начало роботы    
+        Previous:int64;        
+        //Предыдущее значение    
+        PStart,PStop:int64;
+        //Для примера выч. времени   
+        CurRate:integer;
+        //Текущая частота проца    
+        function GetCPUClick:int64;    
+        function GetTime(Start,Stop:int64):double;
+    end;
+    
+    var  Form1: TForm1;
+    
+    implementation
+    {$R *.DFM}
+    
     // Функция работает на пнях ММХ или выше а
     // также проверялась на К6
     function TForm1.GetCPUClick:int64;
     begin
       asm    db  0fh,31h   
-    // Опкод для команды rdtsc
-    // mov dword ptr result,eax
-    // mov dword ptr result[4],edx
+      // Опкод для команды rdtsc
+      // mov dword ptr result,eax
+      // mov dword ptr result[4],edx
+      end;
+      // Не смешно :(. Без ?той штуки
+      // Компайлер выдает Internal error C1079  
+      Result:=Result;
     end;
-    // Не смешно :(. Без ?той штуки
-    // Компайлер выдает Internal error C1079  
-    Result:=Result;
-    end;
+    
     // Время в секундах между старт и стоп
     function TForm1.GetTime(Start,Stop:int64):double;
     begin
-      try    result:=(Stop-Start)/CurRate  except    result:=0;
-     end;
+      try
+        result:=(Stop-Start)/CurRate
+      except
+        result:=0;
+      end;
     end;
+    
     // Обработчик таймера считает текущую частоту, выводит ее, а также
     // усредненную частоту, текущий такт с момента старта процессора.
     // При постоянной частоте процессора желательно интервал братьпобольше
     // 1-5с для точного прощета частоты процессора.
     procedure TForm1.Timer1Timer(Sender: TObject);
-      var    i:int64;
+    var
+      i:int64;
     begin
       i:=GetCPUClick;
-      if Counter=0    then Start:=i    else 
-    begin
-          Label2.Caption:=Format('Частота общая:%2f',
-           [(i-Start)/(Counter*Timer1.Interval*1000)]);
+      if Counter=0 then
+        Start:=i
+      else 
+      begin
+        Label2.Caption:=Format('Частота общая:%2f',
+          [(i-Start)/(Counter*Timer1.Interval*1000)]);
           Label3.Caption:=Format('Частота текущая:%2f',
-           [(i-Previous)/(Timer1.Interval*1000)]);
-          CurRate:=Round(((i-Previous)*1000)/(Timer1.Interval));
-        end;
-      Label1.Cap примера
+          [(i-Previous)/(Timer1.Interval*1000)]);
+        CurRate:=Round(((i-Previous)*1000)/(Timer1.Interval));
+      end;
+      Label1.Caption:='Такты: '+IntToStr(i);
+      Previous:=i;
+      Inc(Counter);
+    end;
+    
+    procedure TForm1.FormActivate(Sender: TObject);
+    begin
+      Counter:=0;
+    end;
+    
+    // Заносим стартовое время для примера
     procedure TForm1.Button1Click(Sender: TObject);
     begin
       PStart:=GetCPUClick;
     end;
+    
     // Останавливаем отсчет времени и показуем соко
     // прошло секунд
     procedure TForm1.Button2Click(Sender: TObject);
     begin
       PStop:=GetCPUClick;
       Label4.Caption:=Format!
-    ('Время между нажатиями:%gсек',[GetTime(PStart,PStop)])
-    end;
+      ('Время между нажатиями:%gсек',[GetTime(PStart,PStop)])
+      end;
     end.
 
 Проверялось под еНТями на Пне 2 333.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Author: Shady
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     uses registry;
     ...
@@ -338,8 +386,3 @@ DelphiWorld 6.0
       end;
     end;
 
-Автор: Shady
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

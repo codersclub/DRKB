@@ -6,10 +6,6 @@ Date: 01.01.2007
 Получение уровня процессора
 ===========================
 
-::: {.date}
-01.01.2007
-:::
-
     function GettingProcLevel: string;  //Win95 or later and NT3.1 or later
     var
       Struc:    _SYSTEM_INFO;

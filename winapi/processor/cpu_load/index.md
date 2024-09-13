@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как узнать загрузку процессора? (NT/2000/XP)
 ============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     const 
       SystemBasicInformation = 0; 
@@ -56,7 +56,6 @@ Date: 01.01.2007
         bufSize: DWORD; 
         returnSize: TPDword): DWORD; stdcall = nil; 
      
-     
       liOldIdleTime: LARGE_INTEGER = (); 
       liOldSystemTime: LARGE_INTEGER = (); 
      
@@ -84,13 +83,14 @@ Date: 01.01.2007
       // get number of processors in the system 
      
       status := NtQuerySystemInformation(SystemBasicInformation, @SysBaseInfo, SizeOf(SysBaseInfo), nil); 
+      
       if status <> 0 then Exit; 
      
       // Show some information 
       with SysBaseInfo do 
       begin 
-          ShowMessage( 
-          Format('uKeMaximumIncrement: %d'#13'uPageSize: %d'#13+ 
+        ShowMessage( 
+        Format('uKeMaximumIncrement: %d'#13'uPageSize: %d'#13+ 
           'uMmNumberOfPhysicalPages: %d'+#13+'uMmLowestPhysicalPage: %d'+#13+ 
           'uMmHighestPhysicalPage: %d'+#13+'uAllocationGranularity: %d'#13+ 
           'uKeActiveProcessors: %d'#13'bKeNumberProcessors: %d', 
@@ -98,7 +98,6 @@ Date: 01.01.2007
           uMmLowestPhysicalPage, uMmHighestPhysicalPage, uAllocationGranularity, 
           uKeActiveProcessors, bKeNumberProcessors])); 
       end; 
-     
      
       bLoopAborted := False; 
      
@@ -152,21 +151,27 @@ Date: 01.01.2007
       GetCPUUsage 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
 ------------------------------------------------------------------------
 
-Читать из реестра HKEY\_DYN\_DATA\\PerfStats\\StatData соответствующий
-ключ Kernel \\CPUUsage
+Вариант 2:
 
-Автор: Nomadic
+Author: Nomadic
 
-Взято с <https://delphiworld.narod.ru>
+Source: <https://delphiworld.narod.ru>
+
+Читать из реестра HKEY\_DYN\_DATA\\PerfStats\\StatData
+соответствующий ключ Kernel\\CPUUsage
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Александр (Rouse\_) Багель
+
+Source: <https://forum.sources.ru>
 
     const
-
      
       SystemBasicInformation = 0; 
       SystemPerformanceInformation = 2; 
@@ -242,6 +247,3 @@ Date: 01.01.2007
           end;
     end;
 
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>

@@ -1,36 +1,33 @@
 ---
 Title: Как запустить процесс на конкретном процессоре в многопроцессорной системе?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как запустить процесс на конкретном процессоре в многопроцессорной системе?
 ===========================================================================
 
-::: {.date}
-01.01.2007
-:::
-
     function ExecuteProcess(FileName: string; Visibility: Integer; BitMask: Integer; Synch: Boolean): Longword;
     //valori di Visibility:
     {
-    Value                Meaning
+    Value               Meaning
     SW_HIDE            :Hides the window and activates another window.
     SW_MAXIMIZE        :Maximizes the specified window.
     SW_MINIMIZE        :Minimizes the specified window and activates the next top-level window in the Z order.
-    SW_RESTORE        :Activates and displays the window. If the window is minimized or maximized,
+    SW_RESTORE         :Activates and displays the window. If the window is minimized or maximized,
                         Windows restores it to its original size and position. An application should
                         specify this flag when restoring a minimized window.
-    SW_SHOW                :Activates the window and displays it in its current size and position.
-    SW_SHOWDEFAULT        :Sets the show state based on the SW_ flag specified in the STARTUPINFO
-                            structure passed to the CreateProcess function by the program that started the application.
-    SW_SHOWMAXIMIZED       :Activates the window and displays it as a maximized window.
-    SW_SHOWMINIMIZED       :Activates the window and displays it as a minimized window.
-    SW_SHOWMINNOACTIVE     :Displays the window as a minimized window. The active window remains active.
-    SW_SHOWNA              :Displays the window in its current state. The active window remains active.
-    SW_SHOWNOACTIVATE      :Displays a window in its most recent size and position. The active window remains active.
-    SW_SHOWNORMAL          :Activates and displays a window. If the window is minimized or maximized,
-                          Windows restores it to its original size and position. An application should specify this
-                          flag when displaying the window for the first time.
+    SW_SHOW            :Activates the window and displays it in its current size and position.
+    SW_SHOWDEFAULT     :Sets the show state based on the SW_ flag specified in the STARTUPINFO
+                        structure passed to the CreateProcess function by the program that started the application.
+    SW_SHOWMAXIMIZED   :Activates the window and displays it as a maximized window.
+    SW_SHOWMINIMIZED   :Activates the window and displays it as a minimized window.
+    SW_SHOWMINNOACTIVE :Displays the window as a minimized window. The active window remains active.
+    SW_SHOWNA          :Displays the window in its current state. The active window remains active.
+    SW_SHOWNOACTIVATE  :Displays a window in its most recent size and position. The active window remains active.
+    SW_SHOWNORMAL      :Activates and displays a window. If the window is minimized or maximized,
+                        Windows restores it to its original size and position. An application should specify this
+                        flag when displaying the window for the first time.
     }
     //FileName: the name of the program I want to launch
     //Bitmask:   specifies the set of CPUs on wich I want to run the program
@@ -103,4 +100,3 @@ Date: 01.01.2007
     // Open Taskmanager, select the launched process, right click,
     // "Set affinity", you will see a check on the CPUs you selected
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

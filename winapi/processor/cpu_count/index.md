@@ -6,10 +6,6 @@ Date: 01.01.2007
 Получение количества установленных процессоров
 ==============================================
 
-::: {.date}
-01.01.2007
-:::
-
     function GettingProcNum: string;  //Win95 or later and NT3.1 or later
     var
       Struc:    _SYSTEM_INFO;

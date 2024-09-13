@@ -1,17 +1,12 @@
 ---
 Title: Работа с портами микропроцессора
-Author: Pavlo Zolotarenki 
-Date: 01.01.2007
+Author: Zolotarenko P.V, pvz@mail.univ.kiev.ua
+Date: 12.12.1998
+Source: <https://delphiworld.narod.ru>
 ---
 
 Работа с портами микропроцессора
 ================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Pavlo Zolotarenki 
 
 Модуль для работы с портами микропроцессора с сохранением синтаксиса.
 
@@ -91,4 +86,3 @@ Date: 01.01.2007
       PortW.free;
     end.
 
-Взято с <https://delphiworld.narod.ru>
