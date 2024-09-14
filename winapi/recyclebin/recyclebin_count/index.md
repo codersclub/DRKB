@@ -6,10 +6,6 @@ Date: 01.01.2007
 Как получить количество файлов в корзине и их размер?
 =====================================================
 
-::: {.date}
-01.01.2007
-:::
-
     type
       PSHQueryRBInfo = ^TSHQueryRBInfo;
       TSHQueryRBInfo = packed record

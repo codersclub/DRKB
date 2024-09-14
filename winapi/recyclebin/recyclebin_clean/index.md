@@ -1,18 +1,14 @@
 ---
 Title: Очистка корзины
 Author: Rouse_
-Date: 01.01.2007
+Date: 01.01.2004
+Source: <https://forum.sources.ru>
 ---
 
 Очистка корзины
 ===============
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-
      
     interface
      
@@ -73,6 +69,3 @@ Date: 01.01.2007
 
 [rbin.zip](../rbin.zip)
 
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>

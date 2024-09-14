@@ -2,17 +2,13 @@
 Title: Удаление файла в корзину
 Author: Rouse_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Удаление файла в корзину
 ========================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-
      
     interface
      
@@ -83,8 +79,5 @@ Date: 01.01.2007
 
 Пример работы с корзиной можно скачать здесь:
 
-[rbin.zip](../rbin.zip)
+[rbin.zip](../rbin.zip) 2k
 
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>

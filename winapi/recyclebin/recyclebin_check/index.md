@@ -1,18 +1,14 @@
 ---
 Title: Просмотр состояния корзины
 Author: Rouse_
-Date: 01.01.2007
+Date: 01.01.2004
+Source: <https://forum.sources.ru>
 ---
 
 Просмотр состояния корзины
 ==========================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Unit1;
-
      
     interface
      
@@ -78,10 +74,5 @@ Date: 01.01.2007
 
 Пример работы с корзиной можно скачать здесь:
 
- 
+[rbin.zip](../rbin.zip) 2k
 
-[rbin.zip](../rbin.zip)
-
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>

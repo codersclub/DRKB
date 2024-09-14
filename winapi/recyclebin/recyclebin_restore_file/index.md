@@ -2,15 +2,11 @@
 Title: Восстановление файла из корзины
 Author: Rouse_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Восстановление файла из корзины
 ===============================
-
-::: {.date}
-01.01.2007
-:::
-
 
     // Функция восстанавливает выбранный в ListView элемент из корзины...
     function RestoreElement(const AHandle: THandle; LV: TListView): Boolean;
@@ -95,10 +91,5 @@ Date: 01.01.2007
 
 Пример работы с корзиной можно скачать здесь:
 
- 
+[rbin.zip](../rbin.zip) 2k
 
-[rbin.zip](../rbin.zip)
-
-Автор: Rouse\_
-
-Взято из <https://forum.sources.ru>
