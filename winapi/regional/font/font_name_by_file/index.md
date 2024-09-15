@@ -1,22 +1,20 @@
 ---
 Title: Получение имени шрифта, зная имя файла шрифта
 Author: p0s0l
-Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
+Date: 01.01.2004
 ---
 
 Получение имени шрифта, зная имя файла шрифта
 =============================================
 
-::: {.date}
-01.01.2007
-:::
+    function GetFontResourceInfoW (FontPath : PWideChar;
+                                   var BufSize : DWORD;
+                                   FontName : PWideChar;
+                                   dwFlags : DWORD) : DWORD;
+             stdcall; external 'GDI32.DLL';
 
-function GetFontResourceInfoW (FontPath : PWideChar; var BufSize :
-DWORD; FontName : PWideChar; dwFlags : DWORD) : DWORD; stdcall; external
-\'GDI32.DLL\';
-
-1-ый параметр - указатель на Wide-строку, содержащую путь к файлу
-шрифта;
+1-ый параметр - указатель на Wide-строку, содержащую путь к файлу шрифта;
 
 2-ой параметр - указатель на DWORD-переменную, содержащую размер
 выходного буфера. После выполнения функции в этой переменной будет
@@ -26,15 +24,16 @@ DWORD; FontName : PWideChar; dwFlags : DWORD) : DWORD; stdcall; external
 содержать Wide-строку имени шрифта;
 
 4-ый параметр - какие-то флаги, если рыться в функции
-GetFontResourceInfoW особым случаем является когда dwFlags=4, но зачем
+GetFontResourceInfoW, особым случаем является когда dwFlags=4, но зачем
 это, я так и не понял - в результате будет возвращен тот же путь к
 файлу; ну а для получения имени шрифта флаг должен быть равен 1.
 
     function GetFontName (FontFileA : PChar) : String;
-
      
     type
-      TGetFontResourceInfoW = function (FontPath : PWideChar; var BufSize : DWORD; FontName : PWideChar; dwFlags : DWORD) : DWORD; stdcall;
+      TGetFontResourceInfoW = function (FontPath : PWideChar; var BufSize : DWORD;
+                                        FontName : PWideChar;
+                                        dwFlags : DWORD) : DWORD; stdcall;
     var
       GetFontResourceInfoW : TGetFontResourceInfoW;
       FontFileW : PWideChar;
@@ -67,20 +66,16 @@ GetFontResourceInfoW особым случаем является когда dwF
 
 Пример вызова:
 
- 
+    GetFontName('C:\MyFonts\FUTURA.TTF') // возвратит 'FuturaEugenia'
 
-GetFontName(\'C:\\MyFonts\\FUTURA.TTF\') - возвратит \'FuturaEugenia\'.
-
-PS: Всё бы хорошо, но эта функция хоть и есть в Win9x, только её там
-вызывать нельзя - пишет "This function is only valid in Windows NT
-mode."...
+**PS:**
+Всё бы хорошо, но эта функция хоть и есть в Win9x, только её там
+вызывать нельзя - пишет
+_"This function is only valid in Windows NT mode."..._
 
 FontView в Win9x использует EnumFontFamiliesEx (видимо по предложенному
 Vit\'ом и x77 способу)...
 
 FontView в WinNT использует GetFontResourceInfo (в импорте вообще нет
-EnumFontFamiliesEx или других Enum*)...
+EnumFontFamiliesEx или других Enum\*)...
 
-Автор: p0s0l
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

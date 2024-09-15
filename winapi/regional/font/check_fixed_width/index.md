@@ -1,14 +1,11 @@
 ---
 Title: Является ли шрифт шрифтом с фиксированной шириной?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Является ли шрифт шрифтом с фиксированной шириной?
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TConsole.FontChanged(Sender: TObject);
     var
@@ -39,4 +36,3 @@ Date: 01.01.2007
         InternalClrScr;
     end;
 
-Взято с <https://delphiworld.narod.ru>

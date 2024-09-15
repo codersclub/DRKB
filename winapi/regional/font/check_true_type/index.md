@@ -1,14 +1,11 @@
 ---
 Title: Как выяснить, установлены ли в системе шрифты TrueType
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Как выяснить, установлены ли в системе шрифты TrueType
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function IsTrueTypeInstalled: bool;
     var
@@ -28,4 +25,3 @@ Date: 01.01.2007
       result := true;
     end;
 
-Взято с <https://delphiworld.narod.ru>

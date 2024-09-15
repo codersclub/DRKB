@@ -1,22 +1,19 @@
 ---
 Title: Как добавить True Type шрифт в систему?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Как добавить True Type шрифт в систему?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
 Чтобы установить шрифт в систему, необходимо скопировать файл шрифта в
-\'Windows\\Fonts\' и добавить ключ в реестр:
+`Windows\Fonts` и добавить ключ в реестр:
 
-\'Software\\Microsoft\\Windows\\CurrentVersion\\Fonts\'
+    Software\Microsoft\Windows\CurrentVersion\Fonts\
 
 Этот ключ указывает на файл шрифта. Далее запускаем API функцию
-\'AddFontRecource\'. В заключении нужно уведомить систему
+`AddFontRecource`. В заключении нужно уведомить систему
 широковещательным сообщением.
 
     uses Registry; 
@@ -44,4 +41,3 @@ Date: 01.01.2007
       SendMessage(HWND_BROADCAST, WM_FONTCHANGE, 0, 0); 
     end;
 
-Взято с <https://delphiworld.narod.ru>
