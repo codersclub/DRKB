@@ -1,15 +1,14 @@
 ---
 Title: Распознавание кодировки
-Author: Даниил Карапетян (delphi4all@narod.ru)
 Date: 01.01.2007
 ---
 
 Распознавание кодировки
 =======================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Даниил Карапетян (delphi4all@narod.ru)
 
 Алгоритм распознавания кодировки нужен для автоматического декодирования
 текста. Этот алгоритм основан на том, что некоторые буквы русского
@@ -164,13 +163,16 @@ Date: 01.01.2007
       Memo2.Text := s;
     end;
 
-Автор: Даниил Карапетян (delphi4all@narod.ru)
 
 Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
 Автор: Stas Malinovski 
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Методом таблицы модельных распределений:
 
@@ -258,7 +260,7 @@ Date: 01.01.2007
           70, 231, 99, 47, 15, 13, 6, 58, 7, 0, 0, 0, 0, 38, 0, 22, 0, 2),
         {?}(0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 2, 4, 4, 8, 0, 0, 5, 3, 4, 0, 0, 0, 0, 0,
           0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
-      { " рейтинг"  буквы ? условно принимается равным 1/20 от " рейтинга"  буквы E,
+      { "рейтинг"  буквы ? условно принимается равным 1/20 от "рейтинга"  буквы E,
       если сочетание с участием ? корректно, иначе - 0 }
     type
       TVariation = array[0..33, 0..33] of Integer;
@@ -333,11 +335,12 @@ Date: 01.01.2007
       readln;
     end. 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Автоопределение кодировки ANSI-OEM
 
@@ -411,11 +414,12 @@ DelphiWorld 6.0
       Result := l3AnalizeCharSetExEx(Buf, Buf + Len);
     end; 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 (Кол-во насчитанных бyков)
 
@@ -585,7 +589,7 @@ DelphiWorld 6.0
         (WinCounts['О'] + WinCounts['Т'] + WinCounts['Е'] + WinCounts['H']) <
         (DosCounts['О'] + DosCounts['Т'] + DosCounts['Е'] + DosCounts['H']);
     end;
-    { *----------------Откyда-вс?-это-???-------------------------* }
+    { *----------------Откyда-всё-это-???-------------------------* }
     { Можно yбpать последние тpи слагаемые, y меня и так pаботало }
     { Опpеделяет по одномy словy, если там есть хотя бы одна бyква }
     { Можно также сделать по всем бyквам и искать pасстояния в 256 }
@@ -602,32 +606,29 @@ DelphiWorld 6.0
      
      
     {Пpимеp использования}
-    _Var_
+    Var
       S: _String_;
       f: Text;
-    _Begin_
+    Begin
       Assign(f, 'Test.txt');
       Reset(f);
       ClearCoding;
-      _Repeat_
+      Repeat
         ReadLn(f, S);
         CalcString(S);
-      _Until_
+      Until
         EOF(f);
       Close(f);
-      _If_ TestWinCode _Then_
+      If TestWinCode Then
         {Виндовская кодиpовка}
-      _If_ TestDosCode _Then_
+      If TestDosCode Then
         {Досовская кодиpовка}
-    _End_;
-     
-     
+    End;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 5:
 
 Распознавание кодировки. Перекодировка.
 
@@ -779,21 +780,20 @@ DelphiWorld 6.0
      
       Memo2.Text := s;
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
 
 ------------------------------------------------------------------------
 
+Вариант 6:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
 Определение кодовой страницы
 
-
-
- 
-
-Автор: Alexander Trunov
+Author: Alexander Trunov (jnc@mail.ru)
 
     {
       Work with codepages
@@ -1039,6 +1039,4 @@ DelphiWorld 6.0
      
     end.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

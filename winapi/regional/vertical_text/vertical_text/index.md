@@ -1,14 +1,11 @@
 ---
 Title: Вертикальный текст
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Вертикальный текст
 ==================
-
-::: {.date}
-01.01.2007
-:::
 
     var
       Hfont: Thandle;
@@ -38,4 +35,3 @@ Date: 01.01.2007
       deleteobject(font);
     end;
 
-Взято с <https://delphiworld.narod.ru>

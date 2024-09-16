@@ -1,14 +1,12 @@
 ---
 Title: Как конвертировать кодовую страницу?
-Date: 01.01.2007
+Author: Daniel Wischnewski
+Date: 12.12.2002
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 ---
 
 Как конвертировать кодовую страницу?
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
 All Systems (Win 95+ and WinNT4+) with MS Internet Explorer 4 and newer
 have a library named mlang.dll in the Winnt\\System32 directory. Usually
@@ -171,4 +169,3 @@ conversion unit to the uses clause!)
       end;
     end;
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>

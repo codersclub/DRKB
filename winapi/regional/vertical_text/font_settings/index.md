@@ -1,14 +1,11 @@
 ---
 Title: Управление настройками шрифта
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Управление настройками шрифта
 =============================
-
-::: {.date}
-01.01.2007
-:::
 
     {
     Данный код изменяет стиль шрифта поля редактирования,
@@ -43,4 +40,3 @@ Date: 01.01.2007
       Edit1.Font.Style := [LookUpTable[ListBox1.ItemIndex + 1].Data];
     end;
 
-Взято с <https://delphiworld.narod.ru>

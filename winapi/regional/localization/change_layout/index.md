@@ -6,9 +6,9 @@ Date: 01.01.2007
 Как программно переключить раскладку клавиатуры
 ===============================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     //На русский
     procedure TForm1.Button1Click(Sender: TObject);
@@ -26,11 +26,12 @@ Date: 01.01.2007
       LoadKeyboardLayout(StrCopy(Layout,'00000409'),KLF_ACTIVATE);
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Эта программа при нажатии на Button1 меняет язык на следующий, при
 нажатии на Button2 - на русский, а на Button3 - на английский. Каждую
@@ -60,6 +61,3 @@ DelphiWorld 6.0
       Form1.Caption := s;
     end; 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

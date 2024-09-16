@@ -2,16 +2,11 @@
 Title: Как добавить нужный язык в систему
 Author: Mekan Gara
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Как добавить нужный язык в систему
 ==================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Mekan Gara
 
 Для этого необходимо изменить некоторые ключи в реестре. Например,
 необходимо добавить Туркменский язык. Конечно, Вам необходимо иметь файл
@@ -41,9 +36,4 @@ KBD с раскладкой клавиатуры (Turkmen.kbd).
       showmessage('Well Done it all');
       close;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

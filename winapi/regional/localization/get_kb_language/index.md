@@ -1,29 +1,32 @@
 ---
 Title: Какой язык на данный момент на клавиатуре?
-Author: Mikel
 Date: 01.01.2007
 ---
 
 Какой язык на данный момент на клавиатуре?
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-Используй GetKeyboardLayoutName
+Author: Mikel
 
-Автор: Mikel
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Используй `GetKeyboardLayoutName`
+
 
 ------------------------------------------------------------------------
 
-    var
+Вариант 2:
 
-     
-    Form1: TForm1;
-    LAYOUT: String;
+Author: Radmin
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+    var
+      Form1: TForm1;
+      LAYOUT: String;
+    
     implementation
     {$R *.DFM}
      
@@ -42,20 +45,20 @@ Date: 01.01.2007
         showmessage(' X 3 ' ) ;
     end; 
 
-Автор: Radmin
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://forum.sources.ru>
 
     function WhichLanguage:string; 
     var 
-    ID:LangID; 
-    Language: array [0..100] of char; 
+      ID:LangID; 
+      Language: array [0..100] of char; 
     begin 
-    ID:=GetSystemDefaultLangID; 
-    VerLanguageName(ID,Language,100); 
-    Result:=String(Language); 
+      ID:=GetSystemDefaultLangID; 
+      VerLanguageName(ID,Language,100); 
+      Result:=String(Language); 
     end; 
 
 Пример вызова этой функции:
@@ -68,4 +71,3 @@ Date: 01.01.2007
 Также, для определения активного языка можно воспользоваться функцией
 GetUserDefaultLangID.
 
-Взято из <https://forum.sources.ru>

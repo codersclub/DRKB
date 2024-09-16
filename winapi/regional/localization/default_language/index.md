@@ -1,14 +1,11 @@
 ---
 Title: Как узнать язык Windows по умолчанию
-Date: 01.01.2007
+Date: 01.01.2004
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Как узнать язык Windows по умолчанию
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
 - GetSystemDefaultLangID
 
@@ -16,6 +13,4 @@ Date: 01.01.2007
 
 - GetLocaleInfo
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

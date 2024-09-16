@@ -6,9 +6,9 @@ Date: 01.01.2007
 Сохранение свойств шрифтов
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+©Drkb::01947
 
     //Saving and restoring font properties in the registry
     Uses typInfo, Registry;
@@ -175,11 +175,12 @@ It is also possible to wrap a font into a small component and stream it:
       end; { finally }
     end;
 
-©Drkb::01947
-
- 
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     function FontToStr(font: TFont): string;
       procedure yes(var str: string);
@@ -258,11 +259,11 @@ It is also possible to wrap a font into a small component and stream it:
           end;
         end;
       end;
+    
     var
-     
       c, t: string;
+    
     begin
-     
       if s = '' then
       begin
         Result := s;
@@ -284,9 +285,10 @@ It is also possible to wrap a font into a small component and stream it:
       Result := t;
     end;
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 3:
 
 Нужно сохранять атрибуты шрифта (имя, размер и т.п.) а не сам обьект
 TFont. После считывания этой информации следует проверить существует ли

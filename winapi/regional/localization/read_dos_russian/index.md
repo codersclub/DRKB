@@ -6,24 +6,19 @@ Date: 01.01.2007
 Как прочитать русский текст MS DOS?
 ===================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Для перекодировки из Win(1251) кодовой страницы в Dos(866) кодовую
 страницу и обратно используются функции:
 
-CharToOEM
-
-OEMToChar
-
-CharToOEMBuff
-
-OEMToCharBuff
-
-OemToAnsi
-
-AnsiToOem:
+- CharToOEM
+- OEMToChar
+- CharToOEMBuff
+- OEMToCharBuff
+- OemToAnsi
+- AnsiToOem
 
 Пример чтения текста dos из файла в memo
 
@@ -37,11 +32,12 @@ AnsiToOem:
       Memo1.Lines.Text := StrPas(N);
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.FormCreate(Sender: TObject);
     var
@@ -61,11 +57,12 @@ DelphiWorld 6.0
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Один из вариантов кодировщика слегка громоздкий, но работает быстро,
 изменяя таблицу можно отключить пропуск непечатаемых символов
@@ -122,12 +119,12 @@ DelphiWorld 6.0
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
      
     function ConvertAnsiToOem(const S: string): string;
     { ConvertAnsiToOem translates a string into the OEM-defined character set }
@@ -170,6 +167,3 @@ DelphiWorld 6.0
       {$ENDIF}
     end; { ConvertOemToAnsi }
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

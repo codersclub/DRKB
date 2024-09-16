@@ -1,14 +1,11 @@
 ---
 Title: Список установленных раскладок клавиатуры
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 Список установленных раскладок клавиатуры
 =========================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure GetKLList(List: TStrings);
      var
@@ -35,4 +32,3 @@ Date: 01.01.2007
          ActivateKeyboardLayout(Hkl(Items.Objects[ItemIndex]), 0);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

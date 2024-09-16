@@ -2,16 +2,11 @@
 Title: Как изменить фоновый цвет текста?
 Author: Олег Кулабухов
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Как изменить фоновый цвет текста?
 =================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Олег Кулабухов
 
     procedure TForm1.Button1Click(Sender: TObject);
     var
@@ -28,4 +23,3 @@ Date: 01.01.2007
       SetTextColor(Form1.Canvas.Handle, OldTextColor);
     end;
 
-Взято с <https://delphiworld.narod.ru>

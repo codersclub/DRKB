@@ -1,14 +1,11 @@
 ---
 Title: Как узнать, является ли окно Unicode?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как узнать, является ли окно Unicode?
 =====================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       The IsWindowUnicode function
@@ -35,4 +32,3 @@ Date: 01.01.2007
         Button1.Caption := 'This window is not a Unicode window'
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

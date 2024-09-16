@@ -1,14 +1,11 @@
 ---
 Title: Вывести полупрозрачный текст
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Вывести полупрозрачный текст
 ============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.FormPaint(Sender: TObject);
     var
@@ -44,4 +41,3 @@ Date: 01.01.2007
       bm.Destroy;
     end;
 
-Взято с <https://delphiworld.narod.ru>
