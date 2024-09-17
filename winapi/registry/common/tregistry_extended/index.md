@@ -2,16 +2,14 @@
 Title: Дополненный TRegistry, умеет работать с значениями типа REG\_MULTI\_SZ
 Author: Кондратюк Виталий
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Дополненный TRegistry, умеет работать с значениями типа REG\_MULTI\_SZ
 ======================================================================
 
-::: {.date}
-01.01.2007
-:::
-
     unit Reg;
+    
     {$R-,T-,H+,X+}
      
     interface
@@ -69,6 +67,7 @@ Date: 01.01.2007
         BufSize) <> ERROR_SUCCESS then
         raise ERegistryException.CreateResFmt(@SRegSetDataFailed, [name]);
     end;
+    
     //------------------------------------------------------------------------------
     // Чтение TStringList ввиде значения типа REG_MULTI_SZ из реестра
     //------------------------------------------------------------------------------
@@ -82,7 +81,6 @@ Date: 01.01.2007
       Buffer: PChar;
       s: string;
     begin
-     
       if list = nil then
         Exit;
       {чтение из реестра}
@@ -119,10 +117,4 @@ Date: 01.01.2007
     end;
      
     end.
-     
 
-Автор: Кондратюк Виталий
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

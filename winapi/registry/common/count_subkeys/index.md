@@ -2,14 +2,11 @@
 Title: Получить количество вложенных ключей и значений ветви реестра
 Author: \_\_\_Nikolay
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Получить количество вложенных ключей и значений ветви реестра
 =============================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses Registry;
      
@@ -37,9 +34,4 @@ Date: 01.01.2007
       end;
       rReg.Free;
     end;
-
-Автор: \_\_\_Nikolay
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
+index.md

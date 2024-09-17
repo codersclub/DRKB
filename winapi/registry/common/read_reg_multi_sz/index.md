@@ -1,15 +1,12 @@
 ---
 Title: Как читать REG\_MULTI\_SZ значение?
-Author: Александр (Rouse\_) Багель
 Date: 01.01.2007
 ---
 
 Как читать REG\_MULTI\_SZ значение?
 ===================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     uses
       Registry;
@@ -76,6 +73,10 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Author: Ralph Friedman
+
     {******************************************}
     {2. by Ralph Friedman }
      
@@ -91,7 +92,7 @@ Date: 01.01.2007
     }
      
     {Answer: Here's an example of ReadBinaryData }
-     
+    
      
     procedure TFrmReadBinary.Button1Click(Sender: TObject);
     const
@@ -139,6 +140,12 @@ Date: 01.01.2007
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Michael Winter
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {******************************************}
     {3. by Michael Winter }
@@ -229,10 +236,15 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
+------------------------------------------------------------
+
+Вариант 4:
+
+Author: Александр (Rouse\_) Багель
+
+Source: <https://forum.sources.ru>
 
     type
-
      
       TExRegistry = class(TRegistry)
       public
@@ -274,8 +286,3 @@ Date: 01.01.2007
         raise Exception.Create ('Unable read MULTI_SZ value');
     end;
 
-
-
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>

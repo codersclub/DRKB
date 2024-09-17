@@ -1,14 +1,12 @@
 ---
 Title: Сохранить объект TFont в реестре
+Author: Vit
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Сохранить объект TFont в реестре
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses Registry;
      
@@ -74,13 +72,9 @@ Date: 01.01.2007
         NFont.Free;
       end;
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
-
-Примечание от Vit
+**Примечание от Vit**
 
 Вообще-то надо было бы читать свойства TFont через RTTI, а не
 перечислением... ибо в этом случае во-первых если в будущих версиях

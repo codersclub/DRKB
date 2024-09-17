@@ -2,16 +2,11 @@
 Title: Удобная загрузка местоположения формы
 Author: Virtualik
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Удобная загрузка местоположения формы
 =====================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Virtualik
 
 Если вы храните параметры местоположения (Top, Left, Width, Height) формы
 в реестре, то чтобы не загружать данные из нескольких ключей вы можете
@@ -46,7 +41,3 @@ Date: 01.01.2007
       Ini.WriteBinaryData('MsgPos', Rct, SizeOf(TRect));
       Ini.Free;
     end;
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

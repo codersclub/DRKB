@@ -1,14 +1,11 @@
 ---
 Title: Получить многострочные значения из реестра и преобразовать их в TStringList
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Получить многострочные значения из реестра и преобразовать их в TStringList
 ===========================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function ReadMultirowKey(reg: TRegistry; Key: string): TStrings;
     const
@@ -50,6 +47,3 @@ Date: 01.01.2007
       end;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

@@ -1,18 +1,20 @@
 ---
 Title: Как получить событие о смене реестра?
-Author: Александр (Rouse\_) Багель
 Date: 01.01.2007
 ---
 
 Как получить событие о смене реестра?
 =====================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Александр (Rouse\_) Багель
+
+Source: <https://forum.sources.ru>
 
     function RegNotifyChangeKeyValue(hKey: HKEY; bWatchSubtree: Boolean;
-        dwNotifyFilter: DWORD; hEvent: THandle; fAsynchronus: Boolean): Longint; stdcall;
+        dwNotifyFilter: DWORD; hEvent: THandle; fAsynchronus: Boolean): Longint;
+        stdcall;
         external 'advapi32.dll' name 'RegNotifyChangeKeyValue';
 
      
@@ -53,11 +55,12 @@ Date: 01.01.2007
         ShowMessage(SysErrorMessage(ErrorCode));
     end;
 
-Автор: Александр (Rouse\_) Багель
-
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {
       An application can be notified of changes in the data stored in the
@@ -73,7 +76,6 @@ Date: 01.01.2007
       to the WM_ChangeCBChain message which is sent whenever any other clipboard viewer on
       the system is added or removed to ensure the next window along is valid.
     }
-     
      
     unit Unit1;
      
@@ -168,4 +170,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

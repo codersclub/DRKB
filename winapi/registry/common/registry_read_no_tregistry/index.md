@@ -1,14 +1,11 @@
 ---
 Title: Чтение строки из реестра без использования класса TRegistry
-Date: 01.01.2007
+Author: Dimka Maslov, mainbox@endimus.ru
+Date: 13.05.2002
 ---
 
 Чтение строки из реестра без использования класса TRegistry
 ===========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Чтение строки из реестра без использования класса TRegistry
@@ -59,7 +56,8 @@ Date: 01.01.2007
         Success^ := Res = ERROR_SUCCESS;
       RegCloseKey(Handle);
     end;
-    Пример использования: 
+
+Пример использования: 
      
     procedure TForm1.Button1Click(Sender: TObject);
     begin

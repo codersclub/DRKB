@@ -1,14 +1,12 @@
 ---
 Title: Облегченный вариант класса TRegistry
+Author: Ben Hochstrasser (bhoc@surfeu.ch).
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Облегченный вариант класса TRegistry
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit MiniReg;
      
@@ -22,53 +20,51 @@ Date: 01.01.2007
     }
     //  Function Examples:
      
-      procedure TForm1.Button1Click(Sender: TObject);
-      var
-        ba1, ba2: array of byte;
-        n: integer;
-        s: String;
-        d: Cardinal;
+    procedure TForm1.Button1Click(Sender: TObject);
+    var
+      ba1, ba2: array of byte;
+      n: integer;
+      s: String;
+      d: Cardinal;
+    begin
+      setlength(ba1, 10);
+      for n := 0 to 9 do ba1[n] := byte(n);
+   
+      RegSetString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestString', 'TestMe');
+      RegSetExpandString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestExpandString',
+        '%SystemRoot%\Test');
+      RegSetMultiString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestMultiString',
+        'String1'#0'String2'#0'String3');
+      RegSetDword(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestDword', 7);
+      RegSetBinary(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestBinary', ba1);
+      RegGetString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestString', s);
+      RegGetMultiString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestMultiString', s);
+      RegGetExpandString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestExpandString', s);
+      RegGetDWORD(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestDword', d);
+      RegGetBinary(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestBinary', s);
+      
+      SetLength(ba2, Length(s));
+      for n := 1 to Length(s) do ba2[n-1] := byte(s[n]);
+      Button1.Caption := IntToStr(Length(ba2));
+   
+      if RegKeyExists(HKEY_CURRENT_USER, 'Software\My Company\Test\foo') then
+        if RegValueExists(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestBinary') then
+          MessageBox(GetActiveWindow, 'OK', 'OK', MB_OK);
+      RegDelValue(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestString');
+      RegDelKey(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar');
+      RegDelKey(HKEY_CURRENT_USER, 'Software\My Company\Test\foo');
+      RegDelKey(HKEY_CURRENT_USER, 'Software\My Company\Test');
+      RegDelKey(HKEY_CURRENT_USER, 'Software\My Company');
+      if RegEnumKeys(HKEY_CURRENT_USER, 'Software\My Company', s) then
+        ListBox1.Text := s;
+      if RegEnumValues(HKEY_CURRENT_USER, 'Software\My Company', s) then
+        ListBox1.Text := s;
+      if RegConnect('\\server1', HKEY_LOCAL_MACHINE, RemoteKey) then
       begin
-        setlength(ba1, 10);
-        for n := 0 to 9 do ba1[n] := byte(n);
-     
-        RegSetString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestString', 'TestMe');
-        RegSetExpandString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestExpandString',
-          '%SystemRoot%\Test');
-        RegSetMultiString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestMultiString',
-          'String1'#0'String2'#0'String3');
-        RegSetDword(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestDword', 7);
-        RegSetBinary(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestBinary', ba1);
-     
-        RegGetString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestString', s);
-        RegGetMultiString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestMultiString', s);
-        RegGetExpandString(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestExpandString', s);
-        RegGetDWORD(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestDword', d);
-        RegGetBinary(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestBinary', s);
-        SetLength(ba2, Length(s));
-        for n := 1 to Length(s) do ba2[n-1] := byte(s[n]);
-        Button1.Caption := IntToStr(Length(ba2));
-     
-        if RegKeyExists(HKEY_CURRENT_USER, 'Software\My Company\Test\foo') then
-          if RegValueExists(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestBinary') then
-            MessageBox(GetActiveWindow, 'OK', 'OK', MB_OK);
-        RegDelValue(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar\TestString');
-        RegDelKey(HKEY_CURRENT_USER, 'Software\My Company\Test\foo\bar');
-        RegDelKey(HKEY_CURRENT_USER, 'Software\My Company\Test\foo');
-        RegDelKey(HKEY_CURRENT_USER, 'Software\My Company\Test');
-        RegDelKey(HKEY_CURRENT_USER, 'Software\My Company');
-        if RegEnumKeys(HKEY_CURRENT_USER, 'Software\My Company', s) then
-          ListBox1.Text := s;
-        if RegEnumValues(HKEY_CURRENT_USER, 'Software\My Company', s) then
-          ListBox1.Text := s;
-        if RegConnect('\\server1', HKEY_LOCAL_MACHINE, RemoteKey) then
-        begin
-          RegGetString(RemoteKey, 'Software\My Company\Test\foo\bar\TestString', s);
-          RegDisconnect(RemoteKey);
-        end;
+        RegGetString(RemoteKey, 'Software\My Company\Test\foo\bar\TestString', s);
+        RegDisconnect(RemoteKey);
       end;
-     
-     
+    end;
      
     interface
      
@@ -438,4 +434,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,14 +1,11 @@
 ---
 Title: Работа с INI-файлами
 Date: 01.01.2007
+Source: <https://dmitry9.nm.ru/info/>
 ---
 
 Работа с INI-файлами
 ====================
-
-::: {.date}
-01.01.2007
-:::
 
 Почему иногда лучше использовать INI-файлы, а не реестр?
 
@@ -26,61 +23,61 @@ Date: 01.01.2007
 объекта TIniFiles модуля IniFiles. Краткое описание методов объекта
 TIniFiles дано ниже.
 
-Constructor Create(\'d:\\test.INI\');
+    Constructor Create('d:\test.INI');
 
 Создать экземпляр объекта и связать его с файлом. Если такого файла нет,
 то он создается, но только тогда, когда произведете в него запись
 информации.
 
-WriteBool(const Section, Ident: string; Value: Boolean);
+    WriteBool(const Section, Ident: string; Value: Boolean);
 
 Присвоить элементу с именем Ident раздела Section значение типа boolean
 
-WriteInteger(const Section, Ident: string; Value: Longint);
+    WriteInteger(const Section, Ident: string; Value: Longint);
 
 Присвоить элементу с именем Ident раздела Section значение типа Longint
 
-WriteString(const Section, Ident, Value: string);
+    WriteString(const Section, Ident, Value: string);
 
 Присвоить элементу с именем Ident раздела Section значение типа String
 
-ReadSection (const Section: string; Strings: TStrings);
+    ReadSection (const Section: string; Strings: TStrings);
 
 Прочитать имена всех корректно описанных переменных раздела Section
 (некорректно описанные опускаются)
 
-ReadSectionValues(const Section: string; Strings: TStrings);
+    ReadSectionValues(const Section: string; Strings: TStrings);
 
 Прочитать имена и значения всех корректно описанных переменных раздела
 Section. Формат :
 
 имя\_переменной = значение
 
-EraseSection(const Section: string);
+    EraseSection(const Section: string);
 
 Удалить раздел Section со всем содержимым
 
-ReadBool(const Section, Ident: string; Default: Boolean): Boolean;
+    ReadBool(const Section, Ident: string; Default: Boolean): Boolean;
 
 Прочитать значение переменной типа Boolean раздела Section с именем
 Ident, и если его нет, то вместо него подставить значение Default.
 
-ReadInteger(const Section, Ident: string; Default: Longint): Longint;
+    ReadInteger(const Section, Ident: string; Default: Longint): Longint;
 
 Прочитать значение переменной типа Longint раздела Section с именем
 Ident, и если его нет, то вместо него подставить значение Default.
 
-ReadString(const Section, Ident, Default: string): string;
+    ReadString(const Section, Ident, Default: string): string;
 
 Прочитать значение переменной типа String раздела Section с именем
 Ident, и если его нет, то вместо него подставить значение Default.
 
-Free;
+    Free;
 
 Закрыть и освободить ресурс. Необходимо вызвать при завершении работы с
 INI файлом
 
-Property Values[const Name: string]: string;
+    Property Values[const Name: string]: string;
 
 Доступ к существующему параметру по имени Name
 
@@ -100,13 +97,12 @@ Property Values[const Name: string]: string;
       IniFile.Free; { Закрыли файл, уничтожили объект и освободили память }
     end;
 
-Источник: <https://dmitry9.nm.ru/info/>
 
-Примечание от Vit.
+**Примечание от Vit.**
 
 INI файлы имеют ограничение на размер (конкретно зависит от версии
 операционной системы), поэтому если нужна поддержка файлов более 64 Kb
-прийдётся воспользоваться сторонними библиотеками или самому работать с
+придётся воспользоваться сторонними библиотеками или самому работать с
 файлами как с текстом. Однако следует помнить, что для хранения больших
 массивов информации ini файлы представляют не самое удачное решение, при
 увеличении ini файлов до таких размеров следует подумать об

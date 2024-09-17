@@ -2,14 +2,11 @@
 Title: Модуль для работы с INI-файлами
 Author: Guedda
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 Модуль для работы с INI-файлами
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот мой модуль для работы с Ini файлами... Должен всем пригодиться...
 
@@ -185,6 +182,3 @@ Date: 01.01.2007
      
     End.
 
-Автор: Rrader
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

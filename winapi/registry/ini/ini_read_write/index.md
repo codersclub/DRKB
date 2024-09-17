@@ -6,10 +6,6 @@ Date: 01.01.2007
 INI-файлы (чтение / запись)
 ===========================
 
-::: {.date}
-01.01.2007
-:::
-
     function ReadIni(ASection, AString: string): string;
     var
       sIniFile: TIniFile;
