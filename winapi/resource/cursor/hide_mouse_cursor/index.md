@@ -1,14 +1,11 @@
 ---
 Title: Как отключить курсор мыши?
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Как отключить курсор мыши?
 ==========================
-
-::: {.date}
-01.01.2007
-:::
 
     //Выключение курсора
     procedure TForm1.Button1Click(Sender: TObject);
@@ -30,6 +27,4 @@ Date: 01.01.2007
         CState := ShowCursor(True);
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

@@ -1,14 +1,11 @@
 ---
 Title: Частота мигания каретки
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Частота мигания каретки
 =======================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin
@@ -22,4 +19,3 @@ Date: 01.01.2007
       SetCaretBlinkTime(2000);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

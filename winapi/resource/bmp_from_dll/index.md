@@ -2,17 +2,13 @@
 Title: Как загрузить BMP файл из DLL?
 Author: Baa
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 Как загрузить BMP файл из DLL?
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
     procedure TForm1.Button1Click(Sender: TObject);
-
     var
       AModule: THandle;
     begin
@@ -21,6 +17,3 @@ Date: 01.01.2007
       FreeLibrary(AModule);
     end;
 
-Автор: Baa
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

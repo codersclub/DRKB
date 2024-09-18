@@ -6,10 +6,6 @@ Date: 01.01.2007
 Converting 16bit resource to 32bit
 ==================================
 
-::: {.date}
-01.01.2007
-:::
-
 If you have the original source file (.rc) then you can simply recompile
 the .rc file to a .res file using the Borland Resource Command Line
 Compiler (brcc32.exe) located in the Delphi/C++ Builders bin directory.

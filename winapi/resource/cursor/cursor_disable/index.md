@@ -6,20 +6,13 @@ Date: 01.01.2007
 Как запретить показ курсора в TEdit и ему подобных контролах?
 =============================================================
 
-::: {.date}
-01.01.2007
-:::
-
 Создайте своего потомка с обработчиками:
 
-procedure WMPaint(var Msg: TMessage); message WM\_Paint;
-
-procedure WMSetFocus(var Msg: TMessage); message WM\_SetFocus;
-
-procedure WMNCHitTest(var Msg: TMessage); message WM\_NCHitTest;
+    procedure WMPaint(var Msg: TMessage); message WM_Paint;
+    procedure WMSetFocus(var Msg: TMessage); message WM_SetFocus;
+    procedure WMNCHitTest(var Msg: TMessage); message WM_NCHitTest;
 
 в которых вызывайте:
 
-inherited;
-
-HideCaret(Handle);
+    inherited;
+    HideCaret(Handle);

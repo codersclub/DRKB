@@ -7,9 +7,9 @@ Date: 01.01.2007
 Как работать с анимированными курсорами?
 ========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 Answer:
 
@@ -24,9 +24,7 @@ cursors at run time, use the LoadCursor, LoadCursorFromFile, or
 LoadImage function to avoid device dependence, to simplify localization,
 and to enable applications to share cursor designs.
 
-  --- ------------------------------
-  ·   Loading a cursor from a file
-  --- ------------------------------
+**Loading a cursor from a file**
 
 The easiest way to load a cursor from a file is by using
 LoadCursorFromFile.
@@ -52,23 +50,19 @@ assign to your application Cursors array.
 
 You can also use LoadImage instead of LoadCursorFromFile like this: 
 
-hCur := LoadImage(0, PChar(PChar(\'path\_to\_my\_cursor\')),
-IMAGE\_CURSOR, 0, 0,
+    hCur := LoadImage(0, PChar(PChar('path_to_my_cursor')),
+                      IMAGE_CURSOR, 0, 0,
+                      LR_DEFAULTSIZE or LR_LOADFROMFILE);
 
-LR\_DEFAULTSIZE or LR\_LOADFROMFILE);
-
-  --- ----------------------------------
-  ·   Loading a cursor from a resource
-  --- ----------------------------------
+**Loading a cursor from a resource**
 
 Before loading a cursor from a resource it\'s necessary to create the
 resource file with the cursor to be loaded.
 
 To do this create a file myResources.rc where you\'ll put the following
 
-#define ANICURSOR 21
-
-myCursor ANICURSOR "path\_to\_my\_cursor"
+    #define ANICURSOR 21
+    myCursor ANICURSOR "path_to_my_cursor"
 
 Because Borland\'s resource compiler does not understand the ANICURSOR
 resource type, so you have to use the numeric id (21).
@@ -80,16 +74,14 @@ myResources.res}
 Now, you just have to load the cursor from the resource instead of
 loading it from a file, using:
 
-hCur := LoadCursor(HInstance, PChar(\'myCursor\'));
+    hCur := LoadCursor(HInstance, PChar('myCursor'));
 
 Remember that HInstance contains the instance handle of the application
 or library as provided by Windows. This variable it\'s very importante
 because it\'s the one used with many Windows API that work with current
 application resources.
 
-  --- ------------------------------
-  ·   Creating a cursor at runtime
-  --- ------------------------------
+**Creating a cursor at runtime**
 
 Another way to use a cursor it\'s creating one at runtime. Why would you
 do that?
@@ -97,7 +89,7 @@ do that?
 I don\'t know, it\'s your choice. I doubt you ever will create your
 cursors at runtime, anyway here it\'s way how to do it.
 
-Define the cursor map
+**Define the cursor map**
 
     const
       // Yin cursor AND bitmask
@@ -139,17 +131,18 @@ Define the cursor map
         $00, $FF, $00, $00, $00, $3C, $00, $00,
         $00, $00, $00, $00, $00, $00, $00, $00
         );    
-     
 
 then create the cursor
 
-hCur := CreateCursor(HInstance, 19, 2, 32, 32, @ANDmaskCursor, @XORmaskCursor);
+    hCur := CreateCursor(HInstance, 19, 2, 32, 32,
+                         @ANDmaskCursor, @XORmaskCursor);
 
-Взято с Delphi Knowledge Base: <https://www.baltsoft.com/>
 
 ------------------------------------------------------------------------
 
-Во первых необходимо получит handle курсора, а затем определить его в
+Вариант 2:
+
+Во первых, необходимо получить handle курсора, а затем определить его в
 массиве курсоров компонента TScreen. Индексы предопределенных курсоров
 системы отрицательны, пользователь может определить курсор, индекс
 которого положителен.
@@ -170,7 +163,11 @@ hCur := CreateCursor(HInstance, 19, 2, 32, 32, @ANDmaskCursor, @XORmaskCursor);
 
 ------------------------------------------------------------------------
 
-Автор: Nomadic 
+Вариант 3:
+
+Author: Nomadic 
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     const
       crMyCursor = 1;
@@ -184,17 +181,11 @@ hCur := CreateCursor(HInstance, 19, 2, 32, 32, @ANDmaskCursor, @XORmaskCursor);
       // Используем курсор на форме
       Cursor := crMyCursor;
     end;
-     
-     
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
 
-    {1.}
-     
+Вариант 4:
+
      procedure TForm1.FormCreate(Sender: TObject);
      begin
        Screen.Cursors[crMyCursor] := LoadCursorFromFile('c:\mystuff\mycursor.ani');
@@ -202,8 +193,15 @@ DelphiWorld 6.0
      end;
      
      
+------------------------------------------------------------------------
+
+Вариант 5:
+
+Author: Blodgett
+
+Source: <https://www.swissdelphicenter.ch>
+
      {*****************************************************************}
-     {2.}
      { by Blodgett}
      
      Const
@@ -233,19 +231,17 @@ DelphiWorld 6.0
      var
       FCurrentCursor: Integer;
      begin
-       //1st - Load Cursors Information 
+      //1st - Load Cursors Information 
       LoadCursors;
-       //2nd - Set FCurrentCursor variable 
+      //2nd - Set FCurrentCursor variable 
       //      to current screen cursor. 
       FCurrentCursor := Screen.Cursor;
-       //3rd - Set Screen.Cursor to your CONST Value. 
+      //3rd - Set Screen.Cursor to your CONST Value. 
       //      this is your animated cursor. 
       Screen.Cursor := CURSOR_HOURGLASS;
-       //4th - Do something ... 
+      //4th - Do something ... 
       sleep(2000);
-       //5th - Set Screen.Cursor to original cursor. 
+      //5th - Set Screen.Cursor to original cursor. 
       Screen.Cursor := FCurrentCursor;
      end;
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

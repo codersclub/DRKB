@@ -1,14 +1,11 @@
 ---
 Title: 256-цветное изображение из RES-файла
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 256-цветное изображение из RES-файла
 ====================================
-
-::: {.date}
-01.01.2007
-:::
 
     function LoadBitmap256(hInstance: HWND; lpBitmapName: PChar): HBITMAP;
     var
@@ -27,8 +24,8 @@ Date: 01.01.2007
      
       hPal := GlobalAlloc(GMEM_MOVEABLE, (16 * nColorData));
      
-      {  hPal := GlobalAlloc( GMEM_MOVEABLE, ( SizeOf( LOGPALETTE ) +
-      (nColorData * SizeOf( PALETTEENTRY )));}
+      { hPal := GlobalAlloc( GMEM_MOVEABLE, ( SizeOf( LOGPALETTE ) +
+                (nColorData * SizeOf( PALETTEENTRY )));}
       pPalette := GlobalLock(hPal);
       pPalette^.palVersion := $300;
       pPalette^.palNumEntries := nColorData;
@@ -49,4 +46,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>
