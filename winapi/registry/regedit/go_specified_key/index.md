@@ -1,14 +1,11 @@
 ---
 Title: Как перейти к нужному ключу в RegEdit?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как перейти к нужному ключу в RegEdit?
 ======================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -93,4 +90,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
