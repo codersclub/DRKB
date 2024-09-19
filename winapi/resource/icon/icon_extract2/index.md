@@ -107,6 +107,8 @@ Date: 01.01.2007
 
 Вариант 2:
 
+Author: Даниил Карапетян (delphi4all@narod.ru)
+
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Функция ExtractIcon позволяет извлечь иконку из exe, dll и ico-файлов.
@@ -138,9 +140,47 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
       ic.Destroy;
     end;
 
-------------------------------------------------------------------------
 
+Автор справки: Алексей Денисов (aleksey@sch103.krasnoyarsk.su)
+
+------------------------------------------------------------------------
 Вариант 3:
+
+Author: Михаил Христосенко
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+Такой вот совет пришел ко мне с рассылкой "Ежедневная рассылка сайта
+Мастера DELPHI", думаю многим будет интересно.
+
+Решить эту задачу нам поможет функция:
+
+    function ExtractIcon(hInstance, filename, iconindex):integer;
+
+где hinstance - глобальная переменная приложения, ее изменять не надо.
+Тип integer.
+
+filename - имя программы или DLL из которой надо извлекать иконки. Тип
+pchar.
+
+iconindex - порядковый номер иконки в файле (начинается с 0). В одном
+файле может находится несколько иконок. Тип integer.
+
+Функция находится в модуле ShellApi, так что не забудьте подключить его
+в uses. Если эта функция возвратит ноль, значит иконок в файле нет.
+
+Данная функция возвращает handle иконки, поэтому применять ее нужно так:
+
+    Image1.Picture.Icon.Handle:=ExtractIcon(
+                                  hInstance,
+                                  pchar(paramstr(0)),
+                                  0);
+
+данное объявление нарисует в Image\'e картинку вашего приложения.
+
+-----------------------------------------------
+
+Вариант 4:
 
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
@@ -172,7 +212,7 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 ------------------------------------------------------------------------
 
-Вариант 4:
+Вариант 5:
 
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 

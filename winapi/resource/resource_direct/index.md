@@ -2,17 +2,14 @@
 Title: Работа с ресурсами без TResourceStream
 Author: Rouse\_
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Работа с ресурсами без TResourceStream
 ======================================
 
-::: {.date}
-01.01.2007
-:::
-
+Используем
 FindResource + LoadResource + LockResource
-
 
 
 Определяем размеры картинки хранящейся в ресурсах:
@@ -46,10 +43,7 @@ FindResource + LoadResource + LockResource
       end;
     end;
 
-
-
-
-Получаем список всех ресурсов
+Получаем список всех ресурсов:
 
     function GetResourceList: Boolean;
     var
@@ -87,9 +81,7 @@ FindResource + LoadResource + LockResource
       end;
     end;
 
-
-
-Извлекаем ресурс в файл
+Извлекаем ресурс в файл:
 
     function ExtractResource: Boolean;
     const
@@ -176,8 +168,6 @@ FindResource + LoadResource + LockResource
       end;
     end;
 
-
-
 Отрисовываем картинку из ресурса на форме:
 
     procedure ShowPicture;
@@ -262,8 +252,3 @@ FindResource + LoadResource + LockResource
       end;
     end;
 
-
-
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_

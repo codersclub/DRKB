@@ -1,14 +1,11 @@
 ---
 Title: How to get all the resource names that are loaded in a given application?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 How to get all the resource names that are loaded in a given application?
 =========================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     type
       TForm1 = class(TForm)
@@ -94,4 +91,3 @@ How to get all the resource names that are loaded in a given application?
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
