@@ -6,24 +6,17 @@ Date: 01.01.2007
 Как извлечь иконку из файла ярлыка?
 ===================================
 
-::: {.date}
-01.01.2007
-:::
+> How to get icon from a shortcut file ?
 
-How to get icon from a shortcut file ?
+Вариант 1:
 
 I have found that if you use a ListView component,
-
 to show a list of files in any folder that contains shortcuts,
-
 then the shortcut icons do not appear correctly -
-
 they do not show the true icon of the application to which they relate.
 
 However, there is a a very useful feature of SHGetFileInfo,
-
 which is SHGFI\_LINKOVERLAY. This adds the shortcut "arrow",
-
 which is shown in the bottom left corner of any shortcut icon.
 
 The demo code below shows the basic use of the SHGFI\_LINKOVERLAY
@@ -31,7 +24,6 @@ feature.
 
 I have added code to this demo, to distingiush between shortcut and
 non-shortcut files -
-
 without this code, it will overlay the shortcut "arrow" irrespective
 of the file type.
 
@@ -39,9 +31,9 @@ To show the icon of a shortcut, the following code can be used as a
 demo:
 
 1. Add the following components to a new project, and adjust their
+properties according to the code below:
 
-properties according to the code below: }
-
+    ```
     // Code for DFM file:
      
     object Form1: TForm1
@@ -125,9 +117,11 @@ properties according to the code below: }
         Top = 8
       end
     end
+    ```
 
-    // 2. Add the code to the PAS file below:
+2. Add the code to the PAS file below:
      
+    ```
     unit cdShortCutIcon;
      
     interface
@@ -211,19 +205,19 @@ properties according to the code below: }
         Icon.Free;
       end;
     end;
-     
-     
+    
     end.
-
- 
-
- 
+    ```
 
 ------------------------------------------------------------------------
 
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
     {  Comment: 
       The procedure GetAssociatedIcon, trys via Registry to get the 
-      icon(should work for small and big icons) that is associated with 
+      icon (should work for small and big icons) that is associated with 
       the files shown in the explorer. 
      
       This is not my work. But I want to distribute it to you, because 
@@ -231,137 +225,135 @@ properties according to the code below: }
       Thanks SuperTrax. 
     }
      
-     
-     
-     unit AIconos;
-     
-     interface
-     
-     uses
-       Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-       ExtCtrls, StdCtrls, FileCtrl;
-     
-     type
-       TForm1 = class(TForm)
-         Button1: TButton;
-         Image1: TImage;
-         Image2: TImage;
-         OpenDialog1: TOpenDialog;
-         procedure Button1Click(Sender: TObject);
-       private
-         { Private declarations }
-       public
-         { Public declarations }
-       end;
-     
-     type
-       PHICON = ^HICON;
-     
-     var
-       Form1: TForm1;
-       PLargeIcon, PSmallIcon: phicon;
-     
-     implementation
-     
-     uses shellapi, registry;
-     
-     {$R *.DFM}
-     
-     procedure GetAssociatedIcon(FileName: TFilename; PLargeIcon, PSmallIcon: PHICON);
-     var
-       IconIndex: SmallInt;  // Position of the icon in the file 
-      Icono: PHICON;       // The LargeIcon parameter of ExtractIconEx 
-      FileExt, FileType: string;
-       Reg: TRegistry;
-       p: Integer;
-       p1, p2: PChar;
-       buffer: array [0..255] of Char;
-     
-     Label
-       noassoc, NoSHELL; // ugly! but I use it, to not modify to much the original code :( 
+    unit AIconos;
+    
+    interface
+    
+    uses
+      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+      ExtCtrls, StdCtrls, FileCtrl;
+    
+    type
+      TForm1 = class(TForm)
+        Button1: TButton;
+        Image1: TImage;
+        Image2: TImage;
+        OpenDialog1: TOpenDialog;
+        procedure Button1Click(Sender: TObject);
+      private
+        { Private declarations }
+      public
+        { Public declarations }
+      end;
+    
+    type
+      PHICON = ^HICON;
+    
+    var
+      Form1: TForm1;
+      PLargeIcon, PSmallIcon: phicon;
+    
+    implementation
+    
+    uses shellapi, registry;
+    
+    {$R *.DFM}
+    
+    procedure GetAssociatedIcon(FileName: TFilename; PLargeIcon, PSmallIcon: PHICON);
+    var
+      IconIndex: SmallInt;  // Position of the icon in the file 
+     Icono: PHICON;       // The LargeIcon parameter of ExtractIconEx 
+     FileExt, FileType: string;
+      Reg: TRegistry;
+      p: Integer;
+      p1, p2: PChar;
+      buffer: array [0..255] of Char;
+    
+    Label
+      noassoc, NoSHELL; // ugly! but I use it, to not modify to much the original code :( 
     begin
-       IconIndex := 0;
-       Icono := nil;
-       // ;Get the extension of the file 
+      IconIndex := 0;
+      Icono := nil;
+      // ;Get the extension of the file 
       FileExt := UpperCase(ExtractFileExt(FileName));
-       if ((FileExt  '.EXE') and (FileExt  '.ICO')) or not FileExists(FileName) then
-       begin
-         // If the file is an EXE or ICO and exists, then we can 
+      if ((FileExt  '.EXE') and (FileExt  '.ICO')) or not FileExists(FileName) then
+      begin
+        // If the file is an EXE or ICO and exists, then we can 
         // extract the icon from that file. Otherwise here we try 
         // to find the icon in the Windows Registry. 
         Reg := nil;
-         try
-           Reg := TRegistry.Create;
-           Reg.RootKey := HKEY_CLASSES_ROOT;
-           if FileExt = '.EXE' then FileExt := '.COM';
-           if Reg.OpenKeyReadOnly(FileExt) then
-             try
-               FileType := Reg.ReadString('');
-             finally
-               Reg.CloseKey;
-             end;
-           if (FileType <> '') and Reg.OpenKeyReadOnly(FileType + '\DefaultIcon') then
-             try
-               FileName := Reg.ReadString('');
-             finally
-               Reg.CloseKey;
-             end;
-         finally
-           Reg.Free;
-         end;
-     
-         // If there is not association then lets try to 
+        try
+          Reg := TRegistry.Create;
+          Reg.RootKey := HKEY_CLASSES_ROOT;
+          if FileExt = '.EXE' then FileExt := '.COM';
+          if Reg.OpenKeyReadOnly(FileExt) then
+            try
+              FileType := Reg.ReadString('');
+            finally
+              Reg.CloseKey;
+            end;
+          if (FileType <> '') and Reg.OpenKeyReadOnly(FileType + '\DefaultIcon') then
+            try
+              FileName := Reg.ReadString('');
+            finally
+              Reg.CloseKey;
+            end;
+        finally
+          Reg.Free;
+        end;
+    
+        // If there is not association then lets try to 
         // get the default icon 
         if FileName = '' then goto noassoc;
      
-         // Get file name and icon index from the association 
+        // Get file name and icon index from the association 
         // ('"File\Name",IconIndex') 
         p1 := PChar(FileName);
-         p2 := StrRScan(p1, ',');
-         if p2  nil then
-         begin
-           p         := p2 - p1 + 1; // Position de la coma 
+        p2 := StrRScan(p1, ',');
+        if p2  nil then
+        begin
+          p         := p2 - p1 + 1; // Position de la coma 
           IconIndex := StrToInt(Copy(FileName, p + 1, Length(FileName) - p));
-           SetLength(FileName, p - 1);
-         end;
-       end; //if ((FileExt  '.EX ... 
+          SetLength(FileName, p - 1);
+        end;
+      end; //if ((FileExt  '.EX ... 
      
       // Try to extract the small icon 
       if ExtractIconEx(PChar(FileName), IconIndex, Icono^, PSmallIcon^, 1) <> 1 then
-       begin
-         noassoc:
-         // That code is executed only if the ExtractIconEx return a value but 1 
+      begin
+        noassoc:
+        // That code is executed only if the ExtractIconEx return a value but 1 
         // There is not associated icon 
         // try to get the default icon from SHELL32.DLL 
      
         FileName := 'C:\Windows\System\SHELL32.DLL';
-         if not FileExists(FileName) then
-         begin  //If SHELL32.DLL is not in Windows\System then 
+        if not FileExists(FileName) then
+        begin  //If SHELL32.DLL is not in Windows\System then 
           GetWindowsDirectory(buffer, SizeOf(buffer));
-           //Search in the current directory and in the windows directory 
+          //Search in the current directory and in the windows directory 
           FileName := FileSearch('SHELL32.DLL', GetCurrentDir + ';' + buffer);
-           if FileName = '' then
-             goto NoSHELL; //the file SHELL32.DLL is not in the system 
+          if FileName = '' then
+            goto NoSHELL; //the file SHELL32.DLL is not in the system 
         end;
      
-         // Determine the default icon for the file extension 
+        // Determine the default icon for the file extension 
         if (FileExt = '.DOC') then IconIndex := 1
-         else if (FileExt = '.EXE') or (FileExt = '.COM') then IconIndex := 2
-         else if (FileExt = '.HLP') then IconIndex := 23
-         else if (FileExt = '.INI') or (FileExt = '.INF') then IconIndex := 63
-         else if (FileExt = '.TXT') then IconIndex := 64
-         else if (FileExt = '.BAT') then IconIndex := 65
-         else if (FileExt = '.DLL') or (FileExt = '.SYS') or (FileExt = '.VBX') or
-           (FileExt = '.OCX') or (FileExt = '.VXD') then IconIndex := 66
-         else if (FileExt = '.FON') then IconIndex := 67
-         else if (FileExt = '.TTF') then IconIndex := 68
-         else if (FileExt = '.FOT') then IconIndex := 69
-         else
-           IconIndex := 0;
-         // Try to extract the small icon 
+        else if (FileExt = '.EXE') or (FileExt = '.COM') then IconIndex := 2
+        else if (FileExt = '.HLP') then IconIndex := 23
+        else if (FileExt = '.INI') or (FileExt = '.INF') then IconIndex := 63
+        else if (FileExt = '.TXT') then IconIndex := 64
+        else if (FileExt = '.BAT') then IconIndex := 65
+        else if (FileExt = '.DLL') or (FileExt = '.SYS') or (FileExt = '.VBX') or
+          (FileExt = '.OCX') or (FileExt = '.VXD') then IconIndex := 66
+        else if (FileExt = '.FON') then IconIndex := 67
+        else if (FileExt = '.TTF') then IconIndex := 68
+        else if (FileExt = '.FOT') then IconIndex := 69
+        else
+          IconIndex := 0;
+        // Try to extract the small icon 
         if ExtractIconEx(PChar(FileName), IconIndex, Icono^, PSmallIcon^, 1) <> 1 then
-         begin
-           //That code is executed only if the ExtractIconEx return a value but 1 
+        begin
+          //That code is executed only if the ExtractIconEx return a value but 1 
           // Fallo encontrar el icono. Solo "regresar" ceros. 
           NoSHELL:
            if PLargeIcon  nil then PLargeIcon^ := 0;
@@ -370,10 +362,10 @@ properties according to the code below: }
        end; //if ExtractIconEx 
      
       if PSmallIcon^ 0 then
-       begin //If there is an small icon then extract the large icon. 
+      begin //If there is an small icon then extract the large icon. 
         PLargeIcon^ := ExtractIcon(Application.Handle, PChar(FileName), IconIndex);
-         if PLargeIcon^ = Null then
-           PLargeIcon^ := 0;
+        if PLargeIcon^ = Null then
+          PLargeIcon^ := 0;
        end;
      end;
      
@@ -403,10 +395,5 @@ properties according to the code below: }
      end;
      
      end.
-     
-     
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

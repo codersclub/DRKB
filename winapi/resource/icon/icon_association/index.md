@@ -6,9 +6,9 @@ Date: 01.01.2007
 Как показать иконку, ассоциированную с данным типом файла?
 ==========================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     uses
       ShellAPI;
@@ -24,9 +24,12 @@ Date: 01.01.2007
       DrawIcon(Canvas.Handle, 10, 10, Icon);
     end;
 
-<https://delphiworld.narod.ru/>
+-------------------------------------------------------------
 
-DelphiWorld 6.0
+Вариант 2:
+
+Author: Poirot, poirot@rol.ru
+Date: 16.06.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение иконки для зарегистрированного расширения по его имени
@@ -88,13 +91,17 @@ DelphiWorld 6.0
       //передача хендлера иконки как рещультат выполнения
       Result := ExtractIcon(hInstance, PChar(IconPath), IconNum);
     end;
-    Пример использования: 
-     
+
+Пример использования: 
+
     GetRegistryIconHandle('c:\winnt\win.ini');
 
- 
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Author: Дмитрий Баранов, kda@pisem.net
+Date: 20.05.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение системной иконки, ассоциированной с файлом в данной системе
@@ -150,4 +157,4 @@ DelphiWorld 6.0
     begin
       Self.Icon := GetIcon('C:\');
     end;
-     
+

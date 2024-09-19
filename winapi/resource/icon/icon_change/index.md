@@ -6,21 +6,21 @@ Date: 01.01.2007
 Изменение иконки приложения
 ===========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Присвойте свойству Application.Icon другую иконку и вызовите функцию
 
     InvalidateRect(Application.Handle, NIL, True); 
 
-... для немедленной перерисовки.
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
+для немедленной перерисовки.
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Изменять иконку приложения или окна во время его работы
 
@@ -34,11 +34,11 @@ TApplication и TForm предусмотрено свойство Icon. Смен
 копирование данных посредством вызова Assign, который производится в
 методе TForm.SetIcon
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Загрузка иконки из ресурса
 
@@ -54,11 +54,12 @@ DelphiWorld 6.0
 
     InvalidateRect(Application.Handle, nil, True);
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Пример организации простейшей анимации иконки приложения
 
@@ -76,11 +77,11 @@ DelphiWorld 6.0
 При этом естественно предполагается, что в Image1 и Image2 загружены
 иконки.
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
-
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Как заставить приложение показывать различные иконки при различных
 разрешениях дисплея?
@@ -100,7 +101,3 @@ DelphiWorld 6.0
       1280 : Application.Icon.Handle := LoadIcon (hInstance, 'ICON1280');
     end;
     Application.Run;
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

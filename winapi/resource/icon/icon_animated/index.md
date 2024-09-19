@@ -1,15 +1,12 @@
 ---
 Title: Компонент на основе TImageList позволяет использовать в приложении анимированные иконки
-Author: Вадим Исаенко
+Author: Вадим Исаенко (Inter) <https://v-isa.narod.ru>
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Компонент на основе TImageList позволяет использовать в приложении анимированные иконки
 =======================================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit AnimIcon;
      
@@ -277,10 +274,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Вадим Исаенко
-
-WEB-сайт: [https://v-isa.narod.ru](https://v-isa.narod.ru%20)
-
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

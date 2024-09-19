@@ -1,14 +1,11 @@
 ---
 Title: Преобразование иконок в Gliph-ы
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Преобразование иконок в Gliph-ы
 ===============================
-
-::: {.date}
-01.01.2007
-:::
 
 Вот небольшой пример того, как можно загрузить иконку, содержащуюся в
 файле EXE, в Glyph у SpeedButton, и как очистить этот самый Glyph.
@@ -18,8 +15,8 @@ Date: 01.01.2007
     unit Procs;
      
     interface
+    
     uses
-     
       SysUtils, WinTypes, WinProcs, Messages, Classes, Graphics, Controls,
       Forms, StdCtrls, Buttons, ExtCtrls, ShellAPI;
      
@@ -47,7 +44,6 @@ Date: 01.01.2007
       NombreBitmap: string;
      
     begin
-     
       try
         screen.cursor := crHourglass;
      
@@ -104,12 +100,10 @@ Date: 01.01.2007
     end; {llenaboton}
      
     procedure LimpiaBoton(boton: TSpeedButton);
-     
     var
       oBitmap: TBitmap;
       rBoton: TRect;
     begin
-     
       try
         {Configuara el tamano del bitmap como el del icono y el del segundo
         bitmap con el tamano del boton}
@@ -125,4 +119,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

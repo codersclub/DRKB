@@ -1,15 +1,16 @@
 ---
 Title: Работа с ресурсами
-Author: Vit
 Date: 01.01.2007
 ---
 
 Работа с ресурсами
 ==================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Сохранить файл в ресурсе программы на этапе компилляции можно выполнив
 следующие шаги:
@@ -26,34 +27,33 @@ Date: 01.01.2007
 образом:
 
     with TResourceStream.Create(hInstance, 'MyResName', RT_RCDATA) do 
-
     try 
-    Seek(0, soFromBeginning); 
-    SaveToFile('MyFileName.exe'); 
+      Seek(0, soFromBeginning); 
+      SaveToFile('MyFileName.exe'); 
     finally 
-    Free; 
+      Free; 
     end;  
 
-       
+---------------------------
 
-Автор: Vit
+Вариант 2:
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+Author: LENIN INC
 
-А вот целый проект, сделанный LENIN INC показывающий различные приёмы
-работы с ресурсами:
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
-[reswork.zip](https://vingrad.ru/download/delphi/reswork.zip)
+А вот целый проект, сделанный LENIN INC показывающий различные приёмы работы с ресурсами:
 
-Автор: LENIN INC
+<https://vingrad.ru/download/delphi/reswork.zip>
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+------------------------------------------------------
+
+Вариант 3:
+
+Author: Song
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Исходники программы для чтения и изменения ресурсов готовой программы
 
-Большое спасибо Song нашедшему эту программу
-[ResEdit.zip](https://forum.vingrad.ru/index.php?s=2e1a44e8fd0d842dc2781c6bd964f18a&act=Attach&type=post&id=21633)
-
-Автор: Song
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
+<https://forum.vingrad.ru/index.php?act=Attach&type=post&id=21633>

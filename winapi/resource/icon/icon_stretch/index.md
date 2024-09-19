@@ -1,14 +1,11 @@
 ---
 Title: Растягивание иконки
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Растягивание иконки
 ===================
-
-::: {.date}
-01.01.2007
-:::
 
 StretchDraw не работает с иконками. В данной ситуации я бы поступил так:
 рисовал бы иконку в Timage и затем назначал изображение другому,
@@ -78,8 +75,7 @@ diFlags - сумма след. занчений:
 
 DI\_COMPAT - буду благодарен, если объясните
 
-DI\_DEFAULTSIZE - если cxWidth, cyWidth равны 0, рисует в default
-размере
+DI\_DEFAULTSIZE - если cxWidth, cyWidth равны 0, рисует в default размере
 
 DI\_IMAGE - применяет одну часть кисти
 
@@ -87,6 +83,4 @@ DI\_MASK - применяет другую часть кисти
 
 DI\_NORMAL = DI\_IMAGE and DI\_MASK - применяет обе части кисти
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
