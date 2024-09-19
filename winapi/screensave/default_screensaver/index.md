@@ -1,14 +1,11 @@
 ---
 Title: Получить установленный по умолчанию Screen Saver
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 Получить установленный по умолчанию Screen Saver
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
        Inifiles, ShellApi;
@@ -35,4 +32,3 @@ Date: 01.01.2007
        label1.Caption := ScreenSaverFile;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

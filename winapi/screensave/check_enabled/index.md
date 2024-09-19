@@ -1,14 +1,11 @@
 ---
 Title: Как определить, установлен ли ScreenSaver?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как определить, установлен ли ScreenSaver?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     function ScreenSaverEnabled: Boolean;
     var
@@ -26,4 +23,3 @@ Date: 01.01.2007
         Caption := 'Screensaver is disabled.'
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
