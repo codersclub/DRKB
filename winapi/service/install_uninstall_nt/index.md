@@ -1,31 +1,32 @@
 ---
 Title: Инсталляция / удаление сервисов под NT
-Date: 01.01.2007
+Author: Alex Kantchev, stoma@bitex.bg
+Date: 19.06.2002
 ---
 
 Инсталляция / удаление сервисов под NT
 ======================================
 
-::: {.date}
-01.01.2007
-:::
-
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Инсталляция/удаление сервисов под НТ.
      
-    Функции для создавания и удаления NT Services. Можно создать NT Service от текущее приложение. Параметры:
-    1. CreateNTService(ExecutablePath,ServiceName: String)
-    ExecutablePath - Полный путь к изполнимого файла от которого создавается NT Service
-    ServiceName - Имя сервиза которое отобразится в Service Control Manager
-    Результат:
-    true - если операциая завершена успешно
-    false - если есть ошибка. Можно произвести call то GetLastError чтобы информироваться об естество ошибки
-    2. DeleteNTService(ServiceName: String):boolean;
-    ServiceName - имя сервиза подлежающии удаления
-    Результат:
-    true - если операциая завершена успешно
-    false - если есть ошибка. Можно произвести call то GetLastError чтобы 
-    информироваться об естество ошибки
+    Функции для создавания и удаления NT Services.
+    Можно создать NT Service от текущее приложение.
+    Параметры:
+      1. CreateNTService(ExecutablePath,ServiceName: String)
+         ExecutablePath - Полный путь к изполнимого файла от которого создавается NT Service
+         ServiceName - Имя сервиза которое отобразится в Service Control Manager
+         Результат:
+           true - если операциая завершена успешно
+           false - если есть ошибка.
+                   Можно произвести call то GetLastError
+                   чтобы информироваться об естество ошибки
+      2. DeleteNTService(ServiceName: String):boolean;
+         ServiceName - имя сервиза подлежающии удаления
+         Результат:
+           true - если операциая завершена успешно
+           false - если есть ошибка. Можно произвести call то GetLastError чтобы 
+                   информироваться об естество ошибки
      
     Зависимости: WinSVC, Windows
     Автор:       Alex Kantchev, stoma@bitex.bg

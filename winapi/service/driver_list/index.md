@@ -1,14 +1,12 @@
 ---
 Title: Как получить список загруженных драйверов?
-Date: 01.01.2007
+Author: Yariv Kaplan (WWW.INTERNALS.COM)
+Date: 01.01.1999
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как получить список загруженных драйверов?
 ==========================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       This code takes advantage of the undocumented NtQuerySystemInformation
@@ -77,4 +75,3 @@ Date: 01.01.2007
       //                      Copyright 1998, 1999 Yariv Kaplan
       //                             WWW.INTERNALS.COM
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

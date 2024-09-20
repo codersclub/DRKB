@@ -1,14 +1,12 @@
 ---
 Title: Написание Terminal Services Client
+Author: Carlo Pasolini, ccpasolini@libero.it
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 Date: 01.01.2007
 ---
 
 Написание Terminal Services Client
 ==================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
     "WINDOWS2000 SERVER" / "WINDOWS XP" terminal services are very important in a computer 
@@ -167,4 +165,3 @@ Date: 01.01.2007
     Carlo Pasolini, Riccione(Italy), ccpasolini@libero.it
     }
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

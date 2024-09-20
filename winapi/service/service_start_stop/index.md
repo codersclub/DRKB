@@ -1,14 +1,11 @@
 ---
 Title: Как запустить и остановить сервис (или получить его статус)?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как запустить и остановить сервис (или получить его статус)?
 ============================================================
-
-::: {.date}
-01.01.2007
-:::
 
 Здесь представлены две функции ServiceStart и ServiceStop, которые
 показывают, как пользоваться API функциями OpenSCManager, OpenService и
@@ -133,26 +130,16 @@ Date: 01.01.2007
      
       Result := hStat; 
     end; 
-     
+
 
 Она возвращает одну из следующих констант:
 
-SERVICE\_STOPPED
-
-SERVICE\_RUNNING
-
-SERVICE\_PAUSED
-
-SERVICE\_START\_PENDING
-
-SERVICE\_STOP\_PENDING
-
-SERVICE\_CONTINUE\_PENDING
-
-или
-
-SERVICE\_PAUSE\_PENDING
+- SERVICE\_STOPPED
+- SERVICE\_RUNNING
+- SERVICE\_PAUSED
+- SERVICE\_START\_PENDING
+- SERVICE\_STOP\_PENDING
+- SERVICE\_CONTINUE\_PENDING или SERVICE\_PAUSE\_PENDING
 
 Всё что, что Вам нужно, это unit WinSvc !
 
-Взято из <https://forum.sources.ru>

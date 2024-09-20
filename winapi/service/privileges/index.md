@@ -1,15 +1,14 @@
 ---
 Title: Получение дополнительных привилегий под NT
-author: Денис, LiquidStorm_HSS@yahoo.com
-Date: 01.01.2007
 ---
 
 Получение дополнительных привилегий под NT
 ==========================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+author: Денис, LiquidStorm_HSS@yahoo.com
+Date: 09.08.2003
 
     { **** UBPFD *********** by kladovka.net.ru ****
     >> Получение дополнительных привилегий под НТ
@@ -68,19 +67,19 @@ Date: 01.01.2007
      tp : TTokenPrivileges;
     begin
      Result := False;
-    // Get the current process token handle so we can get privilege.
+     // Get the current process token handle so we can get privilege.
      if OpenProcessToken(GetCurrentProcess, TOKEN_ADJUST_PRIVILEGES + TOKEN_QUERY, hTok) then
      try
-    // Get the LUID for privilege.
+       // Get the LUID for privilege.
        if LookupPrivilegeValue(nil,PChar(PrivelegStr), tp.Privileges[0].Luid) then
        begin
          tp.PrivilegeCount := 1; // one privilege to set
          tp.Privileges[0].Attributes := SE_PRIVILEGE_ENABLED;
-    // Get privilege for this process.
+         // Get privilege for this process.
          Result := AdjustTokenPrivileges(hTok, False, tp, 0, PTokenPrivileges(nil)^, PDWord(nil)^)
        end
      finally
-    // Cannot test the return value of AdjustTokenPrivileges.
+       // Cannot test the return value of AdjustTokenPrivileges.
        if (GetLastError <> ERROR_SUCCESS) then
           raise Exception.Create('AdjustTokenPrivileges enable failed');
        CloseHandle(hTok)
@@ -503,10 +502,12 @@ Date: 01.01.2007
         10, // time-out period
         FALSE, // ask user to close apps
         TRUE); // reboot after shutdown
-    // bQuite:=False;
+      // bQuite:=False;
     end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     { 
       For some functions you need to get the right privileges 
@@ -591,10 +592,11 @@ Date: 01.01.2007
           CloseHandle(hToken); 
         end; 
       end; 
+      
       // test the return value of AdjustTokenPrivileges. 
       Result := GetLastError = ERROR_SUCCESS; 
       if not Result then 
         raise Exception.Create(SysErrorMessage(GetLastError)); 
     end;
-     
-     
+
+

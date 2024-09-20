@@ -1,14 +1,11 @@
 ---
 Title: Как сделать System Restore Point в Windows XP?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как сделать System Restore Point в Windows XP?
 ==============================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
       If you haven't installed the Microsoft Scripting Control yet
@@ -24,7 +21,6 @@ Date: 01.01.2007
       In the OnClick event of Button1, put the following code:
     }
      
-     
     procedure TForm1.Button1Click(Sender: TObject);
     var
       sr: OLEVAriant;
@@ -38,7 +34,6 @@ Date: 01.01.2007
         ShowMessage('Restore Point creation Failed!');
         // Wiederherstellungspunkt Erstellung fehlgeschlagen.
     end;
-     
      
      
     {*****************************************************}
@@ -123,4 +118,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

@@ -1,14 +1,11 @@
 ---
 Title: How immediately start a service after it\'s installation?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 How immediately start a service after it\'s installation?
 =========================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { To automatically start a service after its installation use this code }
      
@@ -26,4 +23,3 @@ How immediately start a service after it\'s installation?
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

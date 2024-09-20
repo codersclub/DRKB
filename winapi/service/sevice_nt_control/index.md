@@ -1,20 +1,19 @@
 ---
 Title: Управление NT-сервисами
 Date: 01.01.2007
+Source:  <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Управление NT-сервисами
 =======================
 
-::: {.date}
-01.01.2007
-:::
+Следующий класс TServiceManager можно использовать для управления вашими NT-службами.
+Вы можете выполнять такие действия, как запуск, остановка, приостановка или запрос статуса служб.
 
     {
       The following class TServiceManager can be used to manage your NT-Services.
       You can do things like start, stop, pause or querying a services status.
     }
-     
      
     //  Thanks for this one to Frederik Schaller as well - it's a co-work }
      
@@ -64,7 +63,6 @@ Date: 01.01.2007
       ServiceControlManager := OpenSCManager(MachineName, DatabaseName, Access);
       Result := (ServiceControlManager <> 0);
     end;
-     
      
     function TServiceManager.OpenServiceConnection(ServiceName: PChar): Boolean;
     begin
@@ -123,13 +121,15 @@ Date: 01.01.2007
     begin
     { Returns the status of the service. Maybe you want to check this
       more than once, so just call this function again.
-      Results may be: SERVICE_STOPPED
-                      SERVICE_START_PENDING
-                      SERVICE_STOP_PENDING
-                      SERVICE_RUNNING
-                      SERVICE_CONTINUE_PENDING
-                      SERVICE_PAUSE_PENDING
-                      SERVICE_PAUSED   }
+      Results may be:
+        SERVICE_STOPPED
+        SERVICE_START_PENDING
+        SERVICE_STOP_PENDING
+        SERVICE_RUNNING
+        SERVICE_CONTINUE_PENDING
+        SERVICE_PAUSE_PENDING
+        SERVICE_PAUSED
+    }
       Result := 0;
       QueryServiceStatus(ServiceHandle, ServiceStatus);
       Result := ServiceStatus.dwCurrentState;
@@ -160,4 +160,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

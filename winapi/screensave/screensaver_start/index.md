@@ -1,20 +1,22 @@
 ---
 Title: Как запустить текущий screensaver?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Как запустить текущий screensaver?
 ==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-SendMessage(Application.Handle, WM\_SYSCOMMAND, SC\_SCREENSAVE, 0);
+    SendMessage(Application.Handle, WM_SYSCOMMAND, SC_SCREENSAVE, 0);
 
-Взято с <https://delphiworld.narod.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Сначала мы проверяем, установлен ли Screen Saver, если нет -
 возвращаемся с отрицательным ответом, в противном случае - запускаем его
@@ -33,6 +35,4 @@ SendMessage(Application.Handle, WM\_SYSCOMMAND, SC\_SCREENSAVE, 0);
       result := true;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

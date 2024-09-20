@@ -1,14 +1,11 @@
 ---
 Title: Как проверить, не запущена ли Terminal Client Session?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как проверить, не запущена ли Terminal Client Session?
 ======================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function IsRemoteSession: Boolean;
     const
@@ -17,4 +14,3 @@ Date: 01.01.2007
       Result := GetSystemMetrics(sm_RemoteSession) <> 0;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

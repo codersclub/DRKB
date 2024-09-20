@@ -359,12 +359,12 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 1. В файл проекта {\*.DPR} добавить строку
 
-    {$D SCRNSAVE \<название хранителя\>}
+        {$D SCRNSAVE <название хранителя>}
 
     после строки подключения модулей (Uses...).
 
-2. У окна формы убрать системное меню, кнопки и придать свойству
-WindowState значение wsMaximize.
+2. У окна формы убрать системное меню, кнопки,
+   и придать свойству WindowState значение wsMaximize.
 
 3. Предусмотреть выход из хранителя при нажатии на клавиши клавиатуры,
 мыши и при перемещении курсора мыши.
@@ -376,8 +376,8 @@ WindowState значение wsMaximize.
 
 5. Скомпилировать хранитель экрана.
 
-6. Переименовать \*.EXE файл в файл \*.SCR и скопировать его в каталог
-WINDOWS\\SYSTEM.
+6. Переименовать \*.EXE файл в файл \*.SCR
+   и скопировать его в каталог WINDOWS\\SYSTEM\\.
 
 7. Установить новый хранитель в настройках системы!
 
@@ -393,13 +393,14 @@ WINDOWS\\SYSTEM.
 в файле \*.DPR:
 
     {$D SCRNSAVE Пример хранителя экрана}
-     
+    
     //проверить переданные параметры}
     IF (ParamStr(1) = '/c') OR (ParamStr(1) = '/C') THEN
-     // скрыть курсор мыши
-     ShowCursor(False);
-     // восстановить курсор мыши
-     ShowCursor(True);
+      // скрыть курсор мыши
+      ShowCursor(False);
+
+    // восстановить курсор мыши
+    ShowCursor(True);
 
 Более подробно о создании хранителя экрана "по всем правилам" Screen
 Saver in Win95.
@@ -494,8 +495,8 @@ Saver in Win95.
       Else Begin
         Result := CreateWindow('MyDelphiScreenSaverClass','MySaver', 
           ws_Visible or ws_Popup,0,0,Width,Height, 0,0,hInstance,nil);
-        SetWindowPos(Result,hwnd_TopMost,0,0,0,0,swp_NoMove or swp_NoSize or 
-    swp_NoRedraw);
+        SetWindowPos(Result,hwnd_TopMost,0,0,0,0,
+                     swp_NoMove or swp_NoSize or swp_NoRedraw);
       End;
       PreviewWindow := Result;
     End;

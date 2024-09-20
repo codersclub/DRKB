@@ -1,14 +1,11 @@
 ---
 Title: Как проверить, запущен ли сервис?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как проверить, запущен ли сервис?
 =================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       WinSvc;
@@ -83,4 +80,3 @@ Date: 01.01.2007
       HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services
     }
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
