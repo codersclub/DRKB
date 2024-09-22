@@ -1,18 +1,14 @@
 ---
 Title: Получить информацию о регистрации Windows
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Получить информацию о регистрации Windows
 =========================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses
        Registry;
-     
      
      procedure GetOwnerAndCompanyName(var sOwner, sOrganization: string);
      var
@@ -30,9 +26,9 @@ Date: 01.01.2007
          if reg.OpenKey('Software\Microsoft' + sWindows + 'CurrentVersion', False) then
          begin
            // Name 
-          sOwner := reg.ReadString('RegisteredOwner');
+           sOwner := reg.ReadString('RegisteredOwner');
            // Organization 
-          sOrganization := reg.ReadString('RegisteredOrganization');
+           sOrganization := reg.ReadString('RegisteredOrganization');
          end;
        finally
          reg.Free;
@@ -48,6 +44,4 @@ Date: 01.01.2007
        Edit2.Text := sOrganization;
      end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

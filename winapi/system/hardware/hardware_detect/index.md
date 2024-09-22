@@ -1,15 +1,14 @@
 ---
 Title: Как узнать конфигурацию железа?
-Author: Diamond cat
 Date: 01.01.2007
 ---
 
 Как узнать конфигурацию железа?
 ===============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Вот компонент для этого нашел:
 
@@ -59,14 +58,15 @@ Description: Component providing detailed system information
 - Sharepoints enumeration
 - Component showing CPU usage
 
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
 
-Почти все о железе можно прочитать из регистра по
+Вариант 2:
+
+Author: Diamond cat
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
+Почти все о железе можно прочитать из регистра по ключу:
 
     HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Class\
 
-Автор: Diamond cat
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

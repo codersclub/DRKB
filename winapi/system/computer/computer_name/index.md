@@ -1,35 +1,38 @@
 ---
 Title: Как узнать имя компьютера?
-Author: Vit
 Date: 01.01.2007
 ---
 
 Как узнать имя компьютера?
 ==========================
 
-::: {.date}
-01.01.2007
-:::
+Author: Vit
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
     Function ReadComputerName:string;
-
      
     var
-    i:DWORD; 
-    p:PChar;
+      i:DWORD; 
+      p:PChar;
     begin
-    i:=255;
-    GetMem(p, i);
-    GetComputerName(p, i);
-    Result:=String(p);
-    FreeMem(p);
+      i:=255;
+      GetMem(p, i);
+      GetComputerName(p, i);
+      Result:=String(p);
+      FreeMem(p);
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Author: Gua, gua@ukr.net
+
+Source: <https://www.swissdelphicenter.ch>
+
+Date: 23.07.2002
 
     { **** UBPFD *********** by delphibase.endimus.com ****
     >> Получение локального имени компьютера
@@ -50,6 +53,5 @@ Date: 01.01.2007
       Result := NameBuf;
       WSACleanup;
     end;
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
+

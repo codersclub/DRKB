@@ -1,18 +1,19 @@
 ---
 Title: Установка драйвера
-Author: Rouse\_
 Date: 01.01.2007
 ---
 
 Установка драйвера
 ==================
 
-::: {.date}
-01.01.2007
-:::
+> Есть 2 файла драйвера - Sys и Ini.  
+> как установить драйвер?
 
-Есть 2 файла драйвера - Sys и Ini как установить драйвер?
+Вариант 1:
 
+Author: Rouse\_
+
+Source: <https://forum.sources.ru>
 
     function Install: Boolean;
     const
@@ -54,9 +55,13 @@ Date: 01.01.2007
         Result := False
     end;
 
-Автор: Rouse\_
+-----------------------------------------------------------------
 
-Взято из <https://forum.sources.ru>
+Вариант 2:
+
+Author: Arazel
+
+Source: <https://forum.sources.ru>
 
     unit DrvMgr;
      
@@ -156,6 +161,3 @@ Date: 01.01.2007
      
     end.
 
-Автор: Arazel
-
-Взято из <https://forum.sources.ru>

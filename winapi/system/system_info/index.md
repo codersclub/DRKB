@@ -1,59 +1,61 @@
 ---
-Title: Прочитать свойства системы
+Title: Как получить информацию о системе?
 Date: 01.01.2007
 ---
 
-Прочитать свойства системы
-==========================
+Как получить информацию о системе?
+==================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-    { 
-      The SYSTEM_INFO structure contains information about the current computer 
-      system. This includes the architecture and type of the processor, the number of 
-      processors in the system, the page size, and other such information. 
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
+
+    {
+      The SYSTEM_INFO structure contains information about the current computer
+      system. This includes the architecture and type of the processor, the number of
+      processors in the system, the page size, and other such information.
     }
      
-     procedure TForm1.Button1Click(Sender: TObject);
-     var
-       SysInfo: TSystemInfo;
-     begin
-       GetSystemInfo(SysInfo);
-       with ListBox1.Items, SysInfo do
-       begin
-         Add('ProcessorArchitecture:' + IntToStr(wProcessorArchitecture));
-         Add(FloatToStr(dwPageSize) + ' Kb page size');
-         Add(Format('Lowest memory address accessible to applications and DLL - %p',
-           [lpMinimumApplicationAddress]));
-         Add(Format('Highest memory address accessible to applications and DLL - %p',
-           [lpMaximumApplicationAddress]));
-         Add('OEMID:' + IntToStr(dwOemId));
-         Add('ActiveProcessorMask:' + IntToStr(dwActiveProcessorMask));
-         Add(IntToStr(dwNumberOfProcessors) + ' - number of processors');
-         Add('ProcessorType:' + IntToStr(dwProcessorType));
-         case wProcessorLevel of
-           3: Add('Intel 80386 processor level');
-           4: Add('Intel 80486 processor level');
-           5: Add('Intel Pentium processor level');
-         end;
-         Add(FloatToStr(dwAllocationGranularity / 1024) +
-           ' Kb - granularity with which virtual memory is allocated');
-         Add('ProcessorRevision:' + IntToStr(wProcessorRevision));
-       end;
-     end;
-
-Взято с сайта: <https://www.swissdelphicenter.ch>
+    procedure TForm1.Button1Click(Sender: TObject);
+    var
+      SysInfo: TSystemInfo;
+    begin
+      GetSystemInfo(SysInfo);
+      with ListBox1.Items, SysInfo do
+      begin
+        Add('ProcessorArchitecture:' + IntToStr(wProcessorArchitecture));
+        Add(FloatToStr(dwPageSize) + ' Kb page size');
+        Add(Format('Lowest memory address accessible to applications and DLL - %p',
+          [lpMinimumApplicationAddress]));
+        Add(Format('Highest memory address accessible to applications and DLL - %p',
+          [lpMaximumApplicationAddress]));
+        Add('OEMID:' + IntToStr(dwOemId));
+        Add('ActiveProcessorMask:' + IntToStr(dwActiveProcessorMask));
+        Add(IntToStr(dwNumberOfProcessors) + ' - number of processors');
+        Add('ProcessorType:' + IntToStr(dwProcessorType));
+        case wProcessorLevel of
+          3: Add('Intel 80386 processor level');
+          4: Add('Intel 80486 processor level');
+          5: Add('Intel Pentium processor level');
+        end;
+        Add(FloatToStr(dwAllocationGranularity / 1024) +
+          ' Kb - granularity with which virtual memory is allocated');
+        Add('ProcessorRevision:' + IntToStr(wProcessorRevision));
+      end;
+    end;
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Часто при создании систем привязки программ к компьютеру или окон типа
 System Info или About Box необходимо определить данные о пользователе и
 о системе. Это можно сделать следующим образом (из примеров по Delphi -
 программа COA):
 
-    ...
+    var
      Buffer : Array[0..30] of Char;    // Буфер под ASCIIZ строку
     begin
      // Открыли библиотеку User
@@ -88,13 +90,7 @@ System Info или About Box необходимо определить данн�
      Fmt := GetFreeSystemResources(GFSR_SYSTEMRESOURCES);
      ValueFSRs.Caption := Format('%d%% Free', [Fmt1]); 
      // Свободно памяти
-     ValueMemory.Caption := FormatFloat(',#######', MemAvail DIV 
-    1024) + ' KB Free';
+     ValueMemory.Caption := FormatFloat(',#######', MemAvail DIV 1024) +
+                                        ' KB Free';
     end;
-     
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
