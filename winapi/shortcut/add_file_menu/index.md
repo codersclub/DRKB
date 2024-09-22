@@ -1,14 +1,11 @@
 ---
 Title: Как зарегистрировать свой пункт в меню для моего типа файлов?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как зарегистрировать свой пункт в меню для моего типа файлов?
 =============================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       Registry; 
@@ -76,4 +73,3 @@ Date: 01.01.2007
       DeleteFileMenue('rtf', 'Edit with Notepad'); 
     end; 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

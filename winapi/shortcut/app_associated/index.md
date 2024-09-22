@@ -7,12 +7,6 @@ Date: 01.01.2007
 Как получить имя программы, с которой ассоциировано то или иное расширение?
 ===========================================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Олег Кулабухов
-
     uses
     {$IFDEF WIN32}
       Registry; {We will get it from the registry}
@@ -40,8 +34,7 @@ Date: 01.01.2007
       s := '';
       reg := TRegistry.Create;
       reg.RootKey := HKEY_CLASSES_ROOT;
-      if reg.OpenKey('.' + ext + '\shell\open\command',
-        false) <> false then
+      if reg.OpenKey('.' + ext + '\shell\open\command', false) <> false then
       begin
         {The open command has been found}
         s := reg.ReadString('');
@@ -50,16 +43,14 @@ Date: 01.01.2007
       else
       begin
         {perhaps thier is a system file pointer}
-        if reg.OpenKey('.' + ext,
-          false) <> false then
+        if reg.OpenKey('.' + ext, false) <> false then
         begin
           s := reg.ReadString('');
           reg.CloseKey;
           if s <> '' then
           begin
             {A system file pointer was found}
-            if reg.OpenKey(s + '\shell\open\command',
-              false) <> false then
+            if reg.OpenKey(s + '\shell\open\command', false) <> false then
               {The open command has been found}
               s := reg.ReadString('');
             reg.CloseKey;
@@ -69,23 +60,18 @@ Date: 01.01.2007
       {Delete any command line, quotes and spaces}
       if Pos('%', s) > 0 then
         Delete(s, Pos('%', s), length(s));
-      if ((length(s) > 0) and
-        (s[1] = '"')) then
+      if ((length(s) > 0) and (s[1] = '"')) then
         Delete(s, 1, 1);
-      if ((length(s) > 0) and
-        (s[length(s)] = '"')) then
+      if ((length(s) > 0) and (s[length(s)] = '"')) then
         Delete(s, Length(s), 1);
-      while ((length(s) > 0) and
-        ((s[length(s)] = #32) or
-        (s[length(s)] = '"'))) do
+      while ((length(s) > 0)
+        and ((s[length(s)] = #32) or (s[length(s)] = '"'))) do
         Delete(s, Length(s), 1);
     {$ELSE}
       GetWindowsDirectory(WinIniFileName, sizeof(WinIniFileName));
       StrCat(WinIniFileName, '\win.ini');
       WinIni := TIniFile.Create(WinIniFileName);
-      s := WinIni.ReadString('Extensions',
-        ext,
-        '');
+      s := WinIni.ReadString('Extensions', ext, '');
       WinIni.Free;
       {Delete any command line}
       if Pos(' ^', s) > 0 then
@@ -98,4 +84,4 @@ Date: 01.01.2007
     begin
       ShowMessage(GetProgramAssociation('gif'));
     end;
-     
+

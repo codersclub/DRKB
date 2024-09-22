@@ -1,25 +1,22 @@
 ---
 Title: Работа с ассоциациями файла
-Date: 01.01.2007
+Author: P. Below
+Date: 14.03.1999
 ---
 
 Работа с ассоциациями файла
 ===========================
 
-::: {.date}
-01.01.2007
-:::
-
     Unit Associations;  { Subset }
      
     Interface
      
-    Procedure RegisterFiletype( Const extension, filetype, description,
-                 verb: String; params: String );
+    Procedure RegisterFiletype(
+                Const extension, filetype, description,
+                verb: String; params: String );
     Procedure RegisterFileIcon( Const filetype, iconsource: String;
                                 iconindex: Cardinal );
-    Function  FiletypeIsRegistered( Const extension, filetype: String ):
-    Boolean;
+    Function  FiletypeIsRegistered( Const extension, filetype: String ): Boolean;
      
     Implementation
      

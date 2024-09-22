@@ -2,18 +2,14 @@
 Title: Как создать shortcut-файл (.lnk)?
 Author: Vit
 Date: 01.01.2007
+Source: Vingrad.ru <https://forum.vingrad.ru>
 ---
 
 Как создать shortcut-файл (.lnk)?
 =================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses ShlObj, ActiveX, ComObj;
     ...
-
      
     procedure CreateShortCut(ShortCutName, Parameters, FileName: string);
     var ShellObject: IUnknown;
@@ -34,6 +30,3 @@ Date: 01.01.2007
         end;
     end;
 
-Автор: Vit
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>

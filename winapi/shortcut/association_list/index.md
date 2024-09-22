@@ -1,14 +1,11 @@
 ---
 Title: Как получить список всех расширений и их ассоциаций?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как получить список всех расширений и их ассоциаций?
 ====================================================
-
-::: {.date}
-01.01.2007
-:::
 
     {
      This Code will return the programs associated with each extension.
@@ -72,4 +69,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

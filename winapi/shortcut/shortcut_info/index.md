@@ -1,14 +1,11 @@
 ---
 Title: Как прочитать shortcut\'s link information?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как прочитать shortcut\'s link information?
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses 
       ShlObj, 
@@ -106,4 +103,3 @@ Date: 01.01.2007
     // Only for D3 or higher. 
     // for D1,D2 users: http://www.hitekdev.com/delphi/shellutlexamples.html 
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
