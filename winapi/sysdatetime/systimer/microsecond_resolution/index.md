@@ -1,14 +1,11 @@
 ---
 Title: How to implement a microsecond resolution Delay?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 How to implement a microsecond resolution Delay?
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     // Wait 0.2ms
      
@@ -26,4 +23,3 @@ How to implement a microsecond resolution Delay?
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

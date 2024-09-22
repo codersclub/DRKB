@@ -1,25 +1,25 @@
 ---
 Title: Как изменить системное время?
-Author: podval
 Date: 01.01.2007
 ---
 
 Как изменить системное время?
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Author: podval
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Функция SetSystemTime.
 
 Обрати внимание на привилегии.
 
-Автор: podval
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
 
     //**********************************************************
     // Функция (раздел Public) SetPCSystemTime изменяет системную дату и время.
@@ -29,28 +29,30 @@ Date: 01.01.2007
     //************************************************************
     function SetPCSystemTime(tDati: TDateTime): Boolean;
     var
-    tSetDati: TDateTime;
-    vDatiBias: Variant;
-    tTZI: TTimeZoneInformation;
-    tST: TSystemTime;
+      tSetDati: TDateTime;
+      vDatiBias: Variant;
+      tTZI: TTimeZoneInformation;
+      tST: TSystemTime;
     begin
-    GetTimeZoneInformation(tTZI);
-    vDatiBias := tTZI.Bias / 1440;
-    tSetDati := tDati + vDatiBias;
-    with tST do
-    begin
-    wYear := StrToInt(FormatDateTime('yyyy', tSetDati));
-    wMonth := StrToInt(FormatDateTime('mm', tSetDati));
-    wDay := StrToInt(FormatDateTime('dd', tSetDati));
-    wHour := StrToInt(FormatDateTime('hh', tSetDati));
-    wMinute := StrToInt(FormatDateTime('nn', tSetDati));
-    wSecond := StrToInt(FormatDateTime('ss', tSetDati));
-    wMilliseconds := 0;
-    end;
-    SetPCSystemTime := SetSystemTime(tST);
+      GetTimeZoneInformation(tTZI);
+      vDatiBias := tTZI.Bias / 1440;
+      tSetDati := tDati + vDatiBias;
+      with tST do
+      begin
+        wYear := StrToInt(FormatDateTime('yyyy', tSetDati));
+        wMonth := StrToInt(FormatDateTime('mm', tSetDati));
+        wDay := StrToInt(FormatDateTime('dd', tSetDati));
+        wHour := StrToInt(FormatDateTime('hh', tSetDati));
+        wMinute := StrToInt(FormatDateTime('nn', tSetDati));
+        wSecond := StrToInt(FormatDateTime('ss', tSetDati));
+        wMilliseconds := 0;
+      end;
+      SetPCSystemTime := SetSystemTime(tST);
     end; 
 
 ------------------------------------------------------------------------
+
+Вариант 3:
 
 Для изменения системного времени используется сложный спобой (через
 строки).
@@ -61,33 +63,37 @@ Date: 01.01.2007
 
 ------------------------------------------------------------------------
 
+Вариант 4:
 
-     
+Author: Pegas
+
+Source: Vingrad.ru <https://forum.vingrad.ru>
+
     Procedure settime(hour, min, sec, hundreths : byte); assembler;
     asm
-    mov ch, hour
-    mov cl, min
-    mov dh, sec
-    mov dl, hundreths
-    mov ah, $2d
-    int $21
+     mov ch, hour
+     mov cl, min
+     mov dh, sec
+     mov dl, hundreths
+     mov ah, $2d
+     int $21
     end;
      
     ////////////////////////////////////////////////////////////////////////
     Procedure setdate(Year : word; Month, Day : byte); assembler;
     asm
-    mov cx, year
-    mov dh, month
-    mov dl, day
-    mov ah, $2b
-    int $21
+     mov cx, year
+     mov dh, month
+     mov dl, day
+     mov ah, $2b
+     int $21
     end; 
 
-Автор: Pegas
-
-Взято с Vingrad.ru <https://forum.vingrad.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 5:
+
+Source: <https://forum.sources.ru>
 
 Следующие несколько строк кода позволяют установить системную дату и
 время без использования панели управления. Дата и время устанавливаются
@@ -99,25 +105,27 @@ Date: 01.01.2007
 
     procedure TfmTime.btnTimeClick(Sender: TObject); 
     var vsys : _SYSTEMTIME; 
-    vYear, vMonth, vDay, vHour, vMin, vSec, vMm : Word; 
+      vYear, vMonth, vDay, vHour, vMin, vSec, vMm : Word; 
     begin 
-    DecodeDate( Trunc(dtpDate.Date), vYear, vMonth, vDay ); 
-    DecodeTime( dtpTime.Time, vHour, vMin, vSec, vMm ); 
-    vMm := 0; 
-    vsys.wYear := vYear; 
-    vsys.wMonth := vMonth; 
-    vsys.wDay := vDay; 
-    vsys.wHour := ( vHour - 2 ); 
-    vsys.wMinute := vMin; 
-    vsys.wSecond := vSec; 
-    vsys.wMilliseconds := vMm; 
-    vsys.wDayOfWeek := DayOfWeek( Trunc(dtpDate.Date) ); 
-    SetSystemTime( vsys ); 
+      DecodeDate( Trunc(dtpDate.Date), vYear, vMonth, vDay ); 
+      DecodeTime( dtpTime.Time, vHour, vMin, vSec, vMm ); 
+      vMm := 0; 
+      vsys.wYear := vYear; 
+      vsys.wMonth := vMonth; 
+      vsys.wDay := vDay; 
+      vsys.wHour := ( vHour - 2 ); 
+      vsys.wMinute := vMin; 
+      vsys.wSecond := vSec; 
+      vsys.wMilliseconds := vMm; 
+      vsys.wDayOfWeek := DayOfWeek( Trunc(dtpDate.Date) ); 
+      SetSystemTime( vsys ); 
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 6:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function SetTime(DateTime:TDateTime): boolean;
     var
@@ -133,13 +141,13 @@ Date: 01.01.2007
       end;
       Result:=SetSystemTime(st);
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 7:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Следующие несколько строк кода позволяют установить системную дату и
 время без использования панели управления. Дата и время устанавливаются
@@ -167,6 +175,3 @@ DelphiWorld 6.0
       SetSystemTime( vsys );
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

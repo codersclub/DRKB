@@ -1,14 +1,11 @@
 ---
 Title: Получить из регистров информацию о временной зоне (DST)
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Получить из регистров информацию о временной зоне (DST)
 =======================================================
-
-::: {.date}
-01.01.2007
-:::
 
 > HKEYLocalMachine/Software/Microsoft/Windows/CurrentVersion/TimeZones/ -
 > место, где в регистре хранится информация о временных зонах (Timezone).
@@ -40,8 +37,6 @@ Date: 01.01.2007
     int16 DaylightStartMins??;        // 0 => 02:00:00.00
     int16 DaylightStartSecs??;        // 0 => 02:00:00.00
     int16 DaylightStartHunds??;       // 0 => 02:00:00.00
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+

@@ -1,14 +1,11 @@
 ---
 Title: Как получить список часовых поясов?
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Как получить список часовых поясов?
 ===================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       Registry;
@@ -30,7 +27,8 @@ Date: 01.01.2007
         reg.CloseKey;
         for i := 0 to ts.Count -1 do
         begin
-          reg.OpenKey('SOFTWARE\Microsoft\Windows\CurrentVersion\Time Zones\' + ts.Strings[i], false);
+          reg.OpenKey('SOFTWARE\Microsoft\Windows\CurrentVersion\Time Zones\' +
+                      ts.Strings[i], false);
           Memo1.Lines.Add(ts.Strings[i]);
           Memo1.Lines.Add(reg.ReadString('Display'));
           Memo1.Lines.Add(reg.ReadString('Std'));
@@ -45,4 +43,3 @@ Date: 01.01.2007
       reg.free;
     end;
 
-Взято с <https://delphiworld.narod.ru>

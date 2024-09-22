@@ -1,14 +1,11 @@
 ---
 Title: Узнать текущие время и дату по Гринвичу
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Узнать текущие время и дату по Гринвичу
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button4Click(Sender: TObject);
     var
@@ -32,8 +29,6 @@ Date: 01.01.2007
         IntToStr(st.wMinute) + ':' +
         IntToStr(st.wSecond));
     end;
-     
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+
