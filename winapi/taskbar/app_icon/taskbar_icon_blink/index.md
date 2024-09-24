@@ -6,20 +6,21 @@ Date: 01.01.2007
 Мигание кнопки приложения
 =========================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TForm1.Timer1Timer(Sender: TObject);
     begin
       FlashWindow(Application.Handle, True);
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     Timer1.Interval = n  (Tip for n = 1000  "1 second")
      
@@ -29,9 +30,11 @@ DelphiWorld 6.0
           FlashWindow(Application.Handle, true);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     // Define FLASHWINFO structure as record type 
     type 
@@ -101,8 +104,4 @@ DelphiWorld 6.0
       WindowState := wsMinimized;  // Application.Minimize; 
       FlashWindowEx(FWInfo); 
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

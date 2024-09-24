@@ -1,14 +1,12 @@
 ---
 Title: Получить дескриптор окна, которое владеет кнопками запущенных программ на панели задач
-Date: 01.01.2007
+Date: 12.12.1999
+Author: Ashot Oganesyan, ashot@aha.ru
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 Получить дескриптор окна, которое владеет кнопками запущенных программ на панели задач
 ======================================================================================
-
-::: {.date}
-01.01.2007
-:::
 
     { 
       In this article, I wish to describe the useful undocumented function 
@@ -34,7 +32,7 @@ Date: 01.01.2007
       GetProcAddress and GetModuleHandle functions: 
     }
      
-     // getaskmanwnd.cpp (Windows NT/2000) 
+    // getaskmanwnd.cpp (Windows NT/2000) 
     // 
     // This example will show you how you can obtain a handle to the 
     // Windows Taskbar window. 
@@ -45,40 +43,38 @@ Date: 01.01.2007
      
      
     function TaskmanWindow: HWND;
-     type
-       TGetTaskmanWindow = function(): HWND; stdcall;
-     var
-       hUser32: THandle;
-       GetTaskmanWindow: TGetTaskmanWindow;
-     begin
-       Result := 0;
-       hUser32 := GetModuleHandle('user32.dll');
-       if (hUser32 > 0) then
-       begin
-         @GetTaskmanWindow := GetProcAddress(hUser32, 'GetTaskmanWindow');
-         if Assigned(GetTaskmanWindow) then
-         begin
-           Result := GetTaskmanWindow;
-         end;
-       end;
-     end;
-     
-     procedure ShowTaskmanWindow(bValue: Boolean);
-     var
-       hTaskmanWindow: Hwnd;
-     begin
-       hTaskmanWindow := TaskmanWindow;
-       if hTaskmanWindow <> 0 then
-       begin
-         ShowWindow(GetParent(hTaskmanWindow), Ord(bValue));
-       end;
-     end;
-     
-     // Example to Hide the Taskman Window 
+    type
+      TGetTaskmanWindow = function(): HWND; stdcall;
+    var
+      hUser32: THandle;
+      GetTaskmanWindow: TGetTaskmanWindow;
+    begin
+      Result := 0;
+      hUser32 := GetModuleHandle('user32.dll');
+      if (hUser32 > 0) then
+      begin
+        @GetTaskmanWindow := GetProcAddress(hUser32, 'GetTaskmanWindow');
+        if Assigned(GetTaskmanWindow) then
+        begin
+          Result := GetTaskmanWindow;
+        end;
+      end;
+    end;
+    
+    procedure ShowTaskmanWindow(bValue: Boolean);
+    var
+      hTaskmanWindow: Hwnd;
+    begin
+      hTaskmanWindow := TaskmanWindow;
+      if hTaskmanWindow <> 0 then
+      begin
+        ShowWindow(GetParent(hTaskmanWindow), Ord(bValue));
+      end;
+    end;
+    
+    // Example to Hide the Taskman Window 
     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       ShowTaskmanWindow(False);
-     end;
-     
+    begin
+      ShowTaskmanWindow(False);
+    end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

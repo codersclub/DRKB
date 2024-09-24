@@ -1,25 +1,21 @@
 ---
 Title: Кнопки в панели задач
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Кнопки в панели задач
 =====================
 
-::: {.date}
-01.01.2007
-:::
-
     // Это необходимо объявить в секции public в верхней части вашего pas-файла
-    procedure TForm1.IconCallBackMessage( var Mess : TMessage ); message WM_USER + 100;
+    procedure TForm1.IconCallBackMessage( var Mess : TMessage );
+              message WM_USER + 100;
      
      
     procedure TForm1.FormCreate(Sender: TObject);
     var
-     
       nid: TNotifyIconData;
     begin
-     
       with nid do
       begin
         cbSize := SizeOf(TNotifyIconData);
@@ -35,10 +31,8 @@ Date: 01.01.2007
      
     procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
     var
-     
       nid: TNotifyIconData;
     begin
-     
       with nid do
       begin
         cbSize := SizeOf(TNotifyIconData);
@@ -49,17 +43,14 @@ Date: 01.01.2007
         hIcon := Application.Icon.Handle;
         szTip := 'Текст всплывающей подсказки';
         // Все, что указано выше, не является обязательным
-     
       end;
       Shell_NotifyIcon(NIM_DELETE, @nid);
     end;
      
     procedure TForm1.IconCallBackMessage(var Mess: TMessage);
     var
-     
       sEventLog: string;
     begin
-     
       case Mess.lParam of
         // Сделайте здесь все что вы хотите. Например,
         // вызов контекстного меню при нажатии правой кнопки мыши.
@@ -77,9 +68,4 @@ Date: 01.01.2007
         WM_RBUTTONUP: sEventLog := 'Отжатие правой кнопки мыши';
       end;
     end;
-     
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

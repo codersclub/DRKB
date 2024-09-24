@@ -6,22 +6,22 @@ Date: 01.01.2007
 Как отобразить не главные окна своей программы в панели задач?
 ==============================================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     procedure TMyForm.CreateParams(var Params :TCreateParams); {override;}
     begin
       inherited CreateParams(Params); {CreateWindowEx}
       Params.ExStyle := Params.ExStyle or WS_Ex_AppWindow;
     end;
-     
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://www.swissdelphicenter.ch>
 
     type
        TForm = class(TForm)
@@ -41,9 +41,11 @@ DelphiWorld 6.0
        Params.WndParent := GetDesktopWindow;
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 У многооконного приложения, как Delphi, обычно только одна кнопка на
 TaskBar. Если же вам понадобилось, чтобы у каждого окна была своя
@@ -100,11 +102,12 @@ WS\_EX\_APPWINDOW.
         Application.Terminate;
     end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 4:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     type
       TForm2 = class(TForm)
@@ -121,6 +124,3 @@ DelphiWorld 6.0
         ExStyle := ExStyle or WS_EX_APPWINDOW;
     end; 
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0

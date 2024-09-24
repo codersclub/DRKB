@@ -2,18 +2,14 @@
 Title: Как заставить формы минимизироваться на панель задач с анимацией?
 Author: Nomadic
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Как заставить формы минимизироваться на панель задач с анимацией?
 =================================================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Nomadic
-
-Дело-то вот в чем: Главным окном программы дельфийской является не
+Дело-то вот в чем:
+Главным окном программы дельфийской является не
 главная форма, а окно TApplication, которое имеет нулевые размеры,
 поэтому его не видно. Именно для него показывается иконка на панели
 задач. Когда пользователь нажимает кнопку минимизации на главной форме,
@@ -32,37 +28,28 @@ Date: 01.01.2007
 
 В исходном тексте модуля главной формы перекрыть следующие методы -
 
-    // // В классе формы
+    // В классе формы
     // Интерфейс
      
     protected
     procedure CreateParams(var p: TCreateParams); override;
     procedure WMSysCommand(var m: TMessage); message WM_SYSCOMMAND;
      
-     
-     
-     
-     
     // Реализация
     procedure TMainForm.CreateParams(var p: TCreateParams);
     begin
-     
-    inherited;
-    p.WndParent := 0;
+      inherited;
+      p.WndParent := 0;
     end;
      
     procedure TMainForm.WMSysCommand(var m: TMessage);
     begin
-     
-    m.Result := DefWindowProc(Handle, m.Msg, m.wParam, m.lParam);
+      m.Result := DefWindowProc(Handle, m.Msg, m.wParam, m.lParam);
     end;
 
 Вместо SetWindowLong в MDI-приложениях лучше использовать
 
-ShowWindow(Application.Handle, SW\_HIDE);
+    ShowWindow(Application.Handle, SW_HIDE);
 
- 
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

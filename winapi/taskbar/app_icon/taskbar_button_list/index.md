@@ -2,19 +2,17 @@
 Title: Как получить список кнопок на таскбаре?
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как получить список кнопок на таскбаре?
 =======================================
 
-::: {.date}
-01.01.2007
-:::
-
     uses CommCtrl;
-
      
-    function GetModuleFileNameExW(hProcess:THandle; hModule:HMODULE; lpFilename:PWideChar; nSize:DWORD):DWORD; stdcall; external 'PSAPI.DLL';
+    function GetModuleFileNameExW(hProcess:THandle; hModule:HMODULE;
+             lpFilename:PWideChar; nSize:DWORD):DWORD;
+             stdcall; external 'PSAPI.DLL';
      
     const 
      ICON_SMALL2 = 2;
@@ -45,17 +43,19 @@ Date: 01.01.2007
      defIcon:HICON;
      r,iType1,iType2: integer;
     begin
-        defIcon:=LoadIcon(0,IDI_APPLICATION);
-        if fSmall then
-        begin iType1:=ICON_SMALL2; iType2:= GCL_HICONSM; end else
-        begin iType1:=ICON_BIG; iType2:= GCL_HICON; end;
+     defIcon:=LoadIcon(0,IDI_APPLICATION);
+     if fSmall then
+     begin iType1:=ICON_SMALL2; iType2:= GCL_HICONSM; end else
+     begin iType1:=ICON_BIG; iType2:= GCL_HICON; end;
      
-       r:=SendMessageTimeOut(wnd,WM_GETICON,iType1,0,SMTO_ABORTIFHUNG or SMTO_NOTIMEOUTIFNOTHUNG, 100, result);
-       if (r=0) then result:=defIcon else
-       begin
-        if (result=0) then  result:=GetClassLong(wnd,iType2);
-        if (result=0) then  result:=defIcon
-       end;
+     r:=SendMessageTimeOut(wnd,WM_GETICON,iType1,0,
+                           SMTO_ABORTIFHUNG or SMTO_NOTIMEOUTIFNOTHUNG,
+                           100, result);
+     if (r=0) then result:=defIcon else
+     begin
+      if (result=0) then  result:=GetClassLong(wnd,iType2);
+      if (result=0) then  result:=defIcon
+     end;
     end;
      
     function EnumWindowsProc(wnd:HWND; lParam: LPARAM):BOOL; stdcall;
@@ -69,12 +69,12 @@ Date: 01.01.2007
       GetWindowText(wnd,wn,MAX_PATH);
       with Form1.ListView1.Items.Add do
       begin
-        Caption :=wn; // заголовок
-        SubItems.Add(IntToStr(wnd)); // дескриптор
-        SubItems.Add(WindowGetEXE(wnd)); // exe
-        SubItems.Add(' '); // колонка для большой иконки
-        ImageIndex:=ImageList_AddIcon(Form1.ImageList1.Handle,WindowGetIcon(wnd,true)); // маленькая иконка
-        SubItemImages[2] := ImageList_AddIcon(Form1.ImageList2.Handle,WindowGetIcon(wnd,false)); // большая иконка
+       Caption :=wn; // заголовок
+       SubItems.Add(IntToStr(wnd)); // дескриптор
+       SubItems.Add(WindowGetEXE(wnd)); // exe
+       SubItems.Add(' '); // колонка для большой иконки
+       ImageIndex:=ImageList_AddIcon(Form1.ImageList1.Handle,WindowGetIcon(wnd,true)); // маленькая иконка
+       SubItemImages[2] := ImageList_AddIcon(Form1.ImageList2.Handle,WindowGetIcon(wnd,false)); // большая иконка
       end;
      end;
     end;
@@ -89,11 +89,8 @@ Date: 01.01.2007
      
     procedure TForm1.FormCreate(Sender: TObject);
     begin
-    // ImageList1 - 16x16;  ImageList2 - 32x32;
+     // ImageList1 - 16x16;  ImageList2 - 32x32;
      ListView1.SmallImages:=ImageList1;
      ListView1.LargeImages:=ImageList2;
     end;
 
-Взято из <https://forum.sources.ru>
-
-Автор: Krid

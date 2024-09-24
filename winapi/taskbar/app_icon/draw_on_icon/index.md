@@ -2,19 +2,14 @@
 Title: Рисование на минимизированной иконке
 Author: Nick Hodges (Monterey, CA)
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Рисование на минимизированной иконке
 ====================================
 
-::: {.date}
-01.01.2007
-:::
-
-Автор: Nick Hodges (Monterey, CA)
-
-Есть ли у кого пример рисования на иконке минимизированного приложения с
-помощью Delphi?
+> Есть ли у кого пример рисования на иконке минимизированного приложения с
+> помощью Delphi?
 
 Когда Delphi-приложение минимизировано, иконка, которая вы видите -
 реальное главное окно, объект TApplication, поэтому вам необходимо
@@ -38,7 +33,8 @@ Date: 01.01.2007
       if (Msg.Message = WM_PAINT) and IsIconic(Application.Handle) then
       begin
         DC := BeginPaint(Application.Handle, PS);
-        ...осуществляем отрисовку с помощью вызовов Windows GDI...
+     
+        //...осуществляем отрисовку с помощью вызовов Windows GDI...
      
         EndPaint(Application.Handle, PS);
         Handled := True;
@@ -52,6 +48,4 @@ Date: 01.01.2007
 
 Код создан на основе алгоритма Neil Rubenking.
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
