@@ -1,20 +1,17 @@
 ---
 Title: Как показать округленное окошко подсказки в трее в Windows 2000?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как показать округленное окошко подсказки в трее в Windows 2000?
 ================================================================
 
-::: {.date}
-01.01.2007
-:::
-
 В Windows 2000, формат структуры NotifyIconData, которая используется
 для работы с иконками в Трее (которая, кстати, называется "The Taskbar
 Notification Area" :) значительно отличается от предыдущий версий
-Windows. Однако, эти изменения НЕ отражены в юните ShellAPI.pas в Delphi
-5.
+Windows.
+Однако, эти изменения НЕ отражены в юните ShellAPI.pas в Delphi 5.
 
 Итак, нам понадобится преобразованный SHELLAPI.H, в котором присутствуют
 все необходимые объявления:
@@ -39,12 +36,11 @@ Windows. Однако, эти изменения НЕ отражены в юни
       end{record};
      
     const
-      NIF_INFO      =        $00000010;
-     
-      NIIF_NONE     =        $00000000;
-      NIIF_INFO     =        $00000001;
-      NIIF_WARNING  =       $00000002;
-      NIIF_ERROR    =        $00000003;
+      NIF_INFO      = $00000010;
+      NIIF_NONE     = $00000000;
+      NIIF_INFO     = $00000001;
+      NIIF_WARNING  = $00000002;
+      NIIF_ERROR    = $00000003;
      
     А это набор вспомогательных типов:
      
@@ -61,9 +57,13 @@ Windows. Однако, эти изменения НЕ отражены в юни
 
     uses SysUtils, Windows, ShellAPI;
      
-    function DZBalloonTrayIcon(const Window: HWND; const IconID: Byte; const Timeout: TBalloonTimeout; const BalloonText, BalloonTitle: String; const BalloonIconType: TBalloonIconType): Boolean; 
+    function DZBalloonTrayIcon(const Window: HWND; const IconID: Byte;
+                               const Timeout: TBalloonTimeout;
+                               const BalloonText, BalloonTitle: String;
+                               const BalloonIconType: TBalloonIconType): Boolean; 
     const
-      aBalloonIconTypes : array[TBalloonIconType] of Byte = (NIIF_NONE, NIIF_INFO, NIIF_WARNING, NIIF_ERROR);
+      aBalloonIconTypes : array[TBalloonIconType] of Byte =
+                          (NIIF_NONE, NIIF_INFO, NIIF_WARNING, NIIF_ERROR);
     var
       NID_50 : NotifyIconData_50;
     begin
@@ -97,7 +97,10 @@ P.S. На всякий случай, ниже представлены функ�
     uses SysUtils, Windows, ShellAPI;
      
     {добавление иконки}
-    function DZAddTrayIcon(const Window: HWND; const IconID: Byte; const Icon: HICON; const Hint: String = ''): Boolean;
+    function DZAddTrayIcon(const Window: HWND;
+                           const IconID: Byte;
+                           const Icon: HICON;
+                           const Hint: String = ''): Boolean;
     var 
       NID : NotifyIconData;
     begin
@@ -118,7 +121,11 @@ P.S. На всякий случай, ниже представлены функ�
     end;
      
     {добавляет иконку с call-back сообщением}
-    function DZAddTrayIconMsg(const Window: HWND; const IconID: Byte; const Icon: HICON; const Msg: Cardinal; const Hint: String = ''): Boolean;
+    function DZAddTrayIconMsg(const Window: HWND;
+                              const IconID: Byte;
+                              const Icon: HICON;
+                              const Msg: Cardinal;
+                              const Hint: String = ''): Boolean;
     var
       NID : NotifyIconData;
     begin
@@ -140,7 +147,8 @@ P.S. На всякий случай, ниже представлены функ�
     end;
      
     {удаляет иконку}
-    function DZRemoveTrayIcon(const Window: HWND; const IconID: Byte): Boolean;
+    function DZRemoveTrayIcon(const Window: HWND;
+                              const IconID: Byte): Boolean;
     var
       NID : NotifyIconData;
     begin
@@ -164,4 +172,3 @@ NotifyIconData прекрасно подойдёт для этого.
 3. Используя различные IconID, легко можно добавить несколько различных
 иконок из одного родительского окна и работать с ними по их IconID.
 
-Взято из <https://forum.sources.ru>

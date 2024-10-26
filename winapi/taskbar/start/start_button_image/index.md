@@ -26,8 +26,7 @@ Source: <https://forum.sources.ru>
       NewImage := TPicture.create; 
       NewImage.LoadFromFile('C:\Windows\Circles.BMP'); 
       StartButton := FindWindowEx 
-                     (FindWindow( 
-                        'Shell_TrayWnd', nil), 
+                         (FindWindow('Shell_TrayWnd', nil), 
                          0,'Button', nil); 
       OldBitmap := SendMessage(StartButton, 
                                BM_SetImage, 0, 
