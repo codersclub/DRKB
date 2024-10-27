@@ -1,14 +1,11 @@
 ---
 Title: Работа с TaskBar
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Работа с TaskBar
 ================
-
-::: {.date}
-01.01.2007
-:::
 
     unit TaskBar;
      
@@ -106,4 +103,3 @@ Date: 01.01.2007
      
     end.
 
-Взято с <https://delphiworld.narod.ru>

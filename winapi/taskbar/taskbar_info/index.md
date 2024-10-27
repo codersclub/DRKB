@@ -1,16 +1,13 @@
 ---
 Title: Получение информации о TaskBar
 Date: 01.01.2007
+Source: <https://delphiworld.narod.ru>
 ---
 
 Получение информации о TaskBar
 ==============================
 
-::: {.date}
-01.01.2007
-:::
-
-Для вывода информации мы будет использовать компонент TStringGrid с
+Для вывода информации мы будем использовать компонент TStringGrid с
 закладки Additional.
 
 Сначала вам нужно будет после
@@ -80,4 +77,3 @@ Date: 01.01.2007
       StringGrid1.Cells[1,4] := IntToStr(Edge);
     end;
 
-Взято с <https://delphiworld.narod.ru>

@@ -1,14 +1,11 @@
 ---
 Title: Получить дескриптор панели задач
 Date: 01.01.2007
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---
 
 Получить дескриптор панели задач
 ================================
-
-::: {.date}
-01.01.2007
-:::
 
 Используем функцию нахождения окна FindWindow, указывая ей в качестве
 параметров сначала название класса окна, затем его заголовок. Если окно
@@ -16,6 +13,4 @@ Date: 01.01.2007
 
     handle_taskbar := FindWindow('Shell_TrayWnd', nil);
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0

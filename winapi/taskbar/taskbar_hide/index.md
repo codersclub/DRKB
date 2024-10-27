@@ -6,11 +6,11 @@ Date: 01.01.2007
 Как скрыть TaskBar?
 ===================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
-    //Спрятать
+Source: <https://forum.sources.ru>
+
+    // Спрятать
     procedure TForm1.Button1Click(Sender: TObject);
     var
       hTaskBar : THandle;
@@ -20,7 +20,7 @@ Date: 01.01.2007
     end;
      
      
-    //Показать
+    // Показать
     procedure TForm1.Button2Click(Sender: TObject);
     var
       hTaskBar : THandle;
@@ -29,12 +29,11 @@ Date: 01.01.2007
       ShowWindow(hTaskBar, SW_SHOWNORMAL);
     end;
 
-Взято из <https://forum.sources.ru>
-
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     ShowWindow(FindWindow('Shell_TrayWnd', nil), sw_hide);
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
