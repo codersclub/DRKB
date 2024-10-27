@@ -1,14 +1,11 @@
 ---
 Title: Как получить закэшированные пароли в Win9x?
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Как получить закэшированные пароли в Win9x?
 ===========================================
-
-::: {.date}
-01.01.2007
-:::
 
     program getpass; 
     ........ 
@@ -74,4 +71,3 @@ Date: 01.01.2007
         error := 'No passwords found...'
     end;
 
-Взято из <https://forum.sources.ru>

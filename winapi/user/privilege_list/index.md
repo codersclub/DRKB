@@ -1,14 +1,11 @@
 ---
 Title: Как вывести список привилегий?
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Как вывести список привилегий?
 ==============================
-
-::: {.date}
-01.01.2007
-:::
 
     procedure TForm1.Button1Click(Sender: TObject);
     const
@@ -44,4 +41,3 @@ Date: 01.01.2007
       FreeMem(pTokenInfo);
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

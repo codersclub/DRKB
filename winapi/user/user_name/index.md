@@ -6,9 +6,7 @@ Date: 01.01.2007
 Как узнать имя пользователя?
 ============================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
 
     function GetUserFromWindows: string;
     var
@@ -25,6 +23,10 @@ Date: 01.01.2007
      
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
     function GetCurrentUserName: string;
      const
@@ -45,11 +47,12 @@ Date: 01.01.2007
        ShowMessage(GetCurrentUserName);
      end;
 
-<https://delphiworld.narod.ru/>
-
-DelphiWorld 6.0
 
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     function GetCurrentUserName(var CurrentUserName: string): Boolean;
      var
@@ -119,6 +122,4 @@ DelphiWorld 6.0
      begin
        Edit1.Text := LoggedOnUserNameEx(NameSamCompatible);
      end;
-     
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

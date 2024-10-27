@@ -1,21 +1,18 @@
 ---
 Title: Определить SID текущего пользователя
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch>
 ---
 
 Определить SID текущего пользователя
 ====================================
 
-::: {.date}
-01.01.2007
-:::
-
-     { 
+    { 
     (******************************************************************************)
-     (* SPGetSid - Retrieve the current user''s SID in text format                  *)
-     (*                                                                            *)
-     (* Copyright (c) 2004 Shorter Path Software                                   *)
-     (* http://www.shorterpath.com                                                 *) 
+    (* SPGetSid - Retrieve the current user''s SID in text format                 *)
+    (*                                                                            *)
+    (* Copyright (c) 2004 Shorter Path Software                                   *)
+    (* http://www.shorterpath.com                                                 *) 
     (******************************************************************************)
      
      
@@ -170,4 +167,3 @@ Date: 01.01.2007
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

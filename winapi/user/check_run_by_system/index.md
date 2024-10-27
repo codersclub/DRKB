@@ -1,14 +1,11 @@
 ---
 Title: Проверить, запущена ли программа от System Account
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Проверить, запущена ли программа от System Account
 ==================================================
-
-::: {.date}
-01.01.2007
-:::
 
     function OnSystemAccount(): Boolean;
     const
@@ -26,4 +23,3 @@ Date: 01.01.2007
         Result := False;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

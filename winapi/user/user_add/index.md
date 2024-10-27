@@ -2,16 +2,11 @@
 Title: Создание нового пользователя NetUserAdd
 Author: Rouse\_
 Date: 01.01.2007
-Keywords: 
-Description: 
+Source: <https://forum.sources.ru>
 ---
 
 Создание нового пользователя NetUserAdd
 =======================================
-
-::: {.date}
-01.01.2007
-:::
 
     unit Unit1;
      
@@ -100,8 +95,4 @@ Description:
     end;
      
     end.
-
-Взято из <https://forum.sources.ru>
-
-Автор: Rouse\_
 

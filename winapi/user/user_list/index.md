@@ -1,15 +1,14 @@
 ---
 Title: Получить список пользователей
-Author: [Кондратюк Виталий](mailto:vit@mo.msk.ru)
 Date: 01.01.2007
 ---
 
 Получить список пользователей
 =============================
 
-::: {.date}
-01.01.2007
-:::
+Author: [Кондратюк Виталий](mailto:vit@mo.msk.ru)
+
+Source: <https://delphiworld.narod.ru>
 
 GetLocalUserList - возвращает список пользователей (Windows NT, Windows
 2000)
@@ -104,21 +103,22 @@ GetLocalUserList - возвращает список пользователей 
      
     end.
 
-Автор: [Кондратюк Виталий](mailto:vit@mo.msk.ru)
-
-Взято с <https://delphiworld.narod.ru>
-
 ------------------------------------------------------------------------
 
-    {-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Вариант 2:
+
+Author: Manfred Ruzicka
+
+Source: <https://www.swissdelphicenter.ch>
+
+    {------------------------------------------
       unit Name: GetUser
       Author: Manfred Ruzicka
       History:   Diese unit ermittelt den aktuell angemeldeten User einer NT / 2000
                  Worstation / Servers.Sie wurde aus dem Programm "loggedon2" von Assarbad
                  ubernommen und fur an die VCL angepasst.Diese unit enthalt zwar noch
                  einige kleine Fehler, funktioniert aber ohne Probleme.-
-      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -}
+     -----------------------------------------}
      
      
      unit GetUser;
@@ -295,9 +295,11 @@ GetLocalUserList - возвращает список пользователей 
      
      end.
 
-Взято с сайта: <https://www.swissdelphicenter.ch>
-
 ------------------------------------------------------------------------
+
+Вариант 3:
+
+Source: <https://www.swissdelphicenter.ch>
 
     // The NetUserEnum function provides information about all user accounts on a server. 
      
@@ -341,8 +343,8 @@ GetLocalUserList - возвращает список пользователей 
        ResumeHandle := 0;
        repeat
          // NetApiStatus := 
-        // NetUserEnum(PChar('\\NT-Domain'), 1, 0, lpBuffer, 0,EntiesRead, TotalEntries, ResumeHandle); 
-        NetApiStatus := NetUserEnum(nil, 1, 0, lpBuffer, 0, EntiesRead,
+         // NetUserEnum(PChar('\\NT-Domain'), 1, 0, lpBuffer, 0,EntiesRead, TotalEntries, ResumeHandle); 
+         NetApiStatus := NetUserEnum(nil, 1, 0, lpBuffer, 0, EntiesRead,
            TotalEntries, ResumeHandle);
          UserInfo     := lpBuffer;
      
@@ -357,4 +359,3 @@ GetLocalUserList - возвращает список пользователей 
        until (NetApiStatus <> ERROR_MORE_DATA);
      end;
 
-Взято с сайта: <https://www.swissdelphicenter.ch>

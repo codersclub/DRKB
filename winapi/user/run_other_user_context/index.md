@@ -1,14 +1,11 @@
 ---
 Title: Запуск процесса в контексте другого пользователя
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Запуск процесса в контексте другого пользователя
 ================================================
-
-::: {.date}
-01.01.2007
-:::
 
     uses
       JwaWinBase; ( http://members.chello.nl/m.vanbrakel2/ )
@@ -44,4 +41,3 @@ Date: 01.01.2007
       end;
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>

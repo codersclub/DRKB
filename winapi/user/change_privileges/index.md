@@ -1,14 +1,20 @@
 ---
 Title: Изменение привилегий
 Date: 01.01.2007
+Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 Изменение привилегий
 ====================
 
-::: {.date}
-01.01.2007
-:::
+Для некоторых функций вам необходимо получить правильные привилегии
+на машине Windows NT.
+(например: для выключения или перезапуска Windows с помощью ExitWindowsEx или
+для изменения системного времени)
+
+Следующий код предоставляет процедуру для настройки привилегий.
+Функция AdjustTokenPrivileges() включает или отключает привилегии
+в указанном токене доступа.
 
     {
       For some functions you need to get the right privileges
@@ -101,4 +107,3 @@ Date: 01.01.2007
         raise Exception.Create(SysErrorMessage(GetLastError));
     end;
 
-Взято с сайта <https://www.swissdelphicenter.ch/en/tipsindex.php>
