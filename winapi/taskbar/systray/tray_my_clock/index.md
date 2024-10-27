@@ -2,18 +2,14 @@
 Title: Делаем свои часы в трее
 Author: Krid
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Делаем свои часы в трее
 =======================
 
-::: {.date}
-01.01.2007
-:::
-
     uses
       windows, messages, ShellAPI;
-     
      
     const
      ClassName = 'MyClockWndClass';
@@ -169,10 +165,6 @@ Date: 01.01.2007
     end.
 
 
-
 но правильнее было бы внедриться в Explorer и сабклассировать
 TrayClockWClass
 
-Взято из <https://forum.sources.ru>
-
-Автор: Krid

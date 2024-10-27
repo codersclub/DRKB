@@ -2,16 +2,11 @@
 Title: Отображаем текст в System Tray
 Author: Ruslan Abu Zant
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Отображаем текст в System Tray
 ==============================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Ruslan Abu Zant
 
 Данный код сперва конвертирует Ваш текст в DIB, а затем DIB в иконку и
 далее в ресурс. После этого изображение иконки отображается в System
@@ -21,7 +16,7 @@ Tray.
 
     StringToIcon('This Is Made By Ruslan K. Abu Zant');
 
-N.B\>\> Не забудьте удалить объект HIcon, после вызова функции...
+**N.B**: Не забудьте удалить объект HIcon, после вызова функции...
 
     unit MainForm;
      
@@ -414,4 +409,3 @@ N.B\>\> Не забудьте удалить объект HIcon, после вы
     end;
     end.
 
-Взято из <https://forum.sources.ru>

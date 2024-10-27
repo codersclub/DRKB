@@ -2,16 +2,11 @@
 Title: Показываем / Скрываем System Tray
 Author: Ruslan Abu Zant
 Date: 01.01.2007
+Source: <https://forum.sources.ru>
 ---
 
 Показываем / Скрываем System Tray
 =================================
-
-::: {.date}
-01.01.2007
-:::
-
-Автор: Ruslan Abu Zant
 
 Вы, наверное, видели множество примеров, которые показывают как скрывать
 панель задач или кнопку Пуск. Но вот как скрыть только System Tray ?
@@ -44,10 +39,7 @@ Date: 01.01.2007
 
 для того, чтобы обатно её показать, используйте
 
-hideStartbutton(true);
+    hideStartbutton(true);
 
-или hideStartbutton(false);
+или `hideStartbutton(false);` чтобы скрыть !!
 
-чтобы скрыть !!
-
-Взято из <https://forum.sources.ru>

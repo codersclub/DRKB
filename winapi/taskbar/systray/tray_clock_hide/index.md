@@ -6,9 +6,9 @@ Date: 01.01.2007
 Как скрыть часики в панели задач?
 =================================
 
-::: {.date}
-01.01.2007
-:::
+Вариант 1:
+
+Source: <https://forum.sources.ru>
 
 Убираем часики:
 
@@ -30,9 +30,12 @@ Date: 01.01.2007
         ShowWindow(hn, SW_SHOW); //Hello, again
     end;
 
-Взято из <https://forum.sources.ru>
 
 ------------------------------------------------------------------------
+
+Вариант 2:
+
+Source: <https://delphiworld.narod.ru>
 
     function ShowTrayClock(bValue: Boolean) : Boolean; 
     var 
@@ -56,4 +59,3 @@ Date: 01.01.2007
        ShowTrayClock(Boolean(0)); 
     end;
 
-Взято с <https://delphiworld.narod.ru>
