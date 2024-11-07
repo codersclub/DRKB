@@ -14,7 +14,7 @@ Source: FAQ Epsylon Technologies
 Объявление метода в TForm позволит вам обрабатывать сообщение
 `WM_WININICHANGED`:
 
-    procedure WMWinIniChange(var Message: TMessage); message WM\_WININICHANGE;
+    procedure WMWinIniChange(var Message: TMessage); message WM_WININICHANGE;
 
 Код в implementation может выглядеть так:
 

@@ -16,7 +16,6 @@ Source: <https://www.swissdelphicenter.ch>
     keybd_event(VK_CONTROL, MapVirtualKey(VK_CONTROL, 0), KEYEVENTF_KEYUP, 0)
     
     
-    
     //Ctrl+V, Strg+V: 
      
     keybd_event(VK_CONTROL, MapVirtualKey(VK_CONTROL, 0), 0, 0);

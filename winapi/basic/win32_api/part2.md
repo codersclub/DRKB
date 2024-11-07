@@ -14,7 +14,7 @@ Source: <https://forum.sources.ru>
 программ. Это библиотеки классов XCL и ACL. Обе библиотеки бесплатны и
 поставляются в исходных кодах.
 
-              |
+|| 
 --------------|-----------------------------
 Библиотека ACL (API control library) | 
 Автор:        |Александр Боковиков, Екатеринбург, Россия
@@ -22,7 +22,7 @@ Source: <https://forum.sources.ru>
 E-Mail:       |abb@adx.ru
 Классы:       |TFont, TFonts, TControl, TWinControl, TStdControl, TLabel, TEdit, TListBox, TButton, TCheckBox, TComboBox, TGroupBox, TProgressBar, TKeyboard
 
-              |
+||
 --------------|-----------------------------
 Библиотека XCL|(Extreme class library) | 
 Автор:        |Vladimir Kladov (Mr.Bonanzas)

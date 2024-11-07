@@ -28,5 +28,6 @@ Source: <https://forum.sources.ru>
 
 Если Вы разрабатываете приложение MDI, то необходимо отправлять
 сообщение в активное дочернее окно, т.е. использовать:
-`ActiveMDIChild.ActiveControl.Handle`
+
+    ActiveMDIChild.ActiveControl.Handle
 

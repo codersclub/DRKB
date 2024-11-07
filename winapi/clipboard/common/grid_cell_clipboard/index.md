@@ -12,62 +12,62 @@ Date: 01.01.2007
 Source: <https://www.swissdelphicenter.ch>
 
     uses
-       Clipbrd;
-     
-     //Copy 
+      Clipbrd;
+    
+    //Copy 
     procedure TForm1.Button1Click(Sender: TObject);
-     var
-       S: string;
-       GRect: TGridRect;
-       C, R: Integer;
-     begin
-       GRect := StringGrid1.Selection;
-       S  := '';
-       for R := GRect.Top to GRect.Bottom do
-       begin
-         for C := GRect.Left to GRect.Right do
-         begin
-           if C = GRect.Right then  S := S + (StringGrid1.Cells[C, R])
-           else
-             S := S + StringGrid1.Cells[C, R] + #9;
-         end;
-         S := S + #13#10;
-     end;
-       ClipBoard.AsText := S;
-     end;
-     
-     // Paste 
+    var
+      S: string;
+      GRect: TGridRect;
+      C, R: Integer;
+    begin
+      GRect := StringGrid1.Selection;
+      S  := '';
+      for R := GRect.Top to GRect.Bottom do
+      begin
+        for C := GRect.Left to GRect.Right do
+        begin
+          if C = GRect.Right then  S := S + (StringGrid1.Cells[C, R])
+          else
+            S := S + StringGrid1.Cells[C, R] + #9;
+        end;
+        S := S + #13#10;
+    end;
+      ClipBoard.AsText := S;
+    end;
+    
+    // Paste 
     procedure TForm1.Button2Click(Sender: TObject);
-     var
-       Grect: TGridRect;
-       S, CS, F: string;
-       L, R, C: Byte;
-     begin
-       GRect := StringGrid1.Selection;
-       L := GRect.Left;
-       R := GRect.Top;
-       S := ClipBoard.AsText;
-       R := R - 1;
-       while Pos(#13, S) > 0 do
-       begin
-         R  := R + 1;
-         C  := L - 1;
-         CS := Copy(S, 1,Pos(#13, S));
-         while Pos(#9, CS) > 0 do
-         begin
-           C := C + 1;
-           if (C <= StringGrid1.ColCount - 1) and (R <= StringGrid1.RowCount - 1) then
-             StringGrid1.Cells[C, R] := Copy(CS, 1,Pos(#9, CS) - 1);
-           F := Copy(CS, 1,Pos(#9, CS) - 1);
-           Delete(CS, 1,Pos(#9, CS));
-         end;
-         if (C <= StringGrid1.ColCount - 1) and (R <= StringGrid1.RowCount - 1) then
-           StringGrid1.Cells[C + 1,R] := Copy(CS, 1,Pos(#13, CS) - 1);
-         Delete(S, 1,Pos(#13, S));
-         if Copy(S, 1,1) = #10 then
-           Delete(S, 1,1);
-       end;
-     end;
+    var
+      Grect: TGridRect;
+      S, CS, F: string;
+      L, R, C: Byte;
+    begin
+      GRect := StringGrid1.Selection;
+      L := GRect.Left;
+      R := GRect.Top;
+      S := ClipBoard.AsText;
+      R := R - 1;
+      while Pos(#13, S) > 0 do
+      begin
+        R  := R + 1;
+        C  := L - 1;
+        CS := Copy(S, 1,Pos(#13, S));
+        while Pos(#9, CS) > 0 do
+        begin
+          C := C + 1;
+          if (C <= StringGrid1.ColCount - 1) and (R <= StringGrid1.RowCount - 1) then
+            StringGrid1.Cells[C, R] := Copy(CS, 1,Pos(#9, CS) - 1);
+          F := Copy(CS, 1,Pos(#9, CS) - 1);
+          Delete(CS, 1,Pos(#9, CS));
+        end;
+        if (C <= StringGrid1.ColCount - 1) and (R <= StringGrid1.RowCount - 1) then
+          StringGrid1.Cells[C + 1,R] := Copy(CS, 1,Pos(#13, CS) - 1);
+        Delete(S, 1,Pos(#13, S));
+        if Copy(S, 1,1) = #10 then
+          Delete(S, 1,1);
+      end;
+    end;
 
 
 ------------------------------------------------------------------------

@@ -1,6 +1,5 @@
 ---
 Title: Определить размера рабочей области Desktop\'а
-Author: Даниил Карапетян (delphi4all@narod.ru)
 Date: 01.01.2007
 ---
 

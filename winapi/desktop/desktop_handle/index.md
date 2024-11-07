@@ -9,7 +9,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ==================================
 
 Рабочий стол перекрыт сверху компонентом ListView. Вам просто необходимо
-взять хэндл этого органа управления. Пример:
+взять хэндл этого органа управления.
+
+Пример:
 
     function GetDesktopListViewHandle: THandle;
     var

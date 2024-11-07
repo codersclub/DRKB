@@ -9,6 +9,7 @@ Title: Просмотр буфера обмена
 Вариант 1:
 
 Author: Sect, sect@mail.ru
+
 Date: 16.06.2002
 
     { **** UBPFD *********** by kladovka.net.ru ****

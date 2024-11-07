@@ -8,6 +8,8 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 Копирование в буфер обмена
 ==========================
 
+Копировать в буфер:
+
     procedure CopyButtonClick(Sender: TObject);
     begin
       if ActiveControl is TMemo then
@@ -19,7 +21,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
       if ActiveControl is TDBedit then
         TDBedit(ActiveControl).CopyToClipboard;
     end;
-     
+
+Вставить из буфера:
+
     procedure PasteButtonClick(Sender: TObject);
     begin
       if ActiveControl is TMemo then
@@ -31,6 +35,4 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
       if ActiveControl is TDBedit then
         TDBedit(ActiveControl).PasteFromClipboard;
     end;
-     
-
 
