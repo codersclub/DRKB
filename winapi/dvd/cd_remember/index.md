@@ -67,17 +67,16 @@ CD Remember
       Result:=0;
       for i:=65 to 90 do
       begin
-      str:=chr(i)+':\';
-      DType:=GetDrivetype(PChar(str));
-      case DType of
-     
+        str:=chr(i)+':\';
+        DType:=GetDrivetype(PChar(str));
+        case DType of
           0: drive:=0;
           1: drive:=1;
           DRIVE_CDROM : drive:=i;
+        end;
+        if not ((DType=0) or (Dtype=1)) then
+          Result:=drive;
       end;
-    if not ((DType=0) or (Dtype=1)) then
-    Result:=drive;
-    end;
     end;
      
     function DiskInDrive(Drive: Char): Boolean;
@@ -88,74 +87,73 @@ CD Remember
       if Drive in ['a'..'z'] then Dec(Drive, $20); 
       { убеждаемся, что это буква } 
       if not (Drive in ['A'..'Z']) then 
-          raise EConvertError.Create('Not a valid drive ID');
+        raise EConvertError.Create('Not a valid drive ID');
      
       //отключаем критические ошибки// 
      
       ErrorMode := SetErrorMode(SEM_FailCriticalErrors); 
       try 
-          if DiskSize (Ord(Drive) - $40) = -1 then 
-            Result := False 
-          else 
-            Result := True; 
+        if DiskSize (Ord(Drive) - $40) = -1 then 
+          Result := False 
+        else 
+          Result := True; 
       finally 
-          { восстанавливаем старый режим ошибок } 
-          SetErrorMode(ErrorMode); 
+        { восстанавливаем старый режим ошибок } 
+        SetErrorMode(ErrorMode); 
       end; 
     end;
      
     procedure ChooseCloseMode;
     begin
-    Form1.Height:=290;
-    Form1.Repaint;
+      Form1.Height:=290;
+      Form1.Repaint;
     end;
      
     procedure TForm1.FormCreate(Sender: TObject);
     begin
-    Edit1.text:=(chr(Findcd)+':\');
-    Button1.Enabled:=false;
-    Label1.Enabled:=false;
+      Edit1.text:=(chr(Findcd)+':\');
+      Button1.Enabled:=false;
+      Label1.Enabled:=false;
     end;
      
     procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     begin
-    if DiskInDrive(chr(findcd))=true then
-    begin
-    Canclose:=false;
-    Form1.Show;
-    end
-    else // если нет
-    CanClose:=true;
+      if DiskInDrive(chr(findcd))=true then
+      begin
+        Canclose:=false;
+        Form1.Show;
+      end
+      else // если нет
+        CanClose:=true;
     end;
      
     procedure TForm1.BitBtn2Click(Sender: TObject);
     begin
-    ChooseCloseMode;
+      ChooseCloseMode;
     end;
      
     procedure TForm1.BitBtn1Click(Sender: TObject);
     begin
-    mciSendString('Set cdaudio door open wait', nil, 0, handle);
-    Button1.Enabled:=true;
-    Label1.Enabled:=true;
-    BitBtn1.Enabled:=false;
-    Bitbtn2.Enabled:=false;
+      mciSendString('Set cdaudio door open wait', nil, 0, handle);
+      Button1.Enabled:=true;
+      Label1.Enabled:=true;
+      BitBtn1.Enabled:=false;
+      Bitbtn2.Enabled:=false;
     end;
      
     procedure TForm1.Button1Click(Sender: TObject);
     begin
-    mciSendString('Set cdaudio door closed wait', nil, 0, handle);
-    ChooseCloseMode;
+      mciSendString('Set cdaudio door closed wait', nil, 0, handle);
+      ChooseCloseMode;
     end;
      
     procedure TForm1.Button2Click(Sender: TObject);
     begin
-    if Radiobutton1.Checked=true then
-            ExitWindowsEx(EWX_POWEROFF or EWX_SHUTDOWN,0)
-    else
-    if Radiobutton2.Checked=true then
-            ExitWindowsEx(EWX_REBOOT,0);
-     
+      if Radiobutton1.Checked=true then
+        ExitWindowsEx(EWX_POWEROFF or EWX_SHUTDOWN,0)
+      else
+      if Radiobutton2.Checked=true then
+        ExitWindowsEx(EWX_REBOOT,0);
     end;
      
     end.

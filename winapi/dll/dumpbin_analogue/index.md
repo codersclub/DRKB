@@ -20,22 +20,18 @@ Source: <https://forum.sources.ru>
 
 Подробно расписывать тут ничего не буду, тут идет разбор элементов PE
 заголовка - нахождение таблицы экспорта,
-
 перечисление ф-ий. Недостаток этого примера в том, что он работает уже с
 подгруженными модулями, т.к. для нахождения
-
 базы используется GetModuleHandle().
 
-Вставка:
+**Вставка:**
 
-The GetModuleHandle function returns a module handle for the specified
-module if the file has been mapped into the address
+> The GetModuleHandle function returns a module handle for the specified
+> module if the file has been mapped into the address
+> space of the calling process.
 
-space of the calling process.
-
-Для расширения возможностей - простмотра всех модулей, надо использовать
-
-что нить другое, например "мэпирование" (CreateFileMapping() итд).
+Для расширения возможностей - просмотра всех модулей, надо использовать
+что-нить другое, например "мэпирование" (CreateFileMapping() итд).
 Ведь надо хоть что нить самому сделать....
 
     program ExpDump;
@@ -52,7 +48,7 @@ space of the calling process.
         i         : Integer;
         cmdline   : string;
      
-    //#### ?-??: ????? ? ????
+    //#### Dump a Log info to a log file
     function Dump(const log: PChar): boolean;
     Var hFile     : THandle;
         dwError   : DWord;

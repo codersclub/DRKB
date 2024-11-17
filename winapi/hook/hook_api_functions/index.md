@@ -19,7 +19,7 @@ DLL:
       messages;
      
     type
-       TImageImportDescriptor=packed record
+      TImageImportDescriptor=packed record
         OriginalFirstThunk    : DWORD;
         TimeDateStamp         : DWORD;
         ForwarderChain        : DWORD;
@@ -34,54 +34,53 @@ DLL:
         ImageBase:cardinal;
      
     function MyHookProcedure(hWnd: HWND; lpText, lpCaption: PWideChar; uType: UINT): Integer;
-    stdcall;
+             stdcall;
     begin
       result:=MessageBoxA(0, 'Notepad', 'my hook', 0);
       //Но уже через нашу табл. импорта
     end;
      
     procedure ProcessImports(PImports:PImageImportDescriptor);
-        Var
-            PImport:PImageImportDescriptor;
-            PRVA_Import:LPDWORD;
-            ProcAddress:pointer;
-            Temp_Cardinal:cardinal;
-        begin{1}
-          ProcAddress:=GetProcAddress(GetModuleHandle('USER32.DLL'), 'MessageBoxA');
-          PImport:=PImports;
-          while PImport.Name<>0 do
-            begin{2}
-              PRVA_Import:=LPDWORD(pImport.FirstThunk+ImageBase);
-              while PRVA_Import^<>0 do
-              begin{3}
-                if PPointer(PRVA_Import)^=ProcAddress
-                   then
-                     begin{4}
-                       VirtualProtect(PPointer(PRVA_Import),4,PAGE_READWRITE,Temp_Cardinal);
-                       PPointer(PRVA_Import)^:=@MyHookProcedure; //пишем свою...
-                      VirtualProtect(PPointer(PRVA_Import),4,Temp_Cardinal,Temp_Cardinal);
-                     end;{1}
-                Inc(PRVA_Import);
-              end;{2}
-           Inc(PImport);
-       end;{3}
-    end;{4}
+    Var
+      PImport:PImageImportDescriptor;
+      PRVA_Import:LPDWORD;
+      ProcAddress:pointer;
+      Temp_Cardinal:cardinal;
+    begin {1}
+      ProcAddress:=GetProcAddress(GetModuleHandle('USER32.DLL'), 'MessageBoxA');
+      PImport:=PImports;
+      while PImport.Name<>0 do
+      begin {2}
+        PRVA_Import:=LPDWORD(pImport.FirstThunk+ImageBase);
+        while PRVA_Import^<>0 do
+        begin {3}
+          if PPointer(PRVA_Import)^=ProcAddress then
+          begin {4}
+            VirtualProtect(PPointer(PRVA_Import),4,PAGE_READWRITE,Temp_Cardinal);
+            PPointer(PRVA_Import)^:=@MyHookProcedure; //пишем свою...
+            VirtualProtect(PPointer(PRVA_Import),4,Temp_Cardinal,Temp_Cardinal);
+          end; {1}
+          Inc(PRVA_Import);
+        end; {2}
+        Inc(PImport);
+      end; {3}
+    end; {4}
      
     procedure DllEntryPoint(reson:longint);stdcall;
     begin
-     case reson of
-      DLL_PROCESS_ATTACH:
-         begin
-          DisableThreadLibraryCalls(hInstance);
-          ZeroMemory(@FileName, SizeOf(FileName));
-          GetModuleFileName(GetModuleHandle(nil), @FileName, SizeOf(FileName));
-     
-             if Pos('NOTEPAD.EXE',AnsiUpper(@FileName))<>0 then //сейчас я хочу попробовать все это дело надо  нотепадом
-             begin
-               ImageBase:=GetModuleHandle(nil);
-               PEHeader:=pointer(int64(ImageBase)+PImageDosHeader(ImageBase)._lfanew);//pe header
+      case reson of
+        DLL_PROCESS_ATTACH:
+          begin
+            DisableThreadLibraryCalls(hInstance);
+            ZeroMemory(@FileName, SizeOf(FileName));
+            GetModuleFileName(GetModuleHandle(nil), @FileName, SizeOf(FileName));
+      
+            if Pos('NOTEPAD.EXE',AnsiUpper(@FileName))<>0 then //сейчас я хочу попробовать все это дело надо  нотепадом
+            begin
+              ImageBase:=GetModuleHandle(nil);
+              PEHeader:=pointer(int64(ImageBase)+PImageDosHeader(ImageBase)._lfanew);//pe header
               ProcessImports(pointer(PEHeader.OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT].VirtualAddress+ImageBase));
-              end;
+            end;
           end;
       end;
     end;
@@ -93,13 +92,13 @@ DLL:
      
     procedure sethook(flag:bool);export; stdcall;
     begin
-     if flag then
+      if flag then
         hook:=setwindowshookex(wh_getmessage,@nexthook,hInstance,0)
-     else
-       begin
+      else
+      begin
         unhookwindowshookex(hook);
         hook:=0;
-       end;
+      end;
     end;
      
     exports sethook;

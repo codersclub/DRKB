@@ -1,11 +1,11 @@
 ---
-Title: How to check, if a CD-Recorder is available? (WinXP)
+Title: Как проверить, доступен ли CD-рекордер? (WinXP)
 Date: 01.01.2007
 Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-How to check, if a CD-Recorder is available? (WinXP)
+Как проверить, доступен ли CD-рекордер? (WinXP)
 ====================================================
 
     {....}

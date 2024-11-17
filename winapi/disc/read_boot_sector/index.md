@@ -35,7 +35,7 @@ Source: <https://forum.sources.ru>
       Device: THandle;
       Count: LongWord;
     begin
-      Device := CreateFile('\.\VWIN32', 0, 0, nil, 0,
+      Device := CreateFile('\\.\VWIN32', 0, 0, nil, 0,
         FILE_FLAG_DELETE_ON_CLOSE, 0);
       if Device = INVALID_HANDLE_VALUE then
         raise Exception.Create(SysErrorMessage(GetLastError));
@@ -71,7 +71,7 @@ Source: <https://forum.sources.ru>
       BytesRead: Cardinal;
       H: THandle;
     begin
-      H := CreateFile(PChar(Format('\.\%s:', [UpCase(Drive)])),
+      H := CreateFile(PChar(Format('\\.\%s:', [UpCase(Drive)])),
         GENERIC_READ, 0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
       if H = INVALID_HANDLE_VALUE then
         raise Exception.Create(SysErrorMessage(GetLastError));

@@ -110,23 +110,23 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
      
     object Form1: TForm1
       Left = 200
-        Top = 104
-        Width = 544
-        Height = 375
-        Caption = 'XXX'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'MS Sans Serif'
-        Font.Style = []
-        PixelsPerInch = 96
-        TextHeight = 13
-        object Label1: TLabel
+      Top = 104
+      Width = 544
+      Height = 375
+      Caption = 'XXX'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      PixelsPerInch = 96
+      TextHeight = 13
+      object Label1: TLabel
         Left = 128
-          Top = 68
-          Width = 32
-          Height = 13
-          Caption = 'Label1'
+        Top = 68
+        Width = 32
+        Height = 13
+        Caption = 'Label1'
       end
     end
 
@@ -187,25 +187,21 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
      
     procedure TForm1.WM_LefttMSG(var M: TMessage);
     begin
-     
       Label1.Caption := 'Left';
     end;
      
     procedure TForm1.WM_RightMSG(var M: TMessage);
     begin
-     
       Label1.Caption := 'Right';
     end;
      
     procedure TForm1.WM_UptMSG(var M: TMessage);
     begin
-     
       Label1.Caption := 'Up';
     end;
      
     procedure TForm1.WM_DownMSG(var M: TMessage);
     begin
-     
       Label1.Caption := 'Down';
     end;
      

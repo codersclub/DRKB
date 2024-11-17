@@ -173,16 +173,16 @@ Source: <https://delphiworld.narod.ru>
         Move(CurName[9], FileExt, 3);
       end;
       asm
-        push ds                             { сохраняем ds }
-        mov ax, ss                          { помещаем сегмент FCB (ss) в ds }
+        push ds             { сохраняем ds }
+        mov ax, ss          { помещаем сегмент FCB (ss) в ds }
         mov ds, ax
-        lea dx, FCB                         { помещаем смещение FCB в dx }
-        mov ax, 1300h                       { функция 13h }
-        Call DOS3Call                       { вызываем int 21h }
-        pop ds                              { восстанавливаем ds }
-        cmp al, 00h                         { проверка на успешность выполнения }
+        lea dx, FCB         { помещаем смещение FCB в dx }
+        mov ax, 1300h       { функция 13h }
+        Call DOS3Call       { вызываем int 21h }
+        pop ds              { восстанавливаем ds }
+        cmp al, 00h         { проверка на успешность выполнения }
         je @@End
-        @@Error:                            { устанавливаем флаг ошибки }
+        @@Error:            { устанавливаем флаг ошибки }
         mov ErrorFlag, 1
         @@End:
       end;

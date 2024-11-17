@@ -34,7 +34,7 @@ Hапример,
       DWORD dummy 
       ) 
     { 
-      MessageBox(hWnd, lpCmdLine, "Command Line", MB_OK); 
+      MessageBox(hWnd, lpCmdLine, 'Command Line', MB_OK); 
       return 0; 
     } 
 

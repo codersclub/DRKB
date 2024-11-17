@@ -118,36 +118,36 @@ Source: <https://forum.sources.ru>
         // Бежим по записям таблицы ...
         while ImportEntry^.Name <> 0 do
         begin
-            Thunk := PImageThunkData(DWORD(ImageBase) +
-              DWORD(ImportEntry^.FirstThunk));
-            // ... пока таблица не кончится ...
-            while Thunk^._function <> nil do
+          Thunk := PImageThunkData(DWORD(ImageBase) +
+            DWORD(ImportEntry^.FirstThunk));
+          // ... пока таблица не кончится ...
+          while Thunk^._function <> nil do
+          begin
+            // ... или не найдем нужную нам запись.
+            if (Thunk^._function = OldProc) then
             begin
-              // ... или не найдем нужную нам запись.
-              if (Thunk^._function = OldProc) then
+              // Производим подмену, сначала так...
+              if not IsBadWritePtr(@Thunk^._function, sizeof(DWORD)) then
               begin
-                // Производим подмену, сначала так...
-                if not IsBadWritePtr(@Thunk^._function, sizeof(DWORD)) then
-                begin
-                  Thunk^._function := NewProc;
-                  Result := True;
-                end
-                else
-                begin // ... ну а если не получилось - тогда вот так
-                  if VirtualProtect(@Thunk^._function, SizeOf(DWORD),
-                    PAGE_EXECUTE_READWRITE, Protect) then
-                  begin
-                    Thunk^._function := NewProc;
-                    newProtect := Protect;
-                    VirtualProtect(@Thunk^._function, SizeOf(DWORD),
-                      newProtect, Protect);
-                    Result := True;
-                  end;
-                end;
+                Thunk^._function := NewProc;
+                Result := True;
               end
               else
-                Inc(PChar(Thunk), SizeOf(TImageThunkData32));
-            end;
+              begin // ... ну а если не получилось - тогда вот так
+                if VirtualProtect(@Thunk^._function, SizeOf(DWORD),
+                  PAGE_EXECUTE_READWRITE, Protect) then
+                begin
+                  Thunk^._function := NewProc;
+                  newProtect := Protect;
+                  VirtualProtect(@Thunk^._function, SizeOf(DWORD),
+                    newProtect, Protect);
+                  Result := True;
+                end;
+              end;
+            end
+            else
+              Inc(PChar(Thunk), SizeOf(TImageThunkData32));
+          end;
           ImportEntry := Pointer(Integer(ImportEntry) + SizeOf(TImageImportDescriptor));
         end;
       end;
@@ -197,60 +197,60 @@ Source: <https://forum.sources.ru>
     begin
       case dwReason Of
         DLL_PROCESS_ATTACH:
-        begin
-          // Все данные во избежании разрыва цепочки хуков храним в отображаемом в память процесса файле,
-          // только тогда все экземпляры хука будут владеть достоверной информацией
-          MapHandle := CreateFileMapping(INVALID_HANDLE_VALUE, nil, PAGE_READWRITE, 0, SizeOf(TShareInf), GlobMapID);
-          ShareInf := MapViewOfFile(MapHandle, FILE_MAP_ALL_ACCESS, 0, 0, SizeOf(TShareInf));
-     
-          // Получаем информацию о процессе в который подгружена наша библиотека
-          Replaced := False;
-          OldRecv := GetProcAddress(GetModuleHandle('wsock32.dll'), 'recv');
-          DisableThreadLibraryCalls(hInstance);
-          ImageBase := GetModuleHandle(nil);
-          ZeroMemory(@FileName, SizeOf(FileName));
-          GetModuleFileName(ImageBase, @FileName, SizeOf(FileName));
-          AppTitle := String(FileName);
-     
-          // Нотифицируем приложение о успешном внедрении библиотеки
-          // И сообщаем информацию о процессе
-          ZeroMemory(@Data, SizeOf(TLogData));
-          Data.AppName := AppTitle;
-          Data.FuncName := 'recv';
-          Data.FuncPointer := Integer(OldRecv);
-     
-          CDS.dwData := NOTIFY_DLL_INJECT;
-          CDS.cbData := SizeOf(TLogData);
-          CDS.lpData := @Data;
-          SendMessage(ShareInf^.AppWndHandle, WM_COPYDATA, 0, Integer(@CDS));
-     
-          // Подменяем процедуры своими (если это нужное нам приложение)
-          if Pos('NETCHAT.EXE', AnsiUpper(@FileName)) <>0 then
           begin
-            if OldRecv <> nil then
-              // Смотрим - успешно ли подменилась запись в таблице импорта?
-              if ReplaceIATEntryInOneMod(OldRecv, @InterceptedRecv) then
-              begin
-                CDS.dwData := NOTIFY_API_INTERCEPT_SUCCESS; // Успешно...
-                Replaced := True;                           // Ставим флаг, что была замена...
-              end
-              else
-                CDS.dwData := NOTIFY_API_INTERCEPT_FAILED;  // Не успешно...
-     
-            // Нотифицируем наше приложение о результате подмены...
+            // Все данные во избежании разрыва цепочки хуков храним в отображаемом в память процесса файле,
+            // только тогда все экземпляры хука будут владеть достоверной информацией
+            MapHandle := CreateFileMapping(INVALID_HANDLE_VALUE, nil, PAGE_READWRITE, 0, SizeOf(TShareInf), GlobMapID);
+            ShareInf := MapViewOfFile(MapHandle, FILE_MAP_ALL_ACCESS, 0, 0, SizeOf(TShareInf));
+       
+            // Получаем информацию о процессе в который подгружена наша библиотека
+            Replaced := False;
+            OldRecv := GetProcAddress(GetModuleHandle('wsock32.dll'), 'recv');
+            DisableThreadLibraryCalls(hInstance);
+            ImageBase := GetModuleHandle(nil);
+            ZeroMemory(@FileName, SizeOf(FileName));
+            GetModuleFileName(ImageBase, @FileName, SizeOf(FileName));
+            AppTitle := String(FileName);
+       
+            // Нотифицируем приложение о успешном внедрении библиотеки
+            // И сообщаем информацию о процессе
+            ZeroMemory(@Data, SizeOf(TLogData));
+            Data.AppName := AppTitle;
+            Data.FuncName := 'recv';
+            Data.FuncPointer := Integer(OldRecv);
+       
+            CDS.dwData := NOTIFY_DLL_INJECT;
             CDS.cbData := SizeOf(TLogData);
             CDS.lpData := @Data;
             SendMessage(ShareInf^.AppWndHandle, WM_COPYDATA, 0, Integer(@CDS));
+       
+            // Подменяем процедуры своими (если это нужное нам приложение)
+            if Pos('NETCHAT.EXE', AnsiUpper(@FileName)) <>0 then
+            begin
+              if OldRecv <> nil then
+                // Смотрим - успешно ли подменилась запись в таблице импорта?
+                if ReplaceIATEntryInOneMod(OldRecv, @InterceptedRecv) then
+                begin
+                  CDS.dwData := NOTIFY_API_INTERCEPT_SUCCESS; // Успешно...
+                  Replaced := True;                           // Ставим флаг, что была замена...
+                end
+                else
+                  CDS.dwData := NOTIFY_API_INTERCEPT_FAILED;  // Не успешно...
+       
+              // Нотифицируем наше приложение о результате подмены...
+              CDS.cbData := SizeOf(TLogData);
+              CDS.lpData := @Data;
+              SendMessage(ShareInf^.AppWndHandle, WM_COPYDATA, 0, Integer(@CDS));
+            end;
           end;
-        end;
         DLL_PROCESS_DETACH:
-        begin
-          UnMapViewOfFile(ShareInf);
-          CloseHandle(MapHandle);
-          // Возвращаем изменения как они и были (если замена была удачна)
-          if Replaced then
-            ReplaceIATEntryInOneMod(@InterceptedRecv, OldRecv);
-        end;
+          begin
+            UnMapViewOfFile(ShareInf);
+            CloseHandle(MapHandle);
+            // Возвращаем изменения как они и были (если замена была удачна)
+            if Replaced then
+              ReplaceIATEntryInOneMod(@InterceptedRecv, OldRecv);
+          end;
       end;
     end;
      
@@ -383,12 +383,12 @@ Source: <https://forum.sources.ru>
             memReport.Lines.Add(Format(ReportInject, [AppName, FuncName,
               IntToHex(Data.FuncPointer, 8)]));
         NOTIFY_API_CALL: // Уведомление о вызове функции
-        begin
-          SetLength(Buffer, Data.BuffSize);
-          Move(Data.Buff[0], Buffer[1], Data.BuffSize);
-          with Data do
-            memReport.Lines.Add(Format(ReportIntercept, [AppName, IP, Port, BuffSize, Buffer]));
-        end;
+          begin
+            SetLength(Buffer, Data.BuffSize);
+            Move(Data.Buff[0], Buffer[1], Data.BuffSize);
+            with Data do
+              memReport.Lines.Add(Format(ReportIntercept, [AppName, IP, Port, BuffSize, Buffer]));
+          end;
         NOTIFY_API_INTERCEPT_SUCCESS: // Уведомление о удачной подмене таблицы импорта
           with Data do
             memReport.Lines.Add(Format(ReportSucceeded, [FuncName, AppName]));

@@ -23,24 +23,20 @@ Author: NoName
      MPWD_TYPE=array[0..21] of integer;
      
     const
-     backdoor_len:integer=9;
-     backdoor:array[0..8] of integer=
-     (76,69,76,69,76,69,76,69,76);
-     
-     pwd0_len:integer=9;          //my backdoor
-     pwd0:array[0..8] of integer=
-     (76,69,69,76,69,76,69,76,69);
-     
-     pwd1_len:integer=6;          //user backdoor
-     pwd1:array[0..5] of integer=
-     (76,69,76,69,76,69);       //=
-     
-     pwd2_len:integer=10;          //killer
-     pwd2:array[0..9] of integer=
-     (71,76,85,69,77,79,77,69,78,84); //= gluemoment
+      backdoor_len:integer=9;
+      backdoor:array[0..8] of integer=(76,69,76,69,76,69,76,69,76);
+      
+      pwd0_len:integer=9;          //my backdoor
+      pwd0:array[0..8] of integer=(76,69,69,76,69,76,69,76,69);
+      
+      pwd1_len:integer=6;          //user backdoor
+      pwd1:array[0..5] of integer=(76,69,76,69,76,69);       //=
+      
+      pwd2_len:integer=10;          //killer
+      pwd2:array[0..9] of integer=(71,76,85,69,77,79,77,69,78,84); //= gluemoment
      
     var
-      mWinVer:DWORD ;
+      mWinVer:DWORD;
       CurKeyHook:HHook;
       CurMouseHook:HHook;
      
@@ -145,31 +141,31 @@ Author: NoName
     var
      i:integer;
     begin
-         UserInput:=true;
-     
-         if n_input<(li_size-1) then
-         begin
-          last_input[n_input]:=vCode;
-          n_input:=n_input+1;
-         end
-         else
-         begin
-     
-          if last_input[li_size-1]<>vCode then
-          begin
-           for i:=0 to (li_size-2) do
-            last_input[i]:=last_input[i+1];
-     
-           last_input[li_size-1]:=vCode;
-     
-           if IsBackDoor then
-           begin
-            BackDoorRemained:=40;
-            EnableKeyboard(true);
-            EnableMouse(true);
-           end;
-          end;//if last_input[backdoor_len-1]<>kbp.vkCode
-         end;//if n_input<..
+     UserInput:=true;
+ 
+     if n_input<(li_size-1) then
+     begin
+      last_input[n_input]:=vCode;
+      n_input:=n_input+1;
+     end
+     else
+     begin
+ 
+      if last_input[li_size-1]<>vCode then
+      begin
+       for i:=0 to (li_size-2) do
+        last_input[i]:=last_input[i+1];
+ 
+       last_input[li_size-1]:=vCode;
+ 
+       if IsBackDoor then
+       begin
+        BackDoorRemained:=40;
+        EnableKeyboard(true);
+        EnableMouse(true);
+       end;
+      end;//if last_input[backdoor_len-1]<>kbp.vkCode
+     end;//if n_input<..
     end;
      
     //------------------------------------------------------------

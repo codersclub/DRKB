@@ -27,5 +27,5 @@ Source: <https://forum.sources.ru>
 
     SHAddTorecentDocs(SHARD_PATH,pchar('C:\mydir\myprogram.exe')); 
 
-файл \'myprogram.exe\' будет добавлен в recent documents list
+файл \'myprogram.exe\' будет добавлен в "Recent documents list"
 

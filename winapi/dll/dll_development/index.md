@@ -404,9 +404,9 @@ GetProcAddress получить указатель на процедуру, вы
       HelloWorld : THelloWorld;
     begin
       { загружаем DLL }
-      DLLInstance := LoadLibrary(myfirstdll.dll');
+      DLLInstance := LoadLibrary('myfirstdll.dll');
       { получаем указатель }
-      @HelloWorld := GetProcAddress(DLLInstance, HelloWorld');
+      @HelloWorld := GetProcAddress(DLLInstance, 'HelloWorld');
       { вызываем процедуру на выполнение }
       HelloWorld(Self);
       { выгружаем DLL из оперативной памяти }

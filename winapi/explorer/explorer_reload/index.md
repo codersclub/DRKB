@@ -9,8 +9,8 @@ Date: 01.01.2007
 
 HWND hwndShell;
 
-    hwndShell = FindWindow ("Progman", NULL);
+    hwndShell = FindWindow ('Progman', NULL);
 
     PostMessage (hwndShell, WM_QUIT, 0, 0L);
 
-    ShellExecute (0, "open", "Explorer", NULL, NULL, SW_SHOWNORMAL);
+    ShellExecute (0, 'open', 'Explorer', NULL, NULL, SW_SHOWNORMAL);

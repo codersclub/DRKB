@@ -1,6 +1,5 @@
 ---
 Title: Информация о физических дисках
-Author: AntonSaburov
 ---
 
 
@@ -21,9 +20,9 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 Там есть ссылка на CreateFile - эта функция под NT может действительно
 вернуть хэндл на физический диск.
 
-You can use the CreateFile function to open a disk drive or a partition
-on a disk drive. The function returns a handle to the disk device; that
-handle can be used with the DeviceIOControl function.
+> You can use the CreateFile function to open a disk drive or a partition
+> on a disk drive. The function returns a handle to the disk device; that
+> handle can be used with the DeviceIOControl function.
 
 ------------------------------------------------------------------------
 

@@ -20,20 +20,18 @@ Source: <https://forum.sources.ru>
 не используется производим следующие действия:
 
 В реестре вот по этому пути
-HKEY\_LOCAL\_MASHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer
-устанавливаем строковое значение AlwaysUnloadDLL равным "1" (если
+`HKEY_LOCAL_MASHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer`
+устанавливаем строковое значение `AlwaysUnloadDLL` равным "1" (если
 такого значения нет, тогда нужно его создать).
 
 Далее пишем код:
 
 вот реализация сервера:
 
- 
 
     // Test COM Server Shell Context menu extention
      
     library CONTMENU;
-
      
     uses
       ComServ,
@@ -49,7 +47,6 @@ HKEY\_LOCAL\_MASHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer
     end.
 
     unit ContextM;
-
      
     interface
      
@@ -127,7 +124,7 @@ HKEY\_LOCAL\_MASHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer
     // Создание меню
     // по этому событию мы добавляем новые элементы меню...
     function TContextMenu.QueryContextMenu(Menu: HMENU; indexMenu, idCmdFirst,
-              idCmdLast, uFlags: UINT): HResult;
+             idCmdLast, uFlags: UINT): HResult;
     begin
       Result := MakeResult(SEVERITY_SUCCESS, FACILITY_NULL, 0);
      
@@ -241,11 +238,9 @@ HKEY\_LOCAL\_MASHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer
 
 Вот и все, компилишь этот код и у тебя готовый ком сервер...
 Регистрировать билиотеку из своей программы так:
-
  
 
     // Установка...
-
      
     procedure TForm1.btnRegClick(Sender: TObject);
     begin
@@ -301,10 +296,10 @@ HKEY\_LOCAL\_MASHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer
         Free;
       end;
     end;
-     
-     
-    а снимать с регистрации вот так:
-     
+
+
+а снимать с регистрации вот так:
+
     // Удаление ...
     procedure TForm1.btnUnRegClick(Sender: TObject);
     begin    

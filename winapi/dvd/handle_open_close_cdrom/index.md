@@ -15,64 +15,64 @@ Source: <https://www.swissdelphicenter.ch>
       applications through the WM_DEVICECHANGE message. 
     }
      
-     type
-       TForm1 = class(TForm)
-       private
-         procedure WMDeviceChange(var Msg: TMessage); message WM_DEVICECHANGE;
-       public
+    type
+      TForm1 = class(TForm)
+      private
+        procedure WMDeviceChange(var Msg: TMessage); message WM_DEVICECHANGE;
+      public
+    
+      end;
      
-       end;
-     
-     {...}
-     
-     implementation
-     
-     {$R *.DFM}
-     
-     procedure TForm1.WMDeviceChange(var Msg: TMessage);
-     const
-       DBT_DEVICEARRIVAL = $8000; // system detected a new device 
+    {...}
+    
+    implementation
+    
+    {$R *.DFM}
+    
+    procedure TForm1.WMDeviceChange(var Msg: TMessage);
+    const
+      DBT_DEVICEARRIVAL = $8000; // system detected a new device 
       DBT_DEVICEREMOVECOMPLETE = $8004;  // device is gone 
     var
        myMsg: string;
-     begin
-       inherited;
-       case Msg.wParam of
-         DBT_DEVICEARRIVAL: myMsg  := 'CD inserted!';
-         DBT_DEVICEREMOVECOMPLETE: myMsg := 'CD removed!';
-       end;
-       ShowMessage(myMsg);
-     end;
-     
-     
-     {*********************************************}
-     
-     // Advanced Code: 
+    begin
+      inherited;
+      case Msg.wParam of
+        DBT_DEVICEARRIVAL: myMsg  := 'CD inserted!';
+        DBT_DEVICEREMOVECOMPLETE: myMsg := 'CD removed!';
+      end;
+      ShowMessage(myMsg);
+    end;
+    
+    
+    {*********************************************}
+    
+    // Advanced Code: 
     // When the device is of type volume, then we can get some device specific 
     // information, namely specific information about a logical volume. 
     // by Juergen Kantz 
      
     unit Unit1;
      
-     interface
-     
-     uses
-       Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-       Dialogs, StdCtrls;
-     
-     type
-       TForm1 = class(TForm)
-         Button1: TButton;
-         label1: TLabel;
-       private
-         procedure WMDeviceChange(var Msg: TMessage); message WM_DeviceChange;
-         { Private declarations }
-       public
-         { Public declarations }
-       end;
-     
-     const
-         DBT_DeviceArrival = $8000;
+    interface
+    
+    uses
+      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
+      Dialogs, StdCtrls;
+    
+    type
+      TForm1 = class(TForm)
+        Button1: TButton;
+        label1: TLabel;
+      private
+        procedure WMDeviceChange(var Msg: TMessage); message WM_DeviceChange;
+        { Private declarations }
+      public
+        { Public declarations }
+      end;
+    
+    const
+       DBT_DeviceArrival = $8000;
        DBT_DeviceRemoveComplete = $8004;
        DBTF_Media = $0001;
        DBT_DevTyp_Volume = $0002;

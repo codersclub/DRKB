@@ -29,14 +29,13 @@ Source: <https://forum.sources.ru>
      
     function OpenCD(Drive: Char): Boolean;
     var
-     
       Res: MciError;
       OpenParm: TMCI_Open_Parms;
       Flags: DWord;
       S: string;
       DeviceID: Word;
+    
     begin
-     
       Result := false;
       S := Drive + ':';
       Flags := mci_Open_Type or mci_Open_Element;
@@ -62,14 +61,13 @@ Source: <https://forum.sources.ru>
      
     function CloseCD(Drive: Char): Boolean;
     var
-     
       Res: MciError;
       OpenParm: TMCI_Open_Parms;
       Flags: DWord;
       S: string;
       DeviceID: Word;
-    begin
      
+    begin
       Result := false;
       S := Drive + ':';
       Flags := mci_Open_Type or mci_Open_Element;
