@@ -59,7 +59,6 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
       if ((KeyState[vk_Shift] and 128) <> 0) then 
       begin 
         { here you could put some code to show the app as tray icon, ie 
-     
          hier kann z.B ein Code eingefugt werden, um die Applikation als 
          Tray Icon anzuzeigen} 
       end; 

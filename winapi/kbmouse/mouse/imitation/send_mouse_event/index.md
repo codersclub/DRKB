@@ -85,7 +85,7 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Вариант 4:
 
-Source: сайта: <https://www.swissdelphicenter.ch>
+Source: <https://www.swissdelphicenter.ch>
 
     // Set the mouse cursor to position x,y: 
     // Maus an Position x,y setzen: 

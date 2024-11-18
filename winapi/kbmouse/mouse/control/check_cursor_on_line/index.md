@@ -11,7 +11,6 @@ Source: <https://www.swissdelphicenter.ch>
     { 
       Check if a Point(X,Y) (e.g a Cursor) is on a Linie (x1,y1) ; (x2,y2) 
       d = line width (min. 1) 
-     
     }
      
     function CursorOnLinie(X, Y, x1, y1, x2, y2, d: Integer): Boolean;

@@ -44,7 +44,7 @@ Author: Song
 
 Source: Vingrad.ru <https://forum.vingrad.ru>
 
-BlockInput(), живёт в user32.dll
+`BlockInput()`, живёт в user32.dll
 
 ------------------------------------------------------------------------
 
@@ -54,8 +54,8 @@ Source: <https://forum.sources.ru>
 
 Как скрыть курсор мышки
 
-Поместите в событие OnClick в button1 и button2 следующие коды.Если
-курсор мышки скрыт, то выбрать button2 можно клавишей Tab.
+Поместите в событие OnClick в button1 и button2 следующие коды.
+Если курсор мышки скрыт, то выбрать button2 можно клавишей Tab.
 
     procedure TForm1.Button1Click(Sender: TObject);
     begin

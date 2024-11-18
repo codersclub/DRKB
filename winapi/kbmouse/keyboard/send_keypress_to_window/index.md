@@ -18,8 +18,11 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
         vkey: Byte;
       end;
       byteset = set of 0..7;
-    const shiftkeys: array[1..3] of TShiftKeyInfo = ((shift: Ord(ssCtrl);
-        vkey: VK_CONTROL), (shift: Ord(ssShift); vkey: VK_SHIFT), (shift: Ord(ssAlt); vkey: VK_MENU));
+    const shiftkeys: array[1..3] of TShiftKeyInfo = (
+      (shift: Ord(ssCtrl); vkey: VK_CONTROL),
+      (shift: Ord(ssShift); vkey: VK_SHIFT),
+      (shift: Ord(ssAlt); vkey: VK_MENU)
+    );
      
     var flag: DWORD;
       bShift: ByteSet absolute shift;

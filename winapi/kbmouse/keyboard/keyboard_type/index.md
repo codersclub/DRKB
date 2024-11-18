@@ -43,8 +43,8 @@ Source: <https://www.swissdelphicenter.ch>
          5: Result := 'Nokia 1050 and similar keyboards';
          6: Result := 'Nokia 9140 and similar keyboards';
          7: Result := 'Japanese keyboard'
-           else
-              Result := 'Unrecognized keyboard type';
+         else
+            Result := 'Unrecognized keyboard type';
        end;
      end;
      
@@ -63,8 +63,8 @@ Source: <https://www.swissdelphicenter.ch>
          5: Result := '10';
          6: Result := '24';
          7: Result := 'Hardware dependent'
-           else
-              Result := 'N/A';
+         else
+            Result := 'N/A';
        end;
      end;
      

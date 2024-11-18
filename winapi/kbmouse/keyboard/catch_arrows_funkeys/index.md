@@ -43,7 +43,7 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     begin
       if (Key = vk_down) and
         not (ssAlt in Shift)
-          {// здесь обработка для "выпадающих" окошек типа TRxDBCalcEdit} then
+        {// здесь обработка для "выпадающих" окошек типа TRxDBCalcEdit} then
       begin
         Key := 0;
         SelectNext(Sender as TWinControl, true, true);
@@ -73,8 +73,8 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
         begin
           if not (ssAlt in Shift) and not
             // здесь нельзя обработать нажатие при вызове "выпадающего"
-          (ActiveControl as TRxDBLookupCombo).IsDropDown then
-          begin // и в случае уже "выпвшего"
+            (ActiveControl as TRxDBLookupCombo).IsDropDown then
+          begin // и в случае уже "выпавшего"
             Key := 0;
             selectnext(ActiveControl, true, true);
           end;
@@ -98,9 +98,8 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-    //Автор: Cheers, Julian (TeamB & TurboPower Software) 
-     
-     
+Author: Julian (TeamB & TurboPower Software) 
+
     procedure WMGetDlgCode(var Msg : TMessage); message WM_GETDLGCODE;
      
     ...

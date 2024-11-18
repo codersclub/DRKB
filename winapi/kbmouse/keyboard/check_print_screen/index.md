@@ -29,7 +29,7 @@ Source: <https://forum.sources.ru>
     procedure TForm1.AppIdle(Sender: TObject; var Done: Boolean); 
     begin 
       if GetAsyncKeyState(VK_SNAPSHOT) <> 0 then 
-      Form1.Caption := 'PrintScreen нажата !'; 
+        Form1.Caption := 'PrintScreen нажата !'; 
       Done := True; 
     end;
 

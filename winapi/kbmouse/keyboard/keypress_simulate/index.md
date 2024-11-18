@@ -12,7 +12,7 @@ Date: 01.01.2007
 
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-Использование клавиш для управления компонентами.
+**Использование клавиш для управления компонентами.**
 
 Так, если у меня есть своего рода кнопка (check, radio, speed и т.п.),
 то почему я не могу с помощью клавиш курсора управлять ею?
@@ -90,7 +90,7 @@ ProcessFormMessages в секцию \'Private\' класса вашей форм
 
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-Как посылать нажатие клавиш в элемент управления.
+**Как посылать нажатие клавиш в элемент управления.**
 
 Ниже приведена процедура, позволяющаю отправлять нажатия в любой элемент
 управления (window control), способный принимать ввод с клавиатуры. Вы
@@ -111,10 +111,13 @@ SimulateKeystroke() получает дополнительный парамет
 будет скопирован в буфер обмена (clipboard). Если дополнительный
 параметр равен 1 будет скопированно только активное окно.
 
-Четыре метода "button click" демонстрируют использование: ButtonClick1
-- включает capslock ButtonClick2 - перехватывает весь экран в буфер
-обмена (clipboard). ButtonClick3 - перехватывает активное окно в буфер
-обмена (clipboard). ButtonClick4 - устанавливает фокус в Edit и
+Четыре метода "button click" демонстрируют использование:
+- ButtonClick1 - включает capslock
+- ButtonClick2 - перехватывает весь экран в буфер
+обмена (clipboard).
+-  ButtonClick3 - перехватывает активное окно в буфер
+обмена (clipboard).
+-  ButtonClick4 - устанавливает фокус в Edit и
 отправляет в него строку.
 
     procedure SimulateKeyDown(Key: byte);
@@ -425,8 +428,8 @@ Source: <https://forum.sources.ru>
     implementation
      
     var
-      temps: string; {й utilizado para ser acessivel pelas funcs q sao
-      utilizadas como callbacks}
+      temps: string; {используется для доступа к функциям,
+                  которые используются в качестве обратных вызовов}
       HTemp: Hwnd;
       ChildText: string;
       ChildWindow: boolean;
@@ -587,12 +590,10 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     interface
      
     uses
-     
       SysUtils, WinTypes, WinProcs, Messages, Classes, Graphics, Controls,
       Forms, Dialogs, StdCtrls;
      
     type
-     
       TForm1 = class(TForm)
         Button1: TButton;
         Button2: TButton;
@@ -607,7 +608,6 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
       end;
      
     var
-     
       Form1: TForm1;
      
     implementation
@@ -619,10 +619,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     procedure SendShift(H: HWnd; Down: Boolean);
     var
       vKey, ScanCode, wParam: Word;
-     
       lParam: longint;
+    
     begin
-     
       vKey := $10;
       ScanCode := MapVirtualKey(vKey, 0);
       wParam := vKey or ScanCode shl 8;
@@ -635,10 +634,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     procedure SendCtrl(H: HWnd; Down: Boolean);
     var
       vKey, ScanCode, wParam: Word;
-     
       lParam: longint;
+    
     begin
-     
       vKey := $11;
       ScanCode := MapVirtualKey(vKey, 0);
       wParam := vKey or ScanCode shl 8;
@@ -651,11 +649,10 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     procedure SendKey(H: Hwnd; Key: char);
     var
       vKey, ScanCode, wParam: Word;
-     
       lParam, ConvKey: longint;
       Shift, Ctrl: boolean;
-    begin
      
+    begin
       ConvKey := OemKeyScan(ord(Key));
       Shift := (ConvKey and $00020000) <> 0;
       Ctrl := (ConvKey and $00040000) <> 0;
@@ -679,7 +676,6 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
      
     function EnumFunc(Handle: HWnd; TF: TForm1): Bool; far;
     begin
-     
       TF.AppWind := 0;
       if GetWindowWord(Handle, GWW_HINSTANCE) = TF.AppInst then
         TF.AppWind := Handle;
@@ -689,8 +685,8 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
     procedure TForm1.Button1Click(Sender: TObject);
     var
       Text: array[0..255] of char;
-    begin
      
+    begin
       AppInst := ShellExecute(Handle, 'open', 'notepad.exe', nil, '', SW_NORMAL);
       EnumWindows(@EnumFunc, longint(self));
       AppWind := GetWindow(AppWind, GW_CHILD);
@@ -698,7 +694,6 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
      
     procedure TForm1.Button2Click(Sender: TObject);
     begin
-     
       SendKey(AppWind, 'T');
       SendKey(AppWind, 'e');
       SendKey(AppWind, 's');
@@ -707,7 +702,6 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
      
     procedure TForm1.FormKeyPress(Sender: TObject; var Key: Char);
     begin
-     
       if AppWind <> 0 then
         SendKey(AppWind, Key);
     end;
@@ -720,7 +714,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
 Вариант 8:
 
-Author: Ken Henderson
+Author: Ken Henderson, khen@compuserve.com
+
+Date: 1995-12-03
 
 Почти полный аналог метода SendKeys из VB
 
@@ -735,7 +731,7 @@ Author: Ken Henderson
     routines: Sendkeys and AppActivate.  SendKeys takes a PChar
     as its first parameter and a boolean as its second, like so:
      
-    SendKeys('KeyString', Wait);
+      SendKeys('KeyString', Wait);
      
     where KeyString is a string of key names and modifiers that you want
     to send to the current input focus and Wait is a boolean variable or value
@@ -744,7 +740,7 @@ Author: Ken Henderson
      
     AppActivate also takes a PChar as its only parameter, like so:
      
-    AppActivate('WindowName');
+      AppActivate('WindowName');
      
     where WindowName is the name of the window that you want to make the
     current input focus.
@@ -753,9 +749,9 @@ Author: Ken Henderson
      
     Supported modifiers:
      
-    + = Shift
-    ^ = Control
-    % = Alt
+      + = Shift
+      ^ = Control
+      % = Alt
      
     Surround sequences of characters or key names with parentheses in order to
     modify them as a group.  For example, '+abc' shifts only 'a', while  '+(abc)' shifts
@@ -763,11 +759,11 @@ Author: Ken Henderson
      
     Supported special characters
      
-    ~ = Enter
-    ( = begin modifier group (see above)
-    ) = end modifier group (see above)
-    { = begin key name text (see below)
-    } = end key name text (see below)
+      ~ = Enter
+      ( = begin modifier group (see above)
+      ) = end modifier group (see above)
+      { = begin key name text (see below)
+      } = end key name text (see below)
      
     Supported characters:
      
@@ -1329,6 +1325,10 @@ Source: <https://www.swissdelphicenter.ch>
 ------------------------------------------------------------------------
 
 Вариант 11:
+
+Date: 1996-02-21
+
+Author: P. Below
 
 Source: <https://www.swissdelphicenter.ch>
 
@@ -2106,5 +2106,4 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
             SendMessage(Edit1.Handle, WM_CHAR, 255, LongInt(KeyData));
             Application.ProcessMessages;
     end;
-
 

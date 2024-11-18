@@ -14,8 +14,8 @@ ASCII код для PrintScreen
     interface
      
     uses
-      Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-      Dialogs;
+      Windows, Messages, SysUtils, Variants, Classes, Graphics,
+      Controls, Forms, Dialogs;
      
     type
       TForm1 = class(TForm)
@@ -37,14 +37,15 @@ ASCII код для PrintScreen
     procedure TForm1.AppIdle(Sender: TObject; var Done: Boolean);
     begin
     if GetAsyncKeyState(VK_SNAPSHOT) <> 0 then
-        Form1.Caption := 'PrintScreen ia?aoa !';
+      Form1.Caption := 'PrintScreen ia?aoa !';
       Done := True;
     end;
      
     procedure TForm1.FormCreate(Sender: TObject);
     begin
-    Application.OnIdle := AppIdle;
+      Application.OnIdle := AppIdle;
     end;
+    
     end.
 
 ------------------------------------------------------------------------

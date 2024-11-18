@@ -276,7 +276,7 @@ Source: <https://www.swissdelphicenter.ch>
             { 
              The CallNextHookEx function passes the hook information to the 
              next hook procedure in the current hook chain. 
-           }
+            }
             Result := CallNextHookEx(MMFData.NextHook, Code, wParam, lParam)
           else
           begin
@@ -286,9 +286,9 @@ Source: <https://www.swissdelphicenter.ch>
             with TMsg(Pointer(lParam)^) do
             begin
               // Kill Numbers 
-             if (wParam >= 48) and (wParam <= 57) then Kill := True;
+              if (wParam >= 48) and (wParam <= 57) then Kill := True;
               // Kill Tabulator 
-             if (wParam = VK_TAB) then Kill := True;
+              if (wParam = VK_TAB) then Kill := True;
             end;
     
             { Example to disable all the start-Key combinations }
@@ -298,7 +298,7 @@ Source: <https://www.swissdelphicenter.ch>
     
               WM_HOTKEY:
                 case ((TPMsg(lParam)^.lParam and $00FF0000) shr 16) of
-                  VK_D,      // Win+D        ==> Desktop 
+                 VK_D,      // Win+D        ==> Desktop 
                  VK_E,      // Win+E        ==> Explorer 
                  VK_F,      // Win+F+(Ctrl) ==> Find:All (and Find: Computer) 
                  VK_M,      // Win+M        ==> Minimize all 

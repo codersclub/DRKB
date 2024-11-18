@@ -152,8 +152,8 @@ Source: <https://www.swissdelphicenter.ch>
      
     procedure TForm1.Button1Click(Sender: TObject);
     begin
-      SetLedState(ktCapsLock, True);  // CapsLock on 
-      SetLedState(ktNumLock, True);  // NumLock on 
-      SetLedState(ktScrollLock, True);  // ScrollLock on 
+      SetLedState(ktCapsLock, True);   // CapsLock on 
+      SetLedState(ktNumLock, True);    // NumLock on 
+      SetLedState(ktScrollLock, True); // ScrollLock on 
     end;
 

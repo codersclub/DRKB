@@ -8,12 +8,12 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 Если нажато более 2-х клавиш одновременно
 =========================================
 
-> I would like to detect more than 2 keys being pressed within a form.
-> For example I would like to know if the user pressed time.
-> The onkeydown seems to only check for one or two keys max but surely
-> you can determine what keys are currently down.
+> Я хотел бы отследить нажатие более 2 клавиш в форме.
+> Например, я хотел бы узнать, нажал ли пользователь время.
+> Событие Onkeydown, похоже, проверяет только одну или две клавиши максимум,
+> но вы наверняка можете определить, какие клавиши в данный момент нажаты.
 
-You can use GetKeyState:
+Вы можете использовать GetKeyState:
      
     procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -28,8 +28,7 @@ You can use GetKeyState:
     { Remember: Form1.Keypreview := TRUE }
 
 
-Or you can read the entire KeyBoard Status,
-and later check for the three keys:
+Или вы можете прочитать весь статус клавиатуры, а затем проверить три клавиши:
 
     procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);

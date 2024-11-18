@@ -27,18 +27,18 @@ Source: <https://forum.sources.ru>
       ACtrl: TWinControl; 
     begin 
       if key = 13 then 
-        begin 
-          ACtrl := ActiveControl; 
-          if ACtrl is TCustomMemo then exit; 
-          repeat 
-            ACtrl:= FindNextControl(ACtrl,true,true,false); 
-          until (ACtrl is TCustomEdit) or 
-          (ACtrl is TCustomComboBox) or 
-          (ACtrl is TCustomListBox) or 
-          (ACtrl is TCustomCheckBox) or 
-          (ACtrl is TRadioButton); 
-          ACtrl.SetFocus ; 
-        end; 
+      begin 
+        ACtrl := ActiveControl; 
+        if ACtrl is TCustomMemo then exit; 
+        repeat 
+          ACtrl:= FindNextControl(ACtrl,true,true,false); 
+        until (ACtrl is TCustomEdit) or 
+        (ACtrl is TCustomComboBox) or 
+        (ACtrl is TCustomListBox) or 
+        (ACtrl is TCustomCheckBox) or 
+        (ACtrl is TRadioButton); 
+        ACtrl.SetFocus ; 
+      end; 
     end; 
 
 Не забудьте установить свойство формы KeyPreview в true.
@@ -68,10 +68,10 @@ Source: <https://forum.sources.ru>
 
     Procedure TForm1.CMDialogKey(Var Msg: TWMKey); 
     Begin 
-    If NOT (ActiveControl Is TButton) Then 
-    If Msg.Charcode = 13 Then 
-    Msg.Charcode := 9; 
-    inherited; 
+      If NOT (ActiveControl Is TButton) Then 
+        If Msg.Charcode = 13 Then 
+          Msg.Charcode := 9; 
+      inherited; 
     End;
 
 Тем самым мы исключаем срабатывания нашей подмены, если фокус находится

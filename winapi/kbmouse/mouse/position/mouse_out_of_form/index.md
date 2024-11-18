@@ -13,26 +13,25 @@ Source: <https://blackman.wp-club.net/>
     TYourObject = class(TAnyControl)
     ...
     private
-    FMouseInPos : Boolean;
-    procedure CMMouseEnter(var AMsg: TMessage); message CM_MOUSEENTER;
-    procedure CMMouseLeave(var AMsg: TMessage); message CM_MOUSELEAVE;
+      FMouseInPos : Boolean;
+      procedure CMMouseEnter(var AMsg: TMessage); message CM_MOUSEENTER;
+      procedure CMMouseLeave(var AMsg: TMessage); message CM_MOUSELEAVE;
     ...
     end;
      
     implementation
      
-     
     procedure TYourObject.CMMouseEnter(var AMsg: TMessage);
     begin
-    FMouseInPos := True;
-    Refresh;
+      FMouseInPos := True;
+      Refresh;
     end;
      
      
     procedure TYourObject.CMMouseLeave(var AMsg: TMessage);
     begin
-    FMouseInPos := False;
-    Refresh;
+      FMouseInPos := False;
+      Refresh;
     end;
 
 Затем считывать параметр FMouseInPos.

@@ -239,8 +239,10 @@ WH\_MOUSE, необходимо разобраться с windows SDK.
     procedure TMainForm.Button1Click(Sender: TObject);
     begin
         if GHookInstalled=true then exit; //if a global hook is installed, exit routine
-         //if a local hook not installed, then attempt to install one, else attempt to remove one
-         if HookInstalled=false then HookInstalled:=SetupLocalHook else HookInstalled:=not(RemoveLocalHook);
+        //if a local hook not installed, then attempt to install one, else attempt to remove one
+        if HookInstalled=false then
+          HookInstalled:=SetupLocalHook
+        else HookInstalled:=not(RemoveLocalHook);
     end;
      
     procedure TMainForm.FormCreate(Sender: TObject);
@@ -260,7 +262,9 @@ WH\_MOUSE, необходимо разобраться с windows SDK.
          if HookInstalled=true then exit; //if a local hook is installed, exit routine
          //if a local hook not installed, then attempt to install one, else attempt to remove one
          //note that removelocalhook can still be used no matter whether the hook is global or local
-         if GHookInstalled=false then GHookInstalled:=SetupGlobalHook else GHookInstalled:=not(RemoveLocalHook);
+         if GHookInstalled=false then
+           GHookInstalled:=SetupGlobalHook
+         else GHookInstalled:=not(RemoveLocalHook);
     end;
      
     end.

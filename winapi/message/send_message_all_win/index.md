@@ -10,11 +10,11 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 =========================================
 
     Var
-    FM_FINDPHOTO: Integer;
-    // Для использовать hwnd_Broadcast нужно сперва
+      FM_FINDPHOTO: Integer;
+    // Для использования hwnd_Broadcast нужно сперва
     // зарегистрировать уникальное сообщение
     Initialization
-    FM_FindPhoto:=RegisterWindowMessage('MyMessageToAll');
+      FM_FindPhoto:=RegisterWindowMessage('MyMessageToAll');
     // Чтобы поймать это сообщение в другом приложении
     //(приемнике) нужно перекрыть DefaultHandler
     procedure TForm1.DefaultHandler(var Message);

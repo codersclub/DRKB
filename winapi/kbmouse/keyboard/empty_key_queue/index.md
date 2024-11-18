@@ -13,7 +13,7 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
       msg: TMsg;
     begin
       while PeekMessage(msg, 0, WM_KEYFIRST, WM_KEYLAST, PM_REMOVE or PM_NOYIELD) do
-        ;
+        ; // Skip messages
     end;
      
     begin

@@ -60,8 +60,8 @@ Hook-функции в собственном приложении
      
     procedure TForm1.Button1Click(Sender: TObject);
     begin
-      Application.MessageBox('You`ll never see this Text /
-        Diesen Text wirst du nie sehen', '...', MB_OK);
+      Application.MessageBox('You`ll never see this Text '
+        + 'Diesen Text wirst du nie sehen', '...', MB_OK);
     end;
      
     var

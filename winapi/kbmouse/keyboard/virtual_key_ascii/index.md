@@ -29,14 +29,13 @@ Source: <https://forum.sources.ru>
           Result := '';
       end;
     end;
-     
-    {
-    Использование:
+
+Использование:
+
     procedure TForm1.Edit1KeyDown
       (Sender: TObject; var Key: Word;
       Shift: TShiftState);
     begin
       ShowMessage(GetCharFromVKey(Key));
     end; 
-    }
 
