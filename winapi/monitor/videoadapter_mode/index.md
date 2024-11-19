@@ -225,7 +225,7 @@ DmFields -
 видеорежима можно и другим способом:
 
     GetDeviceCaps(Form1.Canvas.Handle, BITSPIXEL)
-    * GetDeviceCaps(Form1.Canvas.Handle, PLANES)
+      * GetDeviceCaps(Form1.Canvas.Handle, PLANES)
 
 Получаемые значения при этом:
 

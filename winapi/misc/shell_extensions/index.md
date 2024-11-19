@@ -90,7 +90,8 @@ GetInfoTip - Получает текст Infotip-а.
 
 GetInfoTip определена следующим образом:
 
-    function GetInfoTip(dwFlags: DWORD; var ppwszTip: PWideChar): HResult;  stdcall;
+    function GetInfoTip(dwFlags: DWORD; var ppwszTip: PWideChar):
+             HResult;  stdcall;
 
 dwFlags - в данный момент не используется
 
@@ -146,7 +147,8 @@ E\_NOTIMPL.
 
 Load определена следующим образом:
 
-    function Load(pszFileName: PoleStr; dwMode: LongInt): HResult; stdcall;
+    function Load(pszFileName: PoleStr; dwMode: LongInt):
+             HResult; stdcall;
 
 pszFileName - указатель на строку, содержащую абсолютный путь открываемого файла.
 Строка должна завершаться нулём.
@@ -174,7 +176,7 @@ IPersistFile; фактически мы не используем интерфе
 файла Type Library, который был сгенерирован Delphi (имя файла
 оканчивается на "\_TLB.pas"). Для нашего примера расширения CLSID
 назван CLASS\_DPRInfoTip и содержит значение
-"{B20433A8-D083-11D4-993A-00D00912C440}".
+`"{B20433A8-D083-11D4-993A-00D00912C440}"`.
 
 Самый простой способ внести изменения в реестр - это сделать копию
 файла .REG, содержащуюся в исходниках проекта. Просто измените CLSID и

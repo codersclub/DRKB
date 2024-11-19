@@ -129,8 +129,9 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
     interface
      
     uses
-      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, ProcessView,
-      StdCtrls, Buttons, abfComponents, Menus, ImgList, AppEvnts, TrayIcon;
+      Windows, Messages, SysUtils, Classes, Graphics, Controls,
+      Forms, Dialogs, ProcessView, StdCtrls, Buttons,
+      abfComponents, Menus, ImgList, AppEvnts, TrayIcon;
      
     type
       TForm1 = class(TForm)
@@ -342,11 +343,12 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
     interface
      
     uses
-      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+       Windows, Messages, SysUtils, Classes, Graphics, Controls,
+       Forms, Dialogs,
        ShellAPI, extctrls, Menus;
      
     const
-         WM_SYSTEM_TRAY_NOTIFY = WM_USER + 1;
+       WM_SYSTEM_TRAY_NOTIFY = WM_USER + 1;
      
     type TTrayIconMessage =(imClick, imDoubleClick, imMouseDown,
                             imMouseUp, imLeftClickUp, imLeftDoubleClick,
@@ -355,7 +357,7 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
     type
       TTrayIcon = class(TComponent)
       private
-        { Private declarations }
+       { Private declarations }
        FData: TNotifyIconData;
        FIsClicked: Boolean;
        FIcon: TIcon;
@@ -828,15 +830,18 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
     end;
      
     //---------------------------------------------------------------------------
-    procedure TTrayIcon.DoMouseMove(Shift: TShiftState; X:integer; Y: integer);
+    procedure TTrayIcon.DoMouseMove(Shift: TShiftState;
+                                    X:integer;
+                                    Y: integer);
     begin
        if (Assigned(FOnMouseMove)) then
           FOnMouseMove(Self, Shift, X, Y);
     end;
      
     //---------------------------------------------------------------------------
-    procedure TTrayIcon.DoMouseDown(Button: TMouseButton; Shift: TShiftState;
-                                           X: integer; Y: integer);
+    procedure TTrayIcon.DoMouseDown(Button: TMouseButton;
+                                    Shift: TShiftState;
+                                    X: integer; Y: integer);
     begin
        if (FAppRestore = imMouseDown) then
           Restore();
@@ -848,8 +853,9 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
     end;
      
     //---------------------------------------------------------------------------
-    procedure TTrayIcon.DoMouseUp(Button: TMouseButton; Shift: TShiftState;
-                                         X: integer; Y:integer);
+    procedure TTrayIcon.DoMouseUp(Button: TMouseButton;
+                                  Shift: TShiftState;
+                                  X: integer; Y:integer);
     begin
        if (FAppRestore = imMouseDown) then
           Restore();

@@ -34,7 +34,8 @@ Source: <https://forum.sources.ru>
         dmPelsHeight:=480;
         dmFields:=DM_BITSPERPEL or DM_PELSWIDTH or DM_PELSHEIGHT;
         result:=False;
-        if ChangeDisplaySettings(DeviceMode,CDS_TEST or CDS_FULLSCREEN) <> DISP_CHANGE_SUCCESSFUL 
+        if ChangeDisplaySettings(DeviceMode,CDS_TEST or CDS_FULLSCREEN)
+          <> DISP_CHANGE_SUCCESSFUL 
           then Exit;
         Result:=ChangeDisplaySettings(DeviceMode,CDS_FULLSCREEN) = DISP_CHANGE_SUCCESSFUL;
       end;

@@ -1,6 +1,5 @@
 ---
 Title: Как узнать разрешение экрана?
-Author: AntonSaburov
 Date: 01.01.2007
 ---
 

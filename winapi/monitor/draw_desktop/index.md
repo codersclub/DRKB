@@ -190,9 +190,9 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
         SetWindowPos(F[i].Handle, HWND_TOPMOST, 0,0,0,0, SWP_NOACTIVATE+SWP_NOMOVE+SWP_NOSIZE);
      
       {
-      следующие строки используются для того, чтобы не останавливаться
+      //следующие строки используются для того, чтобы не останавливаться
       repeat
-      ProcessMessage;
+        ProcessMessage;
       until false;
       }
       Sleep(15000);

@@ -118,63 +118,68 @@ Source: <https://delphiworld.narod.ru>
           constructor Create(AOwner: TComponent); override;
           destructor Destroy; override;
         published
-          property Path: string read fPath write SetPath;
-          property Active: Boolean read GetActive write SetActive;
-          property WatchSubTree: Boolean read fWatch write SetWatch;
+          property Path: string
+            read fPath write SetPath;
+    
+          property Active: Boolean
+            read GetActive write SetActive;
+    
+          property WatchSubTree: Boolean
+            read fWatch write SetWatch;
      
           property WatchEvents: TNotificationEvents
-          read fWatchEvents write SetWatchEvents;
+            read fWatchEvents write SetWatchEvents;
      
           property OnAssociationChange: TNotifyEvent
-          read fOnAssociationChange write FOnAssociationChange;
+            read fOnAssociationChange write FOnAssociationChange;
      
           property OnAttributesChange: TShellNotificationEvent2
-          read fOnAttribChange write fOnAttribChange;
+            read fOnAttribChange write fOnAttribChange;
      
           property OnFileCreate: TShellNotificationEvent1
-          read FOnCreate write FOnCreate;
+            read FOnCreate write FOnCreate;
      
           property OnFolderRename: TShellNotificationEvent2
-          read FOnRenameFolder write FOnRenameFolder;
+            read FOnRenameFolder write FOnRenameFolder;
      
           property OnFolderUpdate: TShellNotificationEvent1
-          read FOnFolderUpdate write FOnFolderUpdate;
+            read FOnFolderUpdate write FOnFolderUpdate;
      
           property OnFileDelete: TShellNotificationEvent1
-          read FOnDelete write FOnDelete;
+            read FOnDelete write FOnDelete;
      
           property OnDriveAdd: TShellNotificationEvent1
-          read FOnDriveAdd write FOnDriveAdd;
+            read FOnDriveAdd write FOnDriveAdd;
      
           property OnFolderRemove: TShellNotificationEvent1
-          read FOnFolderRemove write FOnFolderRemove;
+            read FOnFolderRemove write FOnFolderRemove;
      
           property OnItemRename: TShellNotificationEvent2
-          read FOnItemRename write FOnItemRename;
+            read FOnItemRename write FOnItemRename;
      
           property OnDriveAddGui: TShellNotificationEvent1
-          read FOnDriveAddGui write FOnDriveAddGui;
+            read FOnDriveAddGui write FOnDriveAddGui;
      
           property OnDriveRemove: TShellNotificationEvent1
-          read FOnDriveRemove write FOnDriveRemove;
+            read FOnDriveRemove write FOnDriveRemove;
      
           property OnMediaInserted: TShellNotificationEvent1
-          read FOnMediaInsert write FOnMediaInsert;
+            read FOnMediaInsert write FOnMediaInsert;
      
           property OnMediaRemove: TShellNotificationEvent1
-          read FOnMediaRemove write FOnMediaRemove;
+            read FOnMediaRemove write FOnMediaRemove;
      
           property OnDirCreate: TShellNotificationEvent1
-          read FOnDirCreate write FOnDirCreate;
+            read FOnDirCreate write FOnDirCreate;
      
           property OnNetShare: TShellNotificationEvent1
-          read FOnNetShare write FOnNetShare;
+            read FOnNetShare write FOnNetShare;
      
           property OnNetUnShare: TShellNotificationEvent1
-          read FOnNetUnShare write FOnNetUnShare;
+            read FOnNetUnShare write FOnNetUnShare;
      
           property OnServerDisconnect: TShellNotificationEvent1
-          read FOnServerDisconnect write FOnServerDisconnect;
+            read FOnServerDisconnect write FOnServerDisconnect;
     end;
      
     function SHChangeNotifyRegister( hWnd: HWND; dwFlags: integer;
@@ -215,7 +220,7 @@ Source: <https://delphiworld.narod.ru>
     procedure TShellNotification.DoAssociationChange;
     begin
       if Assigned( fOnAssociationChange ) and
-      (neAssociationChange in fWatchEvents) then
+        (neAssociationChange in fWatchEvents) then
         fOnAssociationChange( Self );
     end;
      
@@ -306,7 +311,7 @@ Source: <https://delphiworld.narod.ru>
     procedure TShellNotification.DoRenameItem(Path1, Path2: string);
     begin
       if Assigned( FOnItemRename ) then
-        FonItemRename(Self, Path1, Path2);
+        FOnItemRename(Self, Path1, Path2);
     end;
      
     procedure TShellNotification.DoServerDisconnect(Path: string);

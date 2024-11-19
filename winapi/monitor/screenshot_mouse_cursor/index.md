@@ -7,6 +7,8 @@ Date: 01.01.2007
 Как получить screen shot экран вместе с указателем мыша?
 ========================================================
 
+Вариант 1:
+
 Author: P.O.D
 
 Source: <https://forum.sources.ru>
@@ -26,13 +28,16 @@ Source: <https://forum.sources.ru>
     GetDC(GetDesktopWindow),0,0,SRCCopy);
     //дорисуем курсор
     Icon:=TIcon.Create;
-    r:=Rect(0,0,GetSystemMetrics(SM_CXSCREEN),GetSystemMetrics(SM_CYSCREEN));
+    r:=Rect(0,0,GetSystemMetrics(SM_CXSCREEN),
+                GetSystemMetrics(SM_CYSCREEN));
     CI.cbSize:=SizeOf(CI);
     if (GetCursorInfo(CI)) and (CI.flags=CURSOR_SHOWING) then
      begin
       Icon.Handle:=CopyIcon(CI.hCursor);
       if GetIconInfo(Icon.Handle,II) then
-      bmp.Canvas.Draw(ci.ptScreenPos.x - Integer(II.xHotspot) - r.Left, ci.ptScreenPos.y - Integer(II.yHotspot) - r.Top, Icon);
+      bmp.Canvas.Draw(ci.ptScreenPos.x - Integer(II.xHotspot) - r.Left,
+                      ci.ptScreenPos.y - Integer(II.yHotspot) - r.Top,
+                      Icon);
      end;
     end;
 
@@ -122,7 +127,8 @@ Source: <https://www.swissdelphicenter.ch>
             GetIconInfo(CursorInfo.hCursor, IconInfo);
             // Draw the Cursor on our bitmap 
             ABitmap.Canvas.Draw(CursorInfo.ptScreenPos.X - IconInfo.xHotspot,
-                                CursorInfo.ptScreenPos.Y - IconInfo.yHotspot, MyCursor);
+                                CursorInfo.ptScreenPos.Y - IconInfo.yHotspot,
+                                MyCursor);
           end;
         finally
           // Clean up 

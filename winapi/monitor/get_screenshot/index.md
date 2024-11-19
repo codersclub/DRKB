@@ -523,27 +523,24 @@ Source: <https://www.swissdelphicenter.ch>
         RC_PALETTE = RC_PALETTE) then
       begin
         {allocate memory for a logical palette}
-        GetMem(lpPal,
-          SizeOf(TLOGPALETTE) +
-        (255 * SizeOf(TPALETTEENTRY)));
+        GetMem(lpPal, SizeOf(TLOGPALETTE) +
+                      (255 * SizeOf(TPALETTEENTRY)));
         {zero it out to be neat}
-        FillChar(lpPal^,
-          SizeOf(TLOGPALETTE) +
-        (255 * SizeOf(TPALETTEENTRY)),
-          #0);
+        FillChar(lpPal^, SizeOf(TLOGPALETTE) +
+                         (255 * SizeOf(TPALETTEENTRY)), #0);
         {fill in the palette version}
         lpPal^.palVersion := $300;
         {grab the system palette entries}
-        lpPal^.palNumEntries :=
-          GetSystemPaletteEntries(dc,
-          0,
-          256,
-          lpPal^.palPalEntry);
+        lpPal^.palNumEntries := GetSystemPaletteEntries(
+                                  dc,
+                                  0,
+                                  256,
+                                  lpPal^.palPalEntry);
         if (lpPal^.PalNumEntries <> 0) then
           {create the palette}
           bm.Palette := CreatePalette(lpPal^);
         FreeMem(lpPal, SizeOf(TLOGPALETTE) +
-        (255 * SizeOf(TPALETTEENTRY)));
+                       (255 * SizeOf(TPALETTEENTRY)));
       end;
       {copy from the screen to the bitmap}
       BitBlt(bm.Canvas.Handle,
@@ -563,7 +560,9 @@ Source: <https://www.swissdelphicenter.ch>
     // Example: 
     procedure TForm1.Button1Click(Sender: TObject);
     begin
-      ScreenShot(0,0,Screen.Width, Screen.Height, Image1.Picture.Bitmap);
+      ScreenShot(0,0,
+                 Screen.Width, Screen.Height,
+                 Image1.Picture.Bitmap);
     end;
 
 ------------------------------------------------------------------------
