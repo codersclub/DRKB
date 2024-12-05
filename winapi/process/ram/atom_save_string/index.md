@@ -20,43 +20,43 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
     var P:PChar;
       i:Word;
     begin
-    GetMem(p, 256);
-    For i:=0 to $FFFF do
-    begin
-      GlobalGetAtomName(i, p, 255);
-      if StrPos(p, PChar(UniqueSignature))<>nil then GlobalDeleteAtom(i);
-    end;
-    FreeMem(p);
+      GetMem(p, 256);
+      For i:=0 to $FFFF do
+      begin
+        GlobalGetAtomName(i, p, 255);
+        if StrPos(p, PChar(UniqueSignature))<>nil then GlobalDeleteAtom(i);
+      end;
+      FreeMem(p);
     end;
      
     Procedure WriteAtom(Str:string);
     begin
-    CleanAtoms;
-    GlobalAddAtom(PChar(UniqueSignature+Str));
+      CleanAtoms;
+      GlobalAddAtom(PChar(UniqueSignature+Str));
     end;
      
     Function ReadAtom:string;
     var P:PChar;
       i:Word;
     begin
-    GetMem(p, 256);
-    For i:=0 to $FFFF do
-    begin
-    GlobalGetAtomName(i, p, 255);
-    if StrPos(p, PChar(UniqueSignature))<>nil then break;
-    end;
-    result:=StrPas(p+length(UniqueSignature));
-    FreeMem(p);
+      GetMem(p, 256);
+      For i:=0 to $FFFF do
+      begin
+        GlobalGetAtomName(i, p, 255);
+        if StrPos(p, PChar(UniqueSignature))<>nil then break;
+      end;
+      result:=StrPas(p+length(UniqueSignature));
+      FreeMem(p);
     end;
      
     procedure TReadFromAtom.Button1Click(Sender: TObject);
     begin
-    WriteAtom(Edit1.text);
+      WriteAtom(Edit1.text);
     end;
      
     procedure TReadFromAtom.Button2Click(Sender: TObject);
     begin
-    Showmessage(ReadAtom);
+      Showmessage(ReadAtom);
     end;
 
 

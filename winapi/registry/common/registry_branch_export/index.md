@@ -1,6 +1,7 @@
 ---
 Title: Экспортировать ветвь реестра
-Date: 01.01.2007
+Author: Arthur Hoornweg (arthur.hoornweg@email.de) 
+Date: 26.05.1998 
 Source: <https://www.swissdelphicenter.ch>
 ---
 

@@ -42,12 +42,12 @@ Source: <https://forum.sources.ru>
       result:=false;
       if not OpenProcessToken(GetCurrentProcess,TOKEN_ADJUST_PRIVILEGES,hToken) then exit;
       try
-         if not LookupPrivilegeValue(nil,'SeDebugPrivilege', tp.Privileges[0].Luid) then exit;
-          tp.Privileges[0].Attributes:=SE_PRIVILEGE_ENABLED;
-          tp.PrivilegeCount:=1;
-          result:=AdjustTokenPrivileges(hToken,false,tp,0,nil,rl) and (GetLastError=0)
+        if not LookupPrivilegeValue(nil,'SeDebugPrivilege', tp.Privileges[0].Luid) then exit;
+        tp.Privileges[0].Attributes:=SE_PRIVILEGE_ENABLED;
+        tp.PrivilegeCount:=1;
+        result:=AdjustTokenPrivileges(hToken,false,tp,0,nil,rl) and (GetLastError=0)
       finally
-         CloseHandle(hToken);
+        CloseHandle(hToken);
       end
     end;
      

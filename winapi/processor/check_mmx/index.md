@@ -183,15 +183,15 @@ Date: 17.07.2002
     begin
       TempCheck := 1;
       asm
-      push ebx
-      mov eax,1
-      db $0F,$A2
-      test edx,$800000
-      jz @NOMMX
-      mov edx,0
-      mov TempCheck,edx
+        push ebx
+        mov eax,1
+        db $0F,$A2
+        test edx,$800000
+        jz @NOMMX
+        mov edx,0
+        mov TempCheck,edx
       @NOMMX:
-      pop ebx
+        pop ebx
       end;
       CheckMMX := (TempCheck = 0);
     end;

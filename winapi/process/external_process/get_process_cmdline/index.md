@@ -24,10 +24,11 @@ Source: <https://forum.sources.ru>
      try
        ret:=NtQueryInformationProcess(h,ProcessBasicInformation,@pbi,sizeof(pbi),@r);
        if ret=STATUS_SUCCESS then
-        if ReadProcessMemory(h,pbi.PebBaseAddress.ProcessParameters.CommandLine.Buffer,
-                               PWideChar(ws),
-                               pbi.PebBaseAddress.ProcessParameters.CommandLine.Length,
-                               r) then
+        if ReadProcessMemory(h,
+                             pbi.PebBaseAddress.ProcessParameters.CommandLine.Buffer,
+                             PWideChar(ws),
+                             pbi.PebBaseAddress.ProcessParameters.CommandLine.Length,
+                             r) then
        result:=string(ws);
      finally
       closehandle(h)

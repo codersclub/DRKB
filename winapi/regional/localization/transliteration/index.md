@@ -40,7 +40,8 @@ Date: 01.01.2007
                         ['+']+['=']+['\']+['|']+[';']+[':']+
                         ['"']+['{']+['<']+['>']+[',']+['.']+
                         [' ']+['?']+['/']+['№']+['^'])
-                     then s:=s+OldName[i];
+                     then
+         s:=s+OldName[i];
       if OldName[i] in ['А','Б','а','б'] then
          s:=s+chr(ord(OldName[i])-127);
       if OldName[i] in ['В','в'] then

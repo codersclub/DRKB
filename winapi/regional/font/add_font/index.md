@@ -12,7 +12,7 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 
     AddFontResource('путь к фонту\Algerian.ttf');
     
-    Объект.Font.Name:="Algerian";
+    Объект.Font.Name:='Algerian';
 
 Удалить шрифт:
 

