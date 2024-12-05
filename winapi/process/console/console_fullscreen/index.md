@@ -60,8 +60,8 @@ Source: <https://delphiworld.narod.ru>
       Result := False; 
       hKernel := GetModuleHandle('kernel32.dll'); 
       if (hKernel > 0) then 
-      begin @SetConsoleDisplayMode := 
-          GetProcAddress(hKernel, 'SetConsoleDisplayMode'); 
+      begin
+        @SetConsoleDisplayMode := GetProcAddress(hKernel, 'SetConsoleDisplayMode'); 
         if Assigned(SetConsoleDisplayMode) then 
         begin 
           Result := SetConsoleDisplayMode(hOut, dwNewMode, lpdwOldMode); 

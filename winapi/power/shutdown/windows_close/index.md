@@ -8,5 +8,6 @@ Source: <https://forum.sources.ru>
 Как программно вызвать окно "Завершение работы Windows"?
 ======================================================
 
-    SendMessage (FindWindow ('Progman', 'Program Manager'), WM_CLOSE, 0, 0);
+    SendMessage (FindWindow ('Progman', 'Program Manager'),
+                 WM_CLOSE, 0, 0);
 

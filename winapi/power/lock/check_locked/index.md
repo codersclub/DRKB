@@ -1,11 +1,11 @@
 ---
-Title: How to check if the Workstation is locked?
+Title: Проверка блокировки рабочего стола компьютера
 Date: 01.01.2007
 Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-How to check if the Workstation is locked?
+Проверка блокировки рабочего стола компьютера
 ==========================================
 
     function IsWorkstationLocked: Boolean;

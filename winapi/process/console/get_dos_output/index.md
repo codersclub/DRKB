@@ -76,10 +76,10 @@ Source: <https://www.swissdelphicenter.ch>
            GENERIC_READ or GENERIC_WRITE,
            { access (read-write) mode }
            FILE_SHARE_READ or FILE_SHARE_WRITE,
-           { share mode } @SecAtrrs,                             { pointer to security attributes }
-           OPEN_ALWAYS,                           { how to create }
-           FILE_ATTRIBUTE_TEMPORARY,              { file attributes }
-           0);                                   { handle to file with attributes to copy }
+           { share mode } @SecAtrrs,  { pointer to security attributes }
+           OPEN_ALWAYS,               { how to create }
+           FILE_ATTRIBUTE_TEMPORARY,  { file attributes }
+           0);                        { handle to file with attributes to copy }
      
      
          { is hInputFile a valid handle? }
@@ -96,10 +96,10 @@ Source: <https://www.swissdelphicenter.ch>
            GENERIC_READ or GENERIC_WRITE,
            { access (read-write) mode }
            FILE_SHARE_READ or FILE_SHARE_WRITE,
-           { share mode } @SecAtrrs,                             { pointer to security attributes }
-           CREATE_ALWAYS,                         { how to create }
-           FILE_ATTRIBUTE_TEMPORARY,              { file attributes }
-           0);                                   { handle to file with attributes to copy }
+           { share mode } @SecAtrrs,  { pointer to security attributes }
+           CREATE_ALWAYS,             { how to create }
+           FILE_ATTRIBUTE_TEMPORARY,  { file attributes }
+           0);                        { handle to file with attributes to copy }
      
          { is hOutputFile a valid handle? }
          if hOutputFile = INVALID_HANDLE_VALUE then
@@ -118,18 +118,17 @@ Source: <https://www.swissdelphicenter.ch>
          StartupInfo.hStdInput   := hInputFile;
      
          { create the app }
-         Result := CreateProcess(nil,                           { pointer to name of executable module }
-           pCommandLine,
-           { pointer to command line string }
-           nil,                           { pointer to process security attributes }
-           nil,                           { pointer to thread security attributes }
-           True,                          { handle inheritance flag }
+         Result := CreateProcess(nil, { pointer to name of executable module }
+           pCommandLine,              { pointer to command line string }
+           nil,                       { pointer to process security attributes }
+           nil,                       { pointer to thread security attributes }
+           True,                      { handle inheritance flag }
            CREATE_NEW_CONSOLE or
-           REALTIME_PRIORITY_CLASS,       { creation flags }
-           nil,                           { pointer to new environment block }
-           nil,                           { pointer to current directory name }
-           StartupInfo,                   { pointer to STARTUPINFO }
-           ProcessInfo);                  { pointer to PROCESS_INF }
+           REALTIME_PRIORITY_CLASS,   { creation flags }
+           nil,                       { pointer to new environment block }
+           nil,                       { pointer to current directory name }
+           StartupInfo,               { pointer to STARTUPINFO }
+           ProcessInfo);              { pointer to PROCESS_INF }
      
          { wait for the app to finish its job and take the handles to free them later }
          if Result then

@@ -111,8 +111,8 @@ Source: <https://forum.sources.ru>
 Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 
     {
-    This function runs a program (console or batch) and adds its output
-    to Memo1
+    This function runs a program (console or batch)
+    and adds its output to Memo1
     }
      
     {....}

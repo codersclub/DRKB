@@ -1,6 +1,6 @@
 ---
 Title: Русификация консольных приложений в Delphi
-Source: Eugene Kasnerik, eugene1975@mail.ru
+Author: Eugene Kasnerik, eugene1975@mail.ru
 Date: 12.12.1999
 Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 ---

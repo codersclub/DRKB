@@ -31,9 +31,9 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
         CloseFile(Dosya);
       end;
     end;
-     
-    The following table lists the predefined constants provided for standard character sets: 
-     
+
+The following table lists the predefined constants provided for standard character sets: 
+
     type
       TFontCharset = 0..255;
      

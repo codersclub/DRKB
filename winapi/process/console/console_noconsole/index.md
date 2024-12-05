@@ -38,15 +38,12 @@ FreeConsole.
 Source: <https://www.swissdelphicenter.ch>
 
     { 
-     
       For implementing console input/output for non-console applications you 
       should use the AllocConsole and FreeConsole functions. 
       The AllocConsole function allocates a new console for the calling process. 
       The FreeConsole function detaches the calling process from its console. 
       Example below demonstrates using these functions: 
-     
     }
-     
      
     procedure TForm1.Button1Click(Sender: TObject);
     var

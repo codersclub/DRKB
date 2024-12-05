@@ -1,25 +1,22 @@
 ---
-Title: Address Windowing Extention (AWE)
+Title: Расширение адресной оболочки Windows (AWE - Address Windowing Extention)
 Date: 12.12.2002
 Author: Mystic (mystic2000@newmail.ru)
 ---
 
-Address Windowing Extention (AWE)
+Расширение адресной оболочки Windows (AWE - Address Windowing Extention)
 =================================
 
-Расширение адресной оболочки Windows
 
-[Описание работы с AWE](awe_basics/)
+- [Описание работы с AWE](awe_basics/)
 
 Функции для работы с AWE:
 
-[MapUserPhysicalPages](mapuserphysicalpages/)
+- [AllocateUserPhysicalPages](awe_allocateuserphysicalpages/)
 
-[AllocateUserPhysicalPages](allocateuserphysicalpages/)
+- [FreeUserPhysicalPages](awe_freeuserphysicalpages/)
 
-[MapUserPhysicalPagesScatter](mapuserphysicalpagesscatter/)
+- [MapUserPhysicalPages](awe_mapuserphysicalpages/)
 
-[FreeUserPhysicalPages](freeuserphysicalpages/)
+- [MapUserPhysicalPagesScatter](awe_mapuserphysicalpagesscatter/)
 
-
-© [Mystic](mailto:mystic2000@newmail.ru), 2002

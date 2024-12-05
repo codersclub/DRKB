@@ -501,16 +501,16 @@ Source: <https://forum.sources.ru>
     begin
       inherited Create( AOwner );
       //OnReceiveData := ReceiveData;
-      FComPort                   := pnCOM1;  // COM 1
-      FComPortBaudRate           := br9600;  // 9600 bauds
-      FComPortDataBits           := db8BITS; // 8 data bits
-      FComPortStopBits           := sb1BITS; // 1 stop bits
-      FComPortParity             := ptEVEN;  // even parity
-      FComPortHwHandshaking      := hhNONE;  // no hardware handshaking
-      FComPortSwHandshaking      := shNONE;  // no software handshaking
-      FComPortInBufSize          := 2048;    // input buffer of 512 ? bytes
-      FComPortOutBufSize         := 2048;    // output buffer of 512 ? bytes
-      FTimeOut                   := 30;      // sec until timeout
+      FComPort              := pnCOM1;  // COM 1
+      FComPortBaudRate      := br9600;  // 9600 bauds
+      FComPortDataBits      := db8BITS; // 8 data bits
+      FComPortStopBits      := sb1BITS; // 1 stop bits
+      FComPortParity        := ptEVEN;  // even parity
+      FComPortHwHandshaking := hhNONE;  // no hardware handshaking
+      FComPortSwHandshaking := shNONE;  // no software handshaking
+      FComPortInBufSize     := 2048;    // input buffer of 512 ? bytes
+      FComPortOutBufSize    := 2048;    // output buffer of 512 ? bytes
+      FTimeOut              := 30;      // sec until timeout
     end;
      
     function  TRS232.ReadString(VAR aResStr: string; aCount: word ): boolean;

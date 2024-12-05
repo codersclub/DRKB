@@ -166,13 +166,13 @@ Console Shutdown Demo:
       if HasParam('?') or (ParamCount = 0) then 
       begin 
         Writeln('Usage:    shutdown [-akrhfnc] [-t secs]'); 
-        Writeln('                  -k:      do not really shutdown, only warn.'); 
-        Writeln('                  -r:      reboot after shutdown.'); 
-        Writeln('                  -h:      halt after shutdown.'); 
-        Writeln('                  -p:      power off after shutdown'); 
-        Writeln('                  -l:      log off only'); 
-        Writeln('                  -n:      kill apps that do not want to die.'); 
-        Writeln('                  -c:      cancel a running shutdown.'); 
+        Writeln('          -k:      do not really shutdown, only warn.'); 
+        Writeln('          -r:      reboot after shutdown.'); 
+        Writeln('          -h:      halt after shutdown.'); 
+        Writeln('          -p:      power off after shutdown'); 
+        Writeln('          -l:      log off only'); 
+        Writeln('          -n:      kill apps that do not want to die.'); 
+        Writeln('          -c:      cancel a running shutdown.'); 
       end 
       else 
       begin 

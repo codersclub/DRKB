@@ -95,7 +95,7 @@ Id: 01683
 
 Author: Song
 
-Source: Vingrad.ru [http://forum.vingrad.ru](http://forum.vingrad.ru) (.weblink target=weblink)
+Source: Vingrad.ru <http://forum.vingrad.ru>
 
 exitkernel очень радикальный способ потому что не сохраняются настройки рабочего стола,
 ini файлы и другие установки, зато быстро.
@@ -284,13 +284,13 @@ begin
   if HasParam('?') or (ParamCount = 0) then 
   begin 
      Writeln('Usage:    shutdown [-akrhfnc] [-t secs]');
-     Writeln('                  -k:      dont really shutdown, only warn.');
-     Writeln('                  -r:      reboot after shutdown.');
-     Writeln('                  -h:      halt after shutdown.');
-     Writeln('                  -p:      power off after shutdown');
-     Writeln('                  -l:      log off only');
-     Writeln('                  -n:      kill apps that dont want to die.');
-     Writeln('                  -c:      cancel a running shutdown.');
+     Writeln('          -k:      dont really shutdown, only warn.');
+     Writeln('          -r:      reboot after shutdown.');
+     Writeln('          -h:      halt after shutdown.');
+     Writeln('          -p:      power off after shutdown');
+     Writeln('          -l:      log off only');
+     Writeln('          -n:      kill apps that dont want to die.');
+     Writeln('          -c:      cancel a running shutdown.');
   end 
   else 
   begin 

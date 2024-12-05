@@ -1,6 +1,7 @@
 ---
 Title: Библиотека для работы с Bluetooth
-Date: 01.01.2007
+Date: 12.12.2006
+Author: Mike B. Petrichenko, pmb_stv@mail.ru
 ---
 
 
@@ -74,7 +75,7 @@ Date: 01.01.2007
       _BLUETOOTH_ADDRESS = record
         case Integer of
           0: (ullLong: BTH_ADDR);       //  easier to compare again BLUETOOTH_NULL_ADDRESS
-          1: (rgBytes: array [0..5] of Byte);   //  easier to format when broken out
+          1: (rgBytes: array [0..5] of Byte); //  easier to format when broken out
       end;
       {$EXTERNALSYM _BLUETOOTH_ADDRESS}
       BLUETOOTH_ADDRESS = _BLUETOOTH_ADDRESS;
@@ -134,16 +135,17 @@ Date: 01.01.2007
     //
     //  Parameters:
     //      pbtfrp
-    //          A pointer to a BLUETOOTH_FIND_RADIO_PARAMS structure. The dwSize 
-    //          member of this structure must match the sizeof the of the structure.
+    //          A pointer to a BLUETOOTH_FIND_RADIO_PARAMS structure.
+    //          The dwSize member of this structure must match the sizeof
+    //          the of the structure.
     //
     //      phRadio
     //          A pointer where the first radio HANDLE enumerated will be returned.
     //
     //  Return Values:
     //      NULL
-    //          Error opening radios or no devices found. Use GetLastError() for
-    //          more info.
+    //          Error opening radios or no devices found.
+    //          Use GetLastError() for more info.
     //
     //          ERROR_INVALID_PARAMETER
     //              pbtfrp parameter is NULL.
@@ -160,7 +162,8 @@ Date: 01.01.2007
     //          Success. The return handle is valid and phRadio points to a valid handle.
     //
      
-    function BluetoothFindFirstRadio(const pbtfrp: PBlueToothFindRadioParams; var phRadio: THandle): HBLUETOOTH_RADIO_FIND; stdcall;
+    function BluetoothFindFirstRadio(const pbtfrp: PBlueToothFindRadioParams; var phRadio: THandle):
+             HBLUETOOTH_RADIO_FIND; stdcall;
     {$EXTERNALSYM BluetoothFindFirstRadio}
      
     //
@@ -194,7 +197,8 @@ Date: 01.01.2007
     //          other Win32 errors
     //
      
-    function BluetoothFindNextRadio(hFind: HBLUETOOTH_RADIO_FIND; var phRadio: THandle): BOOL; stdcall;
+    function BluetoothFindNextRadio(hFind: HBLUETOOTH_RADIO_FIND; var phRadio: THandle):
+             BOOL; stdcall;
     {$EXTERNALSYM BluetoothFindNextRadio}
      
     //
@@ -227,14 +231,15 @@ Date: 01.01.2007
      
     type
       _BLUETOOTH_RADIO_INFO = record
-        dwSize: DWORD;                               // Size, in bytes, of this entire data structure
-        address: BLUETOOTH_ADDRESS;                  // Address of the local radio
-        szName: array [0..BLUETOOTH_MAX_NAME_SIZE - 1] of WideChar;    // Name of the local radio
-        ulClassofDevice: ULONG;                      // Class of device for the local radio
-        lmpSubversion: Word;                       // lmpSubversion, manufacturer specifc.
-        manufacturer: Word;                        // Manufacturer of the radio, BTH_MFG_Xxx value.  For the most up to date
-                                                    // list, goto the Bluetooth specification website and get the Bluetooth
-                                                    // assigned numbers document.
+        dwSize: DWORD;               // Size, in bytes, of this entire data structure
+        address: BLUETOOTH_ADDRESS;  // Address of the local radio
+        szName: array [0..BLUETOOTH_MAX_NAME_SIZE - 1] of WideChar; // Name of the local radio
+        ulClassofDevice: ULONG;      // Class of device for the local radio
+        lmpSubversion: Word;         // lmpSubversion, manufacturer specifc.
+        manufacturer: Word;          // Manufacturer of the radio, BTH_MFG_Xxx value.
+                                     // For the most up to date list,
+                                     // goto the Bluetooth specification website
+                                     // and get the Bluetooth assigned numbers document.
       end;
       {$EXTERNALSYM _BLUETOOTH_RADIO_INFO}
       BLUETOOTH_RADIO_INFO = _BLUETOOTH_RADIO_INFO;
@@ -254,8 +259,8 @@ Date: 01.01.2007
     //          et al or SetupDiEnumerateDeviceInterfaces()
     //
     //      pRadioInfo
-    //          Radio information to be filled in. The dwSize member must match the 
-    //          size of the structure.
+    //          Radio information to be filled in.
+    //          The dwSize member must match the size of the structure.
     //
     //  Return Values:
     //      ERROR_SUCCESS
@@ -270,7 +275,8 @@ Date: 01.01.2007
     //      other Win32 error codes.
     //
      
-    function BluetoothGetRadioInfo(hRadio: THandle; var pRadioInfo: BLUETOOTH_RADIO_INFO): DWORD; stdcall;
+    function BluetoothGetRadioInfo(hRadio: THandle; var pRadioInfo: BLUETOOTH_RADIO_INFO):
+             DWORD; stdcall;
     {$EXTERNALSYM BluetoothGetRadioInfo}
      
     // ***************************************************************************
@@ -281,14 +287,14 @@ Date: 01.01.2007
      
     type
       _BLUETOOTH_DEVICE_INFO = record
-        dwSize: DWORD;                             //  size, in bytes, of this structure - must be the sizeof(BLUETOOTH_DEVICE_INFO)
-        Address: BLUETOOTH_ADDRESS;                  //  Bluetooth address
-        ulClassofDevice: ULONG;                    //  Bluetooth "Class of Device"
-        fConnected: BOOL;                         //  Device connected/in use
-        fRemembered: BOOL;                        //  Device remembered
-        fAuthenticated: BOOL;                     //  Device authenticated/paired/bonded
-        stLastSeen: SYSTEMTIME;                     //  Last time the device was seen
-        stLastUsed: SYSTEMTIME;                     //  Last time the device was used for other than RNR, inquiry, or SDP
+        dwSize: DWORD;                 //  size, in bytes, of this structure - must be the sizeof(BLUETOOTH_DEVICE_INFO)
+        Address: BLUETOOTH_ADDRESS;    //  Bluetooth address
+        ulClassofDevice: ULONG;        //  Bluetooth "Class of Device"
+        fConnected: BOOL;              //  Device connected/in use
+        fRemembered: BOOL;             //  Device remembered
+        fAuthenticated: BOOL;          //  Device authenticated/paired/bonded
+        stLastSeen: SYSTEMTIME;        //  Last time the device was seen
+        stLastUsed: SYSTEMTIME;        //  Last time the device was used for other than RNR, inquiry, or SDP
         szName: array [0..BLUETOOTH_MAX_NAME_SIZE - 1] of WideChar;  //  Name of the device
       end;
       {$EXTERNALSYM _BLUETOOTH_DEVICE_INFO}
@@ -334,17 +340,17 @@ Date: 01.01.2007
      
     type
       _BLUETOOTH_DEVICE_SEARCH_PARAMS = record
-        dwSize: DWORD;                 //  IN  sizeof this structure
-     
+        dwSize: DWORD;                //  IN  sizeof this structure
         fReturnAuthenticated: BOOL;   //  IN  return authenticated devices
         fReturnRemembered: BOOL;      //  IN  return remembered devices
         fReturnUnknown: BOOL;         //  IN  return unknown devices
         fReturnConnected: BOOL;       //  IN  return connected devices
      
         fIssueInquiry: BOOL;          //  IN  issue a new inquiry
-        cTimeoutMultiplier: UCHAR;     //  IN  timeout for the inquiry
+        cTimeoutMultiplier: UCHAR;    //  IN  timeout for the inquiry
      
-        hRadio: THandle;                 //  IN  handle to radio to enumerate - NULL == all radios will be searched
+        hRadio: THandle;              //  IN  handle to radio to enumerate -
+                                      //      NULL == all radios will be searched
       end;
       {$EXTERNALSYM _BLUETOOTH_DEVICE_SEARCH_PARAMS}
       BLUETOOTH_DEVICE_SEARCH_PARAMS = _BLUETOOTH_DEVICE_SEARCH_PARAMS;
@@ -587,8 +593,8 @@ Date: 01.01.2007
      
     type
       _BLUETOOTH_COD_PAIRS = record
-        ulCODMask: ULONG;                          //  ClassOfDevice mask to compare
-        pcszDescription: LPWSTR;                    //  Descriptive string of mask
+        ulCODMask: ULONG;                   //  ClassOfDevice mask to compare
+        pcszDescription: LPWSTR;            //  Descriptive string of mask
       end;
       {$EXTERNALSYM _BLUETOOTH_COD_PAIRS}
       BLUETOOTH_COD_PAIRS = _BLUETOOTH_COD_PAIRS;
@@ -600,33 +606,33 @@ Date: 01.01.2007
       {$EXTERNALSYM PFN_DEVICE_CALLBACK}
      
       _BLUETOOTH_SELECT_DEVICE_PARAMS = record
-        dwSize: DWORD;                             //  IN  sizeof this structure
+        dwSize: DWORD;                          //  IN  sizeof this structure
      
-        cNumOfClasses: ULONG;                      //  IN  Number in prgClassOfDevice - if ZERO search for all devices
-        prgClassOfDevices: PBlueToothCodPairs;    //  IN  Array of CODs to find.
+        cNumOfClasses: ULONG;                   //  IN  Number in prgClassOfDevice - if ZERO search for all devices
+        prgClassOfDevices: PBlueToothCodPairs;  //  IN  Array of CODs to find.
      
-        pszInfo: LPWSTR;                            //  IN  If not NULL, sets the "information" text
+        pszInfo: LPWSTR;                        //  IN  If not NULL, sets the "information" text
      
-        hwndParent: HWND;                         //  IN  parent window - NULL == no parent
+        hwndParent: HWND;                       //  IN  parent window - NULL == no parent
      
-        fForceAuthentication: BOOL;               //  IN  If TRUE, authenication will be forced before returning
-        fShowAuthenticated: BOOL;                 //  IN  If TRUE, authenticated devices will be shown in the picker
-        fShowRemembered: BOOL;                    //  IN  If TRUE, remembered devices will be shown in the picker
-        fShowUnknown: BOOL;                       //  IN  If TRUE, unknown devices that are not authenticated or "remember" will be shown.
+        fForceAuthentication: BOOL;             //  IN  If TRUE, authenication will be forced before returning
+        fShowAuthenticated: BOOL;               //  IN  If TRUE, authenticated devices will be shown in the picker
+        fShowRemembered: BOOL;                  //  IN  If TRUE, remembered devices will be shown in the picker
+        fShowUnknown: BOOL;                     //  IN  If TRUE, unknown devices that are not authenticated or "remember" will be shown.
      
-        fAddNewDeviceWizard: BOOL;                //  IN  If TRUE, invokes the add new device wizard.
-        fSkipServicesPage: BOOL;                  //  IN  If TRUE, skips the "Services" page in the wizard.
+        fAddNewDeviceWizard: BOOL;              //  IN  If TRUE, invokes the add new device wizard.
+        fSkipServicesPage: BOOL;                //  IN  If TRUE, skips the "Services" page in the wizard.
      
-        pfnDeviceCallback: PFN_DEVICE_CALLBACK;      //  IN  If non-NULL, a callback that will be called for each device. If the
-                                                    //      the callback returns TRUE, the item will be added. If the callback is
-                                                    //      is FALSE, the item will not be shown.
-        pvParam: Pointer;                            //  IN  Parameter to be passed to pfnDeviceCallback as the pvParam.
+        pfnDeviceCallback: PFN_DEVICE_CALLBACK; //  IN  If non-NULL, a callback that will be called for each device. If the
+                                                //      the callback returns TRUE, the item will be added. If the callback is
+                                                //      is FALSE, the item will not be shown.
+        pvParam: Pointer;                       //  IN  Parameter to be passed to pfnDeviceCallback as the pvParam.
      
-        cNumDevices: DWORD;                        //  IN  number calles wants - ZERO == no limit.
-                                                    //  OUT the number of devices returned.
+        cNumDevices: DWORD;                     //  IN  number calles wants - ZERO == no limit.
+                                                //  OUT the number of devices returned.
      
-        pDevices: PBLUETOOTH_DEVICE_INFO;           //  OUT pointer to an array for BLUETOOTH_DEVICE_INFOs.
-                                                    //      call BluetoothSelectDevicesFree() to free
+        pDevices: PBLUETOOTH_DEVICE_INFO;       //  OUT pointer to an array for BLUETOOTH_DEVICE_INFOs.
+                                                //      call BluetoothSelectDevicesFree() to free
       end;
       {$EXTERNALSYM _BLUETOOTH_SELECT_DEVICE_PARAMS}
       BLUETOOTH_SELECT_DEVICE_PARAMS = _BLUETOOTH_SELECT_DEVICE_PARAMS;

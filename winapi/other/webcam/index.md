@@ -8,8 +8,7 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 Как работать с web-камерой?
 ===========================
 
-First of all, get the SDK at
-http://developer.logitech.comhttp://developer.logitech.com
+First of all, get the SDK at <http://developer.logitech.com>
 
 After installation, open delphi and Import ActiveX Control VPortal2 from
 the list. Now, create a new form, and put a VideoPortal from the ActiveX
@@ -73,7 +72,7 @@ Here is a copy a VideoPortal.Pas (constants).
     const
       UIELEMENT_160x120 = 6;
      
-      // Camera status codes, returned by CameraState property
+    // Camera status codes, returned by CameraState property
     const
       CAMERA_OK = 0;
     const

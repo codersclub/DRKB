@@ -18,8 +18,7 @@ Source: <https://forum.sources.ru>
     begin 
       reg := TRegistry.Create; 
       reg.RootKey := HKEY_LOCAL_MACHINE; 
-      reg.OpenKey('hardware\devicemap\serialcomm', 
-                  false); 
+      reg.OpenKey('hardware\devicemap\serialcomm', false); 
       ts := TStringList.Create; 
       reg.GetValueNames(ts); 
       for i := 0 to ts.Count -1 do begin 

@@ -51,9 +51,10 @@ positional information). Это можно сделать, либо опраши
 одно-единственное изображение, более или менее похожее на прицел
 джойстика (рис.1):
 
-![clip0052](clip0052.gif){.center}
-
+:::{.center}
+![clip0052](clip0052.gif)  
 Рис.1. Главная форма приложения для тестирования джойстика
+:::
 
 Интерфейс приложения готов. Теперь можно приступить к созданию кода.
 
@@ -92,7 +93,7 @@ joyGetPosEx и убедиться, что она не возвращает ко�
 выведем в компонент TMemo информацию о некоторые из них. Сведения об
 остальных можно получить аналогичным способом.
 
-    Memo1->Lines->Add("Номер устройства -  "+ IntToStr(jnum));
+    Memo1->Lines->Add("Номер устройства - " + IntToStr(jnum));
     Memo1->Lines->Add("Наименование - " + AnsiString(JoyCaps.szPname));
     Memo1->Lines->Add("Число кнопок - " + IntToStr(JoyCaps.wNumButtons));
 
@@ -151,11 +152,12 @@ joySetCapture предназначена для перенаправления �
      int jnum;  JOYCAPS JoyCaps;
      bool connect;
      int stepX,stepY;
-      TPoint Pos;
+     TPoint Pos;
      
-            // User declarations
-    public:                // User declarations
-            __fastcall TForm1(TComponent* Owner);
+     // User declarations
+    public:
+      // User declarations
+      __fastcall TForm1(TComponent* Owner);
     BEGIN_MESSAGE_MAP
       MESSAGE_HANDLER(MM_JOY1BUTTONDOWN,TMessage,UpdButton)
       MESSAGE_HANDLER(MM_JOY1BUTTONUP,TMessage,UpdButton)
@@ -169,7 +171,9 @@ joySetCapture предназначена для перенаправления �
     extern PACKAGE TForm1 *Form1;
     //---------------------------------------------------------------------------
     #endif
-    Сам исходный текст модуля, связанного с главной формой приложения, имеет вид: 
+
+Сам исходный текст модуля, связанного с главной формой приложения, имеет вид:
+
     //---------------------------------------------------------------------------
     #include <vcl.h>
     #pragma hdrstop
@@ -180,68 +184,68 @@ joySetCapture предназначена для перенаправления �
     #pragma resource "*.dfm"
     TForm1 *Form1;
     //---------------------------------------------------------------------------
-    __fastcall TForm1::TForm1(TComponent* Owner)
-            : TForm(Owner)
+    __fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner)
     {
     }
     //---------------------------------------------------------------------------
     void __fastcall TForm1::FormCreate(TObject *Sender)
     {
-       MMRESULT jr;    JOYINFOEX JoyInfo;
-       int joycount=joyGetNumDevs();
+      MMRESULT jr;
+      JOYINFOEX JoyInfo;
+      int joycount=joyGetNumDevs();
       if (joycount=0) Memo1->Lines->Add("Драйверы джойстика не установлены");
       else
       {
-      connect=false;
-    jr=joyGetPosEx(JOYSTICKID1,&JoyInfo);
-       if (jr ==JOYERR_NOERROR)
-       {
-       connect=true;
-        jnum= JOYSTICKID1;
-           }
-         else if (jr == MMSYSERR_INVALPARAM)
-        ShowMessage("Ошибка определения наличия джойстика");
-       else if((jr=joyGetPosEx(JOYSTICKID2,&JoyInfo)) == JOYERR_NOERROR)
+        connect=false;
+        jr=joyGetPosEx(JOYSTICKID1,&JoyInfo);
+        if (jr ==JOYERR_NOERROR)
+        {
+          connect=true;
+          jnum= JOYSTICKID1;
+        }
+        else if (jr == MMSYSERR_INVALPARAM)
+          ShowMessage("Ошибка определения наличия джойстика");
+        else if((jr=joyGetPosEx(JOYSTICKID2,&JoyInfo)) == JOYERR_NOERROR)
         {
           connect = true;
           jnum= JOYSTICKID2;
-         }
-    }
+        }
+      }
       joyGetDevCaps(jnum,&JoyCaps, sizeof(JOYCAPS));
       if (connect) Memo1->Lines->Add("Джойстик подключен") ;
       else  Memo1->Lines->Add("Джойстик не подключен")    ;
-       Memo1->Lines->Add("Номер устройства -  "+ IntToStr(jnum));
-       Memo1->Lines->Add("Наименование - " + AnsiString(JoyCaps.szPname));
-    Memo1->Lines->Add("Число кнопок - " +   IntToStr(JoyCaps.wNumButtons));
-    if (connect)  joySetCapture(Handle,jnum,2*JoyCaps.wPeriodMin,FALSE);
-    stepX = (JoyCaps.wXmax - JoyCaps.wXmin)/ PaintBox1->Width;
-    stepY = (JoyCaps.wYmax - JoyCaps.wYmin)/ PaintBox1->Height;
+        Memo1->Lines->Add("Номер устройства -  "+ IntToStr(jnum));
+      Memo1->Lines->Add("Наименование - " + AnsiString(JoyCaps.szPname));
+      Memo1->Lines->Add("Число кнопок - " +   IntToStr(JoyCaps.wNumButtons));
+      if (connect)  joySetCapture(Handle,jnum,2*JoyCaps.wPeriodMin,FALSE);
+      stepX = (JoyCaps.wXmax - JoyCaps.wXmin)/ PaintBox1->Width;
+      stepY = (JoyCaps.wYmax - JoyCaps.wYmin)/ PaintBox1->Height;
     }
     //---------------------------------------------------------------------------
     void __fastcall TForm1::UpdButton(TMessage &msg)
     {
-     Shape1->Visible= (msg.WParam &JOY_BUTTON1);
-     Shape2->Visible= (msg.WParam &JOY_BUTTON2);
-     Shape3->Visible= (msg.WParam &JOY_BUTTON3);
-     Shape4->Visible= (msg.WParam &JOY_BUTTON4);
+      Shape1->Visible= (msg.WParam &JOY_BUTTON1);
+      Shape2->Visible= (msg.WParam &JOY_BUTTON2);
+      Shape3->Visible= (msg.WParam &JOY_BUTTON3);
+      Shape4->Visible= (msg.WParam &JOY_BUTTON4);
     }
     //---------------------------------------------------------------------------
     void __fastcall TForm1::UpdCoord(TMessage &msg)
     {
-    JOYINFO JoyInfo;
-    TCanvas *pCanvas = PaintBox1->Canvas;
-    pCanvas->Brush->Color=Form1->Color;
-    pCanvas->FillRect(Rect(0,0,PaintBox1->Width,PaintBox1->Height));
-    Pos.x =  msg.LParamLo;
-    Pos.y =  msg.LParamHi;
-    int x=(Pos.x-JoyCaps.wXmin)/stepX-ImageList1->Width/2;
-    int y=(Pos.y-JoyCaps.wYmin)/stepY-ImageList1->Height/2;
-    ImageList1->Draw(pCanvas,x,y,0,true);
+      JOYINFO JoyInfo;
+      TCanvas *pCanvas = PaintBox1->Canvas;
+      pCanvas->Brush->Color=Form1->Color;
+      pCanvas->FillRect(Rect(0,0,PaintBox1->Width,PaintBox1->Height));
+      Pos.x =  msg.LParamLo;
+      Pos.y =  msg.LParamHi;
+      int x=(Pos.x-JoyCaps.wXmin)/stepX-ImageList1->Width/2;
+      int y=(Pos.y-JoyCaps.wYmin)/stepY-ImageList1->Height/2;
+      ImageList1->Draw(pCanvas,x,y,0,true);
     }
     //---------------------------------------------------------------------------
     void __fastcall TForm1::FormDestroy(TObject *Sender)
     {
-    if (connect) joyReleaseCapture(jnum);
+      if (connect) joyReleaseCapture(jnum);
     }
     //---------------------------------------------------------------------------
 
@@ -251,11 +255,12 @@ joySetCapture предназначена для перенаправления �
 а при нажатии на кнопки на экране будут появляться красные эллипсы в
 соответствующих местах (рис.2).
 
-![clip0051](clip0051.gif){.center}
-
+:::{.center}
+![clip0051](clip0051.gif)  
 Рис.2. Приложение для тестирования джойстика на этапе выполнения
+:::
 
-**P.S.**
+**P.S.**  
 для дельфи практически всё так же, использованные функции api
 находятся в модуле mmsystem.pas
 

@@ -68,9 +68,10 @@ Source: <https://delphiworld.narod.ru>
      
       //установка требуемых параметров
       GetCommState(hFile, DCB); //чтение текущих параметров порта
-      PortParam := 'baud=' + IntToStr(BaudRate) + ' parity=' + Parity +
-        ' data=8 stop=1 ' +
-        'octs=off';
+      PortParam := 'baud=' + IntToStr(BaudRate) +
+                   ' parity=' + Parity +
+                   ' data=8 stop=1 ' +
+                   'octs=off';
       if BuildCommDCB(PChar(PortParam), DCB) then
       begin
         result := SetCommState(hFile, DCB) and

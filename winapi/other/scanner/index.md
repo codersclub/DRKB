@@ -56,8 +56,8 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
       MSG_QUERYSUPPORT = $0008; // Get supported operations on the
       // capacities
      
-    // Messages used with DAT_NULL
-    // ---------------------------
+      // Messages used with DAT_NULL
+      // ---------------------------
       MSG_XFERREADY = $0101; // The data source has data ready
       MSG_CLOSEDSREQ = $0102; // Request for the application to close
       // the Data Source
@@ -81,8 +81,8 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
       MSG_USERSELECT = $0403; // Put up a dialog of all Data Sources
       // The user can select a Data Source
      
-    // Messages used with a pointer to a DAT_USERINTERFACE structure
-    // -------------------------------------------------------------
+      // Messages used with a pointer to a DAT_USERINTERFACE structure
+      // -------------------------------------------------------------
       MSG_DISABLEDS = $0501; // Disable data transfer in the Data
       // Source
       MSG_ENABLEDS = $0502; // Enable data transfer in the Data
@@ -90,8 +90,8 @@ Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
       MSG_ENABLEDSUIONLY = $0503; // Enable for saving Data Source state
       // only
      
-    // Messages used with a pointer to a DAT_EVENT structure
-    // -----------------------------------------------------
+      // Messages used with a pointer to a DAT_EVENT structure
+      // -----------------------------------------------------
       MSG_PROCESSEVENT = $0601;
      
       // Messages used with a pointer to a DAT_PENDINGXFERS structure

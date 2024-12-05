@@ -1,11 +1,11 @@
 ---
-Title: Detect if a USB device is connected or disconnected?
+Title: Как проверить, подключено или отключено USB устройство?
 Date: 01.01.2007
 Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
 
-Detect if a USB device is connected or disconnected?
+Как проверить, подключено или отключено USB устройство?
 ====================================================
 
     unit U_Usb;
