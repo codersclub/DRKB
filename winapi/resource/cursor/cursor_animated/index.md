@@ -11,26 +11,19 @@ Date: 01.01.2007
 
 Source: Delphi Knowledge Base: <https://www.baltsoft.com/>
 
-Answer:
+Ответ:
 
-To use an animated cursor you have several options: load it from a file
-(using LoadImage or LoadCursorFromFile), load it from a resource (using
-LoadCursor) or even creating the cursor at runtime (using CreateCursor).
+Чтобы использовать анимированный курсор, у вас есть несколько вариантов: загрузить его из файла (используя LoadImage или LoadCursorFromFile), загрузить его из ресурса (используя LoadCursor) или даже создать курсор во время выполнения (используя CreateCursor).
 
-Note:
+Примечание:
 
-You should implement custom cursors as resources. Rather than create the
-cursors at run time, use the LoadCursor, LoadCursorFromFile, or
-LoadImage function to avoid device dependence, to simplify localization,
-and to enable applications to share cursor designs.
+Вам следует реализовать пользовательские курсоры как ресурсы. Вместо того чтобы создавать курсоры во время выполнения, используйте функцию LoadCursor, LoadCursorFromFile или LoadImage, чтобы избежать зависимости от устройства, упростить локализацию и позволить приложениям совместно использовать дизайн курсора.
 
-**Loading a cursor from a file**
+**Загрузка курсора из файла**
 
-The easiest way to load a cursor from a file is by using
-LoadCursorFromFile.
+Самый простой способ загрузить курсор из файла — использовать LoadCursorFromFile.
 
-This functions returns a handle to the loaded cursor that you should
-assign to your application Cursors array.
+Эта функция возвращает дескриптор загруженного курсора, который вы должны назначить массиву Cursors вашего приложения.
 
     var
       hCur: HCURSOR;
@@ -48,48 +41,42 @@ assign to your application Cursors array.
       Screen.Cursor := 1;
     end;
 
-You can also use LoadImage instead of LoadCursorFromFile like this: 
+Вы также можете использовать LoadImage вместо LoadCursorFromFile следующим образом:
+
 
     hCur := LoadImage(0, PChar(PChar('path_to_my_cursor')),
                       IMAGE_CURSOR, 0, 0,
                       LR_DEFAULTSIZE or LR_LOADFROMFILE);
 
-**Loading a cursor from a resource**
+**Загрузка курсора из ресурса**
 
-Before loading a cursor from a resource it\'s necessary to create the
-resource file with the cursor to be loaded.
+Перед загрузкой курсора из ресурса необходимо создать файл ресурса с загружаемым курсором.
 
-To do this create a file myResources.rc where you\'ll put the following
+Для этого создайте файл myResources.rc, в который поместите следующее
+
 
     #define ANICURSOR 21
     myCursor ANICURSOR "path_to_my_cursor"
 
-Because Borland\'s resource compiler does not understand the ANICURSOR
-resource type, so you have to use the numeric id (21).
+Поскольку компилятор ресурсов Borland не понимает тип ресурса ANICURSOR, вам придется использовать числовой идентификатор (21).
 
-Compile your resource file using "brcc32 myResources.rc" and include
-in the unit where you\'ll be loading the cursor, using {$R
-myResources.res}
+Скомпилируйте файл ресурсов с помощью "brcc32 myResources.rc" и включите его в модуль, в который вы будете загружать курсор, используя {$R myResources.res}
 
-Now, you just have to load the cursor from the resource instead of
-loading it from a file, using:
+Теперь вам просто нужно загрузить курсор из ресурса, а не из файла, используя:
+
 
     hCur := LoadCursor(HInstance, PChar('myCursor'));
 
-Remember that HInstance contains the instance handle of the application
-or library as provided by Windows. This variable it\'s very importante
-because it\'s the one used with many Windows API that work with current
-application resources.
+Помните, что HInstance содержит дескриптор экземпляра приложения или библиотеки, предоставляемый Windows. Эта переменная очень важна, поскольку она используется многими API Windows, которые работают с текущими ресурсами приложения.
 
-**Creating a cursor at runtime**
+**Создание курсора во время выполнения**
 
-Another way to use a cursor it\'s creating one at runtime. Why would you
-do that?
+Еще один способ использования курсора — это создание его во время выполнения. Зачем вам это делать?
 
-I don\'t know, it\'s your choice. I doubt you ever will create your
-cursors at runtime, anyway here it\'s way how to do it.
+Я не знаю, это ваш выбор. Я сомневаюсь, что вы когда-либо будете создавать свои курсоры во время выполнения, в любом случае, вот способ, как это сделать.
 
-**Define the cursor map**
+**Определение карты курсора**
+
 
     const
       // Yin cursor AND bitmask
@@ -132,7 +119,7 @@ cursors at runtime, anyway here it\'s way how to do it.
         $00, $00, $00, $00, $00, $00, $00, $00
         );    
 
-then create the cursor
+затем создайте курсор
 
     hCur := CreateCursor(HInstance, 19, 2, 32, 32,
                          @ANDmaskCursor, @XORmaskCursor);

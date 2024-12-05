@@ -1,18 +1,15 @@
 ---
-Title: Converting 16bit resource to 32bit
+Title: Преобразование 16-битного ресурса в 32-битный
 Date: 01.01.2007
 ---
 
-Converting 16bit resource to 32bit
+Преобразование 16-битного ресурса в 32-битный
 ==================================
 
-If you have the original source file (.rc) then you can simply recompile
-the .rc file to a .res file using the Borland Resource Command Line
-Compiler (brcc32.exe) located in the Delphi/C++ Builders bin directory.
-If you only have a .res file to work with, you will need to use a
-quality resource compiler/decompiler such as Borland\'s Resource
-Workshop. Versions of the Borland\'s Resource Workshop later than 4.5
-can extract, compile, and decompile both 16 and 32 bit resource files
-from a variety of sources including .res, .exe, .dll, drv, and .cpl
-files. The Borland Resource Workshop version 4.5 ship with the Borland
-RAD Pack product line
+Если у вас есть исходный файл (.rc), то вы можете просто перекомпилировать файл .rc в файл .res с помощью компилятора командной строки Borland Resource (brcc32.exe), расположенного в каталоге bin Delphi/C++ Builders.
+
+Если у вас есть только файл .res для работы, вам нужно будет использовать качественный компилятор/декомпилятор ресурсов, такой как Borland\'s Resource Workshop.
+
+Версии Borland\'s Resource Workshop более поздние, чем 4.5, могут извлекать, компилировать и декомпилировать как 16-, так и 32-битные файлы ресурсов из различных источников, включая файлы .res, .exe, .dll, drv и .cpl.
+
+Версия Borland Resource Workshop 4.5 поставляется с линейкой продуктов Borland RAD Pack.
