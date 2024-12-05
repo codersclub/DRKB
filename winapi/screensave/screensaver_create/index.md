@@ -31,8 +31,9 @@ Source: <https://forum.sources.ru>
 Вы должны быть уверены, что Ваша форма создана со стилем fsStayOnTop. Вы
 так же должны быть уверены, что только один экземпляр Вашей программы
 будет запущен в системе. И в заключении Вам необходимо включить
-директиву компилятора `{$D "Programname Screensaver"}` в Ваш проект
-(\*.dpr).
+в Ваш проект (\*.dpr) директиву компилятора:
+
+`{$D "Programname Screensaver"}`
 
 После того, как Вы скомпилируете программу, измените расширение файла на
 SCR и скопируйте его в Вашу системную папку \\WINDOWS\\SYSTEM .
@@ -886,63 +887,63 @@ Standard) и компонент SpinEdit (из палитры Samples): (При�
 пункт меню "View as Text" контекстного меню формы.)
 
     object Label1: TLabel
-    Left = 16
-    Top = 19
-    Width = 58
-    Height = 16
-    Alignment = taRightJustify
-    Caption = 'Сфер:'
+      Left = 16
+      Top = 19
+      Width = 58
+      Height = 16
+      Alignment = taRightJustify
+      Caption = 'Сфер:'
     end
     
     object Label2: TLabel
-    Left = 41
-    Top = 59
-    Width = 33
-    Height = 16
-    Alignment = taRightJustify
-    Caption = 'Размер:'
+      Left = 41
+      Top = 59
+      Width = 33
+      Height = 16
+      Alignment = taRightJustify
+      Caption = 'Размер:'
     end
     
     object Label3: TLabel
-    Left = 29
-    Top = 99
-    Width = 45
-    Height = 16
-    Alignment = taRightJustify
-    Caption = 'Скорость:'
+      Left = 29
+      Top = 99
+      Width = 45
+      Height = 16
+      Alignment = taRightJustify
+      Caption = 'Скорость:'
     end
     
     object spnSpheres: TSpinEdit
-    Left = 84
-    Top = 15
-    Width = 53
-    Height = 26
-    MaxValue = 500
-    MinValue = 1
-    TabOrder = 0
-    Value = 50
+      Left = 84
+      Top = 15
+      Width = 53
+      Height = 26
+      MaxValue = 500
+      MinValue = 1
+      TabOrder = 0
+      Value = 50
     end
     
     object spnSize: TSpinEdit
-    Left = 84
-    Top = 55
-    Width = 53
-    Height = 26
-    MaxValue = 250
-    MinValue = 50
-    TabOrder = 1
-    Value = 100
+      Left = 84
+      Top = 55
+      Width = 53
+      Height = 26
+      MaxValue = 250
+      MinValue = 50
+      TabOrder = 1
+      Value = 100
     end
     
     object spnSpeed: TSpinEdit
-    Left = 84
-    Top = 95
-    Width = 53
-    Height = 26
-    MaxValue = 10
-    MinValue = 1
-    TabOrder = 2
-    Value = 10
+      Left = 84
+      Top = 95
+      Width = 53
+      Height = 26
+      MaxValue = 10
+      MinValue = 1
+      TabOrder = 2
+      Value = 10
     end
 
 Наконец, нам необходимы три кнопки - OK, Отмена и Тест. Кнопка Тест не
@@ -952,31 +953,31 @@ Standard) и компонент SpinEdit (из палитры Samples): (При�
 "Additional":
 
     object btnOK: TBitBtn
-    Left = 153
-    Top = 11
-    Width = 89
-    Height = 34
-    TabOrder = 3
-    Kind = bkOK
+      Left = 153
+      Top = 11
+      Width = 89
+      Height = 34
+      TabOrder = 3
+      Kind = bkOK
     end
     
     object btnCancel: TBitBtn
-    Left = 153
-    Top = 51
-    Width = 89
-    Height = 34
-    TabOrder = 4
-    Kind = bkCancel
+      Left = 153
+      Top = 51
+      Width = 89
+      Height = 34
+      TabOrder = 4
+      Kind = bkCancel
     end
     
     object btnTest: TBitBtn
-    Left = 153
-    Top = 91
-    Width = 89
-    Height = 34
-    Caption = 'Тест...'
-    TabOrder = 5
-    Kind = bkIgnore
+      Left = 153
+      Top = 91
+      Width = 89
+      Height = 34
+      Caption = 'Тест...'
+      TabOrder = 5
+      Kind = bkIgnore
     end
 
 Для того, чтобы мы могли управлять формой и текущими значениями, нам
@@ -1433,101 +1434,101 @@ Cfg.dfm:
      
     object CfgFrm: TCfgFrm
       Left = 196
-        Top = 124
-        BorderIcons = [biSystemMenu]
-        BorderStyle = bsDialog
-        Caption = 'Конфигурация'
-        ClientHeight = 135
-        ClientWidth = 258
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'System'
-        Font.Style = []
-        PixelsPerInch = 96
-        Position = poScreenCenter
-        OnCreate = FormCreate
-        TextHeight = 16
-        object Label1: TLabel
+      Top = 124
+      BorderIcons = [biSystemMenu]
+      BorderStyle = bsDialog
+      Caption = 'Конфигурация'
+      ClientHeight = 135
+      ClientWidth = 258
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'System'
+      Font.Style = []
+      PixelsPerInch = 96
+      Position = poScreenCenter
+      OnCreate = FormCreate
+      TextHeight = 16
+      object Label1: TLabel
         Left = 16
-          Top = 19
-          Width = 58
-          Height = 16
-          Alignment = taRightJustify
-          Caption = 'Сфер:'
+        Top = 19
+        Width = 58
+        Height = 16
+        Alignment = taRightJustify
+        Caption = 'Сфер:'
       end
       object Label2: TLabel
         Left = 41
-          Top = 59
-          Width = 33
-          Height = 16
-          Alignment = taRightJustify
-          Caption = 'Размер:'
+        Top = 59
+        Width = 33
+        Height = 16
+        Alignment = taRightJustify
+        Caption = 'Размер:'
       end
       object Label3: TLabel
         Left = 29
-          Top = 99
-          Width = 45
-          Height = 16
-          Alignment = taRightJustify
-          Caption = 'Скорость:'
+        Top = 99
+        Width = 45
+        Height = 16
+        Alignment = taRightJustify
+        Caption = 'Скорость:'
       end
       object spnSpheres: TSpinEdit
         Left = 84
-          Top = 15
-          Width = 53
-          Height = 26
-          MaxValue = 500
-          MinValue = 1
-          TabOrder = 0
-          Value = 50
+        Top = 15
+        Width = 53
+        Height = 26
+        MaxValue = 500
+        MinValue = 1
+        TabOrder = 0
+        Value = 50
       end
       object spnSize: TSpinEdit
         Left = 84
-          Top = 55
-          Width = 53
-          Height = 26
-          MaxValue = 250
-          MinValue = 50
-          TabOrder = 1
-          Value = 100
+        Top = 55
+        Width = 53
+        Height = 26
+        MaxValue = 250
+        MinValue = 50
+        TabOrder = 1
+        Value = 100
       end
       object spnSpeed: TSpinEdit
         Left = 84
-          Top = 95
-          Width = 53
-          Height = 26
-          MaxValue = 10
-          MinValue = 1
-          TabOrder = 2
-          Value = 10
+        Top = 95
+        Width = 53
+        Height = 26
+        MaxValue = 10
+        MinValue = 1
+        TabOrder = 2
+        Value = 10
       end
       object btnOK: TBitBtn
         Left = 153
-          Top = 11
-          Width = 89
-          Height = 34
-          TabOrder = 3
-          OnClick = btnOKClick
-          Kind = bkOK
+        Top = 11
+        Width = 89
+        Height = 34
+        TabOrder = 3
+        OnClick = btnOKClick
+        Kind = bkOK
       end
       object btnCancel: TBitBtn
         Left = 153
-          Top = 51
-          Width = 89
-          Height = 34
-          TabOrder = 4
-          OnClick = btnCancelClick
-          Kind = bkCancel
+        Top = 51
+        Width = 89
+        Height = 34
+        TabOrder = 4
+        OnClick = btnCancelClick
+        Kind = bkCancel
       end
       object btnTest: TBitBtn
         Left = 153
-          Top = 91
-          Width = 89
-          Height = 34
-          Caption = 'Тест...'
-          TabOrder = 5
-          OnClick = btnTestClick
-          Kind = bkIgnore
+        Top = 91
+        Width = 89
+        Height = 34
+        Caption = 'Тест...'
+        TabOrder = 5
+        OnClick = btnTestClick
+        Kind = bkIgnore
       end
     end
 
@@ -1656,30 +1657,30 @@ SCRN.dfm:
      
     object ScrnFrm: TScrnFrm
       Left = 196
-        Top = 98
-        BorderIcons = []
-        BorderStyle = bsNone
-        Caption = 'ScrnFrm'
-        ClientHeight = 101
-        ClientWidth = 259
-        Color = clBlack
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'System'
-        Font.Style = []
-        FormStyle = fsStayOnTop
-        OldCreateOrder = True
-        OnActivate = FormActivate
-        OnHide = FormHide
-        OnShow = FormShow
-        PixelsPerInch = 96
-        TextHeight = 16
-        object tmrTick: TTimer
+      Top = 98
+      BorderIcons = []
+      BorderStyle = bsNone
+      Caption = 'ScrnFrm'
+      ClientHeight = 101
+      ClientWidth = 259
+      Color = clBlack
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'System'
+      Font.Style = []
+      FormStyle = fsStayOnTop
+      OldCreateOrder = True
+      OnActivate = FormActivate
+      OnHide = FormHide
+      OnShow = FormShow
+      PixelsPerInch = 96
+      TextHeight = 16
+      object tmrTick: TTimer
         Enabled = False
-          OnTimer = tmrTickTimer
-          Left = 65535
-          Top = 2
+        OnTimer = tmrTickTimer
+        Left = 65535
+        Top = 2
       end
     end
 
