@@ -1,7 +1,7 @@
 ---
 Title: Работа с ассоциациями файла
 Author: P. Below
-Date: 14.03.1999
+Date: 21.03.1999
 ---
 
 Работа с ассоциациями файла
@@ -14,18 +14,22 @@ Date: 14.03.1999
     Procedure RegisterFiletype(
                 Const extension, filetype, description,
                 verb: String; params: String );
-    Procedure RegisterFileIcon( Const filetype, iconsource: String;
-                                iconindex: Cardinal );
-    Function  FiletypeIsRegistered( Const extension, filetype: String ): Boolean;
+    Procedure RegisterFileIcon(
+                Const filetype, iconsource: String;
+                iconindex: Cardinal );
+    Function  FiletypeIsRegistered(
+                Const extension,
+                filetype: String ): Boolean;
      
     Implementation
      
     Uses Windows, Classes, SysUtils, Registry;
      
     ResourceString
-      eCannotCreateKey =
-       'Cannot create key %s, the user account may not have the required '+
-       'rights to create registry keys under HKEY_CLASSES_ROOT.';
+      eCannotCreateKey = 'Cannot create key %s, ' +
+                         'the user account may not have the '+
+                         'required rights to create registry '+
+                         'keys under HKEY_CLASSES_ROOT.';
      
     Type
       ERegistryError = Class( Exception );

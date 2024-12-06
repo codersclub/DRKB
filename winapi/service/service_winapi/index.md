@@ -1,7 +1,6 @@
 ---
 Title: Написание сервисов Windows NT на WinAPI
 Date: 01.01.2007
-Source: delphi.xonix.ru
 Source: <https://forum.sources.ru>
 ---
 
@@ -9,7 +8,7 @@ Source: <https://forum.sources.ru>
 =======================================
 
 
-Причиной написания этой статьи, как не странно, стала необходимость
+Причиной написания этой статьи, как ни странно, стала необходимость
 написания своего сервиса. Но в Borland\'е решили немного "порадовать"
 нас, пользователей Delphi 6 Personal, не добавив возможности создания
 сервисов (в остальных версиях Delphi 5 и 6 эта возможность имеется в
@@ -18,14 +17,14 @@ Source: <https://forum.sources.ru>
 многочисленными багами, а до пробы второго я не дошел, взглянув на
 исходник - модуль Forms в Uses это не только окошки, но и более 300
 килобайт "веса" программы. Бессмысленного увеличения размера не
-хотелось и пришлось творить свое.
+хотелось и пришлось творить своё.
 
 Так как сервис из воздуха не сотворишь, то мой исходник и эта статья
 очень сильно опираются на MSDN.
 
 Итак, приступим к написанию своего сервиса...
 
-Обычный Win32-сервис это обычная программа. Программу рекомендуется
+Обычный Win32-сервис - это обычная программа. Программу рекомендуется
 сделать консольной
 
     DELPHI MENU | Project | Options.. | Linker
@@ -193,20 +192,20 @@ SetServiceStatus и мы работаем :).
     begin
       ServiceStatus.dwServiceType      := SERVICE_WIN32;
       ServiceStatus.dwCurrentState     := SERVICE_START_PENDING;
-      ServiceStatus.dwControlsAccepted := SERVICE_ACCEPT_STOP 
-        or SERVICE_ACCEPT_PAUSE_CONTINUE;
+      ServiceStatus.dwControlsAccepted := SERVICE_ACCEPT_STOP
+                                       or SERVICE_ACCEPT_PAUSE_CONTINUE;
       ServiceStatus.dwWin32ExitCode           := 0;
       ServiceStatus.dwServiceSpecificExitCode := 0;
       ServiceStatus.dwCheckPoint              := 0;
       ServiceStatus.dwWaitHint                := 0;
      
-      ServiceStatusHandle := 
-               RegisterServiceCtrlHandler(ServiceName,@ServiceCtrlHandler);
-      if ServiceStatusHandle = 0 then WriteLn('RegisterServiceCtrlHandler Error');
+      ServiceStatusHandle := RegisterServiceCtrlHandler(ServiceName,@ServiceCtrlHandler);
+      if ServiceStatusHandle = 0 then
+        WriteLn('RegisterServiceCtrlHandler Error');
      
       Status :=ServiceInitialization(argc,argv,SpecificError);
-      if Status <> NO_ERROR
-       then begin
+      if Status <> NO_ERROR then
+      begin
         ServiceStatus.dwCurrentState := SERVICE_STOPPED;
         ServiceStatus.dwCheckPoint   := 0;
         ServiceStatus.dwWaitHint     := 0;
@@ -214,7 +213,7 @@ SetServiceStatus и мы работаем :).
         ServiceStatus.dwServiceSpecificExitCode:=SpecificError;
      
         SetServiceStatus (ServiceStatusHandle, ServiceStatus);
-            LogError('ServiceInitialization');
+        LogError('ServiceInitialization');
         exit;
        end;
      
@@ -222,10 +221,10 @@ SetServiceStatus и мы работаем :).
        ServiceStatus.dwCheckPoint   :=0;
        ServiceStatus.dwWaitHint     :=0;
      
-       if not SetServiceStatus (ServiceStatusHandle,ServiceStatus)
-       then begin
+       if not SetServiceStatus (ServiceStatusHandle,ServiceStatus) then
+       begin
          Status:=GetLastError;
-             LogError('SetServiceStatus');
+         LogError('SetServiceStatus');
          exit;
        end;
       // WORK HERE 
@@ -276,39 +275,39 @@ ServiceStatus.dwControlsAccepted - Обрабатываемые сообщени
     var
      Status : Cardinal;
     begin
-     case Opcode of
+      case Opcode of
       SERVICE_CONTROL_PAUSE    :
-       begin
-        ServiceStatus.dwCurrentState := SERVICE_PAUSED;
+        begin
+          ServiceStatus.dwCurrentState := SERVICE_PAUSED;
         end;
       SERVICE_CONTROL_CONTINUE :
-       begin
-        ServiceStatus.dwCurrentState := SERVICE_RUNNING;
-       end;
+        begin
+          ServiceStatus.dwCurrentState := SERVICE_RUNNING;
+        end;
       SERVICE_CONTROL_STOP     :
-       begin
-        ServiceStatus.dwWin32ExitCode:=0;
-        ServiceStatus.dwCurrentState := SERVICE_STOPPED;
-        ServiceStatus.dwCheckPoint   :=0;
-        ServiceStatus.dwWaitHint     :=0;
+        begin
+          ServiceStatus.dwWin32ExitCode:=0;
+          ServiceStatus.dwCurrentState := SERVICE_STOPPED;
+          ServiceStatus.dwCheckPoint   :=0;
+          ServiceStatus.dwWaitHint     :=0;
      
-        if not SetServiceStatus (ServiceStatusHandle,ServiceStatus)
-         then begin
-          Status:=GetLastError;
-              LogError('SetServiceStatus');
-          Exit;
-         end;
-         exit;
-       end;
+          if not SetServiceStatus (ServiceStatusHandle,ServiceStatus)
+          then begin
+            Status:=GetLastError;
+            LogError('SetServiceStatus');
+            Exit;
+          end;
+          exit;
+        end;
      
       SERVICE_CONTROL_INTERROGATE : ;
-     end;
+      end;
      
-     if not SetServiceStatus (ServiceStatusHandle, ServiceStatus)
+      if not SetServiceStatus (ServiceStatusHandle, ServiceStatus)
       then begin
-       Status := GetLastError;
-       LogError('SetServiceStatus');
-       Exit;
+        Status := GetLastError;
+        LogError('SetServiceStatus');
+        Exit;
       end;
     end;
 
@@ -319,7 +318,7 @@ ServiceStatus.dwControlsAccepted - Обрабатываемые сообщени
 код будет находиться в цикле. Например в таком :
 
     repeat
-     Что-нибудь делаем пока сервис не завершится.
+      Что-нибудь делаем пока сервис не завершится.
     until ServiceStatus.dwCurrentState = SERVICE_STOPPED;
 
 Но это пройдет если сервис не обрабатывает сообщения приостановки/перезапуска,
@@ -328,7 +327,7 @@ ServiceStatus.dwControlsAccepted - Обрабатываемые сообщени
 Другой вариант :
 
     repeat 
-     if ServiceStatus.dwCurrentState <> SERVICE_PAUSED
+      if ServiceStatus.dwCurrentState <> SERVICE_PAUSED
       then чего-то делаем
     until ServiceStatus.dwCurrentState = SERVICE_STOPPED;
 
@@ -344,7 +343,7 @@ ServiceStatus.dwControlsAccepted - Обрабатываемые сообщени
 и в ServiceMain создаем поток
 
     var
-     ThID : Cardinal;
+      ThID : Cardinal;
      
     hThread:=CreateThread(nil,0,@MainServiceThread,nil,0,ThID);
 
@@ -359,17 +358,17 @@ ServiceStatus.dwControlsAccepted - Обрабатываемые сообщени
 При этом hThread делаем глобальной переменной.
 Теперь при приостановке сервиса (в Handler) делаем так
 
-      SERVICE_CONTROL_PAUSE    :
-       begin
+    SERVICE_CONTROL_PAUSE    :
+      begin
         ServiceStatus.dwCurrentState := SERVICE_PAUSED;
         SuspendThread(hThread); // приостанавливаем поток
-       end;
+      end;
 
 и при возобновлении работы сервиса
 
-      SERVICE_CONTROL_CONTINUE :
-       begin
+    SERVICE_CONTROL_CONTINUE :
+      begin
         ServiceStatus.dwCurrentState := SERVICE_RUNNING;
         ResumeThread(hThread); // возобновляем поток
-       end;
+      end;
 

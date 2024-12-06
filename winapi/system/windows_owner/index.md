@@ -22,7 +22,8 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
          vi.dwOSVersionInfoSize := SizeOf(vi);
          getversionex(vi);
          reg.RootKey := HKEY_LOCAL_MACHINE;
-         if (vi.dwPlatformId = VER_PLATFORM_WIN32_NT) then sWindows := '\Windows NT\';
+         if (vi.dwPlatformId = VER_PLATFORM_WIN32_NT) then
+           sWindows := '\Windows NT\';
          if reg.OpenKey('Software\Microsoft' + sWindows + 'CurrentVersion', False) then
          begin
            // Name 

@@ -54,8 +54,8 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Вариант 3:
 
-Для изменения системного времени используется сложный спобой (через
-строки).
+Для изменения системного времени используется сложный способ
+(через строки).
 
     DateTimeToSystemTime(tSetDati,Tst);
 
@@ -101,10 +101,13 @@ Source: <https://forum.sources.ru>
 декодируются и передаются в API функцию.
 
 Из значения часа вычитается 2 для установки правильного времени.
-(Примечание Vit: вычитается не 2 часа а разница с Гринвичем)
+
+>**Примечание Vit:**  
+>вычитается не 2 часа, а разница с Гринвичем!
 
     procedure TfmTime.btnTimeClick(Sender: TObject); 
-    var vsys : _SYSTEMTIME; 
+    var
+      vsys : _SYSTEMTIME; 
       vYear, vMonth, vDay, vHour, vMin, vSec, vMm : Word; 
     begin 
       DecodeDate( Trunc(dtpDate.Date), vYear, vMonth, vDay ); 
@@ -140,38 +143,5 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
         DecodeTime(DateTime, wHour, wMinute, wSecond, wMilliseconds);
       end;
       Result:=SetSystemTime(st);
-    end;
-
-
-------------------------------------------------------------------------
-
-Вариант 7:
-
-Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
-
-Следующие несколько строк кода позволяют установить системную дату и
-время без использования панели управления. Дата и время устанавливаются
-двумя раздельными компонентами TDateTimePicker. Дата и время
-декодируются и передаются в API функцию.
-
-Из значения часа вычитается 2 для установки правильного времени.
-
-    procedure TfmTime.btnTimeClick(Sender: TObject);
-    var
-      vsys: _SYSTEMTIME;
-      vYear, vMonth, vDay, vHour, vMin, vSec, vMm: Word;
-    begin
-      DecodeDate( Trunc(dtpDate.Date), vYear, vMonth, vDay );
-      DecodeTime( dtpTime.Time, vHour, vMin, vSec, vMm );
-      vMm := 0;
-      vsys.wYear := vYear;
-      vsys.wMonth := vMonth;
-      vsys.wDay := vDay;
-      vsys.wHour := ( vHour - 2 );
-      vsys.wMinute := vMin;
-      vsys.wSecond := vSec;
-      vsys.wMilliseconds := vMm;
-      vsys.wDayOfWeek := DayOfWeek( Trunc(dtpDate.Date) );
-      SetSystemTime( vsys );
     end;
 

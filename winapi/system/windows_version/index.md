@@ -37,11 +37,16 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
         case osVerInfo.dwPlatformId of
           VER_PLATFORM_WIN32_NT :
             Case majorVer of
-              4:result := OsWinNT;
-              5:if minorVer=0 then result := OsWin2000
-              else 
-              if minorVer=1 then result := OsXP else result := osUnknownNT;
-              else result := osUnknownNT;
+              4: result := OsWinNT;
+              5: if minorVer=0 then
+                   result := OsWin2000
+                 else 
+                   if minorVer=1 then
+                     result := OsXP
+                   else
+                     result := osUnknownNT;
+              else
+                 result := osUnknownNT;
             end; {Case majorVer of}
           VER_PLATFORM_WIN32_WINDOWS :
             case majorVer of
@@ -111,21 +116,21 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
     function GetWindowsVersion1: string;
     function WhatWindowsIsInstalled : String;
     const
-    VER_NT_WORKSTATION = 0;
-    VER_NT_DOMAIN_CONTROLLER = 1;
-    VER_NT_SERVER = 2;
-     
-    VER_SUITE_SMALLBUSINESS = 1;
-    VER_SUITE_ENTERPRISE = 2;
-    VER_SUITE_BACKOFFICE = 4;
-    VER_SUITE_COMMUNICATIONS = 8;
-    VER_SUITE_TERMINAL = $10;
-    VER_SUITE_SMALLBUSINESS_RESTRICTED = $20;
-    VER_SUITE_EMBEDDEDNT = $40;
-    VER_SUITE_DATACENTER = $80;
-    VER_SUITE_SINGLEUSERTS = $100;
-    VER_SUITE_PERSONAL = $200;
-    VER_SUITE_BLADE = $400;
+      VER_NT_WORKSTATION = 0;
+      VER_NT_DOMAIN_CONTROLLER = 1;
+      VER_NT_SERVER = 2;
+       
+      VER_SUITE_SMALLBUSINESS = 1;
+      VER_SUITE_ENTERPRISE = 2;
+      VER_SUITE_BACKOFFICE = 4;
+      VER_SUITE_COMMUNICATIONS = 8;
+      VER_SUITE_TERMINAL = $10;
+      VER_SUITE_SMALLBUSINESS_RESTRICTED = $20;
+      VER_SUITE_EMBEDDEDNT = $40;
+      VER_SUITE_DATACENTER = $80;
+      VER_SUITE_SINGLEUSERTS = $100;
+      VER_SUITE_PERSONAL = $200;
+      VER_SUITE_BLADE = $400;
      
     type
     
@@ -135,25 +140,26 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
       wServicePackMinor : Word;
     
       {
-      wSuiteMask - Набор битовых флагов, определяющих компоненты Windows:
+      wSuiteMask           - Набор битовых флагов,
+                             определяющих компоненты Windows:
       VER_SUITE_BACKOFFICE - Установлен компонент Microsoft BackOffice.
-      VER_SUITE_BLADE - Установлен компонент Windows .NET Web Server.
-      VER_SUITE_DATACENTER - Установлена Windows 2000 или компонент Windows
-        .NET Datacenter Server
+      VER_SUITE_BLADE      - Установлен компонент Windows .NET Web Server.
+      VER_SUITE_DATACENTER - Установлена Windows 2000
+                             или компонент Windows .NET Datacenter Server
       VER_SUITE_ENTERPRISE - Установлена Windows 2000 Advanced Server
-        или компонент Windows .NET Enterprise Server.
-      VER_SUITE_PERSONAL - Установлена Windows XP Home Edition.
+                             или компонент Windows .NET Enterprise Server.
+      VER_SUITE_PERSONAL   - Установлена Windows XP Home Edition.
       VER_SUITE_SMALLBUSINESS - Установлен Microsoft Small Business Server.
-      VER_SUITE_SMALLBUSINESS_RESTRICTED - Установлен Microsoft Small Business
-        Server с ограничительной лицензией для клиентов
-      VER_SUITE_TERMINAL - Установлен компонент Terminal Services.
+      VER_SUITE_SMALLBUSINESS_RESTRICTED - Установлен Microsoft Small Business Server
+                              с ограничительной лицензией для клиентов
+      VER_SUITE_TERMINAL   - Установлен компонент Terminal Services.
       }
       wSuiteMask : Word;
       
-      {wProductType - Дополнительная информация о типе операционной системы
-      VER_NT_WORKSTATION - Операционная система Windows NT 4.0 Workstation,
-        Windows 2000 Professional, Windows XP Home Edition,
-        или Windows XP Professional.
+      {wProductType        - Дополнительная информация о типе операционной системы
+      VER_NT_WORKSTATION   - Операционная система Windows NT 4.0 Workstation,
+                             Windows 2000 Professional, Windows XP Home Edition,
+                             или Windows XP Professional.
       VER_NT_DOMAIN_CONTROLLER - Операционная система является контроллером домена.
       VER_NT_SERVER - Операционная система является сервером.
       }

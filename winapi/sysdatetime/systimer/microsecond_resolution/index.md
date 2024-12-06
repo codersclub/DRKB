@@ -1,13 +1,13 @@
 ---
-Title: How to implement a microsecond resolution Delay?
+Title: Как реализовать задержку с микросекундным разрешением?
 Date: 01.01.2007
 Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
 ---
 
-How to implement a microsecond resolution Delay?
+Как реализовать задержку с микросекундным разрешением?
 ================================================
 
-    // Wait 0.2ms
+    // Wait 0.2ms ( = 0.000200s)
      
     procedure PerformanceDelay;
     var

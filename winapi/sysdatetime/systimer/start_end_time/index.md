@@ -16,22 +16,22 @@ Source: <https://forum.sources.ru>
     interface
      
     uses
-      Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-      Dialogs, StdCtrls;
+     Windows, Messages, SysUtils, Variants, Classes, Graphics,
+     Controls, Forms, Dialogs, StdCtrls;
      
     type
-      TForm1 = class(TForm)
-        Label1: TLabel;
-        Label2: TLabel;
-        procedure FormCreate(Sender: TObject);
-      private
-        { Private declarations }
-      public
-        { Public declarations }
-      end;
+     TForm1 = class(TForm)
+      Label1: TLabel;
+      Label2: TLabel;
+      procedure FormCreate(Sender: TObject);
+     private
+      { Private declarations }
+     public
+      { Public declarations }
+     end;
      
     var
-      Form1: TForm1;
+     Form1: TForm1;
      
     implementation
      
@@ -43,22 +43,24 @@ Source: <https://forum.sources.ru>
     type
      
      SYSTEM_TIME_OF_DAY_INFORMATION = record
-        BootTime: LARGE_INTEGER;
-        CurrentTime: LARGE_INTEGER;
-        TimeZoneBias: LARGE_INTEGER;
-        CurrentTimeZoneId: ULONG;
-      end;
-      PSYSTEM_TIME_OF_DAY_INFORMATION = ^SYSTEM_TIME_OF_DAY_INFORMATION;
-     
-      NTSTATUS = DWORD;
+       BootTime: LARGE_INTEGER;
+       CurrentTime: LARGE_INTEGER;
+       TimeZoneBias: LARGE_INTEGER;
+       CurrentTimeZoneId: ULONG;
+     end;
+     PSYSTEM_TIME_OF_DAY_INFORMATION = ^SYSTEM_TIME_OF_DAY_INFORMATION;
+    
+     NTSTATUS = DWORD;
      
     const
-     SystemTimeOfDayInformation =3;
+     SystemTimeOfDayInformation = 3;
      
-    function NtQuerySystemInformation(SystemInformationClass:byte; 
-                SystemInformation: Pointer;
-                SystemInformationLength: ULONG;
-                ReturnLength: PULONG): NTSTATUS; stdcall; external 'NTDLL.DLL';
+    function NtQuerySystemInformation(
+               SystemInformationClass:byte; 
+               SystemInformation: Pointer;
+               SystemInformationLength: ULONG;
+               ReturnLength: PULONG): NTSTATUS;
+             stdcall; external 'NTDLL.DLL';
      
      
     function SysDateToStr(ST : TSystemTime) : string;
@@ -101,8 +103,10 @@ Source: <https://forum.sources.ru>
      reg:=TRegistry.Create;
      try
       reg.RootKey:=HKEY_LOCAL_MACHINE;
-      if (not reg.OpenKeyReadOnly('System\CurrentControlSet\Control\Windows')) then exit;
-      if (reg.ReadBinaryData('ShutdownTime',ft,sizeof(ft))=0) then exit
+      if (not reg.OpenKeyReadOnly('System\CurrentControlSet\Control\Windows')) then
+        exit;
+      if (reg.ReadBinaryData('ShutdownTime',ft,sizeof(ft))=0) then
+        exit
      finally
       reg.Free
      end;
@@ -118,13 +122,14 @@ Source: <https://forum.sources.ru>
      ST:TSystemTime;
     begin
      Result:='';
-     status:=NtQuerySystemInformation(SystemTimeOfDayInformation, @sti,
-                         sizeof(SYSTEM_TIME_OF_DAY_INFORMATION),nil);
+     status:=NtQuerySystemInformation(
+               SystemTimeOfDayInformation, @sti,
+               sizeof(SYSTEM_TIME_OF_DAY_INFORMATION),nil);
      if (status<>NO_ERROR) then exit;
      ftSystemBoot := PFILETIME(@(sti.BootTime))^;
      if FileTimeToLocalFileTime(ftSystemBoot,ftSystemBoot) then
-     if FileTimeToSystemTime(ftSystemBoot,ST) then
-     Result:=SysDateToStr(ST)+'  at  '+SysTimeToStr(ST)
+       if FileTimeToSystemTime(ftSystemBoot,ST) then
+         Result:=SysDateToStr(ST)+'  at  '+SysTimeToStr(ST)
     end;
      
     procedure TForm1.FormCreate(Sender: TObject);

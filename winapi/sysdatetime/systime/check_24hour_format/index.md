@@ -8,12 +8,12 @@ Source: <https://www.swissdelphicenter.ch>
 ===================================================
 
     function Is24HourTimeFormat: Boolean;
-     var
-       DefaultLCID: LCID;
-     begin
-       DefaultLCID := GetThreadLocale;
-       Result := 0 <> StrToIntDef(
-                        GetLocaleStr(DefaultLCID,LOCALE_ITIME,'0'),
-                        0);
-     end;
+    var
+      DefaultLCID: LCID;
+    begin
+      DefaultLCID := GetThreadLocale;
+      Result := 0 <> StrToIntDef(
+                       GetLocaleStr(DefaultLCID,LOCALE_ITIME,'0'),
+                       0);
+    end;
 

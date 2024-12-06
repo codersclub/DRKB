@@ -15,7 +15,8 @@ WM\_TIMECHANGE всем окнам верхнего уровня.
       TForm1 = class(TForm) 
     private 
     { Private declarations } 
-      procedure WMTIMECHANGE(var Message: TWMTIMECHANGE); message WM_TIMECHANGE; 
+      procedure WMTIMECHANGE(var Message: TWMTIMECHANGE);
+                message WM_TIMECHANGE; 
     public 
     { Public declarations } 
     end; 

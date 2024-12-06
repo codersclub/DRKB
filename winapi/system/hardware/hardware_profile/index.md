@@ -6,7 +6,8 @@ Date: 01.01.2007
 Получение имени конфигурации HardWare profile
 =============================================
 
-    function GettingHWProfileName: string;  //Win95OSR2 or later and NT4.0 or later
+    //Win95OSR2 or later and NT4.0 or later
+    function GettingHWProfileName: string;
     var
       pInfo:  tagHW_PROFILE_INFOA;
     begin

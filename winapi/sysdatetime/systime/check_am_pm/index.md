@@ -8,10 +8,10 @@ Source: <https://www.swissdelphicenter.ch>
 =======================================
 
     procedure AM_or_PM;
-     begin
-       if Frac(Time) = 0 then
-         ShowMessage('AM')
-       else
-         ShowMessage('PM');
-     end;
+    begin
+      if Frac(Time) = 0 then
+        ShowMessage('AM')
+      else
+        ShowMessage('PM');
+    end;
 
