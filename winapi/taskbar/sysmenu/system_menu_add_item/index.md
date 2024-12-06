@@ -14,7 +14,10 @@ Source: Vingrad.ru <https://forum.vingrad.ru>
 
 Добавить новый пункт меню в системное меню диалога:
 
-    AppendMenu(GetSystemMenu(Self.Handle,FALSE),MF_ENABLED,1001,'&Help'); 
+    AppendMenu(GetSystemMenu(Self.Handle,FALSE),
+               MF_ENABLED,
+               1001,
+               '&Help'); 
 
 ------------------------------------------------------------------------
 

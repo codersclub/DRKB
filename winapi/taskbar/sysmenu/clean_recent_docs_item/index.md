@@ -14,6 +14,6 @@ Source: <https://forum.sources.ru>
      
     procedure TForm1.Button1Click(Sender: TObject);
     begin
-          SHAddToRecentDocs(SHARD_PATH, nil);
+      SHAddToRecentDocs(SHARD_PATH, nil);
     end;
 

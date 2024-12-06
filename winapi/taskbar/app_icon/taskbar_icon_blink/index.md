@@ -84,11 +84,11 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
         // Set default parameters 
         with FWInfo do 
         begin 
-          cbSize    := SizeOf(FWInfo);  // Size of structure in bytes 
-          hWnd      := Form1.Handle;      // Main's form handle 
+          cbSize    := SizeOf(FWInfo); // Size of structure in bytes 
+          hWnd      := Form1.Handle;   // Main's form handle 
           dwFlags   := FLASHW_ALL;     // Flash both caption & task bar 
-          uCount    := 10;              // Flash 10 times 
-          dwTimeOut := 100;          // Timeout is 1/10 second apart 
+          uCount    := 10;             // Flash 10 times 
+          dwTimeOut := 100;            // Timeout is 1/10 second apart 
         end; 
     end; 
      

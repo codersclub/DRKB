@@ -17,7 +17,7 @@ Source: FAQ: <https://blackman.km.ru/myfaq/cont4.phtml>
                        событие
     
     (UINT)lParam   -   содержит стандартное событие мыши, такое
-                       как WM\_MOUSEMOVE или WM\_LBUTTONDOWN.
+                       как WM_MOUSEMOVE или WM_LBUTTONDOWN.
 
 При этом, информация о клавишах смены регистра, так же как и
 местоположения события, передаваемые при стандартных " настоящих"
