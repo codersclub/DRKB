@@ -18,7 +18,8 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
       SetLength(sName, cnMaxNameLen);
       GetUserName(PChar(sName), dwNameLen);
       SetLength(sName, dwNameLen);
-      if UpperCase(Trim(sName)) = 'SYSTEM' then Result := True 
+      if UpperCase(Trim(sName)) = 'SYSTEM' then
+        Result := True 
       else 
         Result := False;
     end;

@@ -17,8 +17,11 @@ Source: DelphiWorld 6.0 <https://delphiworld.narod.ru/>
      TOKEN_USER = _TOKEN_USER;
      
     function GetCurrentUserAndDomain (
-          szUser : PChar; var chUser: DWORD; szDomain :PChar; var chDomain : DWORD
-     ):Boolean;
+               szUser : PChar;
+               var chUser: DWORD;
+               szDomain :PChar;
+               var chDomain : DWORD
+             ):Boolean;
     var
      hToken : THandle;
      cbBuf  : Cardinal;

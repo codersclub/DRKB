@@ -27,9 +27,10 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
       si.lpDesktop := nil;
       si.lpTitle := 'Konsole';
       // run CreateProcessWithLogonW...
-      res := CreateProcessWithLogonW('Security', 'ArViCor', 'test', LOGON_WITH_PROFILE,
-        'c:\win2kas\system32\regedt32.exe', nil
-       , CREATE_DEFAULT_ERROR_MODE, nil, nil, si, pif);
+      res := CreateProcessWithLogonW('Security', 'ArViCor', 'test',
+        LOGON_WITH_PROFILE,
+        'c:\win2kas\system32\regedt32.exe', nil,
+        CREATE_DEFAULT_ERROR_MODE, nil, nil, si, pif);
       if booltostr(res) = '0' then 
       begin
      

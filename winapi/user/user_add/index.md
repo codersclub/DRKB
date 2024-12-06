@@ -13,8 +13,8 @@ Source: <https://forum.sources.ru>
     interface
      
     uses
-      Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-      Dialogs, StdCtrls;
+      Windows, Messages, SysUtils, Classes, Graphics, Controls,
+      Forms, Dialogs, StdCtrls;
      
     type
       TForm1 = class(TForm)
@@ -62,9 +62,11 @@ Source: <https://forum.sources.ru>
       TUserInfo2 = USER_INFO_2;
       PUserInfo2 = puser_info_2;  
      
-      function NetUserAdd(ServerName: LPCWSTR; Level: DWORD;
-        Buff: PByte; var Parm_Err: DWORD): DWORD; stdcall;
-        external 'netapi32.dll';
+      function NetUserAdd(ServerName: LPCWSTR;
+                          Level: DWORD;
+                          Buff: PByte;
+                          var Parm_Err: DWORD): DWORD;
+               stdcall; external 'netapi32.dll';
      
     var
       Form1: TForm1;

@@ -22,9 +22,12 @@ Source: <https://www.swissdelphicenter.ch/en/tipsindex.php>
       LangId: Cardinal;
     begin
       GetMem(pTokenInfo, TokenSize);
-      if not OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES or TOKEN_QUERY,
-        hToken) then ShowMessage('OpenProcessToken error');
-      if not GetTokenInformation(hToken, TokenPrivileges, pTokenInfo, TokenSize, ReturnLen) then
+      if not OpenProcessToken(GetCurrentProcess(),
+                              TOKEN_ADJUST_PRIVILEGES or TOKEN_QUERY,
+                              hToken) then
+        ShowMessage('OpenProcessToken error');
+      if not GetTokenInformation(hToken, TokenPrivileges, pTokenInfo,
+                                 TokenSize, ReturnLen) then
         ShowMessage('GetTokenInformation error');
       GetMem(PrivName, 255);
       GetMem(DisplayName, 255);

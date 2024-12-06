@@ -22,19 +22,17 @@ GetLocalUserList - возвращает список пользователей 
     ////////////////////////////////////////////////////////////////////////////////
     {$EXTERNALSYM NetUserEnum}
     function NetUserEnum(servername: LPWSTR;
-     
-      level,
-      filter: DWORD;
-      bufptr: Pointer;
-      prefmaxlen: DWORD;
-      entriesread,
-      totalentries,
-      resume_handle: LPDWORD): DWORD; stdcall;
-    external 'NetApi32.dll' Name 'NetUserEnum';
+                         level,
+                         filter: DWORD;
+                         bufptr: Pointer;
+                         prefmaxlen: DWORD;
+                         entriesread,
+                         totalentries,
+                         resume_handle: LPDWORD): DWORD; stdcall;
+             external 'NetApi32.dll' Name 'NetUserEnum';
      
     function NetApiBufferFree(Buffer: Pointer {LPVOID}): DWORD; stdcall;
-     
-    external 'NetApi32.dll' Name 'NetApiBufferFree';
+             external 'NetApi32.dll' Name 'NetApiBufferFree';
     ////////////////////////////////////////////////////////////////////////////////
      
     procedure GetLocalUserList(ulist: TStringList);
@@ -60,9 +58,9 @@ GetLocalUserList - возвращает список пользователей 
      
       TUSER_INFO_10 = record
         usri10_name,
-          usri10_comment,
-          usri10_usr_comment,
-          usri10_full_name: PWideChar;
+        usri10_comment,
+        usri10_usr_comment,
+        usri10_full_name: PWideChar;
       end;
       PUSER_INFO_10 = ^TUSER_INFO_10;
      
@@ -82,13 +80,13 @@ GetLocalUserList - возвращает список пользователей 
       info := nil;
       dwRes := 0;
       res := NetUserEnum(nil,
-        10,
-        FILTER_NORMAL_ACCOUNT,
-        @info,
-        65536,
-        @dwERead,
-        @dwETotal,
-        @dwRes);
+                         10,
+                         FILTER_NORMAL_ACCOUNT,
+                         @info,
+                         65536,
+                         @dwERead,
+                         @dwETotal,
+                         @dwRes);
       if (res <> NERR_SUCCESS) or (info = nil) then
         Exit;
       p := PChar(info);
@@ -114,12 +112,13 @@ Source: <https://www.swissdelphicenter.ch>
     {------------------------------------------
       unit Name: GetUser
       Author: Manfred Ruzicka
-      History:   Diese unit ermittelt den aktuell angemeldeten User einer NT / 2000
-                 Worstation / Servers.Sie wurde aus dem Programm "loggedon2" von Assarbad
-                 ubernommen und fur an die VCL angepasst.Diese unit enthalt zwar noch
-                 einige kleine Fehler, funktioniert aber ohne Probleme.-
-     -----------------------------------------}
-     
+      History:   Diese unit ermittelt den aktuell angemeldeten User
+                 einer NT / 2000 Worstation / Servers.Sie wurde
+                 aus dem Programm "loggedon2" von Assarbad
+                 ubernommen und fur an die VCL angepasst.
+                 Diese unit enthalt zwar noch einige kleine Fehler,
+                 funktioniert aber ohne Probleme.
+    ------------------------------------------}
      
      unit GetUser;
      
@@ -127,14 +126,15 @@ Source: <https://www.swissdelphicenter.ch>
      
      uses
        Windows
-        , Messages
-        , SysUtils
-        , Dialogs;
+       , Messages
+       , SysUtils
+       , Dialogs;
      
      type
-       TServerBrowseDialogA0 = function(hwnd: HWND; pchBuffer: Pointer;
-         cchBufSize: DWORD): bool;
-       stdcall;
+       TServerBrowseDialogA0 = function(hwnd: HWND;
+                                        pchBuffer: Pointer;
+                                        cchBufSize: DWORD): bool;
+                               stdcall;
        ATStrings = array of string;
      
      
@@ -150,7 +150,7 @@ Source: <https://www.swissdelphicenter.ch>
      const
        MAX_NAME_STRING = 1024;
      var
-        userName, domainName: array[0..MAX_NAME_STRING] of Char;
+       userName, domainName: array[0..MAX_NAME_STRING] of Char;
        subKeyName: array[0..MAX_PATH] of Char;
        NIL_HANDLE: Integer absolute 0;
        Result: ATStrings;
@@ -171,7 +171,7 @@ Source: <https://www.swissdelphicenter.ch>
      
        function getvals(s: string): Integer;
        var
-          i, j, k, l: integer;
+         i, j, k, l: integer;
          tmp: string;
        begin
          Delete(s, 1, 2);
@@ -186,17 +186,17 @@ Source: <https://www.swissdelphicenter.ch>
          i := 2;
          s := s + '-';
          for l := 0 to 7 do
-          begin
+         begin
            j := Pos('-', s);
            if j > 0 then
-            begin
+           begin
              tmp := Copy(s, 1, j - 1);
              val(tmp, subAuthorityVal[l], k);
              Delete(s, 1, j);
              Inc(i);
            end
-            else
-              break;
+           else
+             break;
          end;
          Result := i;
        end;
@@ -209,26 +209,26 @@ Source: <https://www.swissdelphicenter.ch>
        FillChar(domainName, SizeOf(domainName), #0);
        FillChar(subKeyName, SizeOf(subKeyName), #0);
        if ServerName <> '' then
-        begin
+       begin
          usersKey := 0;
          if (RegConnectRegistry(PChar(ServerName), HKEY_USERS, usersKey) <> 0) then
            Exit;
        end
-        else
-        begin
-         if (RegOpenKey(HKEY_USERS, nil, usersKey) <> ERROR_SUCCESS) then
-           Exit;
+       else
+       begin
+        if (RegOpenKey(HKEY_USERS, nil, usersKey) <> ERROR_SUCCESS) then
+          Exit;
        end;
        Index          := 0;
        subKeyNameSize := SizeOf(subKeyName);
        while (RegEnumKeyEx(usersKey, Index, subKeyName, subKeyNameSize,
          nil, nil, nil, @lastWriteTime) = ERROR_SUCCESS) do
-        begin
+       begin
          if (lstrcmpi(subKeyName, '.default') <> 0) and (Pos('Classes', string(subKeyName)) = 0) then
-          begin
+         begin
            subAuthorityCount := getvals(subKeyName);
            if (subAuthorityCount >= 3) then
-            begin
+           begin
              subAuthorityCount := subAuthorityCount - 2;
              if (subAuthorityCount < 2) then subAuthorityCount := 2;
              authority.Value[5] := PByte(@authorityVal)^;
@@ -244,15 +244,15 @@ Source: <https://www.swissdelphicenter.ch>
                subAuthorityVal[0], subAuthorityVal[1], subAuthorityVal[2],
                subAuthorityVal[3], subAuthorityVal[4], subAuthorityVal[5],
                subAuthorityVal[6], subAuthorityVal[7], sid) then
-              begin
+             begin
                if LookupAccountSid(PChar(ServerName), sid, userName, userNameSize,
                  domainName, domainNameSize, sidType) then
-                begin
+               begin
                  setlength(Result, Length(Result) + 1);
                  Result[Length(Result) - 1] := string(domainName) + '\' + string(userName);
      
                  // Hier kann das Ziel eingetragen werden 
-                Form1.label2.Caption := string(userName);
+                 Form1.label2.Caption := string(userName);
                  form2.label1.Caption := string(userName);
                end;
              end;
@@ -317,16 +317,17 @@ Source: <https://www.swissdelphicenter.ch>
        lpUSER_INFO_1 = ^USER_INFO_1;
      
      function NetUserEnum(ServerName: PWideChar;
-       Level,
-       Filter: DWORD;
-       var Buffer: Pointer;
-       PrefMaxLen: DWORD;
-       var EntriesRead,
-       TotalEntries,
-       ResumeHandle: DWORD): Longword; stdcall; external 'netapi32.dll';
+                          Level,
+                          Filter: DWORD;
+                          var Buffer: Pointer;
+                          PrefMaxLen: DWORD;
+                          var EntriesRead,
+                          TotalEntries,
+                          ResumeHandle: DWORD): Longword;
+              stdcall; external 'netapi32.dll';
      
-     function NetApiBufferFree(pBuffer: PByte): Longint; stdcall; external
-     'netapi32.dll';
+     function NetApiBufferFree(pBuffer: PByte): Longint;
+              stdcall; external 'netapi32.dll';
      
      {...}
      
