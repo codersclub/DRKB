@@ -1,0 +1,182 @@
+/* ---------------------
+    Tree core styles
+*/
+ul.tree {
+    margin: 0;
+    padding: 0 0 1em 1em;
+*    font: 1.2em/250% 'Arimo',arial,verdana,sans-serif;
+}
+
+.tree ul {
+    margin: 0;
+    padding: 0 0 0 0.5em;
+}
+
+.tree input {
+    position: absolute;
+*    clip: rect(0, 0, 0, 0);
+    margin-left: -1em;
+    visibility: hidden;
+}
+
+.tree input ~ ul {
+    display: none;
+}
+
+.tree input:checked ~ ul {
+    display: block;
+}
+
+/* ---------------------
+    Tree rows
+*/
+.tree li {
+    text-align: left;
+    line-height: 1.2;
+    position: relative;
+    padding: 0 0 1em 1.5em;
+    list-style: none;
+}
+
+.tree ul li {
+    padding: 0.5em 0 0 1.5em;
+}
+
+.tree > li:last-child {
+    padding-bottom: 0;
+}
+
+/* ---------------------
+    Tree vertical branches
+*/
+.tree li:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    border-left: 1px solid #777;
+    content: "";
+}
+
+.tree > li:last-child:before {
+    display: none;
+}
+
+.tree li:last-child:before {
+    height: 1em;
+}
+
+/* ---------------------
+    Tree horizontal branches
+*/
+.tree li:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 0.5em;
+    width: 1.5em;
+    border-bottom: 1px solid #777;
+    content: '';
+}
+
+.tree li:last-child:after {
+    border-left: 1px solid #777;
+    /*  border-radius: 0 0 0 .3em;*/
+    height: 0.5em;
+    top: 0;
+}
+
+.tree li li:last-child:after {
+    height: 1em;
+}
+
+.tree ul li:after {
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    display: block;
+    height: 0.5em;
+    width: 1.5em;
+    border-bottom: 1px solid #777;
+    content: '';
+}
+
+/* ---------------------
+    Tree labels
+*/
+.tree label {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    left: 0;
+    top: inherit;
+*   border: 1px solid red;
+    width: 1em;
+    height: 1em;
+    margin-left: -0.5em;
+}
+
+/* ---------------------
+    Tree expanded icon
+*/
+.tree label:before {
+    position: absolute;
+    background: #555;
+/*  background: rgb(122,188,255); /* Old browsers */
+/*  background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
+/*  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
+/*  background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
+/*  background: -o-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Opera11.10+ */
+/*  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+/*    background: linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C */
+    color: #fff;
+    z-index: 1;
+    float: left;
+    margin: 0 1em 0 0em;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    content: '+';
+    text-align: center;
+    line-height: 1em;
+}
+
+.tree input:checked ~ label:before {
+    content: '–';
+}
+
+/* ---------------------
+    Custom Row
+*/
+.tree .custom {
+    display: inline-block;
+    background: #eee;
+    padding: 1em;
+}
+
+
+.tree .all_off {
+    display: block!important;
+}
+
+
+.tree a {
+  display: block;
+  text-decoration: none;
+}
+
+.tree a.current {
+  font-weight: bold;
+  background: #666;
+*  color: red;
+*  font-size: 120%;
+}
+.tree a:hover {
+  background: #666;
+}
+.tree body {
+  padding: 0 1em 3em;
+}

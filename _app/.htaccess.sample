@@ -1,0 +1,32 @@
+AddDefaultCharset UTF-8
+#LoadModule rewrite_module modules/mod_rewrite.so
+#AddModule mod_rewrite.c
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#RewriteBase /
+RewriteBase /yo
+#RewriteBase /docs/
+
+# Block all direct access for these folders
+#RewriteRule ^(lib|tpl)/(.*) error [F]
+
+# Block all direct access to .md files:
+RewriteRule \.md$ error [F]
+
+# Add a trailing slash to directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.)
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ([^/]+)$ $1/ [R=301,L]
+
+
+# Rewrite other requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . _app/app.php [L,QSA]
+
+# Index request
+RewriteRule ^$ _app/app.php [L]
+RewriteRule /$ _app/app.php [L]
+</IfModule>
