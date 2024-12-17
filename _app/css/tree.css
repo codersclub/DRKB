@@ -157,12 +157,6 @@ ul.tree {
     padding: 1em;
 }
 
-
-.tree .all_off {
-    display: block!important;
-}
-
-
 .tree a {
   display: block;
   text-decoration: none;

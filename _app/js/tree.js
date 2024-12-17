@@ -1,69 +1,60 @@
 function tree_open_all() {
-	$('.tree ul').toggleClass('all_off');
+    var allLists = document.querySelectorAll('.tree ul');
+    var checkboxes = [];
+    
+    for (var i = 0; i < allLists.length; i++) {
+        var parentLi = allLists[i].parentElement;
+        if (parentLi && parentLi.tagName === 'LI') {
+            var checkbox = parentLi.querySelector('input[type="checkbox"]');
+            if (checkbox && checkboxes.indexOf(checkbox) === -1) {
+                checkboxes.push(checkbox);
+            }
+        }
+    }
+    
+    var allChecked = checkboxes.length > 0;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (!checkboxes[i].checked) {
+            allChecked = false;
+            break;
+        }
+    }
+    
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = !allChecked;
+    }
 }
 
-$(document).ready(function () {
-	
-	var url = window.parent.location.pathname;
-	var selector = 'a[href="'+url+'"]';
-	
-	$(selector).addClass('current').focus();
-	
-	var i = 6; // Max depth level
-	
-	while(url !== '/' && i) {
-		
-		var elem = document.getElementById(url);
-		
-		if(elem) {
-			elem.checked = true;
-		}
-		
-		url = url.replace(/\/$/, '').replace(/\/[^\/]*$/, '/');
-		
-		i--;
-	}
-	
+document.addEventListener('DOMContentLoaded', function() {
+    var currentURL = window.parent.location.pathname;
+    var allLists = document.querySelectorAll('.tree ul');
+    var checkboxIndex = 1;
+    
+    for (var i = 0; i < allLists.length; i++) {
+        var parentLi = allLists[i].parentElement;
+        if (parentLi && parentLi.tagName === 'LI' && !parentLi.querySelector('input[type="checkbox"]')) {
+            var tpl = '<input id="tree_check_' + checkboxIndex + '" type="checkbox"><label for="tree_check_' + checkboxIndex + '"></label>';
+            parentLi.insertAdjacentHTML('afterbegin', tpl);
+            checkboxIndex++;
+        }
+    }
+    
+    var currentLink = document.querySelector('a[href="' + currentURL + '"]');
+    
+    if (currentLink) {
+        currentLink.classList.add('current');
+        
+        var parent = currentLink.parentElement;
+        while (parent) {
+            if (parent.tagName === 'LI') {
+                var checkbox = parent.querySelector('input[type="checkbox"]');
+                if (checkbox) checkbox.checked = true;
+            }
+            parent = parent.parentElement;
+        }
+        
+        setTimeout(function() {
+            currentLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+    }
 });
-
-
-
-// Add a Tree Expand/Collapse Handler
-var index = 1;
-
-var len = $('.tree li:has(ul)').length - 1;
-$.each($('.tree li:has(ul)'), function(itr) {
-	var tpl = `<input id="tree_${index}" type="checkbox">
-	<label for="tree_${index}"></label>`;
-	index++;
-	$(this).prepend(tpl);
-	if(itr == len){
-		currentNav();
-		expandToCurrent();
-	}
-});
-
-// Nav tree
-// TODO: Ajax tree?
-function currentNav(){
-	var currentURL = window.location.href;
-	currentURL = currentURL.slice(currentURL.indexOf('/', currentURL.indexOf('//') + 2)); //ToDo: simplify
-	if(currentURL.includes('?')){
-		currentURL = currentURL.slice(0, currentURL.indexOf('?'))
-	}
-	$('.tree a').each(function(){
-		if($(this).attr('href') == currentURL){
-			$(this).addClass('current');
-		}
-	});
-	// var elements = document.querySelectorAll('.tree li a');
-	//     Array.from(elements).forEach(function(element) {
-	//       if(element.getAttribute('href') == currentURL){
-	//         element.classList.add('current');
-	//       }
-	//     });
-}
-
-function expandToCurrent(){
-	$('.tree .current').parents('li').children('input[type=checkbox]').prop('checked', true);
-}
