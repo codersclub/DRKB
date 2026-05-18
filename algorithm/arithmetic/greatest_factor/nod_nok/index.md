@@ -25,23 +25,21 @@ Source: <https://algolist.manual.ru>
 ## Алгоритм Евклида.
 
 1. Вычислим r - остаток от деления числа a на b, a = bq+r, 0 \<= r \< b.
-
 2. Если r = 0, то b есть искомое число.
-
-3. Если r =/= 0, то заменим пару чисел (a,b) парой (b,r)
-   и перейдем к шагу 1.
+3. Если r =/= 0, то заменим пару чисел (a,b) парой (b,r) и перейдем к шагу 1.
 
 ```
-    int NOD(int a,int b)
-     {
-        while(a!=0 && b!=0)
-        {
-           if(a>=b) a=a%b;
-               else b=b%a;
-        }
-     return a+b; // Одно - ноль
-     }
+int NOD(int a,int b)
+{
+    while(a!=0 && b!=0)
+    {
+       if(a>=b) a=a%b;
+           else b=b%a;
+    }
+    return a+b; // Одно - ноль
+}
 ```
+
 
 При вычислении наибольшего общего делителя (a,b) с помощью алгоритма
 Евклида будет выполнено не более 5p операций деления с остатком, где p
@@ -58,22 +56,22 @@ Source: <https://algolist.manual.ru>
 Он иллюстрируется следующей программой:
 
 
-      m:= a; n:=b; d:=1;
-      {НОД(a,b) = d * НОД(m,n)}
-      while not ((m=0) or (n=0)) do begin
-        if (m mod 2 = 0) and (n mod 2 = 0) then begin
-          d:= d*2; m:= m div 2; n:= n div 2;
-        end else if (m mod 2 = 0) and (n mod 2 = 1) then begin
-          m:= m div 2;
-        end else if (m mod 2 = 1) and (n mod 2 = 0) then begin
-          n:= n div 2;
-        end else if (m mod 2=1) and (n mod 2=1) and (m>=n)then begin
-          m:= m-n;
-        end else if (m mod 2=1) and (n mod 2=1) and (m<=n)then begin
-          n:= n-m;
-        end;
+    m:= a; n:=b; d:=1;
+    {НОД(a,b) = d * НОД(m,n)}
+    while not ((m=0) or (n=0)) do begin
+      if (m mod 2 = 0) and (n mod 2 = 0) then begin
+        d:= d*2; m:= m div 2; n:= n div 2;
+      end else if (m mod 2 = 0) and (n mod 2 = 1) then begin
+        m:= m div 2;
+      end else if (m mod 2 = 1) and (n mod 2 = 0) then begin
+        n:= n div 2;
+      end else if (m mod 2=1) and (n mod 2=1) and (m>=n)then begin
+        m:= m-n;
+      end else if (m mod 2=1) and (n mod 2=1) and (m<=n)then begin
+        n:= n-m;
       end;
-      {m=0 => ответ=d*n; n=0 =>  ответ=d*m}  
+    end;
+    {m=0 => ответ=d*n; n=0 =>  ответ=d*m}  
 
 
 ## Алгоритм решения уравнения ax+by = 1.
@@ -83,10 +81,8 @@ Source: <https://algolist.manual.ru>
 1. Определим матрицу E:
 
 ```
-    +-----------------------------------+-----------------------------------+
-    | E =                               | ( 1 0 )                           |
-    |                                   | ( 0 1 )                           |
-    +-----------------------------------+-----------------------------------+
+    E = ( 1 0 )
+        ( 0 1 )
 ```
 
 2. Вычислим r - остаток от деления числа a на b, a=bq+r, 0 \<= r \< b.
@@ -97,10 +93,8 @@ Source: <https://algolist.manual.ru>
 4. Если r =/= 0, то заменим матрицу E матрицей
 
 ```
-    +-----------------------------------+-----------------------------------+
-    | E *                               | ( 0 1 )                           |
-    |                                   | ( 1 -q )                          |
-    +-----------------------------------+-----------------------------------+
+    E * ( 0  1 )
+        ( 1 -q )
 ```
 
 5. Заменим пару чисел (a,b) на (b,r) и перейдем к шагу 2.
@@ -124,16 +118,16 @@ Source: <https://algolist.manual.ru>
 
 3. Пока b\>0
 
-   3.1 q:=[a/b], r:=a-qb, x:=x2-qx1, y:=y2-qy1
+    3.1. q:=[a/b], r:=a-qb, x:=x2-qx1, y:=y2-qy1
 
-   3.2 a:=b, b:=r, x2:=x1, x1:=x, y2:=y1, y1:=y
+    3.2. a:=b, b:=r, x2:=x1, x1:=x, y2:=y1, y1:=y
 
 4. Положить d:=a, x:=x2, y:=y2 и возвратить (d,x,y)
 
 ### Исходник на Си.
 
-/* Author:  Pate Williams (c) 1997 */
-
+    /* Author:  Pate Williams (c) 1997 */
+    
     #include <stdio.h>
     #define DEBUG
      
@@ -193,7 +187,6 @@ Source: <https://algolist.manual.ru>
 
 
 ## Нахождение обратного элемента по модулю
-
  
 
 Для начала заметим, что элемент a кольца Zn обратим тогда и только
@@ -207,16 +200,14 @@ Source: <https://algolist.manual.ru>
 НА ВЫХОДЕ: обратный к а в кольце, если он существует.
 
 1. Использовать расширенный алгоритм Евклида для нахождения
-
-  x и y, таких что ax + ny = d, где d=НОД(a,n).
+   x и y, таких что ax + ny = d, где d=НОД(a,n).
 
 2. Если d \> 1, то обратного элемента не существует.
-
    Иначе возвращаем x.
 
 ### Исходник на Си.
 
-    /*  Author:  Pate Williams (c) 1997 */
+    /* Author:  Pate Williams (c) 1997 */
      
     #include <stdio.h>
      
@@ -265,7 +256,7 @@ Source: <https://algolist.manual.ru>
 
 ## НОК.
 
-НОК( a, b) = a*b / НОД(a, b)
+    НОК( a, b) = a*b / НОД(a, b)
 
- 
+
 

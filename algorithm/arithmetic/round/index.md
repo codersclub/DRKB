@@ -46,9 +46,10 @@ Date: 01.01.2007
         Result := Zn;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+
 
 ------------------------------------------------------------------------
 
@@ -56,11 +57,11 @@ DelphiWorld 6.0
 
     function RoundEx(X: Double; Precision: Integer ): Double;
     {
-    Precision :
-    1 - до целых
-    10 - до десятых
-    100 - до сотых
-    ...
+      Precision :
+      1 - до целых
+      10 - до десятых
+      100 - до сотых
+      ...
     }
     var
       ScaledFractPart, Temp: Double;
@@ -75,9 +76,10 @@ DelphiWorld 6.0
       RoundEx := Int(X) + ScaledFractPart / Precision;
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+
 
 ------------------------------------------------------------------------
 
@@ -91,9 +93,10 @@ DelphiWorld 6.0
       Result:=FloatToStr(Round(StrToFloat(s)*exp(i*ln(10)))/(exp(i*ln(10))));
     end;
 
-<https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
+
+
 
 ------------------------------------------------------------------------
 
@@ -102,8 +105,6 @@ DelphiWorld 6.0
 Как округлять до сотых в большую сторону
 
     uses Math;
-     
-
      
      
     // Прибавляешь 0.5 затем округляешь:
@@ -250,9 +251,9 @@ DelphiWorld 6.0
       Edit1.Text := RoundEx(StrToFloat(Edit1.Text), 2);
     end;
 
-<https://delphiworld.narod.ru/>
+DelphiWorld 6.0 <https://delphiworld.narod.ru/>
 
-DelphiWorld 6.0
+
 
 ------------------------------------------------------------------------
 
@@ -305,19 +306,19 @@ DelphiWorld 6.0
       x:= Round(12.5) = x = 12 
     }
      
-     function DoRound(const X: Extended): Int64;
-     begin
-       Result := 0;
-       if X0 then
-         Result := trunc(X + 0.5);
-       if Xthen
-         Result := trunc(X - 0.5);
-     end;
+    function DoRound(const X: Extended): Int64;
+    begin
+      Result := 0;
+      if X0 then
+        Result := trunc(X + 0.5);
+      if Xthen
+        Result := trunc(X - 0.5);
+    end;
      
      
-     procedure TForm1.Button1Click(Sender: TObject);
-     begin
-       ShowMessage(FormatFloat('0.00', DoRound(17.5)));  // - 18 
+    procedure TForm1.Button1Click(Sender: TObject);
+    begin
+      ShowMessage(FormatFloat('0.00', DoRound(17.5)));  // - 18 
       ShowMessage(FormatFloat('0.00', DoRound(12.5)));  // - 13 
      
       //This rounds every value to 0.05 steps 
@@ -326,32 +327,32 @@ DelphiWorld 6.0
     end;
      
      
-     {***Another function:***}
-     
-     function RoundUp(Value: Extended): Int64;
-       procedure Set8087CW(NewCW: Word);
-       asm
-              MOV     Default8087CW,AX
-              FNCLEX
-              FLDCW   Default8087CW
+    {***Another function:***}
+    
+    function RoundUp(Value: Extended): Int64;
+      procedure Set8087CW(NewCW: Word);
+      asm
+             MOV     Default8087CW,AX
+             FNCLEX
+             FLDCW   Default8087CW
       end;
-     const
-       RoundUpCW = $1B32;
-     var
-       OldCW: Word;
-     begin
-       OldCW := Default8087CW;
-       try
-         Set8087CW(RoundUpCW);
-         Result := Round(Value);
-       finally
-         Set8087CW(OldCW);
-       end;
-     end;
-     
-     procedure TForm1.Button2Click(Sender: TObject);
-     begin
-       ShowMessage(FormatFloat('0.00', RoundUp(19.32)));  // - 19 
+    const
+      RoundUpCW = $1B32;
+    var
+      OldCW: Word;
+    begin
+      OldCW := Default8087CW;
+      try
+        Set8087CW(RoundUpCW);
+        Result := Round(Value);
+      finally
+        Set8087CW(OldCW);
+      end;
+    end;
+    
+    procedure TForm1.Button2Click(Sender: TObject);
+    begin
+      ShowMessage(FormatFloat('0.00', RoundUp(19.32)));  // - 19 
     end;
 
 Взято с сайта: <https://www.swissdelphicenter.ch>

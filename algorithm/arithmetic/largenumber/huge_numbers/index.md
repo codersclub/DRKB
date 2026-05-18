@@ -128,7 +128,6 @@ Intel-целочисленным типам.
      
     procedure HugeInt_SHL(var a: HugeInt; Digits: Integer);
     { Перемещение байтов переменной "Digits" в левую часть,
-     
     байты "Digits" будут 'ослабевать' в MSB-части.
     LSB-часть заполняется нулями. }
     var
@@ -396,7 +395,6 @@ Intel-целочисленным типам.
      
     procedure HugeInt_DivMod100(var a: HugeInt; var R: Integer);
     { 256-тиричное деление - работает только с
-     
     положительными числами: R := a mod 100; a:= a div 100; }
     var
      
@@ -458,7 +456,6 @@ Intel-целочисленным типам.
      
     procedure String_DivMod256(var S: string; var R: Integer);
     { 10(00)-тиричное деление - работает только с
-     
     положительными числами: R := S mod 256; S := S div 256 }
     var
       Q: string;
